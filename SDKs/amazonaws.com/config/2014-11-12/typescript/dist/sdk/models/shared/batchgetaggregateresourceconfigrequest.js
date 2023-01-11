@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateResourceIdentifier } from "./aggregateresourceidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetAggregateResourceConfigRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateresourceidentifier_1 = require("./aggregateresourceidentifier");
 var BatchGetAggregateResourceConfigRequest = /** @class */ (function (_super) {
     __extends(BatchGetAggregateResourceConfigRequest, _super);
     function BatchGetAggregateResourceConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregatorName" }),
         __metadata("design:type", String)
     ], BatchGetAggregateResourceConfigRequest.prototype, "configurationAggregatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceIdentifiers", elemType: AggregateResourceIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceIdentifiers", elemType: aggregateresourceidentifier_1.AggregateResourceIdentifier }),
         __metadata("design:type", Array)
     ], BatchGetAggregateResourceConfigRequest.prototype, "resourceIdentifiers", void 0);
     return BatchGetAggregateResourceConfigRequest;
-}(SpeakeasyBase));
-export { BatchGetAggregateResourceConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetAggregateResourceConfigRequest = BatchGetAggregateResourceConfigRequest;

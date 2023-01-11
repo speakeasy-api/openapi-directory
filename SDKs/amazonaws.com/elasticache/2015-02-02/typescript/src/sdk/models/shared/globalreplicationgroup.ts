@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalNodeGroup } from "./globalnodegroup";
-import { GlobalReplicationGroupMember } from "./globalreplicationgroupmember";
+import { GlobalNodeGroupList } from "./globalnodegrouplist";
+import { GlobalReplicationGroupMemberList } from "./globalreplicationgroupmemberlist";
 
 
 
@@ -30,8 +30,8 @@ export class GlobalReplicationGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   engineVersion?: string;
 
-  @SpeakeasyMetadata({ elemType: GlobalNodeGroup })
-  globalNodeGroups?: GlobalNodeGroup[];
+  @SpeakeasyMetadata({ elemType: GlobalNodeGroupList })
+  globalNodeGroups?: GlobalNodeGroupList[];
 
   @SpeakeasyMetadata()
   globalReplicationGroupDescription?: string;
@@ -39,8 +39,8 @@ export class GlobalReplicationGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   globalReplicationGroupId?: string;
 
-  @SpeakeasyMetadata({ elemType: GlobalReplicationGroupMember })
-  members?: GlobalReplicationGroupMember[];
+  @SpeakeasyMetadata({ elemType: GlobalReplicationGroupMemberList })
+  members?: GlobalReplicationGroupMemberList[];
 
   @SpeakeasyMetadata()
   status?: string;

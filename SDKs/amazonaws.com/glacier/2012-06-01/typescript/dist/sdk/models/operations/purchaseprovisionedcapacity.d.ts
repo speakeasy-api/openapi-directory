@@ -20,7 +20,7 @@ export declare class PurchaseProvisionedCapacityResponse extends SpeakeasyBase {
     invalidParameterValueException?: any;
     limitExceededException?: any;
     missingParameterValueException?: any;
-    purchaseProvisionedCapacityOutput?: Map<string, any>;
+    purchaseProvisionedCapacityOutput?: Record<string, any>;
     serviceUnavailableException?: any;
     statusCode: number;
 }

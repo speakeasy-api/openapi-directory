@@ -25,7 +25,7 @@ export declare class ListFaxListFaxResponse extends SpeakeasyBase {
     meta?: ListFaxListFaxResponseMeta;
 }
 export declare class ListFaxRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: ListFaxQueryParams;
     security: ListFaxSecurity;
 }

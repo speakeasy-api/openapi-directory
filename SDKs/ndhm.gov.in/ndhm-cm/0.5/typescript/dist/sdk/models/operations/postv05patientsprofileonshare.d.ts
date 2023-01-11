@@ -4,7 +4,7 @@ export declare class PostV05PatientsProfileOnShareHeaders extends SpeakeasyBase 
     authorization: string;
 }
 export declare class PostV05PatientsProfileOnShareRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     shareProfileResult?: shared.ShareProfileResult;
 }
 export declare class PostV05PatientsProfileOnShareRequest extends SpeakeasyBase {

@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class LifeCycleLastTestInitiated extends SpeakeasyBase {
     apiCallDateTime?: string;
-    jobId?: string;
+    jobID?: string;
 }

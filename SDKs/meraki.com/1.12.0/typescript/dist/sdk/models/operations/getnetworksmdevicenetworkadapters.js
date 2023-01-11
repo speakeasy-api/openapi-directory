@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmDeviceNetworkAdaptersResponse = exports.GetNetworkSmDeviceNetworkAdaptersRequest = exports.GetNetworkSmDeviceNetworkAdaptersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmDeviceNetworkAdaptersPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceNetworkAdaptersPathParams, _super);
     function GetNetworkSmDeviceNetworkAdaptersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceNetworkAdaptersPathParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceNetworkAdaptersPathParams.prototype, "networkId", void 0);
     return GetNetworkSmDeviceNetworkAdaptersPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceNetworkAdaptersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceNetworkAdaptersPathParams = GetNetworkSmDeviceNetworkAdaptersPathParams;
 var GetNetworkSmDeviceNetworkAdaptersRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceNetworkAdaptersRequest, _super);
     function GetNetworkSmDeviceNetworkAdaptersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDeviceNetworkAdaptersPathParams)
     ], GetNetworkSmDeviceNetworkAdaptersRequest.prototype, "pathParams", void 0);
     return GetNetworkSmDeviceNetworkAdaptersRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceNetworkAdaptersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceNetworkAdaptersRequest = GetNetworkSmDeviceNetworkAdaptersRequest;
 var GetNetworkSmDeviceNetworkAdaptersResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceNetworkAdaptersResponse, _super);
     function GetNetworkSmDeviceNetworkAdaptersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceNetworkAdaptersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmDeviceNetworkAdaptersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmDeviceNetworkAdaptersResponse.prototype, "getNetworkSmDeviceNetworkAdapters200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmDeviceNetworkAdaptersResponse.prototype, "getNetworkSmDeviceNetworkAdapters200ApplicationJSONObject", void 0);
     return GetNetworkSmDeviceNetworkAdaptersResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceNetworkAdaptersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceNetworkAdaptersResponse = GetNetworkSmDeviceNetworkAdaptersResponse;

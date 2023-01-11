@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePipelineVariableForTeamResponse = exports.DeletePipelineVariableForTeamRequest = exports.DeletePipelineVariableForTeamPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePipelineVariableForTeamPathParams = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForTeamPathParams, _super);
     function DeletePipelineVariableForTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], DeletePipelineVariableForTeamPathParams.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], DeletePipelineVariableForTeamPathParams.prototype, "variableUuid", void 0);
     return DeletePipelineVariableForTeamPathParams;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForTeamPathParams = DeletePipelineVariableForTeamPathParams;
 var DeletePipelineVariableForTeamRequest = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForTeamRequest, _super);
     function DeletePipelineVariableForTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePipelineVariableForTeamPathParams)
     ], DeletePipelineVariableForTeamRequest.prototype, "pathParams", void 0);
     return DeletePipelineVariableForTeamRequest;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForTeamRequest = DeletePipelineVariableForTeamRequest;
 var DeletePipelineVariableForTeamResponse = /** @class */ (function (_super) {
     __extends(DeletePipelineVariableForTeamResponse, _super);
     function DeletePipelineVariableForTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePipelineVariableForTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePipelineVariableForTeamResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeletePipelineVariableForTeamResponse.prototype, "error", void 0);
     return DeletePipelineVariableForTeamResponse;
-}(SpeakeasyBase));
-export { DeletePipelineVariableForTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePipelineVariableForTeamResponse = DeletePipelineVariableForTeamResponse;

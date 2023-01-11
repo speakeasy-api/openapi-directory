@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartResourceScanResponse = exports.StartResourceScanRequest = exports.StartResourceScanRequestBody = exports.StartResourceScanHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var StartResourceScanHeaders = /** @class */ (function (_super) {
     __extends(StartResourceScanHeaders, _super);
     function StartResourceScanHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], StartResourceScanHeaders.prototype, "xAmzSignedHeaders", void 0);
     return StartResourceScanHeaders;
-}(SpeakeasyBase));
-export { StartResourceScanHeaders };
+}(utils_1.SpeakeasyBase));
+exports.StartResourceScanHeaders = StartResourceScanHeaders;
 var StartResourceScanRequestBody = /** @class */ (function (_super) {
     __extends(StartResourceScanRequestBody, _super);
     function StartResourceScanRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyzerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyzerArn" }),
         __metadata("design:type", String)
     ], StartResourceScanRequestBody.prototype, "analyzerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArn" }),
         __metadata("design:type", String)
     ], StartResourceScanRequestBody.prototype, "resourceArn", void 0);
     return StartResourceScanRequestBody;
-}(SpeakeasyBase));
-export { StartResourceScanRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.StartResourceScanRequestBody = StartResourceScanRequestBody;
 var StartResourceScanRequest = /** @class */ (function (_super) {
     __extends(StartResourceScanRequest, _super);
     function StartResourceScanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StartResourceScanHeaders)
     ], StartResourceScanRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", StartResourceScanRequestBody)
     ], StartResourceScanRequest.prototype, "request", void 0);
     return StartResourceScanRequest;
-}(SpeakeasyBase));
-export { StartResourceScanRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartResourceScanRequest = StartResourceScanRequest;
 var StartResourceScanResponse = /** @class */ (function (_super) {
     __extends(StartResourceScanResponse, _super);
     function StartResourceScanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartResourceScanResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StartResourceScanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartResourceScanResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartResourceScanResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StartResourceScanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartResourceScanResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartResourceScanResponse.prototype, "validationException", void 0);
     return StartResourceScanResponse;
-}(SpeakeasyBase));
-export { StartResourceScanResponse };
+}(utils_1.SpeakeasyBase));
+exports.StartResourceScanResponse = StartResourceScanResponse;

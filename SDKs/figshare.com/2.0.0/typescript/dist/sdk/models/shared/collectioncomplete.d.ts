@@ -1,0 +1,36 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import { Author } from "./author";
+import { Category } from "./category";
+import { CustomArticleField } from "./customarticlefield";
+import { FundingInformation } from "./fundinginformation";
+import { Timeline } from "./timeline";
+export declare class CollectionComplete extends SpeakeasyBase {
+    articlesCount?: number;
+    authors?: Author[];
+    categories?: Category[];
+    citation?: string;
+    createdDate?: string;
+    customFields?: CustomArticleField[];
+    description?: string;
+    doi?: string;
+    funding?: FundingInformation[];
+    groupId?: number;
+    groupResourceId?: string;
+    handle?: string;
+    id?: number;
+    institutionId?: number;
+    modifiedDate?: string;
+    public?: boolean;
+    publishedDate?: string;
+    references?: string[];
+    resourceDoi?: string;
+    resourceId?: string;
+    resourceLink?: string;
+    resourceTitle?: string;
+    resourceVersion?: number;
+    tags?: string[];
+    timeline?: Timeline;
+    title?: string;
+    url?: string;
+    version?: number;
+}

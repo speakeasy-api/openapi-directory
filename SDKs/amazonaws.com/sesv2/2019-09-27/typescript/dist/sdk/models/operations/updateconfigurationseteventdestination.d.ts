@@ -38,5 +38,5 @@ export declare class UpdateConfigurationSetEventDestinationResponse extends Spea
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateConfigurationSetEventDestinationResponse?: Map<string, any>;
+    updateConfigurationSetEventDestinationResponse?: Record<string, any>;
 }

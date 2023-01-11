@@ -2,12 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetSearchCarIncentiveOemOfferTypeEnum {
-    Lease = "lease",
-    Finance = "finance",
-    Cash = "cash"
-}
-
 
 export class GetSearchCarIncentiveOemQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=acquisition_fee" })
@@ -95,7 +89,7 @@ export class GetSearchCarIncentiveOemQueryParams extends SpeakeasyBase {
   netCapitalisedCost?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offer_type" })
-  offerType?: GetSearchCarIncentiveOemOfferTypeEnum;
+  offerType?: shared.ApiKeyEnum3;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=radius" })
   radius?: number;
@@ -152,7 +146,7 @@ export class GetSearchCarIncentiveOemResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   searchResponse?: shared.SearchResponse;

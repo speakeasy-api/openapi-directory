@@ -1,5 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GlobalConfig } from "./globalconfig";
 import { Canary } from "./canary";
 import { ExposedApi } from "./exposedapi";
 import { ChaosConfig } from "./chaosconfig";
@@ -11,6 +10,7 @@ import { IpFiltering } from "./ipfiltering";
 import { RedirectionSettings } from "./redirectionsettings";
 import { StatsdConfig } from "./statsdconfig";
 import { Target } from "./target";
+import { GlobalConfig } from "./globalconfig";
 import { ImportExportStats } from "./importexportstats";
 /**
  * Administrator using FIDO U2F device to access Otoroshi
@@ -19,7 +19,7 @@ export declare class ImportExportAdmins extends SpeakeasyBase {
     createdAt: number;
     label: string;
     password: string;
-    registration: Map<string, string>;
+    registration: Record<string, string>;
     username: string;
 }
 /**
@@ -32,7 +32,7 @@ export declare class ImportExportApiKeys extends SpeakeasyBase {
     clientSecret: string;
     dailyQuota?: number;
     enabled: boolean;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     monthlyQuota?: number;
     throttlingQuota?: number;
 }
@@ -40,7 +40,7 @@ export declare class ImportExportApiKeys extends SpeakeasyBase {
  * Error templates for a service descriptor
 **/
 export declare class ImportExportErrorTemplates extends SpeakeasyBase {
-    messages: Map<string, string>;
+    messages: Record<string, string>;
     serviceId: string;
     template40x: string;
     template50x: string;
@@ -52,7 +52,7 @@ export declare class ImportExportErrorTemplates extends SpeakeasyBase {
 **/
 export declare class ImportExportServiceDescriptors extends SpeakeasyBase {
     canary?: Canary;
-    additionalHeaders?: Map<string, string>;
+    additionalHeaders?: Record<string, string>;
     api?: ExposedApi;
     authConfigRef?: string;
     buildMode: boolean;
@@ -67,7 +67,7 @@ export declare class ImportExportServiceDescriptors extends SpeakeasyBase {
     forceHttps: boolean;
     groups: string[];
     gzip?: Gzip;
-    headersVerification?: Map<string, string>;
+    headersVerification?: Record<string, string>;
     healthCheck?: HealthCheck;
     id: string;
     ipFiltering?: IpFiltering;
@@ -75,9 +75,9 @@ export declare class ImportExportServiceDescriptors extends SpeakeasyBase {
     localHost?: string;
     localScheme?: string;
     maintenanceMode: boolean;
-    matchingHeaders?: Map<string, string>;
+    matchingHeaders?: Record<string, string>;
     matchingRoot?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name: string;
     overrideHost?: boolean;
     privateApp: boolean;
@@ -119,7 +119,7 @@ export declare class ImportExportSimpleAdmins extends SpeakeasyBase {
 export declare class ImportExport extends SpeakeasyBase {
     admins: ImportExportAdmins[];
     apiKeys: ImportExportApiKeys[];
-    appConfig?: Map<string, string>;
+    appConfig?: Record<string, string>;
     config: GlobalConfig;
     date: Date;
     dateRaw: number;

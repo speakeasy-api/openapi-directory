@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SongForApiContract } from "./songforapicontract";
-import { UserForApiContract } from "./userforapicontract";
-export var RatedSongForUserForApiContractRatingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RatedSongForUserForApiContract = exports.RatedSongForUserForApiContractRatingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var songforapicontract_1 = require("./songforapicontract");
+var userforapicontract_1 = require("./userforapicontract");
+var RatedSongForUserForApiContractRatingEnum;
 (function (RatedSongForUserForApiContractRatingEnum) {
     RatedSongForUserForApiContractRatingEnum["Nothing"] = "Nothing";
     RatedSongForUserForApiContractRatingEnum["Dislike"] = "Dislike";
     RatedSongForUserForApiContractRatingEnum["Like"] = "Like";
     RatedSongForUserForApiContractRatingEnum["Favorite"] = "Favorite";
-})(RatedSongForUserForApiContractRatingEnum || (RatedSongForUserForApiContractRatingEnum = {}));
+})(RatedSongForUserForApiContractRatingEnum = exports.RatedSongForUserForApiContractRatingEnum || (exports.RatedSongForUserForApiContractRatingEnum = {}));
 var RatedSongForUserForApiContract = /** @class */ (function (_super) {
     __extends(RatedSongForUserForApiContract, _super);
     function RatedSongForUserForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], RatedSongForUserForApiContract.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", String)
     ], RatedSongForUserForApiContract.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=song" }),
-        __metadata("design:type", SongForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=song" }),
+        __metadata("design:type", songforapicontract_1.SongForApiContract)
     ], RatedSongForUserForApiContract.prototype, "song", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], RatedSongForUserForApiContract.prototype, "user", void 0);
     return RatedSongForUserForApiContract;
-}(SpeakeasyBase));
-export { RatedSongForUserForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.RatedSongForUserForApiContract = RatedSongForUserForApiContract;

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EventCategoriesMap } from "./eventcategoriesmap";
+import { EventCategoriesMapList } from "./eventcategoriesmaplist";
 export declare class EventCategoriesMessage extends SpeakeasyBase {
-    eventCategoriesMapList?: EventCategoriesMap[];
+    eventCategoriesMapList?: EventCategoriesMapList[];
 }

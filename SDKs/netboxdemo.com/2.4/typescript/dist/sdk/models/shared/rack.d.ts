@@ -14,7 +14,7 @@ export declare class RackWidth extends SpeakeasyBase {
 export declare class Rack extends SpeakeasyBase {
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     descUnits?: boolean;
     displayName?: string;
     facilityId?: string;

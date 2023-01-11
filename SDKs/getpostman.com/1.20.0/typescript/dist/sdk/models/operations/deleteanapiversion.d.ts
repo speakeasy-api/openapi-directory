@@ -15,5 +15,5 @@ export declare class DeleteAnApiVersionRequest extends SpeakeasyBase {
 export declare class DeleteAnApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteAnApiVersion200ApplicationJsonObject?: DeleteAnApiVersion200ApplicationJson;
+    deleteAnApiVersion200ApplicationJSONObject?: DeleteAnApiVersion200ApplicationJson;
 }

@@ -2,14 +2,14 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GroupsAddMemberPathParams extends SpeakeasyBase {
     groupObjectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class GroupsAddMemberQueryParams extends SpeakeasyBase {
     apiVersion: string;
 }
 export declare class GroupsAddMemberRequests extends SpeakeasyBase {
-    groupAddMemberParameters?: Map<string, Map<string, any>>;
-    groupAddMemberParameters1?: Map<string, Map<string, any>>;
+    groupAddMemberParameters?: Record<string, Record<string, any>>;
+    groupAddMemberParameters1?: Record<string, Record<string, any>>;
 }
 export declare class GroupsAddMemberRequest extends SpeakeasyBase {
     pathParams: GroupsAddMemberPathParams;

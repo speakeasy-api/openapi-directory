@@ -38,7 +38,7 @@ export class GetEmployerSummaryReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getEmployerSummaryReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getEmployerSummaryReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

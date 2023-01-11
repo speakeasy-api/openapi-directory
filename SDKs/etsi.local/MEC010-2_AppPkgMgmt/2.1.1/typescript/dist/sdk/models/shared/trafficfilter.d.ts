@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class TrafficFilter extends SpeakeasyBase {
-    dScp?: number;
+    dSCP?: number;
     dstAddress?: string[];
     dstPort?: string[];
     dstTunnelPort?: string[];
     protocol?: string[];
-    qCi?: number;
+    qCI?: number;
     srcAddress?: string[];
     srcPort?: string[];
     srcTunnelAddress?: string[];

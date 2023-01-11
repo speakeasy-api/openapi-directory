@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatafeedStatusError } from "./datafeedstatuserror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafeedstatuserror_1 = require("./datafeedstatuserror");
 // DatafeedStatus
 /**
  * The status of a datafeed, i.e., the result of the last retrieval of the datafeed computed asynchronously when the feed processing is finished.
@@ -34,45 +37,45 @@ var DatafeedStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datafeedId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datafeedId" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "datafeedId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: DatafeedStatusError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: datafeedstatuserror_1.DatafeedStatusError }),
         __metadata("design:type", Array)
     ], DatafeedStatus.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsTotal" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "itemsTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsValid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsValid" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "itemsValid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUploadDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUploadDate" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "lastUploadDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingStatus" }),
         __metadata("design:type", String)
     ], DatafeedStatus.prototype, "processingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: DatafeedStatusError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: datafeedstatuserror_1.DatafeedStatusError }),
         __metadata("design:type", Array)
     ], DatafeedStatus.prototype, "warnings", void 0);
     return DatafeedStatus;
-}(SpeakeasyBase));
-export { DatafeedStatus };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedStatus = DatafeedStatus;

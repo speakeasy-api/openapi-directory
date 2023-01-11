@@ -3,31 +3,6 @@ import { TcpRouteRouteRule } from "./tcprouterouterule";
 
 
 
-// TcpRouteInput
-/** 
- * TcpRoute is the resource defining how TCP traffic should be routed by a Mesh/Gateway resource.
-**/
-export class TcpRouteInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=gateways" })
-  gateways?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=meshes" })
-  meshes?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=rules", elemType: TcpRouteRouteRule })
-  rules?: TcpRouteRouteRule[];
-}
-
-
 // TcpRoute
 /** 
  * TcpRoute is the resource defining how TCP traffic should be routed by a Mesh/Gateway resource.
@@ -43,7 +18,7 @@ export class TcpRoute extends SpeakeasyBase {
   gateways?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=meshes" })
   meshes?: string[];
@@ -59,4 +34,29 @@ export class TcpRoute extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// TcpRouteInput
+/** 
+ * TcpRoute is the resource defining how TCP traffic should be routed by a Mesh/Gateway resource.
+**/
+export class TcpRouteInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=gateways" })
+  gateways?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=meshes" })
+  meshes?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=rules", elemType: TcpRouteRouteRule })
+  rules?: TcpRouteRouteRule[];
 }

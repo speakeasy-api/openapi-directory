@@ -113,5 +113,5 @@ export class GetSubscriptionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSubscriptions200ApplicationJsonObject?: GetSubscriptions200ApplicationJson;
+  getSubscriptions200ApplicationJSONObject?: GetSubscriptions200ApplicationJson;
 }

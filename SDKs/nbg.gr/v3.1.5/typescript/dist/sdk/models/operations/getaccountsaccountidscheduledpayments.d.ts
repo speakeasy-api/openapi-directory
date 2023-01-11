@@ -21,7 +21,6 @@ export declare class GetAccountsAccountIdScheduledPaymentsRequest extends Speake
 }
 export declare class GetAccountsAccountIdScheduledPaymentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadScheduledPayment3?: shared.ObReadScheduledPayment3;
     statusCode: number;

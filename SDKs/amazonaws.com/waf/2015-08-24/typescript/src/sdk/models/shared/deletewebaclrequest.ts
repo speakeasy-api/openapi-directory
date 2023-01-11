@@ -7,5 +7,5 @@ export class DeleteWebAclRequest extends SpeakeasyBase {
   changeToken: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

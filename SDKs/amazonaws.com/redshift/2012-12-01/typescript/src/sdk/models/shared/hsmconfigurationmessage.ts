@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HsmConfiguration } from "./hsmconfiguration";
+import { HsmConfigurationList } from "./hsmconfigurationlist";
 
 
 
@@ -8,8 +8,8 @@ import { HsmConfiguration } from "./hsmconfiguration";
  * <p/>
 **/
 export class HsmConfigurationMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: HsmConfiguration })
-  hsmConfigurations?: HsmConfiguration[];
+  @SpeakeasyMetadata({ elemType: HsmConfigurationList })
+  hsmConfigurations?: HsmConfigurationList[];
 
   @SpeakeasyMetadata()
   marker?: string;

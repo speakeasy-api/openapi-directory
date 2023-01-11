@@ -1,6 +1,9 @@
-export var StatementTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatementTypeEnum = void 0;
+var StatementTypeEnum;
 (function (StatementTypeEnum) {
     StatementTypeEnum["Ddl"] = "DDL";
     StatementTypeEnum["Dml"] = "DML";
     StatementTypeEnum["Utility"] = "UTILITY";
-})(StatementTypeEnum || (StatementTypeEnum = {}));
+})(StatementTypeEnum = exports.StatementTypeEnum || (exports.StatementTypeEnum = {}));

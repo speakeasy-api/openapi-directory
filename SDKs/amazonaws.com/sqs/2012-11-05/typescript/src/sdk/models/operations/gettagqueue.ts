@@ -24,7 +24,7 @@ export class GetTagQueueQueryParams extends SpeakeasyBase {
   action: GetTagQueueActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetTagQueueVersionEnum;

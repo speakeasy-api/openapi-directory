@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Presentation } from "./presentation";
-import { SearchEngineOptimization } from "./searchengineoptimization";
-import { Shipping } from "./shipping";
-export var OnlinePropertiesStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnlineProperties = exports.OnlinePropertiesStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var presentation_1 = require("./presentation");
+var searchengineoptimization_1 = require("./searchengineoptimization");
+var shipping_1 = require("./shipping");
+var OnlinePropertiesStatusEnum;
 (function (OnlinePropertiesStatusEnum) {
     OnlinePropertiesStatusEnum["Active"] = "ACTIVE";
     OnlinePropertiesStatusEnum["Hidden"] = "HIDDEN";
-})(OnlinePropertiesStatusEnum || (OnlinePropertiesStatusEnum = {}));
+})(OnlinePropertiesStatusEnum = exports.OnlinePropertiesStatusEnum || (exports.OnlinePropertiesStatusEnum = {}));
 var OnlineProperties = /** @class */ (function (_super) {
     __extends(OnlineProperties, _super);
     function OnlineProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OnlineProperties.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=presentation" }),
-        __metadata("design:type", Presentation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=presentation" }),
+        __metadata("design:type", presentation_1.Presentation)
     ], OnlineProperties.prototype, "presentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seo" }),
-        __metadata("design:type", SearchEngineOptimization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seo" }),
+        __metadata("design:type", searchengineoptimization_1.SearchEngineOptimization)
     ], OnlineProperties.prototype, "seo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipping" }),
-        __metadata("design:type", Shipping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipping" }),
+        __metadata("design:type", shipping_1.Shipping)
     ], OnlineProperties.prototype, "shipping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OnlineProperties.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], OnlineProperties.prototype, "title", void 0);
     return OnlineProperties;
-}(SpeakeasyBase));
-export { OnlineProperties };
+}(utils_1.SpeakeasyBase));
+exports.OnlineProperties = OnlineProperties;

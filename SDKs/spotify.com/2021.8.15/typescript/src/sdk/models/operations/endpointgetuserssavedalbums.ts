@@ -78,5 +78,5 @@ export class EndpointGetUsersSavedAlbumsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetUsersSavedAlbums200ApplicationJsonObject?: EndpointGetUsersSavedAlbums200ApplicationJson;
+  endpointGetUsersSavedAlbums200ApplicationJSONObject?: EndpointGetUsersSavedAlbums200ApplicationJson;
 }

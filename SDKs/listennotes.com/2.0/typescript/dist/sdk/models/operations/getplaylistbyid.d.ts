@@ -19,7 +19,7 @@ export declare class GetPlaylistByIdQueryParams extends SpeakeasyBase {
     type?: GetPlaylistByIdTypeEnum;
 }
 export declare class GetPlaylistByIdHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetPlaylistByIdRequest extends SpeakeasyBase {
     pathParams: GetPlaylistByIdPathParams;
@@ -28,7 +28,7 @@ export declare class GetPlaylistByIdRequest extends SpeakeasyBase {
 }
 export declare class GetPlaylistByIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     playlistResponse?: shared.PlaylistResponse;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApkListing } from "./apklisting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApkListingsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var apklisting_1 = require("./apklisting");
 var ApkListingsListResponse = /** @class */ (function (_super) {
     __extends(ApkListingsListResponse, _super);
     function ApkListingsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApkListingsListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ApkListing }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: apklisting_1.ApkListing }),
         __metadata("design:type", Array)
     ], ApkListingsListResponse.prototype, "listings", void 0);
     return ApkListingsListResponse;
-}(SpeakeasyBase));
-export { ApkListingsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApkListingsListResponse = ApkListingsListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerCreateLandlordLoginResponse = exports.SessionControllerCreateLandlordLoginRequest = exports.SessionControllerCreateLandlordLoginQueryParams = exports.SessionControllerCreateLandlordLoginPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerCreateLandlordLoginPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerCreateLandlordLoginPathParams, _super);
     function SessionControllerCreateLandlordLoginPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginPathParams.prototype, "shortName", void 0);
     return SessionControllerCreateLandlordLoginPathParams;
-}(SpeakeasyBase));
-export { SessionControllerCreateLandlordLoginPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerCreateLandlordLoginPathParams = SessionControllerCreateLandlordLoginPathParams;
 var SessionControllerCreateLandlordLoginQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerCreateLandlordLoginQueryParams, _super);
     function SessionControllerCreateLandlordLoginQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=branchID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=branchID" }),
         __metadata("design:type", String)
-    ], SessionControllerCreateLandlordLoginQueryParams.prototype, "branchId", void 0);
+    ], SessionControllerCreateLandlordLoginQueryParams.prototype, "branchID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=contactDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=contactDetails" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "contactDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=forename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=forename" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "forename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=propertyAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=propertyAddress" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "propertyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=surname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=surname" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "surname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=title" }),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginQueryParams.prototype, "title", void 0);
     return SessionControllerCreateLandlordLoginQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerCreateLandlordLoginQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerCreateLandlordLoginQueryParams = SessionControllerCreateLandlordLoginQueryParams;
 var SessionControllerCreateLandlordLoginRequest = /** @class */ (function (_super) {
     __extends(SessionControllerCreateLandlordLoginRequest, _super);
     function SessionControllerCreateLandlordLoginRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerCreateLandlordLoginPathParams)
     ], SessionControllerCreateLandlordLoginRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerCreateLandlordLoginQueryParams)
     ], SessionControllerCreateLandlordLoginRequest.prototype, "queryParams", void 0);
     return SessionControllerCreateLandlordLoginRequest;
-}(SpeakeasyBase));
-export { SessionControllerCreateLandlordLoginRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerCreateLandlordLoginRequest = SessionControllerCreateLandlordLoginRequest;
 var SessionControllerCreateLandlordLoginResponse = /** @class */ (function (_super) {
     __extends(SessionControllerCreateLandlordLoginResponse, _super);
     function SessionControllerCreateLandlordLoginResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerCreateLandlordLoginResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerCreateLandlordLoginResponse.prototype, "statusCode", void 0);
     return SessionControllerCreateLandlordLoginResponse;
-}(SpeakeasyBase));
-export { SessionControllerCreateLandlordLoginResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerCreateLandlordLoginResponse = SessionControllerCreateLandlordLoginResponse;

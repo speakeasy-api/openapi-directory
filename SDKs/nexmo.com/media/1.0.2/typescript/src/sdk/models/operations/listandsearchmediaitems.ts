@@ -98,5 +98,5 @@ export class ListAndSearchMediaItemsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAndSearchMediaItems200ApplicationJsonObject?: ListAndSearchMediaItems200ApplicationJson;
+  listAndSearchMediaItems200ApplicationJSONObject?: ListAndSearchMediaItems200ApplicationJson;
 }

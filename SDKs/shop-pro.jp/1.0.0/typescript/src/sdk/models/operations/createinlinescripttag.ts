@@ -97,5 +97,5 @@ export class CreateInlineScriptTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createInlineScriptTag201ApplicationJsonObject?: CreateInlineScriptTag201ApplicationJson;
+  createInlineScriptTag201ApplicationJSONObject?: CreateInlineScriptTag201ApplicationJson;
 }

@@ -197,23 +197,23 @@ export class SslcrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  sslcr400ApplicationJsonObject?: Sslcr400ApplicationJson;
+  sslcr400ApplicationJSONObject?: Sslcr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr401ApplicationJsonObject?: Sslcr401ApplicationJson;
+  sslcr401ApplicationJSONObject?: Sslcr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr404ApplicationJsonObject?: Sslcr404ApplicationJson;
+  sslcr404ApplicationJSONObject?: Sslcr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr500ApplicationJsonObject?: Sslcr500ApplicationJson;
+  sslcr500ApplicationJSONObject?: Sslcr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr502ApplicationJsonObject?: Sslcr502ApplicationJson;
+  sslcr502ApplicationJSONObject?: Sslcr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr503ApplicationJsonObject?: Sslcr503ApplicationJson;
+  sslcr503ApplicationJSONObject?: Sslcr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  sslcr504ApplicationJsonObject?: Sslcr504ApplicationJson;
+  sslcr504ApplicationJSONObject?: Sslcr504ApplicationJson;
 }

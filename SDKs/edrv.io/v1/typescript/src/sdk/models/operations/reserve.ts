@@ -22,7 +22,7 @@ export class ReserveRequestBody extends SpeakeasyBase {
 
 export class Reserve201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=command" })
-  command?: Map<string, any>;
+  command?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,5 +46,5 @@ export class ReserveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reserve201ApplicationJsonObject?: Reserve201ApplicationJson;
+  reserve201ApplicationJSONObject?: Reserve201ApplicationJson;
 }

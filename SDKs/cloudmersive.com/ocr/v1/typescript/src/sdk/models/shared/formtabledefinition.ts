@@ -12,7 +12,7 @@ export class FormTableDefinition extends SpeakeasyBase {
   columnDefinitions?: FormTableColumnDefinition[];
 
   @SpeakeasyMetadata({ data: "json, name=TableID" })
-  tableId?: string;
+  tableID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TargetRowHeight_Relative" })
   targetRowHeightRelative?: number;

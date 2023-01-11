@@ -107,11 +107,11 @@ export declare class TetmsRequest extends SpeakeasyBase {
 export declare class TetmsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tetms400ApplicationJsonObject?: Tetms400ApplicationJson;
-    tetms401ApplicationJsonObject?: Tetms401ApplicationJson;
-    tetms404ApplicationJsonObject?: Tetms404ApplicationJson;
-    tetms500ApplicationJsonObject?: Tetms500ApplicationJson;
-    tetms502ApplicationJsonObject?: Tetms502ApplicationJson;
-    tetms503ApplicationJsonObject?: Tetms503ApplicationJson;
-    tetms504ApplicationJsonObject?: Tetms504ApplicationJson;
+    tetms400ApplicationJSONObject?: Tetms400ApplicationJson;
+    tetms401ApplicationJSONObject?: Tetms401ApplicationJson;
+    tetms404ApplicationJSONObject?: Tetms404ApplicationJson;
+    tetms500ApplicationJSONObject?: Tetms500ApplicationJson;
+    tetms502ApplicationJSONObject?: Tetms502ApplicationJson;
+    tetms503ApplicationJSONObject?: Tetms503ApplicationJson;
+    tetms504ApplicationJSONObject?: Tetms504ApplicationJson;
 }

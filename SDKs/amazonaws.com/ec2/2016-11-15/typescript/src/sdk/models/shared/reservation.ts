@@ -1,6 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupIdentifier } from "./groupidentifier";
-import { Instance } from "./instance";
 
 
 
@@ -9,18 +7,18 @@ import { Instance } from "./instance";
  * Describes a launch request for one or more instances, and includes owner, requester, and security group information that applies to all instances in the launch request.
 **/
 export class Reservation extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: GroupIdentifier })
-  groups?: GroupIdentifier[];
-
-  @SpeakeasyMetadata({ elemType: Instance })
-  instances?: Instance[];
+  @SpeakeasyMetadata()
+  groups?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  ownerId?: string;
+  instances?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  requesterId?: string;
+  ownerId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  reservationId?: string;
+  requesterId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  reservationId?: Record<string, any>;
 }

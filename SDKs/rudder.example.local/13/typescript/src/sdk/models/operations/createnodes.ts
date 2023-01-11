@@ -53,5 +53,5 @@ export class CreateNodesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNodes200ApplicationJsonObject?: CreateNodes200ApplicationJson;
+  createNodes200ApplicationJSONObject?: CreateNodes200ApplicationJson;
 }

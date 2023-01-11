@@ -25,7 +25,7 @@ export class LeaveLine extends SpeakeasyBase {
   includeSuperannuationGuaranteeContribution?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=LeaveTypeID" })
-  leaveTypeId?: string;
+  leaveTypeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number;

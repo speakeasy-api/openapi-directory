@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnlockUserResponse = exports.UnlockUserRequest = exports.UnlockUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UnlockUserPathParams = /** @class */ (function (_super) {
     __extends(UnlockUserPathParams, _super);
     function UnlockUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], UnlockUserPathParams.prototype, "userId", void 0);
     return UnlockUserPathParams;
-}(SpeakeasyBase));
-export { UnlockUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UnlockUserPathParams = UnlockUserPathParams;
 var UnlockUserRequest = /** @class */ (function (_super) {
     __extends(UnlockUserRequest, _super);
     function UnlockUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UnlockUserPathParams)
     ], UnlockUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/plain" }),
         __metadata("design:type", Uint8Array)
     ], UnlockUserRequest.prototype, "request", void 0);
     return UnlockUserRequest;
-}(SpeakeasyBase));
-export { UnlockUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.UnlockUserRequest = UnlockUserRequest;
 var UnlockUserResponse = /** @class */ (function (_super) {
     __extends(UnlockUserResponse, _super);
     function UnlockUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UnlockUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UnlockUserResponse.prototype, "statusCode", void 0);
     return UnlockUserResponse;
-}(SpeakeasyBase));
-export { UnlockUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UnlockUserResponse = UnlockUserResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Instance } from "./instance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterEndPointsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var instance_1 = require("./instance");
 // RegisterEndPointsOutput
 /**
  * Contains the output of RegisterInstancesWithLoadBalancer.
@@ -34,9 +37,9 @@ var RegisterEndPointsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], RegisterEndPointsOutput.prototype, "instances", void 0);
     return RegisterEndPointsOutput;
-}(SpeakeasyBase));
-export { RegisterEndPointsOutput };
+}(utils_1.SpeakeasyBase));
+exports.RegisterEndPointsOutput = RegisterEndPointsOutput;

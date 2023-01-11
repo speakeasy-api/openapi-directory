@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,138 +23,140 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyInstancePlacementActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyInstancePlacementResponse = exports.GetModifyInstancePlacementRequest = exports.GetModifyInstancePlacementHeaders = exports.GetModifyInstancePlacementQueryParams = exports.GetModifyInstancePlacementVersionEnum = exports.GetModifyInstancePlacementTenancyEnum = exports.GetModifyInstancePlacementAffinityEnum = exports.GetModifyInstancePlacementActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyInstancePlacementActionEnum;
 (function (GetModifyInstancePlacementActionEnum) {
     GetModifyInstancePlacementActionEnum["ModifyInstancePlacement"] = "ModifyInstancePlacement";
-})(GetModifyInstancePlacementActionEnum || (GetModifyInstancePlacementActionEnum = {}));
-export var GetModifyInstancePlacementAffinityEnum;
+})(GetModifyInstancePlacementActionEnum = exports.GetModifyInstancePlacementActionEnum || (exports.GetModifyInstancePlacementActionEnum = {}));
+var GetModifyInstancePlacementAffinityEnum;
 (function (GetModifyInstancePlacementAffinityEnum) {
     GetModifyInstancePlacementAffinityEnum["Default"] = "default";
     GetModifyInstancePlacementAffinityEnum["Host"] = "host";
-})(GetModifyInstancePlacementAffinityEnum || (GetModifyInstancePlacementAffinityEnum = {}));
-export var GetModifyInstancePlacementTenancyEnum;
+})(GetModifyInstancePlacementAffinityEnum = exports.GetModifyInstancePlacementAffinityEnum || (exports.GetModifyInstancePlacementAffinityEnum = {}));
+var GetModifyInstancePlacementTenancyEnum;
 (function (GetModifyInstancePlacementTenancyEnum) {
     GetModifyInstancePlacementTenancyEnum["Dedicated"] = "dedicated";
     GetModifyInstancePlacementTenancyEnum["Host"] = "host";
-})(GetModifyInstancePlacementTenancyEnum || (GetModifyInstancePlacementTenancyEnum = {}));
-export var GetModifyInstancePlacementVersionEnum;
+})(GetModifyInstancePlacementTenancyEnum = exports.GetModifyInstancePlacementTenancyEnum || (exports.GetModifyInstancePlacementTenancyEnum = {}));
+var GetModifyInstancePlacementVersionEnum;
 (function (GetModifyInstancePlacementVersionEnum) {
     GetModifyInstancePlacementVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyInstancePlacementVersionEnum || (GetModifyInstancePlacementVersionEnum = {}));
+})(GetModifyInstancePlacementVersionEnum = exports.GetModifyInstancePlacementVersionEnum || (exports.GetModifyInstancePlacementVersionEnum = {}));
 var GetModifyInstancePlacementQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyInstancePlacementQueryParams, _super);
     function GetModifyInstancePlacementQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Affinity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Affinity" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "affinity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=GroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=GroupName" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HostId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HostId" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "hostId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HostResourceGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HostResourceGroupArn" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "hostResourceGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PartitionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PartitionNumber" }),
         __metadata("design:type", Number)
     ], GetModifyInstancePlacementQueryParams.prototype, "partitionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Tenancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Tenancy" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "tenancy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementQueryParams.prototype, "version", void 0);
     return GetModifyInstancePlacementQueryParams;
-}(SpeakeasyBase));
-export { GetModifyInstancePlacementQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstancePlacementQueryParams = GetModifyInstancePlacementQueryParams;
 var GetModifyInstancePlacementHeaders = /** @class */ (function (_super) {
     __extends(GetModifyInstancePlacementHeaders, _super);
     function GetModifyInstancePlacementHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyInstancePlacementHeaders;
-}(SpeakeasyBase));
-export { GetModifyInstancePlacementHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstancePlacementHeaders = GetModifyInstancePlacementHeaders;
 var GetModifyInstancePlacementRequest = /** @class */ (function (_super) {
     __extends(GetModifyInstancePlacementRequest, _super);
     function GetModifyInstancePlacementRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyInstancePlacementQueryParams)
     ], GetModifyInstancePlacementRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyInstancePlacementHeaders)
     ], GetModifyInstancePlacementRequest.prototype, "headers", void 0);
     return GetModifyInstancePlacementRequest;
-}(SpeakeasyBase));
-export { GetModifyInstancePlacementRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstancePlacementRequest = GetModifyInstancePlacementRequest;
 var GetModifyInstancePlacementResponse = /** @class */ (function (_super) {
     __extends(GetModifyInstancePlacementResponse, _super);
     function GetModifyInstancePlacementResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyInstancePlacementResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyInstancePlacementResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyInstancePlacementResponse.prototype, "statusCode", void 0);
     return GetModifyInstancePlacementResponse;
-}(SpeakeasyBase));
-export { GetModifyInstancePlacementResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstancePlacementResponse = GetModifyInstancePlacementResponse;

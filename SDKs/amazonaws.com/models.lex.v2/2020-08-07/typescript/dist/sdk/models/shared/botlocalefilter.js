@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotLocaleFilterNameEnum } from "./botlocalefilternameenum";
-import { BotLocaleFilterOperatorEnum } from "./botlocalefilteroperatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotLocaleFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var botlocalefilternameenum_1 = require("./botlocalefilternameenum");
+var botlocalefilteroperatorenum_1 = require("./botlocalefilteroperatorenum");
 // BotLocaleFilter
 /**
  * Filters responses returned by the <code>ListBotLocales</code> operation.
@@ -35,17 +38,17 @@ var BotLocaleFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BotLocaleFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], BotLocaleFilter.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], BotLocaleFilter.prototype, "values", void 0);
     return BotLocaleFilter;
-}(SpeakeasyBase));
-export { BotLocaleFilter };
+}(utils_1.SpeakeasyBase));
+exports.BotLocaleFilter = BotLocaleFilter;

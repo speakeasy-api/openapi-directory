@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotifyWorkersRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var NotifyWorkersRequest = /** @class */ (function (_super) {
     __extends(NotifyWorkersRequest, _super);
     function NotifyWorkersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageText" }),
         __metadata("design:type", String)
     ], NotifyWorkersRequest.prototype, "messageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], NotifyWorkersRequest.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerIds" }),
         __metadata("design:type", Array)
     ], NotifyWorkersRequest.prototype, "workerIds", void 0);
     return NotifyWorkersRequest;
-}(SpeakeasyBase));
-export { NotifyWorkersRequest };
+}(utils_1.SpeakeasyBase));
+exports.NotifyWorkersRequest = NotifyWorkersRequest;

@@ -25,5 +25,5 @@ export class GetOrganizationLicenseResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationLicense200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationLicense200ApplicationJSONObject?: Record<string, any>;
 }

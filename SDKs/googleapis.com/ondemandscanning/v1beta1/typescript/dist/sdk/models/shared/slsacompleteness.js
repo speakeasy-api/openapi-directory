@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlsaCompleteness = void 0;
+var utils_1 = require("../../../internal/utils");
 // SlsaCompleteness
 /**
  * Indicates that the builder claims certain fields in this message to be complete.
@@ -33,17 +36,17 @@ var SlsaCompleteness = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arguments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arguments" }),
         __metadata("design:type", Boolean)
     ], SlsaCompleteness.prototype, "arguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", Boolean)
     ], SlsaCompleteness.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=materials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=materials" }),
         __metadata("design:type", Boolean)
     ], SlsaCompleteness.prototype, "materials", void 0);
     return SlsaCompleteness;
-}(SpeakeasyBase));
-export { SlsaCompleteness };
+}(utils_1.SpeakeasyBase));
+exports.SlsaCompleteness = SlsaCompleteness;

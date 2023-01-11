@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteRouteRule } from "./httprouterouterule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteInput = exports.HttpRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var httprouterouterule_1 = require("./httprouterouterule");
 // HttpRoute
 /**
  * HttpRoute is the resource defining how HTTP traffic should be routed by a Mesh or Gateway resource.
@@ -34,48 +37,48 @@ var HttpRoute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], HttpRoute.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], HttpRoute.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateways" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateways" }),
         __metadata("design:type", Array)
     ], HttpRoute.prototype, "gateways", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostnames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostnames" }),
         __metadata("design:type", Array)
     ], HttpRoute.prototype, "hostnames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], HttpRoute.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshes" }),
         __metadata("design:type", Array)
     ], HttpRoute.prototype, "meshes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], HttpRoute.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: HttpRouteRouteRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: httprouterouterule_1.HttpRouteRouteRule }),
         __metadata("design:type", Array)
     ], HttpRoute.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], HttpRoute.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], HttpRoute.prototype, "updateTime", void 0);
     return HttpRoute;
-}(SpeakeasyBase));
-export { HttpRoute };
+}(utils_1.SpeakeasyBase));
+exports.HttpRoute = HttpRoute;
 // HttpRouteInput
 /**
  * HttpRoute is the resource defining how HTTP traffic should be routed by a Mesh or Gateway resource.
@@ -86,33 +89,33 @@ var HttpRouteInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], HttpRouteInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gateways" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gateways" }),
         __metadata("design:type", Array)
     ], HttpRouteInput.prototype, "gateways", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostnames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostnames" }),
         __metadata("design:type", Array)
     ], HttpRouteInput.prototype, "hostnames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], HttpRouteInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshes" }),
         __metadata("design:type", Array)
     ], HttpRouteInput.prototype, "meshes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], HttpRouteInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: HttpRouteRouteRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: httprouterouterule_1.HttpRouteRouteRule }),
         __metadata("design:type", Array)
     ], HttpRouteInput.prototype, "rules", void 0);
     return HttpRouteInput;
-}(SpeakeasyBase));
-export { HttpRouteInput };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteInput = HttpRouteInput;

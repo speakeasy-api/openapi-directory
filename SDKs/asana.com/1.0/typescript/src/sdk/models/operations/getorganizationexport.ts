@@ -44,5 +44,5 @@ export class GetOrganizationExportResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationExport200ApplicationJsonObject?: GetOrganizationExport200ApplicationJson;
+  getOrganizationExport200ApplicationJSONObject?: GetOrganizationExport200ApplicationJson;
 }

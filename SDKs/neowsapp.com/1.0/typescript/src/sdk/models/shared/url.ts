@@ -7,7 +7,7 @@ export class Url extends SpeakeasyBase {
   authority?: string;
 
   @SpeakeasyMetadata({ data: "json, name=content" })
-  content?: Map<string, any>;
+  content?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=defaultPort" })
   defaultPort?: number;

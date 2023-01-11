@@ -22,5 +22,5 @@ export class GetNetworkApplianceVpnSiteToSiteVpnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceVpnSiteToSiteVpn200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONObject?: Record<string, any>;
 }

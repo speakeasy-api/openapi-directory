@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEvidenceFilterResponse = exports.GetEvidenceFilterRequest = exports.GetEvidenceFilterQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEvidenceFilterQueryParams = /** @class */ (function (_super) {
     __extends(GetEvidenceFilterQueryParams, _super);
     function GetEvidenceFilterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=data source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=data source" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=datastructure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=datastructure" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "datastructure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=datatype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=datatype" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "datatype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disease" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disease" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "disease", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=from" }),
         __metadata("design:type", Number)
     ], GetEvidenceFilterQueryParams.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pathway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pathway" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "pathway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=scorevalue_max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=scorevalue_max" }),
         __metadata("design:type", Number)
     ], GetEvidenceFilterQueryParams.prototype, "scorevalueMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=scorevalue_min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=scorevalue_min" }),
         __metadata("design:type", Number)
     ], GetEvidenceFilterQueryParams.prototype, "scorevalueMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=size" }),
         __metadata("design:type", Number)
     ], GetEvidenceFilterQueryParams.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=target" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uniprotkw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uniprotkw" }),
         __metadata("design:type", String)
     ], GetEvidenceFilterQueryParams.prototype, "uniprotkw", void 0);
     return GetEvidenceFilterQueryParams;
-}(SpeakeasyBase));
-export { GetEvidenceFilterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceFilterQueryParams = GetEvidenceFilterQueryParams;
 var GetEvidenceFilterRequest = /** @class */ (function (_super) {
     __extends(GetEvidenceFilterRequest, _super);
     function GetEvidenceFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEvidenceFilterQueryParams)
     ], GetEvidenceFilterRequest.prototype, "queryParams", void 0);
     return GetEvidenceFilterRequest;
-}(SpeakeasyBase));
-export { GetEvidenceFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceFilterRequest = GetEvidenceFilterRequest;
 var GetEvidenceFilterResponse = /** @class */ (function (_super) {
     __extends(GetEvidenceFilterResponse, _super);
     function GetEvidenceFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEvidenceFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEvidenceFilterResponse.prototype, "statusCode", void 0);
     return GetEvidenceFilterResponse;
-}(SpeakeasyBase));
-export { GetEvidenceFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEvidenceFilterResponse = GetEvidenceFilterResponse;

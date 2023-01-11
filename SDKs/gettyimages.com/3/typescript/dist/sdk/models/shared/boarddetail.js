@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Asset } from "./asset";
-import { Links } from "./links";
-import { BoardPermissions } from "./boardpermissions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoardDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var asset_1 = require("./asset");
+var links_1 = require("./links");
+var boardpermissions_1 = require("./boardpermissions");
 var BoardDetail = /** @class */ (function (_super) {
     __extends(BoardDetail, _super);
     function BoardDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_count" }),
         __metadata("design:type", Number)
     ], BoardDetail.prototype, "assetCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: Asset }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: asset_1.Asset }),
         __metadata("design:type", Array)
     ], BoardDetail.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment_count" }),
         __metadata("design:type", Number)
     ], BoardDetail.prototype, "commentCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_created" }),
         __metadata("design:type", Date)
     ], BoardDetail.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_last_updated" }),
         __metadata("design:type", Date)
     ], BoardDetail.prototype, "dateLastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BoardDetail.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BoardDetail.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", links_1.Links)
     ], BoardDetail.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BoardDetail.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
-        __metadata("design:type", BoardPermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
+        __metadata("design:type", boardpermissions_1.BoardPermissions)
     ], BoardDetail.prototype, "permissions", void 0);
     return BoardDetail;
-}(SpeakeasyBase));
-export { BoardDetail };
+}(utils_1.SpeakeasyBase));
+exports.BoardDetail = BoardDetail;

@@ -6,10 +6,10 @@ import { FreeBusyGroup } from "./freebusygroup";
 
 export class FreeBusyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=calendars", elemType: FreeBusyCalendar })
-  calendars?: Map<string, FreeBusyCalendar>;
+  calendars?: Record<string, FreeBusyCalendar>;
 
   @SpeakeasyMetadata({ data: "json, name=groups", elemType: FreeBusyGroup })
-  groups?: Map<string, FreeBusyGroup>;
+  groups?: Record<string, FreeBusyGroup>;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

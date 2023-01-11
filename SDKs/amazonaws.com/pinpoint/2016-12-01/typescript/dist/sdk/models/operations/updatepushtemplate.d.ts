@@ -28,7 +28,7 @@ export declare class UpdatePushTemplateRequestBodyPushNotificationTemplateReques
     gcm?: shared.AndroidPushNotificationTemplate;
     recommenderId?: string;
     templateDescription?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdatePushTemplateRequestBody extends SpeakeasyBase {
     pushNotificationTemplateRequest: UpdatePushTemplateRequestBodyPushNotificationTemplateRequest;

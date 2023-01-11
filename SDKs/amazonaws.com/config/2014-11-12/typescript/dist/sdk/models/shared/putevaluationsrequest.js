@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Evaluation } from "./evaluation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutEvaluationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluation_1 = require("./evaluation");
 // PutEvaluationsRequest
 /**
  * <p/>
@@ -34,17 +37,17 @@ var PutEvaluationsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Evaluations", elemType: Evaluation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Evaluations", elemType: evaluation_1.Evaluation }),
         __metadata("design:type", Array)
     ], PutEvaluationsRequest.prototype, "evaluations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultToken" }),
         __metadata("design:type", String)
     ], PutEvaluationsRequest.prototype, "resultToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestMode" }),
         __metadata("design:type", Boolean)
     ], PutEvaluationsRequest.prototype, "testMode", void 0);
     return PutEvaluationsRequest;
-}(SpeakeasyBase));
-export { PutEvaluationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutEvaluationsRequest = PutEvaluationsRequest;

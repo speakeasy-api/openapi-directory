@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FundingAudit } from "./fundingaudit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFundingsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var fundingaudit_1 = require("./fundingaudit");
 // GetFundingsResponse
 /**
  * List Users Response Object
@@ -34,17 +37,17 @@ var GetFundingsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content", elemType: FundingAudit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content", elemType: fundingaudit_1.FundingAudit }),
         __metadata("design:type", Array)
     ], GetFundingsResponse.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", Array)
     ], GetFundingsResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Object)
     ], GetFundingsResponse.prototype, "page", void 0);
     return GetFundingsResponse;
-}(SpeakeasyBase));
-export { GetFundingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFundingsResponse = GetFundingsResponse;

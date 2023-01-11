@@ -9,5 +9,5 @@ import { BlacklistEntry } from "./blacklistentry";
 **/
 export class GetBlacklistReportsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=BlacklistReport", elemType: BlacklistEntry, elemDepth: 2 })
-  blacklistReport: Map<string, BlacklistEntry[]>;
+  blacklistReport: Record<string, BlacklistEntry[]>;
 }

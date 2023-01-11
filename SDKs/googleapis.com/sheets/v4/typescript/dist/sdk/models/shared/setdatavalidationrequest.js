@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-import { DataValidationRule } from "./datavalidationrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetDataValidationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var datavalidationrule_1 = require("./datavalidationrule");
 // SetDataValidationRequest
 /**
  * Sets a data validation rule to every cell in the range. To clear validation in a range, call this with no rule specified.
@@ -35,13 +38,13 @@ var SetDataValidationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], SetDataValidationRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule" }),
-        __metadata("design:type", DataValidationRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule" }),
+        __metadata("design:type", datavalidationrule_1.DataValidationRule)
     ], SetDataValidationRequest.prototype, "rule", void 0);
     return SetDataValidationRequest;
-}(SpeakeasyBase));
-export { SetDataValidationRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetDataValidationRequest = SetDataValidationRequest;

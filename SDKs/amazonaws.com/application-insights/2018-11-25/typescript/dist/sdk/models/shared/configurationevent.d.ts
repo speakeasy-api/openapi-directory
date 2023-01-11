@@ -10,5 +10,5 @@ export declare class ConfigurationEvent extends SpeakeasyBase {
     eventResourceType?: ConfigurationEventResourceTypeEnum;
     eventStatus?: ConfigurationEventStatusEnum;
     eventTime?: Date;
-    monitoredResourceArn?: string;
+    monitoredResourceARN?: string;
 }

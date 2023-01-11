@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues } from "./googleprivacydlpv2deltapresenceestimationquasiidvalues";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2deltapresenceestimationquasiidvalues_1 = require("./googleprivacydlpv2deltapresenceestimationquasiidvalues");
 // GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket
 /**
  * A DeltaPresenceEstimationHistogramBucket message with the following values: min_probability: 0.1 max_probability: 0.2 frequency: 42 means that there are 42 records for which δ is in [0.1, 0.2). An important particular case is when min_probability = max_probability = 1: then, every individual who shares this quasi-identifier combination is in the dataset.
@@ -34,25 +37,25 @@ var GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketSize" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.prototype, "bucketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValueCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValueCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.prototype, "bucketValueCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValues", elemType: GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValues", elemType: googleprivacydlpv2deltapresenceestimationquasiidvalues_1.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.prototype, "bucketValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxProbability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxProbability" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.prototype, "maxProbability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minProbability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minProbability" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.prototype, "minProbability", void 0);
     return GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket = GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket;

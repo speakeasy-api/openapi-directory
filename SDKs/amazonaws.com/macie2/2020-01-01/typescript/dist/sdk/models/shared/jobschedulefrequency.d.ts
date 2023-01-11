@@ -5,7 +5,7 @@ import { WeeklySchedule } from "./weeklyschedule";
  * Specifies the recurrence pattern for running a classification job.
 **/
 export declare class JobScheduleFrequency extends SpeakeasyBase {
-    dailySchedule?: Map<string, any>;
+    dailySchedule?: Record<string, any>;
     monthlySchedule?: MonthlySchedule;
     weeklySchedule?: WeeklySchedule;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteHumanLoopRequest, DeleteHumanLoopResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteHumanLoopRequest = {
   pathParams: {
-    humanLoopName: "corrupti",
+    humanLoopName: "sit",
   },
   headers: {
-    xAmzAlgorithm: "perspiciatis",
-    xAmzContentSha256: "accusamus",
-    xAmzCredential: "iusto",
-    xAmzDate: "aut",
-    xAmzSecurityToken: "illo",
-    xAmzSignature: "molestiae",
-    xAmzSignedHeaders: "quo",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
 };
 
-sdk.sdk.deleteHumanLoop(req).then((res: DeleteHumanLoopResponse | AxiosError) => {
+sdk.deleteHumanLoop(req).then((res: DeleteHumanLoopResponse | AxiosError) => {
    // handle response
 });
 ```

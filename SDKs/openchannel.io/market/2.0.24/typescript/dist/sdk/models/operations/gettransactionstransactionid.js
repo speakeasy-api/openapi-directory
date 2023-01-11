@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionsTransactionIdResponse = exports.GetTransactionsTransactionIdRequest = exports.GetTransactionsTransactionIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTransactionsTransactionIdPathParams = /** @class */ (function (_super) {
     __extends(GetTransactionsTransactionIdPathParams, _super);
     function GetTransactionsTransactionIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
         __metadata("design:type", String)
     ], GetTransactionsTransactionIdPathParams.prototype, "transactionId", void 0);
     return GetTransactionsTransactionIdPathParams;
-}(SpeakeasyBase));
-export { GetTransactionsTransactionIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsTransactionIdPathParams = GetTransactionsTransactionIdPathParams;
 var GetTransactionsTransactionIdRequest = /** @class */ (function (_super) {
     __extends(GetTransactionsTransactionIdRequest, _super);
     function GetTransactionsTransactionIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionsTransactionIdPathParams)
     ], GetTransactionsTransactionIdRequest.prototype, "pathParams", void 0);
     return GetTransactionsTransactionIdRequest;
-}(SpeakeasyBase));
-export { GetTransactionsTransactionIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsTransactionIdRequest = GetTransactionsTransactionIdRequest;
 var GetTransactionsTransactionIdResponse = /** @class */ (function (_super) {
     __extends(GetTransactionsTransactionIdResponse, _super);
     function GetTransactionsTransactionIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTransactionsTransactionIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTransactionsTransactionIdResponse.prototype, "statusCode", void 0);
     return GetTransactionsTransactionIdResponse;
-}(SpeakeasyBase));
-export { GetTransactionsTransactionIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsTransactionIdResponse = GetTransactionsTransactionIdResponse;

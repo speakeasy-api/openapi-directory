@@ -1,4 +1,7 @@
-export var UpdateParamTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateParamTypeEnum = void 0;
+var UpdateParamTypeEnum;
 (function (UpdateParamTypeEnum) {
     UpdateParamTypeEnum["Version"] = "Version";
     UpdateParamTypeEnum["PlatformVersion"] = "PlatformVersion";
@@ -23,4 +26,4 @@ export var UpdateParamTypeEnum;
     UpdateParamTypeEnum["ResolveConflicts"] = "ResolveConflicts";
     UpdateParamTypeEnum["MaxUnavailable"] = "MaxUnavailable";
     UpdateParamTypeEnum["MaxUnavailablePercentage"] = "MaxUnavailablePercentage";
-})(UpdateParamTypeEnum || (UpdateParamTypeEnum = {}));
+})(UpdateParamTypeEnum = exports.UpdateParamTypeEnum || (exports.UpdateParamTypeEnum = {}));

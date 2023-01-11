@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRangeValues } from "./daterangevalues";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportRow = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterangevalues_1 = require("./daterangevalues");
 // ReportRow
 /**
  * A row in the report.
@@ -34,13 +37,13 @@ var ReportRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", Array)
     ], ReportRow.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: DateRangeValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: daterangevalues_1.DateRangeValues }),
         __metadata("design:type", Array)
     ], ReportRow.prototype, "metrics", void 0);
     return ReportRow;
-}(SpeakeasyBase));
-export { ReportRow };
+}(utils_1.SpeakeasyBase));
+exports.ReportRow = ReportRow;

@@ -11,11 +11,11 @@ export declare class PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity exten
 }
 export declare class PostRepositoriesWorkspaceRepoSlugIssuesExportRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugIssuesExportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

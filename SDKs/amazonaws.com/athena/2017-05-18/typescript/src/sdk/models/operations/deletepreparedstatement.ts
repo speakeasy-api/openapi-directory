@@ -48,7 +48,7 @@ export class DeletePreparedStatementResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deletePreparedStatementOutput?: Map<string, any>;
+  deletePreparedStatementOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

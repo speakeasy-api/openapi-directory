@@ -4,10 +4,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetXdbsDiffUsingGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" })
-  dateFromYyyymmdd: string;
+  dateFromYYYYMMDD: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" })
-  dateToYyyymmdd: string;
+  dateToYYYYMMDD: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" })
   speciesTypeKey: number;

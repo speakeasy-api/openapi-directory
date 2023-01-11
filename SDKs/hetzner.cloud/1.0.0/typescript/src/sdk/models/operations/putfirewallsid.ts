@@ -10,7 +10,7 @@ export class PutFirewallsIdPathParams extends SpeakeasyBase {
 
 export class PutFirewallsIdUpdateFirewallRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -113,7 +113,7 @@ export class PutFirewallsIdFirewallResponseFirewall extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

@@ -1,4 +1,7 @@
-export var JqStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JqStatusEnum = void 0;
+var JqStatusEnum;
 (function (JqStatusEnum) {
     JqStatusEnum["Creating"] = "CREATING";
     JqStatusEnum["Updating"] = "UPDATING";
@@ -6,4 +9,4 @@ export var JqStatusEnum;
     JqStatusEnum["Deleted"] = "DELETED";
     JqStatusEnum["Valid"] = "VALID";
     JqStatusEnum["Invalid"] = "INVALID";
-})(JqStatusEnum || (JqStatusEnum = {}));
+})(JqStatusEnum = exports.JqStatusEnum || (exports.JqStatusEnum = {}));

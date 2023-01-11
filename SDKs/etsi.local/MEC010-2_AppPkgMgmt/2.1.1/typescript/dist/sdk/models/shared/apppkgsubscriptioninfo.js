@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppPkgSubscriptionInfoLinks } from "./apppkgsubscriptioninfolinks";
-import { AppPkgSubscriptionTypeEnum } from "./apppkgsubscriptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgSubscriptionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var apppkgsubscriptioninfolinks_1 = require("./apppkgsubscriptioninfolinks");
+var apppkgsubscriptiontypeenum_1 = require("./apppkgsubscriptiontypeenum");
 // AppPkgSubscriptionInfo
 /**
  * 'The data type represents a subscription to notification of application package management for the onboarding, or operational state change of application package'
@@ -35,21 +38,21 @@ var AppPkgSubscriptionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", AppPkgSubscriptionInfoLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", apppkgsubscriptioninfolinks_1.AppPkgSubscriptionInfoLinks)
     ], AppPkgSubscriptionInfo.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackUri" }),
         __metadata("design:type", String)
     ], AppPkgSubscriptionInfo.prototype, "callbackUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AppPkgSubscriptionInfo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionType" }),
         __metadata("design:type", String)
     ], AppPkgSubscriptionInfo.prototype, "subscriptionType", void 0);
     return AppPkgSubscriptionInfo;
-}(SpeakeasyBase));
-export { AppPkgSubscriptionInfo };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgSubscriptionInfo = AppPkgSubscriptionInfo;

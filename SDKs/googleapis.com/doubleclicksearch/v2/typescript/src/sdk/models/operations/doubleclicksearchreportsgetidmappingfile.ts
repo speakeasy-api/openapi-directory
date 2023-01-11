@@ -74,7 +74,7 @@ export class DoubleclicksearchReportsGetIdMappingFileResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  idMappingFile?: Map<string, any>;
+  idMappingFile?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

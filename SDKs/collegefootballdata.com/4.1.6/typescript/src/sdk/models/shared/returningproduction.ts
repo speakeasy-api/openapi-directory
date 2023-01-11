@@ -10,16 +10,16 @@ export class ReturningProduction extends SpeakeasyBase {
   passingUsage?: number;
 
   @SpeakeasyMetadata({ data: "json, name=percentPPA" })
-  percentPpa?: number;
+  percentPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=percentPassingPPA" })
-  percentPassingPpa?: number;
+  percentPassingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=percentReceivingPPA" })
-  percentReceivingPpa?: number;
+  percentReceivingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=percentRushingPPA" })
-  percentRushingPpa?: number;
+  percentRushingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=receivingUsage" })
   receivingUsage?: number;
@@ -34,16 +34,16 @@ export class ReturningProduction extends SpeakeasyBase {
   team?: string;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPassingPPA" })
-  totalPassingPpa?: number;
+  totalPassingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalReceivingPPA" })
-  totalReceivingPpa?: number;
+  totalReceivingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalRushingPPA" })
-  totalRushingPpa?: number;
+  totalRushingPPA?: number;
 
   @SpeakeasyMetadata({ data: "json, name=usage" })
   usage?: number;

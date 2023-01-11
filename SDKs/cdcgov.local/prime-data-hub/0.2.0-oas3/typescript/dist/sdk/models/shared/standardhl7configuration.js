@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var StandardHl7ConfigurationPhoneNumberFormattingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandardHl7Configuration = exports.StandardHl7ConfigurationPhoneNumberFormattingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var StandardHl7ConfigurationPhoneNumberFormattingEnum;
 (function (StandardHl7ConfigurationPhoneNumberFormattingEnum) {
     StandardHl7ConfigurationPhoneNumberFormattingEnum["Standard"] = "STANDARD";
     StandardHl7ConfigurationPhoneNumberFormattingEnum["OnlyDigitsInComponentOne"] = "ONLY_DIGITS_IN_COMPONENT_ONE";
     StandardHl7ConfigurationPhoneNumberFormattingEnum["AreaLocalInComponentOne"] = "AREA_LOCAL_IN_COMPONENT_ONE";
-})(StandardHl7ConfigurationPhoneNumberFormattingEnum || (StandardHl7ConfigurationPhoneNumberFormattingEnum = {}));
+})(StandardHl7ConfigurationPhoneNumberFormattingEnum = exports.StandardHl7ConfigurationPhoneNumberFormattingEnum || (exports.StandardHl7ConfigurationPhoneNumberFormattingEnum = {}));
 // StandardHl7Configuration
 /**
  * A standard HL7 configuration
@@ -39,97 +42,97 @@ var StandardHl7Configuration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=convertTimestampToDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=convertTimestampToDateTime" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "convertTimestampToDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultAoeToUnknown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultAoeToUnknown" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "defaultAoeToUnknown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeAOE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeAOE" }),
         __metadata("design:type", Boolean)
-    ], StandardHl7Configuration.prototype, "includeAoe", void 0);
+    ], StandardHl7Configuration.prototype, "includeAOE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameFormat" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "nameFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumberFormatting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumberFormatting" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "phoneNumberFormatting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingApplicationName" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "receivingApplicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingApplicationOID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingApplicationOID" }),
         __metadata("design:type", String)
-    ], StandardHl7Configuration.prototype, "receivingApplicationOid", void 0);
+    ], StandardHl7Configuration.prototype, "receivingApplicationOID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingFacilityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingFacilityName" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "receivingFacilityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingFacilityOID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingFacilityOID" }),
         __metadata("design:type", String)
-    ], StandardHl7Configuration.prototype, "receivingFacilityOid", void 0);
+    ], StandardHl7Configuration.prototype, "receivingFacilityOID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingOrganization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingOrganization" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "receivingOrganization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingFacilityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingFacilityId" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "reportingFacilityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingFacilityIdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingFacilityIdType" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "reportingFacilityIdType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingFacilityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingFacilityName" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "reportingFacilityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suppressAoe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suppressAoe" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "suppressAoe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suppressHl7Fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suppressHl7Fields" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "suppressHl7Fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suppressQstForAoe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suppressQstForAoe" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "suppressQstForAoe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transport" }),
         __metadata("design:type", Object)
     ], StandardHl7Configuration.prototype, "transport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truncateHDNamespaceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truncateHDNamespaceIds" }),
         __metadata("design:type", Boolean)
-    ], StandardHl7Configuration.prototype, "truncateHdNamespaceIds", void 0);
+    ], StandardHl7Configuration.prototype, "truncateHDNamespaceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useBatchHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useBatchHeaders" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "useBatchHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useBlankInsteadOfUnknown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useBlankInsteadOfUnknown" }),
         __metadata("design:type", String)
     ], StandardHl7Configuration.prototype, "useBlankInsteadOfUnknown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usePid14ForPatientEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usePid14ForPatientEmail" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "usePid14ForPatientEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useTestProcessingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useTestProcessingMode" }),
         __metadata("design:type", Boolean)
     ], StandardHl7Configuration.prototype, "useTestProcessingMode", void 0);
     return StandardHl7Configuration;
-}(SpeakeasyBase));
-export { StandardHl7Configuration };
+}(utils_1.SpeakeasyBase));
+exports.StandardHl7Configuration = StandardHl7Configuration;

@@ -15,7 +15,7 @@ export declare class CreateStreamRequestBody extends SpeakeasyBase {
     kmsKeyId?: string;
     mediaType?: string;
     streamName: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateStreamRequest extends SpeakeasyBase {
     headers: CreateStreamHeaders;

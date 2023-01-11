@@ -92,7 +92,7 @@ export class CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRespon
   contentType: string;
 
   @SpeakeasyMetadata()
-  sendCommandToDeviceResponse?: Map<string, any>;
+  sendCommandToDeviceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

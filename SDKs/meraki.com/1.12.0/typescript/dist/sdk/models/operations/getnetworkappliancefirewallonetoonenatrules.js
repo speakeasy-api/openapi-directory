@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceFirewallOneToOneNatRulesResponse = exports.GetNetworkApplianceFirewallOneToOneNatRulesRequest = exports.GetNetworkApplianceFirewallOneToOneNatRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceFirewallOneToOneNatRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallOneToOneNatRulesPathParams, _super);
     function GetNetworkApplianceFirewallOneToOneNatRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallOneToOneNatRulesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceFirewallOneToOneNatRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallOneToOneNatRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallOneToOneNatRulesPathParams = GetNetworkApplianceFirewallOneToOneNatRulesPathParams;
 var GetNetworkApplianceFirewallOneToOneNatRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallOneToOneNatRulesRequest, _super);
     function GetNetworkApplianceFirewallOneToOneNatRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceFirewallOneToOneNatRulesPathParams)
     ], GetNetworkApplianceFirewallOneToOneNatRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceFirewallOneToOneNatRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallOneToOneNatRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallOneToOneNatRulesRequest = GetNetworkApplianceFirewallOneToOneNatRulesRequest;
 var GetNetworkApplianceFirewallOneToOneNatRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallOneToOneNatRulesResponse, _super);
     function GetNetworkApplianceFirewallOneToOneNatRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallOneToOneNatRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceFirewallOneToOneNatRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceFirewallOneToOneNatRulesResponse.prototype, "getNetworkApplianceFirewallOneToOneNatRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceFirewallOneToOneNatRulesResponse.prototype, "getNetworkApplianceFirewallOneToOneNatRules200ApplicationJSONObject", void 0);
     return GetNetworkApplianceFirewallOneToOneNatRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallOneToOneNatRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallOneToOneNatRulesResponse = GetNetworkApplianceFirewallOneToOneNatRulesResponse;

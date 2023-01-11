@@ -25,5 +25,5 @@ export class GetNetworkCameraWirelessProfileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCameraWirelessProfile200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCameraWirelessProfile200ApplicationJSONObject?: Record<string, any>;
 }

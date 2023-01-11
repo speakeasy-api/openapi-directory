@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteConfigurationSetEventDestinationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteConfigurationSetEventDestinationResponse = exports.GetDeleteConfigurationSetEventDestinationRequest = exports.GetDeleteConfigurationSetEventDestinationHeaders = exports.GetDeleteConfigurationSetEventDestinationQueryParams = exports.GetDeleteConfigurationSetEventDestinationVersionEnum = exports.GetDeleteConfigurationSetEventDestinationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteConfigurationSetEventDestinationActionEnum;
 (function (GetDeleteConfigurationSetEventDestinationActionEnum) {
     GetDeleteConfigurationSetEventDestinationActionEnum["DeleteConfigurationSetEventDestination"] = "DeleteConfigurationSetEventDestination";
-})(GetDeleteConfigurationSetEventDestinationActionEnum || (GetDeleteConfigurationSetEventDestinationActionEnum = {}));
-export var GetDeleteConfigurationSetEventDestinationVersionEnum;
+})(GetDeleteConfigurationSetEventDestinationActionEnum = exports.GetDeleteConfigurationSetEventDestinationActionEnum || (exports.GetDeleteConfigurationSetEventDestinationActionEnum = {}));
+var GetDeleteConfigurationSetEventDestinationVersionEnum;
 (function (GetDeleteConfigurationSetEventDestinationVersionEnum) {
     GetDeleteConfigurationSetEventDestinationVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteConfigurationSetEventDestinationVersionEnum || (GetDeleteConfigurationSetEventDestinationVersionEnum = {}));
+})(GetDeleteConfigurationSetEventDestinationVersionEnum = exports.GetDeleteConfigurationSetEventDestinationVersionEnum || (exports.GetDeleteConfigurationSetEventDestinationVersionEnum = {}));
 var GetDeleteConfigurationSetEventDestinationQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetEventDestinationQueryParams, _super);
     function GetDeleteConfigurationSetEventDestinationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConfigurationSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConfigurationSetName" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationQueryParams.prototype, "configurationSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EventDestinationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EventDestinationName" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationQueryParams.prototype, "eventDestinationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationQueryParams.prototype, "version", void 0);
     return GetDeleteConfigurationSetEventDestinationQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetEventDestinationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetEventDestinationQueryParams = GetDeleteConfigurationSetEventDestinationQueryParams;
 var GetDeleteConfigurationSetEventDestinationHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetEventDestinationHeaders, _super);
     function GetDeleteConfigurationSetEventDestinationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteConfigurationSetEventDestinationHeaders;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetEventDestinationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetEventDestinationHeaders = GetDeleteConfigurationSetEventDestinationHeaders;
 var GetDeleteConfigurationSetEventDestinationRequest = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetEventDestinationRequest, _super);
     function GetDeleteConfigurationSetEventDestinationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteConfigurationSetEventDestinationQueryParams)
     ], GetDeleteConfigurationSetEventDestinationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteConfigurationSetEventDestinationHeaders)
     ], GetDeleteConfigurationSetEventDestinationRequest.prototype, "headers", void 0);
     return GetDeleteConfigurationSetEventDestinationRequest;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetEventDestinationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetEventDestinationRequest = GetDeleteConfigurationSetEventDestinationRequest;
 var GetDeleteConfigurationSetEventDestinationResponse = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetEventDestinationResponse, _super);
     function GetDeleteConfigurationSetEventDestinationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteConfigurationSetEventDestinationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetEventDestinationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteConfigurationSetEventDestinationResponse.prototype, "statusCode", void 0);
     return GetDeleteConfigurationSetEventDestinationResponse;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetEventDestinationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetEventDestinationResponse = GetDeleteConfigurationSetEventDestinationResponse;

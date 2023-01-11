@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchedArtifact } from "./searchedartifact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchedartifact_1 = require("./searchedartifact");
 // ArtifactSearchResults
 /**
  * Describes the response received when searching for artifacts.
@@ -34,13 +37,13 @@ var ArtifactSearchResults = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifacts", elemType: SearchedArtifact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifacts", elemType: searchedartifact_1.SearchedArtifact }),
         __metadata("design:type", Array)
     ], ArtifactSearchResults.prototype, "artifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], ArtifactSearchResults.prototype, "count", void 0);
     return ArtifactSearchResults;
-}(SpeakeasyBase));
-export { ArtifactSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactSearchResults = ArtifactSearchResults;

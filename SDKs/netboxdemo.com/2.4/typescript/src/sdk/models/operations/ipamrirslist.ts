@@ -53,5 +53,5 @@ export class IpamRirsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamRirsList200ApplicationJsonObject?: IpamRirsList200ApplicationJson;
+  ipamRirsList200ApplicationJSONObject?: IpamRirsList200ApplicationJson;
 }

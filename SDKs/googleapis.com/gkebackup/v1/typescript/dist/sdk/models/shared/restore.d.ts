@@ -14,7 +14,7 @@ export declare enum RestoreStateEnum {
 export declare class RestoreInput extends SpeakeasyBase {
     backup?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     restoreConfig?: RestoreConfig;
 }
 /**
@@ -27,7 +27,7 @@ export declare class Restore extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     resourcesExcludedCount?: number;
     resourcesFailedCount?: number;

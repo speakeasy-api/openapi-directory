@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouterApplianceInstance = void 0;
+var utils_1 = require("../../../internal/utils");
 // RouterApplianceInstance
 /**
  * RouterAppliance represents a Router appliance which is specified by a VM URI and a NIC address.
@@ -33,17 +36,17 @@ var RouterApplianceInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], RouterApplianceInstance.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterface" }),
         __metadata("design:type", String)
     ], RouterApplianceInstance.prototype, "networkInterface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachine" }),
         __metadata("design:type", String)
     ], RouterApplianceInstance.prototype, "virtualMachine", void 0);
     return RouterApplianceInstance;
-}(SpeakeasyBase));
-export { RouterApplianceInstance };
+}(utils_1.SpeakeasyBase));
+exports.RouterApplianceInstance = RouterApplianceInstance;

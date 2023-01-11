@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupRun } from "./backuprun";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupRunsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var backuprun_1 = require("./backuprun");
 // BackupRunsListResponse
 /**
  * Backup run list results.
@@ -34,17 +37,17 @@ var BackupRunsListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: BackupRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: backuprun_1.BackupRun }),
         __metadata("design:type", Array)
     ], BackupRunsListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BackupRunsListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], BackupRunsListResponse.prototype, "nextPageToken", void 0);
     return BackupRunsListResponse;
-}(SpeakeasyBase));
-export { BackupRunsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.BackupRunsListResponse = BackupRunsListResponse;

@@ -41,8 +41,8 @@ export class GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse exte
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branchingModelSettings?: Map<string, any>;
+  branchingModelSettings?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

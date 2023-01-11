@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ElasticLoadBalancer = void 0;
+var utils_1 = require("../../../internal/utils");
 // ElasticLoadBalancer
 /**
  * Describes an Elastic Load Balancing instance.
@@ -33,41 +36,41 @@ var ElasticLoadBalancer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZones" }),
         __metadata("design:type", Array)
     ], ElasticLoadBalancer.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DnsName" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ec2InstanceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ec2InstanceIds" }),
         __metadata("design:type", Array)
     ], ElasticLoadBalancer.prototype, "ec2InstanceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ElasticLoadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElasticLoadBalancerName" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "elasticLoadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerId" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Region" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "stackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], ElasticLoadBalancer.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], ElasticLoadBalancer.prototype, "vpcId", void 0);
     return ElasticLoadBalancer;
-}(SpeakeasyBase));
-export { ElasticLoadBalancer };
+}(utils_1.SpeakeasyBase));
+exports.ElasticLoadBalancer = ElasticLoadBalancer;

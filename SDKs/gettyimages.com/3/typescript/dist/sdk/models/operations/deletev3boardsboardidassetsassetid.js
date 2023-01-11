@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteV3BoardsBoardIdAssetsAssetIdResponse = exports.DeleteV3BoardsBoardIdAssetsAssetIdRequest = exports.DeleteV3BoardsBoardIdAssetsAssetIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteV3BoardsBoardIdAssetsAssetIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsAssetIdPathParams, _super);
     function DeleteV3BoardsBoardIdAssetsAssetIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=asset_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=asset_id" }),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdAssetsAssetIdPathParams.prototype, "assetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=board_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=board_id" }),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdAssetsAssetIdPathParams.prototype, "boardId", void 0);
     return DeleteV3BoardsBoardIdAssetsAssetIdPathParams;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsAssetIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsAssetIdPathParams = DeleteV3BoardsBoardIdAssetsAssetIdPathParams;
 var DeleteV3BoardsBoardIdAssetsAssetIdRequest = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsAssetIdRequest, _super);
     function DeleteV3BoardsBoardIdAssetsAssetIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteV3BoardsBoardIdAssetsAssetIdPathParams)
     ], DeleteV3BoardsBoardIdAssetsAssetIdRequest.prototype, "pathParams", void 0);
     return DeleteV3BoardsBoardIdAssetsAssetIdRequest;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsAssetIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsAssetIdRequest = DeleteV3BoardsBoardIdAssetsAssetIdRequest;
 var DeleteV3BoardsBoardIdAssetsAssetIdResponse = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsAssetIdResponse, _super);
     function DeleteV3BoardsBoardIdAssetsAssetIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdAssetsAssetIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteV3BoardsBoardIdAssetsAssetIdResponse.prototype, "statusCode", void 0);
     return DeleteV3BoardsBoardIdAssetsAssetIdResponse;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsAssetIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsAssetIdResponse = DeleteV3BoardsBoardIdAssetsAssetIdResponse;

@@ -28,5 +28,5 @@ export declare class UpdateNetworkTrafficAnalysisRequest extends SpeakeasyBase {
 export declare class UpdateNetworkTrafficAnalysisResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkTrafficAnalysis200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkTrafficAnalysis200ApplicationJSONObject?: Record<string, any>;
 }

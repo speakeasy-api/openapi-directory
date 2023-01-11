@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveRevisionUsingGetResponse = exports.SaveRevisionUsingGetRequest = exports.SaveRevisionUsingGet500ApplicationJson = exports.SaveRevisionUsingGet401ApplicationJson = exports.SaveRevisionUsingGet400ApplicationJson = exports.SaveRevisionUsingGet200ApplicationJson = exports.SaveRevisionUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SaveRevisionUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGetQueryParams, _super);
     function SaveRevisionUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], SaveRevisionUsingGetQueryParams.prototype, "padId", void 0);
+    ], SaveRevisionUsingGetQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rev" }),
         __metadata("design:type", String)
     ], SaveRevisionUsingGetQueryParams.prototype, "rev", void 0);
     return SaveRevisionUsingGetQueryParams;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGetQueryParams = SaveRevisionUsingGetQueryParams;
 var SaveRevisionUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGet200ApplicationJson, _super);
     function SaveRevisionUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SaveRevisionUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SaveRevisionUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SaveRevisionUsingGet200ApplicationJson.prototype, "message", void 0);
     return SaveRevisionUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGet200ApplicationJson = SaveRevisionUsingGet200ApplicationJson;
 var SaveRevisionUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGet400ApplicationJson, _super);
     function SaveRevisionUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SaveRevisionUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SaveRevisionUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SaveRevisionUsingGet400ApplicationJson.prototype, "message", void 0);
     return SaveRevisionUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGet400ApplicationJson = SaveRevisionUsingGet400ApplicationJson;
 var SaveRevisionUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGet401ApplicationJson, _super);
     function SaveRevisionUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SaveRevisionUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SaveRevisionUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SaveRevisionUsingGet401ApplicationJson.prototype, "message", void 0);
     return SaveRevisionUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGet401ApplicationJson = SaveRevisionUsingGet401ApplicationJson;
 var SaveRevisionUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGet500ApplicationJson, _super);
     function SaveRevisionUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SaveRevisionUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SaveRevisionUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SaveRevisionUsingGet500ApplicationJson.prototype, "message", void 0);
     return SaveRevisionUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGet500ApplicationJson = SaveRevisionUsingGet500ApplicationJson;
 var SaveRevisionUsingGetRequest = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGetRequest, _super);
     function SaveRevisionUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SaveRevisionUsingGetQueryParams)
     ], SaveRevisionUsingGetRequest.prototype, "queryParams", void 0);
     return SaveRevisionUsingGetRequest;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGetRequest = SaveRevisionUsingGetRequest;
 var SaveRevisionUsingGetResponse = /** @class */ (function (_super) {
     __extends(SaveRevisionUsingGetResponse, _super);
     function SaveRevisionUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SaveRevisionUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SaveRevisionUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SaveRevisionUsingGet200ApplicationJson)
-    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGet200ApplicationJsonObject", void 0);
+    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SaveRevisionUsingGet400ApplicationJson)
-    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGet400ApplicationJsonObject", void 0);
+    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SaveRevisionUsingGet401ApplicationJson)
-    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGet401ApplicationJsonObject", void 0);
+    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SaveRevisionUsingGet500ApplicationJson)
-    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGet500ApplicationJsonObject", void 0);
+    ], SaveRevisionUsingGetResponse.prototype, "saveRevisionUsingGET500ApplicationJSONObject", void 0);
     return SaveRevisionUsingGetResponse;
-}(SpeakeasyBase));
-export { SaveRevisionUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.SaveRevisionUsingGetResponse = SaveRevisionUsingGetResponse;

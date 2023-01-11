@@ -19,7 +19,7 @@ export declare class RegisterWebhookWithThirdPartyRequest extends SpeakeasyBase 
 }
 export declare class RegisterWebhookWithThirdPartyResponse extends SpeakeasyBase {
     contentType: string;
-    registerWebhookWithThirdPartyOutput?: Map<string, any>;
+    registerWebhookWithThirdPartyOutput?: Record<string, any>;
     statusCode: number;
     validationException?: any;
     webhookNotFoundException?: any;

@@ -26,7 +26,7 @@ export class InsertSectionForProjectRequestBody extends SpeakeasyBase {
 
 export class InsertSectionForProject200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class InsertSectionForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  insertSectionForProject200ApplicationJsonObject?: InsertSectionForProject200ApplicationJson;
+  insertSectionForProject200ApplicationJSONObject?: InsertSectionForProject200ApplicationJson;
 }

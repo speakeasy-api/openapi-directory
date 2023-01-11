@@ -36,8 +36,8 @@ export class PostV1VerificationSendResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postV1VerificationSend200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postV1VerificationSend200ApplicationJSONString?: string;
 }

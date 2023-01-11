@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
 import { CareContextRepresentation } from "./carecontextrepresentation";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 
 
@@ -19,7 +19,7 @@ export class PatientLinkResultPatient extends SpeakeasyBase {
 
 export class PatientLinkResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=patient" })
   patient?: PatientLinkResultPatient;

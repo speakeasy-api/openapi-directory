@@ -32,7 +32,7 @@ export class V4CreatePayeeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createPayeesCsvResponse2?: shared.CreatePayeesCsvResponse2;
+  createPayeesCSVResponse2?: shared.CreatePayeesCsvResponse2;
 
   @SpeakeasyMetadata()
   statusCode: number;

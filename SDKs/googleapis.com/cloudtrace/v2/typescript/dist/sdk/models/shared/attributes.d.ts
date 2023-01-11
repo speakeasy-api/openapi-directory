@@ -4,6 +4,6 @@ import { AttributeValue } from "./attributevalue";
  * A set of attributes as key-value pairs.
 **/
 export declare class Attributes extends SpeakeasyBase {
-    attributeMap?: Map<string, AttributeValue>;
+    attributeMap?: Record<string, AttributeValue>;
     droppedAttributesCount?: number;
 }

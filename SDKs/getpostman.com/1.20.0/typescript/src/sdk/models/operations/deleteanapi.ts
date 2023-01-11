@@ -34,5 +34,5 @@ export class DeleteAnApiResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteAnApi200ApplicationJsonObject?: DeleteAnApi200ApplicationJson;
+  deleteAnApi200ApplicationJSONObject?: DeleteAnApi200ApplicationJson;
 }

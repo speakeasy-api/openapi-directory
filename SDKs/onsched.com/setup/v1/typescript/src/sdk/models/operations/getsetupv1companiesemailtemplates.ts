@@ -7,7 +7,7 @@ export class GetSetupV1CompaniesEmailTemplatesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  emailTemplateListViewModel?: Map<string, any>;
+  emailTemplateListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

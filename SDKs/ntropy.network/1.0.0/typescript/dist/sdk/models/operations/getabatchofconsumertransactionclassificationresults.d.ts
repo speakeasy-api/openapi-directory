@@ -42,5 +42,5 @@ export declare class GetABatchOfConsumerTransactionClassificationResultsRequest 
 export declare class GetABatchOfConsumerTransactionClassificationResultsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getABatchOfConsumerTransactionClassificationResults200ApplicationJsonObject?: GetABatchOfConsumerTransactionClassificationResults200ApplicationJson;
+    getABatchOfConsumerTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfConsumerTransactionClassificationResults200ApplicationJson;
 }

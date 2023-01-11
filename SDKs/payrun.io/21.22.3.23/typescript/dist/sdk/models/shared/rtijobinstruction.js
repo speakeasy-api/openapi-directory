@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RtiJobInstruction = exports.RtiJobInstructionRtiJobInstruction = exports.RtiJobInstructionRtiJobInstructionRtiTransaction = exports.RtiJobInstructionRtiJobInstructionPaySchedule = exports.RtiJobInstructionRtiJobInstructionLateReasonEnum = exports.RtiJobInstructionRtiJobInstructionEmployer = void 0;
+var utils_1 = require("../../../internal/utils");
 // RtiJobInstructionRtiJobInstructionEmployer
 /**
  * The rti job instructions' employer
@@ -33,21 +36,21 @@ var RtiJobInstructionRtiJobInstructionEmployer = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionEmployer.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionEmployer.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionEmployer.prototype, "atTitle", void 0);
     return RtiJobInstructionRtiJobInstructionEmployer;
-}(SpeakeasyBase));
-export { RtiJobInstructionRtiJobInstructionEmployer };
-export var RtiJobInstructionRtiJobInstructionLateReasonEnum;
+}(utils_1.SpeakeasyBase));
+exports.RtiJobInstructionRtiJobInstructionEmployer = RtiJobInstructionRtiJobInstructionEmployer;
+var RtiJobInstructionRtiJobInstructionLateReasonEnum;
 (function (RtiJobInstructionRtiJobInstructionLateReasonEnum) {
     RtiJobInstructionRtiJobInstructionLateReasonEnum["A"] = "A";
     RtiJobInstructionRtiJobInstructionLateReasonEnum["B"] = "B";
@@ -56,7 +59,7 @@ export var RtiJobInstructionRtiJobInstructionLateReasonEnum;
     RtiJobInstructionRtiJobInstructionLateReasonEnum["F"] = "F";
     RtiJobInstructionRtiJobInstructionLateReasonEnum["G"] = "G";
     RtiJobInstructionRtiJobInstructionLateReasonEnum["H"] = "H";
-})(RtiJobInstructionRtiJobInstructionLateReasonEnum || (RtiJobInstructionRtiJobInstructionLateReasonEnum = {}));
+})(RtiJobInstructionRtiJobInstructionLateReasonEnum = exports.RtiJobInstructionRtiJobInstructionLateReasonEnum || (exports.RtiJobInstructionRtiJobInstructionLateReasonEnum = {}));
 // RtiJobInstructionRtiJobInstructionPaySchedule
 /**
  * The rti job instructions' pay schedule
@@ -67,20 +70,20 @@ var RtiJobInstructionRtiJobInstructionPaySchedule = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionPaySchedule.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionPaySchedule.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionPaySchedule.prototype, "atTitle", void 0);
     return RtiJobInstructionRtiJobInstructionPaySchedule;
-}(SpeakeasyBase));
-export { RtiJobInstructionRtiJobInstructionPaySchedule };
+}(utils_1.SpeakeasyBase));
+exports.RtiJobInstructionRtiJobInstructionPaySchedule = RtiJobInstructionRtiJobInstructionPaySchedule;
 // RtiJobInstructionRtiJobInstructionRtiTransaction
 /**
  * The rti job instructions' rti transaction
@@ -91,113 +94,113 @@ var RtiJobInstructionRtiJobInstructionRtiTransaction = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionRtiTransaction.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionRtiTransaction.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstructionRtiTransaction.prototype, "atTitle", void 0);
     return RtiJobInstructionRtiJobInstructionRtiTransaction;
-}(SpeakeasyBase));
-export { RtiJobInstructionRtiJobInstructionRtiTransaction };
+}(utils_1.SpeakeasyBase));
+exports.RtiJobInstructionRtiJobInstructionRtiTransaction = RtiJobInstructionRtiJobInstructionRtiTransaction;
 var RtiJobInstructionRtiJobInstruction = /** @class */ (function (_super) {
     __extends(RtiJobInstructionRtiJobInstruction, _super);
     function RtiJobInstructionRtiJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarlierTaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarlierTaxYear" }),
         __metadata("design:type", Number)
     ], RtiJobInstructionRtiJobInstruction.prototype, "earlierTaxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employer" }),
         __metadata("design:type", RtiJobInstructionRtiJobInstructionEmployer)
     ], RtiJobInstructionRtiJobInstruction.prototype, "employer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FinalSubmissionForYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FinalSubmissionForYear" }),
         __metadata("design:type", Boolean)
     ], RtiJobInstructionRtiJobInstruction.prototype, "finalSubmissionForYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Generate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Generate" }),
         __metadata("design:type", Boolean)
     ], RtiJobInstructionRtiJobInstruction.prototype, "generate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldingDate" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "holdingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LateReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LateReason" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstruction.prototype, "lateReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoPaymentForPeriodFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoPaymentForPeriodFrom" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "noPaymentForPeriodFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoPaymentForPeriodTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoPaymentForPeriodTo" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "noPaymentForPeriodTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaySchedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaySchedule" }),
         __metadata("design:type", RtiJobInstructionRtiJobInstructionPaySchedule)
     ], RtiJobInstructionRtiJobInstruction.prototype, "paySchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentDate" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "paymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PeriodOfInactivityFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PeriodOfInactivityFrom" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "periodOfInactivityFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PeriodOfInactivityTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PeriodOfInactivityTo" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "periodOfInactivityTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RtiTransaction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RtiTransaction" }),
         __metadata("design:type", RtiJobInstructionRtiJobInstructionRtiTransaction)
     ], RtiJobInstructionRtiJobInstruction.prototype, "rtiTransaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RtiType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RtiType" }),
         __metadata("design:type", String)
     ], RtiJobInstructionRtiJobInstruction.prototype, "rtiType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemeCeased" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemeCeased" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "schemeCeased", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxMonth" }),
         __metadata("design:type", Number)
     ], RtiJobInstructionRtiJobInstruction.prototype, "taxMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], RtiJobInstructionRtiJobInstruction.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], RtiJobInstructionRtiJobInstruction.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Transmit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Transmit" }),
         __metadata("design:type", Boolean)
     ], RtiJobInstructionRtiJobInstruction.prototype, "transmit", void 0);
     return RtiJobInstructionRtiJobInstruction;
-}(SpeakeasyBase));
-export { RtiJobInstructionRtiJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.RtiJobInstructionRtiJobInstruction = RtiJobInstructionRtiJobInstruction;
 var RtiJobInstruction = /** @class */ (function (_super) {
     __extends(RtiJobInstruction, _super);
     function RtiJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RtiJobInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RtiJobInstruction" }),
         __metadata("design:type", RtiJobInstructionRtiJobInstruction)
     ], RtiJobInstruction.prototype, "rtiJobInstruction", void 0);
     return RtiJobInstruction;
-}(SpeakeasyBase));
-export { RtiJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.RtiJobInstruction = RtiJobInstruction;

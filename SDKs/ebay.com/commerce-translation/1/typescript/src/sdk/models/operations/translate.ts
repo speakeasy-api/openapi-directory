@@ -10,14 +10,14 @@ export class TranslateSecurity extends SpeakeasyBase {
 
 
 export class Translate400ApplicationJson extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }
 
 
 export class Translate500ApplicationJson extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }
 
 
@@ -41,8 +41,8 @@ export class TranslateResponse extends SpeakeasyBase {
   translateResponse?: shared.TranslateResponse;
 
   @SpeakeasyMetadata()
-  translate400ApplicationJsonObject?: Translate400ApplicationJson;
+  translate400ApplicationJSONObject?: Translate400ApplicationJson;
 
   @SpeakeasyMetadata()
-  translate500ApplicationJsonObject?: Translate500ApplicationJson;
+  translate500ApplicationJSONObject?: Translate500ApplicationJson;
 }

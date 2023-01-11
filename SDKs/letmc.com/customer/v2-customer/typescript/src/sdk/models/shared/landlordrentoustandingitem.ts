@@ -20,5 +20,5 @@ export class LandlordRentOustandingItem extends SpeakeasyBase {
   tenant?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TenantID" })
-  tenantId?: string;
+  tenantID?: string;
 }

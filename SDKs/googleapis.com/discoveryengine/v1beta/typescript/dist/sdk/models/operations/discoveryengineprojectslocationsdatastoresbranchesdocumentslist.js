@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse = exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest = exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity = exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams = exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams = /** @class */ (function (_super) {
     __extends(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams, _super);
     function DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams.prototype, "parent", void 0);
     return DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams;
-}(SpeakeasyBase));
-export { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams = DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams;
 var DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams = /** @class */ (function (_super) {
     __extends(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams, _super);
     function DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams.prototype, "uploadProtocol", void 0);
     return DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams;
-}(SpeakeasyBase));
-export { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams = DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams;
 var DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity = /** @class */ (function (_super) {
     __extends(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity, _super);
     function DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity.prototype, "oauth2c", void 0);
     return DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity;
-}(SpeakeasyBase));
-export { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity = DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity;
 var DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest = /** @class */ (function (_super) {
     __extends(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest, _super);
     function DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListPathParams)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListQueryParams)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest.prototype, "security", void 0);
     return DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest;
-}(SpeakeasyBase));
-export { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest = DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest;
 var DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse = /** @class */ (function (_super) {
     __extends(DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse, _super);
     function DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GoogleCloudDiscoveryengineV1betaListDocumentsResponse)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse.prototype, "googleCloudDiscoveryengineV1betaListDocumentsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse.prototype, "statusCode", void 0);
     return DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse;
-}(SpeakeasyBase));
-export { DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse = DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse;

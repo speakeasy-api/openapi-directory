@@ -13,7 +13,7 @@ export declare class OrgsListPendingInvitationsRequest extends SpeakeasyBase {
 }
 export declare class OrgsListPendingInvitationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     organizationInvitations?: shared.OrganizationInvitation[];

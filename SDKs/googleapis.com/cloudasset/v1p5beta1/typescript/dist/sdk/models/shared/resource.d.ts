@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * A representation of a Google Cloud resource.
 **/
 export declare class Resource extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     discoveryDocumentUri?: string;
     discoveryName?: string;
     parent?: string;

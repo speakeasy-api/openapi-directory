@@ -185,23 +185,23 @@ export class CecerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cecer400ApplicationJsonObject?: Cecer400ApplicationJson;
+  cecer400ApplicationJSONObject?: Cecer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer401ApplicationJsonObject?: Cecer401ApplicationJson;
+  cecer401ApplicationJSONObject?: Cecer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer404ApplicationJsonObject?: Cecer404ApplicationJson;
+  cecer404ApplicationJSONObject?: Cecer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer500ApplicationJsonObject?: Cecer500ApplicationJson;
+  cecer500ApplicationJSONObject?: Cecer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer502ApplicationJsonObject?: Cecer502ApplicationJson;
+  cecer502ApplicationJSONObject?: Cecer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer503ApplicationJsonObject?: Cecer503ApplicationJson;
+  cecer503ApplicationJSONObject?: Cecer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cecer504ApplicationJsonObject?: Cecer504ApplicationJson;
+  cecer504ApplicationJSONObject?: Cecer504ApplicationJson;
 }

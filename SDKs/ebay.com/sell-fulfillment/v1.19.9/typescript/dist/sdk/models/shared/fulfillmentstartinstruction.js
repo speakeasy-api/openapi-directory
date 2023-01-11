@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { PickupStep } from "./pickupstep";
-import { ShippingStep } from "./shippingstep";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FulfillmentStartInstruction = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var pickupstep_1 = require("./pickupstep");
+var shippingstep_1 = require("./shippingstep");
 // FulfillmentStartInstruction
 /**
  * This type contains a set of specifications for processing a fulfillment of an order, including the type of fulfillment, shipping carrier and service, addressing details, and estimated delivery window. These instructions are derived from the buyer's and seller's eBay account preferences, the listing parameters, and the buyer's checkout selections. The seller can use them as a starting point for packaging, addressing, and shipping the order.
@@ -36,33 +39,33 @@ var FulfillmentStartInstruction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ebaySupportedFulfillment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ebaySupportedFulfillment" }),
         __metadata("design:type", Boolean)
     ], FulfillmentStartInstruction.prototype, "ebaySupportedFulfillment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalDestinationAddress" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalDestinationAddress" }),
+        __metadata("design:type", address_1.Address)
     ], FulfillmentStartInstruction.prototype, "finalDestinationAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentInstructionsType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentInstructionsType" }),
         __metadata("design:type", String)
     ], FulfillmentStartInstruction.prototype, "fulfillmentInstructionsType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], FulfillmentStartInstruction.prototype, "maxEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], FulfillmentStartInstruction.prototype, "minEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupStep" }),
-        __metadata("design:type", PickupStep)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupStep" }),
+        __metadata("design:type", pickupstep_1.PickupStep)
     ], FulfillmentStartInstruction.prototype, "pickupStep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingStep" }),
-        __metadata("design:type", ShippingStep)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingStep" }),
+        __metadata("design:type", shippingstep_1.ShippingStep)
     ], FulfillmentStartInstruction.prototype, "shippingStep", void 0);
     return FulfillmentStartInstruction;
-}(SpeakeasyBase));
-export { FulfillmentStartInstruction };
+}(utils_1.SpeakeasyBase));
+exports.FulfillmentStartInstruction = FulfillmentStartInstruction;

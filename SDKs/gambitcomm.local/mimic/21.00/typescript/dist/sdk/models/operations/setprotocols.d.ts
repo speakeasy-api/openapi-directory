@@ -9,5 +9,5 @@ export declare class SetProtocolsRequest extends SpeakeasyBase {
 export declare class SetProtocolsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setProtocols200ApplicationJsonStringIntegers?: number[];
+    setProtocols200ApplicationJSONStringIntegers?: number[];
 }

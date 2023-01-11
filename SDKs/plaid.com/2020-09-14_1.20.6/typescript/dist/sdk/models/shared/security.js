@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Security = exports.SchemeSecret = exports.SchemePlaidVersion = exports.SchemeClientId = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeClientId = /** @class */ (function (_super) {
     __extends(SchemeClientId, _super);
     function SchemeClientId() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=PLAID-CLIENT-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=PLAID-CLIENT-ID" }),
         __metadata("design:type", String)
     ], SchemeClientId.prototype, "apiKey", void 0);
     return SchemeClientId;
-}(SpeakeasyBase));
-export { SchemeClientId };
+}(utils_1.SpeakeasyBase));
+exports.SchemeClientId = SchemeClientId;
 var SchemePlaidVersion = /** @class */ (function (_super) {
     __extends(SchemePlaidVersion, _super);
     function SchemePlaidVersion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Plaid-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Plaid-Version" }),
         __metadata("design:type", String)
     ], SchemePlaidVersion.prototype, "apiKey", void 0);
     return SchemePlaidVersion;
-}(SpeakeasyBase));
-export { SchemePlaidVersion };
+}(utils_1.SpeakeasyBase));
+exports.SchemePlaidVersion = SchemePlaidVersion;
 var SchemeSecret = /** @class */ (function (_super) {
     __extends(SchemeSecret, _super);
     function SchemeSecret() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=PLAID-SECRET" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=PLAID-SECRET" }),
         __metadata("design:type", String)
     ], SchemeSecret.prototype, "apiKey", void 0);
     return SchemeSecret;
-}(SpeakeasyBase));
-export { SchemeSecret };
+}(utils_1.SpeakeasyBase));
+exports.SchemeSecret = SchemeSecret;
 var Security = /** @class */ (function (_super) {
     __extends(Security, _super);
     function Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemeClientId)
     ], Security.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemePlaidVersion)
     ], Security.prototype, "plaidVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemeSecret)
     ], Security.prototype, "secret", void 0);
     return Security;
-}(SpeakeasyBase));
-export { Security };
+}(utils_1.SpeakeasyBase));
+exports.Security = Security;

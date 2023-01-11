@@ -33,5 +33,5 @@ export class GetListeNoireResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getListeNoire200ApplicationJsonBinaryString?: Uint8Array;
+  getListeNoire200ApplicationJSONBinaryString?: Uint8Array;
 }

@@ -42,7 +42,7 @@ export class AmqpRuleResponseTarget extends SpeakeasyBase {
 
 export class AmqpRuleResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=appId" })
   appId?: string;

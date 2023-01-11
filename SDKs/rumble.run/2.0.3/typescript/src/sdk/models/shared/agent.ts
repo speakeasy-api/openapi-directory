@@ -52,7 +52,7 @@ export class Agent extends SpeakeasyBase {
   siteId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=system_info" })
-  systemInfo?: Map<string, any>;
+  systemInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updated_at" })
   updatedAt?: number;

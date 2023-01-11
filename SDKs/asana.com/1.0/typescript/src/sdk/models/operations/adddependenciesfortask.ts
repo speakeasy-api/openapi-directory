@@ -26,7 +26,7 @@ export class AddDependenciesForTaskRequestBody extends SpeakeasyBase {
 
 export class AddDependenciesForTask200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddDependenciesForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addDependenciesForTask200ApplicationJsonObject?: AddDependenciesForTask200ApplicationJson;
+  addDependenciesForTask200ApplicationJSONObject?: AddDependenciesForTask200ApplicationJson;
 }

@@ -18,7 +18,7 @@ export class GetUpdateAvailabilityOptionsQueryParams extends SpeakeasyBase {
   domainName: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MultiAZ" })
-  multiAz: boolean;
+  multiAZ: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetUpdateAvailabilityOptionsVersionEnum;

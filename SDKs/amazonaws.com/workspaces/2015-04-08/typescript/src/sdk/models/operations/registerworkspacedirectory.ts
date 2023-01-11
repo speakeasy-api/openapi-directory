@@ -60,7 +60,7 @@ export class RegisterWorkspaceDirectoryResponse extends SpeakeasyBase {
   operationNotSupportedException?: any;
 
   @SpeakeasyMetadata()
-  registerWorkspaceDirectoryResult?: Map<string, any>;
+  registerWorkspaceDirectoryResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceLimitExceededException?: any;

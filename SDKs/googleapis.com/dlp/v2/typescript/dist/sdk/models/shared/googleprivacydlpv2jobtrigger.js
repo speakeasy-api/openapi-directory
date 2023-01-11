@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Error } from "./googleprivacydlpv2error";
-import { GooglePrivacyDlpV2InspectJobConfig } from "./googleprivacydlpv2inspectjobconfig";
-import { GooglePrivacyDlpV2Trigger } from "./googleprivacydlpv2trigger";
-export var GooglePrivacyDlpV2JobTriggerStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2JobTriggerInput = exports.GooglePrivacyDlpV2JobTrigger = exports.GooglePrivacyDlpV2JobTriggerStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2error_1 = require("./googleprivacydlpv2error");
+var googleprivacydlpv2inspectjobconfig_1 = require("./googleprivacydlpv2inspectjobconfig");
+var googleprivacydlpv2trigger_1 = require("./googleprivacydlpv2trigger");
+var GooglePrivacyDlpV2JobTriggerStatusEnum;
 (function (GooglePrivacyDlpV2JobTriggerStatusEnum) {
     GooglePrivacyDlpV2JobTriggerStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     GooglePrivacyDlpV2JobTriggerStatusEnum["Healthy"] = "HEALTHY";
     GooglePrivacyDlpV2JobTriggerStatusEnum["Paused"] = "PAUSED";
     GooglePrivacyDlpV2JobTriggerStatusEnum["Cancelled"] = "CANCELLED";
-})(GooglePrivacyDlpV2JobTriggerStatusEnum || (GooglePrivacyDlpV2JobTriggerStatusEnum = {}));
+})(GooglePrivacyDlpV2JobTriggerStatusEnum = exports.GooglePrivacyDlpV2JobTriggerStatusEnum || (exports.GooglePrivacyDlpV2JobTriggerStatusEnum = {}));
 // GooglePrivacyDlpV2JobTrigger
 /**
  * Contains a configuration to make dlp api calls on a repeating basis. See https://cloud.google.com/dlp/docs/concepts-job-triggers to learn more.
@@ -43,48 +46,48 @@ var GooglePrivacyDlpV2JobTrigger = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: GooglePrivacyDlpV2Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: googleprivacydlpv2error_1.GooglePrivacyDlpV2Error }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectJob" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectJob" }),
+        __metadata("design:type", googleprivacydlpv2inspectjobconfig_1.GooglePrivacyDlpV2InspectJobConfig)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "inspectJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRunTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRunTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "lastRunTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggers", elemType: GooglePrivacyDlpV2Trigger }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggers", elemType: googleprivacydlpv2trigger_1.GooglePrivacyDlpV2Trigger }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "triggers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTrigger.prototype, "updateTime", void 0);
     return GooglePrivacyDlpV2JobTrigger;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2JobTrigger };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2JobTrigger = GooglePrivacyDlpV2JobTrigger;
 // GooglePrivacyDlpV2JobTriggerInput
 /**
  * Contains a configuration to make dlp api calls on a repeating basis. See https://cloud.google.com/dlp/docs/concepts-job-triggers to learn more.
@@ -95,29 +98,29 @@ var GooglePrivacyDlpV2JobTriggerInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectJob" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectJob" }),
+        __metadata("design:type", googleprivacydlpv2inspectjobconfig_1.GooglePrivacyDlpV2InspectJobConfig)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "inspectJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggers", elemType: GooglePrivacyDlpV2Trigger }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggers", elemType: googleprivacydlpv2trigger_1.GooglePrivacyDlpV2Trigger }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2JobTriggerInput.prototype, "triggers", void 0);
     return GooglePrivacyDlpV2JobTriggerInput;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2JobTriggerInput };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2JobTriggerInput = GooglePrivacyDlpV2JobTriggerInput;

@@ -7,6 +7,6 @@ import { WeightedQuantileLoss } from "./weightedquantileloss";
 export declare class Metrics extends SpeakeasyBase {
     averageWeightedQuantileLoss?: number;
     errorMetrics?: ErrorMetric[];
-    rmse?: number;
+    rmse?: Record<string, any>;
     weightedQuantileLosses?: WeightedQuantileLoss[];
 }

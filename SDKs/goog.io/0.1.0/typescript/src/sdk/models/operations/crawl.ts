@@ -32,7 +32,7 @@ export class CrawlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  crawl200ApplicationJsonObject?: Crawl200ApplicationJson;
+  crawl200ApplicationJSONObject?: Crawl200ApplicationJson;
 
   @SpeakeasyMetadata()
   httpValidationError?: shared.HttpValidationError;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposDownloadZipballArchiveResponse = exports.ReposDownloadZipballArchiveRequest = exports.ReposDownloadZipballArchivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposDownloadZipballArchivePathParams = /** @class */ (function (_super) {
     __extends(ReposDownloadZipballArchivePathParams, _super);
     function ReposDownloadZipballArchivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposDownloadZipballArchivePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ref" }),
         __metadata("design:type", String)
     ], ReposDownloadZipballArchivePathParams.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposDownloadZipballArchivePathParams.prototype, "repo", void 0);
     return ReposDownloadZipballArchivePathParams;
-}(SpeakeasyBase));
-export { ReposDownloadZipballArchivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadZipballArchivePathParams = ReposDownloadZipballArchivePathParams;
 var ReposDownloadZipballArchiveRequest = /** @class */ (function (_super) {
     __extends(ReposDownloadZipballArchiveRequest, _super);
     function ReposDownloadZipballArchiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposDownloadZipballArchivePathParams)
     ], ReposDownloadZipballArchiveRequest.prototype, "pathParams", void 0);
     return ReposDownloadZipballArchiveRequest;
-}(SpeakeasyBase));
-export { ReposDownloadZipballArchiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadZipballArchiveRequest = ReposDownloadZipballArchiveRequest;
 var ReposDownloadZipballArchiveResponse = /** @class */ (function (_super) {
     __extends(ReposDownloadZipballArchiveResponse, _super);
     function ReposDownloadZipballArchiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposDownloadZipballArchiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposDownloadZipballArchiveResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposDownloadZipballArchiveResponse.prototype, "statusCode", void 0);
     return ReposDownloadZipballArchiveResponse;
-}(SpeakeasyBase));
-export { ReposDownloadZipballArchiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadZipballArchiveResponse = ReposDownloadZipballArchiveResponse;

@@ -34,6 +34,6 @@ export declare class DeepLinksRequest extends SpeakeasyBase {
 }
 export declare class DeepLinksResponse extends SpeakeasyBase {
     contentType: string;
-    deepLinks200ApplicationJsonString?: string;
+    deepLinks200ApplicationJSONString?: string;
     statusCode: number;
 }

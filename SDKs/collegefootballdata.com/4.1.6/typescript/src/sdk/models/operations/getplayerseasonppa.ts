@@ -38,7 +38,7 @@ export class GetPlayerSeasonPpaResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata({ elemType: shared.PlayerSeasonPpa })
-  playerSeasonPpas?: shared.PlayerSeasonPpa[];
+  playerSeasonPPAS?: shared.PlayerSeasonPpa[];
 
   @SpeakeasyMetadata()
   statusCode: number;

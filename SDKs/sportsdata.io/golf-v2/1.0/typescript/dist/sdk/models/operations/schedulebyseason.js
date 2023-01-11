@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScheduleBySeasonFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleBySeasonResponse = exports.ScheduleBySeasonRequest = exports.ScheduleBySeasonPathParams = exports.ScheduleBySeasonFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScheduleBySeasonFormatEnum;
 (function (ScheduleBySeasonFormatEnum) {
     ScheduleBySeasonFormatEnum["Xml"] = "XML";
     ScheduleBySeasonFormatEnum["Json"] = "JSON";
-})(ScheduleBySeasonFormatEnum || (ScheduleBySeasonFormatEnum = {}));
+})(ScheduleBySeasonFormatEnum = exports.ScheduleBySeasonFormatEnum || (exports.ScheduleBySeasonFormatEnum = {}));
 var ScheduleBySeasonPathParams = /** @class */ (function (_super) {
     __extends(ScheduleBySeasonPathParams, _super);
     function ScheduleBySeasonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ScheduleBySeasonPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ScheduleBySeasonPathParams.prototype, "season", void 0);
     return ScheduleBySeasonPathParams;
-}(SpeakeasyBase));
-export { ScheduleBySeasonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleBySeasonPathParams = ScheduleBySeasonPathParams;
 var ScheduleBySeasonRequest = /** @class */ (function (_super) {
     __extends(ScheduleBySeasonRequest, _super);
     function ScheduleBySeasonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ScheduleBySeasonPathParams)
     ], ScheduleBySeasonRequest.prototype, "pathParams", void 0);
     return ScheduleBySeasonRequest;
-}(SpeakeasyBase));
-export { ScheduleBySeasonRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleBySeasonRequest = ScheduleBySeasonRequest;
 var ScheduleBySeasonResponse = /** @class */ (function (_super) {
     __extends(ScheduleBySeasonResponse, _super);
     function ScheduleBySeasonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduleBySeasonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduleBySeasonResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScheduleBySeasonResponse.prototype, "tournaments", void 0);
     return ScheduleBySeasonResponse;
-}(SpeakeasyBase));
-export { ScheduleBySeasonResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleBySeasonResponse = ScheduleBySeasonResponse;

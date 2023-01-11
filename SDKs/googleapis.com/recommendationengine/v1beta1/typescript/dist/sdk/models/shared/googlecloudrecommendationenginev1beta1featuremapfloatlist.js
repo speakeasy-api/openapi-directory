@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// GoogleCloudRecommendationengineV1beta1FeatureMapFloatList
-/**
- * A list of float features.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudRecommendationengineV1beta1FeatureMapFloatList = /** @class */ (function (_super) {
     __extends(GoogleCloudRecommendationengineV1beta1FeatureMapFloatList, _super);
     function GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1FeatureMapFloatList.prototype, "value", void 0);
     return GoogleCloudRecommendationengineV1beta1FeatureMapFloatList;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1FeatureMapFloatList };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList = GoogleCloudRecommendationengineV1beta1FeatureMapFloatList;

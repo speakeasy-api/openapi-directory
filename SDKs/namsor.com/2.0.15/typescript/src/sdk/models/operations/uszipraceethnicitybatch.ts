@@ -20,7 +20,7 @@ export class UsZipRaceEthnicityBatchRequest extends SpeakeasyBase {
 
 export class UsZipRaceEthnicityBatchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  batchFirstLastNameUsRaceEthnicityOut?: shared.BatchFirstLastNameUsRaceEthnicityOut;
+  batchFirstLastNameUSRaceEthnicityOut?: shared.BatchFirstLastNameUsRaceEthnicityOut;
 
   @SpeakeasyMetadata()
   contentType: string;

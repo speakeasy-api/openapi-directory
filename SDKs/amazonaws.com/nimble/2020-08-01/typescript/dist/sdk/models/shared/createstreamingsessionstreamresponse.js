@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingSessionStream } from "./streamingsessionstream";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateStreamingSessionStreamResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingsessionstream_1 = require("./streamingsessionstream");
 var CreateStreamingSessionStreamResponse = /** @class */ (function (_super) {
     __extends(CreateStreamingSessionStreamResponse, _super);
     function CreateStreamingSessionStreamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stream" }),
-        __metadata("design:type", StreamingSessionStream)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stream" }),
+        __metadata("design:type", streamingsessionstream_1.StreamingSessionStream)
     ], CreateStreamingSessionStreamResponse.prototype, "stream", void 0);
     return CreateStreamingSessionStreamResponse;
-}(SpeakeasyBase));
-export { CreateStreamingSessionStreamResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateStreamingSessionStreamResponse = CreateStreamingSessionStreamResponse;

@@ -8,12 +8,6 @@ export class ProjectsListForOrgPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum ProjectsListForOrgStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class ProjectsListForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -23,7 +17,7 @@ export class ProjectsListForOrgQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: ProjectsListForOrgStateEnum;
+  state?: shared.OrgEnum1;
 }
 
 
@@ -41,7 +35,7 @@ export class ProjectsListForOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

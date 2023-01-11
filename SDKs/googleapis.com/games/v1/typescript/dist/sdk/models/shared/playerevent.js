@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerEvent = void 0;
+var utils_1 = require("../../../internal/utils");
 // PlayerEvent
 /**
  * An event status resource.
@@ -33,25 +36,25 @@ var PlayerEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definitionId" }),
         __metadata("design:type", String)
     ], PlayerEvent.prototype, "definitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedNumEvents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedNumEvents" }),
         __metadata("design:type", String)
     ], PlayerEvent.prototype, "formattedNumEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PlayerEvent.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numEvents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numEvents" }),
         __metadata("design:type", String)
     ], PlayerEvent.prototype, "numEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playerId" }),
         __metadata("design:type", String)
     ], PlayerEvent.prototype, "playerId", void 0);
     return PlayerEvent;
-}(SpeakeasyBase));
-export { PlayerEvent };
+}(utils_1.SpeakeasyBase));
+exports.PlayerEvent = PlayerEvent;

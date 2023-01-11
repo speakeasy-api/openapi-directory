@@ -15,6 +15,6 @@ export declare class ReposDeletePagesSiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposDeletePagesSite415ApplicationJsonObject?: ReposDeletePagesSite415ApplicationJson;
+    reposDeletePagesSite415ApplicationJSONObject?: ReposDeletePagesSite415ApplicationJson;
     validationError?: shared.ValidationError;
 }

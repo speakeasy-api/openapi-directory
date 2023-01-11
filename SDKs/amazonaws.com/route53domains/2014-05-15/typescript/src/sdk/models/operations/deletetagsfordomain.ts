@@ -48,7 +48,7 @@ export class DeleteTagsForDomainResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTagsForDomainResponse?: Map<string, any>;
+  deleteTagsForDomainResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInput?: any;
@@ -60,5 +60,5 @@ export class DeleteTagsForDomainResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

@@ -20,7 +20,7 @@ export class Route extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -45,5 +45,5 @@ export class RouteInput extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 }

@@ -21,6 +21,6 @@ export declare class HooksGetRequest extends SpeakeasyBase {
 }
 export declare class HooksGetResponse extends SpeakeasyBase {
     contentType: string;
-    hooksGet200ApplicationJsonObject?: HooksGet200ApplicationJson;
+    hooksGet200ApplicationJSONObject?: HooksGet200ApplicationJson;
     statusCode: number;
 }

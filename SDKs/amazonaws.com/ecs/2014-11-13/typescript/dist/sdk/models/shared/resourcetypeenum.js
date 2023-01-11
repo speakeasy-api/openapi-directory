@@ -1,5 +1,8 @@
-export var ResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceTypeEnum = void 0;
+var ResourceTypeEnum;
 (function (ResourceTypeEnum) {
     ResourceTypeEnum["Gpu"] = "GPU";
     ResourceTypeEnum["InferenceAccelerator"] = "InferenceAccelerator";
-})(ResourceTypeEnum || (ResourceTypeEnum = {}));
+})(ResourceTypeEnum = exports.ResourceTypeEnum || (exports.ResourceTypeEnum = {}));

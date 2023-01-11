@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleWorkspaceAccount } from "./googleworkspaceaccount";
-import { GoogleWorkspaceAccountInput } from "./googleworkspaceaccount";
-export var CompanyTermsStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyInput = exports.Company = exports.CompanyTermsStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleworkspaceaccount_1 = require("./googleworkspaceaccount");
+var googleworkspaceaccount_2 = require("./googleworkspaceaccount");
+var CompanyTermsStatusEnum;
 (function (CompanyTermsStatusEnum) {
     CompanyTermsStatusEnum["TermsStatusUnspecified"] = "TERMS_STATUS_UNSPECIFIED";
     CompanyTermsStatusEnum["TermsStatusNotAccepted"] = "TERMS_STATUS_NOT_ACCEPTED";
     CompanyTermsStatusEnum["TermsStatusAccepted"] = "TERMS_STATUS_ACCEPTED";
     CompanyTermsStatusEnum["TermsStatusStale"] = "TERMS_STATUS_STALE";
-})(CompanyTermsStatusEnum || (CompanyTermsStatusEnum = {}));
+})(CompanyTermsStatusEnum = exports.CompanyTermsStatusEnum || (exports.CompanyTermsStatusEnum = {}));
 // Company
 /**
  * A reseller, vendor, or customer in the zero-touch reseller and customer APIs.
@@ -42,44 +45,44 @@ var Company = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminEmails" }),
         __metadata("design:type", Array)
     ], Company.prototype, "adminEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyId" }),
         __metadata("design:type", String)
     ], Company.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], Company.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleWorkspaceAccount" }),
-        __metadata("design:type", GoogleWorkspaceAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleWorkspaceAccount" }),
+        __metadata("design:type", googleworkspaceaccount_1.GoogleWorkspaceAccount)
     ], Company.prototype, "googleWorkspaceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], Company.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Company.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerEmails" }),
         __metadata("design:type", Array)
     ], Company.prototype, "ownerEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipWelcomeEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipWelcomeEmail" }),
         __metadata("design:type", Boolean)
     ], Company.prototype, "skipWelcomeEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termsStatus" }),
         __metadata("design:type", String)
     ], Company.prototype, "termsStatus", void 0);
     return Company;
-}(SpeakeasyBase));
-export { Company };
+}(utils_1.SpeakeasyBase));
+exports.Company = Company;
 // CompanyInput
 /**
  * A reseller, vendor, or customer in the zero-touch reseller and customer APIs.
@@ -90,29 +93,29 @@ var CompanyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminEmails" }),
         __metadata("design:type", Array)
     ], CompanyInput.prototype, "adminEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], CompanyInput.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleWorkspaceAccount" }),
-        __metadata("design:type", GoogleWorkspaceAccountInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleWorkspaceAccount" }),
+        __metadata("design:type", googleworkspaceaccount_2.GoogleWorkspaceAccountInput)
     ], CompanyInput.prototype, "googleWorkspaceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], CompanyInput.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerEmails" }),
         __metadata("design:type", Array)
     ], CompanyInput.prototype, "ownerEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipWelcomeEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipWelcomeEmail" }),
         __metadata("design:type", Boolean)
     ], CompanyInput.prototype, "skipWelcomeEmail", void 0);
     return CompanyInput;
-}(SpeakeasyBase));
-export { CompanyInput };
+}(utils_1.SpeakeasyBase));
+exports.CompanyInput = CompanyInput;

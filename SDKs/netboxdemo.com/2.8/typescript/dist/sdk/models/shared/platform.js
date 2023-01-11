@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedManufacturer } from "./nestedmanufacturer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Platform = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedmanufacturer_1 = require("./nestedmanufacturer");
 var Platform = /** @class */ (function (_super) {
     __extends(Platform, _super);
     function Platform() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Platform.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_count" }),
         __metadata("design:type", Number)
     ], Platform.prototype, "deviceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Platform.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
-        __metadata("design:type", NestedManufacturer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
+        __metadata("design:type", nestedmanufacturer_1.NestedManufacturer)
     ], Platform.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Platform.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=napalm_args" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=napalm_args" }),
         __metadata("design:type", String)
     ], Platform.prototype, "napalmArgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=napalm_driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=napalm_driver" }),
         __metadata("design:type", String)
     ], Platform.prototype, "napalmDriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Platform.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualmachine_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualmachine_count" }),
         __metadata("design:type", Number)
     ], Platform.prototype, "virtualmachineCount", void 0);
     return Platform;
-}(SpeakeasyBase));
-export { Platform };
+}(utils_1.SpeakeasyBase));
+exports.Platform = Platform;

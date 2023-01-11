@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrFiltersForSegment } from "./orfiltersforsegment";
-export var SegmentSequenceStepMatchTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentSequenceStep = exports.SegmentSequenceStepMatchTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var orfiltersforsegment_1 = require("./orfiltersforsegment");
+var SegmentSequenceStepMatchTypeEnum;
 (function (SegmentSequenceStepMatchTypeEnum) {
     SegmentSequenceStepMatchTypeEnum["UnspecifiedMatchType"] = "UNSPECIFIED_MATCH_TYPE";
     SegmentSequenceStepMatchTypeEnum["Precedes"] = "PRECEDES";
     SegmentSequenceStepMatchTypeEnum["ImmediatelyPrecedes"] = "IMMEDIATELY_PRECEDES";
-})(SegmentSequenceStepMatchTypeEnum || (SegmentSequenceStepMatchTypeEnum = {}));
+})(SegmentSequenceStepMatchTypeEnum = exports.SegmentSequenceStepMatchTypeEnum || (exports.SegmentSequenceStepMatchTypeEnum = {}));
 // SegmentSequenceStep
 /**
  * A segment sequence definition.
@@ -40,13 +43,13 @@ var SegmentSequenceStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchType" }),
         __metadata("design:type", String)
     ], SegmentSequenceStep.prototype, "matchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orFiltersForSegment", elemType: OrFiltersForSegment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orFiltersForSegment", elemType: orfiltersforsegment_1.OrFiltersForSegment }),
         __metadata("design:type", Array)
     ], SegmentSequenceStep.prototype, "orFiltersForSegment", void 0);
     return SegmentSequenceStep;
-}(SpeakeasyBase));
-export { SegmentSequenceStep };
+}(utils_1.SpeakeasyBase));
+exports.SegmentSequenceStep = SegmentSequenceStep;

@@ -10,16 +10,16 @@ export class PutConsumerV1AppointmentsIdNoshowPathParams extends SpeakeasyBase {
 
 export class PutConsumerV1AppointmentsIdNoshowRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/*+json" })
-  appointmentNoShowModel?: Map<string, any>;
+  appointmentNoShowModel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  appointmentNoShowModel1?: Map<string, any>;
+  appointmentNoShowModel1?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" })
-  appointmentNoShowModel2?: Map<string, any>;
+  appointmentNoShowModel2?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  appointmentNoShowModel3?: Map<string, any>;
+  appointmentNoShowModel3?: Record<string, any>;
 }
 
 

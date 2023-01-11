@@ -58,5 +58,5 @@ export class GetABatchOfBusinessTransactionClassificationResultsResponse extends
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getABatchOfBusinessTransactionClassificationResults200ApplicationJsonObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJson;
+  getABatchOfBusinessTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJson;
 }

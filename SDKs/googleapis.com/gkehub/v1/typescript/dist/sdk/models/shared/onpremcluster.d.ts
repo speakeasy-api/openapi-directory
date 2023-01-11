@@ -9,17 +9,17 @@ export declare enum OnPremClusterClusterTypeEnum {
 /**
  * OnPremCluster contains information specific to GKE On-Prem clusters.
 **/
-export declare class OnPremCluster extends SpeakeasyBase {
+export declare class OnPremClusterInput extends SpeakeasyBase {
     adminCluster?: boolean;
-    clusterMissing?: boolean;
     clusterType?: OnPremClusterClusterTypeEnum;
     resourceLink?: string;
 }
 /**
  * OnPremCluster contains information specific to GKE On-Prem clusters.
 **/
-export declare class OnPremClusterInput extends SpeakeasyBase {
+export declare class OnPremCluster extends SpeakeasyBase {
     adminCluster?: boolean;
+    clusterMissing?: boolean;
     clusterType?: OnPremClusterClusterTypeEnum;
     resourceLink?: string;
 }

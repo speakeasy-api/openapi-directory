@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleCommit = exports.SimpleCommitCommitter = exports.SimpleCommitAuthor = void 0;
+var utils_1 = require("../../../internal/utils");
 var SimpleCommitAuthor = /** @class */ (function (_super) {
     __extends(SimpleCommitAuthor, _super);
     function SimpleCommitAuthor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], SimpleCommitAuthor.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SimpleCommitAuthor.prototype, "name", void 0);
     return SimpleCommitAuthor;
-}(SpeakeasyBase));
-export { SimpleCommitAuthor };
+}(utils_1.SpeakeasyBase));
+exports.SimpleCommitAuthor = SimpleCommitAuthor;
 var SimpleCommitCommitter = /** @class */ (function (_super) {
     __extends(SimpleCommitCommitter, _super);
     function SimpleCommitCommitter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], SimpleCommitCommitter.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SimpleCommitCommitter.prototype, "name", void 0);
     return SimpleCommitCommitter;
-}(SpeakeasyBase));
-export { SimpleCommitCommitter };
+}(utils_1.SpeakeasyBase));
+exports.SimpleCommitCommitter = SimpleCommitCommitter;
 // SimpleCommit
 /**
  * Simple Commit
@@ -65,29 +68,29 @@ var SimpleCommit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", SimpleCommitAuthor)
     ], SimpleCommit.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer" }),
         __metadata("design:type", SimpleCommitCommitter)
     ], SimpleCommit.prototype, "committer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SimpleCommit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SimpleCommit.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], SimpleCommit.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tree_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tree_id" }),
         __metadata("design:type", String)
     ], SimpleCommit.prototype, "treeId", void 0);
     return SimpleCommit;
-}(SpeakeasyBase));
-export { SimpleCommit };
+}(utils_1.SpeakeasyBase));
+exports.SimpleCommit = SimpleCommit;

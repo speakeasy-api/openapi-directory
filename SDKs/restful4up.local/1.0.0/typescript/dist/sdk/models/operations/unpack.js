@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnpackResponse = exports.UnpackRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UnpackRequest = /** @class */ (function (_super) {
     __extends(UnpackRequest, _super);
     function UnpackRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", Object)
     ], UnpackRequest.prototype, "request", void 0);
     return UnpackRequest;
-}(SpeakeasyBase));
-export { UnpackRequest };
+}(utils_1.SpeakeasyBase));
+exports.UnpackRequest = UnpackRequest;
 var UnpackResponse = /** @class */ (function (_super) {
     __extends(UnpackResponse, _super);
     function UnpackResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], UnpackResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UnpackResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UnpackResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], UnpackResponse.prototype, "unpack200WildcardBinaryString", void 0);
     return UnpackResponse;
-}(SpeakeasyBase));
-export { UnpackResponse };
+}(utils_1.SpeakeasyBase));
+exports.UnpackResponse = UnpackResponse;

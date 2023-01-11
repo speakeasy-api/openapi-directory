@@ -30,6 +30,6 @@ export declare class BooksPromoofferDismissRequest extends SpeakeasyBase {
 }
 export declare class BooksPromoofferDismissResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

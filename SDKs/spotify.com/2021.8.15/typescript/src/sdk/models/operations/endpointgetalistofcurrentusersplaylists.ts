@@ -75,5 +75,5 @@ export class EndpointGetAListOfCurrentUsersPlaylistsResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetAListOfCurrentUsersPlaylists200ApplicationJsonObject?: EndpointGetAListOfCurrentUsersPlaylists200ApplicationJson;
+  endpointGetAListOfCurrentUsersPlaylists200ApplicationJSONObject?: EndpointGetAListOfCurrentUsersPlaylists200ApplicationJson;
 }

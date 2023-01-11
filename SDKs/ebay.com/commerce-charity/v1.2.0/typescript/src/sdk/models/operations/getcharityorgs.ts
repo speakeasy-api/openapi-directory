@@ -20,7 +20,7 @@ export class GetCharityOrgsQueryParams extends SpeakeasyBase {
 
 export class GetCharityOrgsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-EBAY-C-MARKETPLACE-ID" })
-  xEbayCMarketplaceId: string;
+  xEBAYCMARKETPLACEID: string;
 }
 
 

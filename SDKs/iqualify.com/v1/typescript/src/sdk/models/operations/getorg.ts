@@ -8,7 +8,7 @@ export class GetOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   orgResponse?: shared.OrgResponse;

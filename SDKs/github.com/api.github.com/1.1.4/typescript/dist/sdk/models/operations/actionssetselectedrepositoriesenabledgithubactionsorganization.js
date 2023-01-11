@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse = exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest = exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody = exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams, _super);
     function ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams.prototype, "org", void 0);
     return ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams;
-}(SpeakeasyBase));
-export { ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams = ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams;
 var ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody, _super);
     function ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_repository_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_repository_ids" }),
         __metadata("design:type", Array)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody.prototype, "selectedRepositoryIds", void 0);
     return ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody;
-}(SpeakeasyBase));
-export { ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody = ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody;
 var ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest, _super);
     function ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest.prototype, "request", void 0);
     return ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest;
-}(SpeakeasyBase));
-export { ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest = ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest;
 var ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse = /** @class */ (function (_super) {
     __extends(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse, _super);
     function ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse.prototype, "statusCode", void 0);
     return ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse;
-}(SpeakeasyBase));
-export { ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse = ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse;

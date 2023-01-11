@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuggesterFuzzyMatchingEnum } from "./suggesterfuzzymatchingenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentSuggesterOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var suggesterfuzzymatchingenum_1 = require("./suggesterfuzzymatchingenum");
 // DocumentSuggesterOptions
 /**
  * Options for a search suggester.
@@ -34,17 +37,17 @@ var DocumentSuggesterOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DocumentSuggesterOptions.prototype, "fuzzyMatching", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DocumentSuggesterOptions.prototype, "sortExpression", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DocumentSuggesterOptions.prototype, "sourceField", void 0);
     return DocumentSuggesterOptions;
-}(SpeakeasyBase));
-export { DocumentSuggesterOptions };
+}(utils_1.SpeakeasyBase));
+exports.DocumentSuggesterOptions = DocumentSuggesterOptions;

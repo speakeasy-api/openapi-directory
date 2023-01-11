@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { VpcPeeringConfig } from "./vpcpeeringconfig";
-export var PrivateConnectionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateConnectionInput = exports.PrivateConnection = exports.PrivateConnectionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var vpcpeeringconfig_1 = require("./vpcpeeringconfig");
+var PrivateConnectionStateEnum;
 (function (PrivateConnectionStateEnum) {
     PrivateConnectionStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     PrivateConnectionStateEnum["Creating"] = "CREATING";
@@ -33,35 +36,7 @@ export var PrivateConnectionStateEnum;
     PrivateConnectionStateEnum["Failed"] = "FAILED";
     PrivateConnectionStateEnum["Deleting"] = "DELETING";
     PrivateConnectionStateEnum["FailedToDelete"] = "FAILED_TO_DELETE";
-})(PrivateConnectionStateEnum || (PrivateConnectionStateEnum = {}));
-// PrivateConnectionInput
-/**
- * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
-**/
-var PrivateConnectionInput = /** @class */ (function (_super) {
-    __extends(PrivateConnectionInput, _super);
-    function PrivateConnectionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], PrivateConnectionInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
-    ], PrivateConnectionInput.prototype, "error", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], PrivateConnectionInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" }),
-        __metadata("design:type", VpcPeeringConfig)
-    ], PrivateConnectionInput.prototype, "vpcPeeringConfig", void 0);
-    return PrivateConnectionInput;
-}(SpeakeasyBase));
-export { PrivateConnectionInput };
+})(PrivateConnectionStateEnum = exports.PrivateConnectionStateEnum || (exports.PrivateConnectionStateEnum = {}));
 // PrivateConnection
 /**
  * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
@@ -72,37 +47,65 @@ var PrivateConnection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], PrivateConnection.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PrivateConnection.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PrivateConnection.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PrivateConnection.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PrivateConnection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PrivateConnection.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], PrivateConnection.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcPeeringConfig" }),
-        __metadata("design:type", VpcPeeringConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcPeeringConfig" }),
+        __metadata("design:type", vpcpeeringconfig_1.VpcPeeringConfig)
     ], PrivateConnection.prototype, "vpcPeeringConfig", void 0);
     return PrivateConnection;
-}(SpeakeasyBase));
-export { PrivateConnection };
+}(utils_1.SpeakeasyBase));
+exports.PrivateConnection = PrivateConnection;
+// PrivateConnectionInput
+/**
+ * The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.
+**/
+var PrivateConnectionInput = /** @class */ (function (_super) {
+    __extends(PrivateConnectionInput, _super);
+    function PrivateConnectionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], PrivateConnectionInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
+    ], PrivateConnectionInput.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], PrivateConnectionInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcPeeringConfig" }),
+        __metadata("design:type", vpcpeeringconfig_1.VpcPeeringConfig)
+    ], PrivateConnectionInput.prototype, "vpcPeeringConfig", void 0);
+    return PrivateConnectionInput;
+}(utils_1.SpeakeasyBase));
+exports.PrivateConnectionInput = PrivateConnectionInput;

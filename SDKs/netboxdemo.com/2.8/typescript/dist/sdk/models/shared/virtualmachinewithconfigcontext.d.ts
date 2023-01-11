@@ -28,9 +28,9 @@ export declare class VirtualMachineWithConfigContextStatus extends SpeakeasyBase
 export declare class VirtualMachineWithConfigContext extends SpeakeasyBase {
     cluster: NestedCluster;
     comments?: string;
-    configContext?: Map<string, string>;
+    configContext?: Record<string, string>;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     disk?: number;
     id?: number;
     lastUpdated?: Date;

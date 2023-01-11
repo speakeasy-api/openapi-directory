@@ -1,4 +1,7 @@
-export var HttpMethodEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpMethodEnum = void 0;
+var HttpMethodEnum;
 (function (HttpMethodEnum) {
     HttpMethodEnum["Get"] = "GET";
     HttpMethodEnum["Head"] = "HEAD";
@@ -9,4 +12,4 @@ export var HttpMethodEnum;
     HttpMethodEnum["Options"] = "OPTIONS";
     HttpMethodEnum["Trace"] = "TRACE";
     HttpMethodEnum["Patch"] = "PATCH";
-})(HttpMethodEnum || (HttpMethodEnum = {}));
+})(HttpMethodEnum = exports.HttpMethodEnum || (exports.HttpMethodEnum = {}));

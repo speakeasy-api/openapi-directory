@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTagResponse = exports.DeleteTagRequest = exports.DeleteTagPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteTagPathParams = /** @class */ (function (_super) {
     __extends(DeleteTagPathParams, _super);
     function DeleteTagPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tagId" }),
         __metadata("design:type", Number)
     ], DeleteTagPathParams.prototype, "tagId", void 0);
     return DeleteTagPathParams;
-}(SpeakeasyBase));
-export { DeleteTagPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTagPathParams = DeleteTagPathParams;
 var DeleteTagRequest = /** @class */ (function (_super) {
     __extends(DeleteTagRequest, _super);
     function DeleteTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteTagPathParams)
     ], DeleteTagRequest.prototype, "pathParams", void 0);
     return DeleteTagRequest;
-}(SpeakeasyBase));
-export { DeleteTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTagRequest = DeleteTagRequest;
 var DeleteTagResponse = /** @class */ (function (_super) {
     __extends(DeleteTagResponse, _super);
     function DeleteTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteTagResponse.prototype, "statusCode", void 0);
     return DeleteTagResponse;
-}(SpeakeasyBase));
-export { DeleteTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTagResponse = DeleteTagResponse;

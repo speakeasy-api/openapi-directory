@@ -25,5 +25,5 @@ export class SetMaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setMask200ApplicationJsonString?: string;
+  setMask200ApplicationJSONString?: string;
 }

@@ -1,114 +1,109 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListAllDropletsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=tag_name" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tag_name" })
   tagName?: string;
 }
 
-
-export class ListAllDropletsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListAllDropletsQueryParams;
-}
-
 export enum ListAllDroplets200ApplicationJsonDropletsImageDistributionEnum {
-    ArchLinux = "Arch Linux"
-,    CentOs = "CentOS"
-,    CoreOs = "CoreOS"
-,    Debian = "Debian"
-,    Fedora = "Fedora"
-,    FedoraAtomic = "Fedora Atomic"
-,    FreeBsd = "FreeBSD"
-,    Gentoo = "Gentoo"
-,    OpenSuse = "openSUSE"
-,    RancherOs = "RancherOS"
-,    Ubuntu = "Ubuntu"
-,    Unknown = "Unknown"
+    ArchLinux = "Arch Linux",
+    CentOs = "CentOS",
+    CoreOs = "CoreOS",
+    Debian = "Debian",
+    Fedora = "Fedora",
+    FedoraAtomic = "Fedora Atomic",
+    FreeBsd = "FreeBSD",
+    Gentoo = "Gentoo",
+    OpenSuse = "openSUSE",
+    RancherOs = "RancherOS",
+    Ubuntu = "Ubuntu",
+    Unknown = "Unknown"
 }
 
 export enum ListAllDroplets200ApplicationJsonDropletsImageRegionsEnum {
-    Ams1 = "ams1"
-,    Ams2 = "ams2"
-,    Ams3 = "ams3"
-,    Blr1 = "blr1"
-,    Fra1 = "fra1"
-,    Lon1 = "lon1"
-,    Nyc1 = "nyc1"
-,    Nyc2 = "nyc2"
-,    Nyc3 = "nyc3"
-,    Sfo1 = "sfo1"
-,    Sfo2 = "sfo2"
-,    Sfo3 = "sfo3"
-,    Sgp1 = "sgp1"
-,    Tor1 = "tor1"
+    Ams1 = "ams1",
+    Ams2 = "ams2",
+    Ams3 = "ams3",
+    Blr1 = "blr1",
+    Fra1 = "fra1",
+    Lon1 = "lon1",
+    Nyc1 = "nyc1",
+    Nyc2 = "nyc2",
+    Nyc3 = "nyc3",
+    Sfo1 = "sfo1",
+    Sfo2 = "sfo2",
+    Sfo3 = "sfo3",
+    Sgp1 = "sgp1",
+    Tor1 = "tor1"
 }
 
 export enum ListAllDroplets200ApplicationJsonDropletsImageStatusEnum {
-    NewUpper = "NEW"
-,    NewLower = "new"
-,    Available = "available"
-,    Pending = "pending"
-,    Deleted = "deleted"
-,    Retired = "retired"
+    NewUpper = "NEW",
+    NewLower = "new",
+    Available = "available",
+    Pending = "pending",
+    Deleted = "deleted",
+    Retired = "retired"
 }
 
 export enum ListAllDroplets200ApplicationJsonDropletsImageTypeEnum {
-    Base = "base"
-,    Snapshot = "snapshot"
-,    Backup = "backup"
-,    Custom = "custom"
+    Base = "base",
+    Snapshot = "snapshot",
+    Backup = "backup",
+    Custom = "custom"
 }
 
 
 export class ListAllDroplets200ApplicationJsonDropletsImage extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;
 
-  @Metadata({ data: "json, name=description" })
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=distribution" })
+  @SpeakeasyMetadata({ data: "json, name=distribution" })
   distribution?: ListAllDroplets200ApplicationJsonDropletsImageDistributionEnum;
 
-  @Metadata({ data: "json, name=error_message" })
+  @SpeakeasyMetadata({ data: "json, name=error_message" })
   errorMessage?: string;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: number;
 
-  @Metadata({ data: "json, name=min_disk_size" })
+  @SpeakeasyMetadata({ data: "json, name=min_disk_size" })
   minDiskSize?: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=public" })
+  @SpeakeasyMetadata({ data: "json, name=public" })
   public?: boolean;
 
-  @Metadata({ data: "json, name=regions" })
+  @SpeakeasyMetadata({ data: "json, name=regions" })
   regions?: ListAllDroplets200ApplicationJsonDropletsImageRegionsEnum[];
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes?: number;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug?: string;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status?: ListAllDroplets200ApplicationJsonDropletsImageStatusEnum;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: ListAllDroplets200ApplicationJsonDropletsImageTypeEnum;
 }
 
@@ -124,33 +119,33 @@ export class ListAllDroplets200ApplicationJsonDropletsImage extends SpeakeasyBas
  * 
 **/
 export class ListAllDroplets200ApplicationJsonDropletsKernel extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=version" })
+  @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;
 }
 
 export enum ListAllDroplets200ApplicationJsonDropletsNetworksV4TypeEnum {
-    Public = "public"
-,    Private = "private"
+    Public = "public",
+    Private = "private"
 }
 
 
 export class ListAllDroplets200ApplicationJsonDropletsNetworksV4 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=gateway" })
+  @SpeakeasyMetadata({ data: "json, name=gateway" })
   gateway?: string;
 
-  @Metadata({ data: "json, name=ip_address" })
+  @SpeakeasyMetadata({ data: "json, name=ip_address" })
   ipAddress?: string;
 
-  @Metadata({ data: "json, name=netmask" })
+  @SpeakeasyMetadata({ data: "json, name=netmask" })
   netmask?: string;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: ListAllDroplets200ApplicationJsonDropletsNetworksV4TypeEnum;
 }
 
@@ -160,16 +155,16 @@ export enum ListAllDroplets200ApplicationJsonDropletsNetworksV6TypeEnum {
 
 
 export class ListAllDroplets200ApplicationJsonDropletsNetworksV6 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=gateway" })
+  @SpeakeasyMetadata({ data: "json, name=gateway" })
   gateway?: string;
 
-  @Metadata({ data: "json, name=ip_address" })
+  @SpeakeasyMetadata({ data: "json, name=ip_address" })
   ipAddress?: string;
 
-  @Metadata({ data: "json, name=netmask" })
+  @SpeakeasyMetadata({ data: "json, name=netmask" })
   netmask?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: ListAllDroplets200ApplicationJsonDropletsNetworksV6TypeEnum;
 }
 
@@ -179,10 +174,10 @@ export class ListAllDroplets200ApplicationJsonDropletsNetworksV6 extends Speakea
  * The details of the network that are configured for the Droplet instance.  This is an object that contains keys for IPv4 and IPv6.  The value of each of these is an array that contains objects describing an individual IP resource allocated to the Droplet.  These will define attributes like the IP address, netmask, and gateway of the specific network depending on the type of network it is.
 **/
 export class ListAllDroplets200ApplicationJsonDropletsNetworks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=v4", elemType: operations.ListAllDroplets200ApplicationJsonDropletsNetworksV4 })
+  @SpeakeasyMetadata({ data: "json, name=v4", elemType: ListAllDroplets200ApplicationJsonDropletsNetworksV4 })
   v4?: ListAllDroplets200ApplicationJsonDropletsNetworksV4[];
 
-  @Metadata({ data: "json, name=v6", elemType: operations.ListAllDroplets200ApplicationJsonDropletsNetworksV6 })
+  @SpeakeasyMetadata({ data: "json, name=v6", elemType: ListAllDroplets200ApplicationJsonDropletsNetworksV6 })
   v6?: ListAllDroplets200ApplicationJsonDropletsNetworksV6[];
 }
 
@@ -192,140 +187,140 @@ export class ListAllDroplets200ApplicationJsonDropletsNetworks extends Speakeasy
  * The details of the Droplet's backups feature, if backups are configured for the Droplet. This object contains keys for the start and end times of the window during which the backup will start.
 **/
 export class ListAllDroplets200ApplicationJsonDropletsNextBackupWindow extends SpeakeasyBase {
-  @Metadata({ data: "json, name=end" })
+  @SpeakeasyMetadata({ data: "json, name=end" })
   end?: Date;
 
-  @Metadata({ data: "json, name=start" })
+  @SpeakeasyMetadata({ data: "json, name=start" })
   start?: Date;
 }
 
 
 export class ListAllDroplets200ApplicationJsonDropletsSize extends SpeakeasyBase {
-  @Metadata({ data: "json, name=available" })
+  @SpeakeasyMetadata({ data: "json, name=available" })
   available: boolean;
 
-  @Metadata({ data: "json, name=description" })
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description: string;
 
-  @Metadata({ data: "json, name=disk" })
+  @SpeakeasyMetadata({ data: "json, name=disk" })
   disk: number;
 
-  @Metadata({ data: "json, name=memory" })
+  @SpeakeasyMetadata({ data: "json, name=memory" })
   memory: number;
 
-  @Metadata({ data: "json, name=price_hourly" })
+  @SpeakeasyMetadata({ data: "json, name=price_hourly" })
   priceHourly: number;
 
-  @Metadata({ data: "json, name=price_monthly" })
+  @SpeakeasyMetadata({ data: "json, name=price_monthly" })
   priceMonthly: number;
 
-  @Metadata({ data: "json, name=regions" })
+  @SpeakeasyMetadata({ data: "json, name=regions" })
   regions: string[];
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug: string;
 
-  @Metadata({ data: "json, name=transfer" })
+  @SpeakeasyMetadata({ data: "json, name=transfer" })
   transfer: number;
 
-  @Metadata({ data: "json, name=vcpus" })
+  @SpeakeasyMetadata({ data: "json, name=vcpus" })
   vcpus: number;
 }
 
 export enum ListAllDroplets200ApplicationJsonDropletsStatusEnum {
-    New = "new"
-,    Active = "active"
-,    Off = "off"
-,    Archive = "archive"
+    New = "new",
+    Active = "active",
+    Off = "off",
+    Archive = "archive"
 }
 
 
 export class ListAllDroplets200ApplicationJsonDroplets extends SpeakeasyBase {
-  @Metadata({ data: "json, name=backup_ids" })
+  @SpeakeasyMetadata({ data: "json, name=backup_ids" })
   backupIds: number[];
 
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt: Date;
 
-  @Metadata({ data: "json, name=disk" })
+  @SpeakeasyMetadata({ data: "json, name=disk" })
   disk: number;
 
-  @Metadata({ data: "json, name=features" })
+  @SpeakeasyMetadata({ data: "json, name=features" })
   features: string[];
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: number;
 
-  @Metadata({ data: "json, name=image" })
+  @SpeakeasyMetadata({ data: "json, name=image" })
   image: ListAllDroplets200ApplicationJsonDropletsImage;
 
-  @Metadata({ data: "json, name=kernel" })
+  @SpeakeasyMetadata({ data: "json, name=kernel" })
   kernel: ListAllDroplets200ApplicationJsonDropletsKernel;
 
-  @Metadata({ data: "json, name=locked" })
+  @SpeakeasyMetadata({ data: "json, name=locked" })
   locked: boolean;
 
-  @Metadata({ data: "json, name=memory" })
+  @SpeakeasyMetadata({ data: "json, name=memory" })
   memory: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=networks" })
+  @SpeakeasyMetadata({ data: "json, name=networks" })
   networks: ListAllDroplets200ApplicationJsonDropletsNetworks;
 
-  @Metadata({ data: "json, name=next_backup_window" })
+  @SpeakeasyMetadata({ data: "json, name=next_backup_window" })
   nextBackupWindow: ListAllDroplets200ApplicationJsonDropletsNextBackupWindow;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21actionsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesActionsItemsPropertiesRegion;
 
-  @Metadata({ data: "json, name=size" })
+  @SpeakeasyMetadata({ data: "json, name=size" })
   size: ListAllDroplets200ApplicationJsonDropletsSize;
 
-  @Metadata({ data: "json, name=size_slug" })
+  @SpeakeasyMetadata({ data: "json, name=size_slug" })
   sizeSlug: string;
 
-  @Metadata({ data: "json, name=snapshot_ids" })
+  @SpeakeasyMetadata({ data: "json, name=snapshot_ids" })
   snapshotIds: number[];
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status: ListAllDroplets200ApplicationJsonDropletsStatusEnum;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags: string[];
 
-  @Metadata({ data: "json, name=vcpus" })
+  @SpeakeasyMetadata({ data: "json, name=vcpus" })
   vcpus: number;
 
-  @Metadata({ data: "json, name=volume_ids" })
+  @SpeakeasyMetadata({ data: "json, name=volume_ids" })
   volumeIds: string[];
 
-  @Metadata({ data: "json, name=vpc_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=vpc_uuid" })
   vpcUuid?: string;
 }
 
 
 export class ListAllDroplets200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllDroplets200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllDroplets200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -335,51 +330,57 @@ export class ListAllDroplets200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllDroplets200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListAllDroplets200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=droplets", elemType: operations.ListAllDroplets200ApplicationJsonDroplets })
+  @SpeakeasyMetadata({ data: "json, name=droplets", elemType: ListAllDroplets200ApplicationJsonDroplets })
   droplets?: ListAllDroplets200ApplicationJsonDroplets[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllDroplets200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllDroplets200ApplicationJsonMeta;
 }
 
 
 export class ListAllDroplets401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListAllDropletsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListAllDropletsQueryParams;
+}
+
+
 export class ListAllDropletsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllDroplets200ApplicationJsonObject?: ListAllDroplets200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllDroplets200ApplicationJSONObject?: ListAllDroplets200ApplicationJson;
 
-  @Metadata()
-  listAllDroplets401ApplicationJsonObject?: ListAllDroplets401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllDroplets401ApplicationJSONObject?: ListAllDroplets401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

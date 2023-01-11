@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdReference } from "./adreference";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAdsByInventoryReferenceResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var adreference_1 = require("./adreference");
+var error_1 = require("./error");
 // CreateAdsByInventoryReferenceResponse
 /**
  * This type defines the fields returned when you create an ad by inventory reference ID.
@@ -35,25 +38,25 @@ var CreateAdsByInventoryReferenceResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ads", elemType: AdReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ads", elemType: adreference_1.AdReference }),
         __metadata("design:type", Array)
     ], CreateAdsByInventoryReferenceResponse.prototype, "ads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], CreateAdsByInventoryReferenceResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryReferenceId" }),
         __metadata("design:type", String)
     ], CreateAdsByInventoryReferenceResponse.prototype, "inventoryReferenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryReferenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryReferenceType" }),
         __metadata("design:type", String)
     ], CreateAdsByInventoryReferenceResponse.prototype, "inventoryReferenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", Number)
     ], CreateAdsByInventoryReferenceResponse.prototype, "statusCode", void 0);
     return CreateAdsByInventoryReferenceResponse;
-}(SpeakeasyBase));
-export { CreateAdsByInventoryReferenceResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateAdsByInventoryReferenceResponse = CreateAdsByInventoryReferenceResponse;

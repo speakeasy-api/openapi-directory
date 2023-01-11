@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1BoundingPolyConfig } from "./googleclouddatalabelingv1beta1boundingpolyconfig";
-import { GoogleCloudDatalabelingV1beta1EvaluationConfig } from "./googleclouddatalabelingv1beta1evaluationconfig";
-import { GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig } from "./googleclouddatalabelingv1beta1evaluationjobalertconfig";
-import { GoogleCloudDatalabelingV1beta1HumanAnnotationConfig } from "./googleclouddatalabelingv1beta1humanannotationconfig";
-import { GoogleCloudDatalabelingV1beta1ImageClassificationConfig } from "./googleclouddatalabelingv1beta1imageclassificationconfig";
-import { GoogleCloudDatalabelingV1beta1InputConfig } from "./googleclouddatalabelingv1beta1inputconfig";
-import { GoogleCloudDatalabelingV1beta1TextClassificationConfig } from "./googleclouddatalabelingv1beta1textclassificationconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1EvaluationJobConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1boundingpolyconfig_1 = require("./googleclouddatalabelingv1beta1boundingpolyconfig");
+var googleclouddatalabelingv1beta1evaluationconfig_1 = require("./googleclouddatalabelingv1beta1evaluationconfig");
+var googleclouddatalabelingv1beta1evaluationjobalertconfig_1 = require("./googleclouddatalabelingv1beta1evaluationjobalertconfig");
+var googleclouddatalabelingv1beta1humanannotationconfig_1 = require("./googleclouddatalabelingv1beta1humanannotationconfig");
+var googleclouddatalabelingv1beta1imageclassificationconfig_1 = require("./googleclouddatalabelingv1beta1imageclassificationconfig");
+var googleclouddatalabelingv1beta1inputconfig_1 = require("./googleclouddatalabelingv1beta1inputconfig");
+var googleclouddatalabelingv1beta1textclassificationconfig_1 = require("./googleclouddatalabelingv1beta1textclassificationconfig");
 // GoogleCloudDatalabelingV1beta1EvaluationJobConfig
 /**
  * Configures specific details of how a continuous evaluation job works. Provide this configuration when you create an EvaluationJob.
@@ -40,45 +43,45 @@ var GoogleCloudDatalabelingV1beta1EvaluationJobConfig = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigqueryImportKeys" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigqueryImportKeys" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "bigqueryImportKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundingPolyConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1BoundingPolyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundingPolyConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1boundingpolyconfig_1.GoogleCloudDatalabelingV1beta1BoundingPolyConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "boundingPolyConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1EvaluationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1evaluationconfig_1.GoogleCloudDatalabelingV1beta1EvaluationConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "evaluationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationJobAlertConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationJobAlertConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1evaluationjobalertconfig_1.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "evaluationJobAlertConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exampleCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exampleCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "exampleCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exampleSamplePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exampleSamplePercentage" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "exampleSamplePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=humanAnnotationConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1HumanAnnotationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=humanAnnotationConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1humanannotationconfig_1.GoogleCloudDatalabelingV1beta1HumanAnnotationConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "humanAnnotationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageClassificationConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1ImageClassificationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageClassificationConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1imageclassificationconfig_1.GoogleCloudDatalabelingV1beta1ImageClassificationConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "imageClassificationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1InputConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1inputconfig_1.GoogleCloudDatalabelingV1beta1InputConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "inputConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textClassificationConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1TextClassificationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textClassificationConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1textclassificationconfig_1.GoogleCloudDatalabelingV1beta1TextClassificationConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobConfig.prototype, "textClassificationConfig", void 0);
     return GoogleCloudDatalabelingV1beta1EvaluationJobConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1EvaluationJobConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1EvaluationJobConfig = GoogleCloudDatalabelingV1beta1EvaluationJobConfig;

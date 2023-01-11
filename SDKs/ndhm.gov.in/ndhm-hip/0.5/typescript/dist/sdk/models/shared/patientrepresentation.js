@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CareContextRepresentation } from "./carecontextrepresentation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientRepresentation = void 0;
+var utils_1 = require("../../../internal/utils");
+var carecontextrepresentation_1 = require("./carecontextrepresentation");
 var PatientRepresentation = /** @class */ (function (_super) {
     __extends(PatientRepresentation, _super);
     function PatientRepresentation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContexts", elemType: CareContextRepresentation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContexts", elemType: carecontextrepresentation_1.CareContextRepresentation }),
         __metadata("design:type", Array)
     ], PatientRepresentation.prototype, "careContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], PatientRepresentation.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchedBy" }),
         __metadata("design:type", Array)
     ], PatientRepresentation.prototype, "matchedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceNumber" }),
         __metadata("design:type", String)
     ], PatientRepresentation.prototype, "referenceNumber", void 0);
     return PatientRepresentation;
-}(SpeakeasyBase));
-export { PatientRepresentation };
+}(utils_1.SpeakeasyBase));
+exports.PatientRepresentation = PatientRepresentation;

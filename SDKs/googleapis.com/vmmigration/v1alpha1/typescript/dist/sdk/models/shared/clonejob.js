@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeEngineTargetDetails } from "./computeenginetargetdetails";
-import { TargetVmDetailsInput } from "./targetvmdetails";
-import { Status } from "./status";
-import { TargetVmDetails } from "./targetvmdetails";
-import { CloneStep } from "./clonestep";
-export var CloneJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloneJobInput = exports.CloneJob = exports.CloneJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeenginetargetdetails_1 = require("./computeenginetargetdetails");
+var targetvmdetails_1 = require("./targetvmdetails");
+var status_1 = require("./status");
+var clonestep_1 = require("./clonestep");
+var targetvmdetails_2 = require("./targetvmdetails");
+var CloneJobStateEnum;
 (function (CloneJobStateEnum) {
     CloneJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     CloneJobStateEnum["Pending"] = "PENDING";
@@ -38,35 +41,7 @@ export var CloneJobStateEnum;
     CloneJobStateEnum["Cancelled"] = "CANCELLED";
     CloneJobStateEnum["Cancelling"] = "CANCELLING";
     CloneJobStateEnum["AdaptingOs"] = "ADAPTING_OS";
-})(CloneJobStateEnum || (CloneJobStateEnum = {}));
-// CloneJobInput
-/**
- * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
-**/
-var CloneJobInput = /** @class */ (function (_super) {
-    __extends(CloneJobInput, _super);
-    function CloneJobInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" }),
-        __metadata("design:type", ComputeEngineTargetDetails)
-    ], CloneJobInput.prototype, "computeEngineTargetDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" }),
-        __metadata("design:type", TargetVmDetailsInput)
-    ], CloneJobInput.prototype, "computeEngineVmDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
-    ], CloneJobInput.prototype, "error", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDetails" }),
-        __metadata("design:type", TargetVmDetailsInput)
-    ], CloneJobInput.prototype, "targetDetails", void 0);
-    return CloneJobInput;
-}(SpeakeasyBase));
-export { CloneJobInput };
+})(CloneJobStateEnum = exports.CloneJobStateEnum || (exports.CloneJobStateEnum = {}));
 // CloneJob
 /**
  * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
@@ -77,45 +52,73 @@ var CloneJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" }),
-        __metadata("design:type", ComputeEngineTargetDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDetails" }),
+        __metadata("design:type", computeenginetargetdetails_1.ComputeEngineTargetDetails)
     ], CloneJob.prototype, "computeEngineTargetDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDetails" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], CloneJob.prototype, "computeEngineVmDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], CloneJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], CloneJob.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], CloneJob.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CloneJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CloneJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateTime" }),
         __metadata("design:type", String)
     ], CloneJob.prototype, "stateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps", elemType: CloneStep }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps", elemType: clonestep_1.CloneStep }),
         __metadata("design:type", Array)
     ], CloneJob.prototype, "steps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDetails" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDetails" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], CloneJob.prototype, "targetDetails", void 0);
     return CloneJob;
-}(SpeakeasyBase));
-export { CloneJob };
+}(utils_1.SpeakeasyBase));
+exports.CloneJob = CloneJob;
+// CloneJobInput
+/**
+ * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
+**/
+var CloneJobInput = /** @class */ (function (_super) {
+    __extends(CloneJobInput, _super);
+    function CloneJobInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDetails" }),
+        __metadata("design:type", computeenginetargetdetails_1.ComputeEngineTargetDetails)
+    ], CloneJobInput.prototype, "computeEngineTargetDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDetails" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
+    ], CloneJobInput.prototype, "computeEngineVmDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
+    ], CloneJobInput.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDetails" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
+    ], CloneJobInput.prototype, "targetDetails", void 0);
+    return CloneJobInput;
+}(utils_1.SpeakeasyBase));
+exports.CloneJobInput = CloneJobInput;

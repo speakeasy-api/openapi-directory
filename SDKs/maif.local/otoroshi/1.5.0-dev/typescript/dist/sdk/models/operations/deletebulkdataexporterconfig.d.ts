@@ -21,5 +21,5 @@ export declare class DeletebulkDataExporterConfigRequest extends SpeakeasyBase {
 export declare class DeletebulkDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deletebulkDataExporterConfig200ApplicationJsonObjects?: DeletebulkDataExporterConfig200ApplicationJson[];
+    deletebulkDataExporterConfig200ApplicationJSONObjects?: DeletebulkDataExporterConfig200ApplicationJson[];
 }

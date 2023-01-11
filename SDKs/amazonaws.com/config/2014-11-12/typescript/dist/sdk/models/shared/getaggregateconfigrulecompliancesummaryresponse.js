@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateComplianceCount } from "./aggregatecompliancecount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateConfigRuleComplianceSummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatecompliancecount_1 = require("./aggregatecompliancecount");
 var GetAggregateConfigRuleComplianceSummaryResponse = /** @class */ (function (_super) {
     __extends(GetAggregateConfigRuleComplianceSummaryResponse, _super);
     function GetAggregateConfigRuleComplianceSummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AggregateComplianceCounts", elemType: AggregateComplianceCount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AggregateComplianceCounts", elemType: aggregatecompliancecount_1.AggregateComplianceCount }),
         __metadata("design:type", Array)
     ], GetAggregateConfigRuleComplianceSummaryResponse.prototype, "aggregateComplianceCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupByKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupByKey" }),
         __metadata("design:type", String)
     ], GetAggregateConfigRuleComplianceSummaryResponse.prototype, "groupByKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetAggregateConfigRuleComplianceSummaryResponse.prototype, "nextToken", void 0);
     return GetAggregateConfigRuleComplianceSummaryResponse;
-}(SpeakeasyBase));
-export { GetAggregateConfigRuleComplianceSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateConfigRuleComplianceSummaryResponse = GetAggregateConfigRuleComplianceSummaryResponse;

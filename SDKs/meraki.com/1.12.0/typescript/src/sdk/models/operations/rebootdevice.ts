@@ -22,5 +22,5 @@ export class RebootDeviceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  rebootDevice202ApplicationJsonObject?: Map<string, any>;
+  rebootDevice202ApplicationJSONObject?: Record<string, any>;
 }

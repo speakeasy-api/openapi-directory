@@ -19,7 +19,7 @@ export declare class Images200ApplicationJsonImageResults extends SpeakeasyBase 
 export declare class Images200ApplicationJson extends SpeakeasyBase {
     answers?: string[];
     imageResults?: Images200ApplicationJsonImageResults[];
-    results?: Map<string, any>[];
+    results?: Record<string, any>[];
     total?: number;
 }
 export declare class ImagesRequest extends SpeakeasyBase {
@@ -28,6 +28,6 @@ export declare class ImagesRequest extends SpeakeasyBase {
 export declare class ImagesResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    images200ApplicationJsonObject?: Images200ApplicationJson;
+    images200ApplicationJSONObject?: Images200ApplicationJson;
     statusCode: number;
 }

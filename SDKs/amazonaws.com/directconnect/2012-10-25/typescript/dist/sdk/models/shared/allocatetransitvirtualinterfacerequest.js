@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NewTransitVirtualInterfaceAllocation } from "./newtransitvirtualinterfaceallocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllocateTransitVirtualInterfaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var newtransitvirtualinterfaceallocation_1 = require("./newtransitvirtualinterfaceallocation");
 var AllocateTransitVirtualInterfaceRequest = /** @class */ (function (_super) {
     __extends(AllocateTransitVirtualInterfaceRequest, _super);
     function AllocateTransitVirtualInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], AllocateTransitVirtualInterfaceRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newTransitVirtualInterfaceAllocation" }),
-        __metadata("design:type", NewTransitVirtualInterfaceAllocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newTransitVirtualInterfaceAllocation" }),
+        __metadata("design:type", newtransitvirtualinterfaceallocation_1.NewTransitVirtualInterfaceAllocation)
     ], AllocateTransitVirtualInterfaceRequest.prototype, "newTransitVirtualInterfaceAllocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], AllocateTransitVirtualInterfaceRequest.prototype, "ownerAccount", void 0);
     return AllocateTransitVirtualInterfaceRequest;
-}(SpeakeasyBase));
-export { AllocateTransitVirtualInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.AllocateTransitVirtualInterfaceRequest = AllocateTransitVirtualInterfaceRequest;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddTagsToResourceRequest, AddTagsToResourceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,38 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddTagsToResourceRequest = {
   headers: {
-    xAmzAlgorithm: "a",
-    xAmzContentSha256: "tempore",
-    xAmzCredential: "veniam",
-    xAmzDate: "consequatur",
-    xAmzSecurityToken: "corporis",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "iure",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
   },
   request: {
-    resourceArn: "est",
+    resourceArn: "fugit",
     tags: [
       {
-        key: "consequatur",
-        resourceArn: "non",
-        value: "nulla",
-      },
-      {
-        key: "inventore",
-        resourceArn: "reprehenderit",
-        value: "quos",
-      },
-      {
-        key: "saepe",
-        resourceArn: "aperiam",
-        value: "est",
+        key: "nihil",
+        resourceArn: "rerum",
+        value: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {
+sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {
    // handle response
 });
 ```

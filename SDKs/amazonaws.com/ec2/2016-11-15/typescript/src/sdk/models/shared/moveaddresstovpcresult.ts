@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
 
 
 
 export class MoveAddressToVpcResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  allocationId?: string;
+  allocationId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: StatusEnum;
+  status?: Record<string, any>;
 }

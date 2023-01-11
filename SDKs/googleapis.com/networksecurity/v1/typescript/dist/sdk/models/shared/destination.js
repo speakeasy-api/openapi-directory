@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpHeaderMatch } from "./httpheadermatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Destination = void 0;
+var utils_1 = require("../../../internal/utils");
+var httpheadermatch_1 = require("./httpheadermatch");
 // Destination
 /**
  * Specification of traffic destination attributes.
@@ -34,21 +37,21 @@ var Destination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hosts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hosts" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "hosts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpHeaderMatch" }),
-        __metadata("design:type", HttpHeaderMatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpHeaderMatch" }),
+        __metadata("design:type", httpheadermatch_1.HttpHeaderMatch)
     ], Destination.prototype, "httpHeaderMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=methods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=methods" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "methods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports" }),
         __metadata("design:type", Array)
     ], Destination.prototype, "ports", void 0);
     return Destination;
-}(SpeakeasyBase));
-export { Destination };
+}(utils_1.SpeakeasyBase));
+exports.Destination = Destination;

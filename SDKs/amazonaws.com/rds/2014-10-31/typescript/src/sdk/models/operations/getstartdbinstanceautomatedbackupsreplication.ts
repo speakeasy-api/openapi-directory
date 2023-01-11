@@ -24,7 +24,7 @@ export class GetStartDbInstanceAutomatedBackupsReplicationQueryParams extends Sp
   preSignedUrl?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBInstanceArn" })
-  sourceDbInstanceArn: string;
+  sourceDBInstanceArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetStartDbInstanceAutomatedBackupsReplicationVersionEnum;

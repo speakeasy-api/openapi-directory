@@ -1,0 +1,30 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class UrlInfoResponse extends SpeakeasyBase {
+    content: string;
+    contentEncoding: string;
+    contentSize: number;
+    contentType: string;
+    httpOk: boolean;
+    httpRedirect: boolean;
+    httpStatus: number;
+    httpStatusMessage: number;
+    isError: boolean;
+    isTimeout: boolean;
+    languageCode: string;
+    loadTime: number;
+    query: Record<string, string>;
+    real: boolean;
+    serverCity: string;
+    serverCountry: string;
+    serverCountryCode: string;
+    serverHostname: string;
+    serverIp: string;
+    serverName: string;
+    serverRegion: string;
+    title: string;
+    url: string;
+    urlPath: string;
+    urlPort: number;
+    urlProtocol: string;
+    valid: boolean;
+}

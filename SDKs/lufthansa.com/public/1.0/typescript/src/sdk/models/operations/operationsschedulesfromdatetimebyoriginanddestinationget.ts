@@ -59,7 +59,7 @@ export class OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse ex
   contentType: string;
 
   @SpeakeasyMetadata()
-  operationsSchedulesFromDateTimeByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+  operationsSchedulesFromDateTimeByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

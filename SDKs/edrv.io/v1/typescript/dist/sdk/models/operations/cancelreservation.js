@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelreservationResponse = exports.CancelreservationRequest = exports.Cancelreservation201ApplicationJson = exports.CancelreservationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var CancelreservationRequestBody = /** @class */ (function (_super) {
     __extends(CancelreservationRequestBody, _super);
     function CancelreservationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservation" }),
         __metadata("design:type", String)
     ], CancelreservationRequestBody.prototype, "reservation", void 0);
     return CancelreservationRequestBody;
-}(SpeakeasyBase));
-export { CancelreservationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CancelreservationRequestBody = CancelreservationRequestBody;
 var Cancelreservation201ApplicationJson = /** @class */ (function (_super) {
     __extends(Cancelreservation201ApplicationJson, _super);
     function Cancelreservation201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Cancelreservation201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Cancelreservation201ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], Cancelreservation201ApplicationJson.prototype, "result", void 0);
     return Cancelreservation201ApplicationJson;
-}(SpeakeasyBase));
-export { Cancelreservation201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Cancelreservation201ApplicationJson = Cancelreservation201ApplicationJson;
 var CancelreservationRequest = /** @class */ (function (_super) {
     __extends(CancelreservationRequest, _super);
     function CancelreservationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CancelreservationRequestBody)
     ], CancelreservationRequest.prototype, "request", void 0);
     return CancelreservationRequest;
-}(SpeakeasyBase));
-export { CancelreservationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CancelreservationRequest = CancelreservationRequest;
 var CancelreservationResponse = /** @class */ (function (_super) {
     __extends(CancelreservationResponse, _super);
     function CancelreservationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CancelreservationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CancelreservationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Cancelreservation201ApplicationJson)
-    ], CancelreservationResponse.prototype, "cancelreservation201ApplicationJsonObject", void 0);
+    ], CancelreservationResponse.prototype, "cancelreservation201ApplicationJSONObject", void 0);
     return CancelreservationResponse;
-}(SpeakeasyBase));
-export { CancelreservationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelreservationResponse = CancelreservationResponse;

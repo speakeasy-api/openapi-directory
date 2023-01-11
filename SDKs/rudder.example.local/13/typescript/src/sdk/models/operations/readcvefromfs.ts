@@ -37,5 +37,5 @@ export class ReadCvEfromFsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  readCvEfromFs200ApplicationJsonObject?: ReadCvEfromFs200ApplicationJson;
+  readCVEfromFS200ApplicationJSONObject?: ReadCvEfromFs200ApplicationJson;
 }

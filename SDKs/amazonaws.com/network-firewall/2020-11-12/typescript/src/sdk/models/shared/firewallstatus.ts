@@ -17,5 +17,5 @@ export class FirewallStatus extends SpeakeasyBase {
   status: FirewallStatusValueEnum;
 
   @SpeakeasyMetadata({ data: "json, name=SyncStates", elemType: SyncState })
-  syncStates?: Map<string, SyncState>;
+  syncStates?: Record<string, SyncState>;
 }

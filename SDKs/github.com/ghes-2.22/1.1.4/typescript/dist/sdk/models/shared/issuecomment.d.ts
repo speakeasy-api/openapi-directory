@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { ReactionRollup } from "./reactionrollup";
+/**
+ * Simple User
+**/
 export declare class IssueCommentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -35,7 +38,7 @@ export declare class IssueComment extends SpeakeasyBase {
     id: number;
     issueUrl: string;
     nodeId: string;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     reactions?: ReactionRollup;
     updatedAt: Date;
     url: string;

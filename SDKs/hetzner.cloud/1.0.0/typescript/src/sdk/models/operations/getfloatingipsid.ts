@@ -86,7 +86,7 @@ export class GetFloatingIpsId200ApplicationJsonFloatingIp extends SpeakeasyBase 
   ip: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -119,8 +119,8 @@ export class GetFloatingIpsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getFloatingIpsId200ApplicationJsonObject?: GetFloatingIpsId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getFloatingIpsId200ApplicationJSONObject?: GetFloatingIpsId200ApplicationJson;
 }

@@ -41,7 +41,7 @@ export class Belegdaten extends SpeakeasyBase {
   storno?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=Storno-Beleg-UUID" })
-  stornoBelegUuid?: string;
+  stornoBelegUUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Storno-Text" })
   stornoText?: string;
@@ -59,10 +59,10 @@ export class Belegdaten extends SpeakeasyBase {
   unternehmenFusszeile?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Unternehmen-ID" })
-  unternehmenId?: string;
+  unternehmenID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Unternehmen-ID-Typ" })
-  unternehmenIdTyp?: BelegdatenUnternehmenIdTypEnum;
+  unternehmenIDTyp?: BelegdatenUnternehmenIdTypEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Unternehmen-Kopfzeile" })
   unternehmenKopfzeile?: string;
@@ -74,7 +74,7 @@ export class Belegdaten extends SpeakeasyBase {
   unternehmenOrt?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Unternehmen-PLZ" })
-  unternehmenPlz?: string;
+  unternehmenPLZ?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Zahlungen", elemType: Zahlung })
   zahlungen?: Zahlung[];

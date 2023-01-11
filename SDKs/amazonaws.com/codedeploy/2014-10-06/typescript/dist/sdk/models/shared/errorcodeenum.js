@@ -1,4 +1,7 @@
-export var ErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorCodeEnum = void 0;
+var ErrorCodeEnum;
 (function (ErrorCodeEnum) {
     ErrorCodeEnum["AgentIssue"] = "AGENT_ISSUE";
     ErrorCodeEnum["AlarmActive"] = "ALARM_ACTIVE";
@@ -34,4 +37,4 @@ export var ErrorCodeEnum;
     ErrorCodeEnum["Throttled"] = "THROTTLED";
     ErrorCodeEnum["Timeout"] = "TIMEOUT";
     ErrorCodeEnum["CloudformationStackFailure"] = "CLOUDFORMATION_STACK_FAILURE";
-})(ErrorCodeEnum || (ErrorCodeEnum = {}));
+})(ErrorCodeEnum = exports.ErrorCodeEnum || (exports.ErrorCodeEnum = {}));

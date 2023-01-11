@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccountsResponse = exports.GetAccountsRequest = exports.GetAccounts200ApplicationJson = exports.GetAccountsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAccountsQueryParams = /** @class */ (function (_super) {
     __extends(GetAccountsQueryParams, _super);
     function GetAccountsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=account" }),
         __metadata("design:type", String)
     ], GetAccountsQueryParams.prototype, "account", void 0);
     return GetAccountsQueryParams;
-}(SpeakeasyBase));
-export { GetAccountsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsQueryParams = GetAccountsQueryParams;
 var GetAccounts200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAccounts200ApplicationJson, _super);
     function GetAccounts200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts" }),
         __metadata("design:type", Array)
     ], GetAccounts200ApplicationJson.prototype, "accounts", void 0);
     return GetAccounts200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAccounts200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAccounts200ApplicationJson = GetAccounts200ApplicationJson;
 var GetAccountsRequest = /** @class */ (function (_super) {
     __extends(GetAccountsRequest, _super);
     function GetAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAccountsQueryParams)
     ], GetAccountsRequest.prototype, "queryParams", void 0);
     return GetAccountsRequest;
-}(SpeakeasyBase));
-export { GetAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsRequest = GetAccountsRequest;
 var GetAccountsResponse = /** @class */ (function (_super) {
     __extends(GetAccountsResponse, _super);
     function GetAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAccounts200ApplicationJson)
-    ], GetAccountsResponse.prototype, "getAccounts200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAccountsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAccounts200ApplicationJson)
+    ], GetAccountsResponse.prototype, "getAccounts200ApplicationJSONObject", void 0);
     return GetAccountsResponse;
-}(SpeakeasyBase));
-export { GetAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountsResponse = GetAccountsResponse;

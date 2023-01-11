@@ -49,7 +49,7 @@ export class TaxonomyCategories200ApplicationJsonData extends SpeakeasyBase {
   subcategories?: TaxonomyCategories200ApplicationJsonDataSubcategories[];
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 }
 
 
@@ -79,10 +79,10 @@ export class TaxonomyCategories200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -112,5 +112,5 @@ export class TaxonomyCategoriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  taxonomyCategories200ApplicationJsonObject?: TaxonomyCategories200ApplicationJson;
+  taxonomyCategories200ApplicationJSONObject?: TaxonomyCategories200ApplicationJson;
 }

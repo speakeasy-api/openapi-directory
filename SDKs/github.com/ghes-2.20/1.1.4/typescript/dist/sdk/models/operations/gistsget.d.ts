@@ -21,5 +21,5 @@ export declare class GistsGetResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     gistSimple?: shared.GistSimple;
-    gistsGet403ApplicationJsonObject?: GistsGet403ApplicationJson;
+    gistsGet403ApplicationJSONObject?: GistsGet403ApplicationJson;
 }

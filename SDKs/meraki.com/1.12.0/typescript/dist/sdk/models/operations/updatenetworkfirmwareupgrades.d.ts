@@ -229,5 +229,5 @@ export declare class UpdateNetworkFirmwareUpgradesRequest extends SpeakeasyBase 
 export declare class UpdateNetworkFirmwareUpgradesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkFirmwareUpgrades200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkFirmwareUpgrades200ApplicationJSONObject?: Record<string, any>;
 }

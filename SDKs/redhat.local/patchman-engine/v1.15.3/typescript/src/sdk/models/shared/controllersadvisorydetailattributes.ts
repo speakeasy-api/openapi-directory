@@ -16,7 +16,7 @@ export class ControllersAdvisoryDetailAttributes extends SpeakeasyBase {
   modifiedDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=packages" })
-  packages?: Map<string, string>;
+  packages?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=public_date" })
   publicDate?: string;

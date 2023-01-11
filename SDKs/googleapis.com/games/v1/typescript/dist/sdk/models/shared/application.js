@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageAsset } from "./imageasset";
-import { ApplicationCategory } from "./applicationcategory";
-import { Instance } from "./instance";
-export var ApplicationEnabledFeaturesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Application = exports.ApplicationEnabledFeaturesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var imageasset_1 = require("./imageasset");
+var applicationcategory_1 = require("./applicationcategory");
+var instance_1 = require("./instance");
+var ApplicationEnabledFeaturesEnum;
 (function (ApplicationEnabledFeaturesEnum) {
     ApplicationEnabledFeaturesEnum["ApplicationFeatureUnspecified"] = "APPLICATION_FEATURE_UNSPECIFIED";
     ApplicationEnabledFeaturesEnum["Snapshots"] = "SNAPSHOTS";
-})(ApplicationEnabledFeaturesEnum || (ApplicationEnabledFeaturesEnum = {}));
+})(ApplicationEnabledFeaturesEnum = exports.ApplicationEnabledFeaturesEnum || (exports.ApplicationEnabledFeaturesEnum = {}));
 // Application
 /**
  * The Application resource.
@@ -41,57 +44,57 @@ var Application = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=achievement_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=achievement_count" }),
         __metadata("design:type", Number)
     ], Application.prototype, "achievementCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: ImageAsset }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: imageasset_1.ImageAsset }),
         __metadata("design:type", Array)
     ], Application.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", String)
     ], Application.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
-        __metadata("design:type", ApplicationCategory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
+        __metadata("design:type", applicationcategory_1.ApplicationCategory)
     ], Application.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Application.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabledFeatures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabledFeatures" }),
         __metadata("design:type", Array)
     ], Application.prototype, "enabledFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Application.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], Application.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Application.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedTimestamp" }),
         __metadata("design:type", String)
     ], Application.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leaderboard_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leaderboard_count" }),
         __metadata("design:type", Number)
     ], Application.prototype, "leaderboardCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Application.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=themeColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=themeColor" }),
         __metadata("design:type", String)
     ], Application.prototype, "themeColor", void 0);
     return Application;
-}(SpeakeasyBase));
-export { Application };
+}(utils_1.SpeakeasyBase));
+exports.Application = Application;

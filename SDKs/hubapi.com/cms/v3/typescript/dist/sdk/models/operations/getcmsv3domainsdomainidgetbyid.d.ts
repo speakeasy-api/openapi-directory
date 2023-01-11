@@ -4,7 +4,15 @@ export declare class GetCmsV3DomainsDomainIdGetByIdPathParams extends SpeakeasyB
     domainId: string;
 }
 export declare class GetCmsV3DomainsDomainIdGetByIdSecurity extends SpeakeasyBase {
-    hapikey: shared.SchemeHapikey;
+    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
+    oauth2?: shared.SchemeOauth2;
+    privateApps?: shared.SchemePrivateApps;
+    hapikey?: shared.SchemeHapikey;
+    privateApps1?: shared.SchemePrivateApps;
+    oauth3?: shared.SchemeOauth2;
+    privateAppsLegacy1?: shared.SchemePrivateAppsLegacy;
+    oauth2Legacy?: shared.SchemeOauth2Legacy;
+    oauth2Legacy1?: shared.SchemeOauth2Legacy;
 }
 export declare class GetCmsV3DomainsDomainIdGetByIdRequest extends SpeakeasyBase {
     pathParams: GetCmsV3DomainsDomainIdGetByIdPathParams;

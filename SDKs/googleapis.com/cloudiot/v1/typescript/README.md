@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest, CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,31 +31,31 @@ const req: CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    parent: "repudiandae",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "autem",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "nobis",
-    fields: "eaque",
-    key: "aut",
-    oauthToken: "nam",
-    prettyPrint: false,
-    quotaUser: "explicabo",
-    uploadType: "tempora",
-    uploadProtocol: "non",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    deviceId: "cumque",
-    gatewayId: "ad",
+    deviceId: "dicta",
+    gatewayId: "debitis",
   },
 };
 

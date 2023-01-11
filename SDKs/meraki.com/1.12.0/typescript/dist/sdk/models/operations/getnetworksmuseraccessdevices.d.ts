@@ -13,7 +13,7 @@ export declare class GetNetworkSmUserAccessDevicesRequest extends SpeakeasyBase 
 }
 export declare class GetNetworkSmUserAccessDevicesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkSmUserAccessDevices200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmUserAccessDevices200ApplicationJSONObject?: Record<string, any>;
 }

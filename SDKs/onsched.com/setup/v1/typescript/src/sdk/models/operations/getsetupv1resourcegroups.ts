@@ -28,7 +28,7 @@ export class GetSetupV1ResourcegroupsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  resourceGroupListViewModel?: Map<string, any>;
+  resourceGroupListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

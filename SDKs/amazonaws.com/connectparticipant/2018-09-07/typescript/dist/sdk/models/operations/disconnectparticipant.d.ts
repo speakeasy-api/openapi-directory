@@ -19,7 +19,7 @@ export declare class DisconnectParticipantRequest extends SpeakeasyBase {
 export declare class DisconnectParticipantResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    disconnectParticipantResponse?: Map<string, any>;
+    disconnectParticipantResponse?: Record<string, any>;
     internalServerException?: any;
     statusCode: number;
     throttlingException?: any;

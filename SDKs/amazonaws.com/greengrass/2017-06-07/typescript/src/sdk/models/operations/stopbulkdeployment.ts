@@ -52,5 +52,5 @@ export class StopBulkDeploymentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopBulkDeploymentResponse?: Map<string, any>;
+  stopBulkDeploymentResponse?: Record<string, any>;
 }

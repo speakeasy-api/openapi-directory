@@ -6,6 +6,6 @@ export declare class GetSessionResponse extends SpeakeasyBase {
     activeContexts?: ActiveContext[];
     dialogAction?: DialogAction;
     recentIntentSummaryView?: IntentSummary[];
-    sessionAttributes?: Map<string, string>;
+    sessionAttributes?: Record<string, string>;
     sessionId?: string;
 }

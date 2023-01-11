@@ -6,7 +6,7 @@ export declare class SolveVrpRequest extends SpeakeasyBase {
 export declare class SolveVrpResponse extends SpeakeasyBase {
     badRequest?: shared.BadRequest;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     internalErrorMessage?: shared.InternalErrorMessage;
     response?: shared.Response;
     statusCode: number;

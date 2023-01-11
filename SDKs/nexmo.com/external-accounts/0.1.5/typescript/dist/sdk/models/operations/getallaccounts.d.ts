@@ -49,6 +49,6 @@ export declare class GetAllAccountsRequest extends SpeakeasyBase {
 export declare class GetAllAccountsResponse extends SpeakeasyBase {
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     contentType: string;
-    getAllAccounts200ApplicationJsonObject?: GetAllAccounts200ApplicationJson;
+    getAllAccounts200ApplicationJSONObject?: GetAllAccounts200ApplicationJson;
     statusCode: number;
 }

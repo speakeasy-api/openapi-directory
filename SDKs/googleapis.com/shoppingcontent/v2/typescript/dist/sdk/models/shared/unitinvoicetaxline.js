@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnitInvoiceTaxLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var UnitInvoiceTaxLine = /** @class */ (function (_super) {
     __extends(UnitInvoiceTaxLine, _super);
     function UnitInvoiceTaxLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAmount" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
+        __metadata("design:type", price_1.Price)
     ], UnitInvoiceTaxLine.prototype, "taxAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxName" }),
         __metadata("design:type", String)
     ], UnitInvoiceTaxLine.prototype, "taxName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxType" }),
         __metadata("design:type", String)
     ], UnitInvoiceTaxLine.prototype, "taxType", void 0);
     return UnitInvoiceTaxLine;
-}(SpeakeasyBase));
-export { UnitInvoiceTaxLine };
+}(utils_1.SpeakeasyBase));
+exports.UnitInvoiceTaxLine = UnitInvoiceTaxLine;

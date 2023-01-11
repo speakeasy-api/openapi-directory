@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-export var OpenInfoStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenInfo = exports.OpenInfoInput = exports.OpenInfoStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var OpenInfoStatusEnum;
 (function (OpenInfoStatusEnum) {
     OpenInfoStatusEnum["OpenForBusinessUnspecified"] = "OPEN_FOR_BUSINESS_UNSPECIFIED";
     OpenInfoStatusEnum["Open"] = "OPEN";
     OpenInfoStatusEnum["ClosedPermanently"] = "CLOSED_PERMANENTLY";
     OpenInfoStatusEnum["ClosedTemporarily"] = "CLOSED_TEMPORARILY";
-})(OpenInfoStatusEnum || (OpenInfoStatusEnum = {}));
-// OpenInfo
-/**
- * Information related to the opening state of the business.
-**/
-var OpenInfo = /** @class */ (function (_super) {
-    __extends(OpenInfo, _super);
-    function OpenInfo() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=canReopen" }),
-        __metadata("design:type", Boolean)
-    ], OpenInfo.prototype, "canReopen", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=openingDate" }),
-        __metadata("design:type", Date)
-    ], OpenInfo.prototype, "openingDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], OpenInfo.prototype, "status", void 0);
-    return OpenInfo;
-}(SpeakeasyBase));
-export { OpenInfo };
+})(OpenInfoStatusEnum = exports.OpenInfoStatusEnum || (exports.OpenInfoStatusEnum = {}));
 // OpenInfoInput
 /**
  * Information related to the opening state of the business.
@@ -65,13 +44,37 @@ var OpenInfoInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openingDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openingDate" }),
+        __metadata("design:type", date_1.Date)
     ], OpenInfoInput.prototype, "openingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OpenInfoInput.prototype, "status", void 0);
     return OpenInfoInput;
-}(SpeakeasyBase));
-export { OpenInfoInput };
+}(utils_1.SpeakeasyBase));
+exports.OpenInfoInput = OpenInfoInput;
+// OpenInfo
+/**
+ * Information related to the opening state of the business.
+**/
+var OpenInfo = /** @class */ (function (_super) {
+    __extends(OpenInfo, _super);
+    function OpenInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canReopen" }),
+        __metadata("design:type", Boolean)
+    ], OpenInfo.prototype, "canReopen", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openingDate" }),
+        __metadata("design:type", date_1.Date)
+    ], OpenInfo.prototype, "openingDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], OpenInfo.prototype, "status", void 0);
+    return OpenInfo;
+}(utils_1.SpeakeasyBase));
+exports.OpenInfo = OpenInfo;

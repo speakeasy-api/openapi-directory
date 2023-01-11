@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CcTotalsByCandidate = void 0;
+var utils_1 = require("../../../internal/utils");
 var CcTotalsByCandidate = /** @class */ (function (_super) {
     __extends(CcTotalsByCandidate, _super);
     function CcTotalsByCandidate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], CcTotalsByCandidate.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycle" }),
         __metadata("design:type", Number)
     ], CcTotalsByCandidate.prototype, "cycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=support_oppose_indicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=support_oppose_indicator" }),
         __metadata("design:type", String)
     ], CcTotalsByCandidate.prototype, "supportOpposeIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], CcTotalsByCandidate.prototype, "total", void 0);
     return CcTotalsByCandidate;
-}(SpeakeasyBase));
-export { CcTotalsByCandidate };
+}(utils_1.SpeakeasyBase));
+exports.CcTotalsByCandidate = CcTotalsByCandidate;

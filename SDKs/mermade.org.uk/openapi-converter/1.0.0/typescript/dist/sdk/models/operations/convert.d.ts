@@ -14,6 +14,6 @@ export declare class ConvertResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    convert200ApplicationJsonAny?: any;
-    convert400ApplicationJsonAny?: any;
+    convert200ApplicationJSONAny?: any;
+    convert400ApplicationJSONAny?: any;
 }

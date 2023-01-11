@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult } from "./googlecloudrecommendationenginev1beta1predictresponsepredictionresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1PredictResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1predictresponsepredictionresult_1 = require("./googlecloudrecommendationenginev1beta1predictresponsepredictionresult");
 // GoogleCloudRecommendationengineV1beta1PredictResponse
 /**
  * Response message for predict method.
@@ -34,29 +37,29 @@ var GoogleCloudRecommendationengineV1beta1PredictResponse = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dryRun" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsMissingInCatalog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsMissingInCatalog" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "itemsMissingInCatalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationToken" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "recommendationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: googlecloudrecommendationenginev1beta1predictresponsepredictionresult_1.GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1PredictResponse.prototype, "results", void 0);
     return GoogleCloudRecommendationengineV1beta1PredictResponse;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1PredictResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1PredictResponse = GoogleCloudRecommendationengineV1beta1PredictResponse;

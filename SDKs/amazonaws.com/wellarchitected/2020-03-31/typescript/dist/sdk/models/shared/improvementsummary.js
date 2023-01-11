@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RiskEnum } from "./riskenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImprovementSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var riskenum_1 = require("./riskenum");
 // ImprovementSummary
 /**
  * An improvement summary of a lens review in a workload.
@@ -34,25 +37,25 @@ var ImprovementSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImprovementPlanUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImprovementPlanUrl" }),
         __metadata("design:type", String)
     ], ImprovementSummary.prototype, "improvementPlanUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PillarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PillarId" }),
         __metadata("design:type", String)
     ], ImprovementSummary.prototype, "pillarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuestionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuestionId" }),
         __metadata("design:type", String)
     ], ImprovementSummary.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuestionTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuestionTitle" }),
         __metadata("design:type", String)
     ], ImprovementSummary.prototype, "questionTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Risk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Risk" }),
         __metadata("design:type", String)
     ], ImprovementSummary.prototype, "risk", void 0);
     return ImprovementSummary;
-}(SpeakeasyBase));
-export { ImprovementSummary };
+}(utils_1.SpeakeasyBase));
+exports.ImprovementSummary = ImprovementSummary;

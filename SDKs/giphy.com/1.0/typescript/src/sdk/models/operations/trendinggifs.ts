@@ -41,5 +41,5 @@ export class TrendingGifsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  trendingGifs200ApplicationJsonObject?: TrendingGifs200ApplicationJson;
+  trendingGifs200ApplicationJSONObject?: TrendingGifs200ApplicationJson;
 }

@@ -191,23 +191,23 @@ export class PodocResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  podoc400ApplicationJsonObject?: Podoc400ApplicationJson;
+  podoc400ApplicationJSONObject?: Podoc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc401ApplicationJsonObject?: Podoc401ApplicationJson;
+  podoc401ApplicationJSONObject?: Podoc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc404ApplicationJsonObject?: Podoc404ApplicationJson;
+  podoc404ApplicationJSONObject?: Podoc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc500ApplicationJsonObject?: Podoc500ApplicationJson;
+  podoc500ApplicationJSONObject?: Podoc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc502ApplicationJsonObject?: Podoc502ApplicationJson;
+  podoc502ApplicationJSONObject?: Podoc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc503ApplicationJsonObject?: Podoc503ApplicationJson;
+  podoc503ApplicationJSONObject?: Podoc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  podoc504ApplicationJsonObject?: Podoc504ApplicationJson;
+  podoc504ApplicationJSONObject?: Podoc504ApplicationJson;
 }

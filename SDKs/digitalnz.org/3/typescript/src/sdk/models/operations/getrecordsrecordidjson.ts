@@ -43,14 +43,14 @@ export class GetRecordsRecordIdJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getRecordsRecordIdJson403ApplicationJsonObject?: Map<string, any>;
-
-  @SpeakeasyMetadata()
-  getRecordsRecordIdJson404ApplicationJsonObject?: Map<string, any>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  record?: shared.Record;
+  getRecordsRecordIdJSON403ApplicationJSONObject?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  getRecordsRecordIdJSON404ApplicationJSONObject?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  record?: shared.RecordT;
 }

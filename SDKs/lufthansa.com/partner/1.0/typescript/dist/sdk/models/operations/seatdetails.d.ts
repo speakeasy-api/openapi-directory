@@ -21,6 +21,6 @@ export declare class SeatDetailsRequest extends SpeakeasyBase {
 }
 export declare class SeatDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    seatDetails200ApplicationJsonString?: string;
+    seatDetails200ApplicationJSONString?: string;
     statusCode: number;
 }

@@ -185,23 +185,23 @@ export class SecerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  secer400ApplicationJsonObject?: Secer400ApplicationJson;
+  secer400ApplicationJSONObject?: Secer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer401ApplicationJsonObject?: Secer401ApplicationJson;
+  secer401ApplicationJSONObject?: Secer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer404ApplicationJsonObject?: Secer404ApplicationJson;
+  secer404ApplicationJSONObject?: Secer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer500ApplicationJsonObject?: Secer500ApplicationJson;
+  secer500ApplicationJSONObject?: Secer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer502ApplicationJsonObject?: Secer502ApplicationJson;
+  secer502ApplicationJSONObject?: Secer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer503ApplicationJsonObject?: Secer503ApplicationJson;
+  secer503ApplicationJSONObject?: Secer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  secer504ApplicationJsonObject?: Secer504ApplicationJson;
+  secer504ApplicationJSONObject?: Secer504ApplicationJson;
 }

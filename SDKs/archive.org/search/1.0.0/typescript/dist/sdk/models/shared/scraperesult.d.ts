@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ScrapeResult extends SpeakeasyBase {
     count?: number;
     cursor?: string;
-    items?: Map<string, any>[];
+    items?: Record<string, any>[];
     previous?: string;
     total?: number;
 }

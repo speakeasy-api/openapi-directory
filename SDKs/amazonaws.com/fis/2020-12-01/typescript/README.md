@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateExperimentTemplateRequest, CreateExperimentTemplateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,128 +33,153 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateExperimentTemplateRequest = {
   headers: {
-    xAmzAlgorithm: "facere",
-    xAmzContentSha256: "deserunt",
-    xAmzCredential: "illo",
-    xAmzDate: "tempore",
-    xAmzSecurityToken: "velit",
-    xAmzSignature: "corporis",
-    xAmzSignedHeaders: "quidem",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     actions: {
-      "officiis": {
-        actionId: "veniam",
-        description: "ducimus",
+      "fugit": {
+        actionId: "et",
+        description: "nihil",
         parameters: {
-          "nobis": "aliquam",
-          "qui": "debitis",
+          "dicta": "debitis",
+          "voluptatum": "et",
+          "ut": "dolorem",
         },
         startAfter: [
-          "consequatur",
-          "iusto",
-          "assumenda",
+          "voluptate",
+          "iste",
         ],
         targets: {
-          "distinctio": "ut",
+          "totam": "dolores",
+        },
+      },
+      "illum": {
+        actionId: "debitis",
+        description: "vel",
+        parameters: {
+          "dolore": "id",
+        },
+        startAfter: [
+          "accusantium",
+        ],
+        targets: {
+          "commodi": "quis",
+          "est": "aut",
+          "odit": "non",
+        },
+      },
+      "voluptas": {
+        actionId: "omnis",
+        description: "aut",
+        parameters: {
+          "sed": "officiis",
+        },
+        startAfter: [
+          "consectetur",
+          "nobis",
+        ],
+        targets: {
+          "qui": "recusandae",
         },
       },
     },
-    clientToken: "ut",
-    description: "expedita",
-    roleArn: "repellendus",
+    clientToken: "at",
+    description: "ipsum",
+    roleArn: "eveniet",
     stopConditions: [
       {
-        source: "exercitationem",
-        value: "nihil",
+        source: "sint",
+        value: "inventore",
       },
       {
-        source: "perferendis",
-        value: "odit",
+        source: "ut",
+        value: "exercitationem",
       },
     ],
     tags: {
-      "dolore": "aliquam",
-      "soluta": "accusantium",
+      "reprehenderit": "tempore",
+      "maiores": "incidunt",
+      "dolor": "beatae",
     },
     targets: {
-      "aut": {
+      "in": {
         filters: [
           {
-            path: "ex",
+            path: "omnis",
             values: [
-              "nihil",
-              "et",
-              "deleniti",
+              "ex",
             ],
           },
           {
-            path: "minima",
+            path: "dolores",
             values: [
-              "omnis",
-              "eum",
+              "vel",
             ],
           },
           {
-            path: "error",
+            path: "rerum",
             values: [
-              "sed",
-              "ipsa",
-              "explicabo",
+              "voluptas",
+              "quam",
             ],
           },
         ],
         resourceArns: [
-          "corporis",
-          "modi",
+          "qui",
         ],
         resourceTags: {
-          "odio": "expedita",
+          "unde": "in",
         },
-        resourceType: "aliquid",
-        selectionMode: "ipsum",
+        resourceType: "autem",
+        selectionMode: "qui",
       },
-      "saepe": {
+      "ut": {
         filters: [
           {
-            path: "atque",
+            path: "ab",
             values: [
-              "suscipit",
+              "ullam",
             ],
           },
           {
-            path: "architecto",
+            path: "et",
             values: [
-              "ipsa",
-              "quos",
+              "esse",
+              "architecto",
+              "quam",
             ],
           },
           {
-            path: "voluptas",
+            path: "velit",
             values: [
-              "a",
-              "iusto",
-              "et",
+              "soluta",
+              "sunt",
             ],
           },
         ],
         resourceArns: [
-          "voluptas",
-          "nisi",
-          "quia",
+          "magni",
+          "et",
         ],
         resourceTags: {
-          "corporis": "omnis",
-          "dolores": "expedita",
+          "qui": "earum",
+          "illo": "omnis",
+          "ut": "consequatur",
         },
-        resourceType: "enim",
-        selectionMode: "quo",
+        resourceType: "dolor",
+        selectionMode: "commodi",
       },
     },
   },
 };
 
-sdk.sdk.createExperimentTemplate(req).then((res: CreateExperimentTemplateResponse | AxiosError) => {
+sdk.createExperimentTemplate(req).then((res: CreateExperimentTemplateResponse | AxiosError) => {
    // handle response
 });
 ```

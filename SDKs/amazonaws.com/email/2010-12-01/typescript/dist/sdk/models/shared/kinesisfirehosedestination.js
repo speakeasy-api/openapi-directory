@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KinesisFirehoseDestination = void 0;
+var utils_1 = require("../../../internal/utils");
 // KinesisFirehoseDestination
 /**
  * <p>Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Firehose event destination.</p> <p>Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer Guide</a>.</p>
@@ -33,13 +36,13 @@ var KinesisFirehoseDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], KinesisFirehoseDestination.prototype, "deliveryStreamArn", void 0);
+    ], KinesisFirehoseDestination.prototype, "deliveryStreamARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], KinesisFirehoseDestination.prototype, "iamRoleArn", void 0);
+    ], KinesisFirehoseDestination.prototype, "iamRoleARN", void 0);
     return KinesisFirehoseDestination;
-}(SpeakeasyBase));
-export { KinesisFirehoseDestination };
+}(utils_1.SpeakeasyBase));
+exports.KinesisFirehoseDestination = KinesisFirehoseDestination;

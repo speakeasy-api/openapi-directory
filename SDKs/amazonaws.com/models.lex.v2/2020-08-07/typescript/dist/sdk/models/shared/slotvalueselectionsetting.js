@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlotValueRegexFilter } from "./slotvalueregexfilter";
-import { SlotValueResolutionStrategyEnum } from "./slotvalueresolutionstrategyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlotValueSelectionSetting = void 0;
+var utils_1 = require("../../../internal/utils");
+var slotvalueregexfilter_1 = require("./slotvalueregexfilter");
+var slotvalueresolutionstrategyenum_1 = require("./slotvalueresolutionstrategyenum");
 // SlotValueSelectionSetting
 /**
  * Contains settings used by Amazon Lex to select a slot value.
@@ -35,13 +38,13 @@ var SlotValueSelectionSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regexFilter" }),
-        __metadata("design:type", SlotValueRegexFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regexFilter" }),
+        __metadata("design:type", slotvalueregexfilter_1.SlotValueRegexFilter)
     ], SlotValueSelectionSetting.prototype, "regexFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolutionStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolutionStrategy" }),
         __metadata("design:type", String)
     ], SlotValueSelectionSetting.prototype, "resolutionStrategy", void 0);
     return SlotValueSelectionSetting;
-}(SpeakeasyBase));
-export { SlotValueSelectionSetting };
+}(utils_1.SpeakeasyBase));
+exports.SlotValueSelectionSetting = SlotValueSelectionSetting;

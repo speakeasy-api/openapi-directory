@@ -94,7 +94,7 @@ export class RemoveFacetFromObjectResponse extends SpeakeasyBase {
   limitExceededException?: shared.LimitExceededException;
 
   @SpeakeasyMetadata()
-  removeFacetFromObjectResponse?: Map<string, any>;
+  removeFacetFromObjectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: shared.ResourceNotFoundException;

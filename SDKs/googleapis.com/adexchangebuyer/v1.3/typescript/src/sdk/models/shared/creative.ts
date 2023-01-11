@@ -214,7 +214,7 @@ export class Creative extends SpeakeasyBase {
   version?: number;
 
   @SpeakeasyMetadata({ data: "json, name=videoURL" })
-  videoUrl?: string;
+  videoURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=width" })
   width?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzedResourceSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // AnalyzedResourceSummary
 /**
  * Contains the ARN of the analyzed resource.
@@ -34,17 +37,17 @@ var AnalyzedResourceSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArn" }),
         __metadata("design:type", String)
     ], AnalyzedResourceSummary.prototype, "resourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOwnerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOwnerAccount" }),
         __metadata("design:type", String)
     ], AnalyzedResourceSummary.prototype, "resourceOwnerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], AnalyzedResourceSummary.prototype, "resourceType", void 0);
     return AnalyzedResourceSummary;
-}(SpeakeasyBase));
-export { AnalyzedResourceSummary };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzedResourceSummary = AnalyzedResourceSummary;

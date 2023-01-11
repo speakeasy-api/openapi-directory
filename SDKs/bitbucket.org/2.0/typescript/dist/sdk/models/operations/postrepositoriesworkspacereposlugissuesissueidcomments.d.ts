@@ -12,12 +12,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecur
 }
 export declare class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

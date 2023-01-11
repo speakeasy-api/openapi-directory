@@ -88,6 +88,10 @@ export enum VideoTypeEnum {
 }
 
 
+// Video
+/** 
+ * This contains the list of the fields that are common to all media returned.
+**/
 export class Video extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=duration_ms" })
   durationMs?: number;

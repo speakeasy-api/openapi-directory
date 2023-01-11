@@ -67,8 +67,8 @@ export class PostPortfolioOptimizationMeanVarianceEfficientResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMeanVarianceEfficient200ApplicationJsonObject?: PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject?: PostPortfolioOptimizationMeanVarianceEfficient200ApplicationJson;
 }

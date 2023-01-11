@@ -28,5 +28,5 @@ export class SetStateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setState200ApplicationJsonString?: string;
+  setState200ApplicationJSONString?: string;
 }

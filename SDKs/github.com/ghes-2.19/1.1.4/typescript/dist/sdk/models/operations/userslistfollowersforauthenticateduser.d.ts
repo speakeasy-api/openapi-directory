@@ -9,7 +9,7 @@ export declare class UsersListFollowersForAuthenticatedUserRequest extends Speak
 }
 export declare class UsersListFollowersForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     simpleUsers?: shared.SimpleUser[];

@@ -14,5 +14,5 @@ export declare class GetListeNoireResponse extends SpeakeasyBase {
     contentType: string;
     erreur?: shared.Erreur;
     statusCode: number;
-    getListeNoire200ApplicationJsonBinaryString?: Uint8Array;
+    getListeNoire200ApplicationJSONBinaryString?: Uint8Array;
 }

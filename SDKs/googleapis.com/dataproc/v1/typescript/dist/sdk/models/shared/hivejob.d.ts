@@ -6,8 +6,8 @@ import { QueryList } from "./querylist";
 export declare class HiveJob extends SpeakeasyBase {
     continueOnFailure?: boolean;
     jarFileUris?: string[];
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     queryFileUri?: string;
     queryList?: QueryList;
-    scriptVariables?: Map<string, string>;
+    scriptVariables?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Price } from "./googlecloudchannelv1price";
-import { GoogleCloudChannelV1PricePhase } from "./googlecloudchannelv1pricephase";
-export var GoogleCloudChannelV1PriceByResourceResourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1PriceByResource = exports.GoogleCloudChannelV1PriceByResourceResourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1price_1 = require("./googlecloudchannelv1price");
+var googlecloudchannelv1pricephase_1 = require("./googlecloudchannelv1pricephase");
+var GoogleCloudChannelV1PriceByResourceResourceTypeEnum;
 (function (GoogleCloudChannelV1PriceByResourceResourceTypeEnum) {
     GoogleCloudChannelV1PriceByResourceResourceTypeEnum["ResourceTypeUnspecified"] = "RESOURCE_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1PriceByResourceResourceTypeEnum["Seat"] = "SEAT";
@@ -35,7 +38,7 @@ export var GoogleCloudChannelV1PriceByResourceResourceTypeEnum;
     GoogleCloudChannelV1PriceByResourceResourceTypeEnum["Minutes"] = "MINUTES";
     GoogleCloudChannelV1PriceByResourceResourceTypeEnum["IaasUsage"] = "IAAS_USAGE";
     GoogleCloudChannelV1PriceByResourceResourceTypeEnum["Subscription"] = "SUBSCRIPTION";
-})(GoogleCloudChannelV1PriceByResourceResourceTypeEnum || (GoogleCloudChannelV1PriceByResourceResourceTypeEnum = {}));
+})(GoogleCloudChannelV1PriceByResourceResourceTypeEnum = exports.GoogleCloudChannelV1PriceByResourceResourceTypeEnum || (exports.GoogleCloudChannelV1PriceByResourceResourceTypeEnum = {}));
 // GoogleCloudChannelV1PriceByResource
 /**
  * Represents price by resource type.
@@ -46,17 +49,17 @@ var GoogleCloudChannelV1PriceByResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", GoogleCloudChannelV1Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", googlecloudchannelv1price_1.GoogleCloudChannelV1Price)
     ], GoogleCloudChannelV1PriceByResource.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricePhases", elemType: GoogleCloudChannelV1PricePhase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricePhases", elemType: googlecloudchannelv1pricephase_1.GoogleCloudChannelV1PricePhase }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1PriceByResource.prototype, "pricePhases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1PriceByResource.prototype, "resourceType", void 0);
     return GoogleCloudChannelV1PriceByResource;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1PriceByResource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1PriceByResource = GoogleCloudChannelV1PriceByResource;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents
 /**
  * Overview of delivery performance for messages that were successfully delivered. All percentages are calculated with countMessagesAccepted as the denominator. These categories are not mutually exclusive; a message can be delayed for multiple reasons.
@@ -33,25 +36,25 @@ var GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedDeviceDoze" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedDeviceDoze" }),
         __metadata("design:type", Number)
     ], GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.prototype, "delayedDeviceDoze", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedDeviceOffline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedDeviceOffline" }),
         __metadata("design:type", Number)
     ], GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.prototype, "delayedDeviceOffline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedMessageThrottled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedMessageThrottled" }),
         __metadata("design:type", Number)
     ], GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.prototype, "delayedMessageThrottled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedUserStopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedUserStopped" }),
         __metadata("design:type", Number)
     ], GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.prototype, "delayedUserStopped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveredNoDelay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveredNoDelay" }),
         __metadata("design:type", Number)
     ], GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.prototype, "deliveredNoDelay", void 0);
     return GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents;
-}(SpeakeasyBase));
-export { GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents = GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents;

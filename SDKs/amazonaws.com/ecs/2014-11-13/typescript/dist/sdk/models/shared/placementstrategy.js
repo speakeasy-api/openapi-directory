@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlacementStrategyTypeEnum } from "./placementstrategytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlacementStrategy = void 0;
+var utils_1 = require("../../../internal/utils");
+var placementstrategytypeenum_1 = require("./placementstrategytypeenum");
 // PlacementStrategy
 /**
  * The task placement strategy for a task or service. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html">Task Placement Strategies</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -34,13 +37,13 @@ var PlacementStrategy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], PlacementStrategy.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PlacementStrategy.prototype, "type", void 0);
     return PlacementStrategy;
-}(SpeakeasyBase));
-export { PlacementStrategy };
+}(utils_1.SpeakeasyBase));
+exports.PlacementStrategy = PlacementStrategy;

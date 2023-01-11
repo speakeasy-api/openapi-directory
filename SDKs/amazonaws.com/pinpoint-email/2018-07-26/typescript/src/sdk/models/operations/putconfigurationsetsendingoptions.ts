@@ -61,7 +61,7 @@ export class PutConfigurationSetSendingOptionsResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putConfigurationSetSendingOptionsResponse?: Map<string, any>;
+  putConfigurationSetSendingOptionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

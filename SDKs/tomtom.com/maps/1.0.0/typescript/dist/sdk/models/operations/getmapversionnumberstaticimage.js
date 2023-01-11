@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,114 +23,116 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberStaticimageResponse = exports.GetMapVersionNumberStaticimageRequest = exports.GetMapVersionNumberStaticimageQueryParams = exports.GetMapVersionNumberStaticimageViewEnum = exports.GetMapVersionNumberStaticimageStyleEnum = exports.GetMapVersionNumberStaticimageLayerEnum = exports.GetMapVersionNumberStaticimageFormatEnum = exports.GetMapVersionNumberStaticimagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMapVersionNumberStaticimagePathParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberStaticimagePathParams, _super);
     function GetMapVersionNumberStaticimagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberStaticimagePathParams.prototype, "versionNumber", void 0);
     return GetMapVersionNumberStaticimagePathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberStaticimagePathParams };
-export var GetMapVersionNumberStaticimageFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberStaticimagePathParams = GetMapVersionNumberStaticimagePathParams;
+var GetMapVersionNumberStaticimageFormatEnum;
 (function (GetMapVersionNumberStaticimageFormatEnum) {
     GetMapVersionNumberStaticimageFormatEnum["Png"] = "png";
     GetMapVersionNumberStaticimageFormatEnum["Jpg"] = "jpg";
     GetMapVersionNumberStaticimageFormatEnum["Jpeg"] = "jpeg";
-})(GetMapVersionNumberStaticimageFormatEnum || (GetMapVersionNumberStaticimageFormatEnum = {}));
-export var GetMapVersionNumberStaticimageLayerEnum;
+})(GetMapVersionNumberStaticimageFormatEnum = exports.GetMapVersionNumberStaticimageFormatEnum || (exports.GetMapVersionNumberStaticimageFormatEnum = {}));
+var GetMapVersionNumberStaticimageLayerEnum;
 (function (GetMapVersionNumberStaticimageLayerEnum) {
     GetMapVersionNumberStaticimageLayerEnum["Basic"] = "basic";
     GetMapVersionNumberStaticimageLayerEnum["Hybrid"] = "hybrid";
     GetMapVersionNumberStaticimageLayerEnum["Labels"] = "labels";
-})(GetMapVersionNumberStaticimageLayerEnum || (GetMapVersionNumberStaticimageLayerEnum = {}));
-export var GetMapVersionNumberStaticimageStyleEnum;
+})(GetMapVersionNumberStaticimageLayerEnum = exports.GetMapVersionNumberStaticimageLayerEnum || (exports.GetMapVersionNumberStaticimageLayerEnum = {}));
+var GetMapVersionNumberStaticimageStyleEnum;
 (function (GetMapVersionNumberStaticimageStyleEnum) {
     GetMapVersionNumberStaticimageStyleEnum["Main"] = "main";
     GetMapVersionNumberStaticimageStyleEnum["Night"] = "night";
-})(GetMapVersionNumberStaticimageStyleEnum || (GetMapVersionNumberStaticimageStyleEnum = {}));
-export var GetMapVersionNumberStaticimageViewEnum;
+})(GetMapVersionNumberStaticimageStyleEnum = exports.GetMapVersionNumberStaticimageStyleEnum || (exports.GetMapVersionNumberStaticimageStyleEnum = {}));
+var GetMapVersionNumberStaticimageViewEnum;
 (function (GetMapVersionNumberStaticimageViewEnum) {
     GetMapVersionNumberStaticimageViewEnum["Unified"] = "Unified";
     GetMapVersionNumberStaticimageViewEnum["In"] = "IN";
-})(GetMapVersionNumberStaticimageViewEnum || (GetMapVersionNumberStaticimageViewEnum = {}));
+})(GetMapVersionNumberStaticimageViewEnum = exports.GetMapVersionNumberStaticimageViewEnum || (exports.GetMapVersionNumberStaticimageViewEnum = {}));
 var GetMapVersionNumberStaticimageQueryParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberStaticimageQueryParams, _super);
     function GetMapVersionNumberStaticimageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bbox" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=center" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=center" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "center", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=height" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=layer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=layer" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "layer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=style" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "style", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=view" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "view", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=width" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "width", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=zoom" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberStaticimageQueryParams.prototype, "zoom", void 0);
     return GetMapVersionNumberStaticimageQueryParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberStaticimageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberStaticimageQueryParams = GetMapVersionNumberStaticimageQueryParams;
 var GetMapVersionNumberStaticimageRequest = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberStaticimageRequest, _super);
     function GetMapVersionNumberStaticimageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberStaticimagePathParams)
     ], GetMapVersionNumberStaticimageRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberStaticimageQueryParams)
     ], GetMapVersionNumberStaticimageRequest.prototype, "queryParams", void 0);
     return GetMapVersionNumberStaticimageRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberStaticimageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberStaticimageRequest = GetMapVersionNumberStaticimageRequest;
 var GetMapVersionNumberStaticimageResponse = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberStaticimageResponse, _super);
     function GetMapVersionNumberStaticimageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMapVersionNumberStaticimageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMapVersionNumberStaticimageResponse.prototype, "statusCode", void 0);
     return GetMapVersionNumberStaticimageResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberStaticimageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberStaticimageResponse = GetMapVersionNumberStaticimageResponse;

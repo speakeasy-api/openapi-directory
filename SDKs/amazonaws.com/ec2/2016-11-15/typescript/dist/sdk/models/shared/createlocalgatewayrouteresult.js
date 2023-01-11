@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayRoute } from "./localgatewayroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLocalGatewayRouteResult = exports.CreateLocalGatewayRouteResultRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateLocalGatewayRouteResultRoute
+/**
+ * Information about the route.
+**/
+var CreateLocalGatewayRouteResultRoute = /** @class */ (function (_super) {
+    __extends(CreateLocalGatewayRouteResultRoute, _super);
+    function CreateLocalGatewayRouteResultRoute() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "destinationCidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "localGatewayRouteTableArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "localGatewayRouteTableId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "localGatewayVirtualInterfaceGroupId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateLocalGatewayRouteResultRoute.prototype, "type", void 0);
+    return CreateLocalGatewayRouteResultRoute;
+}(utils_1.SpeakeasyBase));
+exports.CreateLocalGatewayRouteResultRoute = CreateLocalGatewayRouteResultRoute;
 var CreateLocalGatewayRouteResult = /** @class */ (function (_super) {
     __extends(CreateLocalGatewayRouteResult, _super);
     function CreateLocalGatewayRouteResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LocalGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateLocalGatewayRouteResultRoute)
     ], CreateLocalGatewayRouteResult.prototype, "route", void 0);
     return CreateLocalGatewayRouteResult;
-}(SpeakeasyBase));
-export { CreateLocalGatewayRouteResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateLocalGatewayRouteResult = CreateLocalGatewayRouteResult;

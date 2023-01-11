@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuditCategoryRelation } from "./auditcategoryrelation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditCategory = void 0;
+var utils_1 = require("../../../internal/utils");
+var auditcategoryrelation_1 = require("./auditcategoryrelation");
 var AuditCategory = /** @class */ (function (_super) {
     __extends(AuditCategory, _super);
     function AuditCategory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_category_id" }),
         __metadata("design:type", String)
     ], AuditCategory.prototype, "primaryCategoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_category_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_category_name" }),
         __metadata("design:type", String)
     ], AuditCategory.prototype, "primaryCategoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub_category_list", elemType: AuditCategoryRelation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub_category_list", elemType: auditcategoryrelation_1.AuditCategoryRelation }),
         __metadata("design:type", Array)
     ], AuditCategory.prototype, "subCategoryList", void 0);
     return AuditCategory;
-}(SpeakeasyBase));
-export { AuditCategory };
+}(utils_1.SpeakeasyBase));
+exports.AuditCategory = AuditCategory;

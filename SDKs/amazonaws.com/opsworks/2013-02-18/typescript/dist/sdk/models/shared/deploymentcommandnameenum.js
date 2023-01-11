@@ -1,4 +1,7 @@
-export var DeploymentCommandNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentCommandNameEnum = void 0;
+var DeploymentCommandNameEnum;
 (function (DeploymentCommandNameEnum) {
     DeploymentCommandNameEnum["InstallDependencies"] = "install_dependencies";
     DeploymentCommandNameEnum["UpdateDependencies"] = "update_dependencies";
@@ -12,4 +15,4 @@ export var DeploymentCommandNameEnum;
     DeploymentCommandNameEnum["Stop"] = "stop";
     DeploymentCommandNameEnum["Restart"] = "restart";
     DeploymentCommandNameEnum["Undeploy"] = "undeploy";
-})(DeploymentCommandNameEnum || (DeploymentCommandNameEnum = {}));
+})(DeploymentCommandNameEnum = exports.DeploymentCommandNameEnum || (exports.DeploymentCommandNameEnum = {}));

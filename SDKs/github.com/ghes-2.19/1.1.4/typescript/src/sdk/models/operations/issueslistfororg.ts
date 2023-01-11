@@ -8,34 +8,13 @@ export class IssuesListForOrgPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum IssuesListForOrgFilterEnum {
-    Assigned = "assigned",
-    Created = "created",
-    Mentioned = "mentioned",
-    Subscribed = "subscribed",
-    Repos = "repos",
-    All = "all"
-}
-
-export enum IssuesListForOrgSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
-
-export enum IssuesListForOrgStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class IssuesListForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
   direction?: shared.DirectionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: IssuesListForOrgFilterEnum;
+  filter?: shared.OrgEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=labels" })
   labels?: string;
@@ -50,10 +29,10 @@ export class IssuesListForOrgQueryParams extends SpeakeasyBase {
   since?: Date;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: IssuesListForOrgSortEnum;
+  sort?: shared.LabelsEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: IssuesListForOrgStateEnum;
+  state?: shared.OrgEnum1;
 }
 
 
@@ -71,7 +50,7 @@ export class IssuesListForOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

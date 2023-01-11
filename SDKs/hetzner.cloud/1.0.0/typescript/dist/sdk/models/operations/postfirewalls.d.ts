@@ -41,7 +41,7 @@ export declare class PostFirewallsCreateFirewallRequestRule extends SpeakeasyBas
 }
 export declare class PostFirewallsCreateFirewallRequest extends SpeakeasyBase {
     applyTo?: PostFirewallsCreateFirewallRequestApplyTo[];
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name: string;
     rules?: PostFirewallsCreateFirewallRequestRule[];
 }
@@ -120,7 +120,7 @@ export declare class PostFirewallsCreateFirewallResponseFirewall extends Speakea
     appliedTo: PostFirewallsCreateFirewallResponseFirewallAppliedTo[];
     created: string;
     id: number;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name: string;
     rules: PostFirewallsCreateFirewallResponseFirewallRule[];
 }

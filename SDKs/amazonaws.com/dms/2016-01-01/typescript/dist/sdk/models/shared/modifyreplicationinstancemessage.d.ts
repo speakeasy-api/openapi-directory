@@ -8,7 +8,7 @@ export declare class ModifyReplicationInstanceMessage extends SpeakeasyBase {
     applyImmediately?: boolean;
     autoMinorVersionUpgrade?: boolean;
     engineVersion?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     preferredMaintenanceWindow?: string;
     replicationInstanceArn: string;
     replicationInstanceClass?: string;

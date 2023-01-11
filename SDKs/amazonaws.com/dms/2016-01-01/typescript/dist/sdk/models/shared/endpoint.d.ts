@@ -40,13 +40,13 @@ export declare class Endpoint extends SpeakeasyBase {
     kafkaSettings?: KafkaSettings;
     kinesisSettings?: KinesisSettings;
     kmsKeyId?: string;
-    microsoftSqlServerSettings?: MicrosoftSqlServerSettings;
+    microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
     mongoDbSettings?: MongoDbSettings;
-    mySqlSettings?: MySqlSettings;
+    mySQLSettings?: MySqlSettings;
     neptuneSettings?: NeptuneSettings;
     oracleSettings?: OracleSettings;
     port?: number;
-    postgreSqlSettings?: PostgreSqlSettings;
+    postgreSQLSettings?: PostgreSqlSettings;
     redisSettings?: RedisSettings;
     redshiftSettings?: RedshiftSettings;
     s3Settings?: S3Settings;

@@ -1,5 +1,8 @@
-export var S3OneTimeClassificationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3OneTimeClassificationTypeEnum = void 0;
+var S3OneTimeClassificationTypeEnum;
 (function (S3OneTimeClassificationTypeEnum) {
     S3OneTimeClassificationTypeEnum["Full"] = "FULL";
     S3OneTimeClassificationTypeEnum["None"] = "NONE";
-})(S3OneTimeClassificationTypeEnum || (S3OneTimeClassificationTypeEnum = {}));
+})(S3OneTimeClassificationTypeEnum = exports.S3OneTimeClassificationTypeEnum || (exports.S3OneTimeClassificationTypeEnum = {}));

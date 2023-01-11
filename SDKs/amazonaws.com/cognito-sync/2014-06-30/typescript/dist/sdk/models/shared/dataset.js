@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dataset = void 0;
+var utils_1 = require("../../../internal/utils");
 // Dataset
 /**
  * A collection of data for an identity pool. An identity pool can have multiple datasets. A dataset is per identity and can be general or associated with a particular entity in an application (like a saved game). Datasets are automatically created if they don't exist. Data is synced by dataset, and a dataset can hold up to 1MB of key-value pairs.
@@ -33,33 +36,33 @@ var Dataset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", Date)
     ], Dataset.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataStorage" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "dataStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetName" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "datasetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityId" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "identityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedBy" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "lastModifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", Date)
     ], Dataset.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumRecords" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "numRecords", void 0);
     return Dataset;
-}(SpeakeasyBase));
-export { Dataset };
+}(utils_1.SpeakeasyBase));
+exports.Dataset = Dataset;

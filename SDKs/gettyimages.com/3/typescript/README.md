@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteV3AssetChangesChangeSetsChangeSetIdRequest, DeleteV3AssetChangesChangeSetsChangeSetIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetV3AffiliatesSearchImagesRequest, GetV3AffiliatesSearchImagesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,13 +31,17 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: DeleteV3AssetChangesChangeSetsChangeSetIdRequest = {
-  pathParams: {
-    changeSetId: 5081223859226604680,
+const req: GetV3AffiliatesSearchImagesRequest = {
+  queryParams: {
+    phrase: "sit",
+    style: "photography",
+  },
+  headers: {
+    acceptLanguage: "culpa",
   },
 };
 
-sdk.sdk.deleteV3AssetChangesChangeSetsChangeSetId(req).then((res: DeleteV3AssetChangesChangeSetsChangeSetIdResponse | AxiosError) => {
+sdk.affiliateSearch.getV3AffiliatesSearchImages(req).then((res: GetV3AffiliatesSearchImagesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,35 +50,86 @@ sdk.sdk.deleteV3AssetChangesChangeSetsChangeSetId(req).then((res: DeleteV3AssetC
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AffiliateSearch
+
+* `getV3AffiliatesSearchImages`
+* `getV3AffiliatesSearchVideos`
+
+### Artists
+
+* `getV3ArtistsImages` - Search for images by a photographer
+* `getV3ArtistsVideos` - Search for videos by a photographer
+
+### AssetChanges
 
 * `deleteV3AssetChangesChangeSetsChangeSetId` - Confirm asset change notifications.
+* `getV3AssetChangesChannels` - Get a list of asset change notification channels.
+* `putV3AssetChangesChangeSets` - Get asset change notifications.
+
+### AssetLicensing
+
+* `postV3AssetLicensingAssetId` - Endpoint for acquiring extended licenses with iStock credits for an asset.
+
+### Boards
+
 * `deleteV3BoardsBoardId` - Delete a board
 * `deleteV3BoardsBoardIdAssets` - Remove assets from a board
 * `deleteV3BoardsBoardIdAssetsAssetId` - Remove an asset from a board
 * `deleteV3BoardsBoardIdCommentsCommentId` - Delete a comment from a board
-* `getV3AffiliatesSearchImages`
-* `getV3AffiliatesSearchVideos`
-* `getV3ArtistsImages` - Search for images by a photographer
-* `getV3ArtistsVideos` - Search for videos by a photographer
-* `getV3AssetChangesChannels` - Get a list of asset change notification channels.
 * `getV3Boards` - Get all boards that the user participates in
 * `getV3BoardsBoardId` - Get assets and metadata for a specific board
 * `getV3BoardsBoardIdComments` - Get comments from a board
+* `postV3Boards` - Create a new board
+* `postV3BoardsBoardIdComments` - Add a comment to a board
+* `putV3BoardsBoardId` - Update a board
+* `putV3BoardsBoardIdAssets` - Add assets to a board
+* `putV3BoardsBoardIdAssetsAssetId` - Add an asset to a board
+
+### Collections
+
 * `getV3Collections` - Gets collections applicable for the customer.
+
+### Countries
+
 * `getV3Countries` - Gets countries codes and names.
+
+### Customers
+
 * `getV3CustomersCurrent` - Returns information about the current user.
+
+### Downloads
+
 * `getV3Downloads` - Returns information about a customer's downloaded assets.
+* `postV3DownloadsImagesId` - Download an image
+* `postV3DownloadsVideosId` - Download a video
+
+### Events
+
 * `getV3Events` - Get metadata for multiple events
 * `getV3EventsId` - Get metadata for a single event
+
+### Images
+
 * `getV3Images` - Get metadata for multiple images by supplying multiple image ids
 * `getV3ImagesId` - Get metadata for a single image by supplying one image id
 * `getV3ImagesIdDownloadhistory` - Returns information about a customer's download history for a specific asset
 * `getV3ImagesIdSameSeries` - Retrieve creative images from the same series
 * `getV3ImagesIdSimilar` - Retrieve similar images
+
+### Orders
+
 * `getV3OrdersId` - Get order metadata
+
+### Products
+
 * `getV3Products` - Get Products
+
+### Purchases
+
 * `getV3PurchasedAssets` - Get Previously Purchased Images and Video
+
+### Search
+
 * `getV3SearchEvents` - Search for events
 * `getV3SearchImages` - Search for both creative and editorial images
 * `getV3SearchImagesCreative` - Search for creative images only
@@ -84,21 +138,18 @@ sdk.sdk.deleteV3AssetChangesChangeSetsChangeSetId(req).then((res: DeleteV3AssetC
 * `getV3SearchVideosCreative` - Search for creative videos
 * `getV3SearchVideosCreativeByImage` - Search for creative videos based on url
 * `getV3SearchVideosEditorial` - Search for editorial videos
+
+### Usage
+
+* `putV3UsageBatchesId` - Report usage of assets via a batch format.
+
+### Videos
+
 * `getV3Videos` - Get metadata for multiple videos by supplying multiple video ids
 * `getV3VideosId` - Get metadata for a single video by supplying one video id
 * `getV3VideosIdDownloadhistory` - Returns information about a customer's download history for a specific asset
 * `getV3VideosIdSameSeries` - Retrieve creative videos from the same series
 * `getV3VideosIdSimilar` - Retrieve similar videos
-* `postV3AssetLicensingAssetId` - Endpoint for acquiring extended licenses with iStock credits for an asset.
-* `postV3Boards` - Create a new board
-* `postV3BoardsBoardIdComments` - Add a comment to a board
-* `postV3DownloadsImagesId` - Download an image
-* `postV3DownloadsVideosId` - Download a video
-* `putV3AssetChangesChangeSets` - Get asset change notifications.
-* `putV3BoardsBoardId` - Update a board
-* `putV3BoardsBoardIdAssets` - Add assets to a board
-* `putV3BoardsBoardIdAssetsAssetId` - Add an asset to a board
-* `putV3UsageBatchesId` - Report usage of assets via a batch format.
 
 <!-- End SDK Available Operations -->
 

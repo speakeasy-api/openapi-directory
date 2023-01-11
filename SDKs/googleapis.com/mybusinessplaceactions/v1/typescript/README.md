@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest, MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,26 +28,26 @@ const sdk = new SDK();
     
 const req: MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest = {
   pathParams: {
-    parent: "illum",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "enim",
-    alt: "proto",
-    callback: "distinctio",
-    fields: "adipisci",
-    key: "sequi",
-    oauthToken: "et",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "vero",
-    uploadType: "architecto",
-    uploadProtocol: "vitae",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     isPreferred: false,
-    name: "atque",
-    placeActionType: "FOOD_DELIVERY",
-    uri: "quis",
+    name: "debitis",
+    placeActionType: "PLACE_ACTION_TYPE_UNSPECIFIED",
+    uri: "et",
   },
 };
 

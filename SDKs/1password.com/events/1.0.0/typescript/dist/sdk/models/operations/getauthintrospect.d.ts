@@ -8,7 +8,7 @@ export declare class GetAuthIntrospectRequest extends SpeakeasyBase {
 }
 export declare class GetAuthIntrospectResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     introspection?: shared.Introspection;
     statusCode: number;
 }

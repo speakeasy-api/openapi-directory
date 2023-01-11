@@ -18,5 +18,5 @@ export declare class ReposGetDeploymentStatusResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     deploymentStatus?: shared.DeploymentStatus;
-    reposGetDeploymentStatus415ApplicationJsonObject?: ReposGetDeploymentStatus415ApplicationJson;
+    reposGetDeploymentStatus415ApplicationJSONObject?: ReposGetDeploymentStatus415ApplicationJson;
 }

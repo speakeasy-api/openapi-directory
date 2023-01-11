@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeneratePartialYaraRuleResponse = exports.GeneratePartialYaraRuleRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GeneratePartialYaraRuleRequest = /** @class */ (function (_super) {
     __extends(GeneratePartialYaraRuleRequest, _super);
     function GeneratePartialYaraRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", Object)
     ], GeneratePartialYaraRuleRequest.prototype, "request", void 0);
     return GeneratePartialYaraRuleRequest;
-}(SpeakeasyBase));
-export { GeneratePartialYaraRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GeneratePartialYaraRuleRequest = GeneratePartialYaraRuleRequest;
 var GeneratePartialYaraRuleResponse = /** @class */ (function (_super) {
     __extends(GeneratePartialYaraRuleResponse, _super);
     function GeneratePartialYaraRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GeneratePartialYaraRuleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GeneratePartialYaraRuleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GeneratePartialYaraRuleResponse.prototype, "statusCode", void 0);
     return GeneratePartialYaraRuleResponse;
-}(SpeakeasyBase));
-export { GeneratePartialYaraRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GeneratePartialYaraRuleResponse = GeneratePartialYaraRuleResponse;

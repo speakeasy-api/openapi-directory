@@ -1,6 +1,9 @@
-export var InstanceSnapshotStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceSnapshotStateEnum = void 0;
+var InstanceSnapshotStateEnum;
 (function (InstanceSnapshotStateEnum) {
     InstanceSnapshotStateEnum["Pending"] = "pending";
     InstanceSnapshotStateEnum["Error"] = "error";
     InstanceSnapshotStateEnum["Available"] = "available";
-})(InstanceSnapshotStateEnum || (InstanceSnapshotStateEnum = {}));
+})(InstanceSnapshotStateEnum = exports.InstanceSnapshotStateEnum || (exports.InstanceSnapshotStateEnum = {}));

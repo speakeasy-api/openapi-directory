@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationStatusEnum } from "./authorizationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointAuthorization = void 0;
+var utils_1 = require("../../../internal/utils");
+var authorizationstatusenum_1 = require("./authorizationstatusenum");
 // EndpointAuthorization
 /**
  * Describes an endpoint authorization for authorizing Redshift-managed VPC endpoint access to a cluster across Amazon Web Services accounts.
@@ -34,41 +37,41 @@ var EndpointAuthorization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], EndpointAuthorization.prototype, "allowedAllVpCs", void 0);
+    ], EndpointAuthorization.prototype, "allowedAllVPCs", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], EndpointAuthorization.prototype, "allowedVpCs", void 0);
+    ], EndpointAuthorization.prototype, "allowedVPCs", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], EndpointAuthorization.prototype, "authorizeTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAuthorization.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAuthorization.prototype, "clusterStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointAuthorization.prototype, "endpointCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAuthorization.prototype, "grantee", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAuthorization.prototype, "grantor", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAuthorization.prototype, "status", void 0);
     return EndpointAuthorization;
-}(SpeakeasyBase));
-export { EndpointAuthorization };
+}(utils_1.SpeakeasyBase));
+exports.EndpointAuthorization = EndpointAuthorization;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataRetrievalPolicy } from "./dataretrievalpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDataRetrievalPolicyOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var dataretrievalpolicy_1 = require("./dataretrievalpolicy");
 // GetDataRetrievalPolicyOutput
 /**
  * Contains the Amazon S3 Glacier response to the <code>GetDataRetrievalPolicy</code> request.
@@ -34,9 +37,9 @@ var GetDataRetrievalPolicyOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Policy" }),
-        __metadata("design:type", DataRetrievalPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Policy" }),
+        __metadata("design:type", dataretrievalpolicy_1.DataRetrievalPolicy)
     ], GetDataRetrievalPolicyOutput.prototype, "policy", void 0);
     return GetDataRetrievalPolicyOutput;
-}(SpeakeasyBase));
-export { GetDataRetrievalPolicyOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetDataRetrievalPolicyOutput = GetDataRetrievalPolicyOutput;

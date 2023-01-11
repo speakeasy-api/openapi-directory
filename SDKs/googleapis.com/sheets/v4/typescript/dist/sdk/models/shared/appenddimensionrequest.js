@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppendDimensionRequestDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppendDimensionRequest = exports.AppendDimensionRequestDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppendDimensionRequestDimensionEnum;
 (function (AppendDimensionRequestDimensionEnum) {
     AppendDimensionRequestDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     AppendDimensionRequestDimensionEnum["Rows"] = "ROWS";
     AppendDimensionRequestDimensionEnum["Columns"] = "COLUMNS";
-})(AppendDimensionRequestDimensionEnum || (AppendDimensionRequestDimensionEnum = {}));
+})(AppendDimensionRequestDimensionEnum = exports.AppendDimensionRequestDimensionEnum || (exports.AppendDimensionRequestDimensionEnum = {}));
 // AppendDimensionRequest
 /**
  * Appends rows or columns to the end of a sheet.
@@ -39,17 +42,17 @@ var AppendDimensionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], AppendDimensionRequest.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], AppendDimensionRequest.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], AppendDimensionRequest.prototype, "sheetId", void 0);
     return AppendDimensionRequest;
-}(SpeakeasyBase));
-export { AppendDimensionRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppendDimensionRequest = AppendDimensionRequest;

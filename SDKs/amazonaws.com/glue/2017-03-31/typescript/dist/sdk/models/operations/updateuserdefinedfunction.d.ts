@@ -25,5 +25,5 @@ export declare class UpdateUserDefinedFunctionResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateUserDefinedFunctionResponse?: Map<string, any>;
+    updateUserDefinedFunctionResponse?: Record<string, any>;
 }

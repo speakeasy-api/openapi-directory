@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { Label } from "./label";
 import { ContentRestriction } from "./contentrestriction";
 import { User } from "./user";
 import { ParentReference } from "./parentreference";
-import { PermissionInput } from "./permission";
-import { Property } from "./property";
-import { Label } from "./label";
 import { Permission } from "./permission";
+import { Property } from "./property";
+import { PermissionInput } from "./permission";
 
 
 
@@ -319,6 +319,238 @@ export class FileVideoMediaMetadata extends SpeakeasyBase {
 }
 
 
+// File
+/** 
+ * The metadata for a file.
+**/
+export class File extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=alternateLink" })
+  alternateLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=appDataContents" })
+  appDataContents?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=canComment" })
+  canComment?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=canReadRevisions" })
+  canReadRevisions?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=capabilities" })
+  capabilities?: FileCapabilities;
+
+  @SpeakeasyMetadata({ data: "json, name=contentRestrictions", elemType: ContentRestriction })
+  contentRestrictions?: ContentRestriction[];
+
+  @SpeakeasyMetadata({ data: "json, name=copyRequiresWriterPermission" })
+  copyRequiresWriterPermission?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=copyable" })
+  copyable?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=createdDate" })
+  createdDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=defaultOpenWithLink" })
+  defaultOpenWithLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=downloadUrl" })
+  downloadUrl?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=driveId" })
+  driveId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=editable" })
+  editable?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=embedLink" })
+  embedLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=etag" })
+  etag?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=explicitlyTrashed" })
+  explicitlyTrashed?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=exportLinks" })
+  exportLinks?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=fileExtension" })
+  fileExtension?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=fileSize" })
+  fileSize?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=folderColorRgb" })
+  folderColorRgb?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=fullFileExtension" })
+  fullFileExtension?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=hasAugmentedPermissions" })
+  hasAugmentedPermissions?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=hasThumbnail" })
+  hasThumbnail?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=headRevisionId" })
+  headRevisionId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=iconLink" })
+  iconLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=imageMediaMetadata" })
+  imageMediaMetadata?: FileImageMediaMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=indexableText" })
+  indexableText?: FileIndexableText;
+
+  @SpeakeasyMetadata({ data: "json, name=isAppAuthorized" })
+  isAppAuthorized?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=kind" })
+  kind?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labelInfo" })
+  labelInfo?: FileLabelInfo;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: FileLabels;
+
+  @SpeakeasyMetadata({ data: "json, name=lastModifyingUser" })
+  lastModifyingUser?: User;
+
+  @SpeakeasyMetadata({ data: "json, name=lastModifyingUserName" })
+  lastModifyingUserName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=lastViewedByMeDate" })
+  lastViewedByMeDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=linkShareMetadata" })
+  linkShareMetadata?: FileLinkShareMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=markedViewedByMeDate" })
+  markedViewedByMeDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=md5Checksum" })
+  md5Checksum?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=mimeType" })
+  mimeType?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=modifiedByMeDate" })
+  modifiedByMeDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=modifiedDate" })
+  modifiedDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=openWithLinks" })
+  openWithLinks?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=originalFilename" })
+  originalFilename?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=ownedByMe" })
+  ownedByMe?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=ownerNames" })
+  ownerNames?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=owners", elemType: User })
+  owners?: User[];
+
+  @SpeakeasyMetadata({ data: "json, name=parents", elemType: ParentReference })
+  parents?: ParentReference[];
+
+  @SpeakeasyMetadata({ data: "json, name=permissionIds" })
+  permissionIds?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=permissions", elemType: Permission })
+  permissions?: Permission[];
+
+  @SpeakeasyMetadata({ data: "json, name=properties", elemType: Property })
+  properties?: Property[];
+
+  @SpeakeasyMetadata({ data: "json, name=quotaBytesUsed" })
+  quotaBytesUsed?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=resourceKey" })
+  resourceKey?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=selfLink" })
+  selfLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sha1Checksum" })
+  sha1Checksum?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sha256Checksum" })
+  sha256Checksum?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=shareable" })
+  shareable?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=shared" })
+  shared?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=sharedWithMeDate" })
+  sharedWithMeDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=sharingUser" })
+  sharingUser?: User;
+
+  @SpeakeasyMetadata({ data: "json, name=shortcutDetails" })
+  shortcutDetails?: FileShortcutDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=spaces" })
+  spaces?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=teamDriveId" })
+  teamDriveId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=thumbnail" })
+  thumbnail?: FileThumbnail;
+
+  @SpeakeasyMetadata({ data: "json, name=thumbnailLink" })
+  thumbnailLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=thumbnailVersion" })
+  thumbnailVersion?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=title" })
+  title?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=trashedDate" })
+  trashedDate?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=trashingUser" })
+  trashingUser?: User;
+
+  @SpeakeasyMetadata({ data: "json, name=userPermission" })
+  userPermission?: Permission;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=videoMediaMetadata" })
+  videoMediaMetadata?: FileVideoMediaMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=webContentLink" })
+  webContentLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=webViewLink" })
+  webViewLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=writersCanShare" })
+  writersCanShare?: boolean;
+}
+
+
 // FileInput
 /** 
  * The metadata for a file.
@@ -448,7 +680,7 @@ export class FileInput extends SpeakeasyBase {
   modifiedDate?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=openWithLinks" })
-  openWithLinks?: Map<string, string>;
+  openWithLinks?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=originalFilename" })
   originalFilename?: string;
@@ -530,238 +762,6 @@ export class FileInput extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=userPermission" })
   userPermission?: PermissionInput;
-
-  @SpeakeasyMetadata({ data: "json, name=version" })
-  version?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=videoMediaMetadata" })
-  videoMediaMetadata?: FileVideoMediaMetadata;
-
-  @SpeakeasyMetadata({ data: "json, name=webContentLink" })
-  webContentLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=webViewLink" })
-  webViewLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=writersCanShare" })
-  writersCanShare?: boolean;
-}
-
-
-// File
-/** 
- * The metadata for a file.
-**/
-export class File extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=alternateLink" })
-  alternateLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=appDataContents" })
-  appDataContents?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=canComment" })
-  canComment?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=canReadRevisions" })
-  canReadRevisions?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=capabilities" })
-  capabilities?: FileCapabilities;
-
-  @SpeakeasyMetadata({ data: "json, name=contentRestrictions", elemType: ContentRestriction })
-  contentRestrictions?: ContentRestriction[];
-
-  @SpeakeasyMetadata({ data: "json, name=copyRequiresWriterPermission" })
-  copyRequiresWriterPermission?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=copyable" })
-  copyable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=createdDate" })
-  createdDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=defaultOpenWithLink" })
-  defaultOpenWithLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=downloadUrl" })
-  downloadUrl?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=driveId" })
-  driveId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=editable" })
-  editable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=embedLink" })
-  embedLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=etag" })
-  etag?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=explicitlyTrashed" })
-  explicitlyTrashed?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=exportLinks" })
-  exportLinks?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=fileExtension" })
-  fileExtension?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=fileSize" })
-  fileSize?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=folderColorRgb" })
-  folderColorRgb?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=fullFileExtension" })
-  fullFileExtension?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=hasAugmentedPermissions" })
-  hasAugmentedPermissions?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=hasThumbnail" })
-  hasThumbnail?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=headRevisionId" })
-  headRevisionId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=iconLink" })
-  iconLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=imageMediaMetadata" })
-  imageMediaMetadata?: FileImageMediaMetadata;
-
-  @SpeakeasyMetadata({ data: "json, name=indexableText" })
-  indexableText?: FileIndexableText;
-
-  @SpeakeasyMetadata({ data: "json, name=isAppAuthorized" })
-  isAppAuthorized?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=kind" })
-  kind?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labelInfo" })
-  labelInfo?: FileLabelInfo;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: FileLabels;
-
-  @SpeakeasyMetadata({ data: "json, name=lastModifyingUser" })
-  lastModifyingUser?: User;
-
-  @SpeakeasyMetadata({ data: "json, name=lastModifyingUserName" })
-  lastModifyingUserName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=lastViewedByMeDate" })
-  lastViewedByMeDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=linkShareMetadata" })
-  linkShareMetadata?: FileLinkShareMetadata;
-
-  @SpeakeasyMetadata({ data: "json, name=markedViewedByMeDate" })
-  markedViewedByMeDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=md5Checksum" })
-  md5Checksum?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=mimeType" })
-  mimeType?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=modifiedByMeDate" })
-  modifiedByMeDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=modifiedDate" })
-  modifiedDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=openWithLinks" })
-  openWithLinks?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=originalFilename" })
-  originalFilename?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=ownedByMe" })
-  ownedByMe?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=ownerNames" })
-  ownerNames?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=owners", elemType: User })
-  owners?: User[];
-
-  @SpeakeasyMetadata({ data: "json, name=parents", elemType: ParentReference })
-  parents?: ParentReference[];
-
-  @SpeakeasyMetadata({ data: "json, name=permissionIds" })
-  permissionIds?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=permissions", elemType: Permission })
-  permissions?: Permission[];
-
-  @SpeakeasyMetadata({ data: "json, name=properties", elemType: Property })
-  properties?: Property[];
-
-  @SpeakeasyMetadata({ data: "json, name=quotaBytesUsed" })
-  quotaBytesUsed?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=resourceKey" })
-  resourceKey?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=selfLink" })
-  selfLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=sha1Checksum" })
-  sha1Checksum?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=sha256Checksum" })
-  sha256Checksum?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=shareable" })
-  shareable?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=shared" })
-  shared?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=sharedWithMeDate" })
-  sharedWithMeDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=sharingUser" })
-  sharingUser?: User;
-
-  @SpeakeasyMetadata({ data: "json, name=shortcutDetails" })
-  shortcutDetails?: FileShortcutDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=spaces" })
-  spaces?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=teamDriveId" })
-  teamDriveId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=thumbnail" })
-  thumbnail?: FileThumbnail;
-
-  @SpeakeasyMetadata({ data: "json, name=thumbnailLink" })
-  thumbnailLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=thumbnailVersion" })
-  thumbnailVersion?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=title" })
-  title?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=trashedDate" })
-  trashedDate?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=trashingUser" })
-  trashingUser?: User;
-
-  @SpeakeasyMetadata({ data: "json, name=userPermission" })
-  userPermission?: Permission;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

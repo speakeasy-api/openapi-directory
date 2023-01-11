@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomDns } from "./customdns";
-import { GlueRecord } from "./gluerecord";
-import { GoogleDomainsDns } from "./googledomainsdns";
-import { GoogleDomainsDnsInput } from "./googledomainsdns";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DnsSettingsInput = exports.DnsSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var customdns_1 = require("./customdns");
+var gluerecord_1 = require("./gluerecord");
+var googledomainsdns_1 = require("./googledomainsdns");
+var googledomainsdns_2 = require("./googledomainsdns");
 // DnsSettings
 /**
  * Defines the DNS configuration of a `Registration`, including name servers, DNSSEC, and glue records.
@@ -37,20 +40,20 @@ var DnsSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDns" }),
-        __metadata("design:type", CustomDns)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDns" }),
+        __metadata("design:type", customdns_1.CustomDns)
     ], DnsSettings.prototype, "customDns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=glueRecords", elemType: GlueRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=glueRecords", elemType: gluerecord_1.GlueRecord }),
         __metadata("design:type", Array)
     ], DnsSettings.prototype, "glueRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleDomainsDns" }),
-        __metadata("design:type", GoogleDomainsDns)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleDomainsDns" }),
+        __metadata("design:type", googledomainsdns_1.GoogleDomainsDns)
     ], DnsSettings.prototype, "googleDomainsDns", void 0);
     return DnsSettings;
-}(SpeakeasyBase));
-export { DnsSettings };
+}(utils_1.SpeakeasyBase));
+exports.DnsSettings = DnsSettings;
 // DnsSettingsInput
 /**
  * Defines the DNS configuration of a `Registration`, including name servers, DNSSEC, and glue records.
@@ -61,17 +64,17 @@ var DnsSettingsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDns" }),
-        __metadata("design:type", CustomDns)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDns" }),
+        __metadata("design:type", customdns_1.CustomDns)
     ], DnsSettingsInput.prototype, "customDns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=glueRecords", elemType: GlueRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=glueRecords", elemType: gluerecord_1.GlueRecord }),
         __metadata("design:type", Array)
     ], DnsSettingsInput.prototype, "glueRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleDomainsDns" }),
-        __metadata("design:type", GoogleDomainsDnsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleDomainsDns" }),
+        __metadata("design:type", googledomainsdns_2.GoogleDomainsDnsInput)
     ], DnsSettingsInput.prototype, "googleDomainsDns", void 0);
     return DnsSettingsInput;
-}(SpeakeasyBase));
-export { DnsSettingsInput };
+}(utils_1.SpeakeasyBase));
+exports.DnsSettingsInput = DnsSettingsInput;

@@ -8,5 +8,5 @@ export declare class GetNetworkEventsEventTypesRequest extends SpeakeasyBase {
 export declare class GetNetworkEventsEventTypesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkEventsEventTypes200ApplicationJsonObject?: Map<string, any>;
+    getNetworkEventsEventTypes200ApplicationJSONObject?: Record<string, any>;
 }

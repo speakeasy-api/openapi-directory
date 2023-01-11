@@ -2,6 +2,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// TeamResponseOrganization
+/** 
+ * The organization/workspace the team belongs to.
+ * 
+**/
 export class TeamResponseOrganization extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -14,6 +19,10 @@ export class TeamResponseOrganization extends SpeakeasyBase {
 }
 
 
+// TeamResponse
+/** 
+ * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
+**/
 export class TeamResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

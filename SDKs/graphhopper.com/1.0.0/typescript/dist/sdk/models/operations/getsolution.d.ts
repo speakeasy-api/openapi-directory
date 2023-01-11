@@ -13,8 +13,8 @@ export declare class GetSolutionRequest extends SpeakeasyBase {
 export declare class GetSolutionResponse extends SpeakeasyBase {
     badRequest?: shared.BadRequest;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     response?: shared.Response;
     statusCode: number;
-    getSolution404ApplicationJsonObject?: GetSolution404ApplicationJson;
+    getSolution404ApplicationJSONObject?: GetSolution404ApplicationJson;
 }

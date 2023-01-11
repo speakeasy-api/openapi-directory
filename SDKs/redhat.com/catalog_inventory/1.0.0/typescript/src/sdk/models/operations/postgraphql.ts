@@ -14,7 +14,7 @@ export class PostGraphQlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  graphQlResponse?: shared.GraphQlResponse;
+  graphQLResponse?: shared.GraphQlResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -43,7 +43,7 @@ export class Video extends SpeakeasyBase {
   liveStreamingDetails?: VideoLiveStreamingDetails;
 
   @SpeakeasyMetadata({ data: "json, name=localizations", elemType: VideoLocalization })
-  localizations?: Map<string, VideoLocalization>;
+  localizations?: Record<string, VideoLocalization>;
 
   @SpeakeasyMetadata({ data: "json, name=monetizationDetails" })
   monetizationDetails?: VideoMonetizationDetails;
@@ -55,7 +55,7 @@ export class Video extends SpeakeasyBase {
   processingDetails?: VideoProcessingDetails;
 
   @SpeakeasyMetadata({ data: "json, name=projectDetails" })
-  projectDetails?: Map<string, any>;
+  projectDetails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=recordingDetails" })
   recordingDetails?: VideoRecordingDetails;

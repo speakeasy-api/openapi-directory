@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicYarnAutoscalingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // BasicYarnAutoscalingConfig
 /**
  * Basic autoscaling configurations for YARN.
@@ -33,25 +36,25 @@ var BasicYarnAutoscalingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gracefulDecommissionTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gracefulDecommissionTimeout" }),
         __metadata("design:type", String)
     ], BasicYarnAutoscalingConfig.prototype, "gracefulDecommissionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleDownFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleDownFactor" }),
         __metadata("design:type", Number)
     ], BasicYarnAutoscalingConfig.prototype, "scaleDownFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleDownMinWorkerFraction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleDownMinWorkerFraction" }),
         __metadata("design:type", Number)
     ], BasicYarnAutoscalingConfig.prototype, "scaleDownMinWorkerFraction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleUpFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleUpFactor" }),
         __metadata("design:type", Number)
     ], BasicYarnAutoscalingConfig.prototype, "scaleUpFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleUpMinWorkerFraction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleUpMinWorkerFraction" }),
         __metadata("design:type", Number)
     ], BasicYarnAutoscalingConfig.prototype, "scaleUpMinWorkerFraction", void 0);
     return BasicYarnAutoscalingConfig;
-}(SpeakeasyBase));
-export { BasicYarnAutoscalingConfig };
+}(utils_1.SpeakeasyBase));
+exports.BasicYarnAutoscalingConfig = BasicYarnAutoscalingConfig;

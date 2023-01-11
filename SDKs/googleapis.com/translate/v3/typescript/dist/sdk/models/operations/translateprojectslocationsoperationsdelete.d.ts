@@ -35,6 +35,6 @@ export declare class TranslateProjectsLocationsOperationsDeleteRequest extends S
 }
 export declare class TranslateProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

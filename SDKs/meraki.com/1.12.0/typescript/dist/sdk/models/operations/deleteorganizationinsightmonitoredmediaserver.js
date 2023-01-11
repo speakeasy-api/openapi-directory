@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteOrganizationInsightMonitoredMediaServerResponse = exports.DeleteOrganizationInsightMonitoredMediaServerRequest = exports.DeleteOrganizationInsightMonitoredMediaServerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteOrganizationInsightMonitoredMediaServerPathParams = /** @class */ (function (_super) {
     __extends(DeleteOrganizationInsightMonitoredMediaServerPathParams, _super);
     function DeleteOrganizationInsightMonitoredMediaServerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=monitoredMediaServerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=monitoredMediaServerId" }),
         __metadata("design:type", String)
     ], DeleteOrganizationInsightMonitoredMediaServerPathParams.prototype, "monitoredMediaServerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], DeleteOrganizationInsightMonitoredMediaServerPathParams.prototype, "organizationId", void 0);
     return DeleteOrganizationInsightMonitoredMediaServerPathParams;
-}(SpeakeasyBase));
-export { DeleteOrganizationInsightMonitoredMediaServerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationInsightMonitoredMediaServerPathParams = DeleteOrganizationInsightMonitoredMediaServerPathParams;
 var DeleteOrganizationInsightMonitoredMediaServerRequest = /** @class */ (function (_super) {
     __extends(DeleteOrganizationInsightMonitoredMediaServerRequest, _super);
     function DeleteOrganizationInsightMonitoredMediaServerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteOrganizationInsightMonitoredMediaServerPathParams)
     ], DeleteOrganizationInsightMonitoredMediaServerRequest.prototype, "pathParams", void 0);
     return DeleteOrganizationInsightMonitoredMediaServerRequest;
-}(SpeakeasyBase));
-export { DeleteOrganizationInsightMonitoredMediaServerRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationInsightMonitoredMediaServerRequest = DeleteOrganizationInsightMonitoredMediaServerRequest;
 var DeleteOrganizationInsightMonitoredMediaServerResponse = /** @class */ (function (_super) {
     __extends(DeleteOrganizationInsightMonitoredMediaServerResponse, _super);
     function DeleteOrganizationInsightMonitoredMediaServerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteOrganizationInsightMonitoredMediaServerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteOrganizationInsightMonitoredMediaServerResponse.prototype, "statusCode", void 0);
     return DeleteOrganizationInsightMonitoredMediaServerResponse;
-}(SpeakeasyBase));
-export { DeleteOrganizationInsightMonitoredMediaServerResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationInsightMonitoredMediaServerResponse = DeleteOrganizationInsightMonitoredMediaServerResponse;

@@ -1,8 +1,11 @@
-export var ServerCatalogStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerCatalogStatusEnum = void 0;
+var ServerCatalogStatusEnum;
 (function (ServerCatalogStatusEnum) {
     ServerCatalogStatusEnum["NotImported"] = "NOT_IMPORTED";
     ServerCatalogStatusEnum["Importing"] = "IMPORTING";
     ServerCatalogStatusEnum["Available"] = "AVAILABLE";
     ServerCatalogStatusEnum["Deleted"] = "DELETED";
     ServerCatalogStatusEnum["Expired"] = "EXPIRED";
-})(ServerCatalogStatusEnum || (ServerCatalogStatusEnum = {}));
+})(ServerCatalogStatusEnum = exports.ServerCatalogStatusEnum || (exports.ServerCatalogStatusEnum = {}));

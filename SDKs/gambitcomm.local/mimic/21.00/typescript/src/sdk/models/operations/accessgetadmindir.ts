@@ -10,5 +10,5 @@ export class AccessGetAdmindirResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  accessGetAdmindir200ApplicationJsonString?: string;
+  accessGetAdmindir200ApplicationJSONString?: string;
 }

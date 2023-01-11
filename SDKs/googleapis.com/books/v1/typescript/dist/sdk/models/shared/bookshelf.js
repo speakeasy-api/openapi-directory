@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bookshelf = void 0;
+var utils_1 = require("../../../internal/utils");
 var Bookshelf = /** @class */ (function (_super) {
     __extends(Bookshelf, _super);
     function Bookshelf() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Bookshelf.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeCount" }),
         __metadata("design:type", Number)
     ], Bookshelf.prototype, "volumeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumesLastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumesLastUpdated" }),
         __metadata("design:type", String)
     ], Bookshelf.prototype, "volumesLastUpdated", void 0);
     return Bookshelf;
-}(SpeakeasyBase));
-export { Bookshelf };
+}(utils_1.SpeakeasyBase));
+exports.Bookshelf = Bookshelf;

@@ -22,5 +22,5 @@ export class GetNetworkMqttBrokersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkMqttBrokers200ApplicationJsonObject?: Map<string, any>;
+  getNetworkMqttBrokers200ApplicationJSONObject?: Record<string, any>;
 }

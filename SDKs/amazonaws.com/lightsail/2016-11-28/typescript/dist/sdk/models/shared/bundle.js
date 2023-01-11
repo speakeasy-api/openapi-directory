@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bundle = void 0;
+var utils_1 = require("../../../internal/utils");
 // Bundle
 /**
  * Describes a bundle, which is a set of specs describing your virtual private server (or <i>instance</i>).
@@ -33,49 +36,49 @@ var Bundle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], Bundle.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskSizeInGb" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "diskSizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], Bundle.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isActive" }),
         __metadata("design:type", Boolean)
     ], Bundle.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Bundle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "power", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ramSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ramSizeInGb" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "ramSizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedPlatforms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedPlatforms" }),
         __metadata("design:type", Array)
     ], Bundle.prototype, "supportedPlatforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferPerMonthInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferPerMonthInGb" }),
         __metadata("design:type", Number)
     ], Bundle.prototype, "transferPerMonthInGb", void 0);
     return Bundle;
-}(SpeakeasyBase));
-export { Bundle };
+}(utils_1.SpeakeasyBase));
+exports.Bundle = Bundle;

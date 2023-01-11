@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Area = void 0;
+var utils_1 = require("../../../internal/utils");
 var Area = /** @class */ (function (_super) {
     __extends(Area, _super);
     function Area() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Area.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Area.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Area.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XLatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XLatitude" }),
         __metadata("design:type", String)
     ], Area.prototype, "xLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XLongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XLongitude" }),
         __metadata("design:type", String)
     ], Area.prototype, "xLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YLatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YLatitude" }),
         __metadata("design:type", String)
     ], Area.prototype, "yLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YLongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YLongitude" }),
         __metadata("design:type", String)
     ], Area.prototype, "yLongitude", void 0);
     return Area;
-}(SpeakeasyBase));
-export { Area };
+}(utils_1.SpeakeasyBase));
+exports.Area = Area;

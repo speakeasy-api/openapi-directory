@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
-import { MeasureValueTypeEnum } from "./measurevaluetypeenum";
-import { TimeUnitEnum } from "./timeunitenum";
-// Record
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordT = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
+var measurevaluetypeenum_1 = require("./measurevaluetypeenum");
+var timeunitenum_1 = require("./timeunitenum");
+// RecordT
 /**
  * Record represents a time series data point being written into Timestream. Each record contains an array of dimensions. Dimensions represent the meta data attributes of a time series data point such as the instance name or availability zone of an EC2 instance. A record also contains the measure name which is the name of the measure being collected for example the CPU utilization of an EC2 instance. A record also contains the measure value and the value type which is the data type of the measure value. In addition, the record contains the timestamp when the measure was collected that the timestamp unit which represents the granularity of the timestamp.
 **/
-var Record = /** @class */ (function (_super) {
-    __extends(Record, _super);
-    function Record() {
+var RecordT = /** @class */ (function (_super) {
+    __extends(RecordT, _super);
+    function RecordT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
-    ], Record.prototype, "dimensions", void 0);
+    ], RecordT.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MeasureName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MeasureName" }),
         __metadata("design:type", String)
-    ], Record.prototype, "measureName", void 0);
+    ], RecordT.prototype, "measureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MeasureValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MeasureValue" }),
         __metadata("design:type", String)
-    ], Record.prototype, "measureValue", void 0);
+    ], RecordT.prototype, "measureValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MeasureValueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MeasureValueType" }),
         __metadata("design:type", String)
-    ], Record.prototype, "measureValueType", void 0);
+    ], RecordT.prototype, "measureValueType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Time" }),
         __metadata("design:type", String)
-    ], Record.prototype, "time", void 0);
+    ], RecordT.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeUnit" }),
         __metadata("design:type", String)
-    ], Record.prototype, "timeUnit", void 0);
+    ], RecordT.prototype, "timeUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
-    ], Record.prototype, "version", void 0);
-    return Record;
-}(SpeakeasyBase));
-export { Record };
+    ], RecordT.prototype, "version", void 0);
+    return RecordT;
+}(utils_1.SpeakeasyBase));
+exports.RecordT = RecordT;

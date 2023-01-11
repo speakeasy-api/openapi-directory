@@ -37,5 +37,5 @@ export class GetcompanymatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getcompanymatch200ApplicationJsonObject?: Getcompanymatch200ApplicationJson;
+  getcompanymatch200ApplicationJSONObject?: Getcompanymatch200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityProviderConfig } from "./identityproviderconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListIdentityProviderConfigsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var identityproviderconfig_1 = require("./identityproviderconfig");
 var ListIdentityProviderConfigsResponse = /** @class */ (function (_super) {
     __extends(ListIdentityProviderConfigsResponse, _super);
     function ListIdentityProviderConfigsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityProviderConfigs", elemType: IdentityProviderConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityProviderConfigs", elemType: identityproviderconfig_1.IdentityProviderConfig }),
         __metadata("design:type", Array)
     ], ListIdentityProviderConfigsResponse.prototype, "identityProviderConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListIdentityProviderConfigsResponse.prototype, "nextToken", void 0);
     return ListIdentityProviderConfigsResponse;
-}(SpeakeasyBase));
-export { ListIdentityProviderConfigsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListIdentityProviderConfigsResponse = ListIdentityProviderConfigsResponse;

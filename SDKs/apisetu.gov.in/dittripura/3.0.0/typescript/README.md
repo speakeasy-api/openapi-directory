@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ChcerRequest, ChcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: ChcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      refNo: "aliquid",
-      tokenNo: "ex",
+      refNo: "sit",
+      tokenNo: "voluptas",
     },
-    consentArtifact: "magnam",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "laudantium",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.chcer(req).then((res: ChcerResponse | AxiosError) => {
+sdk.apIs.chcer(req).then((res: ChcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.chcer(req).then((res: ChcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `chcer` - Character Certificate
 * `dncer` - Distance Certificate

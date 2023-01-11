@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TableRestoreStatus } from "./tablerestorestatus";
+import { TableRestoreStatusList } from "./tablerestorestatuslist";
 /**
  * <p/>
 **/
 export declare class TableRestoreStatusMessage extends SpeakeasyBase {
     marker?: string;
-    tableRestoreStatusDetails?: TableRestoreStatus[];
+    tableRestoreStatusDetails?: TableRestoreStatusList[];
 }

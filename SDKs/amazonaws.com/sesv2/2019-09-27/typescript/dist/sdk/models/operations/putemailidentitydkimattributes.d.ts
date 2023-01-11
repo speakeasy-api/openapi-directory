@@ -23,7 +23,7 @@ export declare class PutEmailIdentityDkimAttributesResponse extends SpeakeasyBas
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putEmailIdentityDkimAttributesResponse?: Map<string, any>;
+    putEmailIdentityDkimAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

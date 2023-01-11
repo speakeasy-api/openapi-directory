@@ -43,5 +43,5 @@ export declare class DcimPowerPanelsListRequest extends SpeakeasyBase {
 export declare class DcimPowerPanelsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerPanelsList200ApplicationJsonObject?: DcimPowerPanelsList200ApplicationJson;
+    dcimPowerPanelsList200ApplicationJSONObject?: DcimPowerPanelsList200ApplicationJson;
 }

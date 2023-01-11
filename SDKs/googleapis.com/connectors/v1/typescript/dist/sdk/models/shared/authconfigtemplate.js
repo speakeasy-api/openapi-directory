@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigVariableTemplate } from "./configvariabletemplate";
-export var AuthConfigTemplateAuthTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthConfigTemplate = exports.AuthConfigTemplateAuthTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var configvariabletemplate_1 = require("./configvariabletemplate");
+var AuthConfigTemplateAuthTypeEnum;
 (function (AuthConfigTemplateAuthTypeEnum) {
     AuthConfigTemplateAuthTypeEnum["AuthTypeUnspecified"] = "AUTH_TYPE_UNSPECIFIED";
     AuthConfigTemplateAuthTypeEnum["UserPassword"] = "USER_PASSWORD";
@@ -32,7 +35,7 @@ export var AuthConfigTemplateAuthTypeEnum;
     AuthConfigTemplateAuthTypeEnum["Oauth2ClientCredentials"] = "OAUTH2_CLIENT_CREDENTIALS";
     AuthConfigTemplateAuthTypeEnum["SshPublicKey"] = "SSH_PUBLIC_KEY";
     AuthConfigTemplateAuthTypeEnum["Oauth2AuthCodeFlow"] = "OAUTH2_AUTH_CODE_FLOW";
-})(AuthConfigTemplateAuthTypeEnum || (AuthConfigTemplateAuthTypeEnum = {}));
+})(AuthConfigTemplateAuthTypeEnum = exports.AuthConfigTemplateAuthTypeEnum || (exports.AuthConfigTemplateAuthTypeEnum = {}));
 // AuthConfigTemplate
 /**
  * AuthConfigTemplate defines required field over an authentication type.
@@ -43,13 +46,13 @@ var AuthConfigTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authType" }),
         __metadata("design:type", String)
     ], AuthConfigTemplate.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configVariableTemplates", elemType: ConfigVariableTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configVariableTemplates", elemType: configvariabletemplate_1.ConfigVariableTemplate }),
         __metadata("design:type", Array)
     ], AuthConfigTemplate.prototype, "configVariableTemplates", void 0);
     return AuthConfigTemplate;
-}(SpeakeasyBase));
-export { AuthConfigTemplate };
+}(utils_1.SpeakeasyBase));
+exports.AuthConfigTemplate = AuthConfigTemplate;

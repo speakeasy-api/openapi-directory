@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArticleWithCountType = exports.ArticleWithCountTypeMedia = exports.ArticleWithCountTypeMediaMediaMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 var ArticleWithCountTypeMediaMediaMetadata = /** @class */ (function (_super) {
     __extends(ArticleWithCountTypeMediaMediaMetadata, _super);
     function ArticleWithCountTypeMediaMediaMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMediaMediaMetadata.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], ArticleWithCountTypeMediaMediaMetadata.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMediaMediaMetadata.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], ArticleWithCountTypeMediaMediaMetadata.prototype, "width", void 0);
     return ArticleWithCountTypeMediaMediaMetadata;
-}(SpeakeasyBase));
-export { ArticleWithCountTypeMediaMediaMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ArticleWithCountTypeMediaMediaMetadata = ArticleWithCountTypeMediaMediaMetadata;
 var ArticleWithCountTypeMedia = /** @class */ (function (_super) {
     __extends(ArticleWithCountTypeMedia, _super);
     function ArticleWithCountTypeMedia() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMedia.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyright" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyright" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMedia.prototype, "copyright", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media-metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media-metadata" }),
         __metadata("design:type", ArticleWithCountTypeMediaMediaMetadata)
     ], ArticleWithCountTypeMedia.prototype, "mediaMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtype" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMedia.prototype, "subtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ArticleWithCountTypeMedia.prototype, "type", void 0);
     return ArticleWithCountTypeMedia;
-}(SpeakeasyBase));
-export { ArticleWithCountTypeMedia };
+}(utils_1.SpeakeasyBase));
+exports.ArticleWithCountTypeMedia = ArticleWithCountTypeMedia;
 var ArticleWithCountType = /** @class */ (function (_super) {
     __extends(ArticleWithCountType, _super);
     function ArticleWithCountType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abstract" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abstract" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "abstract", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=byline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byline" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "byline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=column" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "column", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count_type" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "countType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=des_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=des_facet" }),
         __metadata("design:type", Object)
     ], ArticleWithCountType.prototype, "desFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo_facet" }),
         __metadata("design:type", Object)
     ], ArticleWithCountType.prototype, "geoFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media", elemType: ArticleWithCountTypeMedia }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media", elemType: ArticleWithCountTypeMedia }),
         __metadata("design:type", Array)
     ], ArticleWithCountType.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org_facet" }),
         __metadata("design:type", Array)
     ], ArticleWithCountType.prototype, "orgFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_facet" }),
         __metadata("design:type", Array)
     ], ArticleWithCountType.prototype, "perFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published_date" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "publishedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=section" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "section", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ArticleWithCountType.prototype, "url", void 0);
     return ArticleWithCountType;
-}(SpeakeasyBase));
-export { ArticleWithCountType };
+}(utils_1.SpeakeasyBase));
+exports.ArticleWithCountType = ArticleWithCountType;

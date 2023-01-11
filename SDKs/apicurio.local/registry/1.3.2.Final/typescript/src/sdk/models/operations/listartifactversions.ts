@@ -20,11 +20,11 @@ export class ListArtifactVersionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listArtifactVersions200ApplicationJsonInt64Integers?: number[];
+  listArtifactVersions200ApplicationJSONInt64Integers?: number[];
 }

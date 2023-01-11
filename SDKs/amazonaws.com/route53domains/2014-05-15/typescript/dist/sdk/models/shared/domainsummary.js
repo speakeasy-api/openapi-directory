@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // DomainSummary
 /**
  * Summary information about one domain.
@@ -33,21 +36,21 @@ var DomainSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoRenew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoRenew" }),
         __metadata("design:type", Boolean)
     ], DomainSummary.prototype, "autoRenew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
         __metadata("design:type", String)
     ], DomainSummary.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expiry" }),
         __metadata("design:type", Date)
     ], DomainSummary.prototype, "expiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransferLock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransferLock" }),
         __metadata("design:type", Boolean)
     ], DomainSummary.prototype, "transferLock", void 0);
     return DomainSummary;
-}(SpeakeasyBase));
-export { DomainSummary };
+}(utils_1.SpeakeasyBase));
+exports.DomainSummary = DomainSummary;

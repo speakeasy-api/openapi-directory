@@ -16,22 +16,21 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAuditCaseRequest, GetAuditCaseResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeaderAuth: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     apiKeyQueryAuth: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -40,54 +39,51 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetAuditCaseRequest = {
   queryParams: {
-    apiKey: "doloremque",
+    apiKey: "sit",
     auditCaseId: [
-      "maiores",
+      "culpa",
     ],
     auditId: [
-      6260203721741419285,
-      626693492911080547,
+      3390393562759376202,
+      2669985732393126063,
     ],
     candidateId: [
-      "non",
+      "voluptas",
+      "fugit",
     ],
-    committeeDesignation: "molestias",
+    committeeDesignation: "et",
     committeeId: [
-      "quo",
+      "rerum",
     ],
     committeeType: [
-      "at",
-      "veritatis",
-      "sequi",
+      "debitis",
+      "voluptatum",
+      "et",
     ],
     cycle: [
-      5964140265861919200,
-      4915141299098414606,
-      4810246019628772601,
+      161231572858529631,
+      7259475919510918339,
+      7373105480197164748,
     ],
-    maxElectionCycle: 6561479165173553535,
-    minElectionCycle: 4212189814162458386,
-    page: 309870905088988184,
-    perPage: 3369996514632458230,
-    primaryCategoryId: "incidunt",
+    maxElectionCycle: 3287288577352441706,
+    minElectionCycle: 3930927879439176946,
+    page: 4706154865122290029,
+    perPage: 2217592893536642650,
+    primaryCategoryId: "illum",
     q: [
-      "nostrum",
-      "esse",
-      "dolores",
+      "vel",
     ],
     qq: [
-      "et",
-      "id",
+      "dolore",
     ],
     sort: [
-      "magni",
-      "minima",
-      "doloremque",
+      "aspernatur",
+      "accusantium",
     ],
     sortHideNull: false,
-    sortNullOnly: true,
+    sortNullOnly: false,
     sortNullsLast: true,
-    subCategoryId: "itaque",
+    subCategoryId: "est",
   },
 };
 

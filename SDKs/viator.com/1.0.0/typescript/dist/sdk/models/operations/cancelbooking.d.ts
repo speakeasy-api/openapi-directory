@@ -32,19 +32,19 @@ export declare class CancelBooking404ApplicationJson extends SpeakeasyBase {
     trackingId?: string;
 }
 export declare class CancelBookingRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: CancelBookingPathParams;
     headers: CancelBookingHeaders;
     request?: shared.CancellationRequest;
 }
 export declare class CancelBookingResponse extends SpeakeasyBase {
-    fourHundredAndOneUnauthorized?: shared.FourHundredAndOneUnauthorized;
-    fourHundredAndSixNotAcceptable?: shared.FourHundredAndSixNotAcceptable;
-    fiveHundredInternalServerError?: shared.FiveHundredInternalServerError;
-    fiveHundredAndThreeServiceUnavailable?: shared.FiveHundredAndThreeServiceUnavailable;
+    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
+    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
+    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
+    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
     cancelBookingResponse?: shared.CancelBookingResponse;
     contentType: string;
     statusCode: number;
-    cancelBooking400ApplicationJsonObject?: CancelBooking400ApplicationJson;
-    cancelBooking404ApplicationJsonObject?: CancelBooking404ApplicationJson;
+    cancelBooking400ApplicationJSONObject?: CancelBooking400ApplicationJson;
+    cancelBooking404ApplicationJSONObject?: CancelBooking404ApplicationJson;
 }

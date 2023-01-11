@@ -1,27 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CreateGroupPadUsingPostQueryParams extends SpeakeasyBase {
-    groupId?: string;
+    groupID?: string;
     padName?: string;
     text?: string;
 }
 export declare class CreateGroupPadUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupPadUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupPadUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupPadUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupPadUsingPostRequest extends SpeakeasyBase {
@@ -30,8 +30,8 @@ export declare class CreateGroupPadUsingPostRequest extends SpeakeasyBase {
 export declare class CreateGroupPadUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupPadUsingPost200ApplicationJsonObject?: CreateGroupPadUsingPost200ApplicationJson;
-    createGroupPadUsingPost400ApplicationJsonObject?: CreateGroupPadUsingPost400ApplicationJson;
-    createGroupPadUsingPost401ApplicationJsonObject?: CreateGroupPadUsingPost401ApplicationJson;
-    createGroupPadUsingPost500ApplicationJsonObject?: CreateGroupPadUsingPost500ApplicationJson;
+    createGroupPadUsingPOST200ApplicationJSONObject?: CreateGroupPadUsingPost200ApplicationJson;
+    createGroupPadUsingPOST400ApplicationJSONObject?: CreateGroupPadUsingPost400ApplicationJson;
+    createGroupPadUsingPOST401ApplicationJSONObject?: CreateGroupPadUsingPost401ApplicationJson;
+    createGroupPadUsingPOST500ApplicationJSONObject?: CreateGroupPadUsingPost500ApplicationJson;
 }

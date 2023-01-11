@@ -11,7 +11,7 @@ export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
 }
 export declare class ListTagsForResourceRequestBody extends SpeakeasyBase {
     nextToken?: string;
-    resourceArn: string;
+    resourceARN: string;
 }
 export declare class ListTagsForResourceRequest extends SpeakeasyBase {
     headers: ListTagsForResourceHeaders;

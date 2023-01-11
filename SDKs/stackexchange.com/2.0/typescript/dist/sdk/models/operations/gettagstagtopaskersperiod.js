@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTagsTagTopAskersPeriodPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsTagTopAskersPeriodResponse = exports.GetTagsTagTopAskersPeriodRequest = exports.GetTagsTagTopAskersPeriodQueryParams = exports.GetTagsTagTopAskersPeriodPathParams = exports.GetTagsTagTopAskersPeriodPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTagsTagTopAskersPeriodPeriodEnum;
 (function (GetTagsTagTopAskersPeriodPeriodEnum) {
     GetTagsTagTopAskersPeriodPeriodEnum["AllTime"] = "all_time";
     GetTagsTagTopAskersPeriodPeriodEnum["Month"] = "month";
-})(GetTagsTagTopAskersPeriodPeriodEnum || (GetTagsTagTopAskersPeriodPeriodEnum = {}));
+})(GetTagsTagTopAskersPeriodPeriodEnum = exports.GetTagsTagTopAskersPeriodPeriodEnum || (exports.GetTagsTagTopAskersPeriodPeriodEnum = {}));
 var GetTagsTagTopAskersPeriodPathParams = /** @class */ (function (_super) {
     __extends(GetTagsTagTopAskersPeriodPathParams, _super);
     function GetTagsTagTopAskersPeriodPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=period" }),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodPathParams.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tag" }),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodPathParams.prototype, "tag", void 0);
     return GetTagsTagTopAskersPeriodPathParams;
-}(SpeakeasyBase));
-export { GetTagsTagTopAskersPeriodPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagTopAskersPeriodPathParams = GetTagsTagTopAskersPeriodPathParams;
 var GetTagsTagTopAskersPeriodQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsTagTopAskersPeriodQueryParams, _super);
     function GetTagsTagTopAskersPeriodQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsTagTopAskersPeriodQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsTagTopAskersPeriodQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodQueryParams.prototype, "site", void 0);
     return GetTagsTagTopAskersPeriodQueryParams;
-}(SpeakeasyBase));
-export { GetTagsTagTopAskersPeriodQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagTopAskersPeriodQueryParams = GetTagsTagTopAskersPeriodQueryParams;
 var GetTagsTagTopAskersPeriodRequest = /** @class */ (function (_super) {
     __extends(GetTagsTagTopAskersPeriodRequest, _super);
     function GetTagsTagTopAskersPeriodRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagTopAskersPeriodPathParams)
     ], GetTagsTagTopAskersPeriodRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagTopAskersPeriodQueryParams)
     ], GetTagsTagTopAskersPeriodRequest.prototype, "queryParams", void 0);
     return GetTagsTagTopAskersPeriodRequest;
-}(SpeakeasyBase));
-export { GetTagsTagTopAskersPeriodRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagTopAskersPeriodRequest = GetTagsTagTopAskersPeriodRequest;
 var GetTagsTagTopAskersPeriodResponse = /** @class */ (function (_super) {
     __extends(GetTagsTagTopAskersPeriodResponse, _super);
     function GetTagsTagTopAskersPeriodResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsTagTopAskersPeriodResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsTagTopAskersPeriodResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsTagTopAskersPeriodResponse.prototype, "statusCode", void 0);
     return GetTagsTagTopAskersPeriodResponse;
-}(SpeakeasyBase));
-export { GetTagsTagTopAskersPeriodResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagTopAskersPeriodResponse = GetTagsTagTopAskersPeriodResponse;

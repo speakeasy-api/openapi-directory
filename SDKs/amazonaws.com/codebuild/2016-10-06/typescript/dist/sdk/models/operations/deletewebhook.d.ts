@@ -19,7 +19,7 @@ export declare class DeleteWebhookRequest extends SpeakeasyBase {
 }
 export declare class DeleteWebhookResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWebhookOutput?: Map<string, any>;
+    deleteWebhookOutput?: Record<string, any>;
     invalidInputException?: any;
     oAuthProviderException?: any;
     resourceNotFoundException?: any;

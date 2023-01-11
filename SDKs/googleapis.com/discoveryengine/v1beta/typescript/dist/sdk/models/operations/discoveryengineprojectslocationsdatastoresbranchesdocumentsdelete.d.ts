@@ -27,6 +27,6 @@ export declare class DiscoveryengineProjectsLocationsDataStoresBranchesDocuments
 }
 export declare class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FirelensConfigurationTypeEnum } from "./firelensconfigurationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirelensConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var firelensconfigurationtypeenum_1 = require("./firelensconfigurationtypeenum");
 // FirelensConfiguration
 /**
  * The FireLens configuration for the container. This is used to specify and configure a log router for container logs. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html">Custom Log Routing</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -34,13 +37,13 @@ var FirelensConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", Object)
     ], FirelensConfiguration.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FirelensConfiguration.prototype, "type", void 0);
     return FirelensConfiguration;
-}(SpeakeasyBase));
-export { FirelensConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.FirelensConfiguration = FirelensConfiguration;

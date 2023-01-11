@@ -11,7 +11,7 @@ export class RuntimeConfig extends SpeakeasyBase {
   containerImage?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

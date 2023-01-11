@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BuildBotLocaleRequest, BuildBotLocaleResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: BuildBotLocaleRequest = {
   pathParams: {
-    botId: "ea",
-    botVersion: "voluptate",
-    localeId: "et",
+    botId: "sit",
+    botVersion: "voluptas",
+    localeId: "culpa",
   },
   headers: {
-    xAmzAlgorithm: "consequatur",
-    xAmzContentSha256: "aliquam",
-    xAmzCredential: "molestiae",
-    xAmzDate: "repellat",
-    xAmzSecurityToken: "ut",
-    xAmzSignature: "necessitatibus",
-    xAmzSignedHeaders: "deserunt",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
 };
 
-sdk.sdk.buildBotLocale(req).then((res: BuildBotLocaleResponse | AxiosError) => {
+sdk.buildBotLocale(req).then((res: BuildBotLocaleResponse | AxiosError) => {
    // handle response
 });
 ```

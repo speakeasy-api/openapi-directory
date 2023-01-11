@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuiltInIntentSummary } from "./builtinintentsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListBuiltInIntentsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var builtinintentsummary_1 = require("./builtinintentsummary");
 var ListBuiltInIntentsResponse = /** @class */ (function (_super) {
     __extends(ListBuiltInIntentsResponse, _super);
     function ListBuiltInIntentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtInIntentSummaries", elemType: BuiltInIntentSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtInIntentSummaries", elemType: builtinintentsummary_1.BuiltInIntentSummary }),
         __metadata("design:type", Array)
     ], ListBuiltInIntentsResponse.prototype, "builtInIntentSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], ListBuiltInIntentsResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListBuiltInIntentsResponse.prototype, "nextToken", void 0);
     return ListBuiltInIntentsResponse;
-}(SpeakeasyBase));
-export { ListBuiltInIntentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListBuiltInIntentsResponse = ListBuiltInIntentsResponse;

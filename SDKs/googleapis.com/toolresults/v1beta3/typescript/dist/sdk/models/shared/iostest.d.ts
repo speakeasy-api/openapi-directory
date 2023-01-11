@@ -8,7 +8,7 @@ import { Duration } from "./duration";
 **/
 export declare class IosTest extends SpeakeasyBase {
     iosAppInfo?: IosAppInfo;
-    iosRoboTest?: Map<string, any>;
+    iosRoboTest?: Record<string, any>;
     iosTestLoop?: IosTestLoop;
     iosXcTest?: IosXcTest;
     testTimeout?: Duration;

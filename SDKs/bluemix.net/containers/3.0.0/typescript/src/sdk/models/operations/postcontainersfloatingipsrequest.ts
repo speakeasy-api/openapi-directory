@@ -22,8 +22,8 @@ export class PostContainersFloatingIpsRequestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postContainersFloatingIpsRequest200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postContainersFloatingIpsRequest200ApplicationJSONString?: string;
 }

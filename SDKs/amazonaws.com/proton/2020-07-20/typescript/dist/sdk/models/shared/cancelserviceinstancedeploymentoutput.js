@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceInstance } from "./serviceinstance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelServiceInstanceDeploymentOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceinstance_1 = require("./serviceinstance");
 var CancelServiceInstanceDeploymentOutput = /** @class */ (function (_super) {
     __extends(CancelServiceInstanceDeploymentOutput, _super);
     function CancelServiceInstanceDeploymentOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceInstance" }),
-        __metadata("design:type", ServiceInstance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceInstance" }),
+        __metadata("design:type", serviceinstance_1.ServiceInstance)
     ], CancelServiceInstanceDeploymentOutput.prototype, "serviceInstance", void 0);
     return CancelServiceInstanceDeploymentOutput;
-}(SpeakeasyBase));
-export { CancelServiceInstanceDeploymentOutput };
+}(utils_1.SpeakeasyBase));
+exports.CancelServiceInstanceDeploymentOutput = CancelServiceInstanceDeploymentOutput;

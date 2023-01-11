@@ -4,14 +4,10 @@ export declare class SecretScanningListAlertsForRepoPathParams extends Speakeasy
     owner: string;
     repo: string;
 }
-export declare enum SecretScanningListAlertsForRepoStateEnum {
-    Open = "open",
-    Resolved = "resolved"
-}
 export declare class SecretScanningListAlertsForRepoQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-    state?: SecretScanningListAlertsForRepoStateEnum;
+    state?: shared.RepoEnum7;
 }
 export declare class SecretScanningListAlertsForRepo503ApplicationJson extends SpeakeasyBase {
     code?: string;
@@ -26,5 +22,5 @@ export declare class SecretScanningListAlertsForRepoResponse extends SpeakeasyBa
     contentType: string;
     statusCode: number;
     secretScanningAlerts?: shared.SecretScanningAlert[];
-    secretScanningListAlertsForRepo503ApplicationJsonObject?: SecretScanningListAlertsForRepo503ApplicationJson;
+    secretScanningListAlertsForRepo503ApplicationJSONObject?: SecretScanningListAlertsForRepo503ApplicationJson;
 }

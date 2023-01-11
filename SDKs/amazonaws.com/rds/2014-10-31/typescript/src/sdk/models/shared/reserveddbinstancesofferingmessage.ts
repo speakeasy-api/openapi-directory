@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservedDbInstancesOffering } from "./reserveddbinstancesoffering";
+import { ReservedDbInstancesOfferingList } from "./reserveddbinstancesofferinglist";
 
 
 
@@ -11,6 +11,6 @@ export class ReservedDbInstancesOfferingMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ReservedDbInstancesOffering })
-  reservedDbInstancesOfferings?: ReservedDbInstancesOffering[];
+  @SpeakeasyMetadata({ elemType: ReservedDbInstancesOfferingList })
+  reservedDBInstancesOfferings?: ReservedDbInstancesOfferingList[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerConnectorInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomerConnectorInfo
 /**
  * Inventory data for installed discovery connectors.
@@ -33,33 +36,33 @@ var CustomerConnectorInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "activeConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blackListedConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blackListedConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "blackListedConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthyConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthyConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "healthyConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shutdownConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shutdownConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "shutdownConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "totalConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unhealthyConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unhealthyConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "unhealthyConnectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unknownConnectors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unknownConnectors" }),
         __metadata("design:type", Number)
     ], CustomerConnectorInfo.prototype, "unknownConnectors", void 0);
     return CustomerConnectorInfo;
-}(SpeakeasyBase));
-export { CustomerConnectorInfo };
+}(utils_1.SpeakeasyBase));
+exports.CustomerConnectorInfo = CustomerConnectorInfo;

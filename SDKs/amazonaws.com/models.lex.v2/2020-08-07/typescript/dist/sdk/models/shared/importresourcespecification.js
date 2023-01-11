@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotImportSpecification } from "./botimportspecification";
-import { BotLocaleImportSpecification } from "./botlocaleimportspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportResourceSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var botimportspecification_1 = require("./botimportspecification");
+var botlocaleimportspecification_1 = require("./botlocaleimportspecification");
 // ImportResourceSpecification
 /**
  * Provides information about the bot or bot locale that you want to import. You can sepcifiy the <code>botImportSpecification</code> or the <code>botLocaleImportSpecification</code>, but not both.
@@ -35,13 +38,13 @@ var ImportResourceSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botImportSpecification" }),
-        __metadata("design:type", BotImportSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botImportSpecification" }),
+        __metadata("design:type", botimportspecification_1.BotImportSpecification)
     ], ImportResourceSpecification.prototype, "botImportSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botLocaleImportSpecification" }),
-        __metadata("design:type", BotLocaleImportSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botLocaleImportSpecification" }),
+        __metadata("design:type", botlocaleimportspecification_1.BotLocaleImportSpecification)
     ], ImportResourceSpecification.prototype, "botLocaleImportSpecification", void 0);
     return ImportResourceSpecification;
-}(SpeakeasyBase));
-export { ImportResourceSpecification };
+}(utils_1.SpeakeasyBase));
+exports.ImportResourceSpecification = ImportResourceSpecification;

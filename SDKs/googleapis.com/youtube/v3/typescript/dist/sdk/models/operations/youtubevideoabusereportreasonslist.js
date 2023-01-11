@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,178 +14,203 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.YoutubeVideoAbuseReportReasonsListResponse = exports.YoutubeVideoAbuseReportReasonsListRequest = exports.YoutubeVideoAbuseReportReasonsListSecurity = exports.YoutubeVideoAbuseReportReasonsListSecurityOption3 = exports.YoutubeVideoAbuseReportReasonsListSecurityOption2 = exports.YoutubeVideoAbuseReportReasonsListSecurityOption1 = exports.YoutubeVideoAbuseReportReasonsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var YoutubeVideoAbuseReportReasonsListQueryParams = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListQueryParams, _super);
     function YoutubeVideoAbuseReportReasonsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hl" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "hl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=part" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=part" }),
         __metadata("design:type", Array)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "part", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListQueryParams.prototype, "uploadProtocol", void 0);
     return YoutubeVideoAbuseReportReasonsListQueryParams;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListQueryParams = YoutubeVideoAbuseReportReasonsListQueryParams;
 var YoutubeVideoAbuseReportReasonsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListSecurityOption1, _super);
     function YoutubeVideoAbuseReportReasonsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption1.prototype, "oauth2c", void 0);
     return YoutubeVideoAbuseReportReasonsListSecurityOption1;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListSecurityOption1 = YoutubeVideoAbuseReportReasonsListSecurityOption1;
 var YoutubeVideoAbuseReportReasonsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListSecurityOption2, _super);
     function YoutubeVideoAbuseReportReasonsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption2.prototype, "oauth2c", void 0);
     return YoutubeVideoAbuseReportReasonsListSecurityOption2;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListSecurityOption2 = YoutubeVideoAbuseReportReasonsListSecurityOption2;
 var YoutubeVideoAbuseReportReasonsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListSecurityOption3, _super);
     function YoutubeVideoAbuseReportReasonsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeVideoAbuseReportReasonsListSecurityOption3.prototype, "oauth2c", void 0);
     return YoutubeVideoAbuseReportReasonsListSecurityOption3;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListSecurityOption3 = YoutubeVideoAbuseReportReasonsListSecurityOption3;
 var YoutubeVideoAbuseReportReasonsListSecurity = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListSecurity, _super);
     function YoutubeVideoAbuseReportReasonsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeVideoAbuseReportReasonsListSecurityOption1)
     ], YoutubeVideoAbuseReportReasonsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeVideoAbuseReportReasonsListSecurityOption2)
     ], YoutubeVideoAbuseReportReasonsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeVideoAbuseReportReasonsListSecurityOption3)
     ], YoutubeVideoAbuseReportReasonsListSecurity.prototype, "option3", void 0);
     return YoutubeVideoAbuseReportReasonsListSecurity;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListSecurity = YoutubeVideoAbuseReportReasonsListSecurity;
 var YoutubeVideoAbuseReportReasonsListRequest = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListRequest, _super);
     function YoutubeVideoAbuseReportReasonsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeVideoAbuseReportReasonsListQueryParams)
     ], YoutubeVideoAbuseReportReasonsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeVideoAbuseReportReasonsListSecurity)
     ], YoutubeVideoAbuseReportReasonsListRequest.prototype, "security", void 0);
     return YoutubeVideoAbuseReportReasonsListRequest;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListRequest = YoutubeVideoAbuseReportReasonsListRequest;
 var YoutubeVideoAbuseReportReasonsListResponse = /** @class */ (function (_super) {
     __extends(YoutubeVideoAbuseReportReasonsListResponse, _super);
     function YoutubeVideoAbuseReportReasonsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], YoutubeVideoAbuseReportReasonsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], YoutubeVideoAbuseReportReasonsListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.VideoAbuseReportReasonListResponse)
     ], YoutubeVideoAbuseReportReasonsListResponse.prototype, "videoAbuseReportReasonListResponse", void 0);
     return YoutubeVideoAbuseReportReasonsListResponse;
-}(SpeakeasyBase));
-export { YoutubeVideoAbuseReportReasonsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeVideoAbuseReportReasonsListResponse = YoutubeVideoAbuseReportReasonsListResponse;

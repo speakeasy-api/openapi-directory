@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAdminRecordingsStartResponse = exports.PostAdminRecordingsStartRequest = exports.PostAdminRecordingsStartRequestBody = exports.PostAdminRecordingsStartRequestBodyFilters = exports.PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials = exports.PostAdminRecordingsStartRequestBodyExtractBodyCriteria = exports.PostAdminRecordingsStartRequestBodyCaptureHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAdminRecordingsStartRequestBodyCaptureHeaders = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsStartRequestBodyCaptureHeaders, _super);
     function PostAdminRecordingsStartRequestBodyCaptureHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseInsensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseInsensitive" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsStartRequestBodyCaptureHeaders.prototype, "caseInsensitive", void 0);
     return PostAdminRecordingsStartRequestBodyCaptureHeaders;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequestBodyCaptureHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequestBodyCaptureHeaders = PostAdminRecordingsStartRequestBodyCaptureHeaders;
 // PostAdminRecordingsStartRequestBodyExtractBodyCriteria
 /**
  * Criteria for extracting response bodies to a separate file instead of including it in the stub mapping
@@ -45,16 +48,16 @@ var PostAdminRecordingsStartRequestBodyExtractBodyCriteria = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binarySizeThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binarySizeThreshold" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyExtractBodyCriteria.prototype, "binarySizeThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textSizeThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textSizeThreshold" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyExtractBodyCriteria.prototype, "textSizeThreshold", void 0);
     return PostAdminRecordingsStartRequestBodyExtractBodyCriteria;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequestBodyExtractBodyCriteria };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequestBodyExtractBodyCriteria = PostAdminRecordingsStartRequestBodyExtractBodyCriteria;
 // PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials
 /**
  * Pre-emptive basic auth credentials to match against
@@ -65,133 +68,133 @@ var PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials.prototype, "username", void 0);
     return PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials = PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials;
 var PostAdminRecordingsStartRequestBodyFilters = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsStartRequestBodyFilters, _super);
     function PostAdminRecordingsStartRequestBodyFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAuthCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAuthCredentials" }),
         __metadata("design:type", PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "basicAuthCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyPatterns" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "bodyPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPath" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPathPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPathPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "urlPathPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBodyFilters.prototype, "urlPattern", void 0);
     return PostAdminRecordingsStartRequestBodyFilters;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequestBodyFilters };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequestBodyFilters = PostAdminRecordingsStartRequestBodyFilters;
 var PostAdminRecordingsStartRequestBody = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsStartRequestBody, _super);
     function PostAdminRecordingsStartRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=captureHeaders", elemType: PostAdminRecordingsStartRequestBodyCaptureHeaders }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=captureHeaders", elemType: PostAdminRecordingsStartRequestBodyCaptureHeaders }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBody.prototype, "captureHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractBodyCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractBodyCriteria" }),
         __metadata("design:type", PostAdminRecordingsStartRequestBodyExtractBodyCriteria)
     ], PostAdminRecordingsStartRequestBody.prototype, "extractBodyCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
         __metadata("design:type", PostAdminRecordingsStartRequestBodyFilters)
     ], PostAdminRecordingsStartRequestBody.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persist" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsStartRequestBody.prototype, "persist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatsAsScenarios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatsAsScenarios" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsStartRequestBody.prototype, "repeatsAsScenarios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestBodyPattern" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestBodyPattern" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBody.prototype, "requestBodyPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetBaseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetBaseUrl" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartRequestBody.prototype, "targetBaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsStartRequestBody.prototype, "transformerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformers" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsStartRequestBody.prototype, "transformers", void 0);
     return PostAdminRecordingsStartRequestBody;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequestBody = PostAdminRecordingsStartRequestBody;
 var PostAdminRecordingsStartRequest = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsStartRequest, _super);
     function PostAdminRecordingsStartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAdminRecordingsStartRequestBody)
     ], PostAdminRecordingsStartRequest.prototype, "request", void 0);
     return PostAdminRecordingsStartRequest;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartRequest = PostAdminRecordingsStartRequest;
 var PostAdminRecordingsStartResponse = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsStartResponse, _super);
     function PostAdminRecordingsStartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAdminRecordingsStartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAdminRecordingsStartResponse.prototype, "statusCode", void 0);
     return PostAdminRecordingsStartResponse;
-}(SpeakeasyBase));
-export { PostAdminRecordingsStartResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsStartResponse = PostAdminRecordingsStartResponse;

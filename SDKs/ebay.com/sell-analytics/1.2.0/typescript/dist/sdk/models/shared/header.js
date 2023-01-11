@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Definition } from "./definition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Header = void 0;
+var utils_1 = require("../../../internal/utils");
+var definition_1 = require("./definition");
 // Header
 /**
  * Type that defines the headers for the dimension keys and metrics returned in the report.
@@ -34,13 +37,13 @@ var Header = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionKeys", elemType: Definition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionKeys", elemType: definition_1.Definition }),
         __metadata("design:type", Array)
     ], Header.prototype, "dimensionKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Definition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: definition_1.Definition }),
         __metadata("design:type", Array)
     ], Header.prototype, "metrics", void 0);
     return Header;
-}(SpeakeasyBase));
-export { Header };
+}(utils_1.SpeakeasyBase));
+exports.Header = Header;

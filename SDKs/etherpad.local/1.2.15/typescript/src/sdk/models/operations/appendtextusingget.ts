@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AppendTextUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" })
   text?: string;
@@ -16,7 +16,7 @@ export class AppendTextUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class AppendTextUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class AppendTextUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class AppendTextUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class AppendTextUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appendTextUsingGet200ApplicationJsonObject?: AppendTextUsingGet200ApplicationJson;
+  appendTextUsingGET200ApplicationJSONObject?: AppendTextUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingGet400ApplicationJsonObject?: AppendTextUsingGet400ApplicationJson;
+  appendTextUsingGET400ApplicationJSONObject?: AppendTextUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingGet401ApplicationJsonObject?: AppendTextUsingGet401ApplicationJson;
+  appendTextUsingGET401ApplicationJSONObject?: AppendTextUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  appendTextUsingGet500ApplicationJsonObject?: AppendTextUsingGet500ApplicationJson;
+  appendTextUsingGET500ApplicationJSONObject?: AppendTextUsingGet500ApplicationJson;
 }

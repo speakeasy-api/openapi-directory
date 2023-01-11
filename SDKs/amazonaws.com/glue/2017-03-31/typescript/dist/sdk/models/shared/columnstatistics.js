@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnStatisticsData } from "./columnstatisticsdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnstatisticsdata_1 = require("./columnstatisticsdata");
 // ColumnStatistics
 /**
  * Represents the generated column-level statistics for a table or partition.
@@ -34,21 +37,21 @@ var ColumnStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnalyzedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnalyzedTime" }),
         __metadata("design:type", Date)
     ], ColumnStatistics.prototype, "analyzedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnName" }),
         __metadata("design:type", String)
     ], ColumnStatistics.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnType" }),
         __metadata("design:type", String)
     ], ColumnStatistics.prototype, "columnType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatisticsData" }),
-        __metadata("design:type", ColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatisticsData" }),
+        __metadata("design:type", columnstatisticsdata_1.ColumnStatisticsData)
     ], ColumnStatistics.prototype, "statisticsData", void 0);
     return ColumnStatistics;
-}(SpeakeasyBase));
-export { ColumnStatistics };
+}(utils_1.SpeakeasyBase));
+exports.ColumnStatistics = ColumnStatistics;

@@ -8,7 +8,7 @@ export declare class DeleteFaxSecurity extends SpeakeasyBase {
     accountSidAuthToken: shared.SchemeAccountSidAuthToken;
 }
 export declare class DeleteFaxRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: DeleteFaxPathParams;
     security: DeleteFaxSecurity;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuperFundProduct = void 0;
+var utils_1 = require("../../../internal/utils");
 var SuperFundProduct = /** @class */ (function (_super) {
     __extends(SuperFundProduct, _super);
     function SuperFundProduct() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ABN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ABN" }),
         __metadata("design:type", String)
     ], SuperFundProduct.prototype, "abn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductName" }),
         __metadata("design:type", String)
     ], SuperFundProduct.prototype, "productName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SPIN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SPIN" }),
         __metadata("design:type", String)
     ], SuperFundProduct.prototype, "spin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=USI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=USI" }),
         __metadata("design:type", String)
     ], SuperFundProduct.prototype, "usi", void 0);
     return SuperFundProduct;
-}(SpeakeasyBase));
-export { SuperFundProduct };
+}(utils_1.SpeakeasyBase));
+exports.SuperFundProduct = SuperFundProduct;

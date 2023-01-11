@@ -24,6 +24,6 @@ export declare class GetPlaylistsRequest extends SpeakeasyBase {
 export declare class GetPlaylistsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getPlaylists200ApplicationJsonObject?: GetPlaylists200ApplicationJson;
     statusCode: number;
+    getPlaylists200ApplicationJSONObject?: GetPlaylists200ApplicationJson;
 }

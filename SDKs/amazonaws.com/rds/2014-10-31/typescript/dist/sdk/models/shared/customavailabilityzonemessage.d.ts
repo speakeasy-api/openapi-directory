@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CustomAvailabilityZone } from "./customavailabilityzone";
+import { CustomAvailabilityZoneList } from "./customavailabilityzonelist";
 export declare class CustomAvailabilityZoneMessage extends SpeakeasyBase {
-    customAvailabilityZones?: CustomAvailabilityZone[];
+    customAvailabilityZones?: CustomAvailabilityZoneList[];
     marker?: string;
 }

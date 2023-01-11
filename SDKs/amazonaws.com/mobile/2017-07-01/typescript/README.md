@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateProjectRequest, CreateProjectResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,25 +33,25 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateProjectRequest = {
   queryParams: {
-    name: "ea",
-    region: "quaerat",
-    snapshotId: "dolorem",
+    name: "sit",
+    region: "voluptas",
+    snapshotId: "culpa",
   },
   headers: {
-    xAmzAlgorithm: "nemo",
-    xAmzContentSha256: "quia",
-    xAmzCredential: "provident",
-    xAmzDate: "sint",
-    xAmzSecurityToken: "distinctio",
-    xAmzSignature: "maiores",
-    xAmzSignedHeaders: "exercitationem",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
   request: {
-    contents: "sunt",
+    contents: "nihil",
   },
 };
 
-sdk.sdk.createProject(req).then((res: CreateProjectResponse | AxiosError) => {
+sdk.createProject(req).then((res: CreateProjectResponse | AxiosError) => {
    // handle response
 });
 ```

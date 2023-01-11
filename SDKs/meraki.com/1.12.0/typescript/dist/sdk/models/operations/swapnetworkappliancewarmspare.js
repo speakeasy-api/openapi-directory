@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SwapNetworkApplianceWarmSpareResponse = exports.SwapNetworkApplianceWarmSpareRequest = exports.SwapNetworkApplianceWarmSparePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SwapNetworkApplianceWarmSparePathParams = /** @class */ (function (_super) {
     __extends(SwapNetworkApplianceWarmSparePathParams, _super);
     function SwapNetworkApplianceWarmSparePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], SwapNetworkApplianceWarmSparePathParams.prototype, "networkId", void 0);
     return SwapNetworkApplianceWarmSparePathParams;
-}(SpeakeasyBase));
-export { SwapNetworkApplianceWarmSparePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SwapNetworkApplianceWarmSparePathParams = SwapNetworkApplianceWarmSparePathParams;
 var SwapNetworkApplianceWarmSpareRequest = /** @class */ (function (_super) {
     __extends(SwapNetworkApplianceWarmSpareRequest, _super);
     function SwapNetworkApplianceWarmSpareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SwapNetworkApplianceWarmSparePathParams)
     ], SwapNetworkApplianceWarmSpareRequest.prototype, "pathParams", void 0);
     return SwapNetworkApplianceWarmSpareRequest;
-}(SpeakeasyBase));
-export { SwapNetworkApplianceWarmSpareRequest };
+}(utils_1.SpeakeasyBase));
+exports.SwapNetworkApplianceWarmSpareRequest = SwapNetworkApplianceWarmSpareRequest;
 var SwapNetworkApplianceWarmSpareResponse = /** @class */ (function (_super) {
     __extends(SwapNetworkApplianceWarmSpareResponse, _super);
     function SwapNetworkApplianceWarmSpareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SwapNetworkApplianceWarmSpareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SwapNetworkApplianceWarmSpareResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], SwapNetworkApplianceWarmSpareResponse.prototype, "swapNetworkApplianceWarmSpare200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], SwapNetworkApplianceWarmSpareResponse.prototype, "swapNetworkApplianceWarmSpare200ApplicationJSONObject", void 0);
     return SwapNetworkApplianceWarmSpareResponse;
-}(SpeakeasyBase));
-export { SwapNetworkApplianceWarmSpareResponse };
+}(utils_1.SpeakeasyBase));
+exports.SwapNetworkApplianceWarmSpareResponse = SwapNetworkApplianceWarmSpareResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenerateDeviceCameraSnapshotResponse = exports.GenerateDeviceCameraSnapshotRequest = exports.GenerateDeviceCameraSnapshotRequestBody = exports.GenerateDeviceCameraSnapshotPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GenerateDeviceCameraSnapshotPathParams = /** @class */ (function (_super) {
     __extends(GenerateDeviceCameraSnapshotPathParams, _super);
     function GenerateDeviceCameraSnapshotPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GenerateDeviceCameraSnapshotPathParams.prototype, "serial", void 0);
     return GenerateDeviceCameraSnapshotPathParams;
-}(SpeakeasyBase));
-export { GenerateDeviceCameraSnapshotPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GenerateDeviceCameraSnapshotPathParams = GenerateDeviceCameraSnapshotPathParams;
 var GenerateDeviceCameraSnapshotRequestBody = /** @class */ (function (_super) {
     __extends(GenerateDeviceCameraSnapshotRequestBody, _super);
     function GenerateDeviceCameraSnapshotRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullframe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullframe" }),
         __metadata("design:type", Boolean)
     ], GenerateDeviceCameraSnapshotRequestBody.prototype, "fullframe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], GenerateDeviceCameraSnapshotRequestBody.prototype, "timestamp", void 0);
     return GenerateDeviceCameraSnapshotRequestBody;
-}(SpeakeasyBase));
-export { GenerateDeviceCameraSnapshotRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.GenerateDeviceCameraSnapshotRequestBody = GenerateDeviceCameraSnapshotRequestBody;
 var GenerateDeviceCameraSnapshotRequest = /** @class */ (function (_super) {
     __extends(GenerateDeviceCameraSnapshotRequest, _super);
     function GenerateDeviceCameraSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GenerateDeviceCameraSnapshotPathParams)
     ], GenerateDeviceCameraSnapshotRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", GenerateDeviceCameraSnapshotRequestBody)
     ], GenerateDeviceCameraSnapshotRequest.prototype, "request", void 0);
     return GenerateDeviceCameraSnapshotRequest;
-}(SpeakeasyBase));
-export { GenerateDeviceCameraSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.GenerateDeviceCameraSnapshotRequest = GenerateDeviceCameraSnapshotRequest;
 var GenerateDeviceCameraSnapshotResponse = /** @class */ (function (_super) {
     __extends(GenerateDeviceCameraSnapshotResponse, _super);
     function GenerateDeviceCameraSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GenerateDeviceCameraSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GenerateDeviceCameraSnapshotResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GenerateDeviceCameraSnapshotResponse.prototype, "generateDeviceCameraSnapshot202ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GenerateDeviceCameraSnapshotResponse.prototype, "generateDeviceCameraSnapshot202ApplicationJSONObject", void 0);
     return GenerateDeviceCameraSnapshotResponse;
-}(SpeakeasyBase));
-export { GenerateDeviceCameraSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.GenerateDeviceCameraSnapshotResponse = GenerateDeviceCameraSnapshotResponse;

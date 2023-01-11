@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams = exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams.prototype, "name", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams.prototype, "uploadProtocol", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1.prototype, "oauth2c", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2.prototype, "oauth2c", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity.prototype, "option2", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptPathParams)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptQueryParams)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.EncryptRequest)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest.prototype, "security", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptRequest;
 var CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse, _super);
     function CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.EncryptResponse)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse.prototype, "encryptResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse.prototype, "statusCode", void 0);
     return CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse = CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse;

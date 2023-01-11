@@ -91,13 +91,13 @@ export class SevenGetListOfPaymentsRequest extends SpeakeasyBase {
 
 export class SevenGetListOfPaymentsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  sevenGetListOfPayments200ApplicationJsonObject?: SevenGetListOfPayments200ApplicationJson;
+  sevenGetListOfPayments200ApplicationJSONObject?: SevenGetListOfPayments200ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

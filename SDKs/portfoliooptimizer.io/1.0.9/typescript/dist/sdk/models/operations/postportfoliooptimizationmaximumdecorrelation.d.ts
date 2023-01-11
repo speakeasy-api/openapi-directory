@@ -22,6 +22,6 @@ export declare class PostPortfolioOptimizationMaximumDecorrelationRequest extend
 }
 export declare class PostPortfolioOptimizationMaximumDecorrelationResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMaximumDecorrelation200ApplicationJsonObject?: PostPortfolioOptimizationMaximumDecorrelation200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject?: PostPortfolioOptimizationMaximumDecorrelation200ApplicationJson;
 }

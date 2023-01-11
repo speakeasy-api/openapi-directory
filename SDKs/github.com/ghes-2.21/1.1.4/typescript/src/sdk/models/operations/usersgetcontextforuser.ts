@@ -8,20 +8,13 @@ export class UsersGetContextForUserPathParams extends SpeakeasyBase {
   username: string;
 }
 
-export enum UsersGetContextForUserSubjectTypeEnum {
-    Organization = "organization",
-    Repository = "repository",
-    Issue = "issue",
-    PullRequest = "pull_request"
-}
-
 
 export class UsersGetContextForUserQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subject_id" })
   subjectId?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subject_type" })
-  subjectType?: UsersGetContextForUserSubjectTypeEnum;
+  subjectType?: shared.UsernameEnum;
 }
 
 

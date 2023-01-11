@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteReplicationGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteReplicationGroupResponse = exports.GetDeleteReplicationGroupRequest = exports.GetDeleteReplicationGroupHeaders = exports.GetDeleteReplicationGroupQueryParams = exports.GetDeleteReplicationGroupVersionEnum = exports.GetDeleteReplicationGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteReplicationGroupActionEnum;
 (function (GetDeleteReplicationGroupActionEnum) {
     GetDeleteReplicationGroupActionEnum["DeleteReplicationGroup"] = "DeleteReplicationGroup";
-})(GetDeleteReplicationGroupActionEnum || (GetDeleteReplicationGroupActionEnum = {}));
-export var GetDeleteReplicationGroupVersionEnum;
+})(GetDeleteReplicationGroupActionEnum = exports.GetDeleteReplicationGroupActionEnum || (exports.GetDeleteReplicationGroupActionEnum = {}));
+var GetDeleteReplicationGroupVersionEnum;
 (function (GetDeleteReplicationGroupVersionEnum) {
     GetDeleteReplicationGroupVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(GetDeleteReplicationGroupVersionEnum || (GetDeleteReplicationGroupVersionEnum = {}));
+})(GetDeleteReplicationGroupVersionEnum = exports.GetDeleteReplicationGroupVersionEnum || (exports.GetDeleteReplicationGroupVersionEnum = {}));
 var GetDeleteReplicationGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteReplicationGroupQueryParams, _super);
     function GetDeleteReplicationGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FinalSnapshotIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FinalSnapshotIdentifier" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupQueryParams.prototype, "finalSnapshotIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReplicationGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReplicationGroupId" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupQueryParams.prototype, "replicationGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RetainPrimaryCluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RetainPrimaryCluster" }),
         __metadata("design:type", Boolean)
     ], GetDeleteReplicationGroupQueryParams.prototype, "retainPrimaryCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupQueryParams.prototype, "version", void 0);
     return GetDeleteReplicationGroupQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteReplicationGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReplicationGroupQueryParams = GetDeleteReplicationGroupQueryParams;
 var GetDeleteReplicationGroupHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteReplicationGroupHeaders, _super);
     function GetDeleteReplicationGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteReplicationGroupHeaders;
-}(SpeakeasyBase));
-export { GetDeleteReplicationGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReplicationGroupHeaders = GetDeleteReplicationGroupHeaders;
 var GetDeleteReplicationGroupRequest = /** @class */ (function (_super) {
     __extends(GetDeleteReplicationGroupRequest, _super);
     function GetDeleteReplicationGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReplicationGroupQueryParams)
     ], GetDeleteReplicationGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteReplicationGroupHeaders)
     ], GetDeleteReplicationGroupRequest.prototype, "headers", void 0);
     return GetDeleteReplicationGroupRequest;
-}(SpeakeasyBase));
-export { GetDeleteReplicationGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReplicationGroupRequest = GetDeleteReplicationGroupRequest;
 var GetDeleteReplicationGroupResponse = /** @class */ (function (_super) {
     __extends(GetDeleteReplicationGroupResponse, _super);
     function GetDeleteReplicationGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteReplicationGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteReplicationGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteReplicationGroupResponse.prototype, "statusCode", void 0);
     return GetDeleteReplicationGroupResponse;
-}(SpeakeasyBase));
-export { GetDeleteReplicationGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteReplicationGroupResponse = GetDeleteReplicationGroupResponse;

@@ -25,5 +25,5 @@ export class ProtocolTftpSessionWriteResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpSessionWrite200ApplicationJsonInt32Integers?: number[];
+  protocolTftpSessionWrite200ApplicationJSONInt32Integers?: number[];
 }

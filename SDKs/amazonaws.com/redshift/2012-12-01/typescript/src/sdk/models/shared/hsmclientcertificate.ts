@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 
 
 
@@ -14,6 +14,6 @@ export class HsmClientCertificate extends SpeakeasyBase {
   @SpeakeasyMetadata()
   hsmClientCertificatePublicKey?: string;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 }

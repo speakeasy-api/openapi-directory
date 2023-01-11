@@ -26,6 +26,6 @@ export declare class BooksFamilysharingUnshareRequest extends SpeakeasyBase {
 }
 export declare class BooksFamilysharingUnshareResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

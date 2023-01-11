@@ -18,5 +18,5 @@ export class ManagedProductTaxAndComplianceSettings extends SpeakeasyBase {
   eeaWithdrawalRightType?: ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=taxRateInfoByRegionCode", elemType: RegionalTaxRateInfo })
-  taxRateInfoByRegionCode?: Map<string, RegionalTaxRateInfo>;
+  taxRateInfoByRegionCode?: Record<string, RegionalTaxRateInfo>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Video } from "./video";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadAttempt = void 0;
+var utils_1 = require("../../../internal/utils");
+var video_1 = require("./video");
+var user_1 = require("./user");
 var UploadAttempt = /** @class */ (function (_super) {
     __extends(UploadAttempt, _super);
     function UploadAttempt() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clip" }),
-        __metadata("design:type", Video)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clip" }),
+        __metadata("design:type", video_1.Video)
     ], UploadAttempt.prototype, "clip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complete_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complete_uri" }),
         __metadata("design:type", String)
     ], UploadAttempt.prototype, "completeUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form" }),
         __metadata("design:type", String)
     ], UploadAttempt.prototype, "form", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticket_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticket_id" }),
         __metadata("design:type", String)
     ], UploadAttempt.prototype, "ticketId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload_link" }),
         __metadata("design:type", String)
     ], UploadAttempt.prototype, "uploadLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UploadAttempt.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], UploadAttempt.prototype, "user", void 0);
     return UploadAttempt;
-}(SpeakeasyBase));
-export { UploadAttempt };
+}(utils_1.SpeakeasyBase));
+exports.UploadAttempt = UploadAttempt;

@@ -30,7 +30,7 @@ export declare class SubmitFeedbackResponse extends SpeakeasyBase {
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    submitFeedbackResponse?: Map<string, any>;
+    submitFeedbackResponse?: Record<string, any>;
     throttlingException?: any;
     validationException?: any;
 }

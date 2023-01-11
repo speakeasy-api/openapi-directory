@@ -1,4 +1,7 @@
-export var RelationalDatabaseMetricNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseMetricNameEnum = void 0;
+var RelationalDatabaseMetricNameEnum;
 (function (RelationalDatabaseMetricNameEnum) {
     RelationalDatabaseMetricNameEnum["CpuUtilization"] = "CPUUtilization";
     RelationalDatabaseMetricNameEnum["DatabaseConnections"] = "DatabaseConnections";
@@ -6,4 +9,4 @@ export var RelationalDatabaseMetricNameEnum;
     RelationalDatabaseMetricNameEnum["FreeStorageSpace"] = "FreeStorageSpace";
     RelationalDatabaseMetricNameEnum["NetworkReceiveThroughput"] = "NetworkReceiveThroughput";
     RelationalDatabaseMetricNameEnum["NetworkTransmitThroughput"] = "NetworkTransmitThroughput";
-})(RelationalDatabaseMetricNameEnum || (RelationalDatabaseMetricNameEnum = {}));
+})(RelationalDatabaseMetricNameEnum = exports.RelationalDatabaseMetricNameEnum || (exports.RelationalDatabaseMetricNameEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowSetTraceResponse = exports.ProtocolNetflowSetTraceRequest = exports.ProtocolNetflowSetTracePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowSetTracePathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetTracePathParams, _super);
     function ProtocolNetflowSetTracePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetTracePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enableOrNot" }),
         __metadata("design:type", String)
     ], ProtocolNetflowSetTracePathParams.prototype, "enableOrNot", void 0);
     return ProtocolNetflowSetTracePathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetTracePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetTracePathParams = ProtocolNetflowSetTracePathParams;
 var ProtocolNetflowSetTraceRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetTraceRequest, _super);
     function ProtocolNetflowSetTraceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowSetTracePathParams)
     ], ProtocolNetflowSetTraceRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowSetTraceRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetTraceRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetTraceRequest = ProtocolNetflowSetTraceRequest;
 var ProtocolNetflowSetTraceResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetTraceResponse, _super);
     function ProtocolNetflowSetTraceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowSetTraceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetTraceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowSetTraceResponse.prototype, "protocolNetflowSetTrace200ApplicationJsonString", void 0);
+    ], ProtocolNetflowSetTraceResponse.prototype, "protocolNetflowSetTrace200ApplicationJSONString", void 0);
     return ProtocolNetflowSetTraceResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetTraceResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetTraceResponse = ProtocolNetflowSetTraceResponse;

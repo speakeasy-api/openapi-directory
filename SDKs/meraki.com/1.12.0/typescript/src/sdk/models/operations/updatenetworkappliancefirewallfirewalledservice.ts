@@ -43,5 +43,5 @@ export class UpdateNetworkApplianceFirewallFirewalledServiceResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceFirewallFirewalledService200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceFirewallFirewalledService200ApplicationJSONObject?: Record<string, any>;
 }

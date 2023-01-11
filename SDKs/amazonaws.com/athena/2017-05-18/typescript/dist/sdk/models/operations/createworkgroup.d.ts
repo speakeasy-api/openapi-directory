@@ -19,7 +19,7 @@ export declare class CreateWorkGroupRequest extends SpeakeasyBase {
 }
 export declare class CreateWorkGroupResponse extends SpeakeasyBase {
     contentType: string;
-    createWorkGroupOutput?: Map<string, any>;
+    createWorkGroupOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

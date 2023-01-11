@@ -194,23 +194,23 @@ export class LcsagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lcsag400ApplicationJsonObject?: Lcsag400ApplicationJson;
+  lcsag400ApplicationJSONObject?: Lcsag400ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag401ApplicationJsonObject?: Lcsag401ApplicationJson;
+  lcsag401ApplicationJSONObject?: Lcsag401ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag404ApplicationJsonObject?: Lcsag404ApplicationJson;
+  lcsag404ApplicationJSONObject?: Lcsag404ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag500ApplicationJsonObject?: Lcsag500ApplicationJson;
+  lcsag500ApplicationJSONObject?: Lcsag500ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag502ApplicationJsonObject?: Lcsag502ApplicationJson;
+  lcsag502ApplicationJSONObject?: Lcsag502ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag503ApplicationJsonObject?: Lcsag503ApplicationJson;
+  lcsag503ApplicationJSONObject?: Lcsag503ApplicationJson;
 
   @SpeakeasyMetadata()
-  lcsag504ApplicationJsonObject?: Lcsag504ApplicationJson;
+  lcsag504ApplicationJSONObject?: Lcsag504ApplicationJson;
 }

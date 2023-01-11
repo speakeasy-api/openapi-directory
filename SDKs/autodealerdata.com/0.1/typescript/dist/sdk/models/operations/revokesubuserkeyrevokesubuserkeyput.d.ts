@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class RevokeSubUserKeyRevokeSubUserKeyPutQueryParams extends SpeakeasyBase {
-    apiId: string;
+    apiID: string;
     apiKey: string;
-    subUserKeyUuid: string;
+    subUserKeyUUID: string;
 }
 export declare class RevokeSubUserKeyRevokeSubUserKeyPutRequest extends SpeakeasyBase {
     queryParams: RevokeSubUserKeyRevokeSubUserKeyPutQueryParams;

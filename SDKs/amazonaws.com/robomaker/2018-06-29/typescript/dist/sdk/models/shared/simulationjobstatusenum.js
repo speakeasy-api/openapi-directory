@@ -1,4 +1,7 @@
-export var SimulationJobStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimulationJobStatusEnum = void 0;
+var SimulationJobStatusEnum;
 (function (SimulationJobStatusEnum) {
     SimulationJobStatusEnum["Pending"] = "Pending";
     SimulationJobStatusEnum["Preparing"] = "Preparing";
@@ -10,4 +13,4 @@ export var SimulationJobStatusEnum;
     SimulationJobStatusEnum["Terminating"] = "Terminating";
     SimulationJobStatusEnum["Terminated"] = "Terminated";
     SimulationJobStatusEnum["Canceled"] = "Canceled";
-})(SimulationJobStatusEnum || (SimulationJobStatusEnum = {}));
+})(SimulationJobStatusEnum = exports.SimulationJobStatusEnum || (exports.SimulationJobStatusEnum = {}));

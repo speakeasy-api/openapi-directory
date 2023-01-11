@@ -32,11 +32,11 @@ export class CreateShippingFulfillmentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createShippingFulfillment201ApplicationJsonObject?: Map<string, any>;
+  createShippingFulfillment201ApplicationJSONObject?: Record<string, any>;
 }

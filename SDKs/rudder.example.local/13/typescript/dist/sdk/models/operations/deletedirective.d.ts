@@ -24,5 +24,5 @@ export declare class DeleteDirectiveRequest extends SpeakeasyBase {
 export declare class DeleteDirectiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteDirective200ApplicationJsonObject?: DeleteDirective200ApplicationJson;
+    deleteDirective200ApplicationJSONObject?: DeleteDirective200ApplicationJson;
 }

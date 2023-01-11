@@ -8,11 +8,11 @@ export declare class UpdateIterationHeaders extends SpeakeasyBase {
     trainingKey: string;
 }
 export declare class UpdateIterationRequestsInput extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     iteration?: shared.IterationInput;
     iteration1?: shared.IterationInput;
     iteration2?: shared.IterationInput;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class UpdateIterationRequest extends SpeakeasyBase {
     pathParams: UpdateIterationPathParams;

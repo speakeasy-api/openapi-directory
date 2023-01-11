@@ -1,4 +1,7 @@
-export var DataSourceFilterVariableEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceFilterVariableEnum = void 0;
+var DataSourceFilterVariableEnum;
 (function (DataSourceFilterVariableEnum) {
     DataSourceFilterVariableEnum["CreatedAt"] = "CreatedAt";
     DataSourceFilterVariableEnum["LastUpdatedAt"] = "LastUpdatedAt";
@@ -6,4 +9,4 @@ export var DataSourceFilterVariableEnum;
     DataSourceFilterVariableEnum["Name"] = "Name";
     DataSourceFilterVariableEnum["DataLocationS3"] = "DataLocationS3";
     DataSourceFilterVariableEnum["IamUser"] = "IAMUser";
-})(DataSourceFilterVariableEnum || (DataSourceFilterVariableEnum = {}));
+})(DataSourceFilterVariableEnum = exports.DataSourceFilterVariableEnum || (exports.DataSourceFilterVariableEnum = {}));

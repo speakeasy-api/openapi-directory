@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MaintenanceTrack } from "./maintenancetrack";
+import { TrackList } from "./tracklist";
 export declare class TrackListMessage extends SpeakeasyBase {
-    maintenanceTracks?: MaintenanceTrack[];
+    maintenanceTracks?: TrackList[];
     marker?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BoxScoresDeltaVFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoxScoresDeltaVResponse = exports.BoxScoresDeltaVRequest = exports.BoxScoresDeltaVPathParams = exports.BoxScoresDeltaVPlayerstoincludeEnum = exports.BoxScoresDeltaVFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BoxScoresDeltaVFormatEnum;
 (function (BoxScoresDeltaVFormatEnum) {
     BoxScoresDeltaVFormatEnum["Xml"] = "XML";
     BoxScoresDeltaVFormatEnum["Json"] = "JSON";
-})(BoxScoresDeltaVFormatEnum || (BoxScoresDeltaVFormatEnum = {}));
-export var BoxScoresDeltaVPlayerstoincludeEnum;
+})(BoxScoresDeltaVFormatEnum = exports.BoxScoresDeltaVFormatEnum || (exports.BoxScoresDeltaVFormatEnum = {}));
+var BoxScoresDeltaVPlayerstoincludeEnum;
 (function (BoxScoresDeltaVPlayerstoincludeEnum) {
     BoxScoresDeltaVPlayerstoincludeEnum["All"] = "all";
     BoxScoresDeltaVPlayerstoincludeEnum["Fantasy"] = "fantasy";
     BoxScoresDeltaVPlayerstoincludeEnum["Idp"] = "idp";
-})(BoxScoresDeltaVPlayerstoincludeEnum || (BoxScoresDeltaVPlayerstoincludeEnum = {}));
+})(BoxScoresDeltaVPlayerstoincludeEnum = exports.BoxScoresDeltaVPlayerstoincludeEnum || (exports.BoxScoresDeltaVPlayerstoincludeEnum = {}));
 var BoxScoresDeltaVPathParams = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaVPathParams, _super);
     function BoxScoresDeltaVPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaVPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaVPathParams.prototype, "minutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerstoinclude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerstoinclude" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaVPathParams.prototype, "playerstoinclude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaVPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaVPathParams.prototype, "week", void 0);
     return BoxScoresDeltaVPathParams;
-}(SpeakeasyBase));
-export { BoxScoresDeltaVPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaVPathParams = BoxScoresDeltaVPathParams;
 var BoxScoresDeltaVRequest = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaVRequest, _super);
     function BoxScoresDeltaVRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BoxScoresDeltaVPathParams)
     ], BoxScoresDeltaVRequest.prototype, "pathParams", void 0);
     return BoxScoresDeltaVRequest;
-}(SpeakeasyBase));
-export { BoxScoresDeltaVRequest };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaVRequest = BoxScoresDeltaVRequest;
 var BoxScoresDeltaVResponse = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaVResponse, _super);
     function BoxScoresDeltaVResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BoxScoresDeltaVResponse.prototype, "boxScoreV3s", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BoxScoresDeltaVResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BoxScoresDeltaVResponse.prototype, "statusCode", void 0);
     return BoxScoresDeltaVResponse;
-}(SpeakeasyBase));
-export { BoxScoresDeltaVResponse };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaVResponse = BoxScoresDeltaVResponse;

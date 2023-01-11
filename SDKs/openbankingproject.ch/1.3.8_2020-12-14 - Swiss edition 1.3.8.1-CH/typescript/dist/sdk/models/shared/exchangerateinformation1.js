@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExchangeRateInformation1RateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExchangeRateInformation1 = exports.ExchangeRateInformation1RateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExchangeRateInformation1RateTypeEnum;
 (function (ExchangeRateInformation1RateTypeEnum) {
     ExchangeRateInformation1RateTypeEnum["Spot"] = "SPOT";
     ExchangeRateInformation1RateTypeEnum["Sale"] = "SALE";
     ExchangeRateInformation1RateTypeEnum["Agrd"] = "AGRD";
-})(ExchangeRateInformation1RateTypeEnum || (ExchangeRateInformation1RateTypeEnum = {}));
+})(ExchangeRateInformation1RateTypeEnum = exports.ExchangeRateInformation1RateTypeEnum || (exports.ExchangeRateInformation1RateTypeEnum = {}));
 // ExchangeRateInformation1
 /**
  * as in ISO pain.001.001.03.ch.02 ExchangeRateInformation1
@@ -39,17 +42,17 @@ var ExchangeRateInformation1 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contractIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contractIdentification" }),
         __metadata("design:type", String)
     ], ExchangeRateInformation1.prototype, "contractIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchangeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchangeRate" }),
         __metadata("design:type", String)
     ], ExchangeRateInformation1.prototype, "exchangeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateType" }),
         __metadata("design:type", String)
     ], ExchangeRateInformation1.prototype, "rateType", void 0);
     return ExchangeRateInformation1;
-}(SpeakeasyBase));
-export { ExchangeRateInformation1 };
+}(utils_1.SpeakeasyBase));
+exports.ExchangeRateInformation1 = ExchangeRateInformation1;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ChannelConnectionInput
-/**
- * A representation of the ChannelConnection resource. A ChannelConnection is a resource which event providers create during the activation process to establish a connection between the provider and the subscriber channel.
-**/
-var ChannelConnectionInput = /** @class */ (function (_super) {
-    __extends(ChannelConnectionInput, _super);
-    function ChannelConnectionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=activationToken" }),
-        __metadata("design:type", String)
-    ], ChannelConnectionInput.prototype, "activationToken", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
-        __metadata("design:type", String)
-    ], ChannelConnectionInput.prototype, "channel", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ChannelConnectionInput.prototype, "name", void 0);
-    return ChannelConnectionInput;
-}(SpeakeasyBase));
-export { ChannelConnectionInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelConnectionInput = exports.ChannelConnection = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelConnection
 /**
  * A representation of the ChannelConnection resource. A ChannelConnection is a resource which event providers create during the activation process to establish a connection between the provider and the subscriber channel.
@@ -57,29 +36,53 @@ var ChannelConnection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activationToken" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "activationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], ChannelConnection.prototype, "updateTime", void 0);
     return ChannelConnection;
-}(SpeakeasyBase));
-export { ChannelConnection };
+}(utils_1.SpeakeasyBase));
+exports.ChannelConnection = ChannelConnection;
+// ChannelConnectionInput
+/**
+ * A representation of the ChannelConnection resource. A ChannelConnection is a resource which event providers create during the activation process to establish a connection between the provider and the subscriber channel.
+**/
+var ChannelConnectionInput = /** @class */ (function (_super) {
+    __extends(ChannelConnectionInput, _super);
+    function ChannelConnectionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activationToken" }),
+        __metadata("design:type", String)
+    ], ChannelConnectionInput.prototype, "activationToken", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
+        __metadata("design:type", String)
+    ], ChannelConnectionInput.prototype, "channel", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ChannelConnectionInput.prototype, "name", void 0);
+    return ChannelConnectionInput;
+}(utils_1.SpeakeasyBase));
+exports.ChannelConnectionInput = ChannelConnectionInput;

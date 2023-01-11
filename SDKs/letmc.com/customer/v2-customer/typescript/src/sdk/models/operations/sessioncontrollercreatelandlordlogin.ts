@@ -10,7 +10,7 @@ export class SessionControllerCreateLandlordLoginPathParams extends SpeakeasyBas
 
 export class SessionControllerCreateLandlordLoginQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=branchID" })
-  branchId?: string;
+  branchID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=contactDetails" })
   contactDetails: string;

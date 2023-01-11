@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var KeyPostCapabilitiesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyPost = exports.KeyPostCapabilitiesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var KeyPostCapabilitiesEnum;
 (function (KeyPostCapabilitiesEnum) {
     KeyPostCapabilitiesEnum["Publish"] = "publish";
     KeyPostCapabilitiesEnum["Subscribe"] = "subscribe";
@@ -33,24 +36,24 @@ export var KeyPostCapabilitiesEnum;
     KeyPostCapabilitiesEnum["PushAdmin"] = "push-admin";
     KeyPostCapabilitiesEnum["PushSubscribe"] = "push-subscribe";
     KeyPostCapabilitiesEnum["Statistics"] = "statistics";
-})(KeyPostCapabilitiesEnum || (KeyPostCapabilitiesEnum = {}));
+})(KeyPostCapabilitiesEnum = exports.KeyPostCapabilitiesEnum || (exports.KeyPostCapabilitiesEnum = {}));
 var KeyPost = /** @class */ (function (_super) {
     __extends(KeyPost, _super);
     function KeyPost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
         __metadata("design:type", Array)
     ], KeyPost.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channels" }),
         __metadata("design:type", String)
     ], KeyPost.prototype, "channels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], KeyPost.prototype, "name", void 0);
     return KeyPost;
-}(SpeakeasyBase));
-export { KeyPost };
+}(utils_1.SpeakeasyBase));
+exports.KeyPost = KeyPost;

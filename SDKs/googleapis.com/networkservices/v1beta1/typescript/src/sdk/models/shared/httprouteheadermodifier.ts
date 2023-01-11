@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class HttpRouteHeaderModifier extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=add" })
-  add?: Map<string, string>;
+  add?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=remove" })
   remove?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=set" })
-  set?: Map<string, string>;
+  set?: Record<string, string>;
 }

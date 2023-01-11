@@ -8,6 +8,7 @@ export * from "./apppkgnotification";
 export * from "./apppkgnotificationlinks";
 export * from "./apppkgnotificationtypeenum";
 export * from "./apppkgoperationalstateenum";
+export * from "./apppkgsubscription";
 export * from "./apppkgsubscriptioninfo";
 export * from "./apppkgsubscriptioninfolinks";
 export * from "./apppkgsubscriptionlinklist";

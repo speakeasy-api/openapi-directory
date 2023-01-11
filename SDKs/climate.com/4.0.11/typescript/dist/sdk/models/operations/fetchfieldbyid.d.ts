@@ -13,8 +13,8 @@ export declare class FetchFieldByIdRequest extends SpeakeasyBase {
 }
 export declare class FetchFieldByIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     field?: any;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

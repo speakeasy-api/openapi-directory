@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsAddOrUpdateRepoPermissionsInOrgResponse = exports.TeamsAddOrUpdateRepoPermissionsInOrgRequest = exports.TeamsAddOrUpdateRepoPermissionsInOrgRequestBody = exports.TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum = exports.TeamsAddOrUpdateRepoPermissionsInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsAddOrUpdateRepoPermissionsInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsInOrgPathParams, _super);
     function TeamsAddOrUpdateRepoPermissionsInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgPathParams.prototype, "teamSlug", void 0);
     return TeamsAddOrUpdateRepoPermissionsInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsInOrgPathParams };
-export var TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsInOrgPathParams = TeamsAddOrUpdateRepoPermissionsInOrgPathParams;
+var TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum;
 (function (TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum) {
     TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum["Pull"] = "pull";
     TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum["Push"] = "push";
     TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum["Admin"] = "admin";
     TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum["Maintain"] = "maintain";
     TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum["Triage"] = "triage";
-})(TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum || (TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum = {}));
+})(TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum = exports.TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum || (exports.TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum = {}));
 var TeamsAddOrUpdateRepoPermissionsInOrgRequestBody = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsInOrgRequestBody, _super);
     function TeamsAddOrUpdateRepoPermissionsInOrgRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgRequestBody.prototype, "permission", void 0);
     return TeamsAddOrUpdateRepoPermissionsInOrgRequestBody;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsInOrgRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsInOrgRequestBody = TeamsAddOrUpdateRepoPermissionsInOrgRequestBody;
 var TeamsAddOrUpdateRepoPermissionsInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsInOrgRequest, _super);
     function TeamsAddOrUpdateRepoPermissionsInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsAddOrUpdateRepoPermissionsInOrgPathParams)
     ], TeamsAddOrUpdateRepoPermissionsInOrgRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TeamsAddOrUpdateRepoPermissionsInOrgRequestBody)
     ], TeamsAddOrUpdateRepoPermissionsInOrgRequest.prototype, "request", void 0);
     return TeamsAddOrUpdateRepoPermissionsInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsInOrgRequest = TeamsAddOrUpdateRepoPermissionsInOrgRequest;
 var TeamsAddOrUpdateRepoPermissionsInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsInOrgResponse, _super);
     function TeamsAddOrUpdateRepoPermissionsInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsAddOrUpdateRepoPermissionsInOrgResponse.prototype, "statusCode", void 0);
     return TeamsAddOrUpdateRepoPermissionsInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsInOrgResponse = TeamsAddOrUpdateRepoPermissionsInOrgResponse;

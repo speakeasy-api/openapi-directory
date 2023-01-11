@@ -61,7 +61,7 @@ export class DeleteLaunchProfileMemberResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLaunchProfileMemberResponse?: Map<string, any>;
+  deleteLaunchProfileMemberResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerErrorException?: any;

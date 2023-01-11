@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GetPayeeListResponseCompany } from "./getpayeelistresponsecompany";
-import { GetPayeeListResponseIndividual } from "./getpayeelistresponseindividual";
-import { OnboardedStatus2Enum } from "./onboardedstatus2enum";
-import { PayeeTypeEnum } from "./payeetypeenum";
-import { PayeePayorRefV3 } from "./payeepayorrefv3";
-import { WatchlistStatusEnum } from "./watchliststatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPayeeListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var getpayeelistresponsecompany_1 = require("./getpayeelistresponsecompany");
+var getpayeelistresponseindividual_1 = require("./getpayeelistresponseindividual");
+var onboardedstatus2enum_1 = require("./onboardedstatus2enum");
+var payeetypeenum_1 = require("./payeetypeenum");
+var payeepayorrefv3_1 = require("./payeepayorrefv3");
+var watchliststatusenum_1 = require("./watchliststatusenum");
 var GetPayeeListResponse = /** @class */ (function (_super) {
     __extends(GetPayeeListResponse, _super);
     function GetPayeeListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
-        __metadata("design:type", GetPayeeListResponseCompany)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
+        __metadata("design:type", getpayeelistresponsecompany_1.GetPayeeListResponseCompany)
     ], GetPayeeListResponse.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], GetPayeeListResponse.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], GetPayeeListResponse.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabledComment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabledComment" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "disabledComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabledUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabledUpdatedTimestamp" }),
         __metadata("design:type", Date)
     ], GetPayeeListResponse.prototype, "disabledUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individual" }),
-        __metadata("design:type", GetPayeeListResponseIndividual)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individual" }),
+        __metadata("design:type", getpayeelistresponseindividual_1.GetPayeeListResponseIndividual)
     ], GetPayeeListResponse.prototype, "individual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onboardedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onboardedStatus" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "onboardedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeId" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeType" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "payeeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorRefs", elemType: PayeePayorRefV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorRefs", elemType: payeepayorrefv3_1.PayeePayorRefV3 }),
         __metadata("design:type", Array)
     ], GetPayeeListResponse.prototype, "payorRefs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlistOverrideComment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlistOverrideComment" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "watchlistOverrideComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlistStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlistStatus" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "watchlistStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlistStatusUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlistStatusUpdatedTimestamp" }),
         __metadata("design:type", String)
     ], GetPayeeListResponse.prototype, "watchlistStatusUpdatedTimestamp", void 0);
     return GetPayeeListResponse;
-}(SpeakeasyBase));
-export { GetPayeeListResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPayeeListResponse = GetPayeeListResponse;

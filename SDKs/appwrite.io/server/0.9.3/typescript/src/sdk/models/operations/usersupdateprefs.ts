@@ -11,7 +11,7 @@ export class UsersUpdatePrefsPathParams extends SpeakeasyBase {
 
 export class UsersUpdatePrefsRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=prefs" })
-  prefs: Map<string, any>;
+  prefs: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class UsersUpdatePrefsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  preferences?: Map<string, any>;
+  preferences?: Record<string, any>;
 }

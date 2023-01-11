@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnecttoWiFiNetworkRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConnecttoWiFiNetworkRequest = /** @class */ (function (_super) {
     __extends(ConnecttoWiFiNetworkRequest, _super);
     function ConnecttoWiFiNetworkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bssid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bssid" }),
         __metadata("design:type", String)
     ], ConnecttoWiFiNetworkRequest.prototype, "bssid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enc_passwd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enc_passwd" }),
         __metadata("design:type", String)
     ], ConnecttoWiFiNetworkRequest.prototype, "encPasswd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signal_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signal_level" }),
         __metadata("design:type", Number)
     ], ConnecttoWiFiNetworkRequest.prototype, "signalLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssid" }),
         __metadata("design:type", String)
     ], ConnecttoWiFiNetworkRequest.prototype, "ssid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wpa_auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wpa_auth" }),
         __metadata("design:type", Number)
     ], ConnecttoWiFiNetworkRequest.prototype, "wpaAuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wpa_cipher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wpa_cipher" }),
         __metadata("design:type", Number)
     ], ConnecttoWiFiNetworkRequest.prototype, "wpaCipher", void 0);
     return ConnecttoWiFiNetworkRequest;
-}(SpeakeasyBase));
-export { ConnecttoWiFiNetworkRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConnecttoWiFiNetworkRequest = ConnecttoWiFiNetworkRequest;

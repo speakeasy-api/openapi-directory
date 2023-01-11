@@ -5,6 +5,6 @@ export declare class LiabilitiesGetRequest extends SpeakeasyBase {
 }
 export declare class LiabilitiesGetResponse extends SpeakeasyBase {
     contentType: string;
-    liabilitiesGetResponse?: Map<string, any>;
+    liabilitiesGetResponse?: Record<string, any>;
     statusCode: number;
 }

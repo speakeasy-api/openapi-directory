@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotTaskDetail } from "./snapshottaskdetail";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportSnapshotResult = exports.ImportSnapshotResultSnapshotTaskDetail = exports.ImportSnapshotResultSnapshotTaskDetailUserBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+// ImportSnapshotResultSnapshotTaskDetailUserBucket
+/**
+ * The Amazon S3 bucket for the disk image.
+**/
+var ImportSnapshotResultSnapshotTaskDetailUserBucket = /** @class */ (function (_super) {
+    __extends(ImportSnapshotResultSnapshotTaskDetailUserBucket, _super);
+    function ImportSnapshotResultSnapshotTaskDetailUserBucket() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetailUserBucket.prototype, "s3Bucket", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetailUserBucket.prototype, "s3Key", void 0);
+    return ImportSnapshotResultSnapshotTaskDetailUserBucket;
+}(utils_1.SpeakeasyBase));
+exports.ImportSnapshotResultSnapshotTaskDetailUserBucket = ImportSnapshotResultSnapshotTaskDetailUserBucket;
+// ImportSnapshotResultSnapshotTaskDetail
+/**
+ * Information about the import snapshot task.
+**/
+var ImportSnapshotResultSnapshotTaskDetail = /** @class */ (function (_super) {
+    __extends(ImportSnapshotResultSnapshotTaskDetail, _super);
+    function ImportSnapshotResultSnapshotTaskDetail() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "diskImageSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "encrypted", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "format", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "kmsKeyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "progress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "snapshotId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "statusMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "url", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportSnapshotResultSnapshotTaskDetailUserBucket)
+    ], ImportSnapshotResultSnapshotTaskDetail.prototype, "userBucket", void 0);
+    return ImportSnapshotResultSnapshotTaskDetail;
+}(utils_1.SpeakeasyBase));
+exports.ImportSnapshotResultSnapshotTaskDetail = ImportSnapshotResultSnapshotTaskDetail;
 var ImportSnapshotResult = /** @class */ (function (_super) {
     __extends(ImportSnapshotResult, _super);
     function ImportSnapshotResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportSnapshotResult.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportSnapshotResult.prototype, "importTaskId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SnapshotTaskDetail)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportSnapshotResultSnapshotTaskDetail)
     ], ImportSnapshotResult.prototype, "snapshotTaskDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportSnapshotResult.prototype, "tags", void 0);
     return ImportSnapshotResult;
-}(SpeakeasyBase));
-export { ImportSnapshotResult };
+}(utils_1.SpeakeasyBase));
+exports.ImportSnapshotResult = ImportSnapshotResult;

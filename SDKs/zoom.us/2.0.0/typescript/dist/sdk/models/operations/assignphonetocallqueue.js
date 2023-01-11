@@ -1,0 +1,192 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssignPhoneToCallQueueResponse = exports.AssignPhoneToCallQueueRequest = exports.AssignPhoneToCallQueueSecurity = exports.AssignPhoneToCallQueueRequests = exports.AssignPhoneToCallQueueMultipartFormData1 = exports.AssignPhoneToCallQueueMultipartFormDataPhoneNumbers = exports.AssignPhoneToCallQueueApplicationJson = exports.AssignPhoneToCallQueueApplicationJsonPhoneNumbers = exports.AssignPhoneToCallQueuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var AssignPhoneToCallQueuePathParams = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueuePathParams, _super);
+    function AssignPhoneToCallQueuePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=callQueueId" }),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueuePathParams.prototype, "callQueueId", void 0);
+    return AssignPhoneToCallQueuePathParams;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueuePathParams = AssignPhoneToCallQueuePathParams;
+var AssignPhoneToCallQueueApplicationJsonPhoneNumbers = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueApplicationJsonPhoneNumbers, _super);
+    function AssignPhoneToCallQueueApplicationJsonPhoneNumbers() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueueApplicationJsonPhoneNumbers.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueueApplicationJsonPhoneNumbers.prototype, "number", void 0);
+    return AssignPhoneToCallQueueApplicationJsonPhoneNumbers;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueApplicationJsonPhoneNumbers = AssignPhoneToCallQueueApplicationJsonPhoneNumbers;
+var AssignPhoneToCallQueueApplicationJson = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueApplicationJson, _super);
+    function AssignPhoneToCallQueueApplicationJson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_numbers", elemType: AssignPhoneToCallQueueApplicationJsonPhoneNumbers }),
+        __metadata("design:type", Array)
+    ], AssignPhoneToCallQueueApplicationJson.prototype, "phoneNumbers", void 0);
+    return AssignPhoneToCallQueueApplicationJson;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueApplicationJson = AssignPhoneToCallQueueApplicationJson;
+var AssignPhoneToCallQueueMultipartFormDataPhoneNumbers = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueMultipartFormDataPhoneNumbers, _super);
+    function AssignPhoneToCallQueueMultipartFormDataPhoneNumbers() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueueMultipartFormDataPhoneNumbers.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueueMultipartFormDataPhoneNumbers.prototype, "number", void 0);
+    return AssignPhoneToCallQueueMultipartFormDataPhoneNumbers;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueMultipartFormDataPhoneNumbers = AssignPhoneToCallQueueMultipartFormDataPhoneNumbers;
+var AssignPhoneToCallQueueMultipartFormData1 = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueMultipartFormData1, _super);
+    function AssignPhoneToCallQueueMultipartFormData1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=phone_numbers;json=true", elemType: AssignPhoneToCallQueueMultipartFormDataPhoneNumbers }),
+        __metadata("design:type", Array)
+    ], AssignPhoneToCallQueueMultipartFormData1.prototype, "phoneNumbers", void 0);
+    return AssignPhoneToCallQueueMultipartFormData1;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueMultipartFormData1 = AssignPhoneToCallQueueMultipartFormData1;
+var AssignPhoneToCallQueueRequests = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueRequests, _super);
+    function AssignPhoneToCallQueueRequests() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", AssignPhoneToCallQueueApplicationJson)
+    ], AssignPhoneToCallQueueRequests.prototype, "object", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
+        __metadata("design:type", AssignPhoneToCallQueueMultipartFormData1)
+    ], AssignPhoneToCallQueueRequests.prototype, "object1", void 0);
+    return AssignPhoneToCallQueueRequests;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueRequests = AssignPhoneToCallQueueRequests;
+var AssignPhoneToCallQueueSecurity = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueSecurity, _super);
+    function AssignPhoneToCallQueueSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
+        __metadata("design:type", shared.SchemeOAuth)
+    ], AssignPhoneToCallQueueSecurity.prototype, "oAuth", void 0);
+    return AssignPhoneToCallQueueSecurity;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueSecurity = AssignPhoneToCallQueueSecurity;
+var AssignPhoneToCallQueueRequest = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueRequest, _super);
+    function AssignPhoneToCallQueueRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssignPhoneToCallQueuePathParams)
+    ], AssignPhoneToCallQueueRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssignPhoneToCallQueueRequests)
+    ], AssignPhoneToCallQueueRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssignPhoneToCallQueueSecurity)
+    ], AssignPhoneToCallQueueRequest.prototype, "security", void 0);
+    return AssignPhoneToCallQueueRequest;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueRequest = AssignPhoneToCallQueueRequest;
+var AssignPhoneToCallQueueResponse = /** @class */ (function (_super) {
+    __extends(AssignPhoneToCallQueueResponse, _super);
+    function AssignPhoneToCallQueueResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Uint8Array)
+    ], AssignPhoneToCallQueueResponse.prototype, "body", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], AssignPhoneToCallQueueResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], AssignPhoneToCallQueueResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssignPhoneToCallQueueResponse.prototype, "assignPhoneToCallQueue204ApplicationJSONObject", void 0);
+    return AssignPhoneToCallQueueResponse;
+}(utils_1.SpeakeasyBase));
+exports.AssignPhoneToCallQueueResponse = AssignPhoneToCallQueueResponse;

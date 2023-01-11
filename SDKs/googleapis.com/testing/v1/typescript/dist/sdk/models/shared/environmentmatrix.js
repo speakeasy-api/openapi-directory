@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidDeviceList } from "./androiddevicelist";
-import { AndroidMatrix } from "./androidmatrix";
-import { IosDeviceList } from "./iosdevicelist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentMatrix = void 0;
+var utils_1 = require("../../../internal/utils");
+var androiddevicelist_1 = require("./androiddevicelist");
+var androidmatrix_1 = require("./androidmatrix");
+var iosdevicelist_1 = require("./iosdevicelist");
 // EnvironmentMatrix
 /**
  * The matrix of environments in which the test is to be executed.
@@ -36,17 +39,17 @@ var EnvironmentMatrix = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidDeviceList" }),
-        __metadata("design:type", AndroidDeviceList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidDeviceList" }),
+        __metadata("design:type", androiddevicelist_1.AndroidDeviceList)
     ], EnvironmentMatrix.prototype, "androidDeviceList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidMatrix" }),
-        __metadata("design:type", AndroidMatrix)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidMatrix" }),
+        __metadata("design:type", androidmatrix_1.AndroidMatrix)
     ], EnvironmentMatrix.prototype, "androidMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosDeviceList" }),
-        __metadata("design:type", IosDeviceList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosDeviceList" }),
+        __metadata("design:type", iosdevicelist_1.IosDeviceList)
     ], EnvironmentMatrix.prototype, "iosDeviceList", void 0);
     return EnvironmentMatrix;
-}(SpeakeasyBase));
-export { EnvironmentMatrix };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentMatrix = EnvironmentMatrix;

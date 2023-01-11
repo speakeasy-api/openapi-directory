@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StartTimeRange } from "./starttimerange";
-import { InsightTypeEnum } from "./insighttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListInsightsAnyStatusFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var starttimerange_1 = require("./starttimerange");
+var insighttypeenum_1 = require("./insighttypeenum");
 // ListInsightsAnyStatusFilter
 /**
  *  Used to filter for insights that have any status.
@@ -35,13 +38,13 @@ var ListInsightsAnyStatusFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTimeRange" }),
-        __metadata("design:type", StartTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTimeRange" }),
+        __metadata("design:type", starttimerange_1.StartTimeRange)
     ], ListInsightsAnyStatusFilter.prototype, "startTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ListInsightsAnyStatusFilter.prototype, "type", void 0);
     return ListInsightsAnyStatusFilter;
-}(SpeakeasyBase));
-export { ListInsightsAnyStatusFilter };
+}(utils_1.SpeakeasyBase));
+exports.ListInsightsAnyStatusFilter = ListInsightsAnyStatusFilter;

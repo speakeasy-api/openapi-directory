@@ -1,21 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AquaConfiguration } from "./aquaconfiguration";
 import { ClusterNode } from "./clusternode";
-import { ClusterParameterGroupStatus } from "./clusterparametergroupstatus";
-import { ClusterSecurityGroupMembership } from "./clustersecuritygroupmembership";
+import { ClusterParameterGroupStatusList } from "./clusterparametergroupstatuslist";
+import { ClusterSecurityGroupMembershipList } from "./clustersecuritygroupmembershiplist";
 import { ClusterSnapshotCopyStatus } from "./clustersnapshotcopystatus";
 import { DataTransferProgress } from "./datatransferprogress";
-import { DeferredMaintenanceWindow } from "./deferredmaintenancewindow";
+import { DeferredMaintenanceWindowsList } from "./deferredmaintenancewindowslist";
 import { ElasticIpStatus } from "./elasticipstatus";
 import { Endpoint } from "./endpoint";
 import { HsmStatus } from "./hsmstatus";
-import { ClusterIamRole } from "./clusteriamrole";
+import { ClusterIamRoleList } from "./clusteriamrolelist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { ResizeInfo } from "./resizeinfo";
 import { RestoreStatus } from "./restorestatus";
 import { ScheduleStateEnum } from "./schedulestateenum";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { TagList } from "./taglist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Describes a cluster.
 **/
@@ -30,17 +30,17 @@ export declare class Cluster extends SpeakeasyBase {
     clusterIdentifier?: string;
     clusterNamespaceArn?: string;
     clusterNodes?: ClusterNode[];
-    clusterParameterGroups?: ClusterParameterGroupStatus[];
+    clusterParameterGroups?: ClusterParameterGroupStatusList[];
     clusterPublicKey?: string;
     clusterRevisionNumber?: string;
-    clusterSecurityGroups?: ClusterSecurityGroupMembership[];
+    clusterSecurityGroups?: ClusterSecurityGroupMembershipList[];
     clusterSnapshotCopyStatus?: ClusterSnapshotCopyStatus;
     clusterStatus?: string;
     clusterSubnetGroupName?: string;
     clusterVersion?: string;
     dbName?: string;
     dataTransferProgress?: DataTransferProgress;
-    deferredMaintenanceWindows?: DeferredMaintenanceWindow[];
+    deferredMaintenanceWindows?: DeferredMaintenanceWindowsList[];
     elasticIpStatus?: ElasticIpStatus;
     elasticResizeNumberOfNodeOptions?: string;
     encrypted?: boolean;
@@ -49,7 +49,7 @@ export declare class Cluster extends SpeakeasyBase {
     expectedNextSnapshotScheduleTime?: Date;
     expectedNextSnapshotScheduleTimeStatus?: string;
     hsmStatus?: HsmStatus;
-    iamRoles?: ClusterIamRole[];
+    iamRoles?: ClusterIamRoleList[];
     kmsKeyId?: string;
     maintenanceTrackName?: string;
     manualSnapshotRetentionPeriod?: number;
@@ -66,8 +66,8 @@ export declare class Cluster extends SpeakeasyBase {
     restoreStatus?: RestoreStatus;
     snapshotScheduleIdentifier?: string;
     snapshotScheduleState?: ScheduleStateEnum;
-    tags?: Tag[];
+    tags?: TagList[];
     totalStorageCapacityInMegaBytes?: number;
     vpcId?: string;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

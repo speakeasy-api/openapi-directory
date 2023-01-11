@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1CalendarsResponse = exports.GetSetupV1CalendarsRequest = exports.GetSetupV1CalendarsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1CalendarsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsQueryParams, _super);
     function GetSetupV1CalendarsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deleted" }),
         __metadata("design:type", Boolean)
     ], GetSetupV1CalendarsQueryParams.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetSetupV1CalendarsQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsQueryParams.prototype, "offset", void 0);
     return GetSetupV1CalendarsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsQueryParams = GetSetupV1CalendarsQueryParams;
 var GetSetupV1CalendarsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsRequest, _super);
     function GetSetupV1CalendarsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1CalendarsQueryParams)
     ], GetSetupV1CalendarsRequest.prototype, "queryParams", void 0);
     return GetSetupV1CalendarsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsRequest = GetSetupV1CalendarsRequest;
 var GetSetupV1CalendarsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1CalendarsResponse, _super);
     function GetSetupV1CalendarsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1CalendarsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1CalendarsResponse.prototype, "scheduleListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1CalendarsResponse.prototype, "statusCode", void 0);
     return GetSetupV1CalendarsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1CalendarsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1CalendarsResponse = GetSetupV1CalendarsResponse;

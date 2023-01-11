@@ -13,7 +13,7 @@ export declare class CloneCampaignRequest extends SpeakeasyBase {
 }
 export declare class CloneCampaignResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    cloneCampaign201ApplicationJsonObject?: Map<string, any>;
+    cloneCampaign201ApplicationJSONObject?: Record<string, any>;
 }

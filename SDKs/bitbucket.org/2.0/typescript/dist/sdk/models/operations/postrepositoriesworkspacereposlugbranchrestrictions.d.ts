@@ -11,12 +11,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity
 }
 export declare class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    branchrestriction?: Map<string, any>;
-    error?: Map<string, any>;
+    branchrestriction?: Record<string, any>;
+    error?: Record<string, any>;
 }

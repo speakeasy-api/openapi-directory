@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BillingMethodEnum } from "./billingmethodenum";
-import { Device } from "./device";
-import { DeviceMinutes } from "./deviceminutes";
-import { InteractionModeEnum } from "./interactionmodeenum";
-import { ExecutionResultEnum } from "./executionresultenum";
-import { ExecutionStatusEnum } from "./executionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoteAccessSession = void 0;
+var utils_1 = require("../../../internal/utils");
+var billingmethodenum_1 = require("./billingmethodenum");
+var device_1 = require("./device");
+var deviceminutes_1 = require("./deviceminutes");
+var interactionmodeenum_1 = require("./interactionmodeenum");
+var executionresultenum_1 = require("./executionresultenum");
+var executionstatusenum_1 = require("./executionstatusenum");
 // RemoteAccessSession
 /**
  * Represents information about the remote access session.
@@ -39,89 +42,89 @@ var RemoteAccessSession = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingMethod" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "billingMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], RemoteAccessSession.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", Device)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", device_1.Device)
     ], RemoteAccessSession.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceMinutes" }),
-        __metadata("design:type", DeviceMinutes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceMinutes" }),
+        __metadata("design:type", deviceminutes_1.DeviceMinutes)
     ], RemoteAccessSession.prototype, "deviceMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceUdid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceUdid" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "deviceUdid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostAddress" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "hostAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceArn" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "instanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactionMode" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "interactionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteDebugEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteDebugEnabled" }),
         __metadata("design:type", Boolean)
     ], RemoteAccessSession.prototype, "remoteDebugEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteRecordAppArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteRecordAppArn" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "remoteRecordAppArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteRecordEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteRecordEnabled" }),
         __metadata("design:type", Boolean)
     ], RemoteAccessSession.prototype, "remoteRecordEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipAppResign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipAppResign" }),
         __metadata("design:type", Boolean)
     ], RemoteAccessSession.prototype, "skipAppResign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", Date)
     ], RemoteAccessSession.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], RemoteAccessSession.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopped" }),
         __metadata("design:type", Date)
     ], RemoteAccessSession.prototype, "stopped", void 0);
     return RemoteAccessSession;
-}(SpeakeasyBase));
-export { RemoteAccessSession };
+}(utils_1.SpeakeasyBase));
+exports.RemoteAccessSession = RemoteAccessSession;

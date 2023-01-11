@@ -21,11 +21,18 @@ export declare enum PortfolioResponseColorEnum {
     LightPurple = "light-purple",
     LightWarmGray = "light-warm-gray"
 }
+/**
+ * *Create-only*. The workspace or organization that the portfolio belongs to.
+**/
 export declare class PortfolioResponseWorkspace extends SpeakeasyBase {
     gid?: string;
     name?: string;
     resourceType?: string;
 }
+/**
+ * A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/docs/asana-project-statuses) update.
+ * Portfolios have some restrictions on size. Each portfolio has a max of 250 items and, like projects, a max of 20 custom fields.
+**/
 export declare class PortfolioResponse extends SpeakeasyBase {
     color?: PortfolioResponseColorEnum;
     createdAt?: Date;

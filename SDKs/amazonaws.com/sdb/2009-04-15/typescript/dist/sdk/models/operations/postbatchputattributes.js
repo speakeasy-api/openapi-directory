@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostBatchPutAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBatchPutAttributesResponse = exports.PostBatchPutAttributesRequest = exports.PostBatchPutAttributesQueryParams = exports.PostBatchPutAttributesVersionEnum = exports.PostBatchPutAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostBatchPutAttributesActionEnum;
 (function (PostBatchPutAttributesActionEnum) {
     PostBatchPutAttributesActionEnum["BatchPutAttributes"] = "BatchPutAttributes";
-})(PostBatchPutAttributesActionEnum || (PostBatchPutAttributesActionEnum = {}));
-export var PostBatchPutAttributesVersionEnum;
+})(PostBatchPutAttributesActionEnum = exports.PostBatchPutAttributesActionEnum || (exports.PostBatchPutAttributesActionEnum = {}));
+var PostBatchPutAttributesVersionEnum;
 (function (PostBatchPutAttributesVersionEnum) {
     PostBatchPutAttributesVersionEnum["TwoThousandAndNine0415"] = "2009-04-15";
-})(PostBatchPutAttributesVersionEnum || (PostBatchPutAttributesVersionEnum = {}));
+})(PostBatchPutAttributesVersionEnum = exports.PostBatchPutAttributesVersionEnum || (exports.PostBatchPutAttributesVersionEnum = {}));
 var PostBatchPutAttributesQueryParams = /** @class */ (function (_super) {
     __extends(PostBatchPutAttributesQueryParams, _super);
     function PostBatchPutAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostBatchPutAttributesQueryParams.prototype, "version", void 0);
     return PostBatchPutAttributesQueryParams;
-}(SpeakeasyBase));
-export { PostBatchPutAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchPutAttributesQueryParams = PostBatchPutAttributesQueryParams;
 var PostBatchPutAttributesRequest = /** @class */ (function (_super) {
     __extends(PostBatchPutAttributesRequest, _super);
     function PostBatchPutAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchPutAttributesQueryParams)
     ], PostBatchPutAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostBatchPutAttributesRequest.prototype, "request", void 0);
     return PostBatchPutAttributesRequest;
-}(SpeakeasyBase));
-export { PostBatchPutAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchPutAttributesRequest = PostBatchPutAttributesRequest;
 var PostBatchPutAttributesResponse = /** @class */ (function (_super) {
     __extends(PostBatchPutAttributesResponse, _super);
     function PostBatchPutAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostBatchPutAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBatchPutAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBatchPutAttributesResponse.prototype, "statusCode", void 0);
     return PostBatchPutAttributesResponse;
-}(SpeakeasyBase));
-export { PostBatchPutAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchPutAttributesResponse = PostBatchPutAttributesResponse;

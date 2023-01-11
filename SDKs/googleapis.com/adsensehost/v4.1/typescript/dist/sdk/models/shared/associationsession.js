@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociationSession = void 0;
+var utils_1 = require("../../../internal/utils");
 var AssociationSession = /** @class */ (function (_super) {
     __extends(AssociationSession, _super);
     function AssociationSession() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCodes" }),
         __metadata("design:type", Array)
     ], AssociationSession.prototype, "productCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirectUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirectUrl" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "redirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLocale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLocale" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "userLocale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteLocale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteLocale" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "websiteLocale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], AssociationSession.prototype, "websiteUrl", void 0);
     return AssociationSession;
-}(SpeakeasyBase));
-export { AssociationSession };
+}(utils_1.SpeakeasyBase));
+exports.AssociationSession = AssociationSession;

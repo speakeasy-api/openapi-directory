@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeInsightRulesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeInsightRulesResponse = exports.PostDescribeInsightRulesRequest = exports.PostDescribeInsightRulesHeaders = exports.PostDescribeInsightRulesQueryParams = exports.PostDescribeInsightRulesVersionEnum = exports.PostDescribeInsightRulesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeInsightRulesActionEnum;
 (function (PostDescribeInsightRulesActionEnum) {
     PostDescribeInsightRulesActionEnum["DescribeInsightRules"] = "DescribeInsightRules";
-})(PostDescribeInsightRulesActionEnum || (PostDescribeInsightRulesActionEnum = {}));
-export var PostDescribeInsightRulesVersionEnum;
+})(PostDescribeInsightRulesActionEnum = exports.PostDescribeInsightRulesActionEnum || (exports.PostDescribeInsightRulesActionEnum = {}));
+var PostDescribeInsightRulesVersionEnum;
 (function (PostDescribeInsightRulesVersionEnum) {
     PostDescribeInsightRulesVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(PostDescribeInsightRulesVersionEnum || (PostDescribeInsightRulesVersionEnum = {}));
+})(PostDescribeInsightRulesVersionEnum = exports.PostDescribeInsightRulesVersionEnum || (exports.PostDescribeInsightRulesVersionEnum = {}));
 var PostDescribeInsightRulesQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeInsightRulesQueryParams, _super);
     function PostDescribeInsightRulesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesQueryParams.prototype, "version", void 0);
     return PostDescribeInsightRulesQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeInsightRulesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeInsightRulesQueryParams = PostDescribeInsightRulesQueryParams;
 var PostDescribeInsightRulesHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeInsightRulesHeaders, _super);
     function PostDescribeInsightRulesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeInsightRulesHeaders;
-}(SpeakeasyBase));
-export { PostDescribeInsightRulesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeInsightRulesHeaders = PostDescribeInsightRulesHeaders;
 var PostDescribeInsightRulesRequest = /** @class */ (function (_super) {
     __extends(PostDescribeInsightRulesRequest, _super);
     function PostDescribeInsightRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeInsightRulesQueryParams)
     ], PostDescribeInsightRulesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeInsightRulesHeaders)
     ], PostDescribeInsightRulesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeInsightRulesRequest.prototype, "request", void 0);
     return PostDescribeInsightRulesRequest;
-}(SpeakeasyBase));
-export { PostDescribeInsightRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeInsightRulesRequest = PostDescribeInsightRulesRequest;
 var PostDescribeInsightRulesResponse = /** @class */ (function (_super) {
     __extends(PostDescribeInsightRulesResponse, _super);
     function PostDescribeInsightRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeInsightRulesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeInsightRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeInsightRulesResponse.prototype, "statusCode", void 0);
     return PostDescribeInsightRulesResponse;
-}(SpeakeasyBase));
-export { PostDescribeInsightRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeInsightRulesResponse = PostDescribeInsightRulesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskSet } from "./taskset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTaskSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskset_1 = require("./taskset");
 var CreateTaskSetResponse = /** @class */ (function (_super) {
     __extends(CreateTaskSetResponse, _super);
     function CreateTaskSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSet" }),
-        __metadata("design:type", TaskSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSet" }),
+        __metadata("design:type", taskset_1.TaskSet)
     ], CreateTaskSetResponse.prototype, "taskSet", void 0);
     return CreateTaskSetResponse;
-}(SpeakeasyBase));
-export { CreateTaskSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateTaskSetResponse = CreateTaskSetResponse;

@@ -18,7 +18,7 @@ export class AdmMessage extends SpeakeasyBase {
   consolidationKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ExpiresAfter" })
   expiresAfter?: string;
@@ -48,7 +48,7 @@ export class AdmMessage extends SpeakeasyBase {
   sound?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=Title" })
   title?: string;

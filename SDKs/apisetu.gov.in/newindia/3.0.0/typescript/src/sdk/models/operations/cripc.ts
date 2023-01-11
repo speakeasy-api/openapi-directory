@@ -194,23 +194,23 @@ export class CripcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cripc400ApplicationJsonObject?: Cripc400ApplicationJson;
+  cripc400ApplicationJSONObject?: Cripc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc401ApplicationJsonObject?: Cripc401ApplicationJson;
+  cripc401ApplicationJSONObject?: Cripc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc404ApplicationJsonObject?: Cripc404ApplicationJson;
+  cripc404ApplicationJSONObject?: Cripc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc500ApplicationJsonObject?: Cripc500ApplicationJson;
+  cripc500ApplicationJSONObject?: Cripc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc502ApplicationJsonObject?: Cripc502ApplicationJson;
+  cripc502ApplicationJSONObject?: Cripc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc503ApplicationJsonObject?: Cripc503ApplicationJson;
+  cripc503ApplicationJSONObject?: Cripc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cripc504ApplicationJsonObject?: Cripc504ApplicationJson;
+  cripc504ApplicationJSONObject?: Cripc504ApplicationJson;
 }

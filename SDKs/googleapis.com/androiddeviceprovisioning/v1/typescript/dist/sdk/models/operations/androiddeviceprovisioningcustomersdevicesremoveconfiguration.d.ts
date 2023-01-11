@@ -23,6 +23,6 @@ export declare class AndroiddeviceprovisioningCustomersDevicesRemoveConfiguratio
 }
 export declare class AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

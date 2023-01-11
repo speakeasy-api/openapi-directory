@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RetentionConfiguration } from "./retentionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeRetentionConfigurationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var retentionconfiguration_1 = require("./retentionconfiguration");
 var DescribeRetentionConfigurationsResponse = /** @class */ (function (_super) {
     __extends(DescribeRetentionConfigurationsResponse, _super);
     function DescribeRetentionConfigurationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeRetentionConfigurationsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetentionConfigurations", elemType: RetentionConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetentionConfigurations", elemType: retentionconfiguration_1.RetentionConfiguration }),
         __metadata("design:type", Array)
     ], DescribeRetentionConfigurationsResponse.prototype, "retentionConfigurations", void 0);
     return DescribeRetentionConfigurationsResponse;
-}(SpeakeasyBase));
-export { DescribeRetentionConfigurationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeRetentionConfigurationsResponse = DescribeRetentionConfigurationsResponse;

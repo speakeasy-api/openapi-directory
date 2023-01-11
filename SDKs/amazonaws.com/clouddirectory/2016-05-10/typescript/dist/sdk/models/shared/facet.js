@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectTypeEnum } from "./objecttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Facet = void 0;
+var utils_1 = require("../../../internal/utils");
+var objecttypeenum_1 = require("./objecttypeenum");
 // Facet
 /**
  * A structure that contains <code>Name</code>, <code>ARN</code>, <code>Attributes</code>, <code> <a>Rule</a>s</code>, and <code>ObjectTypes</code>. See <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/whatarefacets.html">Facets</a> for more information.
@@ -34,13 +37,13 @@ var Facet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Facet.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectType" }),
         __metadata("design:type", String)
     ], Facet.prototype, "objectType", void 0);
     return Facet;
-}(SpeakeasyBase));
-export { Facet };
+}(utils_1.SpeakeasyBase));
+exports.Facet = Facet;

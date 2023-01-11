@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Field } from "./field";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var field_1 = require("./field");
+var tag_1 = require("./tag");
 // PipelineDescription
 /**
  * Contains pipeline metadata.
@@ -35,25 +38,25 @@ var PipelineDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PipelineDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields", elemType: Field }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields", elemType: field_1.Field }),
         __metadata("design:type", Array)
     ], PipelineDescription.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PipelineDescription.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineId" }),
         __metadata("design:type", String)
     ], PipelineDescription.prototype, "pipelineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], PipelineDescription.prototype, "tags", void 0);
     return PipelineDescription;
-}(SpeakeasyBase));
-export { PipelineDescription };
+}(utils_1.SpeakeasyBase));
+exports.PipelineDescription = PipelineDescription;

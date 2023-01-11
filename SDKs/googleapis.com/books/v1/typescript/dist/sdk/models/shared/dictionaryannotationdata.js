@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dictlayerdata } from "./dictlayerdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DictionaryAnnotationdata = void 0;
+var utils_1 = require("../../../internal/utils");
+var dictlayerdata_1 = require("./dictlayerdata");
 var DictionaryAnnotationdata = /** @class */ (function (_super) {
     __extends(DictionaryAnnotationdata, _super);
     function DictionaryAnnotationdata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationType" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "annotationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Dictlayerdata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", dictlayerdata_1.Dictlayerdata)
     ], DictionaryAnnotationdata.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodedData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodedData" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "encodedData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerId" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeId" }),
         __metadata("design:type", String)
     ], DictionaryAnnotationdata.prototype, "volumeId", void 0);
     return DictionaryAnnotationdata;
-}(SpeakeasyBase));
-export { DictionaryAnnotationdata };
+}(utils_1.SpeakeasyBase));
+exports.DictionaryAnnotationdata = DictionaryAnnotationdata;

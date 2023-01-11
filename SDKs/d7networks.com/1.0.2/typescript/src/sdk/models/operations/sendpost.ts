@@ -26,7 +26,7 @@ export class SendPostResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sendPost500ApplicationJsonAny?: any;
+  sendPost500ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

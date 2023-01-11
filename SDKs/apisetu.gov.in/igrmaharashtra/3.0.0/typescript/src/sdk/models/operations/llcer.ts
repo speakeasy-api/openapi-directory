@@ -191,23 +191,23 @@ export class LlcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  llcer400ApplicationJsonObject?: Llcer400ApplicationJson;
+  llcer400ApplicationJSONObject?: Llcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer401ApplicationJsonObject?: Llcer401ApplicationJson;
+  llcer401ApplicationJSONObject?: Llcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer404ApplicationJsonObject?: Llcer404ApplicationJson;
+  llcer404ApplicationJSONObject?: Llcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer500ApplicationJsonObject?: Llcer500ApplicationJson;
+  llcer500ApplicationJSONObject?: Llcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer502ApplicationJsonObject?: Llcer502ApplicationJson;
+  llcer502ApplicationJSONObject?: Llcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer503ApplicationJsonObject?: Llcer503ApplicationJson;
+  llcer503ApplicationJSONObject?: Llcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  llcer504ApplicationJsonObject?: Llcer504ApplicationJson;
+  llcer504ApplicationJSONObject?: Llcer504ApplicationJson;
 }

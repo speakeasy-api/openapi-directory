@@ -14,18 +14,13 @@ export class ChecksListForSuitePathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ChecksListForSuiteFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
-
 
 export class ChecksListForSuiteQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=check_name" })
   checkName?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: ChecksListForSuiteFilterEnum;
+  filter?: shared.StatusEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -61,11 +56,11 @@ export class ChecksListForSuiteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checksListForSuite200ApplicationJsonObject?: ChecksListForSuite200ApplicationJson;
+  checksListForSuite200ApplicationJSONObject?: ChecksListForSuite200ApplicationJson;
 }

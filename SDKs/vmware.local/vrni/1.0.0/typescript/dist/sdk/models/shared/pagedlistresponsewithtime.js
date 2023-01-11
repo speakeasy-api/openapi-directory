@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityIdWithTime } from "./entityidwithtime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagedListResponseWithTime = void 0;
+var utils_1 = require("../../../internal/utils");
+var entityidwithtime_1 = require("./entityidwithtime");
 var PagedListResponseWithTime = /** @class */ (function (_super) {
     __extends(PagedListResponseWithTime, _super);
     function PagedListResponseWithTime() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursor" }),
         __metadata("design:type", String)
     ], PagedListResponseWithTime.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
         __metadata("design:type", Number)
     ], PagedListResponseWithTime.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: EntityIdWithTime }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: entityidwithtime_1.EntityIdWithTime }),
         __metadata("design:type", Array)
     ], PagedListResponseWithTime.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
         __metadata("design:type", Number)
     ], PagedListResponseWithTime.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_count" }),
         __metadata("design:type", Number)
     ], PagedListResponseWithTime.prototype, "totalCount", void 0);
     return PagedListResponseWithTime;
-}(SpeakeasyBase));
-export { PagedListResponseWithTime };
+}(utils_1.SpeakeasyBase));
+exports.PagedListResponseWithTime = PagedListResponseWithTime;

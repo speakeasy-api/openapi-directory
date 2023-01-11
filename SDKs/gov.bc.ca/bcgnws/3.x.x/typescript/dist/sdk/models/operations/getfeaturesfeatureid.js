@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFeaturesFeatureIdResponse = exports.GetFeaturesFeatureIdRequest = exports.GetFeaturesFeatureIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetFeaturesFeatureIdPathParams = /** @class */ (function (_super) {
     __extends(GetFeaturesFeatureIdPathParams, _super);
     function GetFeaturesFeatureIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=featureId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=featureId" }),
         __metadata("design:type", Number)
     ], GetFeaturesFeatureIdPathParams.prototype, "featureId", void 0);
     return GetFeaturesFeatureIdPathParams;
-}(SpeakeasyBase));
-export { GetFeaturesFeatureIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFeaturesFeatureIdPathParams = GetFeaturesFeatureIdPathParams;
 var GetFeaturesFeatureIdRequest = /** @class */ (function (_super) {
     __extends(GetFeaturesFeatureIdRequest, _super);
     function GetFeaturesFeatureIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFeaturesFeatureIdPathParams)
     ], GetFeaturesFeatureIdRequest.prototype, "pathParams", void 0);
     return GetFeaturesFeatureIdRequest;
-}(SpeakeasyBase));
-export { GetFeaturesFeatureIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFeaturesFeatureIdRequest = GetFeaturesFeatureIdRequest;
 var GetFeaturesFeatureIdResponse = /** @class */ (function (_super) {
     __extends(GetFeaturesFeatureIdResponse, _super);
     function GetFeaturesFeatureIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFeaturesFeatureIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFeaturesFeatureIdResponse.prototype, "statusCode", void 0);
     return GetFeaturesFeatureIdResponse;
-}(SpeakeasyBase));
-export { GetFeaturesFeatureIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFeaturesFeatureIdResponse = GetFeaturesFeatureIdResponse;

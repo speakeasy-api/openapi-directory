@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqlInstancesResetSslConfigResponse = exports.SqlInstancesResetSslConfigRequest = exports.SqlInstancesResetSslConfigSecurity = exports.SqlInstancesResetSslConfigSecurityOption2 = exports.SqlInstancesResetSslConfigSecurityOption1 = exports.SqlInstancesResetSslConfigQueryParams = exports.SqlInstancesResetSslConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SqlInstancesResetSslConfigPathParams = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigPathParams, _super);
     function SqlInstancesResetSslConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigPathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigPathParams.prototype, "project", void 0);
     return SqlInstancesResetSslConfigPathParams;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigPathParams = SqlInstancesResetSslConfigPathParams;
 var SqlInstancesResetSslConfigQueryParams = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigQueryParams, _super);
     function SqlInstancesResetSslConfigQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigQueryParams.prototype, "uploadProtocol", void 0);
     return SqlInstancesResetSslConfigQueryParams;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigQueryParams = SqlInstancesResetSslConfigQueryParams;
 var SqlInstancesResetSslConfigSecurityOption1 = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigSecurityOption1, _super);
     function SqlInstancesResetSslConfigSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SqlInstancesResetSslConfigSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SqlInstancesResetSslConfigSecurityOption1.prototype, "oauth2c", void 0);
     return SqlInstancesResetSslConfigSecurityOption1;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigSecurityOption1 = SqlInstancesResetSslConfigSecurityOption1;
 var SqlInstancesResetSslConfigSecurityOption2 = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigSecurityOption2, _super);
     function SqlInstancesResetSslConfigSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SqlInstancesResetSslConfigSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SqlInstancesResetSslConfigSecurityOption2.prototype, "oauth2c", void 0);
     return SqlInstancesResetSslConfigSecurityOption2;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigSecurityOption2 = SqlInstancesResetSslConfigSecurityOption2;
 var SqlInstancesResetSslConfigSecurity = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigSecurity, _super);
     function SqlInstancesResetSslConfigSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SqlInstancesResetSslConfigSecurityOption1)
     ], SqlInstancesResetSslConfigSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SqlInstancesResetSslConfigSecurityOption2)
     ], SqlInstancesResetSslConfigSecurity.prototype, "option2", void 0);
     return SqlInstancesResetSslConfigSecurity;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigSecurity };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigSecurity = SqlInstancesResetSslConfigSecurity;
 var SqlInstancesResetSslConfigRequest = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigRequest, _super);
     function SqlInstancesResetSslConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlInstancesResetSslConfigPathParams)
     ], SqlInstancesResetSslConfigRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlInstancesResetSslConfigQueryParams)
     ], SqlInstancesResetSslConfigRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SqlInstancesResetSslConfigSecurity)
     ], SqlInstancesResetSslConfigRequest.prototype, "security", void 0);
     return SqlInstancesResetSslConfigRequest;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigRequest = SqlInstancesResetSslConfigRequest;
 var SqlInstancesResetSslConfigResponse = /** @class */ (function (_super) {
     __extends(SqlInstancesResetSslConfigResponse, _super);
     function SqlInstancesResetSslConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SqlInstancesResetSslConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], SqlInstancesResetSslConfigResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SqlInstancesResetSslConfigResponse.prototype, "statusCode", void 0);
     return SqlInstancesResetSslConfigResponse;
-}(SpeakeasyBase));
-export { SqlInstancesResetSslConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.SqlInstancesResetSslConfigResponse = SqlInstancesResetSslConfigResponse;

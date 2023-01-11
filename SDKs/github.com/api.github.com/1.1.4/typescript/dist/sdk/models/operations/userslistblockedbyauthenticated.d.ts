@@ -9,5 +9,5 @@ export declare class UsersListBlockedByAuthenticatedResponse extends SpeakeasyBa
     statusCode: number;
     basicError?: shared.BasicError;
     simpleUsers?: shared.SimpleUser[];
-    usersListBlockedByAuthenticated415ApplicationJsonObject?: UsersListBlockedByAuthenticated415ApplicationJson;
+    usersListBlockedByAuthenticated415ApplicationJSONObject?: UsersListBlockedByAuthenticated415ApplicationJson;
 }

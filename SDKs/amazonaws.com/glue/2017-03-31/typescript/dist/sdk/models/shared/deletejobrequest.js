@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteJobRequest = /** @class */ (function (_super) {
     __extends(DeleteJobRequest, _super);
     function DeleteJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobName" }),
         __metadata("design:type", String)
     ], DeleteJobRequest.prototype, "jobName", void 0);
     return DeleteJobRequest;
-}(SpeakeasyBase));
-export { DeleteJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteJobRequest = DeleteJobRequest;

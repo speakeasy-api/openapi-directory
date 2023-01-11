@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AbortMultipartUploadRequest, AbortMultipartUploadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: AbortMultipartUploadRequest = {
   pathParams: {
-    accountId: "ut",
-    uploadId: "inventore",
-    vaultName: "officiis",
+    accountId: "sit",
+    uploadId: "voluptas",
+    vaultName: "culpa",
   },
   headers: {
-    xAmzAlgorithm: "aliquam",
-    xAmzContentSha256: "ratione",
-    xAmzCredential: "adipisci",
-    xAmzDate: "hic",
-    xAmzSecurityToken: "inventore",
-    xAmzSignature: "qui",
-    xAmzSignedHeaders: "molestiae",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
 };
 
-sdk.sdk.abortMultipartUpload(req).then((res: AbortMultipartUploadResponse | AxiosError) => {
+sdk.abortMultipartUpload(req).then((res: AbortMultipartUploadResponse | AxiosError) => {
    // handle response
 });
 ```

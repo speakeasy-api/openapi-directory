@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConvertedOtherRegionsPrice } from "./convertedotherregionsprice";
-import { ConvertedRegionPrice } from "./convertedregionprice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConvertRegionPricesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var convertedotherregionsprice_1 = require("./convertedotherregionsprice");
+var convertedregionprice_1 = require("./convertedregionprice");
 // ConvertRegionPricesResponse
 /**
  * Response message for ConvertRegionPrices.
@@ -35,13 +38,13 @@ var ConvertRegionPricesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=convertedOtherRegionsPrice" }),
-        __metadata("design:type", ConvertedOtherRegionsPrice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=convertedOtherRegionsPrice" }),
+        __metadata("design:type", convertedotherregionsprice_1.ConvertedOtherRegionsPrice)
     ], ConvertRegionPricesResponse.prototype, "convertedOtherRegionsPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=convertedRegionPrices", elemType: ConvertedRegionPrice }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=convertedRegionPrices", elemType: convertedregionprice_1.ConvertedRegionPrice }),
+        __metadata("design:type", Object)
     ], ConvertRegionPricesResponse.prototype, "convertedRegionPrices", void 0);
     return ConvertRegionPricesResponse;
-}(SpeakeasyBase));
-export { ConvertRegionPricesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConvertRegionPricesResponse = ConvertRegionPricesResponse;

@@ -52,5 +52,5 @@ export class GetRoleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRole200ApplicationJsonObject?: GetRole200ApplicationJson;
+  getRole200ApplicationJSONObject?: GetRole200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,159 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidpublisherEditsApklistingsUpdateResponse = exports.AndroidpublisherEditsApklistingsUpdateRequest = exports.AndroidpublisherEditsApklistingsUpdateSecurity = exports.AndroidpublisherEditsApklistingsUpdateQueryParams = exports.AndroidpublisherEditsApklistingsUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AndroidpublisherEditsApklistingsUpdatePathParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApklistingsUpdatePathParams, _super);
     function AndroidpublisherEditsApklistingsUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apkVersionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apkVersionCode" }),
         __metadata("design:type", Number)
     ], AndroidpublisherEditsApklistingsUpdatePathParams.prototype, "apkVersionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=editId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=editId" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdatePathParams.prototype, "editId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=language" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdatePathParams.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packageName" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdatePathParams.prototype, "packageName", void 0);
     return AndroidpublisherEditsApklistingsUpdatePathParams;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApklistingsUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApklistingsUpdatePathParams = AndroidpublisherEditsApklistingsUpdatePathParams;
 var AndroidpublisherEditsApklistingsUpdateQueryParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApklistingsUpdateQueryParams, _super);
     function AndroidpublisherEditsApklistingsUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateQueryParams.prototype, "userIp", void 0);
     return AndroidpublisherEditsApklistingsUpdateQueryParams;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApklistingsUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApklistingsUpdateQueryParams = AndroidpublisherEditsApklistingsUpdateQueryParams;
 var AndroidpublisherEditsApklistingsUpdateSecurity = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApklistingsUpdateSecurity, _super);
     function AndroidpublisherEditsApklistingsUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AndroidpublisherEditsApklistingsUpdateSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AndroidpublisherEditsApklistingsUpdateSecurity.prototype, "oauth2c", void 0);
     return AndroidpublisherEditsApklistingsUpdateSecurity;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApklistingsUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApklistingsUpdateSecurity = AndroidpublisherEditsApklistingsUpdateSecurity;
 var AndroidpublisherEditsApklistingsUpdateRequest = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApklistingsUpdateRequest, _super);
     function AndroidpublisherEditsApklistingsUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApklistingsUpdatePathParams)
     ], AndroidpublisherEditsApklistingsUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApklistingsUpdateQueryParams)
     ], AndroidpublisherEditsApklistingsUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ApkListing)
     ], AndroidpublisherEditsApklistingsUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherEditsApklistingsUpdateSecurity)
     ], AndroidpublisherEditsApklistingsUpdateRequest.prototype, "security", void 0);
     return AndroidpublisherEditsApklistingsUpdateRequest;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApklistingsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApklistingsUpdateRequest = AndroidpublisherEditsApklistingsUpdateRequest;
 var AndroidpublisherEditsApklistingsUpdateResponse = /** @class */ (function (_super) {
     __extends(AndroidpublisherEditsApklistingsUpdateResponse, _super);
     function AndroidpublisherEditsApklistingsUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], AndroidpublisherEditsApklistingsUpdateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AndroidpublisherEditsApklistingsUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AndroidpublisherEditsApklistingsUpdateResponse.prototype, "statusCode", void 0);
     return AndroidpublisherEditsApklistingsUpdateResponse;
-}(SpeakeasyBase));
-export { AndroidpublisherEditsApklistingsUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherEditsApklistingsUpdateResponse = AndroidpublisherEditsApklistingsUpdateResponse;

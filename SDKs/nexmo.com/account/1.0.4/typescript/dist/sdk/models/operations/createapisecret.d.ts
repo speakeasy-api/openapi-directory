@@ -13,9 +13,9 @@ export declare class CreateApiSecretRequest extends SpeakeasyBase {
 }
 export declare class CreateApiSecretResponse extends SpeakeasyBase {
     contentType: string;
-    errorApiKeyNotFound?: shared.ErrorApiKeyNotFound;
+    errorAPIKeyNotFound?: shared.ErrorApiKeyNotFound;
     statusCode: number;
-    createApiSecret400ApplicationJsonAny?: any;
-    createApiSecret401ApplicationJsonAny?: any;
+    createAPISecret400ApplicationJSONAny?: any;
+    createAPISecret401ApplicationJSONAny?: any;
     secretInfo?: shared.SecretInfo;
 }

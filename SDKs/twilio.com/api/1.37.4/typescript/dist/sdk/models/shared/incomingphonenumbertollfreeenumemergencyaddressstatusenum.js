@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum = void 0;
+var IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum;
+(function (IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum) {
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["Registered"] = "registered";
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["Unregistered"] = "unregistered";
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["PendingRegistration"] = "pending-registration";
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["RegistrationFailure"] = "registration-failure";
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["PendingUnregistration"] = "pending-unregistration";
+    IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum["UnregistrationFailure"] = "unregistration-failure";
+})(IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum = exports.IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum || (exports.IncomingPhoneNumberTollFreeEnumEmergencyAddressStatusEnum = {}));

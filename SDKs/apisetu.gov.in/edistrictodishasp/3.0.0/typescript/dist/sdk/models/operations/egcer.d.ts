@@ -108,11 +108,11 @@ export declare class EgcerRequest extends SpeakeasyBase {
 export declare class EgcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    egcer400ApplicationJsonObject?: Egcer400ApplicationJson;
-    egcer401ApplicationJsonObject?: Egcer401ApplicationJson;
-    egcer404ApplicationJsonObject?: Egcer404ApplicationJson;
-    egcer500ApplicationJsonObject?: Egcer500ApplicationJson;
-    egcer502ApplicationJsonObject?: Egcer502ApplicationJson;
-    egcer503ApplicationJsonObject?: Egcer503ApplicationJson;
-    egcer504ApplicationJsonObject?: Egcer504ApplicationJson;
+    egcer400ApplicationJSONObject?: Egcer400ApplicationJson;
+    egcer401ApplicationJSONObject?: Egcer401ApplicationJson;
+    egcer404ApplicationJSONObject?: Egcer404ApplicationJson;
+    egcer500ApplicationJSONObject?: Egcer500ApplicationJson;
+    egcer502ApplicationJSONObject?: Egcer502ApplicationJson;
+    egcer503ApplicationJSONObject?: Egcer503ApplicationJson;
+    egcer504ApplicationJSONObject?: Egcer504ApplicationJson;
 }

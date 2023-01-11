@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RoutingControl } from "./routingcontrol";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRoutingControlResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var routingcontrol_1 = require("./routingcontrol");
 var UpdateRoutingControlResponse = /** @class */ (function (_super) {
     __extends(UpdateRoutingControlResponse, _super);
     function UpdateRoutingControlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoutingControl" }),
-        __metadata("design:type", RoutingControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoutingControl" }),
+        __metadata("design:type", routingcontrol_1.RoutingControl)
     ], UpdateRoutingControlResponse.prototype, "routingControl", void 0);
     return UpdateRoutingControlResponse;
-}(SpeakeasyBase));
-export { UpdateRoutingControlResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRoutingControlResponse = UpdateRoutingControlResponse;

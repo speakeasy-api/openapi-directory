@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchContainersGroupsNameOrIdResponse = exports.PatchContainersGroupsNameOrIdRequest = exports.PatchContainersGroupsNameOrIdHeaders = exports.PatchContainersGroupsNameOrIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatchContainersGroupsNameOrIdPathParams = /** @class */ (function (_super) {
     __extends(PatchContainersGroupsNameOrIdPathParams, _super);
     function PatchContainersGroupsNameOrIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
         __metadata("design:type", String)
     ], PatchContainersGroupsNameOrIdPathParams.prototype, "nameOrId", void 0);
     return PatchContainersGroupsNameOrIdPathParams;
-}(SpeakeasyBase));
-export { PatchContainersGroupsNameOrIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchContainersGroupsNameOrIdPathParams = PatchContainersGroupsNameOrIdPathParams;
 var PatchContainersGroupsNameOrIdHeaders = /** @class */ (function (_super) {
     __extends(PatchContainersGroupsNameOrIdHeaders, _super);
     function PatchContainersGroupsNameOrIdHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PatchContainersGroupsNameOrIdHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PatchContainersGroupsNameOrIdHeaders.prototype, "xAuthToken", void 0);
     return PatchContainersGroupsNameOrIdHeaders;
-}(SpeakeasyBase));
-export { PatchContainersGroupsNameOrIdHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PatchContainersGroupsNameOrIdHeaders = PatchContainersGroupsNameOrIdHeaders;
 var PatchContainersGroupsNameOrIdRequest = /** @class */ (function (_super) {
     __extends(PatchContainersGroupsNameOrIdRequest, _super);
     function PatchContainersGroupsNameOrIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchContainersGroupsNameOrIdPathParams)
     ], PatchContainersGroupsNameOrIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchContainersGroupsNameOrIdHeaders)
     ], PatchContainersGroupsNameOrIdRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PatchContainersGroupsNameOrIdRequest.prototype, "request", void 0);
     return PatchContainersGroupsNameOrIdRequest;
-}(SpeakeasyBase));
-export { PatchContainersGroupsNameOrIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchContainersGroupsNameOrIdRequest = PatchContainersGroupsNameOrIdRequest;
 var PatchContainersGroupsNameOrIdResponse = /** @class */ (function (_super) {
     __extends(PatchContainersGroupsNameOrIdResponse, _super);
     function PatchContainersGroupsNameOrIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchContainersGroupsNameOrIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchContainersGroupsNameOrIdResponse.prototype, "statusCode", void 0);
     return PatchContainersGroupsNameOrIdResponse;
-}(SpeakeasyBase));
-export { PatchContainersGroupsNameOrIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchContainersGroupsNameOrIdResponse = PatchContainersGroupsNameOrIdResponse;

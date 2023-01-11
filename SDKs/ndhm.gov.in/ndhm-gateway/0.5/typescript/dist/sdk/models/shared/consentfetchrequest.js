@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentFetchRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConsentFetchRequest = /** @class */ (function (_super) {
     __extends(ConsentFetchRequest, _super);
     function ConsentFetchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentId" }),
         __metadata("design:type", String)
     ], ConsentFetchRequest.prototype, "consentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ConsentFetchRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], ConsentFetchRequest.prototype, "timestamp", void 0);
     return ConsentFetchRequest;
-}(SpeakeasyBase));
-export { ConsentFetchRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConsentFetchRequest = ConsentFetchRequest;

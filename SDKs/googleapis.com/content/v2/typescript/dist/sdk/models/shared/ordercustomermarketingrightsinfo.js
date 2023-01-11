@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderCustomerMarketingRightsInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderCustomerMarketingRightsInfo = /** @class */ (function (_super) {
     __extends(OrderCustomerMarketingRightsInfo, _super);
     function OrderCustomerMarketingRightsInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicitMarketingPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicitMarketingPreference" }),
         __metadata("design:type", String)
     ], OrderCustomerMarketingRightsInfo.prototype, "explicitMarketingPreference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedTimestamp" }),
         __metadata("design:type", String)
     ], OrderCustomerMarketingRightsInfo.prototype, "lastUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketingEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketingEmailAddress" }),
         __metadata("design:type", String)
     ], OrderCustomerMarketingRightsInfo.prototype, "marketingEmailAddress", void 0);
     return OrderCustomerMarketingRightsInfo;
-}(SpeakeasyBase));
-export { OrderCustomerMarketingRightsInfo };
+}(utils_1.SpeakeasyBase));
+exports.OrderCustomerMarketingRightsInfo = OrderCustomerMarketingRightsInfo;

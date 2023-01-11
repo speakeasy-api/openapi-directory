@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ElasticConfig extends SpeakeasyBase {
     clusterUri: string;
-    headers: Map<string, string>;
+    headers: Record<string, string>;
     index: string;
     password: string;
     type: string;

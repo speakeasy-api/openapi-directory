@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreatorRolesListRequest, CreatorRolesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: CreatorRolesListRequest = {
   queryParams: {
-    page: 7348434050736803316,
-    pageSize: 8602515491234131430,
+    page: 8717895732742165505,
+    pageSize: 2259404117704393152,
   },
 };
 
-sdk.sdk.creatorRolesList(req).then((res: CreatorRolesListResponse | AxiosError) => {
+sdk.creatorRoles.creatorRolesList(req).then((res: CreatorRolesListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,13 +42,22 @@ sdk.sdk.creatorRolesList(req).then((res: CreatorRolesListResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### creator-roles
 
 * `creatorRolesList` - Get a list of creator positions (jobs).
+
+### creators
+
 * `creatorsList` - Get a list of game creators.
 * `creatorsRead` - Get details of the creator.
+
+### developers
+
 * `developersList` - Get a list of game developers.
 * `developersRead` - Get details of the developer.
+
+### games
+
 * `gamesAchievementsRead` - Get a list of game achievements.
 * `gamesAdditionsList` - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
 * `gamesDevelopmentTeamList` - Get a list of individual creators that were part of the development team.
@@ -64,15 +72,30 @@ sdk.sdk.creatorRolesList(req).then((res: CreatorRolesListResponse | AxiosError) 
 * `gamesSuggestedRead` - Get a list of visually similar games, available only for business and enterprise API users.
 * `gamesTwitchRead` - Get streams on Twitch associated with the game, available only for business and enterprise API users.
 * `gamesYoutubeRead` - Get videos from YouTube associated with the game, available only for business and enterprise API users.
+
+### genres
+
 * `genresList` - Get a list of video game genres.
 * `genresRead` - Get details of the genre.
+
+### platforms
+
 * `platformsList` - Get a list of video game platforms.
 * `platformsListsParentsList` - Get a list of parent platforms.
 * `platformsRead` - Get details of the platform.
+
+### publishers
+
 * `publishersList` - Get a list of video game publishers.
 * `publishersRead` - Get details of the publisher.
+
+### stores
+
 * `storesList` - Get a list of video game storefronts.
 * `storesRead` - Get details of the store.
+
+### tags
+
 * `tagsList` - Get a list of tags.
 * `tagsRead` - Get details of the tag.
 

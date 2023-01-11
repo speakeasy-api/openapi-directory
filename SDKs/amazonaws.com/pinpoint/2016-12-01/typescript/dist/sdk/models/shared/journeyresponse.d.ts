@@ -9,7 +9,7 @@ import { StateEnum } from "./stateenum";
  * Provides information about the status, configuration, and other settings for a journey.
 **/
 export declare class JourneyResponse extends SpeakeasyBase {
-    activities?: Map<string, Activity>;
+    activities?: Record<string, Activity>;
     applicationId: string;
     creationDate?: string;
     id: string;
@@ -25,5 +25,5 @@ export declare class JourneyResponse extends SpeakeasyBase {
     startCondition?: StartCondition;
     state?: StateEnum;
     waitForQuietTime?: boolean;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

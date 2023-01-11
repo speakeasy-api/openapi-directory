@@ -53,5 +53,5 @@ export class PostTokensResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postTokens201ApplicationJsonObject?: PostTokens201ApplicationJson;
+  postTokens201ApplicationJSONObject?: PostTokens201ApplicationJson;
 }

@@ -24,6 +24,6 @@ export declare class UpdateDomainContactResponse extends SpeakeasyBase {
     operationLimitExceeded?: any;
     statusCode: number;
     tldRulesViolation?: any;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
     updateDomainContactResponse?: shared.UpdateDomainContactResponse;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldProperties = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2betaFieldProperties
 /**
  * The basic properties of the field.
@@ -33,17 +36,17 @@ var GoogleAppsDriveLabelsV2betaFieldProperties = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldProperties.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertBeforeField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertBeforeField" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldProperties.prototype, "insertBeforeField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaFieldProperties.prototype, "required", void 0);
     return GoogleAppsDriveLabelsV2betaFieldProperties;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldProperties };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldProperties = GoogleAppsDriveLabelsV2betaFieldProperties;

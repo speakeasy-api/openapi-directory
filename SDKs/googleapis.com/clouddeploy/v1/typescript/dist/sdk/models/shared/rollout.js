@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Metadata } from "./metadata";
-import { Phase } from "./phase";
-export var RolloutApprovalStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RolloutInput = exports.Rollout = exports.RolloutStateEnum = exports.RolloutDeployFailureCauseEnum = exports.RolloutApprovalStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var metadata_1 = require("./metadata");
+var phase_1 = require("./phase");
+var RolloutApprovalStateEnum;
 (function (RolloutApprovalStateEnum) {
     RolloutApprovalStateEnum["ApprovalStateUnspecified"] = "APPROVAL_STATE_UNSPECIFIED";
     RolloutApprovalStateEnum["NeedsApproval"] = "NEEDS_APPROVAL";
     RolloutApprovalStateEnum["DoesNotNeedApproval"] = "DOES_NOT_NEED_APPROVAL";
     RolloutApprovalStateEnum["Approved"] = "APPROVED";
     RolloutApprovalStateEnum["Rejected"] = "REJECTED";
-})(RolloutApprovalStateEnum || (RolloutApprovalStateEnum = {}));
-export var RolloutDeployFailureCauseEnum;
+})(RolloutApprovalStateEnum = exports.RolloutApprovalStateEnum || (exports.RolloutApprovalStateEnum = {}));
+var RolloutDeployFailureCauseEnum;
 (function (RolloutDeployFailureCauseEnum) {
     RolloutDeployFailureCauseEnum["FailureCauseUnspecified"] = "FAILURE_CAUSE_UNSPECIFIED";
     RolloutDeployFailureCauseEnum["CloudBuildUnavailable"] = "CLOUD_BUILD_UNAVAILABLE";
@@ -42,8 +45,8 @@ export var RolloutDeployFailureCauseEnum;
     RolloutDeployFailureCauseEnum["ReleaseFailed"] = "RELEASE_FAILED";
     RolloutDeployFailureCauseEnum["ReleaseAbandoned"] = "RELEASE_ABANDONED";
     RolloutDeployFailureCauseEnum["VerificationConfigNotFound"] = "VERIFICATION_CONFIG_NOT_FOUND";
-})(RolloutDeployFailureCauseEnum || (RolloutDeployFailureCauseEnum = {}));
-export var RolloutStateEnum;
+})(RolloutDeployFailureCauseEnum = exports.RolloutDeployFailureCauseEnum || (exports.RolloutDeployFailureCauseEnum = {}));
+var RolloutStateEnum;
 (function (RolloutStateEnum) {
     RolloutStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     RolloutStateEnum["Succeeded"] = "SUCCEEDED";
@@ -53,7 +56,7 @@ export var RolloutStateEnum;
     RolloutStateEnum["ApprovalRejected"] = "APPROVAL_REJECTED";
     RolloutStateEnum["Pending"] = "PENDING";
     RolloutStateEnum["PendingRelease"] = "PENDING_RELEASE";
-})(RolloutStateEnum || (RolloutStateEnum = {}));
+})(RolloutStateEnum = exports.RolloutStateEnum || (exports.RolloutStateEnum = {}));
 // Rollout
 /**
  * A `Rollout` resource in the Google Cloud Deploy API. A `Rollout` contains information around a specific deployment to a `Target`.
@@ -64,84 +67,84 @@ var Rollout = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], Rollout.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalState" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "approvalState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approveTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approveTime" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "approveTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployEndTime" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "deployEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployFailureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployFailureCause" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "deployFailureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployStartTime" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "deployStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployingBuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployingBuild" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "deployingBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enqueueTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enqueueTime" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "enqueueTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Rollout.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], Rollout.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phases", elemType: Phase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phases", elemType: phase_1.Phase }),
         __metadata("design:type", Array)
     ], Rollout.prototype, "phases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Rollout.prototype, "uid", void 0);
     return Rollout;
-}(SpeakeasyBase));
-export { Rollout };
+}(utils_1.SpeakeasyBase));
+exports.Rollout = Rollout;
 // RolloutInput
 /**
  * A `Rollout` resource in the Google Cloud Deploy API. A `Rollout` contains information around a specific deployment to a `Target`.
@@ -152,33 +155,33 @@ var RolloutInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], RolloutInput.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RolloutInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], RolloutInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], RolloutInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], RolloutInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RolloutInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], RolloutInput.prototype, "targetId", void 0);
     return RolloutInput;
-}(SpeakeasyBase));
-export { RolloutInput };
+}(utils_1.SpeakeasyBase));
+exports.RolloutInput = RolloutInput;

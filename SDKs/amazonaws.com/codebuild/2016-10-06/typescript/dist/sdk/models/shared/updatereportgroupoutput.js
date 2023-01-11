@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportGroup } from "./reportgroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateReportGroupOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportgroup_1 = require("./reportgroup");
 var UpdateReportGroupOutput = /** @class */ (function (_super) {
     __extends(UpdateReportGroupOutput, _super);
     function UpdateReportGroupOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportGroup" }),
-        __metadata("design:type", ReportGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportGroup" }),
+        __metadata("design:type", reportgroup_1.ReportGroup)
     ], UpdateReportGroupOutput.prototype, "reportGroup", void 0);
     return UpdateReportGroupOutput;
-}(SpeakeasyBase));
-export { UpdateReportGroupOutput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateReportGroupOutput = UpdateReportGroupOutput;

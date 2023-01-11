@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var XPingFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.XPingResponse = exports.XPingRequest = exports.XPingPathParams = exports.XPingFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var XPingFormatEnum;
 (function (XPingFormatEnum) {
     XPingFormatEnum["Xml"] = "XML";
     XPingFormatEnum["Json"] = "JSON";
-})(XPingFormatEnum || (XPingFormatEnum = {}));
+})(XPingFormatEnum = exports.XPingFormatEnum || (exports.XPingFormatEnum = {}));
 var XPingPathParams = /** @class */ (function (_super) {
     __extends(XPingPathParams, _super);
     function XPingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], XPingPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=seconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=seconds" }),
         __metadata("design:type", String)
     ], XPingPathParams.prototype, "seconds", void 0);
     return XPingPathParams;
-}(SpeakeasyBase));
-export { XPingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.XPingPathParams = XPingPathParams;
 var XPingRequest = /** @class */ (function (_super) {
     __extends(XPingRequest, _super);
     function XPingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", XPingPathParams)
     ], XPingRequest.prototype, "pathParams", void 0);
     return XPingRequest;
-}(SpeakeasyBase));
-export { XPingRequest };
+}(utils_1.SpeakeasyBase));
+exports.XPingRequest = XPingRequest;
 var XPingResponse = /** @class */ (function (_super) {
     __extends(XPingResponse, _super);
     function XPingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], XPingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], XPingResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], XPingResponse.prototype, "xPing200ApplicationJsonAny", void 0);
+    ], XPingResponse.prototype, "xPing200ApplicationJSONAny", void 0);
     return XPingResponse;
-}(SpeakeasyBase));
-export { XPingResponse };
+}(utils_1.SpeakeasyBase));
+exports.XPingResponse = XPingResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Conditions } from "./googleprivacydlpv2conditions";
-export var GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Expressions = exports.GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2conditions_1 = require("./googleprivacydlpv2conditions");
+var GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum;
 (function (GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum) {
     GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum["LogicalOperatorUnspecified"] = "LOGICAL_OPERATOR_UNSPECIFIED";
     GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum["And"] = "AND";
-})(GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum || (GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum = {}));
+})(GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum = exports.GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum || (exports.GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum = {}));
 // GooglePrivacyDlpV2Expressions
 /**
  * An expression, consisting of an operator and conditions.
@@ -39,13 +42,13 @@ var GooglePrivacyDlpV2Expressions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions" }),
-        __metadata("design:type", GooglePrivacyDlpV2Conditions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions" }),
+        __metadata("design:type", googleprivacydlpv2conditions_1.GooglePrivacyDlpV2Conditions)
     ], GooglePrivacyDlpV2Expressions.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logicalOperator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logicalOperator" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Expressions.prototype, "logicalOperator", void 0);
     return GooglePrivacyDlpV2Expressions;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Expressions };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Expressions = GooglePrivacyDlpV2Expressions;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DocTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Doc = exports.DocTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DocTypeEnum;
 (function (DocTypeEnum) {
     DocTypeEnum["Basic"] = "basic";
     DocTypeEnum["Error"] = "error";
     DocTypeEnum["Link"] = "link";
-})(DocTypeEnum || (DocTypeEnum = {}));
+})(DocTypeEnum = exports.DocTypeEnum || (exports.DocTypeEnum = {}));
 var Doc = /** @class */ (function (_super) {
     __extends(Doc, _super);
     function Doc() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Doc.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], Doc.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], Doc.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentDoc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentDoc" }),
         __metadata("design:type", String)
     ], Doc.prototype, "parentDoc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Doc.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Doc.prototype, "type", void 0);
     return Doc;
-}(SpeakeasyBase));
-export { Doc };
+}(utils_1.SpeakeasyBase));
+exports.Doc = Doc;

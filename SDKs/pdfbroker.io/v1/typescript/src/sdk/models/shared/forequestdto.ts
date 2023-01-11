@@ -15,5 +15,5 @@ export class FoRequestDto extends SpeakeasyBase {
   metadata?: PdfMetadataDto;
 
   @SpeakeasyMetadata({ data: "json, name=Resources" })
-  resources?: Map<string, string>;
+  resources?: Record<string, string>;
 }

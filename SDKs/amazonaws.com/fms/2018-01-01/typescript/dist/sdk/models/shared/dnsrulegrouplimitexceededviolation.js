@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DnsRuleGroupLimitExceededViolation = void 0;
+var utils_1 = require("../../../internal/utils");
 // DnsRuleGroupLimitExceededViolation
 /**
  * The VPC that Firewall Manager was applying a DNS Fireall policy to reached the limit for associated DNS Firewall rule groups. Firewall Manager tried to associate another rule group with the VPC and failed due to the limit.
@@ -33,17 +36,17 @@ var DnsRuleGroupLimitExceededViolation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfRuleGroupsAlreadyAssociated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfRuleGroupsAlreadyAssociated" }),
         __metadata("design:type", Number)
     ], DnsRuleGroupLimitExceededViolation.prototype, "numberOfRuleGroupsAlreadyAssociated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTarget" }),
         __metadata("design:type", String)
     ], DnsRuleGroupLimitExceededViolation.prototype, "violationTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTargetDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTargetDescription" }),
         __metadata("design:type", String)
     ], DnsRuleGroupLimitExceededViolation.prototype, "violationTargetDescription", void 0);
     return DnsRuleGroupLimitExceededViolation;
-}(SpeakeasyBase));
-export { DnsRuleGroupLimitExceededViolation };
+}(utils_1.SpeakeasyBase));
+exports.DnsRuleGroupLimitExceededViolation = DnsRuleGroupLimitExceededViolation;

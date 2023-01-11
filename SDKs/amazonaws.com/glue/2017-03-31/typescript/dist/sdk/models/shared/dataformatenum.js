@@ -1,5 +1,8 @@
-export var DataFormatEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataFormatEnum = void 0;
+var DataFormatEnum;
 (function (DataFormatEnum) {
     DataFormatEnum["Avro"] = "AVRO";
     DataFormatEnum["Json"] = "JSON";
-})(DataFormatEnum || (DataFormatEnum = {}));
+})(DataFormatEnum = exports.DataFormatEnum || (exports.DataFormatEnum = {}));

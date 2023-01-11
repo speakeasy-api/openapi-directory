@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetCognitoEventsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Events" })
-  events?: Map<string, string>;
+  events?: Record<string, string>;
 }

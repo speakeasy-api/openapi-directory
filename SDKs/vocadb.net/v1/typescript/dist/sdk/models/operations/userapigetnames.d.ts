@@ -19,7 +19,7 @@ export declare class UserApiGetNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    userApiGetNames200ApplicationJsonStrings?: string[];
+    userApiGetNames200ApplicationJSONStrings?: string[];
     userApiGetNames200ApplicationJsonpStrings?: string[];
-    userApiGetNames200TextJsonStrings?: string[];
+    userApiGetNames200TextJSONStrings?: string[];
 }

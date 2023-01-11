@@ -16,31 +16,35 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest, GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest, GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest = {
+const req: GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest = {
   queryParams: {
-    aggregateHours: "totam",
+    aggregateHours: "sit",
     allowAsynch: false,
-    contentType: "asperiores",
-    key: "ut",
-    locations: "ex",
-    sendAsDatasource: false,
+    collectStationContributions: true,
+    contentType: "expedita",
+    endDateTime: "consequuntur",
+    includeNormals: false,
+    key: "expedita",
+    locations: "voluptas",
+    maxDistance: "fugit",
+    maxStations: "et",
     shortColumnNames: true,
-    unitGroup: "fugiat",
+    startDateTime: "rerum",
+    unitGroup: "dicta",
   },
 };
 
-sdk.sdk.getVisualCrossingWebServicesRestServicesWeatherdataForecast(req).then((res: GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse | AxiosError) => {
+sdk.historicalWeather.getVisualCrossingWebServicesRestServicesWeatherdataHistory(req).then((res: GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,10 +53,13 @@ sdk.sdk.getVisualCrossingWebServicesRestServicesWeatherdataForecast(req).then((r
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Historical Weather
+
+* `getVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
+
+### Weather Forecast
 
 * `getVisualCrossingWebServicesRestServicesWeatherdataForecast` - Weather Forecast API
-* `getVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
 
 <!-- End SDK Available Operations -->
 

@@ -18,6 +18,6 @@ export declare class GetAoeLiabilityReportOuputRequest extends SpeakeasyBase {
 export declare class GetAoeLiabilityReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getAoeLiabilityReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getAoeLiabilityReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

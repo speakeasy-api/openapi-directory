@@ -7,7 +7,7 @@ import { AccessPreviewStatusReason } from "./accesspreviewstatusreason";
 **/
 export declare class AccessPreview extends SpeakeasyBase {
     analyzerArn: string;
-    configurations: Map<string, Configuration>;
+    configurations: Record<string, Configuration>;
     createdAt: Date;
     id: string;
     status: AccessPreviewStatusEnum;

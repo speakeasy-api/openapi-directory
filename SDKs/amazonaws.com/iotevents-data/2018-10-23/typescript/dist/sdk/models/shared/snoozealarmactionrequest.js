@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnoozeAlarmActionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // SnoozeAlarmActionRequest
 /**
  * Information needed to snooze the alarm.
@@ -33,25 +36,25 @@ var SnoozeAlarmActionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelName" }),
         __metadata("design:type", String)
     ], SnoozeAlarmActionRequest.prototype, "alarmModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValue" }),
         __metadata("design:type", String)
     ], SnoozeAlarmActionRequest.prototype, "keyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], SnoozeAlarmActionRequest.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], SnoozeAlarmActionRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snoozeDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snoozeDuration" }),
         __metadata("design:type", Number)
     ], SnoozeAlarmActionRequest.prototype, "snoozeDuration", void 0);
     return SnoozeAlarmActionRequest;
-}(SpeakeasyBase));
-export { SnoozeAlarmActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.SnoozeAlarmActionRequest = SnoozeAlarmActionRequest;

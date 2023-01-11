@@ -17,5 +17,5 @@ export declare class DescribeSimulationJobBatchResponse extends SpeakeasyBase {
     lastUpdatedAt?: Date;
     pendingRequests?: SimulationJobRequest[];
     status?: SimulationJobBatchStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

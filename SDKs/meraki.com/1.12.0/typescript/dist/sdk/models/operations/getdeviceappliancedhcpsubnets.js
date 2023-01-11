@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceApplianceDhcpSubnetsResponse = exports.GetDeviceApplianceDhcpSubnetsRequest = exports.GetDeviceApplianceDhcpSubnetsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceApplianceDhcpSubnetsPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceApplianceDhcpSubnetsPathParams, _super);
     function GetDeviceApplianceDhcpSubnetsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceApplianceDhcpSubnetsPathParams.prototype, "serial", void 0);
     return GetDeviceApplianceDhcpSubnetsPathParams;
-}(SpeakeasyBase));
-export { GetDeviceApplianceDhcpSubnetsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceApplianceDhcpSubnetsPathParams = GetDeviceApplianceDhcpSubnetsPathParams;
 var GetDeviceApplianceDhcpSubnetsRequest = /** @class */ (function (_super) {
     __extends(GetDeviceApplianceDhcpSubnetsRequest, _super);
     function GetDeviceApplianceDhcpSubnetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceApplianceDhcpSubnetsPathParams)
     ], GetDeviceApplianceDhcpSubnetsRequest.prototype, "pathParams", void 0);
     return GetDeviceApplianceDhcpSubnetsRequest;
-}(SpeakeasyBase));
-export { GetDeviceApplianceDhcpSubnetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceApplianceDhcpSubnetsRequest = GetDeviceApplianceDhcpSubnetsRequest;
 var GetDeviceApplianceDhcpSubnetsResponse = /** @class */ (function (_super) {
     __extends(GetDeviceApplianceDhcpSubnetsResponse, _super);
     function GetDeviceApplianceDhcpSubnetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceApplianceDhcpSubnetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceApplianceDhcpSubnetsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceApplianceDhcpSubnetsResponse.prototype, "getDeviceApplianceDhcpSubnets200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceApplianceDhcpSubnetsResponse.prototype, "getDeviceApplianceDhcpSubnets200ApplicationJSONObject", void 0);
     return GetDeviceApplianceDhcpSubnetsResponse;
-}(SpeakeasyBase));
-export { GetDeviceApplianceDhcpSubnetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceApplianceDhcpSubnetsResponse = GetDeviceApplianceDhcpSubnetsResponse;

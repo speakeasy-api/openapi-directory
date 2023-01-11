@@ -26,5 +26,5 @@ export declare class UpdateEmailIdentityPolicyResponse extends SpeakeasyBase {
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateEmailIdentityPolicyResponse?: Map<string, any>;
+    updateEmailIdentityPolicyResponse?: Record<string, any>;
 }

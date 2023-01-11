@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecurringCharge } from "./recurringcharge";
+import { RecurringChargeList } from "./recurringchargelist";
 
 
 
@@ -20,7 +20,7 @@ export class ReservedDbInstance extends SpeakeasyBase {
   fixedPrice?: number;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   offeringType?: string;
@@ -28,14 +28,14 @@ export class ReservedDbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   productDescription?: string;
 
-  @SpeakeasyMetadata({ elemType: RecurringCharge })
-  recurringCharges?: RecurringCharge[];
+  @SpeakeasyMetadata({ elemType: RecurringChargeList })
+  recurringCharges?: RecurringChargeList[];
 
   @SpeakeasyMetadata()
-  reservedDbInstanceId?: string;
+  reservedDBInstanceId?: string;
 
   @SpeakeasyMetadata()
-  reservedDbInstancesOfferingId?: string;
+  reservedDBInstancesOfferingId?: string;
 
   @SpeakeasyMetadata()
   startTime?: Date;

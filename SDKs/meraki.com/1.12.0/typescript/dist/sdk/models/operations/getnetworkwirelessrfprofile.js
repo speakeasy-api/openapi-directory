@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessRfProfileResponse = exports.GetNetworkWirelessRfProfileRequest = exports.GetNetworkWirelessRfProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessRfProfilePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessRfProfilePathParams, _super);
     function GetNetworkWirelessRfProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessRfProfilePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rfProfileId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessRfProfilePathParams.prototype, "rfProfileId", void 0);
     return GetNetworkWirelessRfProfilePathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessRfProfilePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessRfProfilePathParams = GetNetworkWirelessRfProfilePathParams;
 var GetNetworkWirelessRfProfileRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessRfProfileRequest, _super);
     function GetNetworkWirelessRfProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessRfProfilePathParams)
     ], GetNetworkWirelessRfProfileRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessRfProfileRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessRfProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessRfProfileRequest = GetNetworkWirelessRfProfileRequest;
 var GetNetworkWirelessRfProfileResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessRfProfileResponse, _super);
     function GetNetworkWirelessRfProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessRfProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessRfProfileResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessRfProfileResponse.prototype, "getNetworkWirelessRfProfile200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessRfProfileResponse.prototype, "getNetworkWirelessRfProfile200ApplicationJSONObject", void 0);
     return GetNetworkWirelessRfProfileResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessRfProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessRfProfileResponse = GetNetworkWirelessRfProfileResponse;

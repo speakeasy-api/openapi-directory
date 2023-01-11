@@ -7,7 +7,7 @@ export declare class ConfirmsPlanting2RequestBody extends SpeakeasyBase {
     transactionId: string;
 }
 export declare class ConfirmsPlanting2Request extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: ConfirmsPlanting2RequestBody;
 }
 export declare class ConfirmsPlanting2Response extends SpeakeasyBase {

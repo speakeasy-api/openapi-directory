@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerOverrides } from "./containeroverrides";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodePropertyOverride = void 0;
+var utils_1 = require("../../../internal/utils");
+var containeroverrides_1 = require("./containeroverrides");
 // NodePropertyOverride
 /**
  * Object representing any node overrides to a job definition that's used in a <a>SubmitJob</a> API operation.
@@ -34,13 +37,13 @@ var NodePropertyOverride = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerOverrides" }),
-        __metadata("design:type", ContainerOverrides)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerOverrides" }),
+        __metadata("design:type", containeroverrides_1.ContainerOverrides)
     ], NodePropertyOverride.prototype, "containerOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetNodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetNodes" }),
         __metadata("design:type", String)
     ], NodePropertyOverride.prototype, "targetNodes", void 0);
     return NodePropertyOverride;
-}(SpeakeasyBase));
-export { NodePropertyOverride };
+}(utils_1.SpeakeasyBase));
+exports.NodePropertyOverride = NodePropertyOverride;

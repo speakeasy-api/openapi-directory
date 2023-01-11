@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceHealthSummary } from "./instancehealthsummary";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { ResourceLocation } from "./resourcelocation";
-import { LoadBalancerProtocolEnum } from "./loadbalancerprotocolenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { LoadBalancerStateEnum } from "./loadbalancerstateenum";
-import { Tag } from "./tag";
-import { LoadBalancerTlsCertificateSummary } from "./loadbalancertlscertificatesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancer = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancehealthsummary_1 = require("./instancehealthsummary");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var resourcelocation_1 = require("./resourcelocation");
+var loadbalancerprotocolenum_1 = require("./loadbalancerprotocolenum");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var loadbalancerstateenum_1 = require("./loadbalancerstateenum");
+var tag_1 = require("./tag");
+var loadbalancertlscertificatesummary_1 = require("./loadbalancertlscertificatesummary");
 // LoadBalancer
 /**
  * Describes a load balancer.
@@ -41,73 +44,73 @@ var LoadBalancer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationOptions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationOptions" }),
+        __metadata("design:type", Object)
     ], LoadBalancer.prototype, "configurationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], LoadBalancer.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsName" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheckPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheckPath" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "healthCheckPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceHealthSummary", elemType: InstanceHealthSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceHealthSummary", elemType: instancehealthsummary_1.InstanceHealthSummary }),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "instanceHealthSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instancePort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instancePort" }),
         __metadata("design:type", Number)
     ], LoadBalancer.prototype, "instancePort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], LoadBalancer.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicPorts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicPorts" }),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "publicPorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tlsCertificateSummaries", elemType: LoadBalancerTlsCertificateSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tlsCertificateSummaries", elemType: loadbalancertlscertificatesummary_1.LoadBalancerTlsCertificateSummary }),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "tlsCertificateSummaries", void 0);
     return LoadBalancer;
-}(SpeakeasyBase));
-export { LoadBalancer };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancer = LoadBalancer;

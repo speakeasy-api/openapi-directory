@@ -18,7 +18,7 @@ export class AccountSettings extends SpeakeasyBase {
   maxJobTimeoutMinutes?: number;
 
   @SpeakeasyMetadata({ data: "json, name=maxSlots" })
-  maxSlots?: Map<string, number>;
+  maxSlots?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=skipAppResign" })
   skipAppResign?: boolean;
@@ -27,8 +27,8 @@ export class AccountSettings extends SpeakeasyBase {
   trialMinutes?: TrialMinutes;
 
   @SpeakeasyMetadata({ data: "json, name=unmeteredDevices" })
-  unmeteredDevices?: Map<string, number>;
+  unmeteredDevices?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=unmeteredRemoteAccessDevices" })
-  unmeteredRemoteAccessDevices?: Map<string, number>;
+  unmeteredRemoteAccessDevices?: Record<string, number>;
 }

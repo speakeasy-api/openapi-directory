@@ -8,5 +8,5 @@ export declare class ResumeRequest extends SpeakeasyBase {
 export declare class ResumeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    resume200ApplicationJsonString?: string;
+    resume200ApplicationJSONString?: string;
 }

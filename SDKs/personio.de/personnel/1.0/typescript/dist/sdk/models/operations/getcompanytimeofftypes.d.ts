@@ -13,6 +13,6 @@ export declare class GetCompanyTimeOffTypesRequest extends SpeakeasyBase {
 }
 export declare class GetCompanyTimeOffTypesResponse extends SpeakeasyBase {
     contentType: string;
-    getCompanyTimeOffTypes200ApplicationJsonObject?: GetCompanyTimeOffTypes200ApplicationJson;
     statusCode: number;
+    getCompanyTimeOffTypes200ApplicationJSONObject?: GetCompanyTimeOffTypes200ApplicationJson;
 }

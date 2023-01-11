@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointMatcher } from "./endpointmatcher";
-import { TrafficPortSelector } from "./trafficportselector";
-export var EndpointPolicyTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointPolicyInput = exports.EndpointPolicy = exports.EndpointPolicyTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointmatcher_1 = require("./endpointmatcher");
+var trafficportselector_1 = require("./trafficportselector");
+var EndpointPolicyTypeEnum;
 (function (EndpointPolicyTypeEnum) {
     EndpointPolicyTypeEnum["EndpointPolicyTypeUnspecified"] = "ENDPOINT_POLICY_TYPE_UNSPECIFIED";
     EndpointPolicyTypeEnum["SidecarProxy"] = "SIDECAR_PROXY";
     EndpointPolicyTypeEnum["GrpcServer"] = "GRPC_SERVER";
-})(EndpointPolicyTypeEnum || (EndpointPolicyTypeEnum = {}));
-// EndpointPolicyInput
-/**
- * EndpointPolicy is a resource that helps apply desired configuration on the endpoints that match specific criteria. For example, this resource can be used to apply "authentication config" an all endpoints that serve on port 8080.
-**/
-var EndpointPolicyInput = /** @class */ (function (_super) {
-    __extends(EndpointPolicyInput, _super);
-    function EndpointPolicyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationPolicy" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "authorizationPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientTlsPolicy" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "clientTlsPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointMatcher" }),
-        __metadata("design:type", EndpointMatcher)
-    ], EndpointPolicyInput.prototype, "endpointMatcher", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], EndpointPolicyInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverTlsPolicy" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "serverTlsPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficPortSelector" }),
-        __metadata("design:type", TrafficPortSelector)
-    ], EndpointPolicyInput.prototype, "trafficPortSelector", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], EndpointPolicyInput.prototype, "type", void 0);
-    return EndpointPolicyInput;
-}(SpeakeasyBase));
-export { EndpointPolicyInput };
+})(EndpointPolicyTypeEnum = exports.EndpointPolicyTypeEnum || (exports.EndpointPolicyTypeEnum = {}));
 // EndpointPolicy
 /**
  * EndpointPolicy is a resource that helps apply desired configuration on the endpoints that match specific criteria. For example, this resource can be used to apply "authentication config" an all endpoints that serve on port 8080.
@@ -89,49 +44,97 @@ var EndpointPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationPolicy" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "authorizationPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientTlsPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientTlsPolicy" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "clientTlsPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointMatcher" }),
-        __metadata("design:type", EndpointMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointMatcher" }),
+        __metadata("design:type", endpointmatcher_1.EndpointMatcher)
     ], EndpointPolicy.prototype, "endpointMatcher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], EndpointPolicy.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverTlsPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverTlsPolicy" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "serverTlsPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficPortSelector" }),
-        __metadata("design:type", TrafficPortSelector)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficPortSelector" }),
+        __metadata("design:type", trafficportselector_1.TrafficPortSelector)
     ], EndpointPolicy.prototype, "trafficPortSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], EndpointPolicy.prototype, "updateTime", void 0);
     return EndpointPolicy;
-}(SpeakeasyBase));
-export { EndpointPolicy };
+}(utils_1.SpeakeasyBase));
+exports.EndpointPolicy = EndpointPolicy;
+// EndpointPolicyInput
+/**
+ * EndpointPolicy is a resource that helps apply desired configuration on the endpoints that match specific criteria. For example, this resource can be used to apply "authentication config" an all endpoints that serve on port 8080.
+**/
+var EndpointPolicyInput = /** @class */ (function (_super) {
+    __extends(EndpointPolicyInput, _super);
+    function EndpointPolicyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationPolicy" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "authorizationPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientTlsPolicy" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "clientTlsPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointMatcher" }),
+        __metadata("design:type", endpointmatcher_1.EndpointMatcher)
+    ], EndpointPolicyInput.prototype, "endpointMatcher", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], EndpointPolicyInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverTlsPolicy" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "serverTlsPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficPortSelector" }),
+        __metadata("design:type", trafficportselector_1.TrafficPortSelector)
+    ], EndpointPolicyInput.prototype, "trafficPortSelector", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], EndpointPolicyInput.prototype, "type", void 0);
+    return EndpointPolicyInput;
+}(utils_1.SpeakeasyBase));
+exports.EndpointPolicyInput = EndpointPolicyInput;

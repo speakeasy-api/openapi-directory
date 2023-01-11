@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendAnalyticsResponse = exports.SendAnalyticsRequest = exports.SendAnalyticsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SendAnalyticsQueryParams = /** @class */ (function (_super) {
     __extends(SendAnalyticsQueryParams, _super);
     function SendAnalyticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=campaign_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=campaign_id" }),
         __metadata("design:type", String)
     ], SendAnalyticsQueryParams.prototype, "campaignId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], SendAnalyticsQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], SendAnalyticsQueryParams.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=send_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=send_id" }),
         __metadata("design:type", String)
     ], SendAnalyticsQueryParams.prototype, "sendId", void 0);
     return SendAnalyticsQueryParams;
-}(SpeakeasyBase));
-export { SendAnalyticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SendAnalyticsQueryParams = SendAnalyticsQueryParams;
 var SendAnalyticsRequest = /** @class */ (function (_super) {
     __extends(SendAnalyticsRequest, _super);
     function SendAnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendAnalyticsQueryParams)
     ], SendAnalyticsRequest.prototype, "queryParams", void 0);
     return SendAnalyticsRequest;
-}(SpeakeasyBase));
-export { SendAnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SendAnalyticsRequest = SendAnalyticsRequest;
 var SendAnalyticsResponse = /** @class */ (function (_super) {
     __extends(SendAnalyticsResponse, _super);
     function SendAnalyticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SendAnalyticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SendAnalyticsResponse.prototype, "statusCode", void 0);
     return SendAnalyticsResponse;
-}(SpeakeasyBase));
-export { SendAnalyticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SendAnalyticsResponse = SendAnalyticsResponse;

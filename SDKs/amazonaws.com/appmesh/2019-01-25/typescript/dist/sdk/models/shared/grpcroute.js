@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcRouteAction } from "./grpcrouteaction";
-import { GrpcRouteMatch } from "./grpcroutematch";
-import { GrpcRetryPolicy } from "./grpcretrypolicy";
-import { GrpcTimeout } from "./grpctimeout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrpcRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcrouteaction_1 = require("./grpcrouteaction");
+var grpcroutematch_1 = require("./grpcroutematch");
+var grpcretrypolicy_1 = require("./grpcretrypolicy");
+var grpctimeout_1 = require("./grpctimeout");
 // GrpcRoute
 /**
  * An object that represents a gRPC route type.
@@ -37,21 +40,21 @@ var GrpcRoute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", GrpcRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", grpcrouteaction_1.GrpcRouteAction)
     ], GrpcRoute.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=match" }),
-        __metadata("design:type", GrpcRouteMatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=match" }),
+        __metadata("design:type", grpcroutematch_1.GrpcRouteMatch)
     ], GrpcRoute.prototype, "match", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryPolicy" }),
-        __metadata("design:type", GrpcRetryPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryPolicy" }),
+        __metadata("design:type", grpcretrypolicy_1.GrpcRetryPolicy)
     ], GrpcRoute.prototype, "retryPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
-        __metadata("design:type", GrpcTimeout)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
+        __metadata("design:type", grpctimeout_1.GrpcTimeout)
     ], GrpcRoute.prototype, "timeout", void 0);
     return GrpcRoute;
-}(SpeakeasyBase));
-export { GrpcRoute };
+}(utils_1.SpeakeasyBase));
+exports.GrpcRoute = GrpcRoute;

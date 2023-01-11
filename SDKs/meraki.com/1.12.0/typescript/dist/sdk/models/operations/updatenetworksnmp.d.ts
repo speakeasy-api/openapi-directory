@@ -23,5 +23,5 @@ export declare class UpdateNetworkSnmpRequest extends SpeakeasyBase {
 export declare class UpdateNetworkSnmpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSnmp200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSnmp200ApplicationJSONObject?: Record<string, any>;
 }

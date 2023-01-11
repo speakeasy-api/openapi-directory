@@ -50,5 +50,5 @@ export class GetItemsForPortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getItemsForPortfolio200ApplicationJsonObject?: GetItemsForPortfolio200ApplicationJson;
+  getItemsForPortfolio200ApplicationJSONObject?: GetItemsForPortfolio200ApplicationJson;
 }

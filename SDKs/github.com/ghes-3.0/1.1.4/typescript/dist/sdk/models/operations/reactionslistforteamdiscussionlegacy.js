@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,101 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsListForTeamDiscussionLegacyResponse = exports.ReactionsListForTeamDiscussionLegacyRequest = exports.ReactionsListForTeamDiscussionLegacyQueryParams = exports.ReactionsListForTeamDiscussionLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReactionsListForTeamDiscussionLegacyPathParams = /** @class */ (function (_super) {
     __extends(ReactionsListForTeamDiscussionLegacyPathParams, _super);
     function ReactionsListForTeamDiscussionLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], ReactionsListForTeamDiscussionLegacyPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], ReactionsListForTeamDiscussionLegacyPathParams.prototype, "teamId", void 0);
     return ReactionsListForTeamDiscussionLegacyPathParams;
-}(SpeakeasyBase));
-export { ReactionsListForTeamDiscussionLegacyPathParams };
-export var ReactionsListForTeamDiscussionLegacyContentEnum;
-(function (ReactionsListForTeamDiscussionLegacyContentEnum) {
-    ReactionsListForTeamDiscussionLegacyContentEnum["Plus1"] = "+1";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Minus1"] = "-1";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Laugh"] = "laugh";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Confused"] = "confused";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Heart"] = "heart";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Hooray"] = "hooray";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Rocket"] = "rocket";
-    ReactionsListForTeamDiscussionLegacyContentEnum["Eyes"] = "eyes";
-})(ReactionsListForTeamDiscussionLegacyContentEnum || (ReactionsListForTeamDiscussionLegacyContentEnum = {}));
+}(utils_1.SpeakeasyBase));
+exports.ReactionsListForTeamDiscussionLegacyPathParams = ReactionsListForTeamDiscussionLegacyPathParams;
 var ReactionsListForTeamDiscussionLegacyQueryParams = /** @class */ (function (_super) {
     __extends(ReactionsListForTeamDiscussionLegacyQueryParams, _super);
     function ReactionsListForTeamDiscussionLegacyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=content" }),
         __metadata("design:type", String)
     ], ReactionsListForTeamDiscussionLegacyQueryParams.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ReactionsListForTeamDiscussionLegacyQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], ReactionsListForTeamDiscussionLegacyQueryParams.prototype, "perPage", void 0);
     return ReactionsListForTeamDiscussionLegacyQueryParams;
-}(SpeakeasyBase));
-export { ReactionsListForTeamDiscussionLegacyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsListForTeamDiscussionLegacyQueryParams = ReactionsListForTeamDiscussionLegacyQueryParams;
 var ReactionsListForTeamDiscussionLegacyRequest = /** @class */ (function (_super) {
     __extends(ReactionsListForTeamDiscussionLegacyRequest, _super);
     function ReactionsListForTeamDiscussionLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsListForTeamDiscussionLegacyPathParams)
     ], ReactionsListForTeamDiscussionLegacyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsListForTeamDiscussionLegacyQueryParams)
     ], ReactionsListForTeamDiscussionLegacyRequest.prototype, "queryParams", void 0);
     return ReactionsListForTeamDiscussionLegacyRequest;
-}(SpeakeasyBase));
-export { ReactionsListForTeamDiscussionLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsListForTeamDiscussionLegacyRequest = ReactionsListForTeamDiscussionLegacyRequest;
 var ReactionsListForTeamDiscussionLegacyResponse = /** @class */ (function (_super) {
     __extends(ReactionsListForTeamDiscussionLegacyResponse, _super);
     function ReactionsListForTeamDiscussionLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsListForTeamDiscussionLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReactionsListForTeamDiscussionLegacyResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsListForTeamDiscussionLegacyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Reaction }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Reaction }),
         __metadata("design:type", Array)
     ], ReactionsListForTeamDiscussionLegacyResponse.prototype, "reactions", void 0);
     return ReactionsListForTeamDiscussionLegacyResponse;
-}(SpeakeasyBase));
-export { ReactionsListForTeamDiscussionLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsListForTeamDiscussionLegacyResponse = ReactionsListForTeamDiscussionLegacyResponse;

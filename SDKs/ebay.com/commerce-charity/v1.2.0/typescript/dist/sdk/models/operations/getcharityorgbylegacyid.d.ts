@@ -4,7 +4,7 @@ export declare class GetCharityOrgByLegacyIdQueryParams extends SpeakeasyBase {
     legacyCharityOrgId: string;
 }
 export declare class GetCharityOrgByLegacyIdHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class GetCharityOrgByLegacyIdSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

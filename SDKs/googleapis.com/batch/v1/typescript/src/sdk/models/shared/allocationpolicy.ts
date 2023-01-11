@@ -15,7 +15,7 @@ export class AllocationPolicy extends SpeakeasyBase {
   instances?: InstancePolicyOrTemplate[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=location" })
   location?: LocationPolicy;

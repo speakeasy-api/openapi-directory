@@ -10,6 +10,6 @@ export declare class UpdateArtifactVersionStateRequest extends SpeakeasyBase {
 }
 export declare class UpdateArtifactVersionStateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

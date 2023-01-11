@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NewTransitVirtualInterface } from "./newtransitvirtualinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTransitVirtualInterfaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var newtransitvirtualinterface_1 = require("./newtransitvirtualinterface");
 var CreateTransitVirtualInterfaceRequest = /** @class */ (function (_super) {
     __extends(CreateTransitVirtualInterfaceRequest, _super);
     function CreateTransitVirtualInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], CreateTransitVirtualInterfaceRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newTransitVirtualInterface" }),
-        __metadata("design:type", NewTransitVirtualInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newTransitVirtualInterface" }),
+        __metadata("design:type", newtransitvirtualinterface_1.NewTransitVirtualInterface)
     ], CreateTransitVirtualInterfaceRequest.prototype, "newTransitVirtualInterface", void 0);
     return CreateTransitVirtualInterfaceRequest;
-}(SpeakeasyBase));
-export { CreateTransitVirtualInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitVirtualInterfaceRequest = CreateTransitVirtualInterfaceRequest;

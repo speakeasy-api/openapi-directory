@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BtcerRequest, BtcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: BtcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certType: "non",
-      dateofEvent: "reiciendis",
-      regisNumber: "id",
-      year: "aut",
+      certType: "sit",
+      dateofEvent: "voluptas",
+      regisNumber: "culpa",
+      year: "expedita",
     },
-    consentArtifact: "harum",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "quaerat",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.btcer(req).then((res: BtcerResponse | AxiosError) => {
+sdk.apIs.btcer(req).then((res: BtcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.btcer(req).then((res: BtcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `btcer` - Birth Certificate
 * `dtcer` - Death Certificate

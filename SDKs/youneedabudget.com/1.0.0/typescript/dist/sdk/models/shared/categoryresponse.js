@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryResponse = exports.CategoryResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var category_1 = require("./category");
 var CategoryResponseData = /** @class */ (function (_super) {
     __extends(CategoryResponseData, _super);
     function CategoryResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
-        __metadata("design:type", Category)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
+        __metadata("design:type", category_1.Category)
     ], CategoryResponseData.prototype, "category", void 0);
     return CategoryResponseData;
-}(SpeakeasyBase));
-export { CategoryResponseData };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResponseData = CategoryResponseData;
 var CategoryResponse = /** @class */ (function (_super) {
     __extends(CategoryResponse, _super);
     function CategoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CategoryResponseData)
     ], CategoryResponse.prototype, "data", void 0);
     return CategoryResponse;
-}(SpeakeasyBase));
-export { CategoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResponse = CategoryResponse;

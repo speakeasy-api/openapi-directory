@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Alarm } from "./alarm";
-import { PredictiveScalingConfiguration } from "./predictivescalingconfiguration";
-import { StepAdjustment } from "./stepadjustment";
-import { TargetTrackingConfiguration } from "./targettrackingconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScalingPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarm_1 = require("./alarm");
+var predictivescalingconfiguration_1 = require("./predictivescalingconfiguration");
+var stepadjustment_1 = require("./stepadjustment");
+var targettrackingconfiguration_1 = require("./targettrackingconfiguration");
 // ScalingPolicy
 /**
  * Describes a scaling policy.
@@ -37,69 +40,69 @@ var ScalingPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScalingPolicy.prototype, "adjustmentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Alarm }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: alarm_1.Alarm }),
         __metadata("design:type", Array)
     ], ScalingPolicy.prototype, "alarms", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScalingPolicy.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScalingPolicy.prototype, "cooldown", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ScalingPolicy.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScalingPolicy.prototype, "estimatedInstanceWarmup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScalingPolicy.prototype, "metricAggregationType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScalingPolicy.prototype, "minAdjustmentMagnitude", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScalingPolicy.prototype, "minAdjustmentStep", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ScalingPolicy.prototype, "policyArn", void 0);
+    ], ScalingPolicy.prototype, "policyARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScalingPolicy.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScalingPolicy.prototype, "policyType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PredictiveScalingConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", predictivescalingconfiguration_1.PredictiveScalingConfiguration)
     ], ScalingPolicy.prototype, "predictiveScalingConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScalingPolicy.prototype, "scalingAdjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: StepAdjustment }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: stepadjustment_1.StepAdjustment }),
         __metadata("design:type", Array)
     ], ScalingPolicy.prototype, "stepAdjustments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TargetTrackingConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", targettrackingconfiguration_1.TargetTrackingConfiguration)
     ], ScalingPolicy.prototype, "targetTrackingConfiguration", void 0);
     return ScalingPolicy;
-}(SpeakeasyBase));
-export { ScalingPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ScalingPolicy = ScalingPolicy;

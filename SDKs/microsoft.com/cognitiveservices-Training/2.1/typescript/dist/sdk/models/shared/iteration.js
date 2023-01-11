@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IterationClassificationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IterationInput = exports.Iteration = exports.IterationClassificationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IterationClassificationTypeEnum;
 (function (IterationClassificationTypeEnum) {
     IterationClassificationTypeEnum["Multiclass"] = "Multiclass";
     IterationClassificationTypeEnum["Multilabel"] = "Multilabel";
-})(IterationClassificationTypeEnum || (IterationClassificationTypeEnum = {}));
+})(IterationClassificationTypeEnum = exports.IterationClassificationTypeEnum || (exports.IterationClassificationTypeEnum = {}));
 // Iteration
 /**
  * Iteration model to be sent over JSON
@@ -38,52 +41,52 @@ var Iteration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classificationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classificationType" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "classificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Iteration.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainId" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "domainId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportable" }),
         __metadata("design:type", Boolean)
     ], Iteration.prototype, "exportable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefault" }),
         __metadata("design:type", Boolean)
     ], Iteration.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModified" }),
         __metadata("design:type", Date)
     ], Iteration.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Iteration.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainedAt" }),
         __metadata("design:type", Date)
     ], Iteration.prototype, "trainedAt", void 0);
     return Iteration;
-}(SpeakeasyBase));
-export { Iteration };
+}(utils_1.SpeakeasyBase));
+exports.Iteration = Iteration;
 // IterationInput
 /**
  * Iteration model to be sent over JSON
@@ -94,13 +97,13 @@ var IterationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefault, form, name=isDefault;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefault, form, name=isDefault;" }),
         __metadata("design:type", Boolean)
     ], IterationInput.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name, form, name=name;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name, form, name=name;" }),
         __metadata("design:type", String)
     ], IterationInput.prototype, "name", void 0);
     return IterationInput;
-}(SpeakeasyBase));
-export { IterationInput };
+}(utils_1.SpeakeasyBase));
+exports.IterationInput = IterationInput;

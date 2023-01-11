@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestCountAllocation = void 0;
+var utils_1 = require("../../../internal/utils");
 var RequestCountAllocation = /** @class */ (function (_super) {
     __extends(RequestCountAllocation, _super);
     function RequestCountAllocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxy" }),
         __metadata("design:type", Number)
     ], RequestCountAllocation.prototype, "proxy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unify" }),
         __metadata("design:type", Number)
     ], RequestCountAllocation.prototype, "unify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vault" }),
         __metadata("design:type", Number)
     ], RequestCountAllocation.prototype, "vault", void 0);
     return RequestCountAllocation;
-}(SpeakeasyBase));
-export { RequestCountAllocation };
+}(utils_1.SpeakeasyBase));
+exports.RequestCountAllocation = RequestCountAllocation;

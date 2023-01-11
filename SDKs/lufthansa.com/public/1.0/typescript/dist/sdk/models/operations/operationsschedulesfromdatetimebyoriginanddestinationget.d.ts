@@ -24,6 +24,6 @@ export declare class OperationsSchedulesFromDateTimeByOriginAndDestinationGetReq
 }
 export declare class OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse extends SpeakeasyBase {
     contentType: string;
-    operationsSchedulesFromDateTimeByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+    operationsSchedulesFromDateTimeByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

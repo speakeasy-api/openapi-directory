@@ -14,21 +14,10 @@ export class ReactionsListForTeamDiscussionCommentLegacyPathParams extends Speak
   teamId: number;
 }
 
-export enum ReactionsListForTeamDiscussionCommentLegacyContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
-
 
 export class ReactionsListForTeamDiscussionCommentLegacyQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=content" })
-  content?: ReactionsListForTeamDiscussionCommentLegacyContentEnum;
+  content?: shared.CommentNumberEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -52,7 +41,7 @@ export class ReactionsListForTeamDiscussionCommentLegacyResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageOcrPhotoRecognizeBusinessCardResponse = exports.ImageOcrPhotoRecognizeBusinessCardRequest = exports.ImageOcrPhotoRecognizeBusinessCardSecurity = exports.ImageOcrPhotoRecognizeBusinessCardRequestBody = exports.ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile = /** @class */ (function (_super) {
     __extends(ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile, _super);
     function ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=imageFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=imageFile" }),
         __metadata("design:type", String)
     ], ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile.prototype, "imageFile", void 0);
     return ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile;
-}(SpeakeasyBase));
-export { ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile };
+}(utils_1.SpeakeasyBase));
+exports.ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile = ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile;
 var ImageOcrPhotoRecognizeBusinessCardRequestBody = /** @class */ (function (_super) {
     __extends(ImageOcrPhotoRecognizeBusinessCardRequestBody, _super);
     function ImageOcrPhotoRecognizeBusinessCardRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", ImageOcrPhotoRecognizeBusinessCardRequestBodyImageFile)
     ], ImageOcrPhotoRecognizeBusinessCardRequestBody.prototype, "imageFile", void 0);
     return ImageOcrPhotoRecognizeBusinessCardRequestBody;
-}(SpeakeasyBase));
-export { ImageOcrPhotoRecognizeBusinessCardRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ImageOcrPhotoRecognizeBusinessCardRequestBody = ImageOcrPhotoRecognizeBusinessCardRequestBody;
 var ImageOcrPhotoRecognizeBusinessCardSecurity = /** @class */ (function (_super) {
     __extends(ImageOcrPhotoRecognizeBusinessCardSecurity, _super);
     function ImageOcrPhotoRecognizeBusinessCardSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApikey)
     ], ImageOcrPhotoRecognizeBusinessCardSecurity.prototype, "apikey", void 0);
     return ImageOcrPhotoRecognizeBusinessCardSecurity;
-}(SpeakeasyBase));
-export { ImageOcrPhotoRecognizeBusinessCardSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ImageOcrPhotoRecognizeBusinessCardSecurity = ImageOcrPhotoRecognizeBusinessCardSecurity;
 var ImageOcrPhotoRecognizeBusinessCardRequest = /** @class */ (function (_super) {
     __extends(ImageOcrPhotoRecognizeBusinessCardRequest, _super);
     function ImageOcrPhotoRecognizeBusinessCardRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", ImageOcrPhotoRecognizeBusinessCardRequestBody)
     ], ImageOcrPhotoRecognizeBusinessCardRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ImageOcrPhotoRecognizeBusinessCardSecurity)
     ], ImageOcrPhotoRecognizeBusinessCardRequest.prototype, "security", void 0);
     return ImageOcrPhotoRecognizeBusinessCardRequest;
-}(SpeakeasyBase));
-export { ImageOcrPhotoRecognizeBusinessCardRequest };
+}(utils_1.SpeakeasyBase));
+exports.ImageOcrPhotoRecognizeBusinessCardRequest = ImageOcrPhotoRecognizeBusinessCardRequest;
 var ImageOcrPhotoRecognizeBusinessCardResponse = /** @class */ (function (_super) {
     __extends(ImageOcrPhotoRecognizeBusinessCardResponse, _super);
     function ImageOcrPhotoRecognizeBusinessCardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ImageOcrPhotoRecognizeBusinessCardResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BusinessCardRecognitionResult)
     ], ImageOcrPhotoRecognizeBusinessCardResponse.prototype, "businessCardRecognitionResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ImageOcrPhotoRecognizeBusinessCardResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ImageOcrPhotoRecognizeBusinessCardResponse.prototype, "statusCode", void 0);
     return ImageOcrPhotoRecognizeBusinessCardResponse;
-}(SpeakeasyBase));
-export { ImageOcrPhotoRecognizeBusinessCardResponse };
+}(utils_1.SpeakeasyBase));
+exports.ImageOcrPhotoRecognizeBusinessCardResponse = ImageOcrPhotoRecognizeBusinessCardResponse;

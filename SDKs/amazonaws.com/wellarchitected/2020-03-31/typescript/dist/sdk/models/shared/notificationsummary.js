@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LensUpgradeSummary } from "./lensupgradesummary";
-import { NotificationTypeEnum } from "./notificationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var lensupgradesummary_1 = require("./lensupgradesummary");
+var notificationtypeenum_1 = require("./notificationtypeenum");
 // NotificationSummary
 /**
  * A notification summary return object.
@@ -35,13 +38,13 @@ var NotificationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LensUpgradeSummary" }),
-        __metadata("design:type", LensUpgradeSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LensUpgradeSummary" }),
+        __metadata("design:type", lensupgradesummary_1.LensUpgradeSummary)
     ], NotificationSummary.prototype, "lensUpgradeSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], NotificationSummary.prototype, "type", void 0);
     return NotificationSummary;
-}(SpeakeasyBase));
-export { NotificationSummary };
+}(utils_1.SpeakeasyBase));
+exports.NotificationSummary = NotificationSummary;

@@ -13,5 +13,5 @@ export declare class PostAuthorizablesRequest extends SpeakeasyBase {
 export declare class PostAuthorizablesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postAuthorizablesDefaultTextHtmlString?: string;
+    postAuthorizablesDefaultTextHTMLString?: string;
 }

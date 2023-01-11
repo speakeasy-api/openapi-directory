@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MatchAttributes } from "./matchattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var matchattributes_1 = require("./matchattributes");
 // RuleDefinition
 /**
  * The inspection criteria and action for a single stateless rule. AWS Network Firewall inspects each packet for the specified matching criteria. When a packet matches the criteria, Network Firewall performs the rule's actions on the packet.
@@ -34,13 +37,13 @@ var RuleDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Actions" }),
         __metadata("design:type", Array)
     ], RuleDefinition.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MatchAttributes" }),
-        __metadata("design:type", MatchAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MatchAttributes" }),
+        __metadata("design:type", matchattributes_1.MatchAttributes)
     ], RuleDefinition.prototype, "matchAttributes", void 0);
     return RuleDefinition;
-}(SpeakeasyBase));
-export { RuleDefinition };
+}(utils_1.SpeakeasyBase));
+exports.RuleDefinition = RuleDefinition;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountQuota = void 0;
+var utils_1 = require("../../../internal/utils");
 // AccountQuota
 /**
  * Describes a quota for an Amazon Web Services account, for example the number of replication instances allowed.
@@ -33,17 +36,17 @@ var AccountQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountQuotaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountQuotaName" }),
         __metadata("design:type", String)
     ], AccountQuota.prototype, "accountQuotaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Max" }),
         __metadata("design:type", Number)
     ], AccountQuota.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Used" }),
         __metadata("design:type", Number)
     ], AccountQuota.prototype, "used", void 0);
     return AccountQuota;
-}(SpeakeasyBase));
-export { AccountQuota };
+}(utils_1.SpeakeasyBase));
+exports.AccountQuota = AccountQuota;

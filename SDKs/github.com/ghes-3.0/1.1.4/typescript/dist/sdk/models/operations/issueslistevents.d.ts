@@ -15,7 +15,7 @@ export declare class IssuesListEventsRequest extends SpeakeasyBase {
 }
 export declare class IssuesListEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issueEventForIssues?: shared.IssueEventForIssue[];

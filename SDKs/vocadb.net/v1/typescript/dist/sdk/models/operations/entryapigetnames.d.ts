@@ -17,8 +17,8 @@ export declare class EntryApiGetNamesRequest extends SpeakeasyBase {
 export declare class EntryApiGetNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    entryApiGetNames200ApplicationJsonStrings?: string[];
+    entryApiGetNames200ApplicationJSONStrings?: string[];
     entryApiGetNames200ApplicationJsonpStrings?: string[];
-    entryApiGetNames200TextJsonStrings?: string[];
+    entryApiGetNames200TextJSONStrings?: string[];
     statusCode: number;
 }

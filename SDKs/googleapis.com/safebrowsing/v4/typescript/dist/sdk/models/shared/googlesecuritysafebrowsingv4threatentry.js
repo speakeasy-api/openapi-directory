@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleSecuritySafebrowsingV4ThreatEntry
 /**
  * An individual threat; for example, a malicious URL or its hash representation. Only one of these fields should be set.
@@ -33,17 +36,17 @@ var GoogleSecuritySafebrowsingV4ThreatEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=digest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=digest" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatEntry.prototype, "digest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatEntry.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatEntry.prototype, "url", void 0);
     return GoogleSecuritySafebrowsingV4ThreatEntry;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatEntry };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatEntry = GoogleSecuritySafebrowsingV4ThreatEntry;

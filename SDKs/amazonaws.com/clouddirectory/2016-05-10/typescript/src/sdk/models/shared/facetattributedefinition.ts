@@ -17,7 +17,7 @@ export class FacetAttributeDefinition extends SpeakeasyBase {
   isImmutable?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=Rules", elemType: Rule })
-  rules?: Map<string, Rule>;
+  rules?: Record<string, Rule>;
 
   @SpeakeasyMetadata({ data: "json, name=Type" })
   type: FacetAttributeTypeEnum;

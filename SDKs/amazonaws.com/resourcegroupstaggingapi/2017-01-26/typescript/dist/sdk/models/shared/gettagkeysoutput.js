@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagKeysOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTagKeysOutput = /** @class */ (function (_super) {
     __extends(GetTagKeysOutput, _super);
     function GetTagKeysOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaginationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaginationToken" }),
         __metadata("design:type", String)
     ], GetTagKeysOutput.prototype, "paginationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagKeys" }),
         __metadata("design:type", Array)
     ], GetTagKeysOutput.prototype, "tagKeys", void 0);
     return GetTagKeysOutput;
-}(SpeakeasyBase));
-export { GetTagKeysOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetTagKeysOutput = GetTagKeysOutput;

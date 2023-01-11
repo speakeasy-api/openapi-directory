@@ -1,4 +1,7 @@
-export var VoiceIdEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceIdEnum = void 0;
+var VoiceIdEnum;
 (function (VoiceIdEnum) {
     VoiceIdEnum["Aditi"] = "Aditi";
     VoiceIdEnum["Amy"] = "Amy";
@@ -65,4 +68,4 @@ export var VoiceIdEnum;
     VoiceIdEnum["Zhiyu"] = "Zhiyu";
     VoiceIdEnum["Aria"] = "Aria";
     VoiceIdEnum["Ayanda"] = "Ayanda";
-})(VoiceIdEnum || (VoiceIdEnum = {}));
+})(VoiceIdEnum = exports.VoiceIdEnum || (exports.VoiceIdEnum = {}));

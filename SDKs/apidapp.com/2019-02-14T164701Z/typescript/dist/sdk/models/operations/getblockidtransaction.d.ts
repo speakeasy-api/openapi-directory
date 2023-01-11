@@ -12,7 +12,7 @@ export declare class GetBlockIdTransactionRequest extends SpeakeasyBase {
 }
 export declare class GetBlockIdTransactionResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

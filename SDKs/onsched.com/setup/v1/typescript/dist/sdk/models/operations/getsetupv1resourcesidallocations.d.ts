@@ -14,6 +14,6 @@ export declare class GetSetupV1ResourcesIdAllocationsRequest extends SpeakeasyBa
 }
 export declare class GetSetupV1ResourcesIdAllocationsResponse extends SpeakeasyBase {
     contentType: string;
-    resourceAllocationListViewModel?: Map<string, any>;
+    resourceAllocationListViewModel?: Record<string, any>;
     statusCode: number;
 }

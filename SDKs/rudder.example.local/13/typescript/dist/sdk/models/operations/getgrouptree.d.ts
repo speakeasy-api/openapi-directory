@@ -3,7 +3,7 @@ export declare enum GetGroupTree200ApplicationJsonActionEnum {
     GetGroupTree = "GetGroupTree"
 }
 export declare class GetGroupTree200ApplicationJsonData extends SpeakeasyBase {
-    groupCategories: Map<string, any>;
+    groupCategories: Record<string, any>;
 }
 export declare enum GetGroupTree200ApplicationJsonResultEnum {
     Success = "success",
@@ -16,6 +16,6 @@ export declare class GetGroupTree200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetGroupTreeResponse extends SpeakeasyBase {
     contentType: string;
-    getGroupTree200ApplicationJsonObject?: GetGroupTree200ApplicationJson;
+    getGroupTree200ApplicationJSONObject?: GetGroupTree200ApplicationJson;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams.prototype, "interfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams.prototype, "switchStackId", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams };
-export var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams = UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams;
+var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum;
 (function (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum) {
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum["ThirtyMinutes"] = "30 minutes";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum["OneHour"] = "1 hour";
@@ -51,171 +54,171 @@ export var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeE
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum["TwelveHours"] = "12 hours";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum["OneDay"] = "1 day";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum["OneWeek"] = "1 week";
-})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum || (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum = {}));
-export var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum;
+})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum || (exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum = {}));
+var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum;
 (function (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum) {
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum["DhcpDisabled"] = "dhcpDisabled";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum["DhcpRelay"] = "dhcpRelay";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum["DhcpServer"] = "dhcpServer";
-})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum || (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum = {}));
-export var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum;
+})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum || (exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum = {}));
+var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum;
 (function (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum) {
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum["Text"] = "text";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum["Ip"] = "ip";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum["Integer"] = "integer";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum["Hex"] = "hex";
-})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum || (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = {}));
+})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum || (exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = {}));
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions.prototype, "value", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions };
-export var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions = UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions;
+var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum;
 (function (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum) {
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum["GooglePublicDns"] = "googlePublicDns";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum["OpenDns"] = "openDns";
     UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum["Custom"] = "custom";
-})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum || (UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum = {}));
+})(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum = exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum || (exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDnsNameserversOptionEnum = {}));
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments.prototype, "mac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments.prototype, "name", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments = UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments;
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges.prototype, "start", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges = UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges;
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootFileName" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "bootFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootNextServer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootNextServer" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "bootNextServer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootOptionsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootOptionsEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "bootOptionsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dhcpLeaseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dhcpLeaseTime" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dhcpLeaseTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dhcpMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dhcpMode" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dhcpMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dhcpOptions", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dhcpOptions", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dhcpOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dhcpRelayServerIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dhcpRelayServerIps" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dhcpRelayServerIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsCustomNameservers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsCustomNameservers" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dnsCustomNameservers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsNameserversOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsNameserversOption" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "dnsNameserversOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedIpAssignments", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedIpAssignments", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIpAssignments }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "fixedIpAssignments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedIpRanges", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedIpRanges", elemType: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIpRanges }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody.prototype, "reservedIpRanges", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody = UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody;
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest = UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest;
 var UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse, _super);
     function UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse.prototype, "updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse.prototype, "updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse = UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse;

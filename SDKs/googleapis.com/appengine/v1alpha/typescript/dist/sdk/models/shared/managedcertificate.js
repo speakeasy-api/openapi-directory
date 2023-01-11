@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ManagedCertificateStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedCertificate = exports.ManagedCertificateStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ManagedCertificateStatusEnum;
 (function (ManagedCertificateStatusEnum) {
     ManagedCertificateStatusEnum["UnspecifiedStatus"] = "UNSPECIFIED_STATUS";
     ManagedCertificateStatusEnum["Ok"] = "OK";
@@ -33,7 +36,7 @@ export var ManagedCertificateStatusEnum;
     ManagedCertificateStatusEnum["FailedPermanentlyNotVisible"] = "FAILED_PERMANENTLY_NOT_VISIBLE";
     ManagedCertificateStatusEnum["FailedRetryingCaaForbidden"] = "FAILED_RETRYING_CAA_FORBIDDEN";
     ManagedCertificateStatusEnum["FailedRetryingCaaChecking"] = "FAILED_RETRYING_CAA_CHECKING";
-})(ManagedCertificateStatusEnum || (ManagedCertificateStatusEnum = {}));
+})(ManagedCertificateStatusEnum = exports.ManagedCertificateStatusEnum || (exports.ManagedCertificateStatusEnum = {}));
 // ManagedCertificate
 /**
  * A certificate managed by App Engine.
@@ -44,13 +47,13 @@ var ManagedCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRenewalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRenewalTime" }),
         __metadata("design:type", String)
     ], ManagedCertificate.prototype, "lastRenewalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ManagedCertificate.prototype, "status", void 0);
     return ManagedCertificate;
-}(SpeakeasyBase));
-export { ManagedCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ManagedCertificate = ManagedCertificate;

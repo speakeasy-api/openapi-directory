@@ -1,6 +1,9 @@
-export var DedicatedTenancyModificationStateEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DedicatedTenancyModificationStateEnumEnum = void 0;
+var DedicatedTenancyModificationStateEnumEnum;
 (function (DedicatedTenancyModificationStateEnumEnum) {
     DedicatedTenancyModificationStateEnumEnum["Pending"] = "PENDING";
     DedicatedTenancyModificationStateEnumEnum["Completed"] = "COMPLETED";
     DedicatedTenancyModificationStateEnumEnum["Failed"] = "FAILED";
-})(DedicatedTenancyModificationStateEnumEnum || (DedicatedTenancyModificationStateEnumEnum = {}));
+})(DedicatedTenancyModificationStateEnumEnum = exports.DedicatedTenancyModificationStateEnumEnum || (exports.DedicatedTenancyModificationStateEnumEnum = {}));

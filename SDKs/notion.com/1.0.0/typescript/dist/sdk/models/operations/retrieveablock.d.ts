@@ -38,7 +38,7 @@ export declare class RetrieveABlockRequest extends SpeakeasyBase {
 }
 export declare class RetrieveABlockResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    retrieveABlock200ApplicationJsonObject?: RetrieveABlock200ApplicationJson;
+    retrieveABlock200ApplicationJSONObject?: RetrieveABlock200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudBillingBudgetsV1BudgetAmount } from "./googlecloudbillingbudgetsv1budgetamount";
-import { GoogleCloudBillingBudgetsV1Filter } from "./googlecloudbillingbudgetsv1filter";
-import { GoogleCloudBillingBudgetsV1NotificationsRule } from "./googlecloudbillingbudgetsv1notificationsrule";
-import { GoogleCloudBillingBudgetsV1ThresholdRule } from "./googlecloudbillingbudgetsv1thresholdrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBillingBudgetsV1BudgetInput = exports.GoogleCloudBillingBudgetsV1Budget = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudbillingbudgetsv1budgetamount_1 = require("./googlecloudbillingbudgetsv1budgetamount");
+var googlecloudbillingbudgetsv1filter_1 = require("./googlecloudbillingbudgetsv1filter");
+var googlecloudbillingbudgetsv1notificationsrule_1 = require("./googlecloudbillingbudgetsv1notificationsrule");
+var googlecloudbillingbudgetsv1thresholdrule_1 = require("./googlecloudbillingbudgetsv1thresholdrule");
 // GoogleCloudBillingBudgetsV1Budget
 /**
  * A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to execute as spend is tracked against that plan, (for example, send an alert when 90% of the target spend is met). The budget time period is configurable, with options such as month (default), quarter, year, or custom time period.
@@ -37,36 +40,36 @@ var GoogleCloudBillingBudgetsV1Budget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1BudgetAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1budgetamount_1.GoogleCloudBillingBudgetsV1BudgetAmount)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budgetFilter" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1Filter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budgetFilter" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1filter_1.GoogleCloudBillingBudgetsV1Filter)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "budgetFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationsRule" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1NotificationsRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationsRule" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1notificationsrule_1.GoogleCloudBillingBudgetsV1NotificationsRule)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "notificationsRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thresholdRules", elemType: GoogleCloudBillingBudgetsV1ThresholdRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thresholdRules", elemType: googlecloudbillingbudgetsv1thresholdrule_1.GoogleCloudBillingBudgetsV1ThresholdRule }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1Budget.prototype, "thresholdRules", void 0);
     return GoogleCloudBillingBudgetsV1Budget;
-}(SpeakeasyBase));
-export { GoogleCloudBillingBudgetsV1Budget };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBillingBudgetsV1Budget = GoogleCloudBillingBudgetsV1Budget;
 // GoogleCloudBillingBudgetsV1BudgetInput
 /**
  * A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to execute as spend is tracked against that plan, (for example, send an alert when 90% of the target spend is met). The budget time period is configurable, with options such as month (default), quarter, year, or custom time period.
@@ -77,29 +80,29 @@ var GoogleCloudBillingBudgetsV1BudgetInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1BudgetAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1budgetamount_1.GoogleCloudBillingBudgetsV1BudgetAmount)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budgetFilter" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1Filter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budgetFilter" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1filter_1.GoogleCloudBillingBudgetsV1Filter)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "budgetFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationsRule" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1NotificationsRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationsRule" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1notificationsrule_1.GoogleCloudBillingBudgetsV1NotificationsRule)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "notificationsRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thresholdRules", elemType: GoogleCloudBillingBudgetsV1ThresholdRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thresholdRules", elemType: googlecloudbillingbudgetsv1thresholdrule_1.GoogleCloudBillingBudgetsV1ThresholdRule }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1BudgetInput.prototype, "thresholdRules", void 0);
     return GoogleCloudBillingBudgetsV1BudgetInput;
-}(SpeakeasyBase));
-export { GoogleCloudBillingBudgetsV1BudgetInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBillingBudgetsV1BudgetInput = GoogleCloudBillingBudgetsV1BudgetInput;

@@ -5,5 +5,5 @@ import { GoogleCloudRecommenderV1OperationGroup } from "./googlecloudrecommender
 **/
 export declare class GoogleCloudRecommenderV1RecommendationContent extends SpeakeasyBase {
     operationGroups?: GoogleCloudRecommenderV1OperationGroup[];
-    overview?: Map<string, any>;
+    overview?: Record<string, any>;
 }

@@ -17,6 +17,6 @@ export declare class GetCampagneResponse extends SpeakeasyBase {
     contentType: string;
     erreur?: shared.Erreur;
     statusCode: number;
-    getCampagne200ApplicationJsonBinaryString?: Uint8Array;
+    getCampagne200ApplicationJSONBinaryString?: Uint8Array;
     getCampagne200FileBinaryString?: Uint8Array;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventCondition } from "./eventcondition";
-import { SegmentCondition } from "./segmentcondition";
-import { SegmentDimensions } from "./segmentdimensions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleCondition = exports.SimpleConditionSegmentDimensions = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributedimension_1 = require("./attributedimension");
+var segmentbehaviors_1 = require("./segmentbehaviors");
+var segmentdemographics_1 = require("./segmentdemographics");
+var segmentlocation_1 = require("./segmentlocation");
+var metricdimension_1 = require("./metricdimension");
+var eventcondition_1 = require("./eventcondition");
+var segmentcondition_1 = require("./segmentcondition");
+// SimpleConditionSegmentDimensions
+/**
+ * The dimension settings for the segment that's associated with the activity.
+**/
+var SimpleConditionSegmentDimensions = /** @class */ (function (_super) {
+    __extends(SimpleConditionSegmentDimensions, _super);
+    function SimpleConditionSegmentDimensions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes", elemType: attributedimension_1.AttributeDimension }),
+        __metadata("design:type", Object)
+    ], SimpleConditionSegmentDimensions.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Behavior" }),
+        __metadata("design:type", segmentbehaviors_1.SegmentBehaviors)
+    ], SimpleConditionSegmentDimensions.prototype, "behavior", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Demographic" }),
+        __metadata("design:type", segmentdemographics_1.SegmentDemographics)
+    ], SimpleConditionSegmentDimensions.prototype, "demographic", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Location" }),
+        __metadata("design:type", segmentlocation_1.SegmentLocation)
+    ], SimpleConditionSegmentDimensions.prototype, "location", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metrics", elemType: metricdimension_1.MetricDimension }),
+        __metadata("design:type", Object)
+    ], SimpleConditionSegmentDimensions.prototype, "metrics", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserAttributes", elemType: attributedimension_1.AttributeDimension }),
+        __metadata("design:type", Object)
+    ], SimpleConditionSegmentDimensions.prototype, "userAttributes", void 0);
+    return SimpleConditionSegmentDimensions;
+}(utils_1.SpeakeasyBase));
+exports.SimpleConditionSegmentDimensions = SimpleConditionSegmentDimensions;
 // SimpleCondition
 /**
  * Specifies a condition to evaluate for an activity in a journey.
@@ -36,17 +79,17 @@ var SimpleCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventCondition" }),
-        __metadata("design:type", EventCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventCondition" }),
+        __metadata("design:type", eventcondition_1.EventCondition)
     ], SimpleCondition.prototype, "eventCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentCondition" }),
-        __metadata("design:type", SegmentCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentCondition" }),
+        __metadata("design:type", segmentcondition_1.SegmentCondition)
     ], SimpleCondition.prototype, "segmentCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentDimensions" }),
-        __metadata("design:type", SegmentDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentDimensions" }),
+        __metadata("design:type", SimpleConditionSegmentDimensions)
     ], SimpleCondition.prototype, "segmentDimensions", void 0);
     return SimpleCondition;
-}(SpeakeasyBase));
-export { SimpleCondition };
+}(utils_1.SpeakeasyBase));
+exports.SimpleCondition = SimpleCondition;

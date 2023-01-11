@@ -12,7 +12,7 @@ import { SqsAction } from "./sqsaction";
  * Specifies one of the following actions to receive notifications when the alarm state changes.
 **/
 export declare class AlarmAction extends SpeakeasyBase {
-    dynamoDb?: DynamoDbAction;
+    dynamoDB?: DynamoDbAction;
     dynamoDBv2?: DynamoDBv2Action;
     firehose?: FirehoseAction;
     iotEvents?: IotEventsAction;

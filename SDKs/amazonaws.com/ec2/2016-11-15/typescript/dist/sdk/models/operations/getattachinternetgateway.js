@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAttachInternetGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAttachInternetGatewayResponse = exports.GetAttachInternetGatewayRequest = exports.GetAttachInternetGatewayHeaders = exports.GetAttachInternetGatewayQueryParams = exports.GetAttachInternetGatewayVersionEnum = exports.GetAttachInternetGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAttachInternetGatewayActionEnum;
 (function (GetAttachInternetGatewayActionEnum) {
     GetAttachInternetGatewayActionEnum["AttachInternetGateway"] = "AttachInternetGateway";
-})(GetAttachInternetGatewayActionEnum || (GetAttachInternetGatewayActionEnum = {}));
-export var GetAttachInternetGatewayVersionEnum;
+})(GetAttachInternetGatewayActionEnum = exports.GetAttachInternetGatewayActionEnum || (exports.GetAttachInternetGatewayActionEnum = {}));
+var GetAttachInternetGatewayVersionEnum;
 (function (GetAttachInternetGatewayVersionEnum) {
     GetAttachInternetGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetAttachInternetGatewayVersionEnum || (GetAttachInternetGatewayVersionEnum = {}));
+})(GetAttachInternetGatewayVersionEnum = exports.GetAttachInternetGatewayVersionEnum || (exports.GetAttachInternetGatewayVersionEnum = {}));
 var GetAttachInternetGatewayQueryParams = /** @class */ (function (_super) {
     __extends(GetAttachInternetGatewayQueryParams, _super);
     function GetAttachInternetGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetAttachInternetGatewayQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InternetGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InternetGatewayId" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayQueryParams.prototype, "internetGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpcId" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayQueryParams.prototype, "vpcId", void 0);
     return GetAttachInternetGatewayQueryParams;
-}(SpeakeasyBase));
-export { GetAttachInternetGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAttachInternetGatewayQueryParams = GetAttachInternetGatewayQueryParams;
 var GetAttachInternetGatewayHeaders = /** @class */ (function (_super) {
     __extends(GetAttachInternetGatewayHeaders, _super);
     function GetAttachInternetGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAttachInternetGatewayHeaders;
-}(SpeakeasyBase));
-export { GetAttachInternetGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAttachInternetGatewayHeaders = GetAttachInternetGatewayHeaders;
 var GetAttachInternetGatewayRequest = /** @class */ (function (_super) {
     __extends(GetAttachInternetGatewayRequest, _super);
     function GetAttachInternetGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAttachInternetGatewayQueryParams)
     ], GetAttachInternetGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAttachInternetGatewayHeaders)
     ], GetAttachInternetGatewayRequest.prototype, "headers", void 0);
     return GetAttachInternetGatewayRequest;
-}(SpeakeasyBase));
-export { GetAttachInternetGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAttachInternetGatewayRequest = GetAttachInternetGatewayRequest;
 var GetAttachInternetGatewayResponse = /** @class */ (function (_super) {
     __extends(GetAttachInternetGatewayResponse, _super);
     function GetAttachInternetGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAttachInternetGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAttachInternetGatewayResponse.prototype, "statusCode", void 0);
     return GetAttachInternetGatewayResponse;
-}(SpeakeasyBase));
-export { GetAttachInternetGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAttachInternetGatewayResponse = GetAttachInternetGatewayResponse;

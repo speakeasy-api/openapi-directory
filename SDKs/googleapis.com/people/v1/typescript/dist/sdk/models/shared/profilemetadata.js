@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProfileMetadataObjectTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileMetadata = exports.ProfileMetadataUserTypesEnum = exports.ProfileMetadataObjectTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProfileMetadataObjectTypeEnum;
 (function (ProfileMetadataObjectTypeEnum) {
     ProfileMetadataObjectTypeEnum["ObjectTypeUnspecified"] = "OBJECT_TYPE_UNSPECIFIED";
     ProfileMetadataObjectTypeEnum["Person"] = "PERSON";
     ProfileMetadataObjectTypeEnum["Page"] = "PAGE";
-})(ProfileMetadataObjectTypeEnum || (ProfileMetadataObjectTypeEnum = {}));
-export var ProfileMetadataUserTypesEnum;
+})(ProfileMetadataObjectTypeEnum = exports.ProfileMetadataObjectTypeEnum || (exports.ProfileMetadataObjectTypeEnum = {}));
+var ProfileMetadataUserTypesEnum;
 (function (ProfileMetadataUserTypesEnum) {
     ProfileMetadataUserTypesEnum["UserTypeUnknown"] = "USER_TYPE_UNKNOWN";
     ProfileMetadataUserTypesEnum["GoogleUser"] = "GOOGLE_USER";
     ProfileMetadataUserTypesEnum["GplusUser"] = "GPLUS_USER";
     ProfileMetadataUserTypesEnum["GoogleAppsUser"] = "GOOGLE_APPS_USER";
-})(ProfileMetadataUserTypesEnum || (ProfileMetadataUserTypesEnum = {}));
+})(ProfileMetadataUserTypesEnum = exports.ProfileMetadataUserTypesEnum || (exports.ProfileMetadataUserTypesEnum = {}));
 // ProfileMetadata
 /**
  * The metadata about a profile.
@@ -46,13 +49,13 @@ var ProfileMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], ProfileMetadata.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userTypes" }),
         __metadata("design:type", Array)
     ], ProfileMetadata.prototype, "userTypes", void 0);
     return ProfileMetadata;
-}(SpeakeasyBase));
-export { ProfileMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ProfileMetadata = ProfileMetadata;

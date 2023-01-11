@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhysicalConnectionRequirements = void 0;
+var utils_1 = require("../../../internal/utils");
 // PhysicalConnectionRequirements
 /**
  * Specifies the physical requirements for a connection.
@@ -33,17 +36,17 @@ var PhysicalConnectionRequirements = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], PhysicalConnectionRequirements.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIdList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIdList" }),
         __metadata("design:type", Array)
     ], PhysicalConnectionRequirements.prototype, "securityGroupIdList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], PhysicalConnectionRequirements.prototype, "subnetId", void 0);
     return PhysicalConnectionRequirements;
-}(SpeakeasyBase));
-export { PhysicalConnectionRequirements };
+}(utils_1.SpeakeasyBase));
+exports.PhysicalConnectionRequirements = PhysicalConnectionRequirements;

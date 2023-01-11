@@ -61,20 +61,20 @@ export class GetConfiguredInvestmentProductPricesResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices200ApplicationJsonObject?: GetConfiguredInvestmentProductPrices200ApplicationJson;
+  getConfiguredInvestmentProductPrices200ApplicationJSONObject?: GetConfiguredInvestmentProductPrices200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices401ApplicationJsonAny?: any;
+  getConfiguredInvestmentProductPrices401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices403ApplicationJsonAny?: any;
+  getConfiguredInvestmentProductPrices403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices404ApplicationJsonAny?: any;
+  getConfiguredInvestmentProductPrices404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices429ApplicationJsonAny?: any;
+  getConfiguredInvestmentProductPrices429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getConfiguredInvestmentProductPrices500ApplicationJsonAny?: any;
+  getConfiguredInvestmentProductPrices500ApplicationJSONAny?: any;
 }

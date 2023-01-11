@@ -9,7 +9,7 @@ export declare class TeamsListForAuthenticatedUserRequest extends SpeakeasyBase 
 }
 export declare class TeamsListForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     teamFulls?: shared.TeamFull[];

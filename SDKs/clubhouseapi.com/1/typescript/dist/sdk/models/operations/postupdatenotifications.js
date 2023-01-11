@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUpdateNotificationsResponse = exports.PostUpdateNotificationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostUpdateNotificationsRequest = /** @class */ (function (_super) {
     __extends(PostUpdateNotificationsRequest, _super);
     function PostUpdateNotificationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PostUpdateNotificationsRequest.prototype, "request", void 0);
     return PostUpdateNotificationsRequest;
-}(SpeakeasyBase));
-export { PostUpdateNotificationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateNotificationsRequest = PostUpdateNotificationsRequest;
 var PostUpdateNotificationsResponse = /** @class */ (function (_super) {
     __extends(PostUpdateNotificationsResponse, _super);
     function PostUpdateNotificationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUpdateNotificationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUpdateNotificationsResponse.prototype, "statusCode", void 0);
     return PostUpdateNotificationsResponse;
-}(SpeakeasyBase));
-export { PostUpdateNotificationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateNotificationsResponse = PostUpdateNotificationsResponse;

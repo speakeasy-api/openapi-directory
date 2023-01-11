@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExternalUrlObject } from "./externalurlobject";
-import { FollowersObject } from "./followersobject";
-import { ImageObject } from "./imageobject";
-import { PublicUserObject } from "./publicuserobject";
-import { PlaylistTrackObject } from "./playlisttrackobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlaylistObject = exports.PlaylistObjectTracks = void 0;
+var utils_1 = require("../../../internal/utils");
+var playlisttrackobject_1 = require("./playlisttrackobject");
+var externalurlobject_1 = require("./externalurlobject");
+var followersobject_1 = require("./followersobject");
+var imageobject_1 = require("./imageobject");
+var publicuserobject_1 = require("./publicuserobject");
 // PlaylistObjectTracks
 /**
  * Information about the tracks of the playlist. Note, a track object may be `null`. This can happen if a track is no longer available.
@@ -39,36 +42,36 @@ var PlaylistObjectTracks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PlaylistObjectTracks.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: PlaylistTrackObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: playlisttrackobject_1.PlaylistTrackObject }),
         __metadata("design:type", Array)
     ], PlaylistObjectTracks.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], PlaylistObjectTracks.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], PlaylistObjectTracks.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], PlaylistObjectTracks.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], PlaylistObjectTracks.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], PlaylistObjectTracks.prototype, "total", void 0);
     return PlaylistObjectTracks;
-}(SpeakeasyBase));
-export { PlaylistObjectTracks };
+}(utils_1.SpeakeasyBase));
+exports.PlaylistObjectTracks = PlaylistObjectTracks;
 // PlaylistObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-playlistobject - Find more info on the official Spotify Web API Reference
@@ -79,61 +82,61 @@ var PlaylistObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collaborative" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collaborative" }),
         __metadata("design:type", Boolean)
     ], PlaylistObject.prototype, "collaborative", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_urls" }),
-        __metadata("design:type", ExternalUrlObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_urls" }),
+        __metadata("design:type", externalurlobject_1.ExternalUrlObject)
     ], PlaylistObject.prototype, "externalUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
-        __metadata("design:type", FollowersObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
+        __metadata("design:type", followersobject_1.FollowersObject)
     ], PlaylistObject.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imageobject_1.ImageObject }),
         __metadata("design:type", Array)
     ], PlaylistObject.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
-        __metadata("design:type", PublicUserObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", publicuserobject_1.PublicUserObject)
     ], PlaylistObject.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], PlaylistObject.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapshot_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapshot_id" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "snapshotId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracks" }),
         __metadata("design:type", PlaylistObjectTracks)
     ], PlaylistObject.prototype, "tracks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], PlaylistObject.prototype, "uri", void 0);
     return PlaylistObject;
-}(SpeakeasyBase));
-export { PlaylistObject };
+}(utils_1.SpeakeasyBase));
+exports.PlaylistObject = PlaylistObject;

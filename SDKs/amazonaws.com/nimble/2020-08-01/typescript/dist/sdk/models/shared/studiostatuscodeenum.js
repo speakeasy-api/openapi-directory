@@ -1,4 +1,7 @@
-export var StudioStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioStatusCodeEnum = void 0;
+var StudioStatusCodeEnum;
 (function (StudioStatusCodeEnum) {
     StudioStatusCodeEnum["StudioCreated"] = "STUDIO_CREATED";
     StudioStatusCodeEnum["StudioDeleted"] = "STUDIO_DELETED";
@@ -18,4 +21,4 @@ export var StudioStatusCodeEnum;
     StudioStatusCodeEnum["EncryptionKeyAccessDenied"] = "ENCRYPTION_KEY_ACCESS_DENIED";
     StudioStatusCodeEnum["AwsSsoConfigurationRepaired"] = "AWS_SSO_CONFIGURATION_REPAIRED";
     StudioStatusCodeEnum["AwsSsoConfigurationRepairInProgress"] = "AWS_SSO_CONFIGURATION_REPAIR_IN_PROGRESS";
-})(StudioStatusCodeEnum || (StudioStatusCodeEnum = {}));
+})(StudioStatusCodeEnum = exports.StudioStatusCodeEnum || (exports.StudioStatusCodeEnum = {}));

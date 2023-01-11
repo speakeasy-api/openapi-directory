@@ -41,7 +41,7 @@ export class UpdateLensReviewRequestBody extends SpeakeasyBase {
   lensNotes?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PillarNotes" })
-  pillarNotes?: Map<string, string>;
+  pillarNotes?: Record<string, string>;
 }
 
 

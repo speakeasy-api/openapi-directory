@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class BaggageTripAndContactPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=searchID" })
-  searchId: string;
+  searchID: string;
 }
 
 
@@ -35,7 +35,7 @@ export class BaggageTripAndContactRequest extends SpeakeasyBase {
 
 export class BaggageTripAndContactResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  baggageTripAndContact200ApplicationJsonString?: string;
+  baggageTripAndContact200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

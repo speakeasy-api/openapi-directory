@@ -12,7 +12,7 @@ export declare class Task extends SpeakeasyBase {
     id: string;
     name?: string;
     organizationId?: string;
-    params?: Map<string, string>;
+    params?: Record<string, string>;
     parentId?: string;
     recur?: boolean;
     recurFrequency?: string;
@@ -21,7 +21,7 @@ export declare class Task extends SpeakeasyBase {
     recurNext?: number;
     siteId?: string;
     startTime?: number;
-    stats?: Map<string, any>;
+    stats?: Record<string, any>;
     status?: string;
     type?: string;
     updatedAt?: number;

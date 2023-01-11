@@ -16,5 +16,5 @@ export declare class DatabaseGetDocumentRequest extends SpeakeasyBase {
 export declare class DatabaseGetDocumentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    document?: Map<string, any>;
+    document?: Record<string, any>;
 }

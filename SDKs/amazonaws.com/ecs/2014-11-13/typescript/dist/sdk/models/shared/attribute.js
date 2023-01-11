@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetTypeEnum } from "./targettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attribute = void 0;
+var utils_1 = require("../../../internal/utils");
+var targettypeenum_1 = require("./targettypeenum");
 // Attribute
 /**
  * An attribute is a name-value pair associated with an Amazon ECS object. Attributes enable you to extend the Amazon ECS data model by adding custom metadata to your resources. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes">Attributes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -34,21 +37,21 @@ var Attribute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetType" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "targetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Attribute.prototype, "value", void 0);
     return Attribute;
-}(SpeakeasyBase));
-export { Attribute };
+}(utils_1.SpeakeasyBase));
+exports.Attribute = Attribute;

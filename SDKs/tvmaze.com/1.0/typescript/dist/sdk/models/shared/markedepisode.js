@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarkedEpisode = exports.MarkedEpisodeInput = exports.MarkedEpisodeEmbedded = void 0;
+var utils_1 = require("../../../internal/utils");
 var MarkedEpisodeEmbedded = /** @class */ (function (_super) {
     __extends(MarkedEpisodeEmbedded, _super);
     function MarkedEpisodeEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode" }),
+        __metadata("design:type", Object)
     ], MarkedEpisodeEmbedded.prototype, "episode", void 0);
     return MarkedEpisodeEmbedded;
-}(SpeakeasyBase));
-export { MarkedEpisodeEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.MarkedEpisodeEmbedded = MarkedEpisodeEmbedded;
 var MarkedEpisodeInput = /** @class */ (function (_super) {
     __extends(MarkedEpisodeInput, _super);
     function MarkedEpisodeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", MarkedEpisodeEmbedded)
     ], MarkedEpisodeInput.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marked_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marked_at" }),
         __metadata("design:type", Number)
     ], MarkedEpisodeInput.prototype, "markedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Object)
     ], MarkedEpisodeInput.prototype, "type", void 0);
     return MarkedEpisodeInput;
-}(SpeakeasyBase));
-export { MarkedEpisodeInput };
+}(utils_1.SpeakeasyBase));
+exports.MarkedEpisodeInput = MarkedEpisodeInput;
 var MarkedEpisode = /** @class */ (function (_super) {
     __extends(MarkedEpisode, _super);
     function MarkedEpisode() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", MarkedEpisodeEmbedded)
     ], MarkedEpisode.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode_id" }),
         __metadata("design:type", Number)
     ], MarkedEpisode.prototype, "episodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marked_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marked_at" }),
         __metadata("design:type", Number)
     ], MarkedEpisode.prototype, "markedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Object)
     ], MarkedEpisode.prototype, "type", void 0);
     return MarkedEpisode;
-}(SpeakeasyBase));
-export { MarkedEpisode };
+}(utils_1.SpeakeasyBase));
+exports.MarkedEpisode = MarkedEpisode;

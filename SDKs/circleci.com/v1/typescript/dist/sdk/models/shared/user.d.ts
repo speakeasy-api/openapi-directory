@@ -19,10 +19,10 @@ export declare class User extends SpeakeasyBase {
     inBetaProgram?: boolean;
     login?: string;
     name?: string;
-    organizationPrefs?: Map<string, any>;
+    organizationPrefs?: Record<string, any>;
     parallelism?: number;
     plan?: string;
-    projects?: Map<string, any>;
+    projects?: Record<string, any>;
     pusherId?: string;
     selectedEmail?: string;
     signInCount?: number;

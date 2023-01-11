@@ -6,7 +6,7 @@ import { GoogleRpcStatus } from "./googlerpcstatus";
 export declare class GoogleLongrunningOperation extends SpeakeasyBase {
     done?: boolean;
     error?: GoogleRpcStatus;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
-    response?: Map<string, any>;
+    response?: Record<string, any>;
 }

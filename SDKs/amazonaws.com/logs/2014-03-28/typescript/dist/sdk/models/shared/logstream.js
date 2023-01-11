@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogStream = void 0;
+var utils_1 = require("../../../internal/utils");
 // LogStream
 /**
  * Represents a log stream, which is a sequence of log events from a single emitter of logs.
@@ -33,37 +36,37 @@ var LogStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], LogStream.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Number)
     ], LogStream.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstEventTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstEventTimestamp" }),
         __metadata("design:type", Number)
     ], LogStream.prototype, "firstEventTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastEventTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastEventTimestamp" }),
         __metadata("design:type", Number)
     ], LogStream.prototype, "lastEventTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastIngestionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastIngestionTime" }),
         __metadata("design:type", Number)
     ], LogStream.prototype, "lastIngestionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamName" }),
         __metadata("design:type", String)
     ], LogStream.prototype, "logStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storedBytes" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storedBytes" }),
+        __metadata("design:type", Object)
     ], LogStream.prototype, "storedBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadSequenceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadSequenceToken" }),
         __metadata("design:type", String)
     ], LogStream.prototype, "uploadSequenceToken", void 0);
     return LogStream;
-}(SpeakeasyBase));
-export { LogStream };
+}(utils_1.SpeakeasyBase));
+exports.LogStream = LogStream;

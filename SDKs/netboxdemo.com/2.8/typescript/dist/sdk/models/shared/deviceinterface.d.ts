@@ -179,7 +179,7 @@ export declare class DeviceInterfaceType extends SpeakeasyBase {
 }
 export declare class DeviceInterface extends SpeakeasyBase {
     cable?: NestedCable;
-    connectedEndpoint?: Map<string, string>;
+    connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: DeviceInterfaceConnectionStatus;
     countIpaddresses?: number;

@@ -6,7 +6,7 @@ import { EndPoint } from "./endpoint";
 export declare class RealtimeLogConfig extends SpeakeasyBase {
     arn: string;
     endPoints: EndPoint[];
-    fields: string[];
+    fields: Record<string, any>[];
     name: string;
     samplingRate: number;
 }

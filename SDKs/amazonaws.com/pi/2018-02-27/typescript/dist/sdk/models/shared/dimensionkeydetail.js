@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetailStatusEnum } from "./detailstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionKeyDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var detailstatusenum_1 = require("./detailstatusenum");
 // DimensionKeyDetail
 /**
  * An object that describes the details for a specified dimension.
@@ -34,17 +37,17 @@ var DimensionKeyDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimension" }),
         __metadata("design:type", String)
     ], DimensionKeyDetail.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DimensionKeyDetail.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], DimensionKeyDetail.prototype, "value", void 0);
     return DimensionKeyDetail;
-}(SpeakeasyBase));
-export { DimensionKeyDetail };
+}(utils_1.SpeakeasyBase));
+exports.DimensionKeyDetail = DimensionKeyDetail;

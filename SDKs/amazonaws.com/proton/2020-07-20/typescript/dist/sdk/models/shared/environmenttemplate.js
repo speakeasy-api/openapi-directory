@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProvisioningEnum } from "./provisioningenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var provisioningenum_1 = require("./provisioningenum");
 // EnvironmentTemplate
 /**
  * The environment template data.
@@ -34,41 +37,41 @@ var EnvironmentTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], EnvironmentTemplate.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKey" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "encryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedAt" }),
         __metadata("design:type", Date)
     ], EnvironmentTemplate.prototype, "lastModifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioning" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "provisioning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendedVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendedVersion" }),
         __metadata("design:type", String)
     ], EnvironmentTemplate.prototype, "recommendedVersion", void 0);
     return EnvironmentTemplate;
-}(SpeakeasyBase));
-export { EnvironmentTemplate };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentTemplate = EnvironmentTemplate;

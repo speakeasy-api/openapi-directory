@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppPatchStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPatch = exports.AppPatchStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppPatchStatusEnum;
 (function (AppPatchStatusEnum) {
     AppPatchStatusEnum["Enabled"] = "enabled";
     AppPatchStatusEnum["Disabled"] = "disabled";
-})(AppPatchStatusEnum || (AppPatchStatusEnum = {}));
+})(AppPatchStatusEnum = exports.AppPatchStatusEnum || (exports.AppPatchStatusEnum = {}));
 var AppPatch = /** @class */ (function (_super) {
     __extends(AppPatch, _super);
     function AppPatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apnsCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apnsCertificate" }),
         __metadata("design:type", String)
     ], AppPatch.prototype, "apnsCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apnsPrivateKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apnsPrivateKey" }),
         __metadata("design:type", String)
     ], AppPatch.prototype, "apnsPrivateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apnsUseSandboxEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apnsUseSandboxEndpoint" }),
         __metadata("design:type", Boolean)
     ], AppPatch.prototype, "apnsUseSandboxEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fcmKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fcmKey" }),
         __metadata("design:type", String)
     ], AppPatch.prototype, "fcmKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AppPatch.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AppPatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tlsOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tlsOnly" }),
         __metadata("design:type", Boolean)
     ], AppPatch.prototype, "tlsOnly", void 0);
     return AppPatch;
-}(SpeakeasyBase));
-export { AppPatch };
+}(utils_1.SpeakeasyBase));
+exports.AppPatch = AppPatch;

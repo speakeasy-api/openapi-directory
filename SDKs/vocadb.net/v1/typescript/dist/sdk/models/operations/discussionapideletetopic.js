@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscussionApiDeleteTopicResponse = exports.DiscussionApiDeleteTopicRequest = exports.DiscussionApiDeleteTopicPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DiscussionApiDeleteTopicPathParams = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteTopicPathParams, _super);
     function DiscussionApiDeleteTopicPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=topicId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=topicId" }),
         __metadata("design:type", Number)
     ], DiscussionApiDeleteTopicPathParams.prototype, "topicId", void 0);
     return DiscussionApiDeleteTopicPathParams;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteTopicPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteTopicPathParams = DiscussionApiDeleteTopicPathParams;
 var DiscussionApiDeleteTopicRequest = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteTopicRequest, _super);
     function DiscussionApiDeleteTopicRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DiscussionApiDeleteTopicPathParams)
     ], DiscussionApiDeleteTopicRequest.prototype, "pathParams", void 0);
     return DiscussionApiDeleteTopicRequest;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteTopicRequest };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteTopicRequest = DiscussionApiDeleteTopicRequest;
 var DiscussionApiDeleteTopicResponse = /** @class */ (function (_super) {
     __extends(DiscussionApiDeleteTopicResponse, _super);
     function DiscussionApiDeleteTopicResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DiscussionApiDeleteTopicResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DiscussionApiDeleteTopicResponse.prototype, "statusCode", void 0);
     return DiscussionApiDeleteTopicResponse;
-}(SpeakeasyBase));
-export { DiscussionApiDeleteTopicResponse };
+}(utils_1.SpeakeasyBase));
+exports.DiscussionApiDeleteTopicResponse = DiscussionApiDeleteTopicResponse;

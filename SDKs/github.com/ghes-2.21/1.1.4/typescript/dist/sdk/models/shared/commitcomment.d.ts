@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { ReactionRollup } from "./reactionrollup";
+/**
+ * Simple User
+**/
 export declare class CommitCommentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

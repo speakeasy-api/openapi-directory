@@ -13,7 +13,7 @@ export declare class VirtualMachine extends SpeakeasyBase {
     cluster: NestedCluster;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     disk?: number;
     id?: number;
     lastUpdated?: Date;

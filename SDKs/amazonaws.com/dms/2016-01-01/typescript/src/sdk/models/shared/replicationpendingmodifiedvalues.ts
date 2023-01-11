@@ -14,7 +14,7 @@ export class ReplicationPendingModifiedValues extends SpeakeasyBase {
   engineVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=ReplicationInstanceClass" })
   replicationInstanceClass?: string;

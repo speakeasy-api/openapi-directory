@@ -25,5 +25,5 @@ export class ProtocolIpmiSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolIpmiSetTrace200ApplicationJsonString?: string;
+  protocolIpmiSetTrace200ApplicationJSONString?: string;
 }

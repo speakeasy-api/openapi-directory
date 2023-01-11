@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateLoadBalancerActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateLoadBalancerResponse = exports.PostCreateLoadBalancerRequest = exports.PostCreateLoadBalancerHeaders = exports.PostCreateLoadBalancerQueryParams = exports.PostCreateLoadBalancerVersionEnum = exports.PostCreateLoadBalancerActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateLoadBalancerActionEnum;
 (function (PostCreateLoadBalancerActionEnum) {
     PostCreateLoadBalancerActionEnum["CreateLoadBalancer"] = "CreateLoadBalancer";
-})(PostCreateLoadBalancerActionEnum || (PostCreateLoadBalancerActionEnum = {}));
-export var PostCreateLoadBalancerVersionEnum;
+})(PostCreateLoadBalancerActionEnum = exports.PostCreateLoadBalancerActionEnum || (exports.PostCreateLoadBalancerActionEnum = {}));
+var PostCreateLoadBalancerVersionEnum;
 (function (PostCreateLoadBalancerVersionEnum) {
     PostCreateLoadBalancerVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(PostCreateLoadBalancerVersionEnum || (PostCreateLoadBalancerVersionEnum = {}));
+})(PostCreateLoadBalancerVersionEnum = exports.PostCreateLoadBalancerVersionEnum || (exports.PostCreateLoadBalancerVersionEnum = {}));
 var PostCreateLoadBalancerQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateLoadBalancerQueryParams, _super);
     function PostCreateLoadBalancerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerQueryParams.prototype, "version", void 0);
     return PostCreateLoadBalancerQueryParams;
-}(SpeakeasyBase));
-export { PostCreateLoadBalancerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateLoadBalancerQueryParams = PostCreateLoadBalancerQueryParams;
 var PostCreateLoadBalancerHeaders = /** @class */ (function (_super) {
     __extends(PostCreateLoadBalancerHeaders, _super);
     function PostCreateLoadBalancerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateLoadBalancerHeaders;
-}(SpeakeasyBase));
-export { PostCreateLoadBalancerHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateLoadBalancerHeaders = PostCreateLoadBalancerHeaders;
 var PostCreateLoadBalancerRequest = /** @class */ (function (_super) {
     __extends(PostCreateLoadBalancerRequest, _super);
     function PostCreateLoadBalancerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateLoadBalancerQueryParams)
     ], PostCreateLoadBalancerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateLoadBalancerHeaders)
     ], PostCreateLoadBalancerRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateLoadBalancerRequest.prototype, "request", void 0);
     return PostCreateLoadBalancerRequest;
-}(SpeakeasyBase));
-export { PostCreateLoadBalancerRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateLoadBalancerRequest = PostCreateLoadBalancerRequest;
 var PostCreateLoadBalancerResponse = /** @class */ (function (_super) {
     __extends(PostCreateLoadBalancerResponse, _super);
     function PostCreateLoadBalancerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateLoadBalancerResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateLoadBalancerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateLoadBalancerResponse.prototype, "statusCode", void 0);
     return PostCreateLoadBalancerResponse;
-}(SpeakeasyBase));
-export { PostCreateLoadBalancerResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateLoadBalancerResponse = PostCreateLoadBalancerResponse;

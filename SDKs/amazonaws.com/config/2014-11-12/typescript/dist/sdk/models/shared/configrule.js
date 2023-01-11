@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigRuleStateEnum } from "./configrulestateenum";
-import { MaximumExecutionFrequencyEnum } from "./maximumexecutionfrequencyenum";
-import { Scope } from "./scope";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var configrulestateenum_1 = require("./configrulestateenum");
+var maximumexecutionfrequencyenum_1 = require("./maximumexecutionfrequencyenum");
+var scope_1 = require("./scope");
+var source_1 = require("./source");
 // ConfigRule
 /**
  * <p>An Config rule represents an Lambda function that you create for a custom rule or a predefined function for an Config managed rule. The function evaluates configuration items to assess whether your Amazon Web Services resources comply with your desired configurations. This function can run when Config detects a configuration change to an Amazon Web Services resource and at a periodic frequency that you choose (for example, every 24 hours).</p> <note> <p>You can use the Amazon Web Services CLI and Amazon Web Services SDKs if you want to create a rule that triggers evaluations for your resources when Config delivers the configuration snapshot. For more information, see <a>ConfigSnapshotDeliveryProperties</a>.</p> </note> <p>For more information about developing and using Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Amazon Web Services resource Configurations with Config</a> in the <i>Config Developer Guide</i>.</p>
@@ -37,45 +40,45 @@ var ConfigRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleArn" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "configRuleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleId" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "configRuleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleState" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "configRuleState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedBy" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputParameters" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "inputParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumExecutionFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumExecutionFrequency" }),
         __metadata("design:type", String)
     ], ConfigRule.prototype, "maximumExecutionFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Scope" }),
-        __metadata("design:type", Scope)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Scope" }),
+        __metadata("design:type", scope_1.Scope)
     ], ConfigRule.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
+        __metadata("design:type", source_1.Source)
     ], ConfigRule.prototype, "source", void 0);
     return ConfigRule;
-}(SpeakeasyBase));
-export { ConfigRule };
+}(utils_1.SpeakeasyBase));
+exports.ConfigRule = ConfigRule;

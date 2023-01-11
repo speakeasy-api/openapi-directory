@@ -5,16 +5,16 @@ export declare class GetGroupsGroupIdPermissionsPathParams extends SpeakeasyBase
 }
 export declare class GetGroupsGroupIdPermissionsQueryParams extends SpeakeasyBase {
     cursor?: string;
-    filter?: Map<string, any>;
-    filterGt?: Map<string, any>;
-    filterGteq?: Map<string, any>;
-    filterLike?: Map<string, any>;
-    filterLt?: Map<string, any>;
-    filterLteq?: Map<string, any>;
+    filter?: Record<string, any>;
+    filterGt?: Record<string, any>;
+    filterGteq?: Record<string, any>;
+    filterLike?: Record<string, any>;
+    filterLt?: Record<string, any>;
+    filterLteq?: Record<string, any>;
     includeGroups?: boolean;
     path?: string;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
     userId?: string;
 }
 export declare class GetGroupsGroupIdPermissionsRequest extends SpeakeasyBase {

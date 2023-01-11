@@ -54,7 +54,7 @@ export class GetLfTagResponse extends SpeakeasyBase {
   entityNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  getLfTagResponse?: shared.GetLfTagResponse;
+  getLFTagResponse?: shared.GetLfTagResponse;
 
   @SpeakeasyMetadata()
   internalServiceException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkCameraSchedulesResponse = exports.GetNetworkCameraSchedulesRequest = exports.GetNetworkCameraSchedulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkCameraSchedulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkCameraSchedulesPathParams, _super);
     function GetNetworkCameraSchedulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkCameraSchedulesPathParams.prototype, "networkId", void 0);
     return GetNetworkCameraSchedulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkCameraSchedulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCameraSchedulesPathParams = GetNetworkCameraSchedulesPathParams;
 var GetNetworkCameraSchedulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkCameraSchedulesRequest, _super);
     function GetNetworkCameraSchedulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkCameraSchedulesPathParams)
     ], GetNetworkCameraSchedulesRequest.prototype, "pathParams", void 0);
     return GetNetworkCameraSchedulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkCameraSchedulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCameraSchedulesRequest = GetNetworkCameraSchedulesRequest;
 var GetNetworkCameraSchedulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkCameraSchedulesResponse, _super);
     function GetNetworkCameraSchedulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkCameraSchedulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkCameraSchedulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkCameraSchedulesResponse.prototype, "getNetworkCameraSchedules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkCameraSchedulesResponse.prototype, "getNetworkCameraSchedules200ApplicationJSONObject", void 0);
     return GetNetworkCameraSchedulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkCameraSchedulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCameraSchedulesResponse = GetNetworkCameraSchedulesResponse;

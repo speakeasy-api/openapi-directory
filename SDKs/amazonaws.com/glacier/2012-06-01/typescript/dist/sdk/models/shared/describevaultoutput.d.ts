@@ -7,6 +7,6 @@ export declare class DescribeVaultOutput extends SpeakeasyBase {
     lastInventoryDate?: string;
     numberOfArchives?: number;
     sizeInBytes?: number;
-    vaultArn?: string;
+    vaultARN?: string;
     vaultName?: string;
 }

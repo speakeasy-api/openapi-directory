@@ -87,7 +87,7 @@ export declare class CreateNetworkCameraQualityRetentionProfileRequestBodyVideoS
 **/
 export declare class CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings extends SpeakeasyBase {
     mv12Mv22Mv72?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72;
-    mv12We?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
+    mv12WE?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
     mv21Mv71?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71;
     mv22XMv72X?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X;
     mv32?: CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32;
@@ -110,5 +110,5 @@ export declare class CreateNetworkCameraQualityRetentionProfileRequest extends S
 export declare class CreateNetworkCameraQualityRetentionProfileResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkCameraQualityRetentionProfile200ApplicationJsonObject?: Map<string, any>;
+    createNetworkCameraQualityRetentionProfile200ApplicationJSONObject?: Record<string, any>;
 }

@@ -22,6 +22,6 @@ export declare class PostPortfolioOptimizationMaximumReturnRequest extends Speak
 }
 export declare class PostPortfolioOptimizationMaximumReturnResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMaximumReturn200ApplicationJsonObject?: PostPortfolioOptimizationMaximumReturn200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMaximumReturn200ApplicationJSONObject?: PostPortfolioOptimizationMaximumReturn200ApplicationJson;
 }

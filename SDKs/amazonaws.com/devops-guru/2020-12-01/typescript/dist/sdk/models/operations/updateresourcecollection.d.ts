@@ -34,6 +34,6 @@ export declare class UpdateResourceCollectionResponse extends SpeakeasyBase {
     internalServerException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateResourceCollectionResponse?: Map<string, any>;
+    updateResourceCollectionResponse?: Record<string, any>;
     validationException?: any;
 }

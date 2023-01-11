@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualizationClusterGroupsDeleteResponse = exports.VirtualizationClusterGroupsDeleteRequest = exports.VirtualizationClusterGroupsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VirtualizationClusterGroupsDeletePathParams = /** @class */ (function (_super) {
     __extends(VirtualizationClusterGroupsDeletePathParams, _super);
     function VirtualizationClusterGroupsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], VirtualizationClusterGroupsDeletePathParams.prototype, "id", void 0);
     return VirtualizationClusterGroupsDeletePathParams;
-}(SpeakeasyBase));
-export { VirtualizationClusterGroupsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationClusterGroupsDeletePathParams = VirtualizationClusterGroupsDeletePathParams;
 var VirtualizationClusterGroupsDeleteRequest = /** @class */ (function (_super) {
     __extends(VirtualizationClusterGroupsDeleteRequest, _super);
     function VirtualizationClusterGroupsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VirtualizationClusterGroupsDeletePathParams)
     ], VirtualizationClusterGroupsDeleteRequest.prototype, "pathParams", void 0);
     return VirtualizationClusterGroupsDeleteRequest;
-}(SpeakeasyBase));
-export { VirtualizationClusterGroupsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationClusterGroupsDeleteRequest = VirtualizationClusterGroupsDeleteRequest;
 var VirtualizationClusterGroupsDeleteResponse = /** @class */ (function (_super) {
     __extends(VirtualizationClusterGroupsDeleteResponse, _super);
     function VirtualizationClusterGroupsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VirtualizationClusterGroupsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VirtualizationClusterGroupsDeleteResponse.prototype, "statusCode", void 0);
     return VirtualizationClusterGroupsDeleteResponse;
-}(SpeakeasyBase));
-export { VirtualizationClusterGroupsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationClusterGroupsDeleteResponse = VirtualizationClusterGroupsDeleteResponse;

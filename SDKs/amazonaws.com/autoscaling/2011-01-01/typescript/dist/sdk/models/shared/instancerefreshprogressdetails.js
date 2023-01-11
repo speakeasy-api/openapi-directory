@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceRefreshLivePoolProgress } from "./instancerefreshlivepoolprogress";
-import { InstanceRefreshWarmPoolProgress } from "./instancerefreshwarmpoolprogress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceRefreshProgressDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancerefreshlivepoolprogress_1 = require("./instancerefreshlivepoolprogress");
+var instancerefreshwarmpoolprogress_1 = require("./instancerefreshwarmpoolprogress");
 // InstanceRefreshProgressDetails
 /**
  * Reports the progress of an instance refresh on an Auto Scaling group that has a warm pool. This includes separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
@@ -35,13 +38,13 @@ var InstanceRefreshProgressDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceRefreshLivePoolProgress)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancerefreshlivepoolprogress_1.InstanceRefreshLivePoolProgress)
     ], InstanceRefreshProgressDetails.prototype, "livePoolProgress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceRefreshWarmPoolProgress)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancerefreshwarmpoolprogress_1.InstanceRefreshWarmPoolProgress)
     ], InstanceRefreshProgressDetails.prototype, "warmPoolProgress", void 0);
     return InstanceRefreshProgressDetails;
-}(SpeakeasyBase));
-export { InstanceRefreshProgressDetails };
+}(utils_1.SpeakeasyBase));
+exports.InstanceRefreshProgressDetails = InstanceRefreshProgressDetails;

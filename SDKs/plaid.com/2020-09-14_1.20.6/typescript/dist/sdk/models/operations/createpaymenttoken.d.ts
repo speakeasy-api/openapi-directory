@@ -5,6 +5,6 @@ export declare class CreatePaymentTokenRequest extends SpeakeasyBase {
 }
 export declare class CreatePaymentTokenResponse extends SpeakeasyBase {
     contentType: string;
-    paymentInitiationPaymentTokenCreateResponse?: Map<string, any>;
+    paymentInitiationPaymentTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

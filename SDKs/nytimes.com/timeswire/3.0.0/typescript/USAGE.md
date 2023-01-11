@@ -1,0 +1,25 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { GetContentJsonRequest, GetContentJsonResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+const sdk = new SDK(withSecurity(
+  security: {
+    apikey: {
+      apiKey: "YOUR_API_KEY_HERE",
+    },
+  }
+));
+    
+const req: GetContentJsonRequest = {
+  queryParams: {
+    url: "sit",
+  },
+};
+
+sdk.getContentJson(req).then((res: GetContentJsonResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

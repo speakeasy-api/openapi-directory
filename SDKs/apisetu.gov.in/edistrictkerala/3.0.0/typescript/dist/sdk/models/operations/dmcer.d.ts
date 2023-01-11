@@ -107,11 +107,11 @@ export declare class DmcerRequest extends SpeakeasyBase {
 export declare class DmcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dmcer400ApplicationJsonObject?: Dmcer400ApplicationJson;
-    dmcer401ApplicationJsonObject?: Dmcer401ApplicationJson;
-    dmcer404ApplicationJsonObject?: Dmcer404ApplicationJson;
-    dmcer500ApplicationJsonObject?: Dmcer500ApplicationJson;
-    dmcer502ApplicationJsonObject?: Dmcer502ApplicationJson;
-    dmcer503ApplicationJsonObject?: Dmcer503ApplicationJson;
-    dmcer504ApplicationJsonObject?: Dmcer504ApplicationJson;
+    dmcer400ApplicationJSONObject?: Dmcer400ApplicationJson;
+    dmcer401ApplicationJSONObject?: Dmcer401ApplicationJson;
+    dmcer404ApplicationJSONObject?: Dmcer404ApplicationJson;
+    dmcer500ApplicationJSONObject?: Dmcer500ApplicationJson;
+    dmcer502ApplicationJSONObject?: Dmcer502ApplicationJson;
+    dmcer503ApplicationJSONObject?: Dmcer503ApplicationJson;
+    dmcer504ApplicationJSONObject?: Dmcer504ApplicationJson;
 }

@@ -11,5 +11,5 @@ export class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResu
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=itemMetadata" })
-  itemMetadata?: Map<string, any>;
+  itemMetadata?: Record<string, any>;
 }

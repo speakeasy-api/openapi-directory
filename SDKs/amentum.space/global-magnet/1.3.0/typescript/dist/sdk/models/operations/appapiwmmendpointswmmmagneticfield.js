@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppApiWmmEndpointsWmmMagneticFieldResponse = exports.AppApiWmmEndpointsWmmMagneticFieldRequest = exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJson = exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity = exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination = exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation = exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination = exports.AppApiWmmEndpointsWmmMagneticFieldQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppApiWmmEndpointsWmmMagneticFieldQueryParams = /** @class */ (function (_super) {
     __extends(AppApiWmmEndpointsWmmMagneticFieldQueryParams, _super);
     function AppApiWmmEndpointsWmmMagneticFieldQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=altitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=altitude" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticFieldQueryParams.prototype, "altitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=latitude" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticFieldQueryParams.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=longitude" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticFieldQueryParams.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=year" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticFieldQueryParams.prototype, "year", void 0);
     return AppApiWmmEndpointsWmmMagneticFieldQueryParams;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticFieldQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticFieldQueryParams = AppApiWmmEndpointsWmmMagneticFieldQueryParams;
 // AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination
 /**
  * The angle in the horizontal plane between magnetic north and true north. Declination is positive when magnetic north is east of true north.
@@ -58,16 +61,16 @@ var AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", String)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination.prototype, "value", void 0);
     return AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination = AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination;
 // AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation
 /**
  * Referenced to grid north, referenced to 0 deg meridian of a polar stereographic projection.  Only defined for latitudes greater than 55 degrees and less than -55 degrees (arctic and antarctic).
@@ -79,16 +82,16 @@ var AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation = /** @cla
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", String)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation.prototype, "value", void 0);
     return AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation = AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation;
 // AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination
 /**
  * Also known as 'dip', is the angle made between the horizontal plane and the magnetic field vector at some position. Positive inclination corresponds to a downward pointing.
@@ -100,16 +103,16 @@ var AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", String)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination.prototype, "value", void 0);
     return AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination = AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination;
 // AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity
 /**
  * Total magnetic field intensity in nano Teslas.
@@ -121,69 +124,69 @@ var AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", String)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity.prototype, "value", void 0);
     return AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity = AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity;
 var AppApiWmmEndpointsWmmMagneticField200ApplicationJson = /** @class */ (function (_super) {
     __extends(AppApiWmmEndpointsWmmMagneticField200ApplicationJson, _super);
     function AppApiWmmEndpointsWmmMagneticField200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declination" }),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticField200ApplicationJsonDeclination)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJson.prototype, "declination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grid_variation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grid_variation" }),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticField200ApplicationJsonGridVariation)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJson.prototype, "gridVariation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inclination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inclination" }),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticField200ApplicationJsonInclination)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJson.prototype, "inclination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_intensity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_intensity" }),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticField200ApplicationJsonTotalIntensity)
     ], AppApiWmmEndpointsWmmMagneticField200ApplicationJson.prototype, "totalIntensity", void 0);
     return AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticField200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticField200ApplicationJson = AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
 var AppApiWmmEndpointsWmmMagneticFieldRequest = /** @class */ (function (_super) {
     __extends(AppApiWmmEndpointsWmmMagneticFieldRequest, _super);
     function AppApiWmmEndpointsWmmMagneticFieldRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticFieldQueryParams)
     ], AppApiWmmEndpointsWmmMagneticFieldRequest.prototype, "queryParams", void 0);
     return AppApiWmmEndpointsWmmMagneticFieldRequest;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticFieldRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticFieldRequest = AppApiWmmEndpointsWmmMagneticFieldRequest;
 var AppApiWmmEndpointsWmmMagneticFieldResponse = /** @class */ (function (_super) {
     __extends(AppApiWmmEndpointsWmmMagneticFieldResponse, _super);
     function AppApiWmmEndpointsWmmMagneticFieldResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppApiWmmEndpointsWmmMagneticFieldResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppApiWmmEndpointsWmmMagneticFieldResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppApiWmmEndpointsWmmMagneticField200ApplicationJson)
-    ], AppApiWmmEndpointsWmmMagneticFieldResponse.prototype, "appApiWmmEndpointsWmmMagneticField200ApplicationJsonObject", void 0);
+    ], AppApiWmmEndpointsWmmMagneticFieldResponse.prototype, "appApiWMMEndpointsWMMMagneticField200ApplicationJSONObject", void 0);
     return AppApiWmmEndpointsWmmMagneticFieldResponse;
-}(SpeakeasyBase));
-export { AppApiWmmEndpointsWmmMagneticFieldResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppApiWmmEndpointsWmmMagneticFieldResponse = AppApiWmmEndpointsWmmMagneticFieldResponse;

@@ -23,5 +23,5 @@ export declare class ResendContactReachabilityEmailResponse extends SpeakeasyBas
     operationLimitExceeded?: any;
     resendContactReachabilityEmailResponse?: shared.ResendContactReachabilityEmailResponse;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

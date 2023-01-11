@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Evaluation = void 0;
+var utils_1 = require("../../../internal/utils");
 // Evaluation
 /**
  * Returns information about the approval rules applied to a pull request and whether conditions have been met.
@@ -33,21 +36,21 @@ var Evaluation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRulesNotSatisfied" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRulesNotSatisfied" }),
         __metadata("design:type", Array)
     ], Evaluation.prototype, "approvalRulesNotSatisfied", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRulesSatisfied" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRulesSatisfied" }),
         __metadata("design:type", Array)
     ], Evaluation.prototype, "approvalRulesSatisfied", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approved" }),
         __metadata("design:type", Boolean)
     ], Evaluation.prototype, "approved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overridden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overridden" }),
         __metadata("design:type", Boolean)
     ], Evaluation.prototype, "overridden", void 0);
     return Evaluation;
-}(SpeakeasyBase));
-export { Evaluation };
+}(utils_1.SpeakeasyBase));
+exports.Evaluation = Evaluation;

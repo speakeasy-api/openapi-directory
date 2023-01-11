@@ -16,7 +16,7 @@ export declare class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerp
 }
 export declare class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     authorization?: shared.Authorization;
     validationError?: shared.ValidationError;

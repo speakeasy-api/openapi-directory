@@ -16,7 +16,7 @@ export class ConfirmPaymentOfTransaction5RequestBody extends SpeakeasyBase {
 
 export class ConfirmPaymentOfTransaction5Request extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: ConfirmPaymentOfTransaction5RequestBody;

@@ -19,7 +19,7 @@ export class App extends SpeakeasyBase {
   appSource?: Source;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=CreatedAt" })
   createdAt?: string;

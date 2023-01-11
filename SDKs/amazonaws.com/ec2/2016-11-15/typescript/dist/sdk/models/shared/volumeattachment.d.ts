@@ -1,13 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VolumeAttachmentStateEnum } from "./volumeattachmentstateenum";
 /**
  * Describes volume attachment details.
 **/
 export declare class VolumeAttachment extends SpeakeasyBase {
-    attachTime?: Date;
-    deleteOnTermination?: boolean;
-    device?: string;
-    instanceId?: string;
-    state?: VolumeAttachmentStateEnum;
-    volumeId?: string;
+    attachTime?: Record<string, any>;
+    deleteOnTermination?: Record<string, any>;
+    device?: Record<string, any>;
+    instanceId?: Record<string, any>;
+    state?: Record<string, any>;
+    volumeId?: Record<string, any>;
 }

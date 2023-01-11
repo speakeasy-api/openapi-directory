@@ -5,9 +5,9 @@ export declare class InAppProduct extends SpeakeasyBase {
     defaultLanguage?: string;
     defaultPrice?: Price;
     gracePeriod?: string;
-    listings?: Map<string, InAppProductListing>;
+    listings?: Record<string, InAppProductListing>;
     packageName?: string;
-    prices?: Map<string, Price>;
+    prices?: Record<string, Price>;
     purchaseType?: string;
     sku?: string;
     status?: string;

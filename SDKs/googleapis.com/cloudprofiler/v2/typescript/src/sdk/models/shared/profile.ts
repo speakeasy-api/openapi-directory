@@ -26,7 +26,7 @@ export class ProfileInput extends SpeakeasyBase {
   duration?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=profileBytes" })
   profileBytes?: string;
@@ -48,7 +48,7 @@ export class Profile extends SpeakeasyBase {
   duration?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

@@ -48,7 +48,7 @@ export class DeleteTaskResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTaskResponse?: Map<string, any>;
+  deleteTaskResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalException?: any;

@@ -25,10 +25,11 @@ import { Search } from "./search";
 import { SecretScanning } from "./secretscanning";
 import { Teams } from "./teams";
 import { Users } from "./users";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://github.com/", "https://{protocol}://{hostname}"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     actions: Actions;
     activity: Activity;
@@ -62,6 +63,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

@@ -38,7 +38,7 @@ export class PatchAppsAppIdKeysKeyIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   keyResponse?: shared.KeyResponse;

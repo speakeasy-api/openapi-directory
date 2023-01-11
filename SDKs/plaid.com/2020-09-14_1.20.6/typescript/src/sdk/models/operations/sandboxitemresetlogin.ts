@@ -14,7 +14,7 @@ export class SandboxItemResetLoginResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sandboxItemResetLoginResponse?: Map<string, any>;
+  sandboxItemResetLoginResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

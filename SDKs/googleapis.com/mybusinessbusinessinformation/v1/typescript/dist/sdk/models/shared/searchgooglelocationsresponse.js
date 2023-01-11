@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleLocation } from "./googlelocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchGoogleLocationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlelocation_1 = require("./googlelocation");
 // SearchGoogleLocationsResponse
 /**
  * Response message for GoogleLocations.SearchGoogleLocations.
@@ -34,9 +37,9 @@ var SearchGoogleLocationsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleLocations", elemType: GoogleLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleLocations", elemType: googlelocation_1.GoogleLocation }),
         __metadata("design:type", Array)
     ], SearchGoogleLocationsResponse.prototype, "googleLocations", void 0);
     return SearchGoogleLocationsResponse;
-}(SpeakeasyBase));
-export { SearchGoogleLocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchGoogleLocationsResponse = SearchGoogleLocationsResponse;

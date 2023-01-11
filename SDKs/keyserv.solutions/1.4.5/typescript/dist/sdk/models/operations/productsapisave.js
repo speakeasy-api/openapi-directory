@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductsApiSaveResponse = exports.ProductsApiSaveRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductsApiSaveRequest = /** @class */ (function (_super) {
     __extends(ProductsApiSaveRequest, _super);
     function ProductsApiSaveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], ProductsApiSaveRequest.prototype, "request", void 0);
     return ProductsApiSaveRequest;
-}(SpeakeasyBase));
-export { ProductsApiSaveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiSaveRequest = ProductsApiSaveRequest;
 var ProductsApiSaveResponse = /** @class */ (function (_super) {
     __extends(ProductsApiSaveResponse, _super);
     function ProductsApiSaveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProductsApiSaveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], ProductsApiSaveResponse.prototype, "productsApiSave201ApplicationJsonOneOf", void 0);
+    ], ProductsApiSaveResponse.prototype, "productsApiSave201ApplicationJSONOneOf", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProductsApiSaveResponse.prototype, "statusCode", void 0);
     return ProductsApiSaveResponse;
-}(SpeakeasyBase));
-export { ProductsApiSaveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiSaveResponse = ProductsApiSaveResponse;

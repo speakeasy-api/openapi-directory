@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationInventoryDeviceResponse = exports.GetOrganizationInventoryDeviceRequest = exports.GetOrganizationInventoryDevicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationInventoryDevicePathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDevicePathParams, _super);
     function GetOrganizationInventoryDevicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicePathParams.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDevicePathParams.prototype, "serial", void 0);
     return GetOrganizationInventoryDevicePathParams;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDevicePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDevicePathParams = GetOrganizationInventoryDevicePathParams;
 var GetOrganizationInventoryDeviceRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDeviceRequest, _super);
     function GetOrganizationInventoryDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationInventoryDevicePathParams)
     ], GetOrganizationInventoryDeviceRequest.prototype, "pathParams", void 0);
     return GetOrganizationInventoryDeviceRequest;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDeviceRequest = GetOrganizationInventoryDeviceRequest;
 var GetOrganizationInventoryDeviceResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationInventoryDeviceResponse, _super);
     function GetOrganizationInventoryDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationInventoryDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationInventoryDeviceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationInventoryDeviceResponse.prototype, "getOrganizationInventoryDevice200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationInventoryDeviceResponse.prototype, "getOrganizationInventoryDevice200ApplicationJSONObject", void 0);
     return GetOrganizationInventoryDeviceResponse;
-}(SpeakeasyBase));
-export { GetOrganizationInventoryDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationInventoryDeviceResponse = GetOrganizationInventoryDeviceResponse;

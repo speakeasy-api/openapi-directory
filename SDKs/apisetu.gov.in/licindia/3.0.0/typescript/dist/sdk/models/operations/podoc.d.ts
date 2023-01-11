@@ -3,7 +3,7 @@ import * as shared from "../shared";
 export declare class PodocRequestBodyCertificateParameters extends SpeakeasyBase {
     dob: string;
     fullName: string;
-    polDob: string;
+    polDOB: string;
     policyNo: string;
 }
 export declare enum PodocRequestBodyFormatEnum {
@@ -108,11 +108,11 @@ export declare class PodocRequest extends SpeakeasyBase {
 export declare class PodocResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    podoc400ApplicationJsonObject?: Podoc400ApplicationJson;
-    podoc401ApplicationJsonObject?: Podoc401ApplicationJson;
-    podoc404ApplicationJsonObject?: Podoc404ApplicationJson;
-    podoc500ApplicationJsonObject?: Podoc500ApplicationJson;
-    podoc502ApplicationJsonObject?: Podoc502ApplicationJson;
-    podoc503ApplicationJsonObject?: Podoc503ApplicationJson;
-    podoc504ApplicationJsonObject?: Podoc504ApplicationJson;
+    podoc400ApplicationJSONObject?: Podoc400ApplicationJson;
+    podoc401ApplicationJSONObject?: Podoc401ApplicationJson;
+    podoc404ApplicationJSONObject?: Podoc404ApplicationJson;
+    podoc500ApplicationJSONObject?: Podoc500ApplicationJson;
+    podoc502ApplicationJSONObject?: Podoc502ApplicationJson;
+    podoc503ApplicationJSONObject?: Podoc503ApplicationJson;
+    podoc504ApplicationJSONObject?: Podoc504ApplicationJson;
 }

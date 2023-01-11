@@ -107,11 +107,11 @@ export declare class LabrpRequest extends SpeakeasyBase {
 export declare class LabrpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    labrp400ApplicationJsonObject?: Labrp400ApplicationJson;
-    labrp401ApplicationJsonObject?: Labrp401ApplicationJson;
-    labrp404ApplicationJsonObject?: Labrp404ApplicationJson;
-    labrp500ApplicationJsonObject?: Labrp500ApplicationJson;
-    labrp502ApplicationJsonObject?: Labrp502ApplicationJson;
-    labrp503ApplicationJsonObject?: Labrp503ApplicationJson;
-    labrp504ApplicationJsonObject?: Labrp504ApplicationJson;
+    labrp400ApplicationJSONObject?: Labrp400ApplicationJson;
+    labrp401ApplicationJSONObject?: Labrp401ApplicationJson;
+    labrp404ApplicationJSONObject?: Labrp404ApplicationJson;
+    labrp500ApplicationJSONObject?: Labrp500ApplicationJson;
+    labrp502ApplicationJSONObject?: Labrp502ApplicationJson;
+    labrp503ApplicationJSONObject?: Labrp503ApplicationJson;
+    labrp504ApplicationJSONObject?: Labrp504ApplicationJson;
 }

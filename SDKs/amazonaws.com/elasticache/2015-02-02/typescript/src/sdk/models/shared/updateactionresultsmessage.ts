@@ -1,13 +1,13 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProcessedUpdateAction } from "./processedupdateaction";
-import { UnprocessedUpdateAction } from "./unprocessedupdateaction";
+import { ProcessedUpdateActionList } from "./processedupdateactionlist";
+import { UnprocessedUpdateActionList } from "./unprocessedupdateactionlist";
 
 
 
 export class UpdateActionResultsMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ProcessedUpdateAction })
-  processedUpdateActions?: ProcessedUpdateAction[];
+  @SpeakeasyMetadata({ elemType: ProcessedUpdateActionList })
+  processedUpdateActions?: ProcessedUpdateActionList[];
 
-  @SpeakeasyMetadata({ elemType: UnprocessedUpdateAction })
-  unprocessedUpdateActions?: UnprocessedUpdateAction[];
+  @SpeakeasyMetadata({ elemType: UnprocessedUpdateActionList })
+  unprocessedUpdateActions?: UnprocessedUpdateActionList[];
 }

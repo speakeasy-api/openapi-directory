@@ -21,7 +21,7 @@ export declare class ContainerService extends SpeakeasyBase {
     powerId?: string;
     principalArn?: string;
     privateDomainName?: string;
-    publicDomainNames?: Map<string, string[]>;
+    publicDomainNames?: Record<string, string[]>;
     resourceType?: ResourceTypeEnum;
     scale?: number;
     state?: ContainerServiceStateEnum;

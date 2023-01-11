@@ -15,13 +15,13 @@ export class GoogleCloudDiscoveryengineV1betaRecommendRequest extends SpeakeasyB
   pageSize?: number;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, any>;
+  params?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=userEvent" })
   userEvent?: GoogleCloudDiscoveryengineV1betaUserEvent;
 
   @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
+  userLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=validateOnly" })
   validateOnly?: boolean;

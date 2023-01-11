@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableCableLengthUnitEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableCableInput = exports.WritableCableTypeEnum = exports.WritableCableStatusEnum = exports.WritableCableLengthUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableCableLengthUnitEnum;
 (function (WritableCableLengthUnitEnum) {
     WritableCableLengthUnitEnum["M"] = "m";
     WritableCableLengthUnitEnum["Cm"] = "cm";
     WritableCableLengthUnitEnum["Ft"] = "ft";
     WritableCableLengthUnitEnum["In"] = "in";
-})(WritableCableLengthUnitEnum || (WritableCableLengthUnitEnum = {}));
-export var WritableCableStatusEnum;
+})(WritableCableLengthUnitEnum = exports.WritableCableLengthUnitEnum || (exports.WritableCableLengthUnitEnum = {}));
+var WritableCableStatusEnum;
 (function (WritableCableStatusEnum) {
     WritableCableStatusEnum["Connected"] = "connected";
     WritableCableStatusEnum["Planned"] = "planned";
     WritableCableStatusEnum["Decommissioning"] = "decommissioning";
-})(WritableCableStatusEnum || (WritableCableStatusEnum = {}));
-export var WritableCableTypeEnum;
+})(WritableCableStatusEnum = exports.WritableCableStatusEnum || (exports.WritableCableStatusEnum = {}));
+var WritableCableTypeEnum;
 (function (WritableCableTypeEnum) {
     WritableCableTypeEnum["Cat3"] = "cat3";
     WritableCableTypeEnum["Cat5"] = "cat5";
@@ -58,52 +61,52 @@ export var WritableCableTypeEnum;
     WritableCableTypeEnum["SmfOs2"] = "smf-os2";
     WritableCableTypeEnum["Aoc"] = "aoc";
     WritableCableTypeEnum["Power"] = "power";
-})(WritableCableTypeEnum || (WritableCableTypeEnum = {}));
+})(WritableCableTypeEnum = exports.WritableCableTypeEnum || (exports.WritableCableTypeEnum = {}));
 var WritableCableInput = /** @class */ (function (_super) {
     __extends(WritableCableInput, _super);
     function WritableCableInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], WritableCableInput.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length_unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length_unit" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "lengthUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termination_a_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termination_a_id" }),
         __metadata("design:type", Number)
     ], WritableCableInput.prototype, "terminationAId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termination_a_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termination_a_type" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "terminationAType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termination_b_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termination_b_id" }),
         __metadata("design:type", Number)
     ], WritableCableInput.prototype, "terminationBId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termination_b_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termination_b_type" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "terminationBType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableCableInput.prototype, "type", void 0);
     return WritableCableInput;
-}(SpeakeasyBase));
-export { WritableCableInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableCableInput = WritableCableInput;

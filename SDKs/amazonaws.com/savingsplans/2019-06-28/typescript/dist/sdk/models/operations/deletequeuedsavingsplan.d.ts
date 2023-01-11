@@ -17,7 +17,7 @@ export declare class DeleteQueuedSavingsPlanRequest extends SpeakeasyBase {
 }
 export declare class DeleteQueuedSavingsPlanResponse extends SpeakeasyBase {
     contentType: string;
-    deleteQueuedSavingsPlanResponse?: Map<string, any>;
+    deleteQueuedSavingsPlanResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

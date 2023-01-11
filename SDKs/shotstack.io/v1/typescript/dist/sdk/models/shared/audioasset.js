@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AudioAssetEffectEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioAsset = exports.AudioAssetEffectEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AudioAssetEffectEnum;
 (function (AudioAssetEffectEnum) {
     AudioAssetEffectEnum["FadeIn"] = "fadeIn";
     AudioAssetEffectEnum["FadeOut"] = "fadeOut";
     AudioAssetEffectEnum["FadeInFadeOut"] = "fadeInFadeOut";
-})(AudioAssetEffectEnum || (AudioAssetEffectEnum = {}));
+})(AudioAssetEffectEnum = exports.AudioAssetEffectEnum || (exports.AudioAssetEffectEnum = {}));
 // AudioAsset
 /**
  * The AudioAsset is used to add sound effects and audio at specific intervals on the timeline. The src must be a publicly accessible URL to an audio resource such  as an mp3 file.
@@ -39,25 +42,25 @@ var AudioAsset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effect" }),
         __metadata("design:type", String)
     ], AudioAsset.prototype, "effect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], AudioAsset.prototype, "src", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trim" }),
         __metadata("design:type", Number)
     ], AudioAsset.prototype, "trim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AudioAsset.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", Number)
     ], AudioAsset.prototype, "volume", void 0);
     return AudioAsset;
-}(SpeakeasyBase));
-export { AudioAsset };
+}(utils_1.SpeakeasyBase));
+exports.AudioAsset = AudioAsset;

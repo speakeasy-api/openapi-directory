@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MatchPersonalFirstLastNameIn } from "./matchpersonalfirstlastnamein";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchMatchPersonalFirstLastNameIn = void 0;
+var utils_1 = require("../../../internal/utils");
+var matchpersonalfirstlastnamein_1 = require("./matchpersonalfirstlastnamein");
 var BatchMatchPersonalFirstLastNameIn = /** @class */ (function (_super) {
     __extends(BatchMatchPersonalFirstLastNameIn, _super);
     function BatchMatchPersonalFirstLastNameIn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personalNames", elemType: MatchPersonalFirstLastNameIn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personalNames", elemType: matchpersonalfirstlastnamein_1.MatchPersonalFirstLastNameIn }),
         __metadata("design:type", Array)
     ], BatchMatchPersonalFirstLastNameIn.prototype, "personalNames", void 0);
     return BatchMatchPersonalFirstLastNameIn;
-}(SpeakeasyBase));
-export { BatchMatchPersonalFirstLastNameIn };
+}(utils_1.SpeakeasyBase));
+exports.BatchMatchPersonalFirstLastNameIn = BatchMatchPersonalFirstLastNameIn;

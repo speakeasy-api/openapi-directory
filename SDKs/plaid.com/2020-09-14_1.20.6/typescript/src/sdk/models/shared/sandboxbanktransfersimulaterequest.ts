@@ -17,7 +17,7 @@ export class SandboxBankTransferSimulateRequest extends SpeakeasyBase {
   eventType: string;
 
   @SpeakeasyMetadata({ data: "json, name=failure_reason" })
-  failureReason?: Map<string, any>;
+  failureReason?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=secret" })
   secret?: string;

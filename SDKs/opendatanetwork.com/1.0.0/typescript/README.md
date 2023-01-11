@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAMapRequest, CreateAMapResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,17 +28,17 @@ const sdk = new SDK();
     
 const req: CreateAMapRequest = {
   queryParams: {
-    appToken: "dolorum",
-    constraint: "praesentium",
-    entityId: "sunt",
-    variable: "rerum",
+    appToken: "sit",
+    constraint: "voluptas",
+    entityId: "culpa",
+    variable: "expedita",
   },
   headers: {
-    xAppToken: "assumenda",
+    xAppToken: "consequuntur",
   },
 };
 
-sdk.sdk.createAMap(req).then((res: CreateAMapResponse | AxiosError) => {
+sdk.createAMap(req).then((res: CreateAMapResponse | AxiosError) => {
    // handle response
 });
 ```

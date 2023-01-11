@@ -9,7 +9,7 @@ export enum ExtensionConfigIntentAddMediaOptEnum {
 
 export class ExtensionConfigIntentAddMedia extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   opt?: ExtensionConfigIntentAddMediaOptEnum[];
@@ -28,7 +28,7 @@ export enum ExtensionConfigIntentPlayMediaOptEnum {
 
 export class ExtensionConfigIntentPlayMedia extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   opt?: ExtensionConfigIntentPlayMediaOptEnum[];
@@ -44,7 +44,7 @@ export enum ExtensionConfigIntentUpdateMediaAffinityOptEnum {
 
 export class ExtensionConfigIntentUpdateMediaAffinity extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   opt?: ExtensionConfigIntentUpdateMediaAffinityOptEnum[];
@@ -59,7 +59,7 @@ export class ExtensionConfigIntent extends SpeakeasyBase {
   addMedia?: ExtensionConfigIntentAddMedia;
 
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   playMedia: ExtensionConfigIntentPlayMedia;
@@ -71,7 +71,7 @@ export class ExtensionConfigIntent extends SpeakeasyBase {
 
 export class ExtensionConfigMediaQueuesPlayMedia extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   url?: string;
@@ -80,7 +80,7 @@ export class ExtensionConfigMediaQueuesPlayMedia extends SpeakeasyBase {
 
 export class ExtensionConfigMediaQueuesUpdateActivity extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   url?: string;
@@ -89,7 +89,7 @@ export class ExtensionConfigMediaQueuesUpdateActivity extends SpeakeasyBase {
 
 export class ExtensionConfigMediaQueues extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   playMedia?: ExtensionConfigMediaQueuesPlayMedia;
@@ -107,7 +107,7 @@ export class ExtensionConfigMedia extends SpeakeasyBase {
 
 export class ExtensionConfig extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  hdr?: Map<string, any>;
+  hdr?: Record<string, any>;
 
   @SpeakeasyMetadata()
   intent: ExtensionConfigIntent;

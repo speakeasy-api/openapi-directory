@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = void 0;
+var utils_1 = require("../../../internal/utils");
 // Permission
 /**
  * Describes stack or user permissions.
@@ -33,25 +36,25 @@ var Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowSsh" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowSsh" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "allowSsh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowSudo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowSudo" }),
         __metadata("design:type", Boolean)
     ], Permission.prototype, "allowSudo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamUserArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamUserArn" }),
         __metadata("design:type", String)
     ], Permission.prototype, "iamUserArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Level" }),
         __metadata("design:type", String)
     ], Permission.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], Permission.prototype, "stackId", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

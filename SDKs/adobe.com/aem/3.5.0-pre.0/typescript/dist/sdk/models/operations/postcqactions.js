@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCqActionsResponse = exports.PostCqActionsRequest = exports.PostCqActionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostCqActionsQueryParams = /** @class */ (function (_super) {
     __extends(PostCqActionsQueryParams, _super);
     function PostCqActionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorizableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=authorizableId" }),
         __metadata("design:type", String)
     ], PostCqActionsQueryParams.prototype, "authorizableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changelog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changelog" }),
         __metadata("design:type", String)
     ], PostCqActionsQueryParams.prototype, "changelog", void 0);
     return PostCqActionsQueryParams;
-}(SpeakeasyBase));
-export { PostCqActionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCqActionsQueryParams = PostCqActionsQueryParams;
 var PostCqActionsRequest = /** @class */ (function (_super) {
     __extends(PostCqActionsRequest, _super);
     function PostCqActionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCqActionsQueryParams)
     ], PostCqActionsRequest.prototype, "queryParams", void 0);
     return PostCqActionsRequest;
-}(SpeakeasyBase));
-export { PostCqActionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCqActionsRequest = PostCqActionsRequest;
 var PostCqActionsResponse = /** @class */ (function (_super) {
     __extends(PostCqActionsResponse, _super);
     function PostCqActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCqActionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCqActionsResponse.prototype, "statusCode", void 0);
     return PostCqActionsResponse;
-}(SpeakeasyBase));
-export { PostCqActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCqActionsResponse = PostCqActionsResponse;

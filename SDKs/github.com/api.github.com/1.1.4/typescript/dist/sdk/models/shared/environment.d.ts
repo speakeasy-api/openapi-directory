@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentBranchPolicy } from "./deploymentbranchpolicy";
 import { DeploymentReviewerTypeEnum } from "./deploymentreviewertypeenum";
+import { DeploymentBranchPolicy } from "./deploymentbranchpolicy";
 export declare class EnvironmentProtectionRules1 extends SpeakeasyBase {
     id: number;
     nodeId: string;

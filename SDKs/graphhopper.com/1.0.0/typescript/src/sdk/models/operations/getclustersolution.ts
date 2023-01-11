@@ -35,11 +35,11 @@ export class GetClusterSolutionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getClusterSolution404ApplicationJsonObject?: GetClusterSolution404ApplicationJson;
+  getClusterSolution404ApplicationJSONObject?: GetClusterSolution404ApplicationJson;
 }

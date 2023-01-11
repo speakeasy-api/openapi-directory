@@ -68,20 +68,20 @@ export class PostBenefitsDocumentUploadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload202ApplicationJsonObject?: PostBenefitsDocumentUpload202ApplicationJson;
+  postBenefitsDocumentUpload202ApplicationJSONObject?: PostBenefitsDocumentUpload202ApplicationJson;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload401ApplicationJsonObject?: PostBenefitsDocumentUpload401ApplicationJson;
+  postBenefitsDocumentUpload401ApplicationJSONObject?: PostBenefitsDocumentUpload401ApplicationJson;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload403ApplicationJsonObject?: PostBenefitsDocumentUpload403ApplicationJson;
+  postBenefitsDocumentUpload403ApplicationJSONObject?: PostBenefitsDocumentUpload403ApplicationJson;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload422ApplicationJsonObject?: PostBenefitsDocumentUpload422ApplicationJson;
+  postBenefitsDocumentUpload422ApplicationJSONObject?: PostBenefitsDocumentUpload422ApplicationJson;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload429ApplicationJsonObject?: PostBenefitsDocumentUpload429ApplicationJson;
+  postBenefitsDocumentUpload429ApplicationJSONObject?: PostBenefitsDocumentUpload429ApplicationJson;
 
   @SpeakeasyMetadata()
-  postBenefitsDocumentUpload500ApplicationJsonObject?: PostBenefitsDocumentUpload500ApplicationJson;
+  postBenefitsDocumentUpload500ApplicationJSONObject?: PostBenefitsDocumentUpload500ApplicationJson;
 }

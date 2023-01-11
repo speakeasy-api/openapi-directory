@@ -11,6 +11,10 @@ export enum JobResponseStatusEnum {
 }
 
 
+// JobResponse
+/** 
+ * A *job* is an object representing a process that handles asynchronous work.
+**/
 export class JobResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;

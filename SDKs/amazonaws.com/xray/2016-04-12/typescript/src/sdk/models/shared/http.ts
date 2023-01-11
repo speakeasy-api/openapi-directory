@@ -17,7 +17,7 @@ export class Http extends SpeakeasyBase {
   httpStatus?: number;
 
   @SpeakeasyMetadata({ data: "json, name=HttpURL" })
-  httpUrl?: string;
+  httpURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=UserAgent" })
   userAgent?: string;

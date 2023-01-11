@@ -8,5 +8,5 @@ export declare class GetOrganizationWebhooksAlertTypesRequest extends SpeakeasyB
 export declare class GetOrganizationWebhooksAlertTypesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationWebhooksAlertTypes200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationWebhooksAlertTypes200ApplicationJSONObject?: Record<string, any>;
 }

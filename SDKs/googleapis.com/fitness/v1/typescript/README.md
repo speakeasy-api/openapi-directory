@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FitnessUsersDataSourcesCreateRequest, FitnessUsersDataSourcesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,64 +31,70 @@ const req: FitnessUsersDataSourcesCreateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    userId: "rerum",
+    userId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
     accessToken: "culpa",
-    alt: "proto",
-    callback: "possimus",
-    fields: "possimus",
-    key: "voluptas",
-    oauthToken: "et",
-    prettyPrint: false,
-    quotaUser: "ducimus",
-    uploadType: "exercitationem",
-    uploadProtocol: "totam",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     application: {
-      detailsUrl: "atque",
-      name: "ut",
-      packageName: "mollitia",
-      version: "impedit",
+      detailsUrl: "dicta",
+      name: "debitis",
+      packageName: "voluptatum",
+      version: "et",
     },
     dataQualityStandard: [
-      "dataQualityBloodPressureEsh2002",
-      "dataQualityBloodPressureEsh2010",
+      "dataQualityUnknown",
+      "dataQualityUnknown",
+      "dataQualityBloodPressureBhsAA",
     ],
-    dataStreamId: "molestias",
-    dataStreamName: "corrupti",
+    dataStreamId: "iste",
+    dataStreamName: "vitae",
     dataType: {
       field: [
         {
-          format: "string",
-          name: "vero",
+          format: "map",
+          name: "illum",
           optional: true,
         },
         {
-          format: "floatList",
-          name: "beatae",
-          optional: false,
+          format: "floatPoint",
+          name: "odio",
+          optional: true,
+        },
+        {
+          format: "integerList",
+          name: "aspernatur",
+          optional: true,
         },
       ],
-      name: "molestiae",
+      name: "totam",
     },
     device: {
-      manufacturer: "deleniti",
-      model: "suscipit",
+      manufacturer: "commodi",
+      model: "quis",
       type: "phone",
-      uid: "et",
-      version: "labore",
+      uid: "aut",
+      version: "odit",
     },
-    name: "et",
+    name: "non",
     type: "raw",
   },
 };

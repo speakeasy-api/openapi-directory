@@ -28,6 +28,6 @@ export declare class AppengineAppsAuthorizedCertificatesDeleteRequest extends Sp
 }
 export declare class AppengineAppsAuthorizedCertificatesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

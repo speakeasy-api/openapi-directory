@@ -19,7 +19,7 @@ export class FunctionConfiguration extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FunctionARN" })
-  functionArn?: string;
+  functionARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FunctionName" })
   functionName?: string;

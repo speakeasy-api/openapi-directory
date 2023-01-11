@@ -30,5 +30,5 @@ export declare class GetAllowedNetworksRequest extends SpeakeasyBase {
 export declare class GetAllowedNetworksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAllowedNetworks200ApplicationJsonObject?: GetAllowedNetworks200ApplicationJson;
+    getAllowedNetworks200ApplicationJSONObject?: GetAllowedNetworks200ApplicationJson;
 }

@@ -6,6 +6,10 @@ import { SearchResultTextMatches } from "./searchresulttextmatches";
 
 
 
+// IssueSearchResultItemSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueSearchResultItemSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -90,6 +94,10 @@ export class IssueSearchResultItemLabels extends SpeakeasyBase {
 }
 
 
+// IssueSearchResultItemMilestoneSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueSearchResultItemMilestoneSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -155,6 +163,10 @@ export enum IssueSearchResultItemMilestoneStateEnum {
 }
 
 
+// IssueSearchResultItemMilestone
+/** 
+ * A collection of related issues and pull requests.
+**/
 export class IssueSearchResultItemMilestone extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=closed_at" })
   closedAt: Date;
@@ -293,7 +305,7 @@ export class IssueSearchResultItem extends SpeakeasyBase {
   number: number;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=pull_request" })
   pullRequest?: IssueSearchResultItemPullRequest;

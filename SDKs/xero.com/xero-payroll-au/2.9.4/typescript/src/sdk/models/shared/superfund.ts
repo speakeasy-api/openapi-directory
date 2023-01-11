@@ -30,7 +30,7 @@ export class SuperFund extends SpeakeasyBase {
   spin?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuperFundID" })
-  superFundId?: string;
+  superFundID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Type" })
   type: SuperFundTypeEnum;
@@ -39,7 +39,7 @@ export class SuperFund extends SpeakeasyBase {
   usi?: string;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError })
   validationErrors?: ValidationError[];
@@ -72,7 +72,7 @@ export class SuperFundInput extends SpeakeasyBase {
   spin?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuperFundID" })
-  superFundId?: string;
+  superFundID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Type" })
   type: SuperFundTypeEnum;

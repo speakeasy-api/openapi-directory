@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartSimulationJobBatchResponse = exports.StartSimulationJobBatchRequest = exports.StartSimulationJobBatchRequestBody = exports.StartSimulationJobBatchRequestBodyBatchPolicy = exports.StartSimulationJobBatchHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StartSimulationJobBatchHeaders = /** @class */ (function (_super) {
     __extends(StartSimulationJobBatchHeaders, _super);
     function StartSimulationJobBatchHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchHeaders.prototype, "xAmzSignedHeaders", void 0);
     return StartSimulationJobBatchHeaders;
-}(SpeakeasyBase));
-export { StartSimulationJobBatchHeaders };
+}(utils_1.SpeakeasyBase));
+exports.StartSimulationJobBatchHeaders = StartSimulationJobBatchHeaders;
 // StartSimulationJobBatchRequestBodyBatchPolicy
 /**
  * Information about the batch policy.
@@ -70,93 +96,93 @@ var StartSimulationJobBatchRequestBodyBatchPolicy = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxConcurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxConcurrency" }),
         __metadata("design:type", Number)
     ], StartSimulationJobBatchRequestBodyBatchPolicy.prototype, "maxConcurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutInSeconds" }),
         __metadata("design:type", Number)
     ], StartSimulationJobBatchRequestBodyBatchPolicy.prototype, "timeoutInSeconds", void 0);
     return StartSimulationJobBatchRequestBodyBatchPolicy;
-}(SpeakeasyBase));
-export { StartSimulationJobBatchRequestBodyBatchPolicy };
+}(utils_1.SpeakeasyBase));
+exports.StartSimulationJobBatchRequestBodyBatchPolicy = StartSimulationJobBatchRequestBodyBatchPolicy;
 var StartSimulationJobBatchRequestBody = /** @class */ (function (_super) {
     __extends(StartSimulationJobBatchRequestBody, _super);
     function StartSimulationJobBatchRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchPolicy" }),
         __metadata("design:type", StartSimulationJobBatchRequestBodyBatchPolicy)
     ], StartSimulationJobBatchRequestBody.prototype, "batchPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRequestToken" }),
         __metadata("design:type", String)
     ], StartSimulationJobBatchRequestBody.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createSimulationJobRequests", elemType: shared.SimulationJobRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createSimulationJobRequests", elemType: shared.SimulationJobRequest }),
         __metadata("design:type", Array)
     ], StartSimulationJobBatchRequestBody.prototype, "createSimulationJobRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], StartSimulationJobBatchRequestBody.prototype, "tags", void 0);
     return StartSimulationJobBatchRequestBody;
-}(SpeakeasyBase));
-export { StartSimulationJobBatchRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.StartSimulationJobBatchRequestBody = StartSimulationJobBatchRequestBody;
 var StartSimulationJobBatchRequest = /** @class */ (function (_super) {
     __extends(StartSimulationJobBatchRequest, _super);
     function StartSimulationJobBatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StartSimulationJobBatchHeaders)
     ], StartSimulationJobBatchRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", StartSimulationJobBatchRequestBody)
     ], StartSimulationJobBatchRequest.prototype, "request", void 0);
     return StartSimulationJobBatchRequest;
-}(SpeakeasyBase));
-export { StartSimulationJobBatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartSimulationJobBatchRequest = StartSimulationJobBatchRequest;
 var StartSimulationJobBatchResponse = /** @class */ (function (_super) {
     __extends(StartSimulationJobBatchResponse, _super);
     function StartSimulationJobBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StartSimulationJobBatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartSimulationJobBatchResponse.prototype, "idempotentParameterMismatchException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartSimulationJobBatchResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartSimulationJobBatchResponse.prototype, "invalidParameterException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartSimulationJobBatchResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.StartSimulationJobBatchResponse)
     ], StartSimulationJobBatchResponse.prototype, "startSimulationJobBatchResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StartSimulationJobBatchResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StartSimulationJobBatchResponse.prototype, "throttlingException", void 0);
     return StartSimulationJobBatchResponse;
-}(SpeakeasyBase));
-export { StartSimulationJobBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.StartSimulationJobBatchResponse = StartSimulationJobBatchResponse;

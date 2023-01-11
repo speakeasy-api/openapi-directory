@@ -32,8 +32,8 @@ export class GetCompanyTimeOffTypesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCompanyTimeOffTypes200ApplicationJsonObject?: GetCompanyTimeOffTypes200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCompanyTimeOffTypes200ApplicationJSONObject?: GetCompanyTimeOffTypes200ApplicationJson;
 }

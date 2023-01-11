@@ -17,5 +17,5 @@ export declare class GetcurrencyrateRequest extends SpeakeasyBase {
 export declare class GetcurrencyrateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcurrencyrate200ApplicationJsonObject?: Getcurrencyrate200ApplicationJson;
+    getcurrencyrate200ApplicationJSONObject?: Getcurrencyrate200ApplicationJson;
 }

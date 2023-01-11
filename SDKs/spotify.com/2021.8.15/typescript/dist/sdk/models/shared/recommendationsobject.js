@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationSeedObject } from "./recommendationseedobject";
-import { TrackObject } from "./trackobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationsObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationseedobject_1 = require("./recommendationseedobject");
+var trackobject_1 = require("./trackobject");
 // RecommendationsObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-recommendationsobject - Find more info on the official Spotify Web API Reference
@@ -35,13 +38,13 @@ var RecommendationsObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seeds", elemType: RecommendationSeedObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seeds", elemType: recommendationseedobject_1.RecommendationSeedObject }),
         __metadata("design:type", Array)
     ], RecommendationsObject.prototype, "seeds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracks", elemType: TrackObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracks", elemType: trackobject_1.TrackObject }),
         __metadata("design:type", Array)
     ], RecommendationsObject.prototype, "tracks", void 0);
     return RecommendationsObject;
-}(SpeakeasyBase));
-export { RecommendationsObject };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationsObject = RecommendationsObject;

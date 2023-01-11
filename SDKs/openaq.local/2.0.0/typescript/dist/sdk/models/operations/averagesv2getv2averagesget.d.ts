@@ -14,7 +14,7 @@ export declare class AveragesV2GetV2AveragesGetQueryParams extends SpeakeasyBase
     parameterId?: number;
     project?: any[];
     projectId?: number;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     spatial: shared.SpatialEnum;
     temporal: shared.TemporalEnum;
     unit?: string[];
@@ -25,6 +25,6 @@ export declare class AveragesV2GetV2AveragesGetRequest extends SpeakeasyBase {
 export declare class AveragesV2GetV2AveragesGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

@@ -26,7 +26,7 @@ export declare class CreateProfilingGroupRequestBody extends SpeakeasyBase {
     agentOrchestrationConfig?: CreateProfilingGroupRequestBodyAgentOrchestrationConfig;
     computePlatform?: CreateProfilingGroupRequestBodyComputePlatformEnum;
     profilingGroupName: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateProfilingGroupRequest extends SpeakeasyBase {
     queryParams: CreateProfilingGroupQueryParams;

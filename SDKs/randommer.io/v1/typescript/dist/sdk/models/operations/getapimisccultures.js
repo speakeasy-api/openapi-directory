@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiMiscCulturesResponse = exports.GetApiMiscCulturesRequest = exports.GetApiMiscCulturesHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiMiscCulturesHeaders = /** @class */ (function (_super) {
     __extends(GetApiMiscCulturesHeaders, _super);
     function GetApiMiscCulturesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiMiscCulturesHeaders.prototype, "xApiKey", void 0);
     return GetApiMiscCulturesHeaders;
-}(SpeakeasyBase));
-export { GetApiMiscCulturesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscCulturesHeaders = GetApiMiscCulturesHeaders;
 var GetApiMiscCulturesRequest = /** @class */ (function (_super) {
     __extends(GetApiMiscCulturesRequest, _super);
     function GetApiMiscCulturesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiMiscCulturesHeaders)
     ], GetApiMiscCulturesRequest.prototype, "headers", void 0);
     return GetApiMiscCulturesRequest;
-}(SpeakeasyBase));
-export { GetApiMiscCulturesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscCulturesRequest = GetApiMiscCulturesRequest;
 var GetApiMiscCulturesResponse = /** @class */ (function (_super) {
     __extends(GetApiMiscCulturesResponse, _super);
     function GetApiMiscCulturesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiMiscCulturesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiMiscCulturesResponse.prototype, "statusCode", void 0);
     return GetApiMiscCulturesResponse;
-}(SpeakeasyBase));
-export { GetApiMiscCulturesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiMiscCulturesResponse = GetApiMiscCulturesResponse;

@@ -35,7 +35,7 @@ export class ProjectsMoveColumnResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsMoveColumn201ApplicationJsonObject?: Map<string, any>;
+  projectsMoveColumn201ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationErrorSimple?: shared.ValidationErrorSimple;

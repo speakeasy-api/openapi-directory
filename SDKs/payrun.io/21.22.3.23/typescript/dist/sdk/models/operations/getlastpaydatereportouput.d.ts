@@ -15,6 +15,6 @@ export declare class GetLastPayDateReportOuputRequest extends SpeakeasyBase {
 export declare class GetLastPayDateReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getLastPayDateReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getLastPayDateReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

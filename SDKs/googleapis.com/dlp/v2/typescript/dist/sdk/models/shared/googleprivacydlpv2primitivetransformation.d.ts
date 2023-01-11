@@ -20,9 +20,9 @@ export declare class GooglePrivacyDlpV2PrimitiveTransformation extends Speakeasy
     cryptoReplaceFfxFpeConfig?: GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig;
     dateShiftConfig?: GooglePrivacyDlpV2DateShiftConfig;
     fixedSizeBucketingConfig?: GooglePrivacyDlpV2FixedSizeBucketingConfig;
-    redactConfig?: Map<string, any>;
+    redactConfig?: Record<string, any>;
     replaceConfig?: GooglePrivacyDlpV2ReplaceValueConfig;
     replaceDictionaryConfig?: GooglePrivacyDlpV2ReplaceDictionaryConfig;
-    replaceWithInfoTypeConfig?: Map<string, any>;
+    replaceWithInfoTypeConfig?: Record<string, any>;
     timePartConfig?: GooglePrivacyDlpV2TimePartConfig;
 }

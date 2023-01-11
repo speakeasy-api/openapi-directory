@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeviceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Device = exports.DeviceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeviceTypeEnum;
 (function (DeviceTypeEnum) {
     DeviceTypeEnum["Unknown"] = "unknown";
     DeviceTypeEnum["Phone"] = "phone";
@@ -33,7 +36,7 @@ export var DeviceTypeEnum;
     DeviceTypeEnum["Scale"] = "scale";
     DeviceTypeEnum["HeadMounted"] = "headMounted";
     DeviceTypeEnum["SmartDisplay"] = "smartDisplay";
-})(DeviceTypeEnum || (DeviceTypeEnum = {}));
+})(DeviceTypeEnum = exports.DeviceTypeEnum || (exports.DeviceTypeEnum = {}));
 // Device
 /**
  * Representation of an integrated device (such as a phone or a wearable) that can hold sensors. Each sensor is exposed as a data source. The main purpose of the device information contained in this class is to identify the hardware of a particular data source. This can be useful in different ways, including: - Distinguishing two similar sensors on different devices (the step counter on two nexus 5 phones, for instance) - Display the source of data to the user (by using the device make / model) - Treat data differently depending on sensor type (accelerometers on a watch may give different patterns than those on a phone) - Build different analysis models for each device/version.
@@ -44,25 +47,25 @@ var Device = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], Device.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], Device.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Device.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Device.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Device.prototype, "version", void 0);
     return Device;
-}(SpeakeasyBase));
-export { Device };
+}(utils_1.SpeakeasyBase));
+exports.Device = Device;

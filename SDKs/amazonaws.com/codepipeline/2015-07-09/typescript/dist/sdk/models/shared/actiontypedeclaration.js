@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionTypeExecutor } from "./actiontypeexecutor";
-import { ActionTypeIdentifier } from "./actiontypeidentifier";
-import { ActionTypeArtifactDetails } from "./actiontypeartifactdetails";
-import { ActionTypePermissions } from "./actiontypepermissions";
-import { ActionTypeUrls } from "./actiontypeurls";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionTypeDeclaration = void 0;
+var utils_1 = require("../../../internal/utils");
+var actiontypeexecutor_1 = require("./actiontypeexecutor");
+var actiontypeidentifier_1 = require("./actiontypeidentifier");
+var actiontypeartifactdetails_1 = require("./actiontypeartifactdetails");
+var actiontypepermissions_1 = require("./actiontypepermissions");
+var actiontypeurls_1 = require("./actiontypeurls");
 // ActionTypeDeclaration
 /**
  * The parameters for the action type definition that are provided when the action type is created or updated.
@@ -38,37 +41,37 @@ var ActionTypeDeclaration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ActionTypeDeclaration.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executor" }),
-        __metadata("design:type", ActionTypeExecutor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executor" }),
+        __metadata("design:type", actiontypeexecutor_1.ActionTypeExecutor)
     ], ActionTypeDeclaration.prototype, "executor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", ActionTypeIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", actiontypeidentifier_1.ActionTypeIdentifier)
     ], ActionTypeDeclaration.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputArtifactDetails" }),
-        __metadata("design:type", ActionTypeArtifactDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputArtifactDetails" }),
+        __metadata("design:type", actiontypeartifactdetails_1.ActionTypeArtifactDetails)
     ], ActionTypeDeclaration.prototype, "inputArtifactDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputArtifactDetails" }),
-        __metadata("design:type", ActionTypeArtifactDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputArtifactDetails" }),
+        __metadata("design:type", actiontypeartifactdetails_1.ActionTypeArtifactDetails)
     ], ActionTypeDeclaration.prototype, "outputArtifactDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
-        __metadata("design:type", ActionTypePermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
+        __metadata("design:type", actiontypepermissions_1.ActionTypePermissions)
     ], ActionTypeDeclaration.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", Object)
     ], ActionTypeDeclaration.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urls" }),
-        __metadata("design:type", ActionTypeUrls)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urls" }),
+        __metadata("design:type", actiontypeurls_1.ActionTypeUrls)
     ], ActionTypeDeclaration.prototype, "urls", void 0);
     return ActionTypeDeclaration;
-}(SpeakeasyBase));
-export { ActionTypeDeclaration };
+}(utils_1.SpeakeasyBase));
+exports.ActionTypeDeclaration = ActionTypeDeclaration;

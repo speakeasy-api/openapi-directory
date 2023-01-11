@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { VpcEndpoint } from "./vpcendpoint";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -36,6 +36,6 @@ export class EndpointAccess extends SpeakeasyBase {
   @SpeakeasyMetadata()
   vpcEndpoint?: VpcEndpoint;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

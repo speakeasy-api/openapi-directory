@@ -13,7 +13,7 @@ export class Event extends SpeakeasyBase {
   createdAt?: number;
 
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>;
+  details?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

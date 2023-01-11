@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DailyFantasyScoringFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DailyFantasyScoringResponse = exports.DailyFantasyScoringRequest = exports.DailyFantasyScoringPathParams = exports.DailyFantasyScoringFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DailyFantasyScoringFormatEnum;
 (function (DailyFantasyScoringFormatEnum) {
     DailyFantasyScoringFormatEnum["Xml"] = "XML";
     DailyFantasyScoringFormatEnum["Json"] = "JSON";
-})(DailyFantasyScoringFormatEnum || (DailyFantasyScoringFormatEnum = {}));
+})(DailyFantasyScoringFormatEnum = exports.DailyFantasyScoringFormatEnum || (exports.DailyFantasyScoringFormatEnum = {}));
 var DailyFantasyScoringPathParams = /** @class */ (function (_super) {
     __extends(DailyFantasyScoringPathParams, _super);
     function DailyFantasyScoringPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], DailyFantasyScoringPathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], DailyFantasyScoringPathParams.prototype, "format", void 0);
     return DailyFantasyScoringPathParams;
-}(SpeakeasyBase));
-export { DailyFantasyScoringPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DailyFantasyScoringPathParams = DailyFantasyScoringPathParams;
 var DailyFantasyScoringRequest = /** @class */ (function (_super) {
     __extends(DailyFantasyScoringRequest, _super);
     function DailyFantasyScoringRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DailyFantasyScoringPathParams)
     ], DailyFantasyScoringRequest.prototype, "pathParams", void 0);
     return DailyFantasyScoringRequest;
-}(SpeakeasyBase));
-export { DailyFantasyScoringRequest };
+}(utils_1.SpeakeasyBase));
+exports.DailyFantasyScoringRequest = DailyFantasyScoringRequest;
 var DailyFantasyScoringResponse = /** @class */ (function (_super) {
     __extends(DailyFantasyScoringResponse, _super);
     function DailyFantasyScoringResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DailyFantasyScoringResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DailyFantasyScoringResponse.prototype, "dailyFantasyScorings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DailyFantasyScoringResponse.prototype, "statusCode", void 0);
     return DailyFantasyScoringResponse;
-}(SpeakeasyBase));
-export { DailyFantasyScoringResponse };
+}(utils_1.SpeakeasyBase));
+exports.DailyFantasyScoringResponse = DailyFantasyScoringResponse;

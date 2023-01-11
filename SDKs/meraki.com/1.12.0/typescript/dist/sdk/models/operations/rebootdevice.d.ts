@@ -8,5 +8,5 @@ export declare class RebootDeviceRequest extends SpeakeasyBase {
 export declare class RebootDeviceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    rebootDevice202ApplicationJsonObject?: Map<string, any>;
+    rebootDevice202ApplicationJSONObject?: Record<string, any>;
 }

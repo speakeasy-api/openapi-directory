@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PauseClusterMessage } from "./pauseclustermessage";
-import { ResizeClusterMessage } from "./resizeclustermessage";
-import { ResumeClusterMessage } from "./resumeclustermessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledActionType = void 0;
+var utils_1 = require("../../../internal/utils");
+var pauseclustermessage_1 = require("./pauseclustermessage");
+var resizeclustermessage_1 = require("./resizeclustermessage");
+var resumeclustermessage_1 = require("./resumeclustermessage");
 // ScheduledActionType
 /**
  * The action type that specifies an Amazon Redshift API operation that is supported by the Amazon Redshift scheduler.
@@ -36,17 +39,17 @@ var ScheduledActionType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PauseClusterMessage)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pauseclustermessage_1.PauseClusterMessage)
     ], ScheduledActionType.prototype, "pauseCluster", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResizeClusterMessage)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resizeclustermessage_1.ResizeClusterMessage)
     ], ScheduledActionType.prototype, "resizeCluster", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResumeClusterMessage)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resumeclustermessage_1.ResumeClusterMessage)
     ], ScheduledActionType.prototype, "resumeCluster", void 0);
     return ScheduledActionType;
-}(SpeakeasyBase));
-export { ScheduledActionType };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledActionType = ScheduledActionType;

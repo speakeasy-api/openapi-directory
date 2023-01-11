@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompact } from "./usercompact";
-import { WorkspaceCompact } from "./workspacecompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceMembershipCompact = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+var workspacecompact_1 = require("./workspacecompact");
+// WorkspaceMembershipCompact
+/**
+ * This object determines if a user is a member of a workspace.
+**/
 var WorkspaceMembershipCompact = /** @class */ (function (_super) {
     __extends(WorkspaceMembershipCompact, _super);
     function WorkspaceMembershipCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], WorkspaceMembershipCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], WorkspaceMembershipCompact.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], WorkspaceMembershipCompact.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
-        __metadata("design:type", WorkspaceCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
+        __metadata("design:type", workspacecompact_1.WorkspaceCompact)
     ], WorkspaceMembershipCompact.prototype, "workspace", void 0);
     return WorkspaceMembershipCompact;
-}(SpeakeasyBase));
-export { WorkspaceMembershipCompact };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceMembershipCompact = WorkspaceMembershipCompact;

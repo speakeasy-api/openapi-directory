@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateFeedConnectionsRequest, CreateFeedConnectionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,38 +33,38 @@ const req: CreateFeedConnectionsRequest = {
     },
   },
   headers: {
-    xeroTenantId: "magnam",
+    xeroTenantId: "sit",
   },
   request: {
     items: [
       {
-        accountId: "distinctio",
-        accountName: "qui",
-        accountNumber: "eaque",
-        accountToken: "facilis",
-        accountType: "veniam",
-        country: "MG",
-        currency: "UGX",
+        accountId: "culpa",
+        accountName: "expedita",
+        accountNumber: "consequuntur",
+        accountToken: "dolor",
+        accountType: "expedita",
+        country: "SO",
+        currency: "GGP",
         error: {
           detail: "et",
-          status: 1655605882959805983,
-          title: "et",
-          type: "feed-already-connected-in-different-organisation",
+          status: 2661732831099943416,
+          title: "rerum",
+          type: "account-not-valid",
         },
-        id: "nesciunt",
-        status: "REJECTED",
+        id: "debitis",
+        status: "PENDING",
       },
     ],
     pagination: {
-      itemCount: 2744772683645008906,
-      page: 2371724776320130943,
-      pageCount: 8740672512783480223,
-      pageSize: 7356219799385552532,
+      itemCount: 2339563716805116249,
+      page: 7144924247938981575,
+      pageCount: 161231572858529631,
+      pageSize: 7259475919510918339,
     },
   },
 };
 
-sdk.sdk.createFeedConnections(req).then((res: CreateFeedConnectionsResponse | AxiosError) => {
+sdk.bankFeeds.createFeedConnections(req).then((res: CreateFeedConnectionsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -74,7 +73,7 @@ sdk.sdk.createFeedConnections(req).then((res: CreateFeedConnectionsResponse | Ax
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### BankFeeds
 
 * `createFeedConnections` - Create one or more new feed connection
 * `createStatements` - Creates one or more new statements

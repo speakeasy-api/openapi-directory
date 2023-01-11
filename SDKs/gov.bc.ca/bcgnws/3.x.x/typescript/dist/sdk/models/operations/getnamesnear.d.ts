@@ -23,7 +23,7 @@ export declare class GetNamesNearQueryParams extends SpeakeasyBase {
     featureType?: string;
     itemsPerPage?: number;
     outputFormat: GetNamesNearOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesNearOutputStyleEnum;
     sortBy?: GetNamesNearSortByEnum;
     startIndex?: number;

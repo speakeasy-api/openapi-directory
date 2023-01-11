@@ -1,6 +1,9 @@
-export var CompatibilityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompatibilityEnum = void 0;
+var CompatibilityEnum;
 (function (CompatibilityEnum) {
     CompatibilityEnum["Ec2"] = "EC2";
     CompatibilityEnum["Fargate"] = "FARGATE";
     CompatibilityEnum["External"] = "EXTERNAL";
-})(CompatibilityEnum || (CompatibilityEnum = {}));
+})(CompatibilityEnum = exports.CompatibilityEnum || (exports.CompatibilityEnum = {}));

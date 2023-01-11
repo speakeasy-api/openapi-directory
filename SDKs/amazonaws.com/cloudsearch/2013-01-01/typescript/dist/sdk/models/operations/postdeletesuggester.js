@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteSuggesterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteSuggesterResponse = exports.PostDeleteSuggesterRequest = exports.PostDeleteSuggesterHeaders = exports.PostDeleteSuggesterQueryParams = exports.PostDeleteSuggesterVersionEnum = exports.PostDeleteSuggesterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteSuggesterActionEnum;
 (function (PostDeleteSuggesterActionEnum) {
     PostDeleteSuggesterActionEnum["DeleteSuggester"] = "DeleteSuggester";
-})(PostDeleteSuggesterActionEnum || (PostDeleteSuggesterActionEnum = {}));
-export var PostDeleteSuggesterVersionEnum;
+})(PostDeleteSuggesterActionEnum = exports.PostDeleteSuggesterActionEnum || (exports.PostDeleteSuggesterActionEnum = {}));
+var PostDeleteSuggesterVersionEnum;
 (function (PostDeleteSuggesterVersionEnum) {
     PostDeleteSuggesterVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(PostDeleteSuggesterVersionEnum || (PostDeleteSuggesterVersionEnum = {}));
+})(PostDeleteSuggesterVersionEnum = exports.PostDeleteSuggesterVersionEnum || (exports.PostDeleteSuggesterVersionEnum = {}));
 var PostDeleteSuggesterQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteSuggesterQueryParams, _super);
     function PostDeleteSuggesterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterQueryParams.prototype, "version", void 0);
     return PostDeleteSuggesterQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteSuggesterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteSuggesterQueryParams = PostDeleteSuggesterQueryParams;
 var PostDeleteSuggesterHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteSuggesterHeaders, _super);
     function PostDeleteSuggesterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteSuggesterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteSuggesterHeaders;
-}(SpeakeasyBase));
-export { PostDeleteSuggesterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteSuggesterHeaders = PostDeleteSuggesterHeaders;
 var PostDeleteSuggesterRequest = /** @class */ (function (_super) {
     __extends(PostDeleteSuggesterRequest, _super);
     function PostDeleteSuggesterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteSuggesterQueryParams)
     ], PostDeleteSuggesterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteSuggesterHeaders)
     ], PostDeleteSuggesterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteSuggesterRequest.prototype, "request", void 0);
     return PostDeleteSuggesterRequest;
-}(SpeakeasyBase));
-export { PostDeleteSuggesterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteSuggesterRequest = PostDeleteSuggesterRequest;
 var PostDeleteSuggesterResponse = /** @class */ (function (_super) {
     __extends(PostDeleteSuggesterResponse, _super);
     function PostDeleteSuggesterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteSuggesterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteSuggesterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteSuggesterResponse.prototype, "statusCode", void 0);
     return PostDeleteSuggesterResponse;
-}(SpeakeasyBase));
-export { PostDeleteSuggesterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteSuggesterResponse = PostDeleteSuggesterResponse;

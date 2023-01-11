@@ -51,7 +51,7 @@ export class GetAwsDefaultServiceQuotaResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAwsDefaultServiceQuotaResponse?: shared.GetAwsDefaultServiceQuotaResponse;
+  getAWSDefaultServiceQuotaResponse?: shared.GetAwsDefaultServiceQuotaResponse;
 
   @SpeakeasyMetadata()
   illegalArgumentException?: any;

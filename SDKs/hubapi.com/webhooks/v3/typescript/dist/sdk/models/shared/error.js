@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetail } from "./errordetail";
-var Error = /** @class */ (function (_super) {
-    __extends(Error, _super);
-    function Error() {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorT = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetail_1 = require("./errordetail");
+var ErrorT = /** @class */ (function (_super) {
+    __extends(ErrorT, _super);
+    function ErrorT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], Error.prototype, "category", void 0);
+    ], ErrorT.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], Error.prototype, "context", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ErrorT.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], Error.prototype, "correlationId", void 0);
+    ], ErrorT.prototype, "correlationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ErrorDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: errordetail_1.ErrorDetail }),
         __metadata("design:type", Array)
-    ], Error.prototype, "errors", void 0);
+    ], ErrorT.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], Error.prototype, "links", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ErrorT.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], Error.prototype, "message", void 0);
+    ], ErrorT.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], Error.prototype, "subCategory", void 0);
-    return Error;
-}(SpeakeasyBase));
-export { Error };
+    ], ErrorT.prototype, "subCategory", void 0);
+    return ErrorT;
+}(utils_1.SpeakeasyBase));
+exports.ErrorT = ErrorT;

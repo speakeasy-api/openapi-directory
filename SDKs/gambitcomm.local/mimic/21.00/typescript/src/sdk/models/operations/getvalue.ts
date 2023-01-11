@@ -31,5 +31,5 @@ export class GetValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getValue200ApplicationJsonString?: string;
+  getValue200ApplicationJSONString?: string;
 }

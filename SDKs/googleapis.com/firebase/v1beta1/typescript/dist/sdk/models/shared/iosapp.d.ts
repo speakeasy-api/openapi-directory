@@ -7,17 +7,6 @@ export declare enum IosAppStateEnum {
 /**
  * Details of a Firebase App for iOS.
 **/
-export declare class IosAppInput extends SpeakeasyBase {
-    apiKeyId?: string;
-    appStoreId?: string;
-    bundleId?: string;
-    displayName?: string;
-    name?: string;
-    teamId?: string;
-}
-/**
- * Details of a Firebase App for iOS.
-**/
 export declare class IosApp extends SpeakeasyBase {
     apiKeyId?: string;
     appId?: string;
@@ -27,5 +16,16 @@ export declare class IosApp extends SpeakeasyBase {
     name?: string;
     projectId?: string;
     state?: IosAppStateEnum;
+    teamId?: string;
+}
+/**
+ * Details of a Firebase App for iOS.
+**/
+export declare class IosAppInput extends SpeakeasyBase {
+    apiKeyId?: string;
+    appStoreId?: string;
+    bundleId?: string;
+    displayName?: string;
+    name?: string;
     teamId?: string;
 }

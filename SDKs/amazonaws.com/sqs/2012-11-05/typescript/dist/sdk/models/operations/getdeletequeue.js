@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteQueueResponse = exports.GetDeleteQueueRequest = exports.GetDeleteQueueHeaders = exports.GetDeleteQueueQueryParams = exports.GetDeleteQueueVersionEnum = exports.GetDeleteQueueActionEnum = exports.GetDeleteQueuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeleteQueuePathParams = /** @class */ (function (_super) {
     __extends(GetDeleteQueuePathParams, _super);
     function GetDeleteQueuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
         __metadata("design:type", Number)
     ], GetDeleteQueuePathParams.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
         __metadata("design:type", String)
     ], GetDeleteQueuePathParams.prototype, "queueName", void 0);
     return GetDeleteQueuePathParams;
-}(SpeakeasyBase));
-export { GetDeleteQueuePathParams };
-export var GetDeleteQueueActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteQueuePathParams = GetDeleteQueuePathParams;
+var GetDeleteQueueActionEnum;
 (function (GetDeleteQueueActionEnum) {
     GetDeleteQueueActionEnum["DeleteQueue"] = "DeleteQueue";
-})(GetDeleteQueueActionEnum || (GetDeleteQueueActionEnum = {}));
-export var GetDeleteQueueVersionEnum;
+})(GetDeleteQueueActionEnum = exports.GetDeleteQueueActionEnum || (exports.GetDeleteQueueActionEnum = {}));
+var GetDeleteQueueVersionEnum;
 (function (GetDeleteQueueVersionEnum) {
     GetDeleteQueueVersionEnum["TwoThousandAndTwelve1105"] = "2012-11-05";
-})(GetDeleteQueueVersionEnum || (GetDeleteQueueVersionEnum = {}));
+})(GetDeleteQueueVersionEnum = exports.GetDeleteQueueVersionEnum || (exports.GetDeleteQueueVersionEnum = {}));
 var GetDeleteQueueQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteQueueQueryParams, _super);
     function GetDeleteQueueQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteQueueQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteQueueQueryParams.prototype, "version", void 0);
     return GetDeleteQueueQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteQueueQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteQueueQueryParams = GetDeleteQueueQueryParams;
 var GetDeleteQueueHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteQueueHeaders, _super);
     function GetDeleteQueueHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteQueueHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteQueueHeaders;
-}(SpeakeasyBase));
-export { GetDeleteQueueHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteQueueHeaders = GetDeleteQueueHeaders;
 var GetDeleteQueueRequest = /** @class */ (function (_super) {
     __extends(GetDeleteQueueRequest, _super);
     function GetDeleteQueueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteQueuePathParams)
     ], GetDeleteQueueRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteQueueQueryParams)
     ], GetDeleteQueueRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteQueueHeaders)
     ], GetDeleteQueueRequest.prototype, "headers", void 0);
     return GetDeleteQueueRequest;
-}(SpeakeasyBase));
-export { GetDeleteQueueRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteQueueRequest = GetDeleteQueueRequest;
 var GetDeleteQueueResponse = /** @class */ (function (_super) {
     __extends(GetDeleteQueueResponse, _super);
     function GetDeleteQueueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteQueueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteQueueResponse.prototype, "statusCode", void 0);
     return GetDeleteQueueResponse;
-}(SpeakeasyBase));
-export { GetDeleteQueueResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteQueueResponse = GetDeleteQueueResponse;

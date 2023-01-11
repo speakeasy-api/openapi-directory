@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckTokenUsingPostResponse = exports.CheckTokenUsingPost500ApplicationJson = exports.CheckTokenUsingPost401ApplicationJson = exports.CheckTokenUsingPost400ApplicationJson = exports.CheckTokenUsingPost200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var CheckTokenUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(CheckTokenUsingPost200ApplicationJson, _super);
     function CheckTokenUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CheckTokenUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CheckTokenUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckTokenUsingPost200ApplicationJson.prototype, "message", void 0);
     return CheckTokenUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { CheckTokenUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CheckTokenUsingPost200ApplicationJson = CheckTokenUsingPost200ApplicationJson;
 var CheckTokenUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(CheckTokenUsingPost400ApplicationJson, _super);
     function CheckTokenUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CheckTokenUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CheckTokenUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckTokenUsingPost400ApplicationJson.prototype, "message", void 0);
     return CheckTokenUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { CheckTokenUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CheckTokenUsingPost400ApplicationJson = CheckTokenUsingPost400ApplicationJson;
 var CheckTokenUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(CheckTokenUsingPost401ApplicationJson, _super);
     function CheckTokenUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CheckTokenUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CheckTokenUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckTokenUsingPost401ApplicationJson.prototype, "message", void 0);
     return CheckTokenUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { CheckTokenUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CheckTokenUsingPost401ApplicationJson = CheckTokenUsingPost401ApplicationJson;
 var CheckTokenUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(CheckTokenUsingPost500ApplicationJson, _super);
     function CheckTokenUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CheckTokenUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CheckTokenUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckTokenUsingPost500ApplicationJson.prototype, "message", void 0);
     return CheckTokenUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { CheckTokenUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CheckTokenUsingPost500ApplicationJson = CheckTokenUsingPost500ApplicationJson;
 var CheckTokenUsingPostResponse = /** @class */ (function (_super) {
     __extends(CheckTokenUsingPostResponse, _super);
     function CheckTokenUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CheckTokenUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CheckTokenUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckTokenUsingPost200ApplicationJson)
-    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPost200ApplicationJsonObject", void 0);
+    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckTokenUsingPost400ApplicationJson)
-    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPost400ApplicationJsonObject", void 0);
+    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckTokenUsingPost401ApplicationJson)
-    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPost401ApplicationJsonObject", void 0);
+    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckTokenUsingPost500ApplicationJson)
-    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPost500ApplicationJsonObject", void 0);
+    ], CheckTokenUsingPostResponse.prototype, "checkTokenUsingPOST500ApplicationJSONObject", void 0);
     return CheckTokenUsingPostResponse;
-}(SpeakeasyBase));
-export { CheckTokenUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.CheckTokenUsingPostResponse = CheckTokenUsingPostResponse;

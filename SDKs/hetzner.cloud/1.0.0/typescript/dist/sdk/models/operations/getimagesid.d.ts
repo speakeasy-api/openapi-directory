@@ -45,7 +45,7 @@ export declare class GetImagesId200ApplicationJsonImage extends SpeakeasyBase {
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: GetImagesId200ApplicationJsonImageOsFlavorEnum;
     osVersion: string;
@@ -62,6 +62,6 @@ export declare class GetImagesIdRequest extends SpeakeasyBase {
 }
 export declare class GetImagesIdResponse extends SpeakeasyBase {
     contentType: string;
-    getImagesId200ApplicationJsonObject?: GetImagesId200ApplicationJson;
     statusCode: number;
+    getImagesId200ApplicationJSONObject?: GetImagesId200ApplicationJson;
 }

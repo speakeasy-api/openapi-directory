@@ -5,16 +5,16 @@ import * as shared from "../shared";
 
 export class PostSetupV1LocationsBulkRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/*+json" })
-  locationsInputModel?: Map<string, any>;
+  locationsInputModel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  locationsInputModel1?: Map<string, any>;
+  locationsInputModel1?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" })
-  locationsInputModel2?: Map<string, any>;
+  locationsInputModel2?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  locationsInputModel3?: Map<string, any>;
+  locationsInputModel3?: Record<string, any>;
 }
 
 

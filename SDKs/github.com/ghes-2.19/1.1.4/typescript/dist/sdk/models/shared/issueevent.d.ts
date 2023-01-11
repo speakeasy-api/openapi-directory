@@ -7,6 +7,9 @@ import { IssueEventMilestone } from "./issueeventmilestone";
 import { IssueEventProjectCard } from "./issueeventprojectcard";
 import { IssueEventRename } from "./issueeventrename";
 import { Team } from "./team";
+/**
+ * Simple User
+**/
 export declare class IssueEventSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -47,7 +50,7 @@ export declare class IssueEvent extends SpeakeasyBase {
     lockReason?: string;
     milestone?: IssueEventMilestone;
     nodeId: string;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     projectCard?: IssueEventProjectCard;
     rename?: IssueEventRename;
     requestedReviewer?: IssueEventSimpleUser;

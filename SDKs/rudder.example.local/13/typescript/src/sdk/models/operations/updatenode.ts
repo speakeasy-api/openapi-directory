@@ -57,5 +57,5 @@ export class UpdateNodeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNode200ApplicationJsonObject?: UpdateNode200ApplicationJson;
+  updateNode200ApplicationJSONObject?: UpdateNode200ApplicationJson;
 }

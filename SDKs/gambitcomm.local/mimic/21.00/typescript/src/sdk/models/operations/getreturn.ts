@@ -10,5 +10,5 @@ export class GetReturnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getReturn200ApplicationJsonObject?: Map<string, number>;
+  getReturn200ApplicationJSONObject?: Record<string, number>;
 }

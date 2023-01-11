@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetComposeEnvironmentsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetComposeEnvironmentsResponse = exports.GetComposeEnvironmentsRequest = exports.GetComposeEnvironmentsHeaders = exports.GetComposeEnvironmentsQueryParams = exports.GetComposeEnvironmentsVersionEnum = exports.GetComposeEnvironmentsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetComposeEnvironmentsActionEnum;
 (function (GetComposeEnvironmentsActionEnum) {
     GetComposeEnvironmentsActionEnum["ComposeEnvironments"] = "ComposeEnvironments";
-})(GetComposeEnvironmentsActionEnum || (GetComposeEnvironmentsActionEnum = {}));
-export var GetComposeEnvironmentsVersionEnum;
+})(GetComposeEnvironmentsActionEnum = exports.GetComposeEnvironmentsActionEnum || (exports.GetComposeEnvironmentsActionEnum = {}));
+var GetComposeEnvironmentsVersionEnum;
 (function (GetComposeEnvironmentsVersionEnum) {
     GetComposeEnvironmentsVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetComposeEnvironmentsVersionEnum || (GetComposeEnvironmentsVersionEnum = {}));
+})(GetComposeEnvironmentsVersionEnum = exports.GetComposeEnvironmentsVersionEnum || (exports.GetComposeEnvironmentsVersionEnum = {}));
 var GetComposeEnvironmentsQueryParams = /** @class */ (function (_super) {
     __extends(GetComposeEnvironmentsQueryParams, _super);
     function GetComposeEnvironmentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsQueryParams.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=GroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=GroupName" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsQueryParams.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VersionLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VersionLabels" }),
         __metadata("design:type", Array)
     ], GetComposeEnvironmentsQueryParams.prototype, "versionLabels", void 0);
     return GetComposeEnvironmentsQueryParams;
-}(SpeakeasyBase));
-export { GetComposeEnvironmentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetComposeEnvironmentsQueryParams = GetComposeEnvironmentsQueryParams;
 var GetComposeEnvironmentsHeaders = /** @class */ (function (_super) {
     __extends(GetComposeEnvironmentsHeaders, _super);
     function GetComposeEnvironmentsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetComposeEnvironmentsHeaders;
-}(SpeakeasyBase));
-export { GetComposeEnvironmentsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetComposeEnvironmentsHeaders = GetComposeEnvironmentsHeaders;
 var GetComposeEnvironmentsRequest = /** @class */ (function (_super) {
     __extends(GetComposeEnvironmentsRequest, _super);
     function GetComposeEnvironmentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetComposeEnvironmentsQueryParams)
     ], GetComposeEnvironmentsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetComposeEnvironmentsHeaders)
     ], GetComposeEnvironmentsRequest.prototype, "headers", void 0);
     return GetComposeEnvironmentsRequest;
-}(SpeakeasyBase));
-export { GetComposeEnvironmentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetComposeEnvironmentsRequest = GetComposeEnvironmentsRequest;
 var GetComposeEnvironmentsResponse = /** @class */ (function (_super) {
     __extends(GetComposeEnvironmentsResponse, _super);
     function GetComposeEnvironmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetComposeEnvironmentsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetComposeEnvironmentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetComposeEnvironmentsResponse.prototype, "statusCode", void 0);
     return GetComposeEnvironmentsResponse;
-}(SpeakeasyBase));
-export { GetComposeEnvironmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetComposeEnvironmentsResponse = GetComposeEnvironmentsResponse;

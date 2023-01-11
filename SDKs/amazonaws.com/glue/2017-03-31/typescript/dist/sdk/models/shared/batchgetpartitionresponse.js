@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Partition } from "./partition";
-import { PartitionValueList } from "./partitionvaluelist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetPartitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var partition_1 = require("./partition");
+var partitionvaluelist_1 = require("./partitionvaluelist");
 var BatchGetPartitionResponse = /** @class */ (function (_super) {
     __extends(BatchGetPartitionResponse, _super);
     function BatchGetPartitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Partitions", elemType: Partition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Partitions", elemType: partition_1.Partition }),
         __metadata("design:type", Array)
     ], BatchGetPartitionResponse.prototype, "partitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedKeys", elemType: PartitionValueList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedKeys", elemType: partitionvaluelist_1.PartitionValueList }),
         __metadata("design:type", Array)
     ], BatchGetPartitionResponse.prototype, "unprocessedKeys", void 0);
     return BatchGetPartitionResponse;
-}(SpeakeasyBase));
-export { BatchGetPartitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetPartitionResponse = BatchGetPartitionResponse;

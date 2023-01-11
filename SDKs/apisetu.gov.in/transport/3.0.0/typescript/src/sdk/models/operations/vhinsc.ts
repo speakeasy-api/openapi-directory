@@ -197,23 +197,23 @@ export class VhinscResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vhinsc400ApplicationJsonObject?: Vhinsc400ApplicationJson;
+  vhinsc400ApplicationJSONObject?: Vhinsc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc401ApplicationJsonObject?: Vhinsc401ApplicationJson;
+  vhinsc401ApplicationJSONObject?: Vhinsc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc404ApplicationJsonObject?: Vhinsc404ApplicationJson;
+  vhinsc404ApplicationJSONObject?: Vhinsc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc500ApplicationJsonObject?: Vhinsc500ApplicationJson;
+  vhinsc500ApplicationJSONObject?: Vhinsc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc502ApplicationJsonObject?: Vhinsc502ApplicationJson;
+  vhinsc502ApplicationJSONObject?: Vhinsc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc503ApplicationJsonObject?: Vhinsc503ApplicationJson;
+  vhinsc503ApplicationJSONObject?: Vhinsc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhinsc504ApplicationJsonObject?: Vhinsc504ApplicationJson;
+  vhinsc504ApplicationJSONObject?: Vhinsc504ApplicationJson;
 }

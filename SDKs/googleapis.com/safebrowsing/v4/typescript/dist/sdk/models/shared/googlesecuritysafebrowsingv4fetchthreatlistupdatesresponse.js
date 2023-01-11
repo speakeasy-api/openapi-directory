@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse } from "./googlesecuritysafebrowsingv4fetchthreatlistupdatesresponselistupdateresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4fetchthreatlistupdatesresponselistupdateresponse_1 = require("./googlesecuritysafebrowsingv4fetchthreatlistupdatesresponselistupdateresponse");
 var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = /** @class */ (function (_super) {
     __extends(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse, _super);
     function GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listUpdateResponses", elemType: GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listUpdateResponses", elemType: googlesecuritysafebrowsingv4fetchthreatlistupdatesresponselistupdateresponse_1.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse.prototype, "listUpdateResponses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumWaitDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumWaitDuration" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse.prototype, "minimumWaitDuration", void 0);
     return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;

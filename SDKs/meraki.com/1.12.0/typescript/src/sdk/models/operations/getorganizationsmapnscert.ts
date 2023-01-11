@@ -22,5 +22,5 @@ export class GetOrganizationSmApnsCertResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationSmApnsCert200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationSmApnsCert200ApplicationJSONObject?: Record<string, any>;
 }

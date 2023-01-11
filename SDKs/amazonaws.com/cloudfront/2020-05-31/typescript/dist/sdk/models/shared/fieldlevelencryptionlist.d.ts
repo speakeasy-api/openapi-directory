@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FieldLevelEncryptionSummary } from "./fieldlevelencryptionsummary";
+import { FieldLevelEncryptionSummaryList } from "./fieldlevelencryptionsummarylist";
 /**
  * List of field-level encrpytion configurations.
 **/
 export declare class FieldLevelEncryptionList extends SpeakeasyBase {
-    items?: FieldLevelEncryptionSummary[];
+    items?: FieldLevelEncryptionSummaryList[];
     maxItems: number;
     nextMarker?: string;
     quantity: number;

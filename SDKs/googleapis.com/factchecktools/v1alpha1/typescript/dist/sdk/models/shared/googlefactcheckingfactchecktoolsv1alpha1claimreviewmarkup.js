@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor } from "./googlefactcheckingfactchecktoolsv1alpha1claimauthor";
-import { GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating } from "./googlefactcheckingfactchecktoolsv1alpha1claimrating";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlefactcheckingfactchecktoolsv1alpha1claimauthor_1 = require("./googlefactcheckingfactchecktoolsv1alpha1claimauthor");
+var googlefactcheckingfactchecktoolsv1alpha1claimrating_1 = require("./googlefactcheckingfactchecktoolsv1alpha1claimrating");
 // GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup
 /**
  * Fields for an individual `ClaimReview` element. Except for sub-messages that group fields together, each of these fields correspond those in https://schema.org/ClaimReview. We list the precise mapping for each field.
@@ -35,37 +38,37 @@ var GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimAppearances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimAppearances" }),
         __metadata("design:type", Array)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimAppearances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimAuthor" }),
-        __metadata("design:type", GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimAuthor" }),
+        __metadata("design:type", googlefactcheckingfactchecktoolsv1alpha1claimauthor_1.GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimAuthor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimDate" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimFirstAppearance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimFirstAppearance" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimFirstAppearance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimLocation" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claimReviewed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claimReviewed" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "claimReviewed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
-        __metadata("design:type", GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
+        __metadata("design:type", googlefactcheckingfactchecktoolsv1alpha1claimrating_1.GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup.prototype, "url", void 0);
     return GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup;
-}(SpeakeasyBase));
-export { GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup = GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup;

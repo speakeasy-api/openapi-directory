@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSaveCurationTagFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSaveCurationTagResponse = exports.GetSaveCurationTagRequest = exports.GetSaveCurationTagQueryParams = exports.GetSaveCurationTagFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSaveCurationTagFormatEnum;
 (function (GetSaveCurationTagFormatEnum) {
     GetSaveCurationTagFormatEnum["Json"] = "json";
     GetSaveCurationTagFormatEnum["Xml"] = "xml";
@@ -31,68 +34,68 @@ export var GetSaveCurationTagFormatEnum;
     GetSaveCurationTagFormatEnum["Dump"] = "dump";
     GetSaveCurationTagFormatEnum["Jpg"] = "jpg";
     GetSaveCurationTagFormatEnum["Pdf"] = "pdf";
-})(GetSaveCurationTagFormatEnum || (GetSaveCurationTagFormatEnum = {}));
+})(GetSaveCurationTagFormatEnum = exports.GetSaveCurationTagFormatEnum || (exports.GetSaveCurationTagFormatEnum = {}));
 var GetSaveCurationTagQueryParams = /** @class */ (function (_super) {
     __extends(GetSaveCurationTagQueryParams, _super);
     function GetSaveCurationTagQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=auth" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pwId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pwId" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "pwId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=revision" }),
         __metadata("design:type", Number)
     ], GetSaveCurationTagQueryParams.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tagName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tagName" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "tagName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], GetSaveCurationTagQueryParams.prototype, "username", void 0);
     return GetSaveCurationTagQueryParams;
-}(SpeakeasyBase));
-export { GetSaveCurationTagQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveCurationTagQueryParams = GetSaveCurationTagQueryParams;
 var GetSaveCurationTagRequest = /** @class */ (function (_super) {
     __extends(GetSaveCurationTagRequest, _super);
     function GetSaveCurationTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSaveCurationTagQueryParams)
     ], GetSaveCurationTagRequest.prototype, "queryParams", void 0);
     return GetSaveCurationTagRequest;
-}(SpeakeasyBase));
-export { GetSaveCurationTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveCurationTagRequest = GetSaveCurationTagRequest;
 var GetSaveCurationTagResponse = /** @class */ (function (_super) {
     __extends(GetSaveCurationTagResponse, _super);
     function GetSaveCurationTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSaveCurationTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSaveCurationTagResponse.prototype, "statusCode", void 0);
     return GetSaveCurationTagResponse;
-}(SpeakeasyBase));
-export { GetSaveCurationTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveCurationTagResponse = GetSaveCurationTagResponse;

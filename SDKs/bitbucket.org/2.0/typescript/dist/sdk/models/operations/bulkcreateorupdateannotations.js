@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkCreateOrUpdateAnnotationsResponse = exports.BulkCreateOrUpdateAnnotationsRequest = exports.BulkCreateOrUpdateAnnotationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BulkCreateOrUpdateAnnotationsPathParams = /** @class */ (function (_super) {
     __extends(BulkCreateOrUpdateAnnotationsPathParams, _super);
     function BulkCreateOrUpdateAnnotationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commit" }),
         __metadata("design:type", String)
     ], BulkCreateOrUpdateAnnotationsPathParams.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], BulkCreateOrUpdateAnnotationsPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reportId" }),
         __metadata("design:type", String)
     ], BulkCreateOrUpdateAnnotationsPathParams.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], BulkCreateOrUpdateAnnotationsPathParams.prototype, "workspace", void 0);
     return BulkCreateOrUpdateAnnotationsPathParams;
-}(SpeakeasyBase));
-export { BulkCreateOrUpdateAnnotationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BulkCreateOrUpdateAnnotationsPathParams = BulkCreateOrUpdateAnnotationsPathParams;
 var BulkCreateOrUpdateAnnotationsRequest = /** @class */ (function (_super) {
     __extends(BulkCreateOrUpdateAnnotationsRequest, _super);
     function BulkCreateOrUpdateAnnotationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BulkCreateOrUpdateAnnotationsPathParams)
     ], BulkCreateOrUpdateAnnotationsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Array)
     ], BulkCreateOrUpdateAnnotationsRequest.prototype, "request", void 0);
     return BulkCreateOrUpdateAnnotationsRequest;
-}(SpeakeasyBase));
-export { BulkCreateOrUpdateAnnotationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BulkCreateOrUpdateAnnotationsRequest = BulkCreateOrUpdateAnnotationsRequest;
 var BulkCreateOrUpdateAnnotationsResponse = /** @class */ (function (_super) {
     __extends(BulkCreateOrUpdateAnnotationsResponse, _super);
     function BulkCreateOrUpdateAnnotationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BulkCreateOrUpdateAnnotationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BulkCreateOrUpdateAnnotationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BulkCreateOrUpdateAnnotationsResponse.prototype, "reportAnnotations", void 0);
     return BulkCreateOrUpdateAnnotationsResponse;
-}(SpeakeasyBase));
-export { BulkCreateOrUpdateAnnotationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BulkCreateOrUpdateAnnotationsResponse = BulkCreateOrUpdateAnnotationsResponse;

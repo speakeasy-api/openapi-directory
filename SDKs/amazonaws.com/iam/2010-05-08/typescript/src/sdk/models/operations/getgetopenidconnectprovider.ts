@@ -15,7 +15,7 @@ export class GetGetOpenIdConnectProviderQueryParams extends SpeakeasyBase {
   action: GetGetOpenIdConnectProviderActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" })
-  openIdConnectProviderArn: string;
+  openIDConnectProviderArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetGetOpenIdConnectProviderVersionEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtrasImageAttachmentsDeleteResponse = exports.ExtrasImageAttachmentsDeleteRequest = exports.ExtrasImageAttachmentsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ExtrasImageAttachmentsDeletePathParams = /** @class */ (function (_super) {
     __extends(ExtrasImageAttachmentsDeletePathParams, _super);
     function ExtrasImageAttachmentsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], ExtrasImageAttachmentsDeletePathParams.prototype, "id", void 0);
     return ExtrasImageAttachmentsDeletePathParams;
-}(SpeakeasyBase));
-export { ExtrasImageAttachmentsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasImageAttachmentsDeletePathParams = ExtrasImageAttachmentsDeletePathParams;
 var ExtrasImageAttachmentsDeleteRequest = /** @class */ (function (_super) {
     __extends(ExtrasImageAttachmentsDeleteRequest, _super);
     function ExtrasImageAttachmentsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtrasImageAttachmentsDeletePathParams)
     ], ExtrasImageAttachmentsDeleteRequest.prototype, "pathParams", void 0);
     return ExtrasImageAttachmentsDeleteRequest;
-}(SpeakeasyBase));
-export { ExtrasImageAttachmentsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasImageAttachmentsDeleteRequest = ExtrasImageAttachmentsDeleteRequest;
 var ExtrasImageAttachmentsDeleteResponse = /** @class */ (function (_super) {
     __extends(ExtrasImageAttachmentsDeleteResponse, _super);
     function ExtrasImageAttachmentsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtrasImageAttachmentsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtrasImageAttachmentsDeleteResponse.prototype, "statusCode", void 0);
     return ExtrasImageAttachmentsDeleteResponse;
-}(SpeakeasyBase));
-export { ExtrasImageAttachmentsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasImageAttachmentsDeleteResponse = ExtrasImageAttachmentsDeleteResponse;

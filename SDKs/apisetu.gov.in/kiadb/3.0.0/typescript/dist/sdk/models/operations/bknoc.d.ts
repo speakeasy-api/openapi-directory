@@ -108,11 +108,11 @@ export declare class BknocRequest extends SpeakeasyBase {
 export declare class BknocResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bknoc400ApplicationJsonObject?: Bknoc400ApplicationJson;
-    bknoc401ApplicationJsonObject?: Bknoc401ApplicationJson;
-    bknoc404ApplicationJsonObject?: Bknoc404ApplicationJson;
-    bknoc500ApplicationJsonObject?: Bknoc500ApplicationJson;
-    bknoc502ApplicationJsonObject?: Bknoc502ApplicationJson;
-    bknoc503ApplicationJsonObject?: Bknoc503ApplicationJson;
-    bknoc504ApplicationJsonObject?: Bknoc504ApplicationJson;
+    bknoc400ApplicationJSONObject?: Bknoc400ApplicationJson;
+    bknoc401ApplicationJSONObject?: Bknoc401ApplicationJson;
+    bknoc404ApplicationJSONObject?: Bknoc404ApplicationJson;
+    bknoc500ApplicationJSONObject?: Bknoc500ApplicationJson;
+    bknoc502ApplicationJSONObject?: Bknoc502ApplicationJson;
+    bknoc503ApplicationJSONObject?: Bknoc503ApplicationJson;
+    bknoc504ApplicationJSONObject?: Bknoc504ApplicationJson;
 }

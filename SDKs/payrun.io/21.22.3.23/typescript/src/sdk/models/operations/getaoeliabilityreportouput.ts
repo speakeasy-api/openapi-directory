@@ -47,7 +47,7 @@ export class GetAoeLiabilityReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getAoeLiabilityReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getAoeLiabilityReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

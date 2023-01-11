@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SignalEvaluateRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -13,10 +13,10 @@ export class SignalEvaluateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  signalEvaluateResponse?: Map<string, any>;
+  signalEvaluateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

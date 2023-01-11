@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommentsForPullRequest } from "./commentsforpullrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCommentsForPullRequestOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var commentsforpullrequest_1 = require("./commentsforpullrequest");
 var GetCommentsForPullRequestOutput = /** @class */ (function (_super) {
     __extends(GetCommentsForPullRequestOutput, _super);
     function GetCommentsForPullRequestOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commentsForPullRequestData", elemType: CommentsForPullRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commentsForPullRequestData", elemType: commentsforpullrequest_1.CommentsForPullRequest }),
         __metadata("design:type", Array)
     ], GetCommentsForPullRequestOutput.prototype, "commentsForPullRequestData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetCommentsForPullRequestOutput.prototype, "nextToken", void 0);
     return GetCommentsForPullRequestOutput;
-}(SpeakeasyBase));
-export { GetCommentsForPullRequestOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetCommentsForPullRequestOutput = GetCommentsForPullRequestOutput;

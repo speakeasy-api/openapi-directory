@@ -16,27 +16,30 @@ export declare class PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCrede
     password: string;
     username: string;
 }
+/**
+ * Filter requests for which to create stub mapping
+**/
 export declare class PostAdminRecordingsSnapshotRequestBodyFilters extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     ids?: string[];
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
     urlPattern?: string;
 }
 export declare class PostAdminRecordingsSnapshotRequestBody extends SpeakeasyBase {
-    captureHeaders?: Map<string, PostAdminRecordingsSnapshotRequestBodyCaptureHeaders>;
+    captureHeaders?: Record<string, PostAdminRecordingsSnapshotRequestBodyCaptureHeaders>;
     extractBodyCriteria?: PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria;
     filters?: PostAdminRecordingsSnapshotRequestBodyFilters;
     persist?: boolean;
     repeatsAsScenarios?: boolean;
-    requestBodyPattern?: Map<string, any>;
-    transformerParameters?: Map<string, any>;
+    requestBodyPattern?: Record<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 /**
@@ -48,11 +51,11 @@ export declare class PostAdminRecordingsSnapshot200ApplicationJsonMappingsReques
 }
 export declare class PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -65,28 +68,28 @@ export declare enum PostAdminRecordingsSnapshot200ApplicationJsonMappingsRespons
     RandomDataThenClose = "RANDOM_DATA_THEN_CLOSE"
 }
 export declare class PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse extends SpeakeasyBase {
-    additionalProxyRequestHeaders?: Map<string, any>;
+    additionalProxyRequestHeaders?: Record<string, any>;
     base64Body?: string;
     body?: string;
     bodyFileName?: string;
     fault?: PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum;
     fixedDelayMilliseconds?: number;
     fromConfiguredStub?: boolean;
-    headers?: Map<string, any>;
-    jsonBody?: Map<string, any>;
+    headers?: Record<string, any>;
+    jsonBody?: Record<string, any>;
     proxyBaseUrl?: string;
     status?: number;
     statusMessage?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class PostAdminRecordingsSnapshot200ApplicationJsonMappings extends SpeakeasyBase {
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     newScenarioState?: string;
     persistent?: boolean;
-    postServeActions?: Map<string, any>;
+    postServeActions?: Record<string, any>;
     priority?: number;
     request?: PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest;
     requiredScenarioState?: string;
@@ -106,6 +109,6 @@ export declare class PostAdminRecordingsSnapshotRequest extends SpeakeasyBase {
 }
 export declare class PostAdminRecordingsSnapshotResponse extends SpeakeasyBase {
     contentType: string;
-    postAdminRecordingsSnapshot200ApplicationJsonObject?: PostAdminRecordingsSnapshot200ApplicationJson;
     statusCode: number;
+    postAdminRecordingsSnapshot200ApplicationJSONObject?: PostAdminRecordingsSnapshot200ApplicationJson;
 }

@@ -17,7 +17,7 @@ export class PostProjectUsernameProjectTreeBranchPathParams extends SpeakeasyBas
 
 export class PostProjectUsernameProjectTreeBranchRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=build_parameters" })
-  buildParameters?: Map<string, any>;
+  buildParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=parallel" })
   parallel?: string;
@@ -44,7 +44,7 @@ export class PostProjectUsernameProjectTreeBranchResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

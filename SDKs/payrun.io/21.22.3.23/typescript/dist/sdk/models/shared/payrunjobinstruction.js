@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayRunJobInstruction = exports.PayRunJobInstructionPayRunJobInstruction = exports.PayRunJobInstructionPayRunJobInstructionPaySchedule = exports.PayRunJobInstructionPayRunJobInstructionEmployee = void 0;
+var utils_1 = require("../../../internal/utils");
 // PayRunJobInstructionPayRunJobInstructionEmployee
 /**
  * The pay run job instructions' employees
@@ -33,12 +36,12 @@ var PayRunJobInstructionPayRunJobInstructionEmployee = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employee" }),
         __metadata("design:type", Array)
     ], PayRunJobInstructionPayRunJobInstructionEmployee.prototype, "employee", void 0);
     return PayRunJobInstructionPayRunJobInstructionEmployee;
-}(SpeakeasyBase));
-export { PayRunJobInstructionPayRunJobInstructionEmployee };
+}(utils_1.SpeakeasyBase));
+exports.PayRunJobInstructionPayRunJobInstructionEmployee = PayRunJobInstructionPayRunJobInstructionEmployee;
 // PayRunJobInstructionPayRunJobInstructionPaySchedule
 /**
  * The pay run job instructions' pay schedule
@@ -49,65 +52,65 @@ var PayRunJobInstructionPayRunJobInstructionPaySchedule = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], PayRunJobInstructionPayRunJobInstructionPaySchedule.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], PayRunJobInstructionPayRunJobInstructionPaySchedule.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], PayRunJobInstructionPayRunJobInstructionPaySchedule.prototype, "atTitle", void 0);
     return PayRunJobInstructionPayRunJobInstructionPaySchedule;
-}(SpeakeasyBase));
-export { PayRunJobInstructionPayRunJobInstructionPaySchedule };
+}(utils_1.SpeakeasyBase));
+exports.PayRunJobInstructionPayRunJobInstructionPaySchedule = PayRunJobInstructionPayRunJobInstructionPaySchedule;
 var PayRunJobInstructionPayRunJobInstruction = /** @class */ (function (_super) {
     __extends(PayRunJobInstructionPayRunJobInstruction, _super);
     function PayRunJobInstructionPayRunJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employees" }),
         __metadata("design:type", PayRunJobInstructionPayRunJobInstructionEmployee)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "employees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", Date)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldingDate" }),
         __metadata("design:type", Date)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "holdingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsSupplementary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsSupplementary" }),
         __metadata("design:type", Boolean)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "isSupplementary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaySchedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaySchedule" }),
         __metadata("design:type", PayRunJobInstructionPayRunJobInstructionPaySchedule)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "paySchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentDate" }),
         __metadata("design:type", Date)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "paymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", Date)
     ], PayRunJobInstructionPayRunJobInstruction.prototype, "startDate", void 0);
     return PayRunJobInstructionPayRunJobInstruction;
-}(SpeakeasyBase));
-export { PayRunJobInstructionPayRunJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.PayRunJobInstructionPayRunJobInstruction = PayRunJobInstructionPayRunJobInstruction;
 var PayRunJobInstruction = /** @class */ (function (_super) {
     __extends(PayRunJobInstruction, _super);
     function PayRunJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayRunJobInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayRunJobInstruction" }),
         __metadata("design:type", PayRunJobInstructionPayRunJobInstruction)
     ], PayRunJobInstruction.prototype, "payRunJobInstruction", void 0);
     return PayRunJobInstruction;
-}(SpeakeasyBase));
-export { PayRunJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.PayRunJobInstruction = PayRunJobInstruction;

@@ -35,13 +35,13 @@ export class UpdatePaymentPsuDataHeaders extends SpeakeasyBase {
   psuAcceptLanguage?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID" })
-  psuCorporateId?: string;
+  psuCorporateID?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Corporate-ID-Type" })
-  psuCorporateIdType?: string;
+  psuCorporateIDType?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Device-ID" })
-  psuDeviceId?: string;
+  psuDeviceID?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Geo-Location" })
   psuGeoLocation?: string;
@@ -50,16 +50,16 @@ export class UpdatePaymentPsuDataHeaders extends SpeakeasyBase {
   psuHttpMethod?: shared.PsuHttpMethodEnum;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-ID" })
-  psuId?: string;
+  psuID?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-ID-Type" })
-  psuIdType?: string;
+  psuIDType?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Address" })
-  psuIpAddress?: string;
+  psuIPAddress?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Port" })
-  psuIpPort?: string;
+  psuIPPort?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-User-Agent" })
   psuUserAgent?: string;
@@ -71,7 +71,7 @@ export class UpdatePaymentPsuDataHeaders extends SpeakeasyBase {
   tppSignatureCertificate?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Request-ID" })
-  xRequestId: string;
+  xRequestID: string;
 }
 
 
@@ -101,47 +101,47 @@ export class UpdatePaymentPsuDataResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error400NgPis?: shared.Error400NgPis;
+  error400NGPIS?: shared.Error400NgPis;
 
   @SpeakeasyMetadata()
-  error400Pis?: shared.Error400Pis;
+  error400PIS?: shared.Error400Pis;
 
   @SpeakeasyMetadata()
-  error401NgPis?: shared.Error401NgPis;
+  error401NGPIS?: shared.Error401NgPis;
 
   @SpeakeasyMetadata()
-  error401Pis?: shared.Error401Pis;
+  error401PIS?: shared.Error401Pis;
 
   @SpeakeasyMetadata()
-  error403NgPis?: shared.Error403NgPis;
+  error403NGPIS?: shared.Error403NgPis;
 
   @SpeakeasyMetadata()
-  error403Pis?: shared.Error403Pis;
+  error403PIS?: shared.Error403Pis;
 
   @SpeakeasyMetadata()
-  error404NgPis?: shared.Error404NgPis;
+  error404NGPIS?: shared.Error404NgPis;
 
   @SpeakeasyMetadata()
-  error404Pis?: shared.Error404Pis;
+  error404PIS?: shared.Error404Pis;
 
   @SpeakeasyMetadata()
-  error405NgPis?: shared.Error405NgPis;
+  error405NGPIS?: shared.Error405NgPis;
 
   @SpeakeasyMetadata()
-  error405Pis?: shared.Error405Pis;
+  error405PIS?: shared.Error405Pis;
 
   @SpeakeasyMetadata()
-  error409NgPis?: shared.Error409NgPis;
+  error409NGPIS?: shared.Error409NgPis;
 
   @SpeakeasyMetadata()
-  error409Pis?: shared.Error409Pis;
+  error409PIS?: shared.Error409Pis;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePaymentPsuData200ApplicationJsonOneOf?: any;
+  updatePaymentPsuData200ApplicationJSONOneOf?: any;
 }

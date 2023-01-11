@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PropertyDataTypeEnum } from "./propertydatatypeenum";
-import { PropertyType } from "./propertytype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetModelPropertyDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var propertydatatypeenum_1 = require("./propertydatatypeenum");
+var propertytype_1 = require("./propertytype");
 // AssetModelPropertyDefinition
 /**
  * Contains an asset model property definition. This property definition is applied to all assets created from the asset model.
@@ -35,25 +38,25 @@ var AssetModelPropertyDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], AssetModelPropertyDefinition.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataTypeSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataTypeSpec" }),
         __metadata("design:type", String)
     ], AssetModelPropertyDefinition.prototype, "dataTypeSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AssetModelPropertyDefinition.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", PropertyType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", propertytype_1.PropertyType)
     ], AssetModelPropertyDefinition.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], AssetModelPropertyDefinition.prototype, "unit", void 0);
     return AssetModelPropertyDefinition;
-}(SpeakeasyBase));
-export { AssetModelPropertyDefinition };
+}(utils_1.SpeakeasyBase));
+exports.AssetModelPropertyDefinition = AssetModelPropertyDefinition;

@@ -5,7 +5,7 @@ import { Tag } from "./tag";
 export declare class CreateContainerServiceRequest extends SpeakeasyBase {
     deployment?: ContainerServiceDeploymentRequest;
     power: ContainerServicePowerNameEnum;
-    publicDomainNames?: Map<string, string[]>;
+    publicDomainNames?: Record<string, string[]>;
     scale: number;
     serviceName: string;
     tags?: Tag[];

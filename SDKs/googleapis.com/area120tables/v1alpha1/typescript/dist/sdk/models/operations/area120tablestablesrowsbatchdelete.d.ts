@@ -46,6 +46,6 @@ export declare class Area120tablesTablesRowsBatchDeleteRequest extends Speakeasy
 }
 export declare class Area120tablesTablesRowsBatchDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

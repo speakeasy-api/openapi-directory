@@ -7,7 +7,7 @@ export class CreateDiffHtmlUsingPostQueryParams extends SpeakeasyBase {
   endRev?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startRev" })
   startRev?: string;
@@ -19,7 +19,7 @@ export class CreateDiffHtmlUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CreateDiffHtmlUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateDiffHtmlUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateDiffHtmlUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateDiffHtmlUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingPost200ApplicationJsonObject?: CreateDiffHtmlUsingPost200ApplicationJson;
+  createDiffHTMLUsingPOST200ApplicationJSONObject?: CreateDiffHtmlUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingPost400ApplicationJsonObject?: CreateDiffHtmlUsingPost400ApplicationJson;
+  createDiffHTMLUsingPOST400ApplicationJSONObject?: CreateDiffHtmlUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingPost401ApplicationJsonObject?: CreateDiffHtmlUsingPost401ApplicationJson;
+  createDiffHTMLUsingPOST401ApplicationJSONObject?: CreateDiffHtmlUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createDiffHtmlUsingPost500ApplicationJsonObject?: CreateDiffHtmlUsingPost500ApplicationJson;
+  createDiffHTMLUsingPOST500ApplicationJSONObject?: CreateDiffHtmlUsingPost500ApplicationJson;
 }

@@ -22,52 +22,6 @@ export enum CloudSqlSettingsDatabaseVersionEnum {
 }
 
 
-// CloudSqlSettingsInput
-/** 
- * Settings for creating a Cloud SQL database instance.
-**/
-export class CloudSqlSettingsInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=activationPolicy" })
-  activationPolicy?: CloudSqlSettingsActivationPolicyEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=autoStorageIncrease" })
-  autoStorageIncrease?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=dataDiskSizeGb" })
-  dataDiskSizeGb?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=dataDiskType" })
-  dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=databaseFlags" })
-  databaseFlags?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=databaseVersion" })
-  databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=ipConfig" })
-  ipConfig?: SqlIpConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=rootPassword" })
-  rootPassword?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=sourceId" })
-  sourceId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=storageAutoResizeLimit" })
-  storageAutoResizeLimit?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=tier" })
-  tier?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=zone" })
-  zone?: string;
-}
-
-
 // CloudSqlSettings
 /** 
  * Settings for creating a Cloud SQL database instance.
@@ -86,7 +40,7 @@ export class CloudSqlSettings extends SpeakeasyBase {
   dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=databaseFlags" })
-  databaseFlags?: Map<string, string>;
+  databaseFlags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=databaseVersion" })
   databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
@@ -110,7 +64,53 @@ export class CloudSqlSettings extends SpeakeasyBase {
   tier?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userLabels" })
-  userLabels?: Map<string, string>;
+  userLabels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=zone" })
+  zone?: string;
+}
+
+
+// CloudSqlSettingsInput
+/** 
+ * Settings for creating a Cloud SQL database instance.
+**/
+export class CloudSqlSettingsInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=activationPolicy" })
+  activationPolicy?: CloudSqlSettingsActivationPolicyEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=autoStorageIncrease" })
+  autoStorageIncrease?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=dataDiskSizeGb" })
+  dataDiskSizeGb?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=dataDiskType" })
+  dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=databaseFlags" })
+  databaseFlags?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=databaseVersion" })
+  databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=ipConfig" })
+  ipConfig?: SqlIpConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=rootPassword" })
+  rootPassword?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sourceId" })
+  sourceId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=storageAutoResizeLimit" })
+  storageAutoResizeLimit?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=tier" })
+  tier?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=userLabels" })
+  userLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=zone" })
   zone?: string;

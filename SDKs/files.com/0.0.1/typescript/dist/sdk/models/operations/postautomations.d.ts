@@ -26,13 +26,13 @@ export declare class PostAutomationsRequestBody extends SpeakeasyBase {
     groupIds?: string;
     interval?: string;
     path?: string;
-    schedule?: Map<string, any>;
+    schedule?: Record<string, any>;
     source?: string;
     trigger?: PostAutomationsRequestBodyTriggerEnum;
     triggerActionPath?: string;
     triggerActions?: string[];
     userIds?: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }
 export declare class PostAutomationsRequest extends SpeakeasyBase {
     request: PostAutomationsRequestBody;

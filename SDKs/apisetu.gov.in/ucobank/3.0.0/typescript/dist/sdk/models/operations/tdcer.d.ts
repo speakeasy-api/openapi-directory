@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class TdcerRequestBodyCertificateParameters extends SpeakeasyBase {
-    custId: string;
+    custID: string;
     dob: string;
     finYr: string;
 }
@@ -107,11 +107,11 @@ export declare class TdcerRequest extends SpeakeasyBase {
 export declare class TdcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tdcer400ApplicationJsonObject?: Tdcer400ApplicationJson;
-    tdcer401ApplicationJsonObject?: Tdcer401ApplicationJson;
-    tdcer404ApplicationJsonObject?: Tdcer404ApplicationJson;
-    tdcer500ApplicationJsonObject?: Tdcer500ApplicationJson;
-    tdcer502ApplicationJsonObject?: Tdcer502ApplicationJson;
-    tdcer503ApplicationJsonObject?: Tdcer503ApplicationJson;
-    tdcer504ApplicationJsonObject?: Tdcer504ApplicationJson;
+    tdcer400ApplicationJSONObject?: Tdcer400ApplicationJson;
+    tdcer401ApplicationJSONObject?: Tdcer401ApplicationJson;
+    tdcer404ApplicationJSONObject?: Tdcer404ApplicationJson;
+    tdcer500ApplicationJSONObject?: Tdcer500ApplicationJson;
+    tdcer502ApplicationJSONObject?: Tdcer502ApplicationJson;
+    tdcer503ApplicationJSONObject?: Tdcer503ApplicationJson;
+    tdcer504ApplicationJSONObject?: Tdcer504ApplicationJson;
 }

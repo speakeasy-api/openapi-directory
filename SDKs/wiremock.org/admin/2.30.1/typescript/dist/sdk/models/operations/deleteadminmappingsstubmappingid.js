@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAdminMappingsStubMappingIdResponse = exports.DeleteAdminMappingsStubMappingIdRequest = exports.DeleteAdminMappingsStubMappingIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAdminMappingsStubMappingIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteAdminMappingsStubMappingIdPathParams, _super);
     function DeleteAdminMappingsStubMappingIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stubMappingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stubMappingId" }),
         __metadata("design:type", String)
     ], DeleteAdminMappingsStubMappingIdPathParams.prototype, "stubMappingId", void 0);
     return DeleteAdminMappingsStubMappingIdPathParams;
-}(SpeakeasyBase));
-export { DeleteAdminMappingsStubMappingIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminMappingsStubMappingIdPathParams = DeleteAdminMappingsStubMappingIdPathParams;
 var DeleteAdminMappingsStubMappingIdRequest = /** @class */ (function (_super) {
     __extends(DeleteAdminMappingsStubMappingIdRequest, _super);
     function DeleteAdminMappingsStubMappingIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAdminMappingsStubMappingIdPathParams)
     ], DeleteAdminMappingsStubMappingIdRequest.prototype, "pathParams", void 0);
     return DeleteAdminMappingsStubMappingIdRequest;
-}(SpeakeasyBase));
-export { DeleteAdminMappingsStubMappingIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminMappingsStubMappingIdRequest = DeleteAdminMappingsStubMappingIdRequest;
 var DeleteAdminMappingsStubMappingIdResponse = /** @class */ (function (_super) {
     __extends(DeleteAdminMappingsStubMappingIdResponse, _super);
     function DeleteAdminMappingsStubMappingIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAdminMappingsStubMappingIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAdminMappingsStubMappingIdResponse.prototype, "statusCode", void 0);
     return DeleteAdminMappingsStubMappingIdResponse;
-}(SpeakeasyBase));
-export { DeleteAdminMappingsStubMappingIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminMappingsStubMappingIdResponse = DeleteAdminMappingsStubMappingIdResponse;

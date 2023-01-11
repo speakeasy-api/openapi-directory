@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * The event integration association.
 **/
 export declare class EventIntegrationAssociation extends SpeakeasyBase {
-    clientAssociationMetadata?: Map<string, string>;
+    clientAssociationMetadata?: Record<string, string>;
     clientId?: string;
     eventBridgeRuleName?: string;
     eventIntegrationAssociationArn?: string;

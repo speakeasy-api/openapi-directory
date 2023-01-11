@@ -19,7 +19,7 @@ export class EvaluationResult extends SpeakeasyBase {
   evalDecision: PolicyEvaluationDecisionTypeEnum;
 
   @SpeakeasyMetadata()
-  evalDecisionDetails?: Map<string, PolicyEvaluationDecisionTypeEnum>;
+  evalDecisionDetails?: Record<string, string>;
 
   @SpeakeasyMetadata()
   evalResourceName?: string;

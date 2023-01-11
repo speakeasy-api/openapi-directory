@@ -11,7 +11,7 @@ import { S3PublicAccessBlockConfiguration } from "./s3publicaccessblockconfigura
 **/
 export class S3BucketConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=accessPoints", elemType: S3AccessPointConfiguration })
-  accessPoints?: Map<string, S3AccessPointConfiguration>;
+  accessPoints?: Record<string, S3AccessPointConfiguration>;
 
   @SpeakeasyMetadata({ data: "json, name=bucketAclGrants", elemType: S3BucketAclGrantConfiguration })
   bucketAclGrants?: S3BucketAclGrantConfiguration[];

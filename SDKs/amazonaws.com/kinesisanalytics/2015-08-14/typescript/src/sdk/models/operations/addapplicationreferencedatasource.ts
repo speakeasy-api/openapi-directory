@@ -45,7 +45,7 @@ export class AddApplicationReferenceDataSourceRequest extends SpeakeasyBase {
 
 export class AddApplicationReferenceDataSourceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addApplicationReferenceDataSourceResponse?: Map<string, any>;
+  addApplicationReferenceDataSourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   concurrentModificationException?: any;

@@ -20,7 +20,7 @@ export class ChannelSection extends SpeakeasyBase {
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=localizations", elemType: ChannelSectionLocalization })
-  localizations?: Map<string, ChannelSectionLocalization>;
+  localizations?: Record<string, ChannelSectionLocalization>;
 
   @SpeakeasyMetadata({ data: "json, name=snippet" })
   snippet?: ChannelSectionSnippet;

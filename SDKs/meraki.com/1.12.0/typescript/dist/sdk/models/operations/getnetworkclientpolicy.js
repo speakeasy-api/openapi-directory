@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkClientPolicyResponse = exports.GetNetworkClientPolicyRequest = exports.GetNetworkClientPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkClientPolicyPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkClientPolicyPathParams, _super);
     function GetNetworkClientPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientId" }),
         __metadata("design:type", String)
     ], GetNetworkClientPolicyPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkClientPolicyPathParams.prototype, "networkId", void 0);
     return GetNetworkClientPolicyPathParams;
-}(SpeakeasyBase));
-export { GetNetworkClientPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientPolicyPathParams = GetNetworkClientPolicyPathParams;
 var GetNetworkClientPolicyRequest = /** @class */ (function (_super) {
     __extends(GetNetworkClientPolicyRequest, _super);
     function GetNetworkClientPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkClientPolicyPathParams)
     ], GetNetworkClientPolicyRequest.prototype, "pathParams", void 0);
     return GetNetworkClientPolicyRequest;
-}(SpeakeasyBase));
-export { GetNetworkClientPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientPolicyRequest = GetNetworkClientPolicyRequest;
 var GetNetworkClientPolicyResponse = /** @class */ (function (_super) {
     __extends(GetNetworkClientPolicyResponse, _super);
     function GetNetworkClientPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkClientPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkClientPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkClientPolicyResponse.prototype, "getNetworkClientPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkClientPolicyResponse.prototype, "getNetworkClientPolicy200ApplicationJSONObject", void 0);
     return GetNetworkClientPolicyResponse;
-}(SpeakeasyBase));
-export { GetNetworkClientPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkClientPolicyResponse = GetNetworkClientPolicyResponse;

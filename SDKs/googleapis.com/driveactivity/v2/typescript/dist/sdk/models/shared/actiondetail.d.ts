@@ -19,7 +19,7 @@ export declare class ActionDetail extends SpeakeasyBase {
     create?: Create;
     delete?: Delete;
     dlpChange?: DataLeakPreventionChange;
-    edit?: Map<string, any>;
+    edit?: Record<string, any>;
     move?: Move;
     permissionChange?: PermissionChange;
     reference?: ApplicationReference;

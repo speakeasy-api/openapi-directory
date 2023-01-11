@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScalingPolicy } from "./scalingpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoliciesType = void 0;
+var utils_1 = require("../../../internal/utils");
+var scalingpolicy_1 = require("./scalingpolicy");
 var PoliciesType = /** @class */ (function (_super) {
     __extends(PoliciesType, _super);
     function PoliciesType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoliciesType.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ScalingPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: scalingpolicy_1.ScalingPolicy }),
         __metadata("design:type", Array)
     ], PoliciesType.prototype, "scalingPolicies", void 0);
     return PoliciesType;
-}(SpeakeasyBase));
-export { PoliciesType };
+}(utils_1.SpeakeasyBase));
+exports.PoliciesType = PoliciesType;

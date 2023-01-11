@@ -4,7 +4,7 @@ export declare class ChangeDiscoverabilityRequest extends SpeakeasyBase {
     request: shared.ChangeDiscoverabilityRequest;
 }
 export declare class ChangeDiscoverabilityResponse extends SpeakeasyBase {
-    body?: Uint8Array;
+    changeDiscoverability200TextPlainObject?: string;
     contentType: string;
     statusCode: number;
 }

@@ -5,23 +5,23 @@ import { X509Parameters } from "./x509parameters";
 /**
  * A CertificateTemplate refers to a managed template for certificate issuance.
 **/
-export declare class CertificateTemplate extends SpeakeasyBase {
-    createTime?: string;
+export declare class CertificateTemplateInput extends SpeakeasyBase {
     description?: string;
     identityConstraints?: CertificateIdentityConstraints;
-    labels?: Map<string, string>;
-    name?: string;
+    labels?: Record<string, string>;
     passthroughExtensions?: CertificateExtensionConstraints;
     predefinedValues?: X509Parameters;
-    updateTime?: string;
 }
 /**
  * A CertificateTemplate refers to a managed template for certificate issuance.
 **/
-export declare class CertificateTemplateInput extends SpeakeasyBase {
+export declare class CertificateTemplate extends SpeakeasyBase {
+    createTime?: string;
     description?: string;
     identityConstraints?: CertificateIdentityConstraints;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
+    name?: string;
     passthroughExtensions?: CertificateExtensionConstraints;
     predefinedValues?: X509Parameters;
+    updateTime?: string;
 }

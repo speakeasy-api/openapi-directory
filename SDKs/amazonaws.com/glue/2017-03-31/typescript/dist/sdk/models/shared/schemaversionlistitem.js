@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchemaVersionStatusEnum } from "./schemaversionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchemaVersionListItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var schemaversionstatusenum_1 = require("./schemaversionstatusenum");
 // SchemaVersionListItem
 /**
  * An object containing the details about a schema version.
@@ -34,25 +37,25 @@ var SchemaVersionListItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTime" }),
         __metadata("design:type", String)
     ], SchemaVersionListItem.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaArn" }),
         __metadata("design:type", String)
     ], SchemaVersionListItem.prototype, "schemaArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaVersionId" }),
         __metadata("design:type", String)
     ], SchemaVersionListItem.prototype, "schemaVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], SchemaVersionListItem.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VersionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VersionNumber" }),
         __metadata("design:type", Number)
     ], SchemaVersionListItem.prototype, "versionNumber", void 0);
     return SchemaVersionListItem;
-}(SpeakeasyBase));
-export { SchemaVersionListItem };
+}(utils_1.SpeakeasyBase));
+exports.SchemaVersionListItem = SchemaVersionListItem;

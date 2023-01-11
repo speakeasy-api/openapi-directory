@@ -200,23 +200,23 @@ export class DgmstResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dgmst400ApplicationJsonObject?: Dgmst400ApplicationJson;
+  dgmst400ApplicationJSONObject?: Dgmst400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst401ApplicationJsonObject?: Dgmst401ApplicationJson;
+  dgmst401ApplicationJSONObject?: Dgmst401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst404ApplicationJsonObject?: Dgmst404ApplicationJson;
+  dgmst404ApplicationJSONObject?: Dgmst404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst500ApplicationJsonObject?: Dgmst500ApplicationJson;
+  dgmst500ApplicationJSONObject?: Dgmst500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst502ApplicationJsonObject?: Dgmst502ApplicationJson;
+  dgmst502ApplicationJSONObject?: Dgmst502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst503ApplicationJsonObject?: Dgmst503ApplicationJson;
+  dgmst503ApplicationJSONObject?: Dgmst503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgmst504ApplicationJsonObject?: Dgmst504ApplicationJson;
+  dgmst504ApplicationJSONObject?: Dgmst504ApplicationJson;
 }

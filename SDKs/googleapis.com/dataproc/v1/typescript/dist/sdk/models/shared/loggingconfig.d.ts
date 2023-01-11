@@ -14,5 +14,5 @@ export declare enum LoggingConfigDriverLogLevelsEnum {
  * The runtime logging config of the job.
 **/
 export declare class LoggingConfig extends SpeakeasyBase {
-    driverLogLevels?: Map<string, LoggingConfigDriverLogLevelsEnum>;
+    driverLogLevels?: Record<string, LoggingConfigDriverLogLevelsEnum>;
 }

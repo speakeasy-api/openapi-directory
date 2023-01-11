@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Picture } from "./picture";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnDemandSeason = exports.OnDemandSeasonUser = exports.OnDemandSeasonUserWebsites = exports.OnDemandSeasonUserUploadQuota = exports.OnDemandSeasonUserUploadQuotaSpace = exports.OnDemandSeasonUserUploadQuotaSpaceShowingEnum = exports.OnDemandSeasonUserUploadQuotaPeriodic = exports.OnDemandSeasonUserUploadQuotaLifetime = exports.OnDemandSeasonUserPreferences = exports.OnDemandSeasonUserPreferencesVideos = exports.OnDemandSeasonUserPreferencesVideosPrivacy = exports.OnDemandSeasonUserPreferencesVideosPrivacyViewEnum = exports.OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum = exports.OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum = exports.OnDemandSeasonUserMetadata = exports.OnDemandSeasonUserMetadataInteractions = exports.OnDemandSeasonUserMetadataInteractionsReport = exports.OnDemandSeasonUserMetadataInteractionsFollow = exports.OnDemandSeasonUserMetadataInteractionsBlock = exports.OnDemandSeasonUserMetadataInteractionsAddPrivacyUser = exports.OnDemandSeasonUserMetadataConnections = exports.OnDemandSeasonUserMetadataConnectionsWatchlater = exports.OnDemandSeasonUserMetadataConnectionsWatchedVideos = exports.OnDemandSeasonUserMetadataConnectionsVideos = exports.OnDemandSeasonUserMetadataConnectionsShared = exports.OnDemandSeasonUserMetadataConnectionsRecommendedUsers = exports.OnDemandSeasonUserMetadataConnectionsRecommendedChannels = exports.OnDemandSeasonUserMetadataConnectionsPortfolios = exports.OnDemandSeasonUserMetadataConnectionsPictures = exports.OnDemandSeasonUserMetadataConnectionsModeratedChannels = exports.OnDemandSeasonUserMetadataConnectionsLikes = exports.OnDemandSeasonUserMetadataConnectionsGroups = exports.OnDemandSeasonUserMetadataConnectionsFollowing = exports.OnDemandSeasonUserMetadataConnectionsFollowers = exports.OnDemandSeasonUserMetadataConnectionsFolders = exports.OnDemandSeasonUserMetadataConnectionsFeed = exports.OnDemandSeasonUserMetadataConnectionsChannels = exports.OnDemandSeasonUserMetadataConnectionsCategories = exports.OnDemandSeasonUserMetadataConnectionsBlock = exports.OnDemandSeasonUserMetadataConnectionsAppearances = exports.OnDemandSeasonUserMetadataConnectionsAlbums = exports.OnDemandSeasonUserAccountEnum = exports.OnDemandSeasonMetadata = exports.OnDemandSeasonMetadataConnections = exports.OnDemandSeasonMetadataConnectionsVideos = void 0;
+var utils_1 = require("../../../internal/utils");
+var picture_1 = require("./picture");
 // OnDemandSeasonMetadataConnectionsVideos
 /**
  * The Videos connection.
@@ -34,45 +37,45 @@ var OnDemandSeasonMetadataConnectionsVideos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonMetadataConnectionsVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonMetadataConnectionsVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonMetadataConnectionsVideos.prototype, "uri", void 0);
     return OnDemandSeasonMetadataConnectionsVideos;
-}(SpeakeasyBase));
-export { OnDemandSeasonMetadataConnectionsVideos };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonMetadataConnectionsVideos = OnDemandSeasonMetadataConnectionsVideos;
 var OnDemandSeasonMetadataConnections = /** @class */ (function (_super) {
     __extends(OnDemandSeasonMetadataConnections, _super);
     function OnDemandSeasonMetadataConnections() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", OnDemandSeasonMetadataConnectionsVideos)
     ], OnDemandSeasonMetadataConnections.prototype, "videos", void 0);
     return OnDemandSeasonMetadataConnections;
-}(SpeakeasyBase));
-export { OnDemandSeasonMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonMetadataConnections = OnDemandSeasonMetadataConnections;
 var OnDemandSeasonMetadata = /** @class */ (function (_super) {
     __extends(OnDemandSeasonMetadata, _super);
     function OnDemandSeasonMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", OnDemandSeasonMetadataConnections)
     ], OnDemandSeasonMetadata.prototype, "connections", void 0);
     return OnDemandSeasonMetadata;
-}(SpeakeasyBase));
-export { OnDemandSeasonMetadata };
-export var OnDemandSeasonUserAccountEnum;
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonMetadata = OnDemandSeasonMetadata;
+var OnDemandSeasonUserAccountEnum;
 (function (OnDemandSeasonUserAccountEnum) {
     OnDemandSeasonUserAccountEnum["Basic"] = "basic";
     OnDemandSeasonUserAccountEnum["Business"] = "business";
@@ -83,7 +86,7 @@ export var OnDemandSeasonUserAccountEnum;
     OnDemandSeasonUserAccountEnum["Pro"] = "pro";
     OnDemandSeasonUserAccountEnum["ProUnlimited"] = "pro_unlimited";
     OnDemandSeasonUserAccountEnum["Producer"] = "producer";
-})(OnDemandSeasonUserAccountEnum || (OnDemandSeasonUserAccountEnum = {}));
+})(OnDemandSeasonUserAccountEnum = exports.OnDemandSeasonUserAccountEnum || (exports.OnDemandSeasonUserAccountEnum = {}));
 // OnDemandSeasonUserMetadataConnectionsAlbums
 /**
  * Information about the albums created by this user.
@@ -94,20 +97,20 @@ var OnDemandSeasonUserMetadataConnectionsAlbums = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsAlbums.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsAlbums.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsAlbums.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsAlbums;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsAlbums };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsAlbums = OnDemandSeasonUserMetadataConnectionsAlbums;
 // OnDemandSeasonUserMetadataConnectionsAppearances
 /**
  * Information about the appearances of this user in other videos.
@@ -118,20 +121,20 @@ var OnDemandSeasonUserMetadataConnectionsAppearances = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsAppearances.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsAppearances.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsAppearances.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsAppearances;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsAppearances };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsAppearances = OnDemandSeasonUserMetadataConnectionsAppearances;
 // OnDemandSeasonUserMetadataConnectionsBlock
 /**
  * Information on the users that the current user has blocked. This data requires a bearer token with the `private` scope.
@@ -142,20 +145,20 @@ var OnDemandSeasonUserMetadataConnectionsBlock = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsBlock.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsBlock.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsBlock.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsBlock;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsBlock };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsBlock = OnDemandSeasonUserMetadataConnectionsBlock;
 // OnDemandSeasonUserMetadataConnectionsCategories
 /**
  * Information about this user's followed categories.
@@ -166,20 +169,20 @@ var OnDemandSeasonUserMetadataConnectionsCategories = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsCategories.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsCategories.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsCategories.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsCategories;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsCategories };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsCategories = OnDemandSeasonUserMetadataConnectionsCategories;
 // OnDemandSeasonUserMetadataConnectionsChannels
 /**
  * Information about this user's subscribed channels.
@@ -190,20 +193,20 @@ var OnDemandSeasonUserMetadataConnectionsChannels = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsChannels.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsChannels;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsChannels };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsChannels = OnDemandSeasonUserMetadataConnectionsChannels;
 // OnDemandSeasonUserMetadataConnectionsFeed
 /**
  * Information about this user's feed.
@@ -214,16 +217,16 @@ var OnDemandSeasonUserMetadataConnectionsFeed = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsFeed.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsFeed.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsFeed;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsFeed };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsFeed = OnDemandSeasonUserMetadataConnectionsFeed;
 // OnDemandSeasonUserMetadataConnectionsFolders
 /**
  * Information about this user's folders.
@@ -234,20 +237,20 @@ var OnDemandSeasonUserMetadataConnectionsFolders = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsFolders.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsFolders.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsFolders.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsFolders;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsFolders };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsFolders = OnDemandSeasonUserMetadataConnectionsFolders;
 // OnDemandSeasonUserMetadataConnectionsFollowers
 /**
  * Information about the user's followers.
@@ -258,20 +261,20 @@ var OnDemandSeasonUserMetadataConnectionsFollowers = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsFollowers.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsFollowers.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsFollowers.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsFollowers;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsFollowers };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsFollowers = OnDemandSeasonUserMetadataConnectionsFollowers;
 // OnDemandSeasonUserMetadataConnectionsFollowing
 /**
  * Information about the users that the current user is following.
@@ -282,20 +285,20 @@ var OnDemandSeasonUserMetadataConnectionsFollowing = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsFollowing.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsFollowing.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsFollowing.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsFollowing;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsFollowing };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsFollowing = OnDemandSeasonUserMetadataConnectionsFollowing;
 // OnDemandSeasonUserMetadataConnectionsGroups
 /**
  * Information about the groups created by this user.
@@ -306,20 +309,20 @@ var OnDemandSeasonUserMetadataConnectionsGroups = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsGroups.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsGroups.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsGroups.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsGroups;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsGroups };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsGroups = OnDemandSeasonUserMetadataConnectionsGroups;
 // OnDemandSeasonUserMetadataConnectionsLikes
 /**
  * Information about the videos that this user has liked.
@@ -330,20 +333,20 @@ var OnDemandSeasonUserMetadataConnectionsLikes = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsLikes.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsLikes.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsLikes.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsLikes;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsLikes };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsLikes = OnDemandSeasonUserMetadataConnectionsLikes;
 // OnDemandSeasonUserMetadataConnectionsModeratedChannels
 /**
  * Information about the channels that this user moderates.
@@ -354,20 +357,20 @@ var OnDemandSeasonUserMetadataConnectionsModeratedChannels = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsModeratedChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsModeratedChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsModeratedChannels.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsModeratedChannels;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsModeratedChannels };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsModeratedChannels = OnDemandSeasonUserMetadataConnectionsModeratedChannels;
 // OnDemandSeasonUserMetadataConnectionsPictures
 /**
  * Information about this user's portraits.
@@ -378,20 +381,20 @@ var OnDemandSeasonUserMetadataConnectionsPictures = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsPictures.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsPictures.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsPictures.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsPictures;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsPictures };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsPictures = OnDemandSeasonUserMetadataConnectionsPictures;
 // OnDemandSeasonUserMetadataConnectionsPortfolios
 /**
  * Information about this user's portfolios.
@@ -402,20 +405,20 @@ var OnDemandSeasonUserMetadataConnectionsPortfolios = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsPortfolios.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsPortfolios.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsPortfolios.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsPortfolios;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsPortfolios = OnDemandSeasonUserMetadataConnectionsPortfolios;
 // OnDemandSeasonUserMetadataConnectionsRecommendedChannels
 /**
  * A collection of recommended channels for the current user to follow. This data requires a bearer token with the `private` scope.
@@ -426,20 +429,20 @@ var OnDemandSeasonUserMetadataConnectionsRecommendedChannels = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedChannels.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsRecommendedChannels;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsRecommendedChannels };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsRecommendedChannels = OnDemandSeasonUserMetadataConnectionsRecommendedChannels;
 // OnDemandSeasonUserMetadataConnectionsRecommendedUsers
 /**
  * A Collection of recommended users for the current user to follow. This data requires a bearer token with the `private` scope.
@@ -450,20 +453,20 @@ var OnDemandSeasonUserMetadataConnectionsRecommendedUsers = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedUsers.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedUsers.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsRecommendedUsers.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsRecommendedUsers;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsRecommendedUsers };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsRecommendedUsers = OnDemandSeasonUserMetadataConnectionsRecommendedUsers;
 // OnDemandSeasonUserMetadataConnectionsShared
 /**
  * Information about the videos that have been shared with this user.
@@ -474,20 +477,20 @@ var OnDemandSeasonUserMetadataConnectionsShared = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsShared.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsShared.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsShared.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsShared;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsShared };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsShared = OnDemandSeasonUserMetadataConnectionsShared;
 // OnDemandSeasonUserMetadataConnectionsVideos
 /**
  * Information about the videos uploaded by this user.
@@ -498,20 +501,20 @@ var OnDemandSeasonUserMetadataConnectionsVideos = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsVideos.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsVideos;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsVideos };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsVideos = OnDemandSeasonUserMetadataConnectionsVideos;
 // OnDemandSeasonUserMetadataConnectionsWatchedVideos
 /**
  * Information about the videos that this user has watched.
@@ -522,20 +525,20 @@ var OnDemandSeasonUserMetadataConnectionsWatchedVideos = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsWatchedVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsWatchedVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsWatchedVideos.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsWatchedVideos;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsWatchedVideos };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsWatchedVideos = OnDemandSeasonUserMetadataConnectionsWatchedVideos;
 // OnDemandSeasonUserMetadataConnectionsWatchlater
 /**
  * Information about the videos that this user wants to watch later.
@@ -546,20 +549,20 @@ var OnDemandSeasonUserMetadataConnectionsWatchlater = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataConnectionsWatchlater.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserMetadataConnectionsWatchlater.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataConnectionsWatchlater.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataConnectionsWatchlater;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnectionsWatchlater };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnectionsWatchlater = OnDemandSeasonUserMetadataConnectionsWatchlater;
 // OnDemandSeasonUserMetadataConnections
 /**
  * The list of resource URIs related to the user.
@@ -570,104 +573,104 @@ var OnDemandSeasonUserMetadataConnections = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=albums" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=albums" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsAlbums)
     ], OnDemandSeasonUserMetadataConnections.prototype, "albums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appearances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appearances" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsAppearances)
     ], OnDemandSeasonUserMetadataConnections.prototype, "appearances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsBlock)
     ], OnDemandSeasonUserMetadataConnections.prototype, "block", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsCategories)
     ], OnDemandSeasonUserMetadataConnections.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channels" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsChannels)
     ], OnDemandSeasonUserMetadataConnections.prototype, "channels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feed" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsFeed)
     ], OnDemandSeasonUserMetadataConnections.prototype, "feed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folders" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsFolders)
     ], OnDemandSeasonUserMetadataConnections.prototype, "folders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsFollowers)
     ], OnDemandSeasonUserMetadataConnections.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsFollowing)
     ], OnDemandSeasonUserMetadataConnections.prototype, "following", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsGroups)
     ], OnDemandSeasonUserMetadataConnections.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likes" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsLikes)
     ], OnDemandSeasonUserMetadataConnections.prototype, "likes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderated_channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderated_channels" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsModeratedChannels)
     ], OnDemandSeasonUserMetadataConnections.prototype, "moderatedChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictures" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsPictures)
     ], OnDemandSeasonUserMetadataConnections.prototype, "pictures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsPortfolios)
     ], OnDemandSeasonUserMetadataConnections.prototype, "portfolios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommended_channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommended_channels" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsRecommendedChannels)
     ], OnDemandSeasonUserMetadataConnections.prototype, "recommendedChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommended_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommended_users" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsRecommendedUsers)
     ], OnDemandSeasonUserMetadataConnections.prototype, "recommendedUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shared" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shared" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsShared)
     ], OnDemandSeasonUserMetadataConnections.prototype, "shared", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsVideos)
     ], OnDemandSeasonUserMetadataConnections.prototype, "videos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watched_videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watched_videos" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsWatchedVideos)
     ], OnDemandSeasonUserMetadataConnections.prototype, "watchedVideos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlater" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlater" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnectionsWatchlater)
     ], OnDemandSeasonUserMetadataConnections.prototype, "watchlater", void 0);
     return OnDemandSeasonUserMetadataConnections;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataConnections = OnDemandSeasonUserMetadataConnections;
 var OnDemandSeasonUserMetadataInteractionsAddPrivacyUser = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserMetadataInteractionsAddPrivacyUser, _super);
     function OnDemandSeasonUserMetadataInteractionsAddPrivacyUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataInteractionsAddPrivacyUser.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataInteractionsAddPrivacyUser.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataInteractionsAddPrivacyUser;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataInteractionsAddPrivacyUser };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataInteractionsAddPrivacyUser = OnDemandSeasonUserMetadataInteractionsAddPrivacyUser;
 // OnDemandSeasonUserMetadataInteractionsBlock
 /**
  * Information related to the block status of this user.
@@ -678,24 +681,24 @@ var OnDemandSeasonUserMetadataInteractionsBlock = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], OnDemandSeasonUserMetadataInteractionsBlock.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_time" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataInteractionsBlock.prototype, "addedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataInteractionsBlock.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataInteractionsBlock.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataInteractionsBlock;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataInteractionsBlock };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataInteractionsBlock = OnDemandSeasonUserMetadataInteractionsBlock;
 // OnDemandSeasonUserMetadataInteractionsFollow
 /**
  * Information related to the followed status of this user.
@@ -706,20 +709,20 @@ var OnDemandSeasonUserMetadataInteractionsFollow = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], OnDemandSeasonUserMetadataInteractionsFollow.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataInteractionsFollow.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataInteractionsFollow.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataInteractionsFollow;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataInteractionsFollow };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataInteractionsFollow = OnDemandSeasonUserMetadataInteractionsFollow;
 // OnDemandSeasonUserMetadataInteractionsReport
 /**
  * Information regarding where and how to report a user.
@@ -730,44 +733,44 @@ var OnDemandSeasonUserMetadataInteractionsReport = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataInteractionsReport.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUserMetadataInteractionsReport.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserMetadataInteractionsReport.prototype, "uri", void 0);
     return OnDemandSeasonUserMetadataInteractionsReport;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataInteractionsReport };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataInteractionsReport = OnDemandSeasonUserMetadataInteractionsReport;
 var OnDemandSeasonUserMetadataInteractions = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserMetadataInteractions, _super);
     function OnDemandSeasonUserMetadataInteractions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add_privacy_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add_privacy_user" }),
         __metadata("design:type", OnDemandSeasonUserMetadataInteractionsAddPrivacyUser)
     ], OnDemandSeasonUserMetadataInteractions.prototype, "addPrivacyUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block" }),
         __metadata("design:type", OnDemandSeasonUserMetadataInteractionsBlock)
     ], OnDemandSeasonUserMetadataInteractions.prototype, "block", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=follow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=follow" }),
         __metadata("design:type", OnDemandSeasonUserMetadataInteractionsFollow)
     ], OnDemandSeasonUserMetadataInteractions.prototype, "follow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report" }),
         __metadata("design:type", OnDemandSeasonUserMetadataInteractionsReport)
     ], OnDemandSeasonUserMetadataInteractions.prototype, "report", void 0);
     return OnDemandSeasonUserMetadataInteractions;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadataInteractions };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadataInteractions = OnDemandSeasonUserMetadataInteractions;
 // OnDemandSeasonUserMetadata
 /**
  * The user's metadata.
@@ -778,29 +781,29 @@ var OnDemandSeasonUserMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", OnDemandSeasonUserMetadataConnections)
     ], OnDemandSeasonUserMetadata.prototype, "connections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactions" }),
         __metadata("design:type", OnDemandSeasonUserMetadataInteractions)
     ], OnDemandSeasonUserMetadata.prototype, "interactions", void 0);
     return OnDemandSeasonUserMetadata;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserMetadata };
-export var OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum;
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserMetadata = OnDemandSeasonUserMetadata;
+var OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum;
 (function (OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum) {
     OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum["Anybody"] = "anybody";
     OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum["Contacts"] = "contacts";
     OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum["Nobody"] = "nobody";
-})(OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum || (OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum = {}));
-export var OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum;
+})(OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum = exports.OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum || (exports.OnDemandSeasonUserPreferencesVideosPrivacyCommentsEnum = {}));
+var OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum;
 (function (OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum) {
     OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum["Private"] = "private";
     OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum["Public"] = "public";
     OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum["Whitelist"] = "whitelist";
-})(OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum || (OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum = {}));
-export var OnDemandSeasonUserPreferencesVideosPrivacyViewEnum;
+})(OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum = exports.OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum || (exports.OnDemandSeasonUserPreferencesVideosPrivacyEmbedEnum = {}));
+var OnDemandSeasonUserPreferencesVideosPrivacyViewEnum;
 (function (OnDemandSeasonUserPreferencesVideosPrivacyViewEnum) {
     OnDemandSeasonUserPreferencesVideosPrivacyViewEnum["Anybody"] = "anybody";
     OnDemandSeasonUserPreferencesVideosPrivacyViewEnum["Contacts"] = "contacts";
@@ -809,59 +812,59 @@ export var OnDemandSeasonUserPreferencesVideosPrivacyViewEnum;
     OnDemandSeasonUserPreferencesVideosPrivacyViewEnum["Password"] = "password";
     OnDemandSeasonUserPreferencesVideosPrivacyViewEnum["Unlisted"] = "unlisted";
     OnDemandSeasonUserPreferencesVideosPrivacyViewEnum["Users"] = "users";
-})(OnDemandSeasonUserPreferencesVideosPrivacyViewEnum || (OnDemandSeasonUserPreferencesVideosPrivacyViewEnum = {}));
+})(OnDemandSeasonUserPreferencesVideosPrivacyViewEnum = exports.OnDemandSeasonUserPreferencesVideosPrivacyViewEnum || (exports.OnDemandSeasonUserPreferencesVideosPrivacyViewEnum = {}));
 var OnDemandSeasonUserPreferencesVideosPrivacy = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserPreferencesVideosPrivacy, _super);
     function OnDemandSeasonUserPreferencesVideosPrivacy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add" }),
         __metadata("design:type", Boolean)
     ], OnDemandSeasonUserPreferencesVideosPrivacy.prototype, "add", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserPreferencesVideosPrivacy.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], OnDemandSeasonUserPreferencesVideosPrivacy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserPreferencesVideosPrivacy.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserPreferencesVideosPrivacy.prototype, "view", void 0);
     return OnDemandSeasonUserPreferencesVideosPrivacy;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserPreferencesVideosPrivacy };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserPreferencesVideosPrivacy = OnDemandSeasonUserPreferencesVideosPrivacy;
 var OnDemandSeasonUserPreferencesVideos = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserPreferencesVideos, _super);
     function OnDemandSeasonUserPreferencesVideos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", OnDemandSeasonUserPreferencesVideosPrivacy)
     ], OnDemandSeasonUserPreferencesVideos.prototype, "privacy", void 0);
     return OnDemandSeasonUserPreferencesVideos;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserPreferencesVideos };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserPreferencesVideos = OnDemandSeasonUserPreferencesVideos;
 var OnDemandSeasonUserPreferences = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserPreferences, _super);
     function OnDemandSeasonUserPreferences() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", OnDemandSeasonUserPreferencesVideos)
     ], OnDemandSeasonUserPreferences.prototype, "videos", void 0);
     return OnDemandSeasonUserPreferences;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserPreferences };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserPreferences = OnDemandSeasonUserPreferences;
 // OnDemandSeasonUserUploadQuotaLifetime
 /**
  * Information about the user's lifetime upload usage.
@@ -872,20 +875,20 @@ var OnDemandSeasonUserUploadQuotaLifetime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaLifetime.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaLifetime.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaLifetime.prototype, "used", void 0);
     return OnDemandSeasonUserUploadQuotaLifetime;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserUploadQuotaLifetime };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserUploadQuotaLifetime = OnDemandSeasonUserUploadQuotaLifetime;
 // OnDemandSeasonUserUploadQuotaPeriodic
 /**
  * Information about the user's usage for the current period.
@@ -896,29 +899,29 @@ var OnDemandSeasonUserUploadQuotaPeriodic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaPeriodic.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaPeriodic.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reset_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reset_date" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserUploadQuotaPeriodic.prototype, "resetDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaPeriodic.prototype, "used", void 0);
     return OnDemandSeasonUserUploadQuotaPeriodic;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserUploadQuotaPeriodic };
-export var OnDemandSeasonUserUploadQuotaSpaceShowingEnum;
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserUploadQuotaPeriodic = OnDemandSeasonUserUploadQuotaPeriodic;
+var OnDemandSeasonUserUploadQuotaSpaceShowingEnum;
 (function (OnDemandSeasonUserUploadQuotaSpaceShowingEnum) {
     OnDemandSeasonUserUploadQuotaSpaceShowingEnum["Lifetime"] = "lifetime";
     OnDemandSeasonUserUploadQuotaSpaceShowingEnum["Periodic"] = "periodic";
-})(OnDemandSeasonUserUploadQuotaSpaceShowingEnum || (OnDemandSeasonUserUploadQuotaSpaceShowingEnum = {}));
+})(OnDemandSeasonUserUploadQuotaSpaceShowingEnum = exports.OnDemandSeasonUserUploadQuotaSpaceShowingEnum || (exports.OnDemandSeasonUserUploadQuotaSpaceShowingEnum = {}));
 // OnDemandSeasonUserUploadQuotaSpace
 /**
  * Information about the user's upload space remaining for the current period.
@@ -929,24 +932,24 @@ var OnDemandSeasonUserUploadQuotaSpace = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaSpace.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaSpace.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showing" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserUploadQuotaSpace.prototype, "showing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], OnDemandSeasonUserUploadQuotaSpace.prototype, "used", void 0);
     return OnDemandSeasonUserUploadQuotaSpace;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserUploadQuotaSpace };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserUploadQuotaSpace = OnDemandSeasonUserUploadQuotaSpace;
 // OnDemandSeasonUserUploadQuota
 /**
  * Appears only when the user has upload access and is looking at their own user record.
@@ -957,40 +960,40 @@ var OnDemandSeasonUserUploadQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
         __metadata("design:type", OnDemandSeasonUserUploadQuotaLifetime)
     ], OnDemandSeasonUserUploadQuota.prototype, "lifetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodic" }),
         __metadata("design:type", OnDemandSeasonUserUploadQuotaPeriodic)
     ], OnDemandSeasonUserUploadQuota.prototype, "periodic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=space" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=space" }),
         __metadata("design:type", OnDemandSeasonUserUploadQuotaSpace)
     ], OnDemandSeasonUserUploadQuota.prototype, "space", void 0);
     return OnDemandSeasonUserUploadQuota;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserUploadQuota };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserUploadQuota = OnDemandSeasonUserUploadQuota;
 var OnDemandSeasonUserWebsites = /** @class */ (function (_super) {
     __extends(OnDemandSeasonUserWebsites, _super);
     function OnDemandSeasonUserWebsites() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserWebsites.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserWebsites.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUserWebsites.prototype, "name", void 0);
     return OnDemandSeasonUserWebsites;
-}(SpeakeasyBase));
-export { OnDemandSeasonUserWebsites };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUserWebsites = OnDemandSeasonUserWebsites;
 // OnDemandSeasonUser
 /**
  * The creator of this On Demand page.
@@ -1001,105 +1004,105 @@ var OnDemandSeasonUser = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bio" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "bio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_filter" }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUser.prototype, "contentFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_time" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", OnDemandSeasonUserMetadata)
     ], OnDemandSeasonUser.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictures" }),
-        __metadata("design:type", Picture)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictures" }),
+        __metadata("design:type", picture_1.Picture)
     ], OnDemandSeasonUser.prototype, "pictures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferences" }),
         __metadata("design:type", OnDemandSeasonUserPreferences)
     ], OnDemandSeasonUser.prototype, "preferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_key" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload_quota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload_quota" }),
         __metadata("design:type", OnDemandSeasonUserUploadQuota)
     ], OnDemandSeasonUser.prototype, "uploadQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeasonUser.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: OnDemandSeasonUserWebsites }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: OnDemandSeasonUserWebsites }),
         __metadata("design:type", Array)
     ], OnDemandSeasonUser.prototype, "websites", void 0);
     return OnDemandSeasonUser;
-}(SpeakeasyBase));
-export { OnDemandSeasonUser };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeasonUser = OnDemandSeasonUser;
 var OnDemandSeason = /** @class */ (function (_super) {
     __extends(OnDemandSeason, _super);
     function OnDemandSeason() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OnDemandSeason.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", OnDemandSeasonMetadata)
     ], OnDemandSeason.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OnDemandSeason.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", Number)
     ], OnDemandSeason.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_key" }),
         __metadata("design:type", String)
     ], OnDemandSeason.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OnDemandSeason.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], OnDemandSeason.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", OnDemandSeasonUser)
     ], OnDemandSeason.prototype, "user", void 0);
     return OnDemandSeason;
-}(SpeakeasyBase));
-export { OnDemandSeason };
+}(utils_1.SpeakeasyBase));
+exports.OnDemandSeason = OnDemandSeason;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostNodeRwResponse = exports.PostNodeRwRequest = exports.PostNodeRwQueryParams = exports.PostNodeRwPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostNodeRwPathParams = /** @class */ (function (_super) {
     __extends(PostNodeRwPathParams, _super);
     function PostNodeRwPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], PostNodeRwPathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], PostNodeRwPathParams.prototype, "path", void 0);
     return PostNodeRwPathParams;
-}(SpeakeasyBase));
-export { PostNodeRwPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostNodeRwPathParams = PostNodeRwPathParams;
 var PostNodeRwQueryParams = /** @class */ (function (_super) {
     __extends(PostNodeRwQueryParams, _super);
     function PostNodeRwQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=addMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=addMembers" }),
         __metadata("design:type", String)
     ], PostNodeRwQueryParams.prototype, "addMembers", void 0);
     return PostNodeRwQueryParams;
-}(SpeakeasyBase));
-export { PostNodeRwQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostNodeRwQueryParams = PostNodeRwQueryParams;
 var PostNodeRwRequest = /** @class */ (function (_super) {
     __extends(PostNodeRwRequest, _super);
     function PostNodeRwRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNodeRwPathParams)
     ], PostNodeRwRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostNodeRwQueryParams)
     ], PostNodeRwRequest.prototype, "queryParams", void 0);
     return PostNodeRwRequest;
-}(SpeakeasyBase));
-export { PostNodeRwRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostNodeRwRequest = PostNodeRwRequest;
 var PostNodeRwResponse = /** @class */ (function (_super) {
     __extends(PostNodeRwResponse, _super);
     function PostNodeRwResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostNodeRwResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostNodeRwResponse.prototype, "statusCode", void 0);
     return PostNodeRwResponse;
-}(SpeakeasyBase));
-export { PostNodeRwResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostNodeRwResponse = PostNodeRwResponse;

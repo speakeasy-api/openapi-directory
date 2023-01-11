@@ -13,12 +13,12 @@ export declare class RouteResponsePath extends SpeakeasyBase {
     ascend?: number;
     bbox?: number[];
     descend?: number;
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     distance?: number;
     instructions?: RouteResponsePathInstructions[];
-    points?: Map<string, any>;
+    points?: Record<string, any>;
     pointsEncoded?: boolean;
     pointsOrder?: number[];
-    snappedWaypoints?: Map<string, any>;
+    snappedWaypoints?: Record<string, any>;
     time?: number;
 }

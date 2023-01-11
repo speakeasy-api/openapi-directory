@@ -38,5 +38,5 @@ export class GetBrandingConfResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getBrandingConf200ApplicationJsonObject?: GetBrandingConf200ApplicationJson;
+  getBrandingConf200ApplicationJSONObject?: GetBrandingConf200ApplicationJson;
 }

@@ -63,7 +63,7 @@ export class StartCrawlerScheduleResponse extends SpeakeasyBase {
   schedulerTransitioningException?: any;
 
   @SpeakeasyMetadata()
-  startCrawlerScheduleResponse?: Map<string, any>;
+  startCrawlerScheduleResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

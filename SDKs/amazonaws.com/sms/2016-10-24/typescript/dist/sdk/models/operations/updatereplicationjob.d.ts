@@ -28,5 +28,5 @@ export declare class UpdateReplicationJobResponse extends SpeakeasyBase {
     statusCode: number;
     temporarilyUnavailableException?: any;
     unauthorizedOperationException?: any;
-    updateReplicationJobResponse?: Map<string, any>;
+    updateReplicationJobResponse?: Record<string, any>;
 }

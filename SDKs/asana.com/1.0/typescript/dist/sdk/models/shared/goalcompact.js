@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalCompact = exports.GoalCompactOwner = void 0;
+var utils_1 = require("../../../internal/utils");
+// GoalCompactOwner
+/**
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 var GoalCompactOwner = /** @class */ (function (_super) {
     __extends(GoalCompactOwner, _super);
     function GoalCompactOwner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalCompactOwner.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalCompactOwner.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalCompactOwner.prototype, "resourceType", void 0);
     return GoalCompactOwner;
-}(SpeakeasyBase));
-export { GoalCompactOwner };
+}(utils_1.SpeakeasyBase));
+exports.GoalCompactOwner = GoalCompactOwner;
+// GoalCompact
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var GoalCompact = /** @class */ (function (_super) {
     __extends(GoalCompact, _super);
     function GoalCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], GoalCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalCompact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", GoalCompactOwner)
     ], GoalCompact.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], GoalCompact.prototype, "resourceType", void 0);
     return GoalCompact;
-}(SpeakeasyBase));
-export { GoalCompact };
+}(utils_1.SpeakeasyBase));
+exports.GoalCompact = GoalCompact;

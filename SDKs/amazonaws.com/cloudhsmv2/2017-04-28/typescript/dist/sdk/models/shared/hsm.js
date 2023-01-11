@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HsmStateEnum } from "./hsmstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hsm = void 0;
+var utils_1 = require("../../../internal/utils");
+var hsmstateenum_1 = require("./hsmstateenum");
 // Hsm
 /**
  * Contains information about a hardware security module (HSM) in an AWS CloudHSM cluster.
@@ -34,37 +37,37 @@ var Hsm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniId" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "eniId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniIp" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "eniIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmId" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "hsmId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StateMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StateMessage" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "stateMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], Hsm.prototype, "subnetId", void 0);
     return Hsm;
-}(SpeakeasyBase));
-export { Hsm };
+}(utils_1.SpeakeasyBase));
+exports.Hsm = Hsm;

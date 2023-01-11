@@ -41,7 +41,7 @@ export class Table extends SpeakeasyBase {
   owner?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=PartitionKeys", elemType: Column })
   partitionKeys?: Column[];

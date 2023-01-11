@@ -26,7 +26,7 @@ export class PlayProgressive extends SpeakeasyBase {
   linkExpirationTime: string;
 
   @SpeakeasyMetadata({ data: "json, name=log" })
-  log?: Map<string, any>;
+  log?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=md5" })
   md5: string;

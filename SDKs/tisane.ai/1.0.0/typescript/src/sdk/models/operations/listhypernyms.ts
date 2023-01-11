@@ -25,5 +25,5 @@ export class ListHypernymsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listHypernyms200ApplicationJsonArrays?: number[][];
+  listHypernyms200ApplicationJSONArrays?: number[][];
 }

@@ -8,7 +8,7 @@ export declare class DeletePortfolioQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeletePortfolio200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeletePortfolioRequest extends SpeakeasyBase {
     pathParams: DeletePortfolioPathParams;
@@ -18,5 +18,5 @@ export declare class DeletePortfolioResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deletePortfolio200ApplicationJsonObject?: DeletePortfolio200ApplicationJson;
+    deletePortfolio200ApplicationJSONObject?: DeletePortfolio200ApplicationJson;
 }

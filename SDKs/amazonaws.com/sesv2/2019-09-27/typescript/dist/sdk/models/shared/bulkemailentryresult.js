@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BulkEmailStatusEnum } from "./bulkemailstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkEmailEntryResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var bulkemailstatusenum_1 = require("./bulkemailstatusenum");
 // BulkEmailEntryResult
 /**
  * The result of the <code>SendBulkEmail</code> operation of each specified <code>BulkEmailEntry</code>.
@@ -34,17 +37,17 @@ var BulkEmailEntryResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
         __metadata("design:type", String)
     ], BulkEmailEntryResult.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageId" }),
         __metadata("design:type", String)
     ], BulkEmailEntryResult.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], BulkEmailEntryResult.prototype, "status", void 0);
     return BulkEmailEntryResult;
-}(SpeakeasyBase));
-export { BulkEmailEntryResult };
+}(utils_1.SpeakeasyBase));
+exports.BulkEmailEntryResult = BulkEmailEntryResult;

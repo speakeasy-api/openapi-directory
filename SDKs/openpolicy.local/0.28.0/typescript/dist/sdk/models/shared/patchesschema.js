@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PatchesSchemaOpEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchesSchema = exports.PatchesSchemaOpEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PatchesSchemaOpEnum;
 (function (PatchesSchemaOpEnum) {
     PatchesSchemaOpEnum["Add"] = "add";
     PatchesSchemaOpEnum["Remove"] = "remove";
@@ -31,7 +34,7 @@ export var PatchesSchemaOpEnum;
     PatchesSchemaOpEnum["Move"] = "move";
     PatchesSchemaOpEnum["Copy"] = "copy";
     PatchesSchemaOpEnum["Test"] = "test";
-})(PatchesSchemaOpEnum || (PatchesSchemaOpEnum = {}));
+})(PatchesSchemaOpEnum = exports.PatchesSchemaOpEnum || (exports.PatchesSchemaOpEnum = {}));
 // PatchesSchema
 /**
  * A JSON patch operation
@@ -42,17 +45,17 @@ var PatchesSchema = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=op" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=op" }),
         __metadata("design:type", String)
     ], PatchesSchema.prototype, "op", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], PatchesSchema.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], PatchesSchema.prototype, "value", void 0);
     return PatchesSchema;
-}(SpeakeasyBase));
-export { PatchesSchema };
+}(utils_1.SpeakeasyBase));
+exports.PatchesSchema = PatchesSchema;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditEmbedPresetResponse = exports.EditEmbedPresetRequest = exports.EditEmbedPresetRequestBody = exports.EditEmbedPresetRequestBodyOutroEnum = exports.EditEmbedPresetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EditEmbedPresetPathParams = /** @class */ (function (_super) {
     __extends(EditEmbedPresetPathParams, _super);
     function EditEmbedPresetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=preset_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=preset_id" }),
         __metadata("design:type", Number)
     ], EditEmbedPresetPathParams.prototype, "presetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", Number)
     ], EditEmbedPresetPathParams.prototype, "userId", void 0);
     return EditEmbedPresetPathParams;
-}(SpeakeasyBase));
-export { EditEmbedPresetPathParams };
-export var EditEmbedPresetRequestBodyOutroEnum;
+}(utils_1.SpeakeasyBase));
+exports.EditEmbedPresetPathParams = EditEmbedPresetPathParams;
+var EditEmbedPresetRequestBodyOutroEnum;
 (function (EditEmbedPresetRequestBodyOutroEnum) {
     EditEmbedPresetRequestBodyOutroEnum["Nothing"] = "nothing";
-})(EditEmbedPresetRequestBodyOutroEnum || (EditEmbedPresetRequestBodyOutroEnum = {}));
+})(EditEmbedPresetRequestBodyOutroEnum = exports.EditEmbedPresetRequestBodyOutroEnum || (exports.EditEmbedPresetRequestBodyOutroEnum = {}));
 var EditEmbedPresetRequestBody = /** @class */ (function (_super) {
     __extends(EditEmbedPresetRequestBody, _super);
     function EditEmbedPresetRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outro" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outro" }),
         __metadata("design:type", String)
     ], EditEmbedPresetRequestBody.prototype, "outro", void 0);
     return EditEmbedPresetRequestBody;
-}(SpeakeasyBase));
-export { EditEmbedPresetRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EditEmbedPresetRequestBody = EditEmbedPresetRequestBody;
 var EditEmbedPresetRequest = /** @class */ (function (_super) {
     __extends(EditEmbedPresetRequest, _super);
     function EditEmbedPresetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EditEmbedPresetPathParams)
     ], EditEmbedPresetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.vimeo.preset+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.vimeo.preset+json" }),
         __metadata("design:type", EditEmbedPresetRequestBody)
     ], EditEmbedPresetRequest.prototype, "request", void 0);
     return EditEmbedPresetRequest;
-}(SpeakeasyBase));
-export { EditEmbedPresetRequest };
+}(utils_1.SpeakeasyBase));
+exports.EditEmbedPresetRequest = EditEmbedPresetRequest;
 var EditEmbedPresetResponse = /** @class */ (function (_super) {
     __extends(EditEmbedPresetResponse, _super);
     function EditEmbedPresetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EditEmbedPresetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EditEmbedPresetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], EditEmbedPresetResponse.prototype, "legacyError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Presets)
     ], EditEmbedPresetResponse.prototype, "presets", void 0);
     return EditEmbedPresetResponse;
-}(SpeakeasyBase));
-export { EditEmbedPresetResponse };
+}(utils_1.SpeakeasyBase));
+exports.EditEmbedPresetResponse = EditEmbedPresetResponse;

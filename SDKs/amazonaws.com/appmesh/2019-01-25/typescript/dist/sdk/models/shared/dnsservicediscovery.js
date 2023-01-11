@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DnsResponseTypeEnum } from "./dnsresponsetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DnsServiceDiscovery = void 0;
+var utils_1 = require("../../../internal/utils");
+var dnsresponsetypeenum_1 = require("./dnsresponsetypeenum");
 // DnsServiceDiscovery
 /**
  * An object that represents the DNS service discovery information for your virtual node.
@@ -34,13 +37,13 @@ var DnsServiceDiscovery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], DnsServiceDiscovery.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseType" }),
         __metadata("design:type", String)
     ], DnsServiceDiscovery.prototype, "responseType", void 0);
     return DnsServiceDiscovery;
-}(SpeakeasyBase));
-export { DnsServiceDiscovery };
+}(utils_1.SpeakeasyBase));
+exports.DnsServiceDiscovery = DnsServiceDiscovery;

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PecerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AC_NO" })
-  acNo: string;
+  acNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=DOB" })
   dob: string;
@@ -188,23 +188,23 @@ export class PecerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pecer400ApplicationJsonObject?: Pecer400ApplicationJson;
+  pecer400ApplicationJSONObject?: Pecer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer401ApplicationJsonObject?: Pecer401ApplicationJson;
+  pecer401ApplicationJSONObject?: Pecer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer404ApplicationJsonObject?: Pecer404ApplicationJson;
+  pecer404ApplicationJSONObject?: Pecer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer500ApplicationJsonObject?: Pecer500ApplicationJson;
+  pecer500ApplicationJSONObject?: Pecer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer502ApplicationJsonObject?: Pecer502ApplicationJson;
+  pecer502ApplicationJSONObject?: Pecer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer503ApplicationJsonObject?: Pecer503ApplicationJson;
+  pecer503ApplicationJSONObject?: Pecer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pecer504ApplicationJsonObject?: Pecer504ApplicationJson;
+  pecer504ApplicationJSONObject?: Pecer504ApplicationJson;
 }

@@ -22,5 +22,5 @@ export class GetOrganizationApplianceVpnThirdPartyVpnPeersResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject?: Record<string, any>;
 }

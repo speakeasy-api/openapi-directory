@@ -1,4 +1,7 @@
-export var StudioComponentStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioComponentStatusCodeEnum = void 0;
+var StudioComponentStatusCodeEnum;
 (function (StudioComponentStatusCodeEnum) {
     StudioComponentStatusCodeEnum["ActiveDirectoryAlreadyExists"] = "ACTIVE_DIRECTORY_ALREADY_EXISTS";
     StudioComponentStatusCodeEnum["StudioComponentCreated"] = "STUDIO_COMPONENT_CREATED";
@@ -10,4 +13,4 @@ export var StudioComponentStatusCodeEnum;
     StudioComponentStatusCodeEnum["StudioComponentUpdateInProgress"] = "STUDIO_COMPONENT_UPDATE_IN_PROGRESS";
     StudioComponentStatusCodeEnum["StudioComponentDeleteInProgress"] = "STUDIO_COMPONENT_DELETE_IN_PROGRESS";
     StudioComponentStatusCodeEnum["InternalError"] = "INTERNAL_ERROR";
-})(StudioComponentStatusCodeEnum || (StudioComponentStatusCodeEnum = {}));
+})(StudioComponentStatusCodeEnum = exports.StudioComponentStatusCodeEnum || (exports.StudioComponentStatusCodeEnum = {}));

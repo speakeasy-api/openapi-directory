@@ -1,3 +1,4 @@
+export * from "./accesskeycredentials";
 export * from "./addgroupmigrationrequest";
 export * from "./altenum";
 export * from "./applianceversion";
@@ -43,6 +44,7 @@ export * from "./schedulingnodeaffinity";
 export * from "./security";
 export * from "./source";
 export * from "./status";
+export * from "./tag";
 export * from "./targetproject";
 export * from "./targetvmdetails";
 export * from "./upgradeappliancerequest";

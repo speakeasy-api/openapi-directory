@@ -22,14 +22,14 @@ import { PossibleRemediationActions } from "./possibleremediationactions";
 export declare class ResourceViolation extends SpeakeasyBase {
     awsEc2InstanceViolation?: AwsEc2InstanceViolation;
     awsEc2NetworkInterfaceViolation?: AwsEc2NetworkInterfaceViolation;
-    awsVpcSecurityGroupViolation?: AwsVpcSecurityGroupViolation;
+    awsVPCSecurityGroupViolation?: AwsVpcSecurityGroupViolation;
     dnsDuplicateRuleGroupViolation?: DnsDuplicateRuleGroupViolation;
     dnsRuleGroupLimitExceededViolation?: DnsRuleGroupLimitExceededViolation;
     dnsRuleGroupPriorityConflictViolation?: DnsRuleGroupPriorityConflictViolation;
     networkFirewallBlackHoleRouteDetectedViolation?: NetworkFirewallBlackHoleRouteDetectedViolation;
     networkFirewallInternetTrafficNotInspectedViolation?: NetworkFirewallInternetTrafficNotInspectedViolation;
     networkFirewallInvalidRouteConfigurationViolation?: NetworkFirewallInvalidRouteConfigurationViolation;
-    networkFirewallMissingExpectedRtViolation?: NetworkFirewallMissingExpectedRtViolation;
+    networkFirewallMissingExpectedRTViolation?: NetworkFirewallMissingExpectedRtViolation;
     networkFirewallMissingExpectedRoutesViolation?: NetworkFirewallMissingExpectedRoutesViolation;
     networkFirewallMissingFirewallViolation?: NetworkFirewallMissingFirewallViolation;
     networkFirewallMissingSubnetViolation?: NetworkFirewallMissingSubnetViolation;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicSubscriptionStatus } from "./publicsubscriptionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicSubscriptionStatusesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var publicsubscriptionstatus_1 = require("./publicsubscriptionstatus");
 // PublicSubscriptionStatusesResponse
 /**
  * A collection of subscription statuses for a contact.
@@ -34,13 +37,13 @@ var PublicSubscriptionStatusesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipient" }),
         __metadata("design:type", String)
     ], PublicSubscriptionStatusesResponse.prototype, "recipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionStatuses", elemType: PublicSubscriptionStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionStatuses", elemType: publicsubscriptionstatus_1.PublicSubscriptionStatus }),
         __metadata("design:type", Array)
     ], PublicSubscriptionStatusesResponse.prototype, "subscriptionStatuses", void 0);
     return PublicSubscriptionStatusesResponse;
-}(SpeakeasyBase));
-export { PublicSubscriptionStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PublicSubscriptionStatusesResponse = PublicSubscriptionStatusesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenBadgeClass = exports.OpenBadgeClassCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
 var OpenBadgeClassCriteria = /** @class */ (function (_super) {
     __extends(OpenBadgeClassCriteria, _super);
     function OpenBadgeClassCriteria() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=narrative" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=narrative" }),
         __metadata("design:type", String)
     ], OpenBadgeClassCriteria.prototype, "narrative", void 0);
     return OpenBadgeClassCriteria;
-}(SpeakeasyBase));
-export { OpenBadgeClassCriteria };
+}(utils_1.SpeakeasyBase));
+exports.OpenBadgeClassCriteria = OpenBadgeClassCriteria;
 var OpenBadgeClass = /** @class */ (function (_super) {
     __extends(OpenBadgeClass, _super);
     function OpenBadgeClass() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criteria" }),
         __metadata("design:type", OpenBadgeClassCriteria)
     ], OpenBadgeClass.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OpenBadgeClass.prototype, "type", void 0);
     return OpenBadgeClass;
-}(SpeakeasyBase));
-export { OpenBadgeClass };
+}(utils_1.SpeakeasyBase));
+exports.OpenBadgeClass = OpenBadgeClass;

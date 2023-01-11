@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FamiliesBabysittingExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Families = exports.FamiliesKidsFriendlyExceptionEnum = exports.FamiliesKidsClubExceptionEnum = exports.FamiliesKidsActivitiesExceptionEnum = exports.FamiliesBabysittingExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FamiliesBabysittingExceptionEnum;
 (function (FamiliesBabysittingExceptionEnum) {
     FamiliesBabysittingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FamiliesBabysittingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FamiliesBabysittingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FamiliesBabysittingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FamiliesBabysittingExceptionEnum || (FamiliesBabysittingExceptionEnum = {}));
-export var FamiliesKidsActivitiesExceptionEnum;
+})(FamiliesBabysittingExceptionEnum = exports.FamiliesBabysittingExceptionEnum || (exports.FamiliesBabysittingExceptionEnum = {}));
+var FamiliesKidsActivitiesExceptionEnum;
 (function (FamiliesKidsActivitiesExceptionEnum) {
     FamiliesKidsActivitiesExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FamiliesKidsActivitiesExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FamiliesKidsActivitiesExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FamiliesKidsActivitiesExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FamiliesKidsActivitiesExceptionEnum || (FamiliesKidsActivitiesExceptionEnum = {}));
-export var FamiliesKidsClubExceptionEnum;
+})(FamiliesKidsActivitiesExceptionEnum = exports.FamiliesKidsActivitiesExceptionEnum || (exports.FamiliesKidsActivitiesExceptionEnum = {}));
+var FamiliesKidsClubExceptionEnum;
 (function (FamiliesKidsClubExceptionEnum) {
     FamiliesKidsClubExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FamiliesKidsClubExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FamiliesKidsClubExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FamiliesKidsClubExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FamiliesKidsClubExceptionEnum || (FamiliesKidsClubExceptionEnum = {}));
-export var FamiliesKidsFriendlyExceptionEnum;
+})(FamiliesKidsClubExceptionEnum = exports.FamiliesKidsClubExceptionEnum || (exports.FamiliesKidsClubExceptionEnum = {}));
+var FamiliesKidsFriendlyExceptionEnum;
 (function (FamiliesKidsFriendlyExceptionEnum) {
     FamiliesKidsFriendlyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FamiliesKidsFriendlyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FamiliesKidsFriendlyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FamiliesKidsFriendlyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FamiliesKidsFriendlyExceptionEnum || (FamiliesKidsFriendlyExceptionEnum = {}));
+})(FamiliesKidsFriendlyExceptionEnum = exports.FamiliesKidsFriendlyExceptionEnum || (exports.FamiliesKidsFriendlyExceptionEnum = {}));
 // Families
 /**
  * Services and amenities for families and young guests.
@@ -61,37 +64,37 @@ var Families = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=babysitting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=babysitting" }),
         __metadata("design:type", Boolean)
     ], Families.prototype, "babysitting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=babysittingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=babysittingException" }),
         __metadata("design:type", String)
     ], Families.prototype, "babysittingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsActivities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsActivities" }),
         __metadata("design:type", Boolean)
     ], Families.prototype, "kidsActivities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsActivitiesException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsActivitiesException" }),
         __metadata("design:type", String)
     ], Families.prototype, "kidsActivitiesException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsClub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsClub" }),
         __metadata("design:type", Boolean)
     ], Families.prototype, "kidsClub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsClubException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsClubException" }),
         __metadata("design:type", String)
     ], Families.prototype, "kidsClubException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsFriendly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsFriendly" }),
         __metadata("design:type", Boolean)
     ], Families.prototype, "kidsFriendly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kidsFriendlyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kidsFriendlyException" }),
         __metadata("design:type", String)
     ], Families.prototype, "kidsFriendlyException", void 0);
     return Families;
-}(SpeakeasyBase));
-export { Families };
+}(utils_1.SpeakeasyBase));
+exports.Families = Families;

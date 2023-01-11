@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TraceSummary } from "./tracesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTraceSummariesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var tracesummary_1 = require("./tracesummary");
 var GetTraceSummariesResult = /** @class */ (function (_super) {
     __extends(GetTraceSummariesResult, _super);
     function GetTraceSummariesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApproximateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApproximateTime" }),
         __metadata("design:type", Date)
     ], GetTraceSummariesResult.prototype, "approximateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetTraceSummariesResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TraceSummaries", elemType: TraceSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TraceSummaries", elemType: tracesummary_1.TraceSummary }),
         __metadata("design:type", Array)
     ], GetTraceSummariesResult.prototype, "traceSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TracesProcessedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TracesProcessedCount" }),
         __metadata("design:type", Number)
     ], GetTraceSummariesResult.prototype, "tracesProcessedCount", void 0);
     return GetTraceSummariesResult;
-}(SpeakeasyBase));
-export { GetTraceSummariesResult };
+}(utils_1.SpeakeasyBase));
+exports.GetTraceSummariesResult = GetTraceSummariesResult;

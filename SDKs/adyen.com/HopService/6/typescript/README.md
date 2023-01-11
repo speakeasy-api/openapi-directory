@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostGetOnboardingUrlRequest, PostGetOnboardingUrlResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,10 +33,10 @@ const req: PostGetOnboardingUrlRequest = {
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "in",
+  request: "sit",
 };
 
-sdk.sdk.postGetOnboardingUrl(req).then((res: PostGetOnboardingUrlResponse | AxiosError) => {
+sdk.hostedOnboardingPage.postGetOnboardingUrl(req).then((res: PostGetOnboardingUrlResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,9 +45,12 @@ sdk.sdk.postGetOnboardingUrl(req).then((res: PostGetOnboardingUrlResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Hosted Onboarding Page
 
 * `postGetOnboardingUrl` - Get a link to a Adyen-hosted onboarding page.
+
+### PCI Compliance Questionnaire Page
+
 * `postGetPciQuestionnaireUrl` - Get a link to a PCI compliance questionnaire.
 
 <!-- End SDK Available Operations -->

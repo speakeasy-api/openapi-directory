@@ -9,7 +9,7 @@ export declare class ScheduledUpdateGroupAction extends SpeakeasyBase {
     maxSize?: number;
     minSize?: number;
     recurrence?: string;
-    scheduledActionArn?: string;
+    scheduledActionARN?: string;
     scheduledActionName?: string;
     startTime?: Date;
     time?: Date;

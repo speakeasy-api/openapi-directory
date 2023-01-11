@@ -52,7 +52,7 @@ export class GetTokenMetadataResponseMetadataOfIssuance extends SpeakeasyBase {
 **/
 export class GetTokenMetadataResponseMetadataOfUtxoUserData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=meta" })
-  meta?: Map<string, any>[];
+  meta?: Record<string, any>[];
 }
 
 

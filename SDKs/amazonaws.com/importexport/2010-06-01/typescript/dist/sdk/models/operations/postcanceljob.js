@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCancelJobActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCancelJobResponse = exports.PostCancelJobRequest = exports.PostCancelJobQueryParams = exports.PostCancelJobVersionEnum = exports.PostCancelJobOperationEnum = exports.PostCancelJobActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCancelJobActionEnum;
 (function (PostCancelJobActionEnum) {
     PostCancelJobActionEnum["CancelJob"] = "CancelJob";
-})(PostCancelJobActionEnum || (PostCancelJobActionEnum = {}));
-export var PostCancelJobOperationEnum;
+})(PostCancelJobActionEnum = exports.PostCancelJobActionEnum || (exports.PostCancelJobActionEnum = {}));
+var PostCancelJobOperationEnum;
 (function (PostCancelJobOperationEnum) {
     PostCancelJobOperationEnum["CancelJob"] = "CancelJob";
-})(PostCancelJobOperationEnum || (PostCancelJobOperationEnum = {}));
-export var PostCancelJobVersionEnum;
+})(PostCancelJobOperationEnum = exports.PostCancelJobOperationEnum || (exports.PostCancelJobOperationEnum = {}));
+var PostCancelJobVersionEnum;
 (function (PostCancelJobVersionEnum) {
     PostCancelJobVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(PostCancelJobVersionEnum || (PostCancelJobVersionEnum = {}));
+})(PostCancelJobVersionEnum = exports.PostCancelJobVersionEnum || (exports.PostCancelJobVersionEnum = {}));
 var PostCancelJobQueryParams = /** @class */ (function (_super) {
     __extends(PostCancelJobQueryParams, _super);
     function PostCancelJobQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCancelJobQueryParams.prototype, "version", void 0);
     return PostCancelJobQueryParams;
-}(SpeakeasyBase));
-export { PostCancelJobQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelJobQueryParams = PostCancelJobQueryParams;
 var PostCancelJobRequest = /** @class */ (function (_super) {
     __extends(PostCancelJobRequest, _super);
     function PostCancelJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCancelJobQueryParams)
     ], PostCancelJobRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCancelJobRequest.prototype, "request", void 0);
     return PostCancelJobRequest;
-}(SpeakeasyBase));
-export { PostCancelJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelJobRequest = PostCancelJobRequest;
 var PostCancelJobResponse = /** @class */ (function (_super) {
     __extends(PostCancelJobResponse, _super);
     function PostCancelJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCancelJobResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCancelJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCancelJobResponse.prototype, "statusCode", void 0);
     return PostCancelJobResponse;
-}(SpeakeasyBase));
-export { PostCancelJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelJobResponse = PostCancelJobResponse;

@@ -21,9 +21,9 @@ export declare class Workload extends SpeakeasyBase {
     pillarPriorities?: string[];
     reviewOwner?: string;
     reviewRestrictionDate?: Date;
-    riskCounts?: Map<string, number>;
+    riskCounts?: Record<string, number>;
     shareInvitationId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     updatedAt?: Date;
     workloadArn?: string;
     workloadId?: string;

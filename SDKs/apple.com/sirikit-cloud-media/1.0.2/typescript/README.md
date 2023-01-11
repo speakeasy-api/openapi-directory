@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ExtensionConfigurationRequest, ExtensionConfigurationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: ExtensionConfigurationRequest = {
   headers: {
-    acceptLanguage: "qui",
-    cacheControl: "nostrum",
-    ifNoneMatch: "modi",
-    requestTimeout: 23.100000,
-    userAgent: "fugiat",
-    xApplecloudextensionRetryCount: 6.100000,
-    xApplecloudextensionSessionId: "aut",
+    acceptLanguage: "sit",
+    cacheControl: "voluptas",
+    ifNoneMatch: "culpa",
+    requestTimeout: 6.200000,
+    userAgent: "dolor",
+    xApplecloudextensionRetryCount: 67.199997,
+    xApplecloudextensionSessionId: "fugit",
   },
 };
 

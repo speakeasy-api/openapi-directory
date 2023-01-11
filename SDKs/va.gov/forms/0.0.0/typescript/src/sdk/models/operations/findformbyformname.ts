@@ -44,14 +44,14 @@ export class FindFormByFormNameResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  findFormByFormName200ApplicationJsonObject?: FindFormByFormName200ApplicationJson;
+  findFormByFormName200ApplicationJSONObject?: FindFormByFormName200ApplicationJson;
 
   @SpeakeasyMetadata()
-  findFormByFormName401ApplicationJsonAny?: any;
+  findFormByFormName401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  findFormByFormName404ApplicationJsonObject?: FindFormByFormName404ApplicationJson;
+  findFormByFormName404ApplicationJSONObject?: FindFormByFormName404ApplicationJson;
 
   @SpeakeasyMetadata()
-  findFormByFormName429ApplicationJsonAny?: any;
+  findFormByFormName429ApplicationJSONAny?: any;
 }

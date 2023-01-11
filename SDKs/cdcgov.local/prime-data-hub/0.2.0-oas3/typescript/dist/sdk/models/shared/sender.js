@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SettingMetadata } from "./settingmetadata";
-export var SenderFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SenderInput = exports.Sender = exports.SenderFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var settingmetadata_1 = require("./settingmetadata");
+var SenderFormatEnum;
 (function (SenderFormatEnum) {
     SenderFormatEnum["Csv"] = "CSV";
-})(SenderFormatEnum || (SenderFormatEnum = {}));
+})(SenderFormatEnum = exports.SenderFormatEnum || (exports.SenderFormatEnum = {}));
 // Sender
 /**
  * An sender of reports to the data hub
@@ -38,36 +41,36 @@ var Sender = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Sender.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], Sender.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", SettingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", settingmetadata_1.SettingMetadata)
     ], Sender.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Sender.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationName" }),
         __metadata("design:type", String)
     ], Sender.prototype, "organizationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schema" }),
         __metadata("design:type", String)
     ], Sender.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], Sender.prototype, "topic", void 0);
     return Sender;
-}(SpeakeasyBase));
-export { Sender };
+}(utils_1.SpeakeasyBase));
+exports.Sender = Sender;
 // SenderInput
 /**
  * An sender of reports to the data hub
@@ -78,25 +81,25 @@ var SenderInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SenderInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], SenderInput.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SenderInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schema" }),
         __metadata("design:type", String)
     ], SenderInput.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], SenderInput.prototype, "topic", void 0);
     return SenderInput;
-}(SpeakeasyBase));
-export { SenderInput };
+}(utils_1.SpeakeasyBase));
+exports.SenderInput = SenderInput;

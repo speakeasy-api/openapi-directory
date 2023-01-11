@@ -31,7 +31,7 @@ export class LensReview extends SpeakeasyBase {
   pillarReviewSummaries?: PillarReviewSummary[];
 
   @SpeakeasyMetadata({ data: "json, name=RiskCounts" })
-  riskCounts?: Map<string, number>;
+  riskCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedAt" })
   updatedAt?: Date;

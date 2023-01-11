@@ -53,5 +53,5 @@ export class UpdateWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWorkspace200ApplicationJsonObject?: UpdateWorkspace200ApplicationJson;
+  updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJson;
 }

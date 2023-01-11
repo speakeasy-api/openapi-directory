@@ -11,7 +11,7 @@ export declare class CalendarEventsWatchQueryParams extends SpeakeasyBase {
     alt?: shared.AltEnum;
     alwaysIncludeEmail?: boolean;
     fields?: string;
-    iCalUid?: string;
+    iCalUID?: string;
     key?: string;
     maxAttendees?: number;
     maxResults?: number;

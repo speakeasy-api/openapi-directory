@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteSigninSigninIdRequest, DeleteSigninSigninIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     tokenHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,7 +33,7 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteSigninSigninIdRequest = {
   pathParams: {
-    signinId: 4749040620526837782,
+    signinId: 8717895732742165505,
   },
 };
 

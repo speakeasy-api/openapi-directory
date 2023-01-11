@@ -77,5 +77,5 @@ export class CreateNetworkFirmwareUpgradesRollbackResponse extends SpeakeasyBase
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkFirmwareUpgradesRollback200ApplicationJsonObject?: Map<string, any>;
+  createNetworkFirmwareUpgradesRollback200ApplicationJSONObject?: Record<string, any>;
 }

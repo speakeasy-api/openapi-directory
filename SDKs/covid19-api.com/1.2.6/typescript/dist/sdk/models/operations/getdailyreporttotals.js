@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDailyReportTotalsDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDailyReportTotalsResponse = exports.GetDailyReportTotalsRequest = exports.GetDailyReportTotals200ApplicationJson = exports.GetDailyReportTotalsQueryParams = exports.GetDailyReportTotalsFormatEnum = exports.GetDailyReportTotalsDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDailyReportTotalsDateFormatEnum;
 (function (GetDailyReportTotalsDateFormatEnum) {
     GetDailyReportTotalsDateFormatEnum["YyyyMmDd"] = "YYYY-MM-DD";
     GetDailyReportTotalsDateFormatEnum["YyyyDdMm"] = "YYYY-DD-MM";
     GetDailyReportTotalsDateFormatEnum["DdMmYyyy"] = "DD-MM-YYYY";
     GetDailyReportTotalsDateFormatEnum["MmDdYyyy"] = "MM-DD-YYYY";
-})(GetDailyReportTotalsDateFormatEnum || (GetDailyReportTotalsDateFormatEnum = {}));
-export var GetDailyReportTotalsFormatEnum;
+})(GetDailyReportTotalsDateFormatEnum = exports.GetDailyReportTotalsDateFormatEnum || (exports.GetDailyReportTotalsDateFormatEnum = {}));
+var GetDailyReportTotalsFormatEnum;
 (function (GetDailyReportTotalsFormatEnum) {
     GetDailyReportTotalsFormatEnum["Json"] = "json";
     GetDailyReportTotalsFormatEnum["Xml"] = "xml";
-})(GetDailyReportTotalsFormatEnum || (GetDailyReportTotalsFormatEnum = {}));
+})(GetDailyReportTotalsFormatEnum = exports.GetDailyReportTotalsFormatEnum || (exports.GetDailyReportTotalsFormatEnum = {}));
 var GetDailyReportTotalsQueryParams = /** @class */ (function (_super) {
     __extends(GetDailyReportTotalsQueryParams, _super);
     function GetDailyReportTotalsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetDailyReportTotalsQueryParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date-format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date-format" }),
         __metadata("design:type", String)
     ], GetDailyReportTotalsQueryParams.prototype, "dateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetDailyReportTotalsQueryParams.prototype, "format", void 0);
     return GetDailyReportTotalsQueryParams;
-}(SpeakeasyBase));
-export { GetDailyReportTotalsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportTotalsQueryParams = GetDailyReportTotalsQueryParams;
 var GetDailyReportTotals200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDailyReportTotals200ApplicationJson, _super);
     function GetDailyReportTotals200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Number)
     ], GetDailyReportTotals200ApplicationJson.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Number)
     ], GetDailyReportTotals200ApplicationJson.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critical" }),
         __metadata("design:type", Number)
     ], GetDailyReportTotals200ApplicationJson.prototype, "critical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], GetDailyReportTotals200ApplicationJson.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deaths" }),
         __metadata("design:type", Number)
     ], GetDailyReportTotals200ApplicationJson.prototype, "deaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovered" }),
         __metadata("design:type", Number)
     ], GetDailyReportTotals200ApplicationJson.prototype, "recovered", void 0);
     return GetDailyReportTotals200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDailyReportTotals200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportTotals200ApplicationJson = GetDailyReportTotals200ApplicationJson;
 var GetDailyReportTotalsRequest = /** @class */ (function (_super) {
     __extends(GetDailyReportTotalsRequest, _super);
     function GetDailyReportTotalsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDailyReportTotalsQueryParams)
     ], GetDailyReportTotalsRequest.prototype, "queryParams", void 0);
     return GetDailyReportTotalsRequest;
-}(SpeakeasyBase));
-export { GetDailyReportTotalsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportTotalsRequest = GetDailyReportTotalsRequest;
 var GetDailyReportTotalsResponse = /** @class */ (function (_super) {
     __extends(GetDailyReportTotalsResponse, _super);
     function GetDailyReportTotalsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDailyReportTotalsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDailyReportTotalsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDailyReportTotalsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetDailyReportTotals200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetDailyReportTotals200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetDailyReportTotalsResponse.prototype, "getDailyReportTotals200ApplicationJsonObjects", void 0);
+    ], GetDailyReportTotalsResponse.prototype, "getDailyReportTotals200ApplicationJSONObjects", void 0);
     return GetDailyReportTotalsResponse;
-}(SpeakeasyBase));
-export { GetDailyReportTotalsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportTotalsResponse = GetDailyReportTotalsResponse;

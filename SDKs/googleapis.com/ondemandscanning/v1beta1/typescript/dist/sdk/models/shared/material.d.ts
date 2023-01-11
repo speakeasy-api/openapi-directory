@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Material extends SpeakeasyBase {
-    digest?: Map<string, string>;
+    digest?: Record<string, string>;
     uri?: string;
 }

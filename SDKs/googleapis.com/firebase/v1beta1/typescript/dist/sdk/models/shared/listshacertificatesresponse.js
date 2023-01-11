@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShaCertificate } from "./shacertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListShaCertificatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var shacertificate_1 = require("./shacertificate");
 var ListShaCertificatesResponse = /** @class */ (function (_super) {
     __extends(ListShaCertificatesResponse, _super);
     function ListShaCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificates", elemType: ShaCertificate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificates", elemType: shacertificate_1.ShaCertificate }),
         __metadata("design:type", Array)
     ], ListShaCertificatesResponse.prototype, "certificates", void 0);
     return ListShaCertificatesResponse;
-}(SpeakeasyBase));
-export { ListShaCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListShaCertificatesResponse = ListShaCertificatesResponse;

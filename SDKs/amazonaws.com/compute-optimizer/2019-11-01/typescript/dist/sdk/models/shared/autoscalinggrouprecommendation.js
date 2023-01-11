@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingGroupConfiguration } from "./autoscalinggroupconfiguration";
-import { FindingEnum } from "./findingenum";
-import { AutoScalingGroupRecommendationOption } from "./autoscalinggrouprecommendationoption";
-import { UtilizationMetric } from "./utilizationmetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoScalingGroupRecommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalinggroupconfiguration_1 = require("./autoscalinggroupconfiguration");
+var findingenum_1 = require("./findingenum");
+var autoscalinggrouprecommendationoption_1 = require("./autoscalinggrouprecommendationoption");
+var utilizationmetric_1 = require("./utilizationmetric");
 // AutoScalingGroupRecommendation
 /**
  * Describes an Auto Scaling group recommendation.
@@ -37,41 +40,41 @@ var AutoScalingGroupRecommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AutoScalingGroupRecommendation.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroupArn" }),
         __metadata("design:type", String)
     ], AutoScalingGroupRecommendation.prototype, "autoScalingGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroupName" }),
         __metadata("design:type", String)
     ], AutoScalingGroupRecommendation.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentConfiguration" }),
-        __metadata("design:type", AutoScalingGroupConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentConfiguration" }),
+        __metadata("design:type", autoscalinggroupconfiguration_1.AutoScalingGroupConfiguration)
     ], AutoScalingGroupRecommendation.prototype, "currentConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finding" }),
         __metadata("design:type", String)
     ], AutoScalingGroupRecommendation.prototype, "finding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRefreshTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRefreshTimestamp" }),
         __metadata("design:type", Date)
     ], AutoScalingGroupRecommendation.prototype, "lastRefreshTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lookBackPeriodInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lookBackPeriodInDays" }),
         __metadata("design:type", Number)
     ], AutoScalingGroupRecommendation.prototype, "lookBackPeriodInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationOptions", elemType: AutoScalingGroupRecommendationOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationOptions", elemType: autoscalinggrouprecommendationoption_1.AutoScalingGroupRecommendationOption }),
         __metadata("design:type", Array)
     ], AutoScalingGroupRecommendation.prototype, "recommendationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utilizationMetrics", elemType: UtilizationMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utilizationMetrics", elemType: utilizationmetric_1.UtilizationMetric }),
         __metadata("design:type", Array)
     ], AutoScalingGroupRecommendation.prototype, "utilizationMetrics", void 0);
     return AutoScalingGroupRecommendation;
-}(SpeakeasyBase));
-export { AutoScalingGroupRecommendation };
+}(utils_1.SpeakeasyBase));
+exports.AutoScalingGroupRecommendation = AutoScalingGroupRecommendation;

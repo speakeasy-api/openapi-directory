@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactRevision } from "./artifactrevision";
-import { PipelineExecutionStatusEnum } from "./pipelineexecutionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineExecution = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifactrevision_1 = require("./artifactrevision");
+var pipelineexecutionstatusenum_1 = require("./pipelineexecutionstatusenum");
 // PipelineExecution
 /**
  * Represents information about an execution of a pipeline.
@@ -35,29 +38,29 @@ var PipelineExecution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactRevisions", elemType: ArtifactRevision }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactRevisions", elemType: artifactrevision_1.ArtifactRevision }),
         __metadata("design:type", Array)
     ], PipelineExecution.prototype, "artifactRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineExecutionId" }),
         __metadata("design:type", String)
     ], PipelineExecution.prototype, "pipelineExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineName" }),
         __metadata("design:type", String)
     ], PipelineExecution.prototype, "pipelineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineVersion" }),
         __metadata("design:type", Number)
     ], PipelineExecution.prototype, "pipelineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PipelineExecution.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusSummary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusSummary" }),
         __metadata("design:type", String)
     ], PipelineExecution.prototype, "statusSummary", void 0);
     return PipelineExecution;
-}(SpeakeasyBase));
-export { PipelineExecution };
+}(utils_1.SpeakeasyBase));
+exports.PipelineExecution = PipelineExecution;

@@ -62,17 +62,14 @@ export class DeleteProxyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteProxy200ApplicationJsonAny?: any;
+  deleteProxy200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  deleteProxy401ApplicationJsonObject?: DeleteProxy401ApplicationJson;
+  deleteProxy401ApplicationJSONObject?: DeleteProxy401ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteProxyDefaultApplicationJsonAny?: any;
+  deleteProxyDefaultApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainIspPlacement = void 0;
+var utils_1 = require("../../../internal/utils");
 // DomainIspPlacement
 /**
  * An object that contains inbox placement data for email sent from one of your email domains to a specific email provider.
@@ -33,25 +36,25 @@ var DomainIspPlacement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InboxPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InboxPercentage" }),
         __metadata("design:type", Number)
     ], DomainIspPlacement.prototype, "inboxPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InboxRawCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InboxRawCount" }),
         __metadata("design:type", Number)
     ], DomainIspPlacement.prototype, "inboxRawCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IspName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IspName" }),
         __metadata("design:type", String)
     ], DomainIspPlacement.prototype, "ispName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpamPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpamPercentage" }),
         __metadata("design:type", Number)
     ], DomainIspPlacement.prototype, "spamPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpamRawCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpamRawCount" }),
         __metadata("design:type", Number)
     ], DomainIspPlacement.prototype, "spamRawCount", void 0);
     return DomainIspPlacement;
-}(SpeakeasyBase));
-export { DomainIspPlacement };
+}(utils_1.SpeakeasyBase));
+exports.DomainIspPlacement = DomainIspPlacement;

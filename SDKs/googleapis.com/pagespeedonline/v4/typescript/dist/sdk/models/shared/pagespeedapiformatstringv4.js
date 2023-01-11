@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagespeedApiFormatStringV4 = exports.PagespeedApiFormatStringV4Args = exports.PagespeedApiFormatStringV4ArgsSecondaryRects = exports.PagespeedApiFormatStringV4ArgsRects = void 0;
+var utils_1 = require("../../../internal/utils");
 var PagespeedApiFormatStringV4ArgsRects = /** @class */ (function (_super) {
     __extends(PagespeedApiFormatStringV4ArgsRects, _super);
     function PagespeedApiFormatStringV4ArgsRects() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsRects.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsRects.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsRects.prototype, "top", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsRects.prototype, "width", void 0);
     return PagespeedApiFormatStringV4ArgsRects;
-}(SpeakeasyBase));
-export { PagespeedApiFormatStringV4ArgsRects };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiFormatStringV4ArgsRects = PagespeedApiFormatStringV4ArgsRects;
 var PagespeedApiFormatStringV4ArgsSecondaryRects = /** @class */ (function (_super) {
     __extends(PagespeedApiFormatStringV4ArgsSecondaryRects, _super);
     function PagespeedApiFormatStringV4ArgsSecondaryRects() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsSecondaryRects.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsSecondaryRects.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsSecondaryRects.prototype, "top", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiFormatStringV4ArgsSecondaryRects.prototype, "width", void 0);
     return PagespeedApiFormatStringV4ArgsSecondaryRects;
-}(SpeakeasyBase));
-export { PagespeedApiFormatStringV4ArgsSecondaryRects };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiFormatStringV4ArgsSecondaryRects = PagespeedApiFormatStringV4ArgsSecondaryRects;
 var PagespeedApiFormatStringV4Args = /** @class */ (function (_super) {
     __extends(PagespeedApiFormatStringV4Args, _super);
     function PagespeedApiFormatStringV4Args() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiFormatStringV4Args.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiFormatStringV4ArgsRects }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiFormatStringV4ArgsRects }),
         __metadata("design:type", Array)
     ], PagespeedApiFormatStringV4Args.prototype, "rects", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiFormatStringV4ArgsSecondaryRects }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiFormatStringV4ArgsSecondaryRects }),
         __metadata("design:type", Array)
     ], PagespeedApiFormatStringV4Args.prototype, "secondaryRects", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiFormatStringV4Args.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiFormatStringV4Args.prototype, "value", void 0);
     return PagespeedApiFormatStringV4Args;
-}(SpeakeasyBase));
-export { PagespeedApiFormatStringV4Args };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiFormatStringV4Args = PagespeedApiFormatStringV4Args;
 var PagespeedApiFormatStringV4 = /** @class */ (function (_super) {
     __extends(PagespeedApiFormatStringV4, _super);
     function PagespeedApiFormatStringV4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiFormatStringV4Args }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiFormatStringV4Args }),
         __metadata("design:type", Array)
     ], PagespeedApiFormatStringV4.prototype, "args", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiFormatStringV4.prototype, "format", void 0);
     return PagespeedApiFormatStringV4;
-}(SpeakeasyBase));
-export { PagespeedApiFormatStringV4 };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiFormatStringV4 = PagespeedApiFormatStringV4;

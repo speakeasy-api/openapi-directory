@@ -67,5 +67,5 @@ export class PostPackageServiceJsonResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postPackageServiceJsonDefaultApplicationJsonString?: string;
+  postPackageServiceJSONDefaultApplicationJSONString?: string;
 }

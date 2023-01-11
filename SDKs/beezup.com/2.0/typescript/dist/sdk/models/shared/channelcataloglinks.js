@@ -1,0 +1,115 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelCatalogLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var linksgetchannelcatalogcategorieslink_1 = require("./linksgetchannelcatalogcategorieslink");
+var externallinksgetchannelinfolink_1 = require("./externallinksgetchannelinfolink");
+var linksconfigurechannelcatalogcolumnmappingslink_1 = require("./linksconfigurechannelcatalogcolumnmappingslink");
+var linksconfigurechannelcatalogcostsettingslink_1 = require("./linksconfigurechannelcatalogcostsettingslink");
+var linksconfigurechannelcataloggeneralsettingslink_1 = require("./linksconfigurechannelcataloggeneralsettingslink");
+var linksdeletechannelcataloglink_1 = require("./linksdeletechannelcataloglink");
+var linksdisablechannelcataloglink_1 = require("./linksdisablechannelcataloglink");
+var linksdisablechannelcatalogcategorymappinglink_1 = require("./linksdisablechannelcatalogcategorymappinglink");
+var linksenablechannelcataloglink_1 = require("./linksenablechannelcataloglink");
+var linksgetchannelcatalogexclusionfilterslink_1 = require("./linksgetchannelcatalogexclusionfilterslink");
+var linksgetchannelcatalogexportationcacheinfolink_1 = require("./linksgetchannelcatalogexportationcacheinfolink");
+var externallinksgetchannelcatalogmarketplacesettingslink_1 = require("./externallinksgetchannelcatalogmarketplacesettingslink");
+var linksgetchannelcatalogproductinfolistlink_1 = require("./linksgetchannelcatalogproductinfolistlink");
+var linksreenablechannelcatalogcategorymappinglink_1 = require("./linksreenablechannelcatalogcategorymappinglink");
+var linksgetchannelcataloglink_1 = require("./linksgetchannelcataloglink");
+// ChannelCatalogLinks
+/**
+ * Indicates the actions you can do on a channel catalog
+**/
+var ChannelCatalogLinks = /** @class */ (function (_super) {
+    __extends(ChannelCatalogLinks, _super);
+    function ChannelCatalogLinks() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryMappings" }),
+        __metadata("design:type", linksgetchannelcatalogcategorieslink_1.LinksGetChannelCatalogCategoriesLink)
+    ], ChannelCatalogLinks.prototype, "categoryMappings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelInfo" }),
+        __metadata("design:type", externallinksgetchannelinfolink_1.ExternalLinksGetChannelInfoLink)
+    ], ChannelCatalogLinks.prototype, "channelInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configureColumnMappings" }),
+        __metadata("design:type", linksconfigurechannelcatalogcolumnmappingslink_1.LinksConfigureChannelCatalogColumnMappingsLink)
+    ], ChannelCatalogLinks.prototype, "configureColumnMappings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configureCostSettings" }),
+        __metadata("design:type", linksconfigurechannelcatalogcostsettingslink_1.LinksConfigureChannelCatalogCostSettingsLink)
+    ], ChannelCatalogLinks.prototype, "configureCostSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configureGeneralSettings" }),
+        __metadata("design:type", linksconfigurechannelcataloggeneralsettingslink_1.LinksConfigureChannelCatalogGeneralSettingsLink)
+    ], ChannelCatalogLinks.prototype, "configureGeneralSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
+        __metadata("design:type", linksdeletechannelcataloglink_1.LinksDeleteChannelCatalogLink)
+    ], ChannelCatalogLinks.prototype, "delete", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disable" }),
+        __metadata("design:type", linksdisablechannelcataloglink_1.LinksDisableChannelCatalogLink)
+    ], ChannelCatalogLinks.prototype, "disable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableCategoryMappings" }),
+        __metadata("design:type", linksdisablechannelcatalogcategorymappinglink_1.LinksDisableChannelCatalogCategoryMappingLink)
+    ], ChannelCatalogLinks.prototype, "disableCategoryMappings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enable" }),
+        __metadata("design:type", linksenablechannelcataloglink_1.LinksEnableChannelCatalogLink)
+    ], ChannelCatalogLinks.prototype, "enable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusionFilters" }),
+        __metadata("design:type", linksgetchannelcatalogexclusionfilterslink_1.LinksGetChannelCatalogExclusionFiltersLink)
+    ], ChannelCatalogLinks.prototype, "exclusionFilters", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportationCacheInfo" }),
+        __metadata("design:type", linksgetchannelcatalogexportationcacheinfolink_1.LinksGetChannelCatalogExportationCacheInfoLink)
+    ], ChannelCatalogLinks.prototype, "exportationCacheInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceSettings" }),
+        __metadata("design:type", externallinksgetchannelcatalogmarketplacesettingslink_1.ExternalLinksGetChannelCatalogMarketplaceSettingsLink)
+    ], ChannelCatalogLinks.prototype, "marketplaceSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products" }),
+        __metadata("design:type", linksgetchannelcatalogproductinfolistlink_1.LinksGetChannelCatalogProductInfoListLink)
+    ], ChannelCatalogLinks.prototype, "products", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reenableCategoryMappings" }),
+        __metadata("design:type", linksreenablechannelcatalogcategorymappinglink_1.LinksReenableChannelCatalogCategoryMappingLink)
+    ], ChannelCatalogLinks.prototype, "reenableCategoryMappings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", linksgetchannelcataloglink_1.LinksGetChannelCatalogLink)
+    ], ChannelCatalogLinks.prototype, "self", void 0);
+    return ChannelCatalogLinks;
+}(utils_1.SpeakeasyBase));
+exports.ChannelCatalogLinks = ChannelCatalogLinks;

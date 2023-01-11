@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagResource = exports.TagResourceRelationships = exports.TagResourceRelationshipsTransactions = exports.TagResourceRelationshipsTransactionsLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagResourceRelationshipsTransactionsLinks = /** @class */ (function (_super) {
     __extends(TagResourceRelationshipsTransactionsLinks, _super);
     function TagResourceRelationshipsTransactionsLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], TagResourceRelationshipsTransactionsLinks.prototype, "related", void 0);
     return TagResourceRelationshipsTransactionsLinks;
-}(SpeakeasyBase));
-export { TagResourceRelationshipsTransactionsLinks };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceRelationshipsTransactionsLinks = TagResourceRelationshipsTransactionsLinks;
 var TagResourceRelationshipsTransactions = /** @class */ (function (_super) {
     __extends(TagResourceRelationshipsTransactions, _super);
     function TagResourceRelationshipsTransactions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", TagResourceRelationshipsTransactionsLinks)
     ], TagResourceRelationshipsTransactions.prototype, "links", void 0);
     return TagResourceRelationshipsTransactions;
-}(SpeakeasyBase));
-export { TagResourceRelationshipsTransactions };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceRelationshipsTransactions = TagResourceRelationshipsTransactions;
 var TagResourceRelationships = /** @class */ (function (_super) {
     __extends(TagResourceRelationships, _super);
     function TagResourceRelationships() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions" }),
         __metadata("design:type", TagResourceRelationshipsTransactions)
     ], TagResourceRelationships.prototype, "transactions", void 0);
     return TagResourceRelationships;
-}(SpeakeasyBase));
-export { TagResourceRelationships };
+}(utils_1.SpeakeasyBase));
+exports.TagResourceRelationships = TagResourceRelationships;
 // TagResource
 /**
  * Provides information about a tag.
@@ -70,17 +73,17 @@ var TagResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TagResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", TagResourceRelationships)
     ], TagResource.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TagResource.prototype, "type", void 0);
     return TagResource;
-}(SpeakeasyBase));
-export { TagResource };
+}(utils_1.SpeakeasyBase));
+exports.TagResource = TagResource;

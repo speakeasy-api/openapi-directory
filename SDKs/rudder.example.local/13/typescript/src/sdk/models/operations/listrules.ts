@@ -38,5 +38,5 @@ export class ListRulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listRules200ApplicationJsonObject?: ListRules200ApplicationJson;
+  listRules200ApplicationJSONObject?: ListRules200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskList } from "./tasklist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PollForDecisionTaskInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var tasklist_1 = require("./tasklist");
 var PollForDecisionTaskInput = /** @class */ (function (_super) {
     __extends(PollForDecisionTaskInput, _super);
     function PollForDecisionTaskInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], PollForDecisionTaskInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
         __metadata("design:type", String)
     ], PollForDecisionTaskInput.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPageSize" }),
         __metadata("design:type", Number)
     ], PollForDecisionTaskInput.prototype, "maximumPageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], PollForDecisionTaskInput.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseOrder" }),
         __metadata("design:type", Boolean)
     ], PollForDecisionTaskInput.prototype, "reverseOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], PollForDecisionTaskInput.prototype, "taskList", void 0);
     return PollForDecisionTaskInput;
-}(SpeakeasyBase));
-export { PollForDecisionTaskInput };
+}(utils_1.SpeakeasyBase));
+exports.PollForDecisionTaskInput = PollForDecisionTaskInput;

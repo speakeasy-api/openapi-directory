@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliveryControlFrequencyCap } from "./deliverycontrolfrequencycap";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryControl = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverycontrolfrequencycap_1 = require("./deliverycontrolfrequencycap");
 var DeliveryControl = /** @class */ (function (_super) {
     __extends(DeliveryControl, _super);
     function DeliveryControl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeBlockingLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeBlockingLevel" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "creativeBlockingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryRateType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "deliveryRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyCaps", elemType: DeliveryControlFrequencyCap }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyCaps", elemType: deliverycontrolfrequencycap_1.DeliveryControlFrequencyCap }),
         __metadata("design:type", Array)
     ], DeliveryControl.prototype, "frequencyCaps", void 0);
     return DeliveryControl;
-}(SpeakeasyBase));
-export { DeliveryControl };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryControl = DeliveryControl;

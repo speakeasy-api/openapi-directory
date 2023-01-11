@@ -1,7 +1,10 @@
-export var LoadBalancerStateEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerStateEnumEnum = void 0;
+var LoadBalancerStateEnumEnum;
 (function (LoadBalancerStateEnumEnum) {
     LoadBalancerStateEnumEnum["Active"] = "active";
     LoadBalancerStateEnumEnum["Provisioning"] = "provisioning";
     LoadBalancerStateEnumEnum["ActiveImpaired"] = "active_impaired";
     LoadBalancerStateEnumEnum["Failed"] = "failed";
-})(LoadBalancerStateEnumEnum || (LoadBalancerStateEnumEnum = {}));
+})(LoadBalancerStateEnumEnum = exports.LoadBalancerStateEnumEnum || (exports.LoadBalancerStateEnumEnum = {}));

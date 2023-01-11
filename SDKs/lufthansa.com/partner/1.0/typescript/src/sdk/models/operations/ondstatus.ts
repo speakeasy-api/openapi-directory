@@ -44,7 +44,7 @@ export class OndStatusResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  ondStatus200ApplicationJsonString?: string;
+  ondStatus200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaterConservation = exports.WaterConservationWaterSavingToiletsExceptionEnum = exports.WaterConservationWaterSavingSinksExceptionEnum = exports.WaterConservationWaterSavingShowersExceptionEnum = exports.WaterConservationTowelReuseProgramExceptionEnum = exports.WaterConservationLinenReuseProgramExceptionEnum = exports.WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum;
 (function (WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum) {
     WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum || (WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum = {}));
-export var WaterConservationLinenReuseProgramExceptionEnum;
+})(WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum = exports.WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum || (exports.WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum = {}));
+var WaterConservationLinenReuseProgramExceptionEnum;
 (function (WaterConservationLinenReuseProgramExceptionEnum) {
     WaterConservationLinenReuseProgramExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationLinenReuseProgramExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationLinenReuseProgramExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationLinenReuseProgramExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationLinenReuseProgramExceptionEnum || (WaterConservationLinenReuseProgramExceptionEnum = {}));
-export var WaterConservationTowelReuseProgramExceptionEnum;
+})(WaterConservationLinenReuseProgramExceptionEnum = exports.WaterConservationLinenReuseProgramExceptionEnum || (exports.WaterConservationLinenReuseProgramExceptionEnum = {}));
+var WaterConservationTowelReuseProgramExceptionEnum;
 (function (WaterConservationTowelReuseProgramExceptionEnum) {
     WaterConservationTowelReuseProgramExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationTowelReuseProgramExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationTowelReuseProgramExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationTowelReuseProgramExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationTowelReuseProgramExceptionEnum || (WaterConservationTowelReuseProgramExceptionEnum = {}));
-export var WaterConservationWaterSavingShowersExceptionEnum;
+})(WaterConservationTowelReuseProgramExceptionEnum = exports.WaterConservationTowelReuseProgramExceptionEnum || (exports.WaterConservationTowelReuseProgramExceptionEnum = {}));
+var WaterConservationWaterSavingShowersExceptionEnum;
 (function (WaterConservationWaterSavingShowersExceptionEnum) {
     WaterConservationWaterSavingShowersExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationWaterSavingShowersExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationWaterSavingShowersExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationWaterSavingShowersExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationWaterSavingShowersExceptionEnum || (WaterConservationWaterSavingShowersExceptionEnum = {}));
-export var WaterConservationWaterSavingSinksExceptionEnum;
+})(WaterConservationWaterSavingShowersExceptionEnum = exports.WaterConservationWaterSavingShowersExceptionEnum || (exports.WaterConservationWaterSavingShowersExceptionEnum = {}));
+var WaterConservationWaterSavingSinksExceptionEnum;
 (function (WaterConservationWaterSavingSinksExceptionEnum) {
     WaterConservationWaterSavingSinksExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationWaterSavingSinksExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationWaterSavingSinksExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationWaterSavingSinksExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationWaterSavingSinksExceptionEnum || (WaterConservationWaterSavingSinksExceptionEnum = {}));
-export var WaterConservationWaterSavingToiletsExceptionEnum;
+})(WaterConservationWaterSavingSinksExceptionEnum = exports.WaterConservationWaterSavingSinksExceptionEnum || (exports.WaterConservationWaterSavingSinksExceptionEnum = {}));
+var WaterConservationWaterSavingToiletsExceptionEnum;
 (function (WaterConservationWaterSavingToiletsExceptionEnum) {
     WaterConservationWaterSavingToiletsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     WaterConservationWaterSavingToiletsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     WaterConservationWaterSavingToiletsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     WaterConservationWaterSavingToiletsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(WaterConservationWaterSavingToiletsExceptionEnum || (WaterConservationWaterSavingToiletsExceptionEnum = {}));
+})(WaterConservationWaterSavingToiletsExceptionEnum = exports.WaterConservationWaterSavingToiletsExceptionEnum || (exports.WaterConservationWaterSavingToiletsExceptionEnum = {}));
 // WaterConservation
 /**
  * Water conservation practices implemented at the hotel.
@@ -75,53 +78,53 @@ var WaterConservation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsWaterUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsWaterUse" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "independentOrganizationAuditsWaterUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=independentOrganizationAuditsWaterUseException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=independentOrganizationAuditsWaterUseException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "independentOrganizationAuditsWaterUseException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linenReuseProgram" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linenReuseProgram" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "linenReuseProgram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linenReuseProgramException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linenReuseProgramException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "linenReuseProgramException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=towelReuseProgram" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=towelReuseProgram" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "towelReuseProgram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=towelReuseProgramException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=towelReuseProgramException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "towelReuseProgramException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingShowers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingShowers" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "waterSavingShowers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingShowersException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingShowersException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "waterSavingShowersException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingSinks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingSinks" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "waterSavingSinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingSinksException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingSinksException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "waterSavingSinksException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingToilets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingToilets" }),
         __metadata("design:type", Boolean)
     ], WaterConservation.prototype, "waterSavingToilets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waterSavingToiletsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waterSavingToiletsException" }),
         __metadata("design:type", String)
     ], WaterConservation.prototype, "waterSavingToiletsException", void 0);
     return WaterConservation;
-}(SpeakeasyBase));
-export { WaterConservation };
+}(utils_1.SpeakeasyBase));
+exports.WaterConservation = WaterConservation;

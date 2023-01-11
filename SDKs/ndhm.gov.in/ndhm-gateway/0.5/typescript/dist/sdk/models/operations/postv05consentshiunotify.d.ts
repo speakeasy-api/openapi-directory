@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05ConsentsHiuNotifyHeaders extends SpeakeasyBase {
     authorization: string;
-    xHiuId: string;
+    xHIUID: string;
 }
 export declare class PostV05ConsentsHiuNotifyRequest extends SpeakeasyBase {
     headers: PostV05ConsentsHiuNotifyHeaders;

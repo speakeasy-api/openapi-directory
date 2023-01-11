@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledSubTransaction } from "./scheduledsubtransaction";
-export var ScheduledTransactionDetailFlagColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledTransactionDetail = exports.ScheduledTransactionDetailFrequencyEnum = exports.ScheduledTransactionDetailFlagColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var scheduledsubtransaction_1 = require("./scheduledsubtransaction");
+var ScheduledTransactionDetailFlagColorEnum;
 (function (ScheduledTransactionDetailFlagColorEnum) {
     ScheduledTransactionDetailFlagColorEnum["Red"] = "red";
     ScheduledTransactionDetailFlagColorEnum["Orange"] = "orange";
@@ -32,8 +35,9 @@ export var ScheduledTransactionDetailFlagColorEnum;
     ScheduledTransactionDetailFlagColorEnum["Green"] = "green";
     ScheduledTransactionDetailFlagColorEnum["Blue"] = "blue";
     ScheduledTransactionDetailFlagColorEnum["Purple"] = "purple";
-})(ScheduledTransactionDetailFlagColorEnum || (ScheduledTransactionDetailFlagColorEnum = {}));
-export var ScheduledTransactionDetailFrequencyEnum;
+    ScheduledTransactionDetailFlagColorEnum["Null"] = "null";
+})(ScheduledTransactionDetailFlagColorEnum = exports.ScheduledTransactionDetailFlagColorEnum || (exports.ScheduledTransactionDetailFlagColorEnum = {}));
+var ScheduledTransactionDetailFrequencyEnum;
 (function (ScheduledTransactionDetailFrequencyEnum) {
     ScheduledTransactionDetailFrequencyEnum["Never"] = "never";
     ScheduledTransactionDetailFrequencyEnum["Daily"] = "daily";
@@ -48,76 +52,76 @@ export var ScheduledTransactionDetailFrequencyEnum;
     ScheduledTransactionDetailFrequencyEnum["TwiceAYear"] = "twiceAYear";
     ScheduledTransactionDetailFrequencyEnum["Yearly"] = "yearly";
     ScheduledTransactionDetailFrequencyEnum["EveryOtherYear"] = "everyOtherYear";
-})(ScheduledTransactionDetailFrequencyEnum || (ScheduledTransactionDetailFrequencyEnum = {}));
+})(ScheduledTransactionDetailFrequencyEnum = exports.ScheduledTransactionDetailFrequencyEnum || (exports.ScheduledTransactionDetailFrequencyEnum = {}));
 var ScheduledTransactionDetail = /** @class */ (function (_super) {
     __extends(ScheduledTransactionDetail, _super);
     function ScheduledTransactionDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_name" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], ScheduledTransactionDetail.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_name" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "categoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_first" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_first" }),
         __metadata("design:type", Date)
     ], ScheduledTransactionDetail.prototype, "dateFirst", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_next" }),
         __metadata("design:type", Date)
     ], ScheduledTransactionDetail.prototype, "dateNext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], ScheduledTransactionDetail.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag_color" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "flagColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_name" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "payeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtransactions", elemType: ScheduledSubTransaction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtransactions", elemType: scheduledsubtransaction_1.ScheduledSubTransaction }),
         __metadata("design:type", Array)
     ], ScheduledTransactionDetail.prototype, "subtransactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_account_id" }),
         __metadata("design:type", String)
     ], ScheduledTransactionDetail.prototype, "transferAccountId", void 0);
     return ScheduledTransactionDetail;
-}(SpeakeasyBase));
-export { ScheduledTransactionDetail };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledTransactionDetail = ScheduledTransactionDetail;

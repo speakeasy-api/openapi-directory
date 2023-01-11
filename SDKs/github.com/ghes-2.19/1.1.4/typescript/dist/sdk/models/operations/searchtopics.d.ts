@@ -18,6 +18,6 @@ export declare class SearchTopicsRequest extends SpeakeasyBase {
 export declare class SearchTopicsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchTopics200ApplicationJsonObject?: SearchTopics200ApplicationJson;
-    searchTopics415ApplicationJsonObject?: SearchTopics415ApplicationJson;
+    searchTopics200ApplicationJSONObject?: SearchTopics200ApplicationJson;
+    searchTopics415ApplicationJSONObject?: SearchTopics415ApplicationJson;
 }

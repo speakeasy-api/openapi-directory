@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginRequestPolicySummary } from "./originrequestpolicysummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OriginRequestPolicyList = void 0;
+var utils_1 = require("../../../internal/utils");
+var originrequestpolicysummarylist_1 = require("./originrequestpolicysummarylist");
 // OriginRequestPolicyList
 /**
  * A list of origin request policies.
@@ -34,21 +37,21 @@ var OriginRequestPolicyList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: OriginRequestPolicySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: originrequestpolicysummarylist_1.OriginRequestPolicySummaryList }),
         __metadata("design:type", Array)
     ], OriginRequestPolicyList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OriginRequestPolicyList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OriginRequestPolicyList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OriginRequestPolicyList.prototype, "quantity", void 0);
     return OriginRequestPolicyList;
-}(SpeakeasyBase));
-export { OriginRequestPolicyList };
+}(utils_1.SpeakeasyBase));
+exports.OriginRequestPolicyList = OriginRequestPolicyList;

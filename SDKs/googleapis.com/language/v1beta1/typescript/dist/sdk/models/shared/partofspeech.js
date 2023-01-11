@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PartOfSpeechAspectEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartOfSpeech = exports.PartOfSpeechVoiceEnum = exports.PartOfSpeechTenseEnum = exports.PartOfSpeechTagEnum = exports.PartOfSpeechReciprocityEnum = exports.PartOfSpeechProperEnum = exports.PartOfSpeechPersonEnum = exports.PartOfSpeechNumberEnum = exports.PartOfSpeechMoodEnum = exports.PartOfSpeechGenderEnum = exports.PartOfSpeechFormEnum = exports.PartOfSpeechCaseEnum = exports.PartOfSpeechAspectEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PartOfSpeechAspectEnum;
 (function (PartOfSpeechAspectEnum) {
     PartOfSpeechAspectEnum["AspectUnknown"] = "ASPECT_UNKNOWN";
     PartOfSpeechAspectEnum["Perfective"] = "PERFECTIVE";
     PartOfSpeechAspectEnum["Imperfective"] = "IMPERFECTIVE";
     PartOfSpeechAspectEnum["Progressive"] = "PROGRESSIVE";
-})(PartOfSpeechAspectEnum || (PartOfSpeechAspectEnum = {}));
-export var PartOfSpeechCaseEnum;
+})(PartOfSpeechAspectEnum = exports.PartOfSpeechAspectEnum || (exports.PartOfSpeechAspectEnum = {}));
+var PartOfSpeechCaseEnum;
 (function (PartOfSpeechCaseEnum) {
     PartOfSpeechCaseEnum["CaseUnknown"] = "CASE_UNKNOWN";
     PartOfSpeechCaseEnum["Accusative"] = "ACCUSATIVE";
@@ -47,8 +50,8 @@ export var PartOfSpeechCaseEnum;
     PartOfSpeechCaseEnum["ReflexiveCase"] = "REFLEXIVE_CASE";
     PartOfSpeechCaseEnum["RelativeCase"] = "RELATIVE_CASE";
     PartOfSpeechCaseEnum["Vocative"] = "VOCATIVE";
-})(PartOfSpeechCaseEnum || (PartOfSpeechCaseEnum = {}));
-export var PartOfSpeechFormEnum;
+})(PartOfSpeechCaseEnum = exports.PartOfSpeechCaseEnum || (exports.PartOfSpeechCaseEnum = {}));
+var PartOfSpeechFormEnum;
 (function (PartOfSpeechFormEnum) {
     PartOfSpeechFormEnum["FormUnknown"] = "FORM_UNKNOWN";
     PartOfSpeechFormEnum["Adnomial"] = "ADNOMIAL";
@@ -62,15 +65,15 @@ export var PartOfSpeechFormEnum;
     PartOfSpeechFormEnum["Long"] = "LONG";
     PartOfSpeechFormEnum["Order"] = "ORDER";
     PartOfSpeechFormEnum["Specific"] = "SPECIFIC";
-})(PartOfSpeechFormEnum || (PartOfSpeechFormEnum = {}));
-export var PartOfSpeechGenderEnum;
+})(PartOfSpeechFormEnum = exports.PartOfSpeechFormEnum || (exports.PartOfSpeechFormEnum = {}));
+var PartOfSpeechGenderEnum;
 (function (PartOfSpeechGenderEnum) {
     PartOfSpeechGenderEnum["GenderUnknown"] = "GENDER_UNKNOWN";
     PartOfSpeechGenderEnum["Feminine"] = "FEMININE";
     PartOfSpeechGenderEnum["Masculine"] = "MASCULINE";
     PartOfSpeechGenderEnum["Neuter"] = "NEUTER";
-})(PartOfSpeechGenderEnum || (PartOfSpeechGenderEnum = {}));
-export var PartOfSpeechMoodEnum;
+})(PartOfSpeechGenderEnum = exports.PartOfSpeechGenderEnum || (exports.PartOfSpeechGenderEnum = {}));
+var PartOfSpeechMoodEnum;
 (function (PartOfSpeechMoodEnum) {
     PartOfSpeechMoodEnum["MoodUnknown"] = "MOOD_UNKNOWN";
     PartOfSpeechMoodEnum["ConditionalMood"] = "CONDITIONAL_MOOD";
@@ -79,35 +82,35 @@ export var PartOfSpeechMoodEnum;
     PartOfSpeechMoodEnum["Interrogative"] = "INTERROGATIVE";
     PartOfSpeechMoodEnum["Jussive"] = "JUSSIVE";
     PartOfSpeechMoodEnum["Subjunctive"] = "SUBJUNCTIVE";
-})(PartOfSpeechMoodEnum || (PartOfSpeechMoodEnum = {}));
-export var PartOfSpeechNumberEnum;
+})(PartOfSpeechMoodEnum = exports.PartOfSpeechMoodEnum || (exports.PartOfSpeechMoodEnum = {}));
+var PartOfSpeechNumberEnum;
 (function (PartOfSpeechNumberEnum) {
     PartOfSpeechNumberEnum["NumberUnknown"] = "NUMBER_UNKNOWN";
     PartOfSpeechNumberEnum["Singular"] = "SINGULAR";
     PartOfSpeechNumberEnum["Plural"] = "PLURAL";
     PartOfSpeechNumberEnum["Dual"] = "DUAL";
-})(PartOfSpeechNumberEnum || (PartOfSpeechNumberEnum = {}));
-export var PartOfSpeechPersonEnum;
+})(PartOfSpeechNumberEnum = exports.PartOfSpeechNumberEnum || (exports.PartOfSpeechNumberEnum = {}));
+var PartOfSpeechPersonEnum;
 (function (PartOfSpeechPersonEnum) {
     PartOfSpeechPersonEnum["PersonUnknown"] = "PERSON_UNKNOWN";
     PartOfSpeechPersonEnum["First"] = "FIRST";
     PartOfSpeechPersonEnum["Second"] = "SECOND";
     PartOfSpeechPersonEnum["Third"] = "THIRD";
     PartOfSpeechPersonEnum["ReflexivePerson"] = "REFLEXIVE_PERSON";
-})(PartOfSpeechPersonEnum || (PartOfSpeechPersonEnum = {}));
-export var PartOfSpeechProperEnum;
+})(PartOfSpeechPersonEnum = exports.PartOfSpeechPersonEnum || (exports.PartOfSpeechPersonEnum = {}));
+var PartOfSpeechProperEnum;
 (function (PartOfSpeechProperEnum) {
     PartOfSpeechProperEnum["ProperUnknown"] = "PROPER_UNKNOWN";
     PartOfSpeechProperEnum["Proper"] = "PROPER";
     PartOfSpeechProperEnum["NotProper"] = "NOT_PROPER";
-})(PartOfSpeechProperEnum || (PartOfSpeechProperEnum = {}));
-export var PartOfSpeechReciprocityEnum;
+})(PartOfSpeechProperEnum = exports.PartOfSpeechProperEnum || (exports.PartOfSpeechProperEnum = {}));
+var PartOfSpeechReciprocityEnum;
 (function (PartOfSpeechReciprocityEnum) {
     PartOfSpeechReciprocityEnum["ReciprocityUnknown"] = "RECIPROCITY_UNKNOWN";
     PartOfSpeechReciprocityEnum["Reciprocal"] = "RECIPROCAL";
     PartOfSpeechReciprocityEnum["NonReciprocal"] = "NON_RECIPROCAL";
-})(PartOfSpeechReciprocityEnum || (PartOfSpeechReciprocityEnum = {}));
-export var PartOfSpeechTagEnum;
+})(PartOfSpeechReciprocityEnum = exports.PartOfSpeechReciprocityEnum || (exports.PartOfSpeechReciprocityEnum = {}));
+var PartOfSpeechTagEnum;
 (function (PartOfSpeechTagEnum) {
     PartOfSpeechTagEnum["Unknown"] = "UNKNOWN";
     PartOfSpeechTagEnum["Adj"] = "ADJ";
@@ -123,8 +126,8 @@ export var PartOfSpeechTagEnum;
     PartOfSpeechTagEnum["Verb"] = "VERB";
     PartOfSpeechTagEnum["X"] = "X";
     PartOfSpeechTagEnum["Affix"] = "AFFIX";
-})(PartOfSpeechTagEnum || (PartOfSpeechTagEnum = {}));
-export var PartOfSpeechTenseEnum;
+})(PartOfSpeechTagEnum = exports.PartOfSpeechTagEnum || (exports.PartOfSpeechTagEnum = {}));
+var PartOfSpeechTenseEnum;
 (function (PartOfSpeechTenseEnum) {
     PartOfSpeechTenseEnum["TenseUnknown"] = "TENSE_UNKNOWN";
     PartOfSpeechTenseEnum["ConditionalTense"] = "CONDITIONAL_TENSE";
@@ -133,14 +136,14 @@ export var PartOfSpeechTenseEnum;
     PartOfSpeechTenseEnum["Present"] = "PRESENT";
     PartOfSpeechTenseEnum["Imperfect"] = "IMPERFECT";
     PartOfSpeechTenseEnum["Pluperfect"] = "PLUPERFECT";
-})(PartOfSpeechTenseEnum || (PartOfSpeechTenseEnum = {}));
-export var PartOfSpeechVoiceEnum;
+})(PartOfSpeechTenseEnum = exports.PartOfSpeechTenseEnum || (exports.PartOfSpeechTenseEnum = {}));
+var PartOfSpeechVoiceEnum;
 (function (PartOfSpeechVoiceEnum) {
     PartOfSpeechVoiceEnum["VoiceUnknown"] = "VOICE_UNKNOWN";
     PartOfSpeechVoiceEnum["Active"] = "ACTIVE";
     PartOfSpeechVoiceEnum["Causative"] = "CAUSATIVE";
     PartOfSpeechVoiceEnum["Passive"] = "PASSIVE";
-})(PartOfSpeechVoiceEnum || (PartOfSpeechVoiceEnum = {}));
+})(PartOfSpeechVoiceEnum = exports.PartOfSpeechVoiceEnum || (exports.PartOfSpeechVoiceEnum = {}));
 // PartOfSpeech
 /**
  * Represents part of speech information for a token.
@@ -151,53 +154,53 @@ var PartOfSpeech = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspect" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "aspect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=case" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=case" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "case", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "form", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mood" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mood" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "mood", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "person", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proper" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "proper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reciprocity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reciprocity" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "reciprocity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tense" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tense" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "tense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voice" }),
         __metadata("design:type", String)
     ], PartOfSpeech.prototype, "voice", void 0);
     return PartOfSpeech;
-}(SpeakeasyBase));
-export { PartOfSpeech };
+}(utils_1.SpeakeasyBase));
+exports.PartOfSpeech = PartOfSpeech;

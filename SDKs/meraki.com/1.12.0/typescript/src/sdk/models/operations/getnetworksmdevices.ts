@@ -49,11 +49,11 @@ export class GetNetworkSmDevicesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

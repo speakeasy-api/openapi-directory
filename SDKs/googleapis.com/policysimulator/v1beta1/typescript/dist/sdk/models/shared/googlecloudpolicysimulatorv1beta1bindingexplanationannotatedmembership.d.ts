@@ -11,9 +11,6 @@ export declare enum GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotated
     Normal = "NORMAL",
     High = "HIGH"
 }
-/**
- * Details about whether the binding includes the principal.
-**/
 export declare class GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership extends SpeakeasyBase {
     membership?: GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum;
     relevance?: GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum;

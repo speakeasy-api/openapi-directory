@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckIfVodWasPurchasedAlt1Response = exports.CheckIfVodWasPurchasedAlt1Request = exports.CheckIfVodWasPurchasedAlt1Security = exports.CheckIfVodWasPurchasedAlt1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CheckIfVodWasPurchasedAlt1PathParams = /** @class */ (function (_super) {
     __extends(CheckIfVodWasPurchasedAlt1PathParams, _super);
     function CheckIfVodWasPurchasedAlt1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ondemand_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ondemand_id" }),
         __metadata("design:type", Number)
     ], CheckIfVodWasPurchasedAlt1PathParams.prototype, "ondemandId", void 0);
     return CheckIfVodWasPurchasedAlt1PathParams;
-}(SpeakeasyBase));
-export { CheckIfVodWasPurchasedAlt1PathParams };
+}(utils_1.SpeakeasyBase));
+exports.CheckIfVodWasPurchasedAlt1PathParams = CheckIfVodWasPurchasedAlt1PathParams;
 var CheckIfVodWasPurchasedAlt1Security = /** @class */ (function (_super) {
     __extends(CheckIfVodWasPurchasedAlt1Security, _super);
     function CheckIfVodWasPurchasedAlt1Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CheckIfVodWasPurchasedAlt1Security.prototype, "oauth2", void 0);
     return CheckIfVodWasPurchasedAlt1Security;
-}(SpeakeasyBase));
-export { CheckIfVodWasPurchasedAlt1Security };
+}(utils_1.SpeakeasyBase));
+exports.CheckIfVodWasPurchasedAlt1Security = CheckIfVodWasPurchasedAlt1Security;
 var CheckIfVodWasPurchasedAlt1Request = /** @class */ (function (_super) {
     __extends(CheckIfVodWasPurchasedAlt1Request, _super);
     function CheckIfVodWasPurchasedAlt1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckIfVodWasPurchasedAlt1PathParams)
     ], CheckIfVodWasPurchasedAlt1Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckIfVodWasPurchasedAlt1Security)
     ], CheckIfVodWasPurchasedAlt1Request.prototype, "security", void 0);
     return CheckIfVodWasPurchasedAlt1Request;
-}(SpeakeasyBase));
-export { CheckIfVodWasPurchasedAlt1Request };
+}(utils_1.SpeakeasyBase));
+exports.CheckIfVodWasPurchasedAlt1Request = CheckIfVodWasPurchasedAlt1Request;
 var CheckIfVodWasPurchasedAlt1Response = /** @class */ (function (_super) {
     __extends(CheckIfVodWasPurchasedAlt1Response, _super);
     function CheckIfVodWasPurchasedAlt1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CheckIfVodWasPurchasedAlt1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CheckIfVodWasPurchasedAlt1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], CheckIfVodWasPurchasedAlt1Response.prototype, "legacyError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OnDemandPage)
     ], CheckIfVodWasPurchasedAlt1Response.prototype, "onDemandPage", void 0);
     return CheckIfVodWasPurchasedAlt1Response;
-}(SpeakeasyBase));
-export { CheckIfVodWasPurchasedAlt1Response };
+}(utils_1.SpeakeasyBase));
+exports.CheckIfVodWasPurchasedAlt1Response = CheckIfVodWasPurchasedAlt1Response;

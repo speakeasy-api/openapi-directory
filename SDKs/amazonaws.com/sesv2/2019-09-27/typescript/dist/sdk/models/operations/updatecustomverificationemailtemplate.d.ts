@@ -12,9 +12,9 @@ export declare class UpdateCustomVerificationEmailTemplateHeaders extends Speake
     xAmzSignedHeaders?: string;
 }
 export declare class UpdateCustomVerificationEmailTemplateRequestBody extends SpeakeasyBase {
-    failureRedirectionUrl: string;
+    failureRedirectionURL: string;
     fromEmailAddress: string;
-    successRedirectionUrl: string;
+    successRedirectionURL: string;
     templateContent: string;
     templateSubject: string;
 }
@@ -29,5 +29,5 @@ export declare class UpdateCustomVerificationEmailTemplateResponse extends Speak
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateCustomVerificationEmailTemplateResponse?: Map<string, any>;
+    updateCustomVerificationEmailTemplateResponse?: Record<string, any>;
 }

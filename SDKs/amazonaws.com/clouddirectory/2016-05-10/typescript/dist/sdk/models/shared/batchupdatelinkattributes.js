@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkAttributeUpdate } from "./linkattributeupdate";
-import { TypedLinkSpecifier } from "./typedlinkspecifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateLinkAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var linkattributeupdate_1 = require("./linkattributeupdate");
+var typedlinkspecifier_1 = require("./typedlinkspecifier");
 // BatchUpdateLinkAttributes
 /**
  * Updates a given typed link’s attributes inside a <a>BatchRead</a> operation. Attributes to be updated must not contribute to the typed link’s identity, as defined by its <code>IdentityAttributeOrder</code>. For more information, see <a>UpdateLinkAttributes</a> and <a>BatchReadRequest$Operations</a>.
@@ -35,13 +38,13 @@ var BatchUpdateLinkAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeUpdates", elemType: LinkAttributeUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeUpdates", elemType: linkattributeupdate_1.LinkAttributeUpdate }),
         __metadata("design:type", Array)
     ], BatchUpdateLinkAttributes.prototype, "attributeUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkSpecifier" }),
-        __metadata("design:type", TypedLinkSpecifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkSpecifier" }),
+        __metadata("design:type", typedlinkspecifier_1.TypedLinkSpecifier)
     ], BatchUpdateLinkAttributes.prototype, "typedLinkSpecifier", void 0);
     return BatchUpdateLinkAttributes;
-}(SpeakeasyBase));
-export { BatchUpdateLinkAttributes };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateLinkAttributes = BatchUpdateLinkAttributes;

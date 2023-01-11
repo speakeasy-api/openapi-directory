@@ -1,4 +1,7 @@
-export var LifecycleErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecycleErrorCodeEnum = void 0;
+var LifecycleErrorCodeEnum;
 (function (LifecycleErrorCodeEnum) {
     LifecycleErrorCodeEnum["Success"] = "Success";
     LifecycleErrorCodeEnum["ScriptMissing"] = "ScriptMissing";
@@ -6,4 +9,4 @@ export var LifecycleErrorCodeEnum;
     LifecycleErrorCodeEnum["ScriptTimedOut"] = "ScriptTimedOut";
     LifecycleErrorCodeEnum["ScriptFailed"] = "ScriptFailed";
     LifecycleErrorCodeEnum["UnknownError"] = "UnknownError";
-})(LifecycleErrorCodeEnum || (LifecycleErrorCodeEnum = {}));
+})(LifecycleErrorCodeEnum = exports.LifecycleErrorCodeEnum || (exports.LifecycleErrorCodeEnum = {}));

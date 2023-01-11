@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BadResponsesFaultConfig } from "./badresponsesfaultconfig";
-import { LargeRequestFaultConfig } from "./largerequestfaultconfig";
-import { LargeResponseFaultConfig } from "./largeresponsefaultconfig";
-import { LatencyInjectionFaultConfig } from "./latencyinjectionfaultconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChaosConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var badresponsesfaultconfig_1 = require("./badresponsesfaultconfig");
+var largerequestfaultconfig_1 = require("./largerequestfaultconfig");
+var largeresponsefaultconfig_1 = require("./largeresponsefaultconfig");
+var latencyinjectionfaultconfig_1 = require("./latencyinjectionfaultconfig");
 // ChaosConfig
 /**
  * Configuration for the faults that can be injected in requests
@@ -37,25 +40,25 @@ var ChaosConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badResponsesFaultConfig" }),
-        __metadata("design:type", BadResponsesFaultConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badResponsesFaultConfig" }),
+        __metadata("design:type", badresponsesfaultconfig_1.BadResponsesFaultConfig)
     ], ChaosConfig.prototype, "badResponsesFaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ChaosConfig.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largeRequestFaultConfig" }),
-        __metadata("design:type", LargeRequestFaultConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largeRequestFaultConfig" }),
+        __metadata("design:type", largerequestfaultconfig_1.LargeRequestFaultConfig)
     ], ChaosConfig.prototype, "largeRequestFaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largeResponseFaultConfig" }),
-        __metadata("design:type", LargeResponseFaultConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largeResponseFaultConfig" }),
+        __metadata("design:type", largeresponsefaultconfig_1.LargeResponseFaultConfig)
     ], ChaosConfig.prototype, "largeResponseFaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latencyInjectionFaultConfig" }),
-        __metadata("design:type", LatencyInjectionFaultConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latencyInjectionFaultConfig" }),
+        __metadata("design:type", latencyinjectionfaultconfig_1.LatencyInjectionFaultConfig)
     ], ChaosConfig.prototype, "latencyInjectionFaultConfig", void 0);
     return ChaosConfig;
-}(SpeakeasyBase));
-export { ChaosConfig };
+}(utils_1.SpeakeasyBase));
+exports.ChaosConfig = ChaosConfig;

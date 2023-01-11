@@ -1,5 +1,8 @@
-export var ContactProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactProtocolEnum = void 0;
+var ContactProtocolEnum;
 (function (ContactProtocolEnum) {
     ContactProtocolEnum["Email"] = "Email";
     ContactProtocolEnum["Sms"] = "SMS";
-})(ContactProtocolEnum || (ContactProtocolEnum = {}));
+})(ContactProtocolEnum = exports.ContactProtocolEnum || (exports.ContactProtocolEnum = {}));

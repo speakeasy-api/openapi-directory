@@ -1,8 +1,11 @@
-export var ConnectorStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectorStateEnum = void 0;
+var ConnectorStateEnum;
 (function (ConnectorStateEnum) {
     ConnectorStateEnum["Running"] = "RUNNING";
     ConnectorStateEnum["Creating"] = "CREATING";
     ConnectorStateEnum["Updating"] = "UPDATING";
     ConnectorStateEnum["Deleting"] = "DELETING";
     ConnectorStateEnum["Failed"] = "FAILED";
-})(ConnectorStateEnum || (ConnectorStateEnum = {}));
+})(ConnectorStateEnum = exports.ConnectorStateEnum || (exports.ConnectorStateEnum = {}));

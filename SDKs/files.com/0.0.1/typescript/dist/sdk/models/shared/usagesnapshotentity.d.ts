@@ -16,5 +16,5 @@ export declare class UsageSnapshotEntity extends SpeakeasyBase {
     totalDownloads?: number;
     totalUploads?: number;
     updatedAt?: Date;
-    usageByTopLevelDir?: Map<string, any>;
+    usageByTopLevelDir?: Record<string, any>;
 }

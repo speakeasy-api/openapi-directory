@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dictlayerdata = exports.DictlayerdataDict = exports.DictlayerdataDictWords = exports.DictlayerdataDictWordsSource = exports.DictlayerdataDictWordsSenses = exports.DictlayerdataDictWordsSensesSynonyms = exports.DictlayerdataDictWordsSensesSynonymsSource = exports.DictlayerdataDictWordsSensesSource = exports.DictlayerdataDictWordsSensesDefinitions = exports.DictlayerdataDictWordsSensesDefinitionsExamples = exports.DictlayerdataDictWordsSensesDefinitionsExamplesSource = exports.DictlayerdataDictWordsSensesConjugations = exports.DictlayerdataDictWordsExamples = exports.DictlayerdataDictWordsExamplesSource = exports.DictlayerdataDictWordsDerivatives = exports.DictlayerdataDictWordsDerivativesSource = exports.DictlayerdataDictSource = exports.DictlayerdataCommon = void 0;
+var utils_1 = require("../../../internal/utils");
 var DictlayerdataCommon = /** @class */ (function (_super) {
     __extends(DictlayerdataCommon, _super);
     function DictlayerdataCommon() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], DictlayerdataCommon.prototype, "title", void 0);
     return DictlayerdataCommon;
-}(SpeakeasyBase));
-export { DictlayerdataCommon };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataCommon = DictlayerdataCommon;
 // DictlayerdataDictSource
 /**
  * The source, url and attribution for this dictionary data.
@@ -45,232 +48,232 @@ var DictlayerdataDictSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictSource.prototype, "url", void 0);
     return DictlayerdataDictSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictSource = DictlayerdataDictSource;
 var DictlayerdataDictWordsDerivativesSource = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsDerivativesSource, _super);
     function DictlayerdataDictWordsDerivativesSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsDerivativesSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsDerivativesSource.prototype, "url", void 0);
     return DictlayerdataDictWordsDerivativesSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsDerivativesSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsDerivativesSource = DictlayerdataDictWordsDerivativesSource;
 var DictlayerdataDictWordsDerivatives = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsDerivatives, _super);
     function DictlayerdataDictWordsDerivatives() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsDerivativesSource)
     ], DictlayerdataDictWordsDerivatives.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsDerivatives.prototype, "text", void 0);
     return DictlayerdataDictWordsDerivatives;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsDerivatives };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsDerivatives = DictlayerdataDictWordsDerivatives;
 var DictlayerdataDictWordsExamplesSource = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsExamplesSource, _super);
     function DictlayerdataDictWordsExamplesSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsExamplesSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsExamplesSource.prototype, "url", void 0);
     return DictlayerdataDictWordsExamplesSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsExamplesSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsExamplesSource = DictlayerdataDictWordsExamplesSource;
 var DictlayerdataDictWordsExamples = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsExamples, _super);
     function DictlayerdataDictWordsExamples() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsExamplesSource)
     ], DictlayerdataDictWordsExamples.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsExamples.prototype, "text", void 0);
     return DictlayerdataDictWordsExamples;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsExamples };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsExamples = DictlayerdataDictWordsExamples;
 var DictlayerdataDictWordsSensesConjugations = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesConjugations, _super);
     function DictlayerdataDictWordsSensesConjugations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesConjugations.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesConjugations.prototype, "value", void 0);
     return DictlayerdataDictWordsSensesConjugations;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesConjugations };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesConjugations = DictlayerdataDictWordsSensesConjugations;
 var DictlayerdataDictWordsSensesDefinitionsExamplesSource = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesDefinitionsExamplesSource, _super);
     function DictlayerdataDictWordsSensesDefinitionsExamplesSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesDefinitionsExamplesSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesDefinitionsExamplesSource.prototype, "url", void 0);
     return DictlayerdataDictWordsSensesDefinitionsExamplesSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesDefinitionsExamplesSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesDefinitionsExamplesSource = DictlayerdataDictWordsSensesDefinitionsExamplesSource;
 var DictlayerdataDictWordsSensesDefinitionsExamples = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesDefinitionsExamples, _super);
     function DictlayerdataDictWordsSensesDefinitionsExamples() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsSensesDefinitionsExamplesSource)
     ], DictlayerdataDictWordsSensesDefinitionsExamples.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesDefinitionsExamples.prototype, "text", void 0);
     return DictlayerdataDictWordsSensesDefinitionsExamples;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesDefinitionsExamples };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesDefinitionsExamples = DictlayerdataDictWordsSensesDefinitionsExamples;
 var DictlayerdataDictWordsSensesDefinitions = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesDefinitions, _super);
     function DictlayerdataDictWordsSensesDefinitions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definition" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesDefinitions.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=examples", elemType: DictlayerdataDictWordsSensesDefinitionsExamples }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=examples", elemType: DictlayerdataDictWordsSensesDefinitionsExamples }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWordsSensesDefinitions.prototype, "examples", void 0);
     return DictlayerdataDictWordsSensesDefinitions;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesDefinitions };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesDefinitions = DictlayerdataDictWordsSensesDefinitions;
 var DictlayerdataDictWordsSensesSource = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesSource, _super);
     function DictlayerdataDictWordsSensesSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesSource.prototype, "url", void 0);
     return DictlayerdataDictWordsSensesSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesSource = DictlayerdataDictWordsSensesSource;
 var DictlayerdataDictWordsSensesSynonymsSource = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesSynonymsSource, _super);
     function DictlayerdataDictWordsSensesSynonymsSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesSynonymsSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesSynonymsSource.prototype, "url", void 0);
     return DictlayerdataDictWordsSensesSynonymsSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesSynonymsSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesSynonymsSource = DictlayerdataDictWordsSensesSynonymsSource;
 var DictlayerdataDictWordsSensesSynonyms = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSensesSynonyms, _super);
     function DictlayerdataDictWordsSensesSynonyms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsSensesSynonymsSource)
     ], DictlayerdataDictWordsSensesSynonyms.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSensesSynonyms.prototype, "text", void 0);
     return DictlayerdataDictWordsSensesSynonyms;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSensesSynonyms };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSensesSynonyms = DictlayerdataDictWordsSensesSynonyms;
 var DictlayerdataDictWordsSenses = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWordsSenses, _super);
     function DictlayerdataDictWordsSenses() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conjugations", elemType: DictlayerdataDictWordsSensesConjugations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conjugations", elemType: DictlayerdataDictWordsSensesConjugations }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWordsSenses.prototype, "conjugations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definitions", elemType: DictlayerdataDictWordsSensesDefinitions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definitions", elemType: DictlayerdataDictWordsSensesDefinitions }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWordsSenses.prototype, "definitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partOfSpeech" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSenses.prototype, "partOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pronunciation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pronunciation" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSenses.prototype, "pronunciation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pronunciationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pronunciationUrl" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSenses.prototype, "pronunciationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsSensesSource)
     ], DictlayerdataDictWordsSenses.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syllabification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syllabification" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSenses.prototype, "syllabification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=synonyms", elemType: DictlayerdataDictWordsSensesSynonyms }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=synonyms", elemType: DictlayerdataDictWordsSensesSynonyms }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWordsSenses.prototype, "synonyms", void 0);
     return DictlayerdataDictWordsSenses;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSenses };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSenses = DictlayerdataDictWordsSenses;
 // DictlayerdataDictWordsSource
 /**
  * The words with different meanings but not related words, e.g. "go" (game) and "go" (verb).
@@ -281,73 +284,73 @@ var DictlayerdataDictWordsSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSource.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DictlayerdataDictWordsSource.prototype, "url", void 0);
     return DictlayerdataDictWordsSource;
-}(SpeakeasyBase));
-export { DictlayerdataDictWordsSource };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWordsSource = DictlayerdataDictWordsSource;
 var DictlayerdataDictWords = /** @class */ (function (_super) {
     __extends(DictlayerdataDictWords, _super);
     function DictlayerdataDictWords() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=derivatives", elemType: DictlayerdataDictWordsDerivatives }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=derivatives", elemType: DictlayerdataDictWordsDerivatives }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWords.prototype, "derivatives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=examples", elemType: DictlayerdataDictWordsExamples }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=examples", elemType: DictlayerdataDictWordsExamples }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWords.prototype, "examples", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=senses", elemType: DictlayerdataDictWordsSenses }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=senses", elemType: DictlayerdataDictWordsSenses }),
         __metadata("design:type", Array)
     ], DictlayerdataDictWords.prototype, "senses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictWordsSource)
     ], DictlayerdataDictWords.prototype, "source", void 0);
     return DictlayerdataDictWords;
-}(SpeakeasyBase));
-export { DictlayerdataDictWords };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDictWords = DictlayerdataDictWords;
 var DictlayerdataDict = /** @class */ (function (_super) {
     __extends(DictlayerdataDict, _super);
     function DictlayerdataDict() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", DictlayerdataDictSource)
     ], DictlayerdataDict.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=words", elemType: DictlayerdataDictWords }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=words", elemType: DictlayerdataDictWords }),
         __metadata("design:type", Array)
     ], DictlayerdataDict.prototype, "words", void 0);
     return DictlayerdataDict;
-}(SpeakeasyBase));
-export { DictlayerdataDict };
+}(utils_1.SpeakeasyBase));
+exports.DictlayerdataDict = DictlayerdataDict;
 var Dictlayerdata = /** @class */ (function (_super) {
     __extends(Dictlayerdata, _super);
     function Dictlayerdata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=common" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=common" }),
         __metadata("design:type", DictlayerdataCommon)
     ], Dictlayerdata.prototype, "common", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dict" }),
         __metadata("design:type", DictlayerdataDict)
     ], Dictlayerdata.prototype, "dict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Dictlayerdata.prototype, "kind", void 0);
     return Dictlayerdata;
-}(SpeakeasyBase));
-export { Dictlayerdata };
+}(utils_1.SpeakeasyBase));
+exports.Dictlayerdata = Dictlayerdata;

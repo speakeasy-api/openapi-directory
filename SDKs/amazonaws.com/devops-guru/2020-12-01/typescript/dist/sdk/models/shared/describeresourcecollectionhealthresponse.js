@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFormationHealth } from "./cloudformationhealth";
-import { ServiceHealth } from "./servicehealth";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeResourceCollectionHealthResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudformationhealth_1 = require("./cloudformationhealth");
+var servicehealth_1 = require("./servicehealth");
 var DescribeResourceCollectionHealthResponse = /** @class */ (function (_super) {
     __extends(DescribeResourceCollectionHealthResponse, _super);
     function DescribeResourceCollectionHealthResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudFormation", elemType: CloudFormationHealth }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudFormation", elemType: cloudformationhealth_1.CloudFormationHealth }),
         __metadata("design:type", Array)
     ], DescribeResourceCollectionHealthResponse.prototype, "cloudFormation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeResourceCollectionHealthResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Service", elemType: ServiceHealth }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Service", elemType: servicehealth_1.ServiceHealth }),
         __metadata("design:type", Array)
     ], DescribeResourceCollectionHealthResponse.prototype, "service", void 0);
     return DescribeResourceCollectionHealthResponse;
-}(SpeakeasyBase));
-export { DescribeResourceCollectionHealthResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeResourceCollectionHealthResponse = DescribeResourceCollectionHealthResponse;

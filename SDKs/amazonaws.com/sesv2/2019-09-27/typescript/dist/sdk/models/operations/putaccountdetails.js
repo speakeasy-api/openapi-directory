@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,130 +23,132 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutAccountDetailsResponse = exports.PutAccountDetailsRequest = exports.PutAccountDetailsRequestBody = exports.PutAccountDetailsRequestBodyMailTypeEnum = exports.PutAccountDetailsRequestBodyContactLanguageEnum = exports.PutAccountDetailsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutAccountDetailsHeaders = /** @class */ (function (_super) {
     __extends(PutAccountDetailsHeaders, _super);
     function PutAccountDetailsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PutAccountDetailsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PutAccountDetailsHeaders;
-}(SpeakeasyBase));
-export { PutAccountDetailsHeaders };
-export var PutAccountDetailsRequestBodyContactLanguageEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutAccountDetailsHeaders = PutAccountDetailsHeaders;
+var PutAccountDetailsRequestBodyContactLanguageEnum;
 (function (PutAccountDetailsRequestBodyContactLanguageEnum) {
     PutAccountDetailsRequestBodyContactLanguageEnum["En"] = "EN";
     PutAccountDetailsRequestBodyContactLanguageEnum["Ja"] = "JA";
-})(PutAccountDetailsRequestBodyContactLanguageEnum || (PutAccountDetailsRequestBodyContactLanguageEnum = {}));
-export var PutAccountDetailsRequestBodyMailTypeEnum;
+})(PutAccountDetailsRequestBodyContactLanguageEnum = exports.PutAccountDetailsRequestBodyContactLanguageEnum || (exports.PutAccountDetailsRequestBodyContactLanguageEnum = {}));
+var PutAccountDetailsRequestBodyMailTypeEnum;
 (function (PutAccountDetailsRequestBodyMailTypeEnum) {
     PutAccountDetailsRequestBodyMailTypeEnum["Marketing"] = "MARKETING";
     PutAccountDetailsRequestBodyMailTypeEnum["Transactional"] = "TRANSACTIONAL";
-})(PutAccountDetailsRequestBodyMailTypeEnum || (PutAccountDetailsRequestBodyMailTypeEnum = {}));
+})(PutAccountDetailsRequestBodyMailTypeEnum = exports.PutAccountDetailsRequestBodyMailTypeEnum || (exports.PutAccountDetailsRequestBodyMailTypeEnum = {}));
 var PutAccountDetailsRequestBody = /** @class */ (function (_super) {
     __extends(PutAccountDetailsRequestBody, _super);
     function PutAccountDetailsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalContactEmailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalContactEmailAddresses" }),
         __metadata("design:type", Array)
     ], PutAccountDetailsRequestBody.prototype, "additionalContactEmailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactLanguage" }),
         __metadata("design:type", String)
     ], PutAccountDetailsRequestBody.prototype, "contactLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailType" }),
         __metadata("design:type", String)
     ], PutAccountDetailsRequestBody.prototype, "mailType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductionAccessEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductionAccessEnabled" }),
         __metadata("design:type", Boolean)
     ], PutAccountDetailsRequestBody.prototype, "productionAccessEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseCaseDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseCaseDescription" }),
         __metadata("design:type", String)
     ], PutAccountDetailsRequestBody.prototype, "useCaseDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebsiteURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebsiteURL" }),
         __metadata("design:type", String)
-    ], PutAccountDetailsRequestBody.prototype, "websiteUrl", void 0);
+    ], PutAccountDetailsRequestBody.prototype, "websiteURL", void 0);
     return PutAccountDetailsRequestBody;
-}(SpeakeasyBase));
-export { PutAccountDetailsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutAccountDetailsRequestBody = PutAccountDetailsRequestBody;
 var PutAccountDetailsRequest = /** @class */ (function (_super) {
     __extends(PutAccountDetailsRequest, _super);
     function PutAccountDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutAccountDetailsHeaders)
     ], PutAccountDetailsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutAccountDetailsRequestBody)
     ], PutAccountDetailsRequest.prototype, "request", void 0);
     return PutAccountDetailsRequest;
-}(SpeakeasyBase));
-export { PutAccountDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutAccountDetailsRequest = PutAccountDetailsRequest;
 var PutAccountDetailsResponse = /** @class */ (function (_super) {
     __extends(PutAccountDetailsResponse, _super);
     function PutAccountDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutAccountDetailsResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutAccountDetailsResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutAccountDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PutAccountDetailsResponse.prototype, "putAccountDetailsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutAccountDetailsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutAccountDetailsResponse.prototype, "tooManyRequestsException", void 0);
     return PutAccountDetailsResponse;
-}(SpeakeasyBase));
-export { PutAccountDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutAccountDetailsResponse = PutAccountDetailsResponse;

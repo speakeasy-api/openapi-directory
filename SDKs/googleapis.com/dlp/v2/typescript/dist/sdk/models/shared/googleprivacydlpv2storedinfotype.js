@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2StoredInfoTypeVersion } from "./googleprivacydlpv2storedinfotypeversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2StoredInfoType = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2storedinfotypeversion_1 = require("./googleprivacydlpv2storedinfotypeversion");
 // GooglePrivacyDlpV2StoredInfoType
 /**
  * StoredInfoType resource message that contains information about the current version and any pending updates.
@@ -34,17 +37,17 @@ var GooglePrivacyDlpV2StoredInfoType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentVersion" }),
-        __metadata("design:type", GooglePrivacyDlpV2StoredInfoTypeVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentVersion" }),
+        __metadata("design:type", googleprivacydlpv2storedinfotypeversion_1.GooglePrivacyDlpV2StoredInfoTypeVersion)
     ], GooglePrivacyDlpV2StoredInfoType.prototype, "currentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2StoredInfoType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingVersions", elemType: GooglePrivacyDlpV2StoredInfoTypeVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingVersions", elemType: googleprivacydlpv2storedinfotypeversion_1.GooglePrivacyDlpV2StoredInfoTypeVersion }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2StoredInfoType.prototype, "pendingVersions", void 0);
     return GooglePrivacyDlpV2StoredInfoType;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2StoredInfoType };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2StoredInfoType = GooglePrivacyDlpV2StoredInfoType;

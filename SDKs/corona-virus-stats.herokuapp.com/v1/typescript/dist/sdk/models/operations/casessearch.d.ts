@@ -17,5 +17,5 @@ export declare class CasesSearchRequest extends SpeakeasyBase {
 export declare class CasesSearchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    casesSearch200ApplicationJsonObject?: CasesSearch200ApplicationJson;
+    casesSearch200ApplicationJSONObject?: CasesSearch200ApplicationJson;
 }

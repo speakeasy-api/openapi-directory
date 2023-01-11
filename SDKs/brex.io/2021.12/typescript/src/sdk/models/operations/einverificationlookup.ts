@@ -38,10 +38,10 @@ export class EinVerificationLookupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  einVerificationLookup200ApplicationJsonAny?: any;
+  einVerificationLookup200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  einVerificationLookupDefaultApplicationJsonAny?: any;
+  einVerificationLookupDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

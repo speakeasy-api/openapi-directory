@@ -9,5 +9,5 @@ export declare class SnowExportAssetsCsvRequest extends SpeakeasyBase {
 export declare class SnowExportAssetsCsvResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    snowExportAssetsCsv200TextCsvBinaryString?: Uint8Array;
+    snowExportAssetsCSV200TextCSVBinaryString?: Uint8Array;
 }

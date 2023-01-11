@@ -270,10 +270,10 @@ export enum GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisatio
 **/
 export class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrademarkID" })
-  trademarkId: string;
+  trademarkID: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" })
-  trademarkIpoCode: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
+  trademarkIPOCode: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisationBrandTrademarkIpoCodeEnum;
 }
 
 
@@ -327,7 +327,7 @@ export class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm extends S
   accessibilityTypes?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAccessibilityTypesEnum[];
 
   @SpeakeasyMetadata({ data: "json, name=AdditionalATMServices" })
-  additionalAtmServices?: string[];
+  additionalATMServices?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=Address" })
   address: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmAddress;
@@ -351,7 +351,7 @@ export class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtm extends S
   organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonAtmOrganisation;
 
   @SpeakeasyMetadata({ data: "json, name=SiteID" })
-  siteId?: string;
+  siteID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SiteName" })
   siteName?: string;
@@ -429,11 +429,11 @@ export class GetAtmsResponse extends SpeakeasyBase {
   errorObject?: GetAtmsErrorObject;
 
   @SpeakeasyMetadata()
-  getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

@@ -22,7 +22,7 @@ export class AuditEvent extends SpeakeasyBase {
   accountId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context?: Map<string, any>;
+  context?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectResponse = exports.ConnectRequest = exports.ConnectRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConnectRequestBody = /** @class */ (function (_super) {
     __extends(ConnectRequestBody, _super);
     function ConnectRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], ConnectRequestBody.prototype, "endpoint", void 0);
     return ConnectRequestBody;
-}(SpeakeasyBase));
-export { ConnectRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConnectRequestBody = ConnectRequestBody;
 var ConnectRequest = /** @class */ (function (_super) {
     __extends(ConnectRequest, _super);
     function ConnectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ConnectRequestBody)
     ], ConnectRequest.prototype, "request", void 0);
     return ConnectRequest;
-}(SpeakeasyBase));
-export { ConnectRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConnectRequest = ConnectRequest;
 var ConnectResponse = /** @class */ (function (_super) {
     __extends(ConnectResponse, _super);
     function ConnectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConnectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConnectResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConnectResponse.prototype, "connect200ApplicationJsonString", void 0);
+    ], ConnectResponse.prototype, "connect200ApplicationJSONString", void 0);
     return ConnectResponse;
-}(SpeakeasyBase));
-export { ConnectResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConnectResponse = ConnectResponse;

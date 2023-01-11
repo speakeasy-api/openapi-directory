@@ -31,7 +31,7 @@ export declare class FirebasestorageProjectsBucketsAddFirebaseSecurity extends S
 export declare class FirebasestorageProjectsBucketsAddFirebaseRequest extends SpeakeasyBase {
     pathParams: FirebasestorageProjectsBucketsAddFirebasePathParams;
     queryParams: FirebasestorageProjectsBucketsAddFirebaseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FirebasestorageProjectsBucketsAddFirebaseSecurity;
 }
 export declare class FirebasestorageProjectsBucketsAddFirebaseResponse extends SpeakeasyBase {

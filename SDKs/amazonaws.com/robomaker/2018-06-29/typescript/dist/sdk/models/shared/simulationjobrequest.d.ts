@@ -20,7 +20,7 @@ export declare class SimulationJobRequest extends SpeakeasyBase {
     outputLocation?: OutputLocation;
     robotApplications?: RobotApplicationConfig[];
     simulationApplications?: SimulationApplicationConfig[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     useDefaultApplications?: boolean;
     vpcConfig?: VpcConfig;
 }

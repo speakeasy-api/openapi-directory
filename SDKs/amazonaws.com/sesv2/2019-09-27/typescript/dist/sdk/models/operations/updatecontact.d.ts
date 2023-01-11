@@ -30,5 +30,5 @@ export declare class UpdateContactResponse extends SpeakeasyBase {
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateContactResponse?: Map<string, any>;
+    updateContactResponse?: Record<string, any>;
 }

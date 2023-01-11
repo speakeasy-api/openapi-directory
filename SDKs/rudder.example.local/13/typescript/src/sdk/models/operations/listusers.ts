@@ -32,5 +32,5 @@ export class ListUsersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listUsers200ApplicationJsonObject?: ListUsers200ApplicationJson;
+  listUsers200ApplicationJSONObject?: ListUsers200ApplicationJson;
 }

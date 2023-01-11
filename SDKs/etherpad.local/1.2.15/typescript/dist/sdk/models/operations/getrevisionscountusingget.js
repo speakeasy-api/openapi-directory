@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRevisionsCountUsingGetResponse = exports.GetRevisionsCountUsingGetRequest = exports.GetRevisionsCountUsingGet500ApplicationJson = exports.GetRevisionsCountUsingGet401ApplicationJson = exports.GetRevisionsCountUsingGet400ApplicationJson = exports.GetRevisionsCountUsingGet200ApplicationJson = exports.GetRevisionsCountUsingGet200ApplicationJsonData = exports.GetRevisionsCountUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRevisionsCountUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGetQueryParams, _super);
     function GetRevisionsCountUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], GetRevisionsCountUsingGetQueryParams.prototype, "padId", void 0);
+    ], GetRevisionsCountUsingGetQueryParams.prototype, "padID", void 0);
     return GetRevisionsCountUsingGetQueryParams;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGetQueryParams = GetRevisionsCountUsingGetQueryParams;
 var GetRevisionsCountUsingGet200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGet200ApplicationJsonData, _super);
     function GetRevisionsCountUsingGet200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisions" }),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGet200ApplicationJsonData.prototype, "revisions", void 0);
     return GetRevisionsCountUsingGet200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGet200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGet200ApplicationJsonData = GetRevisionsCountUsingGet200ApplicationJsonData;
 var GetRevisionsCountUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGet200ApplicationJson, _super);
     function GetRevisionsCountUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetRevisionsCountUsingGet200ApplicationJsonData)
     ], GetRevisionsCountUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetRevisionsCountUsingGet200ApplicationJson.prototype, "message", void 0);
     return GetRevisionsCountUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGet200ApplicationJson = GetRevisionsCountUsingGet200ApplicationJson;
 var GetRevisionsCountUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGet400ApplicationJson, _super);
     function GetRevisionsCountUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetRevisionsCountUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetRevisionsCountUsingGet400ApplicationJson.prototype, "message", void 0);
     return GetRevisionsCountUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGet400ApplicationJson = GetRevisionsCountUsingGet400ApplicationJson;
 var GetRevisionsCountUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGet401ApplicationJson, _super);
     function GetRevisionsCountUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetRevisionsCountUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetRevisionsCountUsingGet401ApplicationJson.prototype, "message", void 0);
     return GetRevisionsCountUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGet401ApplicationJson = GetRevisionsCountUsingGet401ApplicationJson;
 var GetRevisionsCountUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGet500ApplicationJson, _super);
     function GetRevisionsCountUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetRevisionsCountUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetRevisionsCountUsingGet500ApplicationJson.prototype, "message", void 0);
     return GetRevisionsCountUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGet500ApplicationJson = GetRevisionsCountUsingGet500ApplicationJson;
 var GetRevisionsCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGetRequest, _super);
     function GetRevisionsCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevisionsCountUsingGetQueryParams)
     ], GetRevisionsCountUsingGetRequest.prototype, "queryParams", void 0);
     return GetRevisionsCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGetRequest = GetRevisionsCountUsingGetRequest;
 var GetRevisionsCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetRevisionsCountUsingGetResponse, _super);
     function GetRevisionsCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRevisionsCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRevisionsCountUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevisionsCountUsingGet200ApplicationJson)
-    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGet200ApplicationJsonObject", void 0);
+    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevisionsCountUsingGet400ApplicationJson)
-    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGet400ApplicationJsonObject", void 0);
+    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevisionsCountUsingGet401ApplicationJson)
-    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGet401ApplicationJsonObject", void 0);
+    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevisionsCountUsingGet500ApplicationJson)
-    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGet500ApplicationJsonObject", void 0);
+    ], GetRevisionsCountUsingGetResponse.prototype, "getRevisionsCountUsingGET500ApplicationJSONObject", void 0);
     return GetRevisionsCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetRevisionsCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRevisionsCountUsingGetResponse = GetRevisionsCountUsingGetResponse;

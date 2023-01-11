@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class OrganicResult extends SpeakeasyBase {
     count?: number;
-    items?: Map<string, any>[];
+    items?: Record<string, any>[];
     total?: number;
 }

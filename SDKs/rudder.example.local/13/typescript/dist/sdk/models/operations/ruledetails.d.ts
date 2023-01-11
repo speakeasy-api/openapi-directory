@@ -24,5 +24,5 @@ export declare class RuleDetailsRequest extends SpeakeasyBase {
 export declare class RuleDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ruleDetails200ApplicationJsonObject?: RuleDetails200ApplicationJson;
+    ruleDetails200ApplicationJSONObject?: RuleDetails200ApplicationJson;
 }

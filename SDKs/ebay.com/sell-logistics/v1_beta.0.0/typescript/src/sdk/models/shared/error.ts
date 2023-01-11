@@ -3,11 +3,11 @@ import { ErrorParameter } from "./errorparameter";
 
 
 
-// Error
+// ErrorT
 /** 
  * A container that defines the elements of error and warning message.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=category" })
   category?: string;
 

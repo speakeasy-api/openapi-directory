@@ -55,7 +55,7 @@ export class InitiateMultipartUploadResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  initiateMultipartUploadOutput?: Map<string, any>;
+  initiateMultipartUploadOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValueException?: any;

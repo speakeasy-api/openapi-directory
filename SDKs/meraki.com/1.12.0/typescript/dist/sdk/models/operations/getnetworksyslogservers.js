@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSyslogServersResponse = exports.GetNetworkSyslogServersRequest = exports.GetNetworkSyslogServersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSyslogServersPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSyslogServersPathParams, _super);
     function GetNetworkSyslogServersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSyslogServersPathParams.prototype, "networkId", void 0);
     return GetNetworkSyslogServersPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSyslogServersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSyslogServersPathParams = GetNetworkSyslogServersPathParams;
 var GetNetworkSyslogServersRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSyslogServersRequest, _super);
     function GetNetworkSyslogServersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSyslogServersPathParams)
     ], GetNetworkSyslogServersRequest.prototype, "pathParams", void 0);
     return GetNetworkSyslogServersRequest;
-}(SpeakeasyBase));
-export { GetNetworkSyslogServersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSyslogServersRequest = GetNetworkSyslogServersRequest;
 var GetNetworkSyslogServersResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSyslogServersResponse, _super);
     function GetNetworkSyslogServersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSyslogServersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSyslogServersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSyslogServersResponse.prototype, "getNetworkSyslogServers200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSyslogServersResponse.prototype, "getNetworkSyslogServers200ApplicationJSONObject", void 0);
     return GetNetworkSyslogServersResponse;
-}(SpeakeasyBase));
-export { GetNetworkSyslogServersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSyslogServersResponse = GetNetworkSyslogServersResponse;

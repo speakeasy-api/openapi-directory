@@ -19,6 +19,6 @@ export declare class GetWorkspacesWorkspacePermissionsRequest extends SpeakeasyB
 export declare class GetWorkspacesWorkspacePermissionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWorkspaceMemberships?: shared.PaginatedWorkspaceMemberships;
 }

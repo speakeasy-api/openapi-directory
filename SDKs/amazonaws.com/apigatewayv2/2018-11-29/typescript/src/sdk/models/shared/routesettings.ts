@@ -1,25 +1,20 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingLevelEnum } from "./logginglevelenum";
 
 
 
-// RouteSettings
-/** 
- * Represents a collection of route settings.
-**/
 export class RouteSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DataTraceEnabled" })
-  dataTraceEnabled?: boolean;
+  dataTraceEnabled?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DetailedMetricsEnabled" })
-  detailedMetricsEnabled?: boolean;
+  detailedMetricsEnabled?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=LoggingLevel" })
-  loggingLevel?: LoggingLevelEnum;
+  loggingLevel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ThrottlingBurstLimit" })
-  throttlingBurstLimit?: number;
+  throttlingBurstLimit?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ThrottlingRateLimit" })
-  throttlingRateLimit?: number;
+  throttlingRateLimit?: Record<string, any>;
 }

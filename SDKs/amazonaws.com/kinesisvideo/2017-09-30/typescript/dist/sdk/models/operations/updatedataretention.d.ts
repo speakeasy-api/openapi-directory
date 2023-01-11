@@ -16,7 +16,7 @@ export declare class UpdateDataRetentionRequestBody extends SpeakeasyBase {
     currentVersion: string;
     dataRetentionChangeInHours: number;
     operation: UpdateDataRetentionRequestBodyOperationEnum;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class UpdateDataRetentionRequest extends SpeakeasyBase {
@@ -31,6 +31,6 @@ export declare class UpdateDataRetentionResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateDataRetentionOutput?: Map<string, any>;
+    updateDataRetentionOutput?: Record<string, any>;
     versionMismatchException?: any;
 }

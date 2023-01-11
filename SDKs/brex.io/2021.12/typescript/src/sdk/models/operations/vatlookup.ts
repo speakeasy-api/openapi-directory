@@ -44,8 +44,8 @@ export class VatLookupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vatLookup200ApplicationJsonAny?: any;
+  vatLookup200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  vatLookupDefaultApplicationJsonAny?: any;
+  vatLookupDefaultApplicationJSONAny?: any;
 }

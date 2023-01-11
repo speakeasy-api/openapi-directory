@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdAnalyticsMarksQuizzesRequest extends 
 }
 export declare class GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     quizMarkResponses?: shared.QuizMarkResponse[];
     statusCode: number;
 }

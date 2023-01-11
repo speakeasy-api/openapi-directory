@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAlbumVideoAlt1Response = exports.GetAlbumVideoAlt1Request = exports.GetAlbumVideoAlt1QueryParams = exports.GetAlbumVideoAlt1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetAlbumVideoAlt1PathParams = /** @class */ (function (_super) {
     __extends(GetAlbumVideoAlt1PathParams, _super);
     function GetAlbumVideoAlt1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=album_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=album_id" }),
         __metadata("design:type", Number)
     ], GetAlbumVideoAlt1PathParams.prototype, "albumId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=video_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=video_id" }),
         __metadata("design:type", Number)
     ], GetAlbumVideoAlt1PathParams.prototype, "videoId", void 0);
     return GetAlbumVideoAlt1PathParams;
-}(SpeakeasyBase));
-export { GetAlbumVideoAlt1PathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAlbumVideoAlt1PathParams = GetAlbumVideoAlt1PathParams;
 var GetAlbumVideoAlt1QueryParams = /** @class */ (function (_super) {
     __extends(GetAlbumVideoAlt1QueryParams, _super);
     function GetAlbumVideoAlt1QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=password" }),
         __metadata("design:type", String)
     ], GetAlbumVideoAlt1QueryParams.prototype, "password", void 0);
     return GetAlbumVideoAlt1QueryParams;
-}(SpeakeasyBase));
-export { GetAlbumVideoAlt1QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAlbumVideoAlt1QueryParams = GetAlbumVideoAlt1QueryParams;
 var GetAlbumVideoAlt1Request = /** @class */ (function (_super) {
     __extends(GetAlbumVideoAlt1Request, _super);
     function GetAlbumVideoAlt1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAlbumVideoAlt1PathParams)
     ], GetAlbumVideoAlt1Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAlbumVideoAlt1QueryParams)
     ], GetAlbumVideoAlt1Request.prototype, "queryParams", void 0);
     return GetAlbumVideoAlt1Request;
-}(SpeakeasyBase));
-export { GetAlbumVideoAlt1Request };
+}(utils_1.SpeakeasyBase));
+exports.GetAlbumVideoAlt1Request = GetAlbumVideoAlt1Request;
 var GetAlbumVideoAlt1Response = /** @class */ (function (_super) {
     __extends(GetAlbumVideoAlt1Response, _super);
     function GetAlbumVideoAlt1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAlbumVideoAlt1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAlbumVideoAlt1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], GetAlbumVideoAlt1Response.prototype, "legacyError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Video)
     ], GetAlbumVideoAlt1Response.prototype, "video", void 0);
     return GetAlbumVideoAlt1Response;
-}(SpeakeasyBase));
-export { GetAlbumVideoAlt1Response };
+}(utils_1.SpeakeasyBase));
+exports.GetAlbumVideoAlt1Response = GetAlbumVideoAlt1Response;

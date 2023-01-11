@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorProto } from "./errorproto";
-export var ErrorsCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Errors = exports.ErrorsCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorproto_1 = require("./errorproto");
+var ErrorsCodeEnum;
 (function (ErrorsCodeEnum) {
     ErrorsCodeEnum["BadRequest"] = "BAD_REQUEST";
     ErrorsCodeEnum["Forbidden"] = "FORBIDDEN";
@@ -34,7 +37,7 @@ export var ErrorsCodeEnum;
     ErrorsCodeEnum["PreconditionFailed"] = "PRECONDITION_FAILED";
     ErrorsCodeEnum["InternalError"] = "INTERNAL_ERROR";
     ErrorsCodeEnum["ServiceUnavailable"] = "SERVICE_UNAVAILABLE";
-})(ErrorsCodeEnum || (ErrorsCodeEnum = {}));
+})(ErrorsCodeEnum = exports.ErrorsCodeEnum || (exports.ErrorsCodeEnum = {}));
 // Errors
 /**
  * Request Error information. The presence of an error field signals that the operation has failed.
@@ -45,17 +48,17 @@ var Errors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], Errors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error", elemType: ErrorProto }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error", elemType: errorproto_1.ErrorProto }),
         __metadata("design:type", Array)
     ], Errors.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], Errors.prototype, "requestId", void 0);
     return Errors;
-}(SpeakeasyBase));
-export { Errors };
+}(utils_1.SpeakeasyBase));
+exports.Errors = Errors;

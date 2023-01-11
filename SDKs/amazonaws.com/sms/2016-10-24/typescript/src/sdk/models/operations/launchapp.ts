@@ -54,7 +54,7 @@ export class LaunchAppResponse extends SpeakeasyBase {
   invalidParameterException?: any;
 
   @SpeakeasyMetadata()
-  launchAppResponse?: Map<string, any>;
+  launchAppResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   missingRequiredParameterException?: any;

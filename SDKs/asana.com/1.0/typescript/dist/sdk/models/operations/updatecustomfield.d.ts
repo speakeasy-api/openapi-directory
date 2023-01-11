@@ -22,5 +22,5 @@ export declare class UpdateCustomFieldResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateCustomField200ApplicationJsonObject?: UpdateCustomField200ApplicationJson;
+    updateCustomField200ApplicationJSONObject?: UpdateCustomField200ApplicationJson;
 }

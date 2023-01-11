@@ -51,11 +51,11 @@ export class GetNetworkApplianceSecurityEventsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceSecurityEvents200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceSecurityEvents200ApplicationJSONObject?: Record<string, any>;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest, CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,43 +30,44 @@ const req: CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRe
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "nobis",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "neque",
-    alt: "json",
-    callback: "magnam",
-    certificateIssuanceConfigId: "non",
-    fields: "inventore",
-    key: "et",
-    oauthToken: "et",
-    prettyPrint: true,
-    quotaUser: "nemo",
-    uploadType: "a",
-    uploadProtocol: "voluptate",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    certificateIssuanceConfigId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     certificateAuthorityConfig: {
       certificateAuthorityServiceConfig: {
-        caPool: "sed",
+        caPool: "debitis",
       },
     },
-    description: "provident",
-    keyAlgorithm: "RSA_2048",
+    description: "voluptatum",
+    keyAlgorithm: "KEY_ALGORITHM_UNSPECIFIED",
     labels: {
-      "voluptatem": "eum",
-      "quo": "repellat",
+      "dolorem": "et",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
-    lifetime: "magni",
-    name: "veritatis",
-    rotationWindowPercentage: 1427044159730156609,
+    lifetime: "dolores",
+    name: "illum",
+    rotationWindowPercentage: 6392442863481646880,
   },
 };
 

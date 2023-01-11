@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayConnect } from "./transitgatewayconnect";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTransitGatewayConnectResult = exports.DeleteTransitGatewayConnectResultTransitGatewayConnect = exports.DeleteTransitGatewayConnectResultTransitGatewayConnectOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteTransitGatewayConnectResultTransitGatewayConnectOptions
+/**
+ * The Connect attachment options.
+**/
+var DeleteTransitGatewayConnectResultTransitGatewayConnectOptions = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayConnectResultTransitGatewayConnectOptions, _super);
+    function DeleteTransitGatewayConnectResultTransitGatewayConnectOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnectOptions.prototype, "protocol", void 0);
+    return DeleteTransitGatewayConnectResultTransitGatewayConnectOptions;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayConnectResultTransitGatewayConnectOptions = DeleteTransitGatewayConnectResultTransitGatewayConnectOptions;
+// DeleteTransitGatewayConnectResultTransitGatewayConnect
+/**
+ * Information about the deleted Connect attachment.
+**/
+var DeleteTransitGatewayConnectResultTransitGatewayConnect = /** @class */ (function (_super) {
+    __extends(DeleteTransitGatewayConnectResultTransitGatewayConnect, _super);
+    function DeleteTransitGatewayConnectResultTransitGatewayConnect() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayConnectResultTransitGatewayConnectOptions)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "options", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "transitGatewayAttachmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "transitGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteTransitGatewayConnectResultTransitGatewayConnect.prototype, "transportTransitGatewayAttachmentId", void 0);
+    return DeleteTransitGatewayConnectResultTransitGatewayConnect;
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayConnectResultTransitGatewayConnect = DeleteTransitGatewayConnectResultTransitGatewayConnect;
 var DeleteTransitGatewayConnectResult = /** @class */ (function (_super) {
     __extends(DeleteTransitGatewayConnectResult, _super);
     function DeleteTransitGatewayConnectResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayConnect)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteTransitGatewayConnectResultTransitGatewayConnect)
     ], DeleteTransitGatewayConnectResult.prototype, "transitGatewayConnect", void 0);
     return DeleteTransitGatewayConnectResult;
-}(SpeakeasyBase));
-export { DeleteTransitGatewayConnectResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransitGatewayConnectResult = DeleteTransitGatewayConnectResult;

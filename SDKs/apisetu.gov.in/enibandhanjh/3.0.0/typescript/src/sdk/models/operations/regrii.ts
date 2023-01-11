@@ -194,23 +194,23 @@ export class RegriiResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  regrii400ApplicationJsonObject?: Regrii400ApplicationJson;
+  regrii400ApplicationJSONObject?: Regrii400ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii401ApplicationJsonObject?: Regrii401ApplicationJson;
+  regrii401ApplicationJSONObject?: Regrii401ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii404ApplicationJsonObject?: Regrii404ApplicationJson;
+  regrii404ApplicationJSONObject?: Regrii404ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii500ApplicationJsonObject?: Regrii500ApplicationJson;
+  regrii500ApplicationJSONObject?: Regrii500ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii502ApplicationJsonObject?: Regrii502ApplicationJson;
+  regrii502ApplicationJSONObject?: Regrii502ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii503ApplicationJsonObject?: Regrii503ApplicationJson;
+  regrii503ApplicationJSONObject?: Regrii503ApplicationJson;
 
   @SpeakeasyMetadata()
-  regrii504ApplicationJsonObject?: Regrii504ApplicationJson;
+  regrii504ApplicationJSONObject?: Regrii504ApplicationJson;
 }

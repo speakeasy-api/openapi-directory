@@ -14,7 +14,7 @@ export declare class GetApiVVersionMetalsBenchmarkSupportedRequest extends Speak
 export declare class GetApiVVersionMetalsBenchmarkSupportedResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getApiVVersionMetalsBenchmarkSupported200ApplicationJsonStrings?: string[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
+    getApiVVersionMetalsBenchmarkSupported200ApplicationJSONStrings?: string[];
 }

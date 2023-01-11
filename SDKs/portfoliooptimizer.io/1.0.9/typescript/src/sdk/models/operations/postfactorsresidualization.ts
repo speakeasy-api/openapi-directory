@@ -34,8 +34,8 @@ export class PostFactorsResidualizationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postFactorsResidualization200ApplicationJsonObject?: PostFactorsResidualization200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postFactorsResidualization200ApplicationJSONObject?: PostFactorsResidualization200ApplicationJson;
 }

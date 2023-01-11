@@ -9,5 +9,5 @@ export declare class ProtocolWebPortRemoveRequest extends SpeakeasyBase {
 export declare class ProtocolWebPortRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolWebPortRemove200ApplicationJsonString?: string;
+    protocolWebPortRemove200ApplicationJSONString?: string;
 }

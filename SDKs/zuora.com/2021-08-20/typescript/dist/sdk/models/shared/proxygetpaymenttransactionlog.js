@@ -1,0 +1,108 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProxyGetPaymentTransactionLog = exports.ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum = exports.ProxyGetPaymentTransactionLogGatewayStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProxyGetPaymentTransactionLogGatewayStateEnum;
+(function (ProxyGetPaymentTransactionLogGatewayStateEnum) {
+    ProxyGetPaymentTransactionLogGatewayStateEnum["MarkedForSubmission"] = "MarkedForSubmission";
+    ProxyGetPaymentTransactionLogGatewayStateEnum["Submitted"] = "Submitted";
+    ProxyGetPaymentTransactionLogGatewayStateEnum["Settled"] = "Settled";
+    ProxyGetPaymentTransactionLogGatewayStateEnum["NotSubmitted"] = "NotSubmitted";
+    ProxyGetPaymentTransactionLogGatewayStateEnum["FailedToSettle"] = "FailedToSettle";
+})(ProxyGetPaymentTransactionLogGatewayStateEnum = exports.ProxyGetPaymentTransactionLogGatewayStateEnum || (exports.ProxyGetPaymentTransactionLogGatewayStateEnum = {}));
+var ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum;
+(function (ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum) {
+    ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum["Authorization"] = "Authorization";
+    ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum["Sale"] = "Sale";
+    ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum["Void"] = "Void";
+    ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum["Inquiry"] = "Inquiry";
+    ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum["VoidAuth"] = "VoidAuth";
+})(ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum = exports.ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum || (exports.ProxyGetPaymentTransactionLogGatewayTransactionTypeEnum = {}));
+var ProxyGetPaymentTransactionLog = /** @class */ (function (_super) {
+    __extends(ProxyGetPaymentTransactionLog, _super);
+    function ProxyGetPaymentTransactionLog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AVSResponseCode" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "avsResponseCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchId" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "batchId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CVVResponseCode" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "cvvResponseCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Gateway" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "gateway", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatewayReasonCode" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "gatewayReasonCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatewayReasonCodeDescription" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "gatewayReasonCodeDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatewayState" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "gatewayState", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatewayTransactionType" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "gatewayTransactionType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentId" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "paymentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestString" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "requestString", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseString" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "responseString", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionDate" }),
+        __metadata("design:type", Date)
+    ], ProxyGetPaymentTransactionLog.prototype, "transactionDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionId" }),
+        __metadata("design:type", String)
+    ], ProxyGetPaymentTransactionLog.prototype, "transactionId", void 0);
+    return ProxyGetPaymentTransactionLog;
+}(utils_1.SpeakeasyBase));
+exports.ProxyGetPaymentTransactionLog = ProxyGetPaymentTransactionLog;

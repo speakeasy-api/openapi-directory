@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptIn1 } from "./optin1";
-import { Settings1 } from "./settings1";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetEurekaInfoRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var optin1_1 = require("./optin1");
+var settings1_1 = require("./settings1");
 var SetEurekaInfoRequest = /** @class */ (function (_super) {
     __extends(SetEurekaInfoRequest, _super);
     function SetEurekaInfoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SetEurekaInfoRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opt_in" }),
-        __metadata("design:type", OptIn1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opt_in" }),
+        __metadata("design:type", optin1_1.OptIn1)
     ], SetEurekaInfoRequest.prototype, "optIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Settings1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", settings1_1.Settings1)
     ], SetEurekaInfoRequest.prototype, "settings", void 0);
     return SetEurekaInfoRequest;
-}(SpeakeasyBase));
-export { SetEurekaInfoRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetEurekaInfoRequest = SetEurekaInfoRequest;

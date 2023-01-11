@@ -11,7 +11,7 @@ export declare class Source extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     updateTime?: string;
     vmware?: VmwareSourceDetails;
@@ -23,6 +23,6 @@ export declare class SourceInput extends SpeakeasyBase {
     aws?: AwsSourceDetailsInput;
     description?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     vmware?: VmwareSourceDetails;
 }

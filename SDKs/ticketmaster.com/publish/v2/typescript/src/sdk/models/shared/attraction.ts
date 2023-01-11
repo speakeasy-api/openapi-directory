@@ -20,13 +20,13 @@ export class Attraction extends SpeakeasyBase {
   active?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=additionalInfos" })
-  additionalInfos?: Map<string, string>;
+  additionalInfos?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=classifications", elemType: Classification })
   classifications?: Classification[];
 
   @SpeakeasyMetadata({ data: "json, name=descriptions" })
-  descriptions?: Map<string, string>;
+  descriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=discoverable" })
   discoverable?: boolean;
@@ -35,13 +35,13 @@ export class Attraction extends SpeakeasyBase {
   images?: Image[];
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=references" })
-  references?: Map<string, string>;
+  references?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=relationships" })
-  relationships?: Map<string, any>[];
+  relationships?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=source" })
   source?: Source;

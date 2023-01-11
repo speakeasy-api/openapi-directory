@@ -22,5 +22,5 @@ export declare class AddFollowersResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addFollowers201ApplicationJsonObject?: AddFollowers201ApplicationJson;
+    addFollowers201ApplicationJSONObject?: AddFollowers201ApplicationJson;
 }

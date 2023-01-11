@@ -53,5 +53,5 @@ export class DuplicateTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  duplicateTask201ApplicationJsonObject?: DuplicateTask201ApplicationJson;
+  duplicateTask201ApplicationJSONObject?: DuplicateTask201ApplicationJson;
 }

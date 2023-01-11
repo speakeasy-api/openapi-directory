@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayRouteTable } from "./localgatewayroutetable";
 export declare class DescribeLocalGatewayRouteTablesResult extends SpeakeasyBase {
-    localGatewayRouteTables?: LocalGatewayRouteTable[];
-    nextToken?: string;
+    localGatewayRouteTables?: Record<string, any>;
+    nextToken?: Record<string, any>;
 }

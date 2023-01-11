@@ -50,5 +50,5 @@ export class SetVideoAsAlbumThumbnailResponse extends SpeakeasyBase {
   album?: shared.Album;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

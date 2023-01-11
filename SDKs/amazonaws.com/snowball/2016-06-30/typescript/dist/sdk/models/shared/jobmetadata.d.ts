@@ -27,13 +27,13 @@ export declare class JobMetadata extends SpeakeasyBase {
     jobLogInfo?: JobLogs;
     jobState?: JobStateEnum;
     jobType?: JobTypeEnum;
-    kmsKeyArn?: string;
+    kmsKeyARN?: string;
     longTermPricingId?: string;
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     remoteManagement?: RemoteManagementEnum;
     resources?: JobResource;
-    roleArn?: string;
+    roleARN?: string;
     shippingDetails?: ShippingDetails;
     snowballCapacityPreference?: SnowballCapacityEnum;
     snowballType?: SnowballTypeEnum;

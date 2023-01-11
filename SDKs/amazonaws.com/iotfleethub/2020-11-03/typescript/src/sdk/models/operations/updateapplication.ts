@@ -79,5 +79,5 @@ export class UpdateApplicationResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateApplicationResponse?: Map<string, any>;
+  updateApplicationResponse?: Record<string, any>;
 }

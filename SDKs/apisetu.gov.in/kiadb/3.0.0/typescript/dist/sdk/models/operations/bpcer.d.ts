@@ -108,11 +108,11 @@ export declare class BpcerRequest extends SpeakeasyBase {
 export declare class BpcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bpcer400ApplicationJsonObject?: Bpcer400ApplicationJson;
-    bpcer401ApplicationJsonObject?: Bpcer401ApplicationJson;
-    bpcer404ApplicationJsonObject?: Bpcer404ApplicationJson;
-    bpcer500ApplicationJsonObject?: Bpcer500ApplicationJson;
-    bpcer502ApplicationJsonObject?: Bpcer502ApplicationJson;
-    bpcer503ApplicationJsonObject?: Bpcer503ApplicationJson;
-    bpcer504ApplicationJsonObject?: Bpcer504ApplicationJson;
+    bpcer400ApplicationJSONObject?: Bpcer400ApplicationJson;
+    bpcer401ApplicationJSONObject?: Bpcer401ApplicationJson;
+    bpcer404ApplicationJSONObject?: Bpcer404ApplicationJson;
+    bpcer500ApplicationJSONObject?: Bpcer500ApplicationJson;
+    bpcer502ApplicationJSONObject?: Bpcer502ApplicationJson;
+    bpcer503ApplicationJSONObject?: Bpcer503ApplicationJson;
+    bpcer504ApplicationJSONObject?: Bpcer504ApplicationJson;
 }

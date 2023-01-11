@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteSettingsOrganizationsOrganizationNameRequest, DeleteSettingsOrganizationsOrganizationNameResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,11 +33,11 @@ const req: DeleteSettingsOrganizationsOrganizationNameRequest = {
     },
   },
   pathParams: {
-    organizationName: "ab",
+    organizationName: "sit",
   },
 };
 
-sdk.sdk.deleteSettingsOrganizationsOrganizationName(req).then((res: DeleteSettingsOrganizationsOrganizationNameResponse | AxiosError) => {
+sdk.deleteSettingsOrganizationsOrganizationName(req).then((res: DeleteSettingsOrganizationsOrganizationNameResponse | AxiosError) => {
    // handle response
 });
 ```

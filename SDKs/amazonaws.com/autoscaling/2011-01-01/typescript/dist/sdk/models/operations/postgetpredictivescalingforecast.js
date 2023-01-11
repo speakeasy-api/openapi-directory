@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetPredictiveScalingForecastActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetPredictiveScalingForecastResponse = exports.PostGetPredictiveScalingForecastRequest = exports.PostGetPredictiveScalingForecastHeaders = exports.PostGetPredictiveScalingForecastQueryParams = exports.PostGetPredictiveScalingForecastVersionEnum = exports.PostGetPredictiveScalingForecastActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetPredictiveScalingForecastActionEnum;
 (function (PostGetPredictiveScalingForecastActionEnum) {
     PostGetPredictiveScalingForecastActionEnum["GetPredictiveScalingForecast"] = "GetPredictiveScalingForecast";
-})(PostGetPredictiveScalingForecastActionEnum || (PostGetPredictiveScalingForecastActionEnum = {}));
-export var PostGetPredictiveScalingForecastVersionEnum;
+})(PostGetPredictiveScalingForecastActionEnum = exports.PostGetPredictiveScalingForecastActionEnum || (exports.PostGetPredictiveScalingForecastActionEnum = {}));
+var PostGetPredictiveScalingForecastVersionEnum;
 (function (PostGetPredictiveScalingForecastVersionEnum) {
     PostGetPredictiveScalingForecastVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostGetPredictiveScalingForecastVersionEnum || (PostGetPredictiveScalingForecastVersionEnum = {}));
+})(PostGetPredictiveScalingForecastVersionEnum = exports.PostGetPredictiveScalingForecastVersionEnum || (exports.PostGetPredictiveScalingForecastVersionEnum = {}));
 var PostGetPredictiveScalingForecastQueryParams = /** @class */ (function (_super) {
     __extends(PostGetPredictiveScalingForecastQueryParams, _super);
     function PostGetPredictiveScalingForecastQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastQueryParams.prototype, "version", void 0);
     return PostGetPredictiveScalingForecastQueryParams;
-}(SpeakeasyBase));
-export { PostGetPredictiveScalingForecastQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetPredictiveScalingForecastQueryParams = PostGetPredictiveScalingForecastQueryParams;
 var PostGetPredictiveScalingForecastHeaders = /** @class */ (function (_super) {
     __extends(PostGetPredictiveScalingForecastHeaders, _super);
     function PostGetPredictiveScalingForecastHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetPredictiveScalingForecastHeaders;
-}(SpeakeasyBase));
-export { PostGetPredictiveScalingForecastHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetPredictiveScalingForecastHeaders = PostGetPredictiveScalingForecastHeaders;
 var PostGetPredictiveScalingForecastRequest = /** @class */ (function (_super) {
     __extends(PostGetPredictiveScalingForecastRequest, _super);
     function PostGetPredictiveScalingForecastRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetPredictiveScalingForecastQueryParams)
     ], PostGetPredictiveScalingForecastRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetPredictiveScalingForecastHeaders)
     ], PostGetPredictiveScalingForecastRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetPredictiveScalingForecastRequest.prototype, "request", void 0);
     return PostGetPredictiveScalingForecastRequest;
-}(SpeakeasyBase));
-export { PostGetPredictiveScalingForecastRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetPredictiveScalingForecastRequest = PostGetPredictiveScalingForecastRequest;
 var PostGetPredictiveScalingForecastResponse = /** @class */ (function (_super) {
     __extends(PostGetPredictiveScalingForecastResponse, _super);
     function PostGetPredictiveScalingForecastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetPredictiveScalingForecastResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetPredictiveScalingForecastResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetPredictiveScalingForecastResponse.prototype, "statusCode", void 0);
     return PostGetPredictiveScalingForecastResponse;
-}(SpeakeasyBase));
-export { PostGetPredictiveScalingForecastResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetPredictiveScalingForecastResponse = PostGetPredictiveScalingForecastResponse;

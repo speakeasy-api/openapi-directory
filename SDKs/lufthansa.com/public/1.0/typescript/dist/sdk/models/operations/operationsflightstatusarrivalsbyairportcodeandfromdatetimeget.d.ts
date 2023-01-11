@@ -22,6 +22,6 @@ export declare class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeG
 }
 export declare class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse extends SpeakeasyBase {
     contentType: string;
-    operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet200ApplicationJsonObject?: Map<string, any>;
+    operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

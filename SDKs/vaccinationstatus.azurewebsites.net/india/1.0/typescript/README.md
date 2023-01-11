@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetVaccineStatusRequest, GetVaccineStatusResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,18 +28,18 @@ const sdk = new SDK();
     
 const req: GetVaccineStatusRequest = {
   headers: {
-    accept: "adipisci",
-    authorization: "aut",
-    contentType: "cumque",
-    cowinApiKey: "ipsa",
+    accept: "sit",
+    authorization: "voluptas",
+    contentType: "culpa",
+    cowinApiKey: "expedita",
   },
   request: {
-    beneficiaryId: "maiores",
+    beneficiaryId: "consequuntur",
     mobile: "dolor",
   },
 };
 
-sdk.sdk.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) => {
+sdk.indiaApi.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,7 +48,7 @@ sdk.sdk.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### india-api
 
 * `getVaccineStatus` - return vaccine status from India
 

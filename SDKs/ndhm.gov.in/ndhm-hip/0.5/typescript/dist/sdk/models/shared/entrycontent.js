@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EntryContentMediaEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryContent = exports.EntryContentMediaEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EntryContentMediaEnum;
 (function (EntryContentMediaEnum) {
     EntryContentMediaEnum["ApplicationFhirPlusJson"] = "application/fhir+json";
-})(EntryContentMediaEnum || (EntryContentMediaEnum = {}));
+})(EntryContentMediaEnum = exports.EntryContentMediaEnum || (exports.EntryContentMediaEnum = {}));
 var EntryContent = /** @class */ (function (_super) {
     __extends(EntryContent, _super);
     function EntryContent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContextReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContextReference" }),
         __metadata("design:type", String)
     ], EntryContent.prototype, "careContextReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checksum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checksum" }),
         __metadata("design:type", String)
     ], EntryContent.prototype, "checksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], EntryContent.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media" }),
         __metadata("design:type", String)
     ], EntryContent.prototype, "media", void 0);
     return EntryContent;
-}(SpeakeasyBase));
-export { EntryContent };
+}(utils_1.SpeakeasyBase));
+exports.EntryContent = EntryContent;

@@ -10,12 +10,12 @@ export declare class CreateDeploymentVariableQueryParams extends SpeakeasyBase {
 export declare class CreateDeploymentVariableRequest extends SpeakeasyBase {
     pathParams: CreateDeploymentVariablePathParams;
     queryParams: CreateDeploymentVariableQueryParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreateDeploymentVariableResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    deploymentVariable?: Map<string, any>;
-    error?: Map<string, any>;
+    deploymentVariable?: Record<string, any>;
+    error?: Record<string, any>;
 }

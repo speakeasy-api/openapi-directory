@@ -28,7 +28,7 @@ export declare enum CheckRunStatusEnum {
  * A check performed on the code of a given code change
 **/
 export declare class CheckRun extends SpeakeasyBase {
-    app: Map<string, any>;
+    app: Record<string, any>;
     checkSuite: CheckRunCheckSuite;
     completedAt: Date;
     conclusion: CheckRunConclusionEnum;

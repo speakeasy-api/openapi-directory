@@ -1,6 +1,9 @@
-export var UsageLimitBreachActionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageLimitBreachActionEnum = void 0;
+var UsageLimitBreachActionEnum;
 (function (UsageLimitBreachActionEnum) {
     UsageLimitBreachActionEnum["Log"] = "log";
     UsageLimitBreachActionEnum["EmitMetric"] = "emit-metric";
     UsageLimitBreachActionEnum["Disable"] = "disable";
-})(UsageLimitBreachActionEnum || (UsageLimitBreachActionEnum = {}));
+})(UsageLimitBreachActionEnum = exports.UsageLimitBreachActionEnum || (exports.UsageLimitBreachActionEnum = {}));

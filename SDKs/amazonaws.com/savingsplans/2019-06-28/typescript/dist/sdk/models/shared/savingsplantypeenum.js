@@ -1,6 +1,9 @@
-export var SavingsPlanTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavingsPlanTypeEnum = void 0;
+var SavingsPlanTypeEnum;
 (function (SavingsPlanTypeEnum) {
     SavingsPlanTypeEnum["Compute"] = "Compute";
     SavingsPlanTypeEnum["Ec2Instance"] = "EC2Instance";
     SavingsPlanTypeEnum["SageMaker"] = "SageMaker";
-})(SavingsPlanTypeEnum || (SavingsPlanTypeEnum = {}));
+})(SavingsPlanTypeEnum = exports.SavingsPlanTypeEnum || (exports.SavingsPlanTypeEnum = {}));

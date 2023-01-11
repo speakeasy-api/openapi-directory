@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepositoryTriggerExecutionFailure } from "./repositorytriggerexecutionfailure";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestRepositoryTriggersOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var repositorytriggerexecutionfailure_1 = require("./repositorytriggerexecutionfailure");
 // TestRepositoryTriggersOutput
 /**
  * Represents the output of a test repository triggers operation.
@@ -34,13 +37,13 @@ var TestRepositoryTriggersOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedExecutions", elemType: RepositoryTriggerExecutionFailure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedExecutions", elemType: repositorytriggerexecutionfailure_1.RepositoryTriggerExecutionFailure }),
         __metadata("design:type", Array)
     ], TestRepositoryTriggersOutput.prototype, "failedExecutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successfulExecutions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successfulExecutions" }),
         __metadata("design:type", Array)
     ], TestRepositoryTriggersOutput.prototype, "successfulExecutions", void 0);
     return TestRepositoryTriggersOutput;
-}(SpeakeasyBase));
-export { TestRepositoryTriggersOutput };
+}(utils_1.SpeakeasyBase));
+exports.TestRepositoryTriggersOutput = TestRepositoryTriggersOutput;

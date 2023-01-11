@@ -16,5 +16,5 @@ export declare class WellsListRequest extends SpeakeasyBase {
 export declare class WellsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    wellsList200ApplicationJsonObject?: WellsList200ApplicationJson;
+    wellsList200ApplicationJSONObject?: WellsList200ApplicationJson;
 }

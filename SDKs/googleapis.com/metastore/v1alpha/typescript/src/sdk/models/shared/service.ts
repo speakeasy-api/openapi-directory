@@ -64,7 +64,7 @@ export class Service extends SpeakeasyBase {
   hiveMetastoreConfig?: HiveMetastoreConfig;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=maintenanceWindow" })
   maintenanceWindow?: MaintenanceWindow;
@@ -125,7 +125,7 @@ export class ServiceInput extends SpeakeasyBase {
   hiveMetastoreConfig?: HiveMetastoreConfigInput;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=maintenanceWindow" })
   maintenanceWindow?: MaintenanceWindow;

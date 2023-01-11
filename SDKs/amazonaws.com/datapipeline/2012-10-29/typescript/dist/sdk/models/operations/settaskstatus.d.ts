@@ -23,7 +23,7 @@ export declare class SetTaskStatusResponse extends SpeakeasyBase {
     invalidRequestException?: any;
     pipelineDeletedException?: any;
     pipelineNotFoundException?: any;
-    setTaskStatusOutput?: Map<string, any>;
+    setTaskStatusOutput?: Record<string, any>;
     statusCode: number;
     taskNotFoundException?: any;
 }

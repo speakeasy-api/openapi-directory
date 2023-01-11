@@ -29,5 +29,5 @@ export declare class GetScriptTagRequest extends SpeakeasyBase {
 export declare class GetScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getScriptTag200ApplicationJsonObject?: GetScriptTag200ApplicationJson;
+    getScriptTag200ApplicationJSONObject?: GetScriptTag200ApplicationJson;
 }

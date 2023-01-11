@@ -1,4 +1,7 @@
-export var ScopeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScopeEnum = void 0;
+var ScopeEnum;
 (function (ScopeEnum) {
     ScopeEnum["WriteSettings"] = "write-settings";
     ScopeEnum["ViewBuilds"] = "view-builds";
@@ -7,4 +10,4 @@ export var ScopeEnum;
     ScopeEnum["All"] = "all";
     ScopeEnum["Status"] = "status";
     ScopeEnum["None"] = "none";
-})(ScopeEnum || (ScopeEnum = {}));
+})(ScopeEnum = exports.ScopeEnum || (exports.ScopeEnum = {}));

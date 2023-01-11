@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Commit } from "./commit";
-import { DiffEntry } from "./diffentry";
-export var CommitComparisonStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommitComparison = exports.CommitComparisonStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var commit_1 = require("./commit");
+var diffentry_1 = require("./diffentry");
+var CommitComparisonStatusEnum;
 (function (CommitComparisonStatusEnum) {
     CommitComparisonStatusEnum["Diverged"] = "diverged";
     CommitComparisonStatusEnum["Ahead"] = "ahead";
     CommitComparisonStatusEnum["Behind"] = "behind";
     CommitComparisonStatusEnum["Identical"] = "identical";
-})(CommitComparisonStatusEnum || (CommitComparisonStatusEnum = {}));
+})(CommitComparisonStatusEnum = exports.CommitComparisonStatusEnum || (exports.CommitComparisonStatusEnum = {}));
 // CommitComparison
 /**
  * Commit Comparison
@@ -42,57 +45,57 @@ var CommitComparison = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ahead_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ahead_by" }),
         __metadata("design:type", Number)
     ], CommitComparison.prototype, "aheadBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base_commit" }),
-        __metadata("design:type", Commit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base_commit" }),
+        __metadata("design:type", commit_1.Commit)
     ], CommitComparison.prototype, "baseCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=behind_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=behind_by" }),
         __metadata("design:type", Number)
     ], CommitComparison.prototype, "behindBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commits", elemType: Commit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commits", elemType: commit_1.Commit }),
         __metadata("design:type", Array)
     ], CommitComparison.prototype, "commits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diff_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diff_url" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "diffUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: DiffEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: diffentry_1.DiffEntry }),
         __metadata("design:type", Array)
     ], CommitComparison.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merge_base_commit" }),
-        __metadata("design:type", Commit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merge_base_commit" }),
+        __metadata("design:type", commit_1.Commit)
     ], CommitComparison.prototype, "mergeBaseCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patch_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patch_url" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "patchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permalink_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permalink_url" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "permalinkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_commits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_commits" }),
         __metadata("design:type", Number)
     ], CommitComparison.prototype, "totalCommits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommitComparison.prototype, "url", void 0);
     return CommitComparison;
-}(SpeakeasyBase));
-export { CommitComparison };
+}(utils_1.SpeakeasyBase));
+exports.CommitComparison = CommitComparison;

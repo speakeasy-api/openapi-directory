@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPipelineVariableForTeamResponse = exports.GetPipelineVariableForTeamRequest = exports.GetPipelineVariableForTeamPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPipelineVariableForTeamPathParams = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForTeamPathParams, _super);
     function GetPipelineVariableForTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], GetPipelineVariableForTeamPathParams.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], GetPipelineVariableForTeamPathParams.prototype, "variableUuid", void 0);
     return GetPipelineVariableForTeamPathParams;
-}(SpeakeasyBase));
-export { GetPipelineVariableForTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForTeamPathParams = GetPipelineVariableForTeamPathParams;
 var GetPipelineVariableForTeamRequest = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForTeamRequest, _super);
     function GetPipelineVariableForTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPipelineVariableForTeamPathParams)
     ], GetPipelineVariableForTeamRequest.prototype, "pathParams", void 0);
     return GetPipelineVariableForTeamRequest;
-}(SpeakeasyBase));
-export { GetPipelineVariableForTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForTeamRequest = GetPipelineVariableForTeamRequest;
 var GetPipelineVariableForTeamResponse = /** @class */ (function (_super) {
     __extends(GetPipelineVariableForTeamResponse, _super);
     function GetPipelineVariableForTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPipelineVariableForTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPipelineVariableForTeamResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPipelineVariableForTeamResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPipelineVariableForTeamResponse.prototype, "pipelineVariable", void 0);
     return GetPipelineVariableForTeamResponse;
-}(SpeakeasyBase));
-export { GetPipelineVariableForTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineVariableForTeamResponse = GetPipelineVariableForTeamResponse;

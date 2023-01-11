@@ -19,7 +19,7 @@ export declare class DeleteRemediationConfigurationRequest extends SpeakeasyBase
 }
 export declare class DeleteRemediationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteRemediationConfigurationResponse?: Map<string, any>;
+    deleteRemediationConfigurationResponse?: Record<string, any>;
     insufficientPermissionsException?: any;
     invalidParameterValueException?: any;
     noSuchRemediationConfigurationException?: any;

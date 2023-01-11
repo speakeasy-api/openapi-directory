@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class MarkedEpisodeEmbedded extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=episode" })
-  episode?: Map<string, any>;
+  episode?: Record<string, any>;
 }
 
 

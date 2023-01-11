@@ -19,7 +19,7 @@ export declare class CreateGatewayRequestBodyGatewayPlatform extends SpeakeasyBa
 export declare class CreateGatewayRequestBody extends SpeakeasyBase {
     gatewayName: string;
     gatewayPlatform: CreateGatewayRequestBodyGatewayPlatform;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateGatewayRequest extends SpeakeasyBase {
     headers: CreateGatewayHeaders;

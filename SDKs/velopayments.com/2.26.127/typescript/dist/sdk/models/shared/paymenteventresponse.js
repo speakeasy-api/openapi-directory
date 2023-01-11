@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PaymentAuditCurrencyEnum } from "./paymentauditcurrencyenum";
-export var PaymentEventResponseEventTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentEventResponse = exports.PaymentEventResponseEventTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var paymentauditcurrencyenum_1 = require("./paymentauditcurrencyenum");
+var PaymentEventResponseEventTypeEnum;
 (function (PaymentEventResponseEventTypeEnum) {
     PaymentEventResponseEventTypeEnum["PayoutSubmitted"] = "PAYOUT_SUBMITTED";
     PaymentEventResponseEventTypeEnum["PayoutCompleted"] = "PAYOUT_COMPLETED";
@@ -59,60 +62,60 @@ export var PaymentEventResponseEventTypeEnum;
     PaymentEventResponseEventTypeEnum["OrchestratedPaymentBatchRequested"] = "ORCHESTRATED_PAYMENT_BATCH_REQUESTED";
     PaymentEventResponseEventTypeEnum["OrchestratedPaymentBatchConfirmed"] = "ORCHESTRATED_PAYMENT_BATCH_CONFIRMED";
     PaymentEventResponseEventTypeEnum["OrchestratedPaymentRequested"] = "ORCHESTRATED_PAYMENT_REQUESTED";
-})(PaymentEventResponseEventTypeEnum || (PaymentEventResponseEventTypeEnum = {}));
+})(PaymentEventResponseEventTypeEnum = exports.PaymentEventResponseEventTypeEnum || (exports.PaymentEventResponseEventTypeEnum = {}));
 var PaymentEventResponse = /** @class */ (function (_super) {
     __extends(PaymentEventResponse, _super);
     function PaymentEventResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDateTime" }),
         __metadata("design:type", Date)
     ], PaymentEventResponse.prototype, "eventDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentAmount" }),
         __metadata("design:type", Number)
     ], PaymentEventResponse.prototype, "paymentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentCurrency" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "paymentCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principal" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "principal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "routingNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAmount" }),
         __metadata("design:type", Number)
     ], PaymentEventResponse.prototype, "sourceAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCurrency" }),
         __metadata("design:type", String)
     ], PaymentEventResponse.prototype, "sourceCurrency", void 0);
     return PaymentEventResponse;
-}(SpeakeasyBase));
-export { PaymentEventResponse };
+}(utils_1.SpeakeasyBase));
+exports.PaymentEventResponse = PaymentEventResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamHittingVsStartingPitcherFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamHittingVsStartingPitcherResponse = exports.TeamHittingVsStartingPitcherRequest = exports.TeamHittingVsStartingPitcherPathParams = exports.TeamHittingVsStartingPitcherFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamHittingVsStartingPitcherFormatEnum;
 (function (TeamHittingVsStartingPitcherFormatEnum) {
     TeamHittingVsStartingPitcherFormatEnum["Xml"] = "XML";
     TeamHittingVsStartingPitcherFormatEnum["Json"] = "JSON";
-})(TeamHittingVsStartingPitcherFormatEnum || (TeamHittingVsStartingPitcherFormatEnum = {}));
+})(TeamHittingVsStartingPitcherFormatEnum = exports.TeamHittingVsStartingPitcherFormatEnum || (exports.TeamHittingVsStartingPitcherFormatEnum = {}));
 var TeamHittingVsStartingPitcherPathParams = /** @class */ (function (_super) {
     __extends(TeamHittingVsStartingPitcherPathParams, _super);
     function TeamHittingVsStartingPitcherPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamHittingVsStartingPitcherPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=gameid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=gameid" }),
         __metadata("design:type", String)
     ], TeamHittingVsStartingPitcherPathParams.prototype, "gameid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team" }),
         __metadata("design:type", String)
     ], TeamHittingVsStartingPitcherPathParams.prototype, "team", void 0);
     return TeamHittingVsStartingPitcherPathParams;
-}(SpeakeasyBase));
-export { TeamHittingVsStartingPitcherPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamHittingVsStartingPitcherPathParams = TeamHittingVsStartingPitcherPathParams;
 var TeamHittingVsStartingPitcherRequest = /** @class */ (function (_super) {
     __extends(TeamHittingVsStartingPitcherRequest, _super);
     function TeamHittingVsStartingPitcherRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamHittingVsStartingPitcherPathParams)
     ], TeamHittingVsStartingPitcherRequest.prototype, "pathParams", void 0);
     return TeamHittingVsStartingPitcherRequest;
-}(SpeakeasyBase));
-export { TeamHittingVsStartingPitcherRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamHittingVsStartingPitcherRequest = TeamHittingVsStartingPitcherRequest;
 var TeamHittingVsStartingPitcherResponse = /** @class */ (function (_super) {
     __extends(TeamHittingVsStartingPitcherResponse, _super);
     function TeamHittingVsStartingPitcherResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamHittingVsStartingPitcherResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamHittingVsStartingPitcherResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamHittingVsStartingPitcherResponse.prototype, "statusCode", void 0);
     return TeamHittingVsStartingPitcherResponse;
-}(SpeakeasyBase));
-export { TeamHittingVsStartingPitcherResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamHittingVsStartingPitcherResponse = TeamHittingVsStartingPitcherResponse;

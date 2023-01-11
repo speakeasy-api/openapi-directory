@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetExportPdfBelegeBelegUuidResponse = exports.GetExportPdfBelegeBelegUuidRequest = exports.GetExportPdfBelegeBelegUuidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetExportPdfBelegeBelegUuidPathParams = /** @class */ (function (_super) {
     __extends(GetExportPdfBelegeBelegUuidPathParams, _super);
     function GetExportPdfBelegeBelegUuidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=belegUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=belegUuid" }),
         __metadata("design:type", String)
     ], GetExportPdfBelegeBelegUuidPathParams.prototype, "belegUuid", void 0);
     return GetExportPdfBelegeBelegUuidPathParams;
-}(SpeakeasyBase));
-export { GetExportPdfBelegeBelegUuidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportPdfBelegeBelegUuidPathParams = GetExportPdfBelegeBelegUuidPathParams;
 var GetExportPdfBelegeBelegUuidRequest = /** @class */ (function (_super) {
     __extends(GetExportPdfBelegeBelegUuidRequest, _super);
     function GetExportPdfBelegeBelegUuidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportPdfBelegeBelegUuidPathParams)
     ], GetExportPdfBelegeBelegUuidRequest.prototype, "pathParams", void 0);
     return GetExportPdfBelegeBelegUuidRequest;
-}(SpeakeasyBase));
-export { GetExportPdfBelegeBelegUuidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetExportPdfBelegeBelegUuidRequest = GetExportPdfBelegeBelegUuidRequest;
 var GetExportPdfBelegeBelegUuidResponse = /** @class */ (function (_super) {
     __extends(GetExportPdfBelegeBelegUuidResponse, _super);
     function GetExportPdfBelegeBelegUuidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetExportPdfBelegeBelegUuidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetExportPdfBelegeBelegUuidResponse.prototype, "statusCode", void 0);
     return GetExportPdfBelegeBelegUuidResponse;
-}(SpeakeasyBase));
-export { GetExportPdfBelegeBelegUuidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetExportPdfBelegeBelegUuidResponse = GetExportPdfBelegeBelegUuidResponse;

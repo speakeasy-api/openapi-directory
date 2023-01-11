@@ -43,7 +43,7 @@ export class GoogleCloudPolicysimulatorV1BindingExplanation extends SpeakeasyBas
   condition?: GoogleTypeExpr;
 
   @SpeakeasyMetadata({ data: "json, name=memberships", elemType: GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership })
-  memberships?: Map<string, GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership>;
+  memberships?: Record<string, GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership>;
 
   @SpeakeasyMetadata({ data: "json, name=relevance" })
   relevance?: GoogleCloudPolicysimulatorV1BindingExplanationRelevanceEnum;

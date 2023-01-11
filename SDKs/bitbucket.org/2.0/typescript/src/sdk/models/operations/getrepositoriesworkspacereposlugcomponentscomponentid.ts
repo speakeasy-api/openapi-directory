@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse exten
   statusCode: number;
 
   @SpeakeasyMetadata()
-  component?: Map<string, any>;
+  component?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

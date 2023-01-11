@@ -20,5 +20,5 @@ export declare class RemoveValidatedUserRequest extends SpeakeasyBase {
 export declare class RemoveValidatedUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    removeValidatedUser200ApplicationJsonObject?: RemoveValidatedUser200ApplicationJson;
+    removeValidatedUser200ApplicationJSONObject?: RemoveValidatedUser200ApplicationJson;
 }

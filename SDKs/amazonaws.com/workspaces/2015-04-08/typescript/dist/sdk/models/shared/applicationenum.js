@@ -1,5 +1,8 @@
-export var ApplicationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationEnum = void 0;
+var ApplicationEnum;
 (function (ApplicationEnum) {
     ApplicationEnum["MicrosoftOffice2016"] = "Microsoft_Office_2016";
     ApplicationEnum["MicrosoftOffice2019"] = "Microsoft_Office_2019";
-})(ApplicationEnum || (ApplicationEnum = {}));
+})(ApplicationEnum = exports.ApplicationEnum || (exports.ApplicationEnum = {}));

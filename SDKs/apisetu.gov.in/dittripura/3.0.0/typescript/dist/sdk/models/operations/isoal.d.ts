@@ -106,11 +106,11 @@ export declare class IsoalRequest extends SpeakeasyBase {
 export declare class IsoalResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    isoal400ApplicationJsonObject?: Isoal400ApplicationJson;
-    isoal401ApplicationJsonObject?: Isoal401ApplicationJson;
-    isoal404ApplicationJsonObject?: Isoal404ApplicationJson;
-    isoal500ApplicationJsonObject?: Isoal500ApplicationJson;
-    isoal502ApplicationJsonObject?: Isoal502ApplicationJson;
-    isoal503ApplicationJsonObject?: Isoal503ApplicationJson;
-    isoal504ApplicationJsonObject?: Isoal504ApplicationJson;
+    isoal400ApplicationJSONObject?: Isoal400ApplicationJson;
+    isoal401ApplicationJSONObject?: Isoal401ApplicationJson;
+    isoal404ApplicationJSONObject?: Isoal404ApplicationJson;
+    isoal500ApplicationJSONObject?: Isoal500ApplicationJson;
+    isoal502ApplicationJSONObject?: Isoal502ApplicationJson;
+    isoal503ApplicationJSONObject?: Isoal503ApplicationJson;
+    isoal504ApplicationJSONObject?: Isoal504ApplicationJson;
 }

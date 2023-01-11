@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugMilestonesRequest extends S
 export declare class GetRepositoriesWorkspaceRepoSlugMilestonesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedMilestones?: shared.PaginatedMilestones;
 }

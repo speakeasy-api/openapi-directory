@@ -62,7 +62,7 @@ export class AndroiddeviceprovisioningCustomersDevicesApplyConfigurationResponse
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

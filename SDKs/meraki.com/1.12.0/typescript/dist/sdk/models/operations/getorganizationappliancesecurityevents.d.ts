@@ -21,7 +21,7 @@ export declare class GetOrganizationApplianceSecurityEventsRequest extends Speak
 }
 export declare class GetOrganizationApplianceSecurityEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationApplianceSecurityEvents200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationApplianceSecurityEvents200ApplicationJSONObject?: Record<string, any>;
 }

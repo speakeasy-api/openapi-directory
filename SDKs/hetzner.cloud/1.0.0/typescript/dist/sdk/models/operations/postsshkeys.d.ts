@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PostSshKeysRequestBody extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name: string;
     publicKey: string;
 }
@@ -8,7 +8,7 @@ export declare class PostSshKeys201ApplicationJsonSshKey extends SpeakeasyBase {
     created: string;
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     publicKey: string;
 }
@@ -20,6 +20,6 @@ export declare class PostSshKeysRequest extends SpeakeasyBase {
 }
 export declare class PostSshKeysResponse extends SpeakeasyBase {
     contentType: string;
-    postSshKeys201ApplicationJsonObject?: PostSshKeys201ApplicationJson;
     statusCode: number;
+    postSshKeys201ApplicationJSONObject?: PostSshKeys201ApplicationJson;
 }

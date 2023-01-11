@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,54 +14,79 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChecksCreateResponse = exports.ChecksCreateRequest = exports.ChecksCreateRequestBody = exports.ChecksCreateRequestBodyStatusEnum = exports.ChecksCreateRequestBodyOutput = exports.ChecksCreateRequestBodyOutputImages = exports.ChecksCreateRequestBodyOutputAnnotations = exports.ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum = exports.ChecksCreateRequestBodyConclusionEnum = exports.ChecksCreateRequestBodyActions = exports.ChecksCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ChecksCreatePathParams = /** @class */ (function (_super) {
     __extends(ChecksCreatePathParams, _super);
     function ChecksCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ChecksCreatePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ChecksCreatePathParams.prototype, "repo", void 0);
     return ChecksCreatePathParams;
-}(SpeakeasyBase));
-export { ChecksCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreatePathParams = ChecksCreatePathParams;
 var ChecksCreateRequestBodyActions = /** @class */ (function (_super) {
     __extends(ChecksCreateRequestBodyActions, _super);
     function ChecksCreateRequestBodyActions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyActions.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyActions.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyActions.prototype, "label", void 0);
     return ChecksCreateRequestBodyActions;
-}(SpeakeasyBase));
-export { ChecksCreateRequestBodyActions };
-export var ChecksCreateRequestBodyConclusionEnum;
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequestBodyActions = ChecksCreateRequestBodyActions;
+var ChecksCreateRequestBodyConclusionEnum;
 (function (ChecksCreateRequestBodyConclusionEnum) {
     ChecksCreateRequestBodyConclusionEnum["ActionRequired"] = "action_required";
     ChecksCreateRequestBodyConclusionEnum["Cancelled"] = "cancelled";
@@ -70,77 +96,77 @@ export var ChecksCreateRequestBodyConclusionEnum;
     ChecksCreateRequestBodyConclusionEnum["Skipped"] = "skipped";
     ChecksCreateRequestBodyConclusionEnum["Stale"] = "stale";
     ChecksCreateRequestBodyConclusionEnum["TimedOut"] = "timed_out";
-})(ChecksCreateRequestBodyConclusionEnum || (ChecksCreateRequestBodyConclusionEnum = {}));
-export var ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum;
+})(ChecksCreateRequestBodyConclusionEnum = exports.ChecksCreateRequestBodyConclusionEnum || (exports.ChecksCreateRequestBodyConclusionEnum = {}));
+var ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum;
 (function (ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum) {
     ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum["Notice"] = "notice";
     ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum["Warning"] = "warning";
     ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum["Failure"] = "failure";
-})(ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum || (ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum = {}));
+})(ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum = exports.ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum || (exports.ChecksCreateRequestBodyOutputAnnotationsAnnotationLevelEnum = {}));
 var ChecksCreateRequestBodyOutputAnnotations = /** @class */ (function (_super) {
     __extends(ChecksCreateRequestBodyOutputAnnotations, _super);
     function ChecksCreateRequestBodyOutputAnnotations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotation_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotation_level" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "annotationLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_column" }),
         __metadata("design:type", Number)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "endColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_line" }),
         __metadata("design:type", Number)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "endLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_details" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "rawDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_column" }),
         __metadata("design:type", Number)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "startColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_line" }),
         __metadata("design:type", Number)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "startLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputAnnotations.prototype, "title", void 0);
     return ChecksCreateRequestBodyOutputAnnotations;
-}(SpeakeasyBase));
-export { ChecksCreateRequestBodyOutputAnnotations };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequestBodyOutputAnnotations = ChecksCreateRequestBodyOutputAnnotations;
 var ChecksCreateRequestBodyOutputImages = /** @class */ (function (_super) {
     __extends(ChecksCreateRequestBodyOutputImages, _super);
     function ChecksCreateRequestBodyOutputImages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alt" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputImages.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputImages.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_url" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutputImages.prototype, "imageUrl", void 0);
     return ChecksCreateRequestBodyOutputImages;
-}(SpeakeasyBase));
-export { ChecksCreateRequestBodyOutputImages };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequestBodyOutputImages = ChecksCreateRequestBodyOutputImages;
 // ChecksCreateRequestBodyOutput
 /**
  * Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. See the [`output` object](https://docs.github.com/rest/reference/checks#output-object) description.
@@ -151,115 +177,115 @@ var ChecksCreateRequestBodyOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations", elemType: ChecksCreateRequestBodyOutputAnnotations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations", elemType: ChecksCreateRequestBodyOutputAnnotations }),
         __metadata("design:type", Array)
     ], ChecksCreateRequestBodyOutput.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ChecksCreateRequestBodyOutputImages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: ChecksCreateRequestBodyOutputImages }),
         __metadata("design:type", Array)
     ], ChecksCreateRequestBodyOutput.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutput.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutput.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBodyOutput.prototype, "title", void 0);
     return ChecksCreateRequestBodyOutput;
-}(SpeakeasyBase));
-export { ChecksCreateRequestBodyOutput };
-export var ChecksCreateRequestBodyStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequestBodyOutput = ChecksCreateRequestBodyOutput;
+var ChecksCreateRequestBodyStatusEnum;
 (function (ChecksCreateRequestBodyStatusEnum) {
     ChecksCreateRequestBodyStatusEnum["Queued"] = "queued";
     ChecksCreateRequestBodyStatusEnum["InProgress"] = "in_progress";
     ChecksCreateRequestBodyStatusEnum["Completed"] = "completed";
-})(ChecksCreateRequestBodyStatusEnum || (ChecksCreateRequestBodyStatusEnum = {}));
+})(ChecksCreateRequestBodyStatusEnum = exports.ChecksCreateRequestBodyStatusEnum || (exports.ChecksCreateRequestBodyStatusEnum = {}));
 var ChecksCreateRequestBody = /** @class */ (function (_super) {
     __extends(ChecksCreateRequestBody, _super);
     function ChecksCreateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: ChecksCreateRequestBodyActions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: ChecksCreateRequestBodyActions }),
         __metadata("design:type", Array)
     ], ChecksCreateRequestBody.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completed_at" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conclusion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conclusion" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "conclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details_url" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "detailsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_id" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head_sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_sha" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "headSha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=output" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=output" }),
         __metadata("design:type", ChecksCreateRequestBodyOutput)
     ], ChecksCreateRequestBody.prototype, "output", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started_at" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ChecksCreateRequestBody.prototype, "status", void 0);
     return ChecksCreateRequestBody;
-}(SpeakeasyBase));
-export { ChecksCreateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequestBody = ChecksCreateRequestBody;
 var ChecksCreateRequest = /** @class */ (function (_super) {
     __extends(ChecksCreateRequest, _super);
     function ChecksCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ChecksCreatePathParams)
     ], ChecksCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ChecksCreateRequestBody)
     ], ChecksCreateRequest.prototype, "request", void 0);
     return ChecksCreateRequest;
-}(SpeakeasyBase));
-export { ChecksCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateRequest = ChecksCreateRequest;
 var ChecksCreateResponse = /** @class */ (function (_super) {
     __extends(ChecksCreateResponse, _super);
     function ChecksCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ChecksCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ChecksCreateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CheckRun)
     ], ChecksCreateResponse.prototype, "checkRun", void 0);
     return ChecksCreateResponse;
-}(SpeakeasyBase));
-export { ChecksCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ChecksCreateResponse = ChecksCreateResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,181 +23,183 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSearchAdvancedAcceptedEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSearchAdvancedResponse = exports.GetSearchAdvancedRequest = exports.GetSearchAdvancedQueryParams = exports.GetSearchAdvancedWikiEnum = exports.GetSearchAdvancedSortEnum = exports.GetSearchAdvancedOrderEnum = exports.GetSearchAdvancedNoticeEnum = exports.GetSearchAdvancedMigratedEnum = exports.GetSearchAdvancedClosedEnum = exports.GetSearchAdvancedAcceptedEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSearchAdvancedAcceptedEnum;
 (function (GetSearchAdvancedAcceptedEnum) {
     GetSearchAdvancedAcceptedEnum["True"] = "true";
     GetSearchAdvancedAcceptedEnum["False"] = "false";
-})(GetSearchAdvancedAcceptedEnum || (GetSearchAdvancedAcceptedEnum = {}));
-export var GetSearchAdvancedClosedEnum;
+})(GetSearchAdvancedAcceptedEnum = exports.GetSearchAdvancedAcceptedEnum || (exports.GetSearchAdvancedAcceptedEnum = {}));
+var GetSearchAdvancedClosedEnum;
 (function (GetSearchAdvancedClosedEnum) {
     GetSearchAdvancedClosedEnum["True"] = "true";
     GetSearchAdvancedClosedEnum["False"] = "false";
-})(GetSearchAdvancedClosedEnum || (GetSearchAdvancedClosedEnum = {}));
-export var GetSearchAdvancedMigratedEnum;
+})(GetSearchAdvancedClosedEnum = exports.GetSearchAdvancedClosedEnum || (exports.GetSearchAdvancedClosedEnum = {}));
+var GetSearchAdvancedMigratedEnum;
 (function (GetSearchAdvancedMigratedEnum) {
     GetSearchAdvancedMigratedEnum["True"] = "true";
     GetSearchAdvancedMigratedEnum["False"] = "false";
-})(GetSearchAdvancedMigratedEnum || (GetSearchAdvancedMigratedEnum = {}));
-export var GetSearchAdvancedNoticeEnum;
+})(GetSearchAdvancedMigratedEnum = exports.GetSearchAdvancedMigratedEnum || (exports.GetSearchAdvancedMigratedEnum = {}));
+var GetSearchAdvancedNoticeEnum;
 (function (GetSearchAdvancedNoticeEnum) {
     GetSearchAdvancedNoticeEnum["True"] = "true";
     GetSearchAdvancedNoticeEnum["False"] = "false";
-})(GetSearchAdvancedNoticeEnum || (GetSearchAdvancedNoticeEnum = {}));
-export var GetSearchAdvancedOrderEnum;
+})(GetSearchAdvancedNoticeEnum = exports.GetSearchAdvancedNoticeEnum || (exports.GetSearchAdvancedNoticeEnum = {}));
+var GetSearchAdvancedOrderEnum;
 (function (GetSearchAdvancedOrderEnum) {
     GetSearchAdvancedOrderEnum["Desc"] = "desc";
     GetSearchAdvancedOrderEnum["Asc"] = "asc";
-})(GetSearchAdvancedOrderEnum || (GetSearchAdvancedOrderEnum = {}));
-export var GetSearchAdvancedSortEnum;
+})(GetSearchAdvancedOrderEnum = exports.GetSearchAdvancedOrderEnum || (exports.GetSearchAdvancedOrderEnum = {}));
+var GetSearchAdvancedSortEnum;
 (function (GetSearchAdvancedSortEnum) {
     GetSearchAdvancedSortEnum["Activity"] = "activity";
     GetSearchAdvancedSortEnum["Creation"] = "creation";
     GetSearchAdvancedSortEnum["Votes"] = "votes";
     GetSearchAdvancedSortEnum["Relevance"] = "relevance";
-})(GetSearchAdvancedSortEnum || (GetSearchAdvancedSortEnum = {}));
-export var GetSearchAdvancedWikiEnum;
+})(GetSearchAdvancedSortEnum = exports.GetSearchAdvancedSortEnum || (exports.GetSearchAdvancedSortEnum = {}));
+var GetSearchAdvancedWikiEnum;
 (function (GetSearchAdvancedWikiEnum) {
     GetSearchAdvancedWikiEnum["True"] = "true";
     GetSearchAdvancedWikiEnum["False"] = "false";
-})(GetSearchAdvancedWikiEnum || (GetSearchAdvancedWikiEnum = {}));
+})(GetSearchAdvancedWikiEnum = exports.GetSearchAdvancedWikiEnum || (exports.GetSearchAdvancedWikiEnum = {}));
 var GetSearchAdvancedQueryParams = /** @class */ (function (_super) {
     __extends(GetSearchAdvancedQueryParams, _super);
     function GetSearchAdvancedQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=accepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=accepted" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "accepted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=answers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=answers" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "answers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=body" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=closed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=closed" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "closed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=migrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=migrated" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "migrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notice" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "notice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nottagged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nottagged" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "nottagged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tagged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tagged" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "tagged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=title" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "todate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=url" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=user" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=views" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=views" }),
         __metadata("design:type", Number)
     ], GetSearchAdvancedQueryParams.prototype, "views", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=wiki" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=wiki" }),
         __metadata("design:type", String)
     ], GetSearchAdvancedQueryParams.prototype, "wiki", void 0);
     return GetSearchAdvancedQueryParams;
-}(SpeakeasyBase));
-export { GetSearchAdvancedQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchAdvancedQueryParams = GetSearchAdvancedQueryParams;
 var GetSearchAdvancedRequest = /** @class */ (function (_super) {
     __extends(GetSearchAdvancedRequest, _super);
     function GetSearchAdvancedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchAdvancedQueryParams)
     ], GetSearchAdvancedRequest.prototype, "queryParams", void 0);
     return GetSearchAdvancedRequest;
-}(SpeakeasyBase));
-export { GetSearchAdvancedRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchAdvancedRequest = GetSearchAdvancedRequest;
 var GetSearchAdvancedResponse = /** @class */ (function (_super) {
     __extends(GetSearchAdvancedResponse, _super);
     function GetSearchAdvancedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSearchAdvancedResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSearchAdvancedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSearchAdvancedResponse.prototype, "statusCode", void 0);
     return GetSearchAdvancedResponse;
-}(SpeakeasyBase));
-export { GetSearchAdvancedResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchAdvancedResponse = GetSearchAdvancedResponse;

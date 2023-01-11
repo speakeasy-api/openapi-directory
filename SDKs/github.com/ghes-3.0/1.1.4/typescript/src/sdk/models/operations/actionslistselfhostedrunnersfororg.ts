@@ -41,11 +41,11 @@ export class ActionsListSelfHostedRunnersForOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListSelfHostedRunnersForOrg200ApplicationJsonObject?: ActionsListSelfHostedRunnersForOrg200ApplicationJson;
+  actionsListSelfHostedRunnersForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnersForOrg200ApplicationJson;
 }

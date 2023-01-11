@@ -24,7 +24,7 @@ export declare class GetOrganizationLicensesRequest extends SpeakeasyBase {
 }
 export declare class GetOrganizationLicensesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationLicenses200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationLicenses200ApplicationJSONObject?: Record<string, any>;
 }

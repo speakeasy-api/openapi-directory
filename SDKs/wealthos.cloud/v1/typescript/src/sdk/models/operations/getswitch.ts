@@ -50,26 +50,26 @@ export class GetSwitchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSwitch200ApplicationJsonAny?: any;
+  getSwitch200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch400ApplicationJsonAny?: any;
+  getSwitch400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch401ApplicationJsonAny?: any;
+  getSwitch401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch403ApplicationJsonAny?: any;
+  getSwitch403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch404ApplicationJsonAny?: any;
+  getSwitch404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch409ApplicationJsonAny?: any;
+  getSwitch409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch429ApplicationJsonAny?: any;
+  getSwitch429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getSwitch500ApplicationJsonAny?: any;
+  getSwitch500ApplicationJSONAny?: any;
 }

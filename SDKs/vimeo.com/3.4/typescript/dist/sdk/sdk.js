@@ -1,178 +1,178 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Security } from "./models/shared";
-import { ApiInformation } from "./apiinformation";
-import { AlbumsAlbumVideos } from "./albumsalbumvideos";
-import { AlbumsCustomAlbumLogos } from "./albumscustomalbumlogos";
-import { AlbumsCustomAlbumThumbnails } from "./albumscustomalbumthumbnails";
-import { AlbumsEssentials } from "./albumsessentials";
-import { AuthenticationExtrasEssentials } from "./authenticationextrasessentials";
-import { CategoriesChannels } from "./categorieschannels";
-import { CategoriesEssentials } from "./categoriesessentials";
-import { CategoriesGroups } from "./categoriesgroups";
-import { CategoriesSubscriptions } from "./categoriessubscriptions";
-import { CategoriesVideos } from "./categoriesvideos";
-import { ChannelsCategories } from "./channelscategories";
-import { ChannelsEssentials } from "./channelsessentials";
-import { ChannelsModerators } from "./channelsmoderators";
-import { ChannelsPrivateChannelMembers } from "./channelsprivatechannelmembers";
-import { ChannelsSubscriptionsAndSubscribers } from "./channelssubscriptionsandsubscribers";
-import { ChannelsTags } from "./channelstags";
-import { ChannelsVideos } from "./channelsvideos";
-import { EmbedPresetsCustomLogos } from "./embedpresetscustomlogos";
-import { EmbedPresetsEssentials } from "./embedpresetsessentials";
-import { EmbedPresetsVideos } from "./embedpresetsvideos";
-import { GroupsEssentials } from "./groupsessentials";
-import { GroupsSubscription } from "./groupssubscription";
-import { GroupsUsers } from "./groupsusers";
-import { GroupsVideos } from "./groupsvideos";
-import { LikesEssentials } from "./likesessentials";
-import { OnDemandBackgrounds } from "./ondemandbackgrounds";
-import { OnDemandEssentials } from "./ondemandessentials";
-import { OnDemandGenres } from "./ondemandgenres";
-import { OnDemandPosters } from "./ondemandposters";
-import { OnDemandPromotions } from "./ondemandpromotions";
-import { OnDemandPurchasesAndRentals } from "./ondemandpurchasesandrentals";
-import { OnDemandRegions } from "./ondemandregions";
-import { OnDemandSeasons } from "./ondemandseasons";
-import { OnDemandVideos } from "./ondemandvideos";
-import { PortfoliosEssentials } from "./portfoliosessentials";
-import { PortfoliosVideos } from "./portfoliosvideos";
-import { ProjectsEssentials } from "./projectsessentials";
-import { ProjectsVideos } from "./projectsvideos";
-import { TagsEssentials } from "./tagsessentials";
-import { UsersEssentials } from "./usersessentials";
-import { UsersFeed } from "./usersfeed";
-import { UsersFollows } from "./usersfollows";
-import { UsersInternal } from "./usersinternal";
-import { UsersPictures } from "./userspictures";
-import { UsersWatchHistory } from "./userswatchhistory";
-import { VideosComments } from "./videoscomments";
-import { VideosContentRatings } from "./videoscontentratings";
-import { VideosCreativeCommons } from "./videoscreativecommons";
-import { VideosCredits } from "./videoscredits";
-import { VideosEmbedPrivacy } from "./videosembedprivacy";
-import { VideosEssentials } from "./videosessentials";
-import { VideosLanguages } from "./videoslanguages";
-import { VideosRecommendations } from "./videosrecommendations";
-import { VideosTags } from "./videostags";
-import { VideosTextTracks } from "./videostexttracks";
-import { VideosThumbnails } from "./videosthumbnails";
-import { VideosUpload } from "./videosupload";
-import { VideosVersions } from "./videosversions";
-import { VideosViewingPrivacy } from "./videosviewingprivacy";
-import { WatchLaterQueueEssentials } from "./watchlaterqueueessentials";
-export var ServerList = [
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var utils = __importStar(require("../internal/utils"));
+var shared_1 = require("./models/shared");
+var apiinformation_1 = require("./apiinformation");
+var albumsalbumvideos_1 = require("./albumsalbumvideos");
+var albumscustomalbumlogos_1 = require("./albumscustomalbumlogos");
+var albumscustomalbumthumbnails_1 = require("./albumscustomalbumthumbnails");
+var albumsessentials_1 = require("./albumsessentials");
+var authenticationextrasessentials_1 = require("./authenticationextrasessentials");
+var categorieschannels_1 = require("./categorieschannels");
+var categoriesessentials_1 = require("./categoriesessentials");
+var categoriesgroups_1 = require("./categoriesgroups");
+var categoriessubscriptions_1 = require("./categoriessubscriptions");
+var categoriesvideos_1 = require("./categoriesvideos");
+var channelscategories_1 = require("./channelscategories");
+var channelsessentials_1 = require("./channelsessentials");
+var channelsmoderators_1 = require("./channelsmoderators");
+var channelsprivatechannelmembers_1 = require("./channelsprivatechannelmembers");
+var channelssubscriptionsandsubscribers_1 = require("./channelssubscriptionsandsubscribers");
+var channelstags_1 = require("./channelstags");
+var channelsvideos_1 = require("./channelsvideos");
+var embedpresetscustomlogos_1 = require("./embedpresetscustomlogos");
+var embedpresetsessentials_1 = require("./embedpresetsessentials");
+var embedpresetsvideos_1 = require("./embedpresetsvideos");
+var groupsessentials_1 = require("./groupsessentials");
+var groupssubscription_1 = require("./groupssubscription");
+var groupsusers_1 = require("./groupsusers");
+var groupsvideos_1 = require("./groupsvideos");
+var likesessentials_1 = require("./likesessentials");
+var ondemandbackgrounds_1 = require("./ondemandbackgrounds");
+var ondemandessentials_1 = require("./ondemandessentials");
+var ondemandgenres_1 = require("./ondemandgenres");
+var ondemandposters_1 = require("./ondemandposters");
+var ondemandpromotions_1 = require("./ondemandpromotions");
+var ondemandpurchasesandrentals_1 = require("./ondemandpurchasesandrentals");
+var ondemandregions_1 = require("./ondemandregions");
+var ondemandseasons_1 = require("./ondemandseasons");
+var ondemandvideos_1 = require("./ondemandvideos");
+var portfoliosessentials_1 = require("./portfoliosessentials");
+var portfoliosvideos_1 = require("./portfoliosvideos");
+var projectsessentials_1 = require("./projectsessentials");
+var projectsvideos_1 = require("./projectsvideos");
+var tagsessentials_1 = require("./tagsessentials");
+var usersessentials_1 = require("./usersessentials");
+var usersfeed_1 = require("./usersfeed");
+var usersfollows_1 = require("./usersfollows");
+var usersinternal_1 = require("./usersinternal");
+var userspictures_1 = require("./userspictures");
+var userswatchhistory_1 = require("./userswatchhistory");
+var videoscomments_1 = require("./videoscomments");
+var videoscontentratings_1 = require("./videoscontentratings");
+var videoscreativecommons_1 = require("./videoscreativecommons");
+var videoscredits_1 = require("./videoscredits");
+var videosembedprivacy_1 = require("./videosembedprivacy");
+var videosessentials_1 = require("./videosessentials");
+var videoslanguages_1 = require("./videoslanguages");
+var videosrecommendations_1 = require("./videosrecommendations");
+var videostags_1 = require("./videostags");
+var videostexttracks_1 = require("./videostexttracks");
+var videosthumbnails_1 = require("./videosthumbnails");
+var videosupload_1 = require("./videosupload");
+var videosversions_1 = require("./videosversions");
+var videosviewingprivacy_1 = require("./videosviewingprivacy");
+var watchlaterqueueessentials_1 = require("./watchlaterqueueessentials");
+exports.ServerList = [
     "https://api.vimeo.com",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
-export function WithSecurity(security) {
-    if (!(security instanceof utils.SpeakeasyBase)) {
-        security = new Security(security);
-    }
-    return function (sdk) {
-        sdk._security = security;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        if (props.security) {
+            var security = props.security;
+            if (!(props.security instanceof utils.SpeakeasyBase))
+                security = new shared_1.Security(props.security);
+            this._securityClient = utils.createSecurityClient(this._defaultClient, security);
         }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
+        else {
+            this._securityClient = this._defaultClient;
         }
-        if (!this._securityClient) {
-            if (this._security) {
-                this._securityClient = utils.CreateSecurityClient(this._defaultClient, this._security);
-            }
-            else {
-                this._securityClient = this._defaultClient;
-            }
-        }
-        this.apiInformation = new ApiInformation(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.albumsAlbumVideos = new AlbumsAlbumVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.albumsCustomAlbumLogos = new AlbumsCustomAlbumLogos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.albumsCustomAlbumThumbnails = new AlbumsCustomAlbumThumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.albumsEssentials = new AlbumsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.authenticationExtrasEssentials = new AuthenticationExtrasEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoriesChannels = new CategoriesChannels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoriesEssentials = new CategoriesEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoriesGroups = new CategoriesGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoriesSubscriptions = new CategoriesSubscriptions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.categoriesVideos = new CategoriesVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsCategories = new ChannelsCategories(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsEssentials = new ChannelsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsModerators = new ChannelsModerators(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsPrivateChannelMembers = new ChannelsPrivateChannelMembers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsSubscriptionsAndSubscribers = new ChannelsSubscriptionsAndSubscribers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsTags = new ChannelsTags(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.channelsVideos = new ChannelsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.embedPresetsCustomLogos = new EmbedPresetsCustomLogos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.embedPresetsEssentials = new EmbedPresetsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.embedPresetsVideos = new EmbedPresetsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.groupsEssentials = new GroupsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.groupsSubscription = new GroupsSubscription(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.groupsUsers = new GroupsUsers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.groupsVideos = new GroupsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.likesEssentials = new LikesEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandBackgrounds = new OnDemandBackgrounds(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandEssentials = new OnDemandEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandGenres = new OnDemandGenres(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandPosters = new OnDemandPosters(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandPromotions = new OnDemandPromotions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandPurchasesAndRentals = new OnDemandPurchasesAndRentals(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandRegions = new OnDemandRegions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandSeasons = new OnDemandSeasons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.onDemandVideos = new OnDemandVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.portfoliosEssentials = new PortfoliosEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.portfoliosVideos = new PortfoliosVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.projectsEssentials = new ProjectsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.projectsVideos = new ProjectsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.tagsEssentials = new TagsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersEssentials = new UsersEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersFeed = new UsersFeed(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersFollows = new UsersFollows(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersInternal = new UsersInternal(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersPictures = new UsersPictures(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.usersWatchHistory = new UsersWatchHistory(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosComments = new VideosComments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosContentRatings = new VideosContentRatings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosCreativeCommons = new VideosCreativeCommons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosCredits = new VideosCredits(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosEmbedPrivacy = new VideosEmbedPrivacy(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosEssentials = new VideosEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosLanguages = new VideosLanguages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosRecommendations = new VideosRecommendations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosTags = new VideosTags(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosTextTracks = new VideosTextTracks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosThumbnails = new VideosThumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosUpload = new VideosUpload(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosVersions = new VideosVersions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.videosViewingPrivacy = new VideosViewingPrivacy(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.watchLaterQueueEssentials = new WatchLaterQueueEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.apiInformation = new apiinformation_1.ApiInformation(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.albumsAlbumVideos = new albumsalbumvideos_1.AlbumsAlbumVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.albumsCustomAlbumLogos = new albumscustomalbumlogos_1.AlbumsCustomAlbumLogos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.albumsCustomAlbumThumbnails = new albumscustomalbumthumbnails_1.AlbumsCustomAlbumThumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.albumsEssentials = new albumsessentials_1.AlbumsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.authenticationExtrasEssentials = new authenticationextrasessentials_1.AuthenticationExtrasEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoriesChannels = new categorieschannels_1.CategoriesChannels(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoriesEssentials = new categoriesessentials_1.CategoriesEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoriesGroups = new categoriesgroups_1.CategoriesGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoriesSubscriptions = new categoriessubscriptions_1.CategoriesSubscriptions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.categoriesVideos = new categoriesvideos_1.CategoriesVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsCategories = new channelscategories_1.ChannelsCategories(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsEssentials = new channelsessentials_1.ChannelsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsModerators = new channelsmoderators_1.ChannelsModerators(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsPrivateChannelMembers = new channelsprivatechannelmembers_1.ChannelsPrivateChannelMembers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsSubscriptionsAndSubscribers = new channelssubscriptionsandsubscribers_1.ChannelsSubscriptionsAndSubscribers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsTags = new channelstags_1.ChannelsTags(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.channelsVideos = new channelsvideos_1.ChannelsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.embedPresetsCustomLogos = new embedpresetscustomlogos_1.EmbedPresetsCustomLogos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.embedPresetsEssentials = new embedpresetsessentials_1.EmbedPresetsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.embedPresetsVideos = new embedpresetsvideos_1.EmbedPresetsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groupsEssentials = new groupsessentials_1.GroupsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groupsSubscription = new groupssubscription_1.GroupsSubscription(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groupsUsers = new groupsusers_1.GroupsUsers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.groupsVideos = new groupsvideos_1.GroupsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.likesEssentials = new likesessentials_1.LikesEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandBackgrounds = new ondemandbackgrounds_1.OnDemandBackgrounds(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandEssentials = new ondemandessentials_1.OnDemandEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandGenres = new ondemandgenres_1.OnDemandGenres(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandPosters = new ondemandposters_1.OnDemandPosters(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandPromotions = new ondemandpromotions_1.OnDemandPromotions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandPurchasesAndRentals = new ondemandpurchasesandrentals_1.OnDemandPurchasesAndRentals(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandRegions = new ondemandregions_1.OnDemandRegions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandSeasons = new ondemandseasons_1.OnDemandSeasons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.onDemandVideos = new ondemandvideos_1.OnDemandVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.portfoliosEssentials = new portfoliosessentials_1.PortfoliosEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.portfoliosVideos = new portfoliosvideos_1.PortfoliosVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.projectsEssentials = new projectsessentials_1.ProjectsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.projectsVideos = new projectsvideos_1.ProjectsVideos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.tagsEssentials = new tagsessentials_1.TagsEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersEssentials = new usersessentials_1.UsersEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersFeed = new usersfeed_1.UsersFeed(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersFollows = new usersfollows_1.UsersFollows(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersInternal = new usersinternal_1.UsersInternal(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersPictures = new userspictures_1.UsersPictures(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.usersWatchHistory = new userswatchhistory_1.UsersWatchHistory(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosComments = new videoscomments_1.VideosComments(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosContentRatings = new videoscontentratings_1.VideosContentRatings(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosCreativeCommons = new videoscreativecommons_1.VideosCreativeCommons(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosCredits = new videoscredits_1.VideosCredits(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosEmbedPrivacy = new videosembedprivacy_1.VideosEmbedPrivacy(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosEssentials = new videosessentials_1.VideosEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosLanguages = new videoslanguages_1.VideosLanguages(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosRecommendations = new videosrecommendations_1.VideosRecommendations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosTags = new videostags_1.VideosTags(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosTextTracks = new videostexttracks_1.VideosTextTracks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosThumbnails = new videosthumbnails_1.VideosThumbnails(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosUpload = new videosupload_1.VideosUpload(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosVersions = new videosversions_1.VideosVersions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.videosViewingPrivacy = new videosviewingprivacy_1.VideosViewingPrivacy(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.watchLaterQueueEssentials = new watchlaterqueueessentials_1.WatchLaterQueueEssentials(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

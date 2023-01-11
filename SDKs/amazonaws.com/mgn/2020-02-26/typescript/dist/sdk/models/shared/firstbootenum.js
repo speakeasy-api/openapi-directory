@@ -1,7 +1,10 @@
-export var FirstBootEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstBootEnum = void 0;
+var FirstBootEnum;
 (function (FirstBootEnum) {
     FirstBootEnum["Waiting"] = "WAITING";
     FirstBootEnum["Succeeded"] = "SUCCEEDED";
     FirstBootEnum["Unknown"] = "UNKNOWN";
     FirstBootEnum["Stopped"] = "STOPPED";
-})(FirstBootEnum || (FirstBootEnum = {}));
+})(FirstBootEnum = exports.FirstBootEnum || (exports.FirstBootEnum = {}));

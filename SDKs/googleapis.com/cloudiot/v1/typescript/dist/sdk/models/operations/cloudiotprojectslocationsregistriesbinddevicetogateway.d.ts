@@ -35,7 +35,7 @@ export declare class CloudiotProjectsLocationsRegistriesBindDeviceToGatewayReque
     security: CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity;
 }
 export declare class CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse extends SpeakeasyBase {
-    bindDeviceToGatewayResponse?: Map<string, any>;
+    bindDeviceToGatewayResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Did } from "./did";
-import { Line } from "./line";
-import { BasicUser } from "./basicuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndUserRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var did_1 = require("./did");
+var line_1 = require("./line");
+var basicuser_1 = require("./basicuser");
 var EndUserRoute = /** @class */ (function (_super) {
     __extends(EndUserRoute, _super);
     function EndUserRoute() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block_caller_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block_caller_id" }),
         __metadata("design:type", Boolean)
     ], EndUserRoute.prototype, "blockCallerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caller_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caller_id" }),
         __metadata("design:type", String)
     ], EndUserRoute.prototype, "callerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dids", elemType: Did }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dids", elemType: did_1.Did }),
         __metadata("design:type", Array)
     ], EndUserRoute.prototype, "dids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnd_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnd_enabled" }),
         __metadata("design:type", Boolean)
     ], EndUserRoute.prototype, "dndEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension_handsets", elemType: Line }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension_handsets", elemType: line_1.Line }),
         __metadata("design:type", Array)
     ], EndUserRoute.prototype, "extensionHandsets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension_number" }),
         __metadata("design:type", String)
     ], EndUserRoute.prototype, "extensionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_id" }),
         __metadata("design:type", Number)
     ], EndUserRoute.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", BasicUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", basicuser_1.BasicUser)
     ], EndUserRoute.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vtt_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vtt_enabled" }),
         __metadata("design:type", Boolean)
     ], EndUserRoute.prototype, "vttEnabled", void 0);
     return EndUserRoute;
-}(SpeakeasyBase));
-export { EndUserRoute };
+}(utils_1.SpeakeasyBase));
+exports.EndUserRoute = EndUserRoute;

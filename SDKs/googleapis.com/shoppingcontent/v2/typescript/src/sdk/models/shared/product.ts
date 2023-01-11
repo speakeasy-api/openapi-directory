@@ -12,7 +12,7 @@ import { ProductShippingWeight } from "./productshippingweight";
 import { ProductTax } from "./producttax";
 import { ProductUnitPricingBaseMeasure } from "./productunitpricingbasemeasure";
 import { ProductUnitPricingMeasure } from "./productunitpricingmeasure";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -255,6 +255,6 @@ export class Product extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=validatedDestinations" })
   validatedDestinations?: string[];
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeServiceUpdatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeServiceUpdatesResponse = exports.GetDescribeServiceUpdatesRequest = exports.GetDescribeServiceUpdatesHeaders = exports.GetDescribeServiceUpdatesQueryParams = exports.GetDescribeServiceUpdatesVersionEnum = exports.GetDescribeServiceUpdatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeServiceUpdatesActionEnum;
 (function (GetDescribeServiceUpdatesActionEnum) {
     GetDescribeServiceUpdatesActionEnum["DescribeServiceUpdates"] = "DescribeServiceUpdates";
-})(GetDescribeServiceUpdatesActionEnum || (GetDescribeServiceUpdatesActionEnum = {}));
-export var GetDescribeServiceUpdatesVersionEnum;
+})(GetDescribeServiceUpdatesActionEnum = exports.GetDescribeServiceUpdatesActionEnum || (exports.GetDescribeServiceUpdatesActionEnum = {}));
+var GetDescribeServiceUpdatesVersionEnum;
 (function (GetDescribeServiceUpdatesVersionEnum) {
     GetDescribeServiceUpdatesVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(GetDescribeServiceUpdatesVersionEnum || (GetDescribeServiceUpdatesVersionEnum = {}));
+})(GetDescribeServiceUpdatesVersionEnum = exports.GetDescribeServiceUpdatesVersionEnum || (exports.GetDescribeServiceUpdatesVersionEnum = {}));
 var GetDescribeServiceUpdatesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeServiceUpdatesQueryParams, _super);
     function GetDescribeServiceUpdatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ServiceUpdateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ServiceUpdateName" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "serviceUpdateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ServiceUpdateStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ServiceUpdateStatus" }),
         __metadata("design:type", Array)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "serviceUpdateStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesQueryParams.prototype, "version", void 0);
     return GetDescribeServiceUpdatesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeServiceUpdatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeServiceUpdatesQueryParams = GetDescribeServiceUpdatesQueryParams;
 var GetDescribeServiceUpdatesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeServiceUpdatesHeaders, _super);
     function GetDescribeServiceUpdatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeServiceUpdatesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeServiceUpdatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeServiceUpdatesHeaders = GetDescribeServiceUpdatesHeaders;
 var GetDescribeServiceUpdatesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeServiceUpdatesRequest, _super);
     function GetDescribeServiceUpdatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeServiceUpdatesQueryParams)
     ], GetDescribeServiceUpdatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeServiceUpdatesHeaders)
     ], GetDescribeServiceUpdatesRequest.prototype, "headers", void 0);
     return GetDescribeServiceUpdatesRequest;
-}(SpeakeasyBase));
-export { GetDescribeServiceUpdatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeServiceUpdatesRequest = GetDescribeServiceUpdatesRequest;
 var GetDescribeServiceUpdatesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeServiceUpdatesResponse, _super);
     function GetDescribeServiceUpdatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeServiceUpdatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeServiceUpdatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeServiceUpdatesResponse.prototype, "statusCode", void 0);
     return GetDescribeServiceUpdatesResponse;
-}(SpeakeasyBase));
-export { GetDescribeServiceUpdatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeServiceUpdatesResponse = GetDescribeServiceUpdatesResponse;

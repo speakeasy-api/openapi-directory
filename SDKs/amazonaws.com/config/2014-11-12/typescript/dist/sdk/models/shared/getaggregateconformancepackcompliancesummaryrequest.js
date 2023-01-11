@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateConformancePackComplianceSummaryFilters } from "./aggregateconformancepackcompliancesummaryfilters";
-import { AggregateConformancePackComplianceSummaryGroupKeyEnum } from "./aggregateconformancepackcompliancesummarygroupkeyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateConformancePackComplianceSummaryRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateconformancepackcompliancesummaryfilters_1 = require("./aggregateconformancepackcompliancesummaryfilters");
+var aggregateconformancepackcompliancesummarygroupkeyenum_1 = require("./aggregateconformancepackcompliancesummarygroupkeyenum");
 var GetAggregateConformancePackComplianceSummaryRequest = /** @class */ (function (_super) {
     __extends(GetAggregateConformancePackComplianceSummaryRequest, _super);
     function GetAggregateConformancePackComplianceSummaryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregatorName" }),
         __metadata("design:type", String)
     ], GetAggregateConformancePackComplianceSummaryRequest.prototype, "configurationAggregatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filters" }),
-        __metadata("design:type", AggregateConformancePackComplianceSummaryFilters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filters" }),
+        __metadata("design:type", aggregateconformancepackcompliancesummaryfilters_1.AggregateConformancePackComplianceSummaryFilters)
     ], GetAggregateConformancePackComplianceSummaryRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupByKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupByKey" }),
         __metadata("design:type", String)
     ], GetAggregateConformancePackComplianceSummaryRequest.prototype, "groupByKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], GetAggregateConformancePackComplianceSummaryRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetAggregateConformancePackComplianceSummaryRequest.prototype, "nextToken", void 0);
     return GetAggregateConformancePackComplianceSummaryRequest;
-}(SpeakeasyBase));
-export { GetAggregateConformancePackComplianceSummaryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateConformancePackComplianceSummaryRequest = GetAggregateConformancePackComplianceSummaryRequest;

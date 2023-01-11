@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentCommand } from "./deploymentcommand";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Deployment = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentcommand_1 = require("./deploymentcommand");
 // Deployment
 /**
  * Describes a deployment of a stack or app.
@@ -34,53 +37,53 @@ var Deployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Command" }),
-        __metadata("design:type", DeploymentCommand)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Command" }),
+        __metadata("design:type", deploymentcommand_1.DeploymentCommand)
     ], Deployment.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Comment" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedAt" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomJson" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomJson" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "customJson", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeploymentId" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Duration" }),
         __metadata("design:type", Number)
     ], Deployment.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamUserArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamUserArn" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "iamUserArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceIds" }),
         __metadata("design:type", Array)
     ], Deployment.prototype, "instanceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "stackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Deployment.prototype, "status", void 0);
     return Deployment;
-}(SpeakeasyBase));
-export { Deployment };
+}(utils_1.SpeakeasyBase));
+exports.Deployment = Deployment;

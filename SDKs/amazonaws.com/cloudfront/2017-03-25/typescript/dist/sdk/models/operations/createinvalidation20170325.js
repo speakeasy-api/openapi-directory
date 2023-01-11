@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInvalidation20170325Response = exports.CreateInvalidation20170325Request = exports.CreateInvalidation20170325Headers = exports.CreateInvalidation20170325PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateInvalidation20170325PathParams = /** @class */ (function (_super) {
     __extends(CreateInvalidation20170325PathParams, _super);
     function CreateInvalidation20170325PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=DistributionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=DistributionId" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325PathParams.prototype, "distributionId", void 0);
     return CreateInvalidation20170325PathParams;
-}(SpeakeasyBase));
-export { CreateInvalidation20170325PathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateInvalidation20170325PathParams = CreateInvalidation20170325PathParams;
 var CreateInvalidation20170325Headers = /** @class */ (function (_super) {
     __extends(CreateInvalidation20170325Headers, _super);
     function CreateInvalidation20170325Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Headers.prototype, "xAmzSignedHeaders", void 0);
     return CreateInvalidation20170325Headers;
-}(SpeakeasyBase));
-export { CreateInvalidation20170325Headers };
+}(utils_1.SpeakeasyBase));
+exports.CreateInvalidation20170325Headers = CreateInvalidation20170325Headers;
 var CreateInvalidation20170325Request = /** @class */ (function (_super) {
     __extends(CreateInvalidation20170325Request, _super);
     function CreateInvalidation20170325Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateInvalidation20170325PathParams)
     ], CreateInvalidation20170325Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateInvalidation20170325Headers)
     ], CreateInvalidation20170325Request.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], CreateInvalidation20170325Request.prototype, "request", void 0);
     return CreateInvalidation20170325Request;
-}(SpeakeasyBase));
-export { CreateInvalidation20170325Request };
+}(utils_1.SpeakeasyBase));
+exports.CreateInvalidation20170325Request = CreateInvalidation20170325Request;
 var CreateInvalidation20170325Response = /** @class */ (function (_super) {
     __extends(CreateInvalidation20170325Response, _super);
     function CreateInvalidation20170325Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], CreateInvalidation20170325Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateInvalidation20170325Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateInvalidation20170325Response.prototype, "statusCode", void 0);
     return CreateInvalidation20170325Response;
-}(SpeakeasyBase));
-export { CreateInvalidation20170325Response };
+}(utils_1.SpeakeasyBase));
+exports.CreateInvalidation20170325Response = CreateInvalidation20170325Response;

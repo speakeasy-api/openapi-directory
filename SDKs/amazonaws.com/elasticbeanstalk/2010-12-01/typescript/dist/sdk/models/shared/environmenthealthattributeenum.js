@@ -1,4 +1,7 @@
-export var EnvironmentHealthAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentHealthAttributeEnum = void 0;
+var EnvironmentHealthAttributeEnum;
 (function (EnvironmentHealthAttributeEnum) {
     EnvironmentHealthAttributeEnum["Status"] = "Status";
     EnvironmentHealthAttributeEnum["Color"] = "Color";
@@ -8,4 +11,4 @@ export var EnvironmentHealthAttributeEnum;
     EnvironmentHealthAttributeEnum["All"] = "All";
     EnvironmentHealthAttributeEnum["HealthStatus"] = "HealthStatus";
     EnvironmentHealthAttributeEnum["RefreshedAt"] = "RefreshedAt";
-})(EnvironmentHealthAttributeEnum || (EnvironmentHealthAttributeEnum = {}));
+})(EnvironmentHealthAttributeEnum = exports.EnvironmentHealthAttributeEnum || (exports.EnvironmentHealthAttributeEnum = {}));

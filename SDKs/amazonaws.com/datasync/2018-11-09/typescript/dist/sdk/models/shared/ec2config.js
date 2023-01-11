@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ec2Config = void 0;
+var utils_1 = require("../../../internal/utils");
 // Ec2Config
 /**
  * The subnet and the security group that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified.
@@ -33,13 +36,13 @@ var Ec2Config = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupArns" }),
         __metadata("design:type", Array)
     ], Ec2Config.prototype, "securityGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetArn" }),
         __metadata("design:type", String)
     ], Ec2Config.prototype, "subnetArn", void 0);
     return Ec2Config;
-}(SpeakeasyBase));
-export { Ec2Config };
+}(utils_1.SpeakeasyBase));
+exports.Ec2Config = Ec2Config;

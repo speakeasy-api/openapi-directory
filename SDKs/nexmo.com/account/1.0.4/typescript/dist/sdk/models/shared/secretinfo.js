@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SecretMgmtLinks } from "./secretmgmtlinks";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecretInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var secretmgmtlinks_1 = require("./secretmgmtlinks");
 var SecretInfo = /** @class */ (function (_super) {
     __extends(SecretInfo, _super);
     function SecretInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", SecretMgmtLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", secretmgmtlinks_1.SecretMgmtLinks)
     ], SecretInfo.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], SecretInfo.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SecretInfo.prototype, "id", void 0);
     return SecretInfo;
-}(SpeakeasyBase));
-export { SecretInfo };
+}(utils_1.SpeakeasyBase));
+exports.SecretInfo = SecretInfo;

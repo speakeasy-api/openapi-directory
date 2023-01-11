@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritablePowerOutletTemplateFeedLegEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritablePowerOutletTemplateInput = exports.WritablePowerOutletTemplateTypeEnum = exports.WritablePowerOutletTemplateFeedLegEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritablePowerOutletTemplateFeedLegEnum;
 (function (WritablePowerOutletTemplateFeedLegEnum) {
     WritablePowerOutletTemplateFeedLegEnum["A"] = "A";
     WritablePowerOutletTemplateFeedLegEnum["B"] = "B";
     WritablePowerOutletTemplateFeedLegEnum["C"] = "C";
-})(WritablePowerOutletTemplateFeedLegEnum || (WritablePowerOutletTemplateFeedLegEnum = {}));
-export var WritablePowerOutletTemplateTypeEnum;
+})(WritablePowerOutletTemplateFeedLegEnum = exports.WritablePowerOutletTemplateFeedLegEnum || (exports.WritablePowerOutletTemplateFeedLegEnum = {}));
+var WritablePowerOutletTemplateTypeEnum;
 (function (WritablePowerOutletTemplateTypeEnum) {
     WritablePowerOutletTemplateTypeEnum["Iec60320C5"] = "iec-60320-c5";
     WritablePowerOutletTemplateTypeEnum["Iec60320C7"] = "iec-60320-c7";
@@ -97,32 +100,32 @@ export var WritablePowerOutletTemplateTypeEnum;
     WritablePowerOutletTemplateTypeEnum["ItaN"] = "ita-n";
     WritablePowerOutletTemplateTypeEnum["ItaO"] = "ita-o";
     WritablePowerOutletTemplateTypeEnum["HdotCx"] = "hdot-cx";
-})(WritablePowerOutletTemplateTypeEnum || (WritablePowerOutletTemplateTypeEnum = {}));
+})(WritablePowerOutletTemplateTypeEnum = exports.WritablePowerOutletTemplateTypeEnum || (exports.WritablePowerOutletTemplateTypeEnum = {}));
 var WritablePowerOutletTemplateInput = /** @class */ (function (_super) {
     __extends(WritablePowerOutletTemplateInput, _super);
     function WritablePowerOutletTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], WritablePowerOutletTemplateInput.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feed_leg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feed_leg" }),
         __metadata("design:type", String)
     ], WritablePowerOutletTemplateInput.prototype, "feedLeg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritablePowerOutletTemplateInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power_port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power_port" }),
         __metadata("design:type", Number)
     ], WritablePowerOutletTemplateInput.prototype, "powerPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritablePowerOutletTemplateInput.prototype, "type", void 0);
     return WritablePowerOutletTemplateInput;
-}(SpeakeasyBase));
-export { WritablePowerOutletTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritablePowerOutletTemplateInput = WritablePowerOutletTemplateInput;

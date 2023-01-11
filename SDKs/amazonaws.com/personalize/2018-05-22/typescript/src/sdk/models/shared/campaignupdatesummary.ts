@@ -21,7 +21,7 @@ export class CampaignUpdateSummary extends SpeakeasyBase {
   lastUpdatedDateTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=minProvisionedTPS" })
-  minProvisionedTps?: number;
+  minProvisionedTPS?: number;
 
   @SpeakeasyMetadata({ data: "json, name=solutionVersionArn" })
   solutionVersionArn?: string;

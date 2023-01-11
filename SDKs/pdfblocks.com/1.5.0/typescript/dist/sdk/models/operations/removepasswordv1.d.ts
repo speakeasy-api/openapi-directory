@@ -8,7 +8,7 @@ export declare class RemovePasswordV1RequestBody extends SpeakeasyBase {
     password: string;
 }
 export declare class RemovePasswordV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -20,5 +20,5 @@ export declare class RemovePasswordV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     removePasswordV1200ApplicationPdfBinaryString?: Uint8Array;
-    removePasswordV14XxApplicationProblemPlusJsonObject?: RemovePasswordV14XxApplicationProblemPlusJson;
+    removePasswordV14XXApplicationProblemPlusJsonObject?: RemovePasswordV14XxApplicationProblemPlusJson;
 }

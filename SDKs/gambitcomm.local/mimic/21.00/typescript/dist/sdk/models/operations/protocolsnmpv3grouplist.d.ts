@@ -8,5 +8,5 @@ export declare class ProtocolSnmpv3GroupListRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3GroupListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3GroupList200ApplicationJsonStrings?: string[];
+    protocolSnmpv3GroupList200ApplicationJSONStrings?: string[];
 }

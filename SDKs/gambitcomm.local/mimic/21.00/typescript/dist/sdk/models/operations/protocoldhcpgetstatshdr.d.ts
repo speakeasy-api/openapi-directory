@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProtocolDhcpGetStatsHdrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolDhcpGetStatsHdr200ApplicationJsonStrings?: string[];
+    protocolDhcpGetStatsHdr200ApplicationJSONStrings?: string[];
 }

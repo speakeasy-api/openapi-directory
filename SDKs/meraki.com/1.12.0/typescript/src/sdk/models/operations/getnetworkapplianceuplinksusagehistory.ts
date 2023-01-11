@@ -40,5 +40,5 @@ export class GetNetworkApplianceUplinksUsageHistoryResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceUplinksUsageHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceUplinksUsageHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -54,7 +54,7 @@ export class DeleteServiceQuotaIncreaseRequestFromTemplateResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteServiceQuotaIncreaseRequestFromTemplateResponse?: Map<string, any>;
+  deleteServiceQuotaIncreaseRequestFromTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   dependencyAccessDeniedException?: any;

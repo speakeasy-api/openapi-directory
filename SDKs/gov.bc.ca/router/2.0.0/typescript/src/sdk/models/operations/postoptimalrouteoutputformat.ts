@@ -41,7 +41,7 @@ export class PostOptimalRouteOutputFormatQueryParams extends SpeakeasyBase {
   distanceUnit?: PostOptimalRouteOutputFormatDistanceUnitEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=points" })
   points: string;

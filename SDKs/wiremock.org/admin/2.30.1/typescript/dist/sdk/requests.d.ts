@@ -21,15 +21,15 @@ export declare class Requests {
     **/
     getAdminRequests(req: operations.GetAdminRequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetAdminRequestsResponse>;
     /**
-     * getAdminRequestsRequestId - Get request by ID
-    **/
-    getAdminRequestsRequestId(req: operations.GetAdminRequestsRequestIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAdminRequestsRequestIdResponse>;
-    /**
      * getAdminRequestsUnmatched - Find unmatched requests
      *
      * Get details of logged requests that weren't matched by any stub mapping
     **/
     getAdminRequestsUnmatched(config?: AxiosRequestConfig): Promise<operations.GetAdminRequestsUnmatchedResponse>;
+    /**
+     * getAdminRequestsRequestId - Get request by ID
+    **/
+    getAdminRequestsRequestId(req: operations.GetAdminRequestsRequestIdRequest, config?: AxiosRequestConfig): Promise<operations.GetAdminRequestsRequestIdResponse>;
     /**
      * postAdminRequestsCount - Count requests by criteria
      *

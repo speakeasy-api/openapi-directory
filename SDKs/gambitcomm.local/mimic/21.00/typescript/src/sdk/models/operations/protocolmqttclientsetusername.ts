@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetUsernameResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetUsername200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetUsername200ApplicationJSONInt32Integers?: number[];
 }

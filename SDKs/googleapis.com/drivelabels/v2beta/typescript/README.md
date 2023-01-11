@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DrivelabelsLabelsCreateRequest, DrivelabelsLabelsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,175 +29,267 @@ const sdk = new SDK();
 const req: DrivelabelsLabelsCreateRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "quia",
-    alt: "json",
-    callback: "consectetur",
-    fields: "omnis",
-    key: "at",
-    languageCode: "et",
-    oauthToken: "sed",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    languageCode: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "cum",
-    uploadType: "at",
-    uploadProtocol: "fugit",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
     useAdminAccess: false,
   },
   request: {
     appliedCapabilities: {
       canApply: true,
       canRead: true,
-      canRemove: true,
+      canRemove: false,
     },
     appliedLabelPolicy: {
       copyMode: "COPY_APPLIABLE",
     },
     creator: {
-      person: "ea",
+      person: "dolorem",
     },
     disabler: {
-      person: "totam",
+      person: "et",
     },
     displayHints: {
-      disabled: true,
+      disabled: false,
       hiddenInSearch: true,
-      priority: "enim",
-      shownInApply: false,
+      priority: "vitae",
+      shownInApply: true,
     },
     fields: [
       {
         appliedCapabilities: {
-          canRead: true,
+          canRead: false,
           canSearch: true,
-          canWrite: true,
+          canWrite: false,
         },
         creator: {
-          person: "quas",
+          person: "odio",
         },
         dateOptions: {
-          dateFormatType: "DATE_FORMAT_UNSPECIFIED",
+          dateFormatType: "LONG_DATE",
           maxValue: {
-            day: 5616634297539951106,
-            month: 1389370168788228999,
-            year: 2467105181836640230,
+            day: 4035568504096476779,
+            month: 959367522974354090,
+            year: 2914295034816259174,
           },
           minValue: {
-            day: 477525113881419882,
-            month: 4908732067574768779,
-            year: 6967081247951840472,
+            day: 1395437218309923052,
+            month: 6745438398739480977,
+            year: 2897681629866238117,
           },
         },
         disabler: {
-          person: "ipsa",
+          person: "est",
         },
         displayHints: {
-          disabled: false,
+          disabled: true,
           hiddenInSearch: true,
           required: true,
           shownInApply: false,
         },
         lifecycle: {
           disabledPolicy: {
-            hideInSearch: false,
-            showInApply: true,
+            hideInSearch: true,
+            showInApply: false,
           },
         },
         properties: {
-          displayName: "quis",
-          insertBeforeField: "assumenda",
+          displayName: "illo",
+          insertBeforeField: "sed",
           required: false,
         },
         publisher: {
-          person: "consequatur",
+          person: "autem",
         },
         schemaCapabilities: {
-          canDelete: false,
-          canDisable: true,
+          canDelete: true,
+          canDisable: false,
           canEnable: false,
-          canUpdate: true,
+          canUpdate: false,
         },
         selectionOptions: {
           choices: [
             {
               appliedCapabilities: {
-                canRead: false,
-                canSearch: true,
-                canSelect: false,
+                canRead: true,
+                canSearch: false,
+                canSelect: true,
               },
               creator: {
-                person: "adipisci",
+                person: "modi",
               },
               disabler: {
-                person: "reprehenderit",
+                person: "sint",
               },
               displayHints: {
                 badgeColors: {
                   backgroundColor: {
-                    alpha: 20.100000,
-                    blue: 69.199997,
-                    green: 81.099998,
-                    red: 88.199997,
+                    alpha: 77.099998,
+                    blue: 56.099998,
+                    green: 30.200001,
+                    red: 97.099998,
                   },
                   foregroundColor: {
-                    alpha: 38.200001,
-                    blue: 85.099998,
-                    green: 67.099998,
-                    red: 64.099998,
+                    alpha: 94.199997,
+                    blue: 19.100000,
+                    green: 69.199997,
+                    red: 3.100000,
                   },
                   soloColor: {
-                    alpha: 85.199997,
-                    blue: 9.200000,
-                    green: 29.200001,
-                    red: 51.099998,
+                    alpha: 64.199997,
+                    blue: 78.199997,
+                    green: 89.099998,
+                    red: 63.200001,
                   },
                 },
-                badgePriority: "sunt",
+                badgePriority: "qui",
                 darkBadgeColors: {
                   backgroundColor: {
-                    alpha: 85.199997,
-                    blue: 48.099998,
-                    green: 75.099998,
-                    red: 71.099998,
+                    alpha: 78.099998,
+                    blue: 31.100000,
+                    green: 13.100000,
+                    red: 26.100000,
                   },
                   foregroundColor: {
-                    alpha: 79.099998,
-                    blue: 15.200000,
-                    green: 95.199997,
-                    red: 87.199997,
+                    alpha: 90.099998,
+                    blue: 92.099998,
+                    green: 68.099998,
+                    red: 38.200001,
                   },
                   soloColor: {
-                    alpha: 75.199997,
-                    blue: 23.200001,
-                    green: 50.099998,
-                    red: 72.099998,
+                    alpha: 20.100000,
+                    blue: 41.200001,
+                    green: 89.199997,
+                    red: 41.099998,
                   },
                 },
-                disabled: false,
-                hiddenInSearch: false,
-                shownInApply: false,
+                disabled: true,
+                hiddenInSearch: true,
+                shownInApply: true,
               },
-              id: "non",
+              id: "ut",
               lifecycle: {
                 disabledPolicy: {
                   hideInSearch: false,
-                  showInApply: false,
+                  showInApply: true,
                 },
               },
               properties: {
                 badgeConfig: {
                   color: {
-                    alpha: 21.200001,
-                    blue: 96.099998,
-                    green: 11.200000,
-                    red: 1.200000,
+                    alpha: 26.100000,
+                    blue: 19.200001,
+                    green: 59.200001,
+                    red: 64.099998,
                   },
                   priorityOverride: "a",
                 },
-                description: "quia",
+                description: "soluta",
                 displayName: "aut",
-                insertBeforeChoice: "soluta",
+                insertBeforeChoice: "quas",
               },
               publisher: {
-                person: "aut",
+                person: "consequuntur",
+              },
+              schemaCapabilities: {
+                canDelete: false,
+                canDisable: true,
+                canEnable: true,
+                canUpdate: false,
+              },
+              updater: {
+                person: "doloremque",
+              },
+            },
+            {
+              appliedCapabilities: {
+                canRead: true,
+                canSearch: false,
+                canSelect: true,
+              },
+              creator: {
+                person: "quisquam",
+              },
+              disabler: {
+                person: "explicabo",
+              },
+              displayHints: {
+                badgeColors: {
+                  backgroundColor: {
+                    alpha: 42.099998,
+                    blue: 15.200000,
+                    green: 66.099998,
+                    red: 94.199997,
+                  },
+                  foregroundColor: {
+                    alpha: 97.199997,
+                    blue: 1.200000,
+                    green: 40.200001,
+                    red: 94.199997,
+                  },
+                  soloColor: {
+                    alpha: 31.100000,
+                    blue: 70.099998,
+                    green: 87.099998,
+                    red: 50.200001,
+                  },
+                },
+                badgePriority: "deserunt",
+                darkBadgeColors: {
+                  backgroundColor: {
+                    alpha: 59.099998,
+                    blue: 68.099998,
+                    green: 66.099998,
+                    red: 91.099998,
+                  },
+                  foregroundColor: {
+                    alpha: 13.200000,
+                    blue: 96.099998,
+                    green: 5.100000,
+                    red: 54.099998,
+                  },
+                  soloColor: {
+                    alpha: 2.100000,
+                    blue: 37.200001,
+                    green: 63.099998,
+                    red: 27.200001,
+                  },
+                },
+                disabled: false,
+                hiddenInSearch: false,
+                shownInApply: true,
+              },
+              id: "excepturi",
+              lifecycle: {
+                disabledPolicy: {
+                  hideInSearch: true,
+                  showInApply: true,
+                },
+              },
+              properties: {
+                badgeConfig: {
+                  color: {
+                    alpha: 29.200001,
+                    blue: 20.100000,
+                    green: 28.100000,
+                    red: 95.099998,
+                  },
+                  priorityOverride: "sed",
+                },
+                description: "et",
+                displayName: "consequuntur",
+                insertBeforeChoice: "non",
+              },
+              publisher: {
+                person: "cupiditate",
               },
               schemaCapabilities: {
                 canDelete: false,
@@ -207,205 +298,138 @@ const req: DrivelabelsLabelsCreateRequest = {
                 canUpdate: false,
               },
               updater: {
-                person: "pariatur",
+                person: "corrupti",
               },
             },
-          ],
-          listOptions: {
-            maxEntries: 3791495815245397066,
-          },
-        },
-        updater: {
-          person: "molestiae",
-        },
-        userOptions: {
-          listOptions: {
-            maxEntries: 2503627642135452943,
-          },
-        },
-      },
-      {
-        appliedCapabilities: {
-          canRead: false,
-          canSearch: true,
-          canWrite: true,
-        },
-        creator: {
-          person: "rerum",
-        },
-        dateOptions: {
-          dateFormatType: "LONG_DATE",
-          maxValue: {
-            day: 1909886773700121370,
-            month: 7494288104748988191,
-            year: 153419209594285167,
-          },
-          minValue: {
-            day: 789858951537355929,
-            month: 5875717815415457979,
-            year: 1699122590662142008,
-          },
-        },
-        disabler: {
-          person: "fugiat",
-        },
-        displayHints: {
-          disabled: true,
-          hiddenInSearch: true,
-          required: true,
-          shownInApply: true,
-        },
-        lifecycle: {
-          disabledPolicy: {
-            hideInSearch: true,
-            showInApply: true,
-          },
-        },
-        properties: {
-          displayName: "quo",
-          insertBeforeField: "vel",
-          required: true,
-        },
-        publisher: {
-          person: "sunt",
-        },
-        schemaCapabilities: {
-          canDelete: true,
-          canDisable: true,
-          canEnable: false,
-          canUpdate: true,
-        },
-        selectionOptions: {
-          choices: [
             {
               appliedCapabilities: {
                 canRead: false,
                 canSearch: true,
-                canSelect: false,
+                canSelect: true,
               },
               creator: {
-                person: "autem",
+                person: "possimus",
               },
               disabler: {
-                person: "porro",
+                person: "modi",
               },
               displayHints: {
                 badgeColors: {
                   backgroundColor: {
-                    alpha: 61.200001,
-                    blue: 17.200001,
-                    green: 37.200001,
-                    red: 17.200001,
+                    alpha: 18.200001,
+                    blue: 33.099998,
+                    green: 28.100000,
+                    red: 93.099998,
                   },
                   foregroundColor: {
-                    alpha: 25.100000,
-                    blue: 56.200001,
-                    green: 41.099998,
-                    red: 43.099998,
+                    alpha: 20.200001,
+                    blue: 73.099998,
+                    green: 45.099998,
+                    red: 56.099998,
                   },
                   soloColor: {
-                    alpha: 91.199997,
-                    blue: 57.200001,
-                    green: 50.200001,
-                    red: 47.200001,
+                    alpha: 18.100000,
+                    blue: 57.099998,
+                    green: 47.200001,
+                    red: 59.099998,
                   },
                 },
-                badgePriority: "nostrum",
+                badgePriority: "ut",
                 darkBadgeColors: {
                   backgroundColor: {
-                    alpha: 95.199997,
-                    blue: 81.099998,
-                    green: 69.099998,
-                    red: 77.099998,
+                    alpha: 80.099998,
+                    blue: 47.099998,
+                    green: 3.200000,
+                    red: 58.200001,
                   },
                   foregroundColor: {
-                    alpha: 99.199997,
-                    blue: 67.099998,
-                    green: 46.200001,
-                    red: 7.100000,
+                    alpha: 69.199997,
+                    blue: 66.199997,
+                    green: 25.200001,
+                    red: 16.200001,
                   },
                   soloColor: {
-                    alpha: 51.099998,
-                    blue: 50.200001,
-                    green: 71.099998,
-                    red: 28.200001,
+                    alpha: 14.100000,
+                    blue: 78.199997,
+                    green: 46.099998,
+                    red: 84.099998,
                   },
                 },
                 disabled: false,
-                hiddenInSearch: false,
+                hiddenInSearch: true,
                 shownInApply: true,
               },
-              id: "repellat",
+              id: "officia",
               lifecycle: {
                 disabledPolicy: {
-                  hideInSearch: false,
+                  hideInSearch: true,
                   showInApply: false,
                 },
               },
               properties: {
                 badgeConfig: {
                   color: {
-                    alpha: 47.200001,
-                    blue: 41.099998,
-                    green: 85.099998,
-                    red: 0.200000,
+                    alpha: 30.100000,
+                    blue: 43.099998,
+                    green: 80.099998,
+                    red: 55.200001,
                   },
-                  priorityOverride: "veniam",
+                  priorityOverride: "dicta",
                 },
-                description: "eum",
-                displayName: "dolorem",
-                insertBeforeChoice: "ab",
+                description: "rem",
+                displayName: "doloremque",
+                insertBeforeChoice: "quae",
               },
               publisher: {
-                person: "qui",
+                person: "nisi",
               },
               schemaCapabilities: {
-                canDelete: true,
-                canDisable: true,
-                canEnable: true,
-                canUpdate: false,
+                canDelete: false,
+                canDisable: false,
+                canEnable: false,
+                canUpdate: true,
               },
               updater: {
-                person: "ut",
+                person: "rerum",
               },
             },
           ],
           listOptions: {
-            maxEntries: 6891606198488508276,
+            maxEntries: 7434067341455688771,
           },
         },
         updater: {
-          person: "odio",
+          person: "rem",
         },
         userOptions: {
           listOptions: {
-            maxEntries: 7642754204309316601,
+            maxEntries: 2386043087176739176,
           },
         },
       },
     ],
     labelType: "LABEL_TYPE_UNSPECIFIED",
-    learnMoreUri: "corrupti",
+    learnMoreUri: "reiciendis",
     lifecycle: {
       disabledPolicy: {
-        hideInSearch: false,
+        hideInSearch: true,
         showInApply: true,
       },
     },
     properties: {
-      description: "et",
-      title: "velit",
+      description: "porro",
+      title: "nihil",
     },
     publisher: {
-      person: "dolorum",
+      person: "adipisci",
     },
     revisionCreator: {
-      person: "maiores",
+      person: "consequatur",
     },
     schemaCapabilities: {
-      canDelete: true,
+      canDelete: false,
       canDisable: false,
-      canEnable: false,
+      canEnable: true,
       canUpdate: true,
     },
   },

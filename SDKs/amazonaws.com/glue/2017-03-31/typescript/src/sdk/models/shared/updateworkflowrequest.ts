@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class UpdateWorkflowRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DefaultRunProperties" })
-  defaultRunProperties?: Map<string, string>;
+  defaultRunProperties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
   description?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudVideointelligenceV1p2beta1VideoContext } from "./googlecloudvideointelligencev1p2beta1videocontext";
-export var GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest = exports.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudvideointelligencev1p2beta1videocontext_1 = require("./googlecloudvideointelligencev1p2beta1videocontext");
+var GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum;
 (function (GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum) {
     GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum["FeatureUnspecified"] = "FEATURE_UNSPECIFIED";
     GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum["LabelDetection"] = "LABEL_DETECTION";
@@ -36,7 +39,7 @@ export var GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum
     GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum["ObjectTracking"] = "OBJECT_TRACKING";
     GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum["LogoRecognition"] = "LOGO_RECOGNITION";
     GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum["PersonDetection"] = "PERSON_DETECTION";
-})(GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum || (GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum = {}));
+})(GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum = exports.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum || (exports.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum = {}));
 // GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest
 /**
  * Video annotation request.
@@ -47,29 +50,29 @@ var GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
         __metadata("design:type", Array)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputContent" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "inputContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputUri" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "inputUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputUri" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "outputUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoContext" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1VideoContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoContext" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1videocontext_1.GoogleCloudVideointelligenceV1p2beta1VideoContext)
     ], GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest.prototype, "videoContext", void 0);
     return GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest = GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest;

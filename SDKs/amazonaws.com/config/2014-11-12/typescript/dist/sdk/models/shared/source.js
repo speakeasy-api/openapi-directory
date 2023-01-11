@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OwnerEnum } from "./ownerenum";
-import { SourceDetail } from "./sourcedetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Source = void 0;
+var utils_1 = require("../../../internal/utils");
+var ownerenum_1 = require("./ownerenum");
+var sourcedetail_1 = require("./sourcedetail");
 // Source
 /**
  * Provides the Config rule owner (Amazon Web Services or customer), the rule identifier, and the events that trigger the evaluation of your Amazon Web Services resources.
@@ -35,17 +38,17 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], Source.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceDetails", elemType: SourceDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceDetails", elemType: sourcedetail_1.SourceDetail }),
         __metadata("design:type", Array)
     ], Source.prototype, "sourceDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceIdentifier" }),
         __metadata("design:type", String)
     ], Source.prototype, "sourceIdentifier", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;

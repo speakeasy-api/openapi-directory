@@ -1,5 +1,8 @@
-export var ResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceTypeEnum = void 0;
+var ResourceTypeEnum;
 (function (ResourceTypeEnum) {
     ResourceTypeEnum["ApplicationLoadBalancer"] = "APPLICATION_LOAD_BALANCER";
     ResourceTypeEnum["ApiGateway"] = "API_GATEWAY";
-})(ResourceTypeEnum || (ResourceTypeEnum = {}));
+})(ResourceTypeEnum = exports.ResourceTypeEnum || (exports.ResourceTypeEnum = {}));

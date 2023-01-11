@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidpublisherMonetizationSubscriptionsListResponse = exports.AndroidpublisherMonetizationSubscriptionsListRequest = exports.AndroidpublisherMonetizationSubscriptionsListSecurity = exports.AndroidpublisherMonetizationSubscriptionsListQueryParams = exports.AndroidpublisherMonetizationSubscriptionsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AndroidpublisherMonetizationSubscriptionsListPathParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherMonetizationSubscriptionsListPathParams, _super);
     function AndroidpublisherMonetizationSubscriptionsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packageName" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListPathParams.prototype, "packageName", void 0);
     return AndroidpublisherMonetizationSubscriptionsListPathParams;
-}(SpeakeasyBase));
-export { AndroidpublisherMonetizationSubscriptionsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherMonetizationSubscriptionsListPathParams = AndroidpublisherMonetizationSubscriptionsListPathParams;
 var AndroidpublisherMonetizationSubscriptionsListQueryParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherMonetizationSubscriptionsListQueryParams, _super);
     function AndroidpublisherMonetizationSubscriptionsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=showArchived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=showArchived" }),
         __metadata("design:type", Boolean)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "showArchived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListQueryParams.prototype, "uploadProtocol", void 0);
     return AndroidpublisherMonetizationSubscriptionsListQueryParams;
-}(SpeakeasyBase));
-export { AndroidpublisherMonetizationSubscriptionsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherMonetizationSubscriptionsListQueryParams = AndroidpublisherMonetizationSubscriptionsListQueryParams;
 var AndroidpublisherMonetizationSubscriptionsListSecurity = /** @class */ (function (_super) {
     __extends(AndroidpublisherMonetizationSubscriptionsListSecurity, _super);
     function AndroidpublisherMonetizationSubscriptionsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AndroidpublisherMonetizationSubscriptionsListSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AndroidpublisherMonetizationSubscriptionsListSecurity.prototype, "oauth2c", void 0);
     return AndroidpublisherMonetizationSubscriptionsListSecurity;
-}(SpeakeasyBase));
-export { AndroidpublisherMonetizationSubscriptionsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherMonetizationSubscriptionsListSecurity = AndroidpublisherMonetizationSubscriptionsListSecurity;
 var AndroidpublisherMonetizationSubscriptionsListRequest = /** @class */ (function (_super) {
     __extends(AndroidpublisherMonetizationSubscriptionsListRequest, _super);
     function AndroidpublisherMonetizationSubscriptionsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherMonetizationSubscriptionsListPathParams)
     ], AndroidpublisherMonetizationSubscriptionsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherMonetizationSubscriptionsListQueryParams)
     ], AndroidpublisherMonetizationSubscriptionsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherMonetizationSubscriptionsListSecurity)
     ], AndroidpublisherMonetizationSubscriptionsListRequest.prototype, "security", void 0);
     return AndroidpublisherMonetizationSubscriptionsListRequest;
-}(SpeakeasyBase));
-export { AndroidpublisherMonetizationSubscriptionsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherMonetizationSubscriptionsListRequest = AndroidpublisherMonetizationSubscriptionsListRequest;
 var AndroidpublisherMonetizationSubscriptionsListResponse = /** @class */ (function (_super) {
     __extends(AndroidpublisherMonetizationSubscriptionsListResponse, _super);
     function AndroidpublisherMonetizationSubscriptionsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AndroidpublisherMonetizationSubscriptionsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListSubscriptionsResponse)
     ], AndroidpublisherMonetizationSubscriptionsListResponse.prototype, "listSubscriptionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AndroidpublisherMonetizationSubscriptionsListResponse.prototype, "statusCode", void 0);
     return AndroidpublisherMonetizationSubscriptionsListResponse;
-}(SpeakeasyBase));
-export { AndroidpublisherMonetizationSubscriptionsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherMonetizationSubscriptionsListResponse = AndroidpublisherMonetizationSubscriptionsListResponse;

@@ -14,5 +14,5 @@ export declare class UpdateOrganizationConfigTemplateRequest extends SpeakeasyBa
 export declare class UpdateOrganizationConfigTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationConfigTemplate200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationConfigTemplate200ApplicationJSONObject?: Record<string, any>;
 }

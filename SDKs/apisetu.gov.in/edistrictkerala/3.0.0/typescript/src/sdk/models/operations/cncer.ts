@@ -191,23 +191,23 @@ export class CncerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cncer400ApplicationJsonObject?: Cncer400ApplicationJson;
+  cncer400ApplicationJSONObject?: Cncer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer401ApplicationJsonObject?: Cncer401ApplicationJson;
+  cncer401ApplicationJSONObject?: Cncer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer404ApplicationJsonObject?: Cncer404ApplicationJson;
+  cncer404ApplicationJSONObject?: Cncer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer500ApplicationJsonObject?: Cncer500ApplicationJson;
+  cncer500ApplicationJSONObject?: Cncer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer502ApplicationJsonObject?: Cncer502ApplicationJson;
+  cncer502ApplicationJSONObject?: Cncer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer503ApplicationJsonObject?: Cncer503ApplicationJson;
+  cncer503ApplicationJSONObject?: Cncer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cncer504ApplicationJsonObject?: Cncer504ApplicationJson;
+  cncer504ApplicationJSONObject?: Cncer504ApplicationJson;
 }

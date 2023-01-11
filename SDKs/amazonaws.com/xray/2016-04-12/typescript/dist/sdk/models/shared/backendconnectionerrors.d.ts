@@ -4,8 +4,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class BackendConnectionErrors extends SpeakeasyBase {
     connectionRefusedCount?: number;
-    httpCode4XxCount?: number;
-    httpCode5XxCount?: number;
+    httpCode4XXCount?: number;
+    httpCode5XXCount?: number;
     otherCount?: number;
     timeoutCount?: number;
     unknownHostCount?: number;

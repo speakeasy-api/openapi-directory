@@ -63,7 +63,7 @@ export class StartMlLabelingSetGenerationTaskRunResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  startMlLabelingSetGenerationTaskRunResponse?: shared.StartMlLabelingSetGenerationTaskRunResponse;
+  startMLLabelingSetGenerationTaskRunResponse?: shared.StartMlLabelingSetGenerationTaskRunResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageRecordResult } from "./usagerecordresult";
-import { UsageRecord } from "./usagerecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchMeterUsageResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagerecordresult_1 = require("./usagerecordresult");
+var usagerecord_1 = require("./usagerecord");
 // BatchMeterUsageResult
 /**
  * Contains the UsageRecords processed by BatchMeterUsage and any records that have failed due to transient error.
@@ -35,13 +38,13 @@ var BatchMeterUsageResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Results", elemType: UsageRecordResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Results", elemType: usagerecordresult_1.UsageRecordResult }),
         __metadata("design:type", Array)
     ], BatchMeterUsageResult.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedRecords", elemType: UsageRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedRecords", elemType: usagerecord_1.UsageRecord }),
         __metadata("design:type", Array)
     ], BatchMeterUsageResult.prototype, "unprocessedRecords", void 0);
     return BatchMeterUsageResult;
-}(SpeakeasyBase));
-export { BatchMeterUsageResult };
+}(utils_1.SpeakeasyBase));
+exports.BatchMeterUsageResult = BatchMeterUsageResult;

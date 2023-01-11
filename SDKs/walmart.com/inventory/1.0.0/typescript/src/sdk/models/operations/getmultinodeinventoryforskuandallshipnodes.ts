@@ -19,16 +19,16 @@ export class GetMultiNodeInventoryForSkuAndAllShipnodesHeaders extends Speakeasy
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 export enum GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonNodesAvailToSellQtyUnitEnum {
@@ -91,7 +91,7 @@ export class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonNodesEr
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=errorIdentifiers" })
-  errorIdentifiers?: Map<string, Map<string, any>>;
+  errorIdentifiers?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=field" })
   field?: string;
@@ -161,5 +161,5 @@ export class GetMultiNodeInventoryForSkuAndAllShipnodesResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonObject?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJson;
+  getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJson;
 }

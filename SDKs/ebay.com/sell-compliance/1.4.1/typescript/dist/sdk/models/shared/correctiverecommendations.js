@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AspectRecommendations } from "./aspectrecommendations";
-import { ProductRecommendation } from "./productrecommendation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CorrectiveRecommendations = void 0;
+var utils_1 = require("../../../internal/utils");
+var aspectrecommendations_1 = require("./aspectrecommendations");
+var productrecommendation_1 = require("./productrecommendation");
 // CorrectiveRecommendations
 /**
  * This type is used by the correctiveRecommendations container, which is returned if eBay has suggestions for how to correct the given violation.
@@ -35,13 +38,13 @@ var CorrectiveRecommendations = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspectRecommendations", elemType: AspectRecommendations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspectRecommendations", elemType: aspectrecommendations_1.AspectRecommendations }),
         __metadata("design:type", Array)
     ], CorrectiveRecommendations.prototype, "aspectRecommendations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productRecommendation" }),
-        __metadata("design:type", ProductRecommendation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRecommendation" }),
+        __metadata("design:type", productrecommendation_1.ProductRecommendation)
     ], CorrectiveRecommendations.prototype, "productRecommendation", void 0);
     return CorrectiveRecommendations;
-}(SpeakeasyBase));
-export { CorrectiveRecommendations };
+}(utils_1.SpeakeasyBase));
+exports.CorrectiveRecommendations = CorrectiveRecommendations;

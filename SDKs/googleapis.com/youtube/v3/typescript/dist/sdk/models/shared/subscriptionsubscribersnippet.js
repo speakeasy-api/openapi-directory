@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ThumbnailDetails } from "./thumbnaildetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionSubscriberSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var thumbnaildetails_1 = require("./thumbnaildetails");
 // SubscriptionSubscriberSnippet
 /**
  * Basic details about a subscription's subscriber including title, description, channel ID and thumbnails.
@@ -34,21 +37,21 @@ var SubscriptionSubscriberSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], SubscriptionSubscriberSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SubscriptionSubscriberSnippet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnails" }),
-        __metadata("design:type", ThumbnailDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnails" }),
+        __metadata("design:type", thumbnaildetails_1.ThumbnailDetails)
     ], SubscriptionSubscriberSnippet.prototype, "thumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SubscriptionSubscriberSnippet.prototype, "title", void 0);
     return SubscriptionSubscriberSnippet;
-}(SpeakeasyBase));
-export { SubscriptionSubscriberSnippet };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionSubscriberSnippet = SubscriptionSubscriberSnippet;

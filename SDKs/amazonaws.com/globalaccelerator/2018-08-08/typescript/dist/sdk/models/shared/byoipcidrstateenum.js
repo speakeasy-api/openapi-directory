@@ -1,4 +1,7 @@
-export var ByoipCidrStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ByoipCidrStateEnum = void 0;
+var ByoipCidrStateEnum;
 (function (ByoipCidrStateEnum) {
     ByoipCidrStateEnum["PendingProvisioning"] = "PENDING_PROVISIONING";
     ByoipCidrStateEnum["Ready"] = "READY";
@@ -11,4 +14,4 @@ export var ByoipCidrStateEnum;
     ByoipCidrStateEnum["FailedAdvertising"] = "FAILED_ADVERTISING";
     ByoipCidrStateEnum["FailedWithdraw"] = "FAILED_WITHDRAW";
     ByoipCidrStateEnum["FailedDeprovision"] = "FAILED_DEPROVISION";
-})(ByoipCidrStateEnum || (ByoipCidrStateEnum = {}));
+})(ByoipCidrStateEnum = exports.ByoipCidrStateEnum || (exports.ByoipCidrStateEnum = {}));

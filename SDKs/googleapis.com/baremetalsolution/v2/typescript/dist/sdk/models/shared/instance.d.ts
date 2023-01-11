@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudBaremetalsolutionV2LogicalInterface } from "./googlecloudbaremetalsolutionv2logicalinterface";
-import { LunInput } from "./lun";
-import { VolumeInput } from "./volume";
 import { Lun } from "./lun";
 import { Network } from "./network";
 import { Volume } from "./volume";
+import { LunInput } from "./lun";
+import { VolumeInput } from "./volume";
 export declare enum InstanceStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Provisioning = "PROVISIONING",
@@ -15,20 +15,10 @@ export declare enum InstanceStateEnum {
     Stopping = "STOPPING",
     Shutdown = "SHUTDOWN"
 }
-/**
- * A server.
-**/
-export declare class InstanceInput extends SpeakeasyBase {
-    hyperthreadingEnabled?: boolean;
-    labels?: Map<string, string>;
-    logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
-    luns?: LunInput[];
-    machineType?: string;
-    name?: string;
-    networkTemplate?: string;
-    osImage?: string;
-    pod?: string;
-    volumes?: VolumeInput[];
+export declare enum InstanceWorkloadProfileEnum {
+    WorkloadProfileUnspecified = "WORKLOAD_PROFILE_UNSPECIFIED",
+    WorkloadProfileGeneric = "WORKLOAD_PROFILE_GENERIC",
+    WorkloadProfileHana = "WORKLOAD_PROFILE_HANA"
 }
 /**
  * A server.
@@ -38,7 +28,7 @@ export declare class Instance extends SpeakeasyBase {
     hyperthreadingEnabled?: boolean;
     id?: string;
     interactiveSerialConsoleEnabled?: boolean;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
     loginInfo?: string;
     luns?: Lun[];
@@ -51,4 +41,21 @@ export declare class Instance extends SpeakeasyBase {
     state?: InstanceStateEnum;
     updateTime?: string;
     volumes?: Volume[];
+    workloadProfile?: InstanceWorkloadProfileEnum;
+}
+/**
+ * A server.
+**/
+export declare class InstanceInput extends SpeakeasyBase {
+    hyperthreadingEnabled?: boolean;
+    labels?: Record<string, string>;
+    logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
+    luns?: LunInput[];
+    machineType?: string;
+    name?: string;
+    networkTemplate?: string;
+    osImage?: string;
+    pod?: string;
+    volumes?: VolumeInput[];
+    workloadProfile?: InstanceWorkloadProfileEnum;
 }

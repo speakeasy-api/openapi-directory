@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CountClosedWorkflowExecutionsRequest, CountClosedWorkflowExecutionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,42 +33,42 @@ const sdk = new SDK(WithSecurity(
     
 const req: CountClosedWorkflowExecutionsRequest = {
   headers: {
-    xAmzAlgorithm: "magnam",
-    xAmzContentSha256: "a",
-    xAmzCredential: "nulla",
-    xAmzDate: "harum",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "quaerat",
-    xAmzSignedHeaders: "ut",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
   },
   request: {
     closeStatusFilter: {
-      status: "TERMINATED",
+      status: "COMPLETED",
     },
     closeTimeFilter: {
-      latestDate: "2015-09-10T13:23:34Z",
-      oldestDate: "1982-08-21T11:18:30Z",
+      latestDate: "2011-08-12T10:11:12Z",
+      oldestDate: "2003-05-13T04:57:12Z",
     },
-    domain: "sed",
+    domain: "rerum",
     executionFilter: {
-      workflowId: "labore",
+      workflowId: "dicta",
     },
     startTimeFilter: {
-      latestDate: "2001-12-16T13:52:09Z",
-      oldestDate: "1992-03-13T14:11:12Z",
+      latestDate: "2004-06-02T10:14:12Z",
+      oldestDate: "1981-07-21T06:30:48Z",
     },
     tagFilter: {
-      tag: "voluptatum",
+      tag: "et",
     },
     typeFilter: {
-      name: "minima",
-      version: "necessitatibus",
+      name: "ut",
+      version: "dolorem",
     },
   },
 };
 
-sdk.sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsResponse | AxiosError) => {
+sdk.countClosedWorkflowExecutions(req).then((res: CountClosedWorkflowExecutionsResponse | AxiosError) => {
    // handle response
 });
 ```

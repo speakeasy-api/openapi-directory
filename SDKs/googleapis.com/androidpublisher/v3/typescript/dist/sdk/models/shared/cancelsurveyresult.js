@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CancelSurveyResultReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelSurveyResult = exports.CancelSurveyResultReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CancelSurveyResultReasonEnum;
 (function (CancelSurveyResultReasonEnum) {
     CancelSurveyResultReasonEnum["CancelSurveyReasonUnspecified"] = "CANCEL_SURVEY_REASON_UNSPECIFIED";
     CancelSurveyResultReasonEnum["CancelSurveyReasonNotEnoughUsage"] = "CANCEL_SURVEY_REASON_NOT_ENOUGH_USAGE";
@@ -31,7 +34,7 @@ export var CancelSurveyResultReasonEnum;
     CancelSurveyResultReasonEnum["CancelSurveyReasonCostRelated"] = "CANCEL_SURVEY_REASON_COST_RELATED";
     CancelSurveyResultReasonEnum["CancelSurveyReasonFoundBetterApp"] = "CANCEL_SURVEY_REASON_FOUND_BETTER_APP";
     CancelSurveyResultReasonEnum["CancelSurveyReasonOthers"] = "CANCEL_SURVEY_REASON_OTHERS";
-})(CancelSurveyResultReasonEnum || (CancelSurveyResultReasonEnum = {}));
+})(CancelSurveyResultReasonEnum = exports.CancelSurveyResultReasonEnum || (exports.CancelSurveyResultReasonEnum = {}));
 // CancelSurveyResult
 /**
  * Result of the cancel survey when the subscription was canceled by the user.
@@ -42,13 +45,13 @@ var CancelSurveyResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], CancelSurveyResult.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonUserInput" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonUserInput" }),
         __metadata("design:type", String)
     ], CancelSurveyResult.prototype, "reasonUserInput", void 0);
     return CancelSurveyResult;
-}(SpeakeasyBase));
-export { CancelSurveyResult };
+}(utils_1.SpeakeasyBase));
+exports.CancelSurveyResult = CancelSurveyResult;

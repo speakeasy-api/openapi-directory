@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BatchRequestActionMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchRequestAction = exports.BatchRequestActionOptions = exports.BatchRequestActionMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BatchRequestActionMethodEnum;
 (function (BatchRequestActionMethodEnum) {
     BatchRequestActionMethodEnum["Get"] = "get";
     BatchRequestActionMethodEnum["Post"] = "post";
@@ -31,7 +34,7 @@ export var BatchRequestActionMethodEnum;
     BatchRequestActionMethodEnum["Delete"] = "delete";
     BatchRequestActionMethodEnum["Patch"] = "patch";
     BatchRequestActionMethodEnum["Head"] = "head";
-})(BatchRequestActionMethodEnum || (BatchRequestActionMethodEnum = {}));
+})(BatchRequestActionMethodEnum = exports.BatchRequestActionMethodEnum || (exports.BatchRequestActionMethodEnum = {}));
 // BatchRequestActionOptions
 /**
  * Pagination (`limit` and `offset`) and output options (`fields` or `expand`) for the action. “Pretty” JSON output is not an available option on individual actions; if you want pretty output, specify that option on the parent request.
@@ -42,20 +45,20 @@ var BatchRequestActionOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", Array)
     ], BatchRequestActionOptions.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], BatchRequestActionOptions.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], BatchRequestActionOptions.prototype, "offset", void 0);
     return BatchRequestActionOptions;
-}(SpeakeasyBase));
-export { BatchRequestActionOptions };
+}(utils_1.SpeakeasyBase));
+exports.BatchRequestActionOptions = BatchRequestActionOptions;
 // BatchRequestAction
 /**
  * An action object for use in a batch request.
@@ -66,21 +69,21 @@ var BatchRequestAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], BatchRequestAction.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], BatchRequestAction.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", BatchRequestActionOptions)
     ], BatchRequestAction.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relative_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relative_path" }),
         __metadata("design:type", String)
     ], BatchRequestAction.prototype, "relativePath", void 0);
     return BatchRequestAction;
-}(SpeakeasyBase));
-export { BatchRequestAction };
+}(utils_1.SpeakeasyBase));
+exports.BatchRequestAction = BatchRequestAction;

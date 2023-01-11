@@ -15,12 +15,12 @@ export declare class GetContainerApiMetadataHeaders extends SpeakeasyBase {
 }
 export declare class GetContainerApiMetadataRequest extends SpeakeasyBase {
     headers: GetContainerApiMetadataHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetContainerApiMetadataResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    getContainerApiMetadataResult?: shared.GetContainerApiMetadataResult;
+    getContainerAPIMetadataResult?: shared.GetContainerApiMetadataResult;
     serviceException?: any;
     statusCode: number;
     unauthenticatedException?: any;

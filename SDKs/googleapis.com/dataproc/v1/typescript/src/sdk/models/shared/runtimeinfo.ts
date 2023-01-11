@@ -15,7 +15,7 @@ export class RuntimeInfo extends SpeakeasyBase {
   diagnosticOutputUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=endpoints" })
-  endpoints?: Map<string, string>;
+  endpoints?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=outputUri" })
   outputUri?: string;

@@ -17,7 +17,7 @@ export class ProtocolSshGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolSshGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configSsh?: shared.ConfigSsh;
+  configSSH?: shared.ConfigSsh;
 
   @SpeakeasyMetadata()
   contentType: string;

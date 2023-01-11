@@ -33,7 +33,7 @@ export declare class CreateFacetRequest extends SpeakeasyBase {
 export declare class CreateFacetResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    createFacetResponse?: Map<string, any>;
+    createFacetResponse?: Record<string, any>;
     facetAlreadyExistsException?: any;
     facetValidationException?: any;
     internalServiceException?: any;

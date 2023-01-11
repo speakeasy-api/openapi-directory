@@ -1,25 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListSavedRevisionsUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class ListSavedRevisionsUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSavedRevisionsUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSavedRevisionsUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSavedRevisionsUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSavedRevisionsUsingGetRequest extends SpeakeasyBase {
@@ -28,8 +28,8 @@ export declare class ListSavedRevisionsUsingGetRequest extends SpeakeasyBase {
 export declare class ListSavedRevisionsUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listSavedRevisionsUsingGet200ApplicationJsonObject?: ListSavedRevisionsUsingGet200ApplicationJson;
-    listSavedRevisionsUsingGet400ApplicationJsonObject?: ListSavedRevisionsUsingGet400ApplicationJson;
-    listSavedRevisionsUsingGet401ApplicationJsonObject?: ListSavedRevisionsUsingGet401ApplicationJson;
-    listSavedRevisionsUsingGet500ApplicationJsonObject?: ListSavedRevisionsUsingGet500ApplicationJson;
+    listSavedRevisionsUsingGET200ApplicationJSONObject?: ListSavedRevisionsUsingGet200ApplicationJson;
+    listSavedRevisionsUsingGET400ApplicationJSONObject?: ListSavedRevisionsUsingGet400ApplicationJson;
+    listSavedRevisionsUsingGET401ApplicationJSONObject?: ListSavedRevisionsUsingGet401ApplicationJson;
+    listSavedRevisionsUsingGET500ApplicationJSONObject?: ListSavedRevisionsUsingGet500ApplicationJson;
 }

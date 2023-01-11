@@ -33,5 +33,5 @@ export class ClientAuthResponse extends SpeakeasyBase {
   auth?: shared.Auth;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

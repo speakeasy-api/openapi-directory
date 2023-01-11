@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddFacetToObjectRequest, AddFacetToObjectResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,57 +33,43 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddFacetToObjectRequest = {
   headers: {
-    xAmzAlgorithm: "ex",
-    xAmzContentSha256: "sint",
-    xAmzCredential: "eos",
-    xAmzDate: "quas",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "temporibus",
-    xAmzSignedHeaders: "voluptas",
-    xAmzDataPartition: "tempora",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
+    xAmzDataPartition: "voluptas",
   },
   request: {
     objectAttributeList: [
       {
         key: {
-          facetName: "deleniti",
-          name: "eum",
-          schemaArn: "ut",
+          facetName: "et",
+          name: "nihil",
+          schemaArn: "rerum",
         },
         value: {
-          binaryValue: "dolorum",
+          binaryValue: "dicta",
           booleanValue: true,
-          datetimeValue: "1976-08-08T08:04:02Z",
-          numberValue: "inventore",
-          stringValue: "exercitationem",
-        },
-      },
-      {
-        key: {
-          facetName: "voluptas",
-          name: "neque",
-          schemaArn: "libero",
-        },
-        value: {
-          binaryValue: "sit",
-          booleanValue: false,
-          datetimeValue: "2008-12-07T12:25:50Z",
-          numberValue: "est",
-          stringValue: "cupiditate",
+          datetimeValue: "1981-07-21T06:30:48Z",
+          numberValue: "et",
+          stringValue: "ut",
         },
       },
     ],
     objectReference: {
-      selector: "culpa",
+      selector: "dolorem",
     },
     schemaFacet: {
-      facetName: "est",
-      schemaArn: "veniam",
+      facetName: "et",
+      schemaArn: "voluptate",
     },
   },
 };
 
-sdk.sdk.addFacetToObject(req).then((res: AddFacetToObjectResponse | AxiosError) => {
+sdk.addFacetToObject(req).then((res: AddFacetToObjectResponse | AxiosError) => {
    // handle response
 });
 ```

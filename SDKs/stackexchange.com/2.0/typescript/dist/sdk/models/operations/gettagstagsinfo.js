@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,115 +23,117 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsTagsInfoResponse = exports.GetTagsTagsInfoRequest = exports.GetTagsTagsInfoQueryParams = exports.GetTagsTagsInfoSortEnum = exports.GetTagsTagsInfoOrderEnum = exports.GetTagsTagsInfoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTagsTagsInfoPathParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsInfoPathParams, _super);
     function GetTagsTagsInfoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tags" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoPathParams.prototype, "tags", void 0);
     return GetTagsTagsInfoPathParams;
-}(SpeakeasyBase));
-export { GetTagsTagsInfoPathParams };
-export var GetTagsTagsInfoOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsInfoPathParams = GetTagsTagsInfoPathParams;
+var GetTagsTagsInfoOrderEnum;
 (function (GetTagsTagsInfoOrderEnum) {
     GetTagsTagsInfoOrderEnum["Desc"] = "desc";
     GetTagsTagsInfoOrderEnum["Asc"] = "asc";
-})(GetTagsTagsInfoOrderEnum || (GetTagsTagsInfoOrderEnum = {}));
-export var GetTagsTagsInfoSortEnum;
+})(GetTagsTagsInfoOrderEnum = exports.GetTagsTagsInfoOrderEnum || (exports.GetTagsTagsInfoOrderEnum = {}));
+var GetTagsTagsInfoSortEnum;
 (function (GetTagsTagsInfoSortEnum) {
     GetTagsTagsInfoSortEnum["Popular"] = "popular";
     GetTagsTagsInfoSortEnum["Activity"] = "activity";
     GetTagsTagsInfoSortEnum["Name"] = "name";
-})(GetTagsTagsInfoSortEnum || (GetTagsTagsInfoSortEnum = {}));
+})(GetTagsTagsInfoSortEnum = exports.GetTagsTagsInfoSortEnum || (exports.GetTagsTagsInfoSortEnum = {}));
 var GetTagsTagsInfoQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsTagsInfoQueryParams, _super);
     function GetTagsTagsInfoQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetTagsTagsInfoQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsTagsInfoQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsTagsInfoQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetTagsTagsInfoQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetTagsTagsInfoQueryParams.prototype, "todate", void 0);
     return GetTagsTagsInfoQueryParams;
-}(SpeakeasyBase));
-export { GetTagsTagsInfoQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsInfoQueryParams = GetTagsTagsInfoQueryParams;
 var GetTagsTagsInfoRequest = /** @class */ (function (_super) {
     __extends(GetTagsTagsInfoRequest, _super);
     function GetTagsTagsInfoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsInfoPathParams)
     ], GetTagsTagsInfoRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsTagsInfoQueryParams)
     ], GetTagsTagsInfoRequest.prototype, "queryParams", void 0);
     return GetTagsTagsInfoRequest;
-}(SpeakeasyBase));
-export { GetTagsTagsInfoRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsInfoRequest = GetTagsTagsInfoRequest;
 var GetTagsTagsInfoResponse = /** @class */ (function (_super) {
     __extends(GetTagsTagsInfoResponse, _super);
     function GetTagsTagsInfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsTagsInfoResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsTagsInfoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsTagsInfoResponse.prototype, "statusCode", void 0);
     return GetTagsTagsInfoResponse;
-}(SpeakeasyBase));
-export { GetTagsTagsInfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsTagsInfoResponse = GetTagsTagsInfoResponse;

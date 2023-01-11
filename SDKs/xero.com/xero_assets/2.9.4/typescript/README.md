@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAssetRequest, CreateAssetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,29 +33,29 @@ const req: CreateAssetRequest = {
     },
   },
   headers: {
-    xeroTenantId: "perferendis",
+    xeroTenantId: "sit",
   },
   request: {
-    accountingBookValue: 7.100000,
-    assetId: "veritatis",
-    assetName: "ducimus",
-    assetNumber: "voluptas",
-    assetStatus: "Disposed",
-    assetTypeId: "fugit",
-    bookDepreciationDetail: "sit",
-    bookDepreciationSetting: "omnis",
-    canRollback: false,
-    disposalDate: "1998-07-13",
-    disposalPrice: 80.199997,
-    isDeleteEnabledForDate: true,
-    purchaseDate: "2016-05-04",
-    purchasePrice: 81.099998,
-    serialNumber: "assumenda",
-    warrantyExpiryDate: "minima",
+    accountingBookValue: 14.200000,
+    assetId: "expedita",
+    assetName: "consequuntur",
+    assetNumber: "dolor",
+    assetStatus: "Registered",
+    assetTypeId: "voluptas",
+    bookDepreciationDetail: "fugit",
+    bookDepreciationSetting: "et",
+    canRollback: true,
+    disposalDate: "2004-06-02",
+    disposalPrice: 52.099998,
+    isDeleteEnabledForDate: false,
+    purchaseDate: "2021-10-23",
+    purchasePrice: 50.099998,
+    serialNumber: "iste",
+    warrantyExpiryDate: "vitae",
   },
 };
 
-sdk.sdk.createAsset(req).then((res: CreateAssetResponse | AxiosError) => {
+sdk.asset.createAsset(req).then((res: CreateAssetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -65,7 +64,7 @@ sdk.sdk.createAsset(req).then((res: CreateAssetResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Asset
 
 * `createAsset` - adds a fixed asset
 * `createAssetType` - adds a fixed asset type

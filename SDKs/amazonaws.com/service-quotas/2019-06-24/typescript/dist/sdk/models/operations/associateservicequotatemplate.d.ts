@@ -14,12 +14,12 @@ export declare class AssociateServiceQuotaTemplateHeaders extends SpeakeasyBase 
 }
 export declare class AssociateServiceQuotaTemplateRequest extends SpeakeasyBase {
     headers: AssociateServiceQuotaTemplateHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class AssociateServiceQuotaTemplateResponse extends SpeakeasyBase {
     awsServiceAccessNotEnabledException?: any;
     accessDeniedException?: any;
-    associateServiceQuotaTemplateResponse?: Map<string, any>;
+    associateServiceQuotaTemplateResponse?: Record<string, any>;
     contentType: string;
     dependencyAccessDeniedException?: any;
     noAvailableOrganizationException?: any;

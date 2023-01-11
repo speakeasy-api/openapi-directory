@@ -101,5 +101,5 @@ export class GetServicesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getServices200ApplicationJsonObject?: GetServices200ApplicationJson;
+  getServices200ApplicationJSONObject?: GetServices200ApplicationJson;
 }

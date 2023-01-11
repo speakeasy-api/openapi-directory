@@ -48,7 +48,7 @@ export class ActivateContactChannelResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  activateContactChannelResult?: Map<string, any>;
+  activateContactChannelResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

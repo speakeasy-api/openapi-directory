@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FSxWindowsFileServerAuthorizationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // FSxWindowsFileServerAuthorizationConfig
 /**
  * <p>The authorization configuration details for Amazon FSx for Windows File Server file system. See <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_FSxWindowsFileServerVolumeConfiguration.html">FSxWindowsFileServerVolumeConfiguration</a> in the <i>Amazon Elastic Container Service API Reference</i>.</p> <p>For more information and the input format, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/wfsx-volumes.html">Amazon FSx for Windows File Server Volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
@@ -33,13 +36,13 @@ var FSxWindowsFileServerAuthorizationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credentialsParameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credentialsParameter" }),
         __metadata("design:type", String)
     ], FSxWindowsFileServerAuthorizationConfig.prototype, "credentialsParameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], FSxWindowsFileServerAuthorizationConfig.prototype, "domain", void 0);
     return FSxWindowsFileServerAuthorizationConfig;
-}(SpeakeasyBase));
-export { FSxWindowsFileServerAuthorizationConfig };
+}(utils_1.SpeakeasyBase));
+exports.FSxWindowsFileServerAuthorizationConfig = FSxWindowsFileServerAuthorizationConfig;

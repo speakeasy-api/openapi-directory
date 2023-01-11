@@ -4,6 +4,10 @@ import { UserCompact } from "./usercompact";
 
 
 
+// PortfolioMembershipResponse
+/** 
+ * This object determines if a user is a member of a portfolio.
+**/
 export class PortfolioMembershipResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;

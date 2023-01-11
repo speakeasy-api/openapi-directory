@@ -23,7 +23,7 @@ export declare class PutConfigurationSetTrackingOptionsResponse extends Speakeas
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putConfigurationSetTrackingOptionsResponse?: Map<string, any>;
+    putConfigurationSetTrackingOptionsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

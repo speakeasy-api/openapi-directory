@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityOut } from "./entityout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntitiesOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var entityout_1 = require("./entityout");
 var EntitiesOut = /** @class */ (function (_super) {
     __extends(EntitiesOut, _super);
     function EntitiesOut() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entities", elemType: EntityOut }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entities", elemType: entityout_1.EntityOut }),
         __metadata("design:type", Array)
     ], EntitiesOut.prototype, "entities", void 0);
     return EntitiesOut;
-}(SpeakeasyBase));
-export { EntitiesOut };
+}(utils_1.SpeakeasyBase));
+exports.EntitiesOut = EntitiesOut;

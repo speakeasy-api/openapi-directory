@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssociationFilterResponse = exports.PostAssociationFilterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssociationFilterRequest = /** @class */ (function (_super) {
     __extends(PostAssociationFilterRequest, _super);
     function PostAssociationFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], PostAssociationFilterRequest.prototype, "request", void 0);
     return PostAssociationFilterRequest;
-}(SpeakeasyBase));
-export { PostAssociationFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociationFilterRequest = PostAssociationFilterRequest;
 var PostAssociationFilterResponse = /** @class */ (function (_super) {
     __extends(PostAssociationFilterResponse, _super);
     function PostAssociationFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssociationFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssociationFilterResponse.prototype, "statusCode", void 0);
     return PostAssociationFilterResponse;
-}(SpeakeasyBase));
-export { PostAssociationFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociationFilterResponse = PostAssociationFilterResponse;

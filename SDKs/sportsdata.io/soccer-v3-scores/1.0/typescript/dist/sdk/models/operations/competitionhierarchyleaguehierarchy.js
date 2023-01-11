@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CompetitionHierarchyLeagueHierarchyFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompetitionHierarchyLeagueHierarchyResponse = exports.CompetitionHierarchyLeagueHierarchyRequest = exports.CompetitionHierarchyLeagueHierarchyPathParams = exports.CompetitionHierarchyLeagueHierarchyFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CompetitionHierarchyLeagueHierarchyFormatEnum;
 (function (CompetitionHierarchyLeagueHierarchyFormatEnum) {
     CompetitionHierarchyLeagueHierarchyFormatEnum["Xml"] = "xml";
     CompetitionHierarchyLeagueHierarchyFormatEnum["Json"] = "json";
-})(CompetitionHierarchyLeagueHierarchyFormatEnum || (CompetitionHierarchyLeagueHierarchyFormatEnum = {}));
+})(CompetitionHierarchyLeagueHierarchyFormatEnum = exports.CompetitionHierarchyLeagueHierarchyFormatEnum || (exports.CompetitionHierarchyLeagueHierarchyFormatEnum = {}));
 var CompetitionHierarchyLeagueHierarchyPathParams = /** @class */ (function (_super) {
     __extends(CompetitionHierarchyLeagueHierarchyPathParams, _super);
     function CompetitionHierarchyLeagueHierarchyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], CompetitionHierarchyLeagueHierarchyPathParams.prototype, "format", void 0);
     return CompetitionHierarchyLeagueHierarchyPathParams;
-}(SpeakeasyBase));
-export { CompetitionHierarchyLeagueHierarchyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionHierarchyLeagueHierarchyPathParams = CompetitionHierarchyLeagueHierarchyPathParams;
 var CompetitionHierarchyLeagueHierarchyRequest = /** @class */ (function (_super) {
     __extends(CompetitionHierarchyLeagueHierarchyRequest, _super);
     function CompetitionHierarchyLeagueHierarchyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompetitionHierarchyLeagueHierarchyPathParams)
     ], CompetitionHierarchyLeagueHierarchyRequest.prototype, "pathParams", void 0);
     return CompetitionHierarchyLeagueHierarchyRequest;
-}(SpeakeasyBase));
-export { CompetitionHierarchyLeagueHierarchyRequest };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionHierarchyLeagueHierarchyRequest = CompetitionHierarchyLeagueHierarchyRequest;
 var CompetitionHierarchyLeagueHierarchyResponse = /** @class */ (function (_super) {
     __extends(CompetitionHierarchyLeagueHierarchyResponse, _super);
     function CompetitionHierarchyLeagueHierarchyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], CompetitionHierarchyLeagueHierarchyResponse.prototype, "areas", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CompetitionHierarchyLeagueHierarchyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CompetitionHierarchyLeagueHierarchyResponse.prototype, "statusCode", void 0);
     return CompetitionHierarchyLeagueHierarchyResponse;
-}(SpeakeasyBase));
-export { CompetitionHierarchyLeagueHierarchyResponse };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionHierarchyLeagueHierarchyResponse = CompetitionHierarchyLeagueHierarchyResponse;

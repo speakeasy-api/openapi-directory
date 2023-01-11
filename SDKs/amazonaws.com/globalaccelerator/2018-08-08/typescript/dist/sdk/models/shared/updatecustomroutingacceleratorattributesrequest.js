@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCustomRoutingAcceleratorAttributesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateCustomRoutingAcceleratorAttributesRequest = /** @class */ (function (_super) {
     __extends(UpdateCustomRoutingAcceleratorAttributesRequest, _super);
     function UpdateCustomRoutingAcceleratorAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorArn" }),
         __metadata("design:type", String)
     ], UpdateCustomRoutingAcceleratorAttributesRequest.prototype, "acceleratorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FlowLogsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FlowLogsEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateCustomRoutingAcceleratorAttributesRequest.prototype, "flowLogsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FlowLogsS3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FlowLogsS3Bucket" }),
         __metadata("design:type", String)
     ], UpdateCustomRoutingAcceleratorAttributesRequest.prototype, "flowLogsS3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FlowLogsS3Prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FlowLogsS3Prefix" }),
         __metadata("design:type", String)
     ], UpdateCustomRoutingAcceleratorAttributesRequest.prototype, "flowLogsS3Prefix", void 0);
     return UpdateCustomRoutingAcceleratorAttributesRequest;
-}(SpeakeasyBase));
-export { UpdateCustomRoutingAcceleratorAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomRoutingAcceleratorAttributesRequest = UpdateCustomRoutingAcceleratorAttributesRequest;

@@ -7,7 +7,7 @@ export declare class IpamPrefixesAvailableIpsReadRequest extends SpeakeasyBase {
     pathParams: IpamPrefixesAvailableIpsReadPathParams;
 }
 export declare class IpamPrefixesAvailableIpsReadResponse extends SpeakeasyBase {
-    availableIps?: shared.AvailableIp[];
+    availableIPS?: shared.AvailableIp[];
     contentType: string;
     statusCode: number;
 }

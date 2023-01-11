@@ -25,8 +25,8 @@ export class GetRepositoryPipelineSshKeyPairResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineSshKeyPair?: Map<string, any>;
+  pipelineSshKeyPair?: Record<string, any>;
 }

@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordingAddOnResultEnumStatusEnum = void 0;
+var RecordingAddOnResultEnumStatusEnum;
+(function (RecordingAddOnResultEnumStatusEnum) {
+    RecordingAddOnResultEnumStatusEnum["Canceled"] = "canceled";
+    RecordingAddOnResultEnumStatusEnum["Completed"] = "completed";
+    RecordingAddOnResultEnumStatusEnum["Deleted"] = "deleted";
+    RecordingAddOnResultEnumStatusEnum["Failed"] = "failed";
+    RecordingAddOnResultEnumStatusEnum["InProgress"] = "in-progress";
+    RecordingAddOnResultEnumStatusEnum["Init"] = "init";
+    RecordingAddOnResultEnumStatusEnum["Processing"] = "processing";
+    RecordingAddOnResultEnumStatusEnum["Queued"] = "queued";
+})(RecordingAddOnResultEnumStatusEnum = exports.RecordingAddOnResultEnumStatusEnum || (exports.RecordingAddOnResultEnumStatusEnum = {}));

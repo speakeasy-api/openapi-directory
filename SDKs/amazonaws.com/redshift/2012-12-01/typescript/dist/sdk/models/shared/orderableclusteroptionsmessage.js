@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderableClusterOption } from "./orderableclusteroption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderableClusterOptionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderableclusteroptionslist_1 = require("./orderableclusteroptionslist");
 // OrderableClusterOptionsMessage
 /**
  * Contains the output from the <a>DescribeOrderableClusterOptions</a> action.
@@ -34,13 +37,13 @@ var OrderableClusterOptionsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrderableClusterOptionsMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: OrderableClusterOption }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: orderableclusteroptionslist_1.OrderableClusterOptionsList }),
         __metadata("design:type", Array)
     ], OrderableClusterOptionsMessage.prototype, "orderableClusterOptions", void 0);
     return OrderableClusterOptionsMessage;
-}(SpeakeasyBase));
-export { OrderableClusterOptionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.OrderableClusterOptionsMessage = OrderableClusterOptionsMessage;

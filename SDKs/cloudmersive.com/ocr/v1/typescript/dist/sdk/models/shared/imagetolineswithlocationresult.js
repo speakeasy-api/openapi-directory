@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrLineElement } from "./ocrlineelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageToLinesWithLocationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrlineelement_1 = require("./ocrlineelement");
 // ImageToLinesWithLocationResult
 /**
  * Result of an image to lines-with-location OCR operation
@@ -34,13 +37,13 @@ var ImageToLinesWithLocationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Lines", elemType: OcrLineElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Lines", elemType: ocrlineelement_1.OcrLineElement }),
         __metadata("design:type", Array)
     ], ImageToLinesWithLocationResult.prototype, "lines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], ImageToLinesWithLocationResult.prototype, "successful", void 0);
     return ImageToLinesWithLocationResult;
-}(SpeakeasyBase));
-export { ImageToLinesWithLocationResult };
+}(utils_1.SpeakeasyBase));
+exports.ImageToLinesWithLocationResult = ImageToLinesWithLocationResult;

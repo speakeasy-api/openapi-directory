@@ -24,7 +24,7 @@ export declare enum UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum {
 export declare class UpdateReplicationConfigurationRequestBody extends SpeakeasyBase {
     associateDefaultSecurityGroup?: boolean;
     bandwidthThrottling?: number;
-    createPublicIp?: boolean;
+    createPublicIP?: boolean;
     dataPlaneRouting?: UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum;
     defaultLargeStagingDiskType?: UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum;
     ebsEncryption?: UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum;
@@ -33,9 +33,9 @@ export declare class UpdateReplicationConfigurationRequestBody extends Speakeasy
     replicatedDisks?: shared.ReplicationConfigurationReplicatedDisk[];
     replicationServerInstanceType?: string;
     replicationServersSecurityGroupsIDs?: string[];
-    sourceServerId: string;
+    sourceServerID: string;
     stagingAreaSubnetId?: string;
-    stagingAreaTags?: Map<string, string>;
+    stagingAreaTags?: Record<string, string>;
     useDedicatedReplicationServer?: boolean;
 }
 export declare class UpdateReplicationConfigurationRequest extends SpeakeasyBase {

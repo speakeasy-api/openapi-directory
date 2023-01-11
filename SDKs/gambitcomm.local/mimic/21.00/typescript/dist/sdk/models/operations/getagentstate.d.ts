@@ -8,5 +8,5 @@ export declare class GetAgentStateRequest extends SpeakeasyBase {
 export declare class GetAgentStateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAgentState200ApplicationJsonInt32Integer?: number;
+    getAgentState200ApplicationJSONInt32Integer?: number;
 }

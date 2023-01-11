@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListSessionsOfAuthorUsingPostQueryParams extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class ListSessionsOfAuthorUsingPost200ApplicationJsonDataSessions extends SpeakeasyBase {
-    authorId?: string;
-    groupId?: string;
+    authorID?: string;
+    groupID?: string;
     id?: string;
     validUntil?: number;
 }
@@ -18,17 +18,17 @@ export declare class ListSessionsOfAuthorUsingPost200ApplicationJson extends Spe
 }
 export declare class ListSessionsOfAuthorUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfAuthorUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfAuthorUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfAuthorUsingPostRequest extends SpeakeasyBase {
@@ -37,8 +37,8 @@ export declare class ListSessionsOfAuthorUsingPostRequest extends SpeakeasyBase 
 export declare class ListSessionsOfAuthorUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listSessionsOfAuthorUsingPost200ApplicationJsonObject?: ListSessionsOfAuthorUsingPost200ApplicationJson;
-    listSessionsOfAuthorUsingPost400ApplicationJsonObject?: ListSessionsOfAuthorUsingPost400ApplicationJson;
-    listSessionsOfAuthorUsingPost401ApplicationJsonObject?: ListSessionsOfAuthorUsingPost401ApplicationJson;
-    listSessionsOfAuthorUsingPost500ApplicationJsonObject?: ListSessionsOfAuthorUsingPost500ApplicationJson;
+    listSessionsOfAuthorUsingPOST200ApplicationJSONObject?: ListSessionsOfAuthorUsingPost200ApplicationJson;
+    listSessionsOfAuthorUsingPOST400ApplicationJSONObject?: ListSessionsOfAuthorUsingPost400ApplicationJson;
+    listSessionsOfAuthorUsingPOST401ApplicationJSONObject?: ListSessionsOfAuthorUsingPost401ApplicationJson;
+    listSessionsOfAuthorUsingPOST500ApplicationJSONObject?: ListSessionsOfAuthorUsingPost500ApplicationJson;
 }

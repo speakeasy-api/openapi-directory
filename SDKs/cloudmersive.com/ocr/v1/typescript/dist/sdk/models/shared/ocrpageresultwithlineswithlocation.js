@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrLineElement } from "./ocrlineelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OcrPageResultWithLinesWithLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrlineelement_1 = require("./ocrlineelement");
 // OcrPageResultWithLinesWithLocation
 /**
  * OCR results of a page, including lines of text and their location
@@ -34,17 +37,17 @@ var OcrPageResultWithLinesWithLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Lines", elemType: OcrLineElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Lines", elemType: ocrlineelement_1.OcrLineElement }),
         __metadata("design:type", Array)
     ], OcrPageResultWithLinesWithLocation.prototype, "lines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PageNumber" }),
         __metadata("design:type", Number)
     ], OcrPageResultWithLinesWithLocation.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], OcrPageResultWithLinesWithLocation.prototype, "successful", void 0);
     return OcrPageResultWithLinesWithLocation;
-}(SpeakeasyBase));
-export { OcrPageResultWithLinesWithLocation };
+}(utils_1.SpeakeasyBase));
+exports.OcrPageResultWithLinesWithLocation = OcrPageResultWithLinesWithLocation;

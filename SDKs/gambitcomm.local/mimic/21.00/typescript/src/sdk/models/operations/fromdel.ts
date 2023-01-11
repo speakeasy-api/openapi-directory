@@ -28,5 +28,5 @@ export class FromDelResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fromDel200ApplicationJsonString?: string;
+  fromDel200ApplicationJSONString?: string;
 }

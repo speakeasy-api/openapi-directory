@@ -33,7 +33,7 @@ export class BatchRequestActionOptions extends SpeakeasyBase {
 **/
 export class BatchRequestAction extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method: BatchRequestActionMethodEnum;

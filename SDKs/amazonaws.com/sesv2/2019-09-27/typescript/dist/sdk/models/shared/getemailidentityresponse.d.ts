@@ -12,7 +12,7 @@ export declare class GetEmailIdentityResponse extends SpeakeasyBase {
     feedbackForwardingStatus?: boolean;
     identityType?: IdentityTypeEnum;
     mailFromAttributes?: MailFromAttributes;
-    policies?: Map<string, string>;
+    policies?: Record<string, string>;
     tags?: Tag[];
     verifiedForSendingStatus?: boolean;
 }

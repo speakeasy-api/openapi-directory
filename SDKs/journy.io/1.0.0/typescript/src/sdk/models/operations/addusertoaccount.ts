@@ -27,6 +27,10 @@ export class AddUserToAccount201ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// AddUserToAccount201ApplicationJson
+/** 
+ * The object was created
+**/
 export class AddUserToAccount201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -42,13 +46,13 @@ export class AddUserToAccount201ApplicationJson extends SpeakeasyBase {
 **/
 export class AddUserToAccount400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -58,7 +62,7 @@ export class AddUserToAccount400ApplicationJsonErrorsParameters extends Speakeas
 **/
 export class AddUserToAccount400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: AddUserToAccount400ApplicationJsonErrorsParameters;
@@ -74,6 +78,10 @@ export class AddUserToAccount400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// AddUserToAccount400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class AddUserToAccount400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: AddUserToAccount400ApplicationJsonErrors;
@@ -95,6 +103,10 @@ export class AddUserToAccount401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// AddUserToAccount401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class AddUserToAccount401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -113,6 +125,10 @@ export class AddUserToAccount429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// AddUserToAccount429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class AddUserToAccount429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -131,6 +147,10 @@ export class AddUserToAccount500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// AddUserToAccount500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class AddUserToAccount500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -154,23 +174,23 @@ export class AddUserToAccountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addUserToAccount201ApplicationJsonObject?: AddUserToAccount201ApplicationJson;
+  addUserToAccount201ApplicationJSONObject?: AddUserToAccount201ApplicationJson;
 
   @SpeakeasyMetadata()
-  addUserToAccount400ApplicationJsonObject?: AddUserToAccount400ApplicationJson;
+  addUserToAccount400ApplicationJSONObject?: AddUserToAccount400ApplicationJson;
 
   @SpeakeasyMetadata()
-  addUserToAccount401ApplicationJsonObject?: AddUserToAccount401ApplicationJson;
+  addUserToAccount401ApplicationJSONObject?: AddUserToAccount401ApplicationJson;
 
   @SpeakeasyMetadata()
-  addUserToAccount429ApplicationJsonObject?: AddUserToAccount429ApplicationJson;
+  addUserToAccount429ApplicationJSONObject?: AddUserToAccount429ApplicationJson;
 
   @SpeakeasyMetadata()
-  addUserToAccount500ApplicationJsonObject?: AddUserToAccount500ApplicationJson;
+  addUserToAccount500ApplicationJSONObject?: AddUserToAccount500ApplicationJson;
 }

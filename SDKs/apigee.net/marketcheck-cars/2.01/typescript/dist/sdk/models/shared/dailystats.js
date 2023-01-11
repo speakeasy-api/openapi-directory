@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DailyStatsNestedJson } from "./dailystatsnestedjson";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DailyStats = void 0;
+var utils_1 = require("../../../internal/utils");
+var dailystatsnestedjson_1 = require("./dailystatsnestedjson");
 var DailyStats = /** @class */ (function (_super) {
     __extends(DailyStats, _super);
     function DailyStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dom" }),
-        __metadata("design:type", DailyStatsNestedJson)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dom" }),
+        __metadata("design:type", dailystatsnestedjson_1.DailyStatsNestedJson)
     ], DailyStats.prototype, "dom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles_stats" }),
-        __metadata("design:type", DailyStatsNestedJson)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles_stats" }),
+        __metadata("design:type", dailystatsnestedjson_1.DailyStatsNestedJson)
     ], DailyStats.prototype, "milesStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_stats" }),
-        __metadata("design:type", DailyStatsNestedJson)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_stats" }),
+        __metadata("design:type", dailystatsnestedjson_1.DailyStatsNestedJson)
     ], DailyStats.prototype, "priceStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units_for_sale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units_for_sale" }),
         __metadata("design:type", Number)
     ], DailyStats.prototype, "unitsForSale", void 0);
     return DailyStats;
-}(SpeakeasyBase));
-export { DailyStats };
+}(utils_1.SpeakeasyBase));
+exports.DailyStats = DailyStats;

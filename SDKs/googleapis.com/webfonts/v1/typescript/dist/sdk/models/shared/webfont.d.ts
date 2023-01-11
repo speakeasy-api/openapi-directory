@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Webfont extends SpeakeasyBase {
     category?: string;
     family?: string;
-    files?: Map<string, string>;
+    files?: Record<string, string>;
     kind?: string;
     lastModified?: string;
     subsets?: string[];

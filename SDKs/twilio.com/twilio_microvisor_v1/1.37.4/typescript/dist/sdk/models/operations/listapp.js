@@ -1,0 +1,171 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAppResponse = exports.ListAppRequest = exports.ListAppListAppResponse = exports.ListAppListAppResponseMeta = exports.ListAppSecurity = exports.ListAppQueryParams = exports.ListAppServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.ListAppServerList = [
+    "https://microvisor.twilio.com",
+];
+var ListAppQueryParams = /** @class */ (function (_super) {
+    __extends(ListAppQueryParams, _super);
+    function ListAppQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PageSize" }),
+        __metadata("design:type", Number)
+    ], ListAppQueryParams.prototype, "pageSize", void 0);
+    return ListAppQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.ListAppQueryParams = ListAppQueryParams;
+var ListAppSecurity = /** @class */ (function (_super) {
+    __extends(ListAppSecurity, _super);
+    function ListAppSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], ListAppSecurity.prototype, "accountSidAuthToken", void 0);
+    return ListAppSecurity;
+}(utils_1.SpeakeasyBase));
+exports.ListAppSecurity = ListAppSecurity;
+var ListAppListAppResponseMeta = /** @class */ (function (_super) {
+    __extends(ListAppListAppResponseMeta, _super);
+    function ListAppListAppResponseMeta() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_page_url" }),
+        __metadata("design:type", String)
+    ], ListAppListAppResponseMeta.prototype, "firstPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", String)
+    ], ListAppListAppResponseMeta.prototype, "key", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page_url" }),
+        __metadata("design:type", String)
+    ], ListAppListAppResponseMeta.prototype, "nextPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", Number)
+    ], ListAppListAppResponseMeta.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_size" }),
+        __metadata("design:type", Number)
+    ], ListAppListAppResponseMeta.prototype, "pageSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page_url" }),
+        __metadata("design:type", String)
+    ], ListAppListAppResponseMeta.prototype, "previousPageUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
+        __metadata("design:type", String)
+    ], ListAppListAppResponseMeta.prototype, "url", void 0);
+    return ListAppListAppResponseMeta;
+}(utils_1.SpeakeasyBase));
+exports.ListAppListAppResponseMeta = ListAppListAppResponseMeta;
+var ListAppListAppResponse = /** @class */ (function (_super) {
+    __extends(ListAppListAppResponse, _super);
+    function ListAppListAppResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apps", elemType: shared.MicrovisorV1App }),
+        __metadata("design:type", Array)
+    ], ListAppListAppResponse.prototype, "apps", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", ListAppListAppResponseMeta)
+    ], ListAppListAppResponse.prototype, "meta", void 0);
+    return ListAppListAppResponse;
+}(utils_1.SpeakeasyBase));
+exports.ListAppListAppResponse = ListAppListAppResponse;
+var ListAppRequest = /** @class */ (function (_super) {
+    __extends(ListAppRequest, _super);
+    function ListAppRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], ListAppRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListAppQueryParams)
+    ], ListAppRequest.prototype, "queryParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListAppSecurity)
+    ], ListAppRequest.prototype, "security", void 0);
+    return ListAppRequest;
+}(utils_1.SpeakeasyBase));
+exports.ListAppRequest = ListAppRequest;
+var ListAppResponse = /** @class */ (function (_super) {
+    __extends(ListAppResponse, _super);
+    function ListAppResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], ListAppResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ListAppListAppResponse)
+    ], ListAppResponse.prototype, "listAppResponse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], ListAppResponse.prototype, "statusCode", void 0);
+    return ListAppResponse;
+}(utils_1.SpeakeasyBase));
+exports.ListAppResponse = ListAppResponse;

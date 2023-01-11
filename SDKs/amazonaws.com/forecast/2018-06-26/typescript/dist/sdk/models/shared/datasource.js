@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3Config } from "./s3config";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3config_1 = require("./s3config");
 // DataSource
 /**
  * The source of your training data, an AWS Identity and Access Management (IAM) role that allows Amazon Forecast to access the data and, optionally, an AWS Key Management Service (KMS) key. This object is submitted in the <a>CreateDatasetImportJob</a> request.
@@ -34,9 +37,9 @@ var DataSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Config" }),
-        __metadata("design:type", S3Config)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Config" }),
+        __metadata("design:type", s3config_1.S3Config)
     ], DataSource.prototype, "s3Config", void 0);
     return DataSource;
-}(SpeakeasyBase));
-export { DataSource };
+}(utils_1.SpeakeasyBase));
+exports.DataSource = DataSource;

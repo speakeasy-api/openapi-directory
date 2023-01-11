@@ -11,7 +11,7 @@ export class Committee extends SpeakeasyBase {
   classification: CommitteeClassificationEnum;
 
   @SpeakeasyMetadata({ data: "json, name=extras" })
-  extras: Map<string, any>;
+  extras: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;

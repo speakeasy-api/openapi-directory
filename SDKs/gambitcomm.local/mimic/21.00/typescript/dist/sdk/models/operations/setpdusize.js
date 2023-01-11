@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetPdusizeResponse = exports.SetPdusizeRequest = exports.SetPdusizePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetPdusizePathParams = /** @class */ (function (_super) {
     __extends(SetPdusizePathParams, _super);
     function SetPdusizePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetPdusizePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pdusize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pdusize" }),
         __metadata("design:type", Number)
     ], SetPdusizePathParams.prototype, "pdusize", void 0);
     return SetPdusizePathParams;
-}(SpeakeasyBase));
-export { SetPdusizePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetPdusizePathParams = SetPdusizePathParams;
 var SetPdusizeRequest = /** @class */ (function (_super) {
     __extends(SetPdusizeRequest, _super);
     function SetPdusizeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetPdusizePathParams)
     ], SetPdusizeRequest.prototype, "pathParams", void 0);
     return SetPdusizeRequest;
-}(SpeakeasyBase));
-export { SetPdusizeRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetPdusizeRequest = SetPdusizeRequest;
 var SetPdusizeResponse = /** @class */ (function (_super) {
     __extends(SetPdusizeResponse, _super);
     function SetPdusizeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetPdusizeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetPdusizeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], SetPdusizeResponse.prototype, "setPdusize200ApplicationJsonInt32Integer", void 0);
+    ], SetPdusizeResponse.prototype, "setPdusize200ApplicationJSONInt32Integer", void 0);
     return SetPdusizeResponse;
-}(SpeakeasyBase));
-export { SetPdusizeResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetPdusizeResponse = SetPdusizeResponse;

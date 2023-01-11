@@ -8,10 +8,10 @@ export declare class PriceBulkUploadsQueryParams extends SpeakeasyBase {
 }
 export declare class PriceBulkUploadsHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType?: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE?: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare class PriceBulkUploadsRequestBodyFile extends SpeakeasyBase {
     content: Uint8Array;
@@ -21,8 +21,8 @@ export declare class PriceBulkUploadsRequestBody extends SpeakeasyBase {
     file?: PriceBulkUploadsRequestBodyFile;
 }
 export declare class PriceBulkUploads200ApplicationJson extends SpeakeasyBase {
-    additionalAttributes?: Map<string, any>;
-    errors?: Map<string, any>;
+    additionalAttributes?: Record<string, any>;
+    errors?: Record<string, any>;
     feedId?: string;
 }
 export declare class PriceBulkUploadsRequest extends SpeakeasyBase {
@@ -34,5 +34,5 @@ export declare class PriceBulkUploadsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    priceBulkUploads200ApplicationJsonObject?: PriceBulkUploads200ApplicationJson;
+    priceBulkUploads200ApplicationJSONObject?: PriceBulkUploads200ApplicationJson;
 }

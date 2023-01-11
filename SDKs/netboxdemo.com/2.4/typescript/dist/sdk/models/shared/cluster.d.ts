@@ -5,7 +5,7 @@ import { NestedClusterType } from "./nestedclustertype";
 export declare class Cluster extends SpeakeasyBase {
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     group?: NestedClusterGroup;
     id?: number;
     lastUpdated?: Date;

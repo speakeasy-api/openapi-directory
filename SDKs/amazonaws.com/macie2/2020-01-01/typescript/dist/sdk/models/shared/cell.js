@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cell = void 0;
+var utils_1 = require("../../../internal/utils");
 // Cell
 /**
  * Specifies the location of an occurrence of sensitive data in a Microsoft Excel workbook, CSV file, or TSV file.
@@ -33,21 +36,21 @@ var Cell = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cellReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cellReference" }),
         __metadata("design:type", String)
     ], Cell.prototype, "cellReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=column" }),
         __metadata("design:type", Number)
     ], Cell.prototype, "column", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnName" }),
         __metadata("design:type", String)
     ], Cell.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=row" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row" }),
         __metadata("design:type", Number)
     ], Cell.prototype, "row", void 0);
     return Cell;
-}(SpeakeasyBase));
-export { Cell };
+}(utils_1.SpeakeasyBase));
+exports.Cell = Cell;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StaticIp } from "./staticip";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStaticIpsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var staticip_1 = require("./staticip");
 var GetStaticIpsResult = /** @class */ (function (_super) {
     __extends(GetStaticIpsResult, _super);
     function GetStaticIpsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GetStaticIpsResult.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticIps", elemType: StaticIp }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticIps", elemType: staticip_1.StaticIp }),
         __metadata("design:type", Array)
     ], GetStaticIpsResult.prototype, "staticIps", void 0);
     return GetStaticIpsResult;
-}(SpeakeasyBase));
-export { GetStaticIpsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetStaticIpsResult = GetStaticIpsResult;

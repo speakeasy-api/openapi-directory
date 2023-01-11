@@ -11,16 +11,16 @@ import { BatchDocumentOutputConfig } from "./batchdocumentoutputconfig";
 **/
 export class BatchTranslateDocumentRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=formatConversions" })
-  formatConversions?: Map<string, string>;
+  formatConversions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=glossaries", elemType: TranslateTextGlossaryConfig })
-  glossaries?: Map<string, TranslateTextGlossaryConfig>;
+  glossaries?: Record<string, TranslateTextGlossaryConfig>;
 
   @SpeakeasyMetadata({ data: "json, name=inputConfigs", elemType: BatchDocumentInputConfig })
   inputConfigs?: BatchDocumentInputConfig[];
 
   @SpeakeasyMetadata({ data: "json, name=models" })
-  models?: Map<string, string>;
+  models?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=outputConfig" })
   outputConfig?: BatchDocumentOutputConfig;

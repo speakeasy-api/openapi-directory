@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SasPortalFrequencyRange } from "./sasportalfrequencyrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDpaMoveList = void 0;
+var utils_1 = require("../../../internal/utils");
+var sasportalfrequencyrange_1 = require("./sasportalfrequencyrange");
 // SasPortalDpaMoveList
 /**
  * An entry in a DPA's move list.
@@ -34,13 +37,13 @@ var SasPortalDpaMoveList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dpaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dpaId" }),
         __metadata("design:type", String)
     ], SasPortalDpaMoveList.prototype, "dpaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyRange" }),
-        __metadata("design:type", SasPortalFrequencyRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyRange" }),
+        __metadata("design:type", sasportalfrequencyrange_1.SasPortalFrequencyRange)
     ], SasPortalDpaMoveList.prototype, "frequencyRange", void 0);
     return SasPortalDpaMoveList;
-}(SpeakeasyBase));
-export { SasPortalDpaMoveList };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDpaMoveList = SasPortalDpaMoveList;

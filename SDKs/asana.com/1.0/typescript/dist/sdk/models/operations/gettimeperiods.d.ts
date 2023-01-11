@@ -19,5 +19,5 @@ export declare class GetTimePeriodsResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTimePeriods200ApplicationJsonObject?: GetTimePeriods200ApplicationJson;
+    getTimePeriods200ApplicationJSONObject?: GetTimePeriods200ApplicationJson;
 }

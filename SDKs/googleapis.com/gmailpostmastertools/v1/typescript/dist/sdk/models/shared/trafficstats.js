@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliveryError } from "./deliveryerror";
-import { IpReputation } from "./ipreputation";
-import { FeedbackLoop } from "./feedbackloop";
-export var TrafficStatsDomainReputationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrafficStats = exports.TrafficStatsDomainReputationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliveryerror_1 = require("./deliveryerror");
+var ipreputation_1 = require("./ipreputation");
+var feedbackloop_1 = require("./feedbackloop");
+var TrafficStatsDomainReputationEnum;
 (function (TrafficStatsDomainReputationEnum) {
     TrafficStatsDomainReputationEnum["ReputationCategoryUnspecified"] = "REPUTATION_CATEGORY_UNSPECIFIED";
     TrafficStatsDomainReputationEnum["High"] = "HIGH";
     TrafficStatsDomainReputationEnum["Medium"] = "MEDIUM";
     TrafficStatsDomainReputationEnum["Low"] = "LOW";
     TrafficStatsDomainReputationEnum["Bad"] = "BAD";
-})(TrafficStatsDomainReputationEnum || (TrafficStatsDomainReputationEnum = {}));
+})(TrafficStatsDomainReputationEnum = exports.TrafficStatsDomainReputationEnum || (exports.TrafficStatsDomainReputationEnum = {}));
 // TrafficStats
 /**
  * Email traffic statistics pertaining to a specific date.
@@ -44,49 +47,49 @@ var TrafficStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryErrors", elemType: DeliveryError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryErrors", elemType: deliveryerror_1.DeliveryError }),
         __metadata("design:type", Array)
     ], TrafficStats.prototype, "deliveryErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dkimSuccessRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dkimSuccessRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "dkimSuccessRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dmarcSuccessRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dmarcSuccessRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "dmarcSuccessRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainReputation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainReputation" }),
         __metadata("design:type", String)
     ], TrafficStats.prototype, "domainReputation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inboundEncryptionRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inboundEncryptionRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "inboundEncryptionRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipReputations", elemType: IpReputation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipReputations", elemType: ipreputation_1.IpReputation }),
         __metadata("design:type", Array)
     ], TrafficStats.prototype, "ipReputations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TrafficStats.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outboundEncryptionRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outboundEncryptionRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "outboundEncryptionRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spammyFeedbackLoops", elemType: FeedbackLoop }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spammyFeedbackLoops", elemType: feedbackloop_1.FeedbackLoop }),
         __metadata("design:type", Array)
     ], TrafficStats.prototype, "spammyFeedbackLoops", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spfSuccessRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spfSuccessRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "spfSuccessRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userReportedSpamRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userReportedSpamRatio" }),
         __metadata("design:type", Number)
     ], TrafficStats.prototype, "userReportedSpamRatio", void 0);
     return TrafficStats;
-}(SpeakeasyBase));
-export { TrafficStats };
+}(utils_1.SpeakeasyBase));
+exports.TrafficStats = TrafficStats;

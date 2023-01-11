@@ -5,9 +5,9 @@ import { ParametersInCacheKeyAndForwardedToOrigin } from "./parametersincachekey
 **/
 export declare class CachePolicyConfig extends SpeakeasyBase {
     comment?: string;
-    defaultTtl?: number;
-    maxTtl?: number;
-    minTtl: number;
+    defaultTTL?: number;
+    maxTTL?: number;
+    minTTL: number;
     name: string;
     parametersInCacheKeyAndForwardedToOrigin?: ParametersInCacheKeyAndForwardedToOrigin;
 }

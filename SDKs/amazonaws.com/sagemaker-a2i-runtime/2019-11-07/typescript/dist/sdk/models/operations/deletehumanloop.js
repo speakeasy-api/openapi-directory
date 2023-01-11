@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteHumanLoopResponse = exports.DeleteHumanLoopRequest = exports.DeleteHumanLoopHeaders = exports.DeleteHumanLoopPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteHumanLoopPathParams = /** @class */ (function (_super) {
     __extends(DeleteHumanLoopPathParams, _super);
     function DeleteHumanLoopPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=HumanLoopName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=HumanLoopName" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopPathParams.prototype, "humanLoopName", void 0);
     return DeleteHumanLoopPathParams;
-}(SpeakeasyBase));
-export { DeleteHumanLoopPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteHumanLoopPathParams = DeleteHumanLoopPathParams;
 var DeleteHumanLoopHeaders = /** @class */ (function (_super) {
     __extends(DeleteHumanLoopHeaders, _super);
     function DeleteHumanLoopHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteHumanLoopHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteHumanLoopHeaders;
-}(SpeakeasyBase));
-export { DeleteHumanLoopHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteHumanLoopHeaders = DeleteHumanLoopHeaders;
 var DeleteHumanLoopRequest = /** @class */ (function (_super) {
     __extends(DeleteHumanLoopRequest, _super);
     function DeleteHumanLoopRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteHumanLoopPathParams)
     ], DeleteHumanLoopRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteHumanLoopHeaders)
     ], DeleteHumanLoopRequest.prototype, "headers", void 0);
     return DeleteHumanLoopRequest;
-}(SpeakeasyBase));
-export { DeleteHumanLoopRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteHumanLoopRequest = DeleteHumanLoopRequest;
 var DeleteHumanLoopResponse = /** @class */ (function (_super) {
     __extends(DeleteHumanLoopResponse, _super);
     function DeleteHumanLoopResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteHumanLoopResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteHumanLoopResponse.prototype, "deleteHumanLoopResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteHumanLoopResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteHumanLoopResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteHumanLoopResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteHumanLoopResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteHumanLoopResponse.prototype, "validationException", void 0);
     return DeleteHumanLoopResponse;
-}(SpeakeasyBase));
-export { DeleteHumanLoopResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteHumanLoopResponse = DeleteHumanLoopResponse;

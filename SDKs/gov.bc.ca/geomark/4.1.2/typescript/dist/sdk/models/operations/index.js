@@ -1,7 +1,23 @@
-export * from "./getgeomarksgeomarkidboundingboxfileformatextension";
-export * from "./getgeomarksgeomarkidfeaturefileformatextension";
-export * from "./getgeomarksgeomarkidfileformatextension";
-export * from "./getgeomarksgeomarkidpartsfileformatextension";
-export * from "./getgeomarksgeomarkidpointfileformatextension";
-export * from "./postgeomarkscopy";
-export * from "./postgeomarksnew";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./getgeomarksgeomarkidboundingboxfileformatextension"), exports);
+__exportStar(require("./getgeomarksgeomarkidfeaturefileformatextension"), exports);
+__exportStar(require("./getgeomarksgeomarkidfileformatextension"), exports);
+__exportStar(require("./getgeomarksgeomarkidpartsfileformatextension"), exports);
+__exportStar(require("./getgeomarksgeomarkidpointfileformatextension"), exports);
+__exportStar(require("./postgeomarkscopy"), exports);
+__exportStar(require("./postgeomarksnew"), exports);

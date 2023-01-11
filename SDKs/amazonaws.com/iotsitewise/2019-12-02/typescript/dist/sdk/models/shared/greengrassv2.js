@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GreengrassV2 = void 0;
+var utils_1 = require("../../../internal/utils");
 // GreengrassV2
 /**
  * Contains details for a gateway that runs on IoT Greengrass V2. To create a gateway that runs on IoT Greengrass V2, you must deploy the IoT SiteWise Edge component to your gateway device. Your <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/device-service-role.html">Greengrass device role</a> must use the <code>AWSIoTSiteWiseEdgeAccess</code> policy. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/sw-gateways.html">Using IoT SiteWise at the edge</a> in the <i>IoT SiteWise User Guide</i>.
@@ -33,9 +36,9 @@ var GreengrassV2 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coreDeviceThingName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coreDeviceThingName" }),
         __metadata("design:type", String)
     ], GreengrassV2.prototype, "coreDeviceThingName", void 0);
     return GreengrassV2;
-}(SpeakeasyBase));
-export { GreengrassV2 };
+}(utils_1.SpeakeasyBase));
+exports.GreengrassV2 = GreengrassV2;

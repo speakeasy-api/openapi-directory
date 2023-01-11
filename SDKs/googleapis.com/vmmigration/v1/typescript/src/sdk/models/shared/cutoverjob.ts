@@ -16,19 +16,6 @@ export enum CutoverJobStateEnum {
 }
 
 
-// CutoverJobInput
-/** 
- * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
-**/
-export class CutoverJobInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" })
-  computeEngineTargetDetails?: ComputeEngineTargetDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Status;
-}
-
-
 // CutoverJob
 /** 
  * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
@@ -63,4 +50,17 @@ export class CutoverJob extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=steps", elemType: CutoverStep })
   steps?: CutoverStep[];
+}
+
+
+// CutoverJobInput
+/** 
+ * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
+**/
+export class CutoverJobInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" })
+  computeEngineTargetDetails?: ComputeEngineTargetDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: Status;
 }

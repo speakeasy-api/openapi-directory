@@ -16,7 +16,7 @@ export class ListWordSenses200ApplicationJsonFamilies extends SpeakeasyBase {
   key?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=definition" })
   definition?: string;
@@ -70,5 +70,5 @@ export class ListWordSensesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: ListWordSenses200ApplicationJson })
-  listWordSenses200ApplicationJsonObjects?: ListWordSenses200ApplicationJson[];
+  listWordSenses200ApplicationJSONObjects?: ListWordSenses200ApplicationJson[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ControllersPackageDetailItem } from "./controllerspackagedetailitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ControllersPackageDetailResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var controllerspackagedetailitem_1 = require("./controllerspackagedetailitem");
 var ControllersPackageDetailResponse = /** @class */ (function (_super) {
     __extends(ControllersPackageDetailResponse, _super);
     function ControllersPackageDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", ControllersPackageDetailItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", controllerspackagedetailitem_1.ControllersPackageDetailItem)
     ], ControllersPackageDetailResponse.prototype, "data", void 0);
     return ControllersPackageDetailResponse;
-}(SpeakeasyBase));
-export { ControllersPackageDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.ControllersPackageDetailResponse = ControllersPackageDetailResponse;

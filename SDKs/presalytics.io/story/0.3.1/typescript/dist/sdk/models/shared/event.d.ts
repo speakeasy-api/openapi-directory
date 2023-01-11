@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * An Story Event object
+ * Base model for all types
 **/
 export declare class Event extends SpeakeasyBase {
     attributes?: string;

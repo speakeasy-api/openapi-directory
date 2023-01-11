@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeScores } from "./attributescores";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzeCommentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributescores_1 = require("./attributescores");
 // AnalyzeCommentResponse
 /**
  * The comment analysis response message.
@@ -34,21 +37,21 @@ var AnalyzeCommentResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeScores", elemType: AttributeScores }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeScores", elemType: attributescores_1.AttributeScores }),
+        __metadata("design:type", Object)
     ], AnalyzeCommentResponse.prototype, "attributeScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], AnalyzeCommentResponse.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectedLanguages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectedLanguages" }),
         __metadata("design:type", Array)
     ], AnalyzeCommentResponse.prototype, "detectedLanguages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], AnalyzeCommentResponse.prototype, "languages", void 0);
     return AnalyzeCommentResponse;
-}(SpeakeasyBase));
-export { AnalyzeCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzeCommentResponse = AnalyzeCommentResponse;

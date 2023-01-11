@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidFcmOptions } from "./androidfcmoptions";
-import { AndroidNotification } from "./androidnotification";
-export var AndroidConfigPriorityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidConfig = exports.AndroidConfigPriorityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidfcmoptions_1 = require("./androidfcmoptions");
+var androidnotification_1 = require("./androidnotification");
+var AndroidConfigPriorityEnum;
 (function (AndroidConfigPriorityEnum) {
     AndroidConfigPriorityEnum["Normal"] = "NORMAL";
     AndroidConfigPriorityEnum["High"] = "HIGH";
-})(AndroidConfigPriorityEnum || (AndroidConfigPriorityEnum = {}));
+})(AndroidConfigPriorityEnum = exports.AndroidConfigPriorityEnum || (exports.AndroidConfigPriorityEnum = {}));
 // AndroidConfig
 /**
  * Android specific options for messages sent through [FCM connection server](https://goo.gl/4GLdUl).
@@ -40,37 +43,37 @@ var AndroidConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collapseKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collapseKey" }),
         __metadata("design:type", String)
     ], AndroidConfig.prototype, "collapseKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AndroidConfig.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directBootOk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directBootOk" }),
         __metadata("design:type", Boolean)
     ], AndroidConfig.prototype, "directBootOk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fcmOptions" }),
-        __metadata("design:type", AndroidFcmOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fcmOptions" }),
+        __metadata("design:type", androidfcmoptions_1.AndroidFcmOptions)
     ], AndroidConfig.prototype, "fcmOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification" }),
-        __metadata("design:type", AndroidNotification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification" }),
+        __metadata("design:type", androidnotification_1.AndroidNotification)
     ], AndroidConfig.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], AndroidConfig.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedPackageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedPackageName" }),
         __metadata("design:type", String)
     ], AndroidConfig.prototype, "restrictedPackageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", String)
     ], AndroidConfig.prototype, "ttl", void 0);
     return AndroidConfig;
-}(SpeakeasyBase));
-export { AndroidConfig };
+}(utils_1.SpeakeasyBase));
+exports.AndroidConfig = AndroidConfig;

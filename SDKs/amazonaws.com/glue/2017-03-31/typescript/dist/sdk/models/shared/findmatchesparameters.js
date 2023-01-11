@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindMatchesParameters = void 0;
+var utils_1 = require("../../../internal/utils");
 // FindMatchesParameters
 /**
  * The parameters to configure the find matches transform.
@@ -33,21 +36,21 @@ var FindMatchesParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccuracyCostTradeoff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccuracyCostTradeoff" }),
         __metadata("design:type", Number)
     ], FindMatchesParameters.prototype, "accuracyCostTradeoff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnforceProvidedLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnforceProvidedLabels" }),
         __metadata("design:type", Boolean)
     ], FindMatchesParameters.prototype, "enforceProvidedLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrecisionRecallTradeoff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrecisionRecallTradeoff" }),
         __metadata("design:type", Number)
     ], FindMatchesParameters.prototype, "precisionRecallTradeoff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrimaryKeyColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrimaryKeyColumnName" }),
         __metadata("design:type", String)
     ], FindMatchesParameters.prototype, "primaryKeyColumnName", void 0);
     return FindMatchesParameters;
-}(SpeakeasyBase));
-export { FindMatchesParameters };
+}(utils_1.SpeakeasyBase));
+exports.FindMatchesParameters = FindMatchesParameters;

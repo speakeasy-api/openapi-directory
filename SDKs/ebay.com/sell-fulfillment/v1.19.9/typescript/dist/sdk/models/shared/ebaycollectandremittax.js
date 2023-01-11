@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { EbayTaxReference } from "./ebaytaxreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EbayCollectAndRemitTax = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var ebaytaxreference_1 = require("./ebaytaxreference");
 // EbayCollectAndRemitTax
 /**
  * This type contains information about the type and amount of tax that eBay will collect and remit to the state, province, country, or other taxing authority in the buyer's location, as required by that taxing authority. 'Collect and Remit' tax includes US state-mandated sales tax, 'Goods and Services' tax in Australia or New Zealand, VAT collected for the UK and EU countries.
@@ -35,21 +38,21 @@ var EbayCollectAndRemitTax = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", amount_1.Amount)
     ], EbayCollectAndRemitTax.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectionMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectionMethod" }),
         __metadata("design:type", String)
     ], EbayCollectAndRemitTax.prototype, "collectionMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ebayReference" }),
-        __metadata("design:type", EbayTaxReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ebayReference" }),
+        __metadata("design:type", ebaytaxreference_1.EbayTaxReference)
     ], EbayCollectAndRemitTax.prototype, "ebayReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxType" }),
         __metadata("design:type", String)
     ], EbayCollectAndRemitTax.prototype, "taxType", void 0);
     return EbayCollectAndRemitTax;
-}(SpeakeasyBase));
-export { EbayCollectAndRemitTax };
+}(utils_1.SpeakeasyBase));
+exports.EbayCollectAndRemitTax = EbayCollectAndRemitTax;

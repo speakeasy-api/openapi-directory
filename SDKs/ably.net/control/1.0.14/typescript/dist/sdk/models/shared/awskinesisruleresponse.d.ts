@@ -22,7 +22,7 @@ export declare class AwsKinesisRuleResponseTarget extends SpeakeasyBase {
     streamName: string;
 }
 export declare class AwsKinesisRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

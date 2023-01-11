@@ -15,8 +15,8 @@ export declare class CompanyDeepsearchLeiRequest extends SpeakeasyBase {
     security: CompanyDeepsearchLeiSecurity;
 }
 export declare class CompanyDeepsearchLeiResponse extends SpeakeasyBase {
-    companyDeepsearchLei200ApplicationJsonAny?: any;
-    companyDeepsearchLeiDefaultApplicationJsonAny?: any;
+    companyDeepsearchLEI200ApplicationJSONAny?: any;
+    companyDeepsearchLEIDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

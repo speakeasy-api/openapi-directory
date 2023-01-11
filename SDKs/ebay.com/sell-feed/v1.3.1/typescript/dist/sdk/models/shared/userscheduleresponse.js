@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserScheduleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserScheduleResponse
 /**
  * The type that defines the fields for a paginated result set of available schedules. The response consists of 0 or more sequenced pages where each page has 0 or more items.
@@ -33,61 +36,61 @@ var UserScheduleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedType" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "feedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedDate" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerDayOfMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerDayOfMonth" }),
         __metadata("design:type", Number)
     ], UserScheduleResponse.prototype, "preferredTriggerDayOfMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerDayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerDayOfWeek" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "preferredTriggerDayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredTriggerHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredTriggerHour" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "preferredTriggerHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleEndDate" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "scheduleEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleId" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "scheduleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleName" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "scheduleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleStartDate" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "scheduleStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTemplateId" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "scheduleTemplateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "schemaVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], UserScheduleResponse.prototype, "statusReason", void 0);
     return UserScheduleResponse;
-}(SpeakeasyBase));
-export { UserScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserScheduleResponse = UserScheduleResponse;

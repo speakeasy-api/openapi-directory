@@ -1,4 +1,4 @@
-# WealthOS Typescript Node SDK
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -16,9 +16,8 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
 import { SDK, withSecurity} from "openapi";
 import { UpdateBankAccountRequest, UpdateBankAccountResponse } from "openapi/src/sdk/models/operations";

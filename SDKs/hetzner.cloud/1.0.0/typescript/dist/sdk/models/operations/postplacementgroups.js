@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostPlacementGroupsCreatePlacementGroupRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPlacementGroupsResponse = exports.PostPlacementGroupsRequest = exports.PostPlacementGroupsCreatePlacementGroupResponse = exports.PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup = exports.PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum = exports.PostPlacementGroupsCreatePlacementGroupResponseNullableAction = exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum = exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources = exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionError = exports.PostPlacementGroupsCreatePlacementGroupRequest = exports.PostPlacementGroupsCreatePlacementGroupRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostPlacementGroupsCreatePlacementGroupRequestTypeEnum;
 (function (PostPlacementGroupsCreatePlacementGroupRequestTypeEnum) {
     PostPlacementGroupsCreatePlacementGroupRequestTypeEnum["Spread"] = "spread";
-})(PostPlacementGroupsCreatePlacementGroupRequestTypeEnum || (PostPlacementGroupsCreatePlacementGroupRequestTypeEnum = {}));
+})(PostPlacementGroupsCreatePlacementGroupRequestTypeEnum = exports.PostPlacementGroupsCreatePlacementGroupRequestTypeEnum || (exports.PostPlacementGroupsCreatePlacementGroupRequestTypeEnum = {}));
 var PostPlacementGroupsCreatePlacementGroupRequest = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsCreatePlacementGroupRequest, _super);
     function PostPlacementGroupsCreatePlacementGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostPlacementGroupsCreatePlacementGroupRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupRequest.prototype, "type", void 0);
     return PostPlacementGroupsCreatePlacementGroupRequest;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupRequest = PostPlacementGroupsCreatePlacementGroupRequest;
 // PostPlacementGroupsCreatePlacementGroupResponseNullableActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -57,159 +60,159 @@ var PostPlacementGroupsCreatePlacementGroupResponseNullableActionError = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableActionError.prototype, "message", void 0);
     return PostPlacementGroupsCreatePlacementGroupResponseNullableActionError;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupResponseNullableActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionError = PostPlacementGroupsCreatePlacementGroupResponseNullableActionError;
 var PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources, _super);
     function PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources.prototype, "type", void 0);
     return PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources };
-export var PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources = PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources;
+var PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum;
 (function (PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum) {
     PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum["Success"] = "success";
     PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum["Running"] = "running";
     PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum["Error"] = "error";
-})(PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum || (PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum = {}));
+})(PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum = exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum || (exports.PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum = {}));
 var PostPlacementGroupsCreatePlacementGroupResponseNullableAction = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsCreatePlacementGroupResponseNullableAction, _super);
     function PostPlacementGroupsCreatePlacementGroupResponseNullableAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostPlacementGroupsCreatePlacementGroupResponseNullableActionError)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources }),
         __metadata("design:type", Array)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponseNullableAction.prototype, "status", void 0);
     return PostPlacementGroupsCreatePlacementGroupResponseNullableAction;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupResponseNullableAction };
-export var PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupResponseNullableAction = PostPlacementGroupsCreatePlacementGroupResponseNullableAction;
+var PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum;
 (function (PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum) {
     PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum["Spread"] = "spread";
-})(PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum || (PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum = {}));
+})(PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum = exports.PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum || (exports.PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum = {}));
 var PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup, _super);
     function PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Array)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.prototype, "type", void 0);
     return PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup = PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup;
 var PostPlacementGroupsCreatePlacementGroupResponse = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsCreatePlacementGroupResponse, _super);
     function PostPlacementGroupsCreatePlacementGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostPlacementGroupsCreatePlacementGroupResponseNullableAction)
     ], PostPlacementGroupsCreatePlacementGroupResponse.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placement_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placement_group" }),
         __metadata("design:type", PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup)
     ], PostPlacementGroupsCreatePlacementGroupResponse.prototype, "placementGroup", void 0);
     return PostPlacementGroupsCreatePlacementGroupResponse;
-}(SpeakeasyBase));
-export { PostPlacementGroupsCreatePlacementGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsCreatePlacementGroupResponse = PostPlacementGroupsCreatePlacementGroupResponse;
 var PostPlacementGroupsRequest = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsRequest, _super);
     function PostPlacementGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPlacementGroupsCreatePlacementGroupRequest)
     ], PostPlacementGroupsRequest.prototype, "request", void 0);
     return PostPlacementGroupsRequest;
-}(SpeakeasyBase));
-export { PostPlacementGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsRequest = PostPlacementGroupsRequest;
 var PostPlacementGroupsResponse = /** @class */ (function (_super) {
     __extends(PostPlacementGroupsResponse, _super);
     function PostPlacementGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPlacementGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPlacementGroupsCreatePlacementGroupResponse)
     ], PostPlacementGroupsResponse.prototype, "createPlacementGroupResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPlacementGroupsResponse.prototype, "statusCode", void 0);
     return PostPlacementGroupsResponse;
-}(SpeakeasyBase));
-export { PostPlacementGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPlacementGroupsResponse = PostPlacementGroupsResponse;

@@ -22,5 +22,5 @@ export class GetNetworkCellularGatewayUplinkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCellularGatewayUplink200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCellularGatewayUplink200ApplicationJSONObject?: Record<string, any>;
 }

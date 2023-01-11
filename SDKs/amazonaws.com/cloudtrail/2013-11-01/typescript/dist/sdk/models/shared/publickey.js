@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // PublicKey
 /**
  * Contains information about a returned public key.
@@ -33,21 +36,21 @@ var PublicKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Fingerprint" }),
         __metadata("design:type", String)
     ], PublicKey.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidityEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidityEndTime" }),
         __metadata("design:type", Date)
     ], PublicKey.prototype, "validityEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidityStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidityStartTime" }),
         __metadata("design:type", Date)
     ], PublicKey.prototype, "validityStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], PublicKey.prototype, "value", void 0);
     return PublicKey;
-}(SpeakeasyBase));
-export { PublicKey };
+}(utils_1.SpeakeasyBase));
+exports.PublicKey = PublicKey;

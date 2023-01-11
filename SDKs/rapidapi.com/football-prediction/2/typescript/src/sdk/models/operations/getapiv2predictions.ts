@@ -10,7 +10,7 @@ export class GetApiV2PredictionsHeaders extends SpeakeasyBase {
 
 export class GetApiV2Predictions404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 }
 
 
@@ -25,8 +25,8 @@ export class GetApiV2PredictionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiV2Predictions404ApplicationJsonObject?: GetApiV2Predictions404ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getApiV2Predictions404ApplicationJSONObject?: GetApiV2Predictions404ApplicationJson;
 }

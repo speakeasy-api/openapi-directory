@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTimezoneAreaLocationRegionResponse = exports.GetTimezoneAreaLocationRegionRequest = exports.GetTimezoneAreaLocationRegionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTimezoneAreaLocationRegionPathParams = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaLocationRegionPathParams, _super);
     function GetTimezoneAreaLocationRegionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=area" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=area" }),
         __metadata("design:type", String)
     ], GetTimezoneAreaLocationRegionPathParams.prototype, "area", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=location" }),
         __metadata("design:type", String)
     ], GetTimezoneAreaLocationRegionPathParams.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], GetTimezoneAreaLocationRegionPathParams.prototype, "region", void 0);
     return GetTimezoneAreaLocationRegionPathParams;
-}(SpeakeasyBase));
-export { GetTimezoneAreaLocationRegionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaLocationRegionPathParams = GetTimezoneAreaLocationRegionPathParams;
 var GetTimezoneAreaLocationRegionRequest = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaLocationRegionRequest, _super);
     function GetTimezoneAreaLocationRegionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTimezoneAreaLocationRegionPathParams)
     ], GetTimezoneAreaLocationRegionRequest.prototype, "pathParams", void 0);
     return GetTimezoneAreaLocationRegionRequest;
-}(SpeakeasyBase));
-export { GetTimezoneAreaLocationRegionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaLocationRegionRequest = GetTimezoneAreaLocationRegionRequest;
 var GetTimezoneAreaLocationRegionResponse = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaLocationRegionResponse, _super);
     function GetTimezoneAreaLocationRegionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTimezoneAreaLocationRegionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetTimezoneAreaLocationRegionResponse.prototype, "dateTimeJsonResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetTimezoneAreaLocationRegionResponse.prototype, "errorJsonResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTimezoneAreaLocationRegionResponse.prototype, "statusCode", void 0);
     return GetTimezoneAreaLocationRegionResponse;
-}(SpeakeasyBase));
-export { GetTimezoneAreaLocationRegionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaLocationRegionResponse = GetTimezoneAreaLocationRegionResponse;

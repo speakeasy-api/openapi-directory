@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { UserCtrlGetUserByIdRequest, UserCtrlGetUserByIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,12 +33,12 @@ const req: UserCtrlGetUserByIdRequest = {
     },
   },
   pathParams: {
-    accountId: "quam",
-    userId: 35.099998,
+    accountId: "sit",
+    userId: 14.200000,
   },
 };
 
-sdk.sdk.userCtrlGetUserById(req).then((res: UserCtrlGetUserByIdResponse | AxiosError) => {
+sdk.userCtrlGetUserById(req).then((res: UserCtrlGetUserByIdResponse | AxiosError) => {
    // handle response
 });
 ```

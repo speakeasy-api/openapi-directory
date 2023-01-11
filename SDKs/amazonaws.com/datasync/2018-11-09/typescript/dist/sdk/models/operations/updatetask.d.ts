@@ -22,5 +22,5 @@ export declare class UpdateTaskResponse extends SpeakeasyBase {
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateTaskResponse?: Map<string, any>;
+    updateTaskResponse?: Record<string, any>;
 }

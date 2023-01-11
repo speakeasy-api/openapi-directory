@@ -14,7 +14,7 @@ export declare class IssuesListLabelsForRepoRequest extends SpeakeasyBase {
 }
 export declare class IssuesListLabelsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     labels?: shared.Label[];

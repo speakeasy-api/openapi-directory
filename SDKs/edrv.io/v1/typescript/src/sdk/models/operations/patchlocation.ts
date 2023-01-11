@@ -175,5 +175,5 @@ export class PatchLocationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchLocation200ApplicationJsonObject?: PatchLocation200ApplicationJson;
+  patchLocation200ApplicationJSONObject?: PatchLocation200ApplicationJson;
 }

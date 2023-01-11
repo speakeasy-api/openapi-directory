@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Test } from "./test";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTestResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var test_1 = require("./test");
 // GetTestResult
 /**
  * Represents the result of a get test request.
@@ -34,9 +37,9 @@ var GetTestResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
-        __metadata("design:type", Test)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
+        __metadata("design:type", test_1.Test)
     ], GetTestResult.prototype, "test", void 0);
     return GetTestResult;
-}(SpeakeasyBase));
-export { GetTestResult };
+}(utils_1.SpeakeasyBase));
+exports.GetTestResult = GetTestResult;

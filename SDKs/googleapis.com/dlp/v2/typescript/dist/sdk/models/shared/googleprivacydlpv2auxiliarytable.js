@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2QuasiIdField } from "./googleprivacydlpv2quasiidfield";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2AuxiliaryTable = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2quasiidfield_1 = require("./googleprivacydlpv2quasiidfield");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
 // GooglePrivacyDlpV2AuxiliaryTable
 /**
  * An auxiliary table contains statistical information on the relative frequency of different quasi-identifiers values. It has one or several quasi-identifiers columns, and one column that indicates the relative frequency of each quasi-identifier tuple. If a tuple is present in the data but not in the auxiliary table, the corresponding relative frequency is assumed to be zero (and thus, the tuple is highly reidentifiable).
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2AuxiliaryTable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quasiIds", elemType: GooglePrivacyDlpV2QuasiIdField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quasiIds", elemType: googleprivacydlpv2quasiidfield_1.GooglePrivacyDlpV2QuasiIdField }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2AuxiliaryTable.prototype, "quasiIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativeFrequency" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativeFrequency" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2AuxiliaryTable.prototype, "relativeFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=table" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=table" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2AuxiliaryTable.prototype, "table", void 0);
     return GooglePrivacyDlpV2AuxiliaryTable;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2AuxiliaryTable };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2AuxiliaryTable = GooglePrivacyDlpV2AuxiliaryTable;

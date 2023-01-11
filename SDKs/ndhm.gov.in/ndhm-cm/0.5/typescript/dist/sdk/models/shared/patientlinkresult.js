@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { CareContextRepresentation } from "./carecontextrepresentation";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientLinkResult = exports.PatientLinkResultPatient = void 0;
+var utils_1 = require("../../../internal/utils");
+var carecontextrepresentation_1 = require("./carecontextrepresentation");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 var PatientLinkResultPatient = /** @class */ (function (_super) {
     __extends(PatientLinkResultPatient, _super);
     function PatientLinkResultPatient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContexts", elemType: CareContextRepresentation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContexts", elemType: carecontextrepresentation_1.CareContextRepresentation }),
         __metadata("design:type", Array)
     ], PatientLinkResultPatient.prototype, "careContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], PatientLinkResultPatient.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceNumber" }),
         __metadata("design:type", String)
     ], PatientLinkResultPatient.prototype, "referenceNumber", void 0);
     return PatientLinkResultPatient;
-}(SpeakeasyBase));
-export { PatientLinkResultPatient };
+}(utils_1.SpeakeasyBase));
+exports.PatientLinkResultPatient = PatientLinkResultPatient;
 var PatientLinkResult = /** @class */ (function (_super) {
     __extends(PatientLinkResult, _super);
     function PatientLinkResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PatientLinkResult.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
         __metadata("design:type", PatientLinkResultPatient)
     ], PatientLinkResult.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientLinkResult.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], PatientLinkResult.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientLinkResult.prototype, "timestamp", void 0);
     return PatientLinkResult;
-}(SpeakeasyBase));
-export { PatientLinkResult };
+}(utils_1.SpeakeasyBase));
+exports.PatientLinkResult = PatientLinkResult;

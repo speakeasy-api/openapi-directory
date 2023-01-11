@@ -9,6 +9,6 @@ export declare class ApiCounterV2Out extends SpeakeasyBase {
     createdDateTime?: number;
     lastFlushedDateTime?: number;
     lastUsedDateTime?: number;
-    serviceFeaturesUsage?: Map<string, number>;
+    serviceFeaturesUsage?: Record<string, number>;
     totalUsage?: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BinLogCoordinates } from "./binlogcoordinates";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloneContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var binlogcoordinates_1 = require("./binlogcoordinates");
 // CloneContext
 /**
  * Database instance clone context.
@@ -34,33 +37,33 @@ var CloneContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allocatedIpRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allocatedIpRange" }),
         __metadata("design:type", String)
     ], CloneContext.prototype, "allocatedIpRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binLogCoordinates" }),
-        __metadata("design:type", BinLogCoordinates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binLogCoordinates" }),
+        __metadata("design:type", binlogcoordinates_1.BinLogCoordinates)
     ], CloneContext.prototype, "binLogCoordinates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseNames" }),
         __metadata("design:type", Array)
     ], CloneContext.prototype, "databaseNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationInstanceName" }),
         __metadata("design:type", String)
     ], CloneContext.prototype, "destinationInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], CloneContext.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pitrTimestampMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pitrTimestampMs" }),
         __metadata("design:type", String)
     ], CloneContext.prototype, "pitrTimestampMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointInTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointInTime" }),
         __metadata("design:type", String)
     ], CloneContext.prototype, "pointInTime", void 0);
     return CloneContext;
-}(SpeakeasyBase));
-export { CloneContext };
+}(utils_1.SpeakeasyBase));
+exports.CloneContext = CloneContext;

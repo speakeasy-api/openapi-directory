@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MirrorAccountsInsertRequest, MirrorAccountsInsertResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,44 +28,42 @@ const sdk = new SDK();
     
 const req: MirrorAccountsInsertRequest = {
   pathParams: {
-    accountName: "asperiores",
-    accountType: "totam",
-    userToken: "est",
+    accountName: "sit",
+    accountType: "voluptas",
+    userToken: "culpa",
   },
   queryParams: {
     alt: "json",
-    fields: "atque",
-    key: "corporis",
-    oauthToken: "quaerat",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "dolor",
-    userIp: "illum",
+    quotaUser: "fugit",
+    userIp: "et",
   },
   request: {
     authTokens: [
       {
-        authToken: "quasi",
-        type: "rerum",
-      },
-      {
-        authToken: "sunt",
-        type: "omnis",
-      },
-      {
-        authToken: "nam",
-        type: "non",
+        authToken: "rerum",
+        type: "dicta",
       },
     ],
     features: [
-      "vero",
-      "quas",
-      "iste",
+      "voluptatum",
     ],
-    password: "distinctio",
+    password: "et",
     userData: [
       {
-        key: "autem",
-        value: "saepe",
+        key: "dolorem",
+        value: "et",
+      },
+      {
+        key: "voluptate",
+        value: "iste",
+      },
+      {
+        key: "vitae",
+        value: "totam",
       },
     ],
   },

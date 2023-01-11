@@ -11,8 +11,8 @@ export declare enum HiveMetastoreConfigEndpointProtocolEnum {
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
 **/
 export declare class HiveMetastoreConfig extends SpeakeasyBase {
-    auxiliaryVersions?: Map<string, AuxiliaryVersionConfig>;
-    configOverrides?: Map<string, string>;
+    auxiliaryVersions?: Record<string, AuxiliaryVersionConfig>;
+    configOverrides?: Record<string, string>;
     endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;
     kerberosConfig?: KerberosConfig;
     version?: string;
@@ -21,8 +21,8 @@ export declare class HiveMetastoreConfig extends SpeakeasyBase {
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
 **/
 export declare class HiveMetastoreConfigInput extends SpeakeasyBase {
-    auxiliaryVersions?: Map<string, AuxiliaryVersionConfigInput>;
-    configOverrides?: Map<string, string>;
+    auxiliaryVersions?: Record<string, AuxiliaryVersionConfigInput>;
+    configOverrides?: Record<string, string>;
     endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;
     kerberosConfig?: KerberosConfig;
     version?: string;

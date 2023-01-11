@@ -44,26 +44,26 @@ export class UpdatePotResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePot200ApplicationJsonAny?: any;
+  updatePot200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot400ApplicationJsonAny?: any;
+  updatePot400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot401ApplicationJsonAny?: any;
+  updatePot401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot403ApplicationJsonAny?: any;
+  updatePot403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot404ApplicationJsonAny?: any;
+  updatePot404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot409ApplicationJsonAny?: any;
+  updatePot409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot429ApplicationJsonAny?: any;
+  updatePot429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePot500ApplicationJsonAny?: any;
+  updatePot500ApplicationJSONAny?: any;
 }

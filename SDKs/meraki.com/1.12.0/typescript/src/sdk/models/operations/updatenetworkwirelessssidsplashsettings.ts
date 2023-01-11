@@ -195,5 +195,5 @@ export class UpdateNetworkWirelessSsidSplashSettingsResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidSplashSettings200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidSplashSettings200ApplicationJSONObject?: Record<string, any>;
 }

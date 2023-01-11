@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShortlinkResponse = exports.ShortlinkResponseEtat = exports.ShortlinkResponseEtatEtat = void 0;
+var utils_1 = require("../../../internal/utils");
 var ShortlinkResponseEtatEtat = /** @class */ (function (_super) {
     __extends(ShortlinkResponseEtatEtat, _super);
     function ShortlinkResponseEtatEtat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ShortlinkResponseEtatEtat.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ShortlinkResponseEtatEtat.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortlink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortlink" }),
         __metadata("design:type", String)
     ], ShortlinkResponseEtatEtat.prototype, "shortlink", void 0);
     return ShortlinkResponseEtatEtat;
-}(SpeakeasyBase));
-export { ShortlinkResponseEtatEtat };
+}(utils_1.SpeakeasyBase));
+exports.ShortlinkResponseEtatEtat = ShortlinkResponseEtatEtat;
 var ShortlinkResponseEtat = /** @class */ (function (_super) {
     __extends(ShortlinkResponseEtat, _super);
     function ShortlinkResponseEtat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etat", elemType: ShortlinkResponseEtatEtat }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etat", elemType: ShortlinkResponseEtatEtat }),
         __metadata("design:type", Array)
     ], ShortlinkResponseEtat.prototype, "etat", void 0);
     return ShortlinkResponseEtat;
-}(SpeakeasyBase));
-export { ShortlinkResponseEtat };
+}(utils_1.SpeakeasyBase));
+exports.ShortlinkResponseEtat = ShortlinkResponseEtat;
 var ShortlinkResponse = /** @class */ (function (_super) {
     __extends(ShortlinkResponse, _super);
     function ShortlinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etat" }),
         __metadata("design:type", ShortlinkResponseEtat)
     ], ShortlinkResponse.prototype, "etat", void 0);
     return ShortlinkResponse;
-}(SpeakeasyBase));
-export { ShortlinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.ShortlinkResponse = ShortlinkResponse;

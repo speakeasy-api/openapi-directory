@@ -34,7 +34,7 @@ export class DbProxy extends SpeakeasyBase {
   idleClientTimeout?: number;
 
   @SpeakeasyMetadata()
-  requireTls?: boolean;
+  requireTLS?: boolean;
 
   @SpeakeasyMetadata()
   roleArn?: string;

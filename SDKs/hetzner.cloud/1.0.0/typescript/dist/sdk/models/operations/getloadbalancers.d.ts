@@ -200,7 +200,7 @@ export declare class GetLoadBalancers200ApplicationJsonLoadBalancers extends Spe
     id: number;
     includedTraffic: number;
     ingoingTraffic: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     loadBalancerType: GetLoadBalancers200ApplicationJsonLoadBalancersLoadBalancerType;
     location: GetLoadBalancers200ApplicationJsonLoadBalancersLocation;
     name: string;
@@ -231,6 +231,6 @@ export declare class GetLoadBalancersRequest extends SpeakeasyBase {
 }
 export declare class GetLoadBalancersResponse extends SpeakeasyBase {
     contentType: string;
-    getLoadBalancers200ApplicationJsonObject?: GetLoadBalancers200ApplicationJson;
     statusCode: number;
+    getLoadBalancers200ApplicationJSONObject?: GetLoadBalancers200ApplicationJson;
 }

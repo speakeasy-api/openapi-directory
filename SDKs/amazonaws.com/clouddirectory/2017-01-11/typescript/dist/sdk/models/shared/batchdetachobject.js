@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectReference } from "./objectreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchDetachObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectreference_1 = require("./objectreference");
 // BatchDetachObject
 /**
  * Represents the output of a <a>DetachObject</a> operation.
@@ -34,17 +37,17 @@ var BatchDetachObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchReferenceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchReferenceName" }),
         __metadata("design:type", String)
     ], BatchDetachObject.prototype, "batchReferenceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LinkName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LinkName" }),
         __metadata("design:type", String)
     ], BatchDetachObject.prototype, "linkName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchDetachObject.prototype, "parentReference", void 0);
     return BatchDetachObject;
-}(SpeakeasyBase));
-export { BatchDetachObject };
+}(utils_1.SpeakeasyBase));
+exports.BatchDetachObject = BatchDetachObject;

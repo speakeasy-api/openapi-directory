@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PulseAnswer } from "./pulseanswer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PulseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var pulseanswer_1 = require("./pulseanswer");
 var PulseResponse = /** @class */ (function (_super) {
     __extends(PulseResponse, _super);
     function PulseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerFirstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerFirstName" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "learnerFirstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerId" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "learnerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerLastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerLastName" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "learnerLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseBaseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseBaseId" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "pulseBaseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseInstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseInstanceId" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "pulseInstanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseQuestion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseQuestion" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "pulseQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseRunDurationMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseRunDurationMinutes" }),
         __metadata("design:type", Number)
     ], PulseResponse.prototype, "pulseRunDurationMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseRunStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseRunStart" }),
         __metadata("design:type", Date)
     ], PulseResponse.prototype, "pulseRunStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pulseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulseType" }),
         __metadata("design:type", String)
     ], PulseResponse.prototype, "pulseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
-        __metadata("design:type", PulseAnswer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
+        __metadata("design:type", pulseanswer_1.PulseAnswer)
     ], PulseResponse.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseTime" }),
         __metadata("design:type", Date)
     ], PulseResponse.prototype, "responseTime", void 0);
     return PulseResponse;
-}(SpeakeasyBase));
-export { PulseResponse };
+}(utils_1.SpeakeasyBase));
+exports.PulseResponse = PulseResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SqlServerDatabaseDetails } from "./sqlserverdatabasedetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Database = void 0;
+var utils_1 = require("../../../internal/utils");
+var sqlserverdatabasedetails_1 = require("./sqlserverdatabasedetails");
 // Database
 /**
  * Represents a SQL database on the Cloud SQL instance.
@@ -34,41 +37,41 @@ var Database = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charset" }),
         __metadata("design:type", String)
     ], Database.prototype, "charset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collation" }),
         __metadata("design:type", String)
     ], Database.prototype, "collation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Database.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instance" }),
         __metadata("design:type", String)
     ], Database.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Database.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Database.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], Database.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Database.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sqlserverDatabaseDetails" }),
-        __metadata("design:type", SqlServerDatabaseDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sqlserverDatabaseDetails" }),
+        __metadata("design:type", sqlserverdatabasedetails_1.SqlServerDatabaseDetails)
     ], Database.prototype, "sqlserverDatabaseDetails", void 0);
     return Database;
-}(SpeakeasyBase));
-export { Database };
+}(utils_1.SpeakeasyBase));
+exports.Database = Database;

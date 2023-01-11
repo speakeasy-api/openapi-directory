@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationApplianceSecurityIntrusionResponse = exports.UpdateOrganizationApplianceSecurityIntrusionRequest = exports.UpdateOrganizationApplianceSecurityIntrusionRequestBody = exports.UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules = exports.UpdateOrganizationApplianceSecurityIntrusionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationApplianceSecurityIntrusionPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationApplianceSecurityIntrusionPathParams, _super);
     function UpdateOrganizationApplianceSecurityIntrusionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationApplianceSecurityIntrusionPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationApplianceSecurityIntrusionPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationApplianceSecurityIntrusionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationApplianceSecurityIntrusionPathParams = UpdateOrganizationApplianceSecurityIntrusionPathParams;
 var UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules = /** @class */ (function (_super) {
     __extends(UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules, _super);
     function UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules.prototype, "ruleId", void 0);
     return UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules;
-}(SpeakeasyBase));
-export { UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules = UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules;
 var UpdateOrganizationApplianceSecurityIntrusionRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationApplianceSecurityIntrusionRequestBody, _super);
     function UpdateOrganizationApplianceSecurityIntrusionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedRules", elemType: UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedRules", elemType: UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules }),
         __metadata("design:type", Array)
     ], UpdateOrganizationApplianceSecurityIntrusionRequestBody.prototype, "allowedRules", void 0);
     return UpdateOrganizationApplianceSecurityIntrusionRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationApplianceSecurityIntrusionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationApplianceSecurityIntrusionRequestBody = UpdateOrganizationApplianceSecurityIntrusionRequestBody;
 var UpdateOrganizationApplianceSecurityIntrusionRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationApplianceSecurityIntrusionRequest, _super);
     function UpdateOrganizationApplianceSecurityIntrusionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationApplianceSecurityIntrusionPathParams)
     ], UpdateOrganizationApplianceSecurityIntrusionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationApplianceSecurityIntrusionRequestBody)
     ], UpdateOrganizationApplianceSecurityIntrusionRequest.prototype, "request", void 0);
     return UpdateOrganizationApplianceSecurityIntrusionRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationApplianceSecurityIntrusionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationApplianceSecurityIntrusionRequest = UpdateOrganizationApplianceSecurityIntrusionRequest;
 var UpdateOrganizationApplianceSecurityIntrusionResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationApplianceSecurityIntrusionResponse, _super);
     function UpdateOrganizationApplianceSecurityIntrusionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationApplianceSecurityIntrusionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationApplianceSecurityIntrusionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationApplianceSecurityIntrusionResponse.prototype, "updateOrganizationApplianceSecurityIntrusion200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationApplianceSecurityIntrusionResponse.prototype, "updateOrganizationApplianceSecurityIntrusion200ApplicationJSONObject", void 0);
     return UpdateOrganizationApplianceSecurityIntrusionResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationApplianceSecurityIntrusionResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationApplianceSecurityIntrusionResponse = UpdateOrganizationApplianceSecurityIntrusionResponse;

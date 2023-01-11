@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCustomersResponse = exports.GetCustomers302ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCustomers302ApplicationJson = /** @class */ (function (_super) {
     __extends(GetCustomers302ApplicationJson, _super);
     function GetCustomers302ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], GetCustomers302ApplicationJson.prototype, "location", void 0);
     return GetCustomers302ApplicationJson;
-}(SpeakeasyBase));
-export { GetCustomers302ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomers302ApplicationJson = GetCustomers302ApplicationJson;
 var GetCustomersResponse = /** @class */ (function (_super) {
     __extends(GetCustomersResponse, _super);
     function GetCustomersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetCustomers302ApplicationJson)
-    ], GetCustomersResponse.prototype, "getCustomers302ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCustomersResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCustomersResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetCustomers302ApplicationJson)
+    ], GetCustomersResponse.prototype, "getCustomers302ApplicationJSONObject", void 0);
     return GetCustomersResponse;
-}(SpeakeasyBase));
-export { GetCustomersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomersResponse = GetCustomersResponse;

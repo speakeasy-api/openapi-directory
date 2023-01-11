@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchedulerAcceleratorConfig } from "./scheduleracceleratorconfig";
-import { DataprocParameters } from "./dataprocparameters";
-import { VertexAiParameters } from "./vertexaiparameters";
-export var ExecutionTemplateJobTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionTemplate = exports.ExecutionTemplateScaleTierEnum = exports.ExecutionTemplateJobTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var scheduleracceleratorconfig_1 = require("./scheduleracceleratorconfig");
+var dataprocparameters_1 = require("./dataprocparameters");
+var vertexaiparameters_1 = require("./vertexaiparameters");
+var ExecutionTemplateJobTypeEnum;
 (function (ExecutionTemplateJobTypeEnum) {
     ExecutionTemplateJobTypeEnum["JobTypeUnspecified"] = "JOB_TYPE_UNSPECIFIED";
     ExecutionTemplateJobTypeEnum["VertexAi"] = "VERTEX_AI";
     ExecutionTemplateJobTypeEnum["Dataproc"] = "DATAPROC";
-})(ExecutionTemplateJobTypeEnum || (ExecutionTemplateJobTypeEnum = {}));
-export var ExecutionTemplateScaleTierEnum;
+})(ExecutionTemplateJobTypeEnum = exports.ExecutionTemplateJobTypeEnum || (exports.ExecutionTemplateJobTypeEnum = {}));
+var ExecutionTemplateScaleTierEnum;
 (function (ExecutionTemplateScaleTierEnum) {
     ExecutionTemplateScaleTierEnum["ScaleTierUnspecified"] = "SCALE_TIER_UNSPECIFIED";
     ExecutionTemplateScaleTierEnum["Basic"] = "BASIC";
@@ -41,7 +44,7 @@ export var ExecutionTemplateScaleTierEnum;
     ExecutionTemplateScaleTierEnum["BasicGpu"] = "BASIC_GPU";
     ExecutionTemplateScaleTierEnum["BasicTpu"] = "BASIC_TPU";
     ExecutionTemplateScaleTierEnum["Custom"] = "CUSTOM";
-})(ExecutionTemplateScaleTierEnum || (ExecutionTemplateScaleTierEnum = {}));
+})(ExecutionTemplateScaleTierEnum = exports.ExecutionTemplateScaleTierEnum || (exports.ExecutionTemplateScaleTierEnum = {}));
 // ExecutionTemplate
 /**
  * The description a notebook execution workload.
@@ -52,65 +55,65 @@ var ExecutionTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorConfig" }),
-        __metadata("design:type", SchedulerAcceleratorConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorConfig" }),
+        __metadata("design:type", scheduleracceleratorconfig_1.SchedulerAcceleratorConfig)
     ], ExecutionTemplate.prototype, "acceleratorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImageUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImageUri" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "containerImageUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataprocParameters" }),
-        __metadata("design:type", DataprocParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataprocParameters" }),
+        __metadata("design:type", dataprocparameters_1.DataprocParameters)
     ], ExecutionTemplate.prototype, "dataprocParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputNotebookFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputNotebookFile" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "inputNotebookFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobType" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kernelSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kernelSpec" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "kernelSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ExecutionTemplate.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterType" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "masterType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputNotebookFolder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputNotebookFolder" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "outputNotebookFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paramsYamlFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paramsYamlFile" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "paramsYamlFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleTier" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "scaleTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tensorboard" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tensorboard" }),
         __metadata("design:type", String)
     ], ExecutionTemplate.prototype, "tensorboard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vertexAiParameters" }),
-        __metadata("design:type", VertexAiParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vertexAiParameters" }),
+        __metadata("design:type", vertexaiparameters_1.VertexAiParameters)
     ], ExecutionTemplate.prototype, "vertexAiParameters", void 0);
     return ExecutionTemplate;
-}(SpeakeasyBase));
-export { ExecutionTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ExecutionTemplate = ExecutionTemplate;

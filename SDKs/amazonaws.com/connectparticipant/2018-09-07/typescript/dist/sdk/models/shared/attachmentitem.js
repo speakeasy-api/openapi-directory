@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactStatusEnum } from "./artifactstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachmentItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifactstatusenum_1 = require("./artifactstatusenum");
 // AttachmentItem
 /**
  * The case-insensitive input to indicate standard MIME type that describes the format of the file that will be uploaded.
@@ -34,21 +37,21 @@ var AttachmentItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttachmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttachmentId" }),
         __metadata("design:type", String)
     ], AttachmentItem.prototype, "attachmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttachmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttachmentName" }),
         __metadata("design:type", String)
     ], AttachmentItem.prototype, "attachmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContentType" }),
         __metadata("design:type", String)
     ], AttachmentItem.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], AttachmentItem.prototype, "status", void 0);
     return AttachmentItem;
-}(SpeakeasyBase));
-export { AttachmentItem };
+}(utils_1.SpeakeasyBase));
+exports.AttachmentItem = AttachmentItem;

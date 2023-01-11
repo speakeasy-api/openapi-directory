@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,34 +14,59 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCommitteeCommitteeIdHistoryCycleResponse = exports.GetCommitteeCommitteeIdHistoryCycleRequest = exports.GetCommitteeCommitteeIdHistoryCycleQueryParams = exports.GetCommitteeCommitteeIdHistoryCycleDesignationEnum = exports.GetCommitteeCommitteeIdHistoryCyclePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetCommitteeCommitteeIdHistoryCyclePathParams = /** @class */ (function (_super) {
     __extends(GetCommitteeCommitteeIdHistoryCyclePathParams, _super);
     function GetCommitteeCommitteeIdHistoryCyclePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=committee_id" }),
         __metadata("design:type", String)
     ], GetCommitteeCommitteeIdHistoryCyclePathParams.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cycle" }),
         __metadata("design:type", Number)
     ], GetCommitteeCommitteeIdHistoryCyclePathParams.prototype, "cycle", void 0);
     return GetCommitteeCommitteeIdHistoryCyclePathParams;
-}(SpeakeasyBase));
-export { GetCommitteeCommitteeIdHistoryCyclePathParams };
-export var GetCommitteeCommitteeIdHistoryCycleDesignationEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCommitteeCommitteeIdHistoryCyclePathParams = GetCommitteeCommitteeIdHistoryCyclePathParams;
+var GetCommitteeCommitteeIdHistoryCycleDesignationEnum;
 (function (GetCommitteeCommitteeIdHistoryCycleDesignationEnum) {
     GetCommitteeCommitteeIdHistoryCycleDesignationEnum["Unknown"] = "";
     GetCommitteeCommitteeIdHistoryCycleDesignationEnum["A"] = "A";
@@ -49,84 +75,84 @@ export var GetCommitteeCommitteeIdHistoryCycleDesignationEnum;
     GetCommitteeCommitteeIdHistoryCycleDesignationEnum["U"] = "U";
     GetCommitteeCommitteeIdHistoryCycleDesignationEnum["B"] = "B";
     GetCommitteeCommitteeIdHistoryCycleDesignationEnum["D"] = "D";
-})(GetCommitteeCommitteeIdHistoryCycleDesignationEnum || (GetCommitteeCommitteeIdHistoryCycleDesignationEnum = {}));
+})(GetCommitteeCommitteeIdHistoryCycleDesignationEnum = exports.GetCommitteeCommitteeIdHistoryCycleDesignationEnum || (exports.GetCommitteeCommitteeIdHistoryCycleDesignationEnum = {}));
 var GetCommitteeCommitteeIdHistoryCycleQueryParams = /** @class */ (function (_super) {
     __extends(GetCommitteeCommitteeIdHistoryCycleQueryParams, _super);
     function GetCommitteeCommitteeIdHistoryCycleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=designation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=designation" }),
         __metadata("design:type", Array)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "designation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=election_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=election_full" }),
         __metadata("design:type", Boolean)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "electionFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_hide_null" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_hide_null" }),
         __metadata("design:type", Boolean)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "sortHideNull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_null_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_null_only" }),
         __metadata("design:type", Boolean)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "sortNullOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_nulls_last" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_nulls_last" }),
         __metadata("design:type", Boolean)
     ], GetCommitteeCommitteeIdHistoryCycleQueryParams.prototype, "sortNullsLast", void 0);
     return GetCommitteeCommitteeIdHistoryCycleQueryParams;
-}(SpeakeasyBase));
-export { GetCommitteeCommitteeIdHistoryCycleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCommitteeCommitteeIdHistoryCycleQueryParams = GetCommitteeCommitteeIdHistoryCycleQueryParams;
 var GetCommitteeCommitteeIdHistoryCycleRequest = /** @class */ (function (_super) {
     __extends(GetCommitteeCommitteeIdHistoryCycleRequest, _super);
     function GetCommitteeCommitteeIdHistoryCycleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCommitteeCommitteeIdHistoryCyclePathParams)
     ], GetCommitteeCommitteeIdHistoryCycleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCommitteeCommitteeIdHistoryCycleQueryParams)
     ], GetCommitteeCommitteeIdHistoryCycleRequest.prototype, "queryParams", void 0);
     return GetCommitteeCommitteeIdHistoryCycleRequest;
-}(SpeakeasyBase));
-export { GetCommitteeCommitteeIdHistoryCycleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCommitteeCommitteeIdHistoryCycleRequest = GetCommitteeCommitteeIdHistoryCycleRequest;
 var GetCommitteeCommitteeIdHistoryCycleResponse = /** @class */ (function (_super) {
     __extends(GetCommitteeCommitteeIdHistoryCycleResponse, _super);
     function GetCommitteeCommitteeIdHistoryCycleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CommitteeHistoryPage)
     ], GetCommitteeCommitteeIdHistoryCycleResponse.prototype, "committeeHistoryPage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCommitteeCommitteeIdHistoryCycleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCommitteeCommitteeIdHistoryCycleResponse.prototype, "statusCode", void 0);
     return GetCommitteeCommitteeIdHistoryCycleResponse;
-}(SpeakeasyBase));
-export { GetCommitteeCommitteeIdHistoryCycleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCommitteeCommitteeIdHistoryCycleResponse = GetCommitteeCommitteeIdHistoryCycleResponse;

@@ -24,5 +24,5 @@ export declare class DeclineChangeRequestRequest extends SpeakeasyBase {
 export declare class DeclineChangeRequestResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    declineChangeRequest200ApplicationJsonObject?: DeclineChangeRequest200ApplicationJson;
+    declineChangeRequest200ApplicationJSONObject?: DeclineChangeRequest200ApplicationJson;
 }

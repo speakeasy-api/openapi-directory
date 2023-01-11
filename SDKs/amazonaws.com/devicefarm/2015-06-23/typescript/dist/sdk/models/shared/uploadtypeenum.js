@@ -1,4 +1,7 @@
-export var UploadTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadTypeEnum = void 0;
+var UploadTypeEnum;
 (function (UploadTypeEnum) {
     UploadTypeEnum["AndroidApp"] = "ANDROID_APP";
     UploadTypeEnum["IosApp"] = "IOS_APP";
@@ -32,4 +35,4 @@ export var UploadTypeEnum;
     UploadTypeEnum["AppiumWebRubyTestSpec"] = "APPIUM_WEB_RUBY_TEST_SPEC";
     UploadTypeEnum["InstrumentationTestSpec"] = "INSTRUMENTATION_TEST_SPEC";
     UploadTypeEnum["XctestUiTestSpec"] = "XCTEST_UI_TEST_SPEC";
-})(UploadTypeEnum || (UploadTypeEnum = {}));
+})(UploadTypeEnum = exports.UploadTypeEnum || (exports.UploadTypeEnum = {}));

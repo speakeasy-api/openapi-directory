@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1BootPerformanceReport = exports.GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum;
 (function (GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum) {
     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum["ShutdownReasonUnspecified"] = "SHUTDOWN_REASON_UNSPECIFIED";
     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum["UserRequest"] = "USER_REQUEST";
     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum["SystemUpdate"] = "SYSTEM_UPDATE";
     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum["LowBattery"] = "LOW_BATTERY";
     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum["Other"] = "OTHER";
-})(GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum || (GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum = {}));
+})(GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum = exports.GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum || (exports.GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum = {}));
 // GoogleChromeManagementV1BootPerformanceReport
 /**
  * Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
@@ -41,29 +44,29 @@ var GoogleChromeManagementV1BootPerformanceReport = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootUpDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootUpDuration" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "bootUpDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootUpTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootUpTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "bootUpTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "reportTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shutdownDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shutdownDuration" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "shutdownDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shutdownReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shutdownReason" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "shutdownReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shutdownTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shutdownTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BootPerformanceReport.prototype, "shutdownTime", void 0);
     return GoogleChromeManagementV1BootPerformanceReport;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1BootPerformanceReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1BootPerformanceReport = GoogleChromeManagementV1BootPerformanceReport;

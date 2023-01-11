@@ -49,7 +49,7 @@ export declare class GetSearchMotorcycleActiveRequest extends SpeakeasyBase {
 }
 export declare class GetSearchMotorcycleActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     motorcycleSearchResponse?: shared.MotorcycleSearchResponse;
     statusCode: number;
 }

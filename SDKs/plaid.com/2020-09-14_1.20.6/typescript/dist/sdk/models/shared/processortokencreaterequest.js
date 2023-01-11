@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProcessorTokenCreateRequestProcessorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcessorTokenCreateRequest = exports.ProcessorTokenCreateRequestProcessorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProcessorTokenCreateRequestProcessorEnum;
 (function (ProcessorTokenCreateRequestProcessorEnum) {
     ProcessorTokenCreateRequestProcessorEnum["Achq"] = "achq";
     ProcessorTokenCreateRequestProcessorEnum["Alpaca"] = "alpaca";
@@ -46,7 +49,7 @@ export var ProcessorTokenCreateRequestProcessorEnum;
     ProcessorTokenCreateRequestProcessorEnum["Vesta"] = "vesta";
     ProcessorTokenCreateRequestProcessorEnum["Vopay"] = "vopay";
     ProcessorTokenCreateRequestProcessorEnum["Wyre"] = "wyre";
-})(ProcessorTokenCreateRequestProcessorEnum || (ProcessorTokenCreateRequestProcessorEnum = {}));
+})(ProcessorTokenCreateRequestProcessorEnum = exports.ProcessorTokenCreateRequestProcessorEnum || (exports.ProcessorTokenCreateRequestProcessorEnum = {}));
 // ProcessorTokenCreateRequest
 /**
  * ProcessorTokenCreateRequest defines the request schema for `/processor/token/create`
@@ -57,25 +60,25 @@ var ProcessorTokenCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], ProcessorTokenCreateRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], ProcessorTokenCreateRequest.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], ProcessorTokenCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processor" }),
         __metadata("design:type", String)
     ], ProcessorTokenCreateRequest.prototype, "processor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], ProcessorTokenCreateRequest.prototype, "secret", void 0);
     return ProcessorTokenCreateRequest;
-}(SpeakeasyBase));
-export { ProcessorTokenCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProcessorTokenCreateRequest = ProcessorTokenCreateRequest;

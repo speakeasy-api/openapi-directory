@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReviewObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReviewObject
 /**
  * **object** containing a single user review
@@ -33,69 +36,69 @@ var ReviewObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAvatarURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAvatarURL" }),
         __metadata("design:type", String)
-    ], ReviewObject.prototype, "ownerAvatarUrl", void 0);
+    ], ReviewObject.prototype, "ownerAvatarURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerCountry" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "ownerCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerId" }),
         __metadata("design:type", Number)
     ], ReviewObject.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerName" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "ownerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCode" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productTitle" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "productTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productUrlName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productUrlName" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "productUrlName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedDate" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "publishedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], ReviewObject.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=review" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=review" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "review", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewId" }),
         __metadata("design:type", Number)
     ], ReviewObject.prototype, "reviewId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], ReviewObject.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sslSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sslSupported" }),
         __metadata("design:type", Boolean)
     ], ReviewObject.prototype, "sslSupported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submissionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submissionDate" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "submissionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viatorFeedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viatorFeedback" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "viatorFeedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viatorNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viatorNotes" }),
         __metadata("design:type", String)
     ], ReviewObject.prototype, "viatorNotes", void 0);
     return ReviewObject;
-}(SpeakeasyBase));
-export { ReviewObject };
+}(utils_1.SpeakeasyBase));
+exports.ReviewObject = ReviewObject;

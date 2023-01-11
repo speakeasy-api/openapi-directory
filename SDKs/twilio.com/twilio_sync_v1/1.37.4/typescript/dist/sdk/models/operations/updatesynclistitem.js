@@ -1,0 +1,171 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSyncListItemResponse = exports.UpdateSyncListItemRequest = exports.UpdateSyncListItemSecurity = exports.UpdateSyncListItemUpdateSyncListItemRequest = exports.UpdateSyncListItemHeaders = exports.UpdateSyncListItemPathParams = exports.UpdateSyncListItemServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.UpdateSyncListItemServerList = [
+    "https://sync.twilio.com",
+];
+var UpdateSyncListItemPathParams = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemPathParams, _super);
+    function UpdateSyncListItemPathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Index" }),
+        __metadata("design:type", Number)
+    ], UpdateSyncListItemPathParams.prototype, "index", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ListSid" }),
+        __metadata("design:type", String)
+    ], UpdateSyncListItemPathParams.prototype, "listSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ServiceSid" }),
+        __metadata("design:type", String)
+    ], UpdateSyncListItemPathParams.prototype, "serviceSid", void 0);
+    return UpdateSyncListItemPathParams;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemPathParams = UpdateSyncListItemPathParams;
+var UpdateSyncListItemHeaders = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemHeaders, _super);
+    function UpdateSyncListItemHeaders() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
+        __metadata("design:type", String)
+    ], UpdateSyncListItemHeaders.prototype, "ifMatch", void 0);
+    return UpdateSyncListItemHeaders;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemHeaders = UpdateSyncListItemHeaders;
+var UpdateSyncListItemUpdateSyncListItemRequest = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemUpdateSyncListItemRequest, _super);
+    function UpdateSyncListItemUpdateSyncListItemRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=CollectionTtl;" }),
+        __metadata("design:type", Number)
+    ], UpdateSyncListItemUpdateSyncListItemRequest.prototype, "collectionTtl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Data;" }),
+        __metadata("design:type", Object)
+    ], UpdateSyncListItemUpdateSyncListItemRequest.prototype, "data", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=ItemTtl;" }),
+        __metadata("design:type", Number)
+    ], UpdateSyncListItemUpdateSyncListItemRequest.prototype, "itemTtl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Ttl;" }),
+        __metadata("design:type", Number)
+    ], UpdateSyncListItemUpdateSyncListItemRequest.prototype, "ttl", void 0);
+    return UpdateSyncListItemUpdateSyncListItemRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemUpdateSyncListItemRequest = UpdateSyncListItemUpdateSyncListItemRequest;
+var UpdateSyncListItemSecurity = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemSecurity, _super);
+    function UpdateSyncListItemSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], UpdateSyncListItemSecurity.prototype, "accountSidAuthToken", void 0);
+    return UpdateSyncListItemSecurity;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemSecurity = UpdateSyncListItemSecurity;
+var UpdateSyncListItemRequest = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemRequest, _super);
+    function UpdateSyncListItemRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateSyncListItemRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateSyncListItemPathParams)
+    ], UpdateSyncListItemRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateSyncListItemHeaders)
+    ], UpdateSyncListItemRequest.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        __metadata("design:type", UpdateSyncListItemUpdateSyncListItemRequest)
+    ], UpdateSyncListItemRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateSyncListItemSecurity)
+    ], UpdateSyncListItemRequest.prototype, "security", void 0);
+    return UpdateSyncListItemRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemRequest = UpdateSyncListItemRequest;
+var UpdateSyncListItemResponse = /** @class */ (function (_super) {
+    __extends(UpdateSyncListItemResponse, _super);
+    function UpdateSyncListItemResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateSyncListItemResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], UpdateSyncListItemResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.SyncV1ServiceSyncListSyncListItem)
+    ], UpdateSyncListItemResponse.prototype, "syncV1ServiceSyncListSyncListItem", void 0);
+    return UpdateSyncListItemResponse;
+}(utils_1.SpeakeasyBase));
+exports.UpdateSyncListItemResponse = UpdateSyncListItemResponse;

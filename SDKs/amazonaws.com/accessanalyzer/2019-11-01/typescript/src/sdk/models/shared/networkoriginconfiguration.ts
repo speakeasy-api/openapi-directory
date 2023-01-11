@@ -9,7 +9,7 @@ import { VpcConfiguration } from "./vpcconfiguration";
 **/
 export class NetworkOriginConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=internetConfiguration" })
-  internetConfiguration?: Map<string, any>;
+  internetConfiguration?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=vpcConfiguration" })
   vpcConfiguration?: VpcConfiguration;

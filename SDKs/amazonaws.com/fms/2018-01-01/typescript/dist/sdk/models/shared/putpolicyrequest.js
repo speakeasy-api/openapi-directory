@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Policy } from "./policy";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var policy_1 = require("./policy");
+var tag_1 = require("./tag");
 var PutPolicyRequest = /** @class */ (function (_super) {
     __extends(PutPolicyRequest, _super);
     function PutPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Policy" }),
-        __metadata("design:type", Policy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Policy" }),
+        __metadata("design:type", policy_1.Policy)
     ], PutPolicyRequest.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagList", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], PutPolicyRequest.prototype, "tagList", void 0);
     return PutPolicyRequest;
-}(SpeakeasyBase));
-export { PutPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutPolicyRequest = PutPolicyRequest;

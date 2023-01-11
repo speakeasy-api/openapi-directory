@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationOpenapiSpecResponse = exports.GetOrganizationOpenapiSpecRequest = exports.GetOrganizationOpenapiSpecPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationOpenapiSpecPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationOpenapiSpecPathParams, _super);
     function GetOrganizationOpenapiSpecPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationOpenapiSpecPathParams.prototype, "organizationId", void 0);
     return GetOrganizationOpenapiSpecPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationOpenapiSpecPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationOpenapiSpecPathParams = GetOrganizationOpenapiSpecPathParams;
 var GetOrganizationOpenapiSpecRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationOpenapiSpecRequest, _super);
     function GetOrganizationOpenapiSpecRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationOpenapiSpecPathParams)
     ], GetOrganizationOpenapiSpecRequest.prototype, "pathParams", void 0);
     return GetOrganizationOpenapiSpecRequest;
-}(SpeakeasyBase));
-export { GetOrganizationOpenapiSpecRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationOpenapiSpecRequest = GetOrganizationOpenapiSpecRequest;
 var GetOrganizationOpenapiSpecResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationOpenapiSpecResponse, _super);
     function GetOrganizationOpenapiSpecResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationOpenapiSpecResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationOpenapiSpecResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationOpenapiSpecResponse.prototype, "getOrganizationOpenapiSpec200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationOpenapiSpecResponse.prototype, "getOrganizationOpenapiSpec200ApplicationJSONObject", void 0);
     return GetOrganizationOpenapiSpecResponse;
-}(SpeakeasyBase));
-export { GetOrganizationOpenapiSpecResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationOpenapiSpecResponse = GetOrganizationOpenapiSpecResponse;

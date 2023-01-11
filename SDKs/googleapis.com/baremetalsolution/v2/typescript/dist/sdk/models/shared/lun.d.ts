@@ -18,10 +18,11 @@ export declare enum LunStorageTypeEnum {
 /**
  * A storage volume logical unit number (LUN).
 **/
-export declare class LunInput extends SpeakeasyBase {
+export declare class Lun extends SpeakeasyBase {
     bootLun?: boolean;
     id?: string;
     multiprotocolType?: LunMultiprotocolTypeEnum;
+    name?: string;
     shareable?: boolean;
     sizeGb?: string;
     state?: LunStateEnum;
@@ -32,11 +33,10 @@ export declare class LunInput extends SpeakeasyBase {
 /**
  * A storage volume logical unit number (LUN).
 **/
-export declare class Lun extends SpeakeasyBase {
+export declare class LunInput extends SpeakeasyBase {
     bootLun?: boolean;
     id?: string;
     multiprotocolType?: LunMultiprotocolTypeEnum;
-    name?: string;
     shareable?: boolean;
     sizeGb?: string;
     state?: LunStateEnum;

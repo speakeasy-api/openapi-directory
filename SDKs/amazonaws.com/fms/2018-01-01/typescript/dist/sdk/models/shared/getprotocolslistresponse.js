@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProtocolsListData } from "./protocolslistdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetProtocolsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var protocolslistdata_1 = require("./protocolslistdata");
 var GetProtocolsListResponse = /** @class */ (function (_super) {
     __extends(GetProtocolsListResponse, _super);
     function GetProtocolsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProtocolsList" }),
-        __metadata("design:type", ProtocolsListData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProtocolsList" }),
+        __metadata("design:type", protocolslistdata_1.ProtocolsListData)
     ], GetProtocolsListResponse.prototype, "protocolsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProtocolsListArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProtocolsListArn" }),
         __metadata("design:type", String)
     ], GetProtocolsListResponse.prototype, "protocolsListArn", void 0);
     return GetProtocolsListResponse;
-}(SpeakeasyBase));
-export { GetProtocolsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetProtocolsListResponse = GetProtocolsListResponse;

@@ -15,7 +15,7 @@ export declare class GetChangeTokenHeaders extends SpeakeasyBase {
 }
 export declare class GetChangeTokenRequest extends SpeakeasyBase {
     headers: GetChangeTokenHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetChangeTokenResponse extends SpeakeasyBase {
     contentType: string;

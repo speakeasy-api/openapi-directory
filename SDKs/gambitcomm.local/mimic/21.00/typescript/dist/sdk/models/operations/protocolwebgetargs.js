@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolWebGetArgsResponse = exports.ProtocolWebGetArgsRequest = exports.ProtocolWebGetArgsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolWebGetArgsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolWebGetArgsPathParams, _super);
     function ProtocolWebGetArgsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolWebGetArgsPathParams.prototype, "agentNum", void 0);
     return ProtocolWebGetArgsPathParams;
-}(SpeakeasyBase));
-export { ProtocolWebGetArgsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebGetArgsPathParams = ProtocolWebGetArgsPathParams;
 var ProtocolWebGetArgsRequest = /** @class */ (function (_super) {
     __extends(ProtocolWebGetArgsRequest, _super);
     function ProtocolWebGetArgsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolWebGetArgsPathParams)
     ], ProtocolWebGetArgsRequest.prototype, "pathParams", void 0);
     return ProtocolWebGetArgsRequest;
-}(SpeakeasyBase));
-export { ProtocolWebGetArgsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebGetArgsRequest = ProtocolWebGetArgsRequest;
 var ProtocolWebGetArgsResponse = /** @class */ (function (_super) {
     __extends(ProtocolWebGetArgsResponse, _super);
     function ProtocolWebGetArgsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolWebGetArgsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolWebGetArgsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProtocolWebGetArgsResponse.prototype, "protocolWebGetArgs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProtocolWebGetArgsResponse.prototype, "protocolWebGetArgs200ApplicationJSONObject", void 0);
     return ProtocolWebGetArgsResponse;
-}(SpeakeasyBase));
-export { ProtocolWebGetArgsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebGetArgsResponse = ProtocolWebGetArgsResponse;

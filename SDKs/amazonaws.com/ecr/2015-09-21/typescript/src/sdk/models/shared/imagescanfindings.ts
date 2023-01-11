@@ -9,7 +9,7 @@ import { ImageScanFinding } from "./imagescanfinding";
 **/
 export class ImageScanFindings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=findingSeverityCounts" })
-  findingSeverityCounts?: Map<string, number>;
+  findingSeverityCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=findings", elemType: ImageScanFinding })
   findings?: ImageScanFinding[];

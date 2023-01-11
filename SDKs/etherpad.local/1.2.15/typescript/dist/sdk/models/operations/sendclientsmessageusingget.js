@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendClientsMessageUsingGetResponse = exports.SendClientsMessageUsingGetRequest = exports.SendClientsMessageUsingGet500ApplicationJson = exports.SendClientsMessageUsingGet401ApplicationJson = exports.SendClientsMessageUsingGet400ApplicationJson = exports.SendClientsMessageUsingGet200ApplicationJson = exports.SendClientsMessageUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SendClientsMessageUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGetQueryParams, _super);
     function SendClientsMessageUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=msg" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGetQueryParams.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], SendClientsMessageUsingGetQueryParams.prototype, "padId", void 0);
+    ], SendClientsMessageUsingGetQueryParams.prototype, "padID", void 0);
     return SendClientsMessageUsingGetQueryParams;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGetQueryParams = SendClientsMessageUsingGetQueryParams;
 var SendClientsMessageUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGet200ApplicationJson, _super);
     function SendClientsMessageUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGet200ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGet200ApplicationJson = SendClientsMessageUsingGet200ApplicationJson;
 var SendClientsMessageUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGet400ApplicationJson, _super);
     function SendClientsMessageUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGet400ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGet400ApplicationJson = SendClientsMessageUsingGet400ApplicationJson;
 var SendClientsMessageUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGet401ApplicationJson, _super);
     function SendClientsMessageUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGet401ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGet401ApplicationJson = SendClientsMessageUsingGet401ApplicationJson;
 var SendClientsMessageUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGet500ApplicationJson, _super);
     function SendClientsMessageUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], SendClientsMessageUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGet500ApplicationJson.prototype, "message", void 0);
     return SendClientsMessageUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGet500ApplicationJson = SendClientsMessageUsingGet500ApplicationJson;
 var SendClientsMessageUsingGetRequest = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGetRequest, _super);
     function SendClientsMessageUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingGetQueryParams)
     ], SendClientsMessageUsingGetRequest.prototype, "queryParams", void 0);
     return SendClientsMessageUsingGetRequest;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGetRequest = SendClientsMessageUsingGetRequest;
 var SendClientsMessageUsingGetResponse = /** @class */ (function (_super) {
     __extends(SendClientsMessageUsingGetResponse, _super);
     function SendClientsMessageUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SendClientsMessageUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SendClientsMessageUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingGet200ApplicationJson)
-    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGet200ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingGet400ApplicationJson)
-    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGet400ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingGet401ApplicationJson)
-    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGet401ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SendClientsMessageUsingGet500ApplicationJson)
-    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGet500ApplicationJsonObject", void 0);
+    ], SendClientsMessageUsingGetResponse.prototype, "sendClientsMessageUsingGET500ApplicationJSONObject", void 0);
     return SendClientsMessageUsingGetResponse;
-}(SpeakeasyBase));
-export { SendClientsMessageUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.SendClientsMessageUsingGetResponse = SendClientsMessageUsingGetResponse;

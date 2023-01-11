@@ -8,7 +8,7 @@ export declare enum GetFailoverDbClusterVersionEnum {
 export declare class GetFailoverDbClusterQueryParams extends SpeakeasyBase {
     action: GetFailoverDbClusterActionEnum;
     dbClusterIdentifier?: string;
-    targetDbInstanceIdentifier?: string;
+    targetDBInstanceIdentifier?: string;
     version: GetFailoverDbClusterVersionEnum;
 }
 export declare class GetFailoverDbClusterHeaders extends SpeakeasyBase {

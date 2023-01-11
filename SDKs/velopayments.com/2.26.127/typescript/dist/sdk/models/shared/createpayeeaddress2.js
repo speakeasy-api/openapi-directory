@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreatePayeeAddress2CountryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayeeAddress2 = exports.CreatePayeeAddress2CountryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreatePayeeAddress2CountryEnum;
 (function (CreatePayeeAddress2CountryEnum) {
     CreatePayeeAddress2CountryEnum["Af"] = "AF";
     CreatePayeeAddress2CountryEnum["Ax"] = "AX";
@@ -274,44 +277,44 @@ export var CreatePayeeAddress2CountryEnum;
     CreatePayeeAddress2CountryEnum["Ye"] = "YE";
     CreatePayeeAddress2CountryEnum["Zm"] = "ZM";
     CreatePayeeAddress2CountryEnum["Zw"] = "ZW";
-})(CreatePayeeAddress2CountryEnum || (CreatePayeeAddress2CountryEnum = {}));
+})(CreatePayeeAddress2CountryEnum = exports.CreatePayeeAddress2CountryEnum || (exports.CreatePayeeAddress2CountryEnum = {}));
 var CreatePayeeAddress2 = /** @class */ (function (_super) {
     __extends(CreatePayeeAddress2, _super);
     function CreatePayeeAddress2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countyOrProvince" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countyOrProvince" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "countyOrProvince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line1" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line2" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line3" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "line3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line4" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "line4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zipOrPostcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zipOrPostcode" }),
         __metadata("design:type", String)
     ], CreatePayeeAddress2.prototype, "zipOrPostcode", void 0);
     return CreatePayeeAddress2;
-}(SpeakeasyBase));
-export { CreatePayeeAddress2 };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayeeAddress2 = CreatePayeeAddress2;

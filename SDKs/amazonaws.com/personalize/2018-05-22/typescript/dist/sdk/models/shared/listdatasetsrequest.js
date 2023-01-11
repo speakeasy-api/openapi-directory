@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDatasetsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListDatasetsRequest = /** @class */ (function (_super) {
     __extends(ListDatasetsRequest, _super);
     function ListDatasetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetGroupArn" }),
         __metadata("design:type", String)
     ], ListDatasetsRequest.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListDatasetsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListDatasetsRequest.prototype, "nextToken", void 0);
     return ListDatasetsRequest;
-}(SpeakeasyBase));
-export { ListDatasetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListDatasetsRequest = ListDatasetsRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoginResponse = exports.LoginResponseStatusEnum = exports.LoginResponseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var LoginResponseResponse = /** @class */ (function (_super) {
     __extends(LoginResponseResponse, _super);
     function LoginResponseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], LoginResponseResponse.prototype, "user", void 0);
     return LoginResponseResponse;
-}(SpeakeasyBase));
-export { LoginResponseResponse };
-export var LoginResponseStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.LoginResponseResponse = LoginResponseResponse;
+var LoginResponseStatusEnum;
 (function (LoginResponseStatusEnum) {
     LoginResponseStatusEnum["Success"] = "success";
-})(LoginResponseStatusEnum || (LoginResponseStatusEnum = {}));
+})(LoginResponseStatusEnum = exports.LoginResponseStatusEnum || (exports.LoginResponseStatusEnum = {}));
 var LoginResponse = /** @class */ (function (_super) {
     __extends(LoginResponse, _super);
     function LoginResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", String)
     ], LoginResponse.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], LoginResponse.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", LoginResponseResponse)
     ], LoginResponse.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], LoginResponse.prototype, "status", void 0);
     return LoginResponse;
-}(SpeakeasyBase));
-export { LoginResponse };
+}(utils_1.SpeakeasyBase));
+exports.LoginResponse = LoginResponse;

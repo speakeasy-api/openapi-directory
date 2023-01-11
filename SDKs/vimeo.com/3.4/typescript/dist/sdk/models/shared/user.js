@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Picture } from "./picture";
-export var UserAccountEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = exports.UserWebsites = exports.UserUploadQuota = exports.UserUploadQuotaSpace = exports.UserUploadQuotaSpaceShowingEnum = exports.UserUploadQuotaPeriodic = exports.UserUploadQuotaLifetime = exports.UserPreferences = exports.UserPreferencesVideos = exports.UserPreferencesVideosPrivacy = exports.UserPreferencesVideosPrivacyViewEnum = exports.UserPreferencesVideosPrivacyEmbedEnum = exports.UserPreferencesVideosPrivacyCommentsEnum = exports.UserMetadata = exports.UserMetadataInteractions = exports.UserMetadataInteractionsReport = exports.UserMetadataInteractionsFollow = exports.UserMetadataInteractionsBlock = exports.UserMetadataInteractionsAddPrivacyUser = exports.UserMetadataConnections = exports.UserMetadataConnectionsWatchlater = exports.UserMetadataConnectionsWatchedVideos = exports.UserMetadataConnectionsVideos = exports.UserMetadataConnectionsShared = exports.UserMetadataConnectionsRecommendedUsers = exports.UserMetadataConnectionsRecommendedChannels = exports.UserMetadataConnectionsPortfolios = exports.UserMetadataConnectionsPictures = exports.UserMetadataConnectionsModeratedChannels = exports.UserMetadataConnectionsLikes = exports.UserMetadataConnectionsGroups = exports.UserMetadataConnectionsFollowing = exports.UserMetadataConnectionsFollowers = exports.UserMetadataConnectionsFolders = exports.UserMetadataConnectionsFeed = exports.UserMetadataConnectionsChannels = exports.UserMetadataConnectionsCategories = exports.UserMetadataConnectionsBlock = exports.UserMetadataConnectionsAppearances = exports.UserMetadataConnectionsAlbums = exports.UserAccountEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var picture_1 = require("./picture");
+var UserAccountEnum;
 (function (UserAccountEnum) {
     UserAccountEnum["Basic"] = "basic";
     UserAccountEnum["Business"] = "business";
@@ -35,7 +38,7 @@ export var UserAccountEnum;
     UserAccountEnum["Pro"] = "pro";
     UserAccountEnum["ProUnlimited"] = "pro_unlimited";
     UserAccountEnum["Producer"] = "producer";
-})(UserAccountEnum || (UserAccountEnum = {}));
+})(UserAccountEnum = exports.UserAccountEnum || (exports.UserAccountEnum = {}));
 // UserMetadataConnectionsAlbums
 /**
  * Information about the albums created by this user.
@@ -46,20 +49,20 @@ var UserMetadataConnectionsAlbums = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsAlbums.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsAlbums.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsAlbums.prototype, "uri", void 0);
     return UserMetadataConnectionsAlbums;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsAlbums };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsAlbums = UserMetadataConnectionsAlbums;
 // UserMetadataConnectionsAppearances
 /**
  * Information about the appearances of this user in other videos.
@@ -70,20 +73,20 @@ var UserMetadataConnectionsAppearances = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsAppearances.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsAppearances.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsAppearances.prototype, "uri", void 0);
     return UserMetadataConnectionsAppearances;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsAppearances };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsAppearances = UserMetadataConnectionsAppearances;
 // UserMetadataConnectionsBlock
 /**
  * Information on the users that the current user has blocked. This data requires a bearer token with the `private` scope.
@@ -94,20 +97,20 @@ var UserMetadataConnectionsBlock = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsBlock.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsBlock.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsBlock.prototype, "uri", void 0);
     return UserMetadataConnectionsBlock;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsBlock };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsBlock = UserMetadataConnectionsBlock;
 // UserMetadataConnectionsCategories
 /**
  * Information about this user's followed categories.
@@ -118,20 +121,20 @@ var UserMetadataConnectionsCategories = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsCategories.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsCategories.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsCategories.prototype, "uri", void 0);
     return UserMetadataConnectionsCategories;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsCategories };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsCategories = UserMetadataConnectionsCategories;
 // UserMetadataConnectionsChannels
 /**
  * Information about this user's subscribed channels.
@@ -142,20 +145,20 @@ var UserMetadataConnectionsChannels = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsChannels.prototype, "uri", void 0);
     return UserMetadataConnectionsChannels;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsChannels };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsChannels = UserMetadataConnectionsChannels;
 // UserMetadataConnectionsFeed
 /**
  * Information about this user's feed.
@@ -166,16 +169,16 @@ var UserMetadataConnectionsFeed = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsFeed.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsFeed.prototype, "uri", void 0);
     return UserMetadataConnectionsFeed;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsFeed };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsFeed = UserMetadataConnectionsFeed;
 // UserMetadataConnectionsFolders
 /**
  * Information about this user's folders.
@@ -186,20 +189,20 @@ var UserMetadataConnectionsFolders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsFolders.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsFolders.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsFolders.prototype, "uri", void 0);
     return UserMetadataConnectionsFolders;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsFolders };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsFolders = UserMetadataConnectionsFolders;
 // UserMetadataConnectionsFollowers
 /**
  * Information about the user's followers.
@@ -210,20 +213,20 @@ var UserMetadataConnectionsFollowers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsFollowers.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsFollowers.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsFollowers.prototype, "uri", void 0);
     return UserMetadataConnectionsFollowers;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsFollowers };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsFollowers = UserMetadataConnectionsFollowers;
 // UserMetadataConnectionsFollowing
 /**
  * Information about the users that the current user is following.
@@ -234,20 +237,20 @@ var UserMetadataConnectionsFollowing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsFollowing.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsFollowing.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsFollowing.prototype, "uri", void 0);
     return UserMetadataConnectionsFollowing;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsFollowing };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsFollowing = UserMetadataConnectionsFollowing;
 // UserMetadataConnectionsGroups
 /**
  * Information about the groups created by this user.
@@ -258,20 +261,20 @@ var UserMetadataConnectionsGroups = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsGroups.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsGroups.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsGroups.prototype, "uri", void 0);
     return UserMetadataConnectionsGroups;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsGroups };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsGroups = UserMetadataConnectionsGroups;
 // UserMetadataConnectionsLikes
 /**
  * Information about the videos that this user has liked.
@@ -282,20 +285,20 @@ var UserMetadataConnectionsLikes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsLikes.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsLikes.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsLikes.prototype, "uri", void 0);
     return UserMetadataConnectionsLikes;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsLikes };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsLikes = UserMetadataConnectionsLikes;
 // UserMetadataConnectionsModeratedChannels
 /**
  * Information about the channels that this user moderates.
@@ -306,20 +309,20 @@ var UserMetadataConnectionsModeratedChannels = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsModeratedChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsModeratedChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsModeratedChannels.prototype, "uri", void 0);
     return UserMetadataConnectionsModeratedChannels;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsModeratedChannels };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsModeratedChannels = UserMetadataConnectionsModeratedChannels;
 // UserMetadataConnectionsPictures
 /**
  * Information about this user's portraits.
@@ -330,20 +333,20 @@ var UserMetadataConnectionsPictures = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsPictures.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsPictures.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsPictures.prototype, "uri", void 0);
     return UserMetadataConnectionsPictures;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsPictures };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsPictures = UserMetadataConnectionsPictures;
 // UserMetadataConnectionsPortfolios
 /**
  * Information about this user's portfolios.
@@ -354,20 +357,20 @@ var UserMetadataConnectionsPortfolios = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsPortfolios.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsPortfolios.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsPortfolios.prototype, "uri", void 0);
     return UserMetadataConnectionsPortfolios;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsPortfolios = UserMetadataConnectionsPortfolios;
 // UserMetadataConnectionsRecommendedChannels
 /**
  * A collection of recommended channels for the current user to follow. This data requires a bearer token with the `private` scope.
@@ -378,20 +381,20 @@ var UserMetadataConnectionsRecommendedChannels = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsRecommendedChannels.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsRecommendedChannels.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsRecommendedChannels.prototype, "uri", void 0);
     return UserMetadataConnectionsRecommendedChannels;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsRecommendedChannels };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsRecommendedChannels = UserMetadataConnectionsRecommendedChannels;
 // UserMetadataConnectionsRecommendedUsers
 /**
  * A Collection of recommended users for the current user to follow. This data requires a bearer token with the `private` scope.
@@ -402,20 +405,20 @@ var UserMetadataConnectionsRecommendedUsers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsRecommendedUsers.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsRecommendedUsers.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsRecommendedUsers.prototype, "uri", void 0);
     return UserMetadataConnectionsRecommendedUsers;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsRecommendedUsers };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsRecommendedUsers = UserMetadataConnectionsRecommendedUsers;
 // UserMetadataConnectionsShared
 /**
  * Information about the videos that have been shared with this user.
@@ -426,20 +429,20 @@ var UserMetadataConnectionsShared = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsShared.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsShared.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsShared.prototype, "uri", void 0);
     return UserMetadataConnectionsShared;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsShared };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsShared = UserMetadataConnectionsShared;
 // UserMetadataConnectionsVideos
 /**
  * Information about the videos uploaded by this user.
@@ -450,20 +453,20 @@ var UserMetadataConnectionsVideos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsVideos.prototype, "uri", void 0);
     return UserMetadataConnectionsVideos;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsVideos };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsVideos = UserMetadataConnectionsVideos;
 // UserMetadataConnectionsWatchedVideos
 /**
  * Information about the videos that this user has watched.
@@ -474,20 +477,20 @@ var UserMetadataConnectionsWatchedVideos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsWatchedVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsWatchedVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsWatchedVideos.prototype, "uri", void 0);
     return UserMetadataConnectionsWatchedVideos;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsWatchedVideos };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsWatchedVideos = UserMetadataConnectionsWatchedVideos;
 // UserMetadataConnectionsWatchlater
 /**
  * Information about the videos that this user wants to watch later.
@@ -498,20 +501,20 @@ var UserMetadataConnectionsWatchlater = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataConnectionsWatchlater.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], UserMetadataConnectionsWatchlater.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataConnectionsWatchlater.prototype, "uri", void 0);
     return UserMetadataConnectionsWatchlater;
-}(SpeakeasyBase));
-export { UserMetadataConnectionsWatchlater };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnectionsWatchlater = UserMetadataConnectionsWatchlater;
 // UserMetadataConnections
 /**
  * The list of resource URIs related to the user.
@@ -522,104 +525,104 @@ var UserMetadataConnections = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=albums" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=albums" }),
         __metadata("design:type", UserMetadataConnectionsAlbums)
     ], UserMetadataConnections.prototype, "albums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appearances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appearances" }),
         __metadata("design:type", UserMetadataConnectionsAppearances)
     ], UserMetadataConnections.prototype, "appearances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block" }),
         __metadata("design:type", UserMetadataConnectionsBlock)
     ], UserMetadataConnections.prototype, "block", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", UserMetadataConnectionsCategories)
     ], UserMetadataConnections.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channels" }),
         __metadata("design:type", UserMetadataConnectionsChannels)
     ], UserMetadataConnections.prototype, "channels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feed" }),
         __metadata("design:type", UserMetadataConnectionsFeed)
     ], UserMetadataConnections.prototype, "feed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folders" }),
         __metadata("design:type", UserMetadataConnectionsFolders)
     ], UserMetadataConnections.prototype, "folders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
         __metadata("design:type", UserMetadataConnectionsFollowers)
     ], UserMetadataConnections.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following" }),
         __metadata("design:type", UserMetadataConnectionsFollowing)
     ], UserMetadataConnections.prototype, "following", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", UserMetadataConnectionsGroups)
     ], UserMetadataConnections.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likes" }),
         __metadata("design:type", UserMetadataConnectionsLikes)
     ], UserMetadataConnections.prototype, "likes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderated_channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderated_channels" }),
         __metadata("design:type", UserMetadataConnectionsModeratedChannels)
     ], UserMetadataConnections.prototype, "moderatedChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictures" }),
         __metadata("design:type", UserMetadataConnectionsPictures)
     ], UserMetadataConnections.prototype, "pictures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios" }),
         __metadata("design:type", UserMetadataConnectionsPortfolios)
     ], UserMetadataConnections.prototype, "portfolios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommended_channels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommended_channels" }),
         __metadata("design:type", UserMetadataConnectionsRecommendedChannels)
     ], UserMetadataConnections.prototype, "recommendedChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommended_users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommended_users" }),
         __metadata("design:type", UserMetadataConnectionsRecommendedUsers)
     ], UserMetadataConnections.prototype, "recommendedUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shared" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shared" }),
         __metadata("design:type", UserMetadataConnectionsShared)
     ], UserMetadataConnections.prototype, "shared", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", UserMetadataConnectionsVideos)
     ], UserMetadataConnections.prototype, "videos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watched_videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watched_videos" }),
         __metadata("design:type", UserMetadataConnectionsWatchedVideos)
     ], UserMetadataConnections.prototype, "watchedVideos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlater" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlater" }),
         __metadata("design:type", UserMetadataConnectionsWatchlater)
     ], UserMetadataConnections.prototype, "watchlater", void 0);
     return UserMetadataConnections;
-}(SpeakeasyBase));
-export { UserMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataConnections = UserMetadataConnections;
 var UserMetadataInteractionsAddPrivacyUser = /** @class */ (function (_super) {
     __extends(UserMetadataInteractionsAddPrivacyUser, _super);
     function UserMetadataInteractionsAddPrivacyUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataInteractionsAddPrivacyUser.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataInteractionsAddPrivacyUser.prototype, "uri", void 0);
     return UserMetadataInteractionsAddPrivacyUser;
-}(SpeakeasyBase));
-export { UserMetadataInteractionsAddPrivacyUser };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataInteractionsAddPrivacyUser = UserMetadataInteractionsAddPrivacyUser;
 // UserMetadataInteractionsBlock
 /**
  * Information related to the block status of this user.
@@ -630,24 +633,24 @@ var UserMetadataInteractionsBlock = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], UserMetadataInteractionsBlock.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_time" }),
         __metadata("design:type", String)
     ], UserMetadataInteractionsBlock.prototype, "addedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataInteractionsBlock.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataInteractionsBlock.prototype, "uri", void 0);
     return UserMetadataInteractionsBlock;
-}(SpeakeasyBase));
-export { UserMetadataInteractionsBlock };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataInteractionsBlock = UserMetadataInteractionsBlock;
 // UserMetadataInteractionsFollow
 /**
  * Information related to the followed status of this user.
@@ -658,20 +661,20 @@ var UserMetadataInteractionsFollow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Boolean)
     ], UserMetadataInteractionsFollow.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataInteractionsFollow.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataInteractionsFollow.prototype, "uri", void 0);
     return UserMetadataInteractionsFollow;
-}(SpeakeasyBase));
-export { UserMetadataInteractionsFollow };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataInteractionsFollow = UserMetadataInteractionsFollow;
 // UserMetadataInteractionsReport
 /**
  * Information regarding where and how to report a user.
@@ -682,44 +685,44 @@ var UserMetadataInteractionsReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], UserMetadataInteractionsReport.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", Array)
     ], UserMetadataInteractionsReport.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UserMetadataInteractionsReport.prototype, "uri", void 0);
     return UserMetadataInteractionsReport;
-}(SpeakeasyBase));
-export { UserMetadataInteractionsReport };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataInteractionsReport = UserMetadataInteractionsReport;
 var UserMetadataInteractions = /** @class */ (function (_super) {
     __extends(UserMetadataInteractions, _super);
     function UserMetadataInteractions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add_privacy_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add_privacy_user" }),
         __metadata("design:type", UserMetadataInteractionsAddPrivacyUser)
     ], UserMetadataInteractions.prototype, "addPrivacyUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block" }),
         __metadata("design:type", UserMetadataInteractionsBlock)
     ], UserMetadataInteractions.prototype, "block", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=follow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=follow" }),
         __metadata("design:type", UserMetadataInteractionsFollow)
     ], UserMetadataInteractions.prototype, "follow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report" }),
         __metadata("design:type", UserMetadataInteractionsReport)
     ], UserMetadataInteractions.prototype, "report", void 0);
     return UserMetadataInteractions;
-}(SpeakeasyBase));
-export { UserMetadataInteractions };
+}(utils_1.SpeakeasyBase));
+exports.UserMetadataInteractions = UserMetadataInteractions;
 // UserMetadata
 /**
  * The user's metadata.
@@ -730,29 +733,29 @@ var UserMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", UserMetadataConnections)
     ], UserMetadata.prototype, "connections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactions" }),
         __metadata("design:type", UserMetadataInteractions)
     ], UserMetadata.prototype, "interactions", void 0);
     return UserMetadata;
-}(SpeakeasyBase));
-export { UserMetadata };
-export var UserPreferencesVideosPrivacyCommentsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UserMetadata = UserMetadata;
+var UserPreferencesVideosPrivacyCommentsEnum;
 (function (UserPreferencesVideosPrivacyCommentsEnum) {
     UserPreferencesVideosPrivacyCommentsEnum["Anybody"] = "anybody";
     UserPreferencesVideosPrivacyCommentsEnum["Contacts"] = "contacts";
     UserPreferencesVideosPrivacyCommentsEnum["Nobody"] = "nobody";
-})(UserPreferencesVideosPrivacyCommentsEnum || (UserPreferencesVideosPrivacyCommentsEnum = {}));
-export var UserPreferencesVideosPrivacyEmbedEnum;
+})(UserPreferencesVideosPrivacyCommentsEnum = exports.UserPreferencesVideosPrivacyCommentsEnum || (exports.UserPreferencesVideosPrivacyCommentsEnum = {}));
+var UserPreferencesVideosPrivacyEmbedEnum;
 (function (UserPreferencesVideosPrivacyEmbedEnum) {
     UserPreferencesVideosPrivacyEmbedEnum["Private"] = "private";
     UserPreferencesVideosPrivacyEmbedEnum["Public"] = "public";
     UserPreferencesVideosPrivacyEmbedEnum["Whitelist"] = "whitelist";
-})(UserPreferencesVideosPrivacyEmbedEnum || (UserPreferencesVideosPrivacyEmbedEnum = {}));
-export var UserPreferencesVideosPrivacyViewEnum;
+})(UserPreferencesVideosPrivacyEmbedEnum = exports.UserPreferencesVideosPrivacyEmbedEnum || (exports.UserPreferencesVideosPrivacyEmbedEnum = {}));
+var UserPreferencesVideosPrivacyViewEnum;
 (function (UserPreferencesVideosPrivacyViewEnum) {
     UserPreferencesVideosPrivacyViewEnum["Anybody"] = "anybody";
     UserPreferencesVideosPrivacyViewEnum["Contacts"] = "contacts";
@@ -761,59 +764,59 @@ export var UserPreferencesVideosPrivacyViewEnum;
     UserPreferencesVideosPrivacyViewEnum["Password"] = "password";
     UserPreferencesVideosPrivacyViewEnum["Unlisted"] = "unlisted";
     UserPreferencesVideosPrivacyViewEnum["Users"] = "users";
-})(UserPreferencesVideosPrivacyViewEnum || (UserPreferencesVideosPrivacyViewEnum = {}));
+})(UserPreferencesVideosPrivacyViewEnum = exports.UserPreferencesVideosPrivacyViewEnum || (exports.UserPreferencesVideosPrivacyViewEnum = {}));
 var UserPreferencesVideosPrivacy = /** @class */ (function (_super) {
     __extends(UserPreferencesVideosPrivacy, _super);
     function UserPreferencesVideosPrivacy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add" }),
         __metadata("design:type", Boolean)
     ], UserPreferencesVideosPrivacy.prototype, "add", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], UserPreferencesVideosPrivacy.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], UserPreferencesVideosPrivacy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", String)
     ], UserPreferencesVideosPrivacy.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], UserPreferencesVideosPrivacy.prototype, "view", void 0);
     return UserPreferencesVideosPrivacy;
-}(SpeakeasyBase));
-export { UserPreferencesVideosPrivacy };
+}(utils_1.SpeakeasyBase));
+exports.UserPreferencesVideosPrivacy = UserPreferencesVideosPrivacy;
 var UserPreferencesVideos = /** @class */ (function (_super) {
     __extends(UserPreferencesVideos, _super);
     function UserPreferencesVideos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", UserPreferencesVideosPrivacy)
     ], UserPreferencesVideos.prototype, "privacy", void 0);
     return UserPreferencesVideos;
-}(SpeakeasyBase));
-export { UserPreferencesVideos };
+}(utils_1.SpeakeasyBase));
+exports.UserPreferencesVideos = UserPreferencesVideos;
 var UserPreferences = /** @class */ (function (_super) {
     __extends(UserPreferences, _super);
     function UserPreferences() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", UserPreferencesVideos)
     ], UserPreferences.prototype, "videos", void 0);
     return UserPreferences;
-}(SpeakeasyBase));
-export { UserPreferences };
+}(utils_1.SpeakeasyBase));
+exports.UserPreferences = UserPreferences;
 // UserUploadQuotaLifetime
 /**
  * Information about the user's lifetime upload usage.
@@ -824,20 +827,20 @@ var UserUploadQuotaLifetime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaLifetime.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaLifetime.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaLifetime.prototype, "used", void 0);
     return UserUploadQuotaLifetime;
-}(SpeakeasyBase));
-export { UserUploadQuotaLifetime };
+}(utils_1.SpeakeasyBase));
+exports.UserUploadQuotaLifetime = UserUploadQuotaLifetime;
 // UserUploadQuotaPeriodic
 /**
  * Information about the user's usage for the current period.
@@ -848,29 +851,29 @@ var UserUploadQuotaPeriodic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaPeriodic.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaPeriodic.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reset_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reset_date" }),
         __metadata("design:type", String)
     ], UserUploadQuotaPeriodic.prototype, "resetDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaPeriodic.prototype, "used", void 0);
     return UserUploadQuotaPeriodic;
-}(SpeakeasyBase));
-export { UserUploadQuotaPeriodic };
-export var UserUploadQuotaSpaceShowingEnum;
+}(utils_1.SpeakeasyBase));
+exports.UserUploadQuotaPeriodic = UserUploadQuotaPeriodic;
+var UserUploadQuotaSpaceShowingEnum;
 (function (UserUploadQuotaSpaceShowingEnum) {
     UserUploadQuotaSpaceShowingEnum["Lifetime"] = "lifetime";
     UserUploadQuotaSpaceShowingEnum["Periodic"] = "periodic";
-})(UserUploadQuotaSpaceShowingEnum || (UserUploadQuotaSpaceShowingEnum = {}));
+})(UserUploadQuotaSpaceShowingEnum = exports.UserUploadQuotaSpaceShowingEnum || (exports.UserUploadQuotaSpaceShowingEnum = {}));
 // UserUploadQuotaSpace
 /**
  * Information about the user's upload space remaining for the current period.
@@ -881,24 +884,24 @@ var UserUploadQuotaSpace = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=free" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaSpace.prototype, "free", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaSpace.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showing" }),
         __metadata("design:type", String)
     ], UserUploadQuotaSpace.prototype, "showing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Number)
     ], UserUploadQuotaSpace.prototype, "used", void 0);
     return UserUploadQuotaSpace;
-}(SpeakeasyBase));
-export { UserUploadQuotaSpace };
+}(utils_1.SpeakeasyBase));
+exports.UserUploadQuotaSpace = UserUploadQuotaSpace;
 // UserUploadQuota
 /**
  * Appears only when the user has upload access and is looking at their own user record.
@@ -909,105 +912,105 @@ var UserUploadQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
         __metadata("design:type", UserUploadQuotaLifetime)
     ], UserUploadQuota.prototype, "lifetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodic" }),
         __metadata("design:type", UserUploadQuotaPeriodic)
     ], UserUploadQuota.prototype, "periodic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=space" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=space" }),
         __metadata("design:type", UserUploadQuotaSpace)
     ], UserUploadQuota.prototype, "space", void 0);
     return UserUploadQuota;
-}(SpeakeasyBase));
-export { UserUploadQuota };
+}(utils_1.SpeakeasyBase));
+exports.UserUploadQuota = UserUploadQuota;
 var UserWebsites = /** @class */ (function (_super) {
     __extends(UserWebsites, _super);
     function UserWebsites() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UserWebsites.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], UserWebsites.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UserWebsites.prototype, "name", void 0);
     return UserWebsites;
-}(SpeakeasyBase));
-export { UserWebsites };
+}(utils_1.SpeakeasyBase));
+exports.UserWebsites = UserWebsites;
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
     function User() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], User.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bio" }),
         __metadata("design:type", String)
     ], User.prototype, "bio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_filter" }),
         __metadata("design:type", Array)
     ], User.prototype, "contentFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_time" }),
         __metadata("design:type", String)
     ], User.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], User.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], User.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], User.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", UserMetadata)
     ], User.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], User.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictures" }),
-        __metadata("design:type", Picture)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictures" }),
+        __metadata("design:type", picture_1.Picture)
     ], User.prototype, "pictures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferences" }),
         __metadata("design:type", UserPreferences)
     ], User.prototype, "preferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_key" }),
         __metadata("design:type", String)
     ], User.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload_quota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload_quota" }),
         __metadata("design:type", UserUploadQuota)
     ], User.prototype, "uploadQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], User.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: UserWebsites }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: UserWebsites }),
         __metadata("design:type", Array)
     ], User.prototype, "websites", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

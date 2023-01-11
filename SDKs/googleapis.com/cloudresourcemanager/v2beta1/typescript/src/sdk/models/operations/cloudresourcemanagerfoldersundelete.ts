@@ -62,7 +62,7 @@ export class CloudresourcemanagerFoldersUndeleteRequest extends SpeakeasyBase {
   queryParams: CloudresourcemanagerFoldersUndeleteQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: CloudresourcemanagerFoldersUndeleteSecurity;

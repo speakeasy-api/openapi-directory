@@ -14,7 +14,7 @@ export declare class ReposListInvitationsRequest extends SpeakeasyBase {
 }
 export declare class ReposListInvitationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     repositoryInvitations?: shared.RepositoryInvitation[];
 }

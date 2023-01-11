@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,74 +14,99 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetShippingQuoteResponse = exports.GetShippingQuoteRequest = exports.GetShippingQuoteSecurity = exports.GetShippingQuotePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetShippingQuotePathParams = /** @class */ (function (_super) {
     __extends(GetShippingQuotePathParams, _super);
     function GetShippingQuotePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shippingQuoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shippingQuoteId" }),
         __metadata("design:type", String)
     ], GetShippingQuotePathParams.prototype, "shippingQuoteId", void 0);
     return GetShippingQuotePathParams;
-}(SpeakeasyBase));
-export { GetShippingQuotePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetShippingQuotePathParams = GetShippingQuotePathParams;
 var GetShippingQuoteSecurity = /** @class */ (function (_super) {
     __extends(GetShippingQuoteSecurity, _super);
     function GetShippingQuoteSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeApiAuth)
     ], GetShippingQuoteSecurity.prototype, "apiAuth", void 0);
     return GetShippingQuoteSecurity;
-}(SpeakeasyBase));
-export { GetShippingQuoteSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetShippingQuoteSecurity = GetShippingQuoteSecurity;
 var GetShippingQuoteRequest = /** @class */ (function (_super) {
     __extends(GetShippingQuoteRequest, _super);
     function GetShippingQuoteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetShippingQuotePathParams)
     ], GetShippingQuoteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetShippingQuoteSecurity)
     ], GetShippingQuoteRequest.prototype, "security", void 0);
     return GetShippingQuoteRequest;
-}(SpeakeasyBase));
-export { GetShippingQuoteRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetShippingQuoteRequest = GetShippingQuoteRequest;
 var GetShippingQuoteResponse = /** @class */ (function (_super) {
     __extends(GetShippingQuoteResponse, _super);
     function GetShippingQuoteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetShippingQuoteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ShippingQuote)
     ], GetShippingQuoteResponse.prototype, "shippingQuote", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetShippingQuoteResponse.prototype, "statusCode", void 0);
     return GetShippingQuoteResponse;
-}(SpeakeasyBase));
-export { GetShippingQuoteResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetShippingQuoteResponse = GetShippingQuoteResponse;

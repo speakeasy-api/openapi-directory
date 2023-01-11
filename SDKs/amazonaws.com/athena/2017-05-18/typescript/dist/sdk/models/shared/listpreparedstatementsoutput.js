@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PreparedStatementSummary } from "./preparedstatementsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPreparedStatementsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var preparedstatementsummary_1 = require("./preparedstatementsummary");
 var ListPreparedStatementsOutput = /** @class */ (function (_super) {
     __extends(ListPreparedStatementsOutput, _super);
     function ListPreparedStatementsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListPreparedStatementsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreparedStatements", elemType: PreparedStatementSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreparedStatements", elemType: preparedstatementsummary_1.PreparedStatementSummary }),
         __metadata("design:type", Array)
     ], ListPreparedStatementsOutput.prototype, "preparedStatements", void 0);
     return ListPreparedStatementsOutput;
-}(SpeakeasyBase));
-export { ListPreparedStatementsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListPreparedStatementsOutput = ListPreparedStatementsOutput;

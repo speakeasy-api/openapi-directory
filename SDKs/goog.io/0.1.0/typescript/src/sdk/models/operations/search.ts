@@ -51,7 +51,7 @@ export class SearchResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  search200ApplicationJsonObject?: Search200ApplicationJson;
+  search200ApplicationJSONObject?: Search200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,92 +1,73 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Actions } from "./actions";
-import { CertificateActions } from "./certificateactions";
-import { Certificates } from "./certificates";
-import { Datacenters } from "./datacenters";
-import { FirewallActions } from "./firewallactions";
-import { Firewalls } from "./firewalls";
-import { FloatingIpActions } from "./floatingipactions";
-import { FloatingIPs } from "./floatingips";
-import { IsOs } from "./isos";
-import { ImageActions } from "./imageactions";
-import { Images } from "./images";
-import { LoadBalancerActions } from "./loadbalanceractions";
-import { LoadBalancerTypes } from "./loadbalancertypes";
-import { LoadBalancers } from "./loadbalancers";
-import { Locations } from "./locations";
-import { NetworkActions } from "./networkactions";
-import { Networks } from "./networks";
-import { PlacementGroups } from "./placementgroups";
-import { Pricing } from "./pricing";
-import { SshKeys } from "./sshkeys";
-import { ServerActions } from "./serveractions";
-import { ServerTypes } from "./servertypes";
-import { Servers } from "./servers";
-import { VolumeActions } from "./volumeactions";
-import { Volumes } from "./volumes";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var actions_1 = require("./actions");
+var certificateactions_1 = require("./certificateactions");
+var certificates_1 = require("./certificates");
+var datacenters_1 = require("./datacenters");
+var firewallactions_1 = require("./firewallactions");
+var firewalls_1 = require("./firewalls");
+var floatingipactions_1 = require("./floatingipactions");
+var floatingips_1 = require("./floatingips");
+var isos_1 = require("./isos");
+var imageactions_1 = require("./imageactions");
+var images_1 = require("./images");
+var loadbalanceractions_1 = require("./loadbalanceractions");
+var loadbalancertypes_1 = require("./loadbalancertypes");
+var loadbalancers_1 = require("./loadbalancers");
+var locations_1 = require("./locations");
+var networkactions_1 = require("./networkactions");
+var networks_1 = require("./networks");
+var placementgroups_1 = require("./placementgroups");
+var pricing_1 = require("./pricing");
+var sshkeys_1 = require("./sshkeys");
+var serveractions_1 = require("./serveractions");
+var servertypes_1 = require("./servertypes");
+var servers_1 = require("./servers");
+var volumeactions_1 = require("./volumeactions");
+var volumes_1 = require("./volumes");
+exports.ServerList = [
     "https://api.hetzner.cloud/v1",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.actions = new Actions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.certificateActions = new CertificateActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.certificates = new Certificates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.datacenters = new Datacenters(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.firewallActions = new FirewallActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.firewalls = new Firewalls(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.floatingIpActions = new FloatingIpActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.floatingIPs = new FloatingIPs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.isOs = new IsOs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.imageActions = new ImageActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.images = new Images(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.loadBalancerActions = new LoadBalancerActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.loadBalancerTypes = new LoadBalancerTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.loadBalancers = new LoadBalancers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.locations = new Locations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.networkActions = new NetworkActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.networks = new Networks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.placementGroups = new PlacementGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.pricing = new Pricing(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.sshKeys = new SshKeys(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.serverActions = new ServerActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.serverTypes = new ServerTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.servers = new Servers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.volumeActions = new VolumeActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.volumes = new Volumes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.actions = new actions_1.Actions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.certificateActions = new certificateactions_1.CertificateActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.certificates = new certificates_1.Certificates(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.datacenters = new datacenters_1.Datacenters(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.firewallActions = new firewallactions_1.FirewallActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.firewalls = new firewalls_1.Firewalls(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.floatingIPActions = new floatingipactions_1.FloatingIpActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.floatingIPs = new floatingips_1.FloatingIPs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.isOs = new isos_1.IsOs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.imageActions = new imageactions_1.ImageActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.images = new images_1.Images(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.loadBalancerActions = new loadbalanceractions_1.LoadBalancerActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.loadBalancerTypes = new loadbalancertypes_1.LoadBalancerTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.loadBalancers = new loadbalancers_1.LoadBalancers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.locations = new locations_1.Locations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.networkActions = new networkactions_1.NetworkActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.networks = new networks_1.Networks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.placementGroups = new placementgroups_1.PlacementGroups(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.pricing = new pricing_1.Pricing(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.sshKeys = new sshkeys_1.SshKeys(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.serverActions = new serveractions_1.ServerActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.serverTypes = new servertypes_1.ServerTypes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.servers = new servers_1.Servers(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.volumeActions = new volumeactions_1.VolumeActions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.volumes = new volumes_1.Volumes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

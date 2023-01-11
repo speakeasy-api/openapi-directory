@@ -11,5 +11,5 @@ export declare class ReposGetCommitActivityStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     commitActivities?: shared.CommitActivity[];
-    reposGetCommitActivityStats202ApplicationJsonObject?: Map<string, any>;
+    reposGetCommitActivityStats202ApplicationJSONObject?: Record<string, any>;
 }

@@ -43,10 +43,10 @@ export class GetImagePerformanceCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getImagePerformanceCount200ApplicationJsonInt32Integer?: number;
+  getImagePerformanceCount200ApplicationJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
-  getImagePerformanceCount200TextJsonInt32Integer?: number;
+  getImagePerformanceCount200TextJSONInt32Integer?: number;
 
   @SpeakeasyMetadata()
   statusCode: number;

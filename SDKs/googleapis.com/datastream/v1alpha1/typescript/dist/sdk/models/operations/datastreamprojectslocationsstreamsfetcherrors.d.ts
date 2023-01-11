@@ -23,7 +23,7 @@ export declare class DatastreamProjectsLocationsStreamsFetchErrorsSecurity exten
 export declare class DatastreamProjectsLocationsStreamsFetchErrorsRequest extends SpeakeasyBase {
     pathParams: DatastreamProjectsLocationsStreamsFetchErrorsPathParams;
     queryParams: DatastreamProjectsLocationsStreamsFetchErrorsQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatastreamProjectsLocationsStreamsFetchErrorsSecurity;
 }
 export declare class DatastreamProjectsLocationsStreamsFetchErrorsResponse extends SpeakeasyBase {

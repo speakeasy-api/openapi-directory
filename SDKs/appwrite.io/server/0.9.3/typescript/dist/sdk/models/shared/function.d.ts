@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Function extends SpeakeasyBase {
     dollarId: string;
-    dollarPermissions: Map<string, any>;
+    dollarPermissions: Record<string, any>;
     dateCreated: number;
     dateUpdated: number;
     events: string[];

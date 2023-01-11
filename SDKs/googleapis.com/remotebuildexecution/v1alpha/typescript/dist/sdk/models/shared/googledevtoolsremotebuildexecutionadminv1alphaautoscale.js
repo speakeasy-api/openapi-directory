@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale
 /**
  * Autoscale defines the autoscaling policy of a worker pool.
@@ -33,13 +36,13 @@ var GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSize" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale.prototype, "maxSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minSize" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale.prototype, "minSize", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale = GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale;

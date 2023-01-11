@@ -19,7 +19,7 @@ export declare class DeleteClassifierRequest extends SpeakeasyBase {
 }
 export declare class DeleteClassifierResponse extends SpeakeasyBase {
     contentType: string;
-    deleteClassifierResponse?: Map<string, any>;
+    deleteClassifierResponse?: Record<string, any>;
     entityNotFoundException?: any;
     operationTimeoutException?: any;
     statusCode: number;

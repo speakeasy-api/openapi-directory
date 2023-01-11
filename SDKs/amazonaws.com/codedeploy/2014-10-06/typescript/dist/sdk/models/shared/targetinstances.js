@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2TagSet } from "./ec2tagset";
-import { Ec2TagFilter } from "./ec2tagfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetInstances = void 0;
+var utils_1 = require("../../../internal/utils");
+var ec2tagset_1 = require("./ec2tagset");
+var ec2tagfilter_1 = require("./ec2tagfilter");
 // TargetInstances
 /**
  * Information about the instances to be used in the replacement environment in a blue/green deployment.
@@ -35,17 +38,17 @@ var TargetInstances = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroups" }),
         __metadata("design:type", Array)
     ], TargetInstances.prototype, "autoScalingGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2TagSet" }),
-        __metadata("design:type", Ec2TagSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2TagSet" }),
+        __metadata("design:type", ec2tagset_1.Ec2TagSet)
     ], TargetInstances.prototype, "ec2TagSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagFilters", elemType: Ec2TagFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagFilters", elemType: ec2tagfilter_1.Ec2TagFilter }),
         __metadata("design:type", Array)
     ], TargetInstances.prototype, "tagFilters", void 0);
     return TargetInstances;
-}(SpeakeasyBase));
-export { TargetInstances };
+}(utils_1.SpeakeasyBase));
+exports.TargetInstances = TargetInstances;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceIdentifier } from "./deviceidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceReference = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceidentifier_1 = require("./deviceidentifier");
 // DeviceReference
 /**
  * A `DeviceReference` is an API abstraction that lets you supply a _device_ argument to a method using one of the following identifier types: * A numeric API resource ID. * Real-world hardware IDs, such as IMEI number, belonging to the manufactured device. Methods that operate on devices take a `DeviceReference` as a parameter type because it's more flexible for the caller. To learn more about device identifiers, read [Identifiers](https://developers.google.com/zero-touch/guides/identifiers).
@@ -34,13 +37,13 @@ var DeviceReference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", String)
     ], DeviceReference.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceIdentifier" }),
-        __metadata("design:type", DeviceIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceIdentifier" }),
+        __metadata("design:type", deviceidentifier_1.DeviceIdentifier)
     ], DeviceReference.prototype, "deviceIdentifier", void 0);
     return DeviceReference;
-}(SpeakeasyBase));
-export { DeviceReference };
+}(utils_1.SpeakeasyBase));
+exports.DeviceReference = DeviceReference;

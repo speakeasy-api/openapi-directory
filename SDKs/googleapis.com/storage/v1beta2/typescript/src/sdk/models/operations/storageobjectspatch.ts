@@ -94,7 +94,7 @@ export class StorageObjectsPatchRequest extends SpeakeasyBase {
   queryParams: StorageObjectsPatchQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: shared.Object;
+  request?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   security: StorageObjectsPatchSecurity;
@@ -106,7 +106,7 @@ export class StorageObjectsPatchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: shared.Object;
+  object?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   statusCode: number;

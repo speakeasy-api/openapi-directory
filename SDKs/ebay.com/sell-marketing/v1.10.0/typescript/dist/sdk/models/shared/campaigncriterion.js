@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SelectionRule } from "./selectionrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignCriterion = void 0;
+var utils_1 = require("../../../internal/utils");
+var selectionrule_1 = require("./selectionrule");
 // CampaignCriterion
 /**
  * This type defines the fields for specifying the criterion (selection rule) settings of an ad campaign.
@@ -34,17 +37,17 @@ var CampaignCriterion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoSelectFutureInventory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoSelectFutureInventory" }),
         __metadata("design:type", Boolean)
     ], CampaignCriterion.prototype, "autoSelectFutureInventory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criterionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criterionType" }),
         __metadata("design:type", String)
     ], CampaignCriterion.prototype, "criterionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionRules", elemType: SelectionRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionRules", elemType: selectionrule_1.SelectionRule }),
         __metadata("design:type", Array)
     ], CampaignCriterion.prototype, "selectionRules", void 0);
     return CampaignCriterion;
-}(SpeakeasyBase));
-export { CampaignCriterion };
+}(utils_1.SpeakeasyBase));
+exports.CampaignCriterion = CampaignCriterion;

@@ -58,8 +58,8 @@ export class GetReviewsSearchJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getReviewsSearchJson200ApplicationJsonObject?: GetReviewsSearchJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getReviewsSearchJSON200ApplicationJSONObject?: GetReviewsSearchJson200ApplicationJson;
 }

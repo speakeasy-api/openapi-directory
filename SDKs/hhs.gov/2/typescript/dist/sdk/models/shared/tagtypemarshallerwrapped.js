@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { TagTypeMarshaller } from "./tagtypemarshaller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagTypeMarshallerWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var tagtypemarshaller_1 = require("./tagtypemarshaller");
 var TagTypeMarshallerWrapped = /** @class */ (function (_super) {
     __extends(TagTypeMarshallerWrapped, _super);
     function TagTypeMarshallerWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], TagTypeMarshallerWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], TagTypeMarshallerWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: TagTypeMarshaller }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: tagtypemarshaller_1.TagTypeMarshaller }),
         __metadata("design:type", Array)
     ], TagTypeMarshallerWrapped.prototype, "results", void 0);
     return TagTypeMarshallerWrapped;
-}(SpeakeasyBase));
-export { TagTypeMarshallerWrapped };
+}(utils_1.SpeakeasyBase));
+exports.TagTypeMarshallerWrapped = TagTypeMarshallerWrapped;

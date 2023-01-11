@@ -17,7 +17,7 @@ export class PostRouteResponse extends SpeakeasyBase {
   ghError?: shared.GhError;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   routeResponse?: shared.RouteResponse;

@@ -54,7 +54,7 @@ export class PutReportDefinitionResponse extends SpeakeasyBase {
   internalErrorException?: any;
 
   @SpeakeasyMetadata()
-  putReportDefinitionResponse?: Map<string, any>;
+  putReportDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   reportLimitReachedException?: any;

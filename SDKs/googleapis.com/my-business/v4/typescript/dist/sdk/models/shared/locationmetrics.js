@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricValue } from "./metricvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricvalue_1 = require("./metricvalue");
 // LocationMetrics
 /**
  * A series of Metrics and BreakdownMetrics associated with a Location over some time range.
@@ -34,17 +37,17 @@ var LocationMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], LocationMetrics.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricValues", elemType: MetricValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricValues", elemType: metricvalue_1.MetricValue }),
         __metadata("design:type", Array)
     ], LocationMetrics.prototype, "metricValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], LocationMetrics.prototype, "timeZone", void 0);
     return LocationMetrics;
-}(SpeakeasyBase));
-export { LocationMetrics };
+}(utils_1.SpeakeasyBase));
+exports.LocationMetrics = LocationMetrics;

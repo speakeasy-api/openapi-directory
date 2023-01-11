@@ -1,15 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubnetCidrReservation } from "./subnetcidrreservation";
 
 
 
 export class GetSubnetCidrReservationsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: SubnetCidrReservation })
-  subnetIpv4CidrReservations?: SubnetCidrReservation[];
+  @SpeakeasyMetadata()
+  subnetIpv4CidrReservations?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: SubnetCidrReservation })
-  subnetIpv6CidrReservations?: SubnetCidrReservation[];
+  @SpeakeasyMetadata()
+  subnetIpv6CidrReservations?: Record<string, any>;
 }

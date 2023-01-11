@@ -35,7 +35,7 @@ export class ReplicationInstance extends SpeakeasyBase {
   kmsKeyId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PendingModifiedValues" })
   pendingModifiedValues?: ReplicationPendingModifiedValues;
@@ -56,13 +56,13 @@ export class ReplicationInstance extends SpeakeasyBase {
   replicationInstanceIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReplicationInstancePrivateIpAddress" })
-  replicationInstancePrivateIpAddress?: string;
+  replicationInstancePrivateIpAddress?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ReplicationInstancePrivateIpAddresses" })
   replicationInstancePrivateIpAddresses?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=ReplicationInstancePublicIpAddress" })
-  replicationInstancePublicIpAddress?: string;
+  replicationInstancePublicIpAddress?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ReplicationInstancePublicIpAddresses" })
   replicationInstancePublicIpAddresses?: string[];

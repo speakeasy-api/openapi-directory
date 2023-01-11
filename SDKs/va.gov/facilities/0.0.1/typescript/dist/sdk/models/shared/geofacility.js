@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Geometry } from "./geometry";
-import { Properties } from "./properties";
-export var GeoFacilityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeoFacility = exports.GeoFacilityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var geometry_1 = require("./geometry");
+var properties_1 = require("./properties");
+var GeoFacilityTypeEnum;
 (function (GeoFacilityTypeEnum) {
     GeoFacilityTypeEnum["Feature"] = "Feature";
-})(GeoFacilityTypeEnum || (GeoFacilityTypeEnum = {}));
+})(GeoFacilityTypeEnum = exports.GeoFacilityTypeEnum || (exports.GeoFacilityTypeEnum = {}));
 // GeoFacility
 /**
  * GeoJSON-complaint Feature object describing a VA Facility
@@ -39,17 +42,17 @@ var GeoFacility = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geometry" }),
-        __metadata("design:type", Geometry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geometry" }),
+        __metadata("design:type", geometry_1.Geometry)
     ], GeoFacility.prototype, "geometry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Properties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", properties_1.Properties)
     ], GeoFacility.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GeoFacility.prototype, "type", void 0);
     return GeoFacility;
-}(SpeakeasyBase));
-export { GeoFacility };
+}(utils_1.SpeakeasyBase));
+exports.GeoFacility = GeoFacility;

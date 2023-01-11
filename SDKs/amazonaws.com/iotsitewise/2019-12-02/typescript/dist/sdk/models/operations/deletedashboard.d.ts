@@ -21,7 +21,7 @@ export declare class DeleteDashboardRequest extends SpeakeasyBase {
 }
 export declare class DeleteDashboardResponse extends SpeakeasyBase {
     contentType: string;
-    deleteDashboardResponse?: Map<string, any>;
+    deleteDashboardResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceNotFoundException?: any;

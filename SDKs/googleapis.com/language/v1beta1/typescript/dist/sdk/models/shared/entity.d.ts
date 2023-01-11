@@ -15,7 +15,7 @@ export declare enum EntityTypeEnum {
 **/
 export declare class Entity extends SpeakeasyBase {
     mentions?: EntityMention[];
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name?: string;
     salience?: number;
     type?: EntityTypeEnum;

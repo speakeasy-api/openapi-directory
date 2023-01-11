@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,111 +23,113 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTruckDistanceBetweenPairsOutputFormatResponse = exports.GetTruckDistanceBetweenPairsOutputFormatRequest = exports.GetTruckDistanceBetweenPairsOutputFormatQueryParams = exports.GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum = exports.GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum = exports.GetTruckDistanceBetweenPairsOutputFormatPathParams = exports.GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum;
 (function (GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum) {
     GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum["Json"] = "json";
     GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum["Html"] = "html";
-})(GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum || (GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = {}));
+})(GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = exports.GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum || (exports.GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = {}));
 var GetTruckDistanceBetweenPairsOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetTruckDistanceBetweenPairsOutputFormatPathParams, _super);
     function GetTruckDistanceBetweenPairsOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetTruckDistanceBetweenPairsOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetTruckDistanceBetweenPairsOutputFormatPathParams };
-export var GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTruckDistanceBetweenPairsOutputFormatPathParams = GetTruckDistanceBetweenPairsOutputFormatPathParams;
+var GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum;
 (function (GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum) {
     GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum["Shortest"] = "shortest";
     GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum["Fastest"] = "fastest";
-})(GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum || (GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum = {}));
-export var GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum;
+})(GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum = exports.GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum || (exports.GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum = {}));
+var GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum;
 (function (GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum) {
     GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum["Km"] = "km";
     GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum["Mi"] = "mi";
-})(GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum || (GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum = {}));
+})(GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum = exports.GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum || (exports.GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum = {}));
 var GetTruckDistanceBetweenPairsOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetTruckDistanceBetweenPairsOutputFormatQueryParams, _super);
     function GetTruckDistanceBetweenPairsOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=correctSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=correctSide" }),
         __metadata("design:type", Boolean)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "correctSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=criteria" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departure" }),
         __metadata("design:type", Date)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disable" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "disable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "distanceUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromPoints" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "fromPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxPairs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxPairs" }),
         __metadata("design:type", Number)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "maxPairs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "routeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=toPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=toPoints" }),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatQueryParams.prototype, "toPoints", void 0);
     return GetTruckDistanceBetweenPairsOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetTruckDistanceBetweenPairsOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckDistanceBetweenPairsOutputFormatQueryParams = GetTruckDistanceBetweenPairsOutputFormatQueryParams;
 var GetTruckDistanceBetweenPairsOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetTruckDistanceBetweenPairsOutputFormatRequest, _super);
     function GetTruckDistanceBetweenPairsOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTruckDistanceBetweenPairsOutputFormatPathParams)
     ], GetTruckDistanceBetweenPairsOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTruckDistanceBetweenPairsOutputFormatQueryParams)
     ], GetTruckDistanceBetweenPairsOutputFormatRequest.prototype, "queryParams", void 0);
     return GetTruckDistanceBetweenPairsOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetTruckDistanceBetweenPairsOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckDistanceBetweenPairsOutputFormatRequest = GetTruckDistanceBetweenPairsOutputFormatRequest;
 var GetTruckDistanceBetweenPairsOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetTruckDistanceBetweenPairsOutputFormatResponse, _super);
     function GetTruckDistanceBetweenPairsOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTruckDistanceBetweenPairsOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTruckDistanceBetweenPairsOutputFormatResponse.prototype, "statusCode", void 0);
     return GetTruckDistanceBetweenPairsOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetTruckDistanceBetweenPairsOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckDistanceBetweenPairsOutputFormatResponse = GetTruckDistanceBetweenPairsOutputFormatResponse;

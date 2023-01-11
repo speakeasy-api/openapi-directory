@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,82 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-import { FieldMetadataInput } from "./fieldmetadata";
-import { FieldMetadata } from "./fieldmetadata";
-// OrganizationInput
-/**
- * A person's past or current organization. Overlapping date ranges are permitted.
-**/
-var OrganizationInput = /** @class */ (function (_super) {
-    __extends(OrganizationInput, _super);
-    function OrganizationInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=costCenter" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "costCenter", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
-        __metadata("design:type", Boolean)
-    ], OrganizationInput.prototype, "current", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=department" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "department", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "domain", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
-        __metadata("design:type", Date)
-    ], OrganizationInput.prototype, "endDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullTimeEquivalentMillipercent" }),
-        __metadata("design:type", Number)
-    ], OrganizationInput.prototype, "fullTimeEquivalentMillipercent", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDescription" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "jobDescription", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "location", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
-    ], OrganizationInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneticName" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "phoneticName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
-        __metadata("design:type", Date)
-    ], OrganizationInput.prototype, "startDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbol" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "symbol", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "title", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], OrganizationInput.prototype, "type", void 0);
-    return OrganizationInput;
-}(SpeakeasyBase));
-export { OrganizationInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationInput = exports.Organization = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Organization
 /**
  * A person's past or current organization. Overlapping date ranges are permitted.
@@ -108,69 +39,141 @@ var Organization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costCenter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costCenter" }),
         __metadata("design:type", String)
     ], Organization.prototype, "costCenter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", Boolean)
     ], Organization.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=department" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=department" }),
         __metadata("design:type", String)
     ], Organization.prototype, "department", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Organization.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", date_1.Date)
     ], Organization.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedType" }),
         __metadata("design:type", String)
     ], Organization.prototype, "formattedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullTimeEquivalentMillipercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullTimeEquivalentMillipercent" }),
         __metadata("design:type", Number)
     ], Organization.prototype, "fullTimeEquivalentMillipercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDescription" }),
         __metadata("design:type", String)
     ], Organization.prototype, "jobDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], Organization.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Organization.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Organization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneticName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneticName" }),
         __metadata("design:type", String)
     ], Organization.prototype, "phoneticName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", date_1.Date)
     ], Organization.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbol" }),
         __metadata("design:type", String)
     ], Organization.prototype, "symbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Organization.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Organization.prototype, "type", void 0);
     return Organization;
-}(SpeakeasyBase));
-export { Organization };
+}(utils_1.SpeakeasyBase));
+exports.Organization = Organization;
+// OrganizationInput
+/**
+ * A person's past or current organization. Overlapping date ranges are permitted.
+**/
+var OrganizationInput = /** @class */ (function (_super) {
+    __extends(OrganizationInput, _super);
+    function OrganizationInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costCenter" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "costCenter", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
+        __metadata("design:type", Boolean)
+    ], OrganizationInput.prototype, "current", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=department" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "department", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "domain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", date_1.Date)
+    ], OrganizationInput.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullTimeEquivalentMillipercent" }),
+        __metadata("design:type", Number)
+    ], OrganizationInput.prototype, "fullTimeEquivalentMillipercent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDescription" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "jobDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "location", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
+    ], OrganizationInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneticName" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "phoneticName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", date_1.Date)
+    ], OrganizationInput.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbol" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "symbol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], OrganizationInput.prototype, "type", void 0);
+    return OrganizationInput;
+}(utils_1.SpeakeasyBase));
+exports.OrganizationInput = OrganizationInput;

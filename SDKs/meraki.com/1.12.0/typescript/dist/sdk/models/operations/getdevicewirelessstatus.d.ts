@@ -8,5 +8,5 @@ export declare class GetDeviceWirelessStatusRequest extends SpeakeasyBase {
 export declare class GetDeviceWirelessStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceWirelessStatus200ApplicationJsonObject?: Map<string, any>;
+    getDeviceWirelessStatus200ApplicationJSONObject?: Record<string, any>;
 }

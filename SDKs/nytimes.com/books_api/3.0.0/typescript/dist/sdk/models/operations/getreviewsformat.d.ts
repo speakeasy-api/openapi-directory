@@ -38,6 +38,6 @@ export declare class GetReviewsFormatRequest extends SpeakeasyBase {
 }
 export declare class GetReviewsFormatResponse extends SpeakeasyBase {
     contentType: string;
-    getReviewsFormat200ApplicationJsonObject?: GetReviewsFormat200ApplicationJson;
+    getReviewsFormat200ApplicationJSONObject?: GetReviewsFormat200ApplicationJson;
     statusCode: number;
 }

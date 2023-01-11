@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ArchivedWebLinkContractCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArchivedWebLinkContract = exports.ArchivedWebLinkContractCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ArchivedWebLinkContractCategoryEnum;
 (function (ArchivedWebLinkContractCategoryEnum) {
     ArchivedWebLinkContractCategoryEnum["Official"] = "Official";
     ArchivedWebLinkContractCategoryEnum["Commercial"] = "Commercial";
     ArchivedWebLinkContractCategoryEnum["Reference"] = "Reference";
     ArchivedWebLinkContractCategoryEnum["Other"] = "Other";
-})(ArchivedWebLinkContractCategoryEnum || (ArchivedWebLinkContractCategoryEnum = {}));
+})(ArchivedWebLinkContractCategoryEnum = exports.ArchivedWebLinkContractCategoryEnum || (exports.ArchivedWebLinkContractCategoryEnum = {}));
 var ArchivedWebLinkContract = /** @class */ (function (_super) {
     __extends(ArchivedWebLinkContract, _super);
     function ArchivedWebLinkContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], ArchivedWebLinkContract.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ArchivedWebLinkContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], ArchivedWebLinkContract.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ArchivedWebLinkContract.prototype, "url", void 0);
     return ArchivedWebLinkContract;
-}(SpeakeasyBase));
-export { ArchivedWebLinkContract };
+}(utils_1.SpeakeasyBase));
+exports.ArchivedWebLinkContract = ArchivedWebLinkContract;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormatComplexity } from "./formatcomplexity";
-import { File } from "./file";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Format = void 0;
+var utils_1 = require("../../../internal/utils");
+var formatcomplexity_1 = require("./formatcomplexity");
+var file_1 = require("./file");
 // Format
 /**
  * The same asset can be represented in different formats, for example, a [WaveFront .obj](//en.wikipedia.org/wiki/Wavefront_.obj_file) file with its corresponding .mtl file or a [Khronos glTF](//www.khronos.org/gltf) file with its corresponding .glb binary data. A format refers to a specific representation of an asset and contains all information needed to retrieve and describe this representation.
@@ -35,21 +38,21 @@ var Format = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formatComplexity" }),
-        __metadata("design:type", FormatComplexity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formatComplexity" }),
+        __metadata("design:type", formatcomplexity_1.FormatComplexity)
     ], Format.prototype, "formatComplexity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formatType" }),
         __metadata("design:type", String)
     ], Format.prototype, "formatType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: File }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: file_1.File }),
         __metadata("design:type", Array)
     ], Format.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root" }),
+        __metadata("design:type", file_1.File)
     ], Format.prototype, "root", void 0);
     return Format;
-}(SpeakeasyBase));
-export { Format };
+}(utils_1.SpeakeasyBase));
+exports.Format = Format;

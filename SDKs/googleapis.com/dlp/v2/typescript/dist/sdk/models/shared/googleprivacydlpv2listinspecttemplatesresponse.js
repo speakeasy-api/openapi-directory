@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InspectTemplate } from "./googleprivacydlpv2inspecttemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ListInspectTemplatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2inspecttemplate_1 = require("./googleprivacydlpv2inspecttemplate");
 // GooglePrivacyDlpV2ListInspectTemplatesResponse
 /**
  * Response message for ListInspectTemplates.
@@ -34,13 +37,13 @@ var GooglePrivacyDlpV2ListInspectTemplatesResponse = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectTemplates", elemType: GooglePrivacyDlpV2InspectTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectTemplates", elemType: googleprivacydlpv2inspecttemplate_1.GooglePrivacyDlpV2InspectTemplate }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2ListInspectTemplatesResponse.prototype, "inspectTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ListInspectTemplatesResponse.prototype, "nextPageToken", void 0);
     return GooglePrivacyDlpV2ListInspectTemplatesResponse;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ListInspectTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ListInspectTemplatesResponse = GooglePrivacyDlpV2ListInspectTemplatesResponse;

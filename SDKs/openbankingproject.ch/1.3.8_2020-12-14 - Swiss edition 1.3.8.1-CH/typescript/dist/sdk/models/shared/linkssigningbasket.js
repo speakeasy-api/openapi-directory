@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinksSigningBasket = void 0;
+var utils_1 = require("../../../internal/utils");
+var hreftype_1 = require("./hreftype");
 // LinksSigningBasket
 /**
  * A list of hyperlinks to be recognised by the TPP. The actual hyperlinks used in the
@@ -77,49 +80,49 @@ var LinksSigningBasket = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaOAuth" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaOAuth" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "scaOAuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaRedirect" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaRedirect" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "scaRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaStatus" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaStatus" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "scaStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "self", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisation" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisation" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisationWithAuthenticationMethodSelection" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisationWithAuthenticationMethodSelection" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisationWithAuthenticationMethodSelection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisationWithEncryptedPsuAuthentication" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisationWithEncryptedPsuAuthentication" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisationWithEncryptedPsuAuthentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisationWithPsuAuthentication" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisationWithPsuAuthentication" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisationWithPsuAuthentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisationWithPsuIdentification" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisationWithPsuIdentification" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisationWithPsuIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startAuthorisationWithTransactionAuthorisation" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startAuthorisationWithTransactionAuthorisation" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "startAuthorisationWithTransactionAuthorisation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", HrefType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", hreftype_1.HrefType)
     ], LinksSigningBasket.prototype, "status", void 0);
     return LinksSigningBasket;
-}(SpeakeasyBase));
-export { LinksSigningBasket };
+}(utils_1.SpeakeasyBase));
+exports.LinksSigningBasket = LinksSigningBasket;

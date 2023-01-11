@@ -12,13 +12,13 @@ export declare class JobDefinition extends SpeakeasyBase {
     jobDefinitionArn: string;
     jobDefinitionName: string;
     nodeProperties?: NodeProperties;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     platformCapabilities?: PlatformCapabilityEnum[];
     propagateTags?: boolean;
     retryStrategy?: RetryStrategy;
     revision: number;
     status?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     timeout?: JobTimeout;
     type: string;
 }

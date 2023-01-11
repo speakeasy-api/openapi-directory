@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CareContext } from "./carecontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientLinkReferenceRequest = exports.PatientLinkReferenceRequestPatient = void 0;
+var utils_1 = require("../../../internal/utils");
+var carecontext_1 = require("./carecontext");
 var PatientLinkReferenceRequestPatient = /** @class */ (function (_super) {
     __extends(PatientLinkReferenceRequestPatient, _super);
     function PatientLinkReferenceRequestPatient() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=careContexts", elemType: CareContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=careContexts", elemType: carecontext_1.CareContext }),
         __metadata("design:type", Array)
     ], PatientLinkReferenceRequestPatient.prototype, "careContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PatientLinkReferenceRequestPatient.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceNumber" }),
         __metadata("design:type", String)
     ], PatientLinkReferenceRequestPatient.prototype, "referenceNumber", void 0);
     return PatientLinkReferenceRequestPatient;
-}(SpeakeasyBase));
-export { PatientLinkReferenceRequestPatient };
+}(utils_1.SpeakeasyBase));
+exports.PatientLinkReferenceRequestPatient = PatientLinkReferenceRequestPatient;
 var PatientLinkReferenceRequest = /** @class */ (function (_super) {
     __extends(PatientLinkReferenceRequest, _super);
     function PatientLinkReferenceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
         __metadata("design:type", PatientLinkReferenceRequestPatient)
     ], PatientLinkReferenceRequest.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientLinkReferenceRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientLinkReferenceRequest.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], PatientLinkReferenceRequest.prototype, "transactionId", void 0);
     return PatientLinkReferenceRequest;
-}(SpeakeasyBase));
-export { PatientLinkReferenceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatientLinkReferenceRequest = PatientLinkReferenceRequest;

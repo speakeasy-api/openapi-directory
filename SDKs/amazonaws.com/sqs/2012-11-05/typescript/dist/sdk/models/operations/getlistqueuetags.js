@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListQueueTagsResponse = exports.GetListQueueTagsRequest = exports.GetListQueueTagsHeaders = exports.GetListQueueTagsQueryParams = exports.GetListQueueTagsVersionEnum = exports.GetListQueueTagsActionEnum = exports.GetListQueueTagsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetListQueueTagsPathParams = /** @class */ (function (_super) {
     __extends(GetListQueueTagsPathParams, _super);
     function GetListQueueTagsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
         __metadata("design:type", Number)
     ], GetListQueueTagsPathParams.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
         __metadata("design:type", String)
     ], GetListQueueTagsPathParams.prototype, "queueName", void 0);
     return GetListQueueTagsPathParams;
-}(SpeakeasyBase));
-export { GetListQueueTagsPathParams };
-export var GetListQueueTagsActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetListQueueTagsPathParams = GetListQueueTagsPathParams;
+var GetListQueueTagsActionEnum;
 (function (GetListQueueTagsActionEnum) {
     GetListQueueTagsActionEnum["ListQueueTags"] = "ListQueueTags";
-})(GetListQueueTagsActionEnum || (GetListQueueTagsActionEnum = {}));
-export var GetListQueueTagsVersionEnum;
+})(GetListQueueTagsActionEnum = exports.GetListQueueTagsActionEnum || (exports.GetListQueueTagsActionEnum = {}));
+var GetListQueueTagsVersionEnum;
 (function (GetListQueueTagsVersionEnum) {
     GetListQueueTagsVersionEnum["TwoThousandAndTwelve1105"] = "2012-11-05";
-})(GetListQueueTagsVersionEnum || (GetListQueueTagsVersionEnum = {}));
+})(GetListQueueTagsVersionEnum = exports.GetListQueueTagsVersionEnum || (exports.GetListQueueTagsVersionEnum = {}));
 var GetListQueueTagsQueryParams = /** @class */ (function (_super) {
     __extends(GetListQueueTagsQueryParams, _super);
     function GetListQueueTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListQueueTagsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListQueueTagsQueryParams.prototype, "version", void 0);
     return GetListQueueTagsQueryParams;
-}(SpeakeasyBase));
-export { GetListQueueTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListQueueTagsQueryParams = GetListQueueTagsQueryParams;
 var GetListQueueTagsHeaders = /** @class */ (function (_super) {
     __extends(GetListQueueTagsHeaders, _super);
     function GetListQueueTagsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListQueueTagsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListQueueTagsHeaders;
-}(SpeakeasyBase));
-export { GetListQueueTagsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListQueueTagsHeaders = GetListQueueTagsHeaders;
 var GetListQueueTagsRequest = /** @class */ (function (_super) {
     __extends(GetListQueueTagsRequest, _super);
     function GetListQueueTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListQueueTagsPathParams)
     ], GetListQueueTagsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListQueueTagsQueryParams)
     ], GetListQueueTagsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListQueueTagsHeaders)
     ], GetListQueueTagsRequest.prototype, "headers", void 0);
     return GetListQueueTagsRequest;
-}(SpeakeasyBase));
-export { GetListQueueTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListQueueTagsRequest = GetListQueueTagsRequest;
 var GetListQueueTagsResponse = /** @class */ (function (_super) {
     __extends(GetListQueueTagsResponse, _super);
     function GetListQueueTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListQueueTagsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListQueueTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListQueueTagsResponse.prototype, "statusCode", void 0);
     return GetListQueueTagsResponse;
-}(SpeakeasyBase));
-export { GetListQueueTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListQueueTagsResponse = GetListQueueTagsResponse;

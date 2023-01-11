@@ -9,5 +9,5 @@ export declare class GetNetworkSmDeviceRestrictionsRequest extends SpeakeasyBase
 export declare class GetNetworkSmDeviceRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmDeviceRestrictions200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDeviceRestrictions200ApplicationJSONObject?: Record<string, any>;
 }

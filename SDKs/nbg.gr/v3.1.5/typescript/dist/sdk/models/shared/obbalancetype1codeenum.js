@@ -1,4 +1,7 @@
-export var ObBalanceType1CodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObBalanceType1CodeEnum = void 0;
+var ObBalanceType1CodeEnum;
 (function (ObBalanceType1CodeEnum) {
     ObBalanceType1CodeEnum["ClosingAvailable"] = "ClosingAvailable";
     ObBalanceType1CodeEnum["ClosingBooked"] = "ClosingBooked";
@@ -13,4 +16,4 @@ export var ObBalanceType1CodeEnum;
     ObBalanceType1CodeEnum["OpeningBooked"] = "OpeningBooked";
     ObBalanceType1CodeEnum["OpeningCleared"] = "OpeningCleared";
     ObBalanceType1CodeEnum["PreviouslyClosedBooked"] = "PreviouslyClosedBooked";
-})(ObBalanceType1CodeEnum || (ObBalanceType1CodeEnum = {}));
+})(ObBalanceType1CodeEnum = exports.ObBalanceType1CodeEnum || (exports.ObBalanceType1CodeEnum = {}));

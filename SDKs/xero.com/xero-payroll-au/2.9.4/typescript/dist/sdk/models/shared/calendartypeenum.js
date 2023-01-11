@@ -1,4 +1,7 @@
-export var CalendarTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarTypeEnum = void 0;
+var CalendarTypeEnum;
 (function (CalendarTypeEnum) {
     CalendarTypeEnum["Weekly"] = "WEEKLY";
     CalendarTypeEnum["Fortnightly"] = "FORTNIGHTLY";
@@ -6,4 +9,4 @@ export var CalendarTypeEnum;
     CalendarTypeEnum["Monthly"] = "MONTHLY";
     CalendarTypeEnum["Twicemonthly"] = "TWICEMONTHLY";
     CalendarTypeEnum["Quarterly"] = "QUARTERLY";
-})(CalendarTypeEnum || (CalendarTypeEnum = {}));
+})(CalendarTypeEnum = exports.CalendarTypeEnum || (exports.CalendarTypeEnum = {}));

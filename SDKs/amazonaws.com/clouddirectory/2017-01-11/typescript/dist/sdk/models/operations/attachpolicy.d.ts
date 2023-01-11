@@ -31,7 +31,7 @@ export declare class AttachPolicyRequest extends SpeakeasyBase {
 }
 export declare class AttachPolicyResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    attachPolicyResponse?: Map<string, any>;
+    attachPolicyResponse?: Record<string, any>;
     contentType: string;
     directoryNotEnabledException?: any;
     internalServiceException?: any;

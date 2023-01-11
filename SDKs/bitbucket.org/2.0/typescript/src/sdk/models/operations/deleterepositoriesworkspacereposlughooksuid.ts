@@ -44,5 +44,5 @@ export class DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

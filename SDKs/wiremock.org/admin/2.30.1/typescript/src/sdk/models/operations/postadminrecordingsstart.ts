@@ -39,19 +39,19 @@ export class PostAdminRecordingsStartRequestBodyFilters extends SpeakeasyBase {
   basicAuthCredentials?: PostAdminRecordingsStartRequestBodyFiltersBasicAuthCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=bodyPatterns" })
-  bodyPatterns?: Map<string, any>[];
+  bodyPatterns?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryParameters" })
-  queryParameters?: Map<string, any>;
+  queryParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
@@ -69,7 +69,7 @@ export class PostAdminRecordingsStartRequestBodyFilters extends SpeakeasyBase {
 
 export class PostAdminRecordingsStartRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=captureHeaders", elemType: PostAdminRecordingsStartRequestBodyCaptureHeaders })
-  captureHeaders?: Map<string, PostAdminRecordingsStartRequestBodyCaptureHeaders>;
+  captureHeaders?: Record<string, PostAdminRecordingsStartRequestBodyCaptureHeaders>;
 
   @SpeakeasyMetadata({ data: "json, name=extractBodyCriteria" })
   extractBodyCriteria?: PostAdminRecordingsStartRequestBodyExtractBodyCriteria;
@@ -84,13 +84,13 @@ export class PostAdminRecordingsStartRequestBody extends SpeakeasyBase {
   repeatsAsScenarios?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=requestBodyPattern" })
-  requestBodyPattern?: Map<string, any>;
+  requestBodyPattern?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=targetBaseUrl" })
   targetBaseUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=transformerParameters" })
-  transformerParameters?: Map<string, any>;
+  transformerParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=transformers" })
   transformers?: string[];

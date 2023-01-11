@@ -10,7 +10,7 @@ export declare class LandlordTenancyModel extends SpeakeasyBase {
     actualEndDate?: Date;
     beds?: number;
     bond?: number;
-    branchId?: string;
+    branchID?: string;
     certificates?: LandlordMaintenanceCertificateModel[];
     documents?: LettingsLandlordDocument[];
     fixedDate?: Date;

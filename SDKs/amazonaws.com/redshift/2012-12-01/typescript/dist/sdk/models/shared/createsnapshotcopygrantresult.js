@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotCopyGrant } from "./snapshotcopygrant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSnapshotCopyGrantResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var snapshotcopygrant_1 = require("./snapshotcopygrant");
 var CreateSnapshotCopyGrantResult = /** @class */ (function (_super) {
     __extends(CreateSnapshotCopyGrantResult, _super);
     function CreateSnapshotCopyGrantResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SnapshotCopyGrant)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", snapshotcopygrant_1.SnapshotCopyGrant)
     ], CreateSnapshotCopyGrantResult.prototype, "snapshotCopyGrant", void 0);
     return CreateSnapshotCopyGrantResult;
-}(SpeakeasyBase));
-export { CreateSnapshotCopyGrantResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateSnapshotCopyGrantResult = CreateSnapshotCopyGrantResult;

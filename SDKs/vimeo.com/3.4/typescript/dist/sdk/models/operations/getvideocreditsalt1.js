@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,104 +14,129 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVideoCreditsAlt1Response = exports.GetVideoCreditsAlt1Request = exports.GetVideoCreditsAlt1QueryParams = exports.GetVideoCreditsAlt1SortEnum = exports.GetVideoCreditsAlt1DirectionEnum = exports.GetVideoCreditsAlt1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetVideoCreditsAlt1PathParams = /** @class */ (function (_super) {
     __extends(GetVideoCreditsAlt1PathParams, _super);
     function GetVideoCreditsAlt1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=channel_id" }),
         __metadata("design:type", Number)
     ], GetVideoCreditsAlt1PathParams.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=video_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=video_id" }),
         __metadata("design:type", Number)
     ], GetVideoCreditsAlt1PathParams.prototype, "videoId", void 0);
     return GetVideoCreditsAlt1PathParams;
-}(SpeakeasyBase));
-export { GetVideoCreditsAlt1PathParams };
-export var GetVideoCreditsAlt1DirectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetVideoCreditsAlt1PathParams = GetVideoCreditsAlt1PathParams;
+var GetVideoCreditsAlt1DirectionEnum;
 (function (GetVideoCreditsAlt1DirectionEnum) {
     GetVideoCreditsAlt1DirectionEnum["Asc"] = "asc";
     GetVideoCreditsAlt1DirectionEnum["Desc"] = "desc";
-})(GetVideoCreditsAlt1DirectionEnum || (GetVideoCreditsAlt1DirectionEnum = {}));
-export var GetVideoCreditsAlt1SortEnum;
+})(GetVideoCreditsAlt1DirectionEnum = exports.GetVideoCreditsAlt1DirectionEnum || (exports.GetVideoCreditsAlt1DirectionEnum = {}));
+var GetVideoCreditsAlt1SortEnum;
 (function (GetVideoCreditsAlt1SortEnum) {
     GetVideoCreditsAlt1SortEnum["Alphabetical"] = "alphabetical";
     GetVideoCreditsAlt1SortEnum["Date"] = "date";
-})(GetVideoCreditsAlt1SortEnum || (GetVideoCreditsAlt1SortEnum = {}));
+})(GetVideoCreditsAlt1SortEnum = exports.GetVideoCreditsAlt1SortEnum || (exports.GetVideoCreditsAlt1SortEnum = {}));
 var GetVideoCreditsAlt1QueryParams = /** @class */ (function (_super) {
     __extends(GetVideoCreditsAlt1QueryParams, _super);
     function GetVideoCreditsAlt1QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], GetVideoCreditsAlt1QueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetVideoCreditsAlt1QueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], GetVideoCreditsAlt1QueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetVideoCreditsAlt1QueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetVideoCreditsAlt1QueryParams.prototype, "sort", void 0);
     return GetVideoCreditsAlt1QueryParams;
-}(SpeakeasyBase));
-export { GetVideoCreditsAlt1QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVideoCreditsAlt1QueryParams = GetVideoCreditsAlt1QueryParams;
 var GetVideoCreditsAlt1Request = /** @class */ (function (_super) {
     __extends(GetVideoCreditsAlt1Request, _super);
     function GetVideoCreditsAlt1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVideoCreditsAlt1PathParams)
     ], GetVideoCreditsAlt1Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVideoCreditsAlt1QueryParams)
     ], GetVideoCreditsAlt1Request.prototype, "queryParams", void 0);
     return GetVideoCreditsAlt1Request;
-}(SpeakeasyBase));
-export { GetVideoCreditsAlt1Request };
+}(utils_1.SpeakeasyBase));
+exports.GetVideoCreditsAlt1Request = GetVideoCreditsAlt1Request;
 var GetVideoCreditsAlt1Response = /** @class */ (function (_super) {
     __extends(GetVideoCreditsAlt1Response, _super);
     function GetVideoCreditsAlt1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVideoCreditsAlt1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVideoCreditsAlt1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Credit }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Credit }),
         __metadata("design:type", Array)
     ], GetVideoCreditsAlt1Response.prototype, "credits", void 0);
     return GetVideoCreditsAlt1Response;
-}(SpeakeasyBase));
-export { GetVideoCreditsAlt1Response };
+}(utils_1.SpeakeasyBase));
+exports.GetVideoCreditsAlt1Response = GetVideoCreditsAlt1Response;

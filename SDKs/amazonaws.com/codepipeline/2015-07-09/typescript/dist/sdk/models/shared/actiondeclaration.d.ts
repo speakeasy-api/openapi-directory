@@ -7,7 +7,7 @@ import { OutputArtifact } from "./outputartifact";
 **/
 export declare class ActionDeclaration extends SpeakeasyBase {
     actionTypeId: ActionTypeId;
-    configuration?: Map<string, string>;
+    configuration?: Record<string, string>;
     inputArtifacts?: InputArtifact[];
     name: string;
     namespace?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmConfiguration } from "./alarmconfiguration";
-import { AutoRollbackConfiguration } from "./autorollbackconfiguration";
-import { BlueGreenDeploymentConfiguration } from "./bluegreendeploymentconfiguration";
-import { DeploymentStyle } from "./deploymentstyle";
-import { Ec2TagFilter } from "./ec2tagfilter";
-import { Ec2TagSet } from "./ec2tagset";
-import { EcsService } from "./ecsservice";
-import { LoadBalancerInfo } from "./loadbalancerinfo";
-import { TagFilter } from "./tagfilter";
-import { OnPremisesTagSet } from "./onpremisestagset";
-import { OutdatedInstancesStrategyEnum } from "./outdatedinstancesstrategyenum";
-import { Tag } from "./tag";
-import { TriggerConfig } from "./triggerconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeploymentGroupInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmconfiguration_1 = require("./alarmconfiguration");
+var autorollbackconfiguration_1 = require("./autorollbackconfiguration");
+var bluegreendeploymentconfiguration_1 = require("./bluegreendeploymentconfiguration");
+var deploymentstyle_1 = require("./deploymentstyle");
+var ec2tagfilter_1 = require("./ec2tagfilter");
+var ec2tagset_1 = require("./ec2tagset");
+var ecsservice_1 = require("./ecsservice");
+var loadbalancerinfo_1 = require("./loadbalancerinfo");
+var tagfilter_1 = require("./tagfilter");
+var onpremisestagset_1 = require("./onpremisestagset");
+var outdatedinstancesstrategyenum_1 = require("./outdatedinstancesstrategyenum");
+var tag_1 = require("./tag");
+var triggerconfig_1 = require("./triggerconfig");
 // CreateDeploymentGroupInput
 /**
  * Represents the input of a <code>CreateDeploymentGroup</code> operation.
@@ -46,77 +49,77 @@ var CreateDeploymentGroupInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmConfiguration" }),
-        __metadata("design:type", AlarmConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmConfiguration" }),
+        __metadata("design:type", alarmconfiguration_1.AlarmConfiguration)
     ], CreateDeploymentGroupInput.prototype, "alarmConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], CreateDeploymentGroupInput.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRollbackConfiguration" }),
-        __metadata("design:type", AutoRollbackConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRollbackConfiguration" }),
+        __metadata("design:type", autorollbackconfiguration_1.AutoRollbackConfiguration)
     ], CreateDeploymentGroupInput.prototype, "autoRollbackConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroups" }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "autoScalingGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueGreenDeploymentConfiguration" }),
-        __metadata("design:type", BlueGreenDeploymentConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueGreenDeploymentConfiguration" }),
+        __metadata("design:type", bluegreendeploymentconfiguration_1.BlueGreenDeploymentConfiguration)
     ], CreateDeploymentGroupInput.prototype, "blueGreenDeploymentConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfigName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfigName" }),
         __metadata("design:type", String)
     ], CreateDeploymentGroupInput.prototype, "deploymentConfigName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentGroupName" }),
         __metadata("design:type", String)
     ], CreateDeploymentGroupInput.prototype, "deploymentGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStyle" }),
-        __metadata("design:type", DeploymentStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStyle" }),
+        __metadata("design:type", deploymentstyle_1.DeploymentStyle)
     ], CreateDeploymentGroupInput.prototype, "deploymentStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2TagFilters", elemType: Ec2TagFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2TagFilters", elemType: ec2tagfilter_1.Ec2TagFilter }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "ec2TagFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2TagSet" }),
-        __metadata("design:type", Ec2TagSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2TagSet" }),
+        __metadata("design:type", ec2tagset_1.Ec2TagSet)
     ], CreateDeploymentGroupInput.prototype, "ec2TagSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecsServices", elemType: EcsService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecsServices", elemType: ecsservice_1.EcsService }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "ecsServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancerInfo" }),
-        __metadata("design:type", LoadBalancerInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancerInfo" }),
+        __metadata("design:type", loadbalancerinfo_1.LoadBalancerInfo)
     ], CreateDeploymentGroupInput.prototype, "loadBalancerInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremisesInstanceTagFilters", elemType: TagFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremisesInstanceTagFilters", elemType: tagfilter_1.TagFilter }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "onPremisesInstanceTagFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremisesTagSet" }),
-        __metadata("design:type", OnPremisesTagSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremisesTagSet" }),
+        __metadata("design:type", onpremisestagset_1.OnPremisesTagSet)
     ], CreateDeploymentGroupInput.prototype, "onPremisesTagSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outdatedInstancesStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outdatedInstancesStrategy" }),
         __metadata("design:type", String)
     ], CreateDeploymentGroupInput.prototype, "outdatedInstancesStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRoleArn" }),
         __metadata("design:type", String)
     ], CreateDeploymentGroupInput.prototype, "serviceRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggerConfigurations", elemType: TriggerConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggerConfigurations", elemType: triggerconfig_1.TriggerConfig }),
         __metadata("design:type", Array)
     ], CreateDeploymentGroupInput.prototype, "triggerConfigurations", void 0);
     return CreateDeploymentGroupInput;
-}(SpeakeasyBase));
-export { CreateDeploymentGroupInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentGroupInput = CreateDeploymentGroupInput;

@@ -14,7 +14,7 @@ export class ProcessorBalanceGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  processorBalanceGetResponse?: Map<string, any>;
+  processorBalanceGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

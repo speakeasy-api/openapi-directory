@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BucketEntry } from "./bucketentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketResp = void 0;
+var utils_1 = require("../../../internal/utils");
+var bucketentry_1 = require("./bucketentry");
 var BucketResp = /** @class */ (function (_super) {
     __extends(BucketResp, _super);
     function BucketResp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], BucketResp.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheTimeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheTimeLimit" }),
         __metadata("design:type", Number)
     ], BucketResp.prototype, "cacheTimeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], BucketResp.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: BucketEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: bucketentry_1.BucketEntry }),
         __metadata("design:type", Array)
     ], BucketResp.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], BucketResp.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msg" }),
         __metadata("design:type", String)
     ], BucketResp.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionName" }),
         __metadata("design:type", String)
     ], BucketResp.prototype, "regionName", void 0);
     return BucketResp;
-}(SpeakeasyBase));
-export { BucketResp };
+}(utils_1.SpeakeasyBase));
+exports.BucketResp = BucketResp;

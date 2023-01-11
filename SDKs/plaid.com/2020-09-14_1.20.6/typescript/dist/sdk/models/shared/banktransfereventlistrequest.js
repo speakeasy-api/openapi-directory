@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BankTransferEventListRequestBankTransferTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BankTransferEventListRequest = exports.BankTransferEventListRequestBankTransferDirectionEnum = exports.BankTransferEventListRequestBankTransferTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BankTransferEventListRequestBankTransferTypeEnum;
 (function (BankTransferEventListRequestBankTransferTypeEnum) {
     BankTransferEventListRequestBankTransferTypeEnum["Debit"] = "debit";
     BankTransferEventListRequestBankTransferTypeEnum["Credit"] = "credit";
-})(BankTransferEventListRequestBankTransferTypeEnum || (BankTransferEventListRequestBankTransferTypeEnum = {}));
-export var BankTransferEventListRequestBankTransferDirectionEnum;
+    BankTransferEventListRequestBankTransferTypeEnum["Null"] = "null";
+})(BankTransferEventListRequestBankTransferTypeEnum = exports.BankTransferEventListRequestBankTransferTypeEnum || (exports.BankTransferEventListRequestBankTransferTypeEnum = {}));
+var BankTransferEventListRequestBankTransferDirectionEnum;
 (function (BankTransferEventListRequestBankTransferDirectionEnum) {
     BankTransferEventListRequestBankTransferDirectionEnum["Inbound"] = "inbound";
     BankTransferEventListRequestBankTransferDirectionEnum["Outbound"] = "outbound";
-})(BankTransferEventListRequestBankTransferDirectionEnum || (BankTransferEventListRequestBankTransferDirectionEnum = {}));
+    BankTransferEventListRequestBankTransferDirectionEnum["Null"] = "null";
+})(BankTransferEventListRequestBankTransferDirectionEnum = exports.BankTransferEventListRequestBankTransferDirectionEnum || (exports.BankTransferEventListRequestBankTransferDirectionEnum = {}));
 // BankTransferEventListRequest
 /**
  * BankTransferEventListRequest defines the request schema for `/bank_transfer/event/list`
@@ -43,53 +48,53 @@ var BankTransferEventListRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bank_transfer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_transfer_id" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "bankTransferId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bank_transfer_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_transfer_type" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "bankTransferType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], BankTransferEventListRequest.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", Date)
     ], BankTransferEventListRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_types" }),
         __metadata("design:type", Array)
     ], BankTransferEventListRequest.prototype, "eventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], BankTransferEventListRequest.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origination_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origination_account_id" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "originationAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], BankTransferEventListRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", Date)
     ], BankTransferEventListRequest.prototype, "startDate", void 0);
     return BankTransferEventListRequest;
-}(SpeakeasyBase));
-export { BankTransferEventListRequest };
+}(utils_1.SpeakeasyBase));
+exports.BankTransferEventListRequest = BankTransferEventListRequest;

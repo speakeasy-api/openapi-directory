@@ -17,7 +17,7 @@ export declare class TagApiGetCategoryNamesListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    tagApiGetCategoryNamesList200ApplicationJsonStrings?: string[];
+    tagApiGetCategoryNamesList200ApplicationJSONStrings?: string[];
     tagApiGetCategoryNamesList200ApplicationJsonpStrings?: string[];
-    tagApiGetCategoryNamesList200TextJsonStrings?: string[];
+    tagApiGetCategoryNamesList200TextJSONStrings?: string[];
 }

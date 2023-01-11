@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedVlanGroup } from "./nestedvlangroup";
-import { NestedRole } from "./nestedrole";
-import { NestedSite } from "./nestedsite";
-import { NestedTenant } from "./nestedtenant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vlan = exports.VlanStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedvlangroup_1 = require("./nestedvlangroup");
+var nestedrole_1 = require("./nestedrole");
+var nestedsite_1 = require("./nestedsite");
+var nestedtenant_1 = require("./nestedtenant");
 var VlanStatus = /** @class */ (function (_super) {
     __extends(VlanStatus, _super);
     function VlanStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], VlanStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], VlanStatus.prototype, "value", void 0);
     return VlanStatus;
-}(SpeakeasyBase));
-export { VlanStatus };
+}(utils_1.SpeakeasyBase));
+exports.VlanStatus = VlanStatus;
 var Vlan = /** @class */ (function (_super) {
     __extends(Vlan, _super);
     function Vlan() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Vlan.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Vlan.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Vlan.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], Vlan.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
-        __metadata("design:type", NestedVlanGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
+        __metadata("design:type", nestedvlangroup_1.NestedVlanGroup)
     ], Vlan.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Vlan.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Vlan.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Vlan.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
-        __metadata("design:type", NestedRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
+        __metadata("design:type", nestedrole_1.NestedRole)
     ], Vlan.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
-        __metadata("design:type", NestedSite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
+        __metadata("design:type", nestedsite_1.NestedSite)
     ], Vlan.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", VlanStatus)
     ], Vlan.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Vlan.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], Vlan.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vid" }),
         __metadata("design:type", Number)
     ], Vlan.prototype, "vid", void 0);
     return Vlan;
-}(SpeakeasyBase));
-export { Vlan };
+}(utils_1.SpeakeasyBase));
+exports.Vlan = Vlan;

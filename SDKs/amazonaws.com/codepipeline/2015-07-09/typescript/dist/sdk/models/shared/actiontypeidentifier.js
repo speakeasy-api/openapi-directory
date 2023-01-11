@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionCategoryEnum } from "./actioncategoryenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionTypeIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var actioncategoryenum_1 = require("./actioncategoryenum");
 // ActionTypeIdentifier
 /**
  * Specifies the category, owner, provider, and version of the action type.
@@ -34,21 +37,21 @@ var ActionTypeIdentifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], ActionTypeIdentifier.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], ActionTypeIdentifier.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], ActionTypeIdentifier.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ActionTypeIdentifier.prototype, "version", void 0);
     return ActionTypeIdentifier;
-}(SpeakeasyBase));
-export { ActionTypeIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.ActionTypeIdentifier = ActionTypeIdentifier;

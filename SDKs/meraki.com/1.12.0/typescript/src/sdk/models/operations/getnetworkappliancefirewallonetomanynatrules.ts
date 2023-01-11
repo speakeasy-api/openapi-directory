@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallOneToManyNatRulesResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallOneToManyNatRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallOneToManyNatRules200ApplicationJSONObject?: Record<string, any>;
 }

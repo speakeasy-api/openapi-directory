@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DoubleclicksearchConversionGetRequest, DoubleclicksearchConversionGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,37 +30,37 @@ const req: DoubleclicksearchConversionGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    advertiserId: "tempora",
-    agencyId: "quaerat",
-    engineAccountId: "necessitatibus",
+    advertiserId: "sit",
+    agencyId: "voluptas",
+    engineAccountId: "culpa",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "voluptas",
-    adGroupId: "molestias",
-    adId: "veritatis",
-    alt: "json",
-    callback: "sapiente",
-    campaignId: "tenetur",
-    criterionId: "at",
-    customerId: "hic",
-    endDate: 6671246700554211078,
-    fields: "ex",
-    key: "aut",
-    oauthToken: "ut",
-    prettyPrint: true,
-    quotaUser: "dignissimos",
-    rowCount: 4770506001507987573,
-    startDate: 4493533068511629898,
-    startRow: 7241857586899297361,
-    uploadType: "ut",
-    uploadProtocol: "enim",
+    dollarXgafv: "1",
+    accessToken: "consequuntur",
+    adGroupId: "dolor",
+    adId: "expedita",
+    alt: "proto",
+    callback: "fugit",
+    campaignId: "et",
+    criterionId: "nihil",
+    customerId: "rerum",
+    endDate: 7837839688282259259,
+    fields: "debitis",
+    key: "voluptatum",
+    oauthToken: "et",
+    prettyPrint: false,
+    quotaUser: "dolorem",
+    rowCount: 7259475919510918339,
+    startDate: 7373105480197164748,
+    startRow: 3287288577352441706,
+    uploadType: "vitae",
+    uploadProtocol: "totam",
   },
 };
 

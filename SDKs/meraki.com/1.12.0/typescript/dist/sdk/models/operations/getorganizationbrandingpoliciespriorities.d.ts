@@ -8,5 +8,5 @@ export declare class GetOrganizationBrandingPoliciesPrioritiesRequest extends Sp
 export declare class GetOrganizationBrandingPoliciesPrioritiesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationBrandingPoliciesPriorities200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationBrandingPoliciesPriorities200ApplicationJSONObject?: Record<string, any>;
 }

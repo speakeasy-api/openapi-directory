@@ -69,7 +69,7 @@ export class PutFeedbackResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  putFeedbackResponse?: Map<string, any>;
+  putFeedbackResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Order } from "./order";
-import { PackageSpecification } from "./packagespecification";
-import { Contact } from "./contact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingQuoteRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var order_1 = require("./order");
+var packagespecification_1 = require("./packagespecification");
+var contact_1 = require("./contact");
 // ShippingQuoteRequest
 /**
  * This complex type defines the request body for createShippingQuote. Sellers request a quote for a shipment by defining the &quot;To&quot; and &quot;From&quot; addresses for the package, plus the package's size. Carriers respond by offering up a &quot;rate&quot; for the service of theirs that best fits seller's needs.
@@ -36,21 +39,21 @@ var ShippingQuoteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orders", elemType: Order }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orders", elemType: order_1.Order }),
         __metadata("design:type", Array)
     ], ShippingQuoteRequest.prototype, "orders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageSpecification" }),
-        __metadata("design:type", PackageSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageSpecification" }),
+        __metadata("design:type", packagespecification_1.PackageSpecification)
     ], ShippingQuoteRequest.prototype, "packageSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipFrom" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipFrom" }),
+        __metadata("design:type", contact_1.Contact)
     ], ShippingQuoteRequest.prototype, "shipFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipTo" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipTo" }),
+        __metadata("design:type", contact_1.Contact)
     ], ShippingQuoteRequest.prototype, "shipTo", void 0);
     return ShippingQuoteRequest;
-}(SpeakeasyBase));
-export { ShippingQuoteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ShippingQuoteRequest = ShippingQuoteRequest;

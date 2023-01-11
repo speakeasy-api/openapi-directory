@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliveryStatusEnum } from "./deliverystatusenum";
-// EndpointMessageResult
-/**
- * Provides information about the delivery status and results of sending a message directly to an endpoint.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointMessageResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverystatusenum_1 = require("./deliverystatusenum");
 var EndpointMessageResult = /** @class */ (function (_super) {
     __extends(EndpointMessageResult, _super);
     function EndpointMessageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Address" }),
         __metadata("design:type", String)
     ], EndpointMessageResult.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryStatus" }),
         __metadata("design:type", String)
     ], EndpointMessageResult.prototype, "deliveryStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageId" }),
         __metadata("design:type", String)
     ], EndpointMessageResult.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusCode" }),
         __metadata("design:type", Number)
     ], EndpointMessageResult.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusMessage" }),
         __metadata("design:type", String)
     ], EndpointMessageResult.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedToken" }),
         __metadata("design:type", String)
     ], EndpointMessageResult.prototype, "updatedToken", void 0);
     return EndpointMessageResult;
-}(SpeakeasyBase));
-export { EndpointMessageResult };
+}(utils_1.SpeakeasyBase));
+exports.EndpointMessageResult = EndpointMessageResult;

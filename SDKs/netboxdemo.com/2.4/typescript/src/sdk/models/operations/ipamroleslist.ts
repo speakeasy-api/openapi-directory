@@ -47,5 +47,5 @@ export class IpamRolesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamRolesList200ApplicationJsonObject?: IpamRolesList200ApplicationJson;
+  ipamRolesList200ApplicationJSONObject?: IpamRolesList200ApplicationJson;
 }

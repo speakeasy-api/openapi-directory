@@ -47,7 +47,7 @@ export class IssuesListEventsForTimelineResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -59,5 +59,5 @@ export class IssuesListEventsForTimelineResponse extends SpeakeasyBase {
   issueEventForIssues?: shared.IssueEventForIssue[];
 
   @SpeakeasyMetadata()
-  issuesListEventsForTimeline415ApplicationJsonObject?: IssuesListEventsForTimeline415ApplicationJson;
+  issuesListEventsForTimeline415ApplicationJSONObject?: IssuesListEventsForTimeline415ApplicationJson;
 }

@@ -37,7 +37,7 @@ export class GetSetupV1CustomersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  customerListViewModel?: Map<string, any>;
+  customerListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -62,17 +62,14 @@ export class OptionsProxyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  optionsProxy200ApplicationJsonAny?: any;
+  optionsProxy200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  optionsProxy401ApplicationJsonObject?: OptionsProxy401ApplicationJson;
+  optionsProxy401ApplicationJSONObject?: OptionsProxy401ApplicationJson;
 
   @SpeakeasyMetadata()
-  optionsProxyDefaultApplicationJsonAny?: any;
+  optionsProxyDefaultApplicationJSONAny?: any;
 }

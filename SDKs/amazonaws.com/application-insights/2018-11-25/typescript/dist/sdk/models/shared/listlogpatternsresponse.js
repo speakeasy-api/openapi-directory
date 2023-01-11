@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogPattern } from "./logpattern";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListLogPatternsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var logpattern_1 = require("./logpattern");
 var ListLogPatternsResponse = /** @class */ (function (_super) {
     __extends(ListLogPatternsResponse, _super);
     function ListLogPatternsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogPatterns", elemType: LogPattern }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogPatterns", elemType: logpattern_1.LogPattern }),
         __metadata("design:type", Array)
     ], ListLogPatternsResponse.prototype, "logPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListLogPatternsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceGroupName" }),
         __metadata("design:type", String)
     ], ListLogPatternsResponse.prototype, "resourceGroupName", void 0);
     return ListLogPatternsResponse;
-}(SpeakeasyBase));
-export { ListLogPatternsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListLogPatternsResponse = ListLogPatternsResponse;

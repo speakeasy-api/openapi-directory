@@ -13,7 +13,7 @@ export declare class GetListingCarIdMediaRequest extends SpeakeasyBase {
 }
 export declare class GetListingCarIdMediaResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     listingMedia?: shared.ListingMedia;
     statusCode: number;
 }

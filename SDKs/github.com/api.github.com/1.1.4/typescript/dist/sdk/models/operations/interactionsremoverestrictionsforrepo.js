@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InteractionsRemoveRestrictionsForRepoResponse = exports.InteractionsRemoveRestrictionsForRepoRequest = exports.InteractionsRemoveRestrictionsForRepoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var InteractionsRemoveRestrictionsForRepoPathParams = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForRepoPathParams, _super);
     function InteractionsRemoveRestrictionsForRepoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], InteractionsRemoveRestrictionsForRepoPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], InteractionsRemoveRestrictionsForRepoPathParams.prototype, "repo", void 0);
     return InteractionsRemoveRestrictionsForRepoPathParams;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForRepoPathParams };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForRepoPathParams = InteractionsRemoveRestrictionsForRepoPathParams;
 var InteractionsRemoveRestrictionsForRepoRequest = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForRepoRequest, _super);
     function InteractionsRemoveRestrictionsForRepoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", InteractionsRemoveRestrictionsForRepoPathParams)
     ], InteractionsRemoveRestrictionsForRepoRequest.prototype, "pathParams", void 0);
     return InteractionsRemoveRestrictionsForRepoRequest;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForRepoRequest };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForRepoRequest = InteractionsRemoveRestrictionsForRepoRequest;
 var InteractionsRemoveRestrictionsForRepoResponse = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForRepoResponse, _super);
     function InteractionsRemoveRestrictionsForRepoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InteractionsRemoveRestrictionsForRepoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InteractionsRemoveRestrictionsForRepoResponse.prototype, "statusCode", void 0);
     return InteractionsRemoveRestrictionsForRepoResponse;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForRepoResponse };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForRepoResponse = InteractionsRemoveRestrictionsForRepoResponse;

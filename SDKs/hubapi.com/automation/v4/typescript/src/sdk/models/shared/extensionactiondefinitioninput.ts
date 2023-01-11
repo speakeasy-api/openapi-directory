@@ -29,7 +29,7 @@ export class ExtensionActionDefinitionInput extends SpeakeasyBase {
   inputFields: InputFieldDefinition[];
 
   @SpeakeasyMetadata({ data: "json, name=labels", elemType: ActionLabels })
-  labels: Map<string, ActionLabels>;
+  labels: Record<string, ActionLabels>;
 
   @SpeakeasyMetadata({ data: "json, name=objectRequestOptions" })
   objectRequestOptions?: ObjectRequestOptions;

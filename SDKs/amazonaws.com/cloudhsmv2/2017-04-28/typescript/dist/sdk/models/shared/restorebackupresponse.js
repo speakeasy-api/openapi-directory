@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Backup } from "./backup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestoreBackupResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var backup_1 = require("./backup");
 var RestoreBackupResponse = /** @class */ (function (_super) {
     __extends(RestoreBackupResponse, _super);
     function RestoreBackupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Backup" }),
-        __metadata("design:type", Backup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Backup" }),
+        __metadata("design:type", backup_1.Backup)
     ], RestoreBackupResponse.prototype, "backup", void 0);
     return RestoreBackupResponse;
-}(SpeakeasyBase));
-export { RestoreBackupResponse };
+}(utils_1.SpeakeasyBase));
+exports.RestoreBackupResponse = RestoreBackupResponse;

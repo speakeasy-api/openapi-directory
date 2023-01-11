@@ -35,7 +35,7 @@ export declare class Result extends SpeakeasyBase {
     labels?: ResultLabels[];
     link?: string;
     mime?: string;
-    pagemap?: Map<string, any>;
+    pagemap?: Record<string, any>;
     snippet?: string;
     title?: string;
 }

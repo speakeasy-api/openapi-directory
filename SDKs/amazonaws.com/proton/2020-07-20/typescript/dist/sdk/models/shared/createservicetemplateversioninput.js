@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompatibleEnvironmentTemplateInput } from "./compatibleenvironmenttemplateinput";
-import { TemplateVersionSourceInput } from "./templateversionsourceinput";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateServiceTemplateVersionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var compatibleenvironmenttemplateinput_1 = require("./compatibleenvironmenttemplateinput");
+var templateversionsourceinput_1 = require("./templateversionsourceinput");
+var tag_1 = require("./tag");
 var CreateServiceTemplateVersionInput = /** @class */ (function (_super) {
     __extends(CreateServiceTemplateVersionInput, _super);
     function CreateServiceTemplateVersionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], CreateServiceTemplateVersionInput.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibleEnvironmentTemplates", elemType: CompatibleEnvironmentTemplateInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibleEnvironmentTemplates", elemType: compatibleenvironmenttemplateinput_1.CompatibleEnvironmentTemplateInput }),
         __metadata("design:type", Array)
     ], CreateServiceTemplateVersionInput.prototype, "compatibleEnvironmentTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateServiceTemplateVersionInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=majorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=majorVersion" }),
         __metadata("design:type", String)
     ], CreateServiceTemplateVersionInput.prototype, "majorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", TemplateVersionSourceInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", templateversionsourceinput_1.TemplateVersionSourceInput)
     ], CreateServiceTemplateVersionInput.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateServiceTemplateVersionInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateName" }),
         __metadata("design:type", String)
     ], CreateServiceTemplateVersionInput.prototype, "templateName", void 0);
     return CreateServiceTemplateVersionInput;
-}(SpeakeasyBase));
-export { CreateServiceTemplateVersionInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateServiceTemplateVersionInput = CreateServiceTemplateVersionInput;

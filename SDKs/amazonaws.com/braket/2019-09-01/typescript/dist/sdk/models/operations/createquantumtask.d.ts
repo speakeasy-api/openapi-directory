@@ -17,7 +17,7 @@ export declare class CreateQuantumTaskRequestBody extends SpeakeasyBase {
     outputS3Bucket: string;
     outputS3KeyPrefix: string;
     shots: number;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateQuantumTaskRequest extends SpeakeasyBase {
     headers: CreateQuantumTaskHeaders;

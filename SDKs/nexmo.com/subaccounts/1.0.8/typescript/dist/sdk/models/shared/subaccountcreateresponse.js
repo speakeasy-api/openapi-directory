@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubaccountCreateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubaccountCreateResponse = /** @class */ (function (_super) {
     __extends(SubaccountCreateResponse, _super);
     function SubaccountCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api_key" }),
         __metadata("design:type", String)
     ], SubaccountCreateResponse.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], SubaccountCreateResponse.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], SubaccountCreateResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=credit_limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=credit_limit" }),
         __metadata("design:type", Number)
     ], SubaccountCreateResponse.prototype, "creditLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubaccountCreateResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_account_api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_account_api_key" }),
         __metadata("design:type", String)
     ], SubaccountCreateResponse.prototype, "primaryAccountApiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], SubaccountCreateResponse.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspended" }),
         __metadata("design:type", Boolean)
     ], SubaccountCreateResponse.prototype, "suspended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_primary_account_balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_primary_account_balance" }),
         __metadata("design:type", Boolean)
     ], SubaccountCreateResponse.prototype, "usePrimaryAccountBalance", void 0);
     return SubaccountCreateResponse;
-}(SpeakeasyBase));
-export { SubaccountCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.SubaccountCreateResponse = SubaccountCreateResponse;

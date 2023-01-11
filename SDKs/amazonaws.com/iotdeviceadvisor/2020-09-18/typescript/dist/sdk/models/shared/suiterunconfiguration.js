@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceUnderTest } from "./deviceundertest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuiteRunConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceundertest_1 = require("./deviceundertest");
 // SuiteRunConfiguration
 /**
  * Gets suite run configuration.
@@ -34,13 +37,13 @@ var SuiteRunConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryDevice" }),
-        __metadata("design:type", DeviceUnderTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryDevice" }),
+        __metadata("design:type", deviceundertest_1.DeviceUnderTest)
     ], SuiteRunConfiguration.prototype, "primaryDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedTestList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedTestList" }),
         __metadata("design:type", Array)
     ], SuiteRunConfiguration.prototype, "selectedTestList", void 0);
     return SuiteRunConfiguration;
-}(SpeakeasyBase));
-export { SuiteRunConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.SuiteRunConfiguration = SuiteRunConfiguration;

@@ -9,7 +9,7 @@ export declare class DeleteReplicationConfigurationTemplateHeaders extends Speak
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteReplicationConfigurationTemplateRequestBody extends SpeakeasyBase {
-    replicationConfigurationTemplateId: string;
+    replicationConfigurationTemplateID: string;
 }
 export declare class DeleteReplicationConfigurationTemplateRequest extends SpeakeasyBase {
     headers: DeleteReplicationConfigurationTemplateHeaders;
@@ -18,7 +18,7 @@ export declare class DeleteReplicationConfigurationTemplateRequest extends Speak
 export declare class DeleteReplicationConfigurationTemplateResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deleteReplicationConfigurationTemplateResponse?: Map<string, any>;
+    deleteReplicationConfigurationTemplateResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     uninitializedAccountException?: any;

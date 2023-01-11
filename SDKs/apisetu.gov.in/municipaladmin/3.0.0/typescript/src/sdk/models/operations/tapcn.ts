@@ -185,23 +185,23 @@ export class TapcnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tapcn400ApplicationJsonObject?: Tapcn400ApplicationJson;
+  tapcn400ApplicationJSONObject?: Tapcn400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn401ApplicationJsonObject?: Tapcn401ApplicationJson;
+  tapcn401ApplicationJSONObject?: Tapcn401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn404ApplicationJsonObject?: Tapcn404ApplicationJson;
+  tapcn404ApplicationJSONObject?: Tapcn404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn500ApplicationJsonObject?: Tapcn500ApplicationJson;
+  tapcn500ApplicationJSONObject?: Tapcn500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn502ApplicationJsonObject?: Tapcn502ApplicationJson;
+  tapcn502ApplicationJSONObject?: Tapcn502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn503ApplicationJsonObject?: Tapcn503ApplicationJson;
+  tapcn503ApplicationJSONObject?: Tapcn503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tapcn504ApplicationJsonObject?: Tapcn504ApplicationJson;
+  tapcn504ApplicationJSONObject?: Tapcn504ApplicationJson;
 }

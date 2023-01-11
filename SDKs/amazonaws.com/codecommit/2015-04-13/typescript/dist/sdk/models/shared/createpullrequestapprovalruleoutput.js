@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApprovalRule } from "./approvalrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePullRequestApprovalRuleOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var approvalrule_1 = require("./approvalrule");
 var CreatePullRequestApprovalRuleOutput = /** @class */ (function (_super) {
     __extends(CreatePullRequestApprovalRuleOutput, _super);
     function CreatePullRequestApprovalRuleOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRule" }),
-        __metadata("design:type", ApprovalRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRule" }),
+        __metadata("design:type", approvalrule_1.ApprovalRule)
     ], CreatePullRequestApprovalRuleOutput.prototype, "approvalRule", void 0);
     return CreatePullRequestApprovalRuleOutput;
-}(SpeakeasyBase));
-export { CreatePullRequestApprovalRuleOutput };
+}(utils_1.SpeakeasyBase));
+exports.CreatePullRequestApprovalRuleOutput = CreatePullRequestApprovalRuleOutput;

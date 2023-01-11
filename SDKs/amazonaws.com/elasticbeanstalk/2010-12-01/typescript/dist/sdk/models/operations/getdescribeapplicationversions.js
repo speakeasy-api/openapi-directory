@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeApplicationVersionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeApplicationVersionsResponse = exports.GetDescribeApplicationVersionsRequest = exports.GetDescribeApplicationVersionsHeaders = exports.GetDescribeApplicationVersionsQueryParams = exports.GetDescribeApplicationVersionsVersionEnum = exports.GetDescribeApplicationVersionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeApplicationVersionsActionEnum;
 (function (GetDescribeApplicationVersionsActionEnum) {
     GetDescribeApplicationVersionsActionEnum["DescribeApplicationVersions"] = "DescribeApplicationVersions";
-})(GetDescribeApplicationVersionsActionEnum || (GetDescribeApplicationVersionsActionEnum = {}));
-export var GetDescribeApplicationVersionsVersionEnum;
+})(GetDescribeApplicationVersionsActionEnum = exports.GetDescribeApplicationVersionsActionEnum || (exports.GetDescribeApplicationVersionsActionEnum = {}));
+var GetDescribeApplicationVersionsVersionEnum;
 (function (GetDescribeApplicationVersionsVersionEnum) {
     GetDescribeApplicationVersionsVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDescribeApplicationVersionsVersionEnum || (GetDescribeApplicationVersionsVersionEnum = {}));
+})(GetDescribeApplicationVersionsVersionEnum = exports.GetDescribeApplicationVersionsVersionEnum || (exports.GetDescribeApplicationVersionsVersionEnum = {}));
 var GetDescribeApplicationVersionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeApplicationVersionsQueryParams, _super);
     function GetDescribeApplicationVersionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VersionLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VersionLabels" }),
         __metadata("design:type", Array)
     ], GetDescribeApplicationVersionsQueryParams.prototype, "versionLabels", void 0);
     return GetDescribeApplicationVersionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeApplicationVersionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeApplicationVersionsQueryParams = GetDescribeApplicationVersionsQueryParams;
 var GetDescribeApplicationVersionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeApplicationVersionsHeaders, _super);
     function GetDescribeApplicationVersionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeApplicationVersionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeApplicationVersionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeApplicationVersionsHeaders = GetDescribeApplicationVersionsHeaders;
 var GetDescribeApplicationVersionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeApplicationVersionsRequest, _super);
     function GetDescribeApplicationVersionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeApplicationVersionsQueryParams)
     ], GetDescribeApplicationVersionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeApplicationVersionsHeaders)
     ], GetDescribeApplicationVersionsRequest.prototype, "headers", void 0);
     return GetDescribeApplicationVersionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeApplicationVersionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeApplicationVersionsRequest = GetDescribeApplicationVersionsRequest;
 var GetDescribeApplicationVersionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeApplicationVersionsResponse, _super);
     function GetDescribeApplicationVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeApplicationVersionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeApplicationVersionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeApplicationVersionsResponse.prototype, "statusCode", void 0);
     return GetDescribeApplicationVersionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeApplicationVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeApplicationVersionsResponse = GetDescribeApplicationVersionsResponse;

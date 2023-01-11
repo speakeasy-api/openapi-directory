@@ -5,7 +5,7 @@ export declare class EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams e
     scimUserId: string;
 }
 export declare class EnterpriseAdminUpdateAttributeForEnterpriseUserRequestBody extends SpeakeasyBase {
-    operations: Map<string, any>[];
+    operations: Record<string, any>[];
     schemas: string[];
 }
 export declare class EnterpriseAdminUpdateAttributeForEnterpriseUserRequest extends SpeakeasyBase {

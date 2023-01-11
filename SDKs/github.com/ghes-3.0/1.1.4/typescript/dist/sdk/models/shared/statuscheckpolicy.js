@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusCheckPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 // StatusCheckPolicy
 /**
  * Status Check Policy
@@ -33,21 +36,21 @@ var StatusCheckPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts" }),
         __metadata("design:type", Array)
     ], StatusCheckPolicy.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts_url" }),
         __metadata("design:type", String)
     ], StatusCheckPolicy.prototype, "contextsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strict" }),
         __metadata("design:type", Boolean)
     ], StatusCheckPolicy.prototype, "strict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], StatusCheckPolicy.prototype, "url", void 0);
     return StatusCheckPolicy;
-}(SpeakeasyBase));
-export { StatusCheckPolicy };
+}(utils_1.SpeakeasyBase));
+exports.StatusCheckPolicy = StatusCheckPolicy;

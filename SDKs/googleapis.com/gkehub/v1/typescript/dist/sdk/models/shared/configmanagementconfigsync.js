@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementGitConfig } from "./configmanagementgitconfig";
-import { ConfigManagementOciConfig } from "./configmanagementociconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementConfigSync = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementgitconfig_1 = require("./configmanagementgitconfig");
+var configmanagementociconfig_1 = require("./configmanagementociconfig");
 // ConfigManagementConfigSync
 /**
  * Configuration for Config Sync
@@ -35,29 +38,29 @@ var ConfigManagementConfigSync = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowVerticalScale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowVerticalScale" }),
         __metadata("design:type", Boolean)
     ], ConfigManagementConfigSync.prototype, "allowVerticalScale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ConfigManagementConfigSync.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git" }),
-        __metadata("design:type", ConfigManagementGitConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git" }),
+        __metadata("design:type", configmanagementgitconfig_1.ConfigManagementGitConfig)
     ], ConfigManagementConfigSync.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oci" }),
-        __metadata("design:type", ConfigManagementOciConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oci" }),
+        __metadata("design:type", configmanagementociconfig_1.ConfigManagementOciConfig)
     ], ConfigManagementConfigSync.prototype, "oci", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preventDrift" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preventDrift" }),
         __metadata("design:type", Boolean)
     ], ConfigManagementConfigSync.prototype, "preventDrift", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceFormat" }),
         __metadata("design:type", String)
     ], ConfigManagementConfigSync.prototype, "sourceFormat", void 0);
     return ConfigManagementConfigSync;
-}(SpeakeasyBase));
-export { ConfigManagementConfigSync };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementConfigSync = ConfigManagementConfigSync;

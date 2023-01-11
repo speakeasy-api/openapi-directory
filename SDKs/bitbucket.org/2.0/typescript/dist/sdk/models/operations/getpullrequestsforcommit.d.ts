@@ -16,6 +16,6 @@ export declare class GetPullrequestsForCommitRequest extends SpeakeasyBase {
 export declare class GetPullrequestsForCommitResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedPullrequests?: shared.PaginatedPullrequests;
 }

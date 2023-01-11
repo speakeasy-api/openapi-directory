@@ -13,5 +13,5 @@ export declare class GetNetworkWirelessAirMarshalRequest extends SpeakeasyBase {
 export declare class GetNetworkWirelessAirMarshalResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessAirMarshal200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessAirMarshal200ApplicationJSONObject?: Record<string, any>;
 }

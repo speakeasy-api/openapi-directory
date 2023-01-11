@@ -29,7 +29,7 @@ export class PatchOfferingsOfferingIdAssessmentsAssessmentIdResponse extends Spe
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

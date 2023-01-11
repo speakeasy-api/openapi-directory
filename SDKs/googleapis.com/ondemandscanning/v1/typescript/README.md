@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { OndemandscanningProjectsLocationsOperationsCancelRequest, OndemandscanningProjectsLocationsOperationsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: OndemandscanningProjectsLocationsOperationsCancelRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "eveniet",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "quia",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "saepe",
-    fields: "voluptas",
-    key: "nihil",
-    oauthToken: "debitis",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "ut",
-    uploadType: "quibusdam",
-    uploadProtocol: "qui",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

@@ -7,7 +7,7 @@ export declare class ReplaceSettingValueBySdkkeyQueryParams extends SpeakeasyBas
     reason?: string;
 }
 export declare class ReplaceSettingValueBySdkkeyHeaders extends SpeakeasyBase {
-    xConfigcatSdkkey: string;
+    xCONFIGCATSDKKEY: string;
 }
 export declare class ReplaceSettingValueBySdkkeyRequests extends SpeakeasyBase {
     updateSettingValueModel?: shared.UpdateSettingValueModel;

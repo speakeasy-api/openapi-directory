@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { VectortileTerraintilesGetRequest, VectortileTerraintilesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,41 +28,40 @@ const sdk = new SDK();
     
 const req: VectortileTerraintilesGetRequest = {
   pathParams: {
-    name: "ut",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "non",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    altitudePrecisionCentimeters: 4899281184932557888,
-    callback: "suscipit",
-    clientInfoApiClient: "sed",
-    clientInfoApplicationId: "rerum",
-    clientInfoApplicationVersion: "sapiente",
-    clientInfoDeviceModel: "explicabo",
-    clientInfoOperatingSystem: "velit",
-    clientInfoPlatform: "IOS",
-    clientInfoUserId: "et",
+    altitudePrecisionCentimeters: 3390393562759376202,
+    callback: "dolor",
+    clientInfoApiClient: "expedita",
+    clientInfoApplicationId: "voluptas",
+    clientInfoApplicationVersion: "fugit",
+    clientInfoDeviceModel: "et",
+    clientInfoOperatingSystem: "nihil",
+    clientInfoPlatform: "WINDOWS",
+    clientInfoUserId: "dicta",
     enableModeledVolumes: true,
     enablePoliticalFeatures: true,
     enablePrivateRoads: false,
-    enableUnclippedBuildings: true,
-    fields: "sit",
-    key: "dignissimos",
-    languageCode: "debitis",
-    maxElevationResolutionCells: 8877279036952564902,
-    minElevationResolutionCells: 4651328896432160141,
-    oauthToken: "et",
-    prettyPrint: false,
-    quotaUser: "sequi",
-    regionCode: "accusamus",
+    enableUnclippedBuildings: false,
+    fields: "dolorem",
+    key: "et",
+    languageCode: "voluptate",
+    maxElevationResolutionCells: 3287288577352441706,
+    minElevationResolutionCells: 3930927879439176946,
+    oauthToken: "totam",
+    prettyPrint: true,
+    quotaUser: "illum",
+    regionCode: "debitis",
     terrainFormats: [
       "TERRAIN_FORMAT_UNKNOWN",
-      "SECOND_DERIVATIVE",
-      "TERRAIN_FORMAT_UNKNOWN",
+      "FIRST_DERIVATIVE",
     ],
-    uploadType: "totam",
-    uploadProtocol: "blanditiis",
+    uploadType: "id",
+    uploadProtocol: "aspernatur",
   },
 };
 

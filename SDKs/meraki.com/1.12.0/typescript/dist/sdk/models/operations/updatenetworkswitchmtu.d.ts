@@ -18,5 +18,5 @@ export declare class UpdateNetworkSwitchMtuRequest extends SpeakeasyBase {
 export declare class UpdateNetworkSwitchMtuResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchMtu200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchMtu200ApplicationJSONObject?: Record<string, any>;
 }

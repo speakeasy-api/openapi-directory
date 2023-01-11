@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1RenewalSettings } from "./googlecloudchannelv1renewalsettings";
+import { GoogleCloudChannelV1RenewalSettingsInput } from "./googlecloudchannelv1renewalsettings";
 /**
  * Request message for CloudChannelService.ChangeRenewalSettings.
 **/
-export declare class GoogleCloudChannelV1ChangeRenewalSettingsRequest extends SpeakeasyBase {
-    renewalSettings?: GoogleCloudChannelV1RenewalSettings;
+export declare class GoogleCloudChannelV1ChangeRenewalSettingsRequestInput extends SpeakeasyBase {
+    renewalSettings?: GoogleCloudChannelV1RenewalSettingsInput;
     requestId?: string;
 }

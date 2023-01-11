@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReceiptRule } from "./receiptrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeReceiptRuleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var receiptrule_1 = require("./receiptrule");
 // DescribeReceiptRuleResponse
 /**
  * Represents the details of a receipt rule.
@@ -34,9 +37,9 @@ var DescribeReceiptRuleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReceiptRule)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", receiptrule_1.ReceiptRule)
     ], DescribeReceiptRuleResponse.prototype, "rule", void 0);
     return DescribeReceiptRuleResponse;
-}(SpeakeasyBase));
-export { DescribeReceiptRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeReceiptRuleResponse = DescribeReceiptRuleResponse;

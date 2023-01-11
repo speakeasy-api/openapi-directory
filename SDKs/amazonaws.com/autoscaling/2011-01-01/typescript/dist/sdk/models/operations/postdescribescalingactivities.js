@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeScalingActivitiesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeScalingActivitiesResponse = exports.PostDescribeScalingActivitiesRequest = exports.PostDescribeScalingActivitiesHeaders = exports.PostDescribeScalingActivitiesQueryParams = exports.PostDescribeScalingActivitiesVersionEnum = exports.PostDescribeScalingActivitiesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeScalingActivitiesActionEnum;
 (function (PostDescribeScalingActivitiesActionEnum) {
     PostDescribeScalingActivitiesActionEnum["DescribeScalingActivities"] = "DescribeScalingActivities";
-})(PostDescribeScalingActivitiesActionEnum || (PostDescribeScalingActivitiesActionEnum = {}));
-export var PostDescribeScalingActivitiesVersionEnum;
+})(PostDescribeScalingActivitiesActionEnum = exports.PostDescribeScalingActivitiesActionEnum || (exports.PostDescribeScalingActivitiesActionEnum = {}));
+var PostDescribeScalingActivitiesVersionEnum;
 (function (PostDescribeScalingActivitiesVersionEnum) {
     PostDescribeScalingActivitiesVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostDescribeScalingActivitiesVersionEnum || (PostDescribeScalingActivitiesVersionEnum = {}));
+})(PostDescribeScalingActivitiesVersionEnum = exports.PostDescribeScalingActivitiesVersionEnum || (exports.PostDescribeScalingActivitiesVersionEnum = {}));
 var PostDescribeScalingActivitiesQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeScalingActivitiesQueryParams, _super);
     function PostDescribeScalingActivitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesQueryParams.prototype, "version", void 0);
     return PostDescribeScalingActivitiesQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeScalingActivitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeScalingActivitiesQueryParams = PostDescribeScalingActivitiesQueryParams;
 var PostDescribeScalingActivitiesHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeScalingActivitiesHeaders, _super);
     function PostDescribeScalingActivitiesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeScalingActivitiesHeaders;
-}(SpeakeasyBase));
-export { PostDescribeScalingActivitiesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeScalingActivitiesHeaders = PostDescribeScalingActivitiesHeaders;
 var PostDescribeScalingActivitiesRequest = /** @class */ (function (_super) {
     __extends(PostDescribeScalingActivitiesRequest, _super);
     function PostDescribeScalingActivitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeScalingActivitiesQueryParams)
     ], PostDescribeScalingActivitiesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeScalingActivitiesHeaders)
     ], PostDescribeScalingActivitiesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeScalingActivitiesRequest.prototype, "request", void 0);
     return PostDescribeScalingActivitiesRequest;
-}(SpeakeasyBase));
-export { PostDescribeScalingActivitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeScalingActivitiesRequest = PostDescribeScalingActivitiesRequest;
 var PostDescribeScalingActivitiesResponse = /** @class */ (function (_super) {
     __extends(PostDescribeScalingActivitiesResponse, _super);
     function PostDescribeScalingActivitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeScalingActivitiesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeScalingActivitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeScalingActivitiesResponse.prototype, "statusCode", void 0);
     return PostDescribeScalingActivitiesResponse;
-}(SpeakeasyBase));
-export { PostDescribeScalingActivitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeScalingActivitiesResponse = PostDescribeScalingActivitiesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ViolationDetail } from "./violationdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetViolationDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var violationdetail_1 = require("./violationdetail");
 var GetViolationDetailsResponse = /** @class */ (function (_super) {
     __extends(GetViolationDetailsResponse, _super);
     function GetViolationDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationDetail" }),
-        __metadata("design:type", ViolationDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationDetail" }),
+        __metadata("design:type", violationdetail_1.ViolationDetail)
     ], GetViolationDetailsResponse.prototype, "violationDetail", void 0);
     return GetViolationDetailsResponse;
-}(SpeakeasyBase));
-export { GetViolationDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetViolationDetailsResponse = GetViolationDetailsResponse;

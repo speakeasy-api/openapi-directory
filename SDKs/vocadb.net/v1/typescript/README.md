@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ActivityEntryApiGetListRequest, ActivityEntryApiGetListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,21 +28,21 @@ const sdk = new SDK();
     
 const req: ActivityEntryApiGetListRequest = {
   queryParams: {
-    before: "1974-10-09T16:13:53Z",
-    editEvent: "Deleted",
-    entryFields: "MainPicture",
-    entryType: "Artist",
+    before: "2006-05-01T09:38:06Z",
+    editEvent: "Updated",
+    entryFields: "Description",
+    entryType: "Venue",
     fields: "ArchivedVersion",
     getTotalCount: true,
-    lang: "English",
-    maxResults: 7887163202762339639,
-    since: "1991-06-24T10:14:35Z",
-    sortRule: "CreateDate",
-    userId: 8916108228658178676,
+    lang: "Japanese",
+    maxResults: 8274930044578894929,
+    since: "2011-08-12T10:11:12Z",
+    sortRule: "CreateDateDescending",
+    userId: 8325060299420976708,
   },
 };
 
-sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse | AxiosError) => {
+sdk.activityEntryApi.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -52,9 +51,12 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ActivityEntryApi
 
 * `activityEntryApiGetList` - Gets a list of recent activity entries.
+
+### AlbumApi
+
 * `albumApiDelete` - Deletes an album.
 * `albumApiDeleteComment` - Deletes a comment.
 * `albumApiDeleteReview`
@@ -68,26 +70,45 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 * `albumApiGetTracks` - Gets tracks for an album.
 * `albumApiGetTracksFields`
 * `albumApiGetUserCollections`
+
+### ArtistApi
+
 * `artistApiDelete` - Deletes an artist.
 * `artistApiDeleteComment` - Deletes a comment.
 * `artistApiGetComments` - Gets a list of comments for an artist.
 * `artistApiGetList` - Find artists.
 * `artistApiGetNames` - Gets a list of artist names. Ideal for autocomplete boxes.
 * `artistApiGetOne` - Gets an artist by Id.
+
+### CommentApi
+
 * `commentApiDeleteComment` - Deletes a comment.
 * `commentApiGetComments` - Gets a list of comments for an entry.
+
+### DiscussionApi
+
 * `discussionApiDeleteComment`
 * `discussionApiDeleteTopic`
 * `discussionApiGetFolders`
 * `discussionApiGetTopic`
 * `discussionApiGetTopics`
 * `discussionApiGetTopicsForFolder`
+
+### EntryApi
+
 * `entryApiGetList` - Find entries.
 * `entryApiGetNames` - Gets a list of entry names. Ideal for autocomplete boxes.
+
+### EntryTypesApi
+
 * `entryTypesApiGetMappedTag`
-* `getApiUsersCurrentAlbumCollectionStatusesAlbumId`
-* `getApiUsersCurrentFollowedArtistsArtistId`
+
+### PVApi
+
 * `pvApiGetList` - Gets a list of PVs for songs.
+
+### ReleaseEventApi
+
 * `releaseEventApiDelete` - Deletes an event.
 * `releaseEventApiGetAlbums` - Gets a list of albums for a specific event.
 * `releaseEventApiGetList` - Gets a page of events.
@@ -97,10 +118,19 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 * `releaseEventApiGetOne`
 * `releaseEventApiGetPublishedSongs` - Gets a list of songs for a specific event.
 * `releaseEventApiPostReport` - Creates a new report.
+
+### ReleaseEventSeriesApi
+
 * `releaseEventSeriesApiDelete` - Deletes an event series.
 * `releaseEventSeriesApiGetList` - Gets a page of event series.
 * `releaseEventSeriesApiGetOne` - Gets single event series by ID.
+
+### ResourcesApi
+
 * `resourcesApiGetList` - Gets a number of resource sets for a specific culture.
+
+### SongApi
+
 * `songApiDelete` - Deletes a song.
 * `songApiDeleteComment` - Deletes a comment.
 * `songApiGetById` - Gets a song by Id.
@@ -115,12 +145,18 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 * `songApiGetRelated` - Gets related songs.
 * `songApiGetTopSongs` - Gets top rated songs.
 * `songApiPostRating` - Add or update rating for a specific song, for the currently logged in user.
+
+### SongListApi
+
 * `songListApiDelete` - Deletes a song list.
 * `songListApiDeleteComment` - Deletes a comment.
 * `songListApiGetComments` - Gets a list of comments for a song list.
 * `songListApiGetFeaturedListNames` - Gets a list of featuedd list names. Ideal for autocomplete boxes.
 * `songListApiGetFeaturedLists` - Gets a list of featured song lists.
 * `songListApiGetSongs` - Gets a list of songs in a song list.
+
+### TagApi
+
 * `tagApiDelete` - Deletes a tag.
 * `tagApiDeleteComment` - Deletes a comment.
             Normal users can delete their own comments, moderators can delete all comments.
@@ -139,6 +175,9 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 * `tagApiGetTopTags` - Gets the most common tags in a category.
 * `tagApiPostNewTag` - Creates a new tag.
 * `tagApiPostReport` - Creates a new report.
+
+### UserApi
+
 * `userApiDeleteFollowedTag`
 * `userApiDeleteMessages` - Deletes a list of user messages.
 * `userApiDeleteProfileComment` - Deletes a comment.
@@ -163,6 +202,11 @@ sdk.sdk.activityEntryApiGetList(req).then((res: ActivityEntryApiGetListResponse 
 * `userApiPostRefreshEntryEdit` - Refresh entry edit status, indicating that the current user is still editing that entry.
 * `userApiPostReport`
 * `userApiPostSetting` - Updates user setting.
+* `getApiUsersCurrentAlbumCollectionStatusesAlbumId`
+* `getApiUsersCurrentFollowedArtistsArtistId`
+
+### VenueApi
+
 * `venueApiDelete` - Deletes a venue.
 * `venueApiGetList` - Gets a page of event venue.
 * `venueApiPostReport` - Creates a new report.

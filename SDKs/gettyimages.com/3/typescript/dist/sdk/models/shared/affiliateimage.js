@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AffiliateImageUrls } from "./affiliateimageurls";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AffiliateImage = void 0;
+var utils_1 = require("../../../internal/utils");
+var affiliateimageurls_1 = require("./affiliateimageurls");
 var AffiliateImage = /** @class */ (function (_super) {
     __extends(AffiliateImage, _super);
     function AffiliateImage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], AffiliateImage.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_url" }),
         __metadata("design:type", String)
     ], AffiliateImage.prototype, "destinationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AffiliateImage.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_urls" }),
-        __metadata("design:type", AffiliateImageUrls)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_urls" }),
+        __metadata("design:type", affiliateimageurls_1.AffiliateImageUrls)
     ], AffiliateImage.prototype, "previewUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], AffiliateImage.prototype, "title", void 0);
     return AffiliateImage;
-}(SpeakeasyBase));
-export { AffiliateImage };
+}(utils_1.SpeakeasyBase));
+exports.AffiliateImage = AffiliateImage;

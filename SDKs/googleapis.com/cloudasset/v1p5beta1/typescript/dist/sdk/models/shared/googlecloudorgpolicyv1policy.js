@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudOrgpolicyV1BooleanPolicy } from "./googlecloudorgpolicyv1booleanpolicy";
-import { GoogleCloudOrgpolicyV1ListPolicy } from "./googlecloudorgpolicyv1listpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV1Policy = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudorgpolicyv1booleanpolicy_1 = require("./googlecloudorgpolicyv1booleanpolicy");
+var googlecloudorgpolicyv1listpolicy_1 = require("./googlecloudorgpolicyv1listpolicy");
 // GoogleCloudOrgpolicyV1Policy
 /**
  * Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of Cloud Platform resources.
@@ -35,33 +38,33 @@ var GoogleCloudOrgpolicyV1Policy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=booleanPolicy" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV1BooleanPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=booleanPolicy" }),
+        __metadata("design:type", googlecloudorgpolicyv1booleanpolicy_1.GoogleCloudOrgpolicyV1BooleanPolicy)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "booleanPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraint" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "constraint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listPolicy" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV1ListPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listPolicy" }),
+        __metadata("design:type", googlecloudorgpolicyv1listpolicy_1.GoogleCloudOrgpolicyV1ListPolicy)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "listPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restoreDefault" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restoreDefault" }),
+        __metadata("design:type", Object)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "restoreDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], GoogleCloudOrgpolicyV1Policy.prototype, "version", void 0);
     return GoogleCloudOrgpolicyV1Policy;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV1Policy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV1Policy = GoogleCloudOrgpolicyV1Policy;

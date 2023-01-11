@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedMethods } from "./allowedmethods";
-import { ForwardedValues } from "./forwardedvalues";
-import { FunctionAssociations } from "./functionassociations";
-import { LambdaFunctionAssociations } from "./lambdafunctionassociations";
-import { TrustedKeyGroups } from "./trustedkeygroups";
-import { TrustedSigners } from "./trustedsigners";
-import { ViewerProtocolPolicyEnum } from "./viewerprotocolpolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultCacheBehavior = exports.DefaultCacheBehaviorForwardedValues = void 0;
+var utils_1 = require("../../../internal/utils");
+var cookiepreference_1 = require("./cookiepreference");
+var headers_1 = require("./headers");
+var querystringcachekeys_1 = require("./querystringcachekeys");
+var allowedmethods_1 = require("./allowedmethods");
+var functionassociations_1 = require("./functionassociations");
+var lambdafunctionassociations_1 = require("./lambdafunctionassociations");
+var trustedkeygroups_1 = require("./trustedkeygroups");
+var trustedsigners_1 = require("./trustedsigners");
+var viewerprotocolpolicyenum_1 = require("./viewerprotocolpolicyenum");
+// DefaultCacheBehaviorForwardedValues
+/**
+ * <p>This field is deprecated. We recommend that you use a cache policy or an origin request policy instead of this field. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html">Working with policies</a> in the <i>Amazon CloudFront Developer Guide</i>.</p> <p>If you want to include values in the cache key, use a cache policy. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy">Creating cache policies</a> or <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html">Using the managed cache policies</a> in the <i>Amazon CloudFront Developer Guide</i>.</p> <p>If you want to send values to the origin but not include them in the cache key, use an origin request policy. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy">Creating origin request policies</a> or <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html">Using the managed origin request policies</a> in the <i>Amazon CloudFront Developer Guide</i>.</p> <p>A <code>DefaultCacheBehavior</code> must include either a <code>CachePolicyId</code> or <code>ForwardedValues</code>. We recommend that you use a <code>CachePolicyId</code>.</p> <p>A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers.</p>
+**/
+var DefaultCacheBehaviorForwardedValues = /** @class */ (function (_super) {
+    __extends(DefaultCacheBehaviorForwardedValues, _super);
+    function DefaultCacheBehaviorForwardedValues() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cookiepreference_1.CookiePreference)
+    ], DefaultCacheBehaviorForwardedValues.prototype, "cookies", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", headers_1.Headers)
+    ], DefaultCacheBehaviorForwardedValues.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], DefaultCacheBehaviorForwardedValues.prototype, "queryString", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", querystringcachekeys_1.QueryStringCacheKeys)
+    ], DefaultCacheBehaviorForwardedValues.prototype, "queryStringCacheKeys", void 0);
+    return DefaultCacheBehaviorForwardedValues;
+}(utils_1.SpeakeasyBase));
+exports.DefaultCacheBehaviorForwardedValues = DefaultCacheBehaviorForwardedValues;
 // DefaultCacheBehavior
 /**
  * A complex type that describes the default cache behavior if you don’t specify a <code>CacheBehavior</code> element or if request URLs don’t match any of the values of <code>PathPattern</code> in <code>CacheBehavior</code> elements. You must create exactly one default cache behavior.
@@ -40,73 +73,73 @@ var DefaultCacheBehavior = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AllowedMethods)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", allowedmethods_1.AllowedMethods)
     ], DefaultCacheBehavior.prototype, "allowedMethods", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "cachePolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DefaultCacheBehavior.prototype, "compress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
-    ], DefaultCacheBehavior.prototype, "defaultTtl", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DefaultCacheBehavior.prototype, "defaultTTL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "fieldLevelEncryptionId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ForwardedValues)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DefaultCacheBehaviorForwardedValues)
     ], DefaultCacheBehavior.prototype, "forwardedValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FunctionAssociations)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", functionassociations_1.FunctionAssociations)
     ], DefaultCacheBehavior.prototype, "functionAssociations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LambdaFunctionAssociations)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", lambdafunctionassociations_1.LambdaFunctionAssociations)
     ], DefaultCacheBehavior.prototype, "lambdaFunctionAssociations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
-    ], DefaultCacheBehavior.prototype, "maxTtl", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DefaultCacheBehavior.prototype, "maxTTL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Number)
-    ], DefaultCacheBehavior.prototype, "minTtl", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DefaultCacheBehavior.prototype, "minTTL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "originRequestPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "realtimeLogConfigArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DefaultCacheBehavior.prototype, "smoothStreaming", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "targetOriginId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrustedKeyGroups)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", trustedkeygroups_1.TrustedKeyGroups)
     ], DefaultCacheBehavior.prototype, "trustedKeyGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrustedSigners)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", trustedsigners_1.TrustedSigners)
     ], DefaultCacheBehavior.prototype, "trustedSigners", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultCacheBehavior.prototype, "viewerProtocolPolicy", void 0);
     return DefaultCacheBehavior;
-}(SpeakeasyBase));
-export { DefaultCacheBehavior };
+}(utils_1.SpeakeasyBase));
+exports.DefaultCacheBehavior = DefaultCacheBehavior;

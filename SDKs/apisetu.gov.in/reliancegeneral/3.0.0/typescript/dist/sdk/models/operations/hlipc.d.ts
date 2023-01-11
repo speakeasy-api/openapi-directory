@@ -109,11 +109,11 @@ export declare class HlipcRequest extends SpeakeasyBase {
 export declare class HlipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    hlipc400ApplicationJsonObject?: Hlipc400ApplicationJson;
-    hlipc401ApplicationJsonObject?: Hlipc401ApplicationJson;
-    hlipc404ApplicationJsonObject?: Hlipc404ApplicationJson;
-    hlipc500ApplicationJsonObject?: Hlipc500ApplicationJson;
-    hlipc502ApplicationJsonObject?: Hlipc502ApplicationJson;
-    hlipc503ApplicationJsonObject?: Hlipc503ApplicationJson;
-    hlipc504ApplicationJsonObject?: Hlipc504ApplicationJson;
+    hlipc400ApplicationJSONObject?: Hlipc400ApplicationJson;
+    hlipc401ApplicationJSONObject?: Hlipc401ApplicationJson;
+    hlipc404ApplicationJSONObject?: Hlipc404ApplicationJson;
+    hlipc500ApplicationJSONObject?: Hlipc500ApplicationJson;
+    hlipc502ApplicationJSONObject?: Hlipc502ApplicationJson;
+    hlipc503ApplicationJSONObject?: Hlipc503ApplicationJson;
+    hlipc504ApplicationJSONObject?: Hlipc504ApplicationJson;
 }

@@ -52,7 +52,7 @@ export class DeleteCustomDataIdentifierResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteCustomDataIdentifierResponse?: Map<string, any>;
+  deleteCustomDataIdentifierResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

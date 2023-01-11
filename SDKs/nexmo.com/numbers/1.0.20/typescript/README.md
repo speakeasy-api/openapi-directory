@@ -16,19 +16,18 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BuyANumberRequest, BuyANumberResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     apiSecret: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -37,13 +36,13 @@ const sdk = new SDK(WithSecurity(
     
 const req: BuyANumberRequest = {
   request: {
-    country: "dignissimos",
-    msisdn: "vel",
-    targetApiKey: "dolorem",
+    country: "sit",
+    msisdn: "voluptas",
+    targetApiKey: "culpa",
   },
 };
 
-sdk.sdk.buyANumber(req).then((res: BuyANumberResponse | AxiosError) => {
+sdk.buyANumber(req).then((res: BuyANumberResponse | AxiosError) => {
    // handle response
 });
 ```

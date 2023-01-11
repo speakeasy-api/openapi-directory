@@ -15,7 +15,7 @@ export declare class ReposListBranchesRequest extends SpeakeasyBase {
 }
 export declare class ReposListBranchesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     shortBranches?: shared.ShortBranch[];

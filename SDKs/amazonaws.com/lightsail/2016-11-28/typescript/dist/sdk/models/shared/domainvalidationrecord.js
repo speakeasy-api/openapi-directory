@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceRecord } from "./resourcerecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainValidationRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcerecord_1 = require("./resourcerecord");
 // DomainValidationRecord
 /**
  * Describes the domain validation records of an Amazon Lightsail SSL/TLS certificate.
@@ -34,13 +37,13 @@ var DomainValidationRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], DomainValidationRecord.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceRecord" }),
-        __metadata("design:type", ResourceRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceRecord" }),
+        __metadata("design:type", resourcerecord_1.ResourceRecord)
     ], DomainValidationRecord.prototype, "resourceRecord", void 0);
     return DomainValidationRecord;
-}(SpeakeasyBase));
-export { DomainValidationRecord };
+}(utils_1.SpeakeasyBase));
+exports.DomainValidationRecord = DomainValidationRecord;

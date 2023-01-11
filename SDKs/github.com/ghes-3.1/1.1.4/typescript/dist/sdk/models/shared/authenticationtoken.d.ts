@@ -9,7 +9,7 @@ export declare enum AuthenticationTokenRepositorySelectionEnum {
 **/
 export declare class AuthenticationToken extends SpeakeasyBase {
     expiresAt: Date;
-    permissions?: Map<string, any>;
+    permissions?: Record<string, any>;
     repositories?: Repository[];
     repositorySelection?: AuthenticationTokenRepositorySelectionEnum;
     singleFile?: string;

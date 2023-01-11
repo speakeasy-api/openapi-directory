@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,223 +14,248 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Area120tablesTablesRowsPatchResponse = exports.Area120tablesTablesRowsPatchRequest = exports.Area120tablesTablesRowsPatchSecurity = exports.Area120tablesTablesRowsPatchSecurityOption4 = exports.Area120tablesTablesRowsPatchSecurityOption3 = exports.Area120tablesTablesRowsPatchSecurityOption2 = exports.Area120tablesTablesRowsPatchSecurityOption1 = exports.Area120tablesTablesRowsPatchQueryParams = exports.Area120tablesTablesRowsPatchViewEnum = exports.Area120tablesTablesRowsPatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var Area120tablesTablesRowsPatchPathParams = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchPathParams, _super);
     function Area120tablesTablesRowsPatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchPathParams.prototype, "name", void 0);
     return Area120tablesTablesRowsPatchPathParams;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchPathParams };
-export var Area120tablesTablesRowsPatchViewEnum;
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchPathParams = Area120tablesTablesRowsPatchPathParams;
+var Area120tablesTablesRowsPatchViewEnum;
 (function (Area120tablesTablesRowsPatchViewEnum) {
     Area120tablesTablesRowsPatchViewEnum["ViewUnspecified"] = "VIEW_UNSPECIFIED";
     Area120tablesTablesRowsPatchViewEnum["ColumnIdView"] = "COLUMN_ID_VIEW";
-})(Area120tablesTablesRowsPatchViewEnum || (Area120tablesTablesRowsPatchViewEnum = {}));
+})(Area120tablesTablesRowsPatchViewEnum = exports.Area120tablesTablesRowsPatchViewEnum || (exports.Area120tablesTablesRowsPatchViewEnum = {}));
 var Area120tablesTablesRowsPatchQueryParams = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchQueryParams, _super);
     function Area120tablesTablesRowsPatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=updateMask" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "updateMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "uploadProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=view" }),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchQueryParams.prototype, "view", void 0);
     return Area120tablesTablesRowsPatchQueryParams;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchQueryParams = Area120tablesTablesRowsPatchQueryParams;
 var Area120tablesTablesRowsPatchSecurityOption1 = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchSecurityOption1, _super);
     function Area120tablesTablesRowsPatchSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], Area120tablesTablesRowsPatchSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], Area120tablesTablesRowsPatchSecurityOption1.prototype, "oauth2c", void 0);
     return Area120tablesTablesRowsPatchSecurityOption1;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchSecurityOption1 = Area120tablesTablesRowsPatchSecurityOption1;
 var Area120tablesTablesRowsPatchSecurityOption2 = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchSecurityOption2, _super);
     function Area120tablesTablesRowsPatchSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], Area120tablesTablesRowsPatchSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], Area120tablesTablesRowsPatchSecurityOption2.prototype, "oauth2c", void 0);
     return Area120tablesTablesRowsPatchSecurityOption2;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchSecurityOption2 = Area120tablesTablesRowsPatchSecurityOption2;
 var Area120tablesTablesRowsPatchSecurityOption3 = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchSecurityOption3, _super);
     function Area120tablesTablesRowsPatchSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], Area120tablesTablesRowsPatchSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], Area120tablesTablesRowsPatchSecurityOption3.prototype, "oauth2c", void 0);
     return Area120tablesTablesRowsPatchSecurityOption3;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchSecurityOption3 = Area120tablesTablesRowsPatchSecurityOption3;
 var Area120tablesTablesRowsPatchSecurityOption4 = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchSecurityOption4, _super);
     function Area120tablesTablesRowsPatchSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], Area120tablesTablesRowsPatchSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], Area120tablesTablesRowsPatchSecurityOption4.prototype, "oauth2c", void 0);
     return Area120tablesTablesRowsPatchSecurityOption4;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchSecurityOption4 = Area120tablesTablesRowsPatchSecurityOption4;
 var Area120tablesTablesRowsPatchSecurity = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchSecurity, _super);
     function Area120tablesTablesRowsPatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", Area120tablesTablesRowsPatchSecurityOption1)
     ], Area120tablesTablesRowsPatchSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", Area120tablesTablesRowsPatchSecurityOption2)
     ], Area120tablesTablesRowsPatchSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", Area120tablesTablesRowsPatchSecurityOption3)
     ], Area120tablesTablesRowsPatchSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", Area120tablesTablesRowsPatchSecurityOption4)
     ], Area120tablesTablesRowsPatchSecurity.prototype, "option4", void 0);
     return Area120tablesTablesRowsPatchSecurity;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchSecurity = Area120tablesTablesRowsPatchSecurity;
 var Area120tablesTablesRowsPatchRequest = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchRequest, _super);
     function Area120tablesTablesRowsPatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Area120tablesTablesRowsPatchPathParams)
     ], Area120tablesTablesRowsPatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Area120tablesTablesRowsPatchQueryParams)
     ], Area120tablesTablesRowsPatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Row)
     ], Area120tablesTablesRowsPatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Area120tablesTablesRowsPatchSecurity)
     ], Area120tablesTablesRowsPatchRequest.prototype, "security", void 0);
     return Area120tablesTablesRowsPatchRequest;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchRequest = Area120tablesTablesRowsPatchRequest;
 var Area120tablesTablesRowsPatchResponse = /** @class */ (function (_super) {
     __extends(Area120tablesTablesRowsPatchResponse, _super);
     function Area120tablesTablesRowsPatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Area120tablesTablesRowsPatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Row)
     ], Area120tablesTablesRowsPatchResponse.prototype, "row", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Area120tablesTablesRowsPatchResponse.prototype, "statusCode", void 0);
     return Area120tablesTablesRowsPatchResponse;
-}(SpeakeasyBase));
-export { Area120tablesTablesRowsPatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.Area120tablesTablesRowsPatchResponse = Area120tablesTablesRowsPatchResponse;

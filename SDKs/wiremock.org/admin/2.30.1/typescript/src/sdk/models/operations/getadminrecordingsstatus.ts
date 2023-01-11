@@ -19,8 +19,8 @@ export class GetAdminRecordingsStatusResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAdminRecordingsStatus200ApplicationJsonObject?: GetAdminRecordingsStatus200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAdminRecordingsStatus200ApplicationJSONObject?: GetAdminRecordingsStatus200ApplicationJson;
 }

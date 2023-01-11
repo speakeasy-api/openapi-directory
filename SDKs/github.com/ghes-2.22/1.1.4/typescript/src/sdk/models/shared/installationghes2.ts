@@ -36,6 +36,10 @@ export enum InstallationGhes2RepositorySelectionEnum {
 }
 
 
+// InstallationGhes2SimpleUser
+/** 
+ * Simple User
+**/
 export class InstallationGhes2SimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

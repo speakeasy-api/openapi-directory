@@ -1,17 +1,33 @@
-export * from "./altenum";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphaautoscale";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphacreateinstancerequest";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphacreateworkerpoolrequest";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphainstance";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphalistinstancesresponse";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphalistworkerpoolsresponse";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphaupdateworkerpoolrequest";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphaworkerconfig";
-export * from "./googledevtoolsremotebuildexecutionadminv1alphaworkerpool";
-export * from "./googlelongrunningoperation";
-export * from "./googlerpcstatus";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphaautoscale"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphacreateinstancerequest"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphacreateworkerpoolrequest"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphainstance"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphalistinstancesresponse"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphalistworkerpoolsresponse"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphaupdateworkerpoolrequest"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphaworkerconfig"), exports);
+__exportStar(require("./googledevtoolsremotebuildexecutionadminv1alphaworkerpool"), exports);
+__exportStar(require("./googlelongrunningoperation"), exports);
+__exportStar(require("./googlerpcstatus"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

@@ -1,4 +1,7 @@
-export var AccountTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountTypeEnum = void 0;
+var AccountTypeEnum;
 (function (AccountTypeEnum) {
     AccountTypeEnum["Bank"] = "BANK";
     AccountTypeEnum["Current"] = "CURRENT";
@@ -23,4 +26,4 @@ export var AccountTypeEnum;
     AccountTypeEnum["Superannuationliability"] = "SUPERANNUATIONLIABILITY";
     AccountTypeEnum["Wagesexpense"] = "WAGESEXPENSE";
     AccountTypeEnum["Wagespayableliability"] = "WAGESPAYABLELIABILITY";
-})(AccountTypeEnum || (AccountTypeEnum = {}));
+})(AccountTypeEnum = exports.AccountTypeEnum || (exports.AccountTypeEnum = {}));

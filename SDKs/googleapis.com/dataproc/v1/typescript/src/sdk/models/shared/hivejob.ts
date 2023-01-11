@@ -15,7 +15,7 @@ export class HiveJob extends SpeakeasyBase {
   jarFileUris?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=queryFileUri" })
   queryFileUri?: string;
@@ -24,5 +24,5 @@ export class HiveJob extends SpeakeasyBase {
   queryList?: QueryList;
 
   @SpeakeasyMetadata({ data: "json, name=scriptVariables" })
-  scriptVariables?: Map<string, string>;
+  scriptVariables?: Record<string, string>;
 }

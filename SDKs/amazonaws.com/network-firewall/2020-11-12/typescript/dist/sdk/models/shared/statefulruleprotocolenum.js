@@ -1,4 +1,7 @@
-export var StatefulRuleProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatefulRuleProtocolEnum = void 0;
+var StatefulRuleProtocolEnum;
 (function (StatefulRuleProtocolEnum) {
     StatefulRuleProtocolEnum["Ip"] = "IP";
     StatefulRuleProtocolEnum["Tcp"] = "TCP";
@@ -19,4 +22,4 @@ export var StatefulRuleProtocolEnum;
     StatefulRuleProtocolEnum["Tftp"] = "TFTP";
     StatefulRuleProtocolEnum["Ntp"] = "NTP";
     StatefulRuleProtocolEnum["Dhcp"] = "DHCP";
-})(StatefulRuleProtocolEnum || (StatefulRuleProtocolEnum = {}));
+})(StatefulRuleProtocolEnum = exports.StatefulRuleProtocolEnum || (exports.StatefulRuleProtocolEnum = {}));

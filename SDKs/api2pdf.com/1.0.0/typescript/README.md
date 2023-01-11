@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ChromeFromHtmlPostRequest, ChromeFromHtmlPostResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     headerApiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,17 +33,17 @@ const sdk = new SDK(WithSecurity(
     
 const req: ChromeFromHtmlPostRequest = {
   request: {
-    fileName: "qui",
-    html: "quisquam",
-    inlinePdf: false,
+    fileName: "sit",
+    html: "voluptas",
+    inlinePdf: true,
     options: {
-      landscape: "aut",
+      landscape: "expedita",
       printBackground: true,
     },
   },
 };
 
-sdk.sdk.chromeFromHtmlPost(req).then((res: ChromeFromHtmlPostResponse | AxiosError) => {
+sdk.headlessChrome.chromeFromHtmlPost(req).then((res: ChromeFromHtmlPostResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -53,17 +52,29 @@ sdk.sdk.chromeFromHtmlPost(req).then((res: ChromeFromHtmlPostResponse | AxiosErr
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Headless Chrome
 
 * `chromeFromHtmlPost` - Convert raw HTML to PDF
 * `chromeFromUrlGet` - Convert URL to PDF
 * `chromeFromUrlPost` - Convert URL to PDF
+
+### LibreOffice
+
 * `libreConvertPost` - Convert office document or image to PDF
+
+### Merge / Combine Pdfs
+
 * `mergePost` - Merge multiple PDFs together
+
+### ZXING (Zebra Crossing) Bar Codes
+
+* `zebraGet` - Generate bar codes and QR codes with ZXING.
+
+### wkhtmltopdf
+
 * `wkhtmltopdfFromHtmlPost` - Convert raw HTML to PDF
 * `wkhtmltopdfFromUrlGet` - Convert URL to PDF
 * `wkhtmltopdfFromUrlPost` - Convert URL to PDF
-* `zebraGet` - Generate bar codes and QR codes with ZXING.
 
 <!-- End SDK Available Operations -->
 

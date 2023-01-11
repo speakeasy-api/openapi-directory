@@ -105,11 +105,11 @@ export declare class ApmclRequest extends SpeakeasyBase {
 export declare class ApmclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apmcl400ApplicationJsonObject?: Apmcl400ApplicationJson;
-    apmcl401ApplicationJsonObject?: Apmcl401ApplicationJson;
-    apmcl404ApplicationJsonObject?: Apmcl404ApplicationJson;
-    apmcl500ApplicationJsonObject?: Apmcl500ApplicationJson;
-    apmcl502ApplicationJsonObject?: Apmcl502ApplicationJson;
-    apmcl503ApplicationJsonObject?: Apmcl503ApplicationJson;
-    apmcl504ApplicationJsonObject?: Apmcl504ApplicationJson;
+    apmcl400ApplicationJSONObject?: Apmcl400ApplicationJson;
+    apmcl401ApplicationJSONObject?: Apmcl401ApplicationJson;
+    apmcl404ApplicationJSONObject?: Apmcl404ApplicationJson;
+    apmcl500ApplicationJSONObject?: Apmcl500ApplicationJson;
+    apmcl502ApplicationJSONObject?: Apmcl502ApplicationJson;
+    apmcl503ApplicationJSONObject?: Apmcl503ApplicationJson;
+    apmcl504ApplicationJSONObject?: Apmcl504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Comment } from "./comment";
-import { Location } from "./location";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentsForComparedCommit = void 0;
+var utils_1 = require("../../../internal/utils");
+var comment_1 = require("./comment");
+var location_1 = require("./location");
 // CommentsForComparedCommit
 /**
  * Returns information about comments on the comparison between two commits.
@@ -35,33 +38,33 @@ var CommentsForComparedCommit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=afterBlobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=afterBlobId" }),
         __metadata("design:type", String)
     ], CommentsForComparedCommit.prototype, "afterBlobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=afterCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=afterCommitId" }),
         __metadata("design:type", String)
     ], CommentsForComparedCommit.prototype, "afterCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beforeBlobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beforeBlobId" }),
         __metadata("design:type", String)
     ], CommentsForComparedCommit.prototype, "beforeBlobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beforeCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beforeCommitId" }),
         __metadata("design:type", String)
     ], CommentsForComparedCommit.prototype, "beforeCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments", elemType: Comment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments", elemType: comment_1.Comment }),
         __metadata("design:type", Array)
     ], CommentsForComparedCommit.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], CommentsForComparedCommit.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], CommentsForComparedCommit.prototype, "repositoryName", void 0);
     return CommentsForComparedCommit;
-}(SpeakeasyBase));
-export { CommentsForComparedCommit };
+}(utils_1.SpeakeasyBase));
+exports.CommentsForComparedCommit = CommentsForComparedCommit;

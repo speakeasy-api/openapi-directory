@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPadIdUsingPostResponse = exports.GetPadIdUsingPostRequest = exports.GetPadIdUsingPost500ApplicationJson = exports.GetPadIdUsingPost401ApplicationJson = exports.GetPadIdUsingPost400ApplicationJson = exports.GetPadIdUsingPost200ApplicationJson = exports.GetPadIdUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPadIdUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPostQueryParams, _super);
     function GetPadIdUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=roID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=roID" }),
         __metadata("design:type", String)
-    ], GetPadIdUsingPostQueryParams.prototype, "roId", void 0);
+    ], GetPadIdUsingPostQueryParams.prototype, "roID", void 0);
     return GetPadIdUsingPostQueryParams;
-}(SpeakeasyBase));
-export { GetPadIdUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPostQueryParams = GetPadIdUsingPostQueryParams;
 var GetPadIdUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPost200ApplicationJson, _super);
     function GetPadIdUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPadIdUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPadIdUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPadIdUsingPost200ApplicationJson.prototype, "message", void 0);
     return GetPadIdUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { GetPadIdUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPost200ApplicationJson = GetPadIdUsingPost200ApplicationJson;
 var GetPadIdUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPost400ApplicationJson, _super);
     function GetPadIdUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPadIdUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPadIdUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPadIdUsingPost400ApplicationJson.prototype, "message", void 0);
     return GetPadIdUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { GetPadIdUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPost400ApplicationJson = GetPadIdUsingPost400ApplicationJson;
 var GetPadIdUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPost401ApplicationJson, _super);
     function GetPadIdUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPadIdUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPadIdUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPadIdUsingPost401ApplicationJson.prototype, "message", void 0);
     return GetPadIdUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { GetPadIdUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPost401ApplicationJson = GetPadIdUsingPost401ApplicationJson;
 var GetPadIdUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPost500ApplicationJson, _super);
     function GetPadIdUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetPadIdUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetPadIdUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetPadIdUsingPost500ApplicationJson.prototype, "message", void 0);
     return GetPadIdUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { GetPadIdUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPost500ApplicationJson = GetPadIdUsingPost500ApplicationJson;
 var GetPadIdUsingPostRequest = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPostRequest, _super);
     function GetPadIdUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPadIdUsingPostQueryParams)
     ], GetPadIdUsingPostRequest.prototype, "queryParams", void 0);
     return GetPadIdUsingPostRequest;
-}(SpeakeasyBase));
-export { GetPadIdUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPostRequest = GetPadIdUsingPostRequest;
 var GetPadIdUsingPostResponse = /** @class */ (function (_super) {
     __extends(GetPadIdUsingPostResponse, _super);
     function GetPadIdUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPadIdUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPadIdUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPadIdUsingPost200ApplicationJson)
-    ], GetPadIdUsingPostResponse.prototype, "getPadIdUsingPost200ApplicationJsonObject", void 0);
+    ], GetPadIdUsingPostResponse.prototype, "getPadIDUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPadIdUsingPost400ApplicationJson)
-    ], GetPadIdUsingPostResponse.prototype, "getPadIdUsingPost400ApplicationJsonObject", void 0);
+    ], GetPadIdUsingPostResponse.prototype, "getPadIDUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPadIdUsingPost401ApplicationJson)
-    ], GetPadIdUsingPostResponse.prototype, "getPadIdUsingPost401ApplicationJsonObject", void 0);
+    ], GetPadIdUsingPostResponse.prototype, "getPadIDUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPadIdUsingPost500ApplicationJson)
-    ], GetPadIdUsingPostResponse.prototype, "getPadIdUsingPost500ApplicationJsonObject", void 0);
+    ], GetPadIdUsingPostResponse.prototype, "getPadIDUsingPOST500ApplicationJSONObject", void 0);
     return GetPadIdUsingPostResponse;
-}(SpeakeasyBase));
-export { GetPadIdUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPadIdUsingPostResponse = GetPadIdUsingPostResponse;

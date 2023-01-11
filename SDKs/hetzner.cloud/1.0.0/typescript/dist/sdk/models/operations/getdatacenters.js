@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDatacentersResponse = exports.GetDatacentersRequest = exports.GetDatacenters200ApplicationJson = exports.GetDatacenters200ApplicationJsonDatacenters = exports.GetDatacenters200ApplicationJsonDatacentersServerTypes = exports.GetDatacenters200ApplicationJsonDatacentersLocation = exports.GetDatacentersQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDatacentersQueryParams = /** @class */ (function (_super) {
     __extends(GetDatacentersQueryParams, _super);
     function GetDatacentersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetDatacentersQueryParams.prototype, "name", void 0);
     return GetDatacentersQueryParams;
-}(SpeakeasyBase));
-export { GetDatacentersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacentersQueryParams = GetDatacentersQueryParams;
 var GetDatacenters200ApplicationJsonDatacentersLocation = /** @class */ (function (_super) {
     __extends(GetDatacenters200ApplicationJsonDatacentersLocation, _super);
     function GetDatacenters200ApplicationJsonDatacentersLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacentersLocation.prototype, "networkZone", void 0);
     return GetDatacenters200ApplicationJsonDatacentersLocation;
-}(SpeakeasyBase));
-export { GetDatacenters200ApplicationJsonDatacentersLocation };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacenters200ApplicationJsonDatacentersLocation = GetDatacenters200ApplicationJsonDatacentersLocation;
 // GetDatacenters200ApplicationJsonDatacentersServerTypes
 /**
  * The Server types the Datacenter can handle
@@ -85,93 +88,93 @@ var GetDatacenters200ApplicationJsonDatacentersServerTypes = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Array)
     ], GetDatacenters200ApplicationJsonDatacentersServerTypes.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available_for_migration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available_for_migration" }),
         __metadata("design:type", Array)
     ], GetDatacenters200ApplicationJsonDatacentersServerTypes.prototype, "availableForMigration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supported" }),
         __metadata("design:type", Array)
     ], GetDatacenters200ApplicationJsonDatacentersServerTypes.prototype, "supported", void 0);
     return GetDatacenters200ApplicationJsonDatacentersServerTypes;
-}(SpeakeasyBase));
-export { GetDatacenters200ApplicationJsonDatacentersServerTypes };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacenters200ApplicationJsonDatacentersServerTypes = GetDatacenters200ApplicationJsonDatacentersServerTypes;
 var GetDatacenters200ApplicationJsonDatacenters = /** @class */ (function (_super) {
     __extends(GetDatacenters200ApplicationJsonDatacenters, _super);
     function GetDatacenters200ApplicationJsonDatacenters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacenters.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetDatacenters200ApplicationJsonDatacenters.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", GetDatacenters200ApplicationJsonDatacentersLocation)
     ], GetDatacenters200ApplicationJsonDatacenters.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetDatacenters200ApplicationJsonDatacenters.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_types" }),
         __metadata("design:type", GetDatacenters200ApplicationJsonDatacentersServerTypes)
     ], GetDatacenters200ApplicationJsonDatacenters.prototype, "serverTypes", void 0);
     return GetDatacenters200ApplicationJsonDatacenters;
-}(SpeakeasyBase));
-export { GetDatacenters200ApplicationJsonDatacenters };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacenters200ApplicationJsonDatacenters = GetDatacenters200ApplicationJsonDatacenters;
 var GetDatacenters200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDatacenters200ApplicationJson, _super);
     function GetDatacenters200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenters", elemType: GetDatacenters200ApplicationJsonDatacenters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenters", elemType: GetDatacenters200ApplicationJsonDatacenters }),
         __metadata("design:type", Array)
     ], GetDatacenters200ApplicationJson.prototype, "datacenters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendation" }),
         __metadata("design:type", Number)
     ], GetDatacenters200ApplicationJson.prototype, "recommendation", void 0);
     return GetDatacenters200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDatacenters200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacenters200ApplicationJson = GetDatacenters200ApplicationJson;
 var GetDatacentersRequest = /** @class */ (function (_super) {
     __extends(GetDatacentersRequest, _super);
     function GetDatacentersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDatacentersQueryParams)
     ], GetDatacentersRequest.prototype, "queryParams", void 0);
     return GetDatacentersRequest;
-}(SpeakeasyBase));
-export { GetDatacentersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacentersRequest = GetDatacentersRequest;
 var GetDatacentersResponse = /** @class */ (function (_super) {
     __extends(GetDatacentersResponse, _super);
     function GetDatacentersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDatacentersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetDatacenters200ApplicationJson)
-    ], GetDatacentersResponse.prototype, "getDatacenters200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDatacentersResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetDatacenters200ApplicationJson)
+    ], GetDatacentersResponse.prototype, "getDatacenters200ApplicationJSONObject", void 0);
     return GetDatacentersResponse;
-}(SpeakeasyBase));
-export { GetDatacentersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDatacentersResponse = GetDatacentersResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetail } from "./errordetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnError = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetail_1 = require("./errordetail");
 // ColumnError
 /**
  * Encapsulates a column name that failed and the reason for failure.
@@ -34,13 +37,13 @@ var ColumnError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnName" }),
         __metadata("design:type", String)
     ], ColumnError.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
-        __metadata("design:type", ErrorDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
+        __metadata("design:type", errordetail_1.ErrorDetail)
     ], ColumnError.prototype, "error", void 0);
     return ColumnError;
-}(SpeakeasyBase));
-export { ColumnError };
+}(utils_1.SpeakeasyBase));
+exports.ColumnError = ColumnError;

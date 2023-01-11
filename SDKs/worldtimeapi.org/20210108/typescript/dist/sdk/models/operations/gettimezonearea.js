@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTimezoneAreaResponse = exports.GetTimezoneAreaRequest = exports.GetTimezoneAreaPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTimezoneAreaPathParams = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaPathParams, _super);
     function GetTimezoneAreaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=area" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=area" }),
         __metadata("design:type", String)
     ], GetTimezoneAreaPathParams.prototype, "area", void 0);
     return GetTimezoneAreaPathParams;
-}(SpeakeasyBase));
-export { GetTimezoneAreaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaPathParams = GetTimezoneAreaPathParams;
 var GetTimezoneAreaRequest = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaRequest, _super);
     function GetTimezoneAreaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTimezoneAreaPathParams)
     ], GetTimezoneAreaRequest.prototype, "pathParams", void 0);
     return GetTimezoneAreaRequest;
-}(SpeakeasyBase));
-export { GetTimezoneAreaRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaRequest = GetTimezoneAreaRequest;
 var GetTimezoneAreaResponse = /** @class */ (function (_super) {
     __extends(GetTimezoneAreaResponse, _super);
     function GetTimezoneAreaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTimezoneAreaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetTimezoneAreaResponse.prototype, "errorJsonResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetTimezoneAreaResponse.prototype, "listJsonResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTimezoneAreaResponse.prototype, "statusCode", void 0);
     return GetTimezoneAreaResponse;
-}(SpeakeasyBase));
-export { GetTimezoneAreaResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTimezoneAreaResponse = GetTimezoneAreaResponse;

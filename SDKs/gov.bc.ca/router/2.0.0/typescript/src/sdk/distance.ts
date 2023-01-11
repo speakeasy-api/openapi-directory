@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -20,53 +20,6 @@ export class Distance {
   }
   
   /**
-   * getDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
-   *
-   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
-  **/
-  getDistanceBetweenPairsOutputFormat(
-    req: operations.GetDistanceBetweenPairsOutputFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetDistanceBetweenPairsOutputFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetDistanceBetweenPairsOutputFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/distance/betweenPairs.{outputFormat}", req.pathParams);
-    
-    const client: AxiosInstance = this._securityClient!;
-    
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
    * getDistanceOutputFormat - Get distance and travel time between two geographic points
    *
    * Represents the distance and time of the shortest or fastest path between given start and end points.
@@ -80,11 +33,11 @@ export class Distance {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/distance.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/distance.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -92,12 +45,14 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -109,29 +64,28 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
   /**
-   * getTruckDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points for a commercial vehicle
+   * getDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
    *
-   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints for a commercial vehicle. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
+   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
   **/
-  getTruckDistanceBetweenPairsOutputFormat(
-    req: operations.GetTruckDistanceBetweenPairsOutputFormatRequest,
+  getDistanceBetweenPairsOutputFormat(
+    req: operations.GetDistanceBetweenPairsOutputFormatRequest,
     config?: AxiosRequestConfig
-  ): Promise<operations.GetTruckDistanceBetweenPairsOutputFormatResponse> {
+  ): Promise<operations.GetDistanceBetweenPairsOutputFormatResponse> {
     if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetTruckDistanceBetweenPairsOutputFormatRequest(req);
+      req = new operations.GetDistanceBetweenPairsOutputFormatRequest(req);
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/truck/distance/betweenPairs.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/distance/betweenPairs.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -139,16 +93,18 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTruckDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        const res: operations.GetDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
             break;
@@ -156,7 +112,6 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -174,11 +129,11 @@ export class Distance {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/truck/distance.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/truck/distance.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -186,12 +141,14 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -203,29 +160,28 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
   /**
-   * postDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
+   * getTruckDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points for a commercial vehicle
    *
-   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
+   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints for a commercial vehicle. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
   **/
-  postDistanceBetweenPairsOutputFormat(
-    req: operations.PostDistanceBetweenPairsOutputFormatRequest,
+  getTruckDistanceBetweenPairsOutputFormat(
+    req: operations.GetTruckDistanceBetweenPairsOutputFormatRequest,
     config?: AxiosRequestConfig
-  ): Promise<operations.PostDistanceBetweenPairsOutputFormatResponse> {
+  ): Promise<operations.GetTruckDistanceBetweenPairsOutputFormatResponse> {
     if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.PostDistanceBetweenPairsOutputFormatRequest(req);
+      req = new operations.GetTruckDistanceBetweenPairsOutputFormatRequest(req);
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/distance/betweenPairs.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/truck/distance/betweenPairs.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -233,16 +189,18 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.PostDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        const res: operations.GetTruckDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
             break;
@@ -250,7 +208,6 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -268,11 +225,11 @@ export class Distance {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/distance.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/distance.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -280,12 +237,14 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -297,29 +256,28 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
   /**
-   * postTruckDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
+   * postDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
    *
    * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
   **/
-  postTruckDistanceBetweenPairsOutputFormat(
-    req: operations.PostTruckDistanceBetweenPairsOutputFormatRequest,
+  postDistanceBetweenPairsOutputFormat(
+    req: operations.PostDistanceBetweenPairsOutputFormatRequest,
     config?: AxiosRequestConfig
-  ): Promise<operations.PostTruckDistanceBetweenPairsOutputFormatResponse> {
+  ): Promise<operations.PostDistanceBetweenPairsOutputFormatResponse> {
     if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.PostTruckDistanceBetweenPairsOutputFormatRequest(req);
+      req = new operations.PostDistanceBetweenPairsOutputFormatRequest(req);
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/truck/distance/betweenPairs.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/distance/betweenPairs.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -327,16 +285,18 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.PostTruckDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        const res: operations.PostDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
             break;
@@ -344,7 +304,6 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -362,11 +321,11 @@ export class Distance {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/truck/distance.{outputFormat}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/truck/distance.{outputFormat}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -374,12 +333,14 @@ export class Distance {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -391,7 +352,54 @@ export class Distance {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * postTruckDistanceBetweenPairsOutputFormat - Get distance and travel time between each pair of geographic points
+   *
+   * Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
+  **/
+  postTruckDistanceBetweenPairsOutputFormat(
+    req: operations.PostTruckDistanceBetweenPairsOutputFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.PostTruckDistanceBetweenPairsOutputFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.PostTruckDistanceBetweenPairsOutputFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/truck/distance/betweenPairs.{outputFormat}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.PostTruckDistanceBetweenPairsOutputFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

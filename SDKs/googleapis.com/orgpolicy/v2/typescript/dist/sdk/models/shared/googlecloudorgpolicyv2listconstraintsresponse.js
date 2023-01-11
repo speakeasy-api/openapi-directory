@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudOrgpolicyV2Constraint } from "./googlecloudorgpolicyv2constraint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV2ListConstraintsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudorgpolicyv2constraint_1 = require("./googlecloudorgpolicyv2constraint");
 // GoogleCloudOrgpolicyV2ListConstraintsResponse
 /**
  * The response returned from the ListConstraints method.
@@ -34,13 +37,13 @@ var GoogleCloudOrgpolicyV2ListConstraintsResponse = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints", elemType: GoogleCloudOrgpolicyV2Constraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints", elemType: googlecloudorgpolicyv2constraint_1.GoogleCloudOrgpolicyV2Constraint }),
         __metadata("design:type", Array)
     ], GoogleCloudOrgpolicyV2ListConstraintsResponse.prototype, "constraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV2ListConstraintsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudOrgpolicyV2ListConstraintsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2ListConstraintsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2ListConstraintsResponse = GoogleCloudOrgpolicyV2ListConstraintsResponse;

@@ -24,7 +24,7 @@ export class TypedLinkAttributeDefinition extends SpeakeasyBase {
   requiredBehavior: RequiredAttributeBehaviorEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Rules", elemType: Rule })
-  rules?: Map<string, Rule>;
+  rules?: Record<string, Rule>;
 
   @SpeakeasyMetadata({ data: "json, name=Type" })
   type: FacetAttributeTypeEnum;

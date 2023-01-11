@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Content } from "./content";
-import { PlayMediaControl } from "./playmediacontrol";
-import { QueuePlayPointer } from "./queueplaypointer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Queue = void 0;
+var utils_1 = require("../../../internal/utils");
+var content_1 = require("./content");
+var playmediacontrol_1 = require("./playmediacontrol");
+var queueplaypointer_1 = require("./queueplaypointer");
 var Queue = /** @class */ (function (_super) {
     __extends(Queue, _super);
     function Queue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content", elemType: Content }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content", elemType: content_1.Content }),
         __metadata("design:type", Array)
     ], Queue.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentItemsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentItemsCount" }),
         __metadata("design:type", Number)
     ], Queue.prototype, "contentItemsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=controls", elemType: PlayMediaControl }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=controls", elemType: playmediacontrol_1.PlayMediaControl }),
+        __metadata("design:type", Object)
     ], Queue.prototype, "controls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], Queue.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertPointer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertPointer" }),
         __metadata("design:type", Object)
     ], Queue.prototype, "insertPointer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextContentUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextContentUrl" }),
         __metadata("design:type", String)
     ], Queue.prototype, "nextContentUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playPointer" }),
-        __metadata("design:type", QueuePlayPointer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playPointer" }),
+        __metadata("design:type", queueplaypointer_1.QueuePlayPointer)
     ], Queue.prototype, "playPointer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prerollSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prerollSeconds" }),
         __metadata("design:type", Number)
     ], Queue.prototype, "prerollSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousContentUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousContentUrl" }),
         __metadata("design:type", String)
     ], Queue.prototype, "previousContentUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipsRemaining" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipsRemaining" }),
         __metadata("design:type", Number)
     ], Queue.prototype, "skipsRemaining", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Queue.prototype, "version", void 0);
     return Queue;
-}(SpeakeasyBase));
-export { Queue };
+}(utils_1.SpeakeasyBase));
+exports.Queue = Queue;

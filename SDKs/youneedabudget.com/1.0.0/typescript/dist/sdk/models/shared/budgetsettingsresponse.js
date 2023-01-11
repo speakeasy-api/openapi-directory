@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BudgetSettings } from "./budgetsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BudgetSettingsResponse = exports.BudgetSettingsResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var budgetsettings_1 = require("./budgetsettings");
 var BudgetSettingsResponseData = /** @class */ (function (_super) {
     __extends(BudgetSettingsResponseData, _super);
     function BudgetSettingsResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", BudgetSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", budgetsettings_1.BudgetSettings)
     ], BudgetSettingsResponseData.prototype, "settings", void 0);
     return BudgetSettingsResponseData;
-}(SpeakeasyBase));
-export { BudgetSettingsResponseData };
+}(utils_1.SpeakeasyBase));
+exports.BudgetSettingsResponseData = BudgetSettingsResponseData;
 var BudgetSettingsResponse = /** @class */ (function (_super) {
     __extends(BudgetSettingsResponse, _super);
     function BudgetSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BudgetSettingsResponseData)
     ], BudgetSettingsResponse.prototype, "data", void 0);
     return BudgetSettingsResponse;
-}(SpeakeasyBase));
-export { BudgetSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BudgetSettingsResponse = BudgetSettingsResponse;

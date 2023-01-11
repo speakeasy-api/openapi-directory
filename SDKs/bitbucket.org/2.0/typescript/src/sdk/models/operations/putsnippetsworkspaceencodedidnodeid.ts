@@ -47,8 +47,8 @@ export class PutSnippetsWorkspaceEncodedIdNodeIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snippet?: Map<string, any>;
+  snippet?: Record<string, any>;
 }

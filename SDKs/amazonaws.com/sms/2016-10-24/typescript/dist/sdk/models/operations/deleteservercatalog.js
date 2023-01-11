@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeleteServerCatalogXAmzTargetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteServerCatalogResponse = exports.DeleteServerCatalogRequest = exports.DeleteServerCatalogHeaders = exports.DeleteServerCatalogXAmzTargetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeleteServerCatalogXAmzTargetEnum;
 (function (DeleteServerCatalogXAmzTargetEnum) {
     DeleteServerCatalogXAmzTargetEnum["AwsServerMigrationServiceV20161024DeleteServerCatalog"] = "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog";
-})(DeleteServerCatalogXAmzTargetEnum || (DeleteServerCatalogXAmzTargetEnum = {}));
+})(DeleteServerCatalogXAmzTargetEnum = exports.DeleteServerCatalogXAmzTargetEnum || (exports.DeleteServerCatalogXAmzTargetEnum = {}));
 var DeleteServerCatalogHeaders = /** @class */ (function (_super) {
     __extends(DeleteServerCatalogHeaders, _super);
     function DeleteServerCatalogHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
         __metadata("design:type", String)
     ], DeleteServerCatalogHeaders.prototype, "xAmzTarget", void 0);
     return DeleteServerCatalogHeaders;
-}(SpeakeasyBase));
-export { DeleteServerCatalogHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteServerCatalogHeaders = DeleteServerCatalogHeaders;
 var DeleteServerCatalogRequest = /** @class */ (function (_super) {
     __extends(DeleteServerCatalogRequest, _super);
     function DeleteServerCatalogRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteServerCatalogHeaders)
     ], DeleteServerCatalogRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], DeleteServerCatalogRequest.prototype, "request", void 0);
     return DeleteServerCatalogRequest;
-}(SpeakeasyBase));
-export { DeleteServerCatalogRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteServerCatalogRequest = DeleteServerCatalogRequest;
 var DeleteServerCatalogResponse = /** @class */ (function (_super) {
     __extends(DeleteServerCatalogResponse, _super);
     function DeleteServerCatalogResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteServerCatalogResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteServerCatalogResponse.prototype, "deleteServerCatalogResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteServerCatalogResponse.prototype, "invalidParameterException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteServerCatalogResponse.prototype, "missingRequiredParameterException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteServerCatalogResponse.prototype, "operationNotPermittedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteServerCatalogResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteServerCatalogResponse.prototype, "unauthorizedOperationException", void 0);
     return DeleteServerCatalogResponse;
-}(SpeakeasyBase));
-export { DeleteServerCatalogResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteServerCatalogResponse = DeleteServerCatalogResponse;

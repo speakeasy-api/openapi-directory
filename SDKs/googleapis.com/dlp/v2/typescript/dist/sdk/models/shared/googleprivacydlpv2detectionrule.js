@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2HotwordRule } from "./googleprivacydlpv2hotwordrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DetectionRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2hotwordrule_1 = require("./googleprivacydlpv2hotwordrule");
 // GooglePrivacyDlpV2DetectionRule
 /**
  * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter behavior under certain circumstances, depending on the specific details of the rule. Not supported for the `surrogate_type` custom infoType.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2DetectionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hotwordRule" }),
-        __metadata("design:type", GooglePrivacyDlpV2HotwordRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hotwordRule" }),
+        __metadata("design:type", googleprivacydlpv2hotwordrule_1.GooglePrivacyDlpV2HotwordRule)
     ], GooglePrivacyDlpV2DetectionRule.prototype, "hotwordRule", void 0);
     return GooglePrivacyDlpV2DetectionRule;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DetectionRule };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DetectionRule = GooglePrivacyDlpV2DetectionRule;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveTagsFromResourceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveTagsFromResourceResponse = exports.GetRemoveTagsFromResourceRequest = exports.GetRemoveTagsFromResourceHeaders = exports.GetRemoveTagsFromResourceQueryParams = exports.GetRemoveTagsFromResourceVersionEnum = exports.GetRemoveTagsFromResourceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveTagsFromResourceActionEnum;
 (function (GetRemoveTagsFromResourceActionEnum) {
     GetRemoveTagsFromResourceActionEnum["RemoveTagsFromResource"] = "RemoveTagsFromResource";
-})(GetRemoveTagsFromResourceActionEnum || (GetRemoveTagsFromResourceActionEnum = {}));
-export var GetRemoveTagsFromResourceVersionEnum;
+})(GetRemoveTagsFromResourceActionEnum = exports.GetRemoveTagsFromResourceActionEnum || (exports.GetRemoveTagsFromResourceActionEnum = {}));
+var GetRemoveTagsFromResourceVersionEnum;
 (function (GetRemoveTagsFromResourceVersionEnum) {
     GetRemoveTagsFromResourceVersionEnum["TwoThousandAndFourteen0901"] = "2014-09-01";
-})(GetRemoveTagsFromResourceVersionEnum || (GetRemoveTagsFromResourceVersionEnum = {}));
+})(GetRemoveTagsFromResourceVersionEnum = exports.GetRemoveTagsFromResourceVersionEnum || (exports.GetRemoveTagsFromResourceVersionEnum = {}));
 var GetRemoveTagsFromResourceQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveTagsFromResourceQueryParams, _super);
     function GetRemoveTagsFromResourceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ResourceName" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceQueryParams.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TagKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TagKeys" }),
         __metadata("design:type", Array)
     ], GetRemoveTagsFromResourceQueryParams.prototype, "tagKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceQueryParams.prototype, "version", void 0);
     return GetRemoveTagsFromResourceQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveTagsFromResourceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsFromResourceQueryParams = GetRemoveTagsFromResourceQueryParams;
 var GetRemoveTagsFromResourceHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveTagsFromResourceHeaders, _super);
     function GetRemoveTagsFromResourceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveTagsFromResourceHeaders;
-}(SpeakeasyBase));
-export { GetRemoveTagsFromResourceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsFromResourceHeaders = GetRemoveTagsFromResourceHeaders;
 var GetRemoveTagsFromResourceRequest = /** @class */ (function (_super) {
     __extends(GetRemoveTagsFromResourceRequest, _super);
     function GetRemoveTagsFromResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveTagsFromResourceQueryParams)
     ], GetRemoveTagsFromResourceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveTagsFromResourceHeaders)
     ], GetRemoveTagsFromResourceRequest.prototype, "headers", void 0);
     return GetRemoveTagsFromResourceRequest;
-}(SpeakeasyBase));
-export { GetRemoveTagsFromResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsFromResourceRequest = GetRemoveTagsFromResourceRequest;
 var GetRemoveTagsFromResourceResponse = /** @class */ (function (_super) {
     __extends(GetRemoveTagsFromResourceResponse, _super);
     function GetRemoveTagsFromResourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveTagsFromResourceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveTagsFromResourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveTagsFromResourceResponse.prototype, "statusCode", void 0);
     return GetRemoveTagsFromResourceResponse;
-}(SpeakeasyBase));
-export { GetRemoveTagsFromResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsFromResourceResponse = GetRemoveTagsFromResourceResponse;

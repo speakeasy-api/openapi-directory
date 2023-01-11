@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrackedActionLastAccessed } from "./trackedactionlastaccessed";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceLastAccessed = void 0;
+var utils_1 = require("../../../internal/utils");
+var trackedactionlastaccessed_1 = require("./trackedactionlastaccessed");
 // ServiceLastAccessed
 /**
  * <p>Contains details about the most recent attempt to access the service.</p> <p>This data type is used as a response element in the <a>GetServiceLastAccessedDetails</a> operation.</p>
@@ -34,33 +37,33 @@ var ServiceLastAccessed = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ServiceLastAccessed.prototype, "lastAuthenticated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServiceLastAccessed.prototype, "lastAuthenticatedEntity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServiceLastAccessed.prototype, "lastAuthenticatedRegion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServiceLastAccessed.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServiceLastAccessed.prototype, "serviceNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ServiceLastAccessed.prototype, "totalAuthenticatedEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TrackedActionLastAccessed }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: trackedactionlastaccessed_1.TrackedActionLastAccessed }),
         __metadata("design:type", Array)
     ], ServiceLastAccessed.prototype, "trackedActionsLastAccessed", void 0);
     return ServiceLastAccessed;
-}(SpeakeasyBase));
-export { ServiceLastAccessed };
+}(utils_1.SpeakeasyBase));
+exports.ServiceLastAccessed = ServiceLastAccessed;

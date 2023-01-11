@@ -9,6 +9,12 @@ export declare class Campaigns {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
+     * getResourcesCampaignsJson - Get Campaigns
+     *
+     * Media Listings for a specific campaign
+    **/
+    getResourcesCampaignsJson(req: operations.GetResourcesCampaignsJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesCampaignsJsonResponse>;
+    /**
      * getResourcesCampaignsIdJson - Get Campaign by ID
      *
      * Information about a specific campaign
@@ -26,10 +32,4 @@ export declare class Campaigns {
      * MediaItem
     **/
     getResourcesCampaignsIdSyndicateFormat(req: operations.GetResourcesCampaignsIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesCampaignsIdSyndicateFormatResponse>;
-    /**
-     * getResourcesCampaignsJson - Get Campaigns
-     *
-     * Media Listings for a specific campaign
-    **/
-    getResourcesCampaignsJson(req: operations.GetResourcesCampaignsJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesCampaignsJsonResponse>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveMembershipForUserInOrgResponse = exports.TeamsRemoveMembershipForUserInOrgRequest = exports.TeamsRemoveMembershipForUserInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsRemoveMembershipForUserInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserInOrgPathParams, _super);
     function TeamsRemoveMembershipForUserInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserInOrgPathParams.prototype, "teamSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserInOrgPathParams.prototype, "username", void 0);
     return TeamsRemoveMembershipForUserInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserInOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserInOrgPathParams = TeamsRemoveMembershipForUserInOrgPathParams;
 var TeamsRemoveMembershipForUserInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserInOrgRequest, _super);
     function TeamsRemoveMembershipForUserInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveMembershipForUserInOrgPathParams)
     ], TeamsRemoveMembershipForUserInOrgRequest.prototype, "pathParams", void 0);
     return TeamsRemoveMembershipForUserInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserInOrgRequest = TeamsRemoveMembershipForUserInOrgRequest;
 var TeamsRemoveMembershipForUserInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserInOrgResponse, _super);
     function TeamsRemoveMembershipForUserInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveMembershipForUserInOrgResponse.prototype, "statusCode", void 0);
     return TeamsRemoveMembershipForUserInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserInOrgResponse = TeamsRemoveMembershipForUserInOrgResponse;

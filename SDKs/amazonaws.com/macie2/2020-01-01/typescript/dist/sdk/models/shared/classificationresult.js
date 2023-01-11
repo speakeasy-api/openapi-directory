@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomDataIdentifiers } from "./customdataidentifiers";
-import { SensitiveDataItem } from "./sensitivedataitem";
-import { ClassificationResultStatus } from "./classificationresultstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClassificationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var customdataidentifiers_1 = require("./customdataidentifiers");
+var sensitivedataitem_1 = require("./sensitivedataitem");
+var classificationresultstatus_1 = require("./classificationresultstatus");
 // ClassificationResult
 /**
  * Provides the details of a sensitive data finding, including the types, number of occurrences, and locations of the sensitive data that was detected.
@@ -36,29 +39,29 @@ var ClassificationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalOccurrences" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalOccurrences" }),
         __metadata("design:type", Boolean)
     ], ClassificationResult.prototype, "additionalOccurrences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDataIdentifiers" }),
-        __metadata("design:type", CustomDataIdentifiers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDataIdentifiers" }),
+        __metadata("design:type", customdataidentifiers_1.CustomDataIdentifiers)
     ], ClassificationResult.prototype, "customDataIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], ClassificationResult.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sensitiveData", elemType: SensitiveDataItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sensitiveData", elemType: sensitivedataitem_1.SensitiveDataItem }),
         __metadata("design:type", Array)
     ], ClassificationResult.prototype, "sensitiveData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeClassified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeClassified" }),
         __metadata("design:type", Number)
     ], ClassificationResult.prototype, "sizeClassified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", ClassificationResultStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", classificationresultstatus_1.ClassificationResultStatus)
     ], ClassificationResult.prototype, "status", void 0);
     return ClassificationResult;
-}(SpeakeasyBase));
-export { ClassificationResult };
+}(utils_1.SpeakeasyBase));
+exports.ClassificationResult = ClassificationResult;

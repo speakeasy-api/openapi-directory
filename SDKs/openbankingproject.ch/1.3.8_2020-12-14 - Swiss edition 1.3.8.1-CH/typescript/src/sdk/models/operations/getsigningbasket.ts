@@ -26,7 +26,7 @@ export class GetSigningBasketHeaders extends SpeakeasyBase {
   psuAcceptLanguage?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Device-ID" })
-  psuDeviceId?: string;
+  psuDeviceID?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-Geo-Location" })
   psuGeoLocation?: string;
@@ -35,10 +35,10 @@ export class GetSigningBasketHeaders extends SpeakeasyBase {
   psuHttpMethod?: shared.PsuHttpMethodEnum;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Address" })
-  psuIpAddress?: string;
+  psuIPAddress?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-IP-Port" })
-  psuIpPort?: string;
+  psuIPPort?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=PSU-User-Agent" })
   psuUserAgent?: string;
@@ -50,7 +50,7 @@ export class GetSigningBasketHeaders extends SpeakeasyBase {
   tppSignatureCertificate?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Request-ID" })
-  xRequestId: string;
+  xRequestID: string;
 }
 
 
@@ -77,43 +77,43 @@ export class GetSigningBasketResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error400NgSbs?: shared.Error400NgSbs;
+  error400NGSBS?: shared.Error400NgSbs;
 
   @SpeakeasyMetadata()
-  error400Sbs?: shared.Error400Sbs;
+  error400SBS?: shared.Error400Sbs;
 
   @SpeakeasyMetadata()
-  error401NgSbs?: shared.Error401NgSbs;
+  error401NGSBS?: shared.Error401NgSbs;
 
   @SpeakeasyMetadata()
-  error401Sbs?: shared.Error401Sbs;
+  error401SBS?: shared.Error401Sbs;
 
   @SpeakeasyMetadata()
-  error403NgSbs?: shared.Error403NgSbs;
+  error403NGSBS?: shared.Error403NgSbs;
 
   @SpeakeasyMetadata()
-  error403Sbs?: shared.Error403Sbs;
+  error403SBS?: shared.Error403Sbs;
 
   @SpeakeasyMetadata()
-  error404NgSbs?: shared.Error404NgSbs;
+  error404NGSBS?: shared.Error404NgSbs;
 
   @SpeakeasyMetadata()
-  error404Sbs?: shared.Error404Sbs;
+  error404SBS?: shared.Error404Sbs;
 
   @SpeakeasyMetadata()
-  error405NgSbs?: shared.Error405NgSbs;
+  error405NGSBS?: shared.Error405NgSbs;
 
   @SpeakeasyMetadata()
-  error405Sbs?: shared.Error405Sbs;
+  error405SBS?: shared.Error405Sbs;
 
   @SpeakeasyMetadata()
-  error409NgSbs?: shared.Error409NgSbs;
+  error409NGSBS?: shared.Error409NgSbs;
 
   @SpeakeasyMetadata()
-  error409Sbs?: shared.Error409Sbs;
+  error409SBS?: shared.Error409Sbs;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

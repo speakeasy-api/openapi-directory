@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StandardError } from "./standarderror";
-import { SubscriberEmailResponse } from "./subscriberemailresponse";
-export var BatchResponseSubscriberEmailResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchResponseSubscriberEmailResponse = exports.BatchResponseSubscriberEmailResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var standarderror_1 = require("./standarderror");
+var subscriberemailresponse_1 = require("./subscriberemailresponse");
+var BatchResponseSubscriberEmailResponseStatusEnum;
 (function (BatchResponseSubscriberEmailResponseStatusEnum) {
     BatchResponseSubscriberEmailResponseStatusEnum["Pending"] = "PENDING";
     BatchResponseSubscriberEmailResponseStatusEnum["Processing"] = "PROCESSING";
     BatchResponseSubscriberEmailResponseStatusEnum["Canceled"] = "CANCELED";
     BatchResponseSubscriberEmailResponseStatusEnum["Complete"] = "COMPLETE";
-})(BatchResponseSubscriberEmailResponseStatusEnum || (BatchResponseSubscriberEmailResponseStatusEnum = {}));
+})(BatchResponseSubscriberEmailResponseStatusEnum = exports.BatchResponseSubscriberEmailResponseStatusEnum || (exports.BatchResponseSubscriberEmailResponseStatusEnum = {}));
 var BatchResponseSubscriberEmailResponse = /** @class */ (function (_super) {
     __extends(BatchResponseSubscriberEmailResponse, _super);
     function BatchResponseSubscriberEmailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseSubscriberEmailResponse.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: StandardError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: standarderror_1.StandardError }),
         __metadata("design:type", Array)
     ], BatchResponseSubscriberEmailResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", Object)
     ], BatchResponseSubscriberEmailResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numErrors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numErrors" }),
         __metadata("design:type", Number)
     ], BatchResponseSubscriberEmailResponse.prototype, "numErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseSubscriberEmailResponse.prototype, "requestedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: SubscriberEmailResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: subscriberemailresponse_1.SubscriberEmailResponse }),
         __metadata("design:type", Array)
     ], BatchResponseSubscriberEmailResponse.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseSubscriberEmailResponse.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], BatchResponseSubscriberEmailResponse.prototype, "status", void 0);
     return BatchResponseSubscriberEmailResponse;
-}(SpeakeasyBase));
-export { BatchResponseSubscriberEmailResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchResponseSubscriberEmailResponse = BatchResponseSubscriberEmailResponse;

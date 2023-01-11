@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWordListByPermalinkResponse = exports.GetWordListByPermalinkRequest = exports.GetWordListByPermalinkHeaders = exports.GetWordListByPermalinkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWordListByPermalinkPathParams = /** @class */ (function (_super) {
     __extends(GetWordListByPermalinkPathParams, _super);
     function GetWordListByPermalinkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=permalink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=permalink" }),
         __metadata("design:type", String)
     ], GetWordListByPermalinkPathParams.prototype, "permalink", void 0);
     return GetWordListByPermalinkPathParams;
-}(SpeakeasyBase));
-export { GetWordListByPermalinkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListByPermalinkPathParams = GetWordListByPermalinkPathParams;
 var GetWordListByPermalinkHeaders = /** @class */ (function (_super) {
     __extends(GetWordListByPermalinkHeaders, _super);
     function GetWordListByPermalinkHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], GetWordListByPermalinkHeaders.prototype, "authToken", void 0);
     return GetWordListByPermalinkHeaders;
-}(SpeakeasyBase));
-export { GetWordListByPermalinkHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListByPermalinkHeaders = GetWordListByPermalinkHeaders;
 var GetWordListByPermalinkRequest = /** @class */ (function (_super) {
     __extends(GetWordListByPermalinkRequest, _super);
     function GetWordListByPermalinkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListByPermalinkPathParams)
     ], GetWordListByPermalinkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListByPermalinkHeaders)
     ], GetWordListByPermalinkRequest.prototype, "headers", void 0);
     return GetWordListByPermalinkRequest;
-}(SpeakeasyBase));
-export { GetWordListByPermalinkRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListByPermalinkRequest = GetWordListByPermalinkRequest;
 var GetWordListByPermalinkResponse = /** @class */ (function (_super) {
     __extends(GetWordListByPermalinkResponse, _super);
     function GetWordListByPermalinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetWordListByPermalinkResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWordListByPermalinkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWordListByPermalinkResponse.prototype, "statusCode", void 0);
     return GetWordListByPermalinkResponse;
-}(SpeakeasyBase));
-export { GetWordListByPermalinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListByPermalinkResponse = GetWordListByPermalinkResponse;

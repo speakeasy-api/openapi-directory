@@ -9,7 +9,7 @@ import { EndpointUser } from "./endpointuser";
 export declare class EndpointResponse extends SpeakeasyBase {
     address?: string;
     applicationId?: string;
-    attributes?: Map<string, string[]>;
+    attributes?: Record<string, string[]>;
     channelType?: ChannelTypeEnum;
     cohortId?: string;
     creationDate?: string;
@@ -18,7 +18,7 @@ export declare class EndpointResponse extends SpeakeasyBase {
     endpointStatus?: string;
     id?: string;
     location?: EndpointLocation;
-    metrics?: Map<string, number>;
+    metrics?: Record<string, number>;
     optOut?: string;
     requestId?: string;
     user?: EndpointUser;

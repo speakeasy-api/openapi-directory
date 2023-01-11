@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupIdentifier } from "./groupidentifier";
-import { Instance } from "./instance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Reservation = void 0;
+var utils_1 = require("../../../internal/utils");
 // Reservation
 /**
  * Describes a launch request for one or more instances, and includes owner, requester, and security group information that applies to all instances in the launch request.
@@ -35,25 +36,25 @@ var Reservation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: GroupIdentifier }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Reservation.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Reservation.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Reservation.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Reservation.prototype, "requesterId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], Reservation.prototype, "reservationId", void 0);
     return Reservation;
-}(SpeakeasyBase));
-export { Reservation };
+}(utils_1.SpeakeasyBase));
+exports.Reservation = Reservation;

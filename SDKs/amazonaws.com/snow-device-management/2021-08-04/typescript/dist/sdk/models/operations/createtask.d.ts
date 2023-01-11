@@ -13,14 +13,14 @@ export declare class CreateTaskHeaders extends SpeakeasyBase {
  * The command given to the device to execute.
 **/
 export declare class CreateTaskRequestBodyCommand extends SpeakeasyBase {
-    reboot?: Map<string, any>;
-    unlock?: Map<string, any>;
+    reboot?: Record<string, any>;
+    unlock?: Record<string, any>;
 }
 export declare class CreateTaskRequestBody extends SpeakeasyBase {
     clientToken?: string;
     command: CreateTaskRequestBodyCommand;
     description?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     targets: string[];
 }
 export declare class CreateTaskRequest extends SpeakeasyBase {

@@ -13,6 +13,6 @@ export declare class GetOfferingsOfferingIdLearnersPendingSubmissionRequest exte
 export declare class GetOfferingsOfferingIdLearnersPendingSubmissionResponse extends SpeakeasyBase {
     assessmentPendingSubmissions?: shared.AssessmentPendingSubmission[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

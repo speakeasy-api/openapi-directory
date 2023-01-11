@@ -173,7 +173,7 @@ export class PowerPort extends SpeakeasyBase {
   cable?: NestedCable;
 
   @SpeakeasyMetadata({ data: "json, name=connected_endpoint" })
-  connectedEndpoint?: Map<string, string>;
+  connectedEndpoint?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=connected_endpoint_type" })
   connectedEndpointType?: string;

@@ -20,7 +20,7 @@ export class ListArtifactRulesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   ruleTypes?: shared.RuleTypeEnum[];

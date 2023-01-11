@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HsmConfiguration } from "./hsmconfiguration";
+import { HsmConfigurationList } from "./hsmconfigurationlist";
 /**
  * <p/>
 **/
 export declare class HsmConfigurationMessage extends SpeakeasyBase {
-    hsmConfigurations?: HsmConfiguration[];
+    hsmConfigurations?: HsmConfigurationList[];
     marker?: string;
 }

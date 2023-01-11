@@ -5,7 +5,7 @@ export declare class TestnetBurnTokenRequest extends SpeakeasyBase {
 }
 export declare class TestnetBurnTokenResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     burnTokenResponse?: shared.BurnTokenResponse;
 }

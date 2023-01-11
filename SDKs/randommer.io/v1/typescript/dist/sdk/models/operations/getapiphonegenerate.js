@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiPhoneGenerateResponse = exports.GetApiPhoneGenerateRequest = exports.GetApiPhoneGenerateHeaders = exports.GetApiPhoneGenerateQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiPhoneGenerateQueryParams = /** @class */ (function (_super) {
     __extends(GetApiPhoneGenerateQueryParams, _super);
     function GetApiPhoneGenerateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CountryCode" }),
         __metadata("design:type", String)
     ], GetApiPhoneGenerateQueryParams.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Quantity" }),
         __metadata("design:type", Number)
     ], GetApiPhoneGenerateQueryParams.prototype, "quantity", void 0);
     return GetApiPhoneGenerateQueryParams;
-}(SpeakeasyBase));
-export { GetApiPhoneGenerateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneGenerateQueryParams = GetApiPhoneGenerateQueryParams;
 var GetApiPhoneGenerateHeaders = /** @class */ (function (_super) {
     __extends(GetApiPhoneGenerateHeaders, _super);
     function GetApiPhoneGenerateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiPhoneGenerateHeaders.prototype, "xApiKey", void 0);
     return GetApiPhoneGenerateHeaders;
-}(SpeakeasyBase));
-export { GetApiPhoneGenerateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneGenerateHeaders = GetApiPhoneGenerateHeaders;
 var GetApiPhoneGenerateRequest = /** @class */ (function (_super) {
     __extends(GetApiPhoneGenerateRequest, _super);
     function GetApiPhoneGenerateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiPhoneGenerateQueryParams)
     ], GetApiPhoneGenerateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiPhoneGenerateHeaders)
     ], GetApiPhoneGenerateRequest.prototype, "headers", void 0);
     return GetApiPhoneGenerateRequest;
-}(SpeakeasyBase));
-export { GetApiPhoneGenerateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneGenerateRequest = GetApiPhoneGenerateRequest;
 var GetApiPhoneGenerateResponse = /** @class */ (function (_super) {
     __extends(GetApiPhoneGenerateResponse, _super);
     function GetApiPhoneGenerateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiPhoneGenerateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiPhoneGenerateResponse.prototype, "statusCode", void 0);
     return GetApiPhoneGenerateResponse;
-}(SpeakeasyBase));
-export { GetApiPhoneGenerateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneGenerateResponse = GetApiPhoneGenerateResponse;

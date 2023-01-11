@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthTypeEnum } from "./authtypeenum";
 import { SimpleFormFieldOption } from "./simpleformfieldoption";
 import { FormFieldOptionGroup } from "./formfieldoptiongroup";
+import { AuthTypeEnum } from "./authtypeenum";
 import { FormField } from "./formfield";
 import { OAuthGrantTypeEnum } from "./oauthgranttypeenum";
 import { ConnectionStateEnum } from "./connectionstateenum";
@@ -100,7 +100,7 @@ export class Connection extends SpeakeasyBase {
   logo?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -121,7 +121,7 @@ export class Connection extends SpeakeasyBase {
   serviceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=settings" })
-  settings?: Map<string, any>;
+  settings?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=settings_required_for_authorization" })
   settingsRequiredForAuthorization?: string[];
@@ -157,8 +157,8 @@ export class ConnectionInput extends SpeakeasyBase {
   enabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=settings" })
-  settings?: Map<string, any>;
+  settings?: Record<string, any>;
 }

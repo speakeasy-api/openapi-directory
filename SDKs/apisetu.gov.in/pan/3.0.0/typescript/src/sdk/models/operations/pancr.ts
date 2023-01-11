@@ -204,23 +204,23 @@ export class PancrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pancr400ApplicationJsonObject?: Pancr400ApplicationJson;
+  pancr400ApplicationJSONObject?: Pancr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr401ApplicationJsonObject?: Pancr401ApplicationJson;
+  pancr401ApplicationJSONObject?: Pancr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr404ApplicationJsonObject?: Pancr404ApplicationJson;
+  pancr404ApplicationJSONObject?: Pancr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr500ApplicationJsonObject?: Pancr500ApplicationJson;
+  pancr500ApplicationJSONObject?: Pancr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr502ApplicationJsonObject?: Pancr502ApplicationJson;
+  pancr502ApplicationJSONObject?: Pancr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr503ApplicationJsonObject?: Pancr503ApplicationJson;
+  pancr503ApplicationJSONObject?: Pancr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pancr504ApplicationJsonObject?: Pancr504ApplicationJson;
+  pancr504ApplicationJSONObject?: Pancr504ApplicationJson;
 }

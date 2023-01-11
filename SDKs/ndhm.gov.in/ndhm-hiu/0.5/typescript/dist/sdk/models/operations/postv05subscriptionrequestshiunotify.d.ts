@@ -2,10 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05SubscriptionRequestsHiuNotifyHeaders extends SpeakeasyBase {
     authorization: string;
-    xHiuId: string;
+    xHIUID: string;
 }
 export declare class PostV05SubscriptionRequestsHiuNotifyRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     subscriptionApprovalNotification?: shared.SubscriptionApprovalNotification;
 }
 export declare class PostV05SubscriptionRequestsHiuNotifyRequest extends SpeakeasyBase {

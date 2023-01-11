@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // SearchResponse
 /**
  * Response message includes the context and a list of matching results which contain the detail of associated entities.
@@ -33,17 +36,17 @@ var SearchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@context" }),
         __metadata("design:type", Object)
     ], SearchResponse.prototype, "atContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@type" }),
         __metadata("design:type", Object)
     ], SearchResponse.prototype, "atType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemListElement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemListElement" }),
         __metadata("design:type", Array)
     ], SearchResponse.prototype, "itemListElement", void 0);
     return SearchResponse;
-}(SpeakeasyBase));
-export { SearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponse = SearchResponse;

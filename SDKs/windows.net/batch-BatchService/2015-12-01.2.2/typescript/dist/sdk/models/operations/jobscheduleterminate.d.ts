@@ -23,6 +23,6 @@ export declare class JobScheduleTerminateRequest extends SpeakeasyBase {
 export declare class JobScheduleTerminateResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

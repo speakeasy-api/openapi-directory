@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLoggedInUserResponse = exports.GetLoggedInUserRequest = exports.GetLoggedInUserHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLoggedInUserHeaders = /** @class */ (function (_super) {
     __extends(GetLoggedInUserHeaders, _super);
     function GetLoggedInUserHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], GetLoggedInUserHeaders.prototype, "authToken", void 0);
     return GetLoggedInUserHeaders;
-}(SpeakeasyBase));
-export { GetLoggedInUserHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetLoggedInUserHeaders = GetLoggedInUserHeaders;
 var GetLoggedInUserRequest = /** @class */ (function (_super) {
     __extends(GetLoggedInUserRequest, _super);
     function GetLoggedInUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLoggedInUserHeaders)
     ], GetLoggedInUserRequest.prototype, "headers", void 0);
     return GetLoggedInUserRequest;
-}(SpeakeasyBase));
-export { GetLoggedInUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLoggedInUserRequest = GetLoggedInUserRequest;
 var GetLoggedInUserResponse = /** @class */ (function (_super) {
     __extends(GetLoggedInUserResponse, _super);
     function GetLoggedInUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetLoggedInUserResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLoggedInUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLoggedInUserResponse.prototype, "statusCode", void 0);
     return GetLoggedInUserResponse;
-}(SpeakeasyBase));
-export { GetLoggedInUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLoggedInUserResponse = GetLoggedInUserResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,178 +14,203 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveCommentsGetResponse = exports.DriveCommentsGetRequest = exports.DriveCommentsGetSecurity = exports.DriveCommentsGetSecurityOption3 = exports.DriveCommentsGetSecurityOption2 = exports.DriveCommentsGetSecurityOption1 = exports.DriveCommentsGetQueryParams = exports.DriveCommentsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DriveCommentsGetPathParams = /** @class */ (function (_super) {
     __extends(DriveCommentsGetPathParams, _super);
     function DriveCommentsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commentId" }),
         __metadata("design:type", String)
     ], DriveCommentsGetPathParams.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileId" }),
         __metadata("design:type", String)
     ], DriveCommentsGetPathParams.prototype, "fileId", void 0);
     return DriveCommentsGetPathParams;
-}(SpeakeasyBase));
-export { DriveCommentsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetPathParams = DriveCommentsGetPathParams;
 var DriveCommentsGetQueryParams = /** @class */ (function (_super) {
     __extends(DriveCommentsGetQueryParams, _super);
     function DriveCommentsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeDeleted" }),
         __metadata("design:type", Boolean)
     ], DriveCommentsGetQueryParams.prototype, "includeDeleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DriveCommentsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DriveCommentsGetQueryParams.prototype, "userIp", void 0);
     return DriveCommentsGetQueryParams;
-}(SpeakeasyBase));
-export { DriveCommentsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetQueryParams = DriveCommentsGetQueryParams;
 var DriveCommentsGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(DriveCommentsGetSecurityOption1, _super);
     function DriveCommentsGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveCommentsGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveCommentsGetSecurityOption1.prototype, "oauth2c", void 0);
     return DriveCommentsGetSecurityOption1;
-}(SpeakeasyBase));
-export { DriveCommentsGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetSecurityOption1 = DriveCommentsGetSecurityOption1;
 var DriveCommentsGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(DriveCommentsGetSecurityOption2, _super);
     function DriveCommentsGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveCommentsGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveCommentsGetSecurityOption2.prototype, "oauth2c", void 0);
     return DriveCommentsGetSecurityOption2;
-}(SpeakeasyBase));
-export { DriveCommentsGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetSecurityOption2 = DriveCommentsGetSecurityOption2;
 var DriveCommentsGetSecurityOption3 = /** @class */ (function (_super) {
     __extends(DriveCommentsGetSecurityOption3, _super);
     function DriveCommentsGetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveCommentsGetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveCommentsGetSecurityOption3.prototype, "oauth2c", void 0);
     return DriveCommentsGetSecurityOption3;
-}(SpeakeasyBase));
-export { DriveCommentsGetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetSecurityOption3 = DriveCommentsGetSecurityOption3;
 var DriveCommentsGetSecurity = /** @class */ (function (_super) {
     __extends(DriveCommentsGetSecurity, _super);
     function DriveCommentsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveCommentsGetSecurityOption1)
     ], DriveCommentsGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveCommentsGetSecurityOption2)
     ], DriveCommentsGetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveCommentsGetSecurityOption3)
     ], DriveCommentsGetSecurity.prototype, "option3", void 0);
     return DriveCommentsGetSecurity;
-}(SpeakeasyBase));
-export { DriveCommentsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetSecurity = DriveCommentsGetSecurity;
 var DriveCommentsGetRequest = /** @class */ (function (_super) {
     __extends(DriveCommentsGetRequest, _super);
     function DriveCommentsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveCommentsGetPathParams)
     ], DriveCommentsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveCommentsGetQueryParams)
     ], DriveCommentsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveCommentsGetSecurity)
     ], DriveCommentsGetRequest.prototype, "security", void 0);
     return DriveCommentsGetRequest;
-}(SpeakeasyBase));
-export { DriveCommentsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetRequest = DriveCommentsGetRequest;
 var DriveCommentsGetResponse = /** @class */ (function (_super) {
     __extends(DriveCommentsGetResponse, _super);
     function DriveCommentsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Comment)
     ], DriveCommentsGetResponse.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DriveCommentsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DriveCommentsGetResponse.prototype, "statusCode", void 0);
     return DriveCommentsGetResponse;
-}(SpeakeasyBase));
-export { DriveCommentsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DriveCommentsGetResponse = DriveCommentsGetResponse;

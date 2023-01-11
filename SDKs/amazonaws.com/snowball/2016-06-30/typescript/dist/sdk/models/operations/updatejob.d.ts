@@ -26,5 +26,5 @@ export declare class UpdateJobResponse extends SpeakeasyBase {
     invalidResourceException?: any;
     kmsRequestFailedException?: any;
     statusCode: number;
-    updateJobResult?: Map<string, any>;
+    updateJobResult?: Record<string, any>;
 }

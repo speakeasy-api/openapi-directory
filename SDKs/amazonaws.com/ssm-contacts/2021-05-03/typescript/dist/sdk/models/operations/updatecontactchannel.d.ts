@@ -26,6 +26,6 @@ export declare class UpdateContactChannelResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateContactChannelResult?: Map<string, any>;
+    updateContactChannelResult?: Record<string, any>;
     validationException?: any;
 }

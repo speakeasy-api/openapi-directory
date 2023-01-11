@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AccessAddRequest, AccessAddResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
@@ -35,13 +34,13 @@ const sdk = new SDK(WithSecurity(
     
 const req: AccessAddRequest = {
   pathParams: {
-    agents: "quo",
-    mask: "odit",
-    user: "ducimus",
+    agents: "sit",
+    mask: "voluptas",
+    user: "culpa",
   },
 };
 
-sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
+sdk.access.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,7 +49,7 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Access
 
 * `accessAdd` - Adds/Overwrites the user entry in the access control database.
 * `accessDel` - Clears a users entry from access control database.
@@ -63,8 +62,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `accessSave` - Saves current access control data in specified file.
 * `accessSetAcldb` - Allows setting the name of the current access control database.
 * `accessSetEnabled` - Allows the user to enable/disable the access control check.
-* `add` - Add an entry to a table.
-* `addDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+
+### Agent
+
 * `addIpalias` - Adds a new ipalias for the agent.
 * `addTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `agentRemove` - Remove the current agent.
@@ -76,79 +76,76 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `agentStorePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
 * `agentStoreSet` - These commands allow the creation of a new variable, or changing an existing value.
 * `agentStoreUnset` - Deletes a variable which is currently defined.
-* `cfgLoad` - Load the lab configuration file file.
-* `cfgNew` - Clear the lab configuration.
-* `cfgSave` - Save the lab configuration.
-* `cfgSaveas` - Save the lab configuration in file.
-* `delDaemonTimerScript` - Remove a timer script from the execution list.
 * `delIpalias` - Deletes an existing ipalias from the agent.
 * `delTimerScript` - Remove a timer script from the execution list.
-* `evalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
 * `fromAdd` - Add a source address that the agent will accept messages from.
 * `fromDel` - delete a source address that the agent will accept messages from.
 * `fromList` - List the source addresses that the agent will accept messages from.
-* `getActiveDataList` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
-* `getActiveList` - The list of {agentnum} that are currently active (running or paused).
 * `getAgentState` - current running state of the agent
-* `getCfgFileChanged` - This predicate indicates if the currently loaded agent configuration file has changed.
-* `getCfgfile` - The currently loaded lab configuration file for the particular user.
 * `getChanged` - has the agent value space changed?
-* `getChangedConfigList` - The list of {agentnum} for which a configurable parameter changed.
-* `getChangedStateList` - The list of {agentnum state} for which the state changed.
-* `getClients` - The number of clients currently connected to the daemon.
 * `getConfigChanged` - has the lab configuration changed?
-* `getConfiguredList` - The list of {agentnum} that are currently configured.
-* `getDaemonProtocols` - The set of protocols supported by the Simulator.
 * `getDelay` - one-way transit delay in msec.
 * `getDrops` - drop rate (every N-th PDU). 0 means no drops.
 * `getHost` - host address of the agent.
-* `getInfo` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
 * `getInformTimeout` - timeout in seconds for retransmitting INFORM PDUs.
-* `getInstances` - Display the MIB object instances for the specified object.
 * `getInterface` - network interface card for the agent.
-* `getInterfaces` - The set of network interfaces that can be used for simulations.
-* `getLast` - The last configured agent instance.
-* `getLog` - The current log file for the Simulator.
 * `getMask` - subnet mask of the agent.
-* `getMax` - The maximum number of agent instances.
-* `getMib` - Return the MIB that defines the specified object.
 * `getMibs` - set of MIBs, simulations and scenarios
-* `getName` - Return the symbolic name of the specified object identifier.
-* `getNetaddr` - The network address of the host where the MIMIC simulator is running.
-* `getNetdev` - The default network device to be used for agent addresses.
 * `getNumberStarts` - number of starts for the agent.
-* `getObjects` - Display the MIB objects below the current position
-* `getOid` - Return the numeric OID of the specified object.
 * `getOiddir` - MIB directory of the agent.
 * `getOwner` - owner of the agent.
 * `getPdusize` - maximum PDU size.
 * `getPort` - port number
 * `getPrivdir` - private directory of the agent.
-* `getProduct` - The product number that is licensed.
 * `getProtocols` - protocols supported by agent
 * `getReadCommunity` - read community string
-* `getReturn` - The return mode.
 * `getScen` - first scenario name
 * `getSim` - first simulation name
 * `getStarttime` - relative start time
-* `getState` - Get the state of a MIB object object.
 * `getStateChanged` - has the agent state changed?
 * `getStatistics` - current statistics of the agent instance
 * `getTrace` - SNMP PDU tracing
 * `getValidate` - SNMP SET validation policy.
-* `getValue` - Get a variable in the Value Space.
-* `getVariables` - Display the variables for the specified instance instance for the specified MIB object object
-* `getVersion` - The version of the MIMIC command interface.
 * `getWriteCommunity` - write community string
 * `halt` - Halt the current agent.
-* `listDaemonTimerScripts` - List the timer scripts currently running along with the their intervals.
 * `listIpaliases` - Lists all the additional ipaliases configured for the agent.
 * `listTimerScripts` - List the timer scripts currently running along with the their intervals.
-* `mgetInfo` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
-* `msetValue` - Set multiple variables in the Value Space.
-* `munsetValue` - Unset multiple variables in the Value Space
 * `new` - Add an agent.
 * `pauseNow` - Pause the current agent.
+* `protocolGetConfig` - Returns the protocol's configuration.
+* `reload` - Reload the current agent.
+* `resume` - Resume the current agent.
+* `save` - Save agent MIB values.
+* `setDelay` - one-way transit delay in msec
+* `setDrops` - drop rate (every N-th PDU)
+* `setHost` - host address of the agent.
+* `setInformTimeout` - timeout in seconds for retransmitting INFORM PDUs
+* `setInterface` - network interface card for the agent
+* `setMask` - subnet mask of the agent.
+* `setMibs` - set of MIBs, simulations and scenarios
+* `setOiddir` - MIB directory of the agent.
+* `setOwner` - owner of the agent
+* `setPdusize` - maximum PDU size
+* `setPort` - port number
+* `setPrivdir` - private directory of the agent.
+* `setProtocols` - protocols supported by agent as a comma-separated list
+* `setReadCommunity` - read community string
+* `setStarttime` - relative start time
+* `setTrace` - SNMP PDU tracing
+* `setValidate` - SNMP SET validation policy
+* `setWriteCommunity` - write community string
+* `start` - Start the current agent.
+* `startIpalias` - Starts an existing ipalias for the agent.
+* `statusIpalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
+* `stop` - Show the agent's primary IP address
+* `stopIpalias` - Stops an existing ipalias for the agent.
+* `trapConfigAdd` - Add a trap destination to the set of destinations.
+* `trapConfigDel` - Remove a trap destination from the set of destinations.
+* `trapConfigList` - List the set of trap destinations for this agent instance.
+* `trapList` - List the outstanding asynchronous traps for this agent instance.
+
+### COAP
+
 * `protocolCoapGetArgs` - Show the agent's COAP argument structure
 * `protocolCoapGetConfig` - Show the agent's COAP configuration
 * `protocolCoapGetStatistics` - Show the agent's COAP statistics
@@ -156,6 +153,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolCoapGetTrace` - Show the agent's COAP traffic tracing
 * `protocolCoapSetConfig` - Set the agent's COAP configuration
 * `protocolCoapSetTrace` - Set the agent's COAP traffic tracing
+
+### DHCP
+
 * `protocolDhcpGetArgs` - Show the agent's DHCP argument structure
 * `protocolDhcpGetConfig` - Show the agent's DHCP configuration
 * `protocolDhcpGetStatistics` - Show the agent's DHCP statistics
@@ -164,7 +164,51 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolDhcpParams` - Show the parameters configured by the server in its DHCP-OFFER message
 * `protocolDhcpSetConfig` - Set the agent's DHCP configuration
 * `protocolDhcpSetTrace` - Set the agent's DHCP traffic tracing
-* `protocolGetConfig` - Returns the protocol's configuration.
+
+### Daemon
+
+* `addDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+* `cfgLoad` - Load the lab configuration file file.
+* `cfgNew` - Clear the lab configuration.
+* `cfgSave` - Save the lab configuration.
+* `cfgSaveas` - Save the lab configuration in file.
+* `delDaemonTimerScript` - Remove a timer script from the execution list.
+* `getActiveDataList` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
+* `getActiveList` - The list of {agentnum} that are currently active (running or paused).
+* `getCfgFileChanged` - This predicate indicates if the currently loaded agent configuration file has changed.
+* `getCfgfile` - The currently loaded lab configuration file for the particular user.
+* `getChangedConfigList` - The list of {agentnum} for which a configurable parameter changed.
+* `getChangedStateList` - The list of {agentnum state} for which the state changed.
+* `getClients` - The number of clients currently connected to the daemon.
+* `getConfiguredList` - The list of {agentnum} that are currently configured.
+* `getDaemonProtocols` - The set of protocols supported by the Simulator.
+* `getInterfaces` - The set of network interfaces that can be used for simulations.
+* `getLast` - The last configured agent instance.
+* `getLog` - The current log file for the Simulator.
+* `getMax` - The maximum number of agent instances.
+* `getNetaddr` - The network address of the host where the MIMIC simulator is running.
+* `getNetdev` - The default network device to be used for agent addresses.
+* `getProduct` - The product number that is licensed.
+* `getReturn` - The return mode.
+* `getVersion` - The version of the MIMIC command interface.
+* `listDaemonTimerScripts` - List the timer scripts currently running along with the their intervals.
+* `mgetInfo` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
+* `setLog` - The current log file for the Simulator.
+* `setNetdev` - The network address of the host where the MIMIC simulator is running.
+* `startAllAgents` - Start MIMIC.
+* `stopAllAgents` - Stop MIMIC.
+* `storeExists` - This command can be used as a predicate to ascertain the existence of a given variable.
+* `storeGet` - Fetches the value associated with a variable.
+* `storeList` - This command will return the list of variables in the said scope.
+* `storeLreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
+* `storePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
+* `storeSave` - This operation flushes all global objects which need to be made persistent to disk.
+* `storeSet` - Set the variable store for the global storage
+* `storeUnset` - Deletes a variable which is currently defined.
+* `terminate` - Terminate the MIMIC daemon.
+
+### IPMI
+
 * `protocolIpmiGetArgs` - Show the agent's IPMI argument structure
 * `protocolIpmiGetAttr` - Show the outgoing message's attributes
 * `protocolIpmiGetConfig` - Show the agent's IPMI configuration
@@ -174,6 +218,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolIpmiSetAttr` - Set the outgoing message's attributes
 * `protocolIpmiSetConfig` - Set the agent's IPMI configuration
 * `protocolIpmiSetTrace` - Set the agent's IPMI traffic tracing
+
+### MQTT
+
 * `protocolMqttClientGetProtstate` - Show the agent's MQTT TCP connection state
 * `protocolMqttClientGetState` - Show the agent's MQTT state
 * `protocolMqttClientMessageCard` - Show the agent's current messages' cardinality
@@ -206,6 +253,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolMqttGetTrace` - Show the agent's MQTT traffic tracing
 * `protocolMqttSetConfig` - Set the agent's MQTT configuration
 * `protocolMqttSetTrace` - Set the agent's MQTT traffic tracing
+
+### NETFLOW
+
 * `protocolNetflowChangeAttr` - Change NETFLOW export attributes
 * `protocolNetflowChangeDfs` - Change NETFLOW data export interval
 * `protocolNetflowChangeTfs` - Change NETFLOW template export interval
@@ -222,6 +272,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolNetflowSetConfig` - Set the agent's NETFLOW configuration
 * `protocolNetflowSetFileName` - Swap NETFLOW configuration file
 * `protocolNetflowSetTrace` - Set the agent's NETFLOW traffic tracing
+
+### PROXY
+
 * `protocolProxyGetArgs` - Show the agent's PROXY argument structure
 * `protocolProxyGetConfig` - Show the agent's PROXY configuration
 * `protocolProxyGetStatistics` - Show the agent's PROXY statistics
@@ -235,6 +288,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolProxyPortStop` - Stop additional target
 * `protocolProxySetConfig` - Set the agent's PROXY configuration
 * `protocolProxySetTrace` - Set the agent's PROXY traffic tracing
+
+### SFLOW
+
 * `protocolSflowGetArgs` - Show the agent's SFLOW argument structure
 * `protocolSflowGetConfig` - Show the agent's SFLOW configuration
 * `protocolSflowGetStatistics` - Show the agent's SFLOW statistics
@@ -245,6 +301,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSflowResume` - Resuming traffic
 * `protocolSflowSetConfig` - Set the agent's SFLOW configuration
 * `protocolSflowSetTrace` - Set the agent's SFLOW traffic tracing
+
+### SNMPTCP
+
 * `protocolSnmptcpGetArgs` - Show the agent's SNMPTCP argument structure
 * `protocolSnmptcpGetConfig` - Show the agent's SNMPTCP configuration
 * `protocolSnmptcpGetStatistics` - Show the agent's SNMPTCP statistics
@@ -256,6 +315,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSnmptcpIpaliasList` - List all IP aliases on the agent and the simulator host
 * `protocolSnmptcpSetConfig` - Set the agent's SNMPTCP configuration
 * `protocolSnmptcpSetTrace` - Set the agent's SNMPTCP traffic tracing
+
+### SNMPv3
+
 * `protocolSnmpv3AccessAdd` - Adds a new access entry with the specified parameters.
 * `protocolSnmpv3AccessClear` - Clears all access entries.
 * `protocolSnmpv3AccessDel` - Deletes the specified access entry.
@@ -282,6 +344,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSnmpv3ViewClear` - Clears all view entries.
 * `protocolSnmpv3ViewDel` - Deletes the specified view entry.
 * `protocolSnmpv3ViewList` - Returns the current view entries as an array of strings.
+
+### SSH
+
 * `protocolSshGetArgs` - Show the agent's SSH argument structure
 * `protocolSshGetConfig` - Show the agent's SSH configuration
 * `protocolSshGetStatistics` - Show the agent's SSH statistics
@@ -293,6 +358,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSshIpaliasList` - List all IP aliases on the agent and the simulator host
 * `protocolSshSetConfig` - Set the agent's SSH configuration
 * `protocolSshSetTrace` - Set the agent's SSH traffic tracing
+
+### SYSLOG
+
 * `protocolSyslogGetArgs` - Show the agent's SYSLOG argument structure
 * `protocolSyslogGetAttr` - Show the outgoing message's attributes
 * `protocolSyslogGetConfig` - Show the agent's SYSLOG configuration
@@ -303,6 +371,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolSyslogSetAttr` - Set the outgoing message's attributes
 * `protocolSyslogSetConfig` - Set the agent's SYSLOG configuration
 * `protocolSyslogSetTrace` - Set the agent's SYSLOG traffic tracing
+
+### TELNET
+
 * `protocolTelnetConnectionLogon` - Changes the connection's current logon.
 * `protocolTelnetConnectionRequest` - Executes the command asynchronously .
 * `protocolTelnetConnectionSignal` - Triggers the asynchronous signal event with the specified signal name
@@ -323,6 +394,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTelnetServerGetUsers` - Show the agent's TELNET users
 * `protocolTelnetSetConfig` - Set the agent's TELNET configuration
 * `protocolTelnetSetTrace` - Set the agent's TELNET traffic tracing
+
+### TFTP
+
 * `protocolTftpGetArgs` - Show the agent's TFTP argument structure
 * `protocolTftpGetConfig` - Show the agent's TFTP configuration
 * `protocolTftpGetStatistics` - Show the agent's TFTP statistics
@@ -337,6 +411,9 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTftpSessionWrite` - Create a read session to upload srcfile to server
 * `protocolTftpSetConfig` - Set the agent's TFTP configuration
 * `protocolTftpSetTrace` - Set the agent's TFTP traffic tracing
+
+### TOD
+
 * `protocolTodGetArgs` - Show the agent's TOD argument structure
 * `protocolTodGetConfig` - Show the agent's TOD configuration
 * `protocolTodGetStatistics` - Show the agent's TOD statistics
@@ -345,6 +422,30 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolTodGettime` - Retrieve TOD time
 * `protocolTodSetConfig` - Set the agent's TOD configuration
 * `protocolTodSetTrace` - Set the agent's TOD traffic tracing
+
+### Valuespace
+
+* `add` - Add an entry to a table.
+* `evalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
+* `getInfo` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
+* `getInstances` - Display the MIB object instances for the specified object.
+* `getMib` - Return the MIB that defines the specified object.
+* `getName` - Return the symbolic name of the specified object identifier.
+* `getObjects` - Display the MIB objects below the current position
+* `getOid` - Return the numeric OID of the specified object.
+* `getState` - Get the state of a MIB object object.
+* `getValue` - Get a variable in the Value Space.
+* `getVariables` - Display the variables for the specified instance instance for the specified MIB object object
+* `msetValue` - Set multiple variables in the Value Space.
+* `munsetValue` - Unset multiple variables in the Value Space
+* `remove` - Remove an entry from a table.
+* `setState` - Set the state of a MIB object object
+* `setValue` - Set a variable in the Value Space.
+* `splitOid` - Split the numerical OID into the object OID and instance OID.
+* `unsetValue` - Unset a variable in the Value Space in order to free its memory.
+
+### WEB
+
 * `protocolWebGetArgs` - Show the agent's WEB argument structure
 * `protocolWebGetConfig` - Show the agent's WEB configuration
 * `protocolWebGetStatistics` - Show the agent's WEB statistics
@@ -358,54 +459,6 @@ sdk.sdk.accessAdd(req).then((res: AccessAddResponse | AxiosError) => {
 * `protocolWebPortStop` - Stop the agent's WEB port
 * `protocolWebSetConfig` - Set the agent's WEB configuration
 * `protocolWebSetTrace` - Set the agent's WEB traffic tracing
-* `reload` - Reload the current agent.
-* `remove` - Remove an entry from a table.
-* `resume` - Resume the current agent.
-* `save` - Save agent MIB values.
-* `setDelay` - one-way transit delay in msec
-* `setDrops` - drop rate (every N-th PDU)
-* `setHost` - host address of the agent.
-* `setInformTimeout` - timeout in seconds for retransmitting INFORM PDUs
-* `setInterface` - network interface card for the agent
-* `setLog` - The current log file for the Simulator.
-* `setMask` - subnet mask of the agent.
-* `setMibs` - set of MIBs, simulations and scenarios
-* `setNetdev` - The network address of the host where the MIMIC simulator is running.
-* `setOiddir` - MIB directory of the agent.
-* `setOwner` - owner of the agent
-* `setPdusize` - maximum PDU size
-* `setPort` - port number
-* `setPrivdir` - private directory of the agent.
-* `setProtocols` - protocols supported by agent as a comma-separated list
-* `setReadCommunity` - read community string
-* `setStarttime` - relative start time
-* `setState` - Set the state of a MIB object object
-* `setTrace` - SNMP PDU tracing
-* `setValidate` - SNMP SET validation policy
-* `setValue` - Set a variable in the Value Space.
-* `setWriteCommunity` - write community string
-* `splitOid` - Split the numerical OID into the object OID and instance OID.
-* `start` - Start the current agent.
-* `startAllAgents` - Start MIMIC.
-* `startIpalias` - Starts an existing ipalias for the agent.
-* `statusIpalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
-* `stop` - Show the agent's primary IP address
-* `stopAllAgents` - Stop MIMIC.
-* `stopIpalias` - Stops an existing ipalias for the agent.
-* `storeExists` - This command can be used as a predicate to ascertain the existence of a given variable.
-* `storeGet` - Fetches the value associated with a variable.
-* `storeList` - This command will return the list of variables in the said scope.
-* `storeLreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
-* `storePersists` - This command can be used as a predicate to ascertain the persistence of a given variable.
-* `storeSave` - This operation flushes all global objects which need to be made persistent to disk.
-* `storeSet` - Set the variable store for the global storage
-* `storeUnset` - Deletes a variable which is currently defined.
-* `terminate` - Terminate the MIMIC daemon.
-* `trapConfigAdd` - Add a trap destination to the set of destinations.
-* `trapConfigDel` - Remove a trap destination from the set of destinations.
-* `trapConfigList` - List the set of trap destinations for this agent instance.
-* `trapList` - List the outstanding asynchronous traps for this agent instance.
-* `unsetValue` - Unset a variable in the Value Space in order to free its memory.
 
 <!-- End SDK Available Operations -->
 

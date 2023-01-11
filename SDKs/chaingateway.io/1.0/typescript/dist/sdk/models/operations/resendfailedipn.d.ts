@@ -10,5 +10,5 @@ export declare class ResendFailedIpnRequest extends SpeakeasyBase {
 export declare class ResendFailedIpnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    resendFailedIpn?: shared.ResendFailedIpn;
+    resendFailedIPN?: shared.ResendFailedIpn;
 }

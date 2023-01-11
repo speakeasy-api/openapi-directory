@@ -9,5 +9,5 @@ import { ChannelResponse } from "./channelresponse";
 **/
 export class ChannelsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Channels", elemType: ChannelResponse })
-  channels: Map<string, ChannelResponse>;
+  channels: Record<string, ChannelResponse>;
 }

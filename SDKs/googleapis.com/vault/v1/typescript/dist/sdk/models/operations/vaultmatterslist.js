@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,179 +14,204 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var VaultMattersListStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VaultMattersListResponse = exports.VaultMattersListRequest = exports.VaultMattersListSecurity = exports.VaultMattersListSecurityOption2 = exports.VaultMattersListSecurityOption1 = exports.VaultMattersListQueryParams = exports.VaultMattersListViewEnum = exports.VaultMattersListStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var VaultMattersListStateEnum;
 (function (VaultMattersListStateEnum) {
     VaultMattersListStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     VaultMattersListStateEnum["Open"] = "OPEN";
     VaultMattersListStateEnum["Closed"] = "CLOSED";
     VaultMattersListStateEnum["Deleted"] = "DELETED";
-})(VaultMattersListStateEnum || (VaultMattersListStateEnum = {}));
-export var VaultMattersListViewEnum;
+})(VaultMattersListStateEnum = exports.VaultMattersListStateEnum || (exports.VaultMattersListStateEnum = {}));
+var VaultMattersListViewEnum;
 (function (VaultMattersListViewEnum) {
     VaultMattersListViewEnum["ViewUnspecified"] = "VIEW_UNSPECIFIED";
     VaultMattersListViewEnum["Basic"] = "BASIC";
     VaultMattersListViewEnum["Full"] = "FULL";
-})(VaultMattersListViewEnum || (VaultMattersListViewEnum = {}));
+})(VaultMattersListViewEnum = exports.VaultMattersListViewEnum || (exports.VaultMattersListViewEnum = {}));
 var VaultMattersListQueryParams = /** @class */ (function (_super) {
     __extends(VaultMattersListQueryParams, _super);
     function VaultMattersListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], VaultMattersListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], VaultMattersListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=state" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "uploadProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=view" }),
         __metadata("design:type", String)
     ], VaultMattersListQueryParams.prototype, "view", void 0);
     return VaultMattersListQueryParams;
-}(SpeakeasyBase));
-export { VaultMattersListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListQueryParams = VaultMattersListQueryParams;
 var VaultMattersListSecurityOption1 = /** @class */ (function (_super) {
     __extends(VaultMattersListSecurityOption1, _super);
     function VaultMattersListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], VaultMattersListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], VaultMattersListSecurityOption1.prototype, "oauth2c", void 0);
     return VaultMattersListSecurityOption1;
-}(SpeakeasyBase));
-export { VaultMattersListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListSecurityOption1 = VaultMattersListSecurityOption1;
 var VaultMattersListSecurityOption2 = /** @class */ (function (_super) {
     __extends(VaultMattersListSecurityOption2, _super);
     function VaultMattersListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], VaultMattersListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], VaultMattersListSecurityOption2.prototype, "oauth2c", void 0);
     return VaultMattersListSecurityOption2;
-}(SpeakeasyBase));
-export { VaultMattersListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListSecurityOption2 = VaultMattersListSecurityOption2;
 var VaultMattersListSecurity = /** @class */ (function (_super) {
     __extends(VaultMattersListSecurity, _super);
     function VaultMattersListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", VaultMattersListSecurityOption1)
     ], VaultMattersListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", VaultMattersListSecurityOption2)
     ], VaultMattersListSecurity.prototype, "option2", void 0);
     return VaultMattersListSecurity;
-}(SpeakeasyBase));
-export { VaultMattersListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListSecurity = VaultMattersListSecurity;
 var VaultMattersListRequest = /** @class */ (function (_super) {
     __extends(VaultMattersListRequest, _super);
     function VaultMattersListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VaultMattersListQueryParams)
     ], VaultMattersListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VaultMattersListSecurity)
     ], VaultMattersListRequest.prototype, "security", void 0);
     return VaultMattersListRequest;
-}(SpeakeasyBase));
-export { VaultMattersListRequest };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListRequest = VaultMattersListRequest;
 var VaultMattersListResponse = /** @class */ (function (_super) {
     __extends(VaultMattersListResponse, _super);
     function VaultMattersListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VaultMattersListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListMattersResponse)
     ], VaultMattersListResponse.prototype, "listMattersResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VaultMattersListResponse.prototype, "statusCode", void 0);
     return VaultMattersListResponse;
-}(SpeakeasyBase));
-export { VaultMattersListResponse };
+}(utils_1.SpeakeasyBase));
+exports.VaultMattersListResponse = VaultMattersListResponse;

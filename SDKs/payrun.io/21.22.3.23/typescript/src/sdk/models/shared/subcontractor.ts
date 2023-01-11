@@ -116,7 +116,7 @@ export class SubContractorSubContractor extends SpeakeasyBase {
   lastName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MiddleName" })
   middleName?: string;

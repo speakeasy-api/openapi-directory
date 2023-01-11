@@ -31,5 +31,5 @@ export declare class EndpointGetRecentlyPlayedResponse extends SpeakeasyBase {
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetRecentlyPlayed200ApplicationJsonObject?: EndpointGetRecentlyPlayed200ApplicationJson;
+    endpointGetRecentlyPlayed200ApplicationJSONObject?: EndpointGetRecentlyPlayed200ApplicationJson;
 }

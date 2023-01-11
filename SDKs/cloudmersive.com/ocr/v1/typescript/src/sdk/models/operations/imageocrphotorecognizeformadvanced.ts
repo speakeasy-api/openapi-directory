@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class ImageOcrPhotoRecognizeFormAdvancedHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=bucketID" })
-  bucketId?: string;
+  bucketID?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=bucketSecretKey" })
   bucketSecretKey?: string;

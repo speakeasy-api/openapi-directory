@@ -8,7 +8,7 @@ export declare class DeleteWebhookQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeleteWebhook200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeleteWebhookRequest extends SpeakeasyBase {
     pathParams: DeleteWebhookPathParams;
@@ -18,5 +18,5 @@ export declare class DeleteWebhookResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deleteWebhook200ApplicationJsonObject?: DeleteWebhook200ApplicationJson;
+    deleteWebhook200ApplicationJSONObject?: DeleteWebhook200ApplicationJson;
 }

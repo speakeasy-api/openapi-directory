@@ -8,6 +8,9 @@ export declare enum TimePeriodCompactPeriodEnum {
     Q3 = "Q3",
     Q4 = "Q4"
 }
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export declare class TimePeriodCompact extends SpeakeasyBase {
     endOn?: string;
     gid?: string;

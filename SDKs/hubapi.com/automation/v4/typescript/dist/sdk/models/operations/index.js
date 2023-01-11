@@ -1,16 +1,32 @@
-export * from "./deleteautomationv4actionsappiddefinitionidarchive";
-export * from "./deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypearchivebyfunctiontype";
-export * from "./deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidarchive";
-export * from "./getautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidgetbyid";
-export * from "./getautomationv4actionsappiddefinitionidfunctionsfunctiontypegetbyfunctiontype";
-export * from "./getautomationv4actionsappiddefinitionidfunctionsgetpage";
-export * from "./getautomationv4actionsappiddefinitionidgetbyid";
-export * from "./getautomationv4actionsappiddefinitionidrevisionsgetpage";
-export * from "./getautomationv4actionsappiddefinitionidrevisionsrevisionidgetbyid";
-export * from "./getautomationv4actionsappidgetpage";
-export * from "./patchautomationv4actionsappiddefinitionidupdate";
-export * from "./postautomationv4actionsappidcreate";
-export * from "./postautomationv4actionscallbackscallbackidcompletecomplete";
-export * from "./postautomationv4actionscallbackscompletecompletebatch";
-export * from "./putautomationv4actionsappiddefinitionidfunctionsfunctiontypecreateorreplacebyfunctiontype";
-export * from "./putautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidcreateorreplace";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deleteautomationv4actionsappiddefinitionidarchive"), exports);
+__exportStar(require("./deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypearchivebyfunctiontype"), exports);
+__exportStar(require("./deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidarchive"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidgetbyid"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidfunctionsfunctiontypegetbyfunctiontype"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidfunctionsgetpage"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidgetbyid"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidrevisionsgetpage"), exports);
+__exportStar(require("./getautomationv4actionsappiddefinitionidrevisionsrevisionidgetbyid"), exports);
+__exportStar(require("./getautomationv4actionsappidgetpage"), exports);
+__exportStar(require("./patchautomationv4actionsappiddefinitionidupdate"), exports);
+__exportStar(require("./postautomationv4actionsappidcreate"), exports);
+__exportStar(require("./postautomationv4actionscallbackscallbackidcompletecomplete"), exports);
+__exportStar(require("./postautomationv4actionscallbackscompletecompletebatch"), exports);
+__exportStar(require("./putautomationv4actionsappiddefinitionidfunctionsfunctiontypecreateorreplacebyfunctiontype"), exports);
+__exportStar(require("./putautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidcreateorreplace"), exports);

@@ -22,7 +22,7 @@ export class ServiceOffering extends SpeakeasyBase {
   documentationUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extra" })
-  extra?: Map<string, any>;
+  extra?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

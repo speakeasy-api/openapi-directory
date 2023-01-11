@@ -1,8 +1,11 @@
-export var ContainerInstanceStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerInstanceStatusEnum = void 0;
+var ContainerInstanceStatusEnum;
 (function (ContainerInstanceStatusEnum) {
     ContainerInstanceStatusEnum["Active"] = "ACTIVE";
     ContainerInstanceStatusEnum["Draining"] = "DRAINING";
     ContainerInstanceStatusEnum["Registering"] = "REGISTERING";
     ContainerInstanceStatusEnum["Deregistering"] = "DEREGISTERING";
     ContainerInstanceStatusEnum["RegistrationFailed"] = "REGISTRATION_FAILED";
-})(ContainerInstanceStatusEnum || (ContainerInstanceStatusEnum = {}));
+})(ContainerInstanceStatusEnum = exports.ContainerInstanceStatusEnum || (exports.ContainerInstanceStatusEnum = {}));

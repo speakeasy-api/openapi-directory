@@ -16,5 +16,5 @@ export declare class WkhtmltopdfFromUrlGetResponse extends SpeakeasyBase {
     apiResponseSuccess?: shared.ApiResponseSuccess;
     contentType: string;
     statusCode: number;
-    wkhtmltopdfFromUrlGet200ApplicationPdfBinaryString?: Uint8Array;
+    wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString?: Uint8Array;
 }

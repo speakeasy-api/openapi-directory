@@ -1,12 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssociationStatus } from "./associationstatus";
 
+
+
+// AssociateClientVpnTargetNetworkResultStatus
+/** 
+ * The current state of the target network association.
+**/
+export class AssociateClientVpnTargetNetworkResultStatus extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
 
 
 export class AssociateClientVpnTargetNetworkResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associationId?: string;
+  associationId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: AssociationStatus;
+  status?: AssociateClientVpnTargetNetworkResultStatus;
 }

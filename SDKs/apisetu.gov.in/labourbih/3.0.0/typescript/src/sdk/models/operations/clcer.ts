@@ -188,23 +188,23 @@ export class ClcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  clcer400ApplicationJsonObject?: Clcer400ApplicationJson;
+  clcer400ApplicationJSONObject?: Clcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer401ApplicationJsonObject?: Clcer401ApplicationJson;
+  clcer401ApplicationJSONObject?: Clcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer404ApplicationJsonObject?: Clcer404ApplicationJson;
+  clcer404ApplicationJSONObject?: Clcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer500ApplicationJsonObject?: Clcer500ApplicationJson;
+  clcer500ApplicationJSONObject?: Clcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer502ApplicationJsonObject?: Clcer502ApplicationJson;
+  clcer502ApplicationJSONObject?: Clcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer503ApplicationJsonObject?: Clcer503ApplicationJson;
+  clcer503ApplicationJSONObject?: Clcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  clcer504ApplicationJsonObject?: Clcer504ApplicationJson;
+  clcer504ApplicationJSONObject?: Clcer504ApplicationJson;
 }

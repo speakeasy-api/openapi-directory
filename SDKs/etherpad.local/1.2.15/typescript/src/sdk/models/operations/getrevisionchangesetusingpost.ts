@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetRevisionChangesetUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -16,7 +16,7 @@ export class GetRevisionChangesetUsingPost200ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class GetRevisionChangesetUsingPost400ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class GetRevisionChangesetUsingPost401ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class GetRevisionChangesetUsingPost500ApplicationJson extends SpeakeasyBa
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class GetRevisionChangesetUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRevisionChangesetUsingPost200ApplicationJsonObject?: GetRevisionChangesetUsingPost200ApplicationJson;
+  getRevisionChangesetUsingPOST200ApplicationJSONObject?: GetRevisionChangesetUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionChangesetUsingPost400ApplicationJsonObject?: GetRevisionChangesetUsingPost400ApplicationJson;
+  getRevisionChangesetUsingPOST400ApplicationJSONObject?: GetRevisionChangesetUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionChangesetUsingPost401ApplicationJsonObject?: GetRevisionChangesetUsingPost401ApplicationJson;
+  getRevisionChangesetUsingPOST401ApplicationJSONObject?: GetRevisionChangesetUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRevisionChangesetUsingPost500ApplicationJsonObject?: GetRevisionChangesetUsingPost500ApplicationJson;
+  getRevisionChangesetUsingPOST500ApplicationJSONObject?: GetRevisionChangesetUsingPost500ApplicationJson;
 }

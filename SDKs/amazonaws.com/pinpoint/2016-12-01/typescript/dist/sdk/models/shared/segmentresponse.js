@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SegmentDimensions } from "./segmentdimensions";
-import { SegmentImportResource } from "./segmentimportresource";
-import { SegmentGroupList } from "./segmentgrouplist";
-import { SegmentTypeEnum } from "./segmenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var segmentdimensions_1 = require("./segmentdimensions");
+var segmentimportresource_1 = require("./segmentimportresource");
+var segmentgrouplist_1 = require("./segmentgrouplist");
+var segmenttypeenum_1 = require("./segmenttypeenum");
 // SegmentResponse
 /**
  * Provides information about the configuration, dimension, and other settings for a segment.
@@ -37,53 +40,53 @@ var SegmentResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions" }),
-        __metadata("design:type", SegmentDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions" }),
+        __metadata("design:type", segmentdimensions_1.SegmentDimensions)
     ], SegmentResponse.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportDefinition" }),
-        __metadata("design:type", SegmentImportResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportDefinition" }),
+        __metadata("design:type", segmentimportresource_1.SegmentImportResource)
     ], SegmentResponse.prototype, "importDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentGroups" }),
-        __metadata("design:type", SegmentGroupList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentGroups" }),
+        __metadata("design:type", segmentgrouplist_1.SegmentGroupList)
     ], SegmentResponse.prototype, "segmentGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentType" }),
         __metadata("design:type", String)
     ], SegmentResponse.prototype, "segmentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], SegmentResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], SegmentResponse.prototype, "tags", void 0);
     return SegmentResponse;
-}(SpeakeasyBase));
-export { SegmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.SegmentResponse = SegmentResponse;

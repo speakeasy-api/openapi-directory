@@ -11,7 +11,7 @@ export declare class AddFollowersForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskAddFollowersRequest;
 }
 export declare class AddFollowersForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddFollowersForTaskRequest extends SpeakeasyBase {
     pathParams: AddFollowersForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class AddFollowersForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addFollowersForTask200ApplicationJsonObject?: AddFollowersForTask200ApplicationJson;
+    addFollowersForTask200ApplicationJSONObject?: AddFollowersForTask200ApplicationJson;
 }

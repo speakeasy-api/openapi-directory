@@ -17,6 +17,6 @@ export declare class GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest extends
 export declare class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    snippetCommit?: Map<string, any>;
+    error?: Record<string, any>;
+    snippetCommit?: Record<string, any>;
 }

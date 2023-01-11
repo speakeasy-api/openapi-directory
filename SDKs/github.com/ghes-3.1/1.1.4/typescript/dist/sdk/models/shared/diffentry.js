@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiffEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // DiffEntry
 /**
  * Diff Entry
@@ -33,49 +36,49 @@ var DiffEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additions" }),
         __metadata("design:type", Number)
     ], DiffEntry.prototype, "additions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_url" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "blobUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changes" }),
         __metadata("design:type", Number)
     ], DiffEntry.prototype, "changes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents_url" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "contentsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletions" }),
         __metadata("design:type", Number)
     ], DiffEntry.prototype, "deletions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patch" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "patch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_filename" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "previousFilename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_url" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "rawUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DiffEntry.prototype, "status", void 0);
     return DiffEntry;
-}(SpeakeasyBase));
-export { DiffEntry };
+}(utils_1.SpeakeasyBase));
+exports.DiffEntry = DiffEntry;

@@ -23,7 +23,7 @@ export declare class PutSuppressedDestinationRequest extends SpeakeasyBase {
 export declare class PutSuppressedDestinationResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    putSuppressedDestinationResponse?: Map<string, any>;
+    putSuppressedDestinationResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

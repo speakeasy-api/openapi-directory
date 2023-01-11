@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Simple User
+**/
 export declare class DeploymentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -31,8 +34,8 @@ export declare class Deployment extends SpeakeasyBase {
     id: number;
     nodeId: string;
     originalEnvironment?: string;
-    payload: Map<string, any>;
-    performedViaGithubApp?: Map<string, any>;
+    payload: Record<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     productionEnvironment?: boolean;
     ref: string;
     repositoryUrl: string;

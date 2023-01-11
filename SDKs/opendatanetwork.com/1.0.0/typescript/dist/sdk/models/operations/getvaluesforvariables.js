@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetValuesForVariablesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetValuesForVariablesResponse = exports.GetValuesForVariablesRequest = exports.GetValuesForVariablesHeaders = exports.GetValuesForVariablesQueryParams = exports.GetValuesForVariablesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetValuesForVariablesFormatEnum;
 (function (GetValuesForVariablesFormatEnum) {
     GetValuesForVariablesFormatEnum["Google"] = "google";
-})(GetValuesForVariablesFormatEnum || (GetValuesForVariablesFormatEnum = {}));
+})(GetValuesForVariablesFormatEnum = exports.GetValuesForVariablesFormatEnum || (exports.GetValuesForVariablesFormatEnum = {}));
 var GetValuesForVariablesQueryParams = /** @class */ (function (_super) {
     __extends(GetValuesForVariablesQueryParams, _super);
     function GetValuesForVariablesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], GetValuesForVariablesQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=describe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=describe" }),
         __metadata("design:type", Boolean)
     ], GetValuesForVariablesQueryParams.prototype, "describe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], GetValuesForVariablesQueryParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=forecast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=forecast" }),
         __metadata("design:type", Number)
     ], GetValuesForVariablesQueryParams.prototype, "forecast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetValuesForVariablesQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=variable" }),
         __metadata("design:type", String)
     ], GetValuesForVariablesQueryParams.prototype, "variable", void 0);
     return GetValuesForVariablesQueryParams;
-}(SpeakeasyBase));
-export { GetValuesForVariablesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetValuesForVariablesQueryParams = GetValuesForVariablesQueryParams;
 var GetValuesForVariablesHeaders = /** @class */ (function (_super) {
     __extends(GetValuesForVariablesHeaders, _super);
     function GetValuesForVariablesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], GetValuesForVariablesHeaders.prototype, "xAppToken", void 0);
     return GetValuesForVariablesHeaders;
-}(SpeakeasyBase));
-export { GetValuesForVariablesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetValuesForVariablesHeaders = GetValuesForVariablesHeaders;
 var GetValuesForVariablesRequest = /** @class */ (function (_super) {
     __extends(GetValuesForVariablesRequest, _super);
     function GetValuesForVariablesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetValuesForVariablesQueryParams)
     ], GetValuesForVariablesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetValuesForVariablesHeaders)
     ], GetValuesForVariablesRequest.prototype, "headers", void 0);
     return GetValuesForVariablesRequest;
-}(SpeakeasyBase));
-export { GetValuesForVariablesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetValuesForVariablesRequest = GetValuesForVariablesRequest;
 var GetValuesForVariablesResponse = /** @class */ (function (_super) {
     __extends(GetValuesForVariablesResponse, _super);
     function GetValuesForVariablesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetValuesForVariablesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetValuesForVariablesResponse.prototype, "statusCode", void 0);
     return GetValuesForVariablesResponse;
-}(SpeakeasyBase));
-export { GetValuesForVariablesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetValuesForVariablesResponse = GetValuesForVariablesResponse;

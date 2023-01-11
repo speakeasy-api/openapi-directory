@@ -191,23 +191,23 @@ export class NtltrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ntltr400ApplicationJsonObject?: Ntltr400ApplicationJson;
+  ntltr400ApplicationJSONObject?: Ntltr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr401ApplicationJsonObject?: Ntltr401ApplicationJson;
+  ntltr401ApplicationJSONObject?: Ntltr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr404ApplicationJsonObject?: Ntltr404ApplicationJson;
+  ntltr404ApplicationJSONObject?: Ntltr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr500ApplicationJsonObject?: Ntltr500ApplicationJson;
+  ntltr500ApplicationJSONObject?: Ntltr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr502ApplicationJsonObject?: Ntltr502ApplicationJson;
+  ntltr502ApplicationJSONObject?: Ntltr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr503ApplicationJsonObject?: Ntltr503ApplicationJson;
+  ntltr503ApplicationJSONObject?: Ntltr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ntltr504ApplicationJsonObject?: Ntltr504ApplicationJson;
+  ntltr504ApplicationJSONObject?: Ntltr504ApplicationJson;
 }

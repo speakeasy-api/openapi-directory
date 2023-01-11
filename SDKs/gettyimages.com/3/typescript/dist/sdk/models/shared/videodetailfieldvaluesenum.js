@@ -1,4 +1,7 @@
-export var VideoDetailFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoDetailFieldValuesEnum = void 0;
+var VideoDetailFieldValuesEnum;
 (function (VideoDetailFieldValuesEnum) {
     VideoDetailFieldValuesEnum["Id"] = "id";
     VideoDetailFieldValuesEnum["AllowedUse"] = "allowed_use";
@@ -41,4 +44,4 @@ export var VideoDetailFieldValuesEnum;
     VideoDetailFieldValuesEnum["SummarySet"] = "summary_set";
     VideoDetailFieldValuesEnum["Thumb"] = "thumb";
     VideoDetailFieldValuesEnum["Title"] = "title";
-})(VideoDetailFieldValuesEnum || (VideoDetailFieldValuesEnum = {}));
+})(VideoDetailFieldValuesEnum = exports.VideoDetailFieldValuesEnum || (exports.VideoDetailFieldValuesEnum = {}));

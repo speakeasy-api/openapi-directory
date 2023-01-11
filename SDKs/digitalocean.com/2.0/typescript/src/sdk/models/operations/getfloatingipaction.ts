@@ -1,50 +1,51 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetFloatingIpActionPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=action_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=action_id" })
   actionId: number;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=floating_ip" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=floating_ip" })
   floatingIp: string;
 }
 
 
-export class GetFloatingIpActionRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetFloatingIpActionPathParams;
-}
-
-
 export class GetFloatingIpAction401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetFloatingIpActionRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetFloatingIpActionPathParams;
+}
+
+
 export class GetFloatingIpActionResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getFloatingIpAction200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  getFloatingIpAction200ApplicationJSONAny?: any;
 
-  @Metadata()
-  getFloatingIpAction401ApplicationJsonObject?: GetFloatingIpAction401ApplicationJson;
+  @SpeakeasyMetadata()
+  getFloatingIpAction401ApplicationJSONObject?: GetFloatingIpAction401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

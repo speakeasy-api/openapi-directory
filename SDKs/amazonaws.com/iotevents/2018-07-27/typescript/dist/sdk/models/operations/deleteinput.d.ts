@@ -17,7 +17,7 @@ export declare class DeleteInputRequest extends SpeakeasyBase {
 }
 export declare class DeleteInputResponse extends SpeakeasyBase {
     contentType: string;
-    deleteInputResponse?: Map<string, any>;
+    deleteInputResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceInUseException?: any;

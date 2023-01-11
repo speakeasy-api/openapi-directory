@@ -48,7 +48,7 @@ export class DeleteAppLaunchConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAppLaunchConfigurationResponse?: Map<string, any>;
+  deleteAppLaunchConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalError?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListAttachedGroupPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListAttachedGroupPoliciesResponse = exports.GetListAttachedGroupPoliciesRequest = exports.GetListAttachedGroupPoliciesHeaders = exports.GetListAttachedGroupPoliciesQueryParams = exports.GetListAttachedGroupPoliciesVersionEnum = exports.GetListAttachedGroupPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListAttachedGroupPoliciesActionEnum;
 (function (GetListAttachedGroupPoliciesActionEnum) {
     GetListAttachedGroupPoliciesActionEnum["ListAttachedGroupPolicies"] = "ListAttachedGroupPolicies";
-})(GetListAttachedGroupPoliciesActionEnum || (GetListAttachedGroupPoliciesActionEnum = {}));
-export var GetListAttachedGroupPoliciesVersionEnum;
+})(GetListAttachedGroupPoliciesActionEnum = exports.GetListAttachedGroupPoliciesActionEnum || (exports.GetListAttachedGroupPoliciesActionEnum = {}));
+var GetListAttachedGroupPoliciesVersionEnum;
 (function (GetListAttachedGroupPoliciesVersionEnum) {
     GetListAttachedGroupPoliciesVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetListAttachedGroupPoliciesVersionEnum || (GetListAttachedGroupPoliciesVersionEnum = {}));
+})(GetListAttachedGroupPoliciesVersionEnum = exports.GetListAttachedGroupPoliciesVersionEnum || (exports.GetListAttachedGroupPoliciesVersionEnum = {}));
 var GetListAttachedGroupPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(GetListAttachedGroupPoliciesQueryParams, _super);
     function GetListAttachedGroupPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=GroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=GroupName" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PathPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PathPrefix" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "pathPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesQueryParams.prototype, "version", void 0);
     return GetListAttachedGroupPoliciesQueryParams;
-}(SpeakeasyBase));
-export { GetListAttachedGroupPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListAttachedGroupPoliciesQueryParams = GetListAttachedGroupPoliciesQueryParams;
 var GetListAttachedGroupPoliciesHeaders = /** @class */ (function (_super) {
     __extends(GetListAttachedGroupPoliciesHeaders, _super);
     function GetListAttachedGroupPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListAttachedGroupPoliciesHeaders;
-}(SpeakeasyBase));
-export { GetListAttachedGroupPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListAttachedGroupPoliciesHeaders = GetListAttachedGroupPoliciesHeaders;
 var GetListAttachedGroupPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetListAttachedGroupPoliciesRequest, _super);
     function GetListAttachedGroupPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListAttachedGroupPoliciesQueryParams)
     ], GetListAttachedGroupPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListAttachedGroupPoliciesHeaders)
     ], GetListAttachedGroupPoliciesRequest.prototype, "headers", void 0);
     return GetListAttachedGroupPoliciesRequest;
-}(SpeakeasyBase));
-export { GetListAttachedGroupPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListAttachedGroupPoliciesRequest = GetListAttachedGroupPoliciesRequest;
 var GetListAttachedGroupPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetListAttachedGroupPoliciesResponse, _super);
     function GetListAttachedGroupPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListAttachedGroupPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListAttachedGroupPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListAttachedGroupPoliciesResponse.prototype, "statusCode", void 0);
     return GetListAttachedGroupPoliciesResponse;
-}(SpeakeasyBase));
-export { GetListAttachedGroupPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListAttachedGroupPoliciesResponse = GetListAttachedGroupPoliciesResponse;

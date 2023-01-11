@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OAuth2Permission = void 0;
+var utils_1 = require("../../../internal/utils");
 // OAuth2Permission
 /**
  * Represents an OAuth 2.0 delegated permission scope. The specified OAuth 2.0 delegated permission scopes may be requested by client applications (through the requiredResourceAccess collection on the Application object) when calling a resource application. The oauth2Permissions property of the ServicePrincipal entity and of the Application entity is a collection of OAuth2Permission.
@@ -33,37 +36,37 @@ var OAuth2Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminConsentDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminConsentDescription" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "adminConsentDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminConsentDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminConsentDisplayName" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "adminConsentDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEnabled" }),
         __metadata("design:type", Boolean)
     ], OAuth2Permission.prototype, "isEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userConsentDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userConsentDescription" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "userConsentDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userConsentDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userConsentDisplayName" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "userConsentDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], OAuth2Permission.prototype, "value", void 0);
     return OAuth2Permission;
-}(SpeakeasyBase));
-export { OAuth2Permission };
+}(utils_1.SpeakeasyBase));
+exports.OAuth2Permission = OAuth2Permission;

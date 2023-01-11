@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TypedAttributeValue } from "./typedattributevalue";
-import { RequiredAttributeBehaviorEnum } from "./requiredattributebehaviorenum";
-import { Rule } from "./rule";
-import { FacetAttributeTypeEnum } from "./facetattributetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedLinkAttributeDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var typedattributevalue_1 = require("./typedattributevalue");
+var requiredattributebehaviorenum_1 = require("./requiredattributebehaviorenum");
+var rule_1 = require("./rule");
+var facetattributetypeenum_1 = require("./facetattributetypeenum");
 // TypedLinkAttributeDefinition
 /**
  * A typed link attribute definition.
@@ -37,29 +40,29 @@ var TypedLinkAttributeDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultValue" }),
-        __metadata("design:type", TypedAttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultValue" }),
+        __metadata("design:type", typedattributevalue_1.TypedAttributeValue)
     ], TypedLinkAttributeDefinition.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsImmutable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsImmutable" }),
         __metadata("design:type", Boolean)
     ], TypedLinkAttributeDefinition.prototype, "isImmutable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], TypedLinkAttributeDefinition.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequiredBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequiredBehavior" }),
         __metadata("design:type", String)
     ], TypedLinkAttributeDefinition.prototype, "requiredBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rules", elemType: Rule }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rules", elemType: rule_1.Rule }),
+        __metadata("design:type", Object)
     ], TypedLinkAttributeDefinition.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], TypedLinkAttributeDefinition.prototype, "type", void 0);
     return TypedLinkAttributeDefinition;
-}(SpeakeasyBase));
-export { TypedLinkAttributeDefinition };
+}(utils_1.SpeakeasyBase));
+exports.TypedLinkAttributeDefinition = TypedLinkAttributeDefinition;

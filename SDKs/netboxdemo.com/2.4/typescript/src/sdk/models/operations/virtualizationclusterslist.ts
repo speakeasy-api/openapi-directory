@@ -71,5 +71,5 @@ export class VirtualizationClustersListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  virtualizationClustersList200ApplicationJsonObject?: VirtualizationClustersList200ApplicationJson;
+  virtualizationClustersList200ApplicationJSONObject?: VirtualizationClustersList200ApplicationJson;
 }

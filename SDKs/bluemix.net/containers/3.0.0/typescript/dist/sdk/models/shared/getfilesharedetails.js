@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Fileshare } from "./fileshare";
-import { FileshareUsage } from "./fileshareusage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFileshareDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileshare_1 = require("./fileshare");
+var fileshareusage_1 = require("./fileshareusage");
 var GetFileshareDetails = /** @class */ (function (_super) {
     __extends(GetFileshareDetails, _super);
     function GetFileshareDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fs", elemType: Fileshare }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fs", elemType: fileshare_1.Fileshare }),
         __metadata("design:type", Array)
     ], GetFileshareDetails.prototype, "fs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fsUsage", elemType: FileshareUsage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fsUsage", elemType: fileshareusage_1.FileshareUsage }),
         __metadata("design:type", Array)
     ], GetFileshareDetails.prototype, "fsUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volnames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volnames" }),
         __metadata("design:type", Array)
     ], GetFileshareDetails.prototype, "volnames", void 0);
     return GetFileshareDetails;
-}(SpeakeasyBase));
-export { GetFileshareDetails };
+}(utils_1.SpeakeasyBase));
+exports.GetFileshareDetails = GetFileshareDetails;

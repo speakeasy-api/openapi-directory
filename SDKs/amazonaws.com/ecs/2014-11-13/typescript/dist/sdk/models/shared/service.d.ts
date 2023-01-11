@@ -26,7 +26,7 @@ export declare class Service extends SpeakeasyBase {
     deploymentController?: DeploymentController;
     deployments?: Deployment[];
     desiredCount?: number;
-    enableEcsManagedTags?: boolean;
+    enableECSManagedTags?: boolean;
     enableExecuteCommand?: boolean;
     events?: ServiceEvent[];
     healthCheckGracePeriodSeconds?: number;

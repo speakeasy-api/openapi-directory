@@ -48,7 +48,7 @@ export class CreateBgpPeerResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createBgpPeerResponse?: shared.CreateBgpPeerResponse;
+  createBGPPeerResponse?: shared.CreateBgpPeerResponse;
 
   @SpeakeasyMetadata()
   directConnectClientException?: any;

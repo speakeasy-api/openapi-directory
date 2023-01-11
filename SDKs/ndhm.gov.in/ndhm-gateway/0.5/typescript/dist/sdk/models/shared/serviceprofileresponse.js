@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Endpoint } from "./endpoint";
-import { ServiceRoleEnum } from "./serviceroleenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceProfileResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpoint_1 = require("./endpoint");
+var serviceroleenum_1 = require("./serviceroleenum");
 var ServiceProfileResponse = /** @class */ (function (_super) {
     __extends(ServiceProfileResponse, _super);
     function ServiceProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], ServiceProfileResponse.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoints", elemType: Endpoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoints", elemType: endpoint_1.Endpoint }),
         __metadata("design:type", Array)
     ], ServiceProfileResponse.prototype, "endpoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ServiceProfileResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceProfileResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ServiceProfileResponse.prototype, "type", void 0);
     return ServiceProfileResponse;
-}(SpeakeasyBase));
-export { ServiceProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.ServiceProfileResponse = ServiceProfileResponse;

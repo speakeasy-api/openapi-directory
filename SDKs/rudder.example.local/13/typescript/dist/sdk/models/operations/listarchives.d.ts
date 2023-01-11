@@ -33,5 +33,5 @@ export declare class ListArchivesRequest extends SpeakeasyBase {
 export declare class ListArchivesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listArchives200ApplicationJsonObject?: ListArchives200ApplicationJson;
+    listArchives200ApplicationJSONObject?: ListArchives200ApplicationJson;
 }

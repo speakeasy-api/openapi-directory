@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceResponse = exports.VoiceRequest = exports.VoiceQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VoiceQueryParams = /** @class */ (function (_super) {
     __extends(VoiceQueryParams, _super);
     function VoiceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=from" }),
         __metadata("design:type", String)
     ], VoiceQueryParams.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], VoiceQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=to" }),
         __metadata("design:type", String)
     ], VoiceQueryParams.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=xml" }),
         __metadata("design:type", Number)
     ], VoiceQueryParams.prototype, "xml", void 0);
     return VoiceQueryParams;
-}(SpeakeasyBase));
-export { VoiceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.VoiceQueryParams = VoiceQueryParams;
 var VoiceRequest = /** @class */ (function (_super) {
     __extends(VoiceRequest, _super);
     function VoiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VoiceQueryParams)
     ], VoiceRequest.prototype, "queryParams", void 0);
     return VoiceRequest;
-}(SpeakeasyBase));
-export { VoiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.VoiceRequest = VoiceRequest;
 var VoiceResponse = /** @class */ (function (_super) {
     __extends(VoiceResponse, _super);
     function VoiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VoiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VoiceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VoiceResponse.prototype, "voice200TextPlainString", void 0);
     return VoiceResponse;
-}(SpeakeasyBase));
-export { VoiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.VoiceResponse = VoiceResponse;

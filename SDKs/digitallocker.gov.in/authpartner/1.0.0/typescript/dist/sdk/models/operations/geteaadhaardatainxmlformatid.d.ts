@@ -17,9 +17,9 @@ export declare class GetEAadhaarDataInXmlFormatIdRequest extends SpeakeasyBase {
 export declare class GetEAadhaarDataInXmlFormatIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getEAadhaarDataInXmlFormatId401ApplicationJsonObject?: GetEAadhaarDataInXmlFormatId401ApplicationJson;
-    getEAadhaarDataInXmlFormatId404ApplicationJsonObject?: GetEAadhaarDataInXmlFormatId404ApplicationJson;
-    getEAadhaarDataInXmlFormatId500ApplicationJsonOneOf?: any;
-    getEAadhaarDataInXmlFormatId503ApplicationJsonOneOf?: any;
+    getEAadhaarDataInXMLFormatId401ApplicationJSONObject?: GetEAadhaarDataInXmlFormatId401ApplicationJson;
+    getEAadhaarDataInXMLFormatId404ApplicationJSONObject?: GetEAadhaarDataInXmlFormatId404ApplicationJson;
+    getEAadhaarDataInXMLFormatId500ApplicationJSONOneOf?: any;
+    getEAadhaarDataInXMLFormatId503ApplicationJSONOneOf?: any;
     statusCode: number;
 }

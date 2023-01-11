@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalDeviceResourceData } from "./localdeviceresourcedata";
-import { LocalVolumeResourceData } from "./localvolumeresourcedata";
-import { S3MachineLearningModelResourceData } from "./s3machinelearningmodelresourcedata";
-import { SageMakerMachineLearningModelResourceData } from "./sagemakermachinelearningmodelresourcedata";
-import { SecretsManagerSecretResourceData } from "./secretsmanagersecretresourcedata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceDataContainer = void 0;
+var utils_1 = require("../../../internal/utils");
+var localdeviceresourcedata_1 = require("./localdeviceresourcedata");
+var localvolumeresourcedata_1 = require("./localvolumeresourcedata");
+var s3machinelearningmodelresourcedata_1 = require("./s3machinelearningmodelresourcedata");
+var sagemakermachinelearningmodelresourcedata_1 = require("./sagemakermachinelearningmodelresourcedata");
+var secretsmanagersecretresourcedata_1 = require("./secretsmanagersecretresourcedata");
 // ResourceDataContainer
 /**
  * A container for resource data. The container takes only one of the following supported resource data types: ''LocalDeviceResourceData'', ''LocalVolumeResourceData'', ''SageMakerMachineLearningModelResourceData'', ''S3MachineLearningModelResourceData'', ''SecretsManagerSecretResourceData''.
@@ -38,25 +41,25 @@ var ResourceDataContainer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocalDeviceResourceData" }),
-        __metadata("design:type", LocalDeviceResourceData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocalDeviceResourceData" }),
+        __metadata("design:type", localdeviceresourcedata_1.LocalDeviceResourceData)
     ], ResourceDataContainer.prototype, "localDeviceResourceData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocalVolumeResourceData" }),
-        __metadata("design:type", LocalVolumeResourceData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocalVolumeResourceData" }),
+        __metadata("design:type", localvolumeresourcedata_1.LocalVolumeResourceData)
     ], ResourceDataContainer.prototype, "localVolumeResourceData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3MachineLearningModelResourceData" }),
-        __metadata("design:type", S3MachineLearningModelResourceData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3MachineLearningModelResourceData" }),
+        __metadata("design:type", s3machinelearningmodelresourcedata_1.S3MachineLearningModelResourceData)
     ], ResourceDataContainer.prototype, "s3MachineLearningModelResourceData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SageMakerMachineLearningModelResourceData" }),
-        __metadata("design:type", SageMakerMachineLearningModelResourceData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SageMakerMachineLearningModelResourceData" }),
+        __metadata("design:type", sagemakermachinelearningmodelresourcedata_1.SageMakerMachineLearningModelResourceData)
     ], ResourceDataContainer.prototype, "sageMakerMachineLearningModelResourceData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretResourceData" }),
-        __metadata("design:type", SecretsManagerSecretResourceData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretResourceData" }),
+        __metadata("design:type", secretsmanagersecretresourcedata_1.SecretsManagerSecretResourceData)
     ], ResourceDataContainer.prototype, "secretsManagerSecretResourceData", void 0);
     return ResourceDataContainer;
-}(SpeakeasyBase));
-export { ResourceDataContainer };
+}(utils_1.SpeakeasyBase));
+exports.ResourceDataContainer = ResourceDataContainer;

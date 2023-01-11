@@ -162,7 +162,7 @@ export class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
   benefitDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitID" })
-  benefitId?: string;
+  benefitID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitName" })
   benefitName?: string;
@@ -613,10 +613,10 @@ export enum GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJ
 **/
 export class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrademarkID" })
-  trademarkId: string;
+  trademarkID: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" })
-  trademarkIpoCode: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+  trademarkIPOCode: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 }
 
 
@@ -716,7 +716,7 @@ export class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
   productType: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=ProductURL" })
-  productUrl: string[];
+  productURL: string[];
 
   @SpeakeasyMetadata({ data: "json, name=TsandCs" })
   tsandCs: string[];
@@ -791,11 +791,11 @@ export class GetCommercialCreditCardsResponse extends SpeakeasyBase {
   errorObject?: GetCommercialCreditCardsErrorObject;
 
   @SpeakeasyMetadata()
-  getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

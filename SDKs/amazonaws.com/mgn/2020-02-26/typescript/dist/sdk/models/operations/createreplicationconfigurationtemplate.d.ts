@@ -24,7 +24,7 @@ export declare enum CreateReplicationConfigurationTemplateRequestBodyEbsEncrypti
 export declare class CreateReplicationConfigurationTemplateRequestBody extends SpeakeasyBase {
     associateDefaultSecurityGroup: boolean;
     bandwidthThrottling: number;
-    createPublicIp: boolean;
+    createPublicIP: boolean;
     dataPlaneRouting: CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum;
     defaultLargeStagingDiskType: CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum;
     ebsEncryption: CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum;
@@ -32,8 +32,8 @@ export declare class CreateReplicationConfigurationTemplateRequestBody extends S
     replicationServerInstanceType: string;
     replicationServersSecurityGroupsIDs: string[];
     stagingAreaSubnetId: string;
-    stagingAreaTags: Map<string, string>;
-    tags?: Map<string, string>;
+    stagingAreaTags: Record<string, string>;
+    tags?: Record<string, string>;
     useDedicatedReplicationServer: boolean;
 }
 export declare class CreateReplicationConfigurationTemplateRequest extends SpeakeasyBase {

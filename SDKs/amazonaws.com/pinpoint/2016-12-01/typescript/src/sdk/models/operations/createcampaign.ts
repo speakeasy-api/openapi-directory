@@ -87,7 +87,7 @@ export class CreateCampaignRequestBodyWriteCampaignRequest extends SpeakeasyBase
   treatmentName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

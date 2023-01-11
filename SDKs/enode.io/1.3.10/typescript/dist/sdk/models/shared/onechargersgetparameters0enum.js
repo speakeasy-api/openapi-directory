@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnechargersGetParameters0Enum = void 0;
+var OnechargersGetParameters0Enum;
+(function (OnechargersGetParameters0Enum) {
+    OnechargersGetParameters0Enum["ChargeState"] = "chargeState";
+    OnechargersGetParameters0Enum["Location"] = "location";
+})(OnechargersGetParameters0Enum = exports.OnechargersGetParameters0Enum || (exports.OnechargersGetParameters0Enum = {}));

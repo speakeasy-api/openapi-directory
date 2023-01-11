@@ -16,53 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { AveragesV2GetV2AveragesGetRequest, AveragesV2GetV2AveragesGetResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { FavicoFaviconIcoGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
-    
-const req: AveragesV2GetV2AveragesGetRequest = {
-  queryParams: {
-    country: [
-      "quo",
-      "odio",
-    ],
-    countryId: "soluta",
-    dateFrom: "corporis",
-    dateTo: "dolorem",
-    group: false,
-    limit: 3626398465402282700,
-    location: [
-      "sequi",
-    ],
-    offset: 964302703755083650,
-    page: 1449801033460238130,
-    parameter: [
-      "quos",
-      "culpa",
-    ],
-    parameterId: 5603562048972080546,
-    project: [
-      "rerum",
-    ],
-    projectId: 7842270398700374155,
-    sort: "desc",
-    spatial: "country",
-    temporal: "day",
-    unit: [
-      "accusantium",
-      "quisquam",
-    ],
-  },
-};
 
-sdk.sdk.averagesV2GetV2AveragesGet(req).then((res: AveragesV2GetV2AveragesGetResponse | AxiosError) => {
+sdk.favicoFaviconIcoGet().then((res: FavicoFaviconIcoGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -73,40 +37,46 @@ sdk.sdk.averagesV2GetV2AveragesGet(req).then((res: AveragesV2GetV2AveragesGetRes
 
 ### SDK SDK
 
-* `averagesV2GetV2AveragesGet` - Averages V2 Get
-* `citiesGetV2CitiesGet` - Provides a simple listing of cities within the platform
+* `favicoFaviconIcoGet` - Favico
+* `pongPingGet` - Pong
+
+### v1
+
 * `citiesGetv1V1CitiesGet` - Provides a simple listing of cities within the platform
 * `countriesGetV1CountriesCountryIdGet` - Countries Get
+* `countriesGetv1V1CountriesGet` - Countries Getv1
+* `latestV1GetV1LatestLocationIdGet` - Latest V1 Get
+* `latestV1GetV1LatestGet` - Latest V1 Get
+* `locationsv1GetV1LocationsLocationIdGet` - Locationsv1 Get
+* `locationsv1GetV1LocationsGet` - Locationsv1 Get
+* `measurementsGetV1V1MeasurementsGet` - Measurements Get V1
+* `parametersGetv1V1ParametersGet` - Parameters Getv1
+* `sourcesV1GetV1SourcesGet` - Sources V1 Get
+
+### v2
+
+* `averagesV2GetV2AveragesGet` - Averages V2 Get
+* `citiesGetV2CitiesGet` - Provides a simple listing of cities within the platform
 * `countriesGetV2CountriesCountryIdGet` - Countries Get
 * `countriesGetV2CountriesGet` - Countries Get
-* `countriesGetv1V1CountriesGet` - Countries Getv1
 * `demoV2LocationsTilesViewerGet` - Demo
-* `favicoFaviconIcoGet` - Favico
 * `getMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet` - Get Mobilegentile
 * `getMobiletileV2LocationsTilesMobileZXYPbfGet` - Get Mobiletile
 * `getTileV2LocationsTilesZXYPbfGet` - Get Tile
 * `latestGetV2LatestLocationIdGet` - Latest Get
 * `latestGetV2LatestGet` - Latest Get
-* `latestV1GetV1LatestLocationIdGet` - Latest V1 Get
-* `latestV1GetV1LatestGet` - Latest V1 Get
 * `locationsGetV2LocationsLocationIdGet` - Locations Get
 * `locationsGetV2LocationsGet` - Locations Get
-* `locationsv1GetV1LocationsLocationIdGet` - Locationsv1 Get
-* `locationsv1GetV1LocationsGet` - Locationsv1 Get
-* `measurementsGetV1V1MeasurementsGet` - Measurements Get V1
 * `measurementsGetV2MeasurementsGet` - Measurements Get
 * `mfrGetV2ManufacturersGet` - Mfr Get
 * `mobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGet` - Mobilegentilejson
 * `mobiletilejsonV2LocationsTilesMobileTilesJsonGet` - Mobiletilejson
 * `modelGetV2ModelsGet` - Model Get
 * `parametersGetV2ParametersGet` - Parameters Get
-* `parametersGetv1V1ParametersGet` - Parameters Getv1
-* `pongPingGet` - Pong
 * `projectsGetV2ProjectsProjectIdGet` - Projects Get
 * `projectsGetV2ProjectsGet` - Projects Get
 * `readmeGetV2SourcesReadmeSlugGet` - Readme Get
 * `sourcesGetV2SourcesGet` - Sources Get
-* `sourcesV1GetV1SourcesGet` - Sources V1 Get
 * `summaryGetV2SummaryGet` - Summary Get
 * `tilejsonV2LocationsTilesTilesJsonGet` - Tilejson
 

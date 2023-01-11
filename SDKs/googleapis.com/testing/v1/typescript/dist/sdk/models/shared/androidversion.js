@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Distribution } from "./distribution";
-import { Date } from "./date";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidVersion = void 0;
+var utils_1 = require("../../../internal/utils");
+var distribution_1 = require("./distribution");
+var date_1 = require("./date");
 // AndroidVersion
 /**
  * A version of the Android OS.
@@ -35,33 +38,33 @@ var AndroidVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiLevel" }),
         __metadata("design:type", Number)
     ], AndroidVersion.prototype, "apiLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codeName" }),
         __metadata("design:type", String)
     ], AndroidVersion.prototype, "codeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distribution" }),
-        __metadata("design:type", Distribution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distribution" }),
+        __metadata("design:type", distribution_1.Distribution)
     ], AndroidVersion.prototype, "distribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AndroidVersion.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
+        __metadata("design:type", date_1.Date)
     ], AndroidVersion.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], AndroidVersion.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionString" }),
         __metadata("design:type", String)
     ], AndroidVersion.prototype, "versionString", void 0);
     return AndroidVersion;
-}(SpeakeasyBase));
-export { AndroidVersion };
+}(utils_1.SpeakeasyBase));
+exports.AndroidVersion = AndroidVersion;

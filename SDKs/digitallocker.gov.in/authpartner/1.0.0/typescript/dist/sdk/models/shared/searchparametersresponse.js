@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchParametersResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchParametersResponse = /** @class */ (function (_super) {
     __extends(SearchParametersResponse, _super);
     function SearchParametersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=example" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=example" }),
         __metadata("design:type", String)
     ], SearchParametersResponse.prototype, "example", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], SearchParametersResponse.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paramname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paramname" }),
         __metadata("design:type", String)
     ], SearchParametersResponse.prototype, "paramname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valuelist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valuelist" }),
         __metadata("design:type", Object)
     ], SearchParametersResponse.prototype, "valuelist", void 0);
     return SearchParametersResponse;
-}(SpeakeasyBase));
-export { SearchParametersResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchParametersResponse = SearchParametersResponse;

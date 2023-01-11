@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteTableAssociationState } from "./routetableassociationstate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateRouteTableResult = exports.AssociateRouteTableResultAssociationState = void 0;
+var utils_1 = require("../../../internal/utils");
+// AssociateRouteTableResultAssociationState
+/**
+ * The state of the association.
+**/
+var AssociateRouteTableResultAssociationState = /** @class */ (function (_super) {
+    __extends(AssociateRouteTableResultAssociationState, _super);
+    function AssociateRouteTableResultAssociationState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateRouteTableResultAssociationState.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateRouteTableResultAssociationState.prototype, "statusMessage", void 0);
+    return AssociateRouteTableResultAssociationState;
+}(utils_1.SpeakeasyBase));
+exports.AssociateRouteTableResultAssociationState = AssociateRouteTableResultAssociationState;
 var AssociateRouteTableResult = /** @class */ (function (_super) {
     __extends(AssociateRouteTableResult, _super);
     function AssociateRouteTableResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AssociateRouteTableResult.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RouteTableAssociationState)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateRouteTableResultAssociationState)
     ], AssociateRouteTableResult.prototype, "associationState", void 0);
     return AssociateRouteTableResult;
-}(SpeakeasyBase));
-export { AssociateRouteTableResult };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRouteTableResult = AssociateRouteTableResult;

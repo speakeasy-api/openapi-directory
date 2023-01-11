@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttemptRead } from "./attemptread";
-import { LogRead } from "./logread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttemptInfoRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var attemptread_1 = require("./attemptread");
+var logread_1 = require("./logread");
 var AttemptInfoRead = /** @class */ (function (_super) {
     __extends(AttemptInfoRead, _super);
     function AttemptInfoRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attempt" }),
-        __metadata("design:type", AttemptRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attempt" }),
+        __metadata("design:type", attemptread_1.AttemptRead)
     ], AttemptInfoRead.prototype, "attempt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logs" }),
-        __metadata("design:type", LogRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logs" }),
+        __metadata("design:type", logread_1.LogRead)
     ], AttemptInfoRead.prototype, "logs", void 0);
     return AttemptInfoRead;
-}(SpeakeasyBase));
-export { AttemptInfoRead };
+}(utils_1.SpeakeasyBase));
+exports.AttemptInfoRead = AttemptInfoRead;

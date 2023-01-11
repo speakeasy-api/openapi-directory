@@ -17,6 +17,9 @@ export class PostMappingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
+  statusCode: number;
+
+  @SpeakeasyMetadata()
   postMapping400WildcardString?: string;
 
   @SpeakeasyMetadata()
@@ -30,7 +33,4 @@ export class PostMappingResponse extends SpeakeasyBase {
 
   @SpeakeasyMetadata()
   postMapping500WildcardString?: string;
-
-  @SpeakeasyMetadata()
-  statusCode: number;
 }

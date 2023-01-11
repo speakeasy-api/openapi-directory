@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Credentials } from "./credentials";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCredentialsForIdentityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var credentials_1 = require("./credentials");
 // GetCredentialsForIdentityResponse
 /**
  * Returned in response to a successful <code>GetCredentialsForIdentity</code> operation.
@@ -34,13 +37,13 @@ var GetCredentialsForIdentityResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credentials" }),
-        __metadata("design:type", Credentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credentials" }),
+        __metadata("design:type", credentials_1.Credentials)
     ], GetCredentialsForIdentityResponse.prototype, "credentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityId" }),
         __metadata("design:type", String)
     ], GetCredentialsForIdentityResponse.prototype, "identityId", void 0);
     return GetCredentialsForIdentityResponse;
-}(SpeakeasyBase));
-export { GetCredentialsForIdentityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCredentialsForIdentityResponse = GetCredentialsForIdentityResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTrailStatusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // GetTrailStatusResponse
 /**
  * Returns the objects or data listed below if successful. Otherwise, returns an error.
@@ -33,73 +36,73 @@ var GetTrailStatusResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsLogging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsLogging" }),
         __metadata("design:type", Boolean)
     ], GetTrailStatusResponse.prototype, "isLogging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestCloudWatchLogsDeliveryError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestCloudWatchLogsDeliveryError" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestCloudWatchLogsDeliveryError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestCloudWatchLogsDeliveryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestCloudWatchLogsDeliveryTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "latestCloudWatchLogsDeliveryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDeliveryAttemptSucceeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDeliveryAttemptSucceeded" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestDeliveryAttemptSucceeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDeliveryAttemptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDeliveryAttemptTime" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestDeliveryAttemptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDeliveryError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDeliveryError" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestDeliveryError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDeliveryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDeliveryTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "latestDeliveryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDigestDeliveryError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDigestDeliveryError" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestDigestDeliveryError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestDigestDeliveryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestDigestDeliveryTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "latestDigestDeliveryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestNotificationAttemptSucceeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestNotificationAttemptSucceeded" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestNotificationAttemptSucceeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestNotificationAttemptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestNotificationAttemptTime" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestNotificationAttemptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestNotificationError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestNotificationError" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "latestNotificationError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestNotificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestNotificationTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "latestNotificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartLoggingTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartLoggingTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "startLoggingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopLoggingTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopLoggingTime" }),
         __metadata("design:type", Date)
     ], GetTrailStatusResponse.prototype, "stopLoggingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeLoggingStarted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeLoggingStarted" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "timeLoggingStarted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeLoggingStopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeLoggingStopped" }),
         __metadata("design:type", String)
     ], GetTrailStatusResponse.prototype, "timeLoggingStopped", void 0);
     return GetTrailStatusResponse;
-}(SpeakeasyBase));
-export { GetTrailStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTrailStatusResponse = GetTrailStatusResponse;

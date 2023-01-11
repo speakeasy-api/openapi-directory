@@ -22,5 +22,5 @@ export class GetNetworkCellularGatewayDhcpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCellularGatewayDhcp200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCellularGatewayDhcp200ApplicationJSONObject?: Record<string, any>;
 }

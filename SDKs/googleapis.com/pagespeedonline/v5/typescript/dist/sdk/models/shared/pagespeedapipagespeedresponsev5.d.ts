@@ -6,7 +6,7 @@ import { PagespeedVersion } from "./pagespeedversion";
  * The Pagespeed API response object.
 **/
 export declare class PagespeedApiPagespeedResponseV5 extends SpeakeasyBase {
-    analysisUtcTimestamp?: string;
+    analysisUTCTimestamp?: string;
     captchaResult?: string;
     id?: string;
     kind?: string;

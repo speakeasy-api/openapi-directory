@@ -10,5 +10,5 @@ export class ListDeploymentTargetsInput extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=targetFilters" })
-  targetFilters?: Map<string, string[]>;
+  targetFilters?: Record<string, string[]>;
 }

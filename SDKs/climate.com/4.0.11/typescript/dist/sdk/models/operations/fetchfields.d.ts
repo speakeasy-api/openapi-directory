@@ -18,9 +18,9 @@ export declare class FetchFieldsRequest extends SpeakeasyBase {
 }
 export declare class FetchFieldsResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
     fields?: any;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

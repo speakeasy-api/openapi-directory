@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSystemInfo200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSystemInfoResponse = exports.GetSystemInfo200ApplicationJson = exports.GetSystemInfo200ApplicationJsonResultEnum = exports.GetSystemInfo200ApplicationJsonData = exports.GetSystemInfo200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSystemInfo200ApplicationJsonActionEnum;
 (function (GetSystemInfo200ApplicationJsonActionEnum) {
     GetSystemInfo200ApplicationJsonActionEnum["GetSystemInfo"] = "getSystemInfo";
-})(GetSystemInfo200ApplicationJsonActionEnum || (GetSystemInfo200ApplicationJsonActionEnum = {}));
+})(GetSystemInfo200ApplicationJsonActionEnum = exports.GetSystemInfo200ApplicationJsonActionEnum || (exports.GetSystemInfo200ApplicationJsonActionEnum = {}));
 // GetSystemInfo200ApplicationJsonData
 /**
  * Information about the service
@@ -37,54 +40,54 @@ var GetSystemInfo200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rudder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rudder" }),
         __metadata("design:type", Object)
     ], GetSystemInfo200ApplicationJsonData.prototype, "rudder", void 0);
     return GetSystemInfo200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetSystemInfo200ApplicationJsonData };
-export var GetSystemInfo200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSystemInfo200ApplicationJsonData = GetSystemInfo200ApplicationJsonData;
+var GetSystemInfo200ApplicationJsonResultEnum;
 (function (GetSystemInfo200ApplicationJsonResultEnum) {
     GetSystemInfo200ApplicationJsonResultEnum["Success"] = "success";
     GetSystemInfo200ApplicationJsonResultEnum["Error"] = "error";
-})(GetSystemInfo200ApplicationJsonResultEnum || (GetSystemInfo200ApplicationJsonResultEnum = {}));
+})(GetSystemInfo200ApplicationJsonResultEnum = exports.GetSystemInfo200ApplicationJsonResultEnum || (exports.GetSystemInfo200ApplicationJsonResultEnum = {}));
 var GetSystemInfo200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSystemInfo200ApplicationJson, _super);
     function GetSystemInfo200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetSystemInfo200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetSystemInfo200ApplicationJsonData)
     ], GetSystemInfo200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetSystemInfo200ApplicationJson.prototype, "result", void 0);
     return GetSystemInfo200ApplicationJson;
-}(SpeakeasyBase));
-export { GetSystemInfo200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSystemInfo200ApplicationJson = GetSystemInfo200ApplicationJson;
 var GetSystemInfoResponse = /** @class */ (function (_super) {
     __extends(GetSystemInfoResponse, _super);
     function GetSystemInfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSystemInfoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSystemInfoResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSystemInfo200ApplicationJson)
-    ], GetSystemInfoResponse.prototype, "getSystemInfo200ApplicationJsonObject", void 0);
+    ], GetSystemInfoResponse.prototype, "getSystemInfo200ApplicationJSONObject", void 0);
     return GetSystemInfoResponse;
-}(SpeakeasyBase));
-export { GetSystemInfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSystemInfoResponse = GetSystemInfoResponse;

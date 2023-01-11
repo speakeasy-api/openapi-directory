@@ -21,6 +21,6 @@ export declare class SyncRelationsWithSchemaRequest extends SpeakeasyBase {
 export declare class SyncRelationsWithSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    syncRelationsWithSchema200ApplicationJsonObject?: SyncRelationsWithSchema200ApplicationJson;
-    syncRelationsWithSchema400ApplicationJsonObject?: SyncRelationsWithSchema400ApplicationJson;
+    syncRelationsWithSchema200ApplicationJSONObject?: SyncRelationsWithSchema200ApplicationJson;
+    syncRelationsWithSchema400ApplicationJSONObject?: SyncRelationsWithSchema400ApplicationJson;
 }

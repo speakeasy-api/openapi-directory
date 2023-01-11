@@ -25,7 +25,7 @@ export class GetConsumerV1ServicegroupsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  serviceGroupListViewModel?: Map<string, any>;
+  serviceGroupListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

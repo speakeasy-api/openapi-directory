@@ -24,7 +24,7 @@ export class Execution extends SpeakeasyBase {
   creationTime?: Timestamp;
 
   @SpeakeasyMetadata({ data: "json, name=dimensionDefinitions" })
-  dimensionDefinitions?: Map<string, any>[];
+  dimensionDefinitions?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=executionId" })
   executionId?: string;

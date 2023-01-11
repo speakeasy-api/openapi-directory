@@ -51,7 +51,7 @@ export class DeleteTrailResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTrailResponse?: Map<string, any>;
+  deleteTrailResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   insufficientDependencyServiceAccessPermissionException?: any;

@@ -21,7 +21,7 @@ export class GetPutNotificationConfigurationQueryParams extends SpeakeasyBase {
   notificationTypes: string[];
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TopicARN" })
-  topicArn: string;
+  topicARN: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetPutNotificationConfigurationVersionEnum;

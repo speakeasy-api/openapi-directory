@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchMetricsDimension } from "./cloudwatchmetricsdimension";
-import { CloudWatchMetricsStatEnum } from "./cloudwatchmetricsstatenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchMetricsDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchmetricsdimension_1 = require("./cloudwatchmetricsdimension");
+var cloudwatchmetricsstatenum_1 = require("./cloudwatchmetricsstatenum");
 // CloudWatchMetricsDetail
 /**
  *  Information about an Amazon CloudWatch metric.
@@ -35,29 +38,29 @@ var CloudWatchMetricsDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: CloudWatchMetricsDimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: cloudwatchmetricsdimension_1.CloudWatchMetricsDimension }),
         __metadata("design:type", Array)
     ], CloudWatchMetricsDetail.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricName" }),
         __metadata("design:type", String)
     ], CloudWatchMetricsDetail.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Namespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Namespace" }),
         __metadata("design:type", String)
     ], CloudWatchMetricsDetail.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Period" }),
         __metadata("design:type", Number)
     ], CloudWatchMetricsDetail.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stat" }),
         __metadata("design:type", String)
     ], CloudWatchMetricsDetail.prototype, "stat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unit" }),
         __metadata("design:type", String)
     ], CloudWatchMetricsDetail.prototype, "unit", void 0);
     return CloudWatchMetricsDetail;
-}(SpeakeasyBase));
-export { CloudWatchMetricsDetail };
+}(utils_1.SpeakeasyBase));
+exports.CloudWatchMetricsDetail = CloudWatchMetricsDetail;

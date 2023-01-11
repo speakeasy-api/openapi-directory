@@ -19,5 +19,5 @@ export declare class ApplyPolicyAllNodes200ApplicationJson extends SpeakeasyBase
 export declare class ApplyPolicyAllNodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    applyPolicyAllNodes200ApplicationJsonObject?: ApplyPolicyAllNodes200ApplicationJson;
+    applyPolicyAllNodes200ApplicationJSONObject?: ApplyPolicyAllNodes200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessHourInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var BusinessHourInputModel = /** @class */ (function (_super) {
     __extends(BusinessHourInputModel, _super);
     function BusinessHourInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], BusinessHourInputModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is24Hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is24Hours" }),
         __metadata("design:type", Boolean)
     ], BusinessHourInputModel.prototype, "is24Hours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isOpen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isOpen" }),
         __metadata("design:type", Boolean)
     ], BusinessHourInputModel.prototype, "isOpen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], BusinessHourInputModel.prototype, "startTime", void 0);
     return BusinessHourInputModel;
-}(SpeakeasyBase));
-export { BusinessHourInputModel };
+}(utils_1.SpeakeasyBase));
+exports.BusinessHourInputModel = BusinessHourInputModel;

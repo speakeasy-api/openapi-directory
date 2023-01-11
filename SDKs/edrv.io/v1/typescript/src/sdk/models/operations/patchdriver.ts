@@ -91,5 +91,5 @@ export class PatchDriverResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchDriver200ApplicationJsonObject?: PatchDriver200ApplicationJson;
+  patchDriver200ApplicationJSONObject?: PatchDriver200ApplicationJson;
 }

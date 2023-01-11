@@ -14,7 +14,7 @@ export class PhotoObject extends SpeakeasyBase {
   editorsPick?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=ownerAvatarURL" })
-  ownerAvatarUrl?: string;
+  ownerAvatarURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ownerCountry" })
   ownerCountry?: string;
@@ -26,16 +26,16 @@ export class PhotoObject extends SpeakeasyBase {
   ownerName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=photoHiResURL" })
-  photoHiResUrl?: string;
+  photoHiResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=photoId" })
   photoId?: number;
 
   @SpeakeasyMetadata({ data: "json, name=photoMediumResURL" })
-  photoMediumResUrl?: string;
+  photoMediumResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=photoURL" })
-  photoUrl?: string;
+  photoURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=productCode" })
   productCode?: string;
@@ -53,7 +53,7 @@ export class PhotoObject extends SpeakeasyBase {
   sslSupported?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=timeUploaded" })
   timeUploaded?: string;

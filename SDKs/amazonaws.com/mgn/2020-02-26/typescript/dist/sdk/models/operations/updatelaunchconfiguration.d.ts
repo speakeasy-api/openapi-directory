@@ -29,7 +29,7 @@ export declare class UpdateLaunchConfigurationRequestBody extends SpeakeasyBase 
     launchDisposition?: UpdateLaunchConfigurationRequestBodyLaunchDispositionEnum;
     licensing?: UpdateLaunchConfigurationRequestBodyLicensing;
     name?: string;
-    sourceServerId: string;
+    sourceServerID: string;
     targetInstanceTypeRightSizingMethod?: UpdateLaunchConfigurationRequestBodyTargetInstanceTypeRightSizingMethodEnum;
 }
 export declare class UpdateLaunchConfigurationRequest extends SpeakeasyBase {

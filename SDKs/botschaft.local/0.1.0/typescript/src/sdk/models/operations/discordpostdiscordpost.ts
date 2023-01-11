@@ -29,5 +29,5 @@ export class DiscordPostDiscordPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  discordPostDiscordPost200ApplicationJsonAny?: any;
+  discordPostDiscordPost200ApplicationJSONAny?: any;
 }

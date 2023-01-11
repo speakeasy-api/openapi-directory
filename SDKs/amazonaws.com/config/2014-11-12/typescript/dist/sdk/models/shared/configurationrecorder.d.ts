@@ -6,5 +6,5 @@ import { RecordingGroup } from "./recordinggroup";
 export declare class ConfigurationRecorder extends SpeakeasyBase {
     name?: string;
     recordingGroup?: RecordingGroup;
-    roleArn?: string;
+    roleARN?: string;
 }

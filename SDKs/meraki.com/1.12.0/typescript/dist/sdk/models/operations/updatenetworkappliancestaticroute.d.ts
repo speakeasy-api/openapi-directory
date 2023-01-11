@@ -10,7 +10,7 @@ export declare class UpdateNetworkApplianceStaticRouteRequestBodyReservedIpRange
 }
 export declare class UpdateNetworkApplianceStaticRouteRequestBody extends SpeakeasyBase {
     enabled?: boolean;
-    fixedIpAssignments?: Map<string, any>;
+    fixedIpAssignments?: Record<string, any>;
     gatewayIp?: string;
     name?: string;
     reservedIpRanges?: UpdateNetworkApplianceStaticRouteRequestBodyReservedIpRanges[];
@@ -23,5 +23,5 @@ export declare class UpdateNetworkApplianceStaticRouteRequest extends SpeakeasyB
 export declare class UpdateNetworkApplianceStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceStaticRoute200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

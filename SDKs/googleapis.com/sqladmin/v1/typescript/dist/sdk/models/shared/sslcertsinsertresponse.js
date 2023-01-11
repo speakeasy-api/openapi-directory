@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SslCertDetail } from "./sslcertdetail";
-import { Operation } from "./operation";
-import { SslCert } from "./sslcert";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SslCertsInsertResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var sslcertdetail_1 = require("./sslcertdetail");
+var operation_1 = require("./operation");
+var sslcert_1 = require("./sslcert");
 // SslCertsInsertResponse
 /**
  * SslCert insert response.
@@ -36,21 +39,21 @@ var SslCertsInsertResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCert" }),
-        __metadata("design:type", SslCertDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCert" }),
+        __metadata("design:type", sslcertdetail_1.SslCertDetail)
     ], SslCertsInsertResponse.prototype, "clientCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], SslCertsInsertResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
-        __metadata("design:type", Operation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
+        __metadata("design:type", operation_1.Operation)
     ], SslCertsInsertResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCaCert" }),
-        __metadata("design:type", SslCert)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCaCert" }),
+        __metadata("design:type", sslcert_1.SslCert)
     ], SslCertsInsertResponse.prototype, "serverCaCert", void 0);
     return SslCertsInsertResponse;
-}(SpeakeasyBase));
-export { SslCertsInsertResponse };
+}(utils_1.SpeakeasyBase));
+exports.SslCertsInsertResponse = SslCertsInsertResponse;

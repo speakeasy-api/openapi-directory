@@ -14,7 +14,7 @@ export declare class DeleteNotificationChannelHeaders extends SpeakeasyBase {
 }
 export declare class DeleteNotificationChannelRequest extends SpeakeasyBase {
     headers: DeleteNotificationChannelHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DeleteNotificationChannelResponse extends SpeakeasyBase {
     contentType: string;

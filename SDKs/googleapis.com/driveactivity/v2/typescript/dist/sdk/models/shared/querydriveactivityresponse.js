@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveActivity } from "./driveactivity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryDriveActivityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var driveactivity_1 = require("./driveactivity");
 // QueryDriveActivityResponse
 /**
  * Response message for querying Drive activity.
@@ -34,13 +37,13 @@ var QueryDriveActivityResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activities", elemType: DriveActivity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activities", elemType: driveactivity_1.DriveActivity }),
         __metadata("design:type", Array)
     ], QueryDriveActivityResponse.prototype, "activities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], QueryDriveActivityResponse.prototype, "nextPageToken", void 0);
     return QueryDriveActivityResponse;
-}(SpeakeasyBase));
-export { QueryDriveActivityResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueryDriveActivityResponse = QueryDriveActivityResponse;

@@ -17,6 +17,6 @@ export declare class PostAssetsCorrelationMatrixRequest extends SpeakeasyBase {
 }
 export declare class PostAssetsCorrelationMatrixResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCorrelationMatrix200ApplicationJsonObject?: PostAssetsCorrelationMatrix200ApplicationJson;
     statusCode: number;
+    postAssetsCorrelationMatrix200ApplicationJSONObject?: PostAssetsCorrelationMatrix200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,82 +23,84 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayProgressiveTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Play = exports.PlayStatusEnum = exports.PlayProgressive = exports.PlayProgressiveTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayProgressiveTypeEnum;
 (function (PlayProgressiveTypeEnum) {
     PlayProgressiveTypeEnum["Source"] = "source";
     PlayProgressiveTypeEnum["VideoMp4"] = "video/mp4";
     PlayProgressiveTypeEnum["VideoWebm"] = "video/webm";
     PlayProgressiveTypeEnum["Vp6XVideo"] = "vp6/x-video";
-})(PlayProgressiveTypeEnum || (PlayProgressiveTypeEnum = {}));
+})(PlayProgressiveTypeEnum = exports.PlayProgressiveTypeEnum || (exports.PlayProgressiveTypeEnum = {}));
 var PlayProgressive = /** @class */ (function (_super) {
     __extends(PlayProgressive, _super);
     function PlayProgressive() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_time" }),
         __metadata("design:type", String)
     ], PlayProgressive.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fps" }),
         __metadata("design:type", Number)
     ], PlayProgressive.prototype, "fps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], PlayProgressive.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], PlayProgressive.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_expiration_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_expiration_time" }),
         __metadata("design:type", String)
     ], PlayProgressive.prototype, "linkExpirationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=log" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=log" }),
+        __metadata("design:type", Object)
     ], PlayProgressive.prototype, "log", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5" }),
         __metadata("design:type", String)
     ], PlayProgressive.prototype, "md5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PlayProgressive.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PlayProgressive.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], PlayProgressive.prototype, "width", void 0);
     return PlayProgressive;
-}(SpeakeasyBase));
-export { PlayProgressive };
-export var PlayStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PlayProgressive = PlayProgressive;
+var PlayStatusEnum;
 (function (PlayStatusEnum) {
     PlayStatusEnum["Playable"] = "playable";
     PlayStatusEnum["PurchaseRequired"] = "purchase_required";
     PlayStatusEnum["Restricted"] = "restricted";
     PlayStatusEnum["Unavailable"] = "unavailable";
-})(PlayStatusEnum || (PlayStatusEnum = {}));
+})(PlayStatusEnum = exports.PlayStatusEnum || (exports.PlayStatusEnum = {}));
 var Play = /** @class */ (function (_super) {
     __extends(Play, _super);
     function Play() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progressive", elemType: PlayProgressive }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progressive", elemType: PlayProgressive }),
         __metadata("design:type", Array)
     ], Play.prototype, "progressive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Play.prototype, "status", void 0);
     return Play;
-}(SpeakeasyBase));
-export { Play };
+}(utils_1.SpeakeasyBase));
+exports.Play = Play;

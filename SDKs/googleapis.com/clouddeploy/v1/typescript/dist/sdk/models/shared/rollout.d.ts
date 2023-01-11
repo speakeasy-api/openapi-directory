@@ -31,7 +31,7 @@ export declare enum RolloutStateEnum {
  * A `Rollout` resource in the Google Cloud Deploy API. A `Rollout` contains information around a specific deployment to a `Target`.
 **/
 export declare class Rollout extends SpeakeasyBase {
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     approvalState?: RolloutApprovalStateEnum;
     approveTime?: string;
     createTime?: string;
@@ -43,7 +43,7 @@ export declare class Rollout extends SpeakeasyBase {
     enqueueTime?: string;
     etag?: string;
     failureReason?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     metadata?: Metadata;
     name?: string;
     phases?: Phase[];
@@ -55,10 +55,10 @@ export declare class Rollout extends SpeakeasyBase {
  * A `Rollout` resource in the Google Cloud Deploy API. A `Rollout` contains information around a specific deployment to a `Target`.
 **/
 export declare class RolloutInput extends SpeakeasyBase {
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     metadata?: Metadata;
     name?: string;
     targetId?: string;

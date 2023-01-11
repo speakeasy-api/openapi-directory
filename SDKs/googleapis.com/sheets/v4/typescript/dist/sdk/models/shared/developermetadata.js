@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeveloperMetadataLocation } from "./developermetadatalocation";
-export var DeveloperMetadataVisibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeveloperMetadata = exports.DeveloperMetadataVisibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var developermetadatalocation_1 = require("./developermetadatalocation");
+var DeveloperMetadataVisibilityEnum;
 (function (DeveloperMetadataVisibilityEnum) {
     DeveloperMetadataVisibilityEnum["DeveloperMetadataVisibilityUnspecified"] = "DEVELOPER_METADATA_VISIBILITY_UNSPECIFIED";
     DeveloperMetadataVisibilityEnum["Document"] = "DOCUMENT";
     DeveloperMetadataVisibilityEnum["Project"] = "PROJECT";
-})(DeveloperMetadataVisibilityEnum || (DeveloperMetadataVisibilityEnum = {}));
+})(DeveloperMetadataVisibilityEnum = exports.DeveloperMetadataVisibilityEnum || (exports.DeveloperMetadataVisibilityEnum = {}));
 // DeveloperMetadata
 /**
  * Developer metadata associated with a location or object in a spreadsheet. Developer metadata may be used to associate arbitrary data with various parts of a spreadsheet and will remain associated at those locations as they move around and the spreadsheet is edited. For example, if developer metadata is associated with row 5 and another row is then subsequently inserted above row 5, that original metadata will still be associated with the row it was first associated with (what is now row 6). If the associated object is deleted its metadata is deleted too.
@@ -40,25 +43,25 @@ var DeveloperMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", DeveloperMetadataLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", developermetadatalocation_1.DeveloperMetadataLocation)
     ], DeveloperMetadata.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataId" }),
         __metadata("design:type", Number)
     ], DeveloperMetadata.prototype, "metadataId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataKey" }),
         __metadata("design:type", String)
     ], DeveloperMetadata.prototype, "metadataKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadataValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadataValue" }),
         __metadata("design:type", String)
     ], DeveloperMetadata.prototype, "metadataValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], DeveloperMetadata.prototype, "visibility", void 0);
     return DeveloperMetadata;
-}(SpeakeasyBase));
-export { DeveloperMetadata };
+}(utils_1.SpeakeasyBase));
+exports.DeveloperMetadata = DeveloperMetadata;

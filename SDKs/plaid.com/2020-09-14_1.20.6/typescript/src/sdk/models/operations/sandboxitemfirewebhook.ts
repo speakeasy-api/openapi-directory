@@ -14,10 +14,10 @@ export class SandboxItemFireWebhookResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sandboxItemFireWebhookResponse?: Map<string, any>;
+  sandboxItemFireWebhookResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

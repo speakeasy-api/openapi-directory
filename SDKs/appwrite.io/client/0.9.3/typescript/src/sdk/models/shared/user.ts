@@ -23,7 +23,7 @@ export class User extends SpeakeasyBase {
   passwordUpdate: number;
 
   @SpeakeasyMetadata({ data: "json, name=prefs" })
-  prefs: Map<string, any>;
+  prefs: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=registration" })
   registration: number;

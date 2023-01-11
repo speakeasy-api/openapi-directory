@@ -25,5 +25,5 @@ export class GetOrganizationSmVppAccountResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationSmVppAccount200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationSmVppAccount200ApplicationJSONObject?: Record<string, any>;
 }

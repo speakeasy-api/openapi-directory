@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyDbProxyTargetGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyDbProxyTargetGroupResponse = exports.GetModifyDbProxyTargetGroupRequest = exports.GetModifyDbProxyTargetGroupHeaders = exports.GetModifyDbProxyTargetGroupQueryParams = exports.GetModifyDbProxyTargetGroupVersionEnum = exports.GetModifyDbProxyTargetGroupConnectionPoolConfig = exports.GetModifyDbProxyTargetGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyDbProxyTargetGroupActionEnum;
 (function (GetModifyDbProxyTargetGroupActionEnum) {
     GetModifyDbProxyTargetGroupActionEnum["ModifyDbProxyTargetGroup"] = "ModifyDBProxyTargetGroup";
-})(GetModifyDbProxyTargetGroupActionEnum || (GetModifyDbProxyTargetGroupActionEnum = {}));
+})(GetModifyDbProxyTargetGroupActionEnum = exports.GetModifyDbProxyTargetGroupActionEnum || (exports.GetModifyDbProxyTargetGroupActionEnum = {}));
 // GetModifyDbProxyTargetGroupConnectionPoolConfig
 /**
  * Specifies the settings that control the size and behavior of the connection pool associated with a <code>DBProxyTargetGroup</code>.
@@ -37,133 +40,133 @@ var GetModifyDbProxyTargetGroupConnectionPoolConfig = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=ConnectionBorrowTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=ConnectionBorrowTimeout" }),
         __metadata("design:type", Number)
     ], GetModifyDbProxyTargetGroupConnectionPoolConfig.prototype, "connectionBorrowTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=InitQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=InitQuery" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupConnectionPoolConfig.prototype, "initQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=MaxConnectionsPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=MaxConnectionsPercent" }),
         __metadata("design:type", Number)
     ], GetModifyDbProxyTargetGroupConnectionPoolConfig.prototype, "maxConnectionsPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=MaxIdleConnectionsPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=MaxIdleConnectionsPercent" }),
         __metadata("design:type", Number)
     ], GetModifyDbProxyTargetGroupConnectionPoolConfig.prototype, "maxIdleConnectionsPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=SessionPinningFilters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=SessionPinningFilters" }),
         __metadata("design:type", Array)
     ], GetModifyDbProxyTargetGroupConnectionPoolConfig.prototype, "sessionPinningFilters", void 0);
     return GetModifyDbProxyTargetGroupConnectionPoolConfig;
-}(SpeakeasyBase));
-export { GetModifyDbProxyTargetGroupConnectionPoolConfig };
-export var GetModifyDbProxyTargetGroupVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDbProxyTargetGroupConnectionPoolConfig = GetModifyDbProxyTargetGroupConnectionPoolConfig;
+var GetModifyDbProxyTargetGroupVersionEnum;
 (function (GetModifyDbProxyTargetGroupVersionEnum) {
     GetModifyDbProxyTargetGroupVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetModifyDbProxyTargetGroupVersionEnum || (GetModifyDbProxyTargetGroupVersionEnum = {}));
+})(GetModifyDbProxyTargetGroupVersionEnum = exports.GetModifyDbProxyTargetGroupVersionEnum || (exports.GetModifyDbProxyTargetGroupVersionEnum = {}));
 var GetModifyDbProxyTargetGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyDbProxyTargetGroupQueryParams, _super);
     function GetModifyDbProxyTargetGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConnectionPoolConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConnectionPoolConfig" }),
         __metadata("design:type", GetModifyDbProxyTargetGroupConnectionPoolConfig)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "connectionPoolConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBProxyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBProxyName" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "dbProxyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NewName" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "newName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TargetGroupName" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "targetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupQueryParams.prototype, "version", void 0);
     return GetModifyDbProxyTargetGroupQueryParams;
-}(SpeakeasyBase));
-export { GetModifyDbProxyTargetGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDbProxyTargetGroupQueryParams = GetModifyDbProxyTargetGroupQueryParams;
 var GetModifyDbProxyTargetGroupHeaders = /** @class */ (function (_super) {
     __extends(GetModifyDbProxyTargetGroupHeaders, _super);
     function GetModifyDbProxyTargetGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyDbProxyTargetGroupHeaders;
-}(SpeakeasyBase));
-export { GetModifyDbProxyTargetGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDbProxyTargetGroupHeaders = GetModifyDbProxyTargetGroupHeaders;
 var GetModifyDbProxyTargetGroupRequest = /** @class */ (function (_super) {
     __extends(GetModifyDbProxyTargetGroupRequest, _super);
     function GetModifyDbProxyTargetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyDbProxyTargetGroupQueryParams)
     ], GetModifyDbProxyTargetGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyDbProxyTargetGroupHeaders)
     ], GetModifyDbProxyTargetGroupRequest.prototype, "headers", void 0);
     return GetModifyDbProxyTargetGroupRequest;
-}(SpeakeasyBase));
-export { GetModifyDbProxyTargetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDbProxyTargetGroupRequest = GetModifyDbProxyTargetGroupRequest;
 var GetModifyDbProxyTargetGroupResponse = /** @class */ (function (_super) {
     __extends(GetModifyDbProxyTargetGroupResponse, _super);
     function GetModifyDbProxyTargetGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyDbProxyTargetGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyDbProxyTargetGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyDbProxyTargetGroupResponse.prototype, "statusCode", void 0);
     return GetModifyDbProxyTargetGroupResponse;
-}(SpeakeasyBase));
-export { GetModifyDbProxyTargetGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDbProxyTargetGroupResponse = GetModifyDbProxyTargetGroupResponse;

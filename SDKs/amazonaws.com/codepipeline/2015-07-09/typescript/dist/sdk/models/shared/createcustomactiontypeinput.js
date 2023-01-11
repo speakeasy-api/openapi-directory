@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionCategoryEnum } from "./actioncategoryenum";
-import { ActionConfigurationProperty } from "./actionconfigurationproperty";
-import { ArtifactDetails } from "./artifactdetails";
-import { ActionTypeSettings } from "./actiontypesettings";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomActionTypeInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var actioncategoryenum_1 = require("./actioncategoryenum");
+var actionconfigurationproperty_1 = require("./actionconfigurationproperty");
+var artifactdetails_1 = require("./artifactdetails");
+var actiontypesettings_1 = require("./actiontypesettings");
+var tag_1 = require("./tag");
 // CreateCustomActionTypeInput
 /**
  * Represents the input of a CreateCustomActionType operation.
@@ -38,37 +41,37 @@ var CreateCustomActionTypeInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], CreateCustomActionTypeInput.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationProperties", elemType: ActionConfigurationProperty }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationProperties", elemType: actionconfigurationproperty_1.ActionConfigurationProperty }),
         __metadata("design:type", Array)
     ], CreateCustomActionTypeInput.prototype, "configurationProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputArtifactDetails" }),
-        __metadata("design:type", ArtifactDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputArtifactDetails" }),
+        __metadata("design:type", artifactdetails_1.ArtifactDetails)
     ], CreateCustomActionTypeInput.prototype, "inputArtifactDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputArtifactDetails" }),
-        __metadata("design:type", ArtifactDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputArtifactDetails" }),
+        __metadata("design:type", artifactdetails_1.ArtifactDetails)
     ], CreateCustomActionTypeInput.prototype, "outputArtifactDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], CreateCustomActionTypeInput.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", ActionTypeSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", actiontypesettings_1.ActionTypeSettings)
     ], CreateCustomActionTypeInput.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateCustomActionTypeInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], CreateCustomActionTypeInput.prototype, "version", void 0);
     return CreateCustomActionTypeInput;
-}(SpeakeasyBase));
-export { CreateCustomActionTypeInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomActionTypeInput = CreateCustomActionTypeInput;

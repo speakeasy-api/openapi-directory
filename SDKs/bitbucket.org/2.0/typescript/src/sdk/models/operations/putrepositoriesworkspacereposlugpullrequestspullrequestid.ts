@@ -32,7 +32,7 @@ export class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequest ex
   pathParams: PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdSecurity;
@@ -47,8 +47,8 @@ export class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse e
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pullrequest?: Map<string, any>;
+  pullrequest?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries } from "./googlecloudcontactcenterinsightsv1calculatestatsresponsetimeseries";
-import { GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats } from "./googlecloudcontactcenterinsightsv1issuemodellabelstatsissuestats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1CalculateStatsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1calculatestatsresponsetimeseries_1 = require("./googlecloudcontactcenterinsightsv1calculatestatsresponsetimeseries");
+var googlecloudcontactcenterinsightsv1issuemodellabelstatsissuestats_1 = require("./googlecloudcontactcenterinsightsv1issuemodellabelstatsissuestats");
 // GoogleCloudContactcenterinsightsV1CalculateStatsResponse
 /**
  * The response for calculating conversation statistics.
@@ -35,37 +38,37 @@ var GoogleCloudContactcenterinsightsV1CalculateStatsResponse = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageDuration" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "averageDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageTurnCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageTurnCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "averageTurnCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversationCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "conversationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversationCountTimeSeries" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversationCountTimeSeries" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1calculatestatsresponsetimeseries_1.GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "conversationCountTimeSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customHighlighterMatches" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customHighlighterMatches" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "customHighlighterMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueMatches" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueMatches" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "issueMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueMatchesStats", elemType: GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueMatchesStats", elemType: googlecloudcontactcenterinsightsv1issuemodellabelstatsissuestats_1.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "issueMatchesStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smartHighlighterMatches" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smartHighlighterMatches" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1CalculateStatsResponse.prototype, "smartHighlighterMatches", void 0);
     return GoogleCloudContactcenterinsightsV1CalculateStatsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1CalculateStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1CalculateStatsResponse = GoogleCloudContactcenterinsightsV1CalculateStatsResponse;

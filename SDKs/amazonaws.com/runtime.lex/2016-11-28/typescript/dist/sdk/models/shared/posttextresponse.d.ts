@@ -17,8 +17,8 @@ export declare class PostTextResponse extends SpeakeasyBase {
     nluIntentConfidence?: IntentConfidence;
     responseCard?: ResponseCard;
     sentimentResponse?: SentimentResponse;
-    sessionAttributes?: Map<string, string>;
+    sessionAttributes?: Record<string, string>;
     sessionId?: string;
     slotToElicit?: string;
-    slots?: Map<string, string>;
+    slots?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RawString = void 0;
+var utils_1 = require("../../../internal/utils");
 // RawString
 /**
  * A revision for an AWS Lambda deployment that is a YAML-formatted or JSON-formatted string. For AWS Lambda deployments, the revision is the same as the AppSpec file.RawString and String revision type are deprecated, use AppSpecContent type instead.
@@ -33,13 +36,13 @@ var RawString = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], RawString.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256" }),
         __metadata("design:type", String)
     ], RawString.prototype, "sha256", void 0);
     return RawString;
-}(SpeakeasyBase));
-export { RawString };
+}(utils_1.SpeakeasyBase));
+exports.RawString = RawString;

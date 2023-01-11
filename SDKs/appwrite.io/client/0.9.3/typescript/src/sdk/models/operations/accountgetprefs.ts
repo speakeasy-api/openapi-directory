@@ -26,5 +26,5 @@ export class AccountGetPrefsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  preferences?: Map<string, any>;
+  preferences?: Record<string, any>;
 }

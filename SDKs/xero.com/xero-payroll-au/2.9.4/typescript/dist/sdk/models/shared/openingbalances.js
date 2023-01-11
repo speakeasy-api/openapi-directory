@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeductionLine } from "./deductionline";
-import { EarningsLine } from "./earningsline";
-import { LeaveLine } from "./leaveline";
-import { ReimbursementLine } from "./reimbursementline";
-import { SuperLine } from "./superline";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpeningBalances = void 0;
+var utils_1 = require("../../../internal/utils");
+var deductionline_1 = require("./deductionline");
+var earningsline_1 = require("./earningsline");
+var leaveline_1 = require("./leaveline");
+var reimbursementline_1 = require("./reimbursementline");
+var superline_1 = require("./superline");
 var OpeningBalances = /** @class */ (function (_super) {
     __extends(OpeningBalances, _super);
     function OpeningBalances() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionLines", elemType: DeductionLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionLines", elemType: deductionline_1.DeductionLine }),
         __metadata("design:type", Array)
     ], OpeningBalances.prototype, "deductionLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsLines", elemType: EarningsLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsLines", elemType: earningsline_1.EarningsLine }),
         __metadata("design:type", Array)
     ], OpeningBalances.prototype, "earningsLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveLines", elemType: LeaveLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveLines", elemType: leaveline_1.LeaveLine }),
         __metadata("design:type", Array)
     ], OpeningBalances.prototype, "leaveLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningBalanceDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningBalanceDate" }),
         __metadata("design:type", String)
     ], OpeningBalances.prototype, "openingBalanceDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementLines", elemType: ReimbursementLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementLines", elemType: reimbursementline_1.ReimbursementLine }),
         __metadata("design:type", Array)
     ], OpeningBalances.prototype, "reimbursementLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperLines", elemType: SuperLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperLines", elemType: superline_1.SuperLine }),
         __metadata("design:type", Array)
     ], OpeningBalances.prototype, "superLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tax" }),
         __metadata("design:type", String)
     ], OpeningBalances.prototype, "tax", void 0);
     return OpeningBalances;
-}(SpeakeasyBase));
-export { OpeningBalances };
+}(utils_1.SpeakeasyBase));
+exports.OpeningBalances = OpeningBalances;

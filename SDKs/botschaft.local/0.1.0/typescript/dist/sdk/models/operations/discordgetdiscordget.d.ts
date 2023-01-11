@@ -16,5 +16,5 @@ export declare class DiscordGetDiscordGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    discordGetDiscordGet200ApplicationJsonAny?: any;
+    discordGetDiscordGet200ApplicationJSONAny?: any;
 }

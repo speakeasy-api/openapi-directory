@@ -1,4 +1,7 @@
-export var ExportTaskStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportTaskStatusCodeEnum = void 0;
+var ExportTaskStatusCodeEnum;
 (function (ExportTaskStatusCodeEnum) {
     ExportTaskStatusCodeEnum["Cancelled"] = "CANCELLED";
     ExportTaskStatusCodeEnum["Completed"] = "COMPLETED";
@@ -6,4 +9,4 @@ export var ExportTaskStatusCodeEnum;
     ExportTaskStatusCodeEnum["Pending"] = "PENDING";
     ExportTaskStatusCodeEnum["PendingCancel"] = "PENDING_CANCEL";
     ExportTaskStatusCodeEnum["Running"] = "RUNNING";
-})(ExportTaskStatusCodeEnum || (ExportTaskStatusCodeEnum = {}));
+})(ExportTaskStatusCodeEnum = exports.ExportTaskStatusCodeEnum || (exports.ExportTaskStatusCodeEnum = {}));

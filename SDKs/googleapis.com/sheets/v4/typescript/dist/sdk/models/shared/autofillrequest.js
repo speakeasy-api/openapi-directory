@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-import { SourceAndDestination } from "./sourceanddestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoFillRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var sourceanddestination_1 = require("./sourceanddestination");
 // AutoFillRequest
 /**
  * Fills in more data based on existing data.
@@ -35,17 +38,17 @@ var AutoFillRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], AutoFillRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAndDestination" }),
-        __metadata("design:type", SourceAndDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAndDestination" }),
+        __metadata("design:type", sourceanddestination_1.SourceAndDestination)
     ], AutoFillRequest.prototype, "sourceAndDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAlternateSeries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAlternateSeries" }),
         __metadata("design:type", Boolean)
     ], AutoFillRequest.prototype, "useAlternateSeries", void 0);
     return AutoFillRequest;
-}(SpeakeasyBase));
-export { AutoFillRequest };
+}(utils_1.SpeakeasyBase));
+exports.AutoFillRequest = AutoFillRequest;

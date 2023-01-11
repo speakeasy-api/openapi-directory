@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FileUploadQuestionTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileUploadQuestion = exports.FileUploadQuestionTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FileUploadQuestionTypesEnum;
 (function (FileUploadQuestionTypesEnum) {
     FileUploadQuestionTypesEnum["FileTypeUnspecified"] = "FILE_TYPE_UNSPECIFIED";
     FileUploadQuestionTypesEnum["Any"] = "ANY";
@@ -35,7 +38,7 @@ export var FileUploadQuestionTypesEnum;
     FileUploadQuestionTypesEnum["Image"] = "IMAGE";
     FileUploadQuestionTypesEnum["Video"] = "VIDEO";
     FileUploadQuestionTypesEnum["Audio"] = "AUDIO";
-})(FileUploadQuestionTypesEnum || (FileUploadQuestionTypesEnum = {}));
+})(FileUploadQuestionTypesEnum = exports.FileUploadQuestionTypesEnum || (exports.FileUploadQuestionTypesEnum = {}));
 // FileUploadQuestion
 /**
  * A file upload question. The API currently does not support creating file upload questions.
@@ -46,21 +49,21 @@ var FileUploadQuestion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folderId" }),
         __metadata("design:type", String)
     ], FileUploadQuestion.prototype, "folderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFileSize" }),
         __metadata("design:type", String)
     ], FileUploadQuestion.prototype, "maxFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFiles" }),
         __metadata("design:type", Number)
     ], FileUploadQuestion.prototype, "maxFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=types" }),
         __metadata("design:type", Array)
     ], FileUploadQuestion.prototype, "types", void 0);
     return FileUploadQuestion;
-}(SpeakeasyBase));
-export { FileUploadQuestion };
+}(utils_1.SpeakeasyBase));
+exports.FileUploadQuestion = FileUploadQuestion;

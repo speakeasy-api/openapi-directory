@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Key } from "./key";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var key_1 = require("./key");
 // DeleteRequest
 /**
  * A container for a Delete BatchWrite request
@@ -34,9 +37,9 @@ var DeleteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Key" }),
-        __metadata("design:type", Key)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Key" }),
+        __metadata("design:type", key_1.Key)
     ], DeleteRequest.prototype, "key", void 0);
     return DeleteRequest;
-}(SpeakeasyBase));
-export { DeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRequest = DeleteRequest;

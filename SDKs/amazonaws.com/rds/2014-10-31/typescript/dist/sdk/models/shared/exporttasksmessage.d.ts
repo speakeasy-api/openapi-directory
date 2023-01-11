@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ExportTask } from "./exporttask";
+import { ExportTasksList } from "./exporttaskslist";
 export declare class ExportTasksMessage extends SpeakeasyBase {
-    exportTasks?: ExportTask[];
+    exportTasks?: ExportTasksList[];
     marker?: string;
 }

@@ -19,5 +19,5 @@ export class FunctionConfigurationEnvironment extends SpeakeasyBase {
   resourceAccessPolicies?: ResourceAccessPolicy[];
 
   @SpeakeasyMetadata({ data: "json, name=Variables" })
-  variables?: Map<string, string>;
+  variables?: Record<string, string>;
 }

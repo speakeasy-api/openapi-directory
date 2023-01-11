@@ -13,6 +13,6 @@ export declare class DecodeViaEpiRequest extends SpeakeasyBase {
 export declare class DecodeViaEpiResponse extends SpeakeasyBase {
     build?: shared.Build;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

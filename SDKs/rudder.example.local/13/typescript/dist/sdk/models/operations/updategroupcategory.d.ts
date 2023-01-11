@@ -25,5 +25,5 @@ export declare class UpdateGroupCategoryRequest extends SpeakeasyBase {
 export declare class UpdateGroupCategoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateGroupCategory200ApplicationJsonObject?: UpdateGroupCategory200ApplicationJson;
+    updateGroupCategory200ApplicationJSONObject?: UpdateGroupCategory200ApplicationJson;
 }

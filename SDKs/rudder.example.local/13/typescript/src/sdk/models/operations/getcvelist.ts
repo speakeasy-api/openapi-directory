@@ -54,5 +54,5 @@ export class GetCveListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCveList200ApplicationJsonObject?: GetCveList200ApplicationJson;
+  getCVEList200ApplicationJSONObject?: GetCveList200ApplicationJson;
 }

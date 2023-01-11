@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateConfigurationSetRequest, CreateConfigurationSetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateConfigurationSetRequest = {
   headers: {
-    xAmzAlgorithm: "quis",
-    xAmzContentSha256: "nam",
-    xAmzCredential: "et",
-    xAmzDate: "saepe",
-    xAmzSecurityToken: "esse",
-    xAmzSignature: "facere",
-    xAmzSignedHeaders: "cumque",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    configurationSetName: "accusamus",
+    configurationSetName: "voluptas",
     deliveryOptions: {
-      sendingPoolName: "placeat",
+      sendingPoolName: "fugit",
       tlsPolicy: "REQUIRE",
     },
     reputationOptions: {
-      lastFreshStart: "1990-03-08T21:09:18Z",
+      lastFreshStart: "2003-05-13T04:57:12Z",
       reputationMetricsEnabled: true,
     },
     sendingOptions: {
@@ -58,31 +57,21 @@ const req: CreateConfigurationSetRequest = {
     suppressionOptions: {
       suppressedReasons: [
         "BOUNCE",
-        "BOUNCE",
-        "BOUNCE",
       ],
     },
     tags: [
       {
-        key: "possimus",
-        value: "ducimus",
-      },
-      {
-        key: "placeat",
-        value: "modi",
-      },
-      {
-        key: "amet",
-        value: "modi",
+        key: "ut",
+        value: "dolorem",
       },
     ],
     trackingOptions: {
-      customRedirectDomain: "adipisci",
+      customRedirectDomain: "et",
     },
   },
 };
 
-sdk.sdk.createConfigurationSet(req).then((res: CreateConfigurationSetResponse | AxiosError) => {
+sdk.createConfigurationSet(req).then((res: CreateConfigurationSetResponse | AxiosError) => {
    // handle response
 });
 ```

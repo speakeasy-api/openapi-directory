@@ -50,7 +50,7 @@ export class UpsertAccountRequestBody extends SpeakeasyBase {
   members?: UpsertAccountRequestBodyMembers[];
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, any>;
+  properties?: Record<string, any>;
 }
 
 
@@ -63,6 +63,10 @@ export class UpsertAccount201ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertAccount201ApplicationJson
+/** 
+ * The object was created
+**/
 export class UpsertAccount201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -78,13 +82,13 @@ export class UpsertAccount201ApplicationJson extends SpeakeasyBase {
 **/
 export class UpsertAccount400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -94,7 +98,7 @@ export class UpsertAccount400ApplicationJsonErrorsParameters extends SpeakeasyBa
 **/
 export class UpsertAccount400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: UpsertAccount400ApplicationJsonErrorsParameters;
@@ -110,6 +114,10 @@ export class UpsertAccount400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertAccount400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class UpsertAccount400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: UpsertAccount400ApplicationJsonErrors;
@@ -131,6 +139,10 @@ export class UpsertAccount401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertAccount401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertAccount401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -149,6 +161,10 @@ export class UpsertAccount429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertAccount429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertAccount429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -167,6 +183,10 @@ export class UpsertAccount500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertAccount500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertAccount500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -187,23 +207,23 @@ export class UpsertAccountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  upsertAccount201ApplicationJsonObject?: UpsertAccount201ApplicationJson;
+  upsertAccount201ApplicationJSONObject?: UpsertAccount201ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertAccount400ApplicationJsonObject?: UpsertAccount400ApplicationJson;
+  upsertAccount400ApplicationJSONObject?: UpsertAccount400ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertAccount401ApplicationJsonObject?: UpsertAccount401ApplicationJson;
+  upsertAccount401ApplicationJSONObject?: UpsertAccount401ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertAccount429ApplicationJsonObject?: UpsertAccount429ApplicationJson;
+  upsertAccount429ApplicationJSONObject?: UpsertAccount429ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertAccount500ApplicationJsonObject?: UpsertAccount500ApplicationJson;
+  upsertAccount500ApplicationJSONObject?: UpsertAccount500ApplicationJson;
 }

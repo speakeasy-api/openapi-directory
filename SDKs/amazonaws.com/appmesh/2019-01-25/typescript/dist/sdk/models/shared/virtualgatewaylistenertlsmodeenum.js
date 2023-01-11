@@ -1,6 +1,9 @@
-export var VirtualGatewayListenerTlsModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayListenerTlsModeEnum = void 0;
+var VirtualGatewayListenerTlsModeEnum;
 (function (VirtualGatewayListenerTlsModeEnum) {
     VirtualGatewayListenerTlsModeEnum["Strict"] = "STRICT";
     VirtualGatewayListenerTlsModeEnum["Permissive"] = "PERMISSIVE";
     VirtualGatewayListenerTlsModeEnum["Disabled"] = "DISABLED";
-})(VirtualGatewayListenerTlsModeEnum || (VirtualGatewayListenerTlsModeEnum = {}));
+})(VirtualGatewayListenerTlsModeEnum = exports.VirtualGatewayListenerTlsModeEnum || (exports.VirtualGatewayListenerTlsModeEnum = {}));

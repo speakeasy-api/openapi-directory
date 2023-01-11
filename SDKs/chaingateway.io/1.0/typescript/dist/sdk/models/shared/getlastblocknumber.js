@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLastBlockNumber = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLastBlockNumber = /** @class */ (function (_super) {
     __extends(GetLastBlockNumber, _super);
     function GetLastBlockNumber() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocknumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocknumber" }),
         __metadata("design:type", Number)
     ], GetLastBlockNumber.prototype, "blocknumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], GetLastBlockNumber.prototype, "ok", void 0);
     return GetLastBlockNumber;
-}(SpeakeasyBase));
-export { GetLastBlockNumber };
+}(utils_1.SpeakeasyBase));
+exports.GetLastBlockNumber = GetLastBlockNumber;

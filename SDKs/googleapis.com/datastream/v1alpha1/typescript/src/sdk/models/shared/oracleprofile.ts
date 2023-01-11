@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class OracleProfile extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=connectionAttributes" })
-  connectionAttributes?: Map<string, string>;
+  connectionAttributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=databaseService" })
   databaseService?: string;

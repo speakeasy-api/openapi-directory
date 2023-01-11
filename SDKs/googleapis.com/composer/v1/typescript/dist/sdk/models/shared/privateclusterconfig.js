@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// PrivateClusterConfig
-/**
- * Configuration options for the private GKE cluster in a Cloud Composer environment.
-**/
-var PrivateClusterConfig = /** @class */ (function (_super) {
-    __extends(PrivateClusterConfig, _super);
-    function PrivateClusterConfig() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivateEndpoint" }),
-        __metadata("design:type", Boolean)
-    ], PrivateClusterConfig.prototype, "enablePrivateEndpoint", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterIpv4CidrBlock" }),
-        __metadata("design:type", String)
-    ], PrivateClusterConfig.prototype, "masterIpv4CidrBlock", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterIpv4ReservedRange" }),
-        __metadata("design:type", String)
-    ], PrivateClusterConfig.prototype, "masterIpv4ReservedRange", void 0);
-    return PrivateClusterConfig;
-}(SpeakeasyBase));
-export { PrivateClusterConfig };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateClusterConfig = exports.PrivateClusterConfigInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // PrivateClusterConfigInput
 /**
  * Configuration options for the private GKE cluster in a Cloud Composer environment.
@@ -57,13 +36,37 @@ var PrivateClusterConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivateEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivateEndpoint" }),
         __metadata("design:type", Boolean)
     ], PrivateClusterConfigInput.prototype, "enablePrivateEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], PrivateClusterConfigInput.prototype, "masterIpv4CidrBlock", void 0);
     return PrivateClusterConfigInput;
-}(SpeakeasyBase));
-export { PrivateClusterConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.PrivateClusterConfigInput = PrivateClusterConfigInput;
+// PrivateClusterConfig
+/**
+ * Configuration options for the private GKE cluster in a Cloud Composer environment.
+**/
+var PrivateClusterConfig = /** @class */ (function (_super) {
+    __extends(PrivateClusterConfig, _super);
+    function PrivateClusterConfig() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivateEndpoint" }),
+        __metadata("design:type", Boolean)
+    ], PrivateClusterConfig.prototype, "enablePrivateEndpoint", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterIpv4CidrBlock" }),
+        __metadata("design:type", String)
+    ], PrivateClusterConfig.prototype, "masterIpv4CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterIpv4ReservedRange" }),
+        __metadata("design:type", String)
+    ], PrivateClusterConfig.prototype, "masterIpv4ReservedRange", void 0);
+    return PrivateClusterConfig;
+}(utils_1.SpeakeasyBase));
+exports.PrivateClusterConfig = PrivateClusterConfig;

@@ -19,7 +19,7 @@ export declare class DeleteDedicatedIpPoolResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    deleteDedicatedIpPoolResponse?: Map<string, any>;
+    deleteDedicatedIpPoolResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

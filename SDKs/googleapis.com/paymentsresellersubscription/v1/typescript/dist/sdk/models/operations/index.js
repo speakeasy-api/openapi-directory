@@ -1,10 +1,26 @@
-export * from "./paymentsresellersubscriptionpartnersproductslist";
-export * from "./paymentsresellersubscriptionpartnerspromotionsfindeligible";
-export * from "./paymentsresellersubscriptionpartnerspromotionslist";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionscancel";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionscreate";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionsentitle";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionsextend";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionsget";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionsprovision";
-export * from "./paymentsresellersubscriptionpartnerssubscriptionsundocancel";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./paymentsresellersubscriptionpartnersproductslist"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerspromotionsfindeligible"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerspromotionslist"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionscancel"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionscreate"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionsentitle"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionsextend"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionsget"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionsprovision"), exports);
+__exportStar(require("./paymentsresellersubscriptionpartnerssubscriptionsundocancel"), exports);

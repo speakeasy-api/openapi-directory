@@ -18,7 +18,7 @@ export declare class AcceptQualificationRequestRequest extends SpeakeasyBase {
     request: shared.AcceptQualificationRequestRequest;
 }
 export declare class AcceptQualificationRequestResponse extends SpeakeasyBase {
-    acceptQualificationRequestResponse?: Map<string, any>;
+    acceptQualificationRequestResponse?: Record<string, any>;
     contentType: string;
     requestError?: any;
     serviceFault?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVVersionReportsStartDateToEndDateReportTypeResponse = exports.GetVVersionReportsStartDateToEndDateReportTypeRequest = exports.GetVVersionReportsStartDateToEndDateReportTypeQueryParams = exports.GetVVersionReportsStartDateToEndDateReportTypePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVVersionReportsStartDateToEndDateReportTypePathParams = /** @class */ (function (_super) {
     __extends(GetVVersionReportsStartDateToEndDateReportTypePathParams, _super);
     function GetVVersionReportsStartDateToEndDateReportTypePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=end_date" }),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypePathParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=report_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=report_type" }),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypePathParams.prototype, "reportType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start_date" }),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypePathParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypePathParams.prototype, "version", void 0);
     return GetVVersionReportsStartDateToEndDateReportTypePathParams;
-}(SpeakeasyBase));
-export { GetVVersionReportsStartDateToEndDateReportTypePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVVersionReportsStartDateToEndDateReportTypePathParams = GetVVersionReportsStartDateToEndDateReportTypePathParams;
 var GetVVersionReportsStartDateToEndDateReportTypeQueryParams = /** @class */ (function (_super) {
     __extends(GetVVersionReportsStartDateToEndDateReportTypeQueryParams, _super);
     function GetVVersionReportsStartDateToEndDateReportTypeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetVVersionReportsStartDateToEndDateReportTypeQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetVVersionReportsStartDateToEndDateReportTypeQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=reportSubTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=reportSubTypeId" }),
         __metadata("design:type", Number)
     ], GetVVersionReportsStartDateToEndDateReportTypeQueryParams.prototype, "reportSubTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sites" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sites" }),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypeQueryParams.prototype, "sites", void 0);
     return GetVVersionReportsStartDateToEndDateReportTypeQueryParams;
-}(SpeakeasyBase));
-export { GetVVersionReportsStartDateToEndDateReportTypeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVVersionReportsStartDateToEndDateReportTypeQueryParams = GetVVersionReportsStartDateToEndDateReportTypeQueryParams;
 var GetVVersionReportsStartDateToEndDateReportTypeRequest = /** @class */ (function (_super) {
     __extends(GetVVersionReportsStartDateToEndDateReportTypeRequest, _super);
     function GetVVersionReportsStartDateToEndDateReportTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVVersionReportsStartDateToEndDateReportTypePathParams)
     ], GetVVersionReportsStartDateToEndDateReportTypeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVVersionReportsStartDateToEndDateReportTypeQueryParams)
     ], GetVVersionReportsStartDateToEndDateReportTypeRequest.prototype, "queryParams", void 0);
     return GetVVersionReportsStartDateToEndDateReportTypeRequest;
-}(SpeakeasyBase));
-export { GetVVersionReportsStartDateToEndDateReportTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVVersionReportsStartDateToEndDateReportTypeRequest = GetVVersionReportsStartDateToEndDateReportTypeRequest;
 var GetVVersionReportsStartDateToEndDateReportTypeResponse = /** @class */ (function (_super) {
     __extends(GetVVersionReportsStartDateToEndDateReportTypeResponse, _super);
     function GetVVersionReportsStartDateToEndDateReportTypeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVVersionReportsStartDateToEndDateReportTypeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetVVersionReportsStartDateToEndDateReportTypeResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVVersionReportsStartDateToEndDateReportTypeResponse.prototype, "statusCode", void 0);
     return GetVVersionReportsStartDateToEndDateReportTypeResponse;
-}(SpeakeasyBase));
-export { GetVVersionReportsStartDateToEndDateReportTypeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVVersionReportsStartDateToEndDateReportTypeResponse = GetVVersionReportsStartDateToEndDateReportTypeResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayeeAddress } from "./payeeaddress";
-import { Challenge } from "./challenge";
-import { Company } from "./company";
-import { IndividualInput } from "./individual";
-import { PayeeTypeEnum } from "./payeetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatePayeeDetailsRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var payeeaddress_1 = require("./payeeaddress");
+var challenge_1 = require("./challenge");
+var company_1 = require("./company");
+var individual_1 = require("./individual");
+var payeetypeenum_1 = require("./payeetypeenum");
 var UpdatePayeeDetailsRequestInput = /** @class */ (function (_super) {
     __extends(UpdatePayeeDetailsRequestInput, _super);
     function UpdatePayeeDetailsRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PayeeAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", payeeaddress_1.PayeeAddress)
     ], UpdatePayeeDetailsRequestInput.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challenge" }),
-        __metadata("design:type", Challenge)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challenge" }),
+        __metadata("design:type", challenge_1.Challenge)
     ], UpdatePayeeDetailsRequestInput.prototype, "challenge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
-        __metadata("design:type", Company)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
+        __metadata("design:type", company_1.Company)
     ], UpdatePayeeDetailsRequestInput.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UpdatePayeeDetailsRequestInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individual" }),
-        __metadata("design:type", IndividualInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individual" }),
+        __metadata("design:type", individual_1.IndividualInput)
     ], UpdatePayeeDetailsRequestInput.prototype, "individual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], UpdatePayeeDetailsRequestInput.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeType" }),
         __metadata("design:type", String)
     ], UpdatePayeeDetailsRequestInput.prototype, "payeeType", void 0);
     return UpdatePayeeDetailsRequestInput;
-}(SpeakeasyBase));
-export { UpdatePayeeDetailsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePayeeDetailsRequestInput = UpdatePayeeDetailsRequestInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { H264CodecSettings } from "./h264codecsettings";
-import { H265CodecSettings } from "./h265codecsettings";
-import { Vp9CodecSettings } from "./vp9codecsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var h264codecsettings_1 = require("./h264codecsettings");
+var h265codecsettings_1 = require("./h265codecsettings");
+var vp9codecsettings_1 = require("./vp9codecsettings");
 // VideoStream
 /**
  * Video stream resource.
@@ -36,17 +39,17 @@ var VideoStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=h264" }),
-        __metadata("design:type", H264CodecSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=h264" }),
+        __metadata("design:type", h264codecsettings_1.H264CodecSettings)
     ], VideoStream.prototype, "h264", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=h265" }),
-        __metadata("design:type", H265CodecSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=h265" }),
+        __metadata("design:type", h265codecsettings_1.H265CodecSettings)
     ], VideoStream.prototype, "h265", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vp9" }),
-        __metadata("design:type", Vp9CodecSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vp9" }),
+        __metadata("design:type", vp9codecsettings_1.Vp9CodecSettings)
     ], VideoStream.prototype, "vp9", void 0);
     return VideoStream;
-}(SpeakeasyBase));
-export { VideoStream };
+}(utils_1.SpeakeasyBase));
+exports.VideoStream = VideoStream;

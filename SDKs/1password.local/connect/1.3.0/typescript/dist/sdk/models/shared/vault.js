@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VaultTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vault = exports.VaultTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VaultTypeEnum;
 (function (VaultTypeEnum) {
     VaultTypeEnum["UserCreated"] = "USER_CREATED";
     VaultTypeEnum["Personal"] = "PERSONAL";
     VaultTypeEnum["Everyone"] = "EVERYONE";
     VaultTypeEnum["Transfer"] = "TRANSFER";
-})(VaultTypeEnum || (VaultTypeEnum = {}));
+})(VaultTypeEnum = exports.VaultTypeEnum || (exports.VaultTypeEnum = {}));
 var Vault = /** @class */ (function (_super) {
     __extends(Vault, _super);
     function Vault() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeVersion" }),
         __metadata("design:type", Number)
     ], Vault.prototype, "attributeVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentVersion" }),
         __metadata("design:type", Number)
     ], Vault.prototype, "contentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Vault.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Vault.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Vault.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
         __metadata("design:type", Number)
     ], Vault.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Vault.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Vault.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Vault.prototype, "updatedAt", void 0);
     return Vault;
-}(SpeakeasyBase));
-export { Vault };
+}(utils_1.SpeakeasyBase));
+exports.Vault = Vault;

@@ -19,5 +19,5 @@ export declare class TopicTopicTopicNameGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    topicTopicTopicNameGet200ApplicationJsonAny?: any;
+    topicTopicTopicNameGet200ApplicationJSONAny?: any;
 }

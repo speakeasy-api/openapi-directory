@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagPerformance } from "./tagperformance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IterationPerformance = void 0;
+var utils_1 = require("../../../internal/utils");
+var tagperformance_1 = require("./tagperformance");
 // IterationPerformance
 /**
  * Represents the detailed performance data for a trained iteration
@@ -34,25 +37,25 @@ var IterationPerformance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PerTagPerformance", elemType: TagPerformance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PerTagPerformance", elemType: tagperformance_1.TagPerformance }),
         __metadata("design:type", Array)
     ], IterationPerformance.prototype, "perTagPerformance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Precision" }),
         __metadata("design:type", Number)
     ], IterationPerformance.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrecisionStdDeviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrecisionStdDeviation" }),
         __metadata("design:type", Number)
     ], IterationPerformance.prototype, "precisionStdDeviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Recall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Recall" }),
         __metadata("design:type", Number)
     ], IterationPerformance.prototype, "recall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecallStdDeviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecallStdDeviation" }),
         __metadata("design:type", Number)
     ], IterationPerformance.prototype, "recallStdDeviation", void 0);
     return IterationPerformance;
-}(SpeakeasyBase));
-export { IterationPerformance };
+}(utils_1.SpeakeasyBase));
+exports.IterationPerformance = IterationPerformance;

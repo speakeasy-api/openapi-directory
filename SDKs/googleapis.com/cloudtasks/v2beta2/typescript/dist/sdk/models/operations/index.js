@@ -1,21 +1,37 @@
-export * from "./cloudtasksapiqueueupdate";
-export * from "./cloudtasksprojectslocationslist";
-export * from "./cloudtasksprojectslocationsqueuescreate";
-export * from "./cloudtasksprojectslocationsqueuesgetiampolicy";
-export * from "./cloudtasksprojectslocationsqueueslist";
-export * from "./cloudtasksprojectslocationsqueuespatch";
-export * from "./cloudtasksprojectslocationsqueuespause";
-export * from "./cloudtasksprojectslocationsqueuespurge";
-export * from "./cloudtasksprojectslocationsqueuesresume";
-export * from "./cloudtasksprojectslocationsqueuessetiampolicy";
-export * from "./cloudtasksprojectslocationsqueuestasksacknowledge";
-export * from "./cloudtasksprojectslocationsqueuestasksbuffer";
-export * from "./cloudtasksprojectslocationsqueuestaskscancellease";
-export * from "./cloudtasksprojectslocationsqueuestaskscreate";
-export * from "./cloudtasksprojectslocationsqueuestasksdelete";
-export * from "./cloudtasksprojectslocationsqueuestasksget";
-export * from "./cloudtasksprojectslocationsqueuestaskslease";
-export * from "./cloudtasksprojectslocationsqueuestaskslist";
-export * from "./cloudtasksprojectslocationsqueuestasksrenewlease";
-export * from "./cloudtasksprojectslocationsqueuestasksrun";
-export * from "./cloudtasksprojectslocationsqueuestestiampermissions";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./cloudtasksapiqueueupdate"), exports);
+__exportStar(require("./cloudtasksprojectslocationslist"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuescreate"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuesgetiampolicy"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueueslist"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuespatch"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuespause"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuespurge"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuesresume"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuessetiampolicy"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksacknowledge"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksbuffer"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestaskscancellease"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestaskscreate"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksdelete"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksget"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestaskslease"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestaskslist"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksrenewlease"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestasksrun"), exports);
+__exportStar(require("./cloudtasksprojectslocationsqueuestestiampermissions"), exports);

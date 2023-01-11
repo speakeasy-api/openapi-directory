@@ -5,7 +5,7 @@ export declare class CreateFundingAccountV2Request extends SpeakeasyBase {
 }
 export declare class CreateFundingAccountV2Response extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     inlineResponse400?: any;
     inlineResponse401?: any;

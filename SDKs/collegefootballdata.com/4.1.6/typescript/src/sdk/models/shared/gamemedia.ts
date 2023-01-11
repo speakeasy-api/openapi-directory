@@ -19,7 +19,7 @@ export class GameMedia extends SpeakeasyBase {
   id?: number;
 
   @SpeakeasyMetadata({ data: "json, name=isStartTimeTBD" })
-  isStartTimeTbd?: boolean;
+  isStartTimeTBD?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=mediaType" })
   mediaType?: string;

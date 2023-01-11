@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSyslogGetStatsHdrResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSyslogGetStatsHdrResponse = /** @class */ (function (_super) {
     __extends(ProtocolSyslogGetStatsHdrResponse, _super);
     function ProtocolSyslogGetStatsHdrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSyslogGetStatsHdrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSyslogGetStatsHdrResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolSyslogGetStatsHdrResponse.prototype, "protocolSyslogGetStatsHdr200ApplicationJsonStrings", void 0);
+    ], ProtocolSyslogGetStatsHdrResponse.prototype, "protocolSyslogGetStatsHdr200ApplicationJSONStrings", void 0);
     return ProtocolSyslogGetStatsHdrResponse;
-}(SpeakeasyBase));
-export { ProtocolSyslogGetStatsHdrResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSyslogGetStatsHdrResponse = ProtocolSyslogGetStatsHdrResponse;

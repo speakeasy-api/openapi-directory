@@ -18,7 +18,7 @@ export declare class DeletePlaybackKeyPairRequest extends SpeakeasyBase {
 export declare class DeletePlaybackKeyPairResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deletePlaybackKeyPairResponse?: Map<string, any>;
+    deletePlaybackKeyPairResponse?: Record<string, any>;
     pendingVerification?: any;
     resourceNotFoundException?: any;
     statusCode: number;

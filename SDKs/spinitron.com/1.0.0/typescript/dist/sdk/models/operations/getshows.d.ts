@@ -22,7 +22,7 @@ export declare class GetShowsRequest extends SpeakeasyBase {
 export declare class GetShowsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
-    getShows200ApplicationJsonObject?: GetShows200ApplicationJson;
+    error?: shared.ErrorT;
     statusCode: number;
+    getShows200ApplicationJSONObject?: GetShows200ApplicationJson;
 }

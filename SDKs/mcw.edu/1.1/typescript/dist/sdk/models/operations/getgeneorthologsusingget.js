@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGeneOrthologsUsingGetResponse = exports.GetGeneOrthologsUsingGetRequest = exports.GetGeneOrthologsUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGeneOrthologsUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGeneOrthologsUsingGetPathParams, _super);
     function GetGeneOrthologsUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetGeneOrthologsUsingGetPathParams.prototype, "rgdId", void 0);
     return GetGeneOrthologsUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGeneOrthologsUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneOrthologsUsingGetPathParams = GetGeneOrthologsUsingGetPathParams;
 var GetGeneOrthologsUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGeneOrthologsUsingGetRequest, _super);
     function GetGeneOrthologsUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGeneOrthologsUsingGetPathParams)
     ], GetGeneOrthologsUsingGetRequest.prototype, "pathParams", void 0);
     return GetGeneOrthologsUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGeneOrthologsUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneOrthologsUsingGetRequest = GetGeneOrthologsUsingGetRequest;
 var GetGeneOrthologsUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGeneOrthologsUsingGetResponse, _super);
     function GetGeneOrthologsUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGeneOrthologsUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGeneOrthologsUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGeneOrthologsUsingGetResponse.prototype, "statusCode", void 0);
     return GetGeneOrthologsUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGeneOrthologsUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneOrthologsUsingGetResponse = GetGeneOrthologsUsingGetResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputePlatformEnum } from "./computeplatformenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateApplicationInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeplatformenum_1 = require("./computeplatformenum");
+var tag_1 = require("./tag");
 // CreateApplicationInput
 /**
  * Represents the input of a <code>CreateApplication</code> operation.
@@ -35,17 +38,17 @@ var CreateApplicationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], CreateApplicationInput.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computePlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computePlatform" }),
         __metadata("design:type", String)
     ], CreateApplicationInput.prototype, "computePlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateApplicationInput.prototype, "tags", void 0);
     return CreateApplicationInput;
-}(SpeakeasyBase));
-export { CreateApplicationInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateApplicationInput = CreateApplicationInput;

@@ -60,7 +60,7 @@ export class RemoveTagsResponse extends SpeakeasyBase {
   pipelineNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  removeTagsOutput?: Map<string, any>;
+  removeTagsOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

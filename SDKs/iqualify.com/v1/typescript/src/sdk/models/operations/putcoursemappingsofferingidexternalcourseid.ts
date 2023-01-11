@@ -23,11 +23,11 @@ export class PutCourseMappingsOfferingIdExternalCourseIdResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  putCourseMappingsOfferingIdExternalCourseId200ApplicationJsonStrings?: string[];
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings?: string[];
 }

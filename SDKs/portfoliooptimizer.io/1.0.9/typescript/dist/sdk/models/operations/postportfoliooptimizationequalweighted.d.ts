@@ -10,6 +10,6 @@ export declare class PostPortfolioOptimizationEqualWeightedRequest extends Speak
 }
 export declare class PostPortfolioOptimizationEqualWeightedResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationEqualWeighted200ApplicationJsonObject?: PostPortfolioOptimizationEqualWeighted200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationEqualWeighted200ApplicationJSONObject?: PostPortfolioOptimizationEqualWeighted200ApplicationJson;
 }

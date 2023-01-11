@@ -9,7 +9,7 @@ import { Answer } from "./answer";
 **/
 export class FormResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=answers", elemType: Answer })
-  answers?: Map<string, Answer>;
+  answers?: Record<string, Answer>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;

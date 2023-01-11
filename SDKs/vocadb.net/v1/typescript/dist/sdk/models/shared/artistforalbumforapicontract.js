@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtistContract } from "./artistcontract";
-export var ArtistForAlbumForApiContractCategoriesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistForAlbumForApiContract = exports.ArtistForAlbumForApiContractRolesEnum = exports.ArtistForAlbumForApiContractEffectiveRolesEnum = exports.ArtistForAlbumForApiContractCategoriesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var artistcontract_1 = require("./artistcontract");
+var ArtistForAlbumForApiContractCategoriesEnum;
 (function (ArtistForAlbumForApiContractCategoriesEnum) {
     ArtistForAlbumForApiContractCategoriesEnum["Nothing"] = "Nothing";
     ArtistForAlbumForApiContractCategoriesEnum["Vocalist"] = "Vocalist";
@@ -36,8 +39,8 @@ export var ArtistForAlbumForApiContractCategoriesEnum;
     ArtistForAlbumForApiContractCategoriesEnum["Band"] = "Band";
     ArtistForAlbumForApiContractCategoriesEnum["Illustrator"] = "Illustrator";
     ArtistForAlbumForApiContractCategoriesEnum["Subject"] = "Subject";
-})(ArtistForAlbumForApiContractCategoriesEnum || (ArtistForAlbumForApiContractCategoriesEnum = {}));
-export var ArtistForAlbumForApiContractEffectiveRolesEnum;
+})(ArtistForAlbumForApiContractCategoriesEnum = exports.ArtistForAlbumForApiContractCategoriesEnum || (exports.ArtistForAlbumForApiContractCategoriesEnum = {}));
+var ArtistForAlbumForApiContractEffectiveRolesEnum;
 (function (ArtistForAlbumForApiContractEffectiveRolesEnum) {
     ArtistForAlbumForApiContractEffectiveRolesEnum["Default"] = "Default";
     ArtistForAlbumForApiContractEffectiveRolesEnum["Animator"] = "Animator";
@@ -56,8 +59,8 @@ export var ArtistForAlbumForApiContractEffectiveRolesEnum;
     ArtistForAlbumForApiContractEffectiveRolesEnum["Chorus"] = "Chorus";
     ArtistForAlbumForApiContractEffectiveRolesEnum["Encoder"] = "Encoder";
     ArtistForAlbumForApiContractEffectiveRolesEnum["VocalDataProvider"] = "VocalDataProvider";
-})(ArtistForAlbumForApiContractEffectiveRolesEnum || (ArtistForAlbumForApiContractEffectiveRolesEnum = {}));
-export var ArtistForAlbumForApiContractRolesEnum;
+})(ArtistForAlbumForApiContractEffectiveRolesEnum = exports.ArtistForAlbumForApiContractEffectiveRolesEnum || (exports.ArtistForAlbumForApiContractEffectiveRolesEnum = {}));
+var ArtistForAlbumForApiContractRolesEnum;
 (function (ArtistForAlbumForApiContractRolesEnum) {
     ArtistForAlbumForApiContractRolesEnum["Default"] = "Default";
     ArtistForAlbumForApiContractRolesEnum["Animator"] = "Animator";
@@ -76,36 +79,36 @@ export var ArtistForAlbumForApiContractRolesEnum;
     ArtistForAlbumForApiContractRolesEnum["Chorus"] = "Chorus";
     ArtistForAlbumForApiContractRolesEnum["Encoder"] = "Encoder";
     ArtistForAlbumForApiContractRolesEnum["VocalDataProvider"] = "VocalDataProvider";
-})(ArtistForAlbumForApiContractRolesEnum || (ArtistForAlbumForApiContractRolesEnum = {}));
+})(ArtistForAlbumForApiContractRolesEnum = exports.ArtistForAlbumForApiContractRolesEnum || (exports.ArtistForAlbumForApiContractRolesEnum = {}));
 var ArtistForAlbumForApiContract = /** @class */ (function (_super) {
     __extends(ArtistForAlbumForApiContract, _super);
     function ArtistForAlbumForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
-        __metadata("design:type", ArtistContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
+        __metadata("design:type", artistcontract_1.ArtistContract)
     ], ArtistForAlbumForApiContract.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", String)
     ], ArtistForAlbumForApiContract.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveRoles" }),
         __metadata("design:type", String)
     ], ArtistForAlbumForApiContract.prototype, "effectiveRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSupport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSupport" }),
         __metadata("design:type", Boolean)
     ], ArtistForAlbumForApiContract.prototype, "isSupport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtistForAlbumForApiContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", String)
     ], ArtistForAlbumForApiContract.prototype, "roles", void 0);
     return ArtistForAlbumForApiContract;
-}(SpeakeasyBase));
-export { ArtistForAlbumForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.ArtistForAlbumForApiContract = ArtistForAlbumForApiContract;

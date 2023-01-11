@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpRuleItem } from "./ipruleitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizeIpRulesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipruleitem_1 = require("./ipruleitem");
 var AuthorizeIpRulesRequest = /** @class */ (function (_super) {
     __extends(AuthorizeIpRulesRequest, _super);
     function AuthorizeIpRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupId" }),
         __metadata("design:type", String)
     ], AuthorizeIpRulesRequest.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserRules", elemType: IpRuleItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserRules", elemType: ipruleitem_1.IpRuleItem }),
         __metadata("design:type", Array)
     ], AuthorizeIpRulesRequest.prototype, "userRules", void 0);
     return AuthorizeIpRulesRequest;
-}(SpeakeasyBase));
-export { AuthorizeIpRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizeIpRulesRequest = AuthorizeIpRulesRequest;

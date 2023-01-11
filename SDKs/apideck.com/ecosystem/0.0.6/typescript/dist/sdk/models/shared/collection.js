@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { File } from "./file";
-import { Translation } from "./translation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Collection = void 0;
+var utils_1 = require("../../../internal/utils");
+var file_1 = require("./file");
+var translation_1 = require("./translation");
 var Collection = /** @class */ (function (_super) {
     __extends(Collection, _super);
     function Collection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_background_color" }),
         __metadata("design:type", String)
     ], Collection.prototype, "cardBackgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_background_image" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_background_image" }),
+        __metadata("design:type", file_1.File)
     ], Collection.prototype, "cardBackgroundImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_columns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_columns" }),
         __metadata("design:type", Number)
     ], Collection.prototype, "cardColumns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=card_style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=card_style" }),
         __metadata("design:type", String)
     ], Collection.prototype, "cardStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], Collection.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Collection.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden_from_homepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden_from_homepage" }),
         __metadata("design:type", Boolean)
     ], Collection.prototype, "hiddenFromHomepage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Collection.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
-        __metadata("design:type", File)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
+        __metadata("design:type", file_1.File)
     ], Collection.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Collection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sequence" }),
         __metadata("design:type", Number)
     ], Collection.prototype, "sequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_max_items_homepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_max_items_homepage" }),
         __metadata("design:type", Number)
     ], Collection.prototype, "showMaxItemsHomepage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Collection.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translations", elemType: Translation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translations", elemType: translation_1.Translation }),
         __metadata("design:type", Array)
     ], Collection.prototype, "translations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visible" }),
         __metadata("design:type", Boolean)
     ], Collection.prototype, "visible", void 0);
     return Collection;
-}(SpeakeasyBase));
-export { Collection };
+}(utils_1.SpeakeasyBase));
+exports.Collection = Collection;

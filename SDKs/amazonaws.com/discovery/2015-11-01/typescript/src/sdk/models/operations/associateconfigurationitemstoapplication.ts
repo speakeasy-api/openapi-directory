@@ -45,7 +45,7 @@ export class AssociateConfigurationItemsToApplicationRequest extends SpeakeasyBa
 
 export class AssociateConfigurationItemsToApplicationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associateConfigurationItemsToApplicationResponse?: Map<string, any>;
+  associateConfigurationItemsToApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   authorizationErrorException?: any;

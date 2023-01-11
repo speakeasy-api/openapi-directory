@@ -46,7 +46,7 @@ export class DescribeSecretResponse extends SpeakeasyBase {
   rotationEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=RotationLambdaARN" })
-  rotationLambdaArn?: string;
+  rotationLambdaARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RotationRules" })
   rotationRules?: RotationRulesType;
@@ -55,5 +55,5 @@ export class DescribeSecretResponse extends SpeakeasyBase {
   tags?: Tag[];
 
   @SpeakeasyMetadata({ data: "json, name=VersionIdsToStages" })
-  versionIdsToStages?: Map<string, string[]>;
+  versionIdsToStages?: Record<string, string[]>;
 }

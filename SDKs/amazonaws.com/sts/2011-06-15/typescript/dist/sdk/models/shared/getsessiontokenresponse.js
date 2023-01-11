@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Credentials } from "./credentials";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSessionTokenResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var credentials_1 = require("./credentials");
 // GetSessionTokenResponse
 /**
  * Contains the response to a successful <a>GetSessionToken</a> request, including temporary Amazon Web Services credentials that can be used to make Amazon Web Services requests.
@@ -34,9 +37,9 @@ var GetSessionTokenResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Credentials)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", credentials_1.Credentials)
     ], GetSessionTokenResponse.prototype, "credentials", void 0);
     return GetSessionTokenResponse;
-}(SpeakeasyBase));
-export { GetSessionTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSessionTokenResponse = GetSessionTokenResponse;

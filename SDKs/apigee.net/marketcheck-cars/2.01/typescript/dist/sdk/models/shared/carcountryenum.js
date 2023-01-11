@@ -1,4 +1,7 @@
-export var CarCountryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarCountryEnum = void 0;
+var CarCountryEnum;
 (function (CarCountryEnum) {
     CarCountryEnum["UsUpper"] = "US";
     CarCountryEnum["CaUpper"] = "CA";
@@ -6,4 +9,4 @@ export var CarCountryEnum;
     CarCountryEnum["CaLower"] = "ca";
     CarCountryEnum["AllLower"] = "all";
     CarCountryEnum["AllUpper"] = "ALL";
-})(CarCountryEnum || (CarCountryEnum = {}));
+})(CarCountryEnum = exports.CarCountryEnum || (exports.CarCountryEnum = {}));

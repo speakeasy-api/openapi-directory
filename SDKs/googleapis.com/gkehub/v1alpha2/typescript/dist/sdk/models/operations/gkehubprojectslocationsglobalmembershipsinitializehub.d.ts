@@ -23,7 +23,7 @@ export declare class GkehubProjectsLocationsGlobalMembershipsInitializeHubSecuri
 export declare class GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest extends SpeakeasyBase {
     pathParams: GkehubProjectsLocationsGlobalMembershipsInitializeHubPathParams;
     queryParams: GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity;
 }
 export declare class GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse extends SpeakeasyBase {

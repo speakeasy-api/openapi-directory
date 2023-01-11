@@ -29,13 +29,13 @@ export class GetUsersUserMobileApplication extends SpeakeasyBase {
   businessUserId?: number;
 
   @SpeakeasyMetadata({ data: "json, name=clientID" })
-  clientId?: string;
+  clientID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=deviceName" })
   deviceName?: GetUsersUserMobileApplicationDeviceNameEnum;
 
   @SpeakeasyMetadata({ data: "json, name=deviceOSVersion" })
-  deviceOsVersion?: string;
+  deviceOSVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=mobileApplicationId" })
   mobileApplicationId?: number;

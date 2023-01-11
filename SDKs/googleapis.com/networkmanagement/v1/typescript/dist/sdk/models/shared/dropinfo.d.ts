@@ -34,7 +34,8 @@ export declare enum DropInfoCauseEnum {
     CloudFunctionNotActive = "CLOUD_FUNCTION_NOT_ACTIVE",
     VpcConnectorNotSet = "VPC_CONNECTOR_NOT_SET",
     VpcConnectorNotRunning = "VPC_CONNECTOR_NOT_RUNNING",
-    PscConnectionNotAccepted = "PSC_CONNECTION_NOT_ACCEPTED"
+    PscConnectionNotAccepted = "PSC_CONNECTION_NOT_ACCEPTED",
+    CloudRunRevisionNotReady = "CLOUD_RUN_REVISION_NOT_READY"
 }
 /**
  * Details of the final state "drop" and associated resource.

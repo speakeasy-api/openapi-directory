@@ -12,7 +12,7 @@ export enum ErrorLocationTypeEnum {
 }
 
 
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errorCode" })
   errorCode?: string;
 

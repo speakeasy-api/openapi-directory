@@ -22,5 +22,5 @@ export class ReloadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reload200ApplicationJsonString?: string;
+  reload200ApplicationJSONString?: string;
 }

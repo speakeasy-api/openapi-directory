@@ -60,7 +60,7 @@ export class ListAssignmentsForHitResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  listAssignmentsForHitResponse?: shared.ListAssignmentsForHitResponse;
+  listAssignmentsForHITResponse?: shared.ListAssignmentsForHitResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

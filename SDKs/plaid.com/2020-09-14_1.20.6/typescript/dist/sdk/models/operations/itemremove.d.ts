@@ -5,7 +5,7 @@ export declare class ItemRemoveRequest extends SpeakeasyBase {
 }
 export declare class ItemRemoveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    itemRemoveResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    itemRemoveResponse?: Record<string, any>;
     statusCode: number;
 }

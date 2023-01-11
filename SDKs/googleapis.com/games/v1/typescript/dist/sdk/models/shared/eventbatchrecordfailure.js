@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventPeriodRange } from "./eventperiodrange";
-export var EventBatchRecordFailureFailureCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventBatchRecordFailure = exports.EventBatchRecordFailureFailureCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventperiodrange_1 = require("./eventperiodrange");
+var EventBatchRecordFailureFailureCauseEnum;
 (function (EventBatchRecordFailureFailureCauseEnum) {
     EventBatchRecordFailureFailureCauseEnum["EventFailureCauseUnspecified"] = "EVENT_FAILURE_CAUSE_UNSPECIFIED";
     EventBatchRecordFailureFailureCauseEnum["TooLarge"] = "TOO_LARGE";
@@ -33,7 +36,7 @@ export var EventBatchRecordFailureFailureCauseEnum;
     EventBatchRecordFailureFailureCauseEnum["TimePeriodLong"] = "TIME_PERIOD_LONG";
     EventBatchRecordFailureFailureCauseEnum["AlreadyUpdated"] = "ALREADY_UPDATED";
     EventBatchRecordFailureFailureCauseEnum["RecordRateHigh"] = "RECORD_RATE_HIGH";
-})(EventBatchRecordFailureFailureCauseEnum || (EventBatchRecordFailureFailureCauseEnum = {}));
+})(EventBatchRecordFailureFailureCauseEnum = exports.EventBatchRecordFailureFailureCauseEnum || (exports.EventBatchRecordFailureFailureCauseEnum = {}));
 // EventBatchRecordFailure
 /**
  * A batch update failure resource.
@@ -44,17 +47,17 @@ var EventBatchRecordFailure = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCause" }),
         __metadata("design:type", String)
     ], EventBatchRecordFailure.prototype, "failureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EventBatchRecordFailure.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", EventPeriodRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", eventperiodrange_1.EventPeriodRange)
     ], EventBatchRecordFailure.prototype, "range", void 0);
     return EventBatchRecordFailure;
-}(SpeakeasyBase));
-export { EventBatchRecordFailure };
+}(utils_1.SpeakeasyBase));
+exports.EventBatchRecordFailure = EventBatchRecordFailure;

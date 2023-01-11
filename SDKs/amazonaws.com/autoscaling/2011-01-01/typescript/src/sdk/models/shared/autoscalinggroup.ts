@@ -15,7 +15,7 @@ import { WarmPoolConfiguration } from "./warmpoolconfiguration";
 **/
 export class AutoScalingGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  autoScalingGroupArn?: string;
+  autoScalingGroupARN?: string;
 
   @SpeakeasyMetadata()
   autoScalingGroupName: string;
@@ -81,7 +81,7 @@ export class AutoScalingGroup extends SpeakeasyBase {
   predictedCapacity?: number;
 
   @SpeakeasyMetadata()
-  serviceLinkedRoleArn?: string;
+  serviceLinkedRoleARN?: string;
 
   @SpeakeasyMetadata()
   status?: string;
@@ -93,7 +93,7 @@ export class AutoScalingGroup extends SpeakeasyBase {
   tags?: TagDescription[];
 
   @SpeakeasyMetadata()
-  targetGroupArNs?: string[];
+  targetGroupARNs?: string[];
 
   @SpeakeasyMetadata()
   terminationPolicies?: string[];

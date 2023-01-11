@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// BucketCriteriaAdditionalProperties
-/** 
- * Specifies the operator to use in a property-based condition that filters the results of a query for information about S3 buckets.
-**/
 export class BucketCriteriaAdditionalProperties extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=eq" })
   eq?: string[];

@@ -1,4 +1,7 @@
-export var MessageCode401PiisEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageCode401PiisEnum = void 0;
+var MessageCode401PiisEnum;
 (function (MessageCode401PiisEnum) {
     MessageCode401PiisEnum["CertificateInvalid"] = "CERTIFICATE_INVALID";
     MessageCode401PiisEnum["RoleInvalid"] = "ROLE_INVALID";
@@ -15,4 +18,4 @@ export var MessageCode401PiisEnum;
     MessageCode401PiisEnum["TokenUnknown"] = "TOKEN_UNKNOWN";
     MessageCode401PiisEnum["TokenInvalid"] = "TOKEN_INVALID";
     MessageCode401PiisEnum["TokenExpired"] = "TOKEN_EXPIRED";
-})(MessageCode401PiisEnum || (MessageCode401PiisEnum = {}));
+})(MessageCode401PiisEnum = exports.MessageCode401PiisEnum || (exports.MessageCode401PiisEnum = {}));

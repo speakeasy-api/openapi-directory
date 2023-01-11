@@ -10,7 +10,7 @@ export class SetPrincipalTagAttributeMapResponse extends SpeakeasyBase {
   identityProviderName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PrincipalTags" })
-  principalTags?: Map<string, string>;
+  principalTags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=UseDefaults" })
   useDefaults?: boolean;

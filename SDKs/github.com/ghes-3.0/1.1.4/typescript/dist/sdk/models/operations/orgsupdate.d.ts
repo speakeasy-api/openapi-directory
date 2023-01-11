@@ -46,6 +46,6 @@ export declare class OrgsUpdateResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     organizationFull?: shared.OrganizationFull;
-    orgsUpdate415ApplicationJsonObject?: OrgsUpdate415ApplicationJson;
-    orgsUpdate422ApplicationJsonOneOf?: any;
+    orgsUpdate415ApplicationJSONObject?: OrgsUpdate415ApplicationJson;
+    orgsUpdate422ApplicationJSONOneOf?: any;
 }

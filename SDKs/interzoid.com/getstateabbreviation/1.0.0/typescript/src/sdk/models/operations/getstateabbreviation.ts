@@ -40,5 +40,5 @@ export class GetstateabbreviationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getstateabbreviation200ApplicationJsonObject?: Getstateabbreviation200ApplicationJson;
+  getstateabbreviation200ApplicationJSONObject?: Getstateabbreviation200ApplicationJson;
 }

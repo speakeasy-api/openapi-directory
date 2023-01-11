@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Device } from "./device";
-import { ProblemDetail } from "./problemdetail";
-import { ExecutionResultEnum } from "./executionresultenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Problem = void 0;
+var utils_1 = require("../../../internal/utils");
+var device_1 = require("./device");
+var problemdetail_1 = require("./problemdetail");
+var executionresultenum_1 = require("./executionresultenum");
 // Problem
 /**
  * Represents a specific warning or failure.
@@ -36,33 +39,33 @@ var Problem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", Device)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", device_1.Device)
     ], Problem.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=job" }),
-        __metadata("design:type", ProblemDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=job" }),
+        __metadata("design:type", problemdetail_1.ProblemDetail)
     ], Problem.prototype, "job", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Problem.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], Problem.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run" }),
-        __metadata("design:type", ProblemDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run" }),
+        __metadata("design:type", problemdetail_1.ProblemDetail)
     ], Problem.prototype, "run", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suite" }),
-        __metadata("design:type", ProblemDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suite" }),
+        __metadata("design:type", problemdetail_1.ProblemDetail)
     ], Problem.prototype, "suite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
-        __metadata("design:type", ProblemDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
+        __metadata("design:type", problemdetail_1.ProblemDetail)
     ], Problem.prototype, "test", void 0);
     return Problem;
-}(SpeakeasyBase));
-export { Problem };
+}(utils_1.SpeakeasyBase));
+exports.Problem = Problem;

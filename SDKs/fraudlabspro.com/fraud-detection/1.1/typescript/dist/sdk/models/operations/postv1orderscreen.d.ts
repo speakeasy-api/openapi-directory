@@ -43,6 +43,6 @@ export declare class PostV1OrderScreenRequest extends SpeakeasyBase {
 }
 export declare class PostV1OrderScreenResponse extends SpeakeasyBase {
     contentType: string;
-    postV1OrderScreen200ApplicationJsonString?: string;
     statusCode: number;
+    postV1OrderScreen200ApplicationJSONString?: string;
 }

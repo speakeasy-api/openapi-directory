@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteProjectUsernameProjectBuildCacheRequest, DeleteProjectUsernameProjectBuildCacheResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,12 +33,12 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteProjectUsernameProjectBuildCacheRequest = {
   pathParams: {
-    project: "molestiae",
-    username: "officia",
+    project: "sit",
+    username: "voluptas",
   },
 };
 
-sdk.sdk.deleteProjectUsernameProjectBuildCache(req).then((res: DeleteProjectUsernameProjectBuildCacheResponse | AxiosError) => {
+sdk.deleteProjectUsernameProjectBuildCache(req).then((res: DeleteProjectUsernameProjectBuildCacheResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -60,14 +59,6 @@ sdk.sdk.deleteProjectUsernameProjectBuildCache(req).then((res: DeleteProjectUser
 
 * `getProjectUsernameProject` - Build summary for each of the last 30 builds for a single git repo.
 
-* `getProjectUsernameProjectBuildNum` - Full details for a single build. The response includes all of the fields from the build summary.
-This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-
-* `getProjectUsernameProjectBuildNumArtifacts` - List the artifacts produced by a given build.
-
-* `getProjectUsernameProjectBuildNumTests` - Provides test metadata for a build
-Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-
 * `getProjectUsernameProjectCheckoutKey` - Lists checkout keys.
 
 * `getProjectUsernameProjectCheckoutKeyFingerprint` - Get a checkout key.
@@ -76,15 +67,19 @@ Note: [Learn how to set up your builds to collect test metadata](https://circlec
 
 * `getProjectUsernameProjectEnvvarName` - Gets the hidden value of environment variable :name
 
+* `getProjectUsernameProjectBuildNum` - Full details for a single build. The response includes all of the fields from the build summary.
+This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+
+* `getProjectUsernameProjectBuildNumArtifacts` - List the artifacts produced by a given build.
+
+* `getProjectUsernameProjectBuildNumTests` - Provides test metadata for a build
+Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+
 * `getProjects` - List of all the projects you're following on CircleCI, with build information organized by branch.
 
 * `getRecentBuilds` - Build summary for each of the last 30 recent builds, ordered by build_num.
 
 * `postProjectUsernameProject` - Triggers a new build, returns a summary of the build.
-
-* `postProjectUsernameProjectBuildNumCancel` - Cancels the build, returns a summary of the build.
-
-* `postProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
 
 * `postProjectUsernameProjectCheckoutKey` - Creates a new checkout key.
 Only usable with a user API token.
@@ -97,6 +92,10 @@ Only usable with a user API token.
 Optional build parameters can be set using an experimental API.
 
 Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
+
+* `postProjectUsernameProjectBuildNumCancel` - Cancels the build, returns a summary of the build.
+
+* `postProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
 
 * `postUserHerokuKey` - Adds your Heroku API key to CircleCI, takes apikey as form param name.
 

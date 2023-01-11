@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,119 +23,121 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyDefaultCreditSpecificationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyDefaultCreditSpecificationResponse = exports.GetModifyDefaultCreditSpecificationRequest = exports.GetModifyDefaultCreditSpecificationHeaders = exports.GetModifyDefaultCreditSpecificationQueryParams = exports.GetModifyDefaultCreditSpecificationVersionEnum = exports.GetModifyDefaultCreditSpecificationInstanceFamilyEnum = exports.GetModifyDefaultCreditSpecificationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyDefaultCreditSpecificationActionEnum;
 (function (GetModifyDefaultCreditSpecificationActionEnum) {
     GetModifyDefaultCreditSpecificationActionEnum["ModifyDefaultCreditSpecification"] = "ModifyDefaultCreditSpecification";
-})(GetModifyDefaultCreditSpecificationActionEnum || (GetModifyDefaultCreditSpecificationActionEnum = {}));
-export var GetModifyDefaultCreditSpecificationInstanceFamilyEnum;
+})(GetModifyDefaultCreditSpecificationActionEnum = exports.GetModifyDefaultCreditSpecificationActionEnum || (exports.GetModifyDefaultCreditSpecificationActionEnum = {}));
+var GetModifyDefaultCreditSpecificationInstanceFamilyEnum;
 (function (GetModifyDefaultCreditSpecificationInstanceFamilyEnum) {
     GetModifyDefaultCreditSpecificationInstanceFamilyEnum["T2"] = "t2";
     GetModifyDefaultCreditSpecificationInstanceFamilyEnum["T3"] = "t3";
     GetModifyDefaultCreditSpecificationInstanceFamilyEnum["T3a"] = "t3a";
     GetModifyDefaultCreditSpecificationInstanceFamilyEnum["T4g"] = "t4g";
-})(GetModifyDefaultCreditSpecificationInstanceFamilyEnum || (GetModifyDefaultCreditSpecificationInstanceFamilyEnum = {}));
-export var GetModifyDefaultCreditSpecificationVersionEnum;
+})(GetModifyDefaultCreditSpecificationInstanceFamilyEnum = exports.GetModifyDefaultCreditSpecificationInstanceFamilyEnum || (exports.GetModifyDefaultCreditSpecificationInstanceFamilyEnum = {}));
+var GetModifyDefaultCreditSpecificationVersionEnum;
 (function (GetModifyDefaultCreditSpecificationVersionEnum) {
     GetModifyDefaultCreditSpecificationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyDefaultCreditSpecificationVersionEnum || (GetModifyDefaultCreditSpecificationVersionEnum = {}));
+})(GetModifyDefaultCreditSpecificationVersionEnum = exports.GetModifyDefaultCreditSpecificationVersionEnum || (exports.GetModifyDefaultCreditSpecificationVersionEnum = {}));
 var GetModifyDefaultCreditSpecificationQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyDefaultCreditSpecificationQueryParams, _super);
     function GetModifyDefaultCreditSpecificationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CpuCredits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CpuCredits" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationQueryParams.prototype, "cpuCredits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetModifyDefaultCreditSpecificationQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceFamily" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationQueryParams.prototype, "instanceFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationQueryParams.prototype, "version", void 0);
     return GetModifyDefaultCreditSpecificationQueryParams;
-}(SpeakeasyBase));
-export { GetModifyDefaultCreditSpecificationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDefaultCreditSpecificationQueryParams = GetModifyDefaultCreditSpecificationQueryParams;
 var GetModifyDefaultCreditSpecificationHeaders = /** @class */ (function (_super) {
     __extends(GetModifyDefaultCreditSpecificationHeaders, _super);
     function GetModifyDefaultCreditSpecificationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyDefaultCreditSpecificationHeaders;
-}(SpeakeasyBase));
-export { GetModifyDefaultCreditSpecificationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDefaultCreditSpecificationHeaders = GetModifyDefaultCreditSpecificationHeaders;
 var GetModifyDefaultCreditSpecificationRequest = /** @class */ (function (_super) {
     __extends(GetModifyDefaultCreditSpecificationRequest, _super);
     function GetModifyDefaultCreditSpecificationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyDefaultCreditSpecificationQueryParams)
     ], GetModifyDefaultCreditSpecificationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyDefaultCreditSpecificationHeaders)
     ], GetModifyDefaultCreditSpecificationRequest.prototype, "headers", void 0);
     return GetModifyDefaultCreditSpecificationRequest;
-}(SpeakeasyBase));
-export { GetModifyDefaultCreditSpecificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDefaultCreditSpecificationRequest = GetModifyDefaultCreditSpecificationRequest;
 var GetModifyDefaultCreditSpecificationResponse = /** @class */ (function (_super) {
     __extends(GetModifyDefaultCreditSpecificationResponse, _super);
     function GetModifyDefaultCreditSpecificationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyDefaultCreditSpecificationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyDefaultCreditSpecificationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyDefaultCreditSpecificationResponse.prototype, "statusCode", void 0);
     return GetModifyDefaultCreditSpecificationResponse;
-}(SpeakeasyBase));
-export { GetModifyDefaultCreditSpecificationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyDefaultCreditSpecificationResponse = GetModifyDefaultCreditSpecificationResponse;

@@ -17,7 +17,6 @@ export declare class GetPartyRequest extends SpeakeasyBase {
 }
 export declare class GetPartyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadParty2?: shared.ObReadParty2;
     statusCode: number;

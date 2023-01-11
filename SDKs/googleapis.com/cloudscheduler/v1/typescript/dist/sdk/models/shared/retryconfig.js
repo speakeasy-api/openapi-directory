@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetryConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // RetryConfig
 /**
  * Settings that determine the retry behavior. By default, if a job does not complete successfully (meaning that an acknowledgement is not received from the handler, then it will be retried with exponential backoff according to the settings in RetryConfig.
@@ -33,25 +36,25 @@ var RetryConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxBackoffDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxBackoffDuration" }),
         __metadata("design:type", String)
     ], RetryConfig.prototype, "maxBackoffDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDoublings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDoublings" }),
         __metadata("design:type", Number)
     ], RetryConfig.prototype, "maxDoublings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxRetryDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxRetryDuration" }),
         __metadata("design:type", String)
     ], RetryConfig.prototype, "maxRetryDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minBackoffDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minBackoffDuration" }),
         __metadata("design:type", String)
     ], RetryConfig.prototype, "minBackoffDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryCount" }),
         __metadata("design:type", Number)
     ], RetryConfig.prototype, "retryCount", void 0);
     return RetryConfig;
-}(SpeakeasyBase));
-export { RetryConfig };
+}(utils_1.SpeakeasyBase));
+exports.RetryConfig = RetryConfig;

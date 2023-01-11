@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StackTrace } from "./stacktrace";
-// Error
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorT = void 0;
+var utils_1 = require("../../../internal/utils");
+var stacktrace_1 = require("./stacktrace");
+// ErrorT
 /**
  * Error describes why the execution was abnormally terminated.
 **/
-var Error = /** @class */ (function (_super) {
-    __extends(Error, _super);
-    function Error() {
+var ErrorT = /** @class */ (function (_super) {
+    __extends(ErrorT, _super);
+    function ErrorT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
         __metadata("design:type", String)
-    ], Error.prototype, "context", void 0);
+    ], ErrorT.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", String)
-    ], Error.prototype, "payload", void 0);
+    ], ErrorT.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stackTrace" }),
-        __metadata("design:type", StackTrace)
-    ], Error.prototype, "stackTrace", void 0);
-    return Error;
-}(SpeakeasyBase));
-export { Error };
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stackTrace" }),
+        __metadata("design:type", stacktrace_1.StackTrace)
+    ], ErrorT.prototype, "stackTrace", void 0);
+    return ErrorT;
+}(utils_1.SpeakeasyBase));
+exports.ErrorT = ErrorT;

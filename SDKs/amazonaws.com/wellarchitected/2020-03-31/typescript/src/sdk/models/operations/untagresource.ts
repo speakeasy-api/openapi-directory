@@ -64,5 +64,5 @@ export class UntagResourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  untagResourceOutput?: Map<string, any>;
+  untagResourceOutput?: Record<string, any>;
 }

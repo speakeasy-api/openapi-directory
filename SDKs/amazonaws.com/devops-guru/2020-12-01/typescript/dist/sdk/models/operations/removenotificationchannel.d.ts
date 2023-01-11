@@ -20,7 +20,7 @@ export declare class RemoveNotificationChannelResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
     internalServerException?: any;
-    removeNotificationChannelResponse?: Map<string, any>;
+    removeNotificationChannelResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

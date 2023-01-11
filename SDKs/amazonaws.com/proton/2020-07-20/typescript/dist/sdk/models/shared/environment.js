@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
-import { ProvisioningEnum } from "./provisioningenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Environment = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentstatusenum_1 = require("./deploymentstatusenum");
+var provisioningenum_1 = require("./provisioningenum");
 // Environment
 /**
  * The environment detail data. An AWS Proton environment is a set resources shared across an AWS Proton service.
@@ -35,69 +38,69 @@ var Environment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Environment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStatus" }),
         __metadata("design:type", String)
     ], Environment.prototype, "deploymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStatusMessage" }),
         __metadata("design:type", String)
     ], Environment.prototype, "deploymentStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Environment.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentAccountConnectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentAccountConnectionId" }),
         __metadata("design:type", String)
     ], Environment.prototype, "environmentAccountConnectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentAccountId" }),
         __metadata("design:type", String)
     ], Environment.prototype, "environmentAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastDeploymentAttemptedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastDeploymentAttemptedAt" }),
         __metadata("design:type", Date)
     ], Environment.prototype, "lastDeploymentAttemptedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastDeploymentSucceededAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastDeploymentSucceededAt" }),
         __metadata("design:type", Date)
     ], Environment.prototype, "lastDeploymentSucceededAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Environment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protonServiceRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protonServiceRoleArn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "protonServiceRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioning" }),
         __metadata("design:type", String)
     ], Environment.prototype, "provisioning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
         __metadata("design:type", String)
     ], Environment.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMajorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMajorVersion" }),
         __metadata("design:type", String)
     ], Environment.prototype, "templateMajorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMinorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMinorVersion" }),
         __metadata("design:type", String)
     ], Environment.prototype, "templateMinorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateName" }),
         __metadata("design:type", String)
     ], Environment.prototype, "templateName", void 0);
     return Environment;
-}(SpeakeasyBase));
-export { Environment };
+}(utils_1.SpeakeasyBase));
+exports.Environment = Environment;

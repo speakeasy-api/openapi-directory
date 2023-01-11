@@ -26,7 +26,7 @@ export declare class UpdateEmailTemplateRequestBodyEmailTemplateRequest extends 
     subject?: string;
     templateDescription?: string;
     textPart?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdateEmailTemplateRequestBody extends SpeakeasyBase {
     emailTemplateRequest: UpdateEmailTemplateRequestBodyEmailTemplateRequest;

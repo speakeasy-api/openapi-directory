@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntentPredictRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var IntentPredictRequest = /** @class */ (function (_super) {
     __extends(IntentPredictRequest, _super);
     function IntentPredictRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document, multipart_form, name=document" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document, multipart_form, name=document" }),
         __metadata("design:type", String)
     ], IntentPredictRequest.prototype, "document", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelId, multipart_form, name=modelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelId, multipart_form, name=modelId" }),
         __metadata("design:type", String)
     ], IntentPredictRequest.prototype, "modelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numResults, multipart_form, name=numResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numResults, multipart_form, name=numResults" }),
         __metadata("design:type", Number)
     ], IntentPredictRequest.prototype, "numResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId, multipart_form, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId, multipart_form, name=sampleId" }),
         __metadata("design:type", String)
     ], IntentPredictRequest.prototype, "sampleId", void 0);
     return IntentPredictRequest;
-}(SpeakeasyBase));
-export { IntentPredictRequest };
+}(utils_1.SpeakeasyBase));
+exports.IntentPredictRequest = IntentPredictRequest;

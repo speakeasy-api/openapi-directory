@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EngineVersion } from "./engineversion";
-import { QueryExecutionContext } from "./queryexecutioncontext";
-import { ResultConfiguration } from "./resultconfiguration";
-import { StatementTypeEnum } from "./statementtypeenum";
-import { QueryExecutionStatistics } from "./queryexecutionstatistics";
-import { QueryExecutionStatus } from "./queryexecutionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryExecution = void 0;
+var utils_1 = require("../../../internal/utils");
+var engineversion_1 = require("./engineversion");
+var queryexecutioncontext_1 = require("./queryexecutioncontext");
+var resultconfiguration_1 = require("./resultconfiguration");
+var statementtypeenum_1 = require("./statementtypeenum");
+var queryexecutionstatistics_1 = require("./queryexecutionstatistics");
+var queryexecutionstatus_1 = require("./queryexecutionstatus");
 // QueryExecution
 /**
  * Information about a single instance of a query execution.
@@ -39,41 +42,41 @@ var QueryExecution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
-        __metadata("design:type", EngineVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
+        __metadata("design:type", engineversion_1.EngineVersion)
     ], QueryExecution.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Query" }),
         __metadata("design:type", String)
     ], QueryExecution.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryExecutionContext" }),
-        __metadata("design:type", QueryExecutionContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryExecutionContext" }),
+        __metadata("design:type", queryexecutioncontext_1.QueryExecutionContext)
     ], QueryExecution.prototype, "queryExecutionContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryExecutionId" }),
         __metadata("design:type", String)
     ], QueryExecution.prototype, "queryExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultConfiguration" }),
-        __metadata("design:type", ResultConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultConfiguration" }),
+        __metadata("design:type", resultconfiguration_1.ResultConfiguration)
     ], QueryExecution.prototype, "resultConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatementType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatementType" }),
         __metadata("design:type", String)
     ], QueryExecution.prototype, "statementType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Statistics" }),
-        __metadata("design:type", QueryExecutionStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Statistics" }),
+        __metadata("design:type", queryexecutionstatistics_1.QueryExecutionStatistics)
     ], QueryExecution.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
-        __metadata("design:type", QueryExecutionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
+        __metadata("design:type", queryexecutionstatus_1.QueryExecutionStatus)
     ], QueryExecution.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkGroup" }),
         __metadata("design:type", String)
     ], QueryExecution.prototype, "workGroup", void 0);
     return QueryExecution;
-}(SpeakeasyBase));
-export { QueryExecution };
+}(utils_1.SpeakeasyBase));
+exports.QueryExecution = QueryExecution;

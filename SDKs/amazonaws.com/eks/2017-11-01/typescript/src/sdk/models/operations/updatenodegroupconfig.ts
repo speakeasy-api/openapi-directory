@@ -42,7 +42,7 @@ export class UpdateNodegroupConfigHeaders extends SpeakeasyBase {
 **/
 export class UpdateNodegroupConfigRequestBodyLabels extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=addOrUpdateLabels" })
-  addOrUpdateLabels?: Map<string, string>;
+  addOrUpdateLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=removeLabels" })
   removeLabels?: string[];

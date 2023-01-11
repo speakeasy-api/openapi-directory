@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateDetails } from "./datedetails";
-import { LabeledItem } from "./labeleditem";
-import { LookupDetails } from "./lookupdetails";
-import { RelationshipDetails } from "./relationshipdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var datedetails_1 = require("./datedetails");
+var labeleditem_1 = require("./labeleditem");
+var lookupdetails_1 = require("./lookupdetails");
+var relationshipdetails_1 = require("./relationshipdetails");
 // ColumnDescription
 /**
  * Details on a column in the table.
@@ -37,41 +40,41 @@ var ColumnDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], ColumnDescription.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateDetails" }),
-        __metadata("design:type", DateDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateDetails" }),
+        __metadata("design:type", datedetails_1.DateDetails)
     ], ColumnDescription.prototype, "dateDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ColumnDescription.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels", elemType: LabeledItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels", elemType: labeleditem_1.LabeledItem }),
         __metadata("design:type", Array)
     ], ColumnDescription.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lookupDetails" }),
-        __metadata("design:type", LookupDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lookupDetails" }),
+        __metadata("design:type", lookupdetails_1.LookupDetails)
     ], ColumnDescription.prototype, "lookupDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multipleValuesDisallowed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multipleValuesDisallowed" }),
         __metadata("design:type", Boolean)
     ], ColumnDescription.prototype, "multipleValuesDisallowed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ColumnDescription.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonly" }),
         __metadata("design:type", Boolean)
     ], ColumnDescription.prototype, "readonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipDetails" }),
-        __metadata("design:type", RelationshipDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipDetails" }),
+        __metadata("design:type", relationshipdetails_1.RelationshipDetails)
     ], ColumnDescription.prototype, "relationshipDetails", void 0);
     return ColumnDescription;
-}(SpeakeasyBase));
-export { ColumnDescription };
+}(utils_1.SpeakeasyBase));
+exports.ColumnDescription = ColumnDescription;

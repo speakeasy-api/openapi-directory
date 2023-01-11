@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdmissionWhitelistPattern } from "./admissionwhitelistpattern";
-import { AdmissionRule } from "./admissionrule";
-export var PolicyGlobalPolicyEvaluationModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Policy = exports.PolicyGlobalPolicyEvaluationModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var admissionwhitelistpattern_1 = require("./admissionwhitelistpattern");
+var admissionrule_1 = require("./admissionrule");
+var PolicyGlobalPolicyEvaluationModeEnum;
 (function (PolicyGlobalPolicyEvaluationModeEnum) {
     PolicyGlobalPolicyEvaluationModeEnum["GlobalPolicyEvaluationModeUnspecified"] = "GLOBAL_POLICY_EVALUATION_MODE_UNSPECIFIED";
     PolicyGlobalPolicyEvaluationModeEnum["Enable"] = "ENABLE";
     PolicyGlobalPolicyEvaluationModeEnum["Disable"] = "DISABLE";
-})(PolicyGlobalPolicyEvaluationModeEnum || (PolicyGlobalPolicyEvaluationModeEnum = {}));
+})(PolicyGlobalPolicyEvaluationModeEnum = exports.PolicyGlobalPolicyEvaluationModeEnum || (exports.PolicyGlobalPolicyEvaluationModeEnum = {}));
 // Policy
 /**
  * A policy for container image binary authorization.
@@ -41,49 +44,49 @@ var Policy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admissionWhitelistPatterns", elemType: AdmissionWhitelistPattern }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admissionWhitelistPatterns", elemType: admissionwhitelistpattern_1.AdmissionWhitelistPattern }),
         __metadata("design:type", Array)
     ], Policy.prototype, "admissionWhitelistPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterAdmissionRules", elemType: AdmissionRule }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterAdmissionRules", elemType: admissionrule_1.AdmissionRule }),
+        __metadata("design:type", Object)
     ], Policy.prototype, "clusterAdmissionRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultAdmissionRule" }),
-        __metadata("design:type", AdmissionRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultAdmissionRule" }),
+        __metadata("design:type", admissionrule_1.AdmissionRule)
     ], Policy.prototype, "defaultAdmissionRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Policy.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Policy.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalPolicyEvaluationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalPolicyEvaluationMode" }),
         __metadata("design:type", String)
     ], Policy.prototype, "globalPolicyEvaluationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=istioServiceIdentityAdmissionRules", elemType: AdmissionRule }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=istioServiceIdentityAdmissionRules", elemType: admissionrule_1.AdmissionRule }),
+        __metadata("design:type", Object)
     ], Policy.prototype, "istioServiceIdentityAdmissionRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesNamespaceAdmissionRules", elemType: AdmissionRule }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesNamespaceAdmissionRules", elemType: admissionrule_1.AdmissionRule }),
+        __metadata("design:type", Object)
     ], Policy.prototype, "kubernetesNamespaceAdmissionRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesServiceAccountAdmissionRules", elemType: AdmissionRule }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesServiceAccountAdmissionRules", elemType: admissionrule_1.AdmissionRule }),
+        __metadata("design:type", Object)
     ], Policy.prototype, "kubernetesServiceAccountAdmissionRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Policy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Policy.prototype, "updateTime", void 0);
     return Policy;
-}(SpeakeasyBase));
-export { Policy };
+}(utils_1.SpeakeasyBase));
+exports.Policy = Policy;

@@ -23,5 +23,5 @@ export declare class UpdateDeviceCellularGatewayLanRequest extends SpeakeasyBase
 export declare class UpdateDeviceCellularGatewayLanResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceCellularGatewayLan200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceCellularGatewayLan200ApplicationJSONObject?: Record<string, any>;
 }

@@ -63,7 +63,7 @@ export class PutSessionRequestBodyDialogAction extends SpeakeasyBase {
   slotToElicit?: string;
 
   @SpeakeasyMetadata({ data: "json, name=slots" })
-  slots?: Map<string, string>;
+  slots?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: shared.DialogActionTypeEnum;
@@ -81,7 +81,7 @@ export class PutSessionRequestBody extends SpeakeasyBase {
   recentIntentSummaryView?: shared.IntentSummary[];
 
   @SpeakeasyMetadata({ data: "json, name=sessionAttributes" })
-  sessionAttributes?: Map<string, string>;
+  sessionAttributes?: Record<string, string>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceReference } from "./instancereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnPremisesConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancereference_1 = require("./instancereference");
 // OnPremisesConfiguration
 /**
  * On-premises instance configuration.
@@ -34,41 +37,41 @@ var OnPremisesConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caCertificate" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "caCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientCertificate" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "clientCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientKey" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "clientKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dumpFilePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dumpFilePath" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "dumpFilePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostPort" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "hostPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceInstance" }),
-        __metadata("design:type", InstanceReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceInstance" }),
+        __metadata("design:type", instancereference_1.InstanceReference)
     ], OnPremisesConfiguration.prototype, "sourceInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], OnPremisesConfiguration.prototype, "username", void 0);
     return OnPremisesConfiguration;
-}(SpeakeasyBase));
-export { OnPremisesConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.OnPremisesConfiguration = OnPremisesConfiguration;

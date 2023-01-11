@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceMetadataOptionsResponse } from "./instancemetadataoptionsresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyInstanceMetadataOptionsResult = exports.ModifyInstanceMetadataOptionsResultInstanceMetadataOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyInstanceMetadataOptionsResultInstanceMetadataOptions
+/**
+ * The metadata options for the instance.
+**/
+var ModifyInstanceMetadataOptionsResultInstanceMetadataOptions = /** @class */ (function (_super) {
+    __extends(ModifyInstanceMetadataOptionsResultInstanceMetadataOptions, _super);
+    function ModifyInstanceMetadataOptionsResultInstanceMetadataOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceMetadataOptionsResultInstanceMetadataOptions.prototype, "httpEndpoint", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceMetadataOptionsResultInstanceMetadataOptions.prototype, "httpProtocolIpv6", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceMetadataOptionsResultInstanceMetadataOptions.prototype, "httpPutResponseHopLimit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceMetadataOptionsResultInstanceMetadataOptions.prototype, "httpTokens", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceMetadataOptionsResultInstanceMetadataOptions.prototype, "state", void 0);
+    return ModifyInstanceMetadataOptionsResultInstanceMetadataOptions;
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceMetadataOptionsResultInstanceMetadataOptions = ModifyInstanceMetadataOptionsResultInstanceMetadataOptions;
 var ModifyInstanceMetadataOptionsResult = /** @class */ (function (_super) {
     __extends(ModifyInstanceMetadataOptionsResult, _super);
     function ModifyInstanceMetadataOptionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ModifyInstanceMetadataOptionsResult.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceMetadataOptionsResponse)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyInstanceMetadataOptionsResultInstanceMetadataOptions)
     ], ModifyInstanceMetadataOptionsResult.prototype, "instanceMetadataOptions", void 0);
     return ModifyInstanceMetadataOptionsResult;
-}(SpeakeasyBase));
-export { ModifyInstanceMetadataOptionsResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceMetadataOptionsResult = ModifyInstanceMetadataOptionsResult;

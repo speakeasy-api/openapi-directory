@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
-export var AwsSourceDetailsStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsSourceDetailsInput = exports.AwsSourceDetails = exports.AwsSourceDetailsStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesskeycredentials_1 = require("./accesskeycredentials");
+var status_1 = require("./status");
+var tag_1 = require("./tag");
+var AwsSourceDetailsStateEnum;
 (function (AwsSourceDetailsStateEnum) {
     AwsSourceDetailsStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     AwsSourceDetailsStateEnum["Pending"] = "PENDING";
     AwsSourceDetailsStateEnum["Failed"] = "FAILED";
     AwsSourceDetailsStateEnum["Active"] = "ACTIVE";
-})(AwsSourceDetailsStateEnum || (AwsSourceDetailsStateEnum = {}));
-// AwsSourceDetailsInput
-/**
- * AwsSourceDetails message describes a specific source details for the AWS source type.
-**/
-var AwsSourceDetailsInput = /** @class */ (function (_super) {
-    __extends(AwsSourceDetailsInput, _super);
-    function AwsSourceDetailsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessKeyId" }),
-        __metadata("design:type", String)
-    ], AwsSourceDetailsInput.prototype, "accessKeyId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsRegion" }),
-        __metadata("design:type", String)
-    ], AwsSourceDetailsInput.prototype, "awsRegion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
-    ], AwsSourceDetailsInput.prototype, "error", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventorySecurityGroupNames" }),
-        __metadata("design:type", Array)
-    ], AwsSourceDetailsInput.prototype, "inventorySecurityGroupNames", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryTags" }),
-        __metadata("design:type", Map)
-    ], AwsSourceDetailsInput.prototype, "inventoryTags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=migrationResourcesUserTags" }),
-        __metadata("design:type", Map)
-    ], AwsSourceDetailsInput.prototype, "migrationResourcesUserTags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretAccessKey" }),
-        __metadata("design:type", String)
-    ], AwsSourceDetailsInput.prototype, "secretAccessKey", void 0);
-    return AwsSourceDetailsInput;
-}(SpeakeasyBase));
-export { AwsSourceDetailsInput };
+})(AwsSourceDetailsStateEnum = exports.AwsSourceDetailsStateEnum || (exports.AwsSourceDetailsStateEnum = {}));
 // AwsSourceDetails
 /**
  * AwsSourceDetails message describes a specific source details for the AWS source type.
@@ -81,41 +46,97 @@ var AwsSourceDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyCreds" }),
+        __metadata("design:type", accesskeycredentials_1.AccessKeyCredentials)
+    ], AwsSourceDetails.prototype, "accessKeyCreds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyId" }),
         __metadata("design:type", String)
     ], AwsSourceDetails.prototype, "accessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsRegion" }),
         __metadata("design:type", String)
     ], AwsSourceDetails.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], AwsSourceDetails.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventorySecurityGroupNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventorySecurityGroupNames" }),
         __metadata("design:type", Array)
     ], AwsSourceDetails.prototype, "inventorySecurityGroupNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryTagList", elemType: tag_1.Tag }),
+        __metadata("design:type", Array)
+    ], AwsSourceDetails.prototype, "inventoryTagList", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryTags" }),
+        __metadata("design:type", Object)
     ], AwsSourceDetails.prototype, "inventoryTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=migrationResourcesUserTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=migrationResourcesUserTags" }),
+        __metadata("design:type", Object)
     ], AwsSourceDetails.prototype, "migrationResourcesUserTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIp" }),
         __metadata("design:type", String)
     ], AwsSourceDetails.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretAccessKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretAccessKey" }),
         __metadata("design:type", String)
     ], AwsSourceDetails.prototype, "secretAccessKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], AwsSourceDetails.prototype, "state", void 0);
     return AwsSourceDetails;
-}(SpeakeasyBase));
-export { AwsSourceDetails };
+}(utils_1.SpeakeasyBase));
+exports.AwsSourceDetails = AwsSourceDetails;
+// AwsSourceDetailsInput
+/**
+ * AwsSourceDetails message describes a specific source details for the AWS source type.
+**/
+var AwsSourceDetailsInput = /** @class */ (function (_super) {
+    __extends(AwsSourceDetailsInput, _super);
+    function AwsSourceDetailsInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyCreds" }),
+        __metadata("design:type", accesskeycredentials_1.AccessKeyCredentials)
+    ], AwsSourceDetailsInput.prototype, "accessKeyCreds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyId" }),
+        __metadata("design:type", String)
+    ], AwsSourceDetailsInput.prototype, "accessKeyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsRegion" }),
+        __metadata("design:type", String)
+    ], AwsSourceDetailsInput.prototype, "awsRegion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
+    ], AwsSourceDetailsInput.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventorySecurityGroupNames" }),
+        __metadata("design:type", Array)
+    ], AwsSourceDetailsInput.prototype, "inventorySecurityGroupNames", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryTagList", elemType: tag_1.Tag }),
+        __metadata("design:type", Array)
+    ], AwsSourceDetailsInput.prototype, "inventoryTagList", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryTags" }),
+        __metadata("design:type", Object)
+    ], AwsSourceDetailsInput.prototype, "inventoryTags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=migrationResourcesUserTags" }),
+        __metadata("design:type", Object)
+    ], AwsSourceDetailsInput.prototype, "migrationResourcesUserTags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretAccessKey" }),
+        __metadata("design:type", String)
+    ], AwsSourceDetailsInput.prototype, "secretAccessKey", void 0);
+    return AwsSourceDetailsInput;
+}(utils_1.SpeakeasyBase));
+exports.AwsSourceDetailsInput = AwsSourceDetailsInput;

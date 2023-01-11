@@ -11,7 +11,7 @@ export declare class Insight extends SpeakeasyBase {
     categories?: InsightCategoryEnum[];
     clientRequestImpactStatistics?: RequestImpactStatistics;
     endTime?: Date;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     insightId?: string;
     rootCauseServiceId?: ServiceId;

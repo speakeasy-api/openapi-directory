@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedPrefixList } from "./managedprefixlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateManagedPrefixListResult = exports.CreateManagedPrefixListResultPrefixList = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateManagedPrefixListResultPrefixList
+/**
+ * Information about the prefix list.
+**/
+var CreateManagedPrefixListResultPrefixList = /** @class */ (function (_super) {
+    __extends(CreateManagedPrefixListResultPrefixList, _super);
+    function CreateManagedPrefixListResultPrefixList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "addressFamily", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "maxEntries", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "prefixListArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "prefixListId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "prefixListName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "stateMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateManagedPrefixListResultPrefixList.prototype, "version", void 0);
+    return CreateManagedPrefixListResultPrefixList;
+}(utils_1.SpeakeasyBase));
+exports.CreateManagedPrefixListResultPrefixList = CreateManagedPrefixListResultPrefixList;
 var CreateManagedPrefixListResult = /** @class */ (function (_super) {
     __extends(CreateManagedPrefixListResult, _super);
     function CreateManagedPrefixListResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ManagedPrefixList)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateManagedPrefixListResultPrefixList)
     ], CreateManagedPrefixListResult.prototype, "prefixList", void 0);
     return CreateManagedPrefixListResult;
-}(SpeakeasyBase));
-export { CreateManagedPrefixListResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateManagedPrefixListResult = CreateManagedPrefixListResult;

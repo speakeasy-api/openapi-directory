@@ -22,7 +22,7 @@ export declare class DeleteLaunchProfileMemberResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteLaunchProfileMemberResponse?: Map<string, any>;
+    deleteLaunchProfileMemberResponse?: Record<string, any>;
     internalServerErrorException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

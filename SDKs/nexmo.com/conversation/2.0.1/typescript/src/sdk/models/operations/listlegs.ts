@@ -5,16 +5,16 @@ import * as shared from "../shared";
 
 export class ListLegs200ApplicationJsonEmbeddedLegs extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_embedded" })
-  embedded?: Map<string, any>;
+  embedded?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=conversation_uuid" })
   conversationUuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=from" })
-  from?: Map<string, any>;
+  from?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=start_end" })
   startEnd?: string;
@@ -26,7 +26,7 @@ export class ListLegs200ApplicationJsonEmbeddedLegs extends SpeakeasyBase {
   state?: shared.LegStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=to" })
-  to?: Map<string, any>;
+  to?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: shared.ChannelTypeEnum;
@@ -88,5 +88,5 @@ export class ListLegsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listLegs200ApplicationJsonObject?: ListLegs200ApplicationJson;
+  listLegs200ApplicationJSONObject?: ListLegs200ApplicationJson;
 }

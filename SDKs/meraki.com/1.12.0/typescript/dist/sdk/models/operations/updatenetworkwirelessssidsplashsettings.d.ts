@@ -94,5 +94,5 @@ export declare class UpdateNetworkWirelessSsidSplashSettingsRequest extends Spea
 export declare class UpdateNetworkWirelessSsidSplashSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidSplashSettings200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidSplashSettings200ApplicationJSONObject?: Record<string, any>;
 }

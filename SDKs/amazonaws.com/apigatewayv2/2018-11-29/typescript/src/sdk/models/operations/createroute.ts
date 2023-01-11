@@ -60,10 +60,10 @@ export class CreateRouteRequestBody extends SpeakeasyBase {
   operationName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=requestModels" })
-  requestModels?: Map<string, string>;
+  requestModels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=requestParameters", elemType: shared.ParameterConstraints })
-  requestParameters?: Map<string, shared.ParameterConstraints>;
+  requestParameters?: Record<string, shared.ParameterConstraints>;
 
   @SpeakeasyMetadata({ data: "json, name=routeKey" })
   routeKey: string;

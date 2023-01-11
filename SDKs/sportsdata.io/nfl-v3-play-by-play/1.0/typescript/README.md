@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlayByPlayRequest, PlayByPlayResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,14 +33,14 @@ const sdk = new SDK(WithSecurity(
     
 const req: PlayByPlayRequest = {
   pathParams: {
-    format: "JSON",
-    hometeam: "dolorem",
-    season: "cupiditate",
-    week: "alias",
+    format: "XML",
+    hometeam: "voluptas",
+    season: "culpa",
+    week: "expedita",
   },
 };
 
-sdk.sdk.playByPlay(req).then((res: PlayByPlayResponse | AxiosError) => {
+sdk.playByPlay(req).then((res: PlayByPlayResponse | AxiosError) => {
    // handle response
 });
 ```

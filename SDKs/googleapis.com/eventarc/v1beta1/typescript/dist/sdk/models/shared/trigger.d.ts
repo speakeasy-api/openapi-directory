@@ -10,7 +10,7 @@ export declare class Trigger extends SpeakeasyBase {
     createTime?: string;
     destination?: Destination;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     matchingCriteria?: MatchingCriteria[];
     name?: string;
     serviceAccount?: string;
@@ -22,7 +22,7 @@ export declare class Trigger extends SpeakeasyBase {
 **/
 export declare class TriggerInput extends SpeakeasyBase {
     destination?: Destination;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     matchingCriteria?: MatchingCriteria[];
     name?: string;
     serviceAccount?: string;

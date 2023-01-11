@@ -58,5 +58,5 @@ export class UpdateNetworkWirelessSsidFirewallL7FirewallRulesResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidFirewallL7FirewallRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidFirewallL7FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

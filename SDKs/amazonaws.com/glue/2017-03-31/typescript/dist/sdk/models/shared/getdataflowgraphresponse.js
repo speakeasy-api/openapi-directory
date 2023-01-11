@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeGenEdge } from "./codegenedge";
-import { CodeGenNode } from "./codegennode";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDataflowGraphResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var codegenedge_1 = require("./codegenedge");
+var codegennode_1 = require("./codegennode");
 var GetDataflowGraphResponse = /** @class */ (function (_super) {
     __extends(GetDataflowGraphResponse, _super);
     function GetDataflowGraphResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DagEdges", elemType: CodeGenEdge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DagEdges", elemType: codegenedge_1.CodeGenEdge }),
         __metadata("design:type", Array)
     ], GetDataflowGraphResponse.prototype, "dagEdges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DagNodes", elemType: CodeGenNode }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DagNodes", elemType: codegennode_1.CodeGenNode }),
         __metadata("design:type", Array)
     ], GetDataflowGraphResponse.prototype, "dagNodes", void 0);
     return GetDataflowGraphResponse;
-}(SpeakeasyBase));
-export { GetDataflowGraphResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDataflowGraphResponse = GetDataflowGraphResponse;

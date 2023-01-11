@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,105 +23,107 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompileResponse = exports.CompileRequest = exports.CompileHeaders = exports.CompileQueryParams = exports.CompileLatexCompilerEnum = exports.CompilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CompilePathParams = /** @class */ (function (_super) {
     __extends(CompilePathParams, _super);
     function CompilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=template-token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=template-token" }),
         __metadata("design:type", String)
     ], CompilePathParams.prototype, "templateToken", void 0);
     return CompilePathParams;
-}(SpeakeasyBase));
-export { CompilePathParams };
-export var CompileLatexCompilerEnum;
+}(utils_1.SpeakeasyBase));
+exports.CompilePathParams = CompilePathParams;
+var CompileLatexCompilerEnum;
 (function (CompileLatexCompilerEnum) {
     CompileLatexCompilerEnum["Pdflatex"] = "pdflatex";
     CompileLatexCompilerEnum["Lualatex"] = "lualatex";
-})(CompileLatexCompilerEnum || (CompileLatexCompilerEnum = {}));
+})(CompileLatexCompilerEnum = exports.CompileLatexCompilerEnum || (exports.CompileLatexCompilerEnum = {}));
 var CompileQueryParams = /** @class */ (function (_super) {
     __extends(CompileQueryParams, _super);
     function CompileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=doc-file-name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=doc-file-name" }),
         __metadata("design:type", String)
     ], CompileQueryParams.prototype, "docFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=doc-url-expires-in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=doc-url-expires-in" }),
         __metadata("design:type", Number)
     ], CompileQueryParams.prototype, "docUrlExpiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=latex-compiler" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=latex-compiler" }),
         __metadata("design:type", String)
     ], CompileQueryParams.prototype, "latexCompiler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=latex-runs " }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=latex-runs " }),
         __metadata("design:type", Number)
     ], CompileQueryParams.prototype, "latexRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=main-file-name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=main-file-name" }),
         __metadata("design:type", String)
     ], CompileQueryParams.prototype, "mainFileName", void 0);
     return CompileQueryParams;
-}(SpeakeasyBase));
-export { CompileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CompileQueryParams = CompileQueryParams;
 var CompileHeaders = /** @class */ (function (_super) {
     __extends(CompileHeaders, _super);
     function CompileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Content-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Content-Type" }),
         __metadata("design:type", String)
     ], CompileHeaders.prototype, "contentType", void 0);
     return CompileHeaders;
-}(SpeakeasyBase));
-export { CompileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CompileHeaders = CompileHeaders;
 var CompileRequest = /** @class */ (function (_super) {
     __extends(CompileRequest, _super);
     function CompileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompilePathParams)
     ], CompileRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompileQueryParams)
     ], CompileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompileHeaders)
     ], CompileRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CompileRequest.prototype, "request", void 0);
     return CompileRequest;
-}(SpeakeasyBase));
-export { CompileRequest };
+}(utils_1.SpeakeasyBase));
+exports.CompileRequest = CompileRequest;
 var CompileResponse = /** @class */ (function (_super) {
     __extends(CompileResponse, _super);
     function CompileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CompileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CompileResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CompileResponse.prototype, "compile200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CompileResponse.prototype, "compile200ApplicationJSONObject", void 0);
     return CompileResponse;
-}(SpeakeasyBase));
-export { CompileResponse };
+}(utils_1.SpeakeasyBase));
+exports.CompileResponse = CompileResponse;

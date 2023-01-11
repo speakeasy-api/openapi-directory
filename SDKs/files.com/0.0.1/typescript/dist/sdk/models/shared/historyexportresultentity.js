@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HistoryExportResultEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // HistoryExportResultEntity
 /**
  * List History Export Results
@@ -33,97 +36,97 @@ var HistoryExportResultEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failure_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failure_type" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "failureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folder" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "folder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "interface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "src", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_expires_at" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "targetExpiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_name" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "targetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_permission" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "targetPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_permission_set" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_permission_set" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "targetPermissionSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_platform" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "targetPlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_recursive" }),
         __metadata("design:type", Boolean)
     ], HistoryExportResultEntity.prototype, "targetRecursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_user_id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "targetUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_username" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "targetUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], HistoryExportResultEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], HistoryExportResultEntity.prototype, "username", void 0);
     return HistoryExportResultEntity;
-}(SpeakeasyBase));
-export { HistoryExportResultEntity };
+}(utils_1.SpeakeasyBase));
+exports.HistoryExportResultEntity = HistoryExportResultEntity;

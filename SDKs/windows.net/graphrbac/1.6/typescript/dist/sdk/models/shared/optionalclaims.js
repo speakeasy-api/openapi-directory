@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionalClaim } from "./optionalclaim";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionalClaims = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionalclaim_1 = require("./optionalclaim");
 // OptionalClaims
 /**
  * Specifying the claims to be included in the token.
@@ -34,17 +37,17 @@ var OptionalClaims = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessToken", elemType: OptionalClaim }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessToken", elemType: optionalclaim_1.OptionalClaim }),
         __metadata("design:type", Array)
     ], OptionalClaims.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idToken", elemType: OptionalClaim }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idToken", elemType: optionalclaim_1.OptionalClaim }),
         __metadata("design:type", Array)
     ], OptionalClaims.prototype, "idToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samlToken", elemType: OptionalClaim }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samlToken", elemType: optionalclaim_1.OptionalClaim }),
         __metadata("design:type", Array)
     ], OptionalClaims.prototype, "samlToken", void 0);
     return OptionalClaims;
-}(SpeakeasyBase));
-export { OptionalClaims };
+}(utils_1.SpeakeasyBase));
+exports.OptionalClaims = OptionalClaims;

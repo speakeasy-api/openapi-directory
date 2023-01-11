@@ -1,4 +1,7 @@
-export var StartChildWorkflowExecutionFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartChildWorkflowExecutionFailedCauseEnum = void 0;
+var StartChildWorkflowExecutionFailedCauseEnum;
 (function (StartChildWorkflowExecutionFailedCauseEnum) {
     StartChildWorkflowExecutionFailedCauseEnum["WorkflowTypeDoesNotExist"] = "WORKFLOW_TYPE_DOES_NOT_EXIST";
     StartChildWorkflowExecutionFailedCauseEnum["WorkflowTypeDeprecated"] = "WORKFLOW_TYPE_DEPRECATED";
@@ -11,4 +14,4 @@ export var StartChildWorkflowExecutionFailedCauseEnum;
     StartChildWorkflowExecutionFailedCauseEnum["DefaultTaskStartToCloseTimeoutUndefined"] = "DEFAULT_TASK_START_TO_CLOSE_TIMEOUT_UNDEFINED";
     StartChildWorkflowExecutionFailedCauseEnum["DefaultChildPolicyUndefined"] = "DEFAULT_CHILD_POLICY_UNDEFINED";
     StartChildWorkflowExecutionFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(StartChildWorkflowExecutionFailedCauseEnum || (StartChildWorkflowExecutionFailedCauseEnum = {}));
+})(StartChildWorkflowExecutionFailedCauseEnum = exports.StartChildWorkflowExecutionFailedCauseEnum || (exports.StartChildWorkflowExecutionFailedCauseEnum = {}));

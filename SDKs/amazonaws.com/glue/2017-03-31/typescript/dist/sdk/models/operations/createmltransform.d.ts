@@ -21,7 +21,7 @@ export declare class CreateMlTransformResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     alreadyExistsException?: any;
     contentType: string;
-    createMlTransformResponse?: shared.CreateMlTransformResponse;
+    createMLTransformResponse?: shared.CreateMlTransformResponse;
     idempotentParameterMismatchException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

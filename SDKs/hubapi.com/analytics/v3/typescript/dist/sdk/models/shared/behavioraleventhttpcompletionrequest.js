@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BehavioralEventHttpCompletionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var BehavioralEventHttpCompletionRequest = /** @class */ (function (_super) {
     __extends(BehavioralEventHttpCompletionRequest, _super);
     function BehavioralEventHttpCompletionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], BehavioralEventHttpCompletionRequest.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventName" }),
         __metadata("design:type", String)
     ], BehavioralEventHttpCompletionRequest.prototype, "eventName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectId" }),
         __metadata("design:type", String)
     ], BehavioralEventHttpCompletionRequest.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=occurredAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occurredAt" }),
         __metadata("design:type", Date)
     ], BehavioralEventHttpCompletionRequest.prototype, "occurredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], BehavioralEventHttpCompletionRequest.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utk" }),
         __metadata("design:type", String)
     ], BehavioralEventHttpCompletionRequest.prototype, "utk", void 0);
     return BehavioralEventHttpCompletionRequest;
-}(SpeakeasyBase));
-export { BehavioralEventHttpCompletionRequest };
+}(utils_1.SpeakeasyBase));
+exports.BehavioralEventHttpCompletionRequest = BehavioralEventHttpCompletionRequest;

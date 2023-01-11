@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GovidRequest, GovidResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: GovidRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "est",
-      fullName: "soluta",
-      regno: "et",
+      dob: "sit",
+      fullName: "voluptas",
+      regno: "culpa",
     },
-    consentArtifact: "eaque",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "corporis",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.govid(req).then((res: GovidResponse | AxiosError) => {
+sdk.apIs.govid(req).then((res: GovidResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.govid(req).then((res: GovidResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `govid` - ID Card
 

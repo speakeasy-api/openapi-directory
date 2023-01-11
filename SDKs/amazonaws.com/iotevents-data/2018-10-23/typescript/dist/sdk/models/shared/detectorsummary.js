@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectorStateSummary } from "./detectorstatesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectorSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var detectorstatesummary_1 = require("./detectorstatesummary");
 // DetectorSummary
 /**
  * Information about the detector (instance).
@@ -34,29 +37,29 @@ var DetectorSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], DetectorSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorModelName" }),
         __metadata("design:type", String)
     ], DetectorSummary.prototype, "detectorModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorModelVersion" }),
         __metadata("design:type", String)
     ], DetectorSummary.prototype, "detectorModelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValue" }),
         __metadata("design:type", String)
     ], DetectorSummary.prototype, "keyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], DetectorSummary.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", DetectorStateSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", detectorstatesummary_1.DetectorStateSummary)
     ], DetectorSummary.prototype, "state", void 0);
     return DetectorSummary;
-}(SpeakeasyBase));
-export { DetectorSummary };
+}(utils_1.SpeakeasyBase));
+exports.DetectorSummary = DetectorSummary;

@@ -10,7 +10,7 @@ export class GetOrganizationDevicesStatusesPathParams extends SpeakeasyBase {
 
 export class GetOrganizationDevicesStatusesQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=components" })
-  components?: Map<string, any>;
+  components?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" })
   endingBefore?: string;
@@ -37,11 +37,11 @@ export class GetOrganizationDevicesStatusesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationDevicesStatuses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationDevicesStatuses200ApplicationJSONObject?: Record<string, any>;
 }

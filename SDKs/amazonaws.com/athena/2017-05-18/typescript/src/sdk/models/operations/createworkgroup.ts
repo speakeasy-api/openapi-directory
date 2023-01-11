@@ -48,7 +48,7 @@ export class CreateWorkGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createWorkGroupOutput?: Map<string, any>;
+  createWorkGroupOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

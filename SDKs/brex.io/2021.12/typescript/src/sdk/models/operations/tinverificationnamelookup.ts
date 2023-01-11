@@ -32,8 +32,8 @@ export class TinVerificationNameLookupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tinVerificationNameLookup200ApplicationJsonAny?: any;
+  tinVerificationNameLookup200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  tinVerificationNameLookupDefaultApplicationJsonAny?: any;
+  tinVerificationNameLookupDefaultApplicationJSONAny?: any;
 }

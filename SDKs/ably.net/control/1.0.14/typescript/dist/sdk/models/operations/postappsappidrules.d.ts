@@ -14,6 +14,6 @@ export declare class PostAppsAppIdRulesRequest extends SpeakeasyBase {
 export declare class PostAppsAppIdRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     ruleResponse?: any;
 }

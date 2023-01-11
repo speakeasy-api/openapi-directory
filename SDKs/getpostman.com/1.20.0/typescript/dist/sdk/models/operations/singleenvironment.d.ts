@@ -23,5 +23,5 @@ export declare class SingleEnvironmentRequest extends SpeakeasyBase {
 export declare class SingleEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleEnvironment200ApplicationJsonObject?: SingleEnvironment200ApplicationJson;
+    singleEnvironment200ApplicationJSONObject?: SingleEnvironment200ApplicationJson;
 }

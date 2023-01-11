@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelJobRequest, CancelJobResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelJobRequest = {
   headers: {
-    xAmzAlgorithm: "qui",
-    xAmzContentSha256: "similique",
-    xAmzCredential: "odit",
-    xAmzDate: "dolorem",
-    xAmzSecurityToken: "voluptate",
-    xAmzSignature: "ut",
-    xAmzSignedHeaders: "inventore",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    jobId: "et",
-    reason: "enim",
+    jobId: "voluptas",
+    reason: "fugit",
   },
 };
 
-sdk.sdk.cancelJob(req).then((res: CancelJobResponse | AxiosError) => {
+sdk.cancelJob(req).then((res: CancelJobResponse | AxiosError) => {
    // handle response
 });
 ```

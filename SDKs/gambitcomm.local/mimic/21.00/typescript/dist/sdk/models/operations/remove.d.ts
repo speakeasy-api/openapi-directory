@@ -10,5 +10,5 @@ export declare class RemoveRequest extends SpeakeasyBase {
 export declare class RemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    remove200ApplicationJsonString?: string;
+    remove200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteAutoScalingGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteAutoScalingGroupResponse = exports.PostDeleteAutoScalingGroupRequest = exports.PostDeleteAutoScalingGroupHeaders = exports.PostDeleteAutoScalingGroupQueryParams = exports.PostDeleteAutoScalingGroupVersionEnum = exports.PostDeleteAutoScalingGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteAutoScalingGroupActionEnum;
 (function (PostDeleteAutoScalingGroupActionEnum) {
     PostDeleteAutoScalingGroupActionEnum["DeleteAutoScalingGroup"] = "DeleteAutoScalingGroup";
-})(PostDeleteAutoScalingGroupActionEnum || (PostDeleteAutoScalingGroupActionEnum = {}));
-export var PostDeleteAutoScalingGroupVersionEnum;
+})(PostDeleteAutoScalingGroupActionEnum = exports.PostDeleteAutoScalingGroupActionEnum || (exports.PostDeleteAutoScalingGroupActionEnum = {}));
+var PostDeleteAutoScalingGroupVersionEnum;
 (function (PostDeleteAutoScalingGroupVersionEnum) {
     PostDeleteAutoScalingGroupVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostDeleteAutoScalingGroupVersionEnum || (PostDeleteAutoScalingGroupVersionEnum = {}));
+})(PostDeleteAutoScalingGroupVersionEnum = exports.PostDeleteAutoScalingGroupVersionEnum || (exports.PostDeleteAutoScalingGroupVersionEnum = {}));
 var PostDeleteAutoScalingGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteAutoScalingGroupQueryParams, _super);
     function PostDeleteAutoScalingGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupQueryParams.prototype, "version", void 0);
     return PostDeleteAutoScalingGroupQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteAutoScalingGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAutoScalingGroupQueryParams = PostDeleteAutoScalingGroupQueryParams;
 var PostDeleteAutoScalingGroupHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteAutoScalingGroupHeaders, _super);
     function PostDeleteAutoScalingGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteAutoScalingGroupHeaders;
-}(SpeakeasyBase));
-export { PostDeleteAutoScalingGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAutoScalingGroupHeaders = PostDeleteAutoScalingGroupHeaders;
 var PostDeleteAutoScalingGroupRequest = /** @class */ (function (_super) {
     __extends(PostDeleteAutoScalingGroupRequest, _super);
     function PostDeleteAutoScalingGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteAutoScalingGroupQueryParams)
     ], PostDeleteAutoScalingGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteAutoScalingGroupHeaders)
     ], PostDeleteAutoScalingGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteAutoScalingGroupRequest.prototype, "request", void 0);
     return PostDeleteAutoScalingGroupRequest;
-}(SpeakeasyBase));
-export { PostDeleteAutoScalingGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAutoScalingGroupRequest = PostDeleteAutoScalingGroupRequest;
 var PostDeleteAutoScalingGroupResponse = /** @class */ (function (_super) {
     __extends(PostDeleteAutoScalingGroupResponse, _super);
     function PostDeleteAutoScalingGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteAutoScalingGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteAutoScalingGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteAutoScalingGroupResponse.prototype, "statusCode", void 0);
     return PostDeleteAutoScalingGroupResponse;
-}(SpeakeasyBase));
-export { PostDeleteAutoScalingGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAutoScalingGroupResponse = PostDeleteAutoScalingGroupResponse;

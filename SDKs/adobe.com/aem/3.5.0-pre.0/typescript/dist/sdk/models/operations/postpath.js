@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPathResponse = exports.PostPathRequest = exports.PostPathQueryParams = exports.PostPathPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPathPathParams = /** @class */ (function (_super) {
     __extends(PostPathPathParams, _super);
     function PostPathPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], PostPathPathParams.prototype, "path", void 0);
     return PostPathPathParams;
-}(SpeakeasyBase));
-export { PostPathPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPathPathParams = PostPathPathParams;
 var PostPathQueryParams = /** @class */ (function (_super) {
     __extends(PostPathQueryParams, _super);
     function PostPathQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=:name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=:name" }),
         __metadata("design:type", String)
     ], PostPathQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:primaryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=jcr:primaryType" }),
         __metadata("design:type", String)
     ], PostPathQueryParams.prototype, "jcrPrimaryType", void 0);
     return PostPathQueryParams;
-}(SpeakeasyBase));
-export { PostPathQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPathQueryParams = PostPathQueryParams;
 var PostPathRequest = /** @class */ (function (_super) {
     __extends(PostPathRequest, _super);
     function PostPathRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPathPathParams)
     ], PostPathRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPathQueryParams)
     ], PostPathRequest.prototype, "queryParams", void 0);
     return PostPathRequest;
-}(SpeakeasyBase));
-export { PostPathRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPathRequest = PostPathRequest;
 var PostPathResponse = /** @class */ (function (_super) {
     __extends(PostPathResponse, _super);
     function PostPathResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPathResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPathResponse.prototype, "statusCode", void 0);
     return PostPathResponse;
-}(SpeakeasyBase));
-export { PostPathResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPathResponse = PostPathResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridCoordinate } from "./gridcoordinate";
-import { GridRange } from "./gridrange";
-export var CutPasteRequestPasteTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CutPasteRequest = exports.CutPasteRequestPasteTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridcoordinate_1 = require("./gridcoordinate");
+var gridrange_1 = require("./gridrange");
+var CutPasteRequestPasteTypeEnum;
 (function (CutPasteRequestPasteTypeEnum) {
     CutPasteRequestPasteTypeEnum["PasteNormal"] = "PASTE_NORMAL";
     CutPasteRequestPasteTypeEnum["PasteValues"] = "PASTE_VALUES";
@@ -34,7 +37,7 @@ export var CutPasteRequestPasteTypeEnum;
     CutPasteRequestPasteTypeEnum["PasteFormula"] = "PASTE_FORMULA";
     CutPasteRequestPasteTypeEnum["PasteDataValidation"] = "PASTE_DATA_VALIDATION";
     CutPasteRequestPasteTypeEnum["PasteConditionalFormatting"] = "PASTE_CONDITIONAL_FORMATTING";
-})(CutPasteRequestPasteTypeEnum || (CutPasteRequestPasteTypeEnum = {}));
+})(CutPasteRequestPasteTypeEnum = exports.CutPasteRequestPasteTypeEnum || (exports.CutPasteRequestPasteTypeEnum = {}));
 // CutPasteRequest
 /**
  * Moves data from the source to the destination.
@@ -45,17 +48,17 @@ var CutPasteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", GridCoordinate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", gridcoordinate_1.GridCoordinate)
     ], CutPasteRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pasteType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pasteType" }),
         __metadata("design:type", String)
     ], CutPasteRequest.prototype, "pasteType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], CutPasteRequest.prototype, "source", void 0);
     return CutPasteRequest;
-}(SpeakeasyBase));
-export { CutPasteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CutPasteRequest = CutPasteRequest;

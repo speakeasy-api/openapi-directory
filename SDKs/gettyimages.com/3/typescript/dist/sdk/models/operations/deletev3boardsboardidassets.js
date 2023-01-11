@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteV3BoardsBoardIdAssetsResponse = exports.DeleteV3BoardsBoardIdAssetsRequest = exports.DeleteV3BoardsBoardIdAssetsQueryParams = exports.DeleteV3BoardsBoardIdAssetsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteV3BoardsBoardIdAssetsPathParams = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsPathParams, _super);
     function DeleteV3BoardsBoardIdAssetsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=board_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=board_id" }),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdAssetsPathParams.prototype, "boardId", void 0);
     return DeleteV3BoardsBoardIdAssetsPathParams;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsPathParams = DeleteV3BoardsBoardIdAssetsPathParams;
 var DeleteV3BoardsBoardIdAssetsQueryParams = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsQueryParams, _super);
     function DeleteV3BoardsBoardIdAssetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=asset_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=asset_ids" }),
         __metadata("design:type", Array)
     ], DeleteV3BoardsBoardIdAssetsQueryParams.prototype, "assetIds", void 0);
     return DeleteV3BoardsBoardIdAssetsQueryParams;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsQueryParams = DeleteV3BoardsBoardIdAssetsQueryParams;
 var DeleteV3BoardsBoardIdAssetsRequest = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsRequest, _super);
     function DeleteV3BoardsBoardIdAssetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteV3BoardsBoardIdAssetsPathParams)
     ], DeleteV3BoardsBoardIdAssetsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteV3BoardsBoardIdAssetsQueryParams)
     ], DeleteV3BoardsBoardIdAssetsRequest.prototype, "queryParams", void 0);
     return DeleteV3BoardsBoardIdAssetsRequest;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsRequest = DeleteV3BoardsBoardIdAssetsRequest;
 var DeleteV3BoardsBoardIdAssetsResponse = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdAssetsResponse, _super);
     function DeleteV3BoardsBoardIdAssetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdAssetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteV3BoardsBoardIdAssetsResponse.prototype, "statusCode", void 0);
     return DeleteV3BoardsBoardIdAssetsResponse;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdAssetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdAssetsResponse = DeleteV3BoardsBoardIdAssetsResponse;

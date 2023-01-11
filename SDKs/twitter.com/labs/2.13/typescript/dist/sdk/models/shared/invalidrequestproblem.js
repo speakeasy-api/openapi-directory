@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvalidRequestProblem = exports.InvalidRequestProblemErrors = void 0;
+var utils_1 = require("../../../internal/utils");
 var InvalidRequestProblemErrors = /** @class */ (function (_super) {
     __extends(InvalidRequestProblemErrors, _super);
     function InvalidRequestProblemErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], InvalidRequestProblemErrors.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], InvalidRequestProblemErrors.prototype, "parameters", void 0);
     return InvalidRequestProblemErrors;
-}(SpeakeasyBase));
-export { InvalidRequestProblemErrors };
+}(utils_1.SpeakeasyBase));
+exports.InvalidRequestProblemErrors = InvalidRequestProblemErrors;
 // InvalidRequestProblem
 /**
  * A problem that indicates this request is invalid.
@@ -49,21 +52,21 @@ var InvalidRequestProblem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], InvalidRequestProblem.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: InvalidRequestProblemErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: InvalidRequestProblemErrors }),
         __metadata("design:type", Array)
     ], InvalidRequestProblem.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], InvalidRequestProblem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], InvalidRequestProblem.prototype, "type", void 0);
     return InvalidRequestProblem;
-}(SpeakeasyBase));
-export { InvalidRequestProblem };
+}(utils_1.SpeakeasyBase));
+exports.InvalidRequestProblem = InvalidRequestProblem;

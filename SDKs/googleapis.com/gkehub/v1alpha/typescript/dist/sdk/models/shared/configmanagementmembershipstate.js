@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementBinauthzState } from "./configmanagementbinauthzstate";
-import { ConfigManagementConfigSyncState } from "./configmanagementconfigsyncstate";
-import { ConfigManagementHierarchyControllerState } from "./configmanagementhierarchycontrollerstate";
-import { ConfigManagementMembershipSpec } from "./configmanagementmembershipspec";
-import { ConfigManagementOperatorState } from "./configmanagementoperatorstate";
-import { ConfigManagementPolicyControllerState } from "./configmanagementpolicycontrollerstate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementMembershipState = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementbinauthzstate_1 = require("./configmanagementbinauthzstate");
+var configmanagementconfigsyncstate_1 = require("./configmanagementconfigsyncstate");
+var configmanagementhierarchycontrollerstate_1 = require("./configmanagementhierarchycontrollerstate");
+var configmanagementmembershipspec_1 = require("./configmanagementmembershipspec");
+var configmanagementoperatorstate_1 = require("./configmanagementoperatorstate");
+var configmanagementpolicycontrollerstate_1 = require("./configmanagementpolicycontrollerstate");
 // ConfigManagementMembershipState
 /**
  * **Anthos Config Management**: State for a single cluster.
@@ -39,33 +42,33 @@ var ConfigManagementMembershipState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binauthzState" }),
-        __metadata("design:type", ConfigManagementBinauthzState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binauthzState" }),
+        __metadata("design:type", configmanagementbinauthzstate_1.ConfigManagementBinauthzState)
     ], ConfigManagementMembershipState.prototype, "binauthzState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], ConfigManagementMembershipState.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configSyncState" }),
-        __metadata("design:type", ConfigManagementConfigSyncState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configSyncState" }),
+        __metadata("design:type", configmanagementconfigsyncstate_1.ConfigManagementConfigSyncState)
     ], ConfigManagementMembershipState.prototype, "configSyncState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hierarchyControllerState" }),
-        __metadata("design:type", ConfigManagementHierarchyControllerState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hierarchyControllerState" }),
+        __metadata("design:type", configmanagementhierarchycontrollerstate_1.ConfigManagementHierarchyControllerState)
     ], ConfigManagementMembershipState.prototype, "hierarchyControllerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipSpec" }),
-        __metadata("design:type", ConfigManagementMembershipSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipSpec" }),
+        __metadata("design:type", configmanagementmembershipspec_1.ConfigManagementMembershipSpec)
     ], ConfigManagementMembershipState.prototype, "membershipSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorState" }),
-        __metadata("design:type", ConfigManagementOperatorState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorState" }),
+        __metadata("design:type", configmanagementoperatorstate_1.ConfigManagementOperatorState)
     ], ConfigManagementMembershipState.prototype, "operatorState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyControllerState" }),
-        __metadata("design:type", ConfigManagementPolicyControllerState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyControllerState" }),
+        __metadata("design:type", configmanagementpolicycontrollerstate_1.ConfigManagementPolicyControllerState)
     ], ConfigManagementMembershipState.prototype, "policyControllerState", void 0);
     return ConfigManagementMembershipState;
-}(SpeakeasyBase));
-export { ConfigManagementMembershipState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementMembershipState = ConfigManagementMembershipState;

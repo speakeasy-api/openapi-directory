@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetailedServiceHours = void 0;
+var utils_1 = require("../../../internal/utils");
 // DetailedServiceHours
 /**
  * Standard hours of operation. Currently formatted as descriptive text suitable for display, with no guarantee of a standard parseable format. Hours of operation may vary due to holidays or other events.
@@ -33,33 +36,33 @@ var DetailedServiceHours = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Friday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Friday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "friday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Monday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Monday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "monday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Saturday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Saturday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "saturday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sunday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sunday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "sunday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Thursday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Thursday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "thursday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tuesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tuesday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "tuesday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Wednesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Wednesday" }),
         __metadata("design:type", String)
     ], DetailedServiceHours.prototype, "wednesday", void 0);
     return DetailedServiceHours;
-}(SpeakeasyBase));
-export { DetailedServiceHours };
+}(utils_1.SpeakeasyBase));
+exports.DetailedServiceHours = DetailedServiceHours;

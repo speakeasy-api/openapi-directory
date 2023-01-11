@@ -30,9 +30,9 @@ export class GetMarketdataExchangeComponentsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 
-  @SpeakeasyMetadata({ elemType: GetMarketdataExchangeComponents200ApplicationJson })
-  getMarketdataExchangeComponents200ApplicationJsonObjects?: GetMarketdataExchangeComponents200ApplicationJson[];
-
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata({ elemType: GetMarketdataExchangeComponents200ApplicationJson })
+  getMarketdataExchangeComponents200ApplicationJSONObjects?: GetMarketdataExchangeComponents200ApplicationJson[];
 }

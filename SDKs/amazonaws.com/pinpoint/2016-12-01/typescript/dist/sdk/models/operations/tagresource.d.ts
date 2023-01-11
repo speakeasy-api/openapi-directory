@@ -15,7 +15,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
  * Specifies the tags (keys and values) for an application, campaign, message template, or segment.
 **/
 export declare class TagResourceRequestBodyTagsModel extends SpeakeasyBase {
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
     tagsModel: TagResourceRequestBodyTagsModel;

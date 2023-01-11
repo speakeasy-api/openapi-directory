@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceByConfigRule } from "./compliancebyconfigrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeComplianceByConfigRuleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancebyconfigrule_1 = require("./compliancebyconfigrule");
 // DescribeComplianceByConfigRuleResponse
 /**
  * <p/>
@@ -34,13 +37,13 @@ var DescribeComplianceByConfigRuleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceByConfigRules", elemType: ComplianceByConfigRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceByConfigRules", elemType: compliancebyconfigrule_1.ComplianceByConfigRule }),
         __metadata("design:type", Array)
     ], DescribeComplianceByConfigRuleResponse.prototype, "complianceByConfigRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeComplianceByConfigRuleResponse.prototype, "nextToken", void 0);
     return DescribeComplianceByConfigRuleResponse;
-}(SpeakeasyBase));
-export { DescribeComplianceByConfigRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeComplianceByConfigRuleResponse = DescribeComplianceByConfigRuleResponse;

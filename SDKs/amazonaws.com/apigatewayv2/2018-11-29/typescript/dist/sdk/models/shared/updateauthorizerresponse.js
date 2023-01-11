@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizerTypeEnum } from "./authorizertypeenum";
-import { JwtConfiguration } from "./jwtconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAuthorizerResponse = exports.UpdateAuthorizerResponseJwtConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+// UpdateAuthorizerResponseJwtConfiguration
+/**
+ * Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.
+**/
+var UpdateAuthorizerResponseJwtConfiguration = /** @class */ (function (_super) {
+    __extends(UpdateAuthorizerResponseJwtConfiguration, _super);
+    function UpdateAuthorizerResponseJwtConfiguration() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Audience" }),
+        __metadata("design:type", Object)
+    ], UpdateAuthorizerResponseJwtConfiguration.prototype, "audience", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Issuer" }),
+        __metadata("design:type", Object)
+    ], UpdateAuthorizerResponseJwtConfiguration.prototype, "issuer", void 0);
+    return UpdateAuthorizerResponseJwtConfiguration;
+}(utils_1.SpeakeasyBase));
+exports.UpdateAuthorizerResponseJwtConfiguration = UpdateAuthorizerResponseJwtConfiguration;
 var UpdateAuthorizerResponse = /** @class */ (function (_super) {
     __extends(UpdateAuthorizerResponse, _super);
     function UpdateAuthorizerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerCredentialsArn" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerCredentialsArn" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerCredentialsArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerId" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerPayloadFormatVersion" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerPayloadFormatVersion" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerPayloadFormatVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerResultTtlInSeconds" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerResultTtlInSeconds" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerResultTtlInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerType" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerType" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthorizerUri" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthorizerUri" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "authorizerUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnableSimpleResponses" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnableSimpleResponses" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "enableSimpleResponses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentitySource" }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentitySource" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "identitySource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityValidationExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityValidationExpression" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "identityValidationExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JwtConfiguration" }),
-        __metadata("design:type", JwtConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JwtConfiguration" }),
+        __metadata("design:type", UpdateAuthorizerResponseJwtConfiguration)
     ], UpdateAuthorizerResponse.prototype, "jwtConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", Object)
     ], UpdateAuthorizerResponse.prototype, "name", void 0);
     return UpdateAuthorizerResponse;
-}(SpeakeasyBase));
-export { UpdateAuthorizerResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAuthorizerResponse = UpdateAuthorizerResponse;

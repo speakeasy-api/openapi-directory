@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1Dataset } from "./googleclouddatalabelingv1beta1dataset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1CreateDatasetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1dataset_1 = require("./googleclouddatalabelingv1beta1dataset");
 // GoogleCloudDatalabelingV1beta1CreateDatasetRequest
 /**
  * Request message for CreateDataset.
@@ -34,9 +37,9 @@ var GoogleCloudDatalabelingV1beta1CreateDatasetRequest = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataset" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1Dataset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataset" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1dataset_1.GoogleCloudDatalabelingV1beta1Dataset)
     ], GoogleCloudDatalabelingV1beta1CreateDatasetRequest.prototype, "dataset", void 0);
     return GoogleCloudDatalabelingV1beta1CreateDatasetRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1CreateDatasetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1CreateDatasetRequest = GoogleCloudDatalabelingV1beta1CreateDatasetRequest;

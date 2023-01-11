@@ -13,7 +13,7 @@ export declare class FinalizeDeviceClaimHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class FinalizeDeviceClaimRequestBody extends SpeakeasyBase {
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class FinalizeDeviceClaimRequest extends SpeakeasyBase {
     pathParams: FinalizeDeviceClaimPathParams;

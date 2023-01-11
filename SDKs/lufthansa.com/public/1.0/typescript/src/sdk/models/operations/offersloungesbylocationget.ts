@@ -53,7 +53,7 @@ export class OffersLoungesByLocationGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  offersLoungesByLocationGet200ApplicationJsonObject?: Map<string, any>;
+  offersLoungesByLocationGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AliasContext } from "./aliascontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GerritSourceContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var aliascontext_1 = require("./aliascontext");
 // GerritSourceContext
 /**
  * A SourceContext referring to a Gerrit project.
@@ -34,21 +37,21 @@ var GerritSourceContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliasContext" }),
-        __metadata("design:type", AliasContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliasContext" }),
+        __metadata("design:type", aliascontext_1.AliasContext)
     ], GerritSourceContext.prototype, "aliasContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gerritProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gerritProject" }),
         __metadata("design:type", String)
     ], GerritSourceContext.prototype, "gerritProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostUri" }),
         __metadata("design:type", String)
     ], GerritSourceContext.prototype, "hostUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], GerritSourceContext.prototype, "revisionId", void 0);
     return GerritSourceContext;
-}(SpeakeasyBase));
-export { GerritSourceContext };
+}(utils_1.SpeakeasyBase));
+exports.GerritSourceContext = GerritSourceContext;

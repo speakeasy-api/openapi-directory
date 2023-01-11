@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserTitleEnum = void 0;
+var UserTitleEnum;
+(function (UserTitleEnum) {
+    UserTitleEnum["Ceo"] = "ceo";
+    UserTitleEnum["Cto"] = "cto";
+    UserTitleEnum["Cso"] = "cso";
+    UserTitleEnum["Seceng"] = "seceng";
+    UserTitleEnum["Dev"] = "dev";
+    UserTitleEnum["Devop"] = "devop";
+    UserTitleEnum["Manager"] = "manager";
+    UserTitleEnum["Other"] = "other";
+})(UserTitleEnum = exports.UserTitleEnum || (exports.UserTitleEnum = {}));

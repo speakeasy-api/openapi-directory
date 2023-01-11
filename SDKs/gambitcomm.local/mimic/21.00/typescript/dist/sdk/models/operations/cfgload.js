@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CfgLoadResponse = exports.CfgLoadRequest = exports.CfgLoadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CfgLoadPathParams = /** @class */ (function (_super) {
     __extends(CfgLoadPathParams, _super);
     function CfgLoadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cfgFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cfgFile" }),
         __metadata("design:type", String)
     ], CfgLoadPathParams.prototype, "cfgFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=firstAgentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=firstAgentNum" }),
         __metadata("design:type", Number)
     ], CfgLoadPathParams.prototype, "firstAgentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=lastAgentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=lastAgentNum" }),
         __metadata("design:type", Number)
     ], CfgLoadPathParams.prototype, "lastAgentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=startAgentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=startAgentNum" }),
         __metadata("design:type", Number)
     ], CfgLoadPathParams.prototype, "startAgentNum", void 0);
     return CfgLoadPathParams;
-}(SpeakeasyBase));
-export { CfgLoadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CfgLoadPathParams = CfgLoadPathParams;
 var CfgLoadRequest = /** @class */ (function (_super) {
     __extends(CfgLoadRequest, _super);
     function CfgLoadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CfgLoadPathParams)
     ], CfgLoadRequest.prototype, "pathParams", void 0);
     return CfgLoadRequest;
-}(SpeakeasyBase));
-export { CfgLoadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CfgLoadRequest = CfgLoadRequest;
 var CfgLoadResponse = /** @class */ (function (_super) {
     __extends(CfgLoadResponse, _super);
     function CfgLoadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CfgLoadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CfgLoadResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CfgLoadResponse.prototype, "cfgLoad200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CfgLoadResponse.prototype, "cfgLoad200ApplicationJSONObject", void 0);
     return CfgLoadResponse;
-}(SpeakeasyBase));
-export { CfgLoadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CfgLoadResponse = CfgLoadResponse;

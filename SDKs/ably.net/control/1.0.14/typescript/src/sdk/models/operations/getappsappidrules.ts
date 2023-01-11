@@ -32,7 +32,7 @@ export class GetAppsAppIdRulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   ruleResponses?: any[];

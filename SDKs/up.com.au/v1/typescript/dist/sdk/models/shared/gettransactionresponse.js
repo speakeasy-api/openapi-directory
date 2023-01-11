@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransactionResource } from "./transactionresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var transactionresource_1 = require("./transactionresource");
 // GetTransactionResponse
 /**
  * Successful response to get a single transaction.
@@ -35,9 +38,9 @@ var GetTransactionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", TransactionResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", transactionresource_1.TransactionResource)
     ], GetTransactionResponse.prototype, "data", void 0);
     return GetTransactionResponse;
-}(SpeakeasyBase));
-export { GetTransactionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionResponse = GetTransactionResponse;

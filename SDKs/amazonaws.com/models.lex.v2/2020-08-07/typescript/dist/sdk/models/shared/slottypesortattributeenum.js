@@ -1,5 +1,8 @@
-export var SlotTypeSortAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlotTypeSortAttributeEnum = void 0;
+var SlotTypeSortAttributeEnum;
 (function (SlotTypeSortAttributeEnum) {
     SlotTypeSortAttributeEnum["SlotTypeName"] = "SlotTypeName";
     SlotTypeSortAttributeEnum["LastUpdatedDateTime"] = "LastUpdatedDateTime";
-})(SlotTypeSortAttributeEnum || (SlotTypeSortAttributeEnum = {}));
+})(SlotTypeSortAttributeEnum = exports.SlotTypeSortAttributeEnum || (exports.SlotTypeSortAttributeEnum = {}));

@@ -1,4 +1,7 @@
-export var SourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceTypeEnum = void 0;
+var SourceTypeEnum;
 (function (SourceTypeEnum) {
     SourceTypeEnum["Codecommit"] = "CODECOMMIT";
     SourceTypeEnum["Codepipeline"] = "CODEPIPELINE";
@@ -7,4 +10,4 @@ export var SourceTypeEnum;
     SourceTypeEnum["Bitbucket"] = "BITBUCKET";
     SourceTypeEnum["GithubEnterprise"] = "GITHUB_ENTERPRISE";
     SourceTypeEnum["NoSource"] = "NO_SOURCE";
-})(SourceTypeEnum || (SourceTypeEnum = {}));
+})(SourceTypeEnum = exports.SourceTypeEnum || (exports.SourceTypeEnum = {}));

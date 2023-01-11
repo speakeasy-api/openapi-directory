@@ -3,22 +3,21 @@ import { Security } from "./models/shared";
 import { Account } from "./account";
 import { Html } from "./html";
 import { SelectedHtml } from "./selectedhtml";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.webscraping.ai"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     account: Account;
     html: Html;
-    selectedHtml: SelectedHtml;
+    selectedHTML: SelectedHtml;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

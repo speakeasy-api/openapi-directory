@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3ObjectSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3ObjectSource
 /**
  * Template bundle S3 bucket data.
@@ -33,13 +36,13 @@ var S3ObjectSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucket" }),
         __metadata("design:type", String)
     ], S3ObjectSource.prototype, "bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], S3ObjectSource.prototype, "key", void 0);
     return S3ObjectSource;
-}(SpeakeasyBase));
-export { S3ObjectSource };
+}(utils_1.SpeakeasyBase));
+exports.S3ObjectSource = S3ObjectSource;

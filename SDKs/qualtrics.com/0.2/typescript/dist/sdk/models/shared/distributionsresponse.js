@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,252 +23,254 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DistributionsResponse = exports.DistributionsResponseResult = exports.DistributionsResponseResultElements = exports.DistributionsResponseResultElementsSurveyLink = exports.DistributionsResponseResultElementsStats = exports.DistributionsResponseResultElementsRecipients = exports.DistributionsResponseResultElementsMessage = exports.DistributionsResponseResultElementsHeaders = exports.DistributionsResponseMeta = void 0;
+var utils_1 = require("../../../internal/utils");
 var DistributionsResponseMeta = /** @class */ (function (_super) {
     __extends(DistributionsResponseMeta, _super);
     function DistributionsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpStatus" }),
         __metadata("design:type", String)
     ], DistributionsResponseMeta.prototype, "httpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], DistributionsResponseMeta.prototype, "requestId", void 0);
     return DistributionsResponseMeta;
-}(SpeakeasyBase));
-export { DistributionsResponseMeta };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseMeta = DistributionsResponseMeta;
 var DistributionsResponseResultElementsHeaders = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElementsHeaders, _super);
     function DistributionsResponseResultElementsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromEmail" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsHeaders.prototype, "fromEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromName" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsHeaders.prototype, "fromName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replyToEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replyToEmail" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsHeaders.prototype, "replyToEmail", void 0);
     return DistributionsResponseResultElementsHeaders;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElementsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElementsHeaders = DistributionsResponseResultElementsHeaders;
 var DistributionsResponseResultElementsMessage = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElementsMessage, _super);
     function DistributionsResponseResultElementsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=libraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=libraryId" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsMessage.prototype, "libraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageId" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsMessage.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageText" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsMessage.prototype, "messageText", void 0);
     return DistributionsResponseResultElementsMessage;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElementsMessage };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElementsMessage = DistributionsResponseResultElementsMessage;
 var DistributionsResponseResultElementsRecipients = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElementsRecipients, _super);
     function DistributionsResponseResultElementsRecipients() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactId" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsRecipients.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=libraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=libraryId" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElementsRecipients.prototype, "libraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailingListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailingListId" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElementsRecipients.prototype, "mailingListId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElementsRecipients.prototype, "sampleId", void 0);
     return DistributionsResponseResultElementsRecipients;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElementsRecipients };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElementsRecipients = DistributionsResponseResultElementsRecipients;
 var DistributionsResponseResultElementsStats = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElementsStats, _super);
     function DistributionsResponseResultElementsStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocked" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "blocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bounced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bounced" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "bounced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complaints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complaints" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "complaints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "failed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opened" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opened" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "opened", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sent" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "sent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipped" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "skipped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", Number)
     ], DistributionsResponseResultElementsStats.prototype, "started", void 0);
     return DistributionsResponseResultElementsStats;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElementsStats };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElementsStats = DistributionsResponseResultElementsStats;
 var DistributionsResponseResultElementsSurveyLink = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElementsSurveyLink, _super);
     function DistributionsResponseResultElementsSurveyLink() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElementsSurveyLink.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkType" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElementsSurveyLink.prototype, "linkType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=surveyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=surveyId" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElementsSurveyLink.prototype, "surveyId", void 0);
     return DistributionsResponseResultElementsSurveyLink;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElementsSurveyLink };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElementsSurveyLink = DistributionsResponseResultElementsSurveyLink;
 var DistributionsResponseResultElements = /** @class */ (function (_super) {
     __extends(DistributionsResponseResultElements, _super);
     function DistributionsResponseResultElements() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdDate" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customHeaders" }),
+        __metadata("design:type", Object)
     ], DistributionsResponseResultElements.prototype, "customHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embeddedData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embeddedData" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElements.prototype, "embeddedData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
         __metadata("design:type", DistributionsResponseResultElementsHeaders)
     ], DistributionsResponseResultElements.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", DistributionsResponseResultElementsMessage)
     ], DistributionsResponseResultElements.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedDate" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "modifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationId" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerId" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentDistributionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentDistributionId" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResultElements.prototype, "parentDistributionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipients" }),
         __metadata("design:type", DistributionsResponseResultElementsRecipients)
     ], DistributionsResponseResultElements.prototype, "recipients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestStatus" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "requestStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestType" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "requestType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendDate" }),
         __metadata("design:type", String)
     ], DistributionsResponseResultElements.prototype, "sendDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
         __metadata("design:type", DistributionsResponseResultElementsStats)
     ], DistributionsResponseResultElements.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=surveyLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=surveyLink" }),
         __metadata("design:type", DistributionsResponseResultElementsSurveyLink)
     ], DistributionsResponseResultElements.prototype, "surveyLink", void 0);
     return DistributionsResponseResultElements;
-}(SpeakeasyBase));
-export { DistributionsResponseResultElements };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResultElements = DistributionsResponseResultElements;
 var DistributionsResponseResult = /** @class */ (function (_super) {
     __extends(DistributionsResponseResult, _super);
     function DistributionsResponseResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elements", elemType: DistributionsResponseResultElements }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elements", elemType: DistributionsResponseResultElements }),
         __metadata("design:type", Array)
     ], DistributionsResponseResult.prototype, "elements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPage" }),
         __metadata("design:type", Object)
     ], DistributionsResponseResult.prototype, "nextPage", void 0);
     return DistributionsResponseResult;
-}(SpeakeasyBase));
-export { DistributionsResponseResult };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponseResult = DistributionsResponseResult;
 var DistributionsResponse = /** @class */ (function (_super) {
     __extends(DistributionsResponse, _super);
     function DistributionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", DistributionsResponseMeta)
     ], DistributionsResponse.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", DistributionsResponseResult)
     ], DistributionsResponse.prototype, "result", void 0);
     return DistributionsResponse;
-}(SpeakeasyBase));
-export { DistributionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DistributionsResponse = DistributionsResponse;

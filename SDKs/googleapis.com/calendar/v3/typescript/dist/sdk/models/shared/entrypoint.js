@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryPoint = void 0;
+var utils_1 = require("../../../internal/utils");
 var EntryPoint = /** @class */ (function (_super) {
     __extends(EntryPoint, _super);
     function EntryPoint() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessCode" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "accessCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryPointFeatures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryPointFeatures" }),
         __metadata("design:type", Array)
     ], EntryPoint.prototype, "entryPointFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryPointType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryPointType" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "entryPointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meetingCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meetingCode" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "meetingCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passcode" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "passcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pin" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionCode" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "regionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], EntryPoint.prototype, "uri", void 0);
     return EntryPoint;
-}(SpeakeasyBase));
-export { EntryPoint };
+}(utils_1.SpeakeasyBase));
+exports.EntryPoint = EntryPoint;

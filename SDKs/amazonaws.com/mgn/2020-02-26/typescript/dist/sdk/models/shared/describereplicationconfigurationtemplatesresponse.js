@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationConfigurationTemplate } from "./replicationconfigurationtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeReplicationConfigurationTemplatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationconfigurationtemplate_1 = require("./replicationconfigurationtemplate");
 var DescribeReplicationConfigurationTemplatesResponse = /** @class */ (function (_super) {
     __extends(DescribeReplicationConfigurationTemplatesResponse, _super);
     function DescribeReplicationConfigurationTemplatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ReplicationConfigurationTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: replicationconfigurationtemplate_1.ReplicationConfigurationTemplate }),
         __metadata("design:type", Array)
     ], DescribeReplicationConfigurationTemplatesResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeReplicationConfigurationTemplatesResponse.prototype, "nextToken", void 0);
     return DescribeReplicationConfigurationTemplatesResponse;
-}(SpeakeasyBase));
-export { DescribeReplicationConfigurationTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeReplicationConfigurationTemplatesResponse = DescribeReplicationConfigurationTemplatesResponse;

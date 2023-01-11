@@ -26,7 +26,7 @@ export declare class InstanceInput extends SpeakeasyBase {
     authorizedNetwork?: string;
     displayName?: string;
     instanceMessages?: InstanceMessage[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     maintenancePolicy?: GoogleCloudMemcacheV1MaintenancePolicyInput;
     memcacheVersion?: InstanceMemcacheVersionEnum;
     name?: string;
@@ -44,7 +44,7 @@ export declare class Instance extends SpeakeasyBase {
     discoveryEndpoint?: string;
     displayName?: string;
     instanceMessages?: InstanceMessage[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     maintenancePolicy?: GoogleCloudMemcacheV1MaintenancePolicy;
     maintenanceSchedule?: MaintenanceSchedule;
     memcacheFullVersion?: string;

@@ -19,5 +19,5 @@ export declare class SingleMockRequest extends SpeakeasyBase {
 export declare class SingleMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleMock200ApplicationJsonObject?: SingleMock200ApplicationJson;
+    singleMock200ApplicationJSONObject?: SingleMock200ApplicationJson;
 }

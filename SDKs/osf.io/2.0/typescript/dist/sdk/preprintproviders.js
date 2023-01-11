@@ -1,0 +1,303 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprintProviders = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var PreprintProviders = /** @class */ (function () {
+    function PreprintProviders(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * preprintProviderDetail - Retrieve a preprint provider
+     *
+     * Retrieves the details of a preprint provider.
+     * #### Returns
+     * Returns a JSON object with a `data` key containing the representation of the requested preprint provider, if the request is successful.
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     *
+     * #### Acceptable Subjects Structure
+     * Each preprint provider specifies acceptable subjects.
+     * `subjects_acceptable` is an array found in `attributes`.
+     * Subjects consist of general parent subjects (e.g., Engineering), more specific child subjects (e.g., Aerospace Engineering), and even more specific grandchild subjects (e.g., Aerodynamics and Fluid Mechanics). Subjects can only be nested 3 deep.
+     *
+     *
+     *     "subjects_acceptable": [
+     *         [
+     *             [
+     *                 # Parent Subject:
+     *                 # Architecture
+     *                 "584240d954be81056ceca9e5",
+     *
+     *                 # Child Subject:
+     *                 # Architectural Engineering
+     *                 "584240da54be81056cecac87"
+     *             ],
+     *             # Include all Architectural Engineering's children:
+     *             true
+     *         ],
+     *         [
+     *             [
+     *                 # Parent Subject:
+     *                 # Engineering
+     *                 "584240da54be81056cecaca9",
+     *
+     *                 # Child Subject:
+     *                 # Aerospace Engineering
+     *                 "584240db54be81056cecacd6",
+     *
+     *                 # Grandchild Subject:
+     *                 # Aerodynamics and Fluid Mechanics
+     *                 "584240da54be81056cecaa74"
+     *             ],
+     *             # All nestings 3 deep must be false
+     *             false
+     *         ]
+     *     ]
+     *
+     * The above structure would allow Architecture, Architectural Engineering, all of Architectural Engineering's children, Engineering, Aerospace Engineering, and Aerodynamics and Fluid Mechanics.
+    **/
+    PreprintProviders.prototype.preprintProviderDetail = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PreprintProviderDetailRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/preprint_providers/{preprint_provider_id}/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * preprintProviderLicensesList - List all licenses
+     *
+     *
+     * A paginated list of the licenses allowed bya preprint provider.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 preprint providers. Each resource in the array is a separate preprint provider object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    PreprintProviders.prototype.preprintProviderLicensesList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PreprintProviderLicensesListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/preprint_providers/{preprint_provider_id}/licenses/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * preprintProviderList - List all preprint providers
+     *
+     *
+     * A paginated list of all preprint providers. The returned preprint providers are sorted by their creation date, with the most recent preprints appearing first.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 preprint providers. Each resource in the array is a separate preprint provider object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * This request should never return an error.
+     * #### Filtering
+     * You can optionally request that the response only include preprint providers that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/preprint_providers/?filter[id]=osf.
+     *
+     * Preprint Providers may be filtered by their `id`, `name`,  and `description`
+    **/
+    PreprintProviders.prototype.preprintProviderList = function (config) {
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/preprint_providers/";
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * preprintProviderTaxonomiesList - List all taxonomies
+     *
+     *
+     * A paginated list of the taxonomies for a preprint provider. The returned preprint providers taxonomies are sorted by their creation date, with the most recent preprints appearing first.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 preprint providers. Each resource in the array is a separate preprint provider object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    PreprintProviders.prototype.preprintProviderTaxonomiesList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PreprintProviderTaxonomiesListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/preprint_providers/{preprint_provider_id}/taxonomies/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * preprintProvidersPreprintsList - List all preprints
+     *
+     *
+     * A paginated list of preprints from the specified preprint provider. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 preprints. Each resource in the array is a separate preprint object.
+     *
+     * The `links` key contains a dictionary with keys that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     *
+     * #### Filtering
+     * You can optionally request that the response only include preprints that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/preprint_providers/osf/preprints/?filter[is_published]=true.
+     *
+     * Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
+    **/
+    PreprintProviders.prototype.preprintProvidersPreprintsList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PreprintProvidersPreprintsListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/preprint_providers/{preprint_provider_id}/preprints/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return PreprintProviders;
+}());
+exports.PreprintProviders = PreprintProviders;

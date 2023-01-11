@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4ClientInfo } from "./googlesecuritysafebrowsingv4clientinfo";
-import { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest } from "./googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4clientinfo_1 = require("./googlesecuritysafebrowsingv4clientinfo");
+var googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequest_1 = require("./googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequest");
 // GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest
 /**
  * Describes a Safe Browsing API update request. Clients can request updates for multiple lists in a single request. The server may not respond to all requests, if the server has no updates for that list. NOTE: Field index 2 is unused. NEXT: 5
@@ -35,13 +38,13 @@ var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4ClientInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4clientinfo_1.GoogleSecuritySafebrowsingV4ClientInfo)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest.prototype, "client", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listUpdateRequests", elemType: GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listUpdateRequests", elemType: googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequest_1.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest.prototype, "listUpdateRequests", void 0);
     return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest;

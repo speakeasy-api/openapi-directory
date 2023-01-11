@@ -11,7 +11,7 @@ export class TrustedSigners extends SpeakeasyBase {
   enabled: boolean;
 
   @SpeakeasyMetadata()
-  items?: string[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

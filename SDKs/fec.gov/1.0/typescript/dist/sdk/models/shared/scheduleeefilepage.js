@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { ScheduleEEfile } from "./scheduleeefile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleEEfilePage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var scheduleeefile_1 = require("./scheduleeefile");
 var ScheduleEEfilePage = /** @class */ (function (_super) {
     __extends(ScheduleEEfilePage, _super);
     function ScheduleEEfilePage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], ScheduleEEfilePage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ScheduleEEfile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: scheduleeefile_1.ScheduleEEfile }),
         __metadata("design:type", Array)
     ], ScheduleEEfilePage.prototype, "results", void 0);
     return ScheduleEEfilePage;
-}(SpeakeasyBase));
-export { ScheduleEEfilePage };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleEEfilePage = ScheduleEEfilePage;

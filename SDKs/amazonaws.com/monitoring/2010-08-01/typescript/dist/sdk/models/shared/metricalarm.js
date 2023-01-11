@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
-import { Dimension } from "./dimension";
-import { MetricDataQuery } from "./metricdataquery";
-import { StateValueEnum } from "./statevalueenum";
-import { StatisticEnum } from "./statisticenum";
-import { StandardUnitEnum } from "./standardunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricAlarm = void 0;
+var utils_1 = require("../../../internal/utils");
+var comparisonoperatorenum_1 = require("./comparisonoperatorenum");
+var dimension_1 = require("./dimension");
+var metricdataquery_1 = require("./metricdataquery");
+var statevalueenum_1 = require("./statevalueenum");
+var statisticenum_1 = require("./statisticenum");
+var standardunitenum_1 = require("./standardunitenum");
 // MetricAlarm
 /**
  * The details about a metric alarm.
@@ -39,113 +42,113 @@ var MetricAlarm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], MetricAlarm.prototype, "actionsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MetricAlarm.prototype, "alarmActions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "alarmArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], MetricAlarm.prototype, "alarmConfigurationUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "alarmDescription", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "alarmName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "comparisonOperator", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetricAlarm.prototype, "datapointsToAlarm", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], MetricAlarm.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "evaluateLowSampleCountPercentile", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetricAlarm.prototype, "evaluationPeriods", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "extendedStatistic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MetricAlarm.prototype, "insufficientDataActions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricDataQuery }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metricdataquery_1.MetricDataQuery }),
         __metadata("design:type", Array)
     ], MetricAlarm.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MetricAlarm.prototype, "okActions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetricAlarm.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "stateReason", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "stateReasonData", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], MetricAlarm.prototype, "stateUpdatedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "stateValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "statistic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetricAlarm.prototype, "threshold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "thresholdMetricId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "treatMissingData", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetricAlarm.prototype, "unit", void 0);
     return MetricAlarm;
-}(SpeakeasyBase));
-export { MetricAlarm };
+}(utils_1.SpeakeasyBase));
+exports.MetricAlarm = MetricAlarm;

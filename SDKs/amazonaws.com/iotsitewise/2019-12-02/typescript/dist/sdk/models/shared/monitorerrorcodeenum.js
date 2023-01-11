@@ -1,6 +1,9 @@
-export var MonitorErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonitorErrorCodeEnum = void 0;
+var MonitorErrorCodeEnum;
 (function (MonitorErrorCodeEnum) {
     MonitorErrorCodeEnum["InternalFailure"] = "INTERNAL_FAILURE";
     MonitorErrorCodeEnum["ValidationError"] = "VALIDATION_ERROR";
     MonitorErrorCodeEnum["LimitExceeded"] = "LIMIT_EXCEEDED";
-})(MonitorErrorCodeEnum || (MonitorErrorCodeEnum = {}));
+})(MonitorErrorCodeEnum = exports.MonitorErrorCodeEnum || (exports.MonitorErrorCodeEnum = {}));

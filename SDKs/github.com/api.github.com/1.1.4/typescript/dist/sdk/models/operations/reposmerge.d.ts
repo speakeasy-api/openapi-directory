@@ -26,7 +26,7 @@ export declare class ReposMergeResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     commit?: shared.Commit;
-    reposMerge404ApplicationJsonObject?: ReposMerge404ApplicationJson;
-    reposMerge409ApplicationJsonObject?: ReposMerge409ApplicationJson;
+    reposMerge404ApplicationJSONObject?: ReposMerge404ApplicationJson;
+    reposMerge409ApplicationJSONObject?: ReposMerge409ApplicationJson;
     validationError?: shared.ValidationError;
 }

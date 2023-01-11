@@ -19,7 +19,7 @@ export declare class AddTagsToVaultHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class AddTagsToVaultRequestBody extends SpeakeasyBase {
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class AddTagsToVaultRequest extends SpeakeasyBase {
     pathParams: AddTagsToVaultPathParams;

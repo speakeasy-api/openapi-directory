@@ -22,5 +22,5 @@ export class ProtocolProxyGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolProxyGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolProxyGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

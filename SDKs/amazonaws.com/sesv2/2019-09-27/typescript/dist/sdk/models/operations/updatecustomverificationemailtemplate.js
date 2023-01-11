@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,134 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCustomVerificationEmailTemplateResponse = exports.UpdateCustomVerificationEmailTemplateRequest = exports.UpdateCustomVerificationEmailTemplateRequestBody = exports.UpdateCustomVerificationEmailTemplateHeaders = exports.UpdateCustomVerificationEmailTemplatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateCustomVerificationEmailTemplatePathParams = /** @class */ (function (_super) {
     __extends(UpdateCustomVerificationEmailTemplatePathParams, _super);
     function UpdateCustomVerificationEmailTemplatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplatePathParams.prototype, "templateName", void 0);
     return UpdateCustomVerificationEmailTemplatePathParams;
-}(SpeakeasyBase));
-export { UpdateCustomVerificationEmailTemplatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomVerificationEmailTemplatePathParams = UpdateCustomVerificationEmailTemplatePathParams;
 var UpdateCustomVerificationEmailTemplateHeaders = /** @class */ (function (_super) {
     __extends(UpdateCustomVerificationEmailTemplateHeaders, _super);
     function UpdateCustomVerificationEmailTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateCustomVerificationEmailTemplateHeaders;
-}(SpeakeasyBase));
-export { UpdateCustomVerificationEmailTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomVerificationEmailTemplateHeaders = UpdateCustomVerificationEmailTemplateHeaders;
 var UpdateCustomVerificationEmailTemplateRequestBody = /** @class */ (function (_super) {
     __extends(UpdateCustomVerificationEmailTemplateRequestBody, _super);
     function UpdateCustomVerificationEmailTemplateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureRedirectionURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureRedirectionURL" }),
         __metadata("design:type", String)
-    ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "failureRedirectionUrl", void 0);
+    ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "failureRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromEmailAddress" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "fromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuccessRedirectionURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuccessRedirectionURL" }),
         __metadata("design:type", String)
-    ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "successRedirectionUrl", void 0);
+    ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "successRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateContent" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "templateContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateSubject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateSubject" }),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateRequestBody.prototype, "templateSubject", void 0);
     return UpdateCustomVerificationEmailTemplateRequestBody;
-}(SpeakeasyBase));
-export { UpdateCustomVerificationEmailTemplateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomVerificationEmailTemplateRequestBody = UpdateCustomVerificationEmailTemplateRequestBody;
 var UpdateCustomVerificationEmailTemplateRequest = /** @class */ (function (_super) {
     __extends(UpdateCustomVerificationEmailTemplateRequest, _super);
     function UpdateCustomVerificationEmailTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateCustomVerificationEmailTemplatePathParams)
     ], UpdateCustomVerificationEmailTemplateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateCustomVerificationEmailTemplateHeaders)
     ], UpdateCustomVerificationEmailTemplateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateCustomVerificationEmailTemplateRequestBody)
     ], UpdateCustomVerificationEmailTemplateRequest.prototype, "request", void 0);
     return UpdateCustomVerificationEmailTemplateRequest;
-}(SpeakeasyBase));
-export { UpdateCustomVerificationEmailTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomVerificationEmailTemplateRequest = UpdateCustomVerificationEmailTemplateRequest;
 var UpdateCustomVerificationEmailTemplateResponse = /** @class */ (function (_super) {
     __extends(UpdateCustomVerificationEmailTemplateResponse, _super);
     function UpdateCustomVerificationEmailTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "tooManyRequestsException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateCustomVerificationEmailTemplateResponse.prototype, "updateCustomVerificationEmailTemplateResponse", void 0);
     return UpdateCustomVerificationEmailTemplateResponse;
-}(SpeakeasyBase));
-export { UpdateCustomVerificationEmailTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCustomVerificationEmailTemplateResponse = UpdateCustomVerificationEmailTemplateResponse;

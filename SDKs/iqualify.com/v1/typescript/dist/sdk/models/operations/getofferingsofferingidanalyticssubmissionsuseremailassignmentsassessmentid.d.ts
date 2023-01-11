@@ -10,7 +10,7 @@ export declare class GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignme
 }
 export declare class GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     submissionMarkResponses?: any[];
 }

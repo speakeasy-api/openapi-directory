@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkSwitchLinkAggregationResponse = exports.DeleteNetworkSwitchLinkAggregationRequest = exports.DeleteNetworkSwitchLinkAggregationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkSwitchLinkAggregationPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchLinkAggregationPathParams, _super);
     function DeleteNetworkSwitchLinkAggregationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=linkAggregationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=linkAggregationId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchLinkAggregationPathParams.prototype, "linkAggregationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchLinkAggregationPathParams.prototype, "networkId", void 0);
     return DeleteNetworkSwitchLinkAggregationPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchLinkAggregationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchLinkAggregationPathParams = DeleteNetworkSwitchLinkAggregationPathParams;
 var DeleteNetworkSwitchLinkAggregationRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchLinkAggregationRequest, _super);
     function DeleteNetworkSwitchLinkAggregationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkSwitchLinkAggregationPathParams)
     ], DeleteNetworkSwitchLinkAggregationRequest.prototype, "pathParams", void 0);
     return DeleteNetworkSwitchLinkAggregationRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchLinkAggregationRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchLinkAggregationRequest = DeleteNetworkSwitchLinkAggregationRequest;
 var DeleteNetworkSwitchLinkAggregationResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchLinkAggregationResponse, _super);
     function DeleteNetworkSwitchLinkAggregationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchLinkAggregationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkSwitchLinkAggregationResponse.prototype, "statusCode", void 0);
     return DeleteNetworkSwitchLinkAggregationResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchLinkAggregationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchLinkAggregationResponse = DeleteNetworkSwitchLinkAggregationResponse;

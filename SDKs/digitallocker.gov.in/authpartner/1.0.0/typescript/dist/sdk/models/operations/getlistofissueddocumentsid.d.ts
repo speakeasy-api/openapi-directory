@@ -9,8 +9,8 @@ export declare class GetListOfIssuedDocumentsId401ApplicationJson extends Speake
 }
 export declare class GetListOfIssuedDocumentsIdResponse extends SpeakeasyBase {
     contentType: string;
-    getListOfIssuedDocumentsId200ApplicationJsonObject?: GetListOfIssuedDocumentsId200ApplicationJson;
-    getListOfIssuedDocumentsId401ApplicationJsonObject?: GetListOfIssuedDocumentsId401ApplicationJson;
-    getListOfIssuedDocumentsId500ApplicationJsonOneOf?: any;
+    getListOfIssuedDocumentsId200ApplicationJSONObject?: GetListOfIssuedDocumentsId200ApplicationJson;
+    getListOfIssuedDocumentsId401ApplicationJSONObject?: GetListOfIssuedDocumentsId401ApplicationJson;
+    getListOfIssuedDocumentsId500ApplicationJSONOneOf?: any;
     statusCode: number;
 }

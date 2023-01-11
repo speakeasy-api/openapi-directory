@@ -1,4 +1,7 @@
-export var InstanceHealthReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceHealthReasonEnum = void 0;
+var InstanceHealthReasonEnum;
 (function (InstanceHealthReasonEnum) {
     InstanceHealthReasonEnum["LbRegistrationInProgress"] = "Lb.RegistrationInProgress";
     InstanceHealthReasonEnum["LbInitialHealthChecking"] = "Lb.InitialHealthChecking";
@@ -11,4 +14,4 @@ export var InstanceHealthReasonEnum;
     InstanceHealthReasonEnum["InstanceDeregistrationInProgress"] = "Instance.DeregistrationInProgress";
     InstanceHealthReasonEnum["InstanceInvalidState"] = "Instance.InvalidState";
     InstanceHealthReasonEnum["InstanceIpUnusable"] = "Instance.IpUnusable";
-})(InstanceHealthReasonEnum || (InstanceHealthReasonEnum = {}));
+})(InstanceHealthReasonEnum = exports.InstanceHealthReasonEnum || (exports.InstanceHealthReasonEnum = {}));

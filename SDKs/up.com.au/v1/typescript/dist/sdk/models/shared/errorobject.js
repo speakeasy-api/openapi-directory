@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorObject = exports.ErrorObjectSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // ErrorObjectSource
 /**
  * If applicable, location in the request that this error relates to. This
@@ -36,16 +39,16 @@ var ErrorObjectSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameter" }),
         __metadata("design:type", String)
     ], ErrorObjectSource.prototype, "parameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointer" }),
         __metadata("design:type", String)
     ], ErrorObjectSource.prototype, "pointer", void 0);
     return ErrorObjectSource;
-}(SpeakeasyBase));
-export { ErrorObjectSource };
+}(utils_1.SpeakeasyBase));
+exports.ErrorObjectSource = ErrorObjectSource;
 // ErrorObject
 /**
  * Provides information about an error processing a request.
@@ -57,21 +60,21 @@ var ErrorObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], ErrorObject.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", ErrorObjectSource)
     ], ErrorObject.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ErrorObject.prototype, "title", void 0);
     return ErrorObject;
-}(SpeakeasyBase));
-export { ErrorObject };
+}(utils_1.SpeakeasyBase));
+exports.ErrorObject = ErrorObject;

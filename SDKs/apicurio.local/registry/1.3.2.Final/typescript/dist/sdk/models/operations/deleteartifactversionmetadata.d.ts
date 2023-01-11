@@ -9,6 +9,6 @@ export declare class DeleteArtifactVersionMetaDataRequest extends SpeakeasyBase 
 }
 export declare class DeleteArtifactVersionMetaDataResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudWebriskV1SearchHashesResponseThreatHash } from "./googlecloudwebriskv1searchhashesresponsethreathash";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1SearchHashesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudwebriskv1searchhashesresponsethreathash_1 = require("./googlecloudwebriskv1searchhashesresponsethreathash");
 var GoogleCloudWebriskV1SearchHashesResponse = /** @class */ (function (_super) {
     __extends(GoogleCloudWebriskV1SearchHashesResponse, _super);
     function GoogleCloudWebriskV1SearchHashesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negativeExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negativeExpireTime" }),
         __metadata("design:type", String)
     ], GoogleCloudWebriskV1SearchHashesResponse.prototype, "negativeExpireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threats", elemType: GoogleCloudWebriskV1SearchHashesResponseThreatHash }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threats", elemType: googlecloudwebriskv1searchhashesresponsethreathash_1.GoogleCloudWebriskV1SearchHashesResponseThreatHash }),
         __metadata("design:type", Array)
     ], GoogleCloudWebriskV1SearchHashesResponse.prototype, "threats", void 0);
     return GoogleCloudWebriskV1SearchHashesResponse;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1SearchHashesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1SearchHashesResponse = GoogleCloudWebriskV1SearchHashesResponse;

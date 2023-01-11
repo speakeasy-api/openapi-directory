@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeleteFileEntry } from "./deletefileentry";
-import { PutFileEntry } from "./putfileentry";
-import { SetFileModeEntry } from "./setfilemodeentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCommitInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var deletefileentry_1 = require("./deletefileentry");
+var putfileentry_1 = require("./putfileentry");
+var setfilemodeentry_1 = require("./setfilemodeentry");
 var CreateCommitInput = /** @class */ (function (_super) {
     __extends(CreateCommitInput, _super);
     function CreateCommitInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorName" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "authorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchName" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "branchName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitMessage" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "commitMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteFiles", elemType: DeleteFileEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteFiles", elemType: deletefileentry_1.DeleteFileEntry }),
         __metadata("design:type", Array)
     ], CreateCommitInput.prototype, "deleteFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keepEmptyFolders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keepEmptyFolders" }),
         __metadata("design:type", Boolean)
     ], CreateCommitInput.prototype, "keepEmptyFolders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentCommitId" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "parentCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=putFiles", elemType: PutFileEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=putFiles", elemType: putfileentry_1.PutFileEntry }),
         __metadata("design:type", Array)
     ], CreateCommitInput.prototype, "putFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], CreateCommitInput.prototype, "repositoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setFileModes", elemType: SetFileModeEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setFileModes", elemType: setfilemodeentry_1.SetFileModeEntry }),
         __metadata("design:type", Array)
     ], CreateCommitInput.prototype, "setFileModes", void 0);
     return CreateCommitInput;
-}(SpeakeasyBase));
-export { CreateCommitInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateCommitInput = CreateCommitInput;

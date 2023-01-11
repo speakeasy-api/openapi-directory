@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationStatusEnum } from "./applicationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationstatusenum_1 = require("./applicationstatusenum");
 // ApplicationSummary
 /**
  * <note> <p>This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications. Version 2 of the API supports SQL and Java applications. For more information about version 2, see <a href="/kinesisanalytics/latest/apiv2/Welcome.html">Amazon Kinesis Data Analytics API V2 Documentation</a>.</p> </note> <p>Provides application summary information, including the application Amazon Resource Name (ARN), name, and status.</p>
@@ -34,17 +37,17 @@ var ApplicationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationARN" }),
         __metadata("design:type", String)
-    ], ApplicationSummary.prototype, "applicationArn", void 0);
+    ], ApplicationSummary.prototype, "applicationARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationName" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationStatus" }),
         __metadata("design:type", String)
     ], ApplicationSummary.prototype, "applicationStatus", void 0);
     return ApplicationSummary;
-}(SpeakeasyBase));
-export { ApplicationSummary };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationSummary = ApplicationSummary;

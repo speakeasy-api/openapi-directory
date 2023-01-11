@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ClassroomCoursesAliasesCreateRequest, ClassroomCoursesAliasesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: ClassroomCoursesAliasesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    courseId: "et",
+    courseId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "qui",
-    alt: "json",
-    callback: "sapiente",
-    fields: "consectetur",
-    key: "distinctio",
-    oauthToken: "explicabo",
-    prettyPrint: false,
-    quotaUser: "est",
-    uploadType: "enim",
-    uploadProtocol: "facere",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    alias: "voluptatem",
+    alias: "dicta",
   },
 };
 

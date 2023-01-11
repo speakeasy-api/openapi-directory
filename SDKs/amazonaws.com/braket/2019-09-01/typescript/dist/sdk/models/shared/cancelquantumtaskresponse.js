@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CancellationStatusEnum } from "./cancellationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelQuantumTaskResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cancellationstatusenum_1 = require("./cancellationstatusenum");
 var CancelQuantumTaskResponse = /** @class */ (function (_super) {
     __extends(CancelQuantumTaskResponse, _super);
     function CancelQuantumTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellationStatus" }),
         __metadata("design:type", String)
     ], CancelQuantumTaskResponse.prototype, "cancellationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantumTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantumTaskArn" }),
         __metadata("design:type", String)
     ], CancelQuantumTaskResponse.prototype, "quantumTaskArn", void 0);
     return CancelQuantumTaskResponse;
-}(SpeakeasyBase));
-export { CancelQuantumTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelQuantumTaskResponse = CancelQuantumTaskResponse;

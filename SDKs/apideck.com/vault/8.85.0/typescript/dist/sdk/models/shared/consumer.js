@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerConnection } from "./consumerconnection";
-import { ConsumerMetadata } from "./consumermetadata";
-import { RequestCountAllocation } from "./requestcountallocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Consumer = void 0;
+var utils_1 = require("../../../internal/utils");
+var consumerconnection_1 = require("./consumerconnection");
+var consumermetadata_1 = require("./consumermetadata");
+var requestcountallocation_1 = require("./requestcountallocation");
 var Consumer = /** @class */ (function (_super) {
     __extends(Consumer, _super);
     function Consumer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregated_request_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregated_request_count" }),
         __metadata("design:type", Number)
     ], Consumer.prototype, "aggregatedRequestCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application_id" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections", elemType: ConsumerConnection }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections", elemType: consumerconnection_1.ConsumerConnection }),
         __metadata("design:type", Array)
     ], Consumer.prototype, "connections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumer_id" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "consumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ConsumerMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", consumermetadata_1.ConsumerMetadata)
     ], Consumer.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "modified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_count_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_count_updated" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "requestCountUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_counts" }),
-        __metadata("design:type", RequestCountAllocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_counts" }),
+        __metadata("design:type", requestcountallocation_1.RequestCountAllocation)
     ], Consumer.prototype, "requestCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
         __metadata("design:type", Array)
     ], Consumer.prototype, "services", void 0);
     return Consumer;
-}(SpeakeasyBase));
-export { Consumer };
+}(utils_1.SpeakeasyBase));
+exports.Consumer = Consumer;

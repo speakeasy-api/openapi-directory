@@ -57,7 +57,7 @@ export class StartCrawlerResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  startCrawlerResponse?: Map<string, any>;
+  startCrawlerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

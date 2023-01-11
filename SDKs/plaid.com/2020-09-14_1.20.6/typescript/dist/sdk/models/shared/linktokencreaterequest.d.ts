@@ -12,7 +12,7 @@ import { LinkTokenCreateRequestUser } from "./linktokencreaterequestuser";
 **/
 export declare class LinkTokenCreateRequest extends SpeakeasyBase {
     accessToken?: string;
-    accountFilters?: Map<string, any>;
+    accountFilters?: Record<string, any>;
     androidPackageName?: string;
     auth?: LinkTokenCreateRequestAuth;
     clientId?: string;

@@ -43,11 +43,11 @@ export class GetOrganizationApplianceUplinkStatusesResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApplianceUplinkStatuses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApplianceUplinkStatuses200ApplicationJSONObject?: Record<string, any>;
 }

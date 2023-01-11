@@ -1,26 +1,42 @@
-export * from "./getnumbersbase";
-export * from "./getnumbersbasebinary";
-export * from "./getnumbersbasehex";
-export * from "./getnumbersbaseoctal";
-export * from "./getnumberscardinal";
-export * from "./getnumberscurrency";
-export * from "./getnumbersfact";
-export * from "./getnumbersiscube";
-export * from "./getnumbersispalindrome";
-export * from "./getnumbersissquare";
-export * from "./getnumbersistriangle";
-export * from "./getnumbersnod";
-export * from "./getnumbersnumeralchinese";
-export * from "./getnumbersnumeralegyptian";
-export * from "./getnumbersnumeralroman";
-export * from "./getnumbersordinal";
-export * from "./getnumberspi";
-export * from "./getnumbersprimefactors";
-export * from "./getnumbersprimeisfermatprime";
-export * from "./getnumbersprimeisfibonacciprime";
-export * from "./getnumbersprimeismersenneprime";
-export * from "./getnumbersprimeispartitionprime";
-export * from "./getnumbersprimeispellprime";
-export * from "./getnumbersprimeisperfect";
-export * from "./getnumbersprimeisprime";
-export * from "./getnumbersrandom";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./getnumbersbase"), exports);
+__exportStar(require("./getnumbersbasebinary"), exports);
+__exportStar(require("./getnumbersbasehex"), exports);
+__exportStar(require("./getnumbersbaseoctal"), exports);
+__exportStar(require("./getnumberscardinal"), exports);
+__exportStar(require("./getnumberscurrency"), exports);
+__exportStar(require("./getnumbersfact"), exports);
+__exportStar(require("./getnumbersiscube"), exports);
+__exportStar(require("./getnumbersispalindrome"), exports);
+__exportStar(require("./getnumbersissquare"), exports);
+__exportStar(require("./getnumbersistriangle"), exports);
+__exportStar(require("./getnumbersnod"), exports);
+__exportStar(require("./getnumbersnumeralchinese"), exports);
+__exportStar(require("./getnumbersnumeralegyptian"), exports);
+__exportStar(require("./getnumbersnumeralroman"), exports);
+__exportStar(require("./getnumbersordinal"), exports);
+__exportStar(require("./getnumberspi"), exports);
+__exportStar(require("./getnumbersprimefactors"), exports);
+__exportStar(require("./getnumbersprimeisfermatprime"), exports);
+__exportStar(require("./getnumbersprimeisfibonacciprime"), exports);
+__exportStar(require("./getnumbersprimeismersenneprime"), exports);
+__exportStar(require("./getnumbersprimeispartitionprime"), exports);
+__exportStar(require("./getnumbersprimeispellprime"), exports);
+__exportStar(require("./getnumbersprimeisperfect"), exports);
+__exportStar(require("./getnumbersprimeisprime"), exports);
+__exportStar(require("./getnumbersrandom"), exports);

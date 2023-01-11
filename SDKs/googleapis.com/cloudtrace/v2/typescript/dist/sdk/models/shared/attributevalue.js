@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TruncatableString } from "./truncatablestring";
-// AttributeValue
-/**
- * The allowed types for `[VALUE]` in a `[KEY]:[VALUE]` attribute.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var truncatablestring_1 = require("./truncatablestring");
 var AttributeValue = /** @class */ (function (_super) {
     __extends(AttributeValue, _super);
     function AttributeValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boolValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boolValue" }),
         __metadata("design:type", Boolean)
     ], AttributeValue.prototype, "boolValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intValue" }),
         __metadata("design:type", String)
     ], AttributeValue.prototype, "intValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], AttributeValue.prototype, "stringValue", void 0);
     return AttributeValue;
-}(SpeakeasyBase));
-export { AttributeValue };
+}(utils_1.SpeakeasyBase));
+exports.AttributeValue = AttributeValue;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HousekeepingDailyHousekeepingExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Housekeeping = exports.HousekeepingTurndownServiceExceptionEnum = exports.HousekeepingHousekeepingAvailableExceptionEnum = exports.HousekeepingDailyHousekeepingExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HousekeepingDailyHousekeepingExceptionEnum;
 (function (HousekeepingDailyHousekeepingExceptionEnum) {
     HousekeepingDailyHousekeepingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     HousekeepingDailyHousekeepingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     HousekeepingDailyHousekeepingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     HousekeepingDailyHousekeepingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(HousekeepingDailyHousekeepingExceptionEnum || (HousekeepingDailyHousekeepingExceptionEnum = {}));
-export var HousekeepingHousekeepingAvailableExceptionEnum;
+})(HousekeepingDailyHousekeepingExceptionEnum = exports.HousekeepingDailyHousekeepingExceptionEnum || (exports.HousekeepingDailyHousekeepingExceptionEnum = {}));
+var HousekeepingHousekeepingAvailableExceptionEnum;
 (function (HousekeepingHousekeepingAvailableExceptionEnum) {
     HousekeepingHousekeepingAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     HousekeepingHousekeepingAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     HousekeepingHousekeepingAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     HousekeepingHousekeepingAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(HousekeepingHousekeepingAvailableExceptionEnum || (HousekeepingHousekeepingAvailableExceptionEnum = {}));
-export var HousekeepingTurndownServiceExceptionEnum;
+})(HousekeepingHousekeepingAvailableExceptionEnum = exports.HousekeepingHousekeepingAvailableExceptionEnum || (exports.HousekeepingHousekeepingAvailableExceptionEnum = {}));
+var HousekeepingTurndownServiceExceptionEnum;
 (function (HousekeepingTurndownServiceExceptionEnum) {
     HousekeepingTurndownServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     HousekeepingTurndownServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     HousekeepingTurndownServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     HousekeepingTurndownServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(HousekeepingTurndownServiceExceptionEnum || (HousekeepingTurndownServiceExceptionEnum = {}));
+})(HousekeepingTurndownServiceExceptionEnum = exports.HousekeepingTurndownServiceExceptionEnum || (exports.HousekeepingTurndownServiceExceptionEnum = {}));
 // Housekeeping
 /**
  * Conveniences provided in guest units to facilitate an easier, more comfortable stay.
@@ -54,29 +57,29 @@ var Housekeeping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyHousekeeping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyHousekeeping" }),
         __metadata("design:type", Boolean)
     ], Housekeeping.prototype, "dailyHousekeeping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyHousekeepingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyHousekeepingException" }),
         __metadata("design:type", String)
     ], Housekeeping.prototype, "dailyHousekeepingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeepingAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeepingAvailable" }),
         __metadata("design:type", Boolean)
     ], Housekeeping.prototype, "housekeepingAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=housekeepingAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=housekeepingAvailableException" }),
         __metadata("design:type", String)
     ], Housekeeping.prototype, "housekeepingAvailableException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=turndownService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=turndownService" }),
         __metadata("design:type", Boolean)
     ], Housekeeping.prototype, "turndownService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=turndownServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=turndownServiceException" }),
         __metadata("design:type", String)
     ], Housekeeping.prototype, "turndownServiceException", void 0);
     return Housekeeping;
-}(SpeakeasyBase));
-export { Housekeeping };
+}(utils_1.SpeakeasyBase));
+exports.Housekeeping = Housekeeping;

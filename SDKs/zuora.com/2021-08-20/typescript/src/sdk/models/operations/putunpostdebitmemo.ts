@@ -1,0 +1,41 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+
+export class PutUnpostDebitMemoPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=debitMemoId" })
+  debitMemoId: string;
+}
+
+
+export class PutUnpostDebitMemoHeaders extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Zuora-Entity-Ids" })
+  zuoraEntityIds?: string;
+
+  @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Zuora-Track-Id" })
+  zuoraTrackId?: string;
+}
+
+
+export class PutUnpostDebitMemoRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: PutUnpostDebitMemoPathParams;
+
+  @SpeakeasyMetadata()
+  headers: PutUnpostDebitMemoHeaders;
+}
+
+
+export class PutUnpostDebitMemoResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  getDebitMemoType?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

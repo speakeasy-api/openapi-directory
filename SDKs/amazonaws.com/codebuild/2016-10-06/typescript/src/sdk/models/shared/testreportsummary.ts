@@ -11,7 +11,7 @@ export class TestReportSummary extends SpeakeasyBase {
   durationInNanoSeconds: number;
 
   @SpeakeasyMetadata({ data: "json, name=statusCounts" })
-  statusCounts: Map<string, number>;
+  statusCounts: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;

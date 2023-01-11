@@ -1,4 +1,7 @@
-export var PayoutStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutStatusEnum = void 0;
+var PayoutStatusEnum;
 (function (PayoutStatusEnum) {
     PayoutStatusEnum["Accepted"] = "ACCEPTED";
     PayoutStatusEnum["Rejected"] = "REJECTED";
@@ -9,4 +12,4 @@ export var PayoutStatusEnum;
     PayoutStatusEnum["Incomplete"] = "INCOMPLETE";
     PayoutStatusEnum["Confirmed"] = "CONFIRMED";
     PayoutStatusEnum["Withdrawn"] = "WITHDRAWN";
-})(PayoutStatusEnum || (PayoutStatusEnum = {}));
+})(PayoutStatusEnum = exports.PayoutStatusEnum || (exports.PayoutStatusEnum = {}));

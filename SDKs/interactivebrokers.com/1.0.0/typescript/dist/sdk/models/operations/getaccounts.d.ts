@@ -10,6 +10,6 @@ export declare class GetAccountsRequest extends SpeakeasyBase {
 }
 export declare class GetAccountsResponse extends SpeakeasyBase {
     contentType: string;
-    getAccounts200ApplicationJsonObject?: GetAccounts200ApplicationJson;
     statusCode: number;
+    getAccounts200ApplicationJSONObject?: GetAccounts200ApplicationJson;
 }

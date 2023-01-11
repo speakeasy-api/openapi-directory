@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAdminRecordingsStatus200ApplicationJsonStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdminRecordingsStatusResponse = exports.GetAdminRecordingsStatus200ApplicationJson = exports.GetAdminRecordingsStatus200ApplicationJsonStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAdminRecordingsStatus200ApplicationJsonStatusEnum;
 (function (GetAdminRecordingsStatus200ApplicationJsonStatusEnum) {
     GetAdminRecordingsStatus200ApplicationJsonStatusEnum["NeverStarted"] = "NeverStarted";
     GetAdminRecordingsStatus200ApplicationJsonStatusEnum["Recording"] = "Recording";
     GetAdminRecordingsStatus200ApplicationJsonStatusEnum["Stopped"] = "Stopped";
-})(GetAdminRecordingsStatus200ApplicationJsonStatusEnum || (GetAdminRecordingsStatus200ApplicationJsonStatusEnum = {}));
+})(GetAdminRecordingsStatus200ApplicationJsonStatusEnum = exports.GetAdminRecordingsStatus200ApplicationJsonStatusEnum || (exports.GetAdminRecordingsStatus200ApplicationJsonStatusEnum = {}));
 var GetAdminRecordingsStatus200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAdminRecordingsStatus200ApplicationJson, _super);
     function GetAdminRecordingsStatus200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetAdminRecordingsStatus200ApplicationJson.prototype, "status", void 0);
     return GetAdminRecordingsStatus200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAdminRecordingsStatus200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRecordingsStatus200ApplicationJson = GetAdminRecordingsStatus200ApplicationJson;
 var GetAdminRecordingsStatusResponse = /** @class */ (function (_super) {
     __extends(GetAdminRecordingsStatusResponse, _super);
     function GetAdminRecordingsStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdminRecordingsStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAdminRecordingsStatus200ApplicationJson)
-    ], GetAdminRecordingsStatusResponse.prototype, "getAdminRecordingsStatus200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdminRecordingsStatusResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAdminRecordingsStatus200ApplicationJson)
+    ], GetAdminRecordingsStatusResponse.prototype, "getAdminRecordingsStatus200ApplicationJSONObject", void 0);
     return GetAdminRecordingsStatusResponse;
-}(SpeakeasyBase));
-export { GetAdminRecordingsStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRecordingsStatusResponse = GetAdminRecordingsStatusResponse;

@@ -24,6 +24,6 @@ export declare class DrivelabelsLabelsRevisionsPermissionsDeleteRequest extends 
 }
 export declare class DrivelabelsLabelsRevisionsPermissionsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

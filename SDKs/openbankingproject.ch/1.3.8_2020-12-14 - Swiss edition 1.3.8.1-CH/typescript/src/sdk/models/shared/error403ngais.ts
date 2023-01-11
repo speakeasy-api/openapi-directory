@@ -11,7 +11,7 @@ import { TppMessage403Ais } from "./tppmessage403ais";
 **/
 export class Error403NgAis extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=tppMessages", elemType: TppMessage403Ais })
   tppMessages?: TppMessage403Ais[];

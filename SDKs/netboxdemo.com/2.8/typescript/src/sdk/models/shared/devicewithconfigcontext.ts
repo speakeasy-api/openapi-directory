@@ -71,13 +71,13 @@ export class DeviceWithConfigContext extends SpeakeasyBase {
   comments?: string;
 
   @SpeakeasyMetadata({ data: "json, name=config_context" })
-  configContext?: Map<string, string>;
+  configContext?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=created" })
   created?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=device_role" })
   deviceRole: NestedDeviceRole;

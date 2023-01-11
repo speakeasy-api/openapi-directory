@@ -57,7 +57,7 @@ export class CreateEmailTemplateRequestBodyEmailTemplateRequest extends Speakeas
   textPart?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

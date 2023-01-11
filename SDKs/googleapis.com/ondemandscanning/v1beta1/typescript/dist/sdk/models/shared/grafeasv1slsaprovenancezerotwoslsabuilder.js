@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder = void 0;
+var utils_1 = require("../../../internal/utils");
 // GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder
 /**
  * Identifies the entity that executed the recipe, which is trusted to have correctly performed the operation and populated this provenance.
@@ -33,9 +36,9 @@ var GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder.prototype, "id", void 0);
     return GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder;
-}(SpeakeasyBase));
-export { GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder };
+}(utils_1.SpeakeasyBase));
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder = GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder;

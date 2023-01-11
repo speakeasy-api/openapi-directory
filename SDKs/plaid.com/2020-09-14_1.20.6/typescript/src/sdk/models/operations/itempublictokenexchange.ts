@@ -14,7 +14,7 @@ export class ItemPublicTokenExchangeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  itemPublicTokenExchangeResponse?: Map<string, any>;
+  itemPublicTokenExchangeResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

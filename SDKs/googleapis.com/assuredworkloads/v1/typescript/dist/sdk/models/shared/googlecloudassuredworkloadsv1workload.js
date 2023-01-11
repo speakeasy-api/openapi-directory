@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus } from "./googlecloudassuredworkloadsv1workloadcompliancestatus";
-import { GoogleCloudAssuredworkloadsV1WorkloadKmsSettings } from "./googlecloudassuredworkloadsv1workloadkmssettings";
-import { GoogleCloudAssuredworkloadsV1WorkloadResourceSettings } from "./googlecloudassuredworkloadsv1workloadresourcesettings";
-import { GoogleCloudAssuredworkloadsV1WorkloadResourceInfo } from "./googlecloudassuredworkloadsv1workloadresourceinfo";
-import { GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse } from "./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse";
-export var GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum;
-(function (GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum) {
-    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStateUnspecified"] = "KAJ_ENROLLMENT_STATE_UNSPECIFIED";
-    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStatePending"] = "KAJ_ENROLLMENT_STATE_PENDING";
-    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStateComplete"] = "KAJ_ENROLLMENT_STATE_COMPLETE";
-})(GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum || (GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum = {}));
-export var GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1Workload = exports.GoogleCloudAssuredworkloadsV1WorkloadInput = exports.GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1workloadcompliancestatus_1 = require("./googlecloudassuredworkloadsv1workloadcompliancestatus");
+var googlecloudassuredworkloadsv1workloadkmssettings_1 = require("./googlecloudassuredworkloadsv1workloadkmssettings");
+var googlecloudassuredworkloadsv1workloadresourcesettings_1 = require("./googlecloudassuredworkloadsv1workloadresourcesettings");
+var googlecloudassuredworkloadsv1workloadsaaenrollmentresponse_1 = require("./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse");
+var googlecloudassuredworkloadsv1workloadresourceinfo_1 = require("./googlecloudassuredworkloadsv1workloadresourceinfo");
+var GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum;
 (function (GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum) {
     GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum["ComplianceRegimeUnspecified"] = "COMPLIANCE_REGIME_UNSPECIFIED";
     GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum["Il4"] = "IL4";
@@ -50,93 +47,19 @@ export var GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum;
     GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum["AuRegionsAndUsSupport"] = "AU_REGIONS_AND_US_SUPPORT";
     GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum["AssuredWorkloadsForPartners"] = "ASSURED_WORKLOADS_FOR_PARTNERS";
     GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum["IsrRegions"] = "ISR_REGIONS";
-})(GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum || (GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum = {}));
-export var GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum;
+})(GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum || (exports.GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum = {}));
+var GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum;
 (function (GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum) {
     GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum["PartnerUnspecified"] = "PARTNER_UNSPECIFIED";
     GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum["LocalControlsByS3Ns"] = "LOCAL_CONTROLS_BY_S3NS";
     GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum["SovereignControlsByTSystems"] = "SOVEREIGN_CONTROLS_BY_T_SYSTEMS";
-})(GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum || (GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = {}));
-// GoogleCloudAssuredworkloadsV1Workload
-/**
- * A Workload object for managing highly regulated workloads of cloud customers.
-**/
-var GoogleCloudAssuredworkloadsV1Workload = /** @class */ (function (_super) {
-    __extends(GoogleCloudAssuredworkloadsV1Workload, _super);
-    function GoogleCloudAssuredworkloadsV1Workload() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingAccount" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "billingAccount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceRegime" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "complianceRegime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceStatus" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "complianceStatus", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=compliantButDisallowedServices" }),
-        __metadata("design:type", Array)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "compliantButDisallowedServices", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableSovereignControls" }),
-        __metadata("design:type", Boolean)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "enableSovereignControls", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kajEnrollmentState" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "kajEnrollmentState", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsSettings" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadKmsSettings)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "kmsSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=partner" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "partner", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisionedResourcesParent" }),
-        __metadata("design:type", String)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "provisionedResourcesParent", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceSettings", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings }),
-        __metadata("design:type", Array)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "resourceSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceInfo }),
-        __metadata("design:type", Array)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "resources", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=saaEnrollmentResponse" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse)
-    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "saaEnrollmentResponse", void 0);
-    return GoogleCloudAssuredworkloadsV1Workload;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1Workload };
+})(GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum || (exports.GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = {}));
+var GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum;
+(function (GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum) {
+    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStateUnspecified"] = "KAJ_ENROLLMENT_STATE_UNSPECIFIED";
+    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStatePending"] = "KAJ_ENROLLMENT_STATE_PENDING";
+    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum["KajEnrollmentStateComplete"] = "KAJ_ENROLLMENT_STATE_COMPLETE";
+})(GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum || (exports.GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum = {}));
 // GoogleCloudAssuredworkloadsV1WorkloadInput
 /**
  * A Workload object for managing highly regulated workloads of cloud customers.
@@ -147,57 +70,137 @@ var GoogleCloudAssuredworkloadsV1WorkloadInput = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingAccount" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "billingAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceRegime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceRegime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "complianceRegime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceStatus" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceStatus" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadcompliancestatus_1.GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "complianceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableSovereignControls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableSovereignControls" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "enableSovereignControls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsSettings" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadKmsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsSettings" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadkmssettings_1.GoogleCloudAssuredworkloadsV1WorkloadKmsSettings)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "kmsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partner" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "partner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisionedResourcesParent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisionedResourcesParent" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "provisionedResourcesParent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceSettings", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceSettings", elemType: googlecloudassuredworkloadsv1workloadresourcesettings_1.GoogleCloudAssuredworkloadsV1WorkloadResourceSettings }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "resourceSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saaEnrollmentResponse" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saaEnrollmentResponse" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadsaaenrollmentresponse_1.GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse)
     ], GoogleCloudAssuredworkloadsV1WorkloadInput.prototype, "saaEnrollmentResponse", void 0);
     return GoogleCloudAssuredworkloadsV1WorkloadInput;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1WorkloadInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1WorkloadInput = GoogleCloudAssuredworkloadsV1WorkloadInput;
+// GoogleCloudAssuredworkloadsV1Workload
+/**
+ * A Workload object for managing highly regulated workloads of cloud customers.
+**/
+var GoogleCloudAssuredworkloadsV1Workload = /** @class */ (function (_super) {
+    __extends(GoogleCloudAssuredworkloadsV1Workload, _super);
+    function GoogleCloudAssuredworkloadsV1Workload() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingAccount" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "billingAccount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceRegime" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "complianceRegime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceStatus" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadcompliancestatus_1.GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "complianceStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compliantButDisallowedServices" }),
+        __metadata("design:type", Array)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "compliantButDisallowedServices", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableSovereignControls" }),
+        __metadata("design:type", Boolean)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "enableSovereignControls", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kajEnrollmentState" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "kajEnrollmentState", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsSettings" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadkmssettings_1.GoogleCloudAssuredworkloadsV1WorkloadKmsSettings)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "kmsSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partner" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "partner", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisionedResourcesParent" }),
+        __metadata("design:type", String)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "provisionedResourcesParent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceSettings", elemType: googlecloudassuredworkloadsv1workloadresourcesettings_1.GoogleCloudAssuredworkloadsV1WorkloadResourceSettings }),
+        __metadata("design:type", Array)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "resourceSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: googlecloudassuredworkloadsv1workloadresourceinfo_1.GoogleCloudAssuredworkloadsV1WorkloadResourceInfo }),
+        __metadata("design:type", Array)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "resources", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saaEnrollmentResponse" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1workloadsaaenrollmentresponse_1.GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse)
+    ], GoogleCloudAssuredworkloadsV1Workload.prototype, "saaEnrollmentResponse", void 0);
+    return GoogleCloudAssuredworkloadsV1Workload;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1Workload = GoogleCloudAssuredworkloadsV1Workload;

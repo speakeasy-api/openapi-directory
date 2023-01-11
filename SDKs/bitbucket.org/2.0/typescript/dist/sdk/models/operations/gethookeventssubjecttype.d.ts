@@ -21,6 +21,6 @@ export declare class GetHookEventsSubjectTypeRequest extends SpeakeasyBase {
 export declare class GetHookEventsSubjectTypeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedHookEvents?: shared.PaginatedHookEvents;
 }

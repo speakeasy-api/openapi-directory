@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ChangeOfferRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1parameter_1 = require("./googlecloudchannelv1parameter");
 // GoogleCloudChannelV1ChangeOfferRequestInput
 /**
  * Request message for CloudChannelService.ChangeOffer.
@@ -34,21 +37,21 @@ var GoogleCloudChannelV1ChangeOfferRequestInput = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offer" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ChangeOfferRequestInput.prototype, "offer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: GoogleCloudChannelV1ParameterInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: googlecloudchannelv1parameter_1.GoogleCloudChannelV1ParameterInput }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1ChangeOfferRequestInput.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseOrderId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ChangeOfferRequestInput.prototype, "purchaseOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ChangeOfferRequestInput.prototype, "requestId", void 0);
     return GoogleCloudChannelV1ChangeOfferRequestInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ChangeOfferRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ChangeOfferRequestInput = GoogleCloudChannelV1ChangeOfferRequestInput;

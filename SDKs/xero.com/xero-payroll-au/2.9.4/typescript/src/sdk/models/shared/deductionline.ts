@@ -11,7 +11,7 @@ export class DeductionLine extends SpeakeasyBase {
   calculationType: DeductionTypeCalculationTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=DeductionTypeID" })
-  deductionTypeId: string;
+  deductionTypeID: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number;

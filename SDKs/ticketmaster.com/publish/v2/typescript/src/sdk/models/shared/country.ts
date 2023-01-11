@@ -11,5 +11,5 @@ export class Country extends SpeakeasyBase {
   countryCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 }

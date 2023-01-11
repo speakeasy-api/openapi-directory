@@ -25,7 +25,7 @@ export declare class PagespeedApiPagespeedResponseV4FormattedResultsRuleResults 
 **/
 export declare class PagespeedApiPagespeedResponseV4FormattedResults extends SpeakeasyBase {
     locale?: string;
-    ruleResults?: Map<string, PagespeedApiPagespeedResponseV4FormattedResultsRuleResults>;
+    ruleResults?: Record<string, PagespeedApiPagespeedResponseV4FormattedResultsRuleResults>;
 }
 export declare class PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions extends SpeakeasyBase {
     max?: number;
@@ -46,7 +46,7 @@ export declare class PagespeedApiPagespeedResponseV4LoadingExperienceMetrics ext
 export declare class PagespeedApiPagespeedResponseV4LoadingExperience extends SpeakeasyBase {
     id?: string;
     initialUrl?: string;
-    metrics?: Map<string, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics>;
+    metrics?: Record<string, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics>;
     overallCategory?: string;
 }
 /**
@@ -98,7 +98,7 @@ export declare class PagespeedApiPagespeedResponseV4 extends SpeakeasyBase {
     loadingExperience?: PagespeedApiPagespeedResponseV4LoadingExperience;
     pageStats?: PagespeedApiPagespeedResponseV4PageStats;
     responseCode?: number;
-    ruleGroups?: Map<string, PagespeedApiPagespeedResponseV4RuleGroups>;
+    ruleGroups?: Record<string, PagespeedApiPagespeedResponseV4RuleGroups>;
     screenshot?: PagespeedApiImageV4;
     snapshots?: PagespeedApiImageV4[];
     title?: string;

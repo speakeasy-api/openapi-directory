@@ -6,5 +6,5 @@ export declare class LandlordChaseNoteModel extends SpeakeasyBase {
     date?: Date;
     note?: string;
     noteType?: string;
-    tenantId?: string;
+    tenantID?: string;
 }

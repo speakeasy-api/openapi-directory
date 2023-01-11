@@ -1,4 +1,7 @@
-export var TaskStatusTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskStatusTypeEnum = void 0;
+var TaskStatusTypeEnum;
 (function (TaskStatusTypeEnum) {
     TaskStatusTypeEnum["Starting"] = "STARTING";
     TaskStatusTypeEnum["Running"] = "RUNNING";
@@ -7,4 +10,4 @@ export var TaskStatusTypeEnum;
     TaskStatusTypeEnum["Succeeded"] = "SUCCEEDED";
     TaskStatusTypeEnum["Failed"] = "FAILED";
     TaskStatusTypeEnum["Timeout"] = "TIMEOUT";
-})(TaskStatusTypeEnum || (TaskStatusTypeEnum = {}));
+})(TaskStatusTypeEnum = exports.TaskStatusTypeEnum || (exports.TaskStatusTypeEnum = {}));

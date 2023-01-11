@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplaceRootVolumeTask } from "./replacerootvolumetask";
 
 
 
 export class DescribeReplaceRootVolumeTasksResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: ReplaceRootVolumeTask })
-  replaceRootVolumeTasks?: ReplaceRootVolumeTask[];
+  @SpeakeasyMetadata()
+  replaceRootVolumeTasks?: Record<string, any>;
 }

@@ -35,10 +35,10 @@ export class CompanyNotificationRegisterRequest extends SpeakeasyBase {
 
 export class CompanyNotificationRegisterResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyNotificationRegister200ApplicationJsonAny?: any;
+  companyNotificationRegister200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  companyNotificationRegisterDefaultApplicationJsonAny?: any;
+  companyNotificationRegisterDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

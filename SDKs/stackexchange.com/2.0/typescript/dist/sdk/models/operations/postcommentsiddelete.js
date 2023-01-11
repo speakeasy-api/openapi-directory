@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCommentsIdDeleteResponse = exports.PostCommentsIdDeleteRequest = exports.PostCommentsIdDeleteQueryParams = exports.PostCommentsIdDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostCommentsIdDeletePathParams = /** @class */ (function (_super) {
     __extends(PostCommentsIdDeletePathParams, _super);
     function PostCommentsIdDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostCommentsIdDeletePathParams.prototype, "id", void 0);
     return PostCommentsIdDeletePathParams;
-}(SpeakeasyBase));
-export { PostCommentsIdDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCommentsIdDeletePathParams = PostCommentsIdDeletePathParams;
 var PostCommentsIdDeleteQueryParams = /** @class */ (function (_super) {
     __extends(PostCommentsIdDeleteQueryParams, _super);
     function PostCommentsIdDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], PostCommentsIdDeleteQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], PostCommentsIdDeleteQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=preview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=preview" }),
         __metadata("design:type", Boolean)
     ], PostCommentsIdDeleteQueryParams.prototype, "preview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], PostCommentsIdDeleteQueryParams.prototype, "site", void 0);
     return PostCommentsIdDeleteQueryParams;
-}(SpeakeasyBase));
-export { PostCommentsIdDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCommentsIdDeleteQueryParams = PostCommentsIdDeleteQueryParams;
 var PostCommentsIdDeleteRequest = /** @class */ (function (_super) {
     __extends(PostCommentsIdDeleteRequest, _super);
     function PostCommentsIdDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCommentsIdDeletePathParams)
     ], PostCommentsIdDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCommentsIdDeleteQueryParams)
     ], PostCommentsIdDeleteRequest.prototype, "queryParams", void 0);
     return PostCommentsIdDeleteRequest;
-}(SpeakeasyBase));
-export { PostCommentsIdDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCommentsIdDeleteRequest = PostCommentsIdDeleteRequest;
 var PostCommentsIdDeleteResponse = /** @class */ (function (_super) {
     __extends(PostCommentsIdDeleteResponse, _super);
     function PostCommentsIdDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCommentsIdDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCommentsIdDeleteResponse.prototype, "statusCode", void 0);
     return PostCommentsIdDeleteResponse;
-}(SpeakeasyBase));
-export { PostCommentsIdDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCommentsIdDeleteResponse = PostCommentsIdDeleteResponse;

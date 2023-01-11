@@ -4,13 +4,10 @@ import { ConfigManagementMembershipState } from "./configmanagementmembershipsta
 import { IdentityServiceMembershipState } from "./identityservicemembershipstate";
 import { ServiceMeshMembershipState } from "./servicemeshmembershipstate";
 import { FeatureState } from "./featurestate";
-/**
- * MembershipFeatureState contains Feature status information for a single Membership.
-**/
 export declare class MembershipFeatureState extends SpeakeasyBase {
     appdevexperience?: AppDevExperienceFeatureState;
     configmanagement?: ConfigManagementMembershipState;
-    fleetobservability?: Map<string, any>;
+    fleetobservability?: Record<string, any>;
     identityservice?: IdentityServiceMembershipState;
     servicemesh?: ServiceMeshMembershipState;
     state?: FeatureState;

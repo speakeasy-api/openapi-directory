@@ -1,7 +1,10 @@
-export var ReviewActionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReviewActionStatusEnum = void 0;
+var ReviewActionStatusEnum;
 (function (ReviewActionStatusEnum) {
     ReviewActionStatusEnum["Intended"] = "Intended";
     ReviewActionStatusEnum["Succeeded"] = "Succeeded";
     ReviewActionStatusEnum["Failed"] = "Failed";
     ReviewActionStatusEnum["Cancelled"] = "Cancelled";
-})(ReviewActionStatusEnum || (ReviewActionStatusEnum = {}));
+})(ReviewActionStatusEnum = exports.ReviewActionStatusEnum || (exports.ReviewActionStatusEnum = {}));

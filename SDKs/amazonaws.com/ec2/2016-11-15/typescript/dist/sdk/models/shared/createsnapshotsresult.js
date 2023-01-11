@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotInfo } from "./snapshotinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSnapshotsResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateSnapshotsResult = /** @class */ (function (_super) {
     __extends(CreateSnapshotsResult, _super);
     function CreateSnapshotsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: SnapshotInfo }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateSnapshotsResult.prototype, "snapshots", void 0);
     return CreateSnapshotsResult;
-}(SpeakeasyBase));
-export { CreateSnapshotsResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateSnapshotsResult = CreateSnapshotsResult;

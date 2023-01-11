@@ -23,6 +23,6 @@ export declare class StartConfigRulesEvaluationResponse extends SpeakeasyBase {
     limitExceededException?: any;
     noSuchConfigRuleException?: any;
     resourceInUseException?: any;
-    startConfigRulesEvaluationResponse?: Map<string, any>;
+    startConfigRulesEvaluationResponse?: Record<string, any>;
     statusCode: number;
 }

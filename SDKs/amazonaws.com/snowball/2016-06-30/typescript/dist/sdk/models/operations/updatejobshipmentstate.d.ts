@@ -22,5 +22,5 @@ export declare class UpdateJobShipmentStateResponse extends SpeakeasyBase {
     invalidJobStateException?: any;
     invalidResourceException?: any;
     statusCode: number;
-    updateJobShipmentStateResult?: Map<string, any>;
+    updateJobShipmentStateResult?: Record<string, any>;
 }

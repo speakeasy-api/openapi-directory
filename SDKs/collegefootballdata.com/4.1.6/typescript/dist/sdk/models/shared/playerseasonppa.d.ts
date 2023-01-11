@@ -20,12 +20,12 @@ export declare class PlayerSeasonPpaTotalPpa extends SpeakeasyBase {
     thirdDown?: number;
 }
 export declare class PlayerSeasonPpa extends SpeakeasyBase {
-    averagePpa?: PlayerSeasonPpaAveragePpa;
+    averagePPA?: PlayerSeasonPpaAveragePpa;
     conference?: string;
     id?: number;
     name?: string;
     position?: string;
     season?: number;
     team?: string;
-    totalPpa?: PlayerSeasonPpaTotalPpa;
+    totalPPA?: PlayerSeasonPpaTotalPpa;
 }

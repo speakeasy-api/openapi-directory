@@ -14,6 +14,6 @@ export declare class GetSetupV1ServicesIdResourcesRequest extends SpeakeasyBase 
 }
 export declare class GetSetupV1ServicesIdResourcesResponse extends SpeakeasyBase {
     contentType: string;
-    resourceListViewModel?: Map<string, any>;
+    resourceListViewModel?: Record<string, any>;
     statusCode: number;
 }

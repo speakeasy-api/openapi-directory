@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeatureTransformation = void 0;
+var utils_1 = require("../../../internal/utils");
 // FeatureTransformation
 /**
  * Provides feature transformation information. Feature transformation is the process of modifying raw input data into a form more suitable for model training.
@@ -33,29 +36,29 @@ var FeatureTransformation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], FeatureTransformation.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultParameters" }),
+        __metadata("design:type", Object)
     ], FeatureTransformation.prototype, "defaultParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featureTransformationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featureTransformationArn" }),
         __metadata("design:type", String)
     ], FeatureTransformation.prototype, "featureTransformationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], FeatureTransformation.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FeatureTransformation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], FeatureTransformation.prototype, "status", void 0);
     return FeatureTransformation;
-}(SpeakeasyBase));
-export { FeatureTransformation };
+}(utils_1.SpeakeasyBase));
+exports.FeatureTransformation = FeatureTransformation;

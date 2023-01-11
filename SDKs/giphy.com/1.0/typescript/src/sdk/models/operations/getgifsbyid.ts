@@ -35,5 +35,5 @@ export class GetGifsByIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getGifsById200ApplicationJsonObject?: GetGifsById200ApplicationJson;
+  getGifsById200ApplicationJSONObject?: GetGifsById200ApplicationJson;
 }

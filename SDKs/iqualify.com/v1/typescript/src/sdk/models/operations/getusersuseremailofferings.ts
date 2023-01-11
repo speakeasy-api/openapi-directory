@@ -20,7 +20,7 @@ export class GetUsersUserEmailOfferingsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingMetadataResponse })
   offeringMetadataResponses?: shared.OfferingMetadataResponse[];

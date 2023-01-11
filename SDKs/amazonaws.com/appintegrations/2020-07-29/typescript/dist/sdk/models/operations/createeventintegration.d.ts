@@ -21,7 +21,7 @@ export declare class CreateEventIntegrationRequestBody extends SpeakeasyBase {
     eventBridgeBus: string;
     eventFilter: CreateEventIntegrationRequestBodyEventFilter;
     name: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateEventIntegrationRequest extends SpeakeasyBase {
     headers: CreateEventIntegrationHeaders;

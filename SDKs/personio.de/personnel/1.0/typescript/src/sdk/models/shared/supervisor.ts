@@ -7,5 +7,5 @@ export class Supervisor extends SpeakeasyBase {
   label: string;
 
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value: Map<string, any>;
+  value: Record<string, any>;
 }

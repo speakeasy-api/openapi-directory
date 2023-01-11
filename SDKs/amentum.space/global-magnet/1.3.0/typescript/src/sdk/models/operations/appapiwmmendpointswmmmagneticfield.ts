@@ -102,5 +102,5 @@ export class AppApiWmmEndpointsWmmMagneticFieldResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appApiWmmEndpointsWmmMagneticField200ApplicationJsonObject?: AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
+  appApiWMMEndpointsWMMMagneticField200ApplicationJSONObject?: AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
 }

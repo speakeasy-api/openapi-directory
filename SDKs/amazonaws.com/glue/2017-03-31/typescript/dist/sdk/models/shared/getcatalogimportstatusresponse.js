@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CatalogImportStatus } from "./catalogimportstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCatalogImportStatusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var catalogimportstatus_1 = require("./catalogimportstatus");
 var GetCatalogImportStatusResponse = /** @class */ (function (_super) {
     __extends(GetCatalogImportStatusResponse, _super);
     function GetCatalogImportStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImportStatus" }),
-        __metadata("design:type", CatalogImportStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImportStatus" }),
+        __metadata("design:type", catalogimportstatus_1.CatalogImportStatus)
     ], GetCatalogImportStatusResponse.prototype, "importStatus", void 0);
     return GetCatalogImportStatusResponse;
-}(SpeakeasyBase));
-export { GetCatalogImportStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCatalogImportStatusResponse = GetCatalogImportStatusResponse;

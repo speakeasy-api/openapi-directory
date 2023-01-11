@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SongForApiContract } from "./songforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartialFindResultSongForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var songforapicontract_1 = require("./songforapicontract");
 var PartialFindResultSongForApiContract = /** @class */ (function (_super) {
     __extends(PartialFindResultSongForApiContract, _super);
     function PartialFindResultSongForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SongForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: songforapicontract_1.SongForApiContract }),
         __metadata("design:type", Array)
     ], PartialFindResultSongForApiContract.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term" }),
         __metadata("design:type", String)
     ], PartialFindResultSongForApiContract.prototype, "term", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], PartialFindResultSongForApiContract.prototype, "totalCount", void 0);
     return PartialFindResultSongForApiContract;
-}(SpeakeasyBase));
-export { PartialFindResultSongForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.PartialFindResultSongForApiContract = PartialFindResultSongForApiContract;

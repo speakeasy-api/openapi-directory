@@ -23,7 +23,7 @@ export declare class UploadArchiveRequest extends SpeakeasyBase {
     request: UploadArchiveRequestBody;
 }
 export declare class UploadArchiveResponse extends SpeakeasyBase {
-    archiveCreationOutput?: Map<string, any>;
+    archiveCreationOutput?: Record<string, any>;
     contentType: string;
     invalidParameterValueException?: any;
     missingParameterValueException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloneJob } from "./clonejob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListCloneJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var clonejob_1 = require("./clonejob");
 // ListCloneJobsResponse
 /**
  * Response message for 'ListCloneJobs' request.
@@ -34,17 +37,17 @@ var ListCloneJobsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloneJobs", elemType: CloneJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloneJobs", elemType: clonejob_1.CloneJob }),
         __metadata("design:type", Array)
     ], ListCloneJobsResponse.prototype, "cloneJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListCloneJobsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListCloneJobsResponse.prototype, "unreachable", void 0);
     return ListCloneJobsResponse;
-}(SpeakeasyBase));
-export { ListCloneJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListCloneJobsResponse = ListCloneJobsResponse;

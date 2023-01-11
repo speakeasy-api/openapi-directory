@@ -15,5 +15,5 @@ export class Scopes extends SpeakeasyBase {
   newAccounts?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=product_access" })
-  productAccess?: Map<string, any>;
+  productAccess?: Record<string, any>;
 }

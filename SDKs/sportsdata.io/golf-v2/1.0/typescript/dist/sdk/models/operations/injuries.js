@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InjuriesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InjuriesResponse = exports.InjuriesRequest = exports.InjuriesPathParams = exports.InjuriesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InjuriesFormatEnum;
 (function (InjuriesFormatEnum) {
     InjuriesFormatEnum["Xml"] = "XML";
     InjuriesFormatEnum["Json"] = "JSON";
-})(InjuriesFormatEnum || (InjuriesFormatEnum = {}));
+})(InjuriesFormatEnum = exports.InjuriesFormatEnum || (exports.InjuriesFormatEnum = {}));
 var InjuriesPathParams = /** @class */ (function (_super) {
     __extends(InjuriesPathParams, _super);
     function InjuriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], InjuriesPathParams.prototype, "format", void 0);
     return InjuriesPathParams;
-}(SpeakeasyBase));
-export { InjuriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesPathParams = InjuriesPathParams;
 var InjuriesRequest = /** @class */ (function (_super) {
     __extends(InjuriesRequest, _super);
     function InjuriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", InjuriesPathParams)
     ], InjuriesRequest.prototype, "pathParams", void 0);
     return InjuriesRequest;
-}(SpeakeasyBase));
-export { InjuriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesRequest = InjuriesRequest;
 var InjuriesResponse = /** @class */ (function (_super) {
     __extends(InjuriesResponse, _super);
     function InjuriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InjuriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], InjuriesResponse.prototype, "injuries", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InjuriesResponse.prototype, "statusCode", void 0);
     return InjuriesResponse;
-}(SpeakeasyBase));
-export { InjuriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.InjuriesResponse = InjuriesResponse;

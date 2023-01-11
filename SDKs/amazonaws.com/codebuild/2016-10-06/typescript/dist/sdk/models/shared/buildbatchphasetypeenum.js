@@ -1,4 +1,7 @@
-export var BuildBatchPhaseTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildBatchPhaseTypeEnum = void 0;
+var BuildBatchPhaseTypeEnum;
 (function (BuildBatchPhaseTypeEnum) {
     BuildBatchPhaseTypeEnum["Submitted"] = "SUBMITTED";
     BuildBatchPhaseTypeEnum["DownloadBatchspec"] = "DOWNLOAD_BATCHSPEC";
@@ -7,4 +10,4 @@ export var BuildBatchPhaseTypeEnum;
     BuildBatchPhaseTypeEnum["Succeeded"] = "SUCCEEDED";
     BuildBatchPhaseTypeEnum["Failed"] = "FAILED";
     BuildBatchPhaseTypeEnum["Stopped"] = "STOPPED";
-})(BuildBatchPhaseTypeEnum || (BuildBatchPhaseTypeEnum = {}));
+})(BuildBatchPhaseTypeEnum = exports.BuildBatchPhaseTypeEnum || (exports.BuildBatchPhaseTypeEnum = {}));

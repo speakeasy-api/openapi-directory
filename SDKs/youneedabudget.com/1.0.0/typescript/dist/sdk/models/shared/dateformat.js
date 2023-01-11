@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateFormat = void 0;
+var utils_1 = require("../../../internal/utils");
 // DateFormat
 /**
  * The date format setting for the budget.  In some cases the format will not be available and will be specified as null.
@@ -33,9 +36,9 @@ var DateFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], DateFormat.prototype, "format", void 0);
     return DateFormat;
-}(SpeakeasyBase));
-export { DateFormat };
+}(utils_1.SpeakeasyBase));
+exports.DateFormat = DateFormat;

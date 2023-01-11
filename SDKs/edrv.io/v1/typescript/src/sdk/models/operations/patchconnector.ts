@@ -37,7 +37,7 @@ export class PatchConnector201ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -58,5 +58,5 @@ export class PatchConnectorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchConnector201ApplicationJsonObject?: PatchConnector201ApplicationJson;
+  patchConnector201ApplicationJSONObject?: PatchConnector201ApplicationJson;
 }

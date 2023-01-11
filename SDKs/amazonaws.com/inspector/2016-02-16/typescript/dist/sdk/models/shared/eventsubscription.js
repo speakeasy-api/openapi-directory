@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InspectorEventEnum } from "./inspectoreventenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
+var inspectoreventenum_1 = require("./inspectoreventenum");
 // EventSubscription
 /**
  * This data type is used in the <a>Subscription</a> data type.
@@ -34,13 +37,13 @@ var EventSubscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscribedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscribedAt" }),
         __metadata("design:type", Date)
     ], EventSubscription.prototype, "subscribedAt", void 0);
     return EventSubscription;
-}(SpeakeasyBase));
-export { EventSubscription };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscription = EventSubscription;

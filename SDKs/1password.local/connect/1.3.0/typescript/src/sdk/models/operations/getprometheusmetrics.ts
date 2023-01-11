@@ -7,7 +7,7 @@ export const GetPrometheusMetricsServerList = [
 
 export class GetPrometheusMetricsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 }
 
 

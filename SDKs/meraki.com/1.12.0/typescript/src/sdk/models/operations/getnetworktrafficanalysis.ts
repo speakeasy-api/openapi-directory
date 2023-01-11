@@ -22,5 +22,5 @@ export class GetNetworkTrafficAnalysisResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkTrafficAnalysis200ApplicationJsonObject?: Map<string, any>;
+  getNetworkTrafficAnalysis200ApplicationJSONObject?: Record<string, any>;
 }

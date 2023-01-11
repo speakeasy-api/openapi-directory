@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessCardRecognitionResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // BusinessCardRecognitionResult
 /**
  * Result of recognizing a business card, to extract the key information from the business card
@@ -33,37 +36,37 @@ var BusinessCardRecognitionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressString" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "addressString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BusinessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BusinessName" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailAddress" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PersonName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PersonName" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "personName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PersonTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PersonTitle" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "personTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PhoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PhoneNumber" }),
         __metadata("design:type", String)
     ], BusinessCardRecognitionResult.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], BusinessCardRecognitionResult.prototype, "successful", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], BusinessCardRecognitionResult.prototype, "timestamp", void 0);
     return BusinessCardRecognitionResult;
-}(SpeakeasyBase));
-export { BusinessCardRecognitionResult };
+}(utils_1.SpeakeasyBase));
+exports.BusinessCardRecognitionResult = BusinessCardRecognitionResult;

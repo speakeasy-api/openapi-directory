@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppContextAppTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppContext = exports.AppContextAppTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppContextAppTypesEnum;
 (function (AppContextAppTypesEnum) {
     AppContextAppTypesEnum["Native"] = "NATIVE";
     AppContextAppTypesEnum["Web"] = "WEB";
-})(AppContextAppTypesEnum || (AppContextAppTypesEnum = {}));
+})(AppContextAppTypesEnum = exports.AppContextAppTypesEnum || (exports.AppContextAppTypesEnum = {}));
 // AppContext
 /**
  * Output only. The app type the restriction applies to for mobile device.
@@ -38,9 +41,9 @@ var AppContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appTypes" }),
         __metadata("design:type", Array)
     ], AppContext.prototype, "appTypes", void 0);
     return AppContext;
-}(SpeakeasyBase));
-export { AppContext };
+}(utils_1.SpeakeasyBase));
+exports.AppContext = AppContext;

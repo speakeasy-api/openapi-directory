@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchemaColumn } from "./schemacolumn";
-import { TransformStatusTypeEnum } from "./transformstatustypeenum";
-import { TransformTypeEnum } from "./transformtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformFilterCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var schemacolumn_1 = require("./schemacolumn");
+var transformstatustypeenum_1 = require("./transformstatustypeenum");
+var transformtypeenum_1 = require("./transformtypeenum");
 // TransformFilterCriteria
 /**
  * The criteria used to filter the machine learning transforms.
@@ -36,41 +39,41 @@ var TransformFilterCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAfter" }),
         __metadata("design:type", Date)
     ], TransformFilterCriteria.prototype, "createdAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedBefore" }),
         __metadata("design:type", Date)
     ], TransformFilterCriteria.prototype, "createdBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlueVersion" }),
         __metadata("design:type", String)
     ], TransformFilterCriteria.prototype, "glueVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedAfter" }),
         __metadata("design:type", Date)
     ], TransformFilterCriteria.prototype, "lastModifiedAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedBefore" }),
         __metadata("design:type", Date)
     ], TransformFilterCriteria.prototype, "lastModifiedBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], TransformFilterCriteria.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schema", elemType: SchemaColumn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schema", elemType: schemacolumn_1.SchemaColumn }),
         __metadata("design:type", Array)
     ], TransformFilterCriteria.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], TransformFilterCriteria.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformType" }),
         __metadata("design:type", String)
     ], TransformFilterCriteria.prototype, "transformType", void 0);
     return TransformFilterCriteria;
-}(SpeakeasyBase));
-export { TransformFilterCriteria };
+}(utils_1.SpeakeasyBase));
+exports.TransformFilterCriteria = TransformFilterCriteria;

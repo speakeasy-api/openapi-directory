@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1alphaBigQuerySource } from "./googleclouddiscoveryenginev1alphabigquerysource";
-import { GoogleCloudDiscoveryengineV1alphaImportErrorConfig } from "./googleclouddiscoveryenginev1alphaimporterrorconfig";
-import { GoogleCloudDiscoveryengineV1alphaGcsSource } from "./googleclouddiscoveryenginev1alphagcssource";
-import { GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource } from "./googleclouddiscoveryenginev1alphaimportusereventsrequestinlinesource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1alphabigquerysource_1 = require("./googleclouddiscoveryenginev1alphabigquerysource");
+var googleclouddiscoveryenginev1alphaimporterrorconfig_1 = require("./googleclouddiscoveryenginev1alphaimporterrorconfig");
+var googleclouddiscoveryenginev1alphagcssource_1 = require("./googleclouddiscoveryenginev1alphagcssource");
+var googleclouddiscoveryenginev1alphaimportusereventsrequestinlinesource_1 = require("./googleclouddiscoveryenginev1alphaimportusereventsrequestinlinesource");
 // GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest
 /**
  * Request message for the ImportUserEvents request.
@@ -37,21 +40,21 @@ var GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigquerySource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaBigQuerySource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigquerySource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphabigquerysource_1.GoogleCloudDiscoveryengineV1alphaBigQuerySource)
     ], GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest.prototype, "bigquerySource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorConfig" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaImportErrorConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorConfig" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphaimporterrorconfig_1.GoogleCloudDiscoveryengineV1alphaImportErrorConfig)
     ], GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest.prototype, "errorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsSource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaGcsSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsSource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphagcssource_1.GoogleCloudDiscoveryengineV1alphaGcsSource)
     ], GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest.prototype, "gcsSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inlineSource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inlineSource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphaimportusereventsrequestinlinesource_1.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource)
     ], GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest.prototype, "inlineSource", void 0);
     return GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest = GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest;

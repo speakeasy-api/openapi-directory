@@ -48,7 +48,7 @@ export class DeleteQualificationTypeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteQualificationTypeResponse?: Map<string, any>;
+  deleteQualificationTypeResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

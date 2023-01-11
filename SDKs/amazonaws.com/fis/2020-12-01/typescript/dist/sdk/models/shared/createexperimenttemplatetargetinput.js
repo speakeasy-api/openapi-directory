@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentTemplateTargetInputFilter } from "./experimenttemplatetargetinputfilter";
-// CreateExperimentTemplateTargetInput
-/**
- * Specifies a target for an experiment. You must specify at least one Amazon Resource Name (ARN) or at least one resource tag. You cannot specify both ARNs and tags.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateExperimentTemplateTargetInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimenttemplatetargetinputfilter_1 = require("./experimenttemplatetargetinputfilter");
 var CreateExperimentTemplateTargetInput = /** @class */ (function (_super) {
     __extends(CreateExperimentTemplateTargetInput, _super);
     function CreateExperimentTemplateTargetInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: ExperimentTemplateTargetInputFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: experimenttemplatetargetinputfilter_1.ExperimentTemplateTargetInputFilter }),
         __metadata("design:type", Array)
     ], CreateExperimentTemplateTargetInput.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArns" }),
         __metadata("design:type", Array)
     ], CreateExperimentTemplateTargetInput.prototype, "resourceArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceTags" }),
+        __metadata("design:type", Object)
     ], CreateExperimentTemplateTargetInput.prototype, "resourceTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], CreateExperimentTemplateTargetInput.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionMode" }),
         __metadata("design:type", String)
     ], CreateExperimentTemplateTargetInput.prototype, "selectionMode", void 0);
     return CreateExperimentTemplateTargetInput;
-}(SpeakeasyBase));
-export { CreateExperimentTemplateTargetInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateExperimentTemplateTargetInput = CreateExperimentTemplateTargetInput;

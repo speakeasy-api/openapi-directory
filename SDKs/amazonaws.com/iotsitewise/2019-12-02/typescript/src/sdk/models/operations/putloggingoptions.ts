@@ -66,7 +66,7 @@ export class PutLoggingOptionsResponse extends SpeakeasyBase {
   invalidRequestException?: any;
 
   @SpeakeasyMetadata()
-  putLoggingOptionsResponse?: Map<string, any>;
+  putLoggingOptionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

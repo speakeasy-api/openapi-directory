@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetails } from "./errordetails";
-import { JobStatusTypeEnum } from "./jobstatustypeenum";
-import { AccessAdvisorUsageGranularityTypeEnum } from "./accessadvisorusagegranularitytypeenum";
-import { ServiceLastAccessed } from "./servicelastaccessed";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetServiceLastAccessedDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetails_1 = require("./errordetails");
+var jobstatustypeenum_1 = require("./jobstatustypeenum");
+var accessadvisorusagegranularitytypeenum_1 = require("./accessadvisorusagegranularitytypeenum");
+var servicelastaccessed_1 = require("./servicelastaccessed");
 var GetServiceLastAccessedDetailsResponse = /** @class */ (function (_super) {
     __extends(GetServiceLastAccessedDetailsResponse, _super);
     function GetServiceLastAccessedDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ErrorDetails)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", errordetails_1.ErrorDetails)
     ], GetServiceLastAccessedDetailsResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GetServiceLastAccessedDetailsResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetServiceLastAccessedDetailsResponse.prototype, "jobCompletionDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetServiceLastAccessedDetailsResponse.prototype, "jobCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetServiceLastAccessedDetailsResponse.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetServiceLastAccessedDetailsResponse.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetServiceLastAccessedDetailsResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ServiceLastAccessed }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: servicelastaccessed_1.ServiceLastAccessed }),
         __metadata("design:type", Array)
     ], GetServiceLastAccessedDetailsResponse.prototype, "servicesLastAccessed", void 0);
     return GetServiceLastAccessedDetailsResponse;
-}(SpeakeasyBase));
-export { GetServiceLastAccessedDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetServiceLastAccessedDetailsResponse = GetServiceLastAccessedDetailsResponse;

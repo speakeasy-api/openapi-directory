@@ -7,7 +7,7 @@ import { InstanceGroupAutoscalingPolicyConfig } from "./instancegroupautoscaling
 export declare class AutoscalingPolicy extends SpeakeasyBase {
     basicAlgorithm?: BasicAutoscalingAlgorithm;
     id?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     secondaryWorkerConfig?: InstanceGroupAutoscalingPolicyConfig;
     workerConfig?: InstanceGroupAutoscalingPolicyConfig;
@@ -18,7 +18,7 @@ export declare class AutoscalingPolicy extends SpeakeasyBase {
 export declare class AutoscalingPolicyInput extends SpeakeasyBase {
     basicAlgorithm?: BasicAutoscalingAlgorithm;
     id?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     secondaryWorkerConfig?: InstanceGroupAutoscalingPolicyConfig;
     workerConfig?: InstanceGroupAutoscalingPolicyConfig;
 }

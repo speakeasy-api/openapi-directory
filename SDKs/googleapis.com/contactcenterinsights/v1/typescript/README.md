@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest, ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequ
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "minima",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "a",
-    alt: "json",
-    callback: "porro",
-    fields: "omnis",
-    key: "sequi",
-    oauthToken: "voluptatem",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "animi",
-    uploadType: "suscipit",
-    uploadProtocol: "blanditiis",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     analysisResult: {
@@ -58,190 +57,268 @@ const req: ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequ
         annotations: [
           {
             annotationEndBoundary: {
-              transcriptIndex: 5178477850341511234,
-              wordIndex: 8923859297648267097,
+              transcriptIndex: 2518412263346885298,
+              wordIndex: 5617773211005988520,
             },
             annotationStartBoundary: {
-              transcriptIndex: 50550707071805504,
-              wordIndex: 5498835279959267408,
+              transcriptIndex: 2339563716805116249,
+              wordIndex: 7144924247938981575,
             },
-            channelTag: 3850862362532702916,
+            channelTag: 161231572858529631,
             entityMentionData: {
-              entityUniqueId: "dolorum",
+              entityUniqueId: "et",
               sentiment: {
-                magnitude: 77.199997,
-                score: 31.200001,
-              },
-              type: "PROPER",
-            },
-            holdData: {
-              "aspernatur": "placeat",
-              "inventore": "voluptatem",
-              "minima": "quia",
-            },
-            intentMatchData: {
-              intentUniqueId: "officiis",
-            },
-            interruptionData: {
-              "dolores": "aliquam",
-            },
-            issueMatchData: {
-              issueAssignment: {
-                displayName: "sunt",
-                issue: "ipsa",
-                score: 61.200001,
-              },
-            },
-            phraseMatchData: {
-              displayName: "esse",
-              phraseMatcher: "sed",
-            },
-            sentimentData: {
-              magnitude: 59.099998,
-              score: 56.200001,
-            },
-            silenceData: {
-              "odio": "sunt",
-            },
-          },
-          {
-            annotationEndBoundary: {
-              transcriptIndex: 8693142301946000333,
-              wordIndex: 7594060307782908627,
-            },
-            annotationStartBoundary: {
-              transcriptIndex: 6649830033022959116,
-              wordIndex: 4645727424483645119,
-            },
-            channelTag: 5016276992496389162,
-            entityMentionData: {
-              entityUniqueId: "vel",
-              sentiment: {
-                magnitude: 82.199997,
-                score: 51.099998,
+                magnitude: 94.199997,
+                score: 68.099998,
               },
               type: "MENTION_TYPE_UNSPECIFIED",
             },
             holdData: {
-              "nihil": "et",
-              "aut": "totam",
+              "debitis": "vel",
+              "odio": "dolore",
+              "id": "aspernatur",
             },
             intentMatchData: {
-              intentUniqueId: "ad",
+              intentUniqueId: "accusantium",
             },
             interruptionData: {
-              "ea": "temporibus",
+              "commodi": "quis",
+              "est": "aut",
+              "odit": "non",
             },
             issueMatchData: {
               issueAssignment: {
-                displayName: "rerum",
-                issue: "illum",
-                score: 35.200001,
+                displayName: "voluptas",
+                issue: "omnis",
+                score: 44.099998,
               },
             },
             phraseMatchData: {
-              displayName: "repellat",
-              phraseMatcher: "qui",
+              displayName: "sed",
+              phraseMatcher: "officiis",
+            },
+            sentimentData: {
+              magnitude: 87.099998,
+              score: 0.100000,
+            },
+            silenceData: {
+              "recusandae": "at",
+            },
+          },
+          {
+            annotationEndBoundary: {
+              transcriptIndex: 3959279844101328186,
+              wordIndex: 8902041070398994519,
+            },
+            annotationStartBoundary: {
+              transcriptIndex: 303089054982227392,
+              wordIndex: 7338728586234333996,
+            },
+            channelTag: 5392504858645185670,
+            entityMentionData: {
+              entityUniqueId: "ut",
+              sentiment: {
+                magnitude: 56.099998,
+                score: 30.200001,
+              },
+              type: "MENTION_TYPE_UNSPECIFIED",
+            },
+            holdData: {
+              "dolor": "beatae",
+              "veritatis": "in",
+              "et": "omnis",
+            },
+            intentMatchData: {
+              intentUniqueId: "ipsum",
+            },
+            interruptionData: {
+              "dolores": "placeat",
+            },
+            issueMatchData: {
+              issueAssignment: {
+                displayName: "vel",
+                issue: "rerum",
+                score: 89.099998,
+              },
+            },
+            phraseMatchData: {
+              displayName: "quam",
+              phraseMatcher: "reprehenderit",
+            },
+            sentimentData: {
+              magnitude: 94.099998,
+              score: 72.199997,
+            },
+            silenceData: {
+              "qui": "ut",
+              "itaque": "ab",
+            },
+          },
+          {
+            annotationEndBoundary: {
+              transcriptIndex: 8218430188258725598,
+              wordIndex: 4255970180603226314,
+            },
+            annotationStartBoundary: {
+              transcriptIndex: 2682844416202521633,
+              wordIndex: 4304520335772049496,
+            },
+            channelTag: 3462733497206508461,
+            entityMentionData: {
+              entityUniqueId: "architecto",
+              sentiment: {
+                magnitude: 38.200001,
+                score: 20.100000,
+              },
+              type: "PROPER",
+            },
+            holdData: {
+              "magni": "et",
+              "optio": "qui",
+            },
+            intentMatchData: {
+              intentUniqueId: "earum",
+            },
+            interruptionData: {
+              "omnis": "ut",
+            },
+            issueMatchData: {
+              issueAssignment: {
+                displayName: "consequatur",
+                issue: "dolor",
+                score: 26.100000,
+              },
+            },
+            phraseMatchData: {
+              displayName: "reprehenderit",
+              phraseMatcher: "consectetur",
             },
             sentimentData: {
               magnitude: 59.200001,
-              score: 23.200001,
+              score: 64.099998,
             },
             silenceData: {
-              "et": "est",
+              "soluta": "aut",
             },
           },
         ],
         entities: {
-          "voluptates": {
-            displayName: "possimus",
+          "consequuntur": {
+            displayName: "laudantium",
             metadata: {
-              "ut": "doloribus",
-              "et": "debitis",
-              "et": "laboriosam",
+              "ipsa": "expedita",
             },
-            salience: 86.099998,
+            salience: 20.200001,
             sentiment: {
-              magnitude: 57.200001,
-              score: 58.200001,
+              magnitude: 26.200001,
+              score: 87.099998,
             },
-            type: "ADDRESS",
+            type: "DATE",
           },
-          "sit": {
-            displayName: "harum",
+          "maxime": {
+            displayName: "eum",
             metadata: {
-              "inventore": "et",
+              "et": "rerum",
+              "reiciendis": "quis",
             },
-            salience: 60.200001,
+            salience: 97.199997,
             sentiment: {
-              magnitude: 51.099998,
-              score: 8.100000,
+              magnitude: 1.200000,
+              score: 40.200001,
             },
-            type: "CONSUMER_GOOD",
+            type: "PHONE_NUMBER",
+          },
+          "et": {
+            displayName: "impedit",
+            metadata: {
+              "expedita": "vel",
+              "qui": "modi",
+              "nihil": "tempora",
+            },
+            salience: 42.200001,
+            sentiment: {
+              magnitude: 60.099998,
+              score: 34.099998,
+            },
+            type: "LOCATION",
           },
         },
         intents: {
-          "nisi": {
-            displayName: "delectus",
-            id: "iste",
+          "placeat": {
+            displayName: "qui",
+            id: "nisi",
+          },
+          "quis": {
+            displayName: "adipisci",
+            id: "porro",
           },
         },
         issueModelResult: {
-          issueModel: "accusamus",
+          issueModel: "rerum",
           issues: [
             {
-              displayName: "non",
-              issue: "excepturi",
-              score: 88.199997,
-            },
-            {
-              displayName: "aperiam",
-              issue: "adipisci",
-              score: 18.200001,
+              displayName: "accusamus",
+              issue: "numquam",
+              score: 58.200001,
             },
           ],
         },
         phraseMatchers: {
-          "ut": {
-            displayName: "provident",
-            phraseMatcher: "rerum",
+          "laborum": {
+            displayName: "fugit",
+            phraseMatcher: "quis",
           },
-          "est": {
-            displayName: "placeat",
-            phraseMatcher: "recusandae",
-          },
-          "et": {
-            displayName: "repudiandae",
-            phraseMatcher: "autem",
+          "minus": {
+            displayName: "soluta",
+            phraseMatcher: "aperiam",
           },
         },
         sentiments: [
           {
-            channelTag: 5435594425185608590,
+            channelTag: 4970157864765978097,
             sentimentData: {
-              magnitude: 69.099998,
-              score: 18.100000,
+              magnitude: 52.099998,
+              score: 29.200001,
             },
           },
           {
-            channelTag: 8132631544243459716,
+            channelTag: 8997481548049309375,
             sentimentData: {
-              magnitude: 55.200001,
-              score: 70.199997,
+              magnitude: 86.099998,
+              score: 68.199997,
             },
           },
           {
-            channelTag: 3716120439908127514,
+            channelTag: 7899896093082851758,
             sentimentData: {
-              magnitude: 93.099998,
-              score: 99.099998,
+              magnitude: 83.099998,
+              score: 30.100000,
             },
           },
         ],
       },
-      endTime: "odio",
+      endTime: "cupiditate",
     },
-    name: "distinctio",
+    annotatorSelector: {
+      issueModels: [
+        "molestiae",
+        "pariatur",
+        "quasi",
+      ],
+      phraseMatchers: [
+        "enim",
+        "qui",
+        "sit",
+      ],
+      runEntityAnnotator: false,
+      runIntentAnnotator: true,
+      runInterruptionAnnotator: true,
+      runIssueModelAnnotator: false,
+      runPhraseMatcherAnnotator: true,
+      runSentimentAnnotator: true,
+      runSilenceAnnotator: true,
+    },
+    name: "occaecati",
   },
 };
 

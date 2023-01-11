@@ -14,5 +14,5 @@ export declare class GetNetworkSplashLoginAttemptsRequest extends SpeakeasyBase 
 export declare class GetNetworkSplashLoginAttemptsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSplashLoginAttempts200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSplashLoginAttempts200ApplicationJSONObject?: Record<string, any>;
 }

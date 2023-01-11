@@ -20,5 +20,5 @@ export declare class IpamRirsListRequest extends SpeakeasyBase {
 export declare class IpamRirsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamRirsList200ApplicationJsonObject?: IpamRirsList200ApplicationJson;
+    ipamRirsList200ApplicationJSONObject?: IpamRirsList200ApplicationJson;
 }

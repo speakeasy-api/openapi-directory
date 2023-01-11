@@ -43,7 +43,7 @@ export class DisassociateFromAdministratorAccountResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateFromAdministratorAccountResponse?: Map<string, any>;
+  disassociateFromAdministratorAccountResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

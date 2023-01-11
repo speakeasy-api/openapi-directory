@@ -23,7 +23,7 @@ export declare class ActionsListWorkflowRunsRequest extends SpeakeasyBase {
 }
 export declare class ActionsListWorkflowRunsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListWorkflowRuns200ApplicationJsonObject?: ActionsListWorkflowRuns200ApplicationJson;
+    actionsListWorkflowRuns200ApplicationJSONObject?: ActionsListWorkflowRuns200ApplicationJson;
 }

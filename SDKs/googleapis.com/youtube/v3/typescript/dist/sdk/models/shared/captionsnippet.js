@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CaptionSnippetAudioTrackTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CaptionSnippet = exports.CaptionSnippetTrackKindEnum = exports.CaptionSnippetStatusEnum = exports.CaptionSnippetFailureReasonEnum = exports.CaptionSnippetAudioTrackTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CaptionSnippetAudioTrackTypeEnum;
 (function (CaptionSnippetAudioTrackTypeEnum) {
     CaptionSnippetAudioTrackTypeEnum["Unknown"] = "unknown";
     CaptionSnippetAudioTrackTypeEnum["Primary"] = "primary";
     CaptionSnippetAudioTrackTypeEnum["Commentary"] = "commentary";
     CaptionSnippetAudioTrackTypeEnum["Descriptive"] = "descriptive";
-})(CaptionSnippetAudioTrackTypeEnum || (CaptionSnippetAudioTrackTypeEnum = {}));
-export var CaptionSnippetFailureReasonEnum;
+})(CaptionSnippetAudioTrackTypeEnum = exports.CaptionSnippetAudioTrackTypeEnum || (exports.CaptionSnippetAudioTrackTypeEnum = {}));
+var CaptionSnippetFailureReasonEnum;
 (function (CaptionSnippetFailureReasonEnum) {
     CaptionSnippetFailureReasonEnum["UnknownFormat"] = "unknownFormat";
     CaptionSnippetFailureReasonEnum["UnsupportedFormat"] = "unsupportedFormat";
     CaptionSnippetFailureReasonEnum["ProcessingFailed"] = "processingFailed";
-})(CaptionSnippetFailureReasonEnum || (CaptionSnippetFailureReasonEnum = {}));
-export var CaptionSnippetStatusEnum;
+})(CaptionSnippetFailureReasonEnum = exports.CaptionSnippetFailureReasonEnum || (exports.CaptionSnippetFailureReasonEnum = {}));
+var CaptionSnippetStatusEnum;
 (function (CaptionSnippetStatusEnum) {
     CaptionSnippetStatusEnum["Serving"] = "serving";
     CaptionSnippetStatusEnum["Syncing"] = "syncing";
     CaptionSnippetStatusEnum["Failed"] = "failed";
-})(CaptionSnippetStatusEnum || (CaptionSnippetStatusEnum = {}));
-export var CaptionSnippetTrackKindEnum;
+})(CaptionSnippetStatusEnum = exports.CaptionSnippetStatusEnum || (exports.CaptionSnippetStatusEnum = {}));
+var CaptionSnippetTrackKindEnum;
 (function (CaptionSnippetTrackKindEnum) {
     CaptionSnippetTrackKindEnum["Standard"] = "standard";
     CaptionSnippetTrackKindEnum["Asr"] = "ASR";
     CaptionSnippetTrackKindEnum["Forced"] = "forced";
-})(CaptionSnippetTrackKindEnum || (CaptionSnippetTrackKindEnum = {}));
+})(CaptionSnippetTrackKindEnum = exports.CaptionSnippetTrackKindEnum || (exports.CaptionSnippetTrackKindEnum = {}));
 // CaptionSnippet
 /**
  * Basic details about a caption track, such as its language and name.
@@ -58,57 +61,57 @@ var CaptionSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioTrackType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioTrackType" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "audioTrackType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAutoSynced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAutoSynced" }),
         __metadata("design:type", Boolean)
     ], CaptionSnippet.prototype, "isAutoSynced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCC" }),
         __metadata("design:type", Boolean)
-    ], CaptionSnippet.prototype, "isCc", void 0);
+    ], CaptionSnippet.prototype, "isCC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDraft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDraft" }),
         __metadata("design:type", Boolean)
     ], CaptionSnippet.prototype, "isDraft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEasyReader" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEasyReader" }),
         __metadata("design:type", Boolean)
     ], CaptionSnippet.prototype, "isEasyReader", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isLarge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isLarge" }),
         __metadata("design:type", Boolean)
     ], CaptionSnippet.prototype, "isLarge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], CaptionSnippet.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackKind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackKind" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "trackKind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoId" }),
         __metadata("design:type", String)
     ], CaptionSnippet.prototype, "videoId", void 0);
     return CaptionSnippet;
-}(SpeakeasyBase));
-export { CaptionSnippet };
+}(utils_1.SpeakeasyBase));
+exports.CaptionSnippet = CaptionSnippet;

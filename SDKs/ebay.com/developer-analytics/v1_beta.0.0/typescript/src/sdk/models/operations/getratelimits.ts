@@ -19,8 +19,8 @@ export class GetRateLimitsSecurity extends SpeakeasyBase {
 
 
 export class GetRateLimits500ApplicationJson extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }
 
 
@@ -44,5 +44,5 @@ export class GetRateLimitsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRateLimits500ApplicationJsonObject?: GetRateLimits500ApplicationJson;
+  getRateLimits500ApplicationJSONObject?: GetRateLimits500ApplicationJson;
 }

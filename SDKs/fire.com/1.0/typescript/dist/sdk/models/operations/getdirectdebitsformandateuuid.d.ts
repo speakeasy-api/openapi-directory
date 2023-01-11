@@ -44,7 +44,7 @@ export declare class GetDirectDebitsForMandateUuidDirectDebitsDirectDebit extend
     dateCreated?: Date;
     directDebitReference?: string;
     directDebitUuid?: string;
-    isDdic?: boolean;
+    isDDIC?: boolean;
     lastUpdated?: Date;
     mandateUUid?: string;
     originatorAlias?: string;

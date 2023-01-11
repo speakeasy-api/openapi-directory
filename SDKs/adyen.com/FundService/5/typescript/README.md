@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostAccountHolderBalanceRequest, PostAccountHolderBalanceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,10 +33,10 @@ const req: PostAccountHolderBalanceRequest = {
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "incidunt",
+  request: "sit",
 };
 
-sdk.sdk.postAccountHolderBalance(req).then((res: PostAccountHolderBalanceResponse | AxiosError) => {
+sdk.general.postAccountHolderBalance(req).then((res: PostAccountHolderBalanceResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,7 +45,7 @@ sdk.sdk.postAccountHolderBalance(req).then((res: PostAccountHolderBalanceRespons
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `postAccountHolderBalance` - Retrieve the balance(s) of an account holder.
 * `postAccountHolderTransactionList` - Retrieve a list of transactions.

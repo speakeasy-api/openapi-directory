@@ -44,5 +44,5 @@ export class GenresListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  genresList200ApplicationJsonObject?: GenresList200ApplicationJson;
+  genresList200ApplicationJSONObject?: GenresList200ApplicationJson;
 }

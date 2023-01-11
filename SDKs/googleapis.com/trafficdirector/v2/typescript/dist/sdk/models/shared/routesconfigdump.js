@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicRouteConfig } from "./dynamicrouteconfig";
-import { StaticRouteConfig } from "./staticrouteconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoutesConfigDump = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamicrouteconfig_1 = require("./dynamicrouteconfig");
+var staticrouteconfig_1 = require("./staticrouteconfig");
 // RoutesConfigDump
 /**
  * Envoy's RDS implementation fills this message with all currently loaded routes, as described by their RouteConfiguration objects. Static routes that are either defined in the bootstrap configuration or defined inline while configuring listeners are separated from those configured dynamically via RDS. Route configuration information can be used to recreate an Envoy configuration by populating all routes as static routes or by returning them in RDS responses.
@@ -35,13 +38,13 @@ var RoutesConfigDump = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicRouteConfigs", elemType: DynamicRouteConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicRouteConfigs", elemType: dynamicrouteconfig_1.DynamicRouteConfig }),
         __metadata("design:type", Array)
     ], RoutesConfigDump.prototype, "dynamicRouteConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticRouteConfigs", elemType: StaticRouteConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticRouteConfigs", elemType: staticrouteconfig_1.StaticRouteConfig }),
         __metadata("design:type", Array)
     ], RoutesConfigDump.prototype, "staticRouteConfigs", void 0);
     return RoutesConfigDump;
-}(SpeakeasyBase));
-export { RoutesConfigDump };
+}(utils_1.SpeakeasyBase));
+exports.RoutesConfigDump = RoutesConfigDump;

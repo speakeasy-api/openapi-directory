@@ -1,4 +1,7 @@
-export var TriggerEventTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerEventTypeEnum = void 0;
+var TriggerEventTypeEnum;
 (function (TriggerEventTypeEnum) {
     TriggerEventTypeEnum["DeploymentStart"] = "DeploymentStart";
     TriggerEventTypeEnum["DeploymentSuccess"] = "DeploymentSuccess";
@@ -10,4 +13,4 @@ export var TriggerEventTypeEnum;
     TriggerEventTypeEnum["InstanceSuccess"] = "InstanceSuccess";
     TriggerEventTypeEnum["InstanceFailure"] = "InstanceFailure";
     TriggerEventTypeEnum["InstanceReady"] = "InstanceReady";
-})(TriggerEventTypeEnum || (TriggerEventTypeEnum = {}));
+})(TriggerEventTypeEnum = exports.TriggerEventTypeEnum || (exports.TriggerEventTypeEnum = {}));

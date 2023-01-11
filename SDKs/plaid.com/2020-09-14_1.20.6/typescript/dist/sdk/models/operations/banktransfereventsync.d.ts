@@ -4,8 +4,8 @@ export declare class BankTransferEventSyncRequest extends SpeakeasyBase {
     request: shared.BankTransferEventSyncRequest;
 }
 export declare class BankTransferEventSyncResponse extends SpeakeasyBase {
-    bankTransferEventSyncResponse?: Map<string, any>;
+    bankTransferEventSyncResponse?: Record<string, any>;
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     statusCode: number;
 }

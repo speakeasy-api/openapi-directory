@@ -17,7 +17,7 @@ export class FindListingRecommendationsQueryParams extends SpeakeasyBase {
 
 export class FindListingRecommendationsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-EBAY-C-MARKETPLACE-ID" })
-  xEbayCMarketplaceId: string;
+  xEBAYCMARKETPLACEID: string;
 }
 
 

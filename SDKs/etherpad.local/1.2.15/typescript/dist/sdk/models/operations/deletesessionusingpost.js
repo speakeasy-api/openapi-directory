@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSessionUsingPostResponse = exports.DeleteSessionUsingPostRequest = exports.DeleteSessionUsingPost500ApplicationJson = exports.DeleteSessionUsingPost401ApplicationJson = exports.DeleteSessionUsingPost400ApplicationJson = exports.DeleteSessionUsingPost200ApplicationJson = exports.DeleteSessionUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSessionUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPostQueryParams, _super);
     function DeleteSessionUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sessionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sessionID" }),
         __metadata("design:type", String)
-    ], DeleteSessionUsingPostQueryParams.prototype, "sessionId", void 0);
+    ], DeleteSessionUsingPostQueryParams.prototype, "sessionID", void 0);
     return DeleteSessionUsingPostQueryParams;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPostQueryParams = DeleteSessionUsingPostQueryParams;
 var DeleteSessionUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPost200ApplicationJson, _super);
     function DeleteSessionUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteSessionUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteSessionUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteSessionUsingPost200ApplicationJson.prototype, "message", void 0);
     return DeleteSessionUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPost200ApplicationJson = DeleteSessionUsingPost200ApplicationJson;
 var DeleteSessionUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPost400ApplicationJson, _super);
     function DeleteSessionUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteSessionUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteSessionUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteSessionUsingPost400ApplicationJson.prototype, "message", void 0);
     return DeleteSessionUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPost400ApplicationJson = DeleteSessionUsingPost400ApplicationJson;
 var DeleteSessionUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPost401ApplicationJson, _super);
     function DeleteSessionUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteSessionUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteSessionUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteSessionUsingPost401ApplicationJson.prototype, "message", void 0);
     return DeleteSessionUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPost401ApplicationJson = DeleteSessionUsingPost401ApplicationJson;
 var DeleteSessionUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPost500ApplicationJson, _super);
     function DeleteSessionUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DeleteSessionUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeleteSessionUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteSessionUsingPost500ApplicationJson.prototype, "message", void 0);
     return DeleteSessionUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPost500ApplicationJson = DeleteSessionUsingPost500ApplicationJson;
 var DeleteSessionUsingPostRequest = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPostRequest, _super);
     function DeleteSessionUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSessionUsingPostQueryParams)
     ], DeleteSessionUsingPostRequest.prototype, "queryParams", void 0);
     return DeleteSessionUsingPostRequest;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPostRequest = DeleteSessionUsingPostRequest;
 var DeleteSessionUsingPostResponse = /** @class */ (function (_super) {
     __extends(DeleteSessionUsingPostResponse, _super);
     function DeleteSessionUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSessionUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSessionUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSessionUsingPost200ApplicationJson)
-    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPost200ApplicationJsonObject", void 0);
+    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSessionUsingPost400ApplicationJson)
-    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPost400ApplicationJsonObject", void 0);
+    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSessionUsingPost401ApplicationJson)
-    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPost401ApplicationJsonObject", void 0);
+    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSessionUsingPost500ApplicationJson)
-    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPost500ApplicationJsonObject", void 0);
+    ], DeleteSessionUsingPostResponse.prototype, "deleteSessionUsingPOST500ApplicationJSONObject", void 0);
     return DeleteSessionUsingPostResponse;
-}(SpeakeasyBase));
-export { DeleteSessionUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSessionUsingPostResponse = DeleteSessionUsingPostResponse;

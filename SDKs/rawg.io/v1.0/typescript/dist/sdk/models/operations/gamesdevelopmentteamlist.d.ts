@@ -21,5 +21,5 @@ export declare class GamesDevelopmentTeamListRequest extends SpeakeasyBase {
 export declare class GamesDevelopmentTeamListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gamesDevelopmentTeamList200ApplicationJsonObject?: GamesDevelopmentTeamList200ApplicationJson;
+    gamesDevelopmentTeamList200ApplicationJSONObject?: GamesDevelopmentTeamList200ApplicationJson;
 }

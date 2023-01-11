@@ -1,38 +1,48 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiskImageFormatEnum } from "./diskimageformatenum";
-import { ExportTaskS3Location } from "./exporttasks3location";
-import { Tag } from "./tag";
 
+
+
+// ExportImageResultS3ExportLocation
+/** 
+ * Information about the destination Amazon S3 bucket.
+**/
+export class ExportImageResultS3ExportLocation extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  s3Bucket?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  s3Prefix?: Record<string, any>;
+}
 
 
 export class ExportImageResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  description?: string;
+  description?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  diskImageFormat?: DiskImageFormatEnum;
+  diskImageFormat?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  exportImageTaskId?: string;
+  exportImageTaskId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  imageId?: string;
+  imageId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  progress?: string;
+  progress?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  roleName?: string;
+  roleName?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  s3ExportLocation?: ExportTaskS3Location;
+  s3ExportLocation?: ExportImageResultS3ExportLocation;
 
   @SpeakeasyMetadata()
-  status?: string;
+  status?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  statusMessage?: string;
+  statusMessage?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
 }

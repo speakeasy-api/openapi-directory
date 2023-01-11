@@ -117,5 +117,5 @@ export class UpdateNetworkFloorPlanResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkFloorPlan200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkFloorPlan200ApplicationJSONObject?: Record<string, any>;
 }

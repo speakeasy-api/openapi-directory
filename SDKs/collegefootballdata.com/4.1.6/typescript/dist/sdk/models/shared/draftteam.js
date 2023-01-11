@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DraftTeam = void 0;
+var utils_1 = require("../../../internal/utils");
 var DraftTeam = /** @class */ (function (_super) {
     __extends(DraftTeam, _super);
     function DraftTeam() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], DraftTeam.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], DraftTeam.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
         __metadata("design:type", String)
     ], DraftTeam.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], DraftTeam.prototype, "nickname", void 0);
     return DraftTeam;
-}(SpeakeasyBase));
-export { DraftTeam };
+}(utils_1.SpeakeasyBase));
+exports.DraftTeam = DraftTeam;

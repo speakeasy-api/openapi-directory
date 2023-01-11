@@ -20,7 +20,7 @@ export declare class CreateClassifierRequest extends SpeakeasyBase {
 export declare class CreateClassifierResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     contentType: string;
-    createClassifierResponse?: Map<string, any>;
+    createClassifierResponse?: Record<string, any>;
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;

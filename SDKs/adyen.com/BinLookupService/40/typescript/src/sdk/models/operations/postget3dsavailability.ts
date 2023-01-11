@@ -32,5 +32,5 @@ export class PostGet3dsAvailabilityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  threeDsAvailabilityResponse?: any;
+  threeDSAvailabilityResponse?: any;
 }

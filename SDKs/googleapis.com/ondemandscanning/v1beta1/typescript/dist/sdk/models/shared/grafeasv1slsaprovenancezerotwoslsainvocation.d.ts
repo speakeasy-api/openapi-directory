@@ -5,6 +5,6 @@ import { GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource } from "./grafeasv1slsap
 **/
 export declare class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation extends SpeakeasyBase {
     configSource?: GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource;
-    environment?: Map<string, any>;
-    parameters?: Map<string, any>;
+    environment?: Record<string, any>;
+    parameters?: Record<string, any>;
 }

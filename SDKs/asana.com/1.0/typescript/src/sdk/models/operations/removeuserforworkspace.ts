@@ -26,7 +26,7 @@ export class RemoveUserForWorkspaceRequestBody extends SpeakeasyBase {
 
 export class RemoveUserForWorkspace204ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class RemoveUserForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeUserForWorkspace204ApplicationJsonObject?: RemoveUserForWorkspace204ApplicationJson;
+  removeUserForWorkspace204ApplicationJSONObject?: RemoveUserForWorkspace204ApplicationJson;
 }

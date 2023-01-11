@@ -1,7 +1,10 @@
-export var OutputFormatEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OutputFormatEnum = void 0;
+var OutputFormatEnum;
 (function (OutputFormatEnum) {
     OutputFormatEnum["Json"] = "json";
     OutputFormatEnum["Mp3"] = "mp3";
     OutputFormatEnum["OggVorbis"] = "ogg_vorbis";
     OutputFormatEnum["Pcm"] = "pcm";
-})(OutputFormatEnum || (OutputFormatEnum = {}));
+})(OutputFormatEnum = exports.OutputFormatEnum || (exports.OutputFormatEnum = {}));

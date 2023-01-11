@@ -12,8 +12,8 @@ export declare class CompanyDeepsearchNameRequest extends SpeakeasyBase {
     security: CompanyDeepsearchNameSecurity;
 }
 export declare class CompanyDeepsearchNameResponse extends SpeakeasyBase {
-    companyDeepsearchName200ApplicationJsonAnies?: any[];
-    companyDeepsearchNameDefaultApplicationJsonAny?: any;
+    companyDeepsearchName200ApplicationJSONAnies?: any[];
+    companyDeepsearchNameDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

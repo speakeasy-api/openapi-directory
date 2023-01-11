@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortfolioCompact } from "./portfoliocompact";
-import { UserCompact } from "./usercompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortfolioMembershipResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var portfoliocompact_1 = require("./portfoliocompact");
+var usercompact_1 = require("./usercompact");
+// PortfolioMembershipResponse
+/**
+ * This object determines if a user is a member of a portfolio.
+**/
 var PortfolioMembershipResponse = /** @class */ (function (_super) {
     __extends(PortfolioMembershipResponse, _super);
     function PortfolioMembershipResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], PortfolioMembershipResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolio" }),
-        __metadata("design:type", PortfolioCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolio" }),
+        __metadata("design:type", portfoliocompact_1.PortfolioCompact)
     ], PortfolioMembershipResponse.prototype, "portfolio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], PortfolioMembershipResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], PortfolioMembershipResponse.prototype, "user", void 0);
     return PortfolioMembershipResponse;
-}(SpeakeasyBase));
-export { PortfolioMembershipResponse };
+}(utils_1.SpeakeasyBase));
+exports.PortfolioMembershipResponse = PortfolioMembershipResponse;

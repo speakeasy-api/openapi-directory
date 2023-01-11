@@ -20,7 +20,7 @@ export declare class DeleteContainerImageRequest extends SpeakeasyBase {
 export declare class DeleteContainerImageResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteContainerImageResult?: Map<string, any>;
+    deleteContainerImageResult?: Record<string, any>;
     invalidInputException?: any;
     notFoundException?: any;
     serviceException?: any;

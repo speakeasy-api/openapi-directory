@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1alphaUserEvent } from "./googleclouddiscoveryenginev1alphauserevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaRecommendRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1alphauserevent_1 = require("./googleclouddiscoveryenginev1alphauserevent");
 // GoogleCloudDiscoveryengineV1alphaRecommendRequest
 /**
  * Request message for Recommend method.
@@ -34,29 +37,29 @@ var GoogleCloudDiscoveryengineV1alphaRecommendRequest = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "params", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEvent" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaUserEvent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEvent" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphauserevent_1.GoogleCloudDiscoveryengineV1alphaUserEvent)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "userEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLabels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLabels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "userLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudDiscoveryengineV1alphaRecommendRequest.prototype, "validateOnly", void 0);
     return GoogleCloudDiscoveryengineV1alphaRecommendRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaRecommendRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaRecommendRequest = GoogleCloudDiscoveryengineV1alphaRecommendRequest;

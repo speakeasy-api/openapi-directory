@@ -13,7 +13,7 @@ export declare class MarkdownRenderRequest extends SpeakeasyBase {
 }
 export declare class MarkdownRenderResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    markdownRender200TextHtmlString?: string;
+    markdownRender200TextHTMLString?: string;
 }

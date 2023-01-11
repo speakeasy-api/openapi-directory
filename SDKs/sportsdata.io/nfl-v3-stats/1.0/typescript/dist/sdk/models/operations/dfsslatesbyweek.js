@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DfsSlatesByWeekFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DfsSlatesByWeekResponse = exports.DfsSlatesByWeekRequest = exports.DfsSlatesByWeekPathParams = exports.DfsSlatesByWeekFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DfsSlatesByWeekFormatEnum;
 (function (DfsSlatesByWeekFormatEnum) {
     DfsSlatesByWeekFormatEnum["Xml"] = "XML";
     DfsSlatesByWeekFormatEnum["Json"] = "JSON";
-})(DfsSlatesByWeekFormatEnum || (DfsSlatesByWeekFormatEnum = {}));
+})(DfsSlatesByWeekFormatEnum = exports.DfsSlatesByWeekFormatEnum || (exports.DfsSlatesByWeekFormatEnum = {}));
 var DfsSlatesByWeekPathParams = /** @class */ (function (_super) {
     __extends(DfsSlatesByWeekPathParams, _super);
     function DfsSlatesByWeekPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], DfsSlatesByWeekPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], DfsSlatesByWeekPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], DfsSlatesByWeekPathParams.prototype, "week", void 0);
     return DfsSlatesByWeekPathParams;
-}(SpeakeasyBase));
-export { DfsSlatesByWeekPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesByWeekPathParams = DfsSlatesByWeekPathParams;
 var DfsSlatesByWeekRequest = /** @class */ (function (_super) {
     __extends(DfsSlatesByWeekRequest, _super);
     function DfsSlatesByWeekRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DfsSlatesByWeekPathParams)
     ], DfsSlatesByWeekRequest.prototype, "pathParams", void 0);
     return DfsSlatesByWeekRequest;
-}(SpeakeasyBase));
-export { DfsSlatesByWeekRequest };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesByWeekRequest = DfsSlatesByWeekRequest;
 var DfsSlatesByWeekResponse = /** @class */ (function (_super) {
     __extends(DfsSlatesByWeekResponse, _super);
     function DfsSlatesByWeekResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DfsSlatesByWeekResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DfsSlatesByWeekResponse.prototype, "dfsSlates", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DfsSlatesByWeekResponse.prototype, "statusCode", void 0);
     return DfsSlatesByWeekResponse;
-}(SpeakeasyBase));
-export { DfsSlatesByWeekResponse };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesByWeekResponse = DfsSlatesByWeekResponse;

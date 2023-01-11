@@ -19,8 +19,8 @@ export declare class GetV4LayersAsHarvestedActivityIdContentsRequest extends Spe
 export declare class GetV4LayersAsHarvestedActivityIdContentsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

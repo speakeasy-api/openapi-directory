@@ -20,7 +20,7 @@ export class EndpointStartAUsersPlaybackRequestBody extends SpeakeasyBase {
   contextUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=offset" })
-  offset?: Map<string, any>;
+  offset?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=position_ms" })
   positionMs?: number;

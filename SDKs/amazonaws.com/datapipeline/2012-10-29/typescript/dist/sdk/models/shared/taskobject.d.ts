@@ -5,7 +5,7 @@ import { PipelineObject } from "./pipelineobject";
 **/
 export declare class TaskObject extends SpeakeasyBase {
     attemptId?: string;
-    objects?: Map<string, PipelineObject>;
+    objects?: Record<string, PipelineObject>;
     pipelineId?: string;
     taskId?: string;
 }

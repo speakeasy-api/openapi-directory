@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,314 +14,339 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FfcerResponse = exports.FfcerRequest = exports.Ffcer504ApplicationJson = exports.Ffcer504ApplicationJsonErrorDescriptionEnum = exports.Ffcer504ApplicationJsonErrorEnum = exports.Ffcer503ApplicationJson = exports.Ffcer503ApplicationJsonErrorDescriptionEnum = exports.Ffcer503ApplicationJsonErrorEnum = exports.Ffcer502ApplicationJson = exports.Ffcer502ApplicationJsonErrorDescriptionEnum = exports.Ffcer502ApplicationJsonErrorEnum = exports.Ffcer500ApplicationJson = exports.Ffcer500ApplicationJsonErrorDescriptionEnum = exports.Ffcer500ApplicationJsonErrorEnum = exports.Ffcer404ApplicationJson = exports.Ffcer404ApplicationJsonErrorDescriptionEnum = exports.Ffcer404ApplicationJsonErrorEnum = exports.Ffcer401ApplicationJson = exports.Ffcer401ApplicationJsonErrorDescriptionEnum = exports.Ffcer401ApplicationJsonErrorEnum = exports.Ffcer400ApplicationJson = exports.Ffcer400ApplicationJsonErrorDescriptionEnum = exports.Ffcer400ApplicationJsonErrorEnum = exports.FfcerSecurity = exports.FfcerRequestBody = exports.FfcerRequestBodyFormatEnum = exports.FfcerRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FfcerRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(FfcerRequestBodyCertificateParameters, _super);
     function FfcerRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], FfcerRequestBodyCertificateParameters.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RefNo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RefNo" }),
         __metadata("design:type", String)
     ], FfcerRequestBodyCertificateParameters.prototype, "refNo", void 0);
     return FfcerRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { FfcerRequestBodyCertificateParameters };
-export var FfcerRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.FfcerRequestBodyCertificateParameters = FfcerRequestBodyCertificateParameters;
+var FfcerRequestBodyFormatEnum;
 (function (FfcerRequestBodyFormatEnum) {
     FfcerRequestBodyFormatEnum["Pdf"] = "pdf";
-})(FfcerRequestBodyFormatEnum || (FfcerRequestBodyFormatEnum = {}));
+})(FfcerRequestBodyFormatEnum = exports.FfcerRequestBodyFormatEnum || (exports.FfcerRequestBodyFormatEnum = {}));
 var FfcerRequestBody = /** @class */ (function (_super) {
     __extends(FfcerRequestBody, _super);
     function FfcerRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", FfcerRequestBodyCertificateParameters)
     ], FfcerRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], FfcerRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], FfcerRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], FfcerRequestBody.prototype, "txnId", void 0);
     return FfcerRequestBody;
-}(SpeakeasyBase));
-export { FfcerRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.FfcerRequestBody = FfcerRequestBody;
 var FfcerSecurity = /** @class */ (function (_super) {
     __extends(FfcerSecurity, _super);
     function FfcerSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], FfcerSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], FfcerSecurity.prototype, "clientId", void 0);
     return FfcerSecurity;
-}(SpeakeasyBase));
-export { FfcerSecurity };
-export var Ffcer400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.FfcerSecurity = FfcerSecurity;
+var Ffcer400ApplicationJsonErrorEnum;
 (function (Ffcer400ApplicationJsonErrorEnum) {
     Ffcer400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Ffcer400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Ffcer400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Ffcer400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Ffcer400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Ffcer400ApplicationJsonErrorEnum || (Ffcer400ApplicationJsonErrorEnum = {}));
-export var Ffcer400ApplicationJsonErrorDescriptionEnum;
+})(Ffcer400ApplicationJsonErrorEnum = exports.Ffcer400ApplicationJsonErrorEnum || (exports.Ffcer400ApplicationJsonErrorEnum = {}));
+var Ffcer400ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer400ApplicationJsonErrorDescriptionEnum) {
     Ffcer400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Ffcer400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Ffcer400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Ffcer400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Ffcer400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Ffcer400ApplicationJsonErrorDescriptionEnum || (Ffcer400ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer400ApplicationJsonErrorDescriptionEnum = exports.Ffcer400ApplicationJsonErrorDescriptionEnum || (exports.Ffcer400ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer400ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer400ApplicationJson, _super);
     function Ffcer400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer400ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer400ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer400ApplicationJson };
-export var Ffcer401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer400ApplicationJson = Ffcer400ApplicationJson;
+var Ffcer401ApplicationJsonErrorEnum;
 (function (Ffcer401ApplicationJsonErrorEnum) {
     Ffcer401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Ffcer401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Ffcer401ApplicationJsonErrorEnum || (Ffcer401ApplicationJsonErrorEnum = {}));
-export var Ffcer401ApplicationJsonErrorDescriptionEnum;
+})(Ffcer401ApplicationJsonErrorEnum = exports.Ffcer401ApplicationJsonErrorEnum || (exports.Ffcer401ApplicationJsonErrorEnum = {}));
+var Ffcer401ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer401ApplicationJsonErrorDescriptionEnum) {
     Ffcer401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Ffcer401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Ffcer401ApplicationJsonErrorDescriptionEnum || (Ffcer401ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer401ApplicationJsonErrorDescriptionEnum = exports.Ffcer401ApplicationJsonErrorDescriptionEnum || (exports.Ffcer401ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer401ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer401ApplicationJson, _super);
     function Ffcer401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer401ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer401ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer401ApplicationJson };
-export var Ffcer404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer401ApplicationJson = Ffcer401ApplicationJson;
+var Ffcer404ApplicationJsonErrorEnum;
 (function (Ffcer404ApplicationJsonErrorEnum) {
     Ffcer404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Ffcer404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Ffcer404ApplicationJsonErrorEnum || (Ffcer404ApplicationJsonErrorEnum = {}));
-export var Ffcer404ApplicationJsonErrorDescriptionEnum;
+})(Ffcer404ApplicationJsonErrorEnum = exports.Ffcer404ApplicationJsonErrorEnum || (exports.Ffcer404ApplicationJsonErrorEnum = {}));
+var Ffcer404ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer404ApplicationJsonErrorDescriptionEnum) {
     Ffcer404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Ffcer404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Ffcer404ApplicationJsonErrorDescriptionEnum || (Ffcer404ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer404ApplicationJsonErrorDescriptionEnum = exports.Ffcer404ApplicationJsonErrorDescriptionEnum || (exports.Ffcer404ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer404ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer404ApplicationJson, _super);
     function Ffcer404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer404ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer404ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer404ApplicationJson };
-export var Ffcer500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer404ApplicationJson = Ffcer404ApplicationJson;
+var Ffcer500ApplicationJsonErrorEnum;
 (function (Ffcer500ApplicationJsonErrorEnum) {
     Ffcer500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Ffcer500ApplicationJsonErrorEnum || (Ffcer500ApplicationJsonErrorEnum = {}));
-export var Ffcer500ApplicationJsonErrorDescriptionEnum;
+})(Ffcer500ApplicationJsonErrorEnum = exports.Ffcer500ApplicationJsonErrorEnum || (exports.Ffcer500ApplicationJsonErrorEnum = {}));
+var Ffcer500ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer500ApplicationJsonErrorDescriptionEnum) {
     Ffcer500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Ffcer500ApplicationJsonErrorDescriptionEnum || (Ffcer500ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer500ApplicationJsonErrorDescriptionEnum = exports.Ffcer500ApplicationJsonErrorDescriptionEnum || (exports.Ffcer500ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer500ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer500ApplicationJson, _super);
     function Ffcer500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer500ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer500ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer500ApplicationJson };
-export var Ffcer502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer500ApplicationJson = Ffcer500ApplicationJson;
+var Ffcer502ApplicationJsonErrorEnum;
 (function (Ffcer502ApplicationJsonErrorEnum) {
     Ffcer502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Ffcer502ApplicationJsonErrorEnum || (Ffcer502ApplicationJsonErrorEnum = {}));
-export var Ffcer502ApplicationJsonErrorDescriptionEnum;
+})(Ffcer502ApplicationJsonErrorEnum = exports.Ffcer502ApplicationJsonErrorEnum || (exports.Ffcer502ApplicationJsonErrorEnum = {}));
+var Ffcer502ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer502ApplicationJsonErrorDescriptionEnum) {
     Ffcer502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Ffcer502ApplicationJsonErrorDescriptionEnum || (Ffcer502ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer502ApplicationJsonErrorDescriptionEnum = exports.Ffcer502ApplicationJsonErrorDescriptionEnum || (exports.Ffcer502ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer502ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer502ApplicationJson, _super);
     function Ffcer502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer502ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer502ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer502ApplicationJson };
-export var Ffcer503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer502ApplicationJson = Ffcer502ApplicationJson;
+var Ffcer503ApplicationJsonErrorEnum;
 (function (Ffcer503ApplicationJsonErrorEnum) {
     Ffcer503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Ffcer503ApplicationJsonErrorEnum || (Ffcer503ApplicationJsonErrorEnum = {}));
-export var Ffcer503ApplicationJsonErrorDescriptionEnum;
+})(Ffcer503ApplicationJsonErrorEnum = exports.Ffcer503ApplicationJsonErrorEnum || (exports.Ffcer503ApplicationJsonErrorEnum = {}));
+var Ffcer503ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer503ApplicationJsonErrorDescriptionEnum) {
     Ffcer503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Ffcer503ApplicationJsonErrorDescriptionEnum || (Ffcer503ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer503ApplicationJsonErrorDescriptionEnum = exports.Ffcer503ApplicationJsonErrorDescriptionEnum || (exports.Ffcer503ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer503ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer503ApplicationJson, _super);
     function Ffcer503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer503ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer503ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer503ApplicationJson };
-export var Ffcer504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ffcer503ApplicationJson = Ffcer503ApplicationJson;
+var Ffcer504ApplicationJsonErrorEnum;
 (function (Ffcer504ApplicationJsonErrorEnum) {
     Ffcer504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Ffcer504ApplicationJsonErrorEnum || (Ffcer504ApplicationJsonErrorEnum = {}));
-export var Ffcer504ApplicationJsonErrorDescriptionEnum;
+})(Ffcer504ApplicationJsonErrorEnum = exports.Ffcer504ApplicationJsonErrorEnum || (exports.Ffcer504ApplicationJsonErrorEnum = {}));
+var Ffcer504ApplicationJsonErrorDescriptionEnum;
 (function (Ffcer504ApplicationJsonErrorDescriptionEnum) {
     Ffcer504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Ffcer504ApplicationJsonErrorDescriptionEnum || (Ffcer504ApplicationJsonErrorDescriptionEnum = {}));
+})(Ffcer504ApplicationJsonErrorDescriptionEnum = exports.Ffcer504ApplicationJsonErrorDescriptionEnum || (exports.Ffcer504ApplicationJsonErrorDescriptionEnum = {}));
 var Ffcer504ApplicationJson = /** @class */ (function (_super) {
     __extends(Ffcer504ApplicationJson, _super);
     function Ffcer504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ffcer504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ffcer504ApplicationJson.prototype, "errorDescription", void 0);
     return Ffcer504ApplicationJson;
-}(SpeakeasyBase));
-export { Ffcer504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Ffcer504ApplicationJson = Ffcer504ApplicationJson;
 var FfcerRequest = /** @class */ (function (_super) {
     __extends(FfcerRequest, _super);
     function FfcerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", FfcerRequestBody)
     ], FfcerRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FfcerSecurity)
     ], FfcerRequest.prototype, "security", void 0);
     return FfcerRequest;
-}(SpeakeasyBase));
-export { FfcerRequest };
+}(utils_1.SpeakeasyBase));
+exports.FfcerRequest = FfcerRequest;
 var FfcerResponse = /** @class */ (function (_super) {
     __extends(FfcerResponse, _super);
     function FfcerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FfcerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FfcerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer400ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer400ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer401ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer401ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer404ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer404ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer500ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer500ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer502ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer502ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer503ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer503ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ffcer504ApplicationJson)
-    ], FfcerResponse.prototype, "ffcer504ApplicationJsonObject", void 0);
+    ], FfcerResponse.prototype, "ffcer504ApplicationJSONObject", void 0);
     return FfcerResponse;
-}(SpeakeasyBase));
-export { FfcerResponse };
+}(utils_1.SpeakeasyBase));
+exports.FfcerResponse = FfcerResponse;

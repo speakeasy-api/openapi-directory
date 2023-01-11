@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdultContentDetectionResponse = exports.AdultContentDetectionRequest = exports.AdultContentDetectionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var AdultContentDetectionRequestBody = /** @class */ (function (_super) {
     __extends(AdultContentDetectionRequestBody, _super);
     function AdultContentDetectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], AdultContentDetectionRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], AdultContentDetectionRequestBody.prototype, "text", void 0);
     return AdultContentDetectionRequestBody;
-}(SpeakeasyBase));
-export { AdultContentDetectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AdultContentDetectionRequestBody = AdultContentDetectionRequestBody;
 var AdultContentDetectionRequest = /** @class */ (function (_super) {
     __extends(AdultContentDetectionRequest, _super);
     function AdultContentDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", AdultContentDetectionRequestBody)
     ], AdultContentDetectionRequest.prototype, "request", void 0);
     return AdultContentDetectionRequest;
-}(SpeakeasyBase));
-export { AdultContentDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.AdultContentDetectionRequest = AdultContentDetectionRequest;
 var AdultContentDetectionResponse = /** @class */ (function (_super) {
     __extends(AdultContentDetectionResponse, _super);
     function AdultContentDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AdultContentDetectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AdultContentDetectionResponse.prototype, "statusCode", void 0);
     return AdultContentDetectionResponse;
-}(SpeakeasyBase));
-export { AdultContentDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.AdultContentDetectionResponse = AdultContentDetectionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsReturnsResponse = exports.PostAssetsReturnsRequest = exports.PostAssetsReturns200ApplicationJson = exports.PostAssetsReturns200ApplicationJsonAssets = exports.PostAssetsReturnsRequestBody = exports.PostAssetsReturnsRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsReturnsRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostAssetsReturnsRequestBodyAssets, _super);
     function PostAssetsReturnsRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetPrices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetPrices" }),
         __metadata("design:type", Array)
     ], PostAssetsReturnsRequestBodyAssets.prototype, "assetPrices", void 0);
     return PostAssetsReturnsRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostAssetsReturnsRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturnsRequestBodyAssets = PostAssetsReturnsRequestBodyAssets;
 var PostAssetsReturnsRequestBody = /** @class */ (function (_super) {
     __extends(PostAssetsReturnsRequestBody, _super);
     function PostAssetsReturnsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsReturnsRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsReturnsRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostAssetsReturnsRequestBody.prototype, "assets", void 0);
     return PostAssetsReturnsRequestBody;
-}(SpeakeasyBase));
-export { PostAssetsReturnsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturnsRequestBody = PostAssetsReturnsRequestBody;
 var PostAssetsReturns200ApplicationJsonAssets = /** @class */ (function (_super) {
     __extends(PostAssetsReturns200ApplicationJsonAssets, _super);
     function PostAssetsReturns200ApplicationJsonAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetReturns" }),
         __metadata("design:type", Array)
     ], PostAssetsReturns200ApplicationJsonAssets.prototype, "assetReturns", void 0);
     return PostAssetsReturns200ApplicationJsonAssets;
-}(SpeakeasyBase));
-export { PostAssetsReturns200ApplicationJsonAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturns200ApplicationJsonAssets = PostAssetsReturns200ApplicationJsonAssets;
 var PostAssetsReturns200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsReturns200ApplicationJson, _super);
     function PostAssetsReturns200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsReturns200ApplicationJsonAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsReturns200ApplicationJsonAssets }),
         __metadata("design:type", Array)
     ], PostAssetsReturns200ApplicationJson.prototype, "assets", void 0);
     return PostAssetsReturns200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsReturns200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturns200ApplicationJson = PostAssetsReturns200ApplicationJson;
 var PostAssetsReturnsRequest = /** @class */ (function (_super) {
     __extends(PostAssetsReturnsRequest, _super);
     function PostAssetsReturnsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAssetsReturnsRequestBody)
     ], PostAssetsReturnsRequest.prototype, "request", void 0);
     return PostAssetsReturnsRequest;
-}(SpeakeasyBase));
-export { PostAssetsReturnsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturnsRequest = PostAssetsReturnsRequest;
 var PostAssetsReturnsResponse = /** @class */ (function (_super) {
     __extends(PostAssetsReturnsResponse, _super);
     function PostAssetsReturnsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsReturnsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsReturns200ApplicationJson)
-    ], PostAssetsReturnsResponse.prototype, "postAssetsReturns200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsReturnsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsReturns200ApplicationJson)
+    ], PostAssetsReturnsResponse.prototype, "postAssetsReturns200ApplicationJSONObject", void 0);
     return PostAssetsReturnsResponse;
-}(SpeakeasyBase));
-export { PostAssetsReturnsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsReturnsResponse = PostAssetsReturnsResponse;

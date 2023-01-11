@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ApiSpecInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=contents" })
   contents?: string;
@@ -20,7 +20,7 @@ export class ApiSpecInput extends SpeakeasyBase {
   filename?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mimeType" })
   mimeType?: string;
@@ -39,7 +39,7 @@ export class ApiSpecInput extends SpeakeasyBase {
 **/
 export class ApiSpec extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=contents" })
   contents?: string;
@@ -57,7 +57,7 @@ export class ApiSpec extends SpeakeasyBase {
   hash?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mimeType" })
   mimeType?: string;

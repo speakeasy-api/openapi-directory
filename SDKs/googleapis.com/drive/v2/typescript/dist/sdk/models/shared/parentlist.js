@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ParentReference } from "./parentreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParentList = void 0;
+var utils_1 = require("../../../internal/utils");
+var parentreference_1 = require("./parentreference");
 // ParentList
 /**
  * A list of a file's parents.
@@ -34,21 +37,21 @@ var ParentList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], ParentList.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ParentReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: parentreference_1.ParentReference }),
         __metadata("design:type", Array)
     ], ParentList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ParentList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], ParentList.prototype, "selfLink", void 0);
     return ParentList;
-}(SpeakeasyBase));
-export { ParentList };
+}(utils_1.SpeakeasyBase));
+exports.ParentList = ParentList;

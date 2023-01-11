@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListConflictingAliases20200531Response = exports.ListConflictingAliases20200531Request = exports.ListConflictingAliases20200531Headers = exports.ListConflictingAliases20200531QueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListConflictingAliases20200531QueryParams = /** @class */ (function (_super) {
     __extends(ListConflictingAliases20200531QueryParams, _super);
     function ListConflictingAliases20200531QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Alias" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531QueryParams.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DistributionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DistributionId" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531QueryParams.prototype, "distributionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531QueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], ListConflictingAliases20200531QueryParams.prototype, "maxItems", void 0);
     return ListConflictingAliases20200531QueryParams;
-}(SpeakeasyBase));
-export { ListConflictingAliases20200531QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListConflictingAliases20200531QueryParams = ListConflictingAliases20200531QueryParams;
 var ListConflictingAliases20200531Headers = /** @class */ (function (_super) {
     __extends(ListConflictingAliases20200531Headers, _super);
     function ListConflictingAliases20200531Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Headers.prototype, "xAmzSignedHeaders", void 0);
     return ListConflictingAliases20200531Headers;
-}(SpeakeasyBase));
-export { ListConflictingAliases20200531Headers };
+}(utils_1.SpeakeasyBase));
+exports.ListConflictingAliases20200531Headers = ListConflictingAliases20200531Headers;
 var ListConflictingAliases20200531Request = /** @class */ (function (_super) {
     __extends(ListConflictingAliases20200531Request, _super);
     function ListConflictingAliases20200531Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListConflictingAliases20200531QueryParams)
     ], ListConflictingAliases20200531Request.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListConflictingAliases20200531Headers)
     ], ListConflictingAliases20200531Request.prototype, "headers", void 0);
     return ListConflictingAliases20200531Request;
-}(SpeakeasyBase));
-export { ListConflictingAliases20200531Request };
+}(utils_1.SpeakeasyBase));
+exports.ListConflictingAliases20200531Request = ListConflictingAliases20200531Request;
 var ListConflictingAliases20200531Response = /** @class */ (function (_super) {
     __extends(ListConflictingAliases20200531Response, _super);
     function ListConflictingAliases20200531Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ListConflictingAliases20200531Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListConflictingAliases20200531Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListConflictingAliases20200531Response.prototype, "statusCode", void 0);
     return ListConflictingAliases20200531Response;
-}(SpeakeasyBase));
-export { ListConflictingAliases20200531Response };
+}(utils_1.SpeakeasyBase));
+exports.ListConflictingAliases20200531Response = ListConflictingAliases20200531Response;

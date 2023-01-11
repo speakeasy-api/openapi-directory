@@ -11,16 +11,16 @@ import { OptimizationObjective } from "./optimizationobjective";
 **/
 export class SolutionConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=algorithmHyperParameters" })
-  algorithmHyperParameters?: Map<string, string>;
+  algorithmHyperParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=autoMLConfig" })
-  autoMlConfig?: AutoMlConfig;
+  autoMLConfig?: AutoMlConfig;
 
   @SpeakeasyMetadata({ data: "json, name=eventValueThreshold" })
   eventValueThreshold?: string;
 
   @SpeakeasyMetadata({ data: "json, name=featureTransformationParameters" })
-  featureTransformationParameters?: Map<string, string>;
+  featureTransformationParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=hpoConfig" })
   hpoConfig?: HpoConfig;

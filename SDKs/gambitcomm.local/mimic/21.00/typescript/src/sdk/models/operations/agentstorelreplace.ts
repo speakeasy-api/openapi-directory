@@ -31,5 +31,5 @@ export class AgentStoreLreplaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  agentStoreLreplace200ApplicationJsonString?: string;
+  agentStoreLreplace200ApplicationJSONString?: string;
 }

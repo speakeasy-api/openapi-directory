@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetV2CustomerShortNameBranchBranchesBranchIdPathParams extends SpeakeasyBase {
-    branchId: string;
+    branchID: string;
     shortName: string;
 }
 export declare class GetV2CustomerShortNameBranchBranchesBranchIdRequest extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeDuration } from "./timeduration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturnPolicyDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeduration_1 = require("./timeduration");
 // ReturnPolicyDetails
 /**
  * This container defines the category policies that relate to domestic and international return policies (the return shipping is made via a domestic or an international shipping service, respectively).
@@ -34,29 +37,29 @@ var ReturnPolicyDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyDescriptionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyDescriptionEnabled" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicyDetails.prototype, "policyDescriptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundMethods" }),
         __metadata("design:type", Array)
     ], ReturnPolicyDetails.prototype, "refundMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnMethods" }),
         __metadata("design:type", Array)
     ], ReturnPolicyDetails.prototype, "returnMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPeriods", elemType: TimeDuration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPeriods", elemType: timeduration_1.TimeDuration }),
         __metadata("design:type", Array)
     ], ReturnPolicyDetails.prototype, "returnPeriods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnShippingCostPayers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnShippingCostPayers" }),
         __metadata("design:type", Array)
     ], ReturnPolicyDetails.prototype, "returnShippingCostPayers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnsAcceptanceEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnsAcceptanceEnabled" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicyDetails.prototype, "returnsAcceptanceEnabled", void 0);
     return ReturnPolicyDetails;
-}(SpeakeasyBase));
-export { ReturnPolicyDetails };
+}(utils_1.SpeakeasyBase));
+exports.ReturnPolicyDetails = ReturnPolicyDetails;

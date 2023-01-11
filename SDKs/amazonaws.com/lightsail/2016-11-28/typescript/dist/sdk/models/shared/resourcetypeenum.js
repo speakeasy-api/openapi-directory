@@ -1,4 +1,7 @@
-export var ResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceTypeEnum = void 0;
+var ResourceTypeEnum;
 (function (ResourceTypeEnum) {
     ResourceTypeEnum["ContainerService"] = "ContainerService";
     ResourceTypeEnum["Instance"] = "Instance";
@@ -20,4 +23,4 @@ export var ResourceTypeEnum;
     ResourceTypeEnum["Distribution"] = "Distribution";
     ResourceTypeEnum["Certificate"] = "Certificate";
     ResourceTypeEnum["Bucket"] = "Bucket";
-})(ResourceTypeEnum || (ResourceTypeEnum = {}));
+})(ResourceTypeEnum = exports.ResourceTypeEnum || (exports.ResourceTypeEnum = {}));

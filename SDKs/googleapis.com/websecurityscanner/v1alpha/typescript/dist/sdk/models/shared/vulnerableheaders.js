@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Header } from "./header";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VulnerableHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var header_1 = require("./header");
 // VulnerableHeaders
 /**
  * Information about vulnerable or missing HTTP Headers.
@@ -34,13 +37,13 @@ var VulnerableHeaders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: Header }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: header_1.Header }),
         __metadata("design:type", Array)
     ], VulnerableHeaders.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=missingHeaders", elemType: Header }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=missingHeaders", elemType: header_1.Header }),
         __metadata("design:type", Array)
     ], VulnerableHeaders.prototype, "missingHeaders", void 0);
     return VulnerableHeaders;
-}(SpeakeasyBase));
-export { VulnerableHeaders };
+}(utils_1.SpeakeasyBase));
+exports.VulnerableHeaders = VulnerableHeaders;

@@ -1,4 +1,7 @@
-export var ExecutionResultEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionResultEnum = void 0;
+var ExecutionResultEnum;
 (function (ExecutionResultEnum) {
     ExecutionResultEnum["Pending"] = "PENDING";
     ExecutionResultEnum["Passed"] = "PASSED";
@@ -7,4 +10,4 @@ export var ExecutionResultEnum;
     ExecutionResultEnum["Skipped"] = "SKIPPED";
     ExecutionResultEnum["Errored"] = "ERRORED";
     ExecutionResultEnum["Stopped"] = "STOPPED";
-})(ExecutionResultEnum || (ExecutionResultEnum = {}));
+})(ExecutionResultEnum = exports.ExecutionResultEnum || (exports.ExecutionResultEnum = {}));

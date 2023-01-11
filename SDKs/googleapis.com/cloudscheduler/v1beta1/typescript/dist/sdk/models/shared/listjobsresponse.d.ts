@@ -1,9 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-import { Job } from "./job";
-/**
- * Response message for listing jobs using ListJobs.
-**/
-export declare class ListJobsResponse extends SpeakeasyBase {
-    jobs?: Job[];
-    nextPageToken?: string;
-}

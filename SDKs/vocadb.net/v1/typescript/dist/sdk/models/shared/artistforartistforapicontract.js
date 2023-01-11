@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtistContract } from "./artistcontract";
-export var ArtistForArtistForApiContractLinkTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistForArtistForApiContract = exports.ArtistForArtistForApiContractLinkTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var artistcontract_1 = require("./artistcontract");
+var ArtistForArtistForApiContractLinkTypeEnum;
 (function (ArtistForArtistForApiContractLinkTypeEnum) {
     ArtistForArtistForApiContractLinkTypeEnum["CharacterDesigner"] = "CharacterDesigner";
     ArtistForArtistForApiContractLinkTypeEnum["Group"] = "Group";
     ArtistForArtistForApiContractLinkTypeEnum["Illustrator"] = "Illustrator";
     ArtistForArtistForApiContractLinkTypeEnum["Manager"] = "Manager";
     ArtistForArtistForApiContractLinkTypeEnum["VoiceProvider"] = "VoiceProvider";
-})(ArtistForArtistForApiContractLinkTypeEnum || (ArtistForArtistForApiContractLinkTypeEnum = {}));
+})(ArtistForArtistForApiContractLinkTypeEnum = exports.ArtistForArtistForApiContractLinkTypeEnum || (exports.ArtistForArtistForApiContractLinkTypeEnum = {}));
 var ArtistForArtistForApiContract = /** @class */ (function (_super) {
     __extends(ArtistForArtistForApiContract, _super);
     function ArtistForArtistForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
-        __metadata("design:type", ArtistContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
+        __metadata("design:type", artistcontract_1.ArtistContract)
     ], ArtistForArtistForApiContract.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkType" }),
         __metadata("design:type", String)
     ], ArtistForArtistForApiContract.prototype, "linkType", void 0);
     return ArtistForArtistForApiContract;
-}(SpeakeasyBase));
-export { ArtistForArtistForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.ArtistForArtistForApiContract = ArtistForArtistForApiContract;

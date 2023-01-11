@@ -101,5 +101,5 @@ export class IpamPrefixesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamPrefixesList200ApplicationJsonObject?: IpamPrefixesList200ApplicationJson;
+  ipamPrefixesList200ApplicationJSONObject?: IpamPrefixesList200ApplicationJson;
 }

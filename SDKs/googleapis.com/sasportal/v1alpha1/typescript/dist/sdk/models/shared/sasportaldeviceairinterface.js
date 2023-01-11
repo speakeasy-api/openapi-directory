@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SasPortalDeviceAirInterfaceRadioTechnologyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDeviceAirInterface = exports.SasPortalDeviceAirInterfaceRadioTechnologyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SasPortalDeviceAirInterfaceRadioTechnologyEnum;
 (function (SasPortalDeviceAirInterfaceRadioTechnologyEnum) {
     SasPortalDeviceAirInterfaceRadioTechnologyEnum["RadioTechnologyUnspecified"] = "RADIO_TECHNOLOGY_UNSPECIFIED";
     SasPortalDeviceAirInterfaceRadioTechnologyEnum["EUtra"] = "E_UTRA";
@@ -34,7 +37,7 @@ export var SasPortalDeviceAirInterfaceRadioTechnologyEnum;
     SasPortalDeviceAirInterfaceRadioTechnologyEnum["Cw"] = "CW";
     SasPortalDeviceAirInterfaceRadioTechnologyEnum["Redline"] = "REDLINE";
     SasPortalDeviceAirInterfaceRadioTechnologyEnum["TaranaWireless"] = "TARANA_WIRELESS";
-})(SasPortalDeviceAirInterfaceRadioTechnologyEnum || (SasPortalDeviceAirInterfaceRadioTechnologyEnum = {}));
+})(SasPortalDeviceAirInterfaceRadioTechnologyEnum = exports.SasPortalDeviceAirInterfaceRadioTechnologyEnum || (exports.SasPortalDeviceAirInterfaceRadioTechnologyEnum = {}));
 // SasPortalDeviceAirInterface
 /**
  * Information about the device's air interface.
@@ -45,13 +48,13 @@ var SasPortalDeviceAirInterface = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radioTechnology" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radioTechnology" }),
         __metadata("design:type", String)
     ], SasPortalDeviceAirInterface.prototype, "radioTechnology", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedSpec" }),
         __metadata("design:type", String)
     ], SasPortalDeviceAirInterface.prototype, "supportedSpec", void 0);
     return SasPortalDeviceAirInterface;
-}(SpeakeasyBase));
-export { SasPortalDeviceAirInterface };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeviceAirInterface = SasPortalDeviceAirInterface;

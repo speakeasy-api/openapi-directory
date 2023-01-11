@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCancelConversionTaskActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCancelConversionTaskResponse = exports.GetCancelConversionTaskRequest = exports.GetCancelConversionTaskHeaders = exports.GetCancelConversionTaskQueryParams = exports.GetCancelConversionTaskVersionEnum = exports.GetCancelConversionTaskActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCancelConversionTaskActionEnum;
 (function (GetCancelConversionTaskActionEnum) {
     GetCancelConversionTaskActionEnum["CancelConversionTask"] = "CancelConversionTask";
-})(GetCancelConversionTaskActionEnum || (GetCancelConversionTaskActionEnum = {}));
-export var GetCancelConversionTaskVersionEnum;
+})(GetCancelConversionTaskActionEnum = exports.GetCancelConversionTaskActionEnum || (exports.GetCancelConversionTaskActionEnum = {}));
+var GetCancelConversionTaskVersionEnum;
 (function (GetCancelConversionTaskVersionEnum) {
     GetCancelConversionTaskVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCancelConversionTaskVersionEnum || (GetCancelConversionTaskVersionEnum = {}));
+})(GetCancelConversionTaskVersionEnum = exports.GetCancelConversionTaskVersionEnum || (exports.GetCancelConversionTaskVersionEnum = {}));
 var GetCancelConversionTaskQueryParams = /** @class */ (function (_super) {
     __extends(GetCancelConversionTaskQueryParams, _super);
     function GetCancelConversionTaskQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConversionTaskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConversionTaskId" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskQueryParams.prototype, "conversionTaskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCancelConversionTaskQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReasonMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ReasonMessage" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskQueryParams.prototype, "reasonMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskQueryParams.prototype, "version", void 0);
     return GetCancelConversionTaskQueryParams;
-}(SpeakeasyBase));
-export { GetCancelConversionTaskQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelConversionTaskQueryParams = GetCancelConversionTaskQueryParams;
 var GetCancelConversionTaskHeaders = /** @class */ (function (_super) {
     __extends(GetCancelConversionTaskHeaders, _super);
     function GetCancelConversionTaskHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCancelConversionTaskHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCancelConversionTaskHeaders;
-}(SpeakeasyBase));
-export { GetCancelConversionTaskHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelConversionTaskHeaders = GetCancelConversionTaskHeaders;
 var GetCancelConversionTaskRequest = /** @class */ (function (_super) {
     __extends(GetCancelConversionTaskRequest, _super);
     function GetCancelConversionTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelConversionTaskQueryParams)
     ], GetCancelConversionTaskRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelConversionTaskHeaders)
     ], GetCancelConversionTaskRequest.prototype, "headers", void 0);
     return GetCancelConversionTaskRequest;
-}(SpeakeasyBase));
-export { GetCancelConversionTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelConversionTaskRequest = GetCancelConversionTaskRequest;
 var GetCancelConversionTaskResponse = /** @class */ (function (_super) {
     __extends(GetCancelConversionTaskResponse, _super);
     function GetCancelConversionTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCancelConversionTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCancelConversionTaskResponse.prototype, "statusCode", void 0);
     return GetCancelConversionTaskResponse;
-}(SpeakeasyBase));
-export { GetCancelConversionTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelConversionTaskResponse = GetCancelConversionTaskResponse;

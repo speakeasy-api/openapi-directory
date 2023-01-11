@@ -27,6 +27,6 @@ export declare class ProdTtSasportalNodesNodesDeleteRequest extends SpeakeasyBas
 }
 export declare class ProdTtSasportalNodesNodesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    sasPortalEmpty?: Map<string, any>;
+    sasPortalEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -14,7 +14,7 @@ export class IdentityGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  identityGetResponse?: Map<string, any>;
+  identityGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

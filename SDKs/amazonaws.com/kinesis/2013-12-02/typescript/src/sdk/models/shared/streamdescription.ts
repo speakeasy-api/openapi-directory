@@ -30,7 +30,7 @@ export class StreamDescription extends SpeakeasyBase {
   shards: Shard[];
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn: string;
+  streamARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamCreationTimestamp" })
   streamCreationTimestamp: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MinimumOrderValueTableStoreCodeSetWithMov = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 // MinimumOrderValueTableStoreCodeSetWithMov
 /**
  * A list of store code sets sharing the same minimum order value. At least two sets are required and the last one must be empty, which signifies 'MOV for all other stores'. Each store code can only appear once across all the sets. All prices within a service must have the same currency.
@@ -34,13 +37,13 @@ var MinimumOrderValueTableStoreCodeSetWithMov = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCodes" }),
         __metadata("design:type", Array)
     ], MinimumOrderValueTableStoreCodeSetWithMov.prototype, "storeCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", price_1.Price)
     ], MinimumOrderValueTableStoreCodeSetWithMov.prototype, "value", void 0);
     return MinimumOrderValueTableStoreCodeSetWithMov;
-}(SpeakeasyBase));
-export { MinimumOrderValueTableStoreCodeSetWithMov };
+}(utils_1.SpeakeasyBase));
+exports.MinimumOrderValueTableStoreCodeSetWithMov = MinimumOrderValueTableStoreCodeSetWithMov;

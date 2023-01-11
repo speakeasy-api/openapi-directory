@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource } from "./grafeasv1slsaprovenancezerotwoslsaconfigsource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var grafeasv1slsaprovenancezerotwoslsaconfigsource_1 = require("./grafeasv1slsaprovenancezerotwoslsaconfigsource");
 // GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation
 /**
  * Identifies the event that kicked off the build.
@@ -34,17 +37,17 @@ var GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configSource" }),
-        __metadata("design:type", GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configSource" }),
+        __metadata("design:type", grafeasv1slsaprovenancezerotwoslsaconfigsource_1.GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation.prototype, "configSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", Object)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
     ], GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation.prototype, "parameters", void 0);
     return GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation;
-}(SpeakeasyBase));
-export { GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation };
+}(utils_1.SpeakeasyBase));
+exports.GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation = GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation;

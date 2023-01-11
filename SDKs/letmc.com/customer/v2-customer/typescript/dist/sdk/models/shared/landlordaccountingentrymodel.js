@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordAccountingEntryModel = void 0;
+var utils_1 = require("../../../internal/utils");
 // LandlordAccountingEntryModel
 /**
  * Landlord Accounting - Finance Entry
@@ -33,21 +36,21 @@ var LandlordAccountingEntryModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
         __metadata("design:type", Number)
     ], LandlordAccountingEntryModel.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Date" }),
         __metadata("design:type", Date)
     ], LandlordAccountingEntryModel.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], LandlordAccountingEntryModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionNumber" }),
         __metadata("design:type", Number)
     ], LandlordAccountingEntryModel.prototype, "transactionNumber", void 0);
     return LandlordAccountingEntryModel;
-}(SpeakeasyBase));
-export { LandlordAccountingEntryModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordAccountingEntryModel = LandlordAccountingEntryModel;

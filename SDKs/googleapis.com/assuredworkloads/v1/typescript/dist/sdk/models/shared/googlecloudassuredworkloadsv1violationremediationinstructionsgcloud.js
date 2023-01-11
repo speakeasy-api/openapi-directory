@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud
 /**
  * Remediation instructions to resolve violation via gcloud cli
@@ -33,17 +36,17 @@ var GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalLinks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalLinks" }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud.prototype, "additionalLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcloudCommands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcloudCommands" }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud.prototype, "gcloudCommands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps" }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud.prototype, "steps", void 0);
     return GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud = GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud;

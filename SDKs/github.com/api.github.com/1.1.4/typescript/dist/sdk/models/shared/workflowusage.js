@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowUsage = exports.WorkflowUsageBillable = exports.WorkflowUsageBillableWindows = exports.WorkflowUsageBillableUbuntu = exports.WorkflowUsageBillableMacos = void 0;
+var utils_1 = require("../../../internal/utils");
 var WorkflowUsageBillableMacos = /** @class */ (function (_super) {
     __extends(WorkflowUsageBillableMacos, _super);
     function WorkflowUsageBillableMacos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_ms" }),
         __metadata("design:type", Number)
     ], WorkflowUsageBillableMacos.prototype, "totalMs", void 0);
     return WorkflowUsageBillableMacos;
-}(SpeakeasyBase));
-export { WorkflowUsageBillableMacos };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowUsageBillableMacos = WorkflowUsageBillableMacos;
 var WorkflowUsageBillableUbuntu = /** @class */ (function (_super) {
     __extends(WorkflowUsageBillableUbuntu, _super);
     function WorkflowUsageBillableUbuntu() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_ms" }),
         __metadata("design:type", Number)
     ], WorkflowUsageBillableUbuntu.prototype, "totalMs", void 0);
     return WorkflowUsageBillableUbuntu;
-}(SpeakeasyBase));
-export { WorkflowUsageBillableUbuntu };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowUsageBillableUbuntu = WorkflowUsageBillableUbuntu;
 var WorkflowUsageBillableWindows = /** @class */ (function (_super) {
     __extends(WorkflowUsageBillableWindows, _super);
     function WorkflowUsageBillableWindows() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_ms" }),
         __metadata("design:type", Number)
     ], WorkflowUsageBillableWindows.prototype, "totalMs", void 0);
     return WorkflowUsageBillableWindows;
-}(SpeakeasyBase));
-export { WorkflowUsageBillableWindows };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowUsageBillableWindows = WorkflowUsageBillableWindows;
 var WorkflowUsageBillable = /** @class */ (function (_super) {
     __extends(WorkflowUsageBillable, _super);
     function WorkflowUsageBillable() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MACOS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MACOS" }),
         __metadata("design:type", WorkflowUsageBillableMacos)
     ], WorkflowUsageBillable.prototype, "macos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UBUNTU" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UBUNTU" }),
         __metadata("design:type", WorkflowUsageBillableUbuntu)
     ], WorkflowUsageBillable.prototype, "ubuntu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WINDOWS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WINDOWS" }),
         __metadata("design:type", WorkflowUsageBillableWindows)
     ], WorkflowUsageBillable.prototype, "windows", void 0);
     return WorkflowUsageBillable;
-}(SpeakeasyBase));
-export { WorkflowUsageBillable };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowUsageBillable = WorkflowUsageBillable;
 // WorkflowUsage
 /**
  * Workflow Usage
@@ -89,9 +92,9 @@ var WorkflowUsage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billable" }),
         __metadata("design:type", WorkflowUsageBillable)
     ], WorkflowUsage.prototype, "billable", void 0);
     return WorkflowUsage;
-}(SpeakeasyBase));
-export { WorkflowUsage };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowUsage = WorkflowUsage;

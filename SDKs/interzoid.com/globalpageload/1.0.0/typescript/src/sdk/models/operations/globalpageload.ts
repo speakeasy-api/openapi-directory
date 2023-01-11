@@ -49,5 +49,5 @@ export class GlobalpageloadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  globalpageload200ApplicationJsonObject?: Globalpageload200ApplicationJson;
+  globalpageload200ApplicationJSONObject?: Globalpageload200ApplicationJson;
 }

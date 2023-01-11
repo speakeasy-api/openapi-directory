@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MeasurementProcessingConfig } from "./measurementprocessingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Measurement = void 0;
+var utils_1 = require("../../../internal/utils");
+var measurementprocessingconfig_1 = require("./measurementprocessingconfig");
 // Measurement
 /**
  * Contains an asset measurement property. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#measurements">Measurements</a> in the <i>IoT SiteWise User Guide</i>.
@@ -34,9 +37,9 @@ var Measurement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingConfig" }),
-        __metadata("design:type", MeasurementProcessingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingConfig" }),
+        __metadata("design:type", measurementprocessingconfig_1.MeasurementProcessingConfig)
     ], Measurement.prototype, "processingConfig", void 0);
     return Measurement;
-}(SpeakeasyBase));
-export { Measurement };
+}(utils_1.SpeakeasyBase));
+exports.Measurement = Measurement;

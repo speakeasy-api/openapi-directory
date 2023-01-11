@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Image = void 0;
+var utils_1 = require("../../../internal/utils");
 var Image = /** @class */ (function (_super) {
     __extends(Image, _super);
     function Image() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frames" }),
         __metadata("design:type", String)
     ], Image.prototype, "frames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", String)
     ], Image.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mp4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mp4" }),
         __metadata("design:type", String)
     ], Image.prototype, "mp4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mp4_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mp4_size" }),
         __metadata("design:type", String)
     ], Image.prototype, "mp4Size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], Image.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Image.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webp" }),
         __metadata("design:type", String)
     ], Image.prototype, "webp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webp_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webp_size" }),
         __metadata("design:type", String)
     ], Image.prototype, "webpSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", String)
     ], Image.prototype, "width", void 0);
     return Image;
-}(SpeakeasyBase));
-export { Image };
+}(utils_1.SpeakeasyBase));
+exports.Image = Image;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkCameraQualityRetentionProfileResponse = exports.CreateNetworkCameraQualityRetentionProfileRequest = exports.CreateNetworkCameraQualityRetentionProfileRequestBody = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32 = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71 = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72 = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum = exports.CreateNetworkCameraQualityRetentionProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkCameraQualityRetentionProfilePathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraQualityRetentionProfilePathParams, _super);
     function CreateNetworkCameraQualityRetentionProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfilePathParams.prototype, "networkId", void 0);
     return CreateNetworkCameraQualityRetentionProfilePathParams;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfilePathParams };
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfilePathParams = CreateNetworkCameraQualityRetentionProfilePathParams;
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum["Standard"] = "Standard";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum["Enhanced"] = "Enhanced";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum["High"] = "High";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum = {}));
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum;
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72QualityEnum = {}));
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum["OneThousandTwoHundredAndEightyx720"] = "1280x720";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum["OneThousandNineHundredAndTwentyx1080"] = "1920x1080";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum = {}));
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72ResolutionEnum = {}));
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72
 /**
  * Quality and resolution for MV12/MV22/MV72 camera models.
@@ -56,27 +59,27 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72.prototype, "resolution", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72 };
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72 = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72;
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum["Standard"] = "Standard";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum["Enhanced"] = "Enhanced";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum["High"] = "High";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum = {}));
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum;
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeQualityEnum = {}));
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum["OneThousandTwoHundredAndEightyx720"] = "1280x720";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum["OneThousandNineHundredAndTwentyx1080"] = "1920x1080";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum = {}));
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12WeResolutionEnum = {}));
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We
 /**
  * Quality and resolution for MV12WE camera models.
@@ -87,26 +90,26 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We = /
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We.prototype, "resolution", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We };
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We;
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum["Standard"] = "Standard";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum["Enhanced"] = "Enhanced";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum["High"] = "High";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum = {}));
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum;
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71QualityEnum = {}));
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum["OneThousandTwoHundredAndEightyx720"] = "1280x720";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum = {}));
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71ResolutionEnum = {}));
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71
 /**
  * Quality and resolution for MV21/MV71 camera models.
@@ -117,28 +120,28 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71 =
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71.prototype, "resolution", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71 };
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71 = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71;
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum["Standard"] = "Standard";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum["Enhanced"] = "Enhanced";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum["High"] = "High";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum = {}));
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum;
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XQualityEnum = {}));
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum["OneThousandTwoHundredAndEightyx720"] = "1280x720";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum["OneThousandNineHundredAndTwentyx1080"] = "1920x1080";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum["TwoThousandSixHundredAndEightyEightx1512"] = "2688x1512";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum = {}));
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72XResolutionEnum = {}));
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X
 /**
  * Quality and resolution for MV22X/MV72X camera models.
@@ -149,27 +152,27 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X.prototype, "resolution", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X };
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X;
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum["Standard"] = "Standard";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum["Enhanced"] = "Enhanced";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum["High"] = "High";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum = {}));
-export var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum;
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32QualityEnum = {}));
+var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum;
 (function (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum) {
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum["OneThousandAndEightyx1080"] = "1080x1080";
     CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum["TwoThousandAndFiftyEightx2058"] = "2058x2058";
-})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum || (CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum = {}));
+})(CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum = exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum || (exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32ResolutionEnum = {}));
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32
 /**
  * Quality and resolution for MV32 camera models.
@@ -180,16 +183,16 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32 = /**
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32.prototype, "resolution", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32 };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32 = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32;
 // CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings
 /**
  * Video quality and resolution settings for all the camera models.
@@ -200,105 +203,105 @@ var CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MV12/MV22/MV72" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MV12/MV22/MV72" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12Mv22Mv72)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv12Mv22Mv72", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MV12WE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MV12WE" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv12We)
-    ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv12We", void 0);
+    ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv12WE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MV21/MV71" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MV21/MV71" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv21Mv71)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv21Mv71", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MV22X/MV72X" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MV22X/MV72X" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv22XMv72X)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv22XMv72X", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MV32" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MV32" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettingsMv32)
     ], CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings.prototype, "mv32", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings = CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings;
 var CreateNetworkCameraQualityRetentionProfileRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraQualityRetentionProfileRequestBody, _super);
     function CreateNetworkCameraQualityRetentionProfileRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioRecordingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioRecordingEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "audioRecordingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudArchiveEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudArchiveEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "cloudArchiveEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxRetentionDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxRetentionDays" }),
         __metadata("design:type", Number)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "maxRetentionDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motionBasedRetentionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motionBasedRetentionEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "motionBasedRetentionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motionDetectorVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motionDetectorVersion" }),
         __metadata("design:type", Number)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "motionDetectorVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedBandwidthModeEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedBandwidthModeEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "restrictedBandwidthModeEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleId" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "scheduleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoSettings" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBodyVideoSettings)
     ], CreateNetworkCameraQualityRetentionProfileRequestBody.prototype, "videoSettings", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequestBody = CreateNetworkCameraQualityRetentionProfileRequestBody;
 var CreateNetworkCameraQualityRetentionProfileRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraQualityRetentionProfileRequest, _super);
     function CreateNetworkCameraQualityRetentionProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfilePathParams)
     ], CreateNetworkCameraQualityRetentionProfileRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkCameraQualityRetentionProfileRequestBody)
     ], CreateNetworkCameraQualityRetentionProfileRequest.prototype, "request", void 0);
     return CreateNetworkCameraQualityRetentionProfileRequest;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileRequest = CreateNetworkCameraQualityRetentionProfileRequest;
 var CreateNetworkCameraQualityRetentionProfileResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraQualityRetentionProfileResponse, _super);
     function CreateNetworkCameraQualityRetentionProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkCameraQualityRetentionProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkCameraQualityRetentionProfileResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkCameraQualityRetentionProfileResponse.prototype, "createNetworkCameraQualityRetentionProfile200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkCameraQualityRetentionProfileResponse.prototype, "createNetworkCameraQualityRetentionProfile200ApplicationJSONObject", void 0);
     return CreateNetworkCameraQualityRetentionProfileResponse;
-}(SpeakeasyBase));
-export { CreateNetworkCameraQualityRetentionProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraQualityRetentionProfileResponse = CreateNetworkCameraQualityRetentionProfileResponse;

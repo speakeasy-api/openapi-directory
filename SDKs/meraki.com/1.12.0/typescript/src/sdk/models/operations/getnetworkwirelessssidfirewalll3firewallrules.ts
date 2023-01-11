@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidFirewallL3FirewallRulesResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsidFirewallL3FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -185,23 +185,23 @@ export class ArcmwResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  arcmw400ApplicationJsonObject?: Arcmw400ApplicationJson;
+  arcmw400ApplicationJSONObject?: Arcmw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw401ApplicationJsonObject?: Arcmw401ApplicationJson;
+  arcmw401ApplicationJSONObject?: Arcmw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw404ApplicationJsonObject?: Arcmw404ApplicationJson;
+  arcmw404ApplicationJSONObject?: Arcmw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw500ApplicationJsonObject?: Arcmw500ApplicationJson;
+  arcmw500ApplicationJSONObject?: Arcmw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw502ApplicationJsonObject?: Arcmw502ApplicationJson;
+  arcmw502ApplicationJSONObject?: Arcmw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw503ApplicationJsonObject?: Arcmw503ApplicationJson;
+  arcmw503ApplicationJSONObject?: Arcmw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  arcmw504ApplicationJsonObject?: Arcmw504ApplicationJson;
+  arcmw504ApplicationJSONObject?: Arcmw504ApplicationJson;
 }

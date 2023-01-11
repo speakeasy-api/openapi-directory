@@ -58,5 +58,5 @@ export class UpdateNetworkTrafficAnalysisResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkTrafficAnalysis200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkTrafficAnalysis200ApplicationJSONObject?: Record<string, any>;
 }

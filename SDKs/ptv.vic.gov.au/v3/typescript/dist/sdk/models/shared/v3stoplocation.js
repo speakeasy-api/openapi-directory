@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3StopGps } from "./v3stopgps";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3StopLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3stopgps_1 = require("./v3stopgps");
 var V3StopLocation = /** @class */ (function (_super) {
     __extends(V3StopLocation, _super);
     function V3StopLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gps" }),
-        __metadata("design:type", V3StopGps)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gps" }),
+        __metadata("design:type", v3stopgps_1.V3StopGps)
     ], V3StopLocation.prototype, "gps", void 0);
     return V3StopLocation;
-}(SpeakeasyBase));
-export { V3StopLocation };
+}(utils_1.SpeakeasyBase));
+exports.V3StopLocation = V3StopLocation;

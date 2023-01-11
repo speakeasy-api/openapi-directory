@@ -29,10 +29,10 @@ export class GetCustomersAccountAnnouncementsAnnouncementIdResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCustomersAccountAnnouncementsAnnouncementId404ApplicationJsonObject?: GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject?: GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJson;
 
   @SpeakeasyMetadata()
   oneannouncementsPostResponses201ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses201ContentApplication1jsonSchema;

@@ -12,5 +12,5 @@ export declare class ProtocolNetflowChangeAttrRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowChangeAttrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowChangeAttr200ApplicationJsonString?: string;
+    protocolNetflowChangeAttr200ApplicationJSONString?: string;
 }

@@ -10,5 +10,5 @@ export declare class UpdateMemberRequest extends SpeakeasyBase {
 export declare class UpdateMemberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateMember200ApplicationJsonAny?: any;
+    updateMember200ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ThirdPartyLinkStatusLinkStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThirdPartyLinkStatus = exports.ThirdPartyLinkStatusLinkStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ThirdPartyLinkStatusLinkStatusEnum;
 (function (ThirdPartyLinkStatusLinkStatusEnum) {
     ThirdPartyLinkStatusLinkStatusEnum["Unknown"] = "unknown";
     ThirdPartyLinkStatusLinkStatusEnum["Failed"] = "failed";
     ThirdPartyLinkStatusLinkStatusEnum["Pending"] = "pending";
     ThirdPartyLinkStatusLinkStatusEnum["Linked"] = "linked";
-})(ThirdPartyLinkStatusLinkStatusEnum || (ThirdPartyLinkStatusLinkStatusEnum = {}));
+})(ThirdPartyLinkStatusLinkStatusEnum = exports.ThirdPartyLinkStatusLinkStatusEnum || (exports.ThirdPartyLinkStatusLinkStatusEnum = {}));
 // ThirdPartyLinkStatus
 /**
  * The third-party link status object contains information about the status of the link.
@@ -40,9 +43,9 @@ var ThirdPartyLinkStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkStatus" }),
         __metadata("design:type", String)
     ], ThirdPartyLinkStatus.prototype, "linkStatus", void 0);
     return ThirdPartyLinkStatus;
-}(SpeakeasyBase));
-export { ThirdPartyLinkStatus };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyLinkStatus = ThirdPartyLinkStatus;

@@ -13,6 +13,6 @@ export declare class GetStatusRequest extends SpeakeasyBase {
 export declare class GetStatusResponse extends SpeakeasyBase {
     apiStatus?: shared.ApiStatus;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

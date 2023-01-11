@@ -52,5 +52,5 @@ export class UpdateNetworkSnmpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSnmp200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSnmp200ApplicationJSONObject?: Record<string, any>;
 }

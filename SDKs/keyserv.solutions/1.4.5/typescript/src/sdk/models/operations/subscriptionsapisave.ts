@@ -16,5 +16,5 @@ export class SubscriptionsApiSaveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  subscriptionsApiSave201ApplicationJsonOneOf?: any;
+  subscriptionsApiSave201ApplicationJSONOneOf?: any;
 }

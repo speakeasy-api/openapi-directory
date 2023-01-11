@@ -30,5 +30,5 @@ export declare class DcimDeviceTypesListRequest extends SpeakeasyBase {
 export declare class DcimDeviceTypesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimDeviceTypesList200ApplicationJsonObject?: DcimDeviceTypesList200ApplicationJson;
+    dcimDeviceTypesList200ApplicationJSONObject?: DcimDeviceTypesList200ApplicationJson;
 }

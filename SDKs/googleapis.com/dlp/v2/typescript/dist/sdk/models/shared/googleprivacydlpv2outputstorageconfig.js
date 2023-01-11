@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
-export var GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2OutputStorageConfig = exports.GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
+var GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum;
 (function (GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum) {
     GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum["OutputSchemaUnspecified"] = "OUTPUT_SCHEMA_UNSPECIFIED";
     GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum["BasicColumns"] = "BASIC_COLUMNS";
@@ -32,7 +35,7 @@ export var GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum;
     GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum["DatastoreColumns"] = "DATASTORE_COLUMNS";
     GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum["BigQueryColumns"] = "BIG_QUERY_COLUMNS";
     GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum["AllColumns"] = "ALL_COLUMNS";
-})(GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum || (GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum = {}));
+})(GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum = exports.GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum || (exports.GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum = {}));
 // GooglePrivacyDlpV2OutputStorageConfig
 /**
  * Cloud repository for storing output.
@@ -43,13 +46,13 @@ var GooglePrivacyDlpV2OutputStorageConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputSchema" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2OutputStorageConfig.prototype, "outputSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=table" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=table" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2OutputStorageConfig.prototype, "table", void 0);
     return GooglePrivacyDlpV2OutputStorageConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2OutputStorageConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2OutputStorageConfig = GooglePrivacyDlpV2OutputStorageConfig;

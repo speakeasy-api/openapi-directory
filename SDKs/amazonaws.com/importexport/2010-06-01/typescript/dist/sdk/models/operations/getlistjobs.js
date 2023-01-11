@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListJobsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListJobsResponse = exports.GetListJobsRequest = exports.GetListJobsQueryParams = exports.GetListJobsVersionEnum = exports.GetListJobsOperationEnum = exports.GetListJobsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListJobsActionEnum;
 (function (GetListJobsActionEnum) {
     GetListJobsActionEnum["ListJobs"] = "ListJobs";
-})(GetListJobsActionEnum || (GetListJobsActionEnum = {}));
-export var GetListJobsOperationEnum;
+})(GetListJobsActionEnum = exports.GetListJobsActionEnum || (exports.GetListJobsActionEnum = {}));
+var GetListJobsOperationEnum;
 (function (GetListJobsOperationEnum) {
     GetListJobsOperationEnum["ListJobs"] = "ListJobs";
-})(GetListJobsOperationEnum || (GetListJobsOperationEnum = {}));
-export var GetListJobsVersionEnum;
+})(GetListJobsOperationEnum = exports.GetListJobsOperationEnum || (exports.GetListJobsOperationEnum = {}));
+var GetListJobsVersionEnum;
 (function (GetListJobsVersionEnum) {
     GetListJobsVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(GetListJobsVersionEnum || (GetListJobsVersionEnum = {}));
+})(GetListJobsVersionEnum = exports.GetListJobsVersionEnum || (exports.GetListJobsVersionEnum = {}));
 var GetListJobsQueryParams = /** @class */ (function (_super) {
     __extends(GetListJobsQueryParams, _super);
     function GetListJobsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxJobs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxJobs" }),
         __metadata("design:type", Number)
     ], GetListJobsQueryParams.prototype, "maxJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListJobsQueryParams.prototype, "version", void 0);
     return GetListJobsQueryParams;
-}(SpeakeasyBase));
-export { GetListJobsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListJobsQueryParams = GetListJobsQueryParams;
 var GetListJobsRequest = /** @class */ (function (_super) {
     __extends(GetListJobsRequest, _super);
     function GetListJobsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListJobsQueryParams)
     ], GetListJobsRequest.prototype, "queryParams", void 0);
     return GetListJobsRequest;
-}(SpeakeasyBase));
-export { GetListJobsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListJobsRequest = GetListJobsRequest;
 var GetListJobsResponse = /** @class */ (function (_super) {
     __extends(GetListJobsResponse, _super);
     function GetListJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListJobsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListJobsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListJobsResponse.prototype, "statusCode", void 0);
     return GetListJobsResponse;
-}(SpeakeasyBase));
-export { GetListJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListJobsResponse = GetListJobsResponse;

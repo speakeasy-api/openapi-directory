@@ -27,7 +27,7 @@ export declare class PostAgentProfileRequest extends SpeakeasyBase {
 export declare class PostAgentProfileResponse extends SpeakeasyBase {
     contentType: string;
     internalServerException?: any;
-    postAgentProfileResponse?: Map<string, any>;
+    postAgentProfileResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

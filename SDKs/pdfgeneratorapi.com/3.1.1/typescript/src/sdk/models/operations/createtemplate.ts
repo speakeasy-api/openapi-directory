@@ -98,20 +98,20 @@ export class CreateTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createTemplate200ApplicationJsonObject?: CreateTemplate200ApplicationJson;
+  createTemplate200ApplicationJSONObject?: CreateTemplate200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createTemplate401ApplicationJsonObject?: CreateTemplate401ApplicationJson;
+  createTemplate401ApplicationJSONObject?: CreateTemplate401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createTemplate403ApplicationJsonObject?: CreateTemplate403ApplicationJson;
+  createTemplate403ApplicationJSONObject?: CreateTemplate403ApplicationJson;
 
   @SpeakeasyMetadata()
-  createTemplate404ApplicationJsonObject?: CreateTemplate404ApplicationJson;
+  createTemplate404ApplicationJSONObject?: CreateTemplate404ApplicationJson;
 
   @SpeakeasyMetadata()
-  createTemplate422ApplicationJsonObject?: CreateTemplate422ApplicationJson;
+  createTemplate422ApplicationJSONObject?: CreateTemplate422ApplicationJson;
 
   @SpeakeasyMetadata()
-  createTemplate500ApplicationJsonObject?: CreateTemplate500ApplicationJson;
+  createTemplate500ApplicationJSONObject?: CreateTemplate500ApplicationJson;
 }

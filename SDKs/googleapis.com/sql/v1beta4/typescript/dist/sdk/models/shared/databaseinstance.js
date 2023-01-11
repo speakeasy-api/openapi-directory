@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiskEncryptionConfiguration } from "./diskencryptionconfiguration";
-import { DiskEncryptionStatus } from "./diskencryptionstatus";
-import { IpMapping } from "./ipmapping";
-import { OnPremisesConfiguration } from "./onpremisesconfiguration";
-import { SqlOutOfDiskReport } from "./sqloutofdiskreport";
-import { ReplicaConfiguration } from "./replicaconfiguration";
-import { SqlScheduledMaintenance } from "./sqlscheduledmaintenance";
-import { SslCert } from "./sslcert";
-import { Settings } from "./settings";
-export var DatabaseInstanceBackendTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseInstanceInput = exports.DatabaseInstance = exports.DatabaseInstanceSuspensionReasonEnum = exports.DatabaseInstanceStateEnum = exports.DatabaseInstanceInstanceTypeEnum = exports.DatabaseInstanceFailoverReplica = exports.DatabaseInstanceDatabaseVersionEnum = exports.DatabaseInstanceBackendTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var diskencryptionconfiguration_1 = require("./diskencryptionconfiguration");
+var diskencryptionstatus_1 = require("./diskencryptionstatus");
+var ipmapping_1 = require("./ipmapping");
+var onpremisesconfiguration_1 = require("./onpremisesconfiguration");
+var sqloutofdiskreport_1 = require("./sqloutofdiskreport");
+var replicaconfiguration_1 = require("./replicaconfiguration");
+var sqlscheduledmaintenance_1 = require("./sqlscheduledmaintenance");
+var sslcert_1 = require("./sslcert");
+var settings_1 = require("./settings");
+var DatabaseInstanceBackendTypeEnum;
 (function (DatabaseInstanceBackendTypeEnum) {
     DatabaseInstanceBackendTypeEnum["SqlBackendTypeUnspecified"] = "SQL_BACKEND_TYPE_UNSPECIFIED";
     DatabaseInstanceBackendTypeEnum["FirstGen"] = "FIRST_GEN";
     DatabaseInstanceBackendTypeEnum["SecondGen"] = "SECOND_GEN";
     DatabaseInstanceBackendTypeEnum["External"] = "EXTERNAL";
-})(DatabaseInstanceBackendTypeEnum || (DatabaseInstanceBackendTypeEnum = {}));
-export var DatabaseInstanceDatabaseVersionEnum;
+})(DatabaseInstanceBackendTypeEnum = exports.DatabaseInstanceBackendTypeEnum || (exports.DatabaseInstanceBackendTypeEnum = {}));
+var DatabaseInstanceDatabaseVersionEnum;
 (function (DatabaseInstanceDatabaseVersionEnum) {
     DatabaseInstanceDatabaseVersionEnum["SqlDatabaseVersionUnspecified"] = "SQL_DATABASE_VERSION_UNSPECIFIED";
     DatabaseInstanceDatabaseVersionEnum["Mysql51"] = "MYSQL_5_1";
@@ -67,7 +70,7 @@ export var DatabaseInstanceDatabaseVersionEnum;
     DatabaseInstanceDatabaseVersionEnum["Sqlserver2019Enterprise"] = "SQLSERVER_2019_ENTERPRISE";
     DatabaseInstanceDatabaseVersionEnum["Sqlserver2019Express"] = "SQLSERVER_2019_EXPRESS";
     DatabaseInstanceDatabaseVersionEnum["Sqlserver2019Web"] = "SQLSERVER_2019_WEB";
-})(DatabaseInstanceDatabaseVersionEnum || (DatabaseInstanceDatabaseVersionEnum = {}));
+})(DatabaseInstanceDatabaseVersionEnum = exports.DatabaseInstanceDatabaseVersionEnum || (exports.DatabaseInstanceDatabaseVersionEnum = {}));
 // DatabaseInstanceFailoverReplica
 /**
  * The name and status of the failover replica.
@@ -78,24 +81,24 @@ var DatabaseInstanceFailoverReplica = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Boolean)
     ], DatabaseInstanceFailoverReplica.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatabaseInstanceFailoverReplica.prototype, "name", void 0);
     return DatabaseInstanceFailoverReplica;
-}(SpeakeasyBase));
-export { DatabaseInstanceFailoverReplica };
-export var DatabaseInstanceInstanceTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInstanceFailoverReplica = DatabaseInstanceFailoverReplica;
+var DatabaseInstanceInstanceTypeEnum;
 (function (DatabaseInstanceInstanceTypeEnum) {
     DatabaseInstanceInstanceTypeEnum["SqlInstanceTypeUnspecified"] = "SQL_INSTANCE_TYPE_UNSPECIFIED";
     DatabaseInstanceInstanceTypeEnum["CloudSqlInstance"] = "CLOUD_SQL_INSTANCE";
     DatabaseInstanceInstanceTypeEnum["OnPremisesInstance"] = "ON_PREMISES_INSTANCE";
     DatabaseInstanceInstanceTypeEnum["ReadReplicaInstance"] = "READ_REPLICA_INSTANCE";
-})(DatabaseInstanceInstanceTypeEnum || (DatabaseInstanceInstanceTypeEnum = {}));
-export var DatabaseInstanceStateEnum;
+})(DatabaseInstanceInstanceTypeEnum = exports.DatabaseInstanceInstanceTypeEnum || (exports.DatabaseInstanceInstanceTypeEnum = {}));
+var DatabaseInstanceStateEnum;
 (function (DatabaseInstanceStateEnum) {
     DatabaseInstanceStateEnum["SqlInstanceStateUnspecified"] = "SQL_INSTANCE_STATE_UNSPECIFIED";
     DatabaseInstanceStateEnum["Runnable"] = "RUNNABLE";
@@ -105,15 +108,15 @@ export var DatabaseInstanceStateEnum;
     DatabaseInstanceStateEnum["Maintenance"] = "MAINTENANCE";
     DatabaseInstanceStateEnum["Failed"] = "FAILED";
     DatabaseInstanceStateEnum["OnlineMaintenance"] = "ONLINE_MAINTENANCE";
-})(DatabaseInstanceStateEnum || (DatabaseInstanceStateEnum = {}));
-export var DatabaseInstanceSuspensionReasonEnum;
+})(DatabaseInstanceStateEnum = exports.DatabaseInstanceStateEnum || (exports.DatabaseInstanceStateEnum = {}));
+var DatabaseInstanceSuspensionReasonEnum;
 (function (DatabaseInstanceSuspensionReasonEnum) {
     DatabaseInstanceSuspensionReasonEnum["SqlSuspensionReasonUnspecified"] = "SQL_SUSPENSION_REASON_UNSPECIFIED";
     DatabaseInstanceSuspensionReasonEnum["BillingIssue"] = "BILLING_ISSUE";
     DatabaseInstanceSuspensionReasonEnum["LegalIssue"] = "LEGAL_ISSUE";
     DatabaseInstanceSuspensionReasonEnum["OperationalIssue"] = "OPERATIONAL_ISSUE";
     DatabaseInstanceSuspensionReasonEnum["KmsKeyIssue"] = "KMS_KEY_ISSUE";
-})(DatabaseInstanceSuspensionReasonEnum || (DatabaseInstanceSuspensionReasonEnum = {}));
+})(DatabaseInstanceSuspensionReasonEnum = exports.DatabaseInstanceSuspensionReasonEnum || (exports.DatabaseInstanceSuspensionReasonEnum = {}));
 // DatabaseInstance
 /**
  * A Cloud SQL instance resource.
@@ -124,152 +127,152 @@ var DatabaseInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableMaintenanceVersions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableMaintenanceVersions" }),
         __metadata("design:type", Array)
     ], DatabaseInstance.prototype, "availableMaintenanceVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backendType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backendType" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "backendType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionName" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "connectionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentDiskSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentDiskSize" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "currentDiskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseInstalledVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseInstalledVersion" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "databaseInstalledVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseVersion" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "databaseVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionConfiguration" }),
-        __metadata("design:type", DiskEncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionConfiguration" }),
+        __metadata("design:type", diskencryptionconfiguration_1.DiskEncryptionConfiguration)
     ], DatabaseInstance.prototype, "diskEncryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionStatus" }),
-        __metadata("design:type", DiskEncryptionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionStatus" }),
+        __metadata("design:type", diskencryptionstatus_1.DiskEncryptionStatus)
     ], DatabaseInstance.prototype, "diskEncryptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failoverReplica" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failoverReplica" }),
         __metadata("design:type", DatabaseInstanceFailoverReplica)
     ], DatabaseInstance.prototype, "failoverReplica", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gceZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gceZone" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "gceZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddresses", elemType: IpMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddresses", elemType: ipmapping_1.IpMapping }),
         __metadata("design:type", Array)
     ], DatabaseInstance.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Address" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "ipv6Address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenanceVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenanceVersion" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "maintenanceVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterInstanceName" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "masterInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDiskSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDiskSize" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "maxDiskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremisesConfiguration" }),
-        __metadata("design:type", OnPremisesConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremisesConfiguration" }),
+        __metadata("design:type", onpremisesconfiguration_1.OnPremisesConfiguration)
     ], DatabaseInstance.prototype, "onPremisesConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outOfDiskReport" }),
-        __metadata("design:type", SqlOutOfDiskReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outOfDiskReport" }),
+        __metadata("design:type", sqloutofdiskreport_1.SqlOutOfDiskReport)
     ], DatabaseInstance.prototype, "outOfDiskReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaConfiguration" }),
-        __metadata("design:type", ReplicaConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaConfiguration" }),
+        __metadata("design:type", replicaconfiguration_1.ReplicaConfiguration)
     ], DatabaseInstance.prototype, "replicaConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaNames" }),
         __metadata("design:type", Array)
     ], DatabaseInstance.prototype, "replicaNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPassword" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "rootPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=satisfiesPzs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=satisfiesPzs" }),
         __metadata("design:type", Boolean)
     ], DatabaseInstance.prototype, "satisfiesPzs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledMaintenance" }),
-        __metadata("design:type", SqlScheduledMaintenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledMaintenance" }),
+        __metadata("design:type", sqlscheduledmaintenance_1.SqlScheduledMaintenance)
     ], DatabaseInstance.prototype, "scheduledMaintenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryGceZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryGceZone" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "secondaryGceZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCaCert" }),
-        __metadata("design:type", SslCert)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCaCert" }),
+        __metadata("design:type", sslcert_1.SslCert)
     ], DatabaseInstance.prototype, "serverCaCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccountEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccountEmailAddress" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "serviceAccountEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Settings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", settings_1.Settings)
     ], DatabaseInstance.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspensionReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspensionReason" }),
         __metadata("design:type", Array)
     ], DatabaseInstance.prototype, "suspensionReason", void 0);
     return DatabaseInstance;
-}(SpeakeasyBase));
-export { DatabaseInstance };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInstance = DatabaseInstance;
 // DatabaseInstanceInput
 /**
  * A Cloud SQL instance resource.
@@ -280,141 +283,141 @@ var DatabaseInstanceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableMaintenanceVersions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableMaintenanceVersions" }),
         __metadata("design:type", Array)
     ], DatabaseInstanceInput.prototype, "availableMaintenanceVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backendType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backendType" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "backendType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionName" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "connectionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentDiskSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentDiskSize" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "currentDiskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseVersion" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "databaseVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionConfiguration" }),
-        __metadata("design:type", DiskEncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionConfiguration" }),
+        __metadata("design:type", diskencryptionconfiguration_1.DiskEncryptionConfiguration)
     ], DatabaseInstanceInput.prototype, "diskEncryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskEncryptionStatus" }),
-        __metadata("design:type", DiskEncryptionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskEncryptionStatus" }),
+        __metadata("design:type", diskencryptionstatus_1.DiskEncryptionStatus)
     ], DatabaseInstanceInput.prototype, "diskEncryptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failoverReplica" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failoverReplica" }),
         __metadata("design:type", DatabaseInstanceFailoverReplica)
     ], DatabaseInstanceInput.prototype, "failoverReplica", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gceZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gceZone" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "gceZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddresses", elemType: IpMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddresses", elemType: ipmapping_1.IpMapping }),
         __metadata("design:type", Array)
     ], DatabaseInstanceInput.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Address" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "ipv6Address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenanceVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenanceVersion" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "maintenanceVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterInstanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterInstanceName" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "masterInstanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDiskSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDiskSize" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "maxDiskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onPremisesConfiguration" }),
-        __metadata("design:type", OnPremisesConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onPremisesConfiguration" }),
+        __metadata("design:type", onpremisesconfiguration_1.OnPremisesConfiguration)
     ], DatabaseInstanceInput.prototype, "onPremisesConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outOfDiskReport" }),
-        __metadata("design:type", SqlOutOfDiskReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outOfDiskReport" }),
+        __metadata("design:type", sqloutofdiskreport_1.SqlOutOfDiskReport)
     ], DatabaseInstanceInput.prototype, "outOfDiskReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaConfiguration" }),
-        __metadata("design:type", ReplicaConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaConfiguration" }),
+        __metadata("design:type", replicaconfiguration_1.ReplicaConfiguration)
     ], DatabaseInstanceInput.prototype, "replicaConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicaNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicaNames" }),
         __metadata("design:type", Array)
     ], DatabaseInstanceInput.prototype, "replicaNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPassword" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "rootPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=satisfiesPzs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=satisfiesPzs" }),
         __metadata("design:type", Boolean)
     ], DatabaseInstanceInput.prototype, "satisfiesPzs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledMaintenance" }),
-        __metadata("design:type", SqlScheduledMaintenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledMaintenance" }),
+        __metadata("design:type", sqlscheduledmaintenance_1.SqlScheduledMaintenance)
     ], DatabaseInstanceInput.prototype, "scheduledMaintenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryGceZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryGceZone" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "secondaryGceZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCaCert" }),
-        __metadata("design:type", SslCert)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCaCert" }),
+        __metadata("design:type", sslcert_1.SslCert)
     ], DatabaseInstanceInput.prototype, "serverCaCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccountEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccountEmailAddress" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "serviceAccountEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", Settings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", settings_1.Settings)
     ], DatabaseInstanceInput.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspensionReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspensionReason" }),
         __metadata("design:type", Array)
     ], DatabaseInstanceInput.prototype, "suspensionReason", void 0);
     return DatabaseInstanceInput;
-}(SpeakeasyBase));
-export { DatabaseInstanceInput };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInstanceInput = DatabaseInstanceInput;

@@ -39,8 +39,8 @@ export declare class BookingPricingmatrix200ApplicationJson extends SpeakeasyBas
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -52,5 +52,5 @@ export declare class BookingPricingmatrixRequest extends SpeakeasyBase {
 export declare class BookingPricingmatrixResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingPricingmatrix200ApplicationJsonObject?: BookingPricingmatrix200ApplicationJson;
+    bookingPricingmatrix200ApplicationJSONObject?: BookingPricingmatrix200ApplicationJson;
 }

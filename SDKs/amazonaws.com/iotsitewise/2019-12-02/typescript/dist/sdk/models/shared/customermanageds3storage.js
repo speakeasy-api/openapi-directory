@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerManagedS3Storage = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomerManagedS3Storage
 /**
  * Contains information about a customer managed Amazon S3 bucket.
@@ -33,13 +36,13 @@ var CustomerManagedS3Storage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], CustomerManagedS3Storage.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3ResourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3ResourceArn" }),
         __metadata("design:type", String)
     ], CustomerManagedS3Storage.prototype, "s3ResourceArn", void 0);
     return CustomerManagedS3Storage;
-}(SpeakeasyBase));
-export { CustomerManagedS3Storage };
+}(utils_1.SpeakeasyBase));
+exports.CustomerManagedS3Storage = CustomerManagedS3Storage;

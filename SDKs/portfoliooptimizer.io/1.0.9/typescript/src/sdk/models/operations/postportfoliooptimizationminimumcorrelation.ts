@@ -31,8 +31,8 @@ export class PostPortfolioOptimizationMinimumCorrelationResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMinimumCorrelation200ApplicationJsonObject?: PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject?: PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
 }

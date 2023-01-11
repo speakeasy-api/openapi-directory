@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateAuthorityConfig } from "./certificateauthorityconfig";
-export var CertificateIssuanceConfigKeyAlgorithmEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateIssuanceConfigInput = exports.CertificateIssuanceConfig = exports.CertificateIssuanceConfigKeyAlgorithmEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificateauthorityconfig_1 = require("./certificateauthorityconfig");
+var CertificateIssuanceConfigKeyAlgorithmEnum;
 (function (CertificateIssuanceConfigKeyAlgorithmEnum) {
     CertificateIssuanceConfigKeyAlgorithmEnum["KeyAlgorithmUnspecified"] = "KEY_ALGORITHM_UNSPECIFIED";
     CertificateIssuanceConfigKeyAlgorithmEnum["Rsa2048"] = "RSA_2048";
     CertificateIssuanceConfigKeyAlgorithmEnum["EcdsaP256"] = "ECDSA_P256";
-})(CertificateIssuanceConfigKeyAlgorithmEnum || (CertificateIssuanceConfigKeyAlgorithmEnum = {}));
-// CertificateIssuanceConfigInput
-/**
- * CertificateIssuanceConfig specifies how to issue and manage a certificate.
-**/
-var CertificateIssuanceConfigInput = /** @class */ (function (_super) {
-    __extends(CertificateIssuanceConfigInput, _super);
-    function CertificateIssuanceConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthorityConfig" }),
-        __metadata("design:type", CertificateAuthorityConfig)
-    ], CertificateIssuanceConfigInput.prototype, "certificateAuthorityConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], CertificateIssuanceConfigInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyAlgorithm" }),
-        __metadata("design:type", String)
-    ], CertificateIssuanceConfigInput.prototype, "keyAlgorithm", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], CertificateIssuanceConfigInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
-        __metadata("design:type", String)
-    ], CertificateIssuanceConfigInput.prototype, "lifetime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], CertificateIssuanceConfigInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationWindowPercentage" }),
-        __metadata("design:type", Number)
-    ], CertificateIssuanceConfigInput.prototype, "rotationWindowPercentage", void 0);
-    return CertificateIssuanceConfigInput;
-}(SpeakeasyBase));
-export { CertificateIssuanceConfigInput };
+})(CertificateIssuanceConfigKeyAlgorithmEnum = exports.CertificateIssuanceConfigKeyAlgorithmEnum || (exports.CertificateIssuanceConfigKeyAlgorithmEnum = {}));
 // CertificateIssuanceConfig
 /**
  * CertificateIssuanceConfig specifies how to issue and manage a certificate.
@@ -80,41 +43,81 @@ var CertificateIssuanceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthorityConfig" }),
-        __metadata("design:type", CertificateAuthorityConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthorityConfig" }),
+        __metadata("design:type", certificateauthorityconfig_1.CertificateAuthorityConfig)
     ], CertificateIssuanceConfig.prototype, "certificateAuthorityConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyAlgorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyAlgorithm" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "keyAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], CertificateIssuanceConfig.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "lifetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationWindowPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationWindowPercentage" }),
         __metadata("design:type", Number)
     ], CertificateIssuanceConfig.prototype, "rotationWindowPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], CertificateIssuanceConfig.prototype, "updateTime", void 0);
     return CertificateIssuanceConfig;
-}(SpeakeasyBase));
-export { CertificateIssuanceConfig };
+}(utils_1.SpeakeasyBase));
+exports.CertificateIssuanceConfig = CertificateIssuanceConfig;
+// CertificateIssuanceConfigInput
+/**
+ * CertificateIssuanceConfig specifies how to issue and manage a certificate.
+**/
+var CertificateIssuanceConfigInput = /** @class */ (function (_super) {
+    __extends(CertificateIssuanceConfigInput, _super);
+    function CertificateIssuanceConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthorityConfig" }),
+        __metadata("design:type", certificateauthorityconfig_1.CertificateAuthorityConfig)
+    ], CertificateIssuanceConfigInput.prototype, "certificateAuthorityConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], CertificateIssuanceConfigInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyAlgorithm" }),
+        __metadata("design:type", String)
+    ], CertificateIssuanceConfigInput.prototype, "keyAlgorithm", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], CertificateIssuanceConfigInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifetime" }),
+        __metadata("design:type", String)
+    ], CertificateIssuanceConfigInput.prototype, "lifetime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], CertificateIssuanceConfigInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationWindowPercentage" }),
+        __metadata("design:type", Number)
+    ], CertificateIssuanceConfigInput.prototype, "rotationWindowPercentage", void 0);
+    return CertificateIssuanceConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.CertificateIssuanceConfigInput = CertificateIssuanceConfigInput;

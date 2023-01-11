@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipsHistoricalFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsHistoricalResponse = exports.MembershipsHistoricalRequest = exports.MembershipsHistoricalPathParams = exports.MembershipsHistoricalFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipsHistoricalFormatEnum;
 (function (MembershipsHistoricalFormatEnum) {
     MembershipsHistoricalFormatEnum["Xml"] = "xml";
     MembershipsHistoricalFormatEnum["Json"] = "json";
-})(MembershipsHistoricalFormatEnum || (MembershipsHistoricalFormatEnum = {}));
+})(MembershipsHistoricalFormatEnum = exports.MembershipsHistoricalFormatEnum || (exports.MembershipsHistoricalFormatEnum = {}));
 var MembershipsHistoricalPathParams = /** @class */ (function (_super) {
     __extends(MembershipsHistoricalPathParams, _super);
     function MembershipsHistoricalPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], MembershipsHistoricalPathParams.prototype, "format", void 0);
     return MembershipsHistoricalPathParams;
-}(SpeakeasyBase));
-export { MembershipsHistoricalPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsHistoricalPathParams = MembershipsHistoricalPathParams;
 var MembershipsHistoricalRequest = /** @class */ (function (_super) {
     __extends(MembershipsHistoricalRequest, _super);
     function MembershipsHistoricalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MembershipsHistoricalPathParams)
     ], MembershipsHistoricalRequest.prototype, "pathParams", void 0);
     return MembershipsHistoricalRequest;
-}(SpeakeasyBase));
-export { MembershipsHistoricalRequest };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsHistoricalRequest = MembershipsHistoricalRequest;
 var MembershipsHistoricalResponse = /** @class */ (function (_super) {
     __extends(MembershipsHistoricalResponse, _super);
     function MembershipsHistoricalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MembershipsHistoricalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MembershipsHistoricalResponse.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MembershipsHistoricalResponse.prototype, "statusCode", void 0);
     return MembershipsHistoricalResponse;
-}(SpeakeasyBase));
-export { MembershipsHistoricalResponse };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsHistoricalResponse = MembershipsHistoricalResponse;

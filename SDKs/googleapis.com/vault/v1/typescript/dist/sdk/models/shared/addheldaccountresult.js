@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HeldAccount } from "./heldaccount";
-import { Status } from "./status";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddHeldAccountResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var heldaccount_1 = require("./heldaccount");
+var status_1 = require("./status");
 // AddHeldAccountResult
 /**
  * The status of each account creation, and the **HeldAccount**, if successful.
@@ -35,13 +38,13 @@ var AddHeldAccountResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", HeldAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", heldaccount_1.HeldAccount)
     ], AddHeldAccountResult.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", status_1.Status)
     ], AddHeldAccountResult.prototype, "status", void 0);
     return AddHeldAccountResult;
-}(SpeakeasyBase));
-export { AddHeldAccountResult };
+}(utils_1.SpeakeasyBase));
+exports.AddHeldAccountResult = AddHeldAccountResult;

@@ -18,5 +18,5 @@ export class TemplateVersionsResponse extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RequestID" })
-  requestId?: string;
+  requestID?: string;
 }

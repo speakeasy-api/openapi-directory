@@ -8,5 +8,5 @@ export declare class GetOrganizationLoginSecurityRequest extends SpeakeasyBase {
 export declare class GetOrganizationLoginSecurityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationLoginSecurity200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationLoginSecurity200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,4 +1,7 @@
-export var RolloutRuleComparatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RolloutRuleComparatorEnum = void 0;
+var RolloutRuleComparatorEnum;
 (function (RolloutRuleComparatorEnum) {
     RolloutRuleComparatorEnum["IsOneOf"] = "isOneOf";
     RolloutRuleComparatorEnum["IsNotOneOf"] = "isNotOneOf";
@@ -18,4 +21,4 @@ export var RolloutRuleComparatorEnum;
     RolloutRuleComparatorEnum["NumberGreaterOrEquals"] = "numberGreaterOrEquals";
     RolloutRuleComparatorEnum["SensitiveIsOneOf"] = "sensitiveIsOneOf";
     RolloutRuleComparatorEnum["SensitiveIsNotOneOf"] = "sensitiveIsNotOneOf";
-})(RolloutRuleComparatorEnum || (RolloutRuleComparatorEnum = {}));
+})(RolloutRuleComparatorEnum = exports.RolloutRuleComparatorEnum || (exports.RolloutRuleComparatorEnum = {}));

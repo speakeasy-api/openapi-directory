@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Criterion } from "./criterion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InlineArchiveRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var criterion_1 = require("./criterion");
 // InlineArchiveRule
 /**
  * An criterion statement in an archive rule. Each archive rule may have multiple criteria.
@@ -34,13 +37,13 @@ var InlineArchiveRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter", elemType: Criterion }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter", elemType: criterion_1.Criterion }),
+        __metadata("design:type", Object)
     ], InlineArchiveRule.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleName" }),
         __metadata("design:type", String)
     ], InlineArchiveRule.prototype, "ruleName", void 0);
     return InlineArchiveRule;
-}(SpeakeasyBase));
-export { InlineArchiveRule };
+}(utils_1.SpeakeasyBase));
+exports.InlineArchiveRule = InlineArchiveRule;

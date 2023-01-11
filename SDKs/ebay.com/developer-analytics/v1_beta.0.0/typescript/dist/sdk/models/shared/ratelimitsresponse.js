@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RateLimit } from "./ratelimit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateLimitsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ratelimit_1 = require("./ratelimit");
 // RateLimitsResponse
 /**
  * This complex type defines a list of rate-limit data as it pertains to a method within the specified version of an API.
@@ -34,9 +37,9 @@ var RateLimitsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateLimits", elemType: RateLimit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateLimits", elemType: ratelimit_1.RateLimit }),
         __metadata("design:type", Array)
     ], RateLimitsResponse.prototype, "rateLimits", void 0);
     return RateLimitsResponse;
-}(SpeakeasyBase));
-export { RateLimitsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RateLimitsResponse = RateLimitsResponse;

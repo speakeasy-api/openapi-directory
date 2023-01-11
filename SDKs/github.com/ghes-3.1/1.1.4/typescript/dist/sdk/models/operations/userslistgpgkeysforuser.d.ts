@@ -13,7 +13,7 @@ export declare class UsersListGpgKeysForUserRequest extends SpeakeasyBase {
 }
 export declare class UsersListGpgKeysForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     gpgKeys?: shared.GpgKey[];
 }

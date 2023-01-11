@@ -4,6 +4,12 @@ import { Version } from "./version";
 import { CryptoKeyConfig } from "./cryptokeyconfig";
 import { EventPublishConfig } from "./eventpublishconfig";
 import { NetworkConfig } from "./networkconfig";
+export declare enum InstanceTypeEnum {
+    TypeUnspecified = "TYPE_UNSPECIFIED",
+    Basic = "BASIC",
+    Enterprise = "ENTERPRISE",
+    Developer = "DEVELOPER"
+}
 export declare enum InstanceDisabledReasonEnum {
     DisabledReasonUnspecified = "DISABLED_REASON_UNSPECIFIED",
     KmsKeyIssue = "KMS_KEY_ISSUE"
@@ -21,11 +27,27 @@ export declare enum InstanceStateEnum {
     AutoUpgrading = "AUTO_UPGRADING",
     Disabled = "DISABLED"
 }
-export declare enum InstanceTypeEnum {
-    TypeUnspecified = "TYPE_UNSPECIFIED",
-    Basic = "BASIC",
-    Enterprise = "ENTERPRISE",
-    Developer = "DEVELOPER"
+/**
+ * Represents a Data Fusion instance.
+**/
+export declare class InstanceInput extends SpeakeasyBase {
+    accelerators?: Accelerator[];
+    availableVersion?: Version[];
+    cryptoKeyConfig?: CryptoKeyConfig;
+    dataprocServiceAccount?: string;
+    description?: string;
+    displayName?: string;
+    enableRbac?: boolean;
+    enableStackdriverLogging?: boolean;
+    enableStackdriverMonitoring?: boolean;
+    eventPublishConfig?: EventPublishConfig;
+    labels?: Record<string, string>;
+    networkConfig?: NetworkConfig;
+    options?: Record<string, string>;
+    privateInstance?: boolean;
+    type?: InstanceTypeEnum;
+    version?: string;
+    zone?: string;
 }
 /**
  * Represents a Data Fusion instance.
@@ -45,10 +67,10 @@ export declare class Instance extends SpeakeasyBase {
     enableStackdriverMonitoring?: boolean;
     eventPublishConfig?: EventPublishConfig;
     gcsBucket?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     networkConfig?: NetworkConfig;
-    options?: Map<string, string>;
+    options?: Record<string, string>;
     p4ServiceAccount?: string;
     privateInstance?: boolean;
     serviceAccount?: string;
@@ -58,28 +80,6 @@ export declare class Instance extends SpeakeasyBase {
     tenantProjectId?: string;
     type?: InstanceTypeEnum;
     updateTime?: string;
-    version?: string;
-    zone?: string;
-}
-/**
- * Represents a Data Fusion instance.
-**/
-export declare class InstanceInput extends SpeakeasyBase {
-    accelerators?: Accelerator[];
-    availableVersion?: Version[];
-    cryptoKeyConfig?: CryptoKeyConfig;
-    dataprocServiceAccount?: string;
-    description?: string;
-    displayName?: string;
-    enableRbac?: boolean;
-    enableStackdriverLogging?: boolean;
-    enableStackdriverMonitoring?: boolean;
-    eventPublishConfig?: EventPublishConfig;
-    labels?: Map<string, string>;
-    networkConfig?: NetworkConfig;
-    options?: Map<string, string>;
-    privateInstance?: boolean;
-    type?: InstanceTypeEnum;
     version?: string;
     zone?: string;
 }

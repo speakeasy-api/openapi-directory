@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicyConfig } from "./cachepolicyconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CachePolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachepolicyconfig_1 = require("./cachepolicyconfig");
 // CachePolicy
 /**
  * <p>A cache policy.</p> <p>When it’s attached to a cache behavior, the cache policy determines the following:</p> <ul> <li> <p>The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.</p> </li> <li> <p>The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.</p> </li> </ul> <p>The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find a valid object in its cache that matches the request’s cache key. If you want to send values to the origin but <i>not</i> include them in the cache key, use <code>OriginRequestPolicy</code>.</p>
@@ -34,17 +37,17 @@ var CachePolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CachePolicyConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachepolicyconfig_1.CachePolicyConfig)
     ], CachePolicy.prototype, "cachePolicyConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CachePolicy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], CachePolicy.prototype, "lastModifiedTime", void 0);
     return CachePolicy;
-}(SpeakeasyBase));
-export { CachePolicy };
+}(utils_1.SpeakeasyBase));
+exports.CachePolicy = CachePolicy;

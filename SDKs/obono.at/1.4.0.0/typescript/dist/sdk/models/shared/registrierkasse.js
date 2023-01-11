@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Registrierkasse = void 0;
+var utils_1 = require("../../../internal/utils");
 var Registrierkasse = /** @class */ (function (_super) {
     __extends(Registrierkasse, _super);
     function Registrierkasse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Benutzerschluessel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Benutzerschluessel" }),
         __metadata("design:type", String)
     ], Registrierkasse.prototype, "benutzerschluessel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Kassen-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Kassen-ID" }),
         __metadata("design:type", String)
-    ], Registrierkasse.prototype, "kassenId", void 0);
+    ], Registrierkasse.prototype, "kassenID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Signaturerstellungseinheit-UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Signaturerstellungseinheit-UUID" }),
         __metadata("design:type", String)
-    ], Registrierkasse.prototype, "signaturerstellungseinheitUuid", void 0);
+    ], Registrierkasse.prototype, "signaturerstellungseinheitUUID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_href" }),
         __metadata("design:type", String)
     ], Registrierkasse.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_uuid" }),
         __metadata("design:type", String)
     ], Registrierkasse.prototype, "uuid", void 0);
     return Registrierkasse;
-}(SpeakeasyBase));
-export { Registrierkasse };
+}(utils_1.SpeakeasyBase));
+exports.Registrierkasse = Registrierkasse;

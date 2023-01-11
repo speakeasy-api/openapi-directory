@@ -9,7 +9,7 @@ export declare class AppsListPlansStubbedRequest extends SpeakeasyBase {
 }
 export declare class AppsListPlansStubbedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     marketplaceListingPlans?: shared.MarketplaceListingPlan[];

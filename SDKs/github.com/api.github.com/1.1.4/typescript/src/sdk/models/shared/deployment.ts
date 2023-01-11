@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// DeploymentSimpleUser
+/** 
+ * Simple User
+**/
 export class DeploymentSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -89,10 +93,10 @@ export class Deployment extends SpeakeasyBase {
   originalEnvironment?: string;
 
   @SpeakeasyMetadata({ data: "json, name=payload" })
-  payload: Map<string, any>;
+  payload: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=production_environment" })
   productionEnvironment?: boolean;

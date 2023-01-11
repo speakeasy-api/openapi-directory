@@ -55,5 +55,5 @@ export class DeleteUserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteUser200ApplicationJsonObject?: DeleteUser200ApplicationJson;
+  deleteUser200ApplicationJSONObject?: DeleteUser200ApplicationJson;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAuthorizeCacheSecurityGroupIngressRequest, GetAuthorizeCacheSecurityGroupIngressResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,23 +34,23 @@ const sdk = new SDK(WithSecurity(
 const req: GetAuthorizeCacheSecurityGroupIngressRequest = {
   queryParams: {
     action: "AuthorizeCacheSecurityGroupIngress",
-    cacheSecurityGroupName: "tenetur",
-    ec2SecurityGroupName: "numquam",
-    ec2SecurityGroupOwnerId: "quam",
+    cacheSecurityGroupName: "voluptas",
+    ec2SecurityGroupName: "culpa",
+    ec2SecurityGroupOwnerId: "expedita",
     version: "2015-02-02",
   },
   headers: {
-    xAmzAlgorithm: "aut",
-    xAmzContentSha256: "fugiat",
-    xAmzCredential: "cumque",
-    xAmzDate: "ad",
-    xAmzSecurityToken: "sapiente",
-    xAmzSignature: "officiis",
-    xAmzSignedHeaders: "sit",
+    xAmzAlgorithm: "dolor",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "voluptas",
+    xAmzDate: "fugit",
+    xAmzSecurityToken: "et",
+    xAmzSignature: "nihil",
+    xAmzSignedHeaders: "rerum",
   },
 };
 
-sdk.sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GetAuthorizeCacheSecurityGroupIngressResponse | AxiosError) => {
+sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GetAuthorizeCacheSecurityGroupIngressResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -67,7 +66,6 @@ sdk.sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GetAuthorizeCacheS
 * `getBatchStopUpdateAction` - Stop the service update. For more information on service updates and stopping them, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/stopping-self-service-updates.html">Stopping Service Updates</a>.
 * `getCompleteMigration` - Complete the migration of data.
 * `getCreateGlobalReplicationGroup` - <p>Global Datastore for Redis offers fully managed, fast, reliable and secure cross-region replication. Using Global Datastore for Redis, you can create cross-region read replica clusters for ElastiCache for Redis to enable low-latency reads and disaster recovery across regions. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html">Replication Across Regions Using Global Datastore</a>. </p> <ul> <li> <p>The <b>GlobalReplicationGroupIdSuffix</b> is the name of the Global datastore.</p> </li> <li> <p>The <b>PrimaryReplicationGroupId</b> represents the name of the primary cluster that accepts writes and will replicate updates to the secondary cluster.</p> </li> </ul>
-* `getDecreaseNodeGroupsInGlobalReplicationGroup` - Decreases the number of node groups in a Global datastore
 * `getDeleteCacheCluster` - <p>Deletes a previously provisioned cluster. <code>DeleteCacheCluster</code> deletes all associated cache nodes, node endpoints and the cluster itself. When you receive a successful response from this operation, Amazon ElastiCache immediately begins deleting the cluster; you cannot cancel or revert this operation.</p> <p>This operation is not valid for:</p> <ul> <li> <p>Redis (cluster mode enabled) clusters</p> </li> <li> <p>Redis (cluster mode disabled) clusters</p> </li> <li> <p>A cluster that is the last read replica of a replication group</p> </li> <li> <p>A cluster that is the primary node of a replication group</p> </li> <li> <p>A node group (shard) that has Multi-AZ mode enabled</p> </li> <li> <p>A cluster from a Redis (cluster mode enabled) replication group</p> </li> <li> <p>A cluster that is not in the <code>available</code> state</p> </li> </ul>
 * `getDeleteCacheParameterGroup` - Deletes the specified cache parameter group. You cannot delete a cache parameter group if it is associated with any cache clusters. You cannot delete the default cache parameter groups in your account.
 * `getDeleteCacheSecurityGroup` - <p>Deletes a cache security group.</p> <note> <p>You cannot delete a cache security group if it is associated with any clusters.</p> </note>
@@ -97,12 +95,10 @@ sdk.sdk.getAuthorizeCacheSecurityGroupIngress(req).then((res: GetAuthorizeCacheS
 * `getFailoverGlobalReplicationGroup` - Used to failover the primary region to a selected secondary region. The selected secondary region will become primary, and all other clusters will become secondary.
 * `getListAllowedNodeTypeModifications` - <p>Lists all available node types that you can scale your Redis cluster's or replication group's current node type.</p> <p>When you use the <code>ModifyCacheCluster</code> or <code>ModifyReplicationGroup</code> operations to scale your cluster or replication group, the value of the <code>CacheNodeType</code> parameter must be one of the node types returned by this operation.</p>
 * `getListTagsForResource` - <p>Lists all tags currently on a named resource.</p> <p> A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication groups, those actions will be replicated to all nodes in the replication group. For more information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level permissions</a>.</p> <p>If the cluster is not in the <i>available</i> state, <code>ListTagsForResource</code> returns an error.</p>
-* `getModifyCacheSubnetGroup` - Modifies an existing cache subnet group.
 * `getModifyGlobalReplicationGroup` - Modifies the settings for a Global datastore.
 * `getModifyUser` - Changes user password(s) and/or access string.
 * `getModifyUserGroup` - Changes the list of users that belong to the user group.
 * `getRebalanceSlotsInGlobalReplicationGroup` - Redistribute slots to ensure uniform distribution across existing shards in the cluster.
-* `getRebootCacheCluster` - <p>Reboots some, or all, of the cache nodes within a provisioned cluster. This operation applies any modified cache parameter groups to the cluster. The reboot operation takes place as soon as possible, and results in a momentary outage to the cluster. During the reboot, the cluster status is set to REBOOTING.</p> <p>The reboot causes the contents of the cache (for each cache node being rebooted) to be lost.</p> <p>When the reboot is complete, a cluster event is created.</p> <p>Rebooting a cluster is currently supported on Memcached and Redis (cluster mode disabled) clusters. Rebooting is not supported on Redis (cluster mode enabled) clusters.</p> <p>If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to be applied, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a Cluster</a> for an alternate process.</p>
 * `getRemoveTagsFromResource` - Removes the tags identified by the <code>TagKeys</code> list from the named resource. A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication groups, those actions will be replicated to all nodes in the replication group. For more information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level permissions</a>.
 * `getRevokeCacheSecurityGroupIngress` - Revokes ingress from a cache security group. Use this operation to disallow access from an Amazon EC2 security group that had been previously authorized.
 * `getTestFailover` - <p>Represents the input of a <code>TestFailover</code> operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).</p> <p class="title"> <b>Note the following</b> </p> <ul> <li> <p>A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache API and Amazon CLI) in any rolling 24-hour period.</p> </li> <li> <p>If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made concurrently.</p> <p> </p> </li> <li> <p>If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be made.</p> </li> <li> <p>To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the Amazon CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of occurrance:</p> <ol> <li> <p>Replication group message: <code>Test Failover API called for node group &lt;node-group-id&gt;</code> </p> </li> <li> <p>Cache cluster message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed</code> </p> </li> <li> <p>Replication group message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed</code> </p> </li> <li> <p>Cache cluster message: <code>Recovering cache nodes &lt;node-id&gt;</code> </p> </li> <li> <p>Cache cluster message: <code>Finished recovery for cache nodes &lt;node-id&gt;</code> </p> </li> </ol> <p>For more information see:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ECEvents.Viewing.html">Viewing ElastiCache Events</a> in the <i>ElastiCache User Guide</i> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a> in the ElastiCache API Reference</p> </li> </ul> </li> </ul> <p>Also see, <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html#auto-failover-test">Testing Multi-AZ </a> in the <i>ElastiCache User Guide</i>.</p>

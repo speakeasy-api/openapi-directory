@@ -15,7 +15,7 @@ export class GetUntagOpenIdConnectProviderQueryParams extends SpeakeasyBase {
   action: GetUntagOpenIdConnectProviderActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" })
-  openIdConnectProviderArn: string;
+  openIDConnectProviderArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TagKeys" })
   tagKeys: string[];

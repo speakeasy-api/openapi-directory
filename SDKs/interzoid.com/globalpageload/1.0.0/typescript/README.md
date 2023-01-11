@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GlobalpageloadRequest, GlobalpageloadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: GlobalpageloadRequest = {
   queryParams: {
-    license: "nesciunt",
-    origin: "repellendus",
-    url: "aspernatur",
+    license: "sit",
+    origin: "voluptas",
+    url: "culpa",
   },
 };
 
-sdk.sdk.globalpageload(req).then((res: GlobalpageloadResponse | AxiosError) => {
+sdk.pageLoadPerformanceTime.globalpageload(req).then((res: GlobalpageloadResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,7 +43,7 @@ sdk.sdk.globalpageload(req).then((res: GlobalpageloadResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Page Load Performance Time
 
 * `globalpageload` - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
 

@@ -20,5 +20,5 @@ export declare class ApiGeneralInformations200ApplicationJson extends SpeakeasyB
 export declare class ApiGeneralInformationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apiGeneralInformations200ApplicationJsonObject?: ApiGeneralInformations200ApplicationJson;
+    apiGeneralInformations200ApplicationJSONObject?: ApiGeneralInformations200ApplicationJson;
 }

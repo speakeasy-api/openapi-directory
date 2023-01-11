@@ -9,5 +9,5 @@ export declare class DeleteEventRequest extends SpeakeasyBase {
 export declare class DeleteEventResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteEvent200ApplicationJsonObject?: Map<string, any>;
+    deleteEvent200ApplicationJSONObject?: Record<string, any>;
 }

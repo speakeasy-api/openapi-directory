@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileModeTypeEnumEnum } from "./filemodetypeenumenum";
-import { SourceFileSpecifier } from "./sourcefilespecifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutFileEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var filemodetypeenumenum_1 = require("./filemodetypeenumenum");
+var sourcefilespecifier_1 = require("./sourcefilespecifier");
 // PutFileEntry
 /**
  * Information about a file added or updated as part of a commit.
@@ -35,21 +38,21 @@ var PutFileEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileContent" }),
         __metadata("design:type", String)
     ], PutFileEntry.prototype, "fileContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileMode" }),
         __metadata("design:type", String)
     ], PutFileEntry.prototype, "fileMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], PutFileEntry.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceFile" }),
-        __metadata("design:type", SourceFileSpecifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceFile" }),
+        __metadata("design:type", sourcefilespecifier_1.SourceFileSpecifier)
     ], PutFileEntry.prototype, "sourceFile", void 0);
     return PutFileEntry;
-}(SpeakeasyBase));
-export { PutFileEntry };
+}(utils_1.SpeakeasyBase));
+exports.PutFileEntry = PutFileEntry;

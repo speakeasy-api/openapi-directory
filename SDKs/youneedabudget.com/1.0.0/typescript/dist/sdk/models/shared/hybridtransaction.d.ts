@@ -10,7 +10,8 @@ export declare enum HybridTransactionFlagColorEnum {
     Yellow = "yellow",
     Green = "green",
     Blue = "blue",
-    Purple = "purple"
+    Purple = "purple",
+    Null = "null"
 }
 export declare enum HybridTransactionTypeEnum {
     Transaction = "transaction",

@@ -20,7 +20,7 @@ export declare class TagResourceRequest extends SpeakeasyBase {
 export declare class TagResourceResponse extends SpeakeasyBase {
     clusterNotFoundFault?: any;
     contentType: string;
-    invalidArnFault?: any;
+    invalidARNFault?: any;
     invalidClusterStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;

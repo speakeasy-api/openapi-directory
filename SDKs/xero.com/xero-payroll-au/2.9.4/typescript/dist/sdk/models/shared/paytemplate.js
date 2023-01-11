@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeductionLine } from "./deductionline";
-import { EarningsLine } from "./earningsline";
-import { LeaveLine } from "./leaveline";
-import { ReimbursementLine } from "./reimbursementline";
-import { SuperLine } from "./superline";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var deductionline_1 = require("./deductionline");
+var earningsline_1 = require("./earningsline");
+var leaveline_1 = require("./leaveline");
+var reimbursementline_1 = require("./reimbursementline");
+var superline_1 = require("./superline");
 var PayTemplate = /** @class */ (function (_super) {
     __extends(PayTemplate, _super);
     function PayTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionLines", elemType: DeductionLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionLines", elemType: deductionline_1.DeductionLine }),
         __metadata("design:type", Array)
     ], PayTemplate.prototype, "deductionLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsLines", elemType: EarningsLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsLines", elemType: earningsline_1.EarningsLine }),
         __metadata("design:type", Array)
     ], PayTemplate.prototype, "earningsLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveLines", elemType: LeaveLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveLines", elemType: leaveline_1.LeaveLine }),
         __metadata("design:type", Array)
     ], PayTemplate.prototype, "leaveLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementLines", elemType: ReimbursementLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementLines", elemType: reimbursementline_1.ReimbursementLine }),
         __metadata("design:type", Array)
     ], PayTemplate.prototype, "reimbursementLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuperLines", elemType: SuperLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuperLines", elemType: superline_1.SuperLine }),
         __metadata("design:type", Array)
     ], PayTemplate.prototype, "superLines", void 0);
     return PayTemplate;
-}(SpeakeasyBase));
-export { PayTemplate };
+}(utils_1.SpeakeasyBase));
+exports.PayTemplate = PayTemplate;

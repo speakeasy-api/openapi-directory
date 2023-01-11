@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddAttributesToFindingsRequest, AddAttributesToFindingsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,31 +33,31 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddAttributesToFindingsRequest = {
   headers: {
-    xAmzAlgorithm: "ut",
-    xAmzContentSha256: "rem",
-    xAmzCredential: "iusto",
-    xAmzDate: "sed",
-    xAmzSecurityToken: "numquam",
-    xAmzSignature: "corrupti",
-    xAmzSignedHeaders: "eveniet",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "InspectorService.AddAttributesToFindings",
   },
   request: {
     attributes: [
       {
-        key: "molestiae",
-        value: "veniam",
+        key: "et",
+        value: "nihil",
       },
     ],
     findingArns: [
-      "voluptatum",
+      "dicta",
       "debitis",
-      "perspiciatis",
+      "voluptatum",
     ],
   },
 };
 
-sdk.sdk.addAttributesToFindings(req).then((res: AddAttributesToFindingsResponse | AxiosError) => {
+sdk.addAttributesToFindings(req).then((res: AddAttributesToFindingsResponse | AxiosError) => {
    // handle response
 });
 ```

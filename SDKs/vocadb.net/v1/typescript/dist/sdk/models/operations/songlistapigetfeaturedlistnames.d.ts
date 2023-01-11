@@ -25,8 +25,8 @@ export declare class SongListApiGetFeaturedListNamesRequest extends SpeakeasyBas
 export declare class SongListApiGetFeaturedListNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    songListApiGetFeaturedListNames200ApplicationJsonStrings?: string[];
+    songListApiGetFeaturedListNames200ApplicationJSONStrings?: string[];
     songListApiGetFeaturedListNames200ApplicationJsonpStrings?: string[];
-    songListApiGetFeaturedListNames200TextJsonStrings?: string[];
+    songListApiGetFeaturedListNames200TextJSONStrings?: string[];
     statusCode: number;
 }

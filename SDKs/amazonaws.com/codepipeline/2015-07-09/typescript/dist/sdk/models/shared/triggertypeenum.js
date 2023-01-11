@@ -1,4 +1,7 @@
-export var TriggerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerTypeEnum = void 0;
+var TriggerTypeEnum;
 (function (TriggerTypeEnum) {
     TriggerTypeEnum["CreatePipeline"] = "CreatePipeline";
     TriggerTypeEnum["StartPipelineExecution"] = "StartPipelineExecution";
@@ -6,4 +9,4 @@ export var TriggerTypeEnum;
     TriggerTypeEnum["Webhook"] = "Webhook";
     TriggerTypeEnum["CloudWatchEvent"] = "CloudWatchEvent";
     TriggerTypeEnum["PutActionRevision"] = "PutActionRevision";
-})(TriggerTypeEnum || (TriggerTypeEnum = {}));
+})(TriggerTypeEnum = exports.TriggerTypeEnum || (exports.TriggerTypeEnum = {}));

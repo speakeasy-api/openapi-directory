@@ -8,16 +8,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CloneStep extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=adaptingOs" })
-  adaptingOs?: Map<string, any>;
+  adaptingOs?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=endTime" })
   endTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=instantiatingMigratedVm" })
-  instantiatingMigratedVm?: Map<string, any>;
+  instantiatingMigratedVm?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=preparingVmDisks" })
-  preparingVmDisks?: Map<string, any>;
+  preparingVmDisks?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=startTime" })
   startTime?: string;

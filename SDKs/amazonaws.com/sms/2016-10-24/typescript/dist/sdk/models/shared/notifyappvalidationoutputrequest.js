@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NotificationContext } from "./notificationcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotifyAppValidationOutputRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var notificationcontext_1 = require("./notificationcontext");
 var NotifyAppValidationOutputRequest = /** @class */ (function (_super) {
     __extends(NotifyAppValidationOutputRequest, _super);
     function NotifyAppValidationOutputRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], NotifyAppValidationOutputRequest.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationContext" }),
-        __metadata("design:type", NotificationContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationContext" }),
+        __metadata("design:type", notificationcontext_1.NotificationContext)
     ], NotifyAppValidationOutputRequest.prototype, "notificationContext", void 0);
     return NotifyAppValidationOutputRequest;
-}(SpeakeasyBase));
-export { NotifyAppValidationOutputRequest };
+}(utils_1.SpeakeasyBase));
+exports.NotifyAppValidationOutputRequest = NotifyAppValidationOutputRequest;

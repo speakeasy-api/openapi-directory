@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RotoballerArticlesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RotoballerArticlesResponse = exports.RotoballerArticlesRequest = exports.RotoballerArticlesPathParams = exports.RotoballerArticlesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RotoballerArticlesFormatEnum;
 (function (RotoballerArticlesFormatEnum) {
     RotoballerArticlesFormatEnum["Xml"] = "xml";
     RotoballerArticlesFormatEnum["Json"] = "json";
-})(RotoballerArticlesFormatEnum || (RotoballerArticlesFormatEnum = {}));
+})(RotoballerArticlesFormatEnum = exports.RotoballerArticlesFormatEnum || (exports.RotoballerArticlesFormatEnum = {}));
 var RotoballerArticlesPathParams = /** @class */ (function (_super) {
     __extends(RotoballerArticlesPathParams, _super);
     function RotoballerArticlesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], RotoballerArticlesPathParams.prototype, "format", void 0);
     return RotoballerArticlesPathParams;
-}(SpeakeasyBase));
-export { RotoballerArticlesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesPathParams = RotoballerArticlesPathParams;
 var RotoballerArticlesRequest = /** @class */ (function (_super) {
     __extends(RotoballerArticlesRequest, _super);
     function RotoballerArticlesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RotoballerArticlesPathParams)
     ], RotoballerArticlesRequest.prototype, "pathParams", void 0);
     return RotoballerArticlesRequest;
-}(SpeakeasyBase));
-export { RotoballerArticlesRequest };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesRequest = RotoballerArticlesRequest;
 var RotoballerArticlesResponse = /** @class */ (function (_super) {
     __extends(RotoballerArticlesResponse, _super);
     function RotoballerArticlesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], RotoballerArticlesResponse.prototype, "articles", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RotoballerArticlesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RotoballerArticlesResponse.prototype, "statusCode", void 0);
     return RotoballerArticlesResponse;
-}(SpeakeasyBase));
-export { RotoballerArticlesResponse };
+}(utils_1.SpeakeasyBase));
+exports.RotoballerArticlesResponse = RotoballerArticlesResponse;

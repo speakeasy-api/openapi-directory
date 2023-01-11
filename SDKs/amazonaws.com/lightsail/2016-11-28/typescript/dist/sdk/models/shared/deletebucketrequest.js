@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteBucketRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteBucketRequest = /** @class */ (function (_super) {
     __extends(DeleteBucketRequest, _super);
     function DeleteBucketRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketName" }),
         __metadata("design:type", String)
     ], DeleteBucketRequest.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forceDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forceDelete" }),
         __metadata("design:type", Boolean)
     ], DeleteBucketRequest.prototype, "forceDelete", void 0);
     return DeleteBucketRequest;
-}(SpeakeasyBase));
-export { DeleteBucketRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBucketRequest = DeleteBucketRequest;

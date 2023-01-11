@@ -14,6 +14,6 @@ export declare class PostAppsAppIdNamespacesRequest extends SpeakeasyBase {
 export declare class PostAppsAppIdNamespacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     namespaceResponse?: shared.NamespaceResponse;
 }

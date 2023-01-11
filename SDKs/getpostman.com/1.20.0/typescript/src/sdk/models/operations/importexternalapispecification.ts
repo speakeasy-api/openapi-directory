@@ -220,8 +220,8 @@ export class ImportExternalApiSpecificationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  importExternalApiSpecification200ApplicationJsonObject?: ImportExternalApiSpecification200ApplicationJson;
+  importExternalApiSpecification200ApplicationJSONObject?: ImportExternalApiSpecification200ApplicationJson;
 
   @SpeakeasyMetadata()
-  importExternalApiSpecification400ApplicationJsonObject?: ImportExternalApiSpecification400ApplicationJson;
+  importExternalApiSpecification400ApplicationJSONObject?: ImportExternalApiSpecification400ApplicationJson;
 }

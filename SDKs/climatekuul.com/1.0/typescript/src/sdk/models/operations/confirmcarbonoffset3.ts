@@ -25,7 +25,7 @@ export class ConfirmCarbonOffset3RequestBody extends SpeakeasyBase {
 
 export class ConfirmCarbonOffset3Request extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: ConfirmCarbonOffset3RequestBody;

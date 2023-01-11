@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetTextUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -34,7 +34,7 @@ export class GetTextUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,7 +46,7 @@ export class GetTextUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetTextUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -79,14 +79,14 @@ export class GetTextUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTextUsingPost200ApplicationJsonObject?: GetTextUsingPost200ApplicationJson;
+  getTextUsingPOST200ApplicationJSONObject?: GetTextUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingPost400ApplicationJsonObject?: GetTextUsingPost400ApplicationJson;
+  getTextUsingPOST400ApplicationJSONObject?: GetTextUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingPost401ApplicationJsonObject?: GetTextUsingPost401ApplicationJson;
+  getTextUsingPOST401ApplicationJSONObject?: GetTextUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingPost500ApplicationJsonObject?: GetTextUsingPost500ApplicationJson;
+  getTextUsingPOST500ApplicationJSONObject?: GetTextUsingPost500ApplicationJson;
 }

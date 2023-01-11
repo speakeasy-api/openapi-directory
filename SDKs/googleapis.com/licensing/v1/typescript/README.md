@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LicensingLicenseAssignmentsDeleteRequest, LicensingLicenseAssignmentsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: LicensingLicenseAssignmentsDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    productId: "consequuntur",
-    skuId: "expedita",
-    userId: "nihil",
+    productId: "sit",
+    skuId: "voluptas",
+    userId: "culpa",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "ipsam",
+    accessToken: "consequuntur",
     alt: "media",
-    callback: "rerum",
-    fields: "sint",
-    key: "rerum",
-    oauthToken: "sapiente",
-    prettyPrint: false,
-    quotaUser: "enim",
-    uploadType: "expedita",
-    uploadProtocol: "rerum",
+    callback: "expedita",
+    fields: "voluptas",
+    key: "fugit",
+    oauthToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

@@ -9,7 +9,7 @@ export declare class GetArtifactVersionMetaDataRequest extends SpeakeasyBase {
 }
 export declare class GetArtifactVersionMetaDataResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     versionMetaData?: shared.VersionMetaData;
 }

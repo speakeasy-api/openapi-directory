@@ -28,7 +28,7 @@ export class DeleteReplicationConfigurationTemplateHeaders extends SpeakeasyBase
 
 export class DeleteReplicationConfigurationTemplateRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=replicationConfigurationTemplateID" })
-  replicationConfigurationTemplateId: string;
+  replicationConfigurationTemplateID: string;
 }
 
 
@@ -49,7 +49,7 @@ export class DeleteReplicationConfigurationTemplateResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteReplicationConfigurationTemplateResponse?: Map<string, any>;
+  deleteReplicationConfigurationTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

@@ -24,7 +24,7 @@ export class UserUserRoles extends SpeakeasyBase {
 
 export class UserUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Permissions" })
   permissions?: UserUserPermission;

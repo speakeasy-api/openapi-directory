@@ -54,7 +54,7 @@ export class AssociateIdentityProviderConfigRequestBodyOidc extends SpeakeasyBas
   issuerUrl?: string;
 
   @SpeakeasyMetadata({ data: "json, name=requiredClaims" })
-  requiredClaims?: Map<string, string>;
+  requiredClaims?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=usernameClaim" })
   usernameClaim?: string;
@@ -72,7 +72,7 @@ export class AssociateIdentityProviderConfigRequestBody extends SpeakeasyBase {
   oidc: AssociateIdentityProviderConfigRequestBodyOidc;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

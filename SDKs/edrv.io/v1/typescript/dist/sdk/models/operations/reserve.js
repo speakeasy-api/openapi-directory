@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReserveResponse = exports.ReserveRequest = exports.Reserve201ApplicationJson = exports.ReserveRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReserveRequestBody = /** @class */ (function (_super) {
     __extends(ReserveRequestBody, _super);
     function ReserveRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargestation" }),
         __metadata("design:type", String)
     ], ReserveRequestBody.prototype, "chargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connector" }),
         __metadata("design:type", String)
     ], ReserveRequestBody.prototype, "connector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driver" }),
         __metadata("design:type", String)
     ], ReserveRequestBody.prototype, "driver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], ReserveRequestBody.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], ReserveRequestBody.prototype, "token", void 0);
     return ReserveRequestBody;
-}(SpeakeasyBase));
-export { ReserveRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReserveRequestBody = ReserveRequestBody;
 var Reserve201ApplicationJson = /** @class */ (function (_super) {
     __extends(Reserve201ApplicationJson, _super);
     function Reserve201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
+        __metadata("design:type", Object)
     ], Reserve201ApplicationJson.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Reserve201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Reserve201ApplicationJson.prototype, "ok", void 0);
     return Reserve201ApplicationJson;
-}(SpeakeasyBase));
-export { Reserve201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Reserve201ApplicationJson = Reserve201ApplicationJson;
 var ReserveRequest = /** @class */ (function (_super) {
     __extends(ReserveRequest, _super);
     function ReserveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReserveRequestBody)
     ], ReserveRequest.prototype, "request", void 0);
     return ReserveRequest;
-}(SpeakeasyBase));
-export { ReserveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReserveRequest = ReserveRequest;
 var ReserveResponse = /** @class */ (function (_super) {
     __extends(ReserveResponse, _super);
     function ReserveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReserveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReserveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Reserve201ApplicationJson)
-    ], ReserveResponse.prototype, "reserve201ApplicationJsonObject", void 0);
+    ], ReserveResponse.prototype, "reserve201ApplicationJSONObject", void 0);
     return ReserveResponse;
-}(SpeakeasyBase));
-export { ReserveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReserveResponse = ReserveResponse;

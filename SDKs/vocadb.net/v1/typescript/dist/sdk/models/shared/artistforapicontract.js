@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtistForArtistForApiContract } from "./artistforartistforapicontract";
-import { ArtistContract } from "./artistcontract";
-import { EntryThumbForApiContract } from "./entrythumbforapicontract";
-import { LocalizedStringContract } from "./localizedstringcontract";
-import { ArtistRelationsForApi } from "./artistrelationsforapi";
-import { TagUsageForApiContract } from "./tagusageforapicontract";
-import { WebLinkForApiContract } from "./weblinkforapicontract";
-export var ArtistForApiContractArtistTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistForApiContract = exports.ArtistForApiContractStatusEnum = exports.ArtistForApiContractDefaultNameLanguageEnum = exports.ArtistForApiContractArtistTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var artistforartistforapicontract_1 = require("./artistforartistforapicontract");
+var artistcontract_1 = require("./artistcontract");
+var entrythumbforapicontract_1 = require("./entrythumbforapicontract");
+var localizedstringcontract_1 = require("./localizedstringcontract");
+var artistrelationsforapi_1 = require("./artistrelationsforapi");
+var tagusageforapicontract_1 = require("./tagusageforapicontract");
+var weblinkforapicontract_1 = require("./weblinkforapicontract");
+var ArtistForApiContractArtistTypeEnum;
 (function (ArtistForApiContractArtistTypeEnum) {
     ArtistForApiContractArtistTypeEnum["Unknown"] = "Unknown";
     ArtistForApiContractArtistTypeEnum["Circle"] = "Circle";
@@ -51,114 +54,114 @@ export var ArtistForApiContractArtistTypeEnum;
     ArtistForApiContractArtistTypeEnum["Vocalist"] = "Vocalist";
     ArtistForApiContractArtistTypeEnum["Character"] = "Character";
     ArtistForApiContractArtistTypeEnum["SynthesizerV"] = "SynthesizerV";
-})(ArtistForApiContractArtistTypeEnum || (ArtistForApiContractArtistTypeEnum = {}));
-export var ArtistForApiContractDefaultNameLanguageEnum;
+})(ArtistForApiContractArtistTypeEnum = exports.ArtistForApiContractArtistTypeEnum || (exports.ArtistForApiContractArtistTypeEnum = {}));
+var ArtistForApiContractDefaultNameLanguageEnum;
 (function (ArtistForApiContractDefaultNameLanguageEnum) {
     ArtistForApiContractDefaultNameLanguageEnum["Unspecified"] = "Unspecified";
     ArtistForApiContractDefaultNameLanguageEnum["Japanese"] = "Japanese";
     ArtistForApiContractDefaultNameLanguageEnum["Romaji"] = "Romaji";
     ArtistForApiContractDefaultNameLanguageEnum["English"] = "English";
-})(ArtistForApiContractDefaultNameLanguageEnum || (ArtistForApiContractDefaultNameLanguageEnum = {}));
-export var ArtistForApiContractStatusEnum;
+})(ArtistForApiContractDefaultNameLanguageEnum = exports.ArtistForApiContractDefaultNameLanguageEnum || (exports.ArtistForApiContractDefaultNameLanguageEnum = {}));
+var ArtistForApiContractStatusEnum;
 (function (ArtistForApiContractStatusEnum) {
     ArtistForApiContractStatusEnum["Draft"] = "Draft";
     ArtistForApiContractStatusEnum["Finished"] = "Finished";
     ArtistForApiContractStatusEnum["Approved"] = "Approved";
     ArtistForApiContractStatusEnum["Locked"] = "Locked";
-})(ArtistForApiContractStatusEnum || (ArtistForApiContractStatusEnum = {}));
+})(ArtistForApiContractStatusEnum = exports.ArtistForApiContractStatusEnum || (exports.ArtistForApiContractStatusEnum = {}));
 var ArtistForApiContract = /** @class */ (function (_super) {
     __extends(ArtistForApiContract, _super);
     function ArtistForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistLinks", elemType: ArtistForArtistForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistLinks", elemType: artistforartistforapicontract_1.ArtistForArtistForApiContract }),
         __metadata("design:type", Array)
     ], ArtistForApiContract.prototype, "artistLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistLinksReverse", elemType: ArtistForArtistForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistLinksReverse", elemType: artistforartistforapicontract_1.ArtistForArtistForApiContract }),
         __metadata("design:type", Array)
     ], ArtistForApiContract.prototype, "artistLinksReverse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistType" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "artistType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseVoicebank" }),
-        __metadata("design:type", ArtistContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseVoicebank" }),
+        __metadata("design:type", artistcontract_1.ArtistContract)
     ], ArtistForApiContract.prototype, "baseVoicebank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], ArtistForApiContract.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultName" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "defaultName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultNameLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultNameLanguage" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "defaultNameLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], ArtistForApiContract.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ArtistForApiContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainPicture" }),
-        __metadata("design:type", EntryThumbForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainPicture" }),
+        __metadata("design:type", entrythumbforapicontract_1.EntryThumbForApiContract)
     ], ArtistForApiContract.prototype, "mainPicture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergedTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergedTo" }),
         __metadata("design:type", Number)
     ], ArtistForApiContract.prototype, "mergedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names", elemType: LocalizedStringContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names", elemType: localizedstringcontract_1.LocalizedStringContract }),
         __metadata("design:type", Array)
     ], ArtistForApiContract.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pictureMime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pictureMime" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "pictureMime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relations" }),
-        __metadata("design:type", ArtistRelationsForApi)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relations" }),
+        __metadata("design:type", artistrelationsforapi_1.ArtistRelationsForApi)
     ], ArtistForApiContract.prototype, "relations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
         __metadata("design:type", Date)
     ], ArtistForApiContract.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ArtistForApiContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: TagUsageForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tagusageforapicontract_1.TagUsageForApiContract }),
         __metadata("design:type", Array)
     ], ArtistForApiContract.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], ArtistForApiContract.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webLinks", elemType: WebLinkForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webLinks", elemType: weblinkforapicontract_1.WebLinkForApiContract }),
         __metadata("design:type", Array)
     ], ArtistForApiContract.prototype, "webLinks", void 0);
     return ArtistForApiContract;
-}(SpeakeasyBase));
-export { ArtistForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.ArtistForApiContract = ArtistForApiContract;

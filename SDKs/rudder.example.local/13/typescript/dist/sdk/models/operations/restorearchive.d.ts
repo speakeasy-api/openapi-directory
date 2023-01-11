@@ -1,13 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum RestoreArchiveArchiveRestoreKindEnum {
-    LatestArchive = "latestArchive",
-    LatestCommit = "latestCommit",
-    ArchiveId = "archive ID"
-}
 export declare class RestoreArchivePathParams extends SpeakeasyBase {
     archiveKind: shared.ArchiveKindEnum;
-    archiveRestoreKind: RestoreArchiveArchiveRestoreKindEnum;
+    archiveRestoreKind: shared.ArchiveKindEnum1;
 }
 export declare enum RestoreArchive200ApplicationJsonActionEnum {
     RestoreFullLatestArchive = "restoreFullLatestArchive",
@@ -48,5 +43,5 @@ export declare class RestoreArchiveRequest extends SpeakeasyBase {
 export declare class RestoreArchiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    restoreArchive200ApplicationJsonObject?: RestoreArchive200ApplicationJson;
+    restoreArchive200ApplicationJSONObject?: RestoreArchive200ApplicationJson;
 }

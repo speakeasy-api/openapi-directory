@@ -15,5 +15,5 @@ export declare class KeyRevokeNosecretResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    keyRevokeNosecret200ApplicationJsonObject?: KeyRevokeNosecret200ApplicationJson;
+    keyRevokeNosecret200ApplicationJSONObject?: KeyRevokeNosecret200ApplicationJson;
 }

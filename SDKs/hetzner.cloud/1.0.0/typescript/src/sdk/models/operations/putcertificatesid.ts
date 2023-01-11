@@ -10,7 +10,7 @@ export class PutCertificatesIdPathParams extends SpeakeasyBase {
 
 export class PutCertificatesIdUpdateCertificateRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -90,7 +90,7 @@ export class PutCertificatesIdCertificateResponseCertificate extends SpeakeasyBa
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

@@ -31,5 +31,5 @@ export class UpdateOrganizationSamlResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationSaml200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationSaml200ApplicationJSONObject?: Record<string, any>;
 }

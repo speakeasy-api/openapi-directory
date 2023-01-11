@@ -25,5 +25,5 @@ export class GetNetworkApplianceFirewallFirewalledServiceResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallFirewalledService200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallFirewalledService200ApplicationJSONObject?: Record<string, any>;
 }

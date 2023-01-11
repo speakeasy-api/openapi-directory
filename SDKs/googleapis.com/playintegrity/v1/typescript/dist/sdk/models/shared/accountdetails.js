@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountActivity } from "./accountactivity";
-export var AccountDetailsAppLicensingVerdictEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountDetails = exports.AccountDetailsAppLicensingVerdictEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountactivity_1 = require("./accountactivity");
+var AccountDetailsAppLicensingVerdictEnum;
 (function (AccountDetailsAppLicensingVerdictEnum) {
     AccountDetailsAppLicensingVerdictEnum["Unknown"] = "UNKNOWN";
     AccountDetailsAppLicensingVerdictEnum["Licensed"] = "LICENSED";
     AccountDetailsAppLicensingVerdictEnum["Unlicensed"] = "UNLICENSED";
     AccountDetailsAppLicensingVerdictEnum["Unevaluated"] = "UNEVALUATED";
-})(AccountDetailsAppLicensingVerdictEnum || (AccountDetailsAppLicensingVerdictEnum = {}));
+})(AccountDetailsAppLicensingVerdictEnum = exports.AccountDetailsAppLicensingVerdictEnum || (exports.AccountDetailsAppLicensingVerdictEnum = {}));
 // AccountDetails
 /**
  * Contains the account information such as the licensing status for the user in the scope.
@@ -41,13 +44,13 @@ var AccountDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountActivity" }),
-        __metadata("design:type", AccountActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountActivity" }),
+        __metadata("design:type", accountactivity_1.AccountActivity)
     ], AccountDetails.prototype, "accountActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appLicensingVerdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appLicensingVerdict" }),
         __metadata("design:type", String)
     ], AccountDetails.prototype, "appLicensingVerdict", void 0);
     return AccountDetails;
-}(SpeakeasyBase));
-export { AccountDetails };
+}(utils_1.SpeakeasyBase));
+exports.AccountDetails = AccountDetails;

@@ -5,11 +5,11 @@ export declare class UpdateRepositoryBuildNumberPathParams extends SpeakeasyBase
 }
 export declare class UpdateRepositoryBuildNumberRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryBuildNumberPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryBuildNumberResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineBuildNumber?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineBuildNumber?: Record<string, any>;
 }

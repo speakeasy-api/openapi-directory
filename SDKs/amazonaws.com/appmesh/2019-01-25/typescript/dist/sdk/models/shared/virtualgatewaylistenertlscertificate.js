@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualGatewayListenerTlsAcmCertificate } from "./virtualgatewaylistenertlsacmcertificate";
-import { VirtualGatewayListenerTlsFileCertificate } from "./virtualgatewaylistenertlsfilecertificate";
-import { VirtualGatewayListenerTlsSdsCertificate } from "./virtualgatewaylistenertlssdscertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayListenerTlsCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualgatewaylistenertlsacmcertificate_1 = require("./virtualgatewaylistenertlsacmcertificate");
+var virtualgatewaylistenertlsfilecertificate_1 = require("./virtualgatewaylistenertlsfilecertificate");
+var virtualgatewaylistenertlssdscertificate_1 = require("./virtualgatewaylistenertlssdscertificate");
 // VirtualGatewayListenerTlsCertificate
 /**
  * An object that represents a listener's Transport Layer Security (TLS) certificate.
@@ -36,17 +39,17 @@ var VirtualGatewayListenerTlsCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acm" }),
-        __metadata("design:type", VirtualGatewayListenerTlsAcmCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acm" }),
+        __metadata("design:type", virtualgatewaylistenertlsacmcertificate_1.VirtualGatewayListenerTlsAcmCertificate)
     ], VirtualGatewayListenerTlsCertificate.prototype, "acm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", VirtualGatewayListenerTlsFileCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", virtualgatewaylistenertlsfilecertificate_1.VirtualGatewayListenerTlsFileCertificate)
     ], VirtualGatewayListenerTlsCertificate.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sds" }),
-        __metadata("design:type", VirtualGatewayListenerTlsSdsCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sds" }),
+        __metadata("design:type", virtualgatewaylistenertlssdscertificate_1.VirtualGatewayListenerTlsSdsCertificate)
     ], VirtualGatewayListenerTlsCertificate.prototype, "sds", void 0);
     return VirtualGatewayListenerTlsCertificate;
-}(SpeakeasyBase));
-export { VirtualGatewayListenerTlsCertificate };
+}(utils_1.SpeakeasyBase));
+exports.VirtualGatewayListenerTlsCertificate = VirtualGatewayListenerTlsCertificate;

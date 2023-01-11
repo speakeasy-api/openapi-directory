@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,28 +31,30 @@ export class EmbedPresetsCustomLogos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/customlogos", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/customlogos", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CreateCustomLogoResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -60,7 +62,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -80,24 +81,26 @@ export class EmbedPresetsCustomLogos {
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "post",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.CreateCustomLogoAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -105,7 +108,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -121,28 +123,30 @@ export class EmbedPresetsCustomLogos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/customlogos/{logo_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/customlogos/{logo_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCustomLogoResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -150,7 +154,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -166,28 +169,30 @@ export class EmbedPresetsCustomLogos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/customlogos/{logo_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/customlogos/{logo_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCustomLogoAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.picture = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -195,7 +200,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -211,28 +215,30 @@ export class EmbedPresetsCustomLogos {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/customlogos", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/customlogos", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCustomLogosResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.pictures = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -240,7 +246,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -255,24 +260,26 @@ export class EmbedPresetsCustomLogos {
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCustomLogosAlt1Response = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.pictures = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.picture+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -280,7 +287,6 @@ export class EmbedPresetsCustomLogos {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

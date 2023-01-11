@@ -8,7 +8,7 @@ export class RotateSecretRequest extends SpeakeasyBase {
   clientRequestToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RotationLambdaARN" })
-  rotationLambdaArn?: string;
+  rotationLambdaARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RotationRules" })
   rotationRules?: RotationRulesType;

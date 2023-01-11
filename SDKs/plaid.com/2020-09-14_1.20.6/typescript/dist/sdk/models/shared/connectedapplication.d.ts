@@ -18,5 +18,5 @@ export declare class ConnectedApplication extends SpeakeasyBase {
     productDataTypes: ConnectedApplicationProductDataTypesEnum[];
     reasonForAccess: string;
     requestedScopes?: RequestedScopes;
-    scopes?: Map<string, any>;
+    scopes?: Record<string, any>;
 }

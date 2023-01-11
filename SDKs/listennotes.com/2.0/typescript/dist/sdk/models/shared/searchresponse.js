@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchResponse = /** @class */ (function (_super) {
     __extends(SearchResponse, _super);
     function SearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], SearchResponse.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_offset" }),
         __metadata("design:type", Number)
     ], SearchResponse.prototype, "nextOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results" }),
         __metadata("design:type", Array)
     ], SearchResponse.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=took" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=took" }),
         __metadata("design:type", Number)
     ], SearchResponse.prototype, "took", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponse.prototype, "total", void 0);
     return SearchResponse;
-}(SpeakeasyBase));
-export { SearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponse = SearchResponse;

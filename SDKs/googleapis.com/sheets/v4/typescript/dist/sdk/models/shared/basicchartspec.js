@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasicChartAxis } from "./basicchartaxis";
-import { BasicChartDomain } from "./basicchartdomain";
-import { BasicChartSeries } from "./basicchartseries";
-import { DataLabel } from "./datalabel";
-export var BasicChartSpecChartTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicChartSpec = exports.BasicChartSpecStackedTypeEnum = exports.BasicChartSpecLegendPositionEnum = exports.BasicChartSpecCompareModeEnum = exports.BasicChartSpecChartTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var basicchartaxis_1 = require("./basicchartaxis");
+var basicchartdomain_1 = require("./basicchartdomain");
+var basicchartseries_1 = require("./basicchartseries");
+var datalabel_1 = require("./datalabel");
+var BasicChartSpecChartTypeEnum;
 (function (BasicChartSpecChartTypeEnum) {
     BasicChartSpecChartTypeEnum["BasicChartTypeUnspecified"] = "BASIC_CHART_TYPE_UNSPECIFIED";
     BasicChartSpecChartTypeEnum["Bar"] = "BAR";
@@ -37,14 +40,14 @@ export var BasicChartSpecChartTypeEnum;
     BasicChartSpecChartTypeEnum["Scatter"] = "SCATTER";
     BasicChartSpecChartTypeEnum["Combo"] = "COMBO";
     BasicChartSpecChartTypeEnum["SteppedArea"] = "STEPPED_AREA";
-})(BasicChartSpecChartTypeEnum || (BasicChartSpecChartTypeEnum = {}));
-export var BasicChartSpecCompareModeEnum;
+})(BasicChartSpecChartTypeEnum = exports.BasicChartSpecChartTypeEnum || (exports.BasicChartSpecChartTypeEnum = {}));
+var BasicChartSpecCompareModeEnum;
 (function (BasicChartSpecCompareModeEnum) {
     BasicChartSpecCompareModeEnum["BasicChartCompareModeUnspecified"] = "BASIC_CHART_COMPARE_MODE_UNSPECIFIED";
     BasicChartSpecCompareModeEnum["Datum"] = "DATUM";
     BasicChartSpecCompareModeEnum["Category"] = "CATEGORY";
-})(BasicChartSpecCompareModeEnum || (BasicChartSpecCompareModeEnum = {}));
-export var BasicChartSpecLegendPositionEnum;
+})(BasicChartSpecCompareModeEnum = exports.BasicChartSpecCompareModeEnum || (exports.BasicChartSpecCompareModeEnum = {}));
+var BasicChartSpecLegendPositionEnum;
 (function (BasicChartSpecLegendPositionEnum) {
     BasicChartSpecLegendPositionEnum["BasicChartLegendPositionUnspecified"] = "BASIC_CHART_LEGEND_POSITION_UNSPECIFIED";
     BasicChartSpecLegendPositionEnum["BottomLegend"] = "BOTTOM_LEGEND";
@@ -52,14 +55,14 @@ export var BasicChartSpecLegendPositionEnum;
     BasicChartSpecLegendPositionEnum["RightLegend"] = "RIGHT_LEGEND";
     BasicChartSpecLegendPositionEnum["TopLegend"] = "TOP_LEGEND";
     BasicChartSpecLegendPositionEnum["NoLegend"] = "NO_LEGEND";
-})(BasicChartSpecLegendPositionEnum || (BasicChartSpecLegendPositionEnum = {}));
-export var BasicChartSpecStackedTypeEnum;
+})(BasicChartSpecLegendPositionEnum = exports.BasicChartSpecLegendPositionEnum || (exports.BasicChartSpecLegendPositionEnum = {}));
+var BasicChartSpecStackedTypeEnum;
 (function (BasicChartSpecStackedTypeEnum) {
     BasicChartSpecStackedTypeEnum["BasicChartStackedTypeUnspecified"] = "BASIC_CHART_STACKED_TYPE_UNSPECIFIED";
     BasicChartSpecStackedTypeEnum["NotStacked"] = "NOT_STACKED";
     BasicChartSpecStackedTypeEnum["Stacked"] = "STACKED";
     BasicChartSpecStackedTypeEnum["PercentStacked"] = "PERCENT_STACKED";
-})(BasicChartSpecStackedTypeEnum || (BasicChartSpecStackedTypeEnum = {}));
+})(BasicChartSpecStackedTypeEnum = exports.BasicChartSpecStackedTypeEnum || (exports.BasicChartSpecStackedTypeEnum = {}));
 // BasicChartSpec
 /**
  * The specification for a basic chart. See BasicChartType for the list of charts this supports.
@@ -70,53 +73,53 @@ var BasicChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=axis", elemType: BasicChartAxis }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=axis", elemType: basicchartaxis_1.BasicChartAxis }),
         __metadata("design:type", Array)
     ], BasicChartSpec.prototype, "axis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chartType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chartType" }),
         __metadata("design:type", String)
     ], BasicChartSpec.prototype, "chartType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compareMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compareMode" }),
         __metadata("design:type", String)
     ], BasicChartSpec.prototype, "compareMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains", elemType: BasicChartDomain }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains", elemType: basicchartdomain_1.BasicChartDomain }),
         __metadata("design:type", Array)
     ], BasicChartSpec.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headerCount" }),
         __metadata("design:type", Number)
     ], BasicChartSpec.prototype, "headerCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interpolateNulls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interpolateNulls" }),
         __metadata("design:type", Boolean)
     ], BasicChartSpec.prototype, "interpolateNulls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legendPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legendPosition" }),
         __metadata("design:type", String)
     ], BasicChartSpec.prototype, "legendPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineSmoothing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineSmoothing" }),
         __metadata("design:type", Boolean)
     ], BasicChartSpec.prototype, "lineSmoothing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series", elemType: BasicChartSeries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series", elemType: basicchartseries_1.BasicChartSeries }),
         __metadata("design:type", Array)
     ], BasicChartSpec.prototype, "series", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stackedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stackedType" }),
         __metadata("design:type", String)
     ], BasicChartSpec.prototype, "stackedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threeDimensional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threeDimensional" }),
         __metadata("design:type", Boolean)
     ], BasicChartSpec.prototype, "threeDimensional", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalDataLabel" }),
-        __metadata("design:type", DataLabel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalDataLabel" }),
+        __metadata("design:type", datalabel_1.DataLabel)
     ], BasicChartSpec.prototype, "totalDataLabel", void 0);
     return BasicChartSpec;
-}(SpeakeasyBase));
-export { BasicChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.BasicChartSpec = BasicChartSpec;

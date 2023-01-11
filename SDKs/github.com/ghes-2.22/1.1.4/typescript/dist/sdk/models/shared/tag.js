@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tag = exports.TagCommit = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagCommit = /** @class */ (function (_super) {
     __extends(TagCommit, _super);
     function TagCommit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], TagCommit.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], TagCommit.prototype, "url", void 0);
     return TagCommit;
-}(SpeakeasyBase));
-export { TagCommit };
+}(utils_1.SpeakeasyBase));
+exports.TagCommit = TagCommit;
 // Tag
 /**
  * Tag
@@ -49,25 +52,25 @@ var Tag = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit" }),
         __metadata("design:type", TagCommit)
     ], Tag.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Tag.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], Tag.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tarball_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tarball_url" }),
         __metadata("design:type", String)
     ], Tag.prototype, "tarballUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zipball_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zipball_url" }),
         __metadata("design:type", String)
     ], Tag.prototype, "zipballUrl", void 0);
     return Tag;
-}(SpeakeasyBase));
-export { Tag };
+}(utils_1.SpeakeasyBase));
+exports.Tag = Tag;

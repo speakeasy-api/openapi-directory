@@ -73,5 +73,5 @@ export class CreateApiResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createApi200ApplicationJsonObject?: CreateApi200ApplicationJson;
+  createApi200ApplicationJSONObject?: CreateApi200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChangedAssetDetail } from "./changedassetdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetChanges = void 0;
+var utils_1 = require("../../../internal/utils");
+var changedassetdetail_1 = require("./changedassetdetail");
 var AssetChanges = /** @class */ (function (_super) {
     __extends(AssetChanges, _super);
     function AssetChanges() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=change_set_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=change_set_id" }),
         __metadata("design:type", String)
     ], AssetChanges.prototype, "changeSetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changed_assets", elemType: ChangedAssetDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changed_assets", elemType: changedassetdetail_1.ChangedAssetDetail }),
         __metadata("design:type", Array)
     ], AssetChanges.prototype, "changedAssets", void 0);
     return AssetChanges;
-}(SpeakeasyBase));
-export { AssetChanges };
+}(utils_1.SpeakeasyBase));
+exports.AssetChanges = AssetChanges;

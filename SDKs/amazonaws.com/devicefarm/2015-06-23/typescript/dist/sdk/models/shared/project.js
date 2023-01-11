@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Project = void 0;
+var utils_1 = require("../../../internal/utils");
 // Project
 /**
  * Represents an operating-system neutral workspace for running and managing tests.
@@ -33,21 +36,21 @@ var Project = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Project.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Project.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultJobTimeoutMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultJobTimeoutMinutes" }),
         __metadata("design:type", Number)
     ], Project.prototype, "defaultJobTimeoutMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Project.prototype, "name", void 0);
     return Project;
-}(SpeakeasyBase));
-export { Project };
+}(utils_1.SpeakeasyBase));
+exports.Project = Project;

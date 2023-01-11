@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchProfile } from "./launchprofile";
-import { StreamingImage } from "./streamingimage";
-import { StudioComponentSummary } from "./studiocomponentsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLaunchProfileDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchprofile_1 = require("./launchprofile");
+var streamingimage_1 = require("./streamingimage");
+var studiocomponentsummary_1 = require("./studiocomponentsummary");
 var GetLaunchProfileDetailsResponse = /** @class */ (function (_super) {
     __extends(GetLaunchProfileDetailsResponse, _super);
     function GetLaunchProfileDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchProfile" }),
-        __metadata("design:type", LaunchProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchProfile" }),
+        __metadata("design:type", launchprofile_1.LaunchProfile)
     ], GetLaunchProfileDetailsResponse.prototype, "launchProfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamingImages", elemType: StreamingImage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingImages", elemType: streamingimage_1.StreamingImage }),
         __metadata("design:type", Array)
     ], GetLaunchProfileDetailsResponse.prototype, "streamingImages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioComponentSummaries", elemType: StudioComponentSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioComponentSummaries", elemType: studiocomponentsummary_1.StudioComponentSummary }),
         __metadata("design:type", Array)
     ], GetLaunchProfileDetailsResponse.prototype, "studioComponentSummaries", void 0);
     return GetLaunchProfileDetailsResponse;
-}(SpeakeasyBase));
-export { GetLaunchProfileDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLaunchProfileDetailsResponse = GetLaunchProfileDetailsResponse;

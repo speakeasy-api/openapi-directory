@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetEventRequest, GetEventResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -35,11 +34,11 @@ const req: GetEventRequest = {
     },
   },
   pathParams: {
-    id: "enim",
+    id: "sit",
   },
 };
 
-sdk.sdk.getEvent(req).then((res: GetEventResponse | AxiosError) => {
+sdk.getEvent(req).then((res: GetEventResponse | AxiosError) => {
    // handle response
 });
 ```

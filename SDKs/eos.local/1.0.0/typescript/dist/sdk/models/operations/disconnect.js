@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisconnectResponse = exports.DisconnectRequest = exports.DisconnectRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var DisconnectRequestBody = /** @class */ (function (_super) {
     __extends(DisconnectRequestBody, _super);
     function DisconnectRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], DisconnectRequestBody.prototype, "endpoint", void 0);
     return DisconnectRequestBody;
-}(SpeakeasyBase));
-export { DisconnectRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DisconnectRequestBody = DisconnectRequestBody;
 var DisconnectRequest = /** @class */ (function (_super) {
     __extends(DisconnectRequest, _super);
     function DisconnectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DisconnectRequestBody)
     ], DisconnectRequest.prototype, "request", void 0);
     return DisconnectRequest;
-}(SpeakeasyBase));
-export { DisconnectRequest };
+}(utils_1.SpeakeasyBase));
+exports.DisconnectRequest = DisconnectRequest;
 var DisconnectResponse = /** @class */ (function (_super) {
     __extends(DisconnectResponse, _super);
     function DisconnectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DisconnectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DisconnectResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DisconnectResponse.prototype, "disconnect200ApplicationJsonString", void 0);
+    ], DisconnectResponse.prototype, "disconnect200ApplicationJSONString", void 0);
     return DisconnectResponse;
-}(SpeakeasyBase));
-export { DisconnectResponse };
+}(utils_1.SpeakeasyBase));
+exports.DisconnectResponse = DisconnectResponse;

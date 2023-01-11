@@ -38,11 +38,11 @@ export class GetEventMatchTimeseriesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEventMatchTimeseries200ApplicationJsonStrings?: string[];
+  getEventMatchTimeseries200ApplicationJSONStrings?: string[];
 }

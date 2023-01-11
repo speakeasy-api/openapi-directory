@@ -48,7 +48,7 @@ export class DisassociateQualificationFromWorkerResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateQualificationFromWorkerResponse?: Map<string, any>;
+  disassociateQualificationFromWorkerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

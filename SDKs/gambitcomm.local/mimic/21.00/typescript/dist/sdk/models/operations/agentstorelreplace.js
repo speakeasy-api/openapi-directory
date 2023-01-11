@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentStoreLreplaceResponse = exports.AgentStoreLreplaceRequest = exports.AgentStoreLreplacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AgentStoreLreplacePathParams = /** @class */ (function (_super) {
     __extends(AgentStoreLreplacePathParams, _super);
     function AgentStoreLreplacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], AgentStoreLreplacePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=index" }),
         __metadata("design:type", Number)
     ], AgentStoreLreplacePathParams.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=var" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=var" }),
         __metadata("design:type", String)
     ], AgentStoreLreplacePathParams.prototype, "var", void 0);
     return AgentStoreLreplacePathParams;
-}(SpeakeasyBase));
-export { AgentStoreLreplacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreLreplacePathParams = AgentStoreLreplacePathParams;
 var AgentStoreLreplaceRequest = /** @class */ (function (_super) {
     __extends(AgentStoreLreplaceRequest, _super);
     function AgentStoreLreplaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AgentStoreLreplacePathParams)
     ], AgentStoreLreplaceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], AgentStoreLreplaceRequest.prototype, "request", void 0);
     return AgentStoreLreplaceRequest;
-}(SpeakeasyBase));
-export { AgentStoreLreplaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreLreplaceRequest = AgentStoreLreplaceRequest;
 var AgentStoreLreplaceResponse = /** @class */ (function (_super) {
     __extends(AgentStoreLreplaceResponse, _super);
     function AgentStoreLreplaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AgentStoreLreplaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AgentStoreLreplaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AgentStoreLreplaceResponse.prototype, "agentStoreLreplace200ApplicationJsonString", void 0);
+    ], AgentStoreLreplaceResponse.prototype, "agentStoreLreplace200ApplicationJSONString", void 0);
     return AgentStoreLreplaceResponse;
-}(SpeakeasyBase));
-export { AgentStoreLreplaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreLreplaceResponse = AgentStoreLreplaceResponse;

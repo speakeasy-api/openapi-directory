@@ -28,5 +28,5 @@ export class DomainRankResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  domainRank200ApplicationJsonObject?: DomainRank200ApplicationJson;
+  domainRank200ApplicationJSONObject?: DomainRank200ApplicationJson;
 }

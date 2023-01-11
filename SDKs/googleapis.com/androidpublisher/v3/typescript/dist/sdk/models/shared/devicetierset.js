@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceTier } from "./devicetier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceTierSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var devicetier_1 = require("./devicetier");
 // DeviceTierSet
 /**
  * A set of device tiers. A tier set determines what variation of app content gets served to a specific device, for device-targeted content. You should assign a priority level to each tier, which determines the ordering by which they are evaluated by Play. See the documentation of DeviceTier.level for more details.
@@ -34,9 +37,9 @@ var DeviceTierSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceTiers", elemType: DeviceTier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceTiers", elemType: devicetier_1.DeviceTier }),
         __metadata("design:type", Array)
     ], DeviceTierSet.prototype, "deviceTiers", void 0);
     return DeviceTierSet;
-}(SpeakeasyBase));
-export { DeviceTierSet };
+}(utils_1.SpeakeasyBase));
+exports.DeviceTierSet = DeviceTierSet;

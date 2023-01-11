@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloneBackendRequest, CloneBackendResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: CloneBackendRequest = {
   pathParams: {
-    appId: "culpa",
-    backendEnvironmentName: "repellendus",
+    appId: "sit",
+    backendEnvironmentName: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "ut",
-    xAmzCredential: "veniam",
-    xAmzDate: "architecto",
-    xAmzSecurityToken: "molestias",
-    xAmzSignature: "rerum",
-    xAmzSignedHeaders: "quo",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
+    xAmzDate: "dolor",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
   request: {
     targetEnvironmentName: "et",
   },
 };
 
-sdk.sdk.cloneBackend(req).then((res: CloneBackendResponse | AxiosError) => {
+sdk.cloneBackend(req).then((res: CloneBackendResponse | AxiosError) => {
    // handle response
 });
 ```

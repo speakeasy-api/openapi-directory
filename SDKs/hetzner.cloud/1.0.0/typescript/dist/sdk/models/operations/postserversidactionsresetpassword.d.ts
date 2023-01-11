@@ -37,6 +37,6 @@ export declare class PostServersIdActionsResetPasswordRequest extends SpeakeasyB
 }
 export declare class PostServersIdActionsResetPasswordResponse extends SpeakeasyBase {
     contentType: string;
-    postServersIdActionsResetPassword201ApplicationJsonObject?: PostServersIdActionsResetPassword201ApplicationJson;
     statusCode: number;
+    postServersIdActionsResetPassword201ApplicationJSONObject?: PostServersIdActionsResetPassword201ApplicationJson;
 }

@@ -5,7 +5,7 @@ export declare class SandboxOauthSelectAccountsRequest extends SpeakeasyBase {
 }
 export declare class SandboxOauthSelectAccountsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    sandboxOauthSelectAccountsResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    sandboxOauthSelectAccountsResponse?: Record<string, any>;
     statusCode: number;
 }

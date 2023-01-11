@@ -15,7 +15,7 @@ export declare class DeviceTypeSubdeviceRole extends SpeakeasyBase {
 export declare class DeviceType extends SpeakeasyBase {
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     deviceCount?: number;
     displayName?: string;
     frontImage?: string;

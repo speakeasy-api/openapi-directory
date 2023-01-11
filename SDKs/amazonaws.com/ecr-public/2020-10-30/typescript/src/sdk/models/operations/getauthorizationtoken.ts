@@ -39,7 +39,7 @@ export class GetAuthorizationTokenRequest extends SpeakeasyBase {
   headers: GetAuthorizationTokenHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

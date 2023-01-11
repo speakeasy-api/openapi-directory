@@ -14,6 +14,6 @@ export declare class GetSchemaRequest extends SpeakeasyBase {
 export declare class GetSchemaResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getSchema200ApplicationJsonBinaryString?: Uint8Array;
+    getSchema200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

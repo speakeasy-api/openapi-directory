@@ -16,9 +16,6 @@ export class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateQueryPara
 
 
 export class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
   privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 

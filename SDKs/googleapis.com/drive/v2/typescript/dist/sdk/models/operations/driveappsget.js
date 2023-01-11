@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,250 +14,275 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveAppsGetResponse = exports.DriveAppsGetRequest = exports.DriveAppsGetSecurity = exports.DriveAppsGetSecurityOption7 = exports.DriveAppsGetSecurityOption6 = exports.DriveAppsGetSecurityOption5 = exports.DriveAppsGetSecurityOption4 = exports.DriveAppsGetSecurityOption3 = exports.DriveAppsGetSecurityOption2 = exports.DriveAppsGetSecurityOption1 = exports.DriveAppsGetQueryParams = exports.DriveAppsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DriveAppsGetPathParams = /** @class */ (function (_super) {
     __extends(DriveAppsGetPathParams, _super);
     function DriveAppsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], DriveAppsGetPathParams.prototype, "appId", void 0);
     return DriveAppsGetPathParams;
-}(SpeakeasyBase));
-export { DriveAppsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetPathParams = DriveAppsGetPathParams;
 var DriveAppsGetQueryParams = /** @class */ (function (_super) {
     __extends(DriveAppsGetQueryParams, _super);
     function DriveAppsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DriveAppsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DriveAppsGetQueryParams.prototype, "userIp", void 0);
     return DriveAppsGetQueryParams;
-}(SpeakeasyBase));
-export { DriveAppsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetQueryParams = DriveAppsGetQueryParams;
 var DriveAppsGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption1, _super);
     function DriveAppsGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption1.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption1;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption1 = DriveAppsGetSecurityOption1;
 var DriveAppsGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption2, _super);
     function DriveAppsGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption2.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption2;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption2 = DriveAppsGetSecurityOption2;
 var DriveAppsGetSecurityOption3 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption3, _super);
     function DriveAppsGetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption3.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption3;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption3 = DriveAppsGetSecurityOption3;
 var DriveAppsGetSecurityOption4 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption4, _super);
     function DriveAppsGetSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption4.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption4;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption4 = DriveAppsGetSecurityOption4;
 var DriveAppsGetSecurityOption5 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption5, _super);
     function DriveAppsGetSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption5.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption5;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption5 = DriveAppsGetSecurityOption5;
 var DriveAppsGetSecurityOption6 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption6, _super);
     function DriveAppsGetSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption6.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption6;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption6 = DriveAppsGetSecurityOption6;
 var DriveAppsGetSecurityOption7 = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurityOption7, _super);
     function DriveAppsGetSecurityOption7() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveAppsGetSecurityOption7.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveAppsGetSecurityOption7.prototype, "oauth2c", void 0);
     return DriveAppsGetSecurityOption7;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurityOption7 };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurityOption7 = DriveAppsGetSecurityOption7;
 var DriveAppsGetSecurity = /** @class */ (function (_super) {
     __extends(DriveAppsGetSecurity, _super);
     function DriveAppsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption1)
     ], DriveAppsGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption2)
     ], DriveAppsGetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption3)
     ], DriveAppsGetSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption4)
     ], DriveAppsGetSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption5)
     ], DriveAppsGetSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption6)
     ], DriveAppsGetSecurity.prototype, "option6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveAppsGetSecurityOption7)
     ], DriveAppsGetSecurity.prototype, "option7", void 0);
     return DriveAppsGetSecurity;
-}(SpeakeasyBase));
-export { DriveAppsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetSecurity = DriveAppsGetSecurity;
 var DriveAppsGetRequest = /** @class */ (function (_super) {
     __extends(DriveAppsGetRequest, _super);
     function DriveAppsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveAppsGetPathParams)
     ], DriveAppsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveAppsGetQueryParams)
     ], DriveAppsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveAppsGetSecurity)
     ], DriveAppsGetRequest.prototype, "security", void 0);
     return DriveAppsGetRequest;
-}(SpeakeasyBase));
-export { DriveAppsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetRequest = DriveAppsGetRequest;
 var DriveAppsGetResponse = /** @class */ (function (_super) {
     __extends(DriveAppsGetResponse, _super);
     function DriveAppsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.App)
     ], DriveAppsGetResponse.prototype, "app", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DriveAppsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DriveAppsGetResponse.prototype, "statusCode", void 0);
     return DriveAppsGetResponse;
-}(SpeakeasyBase));
-export { DriveAppsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DriveAppsGetResponse = DriveAppsGetResponse;

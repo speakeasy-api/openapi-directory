@@ -20,7 +20,7 @@ export class UpdateIterationHeaders extends SpeakeasyBase {
 
 export class UpdateIterationRequestsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   iteration?: shared.IterationInput;
@@ -32,7 +32,7 @@ export class UpdateIterationRequestsInput extends SpeakeasyBase {
   iteration2?: shared.IterationInput;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

@@ -4,6 +4,9 @@ export declare class ApplicationGrantApp extends SpeakeasyBase {
     name: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class ApplicationGrantSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

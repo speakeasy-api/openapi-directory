@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TemplateVersionResponse } from "./templateversionresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var templateversionresponse_1 = require("./templateversionresponse");
 // TemplateVersionsResponse
 /**
  * Provides information about all the versions of a specific message template.
@@ -34,21 +37,21 @@ var TemplateVersionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Item", elemType: TemplateVersionResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Item", elemType: templateversionresponse_1.TemplateVersionResponse }),
         __metadata("design:type", Array)
     ], TemplateVersionsResponse.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], TemplateVersionsResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], TemplateVersionsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestID" }),
         __metadata("design:type", String)
-    ], TemplateVersionsResponse.prototype, "requestId", void 0);
+    ], TemplateVersionsResponse.prototype, "requestID", void 0);
     return TemplateVersionsResponse;
-}(SpeakeasyBase));
-export { TemplateVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TemplateVersionsResponse = TemplateVersionsResponse;

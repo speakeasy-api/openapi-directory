@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomizedMetricSpecification } from "./customizedmetricspecification";
-import { PredefinedMetricSpecification } from "./predefinedmetricspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetTrackingConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var customizedmetricspecification_1 = require("./customizedmetricspecification");
+var predefinedmetricspecification_1 = require("./predefinedmetricspecification");
 // TargetTrackingConfiguration
 /**
  * Represents a target tracking scaling policy configuration to use with Amazon EC2 Auto Scaling.
@@ -35,21 +38,21 @@ var TargetTrackingConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CustomizedMetricSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", customizedmetricspecification_1.CustomizedMetricSpecification)
     ], TargetTrackingConfiguration.prototype, "customizedMetricSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], TargetTrackingConfiguration.prototype, "disableScaleIn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PredefinedMetricSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", predefinedmetricspecification_1.PredefinedMetricSpecification)
     ], TargetTrackingConfiguration.prototype, "predefinedMetricSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TargetTrackingConfiguration.prototype, "targetValue", void 0);
     return TargetTrackingConfiguration;
-}(SpeakeasyBase));
-export { TargetTrackingConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.TargetTrackingConfiguration = TargetTrackingConfiguration;

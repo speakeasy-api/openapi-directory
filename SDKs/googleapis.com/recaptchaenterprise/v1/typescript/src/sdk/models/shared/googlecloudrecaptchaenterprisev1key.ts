@@ -25,7 +25,7 @@ export class GoogleCloudRecaptchaenterpriseV1Key extends SpeakeasyBase {
   iosSettings?: GoogleCloudRecaptchaenterpriseV1IosKeySettings;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

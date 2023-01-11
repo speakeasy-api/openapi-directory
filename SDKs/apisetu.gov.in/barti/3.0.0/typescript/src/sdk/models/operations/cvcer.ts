@@ -188,23 +188,23 @@ export class CvcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cvcer400ApplicationJsonObject?: Cvcer400ApplicationJson;
+  cvcer400ApplicationJSONObject?: Cvcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer401ApplicationJsonObject?: Cvcer401ApplicationJson;
+  cvcer401ApplicationJSONObject?: Cvcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer404ApplicationJsonObject?: Cvcer404ApplicationJson;
+  cvcer404ApplicationJSONObject?: Cvcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer500ApplicationJsonObject?: Cvcer500ApplicationJson;
+  cvcer500ApplicationJSONObject?: Cvcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer502ApplicationJsonObject?: Cvcer502ApplicationJson;
+  cvcer502ApplicationJSONObject?: Cvcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer503ApplicationJsonObject?: Cvcer503ApplicationJson;
+  cvcer503ApplicationJSONObject?: Cvcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cvcer504ApplicationJsonObject?: Cvcer504ApplicationJson;
+  cvcer504ApplicationJSONObject?: Cvcer504ApplicationJson;
 }

@@ -66,7 +66,7 @@ export class GetProjectVideosResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.Video })
   videos?: shared.Video[];

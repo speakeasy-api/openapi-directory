@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProperNounCategorizedOut } from "./propernouncategorizedout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchProperNounCategorizedOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var propernouncategorizedout_1 = require("./propernouncategorizedout");
 // BatchProperNounCategorizedOut
 /**
  * Represents the output of inferring the common type (anthroponym, toponym, brand, etc.) from a list of proper names.
@@ -34,9 +37,9 @@ var BatchProperNounCategorizedOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properNouns", elemType: ProperNounCategorizedOut }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properNouns", elemType: propernouncategorizedout_1.ProperNounCategorizedOut }),
         __metadata("design:type", Array)
     ], BatchProperNounCategorizedOut.prototype, "properNouns", void 0);
     return BatchProperNounCategorizedOut;
-}(SpeakeasyBase));
-export { BatchProperNounCategorizedOut };
+}(utils_1.SpeakeasyBase));
+exports.BatchProperNounCategorizedOut = BatchProperNounCategorizedOut;

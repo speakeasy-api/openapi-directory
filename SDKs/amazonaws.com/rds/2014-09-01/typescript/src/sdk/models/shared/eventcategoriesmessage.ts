@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventCategoriesMap } from "./eventcategoriesmap";
+import { EventCategoriesMapList } from "./eventcategoriesmaplist";
 
 
 
 export class EventCategoriesMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: EventCategoriesMap })
-  eventCategoriesMapList?: EventCategoriesMap[];
+  @SpeakeasyMetadata({ elemType: EventCategoriesMapList })
+  eventCategoriesMapList?: EventCategoriesMapList[];
 }

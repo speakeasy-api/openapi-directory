@@ -25,5 +25,5 @@ export declare class UpdateRuleCategoryRequest extends SpeakeasyBase {
 export declare class UpdateRuleCategoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateRuleCategory200ApplicationJsonObject?: UpdateRuleCategory200ApplicationJson;
+    updateRuleCategory200ApplicationJSONObject?: UpdateRuleCategory200ApplicationJson;
 }

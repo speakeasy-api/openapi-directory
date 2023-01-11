@@ -1,0 +1,421 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LineItemTransaction = exports.LineItemTransactionClaimStatusEnum = exports.LineItemTransactionAdjustmentReasonEnum = exports.LineItemTransactionAdjustmentGroupCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LineItemTransactionAdjustmentGroupCodeEnum;
+(function (LineItemTransactionAdjustmentGroupCodeEnum) {
+    LineItemTransactionAdjustmentGroupCodeEnum["Unknown"] = "";
+    LineItemTransactionAdjustmentGroupCodeEnum["Co"] = "CO";
+    LineItemTransactionAdjustmentGroupCodeEnum["Oa"] = "OA";
+    LineItemTransactionAdjustmentGroupCodeEnum["Pi"] = "PI";
+    LineItemTransactionAdjustmentGroupCodeEnum["Pr"] = "PR";
+})(LineItemTransactionAdjustmentGroupCodeEnum = exports.LineItemTransactionAdjustmentGroupCodeEnum || (exports.LineItemTransactionAdjustmentGroupCodeEnum = {}));
+var LineItemTransactionAdjustmentReasonEnum;
+(function (LineItemTransactionAdjustmentReasonEnum) {
+    LineItemTransactionAdjustmentReasonEnum["Minus3"] = "-3";
+    LineItemTransactionAdjustmentReasonEnum["Minus2"] = "-2";
+    LineItemTransactionAdjustmentReasonEnum["Minus4"] = "-4";
+    LineItemTransactionAdjustmentReasonEnum["Minus1"] = "-1";
+    LineItemTransactionAdjustmentReasonEnum["Zero"] = "0";
+    LineItemTransactionAdjustmentReasonEnum["One"] = "1";
+    LineItemTransactionAdjustmentReasonEnum["Two"] = "2";
+    LineItemTransactionAdjustmentReasonEnum["Three"] = "3";
+    LineItemTransactionAdjustmentReasonEnum["Four"] = "4";
+    LineItemTransactionAdjustmentReasonEnum["Five"] = "5";
+    LineItemTransactionAdjustmentReasonEnum["Six"] = "6";
+    LineItemTransactionAdjustmentReasonEnum["Seven"] = "7";
+    LineItemTransactionAdjustmentReasonEnum["Eight"] = "8";
+    LineItemTransactionAdjustmentReasonEnum["Nine"] = "9";
+    LineItemTransactionAdjustmentReasonEnum["Ten"] = "10";
+    LineItemTransactionAdjustmentReasonEnum["Eleven"] = "11";
+    LineItemTransactionAdjustmentReasonEnum["Twelve"] = "12";
+    LineItemTransactionAdjustmentReasonEnum["Thirteen"] = "13";
+    LineItemTransactionAdjustmentReasonEnum["Fourteen"] = "14";
+    LineItemTransactionAdjustmentReasonEnum["Fifteen"] = "15";
+    LineItemTransactionAdjustmentReasonEnum["Sixteen"] = "16";
+    LineItemTransactionAdjustmentReasonEnum["Eighteen"] = "18";
+    LineItemTransactionAdjustmentReasonEnum["Nineteen"] = "19";
+    LineItemTransactionAdjustmentReasonEnum["Twenty"] = "20";
+    LineItemTransactionAdjustmentReasonEnum["TwentyOne"] = "21";
+    LineItemTransactionAdjustmentReasonEnum["TwentyTwo"] = "22";
+    LineItemTransactionAdjustmentReasonEnum["TwentyThree"] = "23";
+    LineItemTransactionAdjustmentReasonEnum["TwentyFour"] = "24";
+    LineItemTransactionAdjustmentReasonEnum["TwentySix"] = "26";
+    LineItemTransactionAdjustmentReasonEnum["TwentySeven"] = "27";
+    LineItemTransactionAdjustmentReasonEnum["TwentyNine"] = "29";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyOne"] = "31";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyTwo"] = "32";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyThree"] = "33";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyFour"] = "34";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyFive"] = "35";
+    LineItemTransactionAdjustmentReasonEnum["ThirtyNine"] = "39";
+    LineItemTransactionAdjustmentReasonEnum["Forty"] = "40";
+    LineItemTransactionAdjustmentReasonEnum["FortyFour"] = "44";
+    LineItemTransactionAdjustmentReasonEnum["FortyFive"] = "45";
+    LineItemTransactionAdjustmentReasonEnum["FortyNine"] = "49";
+    LineItemTransactionAdjustmentReasonEnum["Fifty"] = "50";
+    LineItemTransactionAdjustmentReasonEnum["FiftyOne"] = "51";
+    LineItemTransactionAdjustmentReasonEnum["FiftyThree"] = "53";
+    LineItemTransactionAdjustmentReasonEnum["FiftyFour"] = "54";
+    LineItemTransactionAdjustmentReasonEnum["FiftyFive"] = "55";
+    LineItemTransactionAdjustmentReasonEnum["FiftySix"] = "56";
+    LineItemTransactionAdjustmentReasonEnum["FiftyEight"] = "58";
+    LineItemTransactionAdjustmentReasonEnum["FiftyNine"] = "59";
+    LineItemTransactionAdjustmentReasonEnum["Sixty"] = "60";
+    LineItemTransactionAdjustmentReasonEnum["SixtyOne"] = "61";
+    LineItemTransactionAdjustmentReasonEnum["SixtySix"] = "66";
+    LineItemTransactionAdjustmentReasonEnum["SixtyNine"] = "69";
+    LineItemTransactionAdjustmentReasonEnum["Seventy"] = "70";
+    LineItemTransactionAdjustmentReasonEnum["SeventyFour"] = "74";
+    LineItemTransactionAdjustmentReasonEnum["SeventyFive"] = "75";
+    LineItemTransactionAdjustmentReasonEnum["SeventySix"] = "76";
+    LineItemTransactionAdjustmentReasonEnum["SeventyEight"] = "78";
+    LineItemTransactionAdjustmentReasonEnum["EightyFive"] = "85";
+    LineItemTransactionAdjustmentReasonEnum["EightySeven"] = "87";
+    LineItemTransactionAdjustmentReasonEnum["EightyNine"] = "89";
+    LineItemTransactionAdjustmentReasonEnum["Ninety"] = "90";
+    LineItemTransactionAdjustmentReasonEnum["NinetyOne"] = "91";
+    LineItemTransactionAdjustmentReasonEnum["NinetyFour"] = "94";
+    LineItemTransactionAdjustmentReasonEnum["NinetyFive"] = "95";
+    LineItemTransactionAdjustmentReasonEnum["NinetySix"] = "96";
+    LineItemTransactionAdjustmentReasonEnum["NinetySeven"] = "97";
+    LineItemTransactionAdjustmentReasonEnum["OneHundred"] = "100";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndOne"] = "101";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwo"] = "102";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThree"] = "103";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFour"] = "104";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFive"] = "105";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSix"] = "106";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeven"] = "107";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEight"] = "108";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNine"] = "109";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTen"] = "110";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEleven"] = "111";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwelve"] = "112";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFourteen"] = "114";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFifteen"] = "115";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixteen"] = "116";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventeen"] = "117";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEighteen"] = "118";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNineteen"] = "119";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwentyOne"] = "121";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwentyTwo"] = "122";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwentyFive"] = "125";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwentyEight"] = "128";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndTwentyNine"] = "129";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirty"] = "130";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyOne"] = "131";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyTwo"] = "132";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyThree"] = "133";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyFour"] = "134";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyFive"] = "135";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtySix"] = "136";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtySeven"] = "137";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyEight"] = "138";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndThirtyNine"] = "139";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndForty"] = "140";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortyTwo"] = "142";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortyThree"] = "143";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortyFour"] = "144";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortySix"] = "146";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortySeven"] = "147";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortyEight"] = "148";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFortyNine"] = "149";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFifty"] = "150";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyOne"] = "151";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyTwo"] = "152";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyThree"] = "153";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyFour"] = "154";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyFive"] = "155";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftySeven"] = "157";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyEight"] = "158";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndFiftyNine"] = "159";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixty"] = "160";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyOne"] = "161";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyTwo"] = "162";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyThree"] = "163";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyFour"] = "164";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyFive"] = "165";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtySix"] = "166";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtySeven"] = "167";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyEight"] = "168";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSixtyNine"] = "169";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventy"] = "170";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyOne"] = "171";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyTwo"] = "172";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyThree"] = "173";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyFour"] = "174";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyFive"] = "175";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventySix"] = "176";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventySeven"] = "177";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyEight"] = "178";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndSeventyNine"] = "179";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEighty"] = "180";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyOne"] = "181";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyTwo"] = "182";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyThree"] = "183";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyFour"] = "184";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyFive"] = "185";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightySix"] = "186";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightySeven"] = "187";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyEight"] = "188";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndEightyNine"] = "189";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinety"] = "190";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyOne"] = "191";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyTwo"] = "192";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyThree"] = "193";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyFour"] = "194";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyFive"] = "195";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetySeven"] = "197";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyEight"] = "198";
+    LineItemTransactionAdjustmentReasonEnum["OneHundredAndNinetyNine"] = "199";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundred"] = "200";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndOne"] = "201";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwo"] = "202";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThree"] = "203";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFour"] = "204";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFive"] = "205";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSix"] = "206";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeven"] = "207";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndEight"] = "208";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndNine"] = "209";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTen"] = "210";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndEleven"] = "211";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwelve"] = "212";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirteen"] = "213";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFourteen"] = "214";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFifteen"] = "215";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixteen"] = "216";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventeen"] = "217";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndEighteen"] = "218";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndNineteen"] = "219";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwenty"] = "220";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyOne"] = "221";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyTwo"] = "222";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyThree"] = "223";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyFour"] = "224";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyFive"] = "225";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentySix"] = "226";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentySeven"] = "227";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyEight"] = "228";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndTwentyNine"] = "229";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirty"] = "230";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyOne"] = "231";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyTwo"] = "232";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyThree"] = "233";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyFour"] = "234";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyFive"] = "235";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtySix"] = "236";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtySeven"] = "237";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyEight"] = "238";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndThirtyNine"] = "239";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndForty"] = "240";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyOne"] = "241";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyTwo"] = "242";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyThree"] = "243";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyFour"] = "244";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyFive"] = "245";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortySix"] = "246";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortySeven"] = "247";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyEight"] = "248";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFortyNine"] = "249";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFifty"] = "250";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyOne"] = "251";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyTwo"] = "252";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyThree"] = "253";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyFour"] = "254";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftySix"] = "256";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftySeven"] = "257";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyEight"] = "258";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndFiftyNine"] = "259";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixty"] = "260";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyOne"] = "261";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyTwo"] = "262";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyThree"] = "263";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyFour"] = "264";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyFive"] = "265";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtySix"] = "266";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtySeven"] = "267";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyEight"] = "268";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSixtyNine"] = "269";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventy"] = "270";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventyOne"] = "271";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventyTwo"] = "272";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventyThree"] = "273";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventyFour"] = "274";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventyFive"] = "275";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventySix"] = "276";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndSeventySeven"] = "277";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndEightySeven"] = "287";
+    LineItemTransactionAdjustmentReasonEnum["TwoHundredAndEightyEight"] = "288";
+    LineItemTransactionAdjustmentReasonEnum["A0"] = "A0";
+    LineItemTransactionAdjustmentReasonEnum["A1"] = "A1";
+    LineItemTransactionAdjustmentReasonEnum["A5"] = "A5";
+    LineItemTransactionAdjustmentReasonEnum["A6"] = "A6";
+    LineItemTransactionAdjustmentReasonEnum["A7"] = "A7";
+    LineItemTransactionAdjustmentReasonEnum["A8"] = "A8";
+    LineItemTransactionAdjustmentReasonEnum["B1"] = "B1";
+    LineItemTransactionAdjustmentReasonEnum["B4"] = "B4";
+    LineItemTransactionAdjustmentReasonEnum["B5"] = "B5";
+    LineItemTransactionAdjustmentReasonEnum["B7"] = "B7";
+    LineItemTransactionAdjustmentReasonEnum["B8"] = "B8";
+    LineItemTransactionAdjustmentReasonEnum["B9"] = "B9";
+    LineItemTransactionAdjustmentReasonEnum["B10"] = "B10";
+    LineItemTransactionAdjustmentReasonEnum["B11"] = "B11";
+    LineItemTransactionAdjustmentReasonEnum["B12"] = "B12";
+    LineItemTransactionAdjustmentReasonEnum["B13"] = "B13";
+    LineItemTransactionAdjustmentReasonEnum["B14"] = "B14";
+    LineItemTransactionAdjustmentReasonEnum["B15"] = "B15";
+    LineItemTransactionAdjustmentReasonEnum["B16"] = "B16";
+    LineItemTransactionAdjustmentReasonEnum["B20"] = "B20";
+    LineItemTransactionAdjustmentReasonEnum["B22"] = "B22";
+    LineItemTransactionAdjustmentReasonEnum["B23"] = "B23";
+    LineItemTransactionAdjustmentReasonEnum["P1"] = "P1";
+    LineItemTransactionAdjustmentReasonEnum["P2"] = "P2";
+    LineItemTransactionAdjustmentReasonEnum["P3"] = "P3";
+    LineItemTransactionAdjustmentReasonEnum["P4"] = "P4";
+    LineItemTransactionAdjustmentReasonEnum["P5"] = "P5";
+    LineItemTransactionAdjustmentReasonEnum["P6"] = "P6";
+    LineItemTransactionAdjustmentReasonEnum["P7"] = "P7";
+    LineItemTransactionAdjustmentReasonEnum["P8"] = "P8";
+    LineItemTransactionAdjustmentReasonEnum["P9"] = "P9";
+    LineItemTransactionAdjustmentReasonEnum["P10"] = "P10";
+    LineItemTransactionAdjustmentReasonEnum["P11"] = "P11";
+    LineItemTransactionAdjustmentReasonEnum["P12"] = "P12";
+    LineItemTransactionAdjustmentReasonEnum["P13"] = "P13";
+    LineItemTransactionAdjustmentReasonEnum["P14"] = "P14";
+    LineItemTransactionAdjustmentReasonEnum["P15"] = "P15";
+    LineItemTransactionAdjustmentReasonEnum["P16"] = "P16";
+    LineItemTransactionAdjustmentReasonEnum["P17"] = "P17";
+    LineItemTransactionAdjustmentReasonEnum["P18"] = "P18";
+    LineItemTransactionAdjustmentReasonEnum["P19"] = "P19";
+    LineItemTransactionAdjustmentReasonEnum["P20"] = "P20";
+    LineItemTransactionAdjustmentReasonEnum["P21"] = "P21";
+    LineItemTransactionAdjustmentReasonEnum["P22"] = "P22";
+    LineItemTransactionAdjustmentReasonEnum["P23"] = "P23";
+    LineItemTransactionAdjustmentReasonEnum["W1"] = "W1";
+    LineItemTransactionAdjustmentReasonEnum["W2"] = "W2";
+    LineItemTransactionAdjustmentReasonEnum["W3"] = "W3";
+    LineItemTransactionAdjustmentReasonEnum["W4"] = "W4";
+    LineItemTransactionAdjustmentReasonEnum["Y1"] = "Y1";
+    LineItemTransactionAdjustmentReasonEnum["Y2"] = "Y2";
+    LineItemTransactionAdjustmentReasonEnum["Y3"] = "Y3";
+})(LineItemTransactionAdjustmentReasonEnum = exports.LineItemTransactionAdjustmentReasonEnum || (exports.LineItemTransactionAdjustmentReasonEnum = {}));
+var LineItemTransactionClaimStatusEnum;
+(function (LineItemTransactionClaimStatusEnum) {
+    LineItemTransactionClaimStatusEnum["Unknown"] = "";
+    LineItemTransactionClaimStatusEnum["Zero"] = "0";
+    LineItemTransactionClaimStatusEnum["One"] = "1";
+    LineItemTransactionClaimStatusEnum["Two"] = "2";
+    LineItemTransactionClaimStatusEnum["Three"] = "3";
+    LineItemTransactionClaimStatusEnum["Four"] = "4";
+    LineItemTransactionClaimStatusEnum["Five"] = "5";
+    LineItemTransactionClaimStatusEnum["Ten"] = "10";
+    LineItemTransactionClaimStatusEnum["Thirteen"] = "13";
+    LineItemTransactionClaimStatusEnum["Fifteen"] = "15";
+    LineItemTransactionClaimStatusEnum["Sixteen"] = "16";
+    LineItemTransactionClaimStatusEnum["Seventeen"] = "17";
+    LineItemTransactionClaimStatusEnum["Nineteen"] = "19";
+    LineItemTransactionClaimStatusEnum["Twenty"] = "20";
+    LineItemTransactionClaimStatusEnum["TwentyOne"] = "21";
+    LineItemTransactionClaimStatusEnum["TwentyTwo"] = "22";
+    LineItemTransactionClaimStatusEnum["TwentyThree"] = "23";
+    LineItemTransactionClaimStatusEnum["TwentyFive"] = "25";
+    LineItemTransactionClaimStatusEnum["TwentySeven"] = "27";
+})(LineItemTransactionClaimStatusEnum = exports.LineItemTransactionClaimStatusEnum || (exports.LineItemTransactionClaimStatusEnum = {}));
+var LineItemTransaction = /** @class */ (function (_super) {
+    __extends(LineItemTransaction, _super);
+    function LineItemTransaction() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustment" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "adjustment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustment_group_code" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "adjustmentGroupCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustment_reason" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "adjustmentReason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "appointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=check_date" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "checkDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claim_status" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "claimStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctor" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "doctor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ins_name" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "insName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ins_paid" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "insPaid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line_item" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "lineItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", Number)
+    ], LineItemTransaction.prototype, "patient", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posted_date" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "postedDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trace_number" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "traceNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], LineItemTransaction.prototype, "updatedAt", void 0);
+    return LineItemTransaction;
+}(utils_1.SpeakeasyBase));
+exports.LineItemTransaction = LineItemTransaction;

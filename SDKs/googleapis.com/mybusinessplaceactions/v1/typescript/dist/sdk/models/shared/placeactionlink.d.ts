@@ -17,15 +17,6 @@ export declare enum PlaceActionLinkProviderTypeEnum {
 /**
  * Represents a place action link and its attributes.
 **/
-export declare class PlaceActionLinkInput extends SpeakeasyBase {
-    isPreferred?: boolean;
-    name?: string;
-    placeActionType?: PlaceActionLinkPlaceActionTypeEnum;
-    uri?: string;
-}
-/**
- * Represents a place action link and its attributes.
-**/
 export declare class PlaceActionLink extends SpeakeasyBase {
     createTime?: string;
     isEditable?: boolean;
@@ -34,5 +25,14 @@ export declare class PlaceActionLink extends SpeakeasyBase {
     placeActionType?: PlaceActionLinkPlaceActionTypeEnum;
     providerType?: PlaceActionLinkProviderTypeEnum;
     updateTime?: string;
+    uri?: string;
+}
+/**
+ * Represents a place action link and its attributes.
+**/
+export declare class PlaceActionLinkInput extends SpeakeasyBase {
+    isPreferred?: boolean;
+    name?: string;
+    placeActionType?: PlaceActionLinkPlaceActionTypeEnum;
     uri?: string;
 }

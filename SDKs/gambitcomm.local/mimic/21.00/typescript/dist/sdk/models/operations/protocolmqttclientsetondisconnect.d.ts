@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetOnDisconnectRequest extends SpeakeasyB
 export declare class ProtocolMqttClientSetOnDisconnectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetOnDisconnect200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetOnDisconnect200ApplicationJSONInt32Integers?: number[];
 }

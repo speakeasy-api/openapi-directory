@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,174 +14,199 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2 = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1 = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams = exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams.prototype, "parent", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams = CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=importJobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=importJobId" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "importJobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams.prototype, "uploadProtocol", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams = CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1 = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1.prototype, "oauth2c", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1 = CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2 = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2.prototype, "oauth2c", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2 = CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption1)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurityOption2)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity.prototype, "option2", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity = CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsImportJobsCreatePathParams)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsImportJobsCreateQueryParams)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ImportJobInput)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudkmsProjectsLocationsKeyRingsImportJobsCreateSecurity)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest.prototype, "security", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest = CloudkmsProjectsLocationsKeyRingsImportJobsCreateRequest;
 var CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse = /** @class */ (function (_super) {
     __extends(CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse, _super);
     function CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ImportJob)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse.prototype, "importJob", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse.prototype, "statusCode", void 0);
     return CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse;
-}(SpeakeasyBase));
-export { CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse = CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse;

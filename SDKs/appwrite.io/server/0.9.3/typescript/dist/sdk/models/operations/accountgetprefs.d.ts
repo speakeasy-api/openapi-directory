@@ -10,5 +10,5 @@ export declare class AccountGetPrefsRequest extends SpeakeasyBase {
 export declare class AccountGetPrefsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    preferences?: Map<string, any>;
+    preferences?: Record<string, any>;
 }

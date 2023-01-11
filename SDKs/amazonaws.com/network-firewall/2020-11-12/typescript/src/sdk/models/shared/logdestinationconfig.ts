@@ -10,7 +10,7 @@ import { LogTypeEnum } from "./logtypeenum";
 **/
 export class LogDestinationConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=LogDestination" })
-  logDestination: Map<string, string>;
+  logDestination: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=LogDestinationType" })
   logDestinationType: LogDestinationTypeEnum;

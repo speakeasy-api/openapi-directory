@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientAffinityEnum } from "./clientaffinityenum";
-import { PortRange } from "./portrange";
-import { ProtocolEnum } from "./protocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Listener = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientaffinityenum_1 = require("./clientaffinityenum");
+var portrange_1 = require("./portrange");
+var protocolenum_1 = require("./protocolenum");
 // Listener
 /**
  * A complex type for a listener.
@@ -36,21 +39,21 @@ var Listener = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientAffinity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientAffinity" }),
         __metadata("design:type", String)
     ], Listener.prototype, "clientAffinity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListenerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListenerArn" }),
         __metadata("design:type", String)
     ], Listener.prototype, "listenerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortRanges", elemType: PortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortRanges", elemType: portrange_1.PortRange }),
         __metadata("design:type", Array)
     ], Listener.prototype, "portRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Protocol" }),
         __metadata("design:type", String)
     ], Listener.prototype, "protocol", void 0);
     return Listener;
-}(SpeakeasyBase));
-export { Listener };
+}(utils_1.SpeakeasyBase));
+exports.Listener = Listener;

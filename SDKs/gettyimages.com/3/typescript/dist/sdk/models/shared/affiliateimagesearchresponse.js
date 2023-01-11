@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoCorrections } from "./autocorrections";
-import { AffiliateImage } from "./affiliateimage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AffiliateImageSearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var autocorrections_1 = require("./autocorrections");
+var affiliateimage_1 = require("./affiliateimage");
 var AffiliateImageSearchResponse = /** @class */ (function (_super) {
     __extends(AffiliateImageSearchResponse, _super);
     function AffiliateImageSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_corrections" }),
-        __metadata("design:type", AutoCorrections)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_corrections" }),
+        __metadata("design:type", autocorrections_1.AutoCorrections)
     ], AffiliateImageSearchResponse.prototype, "autoCorrections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: AffiliateImage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: affiliateimage_1.AffiliateImage }),
         __metadata("design:type", Array)
     ], AffiliateImageSearchResponse.prototype, "images", void 0);
     return AffiliateImageSearchResponse;
-}(SpeakeasyBase));
-export { AffiliateImageSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.AffiliateImageSearchResponse = AffiliateImageSearchResponse;

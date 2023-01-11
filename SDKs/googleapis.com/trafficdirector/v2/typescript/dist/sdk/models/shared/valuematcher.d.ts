@@ -9,7 +9,7 @@ export declare class ValueMatcher extends SpeakeasyBase {
     boolMatch?: boolean;
     doubleMatch?: DoubleMatcher;
     listMatch?: ListMatcher;
-    nullMatch?: Map<string, any>;
+    nullMatch?: Record<string, any>;
     presentMatch?: boolean;
     stringMatch?: StringMatcher;
 }

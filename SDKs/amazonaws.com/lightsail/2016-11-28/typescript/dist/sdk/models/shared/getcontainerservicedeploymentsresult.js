@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerServiceDeployment } from "./containerservicedeployment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContainerServiceDeploymentsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerservicedeployment_1 = require("./containerservicedeployment");
 var GetContainerServiceDeploymentsResult = /** @class */ (function (_super) {
     __extends(GetContainerServiceDeploymentsResult, _super);
     function GetContainerServiceDeploymentsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployments", elemType: ContainerServiceDeployment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployments", elemType: containerservicedeployment_1.ContainerServiceDeployment }),
         __metadata("design:type", Array)
     ], GetContainerServiceDeploymentsResult.prototype, "deployments", void 0);
     return GetContainerServiceDeploymentsResult;
-}(SpeakeasyBase));
-export { GetContainerServiceDeploymentsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetContainerServiceDeploymentsResult = GetContainerServiceDeploymentsResult;

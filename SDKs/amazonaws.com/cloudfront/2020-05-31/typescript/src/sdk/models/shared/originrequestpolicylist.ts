@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginRequestPolicySummary } from "./originrequestpolicysummary";
+import { OriginRequestPolicySummaryList } from "./originrequestpolicysummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { OriginRequestPolicySummary } from "./originrequestpolicysummary";
  * A list of origin request policies.
 **/
 export class OriginRequestPolicyList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: OriginRequestPolicySummary })
-  items?: OriginRequestPolicySummary[];
+  @SpeakeasyMetadata({ elemType: OriginRequestPolicySummaryList })
+  items?: OriginRequestPolicySummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

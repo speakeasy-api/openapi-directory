@@ -48,7 +48,7 @@ export class CreatePreparedStatementResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createPreparedStatementOutput?: Map<string, any>;
+  createPreparedStatementOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesTagsIdSyndicateFormatResponse = exports.GetResourcesTagsIdSyndicateFormatRequest = exports.GetResourcesTagsIdSyndicateFormatQueryParams = exports.GetResourcesTagsIdSyndicateFormatPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetResourcesTagsIdSyndicateFormatPathParams = /** @class */ (function (_super) {
     __extends(GetResourcesTagsIdSyndicateFormatPathParams, _super);
     function GetResourcesTagsIdSyndicateFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GetResourcesTagsIdSyndicateFormatPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetResourcesTagsIdSyndicateFormatPathParams.prototype, "id", void 0);
     return GetResourcesTagsIdSyndicateFormatPathParams;
-}(SpeakeasyBase));
-export { GetResourcesTagsIdSyndicateFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsIdSyndicateFormatPathParams = GetResourcesTagsIdSyndicateFormatPathParams;
 var GetResourcesTagsIdSyndicateFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesTagsIdSyndicateFormatQueryParams, _super);
     function GetResourcesTagsIdSyndicateFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=displayMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=displayMethod" }),
         __metadata("design:type", String)
     ], GetResourcesTagsIdSyndicateFormatQueryParams.prototype, "displayMethod", void 0);
     return GetResourcesTagsIdSyndicateFormatQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesTagsIdSyndicateFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsIdSyndicateFormatQueryParams = GetResourcesTagsIdSyndicateFormatQueryParams;
 var GetResourcesTagsIdSyndicateFormatRequest = /** @class */ (function (_super) {
     __extends(GetResourcesTagsIdSyndicateFormatRequest, _super);
     function GetResourcesTagsIdSyndicateFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesTagsIdSyndicateFormatPathParams)
     ], GetResourcesTagsIdSyndicateFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesTagsIdSyndicateFormatQueryParams)
     ], GetResourcesTagsIdSyndicateFormatRequest.prototype, "queryParams", void 0);
     return GetResourcesTagsIdSyndicateFormatRequest;
-}(SpeakeasyBase));
-export { GetResourcesTagsIdSyndicateFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsIdSyndicateFormatRequest = GetResourcesTagsIdSyndicateFormatRequest;
 var GetResourcesTagsIdSyndicateFormatResponse = /** @class */ (function (_super) {
     __extends(GetResourcesTagsIdSyndicateFormatResponse, _super);
     function GetResourcesTagsIdSyndicateFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesTagsIdSyndicateFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetResourcesTagsIdSyndicateFormatResponse.prototype, "getResourcesTagsIdSyndicateFormat200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesTagsIdSyndicateFormatResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetResourcesTagsIdSyndicateFormatResponse.prototype, "getResourcesTagsIdSyndicateFormat200ApplicationJSONString", void 0);
     return GetResourcesTagsIdSyndicateFormatResponse;
-}(SpeakeasyBase));
-export { GetResourcesTagsIdSyndicateFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsIdSyndicateFormatResponse = GetResourcesTagsIdSyndicateFormatResponse;

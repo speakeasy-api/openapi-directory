@@ -14,5 +14,5 @@ export declare class ExportWirelessJsonlRequest extends SpeakeasyBase {
 export declare class ExportWirelessJsonlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    exportWirelessJsonl200ApplicationJsonBinaryString?: Uint8Array;
+    exportWirelessJSONL200ApplicationJSONBinaryString?: Uint8Array;
 }

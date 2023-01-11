@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsKeyKeyResponse = exports.OptionsKeyKeyRequest = exports.OptionsKeyKeyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsKeyKeyPathParams = /** @class */ (function (_super) {
     __extends(OptionsKeyKeyPathParams, _super);
     function OptionsKeyKeyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=key" }),
         __metadata("design:type", String)
     ], OptionsKeyKeyPathParams.prototype, "key", void 0);
     return OptionsKeyKeyPathParams;
-}(SpeakeasyBase));
-export { OptionsKeyKeyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsKeyKeyPathParams = OptionsKeyKeyPathParams;
 var OptionsKeyKeyRequest = /** @class */ (function (_super) {
     __extends(OptionsKeyKeyRequest, _super);
     function OptionsKeyKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsKeyKeyPathParams)
     ], OptionsKeyKeyRequest.prototype, "pathParams", void 0);
     return OptionsKeyKeyRequest;
-}(SpeakeasyBase));
-export { OptionsKeyKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsKeyKeyRequest = OptionsKeyKeyRequest;
 var OptionsKeyKeyResponse = /** @class */ (function (_super) {
     __extends(OptionsKeyKeyResponse, _super);
     function OptionsKeyKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsKeyKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsKeyKeyResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsKeyKeyResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsKeyKeyResponse.prototype, "statusCode", void 0);
     return OptionsKeyKeyResponse;
-}(SpeakeasyBase));
-export { OptionsKeyKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsKeyKeyResponse = OptionsKeyKeyResponse;

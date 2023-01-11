@@ -191,23 +191,23 @@ export class EgipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  egipc400ApplicationJsonObject?: Egipc400ApplicationJson;
+  egipc400ApplicationJSONObject?: Egipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc401ApplicationJsonObject?: Egipc401ApplicationJson;
+  egipc401ApplicationJSONObject?: Egipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc404ApplicationJsonObject?: Egipc404ApplicationJson;
+  egipc404ApplicationJSONObject?: Egipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc500ApplicationJsonObject?: Egipc500ApplicationJson;
+  egipc500ApplicationJSONObject?: Egipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc502ApplicationJsonObject?: Egipc502ApplicationJson;
+  egipc502ApplicationJSONObject?: Egipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc503ApplicationJsonObject?: Egipc503ApplicationJson;
+  egipc503ApplicationJSONObject?: Egipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  egipc504ApplicationJsonObject?: Egipc504ApplicationJson;
+  egipc504ApplicationJSONObject?: Egipc504ApplicationJson;
 }

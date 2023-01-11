@@ -22,7 +22,7 @@ export declare class GetTaxonomyTermsRequest extends SpeakeasyBase {
 }
 export declare class GetTaxonomyTermsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     specsAutoCompleteResponse?: shared.SpecsAutoCompleteResponse;
     statusCode: number;
 }

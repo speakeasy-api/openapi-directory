@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAssociateDataShareConsumerActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociateDataShareConsumerResponse = exports.GetAssociateDataShareConsumerRequest = exports.GetAssociateDataShareConsumerHeaders = exports.GetAssociateDataShareConsumerQueryParams = exports.GetAssociateDataShareConsumerVersionEnum = exports.GetAssociateDataShareConsumerActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAssociateDataShareConsumerActionEnum;
 (function (GetAssociateDataShareConsumerActionEnum) {
     GetAssociateDataShareConsumerActionEnum["AssociateDataShareConsumer"] = "AssociateDataShareConsumer";
-})(GetAssociateDataShareConsumerActionEnum || (GetAssociateDataShareConsumerActionEnum = {}));
-export var GetAssociateDataShareConsumerVersionEnum;
+})(GetAssociateDataShareConsumerActionEnum = exports.GetAssociateDataShareConsumerActionEnum || (exports.GetAssociateDataShareConsumerActionEnum = {}));
+var GetAssociateDataShareConsumerVersionEnum;
 (function (GetAssociateDataShareConsumerVersionEnum) {
     GetAssociateDataShareConsumerVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetAssociateDataShareConsumerVersionEnum || (GetAssociateDataShareConsumerVersionEnum = {}));
+})(GetAssociateDataShareConsumerVersionEnum = exports.GetAssociateDataShareConsumerVersionEnum || (exports.GetAssociateDataShareConsumerVersionEnum = {}));
 var GetAssociateDataShareConsumerQueryParams = /** @class */ (function (_super) {
     __extends(GetAssociateDataShareConsumerQueryParams, _super);
     function GetAssociateDataShareConsumerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AssociateEntireAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AssociateEntireAccount" }),
         __metadata("design:type", Boolean)
     ], GetAssociateDataShareConsumerQueryParams.prototype, "associateEntireAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConsumerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConsumerArn" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerQueryParams.prototype, "consumerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DataShareArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DataShareArn" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerQueryParams.prototype, "dataShareArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerQueryParams.prototype, "version", void 0);
     return GetAssociateDataShareConsumerQueryParams;
-}(SpeakeasyBase));
-export { GetAssociateDataShareConsumerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateDataShareConsumerQueryParams = GetAssociateDataShareConsumerQueryParams;
 var GetAssociateDataShareConsumerHeaders = /** @class */ (function (_super) {
     __extends(GetAssociateDataShareConsumerHeaders, _super);
     function GetAssociateDataShareConsumerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAssociateDataShareConsumerHeaders;
-}(SpeakeasyBase));
-export { GetAssociateDataShareConsumerHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateDataShareConsumerHeaders = GetAssociateDataShareConsumerHeaders;
 var GetAssociateDataShareConsumerRequest = /** @class */ (function (_super) {
     __extends(GetAssociateDataShareConsumerRequest, _super);
     function GetAssociateDataShareConsumerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociateDataShareConsumerQueryParams)
     ], GetAssociateDataShareConsumerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociateDataShareConsumerHeaders)
     ], GetAssociateDataShareConsumerRequest.prototype, "headers", void 0);
     return GetAssociateDataShareConsumerRequest;
-}(SpeakeasyBase));
-export { GetAssociateDataShareConsumerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateDataShareConsumerRequest = GetAssociateDataShareConsumerRequest;
 var GetAssociateDataShareConsumerResponse = /** @class */ (function (_super) {
     __extends(GetAssociateDataShareConsumerResponse, _super);
     function GetAssociateDataShareConsumerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAssociateDataShareConsumerResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAssociateDataShareConsumerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAssociateDataShareConsumerResponse.prototype, "statusCode", void 0);
     return GetAssociateDataShareConsumerResponse;
-}(SpeakeasyBase));
-export { GetAssociateDataShareConsumerResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociateDataShareConsumerResponse = GetAssociateDataShareConsumerResponse;

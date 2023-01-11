@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcEndpoint } from "./vpcendpoint";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointAccess = void 0;
+var utils_1 = require("../../../internal/utils");
+var vpcendpoint_1 = require("./vpcendpoint");
+var vpcsecuritygroupmembershiplist_1 = require("./vpcsecuritygroupmembershiplist");
 // EndpointAccess
 /**
  * Describes a Redshift-managed VPC endpoint.
@@ -35,45 +38,45 @@ var EndpointAccess = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], EndpointAccess.prototype, "endpointCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "endpointName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "endpointStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointAccess.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "resourceOwner", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointAccess.prototype, "subnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpcEndpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", vpcendpoint_1.VpcEndpoint)
     ], EndpointAccess.prototype, "vpcEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: vpcsecuritygroupmembershiplist_1.VpcSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], EndpointAccess.prototype, "vpcSecurityGroups", void 0);
     return EndpointAccess;
-}(SpeakeasyBase));
-export { EndpointAccess };
+}(utils_1.SpeakeasyBase));
+exports.EndpointAccess = EndpointAccess;

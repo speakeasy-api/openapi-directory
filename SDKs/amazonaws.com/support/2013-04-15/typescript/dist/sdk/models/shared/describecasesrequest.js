@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeCasesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeCasesRequest = /** @class */ (function (_super) {
     __extends(DescribeCasesRequest, _super);
     function DescribeCasesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=afterTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=afterTime" }),
         __metadata("design:type", String)
     ], DescribeCasesRequest.prototype, "afterTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beforeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beforeTime" }),
         __metadata("design:type", String)
     ], DescribeCasesRequest.prototype, "beforeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseIdList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseIdList" }),
         __metadata("design:type", Array)
     ], DescribeCasesRequest.prototype, "caseIdList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayId" }),
         __metadata("design:type", String)
     ], DescribeCasesRequest.prototype, "displayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeCommunications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeCommunications" }),
         __metadata("design:type", Boolean)
     ], DescribeCasesRequest.prototype, "includeCommunications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeResolvedCases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeResolvedCases" }),
         __metadata("design:type", Boolean)
     ], DescribeCasesRequest.prototype, "includeResolvedCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], DescribeCasesRequest.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], DescribeCasesRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeCasesRequest.prototype, "nextToken", void 0);
     return DescribeCasesRequest;
-}(SpeakeasyBase));
-export { DescribeCasesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeCasesRequest = DescribeCasesRequest;

@@ -8,5 +8,5 @@ export declare class GetNetworkCellularGatewayUplinkRequest extends SpeakeasyBas
 export declare class GetNetworkCellularGatewayUplinkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCellularGatewayUplink200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCellularGatewayUplink200ApplicationJSONObject?: Record<string, any>;
 }

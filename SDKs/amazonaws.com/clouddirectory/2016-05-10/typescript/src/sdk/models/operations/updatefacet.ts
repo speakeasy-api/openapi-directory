@@ -93,7 +93,7 @@ export class UpdateFacetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateFacetResponse?: Map<string, any>;
+  updateFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: shared.ValidationException;

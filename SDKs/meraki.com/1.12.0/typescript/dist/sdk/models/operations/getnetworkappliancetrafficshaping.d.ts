@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceTrafficShapingRequest extends SpeakeasyB
 export declare class GetNetworkApplianceTrafficShapingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceTrafficShaping200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceTrafficShaping200ApplicationJSONObject?: Record<string, any>;
 }

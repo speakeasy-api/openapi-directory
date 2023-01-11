@@ -8,13 +8,13 @@ export class PostV05LinksLinkAddContextsHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-CM-ID" })
-  xCmId: string;
+  xCMID: string;
 }
 
 
 export class PostV05LinksLinkAddContextsRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   patientCareContextLinkRequest?: shared.PatientCareContextLinkRequest;

@@ -20,7 +20,7 @@ export declare class DeleteWorkspaceBundleRequest extends SpeakeasyBase {
 export declare class DeleteWorkspaceBundleResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteWorkspaceBundleResult?: Map<string, any>;
+    deleteWorkspaceBundleResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     resourceAssociatedException?: any;
     resourceNotFoundException?: any;

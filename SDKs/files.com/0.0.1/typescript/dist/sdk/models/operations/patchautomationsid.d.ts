@@ -29,13 +29,13 @@ export declare class PatchAutomationsIdRequestBody extends SpeakeasyBase {
     groupIds?: string;
     interval?: string;
     path?: string;
-    schedule?: Map<string, any>;
+    schedule?: Record<string, any>;
     source?: string;
     trigger?: PatchAutomationsIdRequestBodyTriggerEnum;
     triggerActionPath?: string;
     triggerActions?: string[];
     userIds?: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }
 export declare class PatchAutomationsIdRequest extends SpeakeasyBase {
     pathParams: PatchAutomationsIdPathParams;

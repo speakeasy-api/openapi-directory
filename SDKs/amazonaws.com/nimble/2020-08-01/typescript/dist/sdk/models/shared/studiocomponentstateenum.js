@@ -1,4 +1,7 @@
-export var StudioComponentStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioComponentStateEnum = void 0;
+var StudioComponentStateEnum;
 (function (StudioComponentStateEnum) {
     StudioComponentStateEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
     StudioComponentStateEnum["Ready"] = "READY";
@@ -8,4 +11,4 @@ export var StudioComponentStateEnum;
     StudioComponentStateEnum["DeleteFailed"] = "DELETE_FAILED";
     StudioComponentStateEnum["CreateFailed"] = "CREATE_FAILED";
     StudioComponentStateEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(StudioComponentStateEnum || (StudioComponentStateEnum = {}));
+})(StudioComponentStateEnum = exports.StudioComponentStateEnum || (exports.StudioComponentStateEnum = {}));

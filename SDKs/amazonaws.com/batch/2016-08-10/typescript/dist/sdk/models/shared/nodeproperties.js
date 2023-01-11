@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NodeRangeProperty } from "./noderangeproperty";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var noderangeproperty_1 = require("./noderangeproperty");
 // NodeProperties
 /**
  * An object representing the node properties of a multi-node parallel job.
@@ -34,17 +37,17 @@ var NodeProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainNode" }),
         __metadata("design:type", Number)
     ], NodeProperties.prototype, "mainNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeRangeProperties", elemType: NodeRangeProperty }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeRangeProperties", elemType: noderangeproperty_1.NodeRangeProperty }),
         __metadata("design:type", Array)
     ], NodeProperties.prototype, "nodeRangeProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numNodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numNodes" }),
         __metadata("design:type", Number)
     ], NodeProperties.prototype, "numNodes", void 0);
     return NodeProperties;
-}(SpeakeasyBase));
-export { NodeProperties };
+}(utils_1.SpeakeasyBase));
+exports.NodeProperties = NodeProperties;

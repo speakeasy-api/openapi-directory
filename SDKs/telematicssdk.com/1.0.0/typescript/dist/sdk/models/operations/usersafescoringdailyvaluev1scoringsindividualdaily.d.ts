@@ -28,7 +28,7 @@ export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest e
 }
 export declare class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJsonObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson;
+    userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject?: UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJson;
 }

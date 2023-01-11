@@ -23,5 +23,5 @@ export class CodesOfConductGetAllCodesOfConductResponse extends SpeakeasyBase {
   codeOfConducts?: shared.CodeOfConduct[];
 
   @SpeakeasyMetadata()
-  codesOfConductGetAllCodesOfConduct415ApplicationJsonObject?: CodesOfConductGetAllCodesOfConduct415ApplicationJson;
+  codesOfConductGetAllCodesOfConduct415ApplicationJSONObject?: CodesOfConductGetAllCodesOfConduct415ApplicationJson;
 }

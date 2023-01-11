@@ -14,6 +14,6 @@ export declare class AddChannelTagRequest extends SpeakeasyBase {
 export declare class AddChannelTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

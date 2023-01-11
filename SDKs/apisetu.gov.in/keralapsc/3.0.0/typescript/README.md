@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { OtcerRequest, OtcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: OtcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "iste",
-      fullName: "molestiae",
-      uid: "ea",
+      dob: "sit",
+      fullName: "voluptas",
+      uid: "culpa",
     },
-    consentArtifact: "non",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "aliquam",
+    txnId: "dolor",
   },
 };
 
-sdk.sdk.otcer(req).then((res: OtcerResponse | AxiosError) => {
+sdk.apIs.otcer(req).then((res: OtcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,7 +56,7 @@ sdk.sdk.otcer(req).then((res: OtcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `otcer` - OTV Certificate
 

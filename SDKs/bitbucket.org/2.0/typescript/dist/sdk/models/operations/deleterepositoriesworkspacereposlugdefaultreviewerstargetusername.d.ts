@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUs
 export declare class DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

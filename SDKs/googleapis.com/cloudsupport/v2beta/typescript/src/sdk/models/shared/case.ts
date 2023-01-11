@@ -55,6 +55,9 @@ export class Case extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=escalated" })
   escalated?: boolean;
 
+  @SpeakeasyMetadata({ data: "json, name=languageCode" })
+  languageCode?: string;
+
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
@@ -100,6 +103,9 @@ export class CaseInput extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=escalated" })
   escalated?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=languageCode" })
+  languageCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

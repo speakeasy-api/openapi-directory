@@ -57,7 +57,7 @@ export class RestoreWorkspaceResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  restoreWorkspaceResult?: Map<string, any>;
+  restoreWorkspaceResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountDetails } from "./accountdetails";
-import { SendQuota } from "./sendquota";
-import { SuppressionAttributes } from "./suppressionattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccountResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountdetails_1 = require("./accountdetails");
+var sendquota_1 = require("./sendquota");
+var suppressionattributes_1 = require("./suppressionattributes");
 // GetAccountResponse
 /**
  * A list of details about the email-sending capabilities of your Amazon SES account in the current AWS Region.
@@ -36,33 +39,33 @@ var GetAccountResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DedicatedIpAutoWarmupEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DedicatedIpAutoWarmupEnabled" }),
         __metadata("design:type", Boolean)
     ], GetAccountResponse.prototype, "dedicatedIpAutoWarmupEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Details" }),
-        __metadata("design:type", AccountDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Details" }),
+        __metadata("design:type", accountdetails_1.AccountDetails)
     ], GetAccountResponse.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnforcementStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnforcementStatus" }),
         __metadata("design:type", String)
     ], GetAccountResponse.prototype, "enforcementStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductionAccessEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductionAccessEnabled" }),
         __metadata("design:type", Boolean)
     ], GetAccountResponse.prototype, "productionAccessEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendQuota" }),
-        __metadata("design:type", SendQuota)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendQuota" }),
+        __metadata("design:type", sendquota_1.SendQuota)
     ], GetAccountResponse.prototype, "sendQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingEnabled" }),
         __metadata("design:type", Boolean)
     ], GetAccountResponse.prototype, "sendingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuppressionAttributes" }),
-        __metadata("design:type", SuppressionAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuppressionAttributes" }),
+        __metadata("design:type", suppressionattributes_1.SuppressionAttributes)
     ], GetAccountResponse.prototype, "suppressionAttributes", void 0);
     return GetAccountResponse;
-}(SpeakeasyBase));
-export { GetAccountResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountResponse = GetAccountResponse;

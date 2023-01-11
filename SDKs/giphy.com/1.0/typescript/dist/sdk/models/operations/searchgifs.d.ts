@@ -18,5 +18,5 @@ export declare class SearchGifsRequest extends SpeakeasyBase {
 export declare class SearchGifsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchGifs200ApplicationJsonObject?: SearchGifs200ApplicationJson;
+    searchGifs200ApplicationJSONObject?: SearchGifs200ApplicationJson;
 }

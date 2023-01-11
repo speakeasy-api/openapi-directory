@@ -62,7 +62,7 @@ export class LowestFaresResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  lowestFares200ApplicationJsonString?: string;
+  lowestFares200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

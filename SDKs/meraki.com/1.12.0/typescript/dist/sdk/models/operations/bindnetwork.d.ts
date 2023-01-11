@@ -13,5 +13,5 @@ export declare class BindNetworkRequest extends SpeakeasyBase {
 export declare class BindNetworkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bindNetwork200ApplicationJsonObject?: Map<string, any>;
+    bindNetwork200ApplicationJSONObject?: Record<string, any>;
 }

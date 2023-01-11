@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImagesByIdsResponse = exports.GetImagesByIdsRequest = exports.GetImagesByIdsHeaders = exports.GetImagesByIdsQueryParams = exports.GetImagesByIdsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetImagesByIdsPathParams = /** @class */ (function (_super) {
     __extends(GetImagesByIdsPathParams, _super);
     function GetImagesByIdsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], GetImagesByIdsPathParams.prototype, "projectId", void 0);
     return GetImagesByIdsPathParams;
-}(SpeakeasyBase));
-export { GetImagesByIdsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesByIdsPathParams = GetImagesByIdsPathParams;
 var GetImagesByIdsQueryParams = /** @class */ (function (_super) {
     __extends(GetImagesByIdsQueryParams, _super);
     function GetImagesByIdsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=imageIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=imageIds" }),
         __metadata("design:type", Array)
     ], GetImagesByIdsQueryParams.prototype, "imageIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=iterationId" }),
         __metadata("design:type", String)
     ], GetImagesByIdsQueryParams.prototype, "iterationId", void 0);
     return GetImagesByIdsQueryParams;
-}(SpeakeasyBase));
-export { GetImagesByIdsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesByIdsQueryParams = GetImagesByIdsQueryParams;
 var GetImagesByIdsHeaders = /** @class */ (function (_super) {
     __extends(GetImagesByIdsHeaders, _super);
     function GetImagesByIdsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], GetImagesByIdsHeaders.prototype, "trainingKey", void 0);
     return GetImagesByIdsHeaders;
-}(SpeakeasyBase));
-export { GetImagesByIdsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesByIdsHeaders = GetImagesByIdsHeaders;
 var GetImagesByIdsRequest = /** @class */ (function (_super) {
     __extends(GetImagesByIdsRequest, _super);
     function GetImagesByIdsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesByIdsPathParams)
     ], GetImagesByIdsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesByIdsQueryParams)
     ], GetImagesByIdsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagesByIdsHeaders)
     ], GetImagesByIdsRequest.prototype, "headers", void 0);
     return GetImagesByIdsRequest;
-}(SpeakeasyBase));
-export { GetImagesByIdsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesByIdsRequest = GetImagesByIdsRequest;
 var GetImagesByIdsResponse = /** @class */ (function (_super) {
     __extends(GetImagesByIdsResponse, _super);
     function GetImagesByIdsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetImagesByIdsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImagesByIdsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Image }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Image }),
         __metadata("design:type", Array)
     ], GetImagesByIdsResponse.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImagesByIdsResponse.prototype, "statusCode", void 0);
     return GetImagesByIdsResponse;
-}(SpeakeasyBase));
-export { GetImagesByIdsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImagesByIdsResponse = GetImagesByIdsResponse;

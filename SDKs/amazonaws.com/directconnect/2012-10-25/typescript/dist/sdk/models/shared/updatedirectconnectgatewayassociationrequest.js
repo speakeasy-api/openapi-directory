@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteFilterPrefix } from "./routefilterprefix";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDirectConnectGatewayAssociationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var routefilterprefix_1 = require("./routefilterprefix");
 var UpdateDirectConnectGatewayAssociationRequest = /** @class */ (function (_super) {
     __extends(UpdateDirectConnectGatewayAssociationRequest, _super);
     function UpdateDirectConnectGatewayAssociationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], UpdateDirectConnectGatewayAssociationRequest.prototype, "addAllowedPrefixesToDirectConnectGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associationId" }),
         __metadata("design:type", String)
     ], UpdateDirectConnectGatewayAssociationRequest.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removeAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removeAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], UpdateDirectConnectGatewayAssociationRequest.prototype, "removeAllowedPrefixesToDirectConnectGateway", void 0);
     return UpdateDirectConnectGatewayAssociationRequest;
-}(SpeakeasyBase));
-export { UpdateDirectConnectGatewayAssociationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDirectConnectGatewayAssociationRequest = UpdateDirectConnectGatewayAssociationRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestImpactStatistics } from "./requestimpactstatistics";
-import { ServiceId } from "./serviceid";
-import { InsightStateEnum } from "./insightstateenum";
-import { AnomalousService } from "./anomalousservice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var requestimpactstatistics_1 = require("./requestimpactstatistics");
+var serviceid_1 = require("./serviceid");
+var insightstateenum_1 = require("./insightstateenum");
+var anomalousservice_1 = require("./anomalousservice");
 // InsightSummary
 /**
  * Information that describes an insight.
@@ -37,57 +40,57 @@ var InsightSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Categories" }),
         __metadata("design:type", Array)
     ], InsightSummary.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientRequestImpactStatistics" }),
-        __metadata("design:type", RequestImpactStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientRequestImpactStatistics" }),
+        __metadata("design:type", requestimpactstatistics_1.RequestImpactStatistics)
     ], InsightSummary.prototype, "clientRequestImpactStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], InsightSummary.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupARN" }),
         __metadata("design:type", String)
-    ], InsightSummary.prototype, "groupArn", void 0);
+    ], InsightSummary.prototype, "groupARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupName" }),
         __metadata("design:type", String)
     ], InsightSummary.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightId" }),
         __metadata("design:type", String)
     ], InsightSummary.prototype, "insightId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], InsightSummary.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootCauseServiceId" }),
-        __metadata("design:type", ServiceId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootCauseServiceId" }),
+        __metadata("design:type", serviceid_1.ServiceId)
     ], InsightSummary.prototype, "rootCauseServiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootCauseServiceRequestImpactStatistics" }),
-        __metadata("design:type", RequestImpactStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootCauseServiceRequestImpactStatistics" }),
+        __metadata("design:type", requestimpactstatistics_1.RequestImpactStatistics)
     ], InsightSummary.prototype, "rootCauseServiceRequestImpactStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], InsightSummary.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], InsightSummary.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Summary" }),
         __metadata("design:type", String)
     ], InsightSummary.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopAnomalousServices", elemType: AnomalousService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopAnomalousServices", elemType: anomalousservice_1.AnomalousService }),
         __metadata("design:type", Array)
     ], InsightSummary.prototype, "topAnomalousServices", void 0);
     return InsightSummary;
-}(SpeakeasyBase));
-export { InsightSummary };
+}(utils_1.SpeakeasyBase));
+exports.InsightSummary = InsightSummary;

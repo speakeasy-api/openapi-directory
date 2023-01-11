@@ -9,5 +9,5 @@ export declare class SparkRJob extends SpeakeasyBase {
     fileUris?: string[];
     loggingConfig?: LoggingConfig;
     mainRFileUri?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
 }

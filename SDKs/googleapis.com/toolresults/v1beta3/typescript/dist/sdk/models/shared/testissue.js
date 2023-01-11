@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StackTrace } from "./stacktrace";
-import { Any } from "./any";
-export var TestIssueCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestIssue = exports.TestIssueTypeEnum = exports.TestIssueSeverityEnum = exports.TestIssueCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var stacktrace_1 = require("./stacktrace");
+var any_1 = require("./any");
+var TestIssueCategoryEnum;
 (function (TestIssueCategoryEnum) {
     TestIssueCategoryEnum["UnspecifiedCategory"] = "unspecifiedCategory";
     TestIssueCategoryEnum["Common"] = "common";
     TestIssueCategoryEnum["Robo"] = "robo";
-})(TestIssueCategoryEnum || (TestIssueCategoryEnum = {}));
-export var TestIssueSeverityEnum;
+})(TestIssueCategoryEnum = exports.TestIssueCategoryEnum || (exports.TestIssueCategoryEnum = {}));
+var TestIssueSeverityEnum;
 (function (TestIssueSeverityEnum) {
     TestIssueSeverityEnum["UnspecifiedSeverity"] = "unspecifiedSeverity";
     TestIssueSeverityEnum["Info"] = "info";
     TestIssueSeverityEnum["Suggestion"] = "suggestion";
     TestIssueSeverityEnum["Warning"] = "warning";
     TestIssueSeverityEnum["Severe"] = "severe";
-})(TestIssueSeverityEnum || (TestIssueSeverityEnum = {}));
-export var TestIssueTypeEnum;
+})(TestIssueSeverityEnum = exports.TestIssueSeverityEnum || (exports.TestIssueSeverityEnum = {}));
+var TestIssueTypeEnum;
 (function (TestIssueTypeEnum) {
     TestIssueTypeEnum["UnspecifiedType"] = "unspecifiedType";
     TestIssueTypeEnum["FatalException"] = "fatalException";
@@ -73,7 +76,7 @@ export var TestIssueTypeEnum;
     TestIssueTypeEnum["DeviceOutOfMemory"] = "deviceOutOfMemory";
     TestIssueTypeEnum["LogcatCollectionError"] = "logcatCollectionError";
     TestIssueTypeEnum["DetectedAppSplashScreen"] = "detectedAppSplashScreen";
-})(TestIssueTypeEnum || (TestIssueTypeEnum = {}));
+})(TestIssueTypeEnum = exports.TestIssueTypeEnum || (exports.TestIssueTypeEnum = {}));
 // TestIssue
 /**
  * An issue detected occurring during a test execution.
@@ -84,29 +87,29 @@ var TestIssue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], TestIssue.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], TestIssue.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], TestIssue.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stackTrace" }),
-        __metadata("design:type", StackTrace)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stackTrace" }),
+        __metadata("design:type", stacktrace_1.StackTrace)
     ], TestIssue.prototype, "stackTrace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TestIssue.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warning" }),
-        __metadata("design:type", Any)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning" }),
+        __metadata("design:type", any_1.Any)
     ], TestIssue.prototype, "warning", void 0);
     return TestIssue;
-}(SpeakeasyBase));
-export { TestIssue };
+}(utils_1.SpeakeasyBase));
+exports.TestIssue = TestIssue;

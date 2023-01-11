@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OrganizationActionsSecretVisibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationActionsSecret = exports.OrganizationActionsSecretVisibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OrganizationActionsSecretVisibilityEnum;
 (function (OrganizationActionsSecretVisibilityEnum) {
     OrganizationActionsSecretVisibilityEnum["All"] = "all";
     OrganizationActionsSecretVisibilityEnum["Private"] = "private";
     OrganizationActionsSecretVisibilityEnum["Selected"] = "selected";
-})(OrganizationActionsSecretVisibilityEnum || (OrganizationActionsSecretVisibilityEnum = {}));
+})(OrganizationActionsSecretVisibilityEnum = exports.OrganizationActionsSecretVisibilityEnum || (exports.OrganizationActionsSecretVisibilityEnum = {}));
 // OrganizationActionsSecret
 /**
  * Secrets for GitHub Actions for an organization.
@@ -39,25 +42,25 @@ var OrganizationActionsSecret = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], OrganizationActionsSecret.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OrganizationActionsSecret.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_repositories_url" }),
         __metadata("design:type", String)
     ], OrganizationActionsSecret.prototype, "selectedRepositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], OrganizationActionsSecret.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], OrganizationActionsSecret.prototype, "visibility", void 0);
     return OrganizationActionsSecret;
-}(SpeakeasyBase));
-export { OrganizationActionsSecret };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationActionsSecret = OrganizationActionsSecret;

@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Hit extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=exprs" })
-  exprs?: Map<string, string>;
+  exprs?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string[]>;
+  fields?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=highlights" })
-  highlights?: Map<string, string>;
+  highlights?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

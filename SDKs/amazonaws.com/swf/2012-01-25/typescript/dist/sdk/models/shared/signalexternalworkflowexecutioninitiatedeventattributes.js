@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignalExternalWorkflowExecutionInitiatedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // SignalExternalWorkflowExecutionInitiatedEventAttributes
 /**
  * Provides the details of the <code>SignalExternalWorkflowExecutionInitiated</code> event.
@@ -33,29 +36,29 @@ var SignalExternalWorkflowExecutionInitiatedEventAttributes = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=control" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=control" }),
         __metadata("design:type", String)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "control", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decisionTaskCompletedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decisionTaskCompletedEventId" }),
         __metadata("design:type", Number)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "decisionTaskCompletedEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=input" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=input" }),
         __metadata("design:type", String)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "input", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runId" }),
         __metadata("design:type", String)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signalName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signalName" }),
         __metadata("design:type", String)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "signalName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowId" }),
         __metadata("design:type", String)
     ], SignalExternalWorkflowExecutionInitiatedEventAttributes.prototype, "workflowId", void 0);
     return SignalExternalWorkflowExecutionInitiatedEventAttributes;
-}(SpeakeasyBase));
-export { SignalExternalWorkflowExecutionInitiatedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.SignalExternalWorkflowExecutionInitiatedEventAttributes = SignalExternalWorkflowExecutionInitiatedEventAttributes;

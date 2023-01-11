@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvoiceSummary } from "./invoicesummary";
-import { ShipmentInvoiceLineItemInvoice } from "./shipmentinvoicelineiteminvoice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShipmentInvoice = void 0;
+var utils_1 = require("../../../internal/utils");
+var invoicesummary_1 = require("./invoicesummary");
+var shipmentinvoicelineiteminvoice_1 = require("./shipmentinvoicelineiteminvoice");
 var ShipmentInvoice = /** @class */ (function (_super) {
     __extends(ShipmentInvoice, _super);
     function ShipmentInvoice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceSummary" }),
-        __metadata("design:type", InvoiceSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceSummary" }),
+        __metadata("design:type", invoicesummary_1.InvoiceSummary)
     ], ShipmentInvoice.prototype, "invoiceSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItemInvoices", elemType: ShipmentInvoiceLineItemInvoice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItemInvoices", elemType: shipmentinvoicelineiteminvoice_1.ShipmentInvoiceLineItemInvoice }),
         __metadata("design:type", Array)
     ], ShipmentInvoice.prototype, "lineItemInvoices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentGroupId" }),
         __metadata("design:type", String)
     ], ShipmentInvoice.prototype, "shipmentGroupId", void 0);
     return ShipmentInvoice;
-}(SpeakeasyBase));
-export { ShipmentInvoice };
+}(utils_1.SpeakeasyBase));
+exports.ShipmentInvoice = ShipmentInvoice;

@@ -64,5 +64,5 @@ export class GetDailyReportTotalsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetDailyReportTotals200ApplicationJson })
-  getDailyReportTotals200ApplicationJsonObjects?: GetDailyReportTotals200ApplicationJson[];
+  getDailyReportTotals200ApplicationJSONObjects?: GetDailyReportTotals200ApplicationJson[];
 }

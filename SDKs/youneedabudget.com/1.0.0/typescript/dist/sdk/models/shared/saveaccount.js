@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SaveAccountTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveAccount = exports.SaveAccountTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SaveAccountTypeEnum;
 (function (SaveAccountTypeEnum) {
     SaveAccountTypeEnum["Checking"] = "checking";
     SaveAccountTypeEnum["Savings"] = "savings";
@@ -32,24 +35,24 @@ export var SaveAccountTypeEnum;
     SaveAccountTypeEnum["LineOfCredit"] = "lineOfCredit";
     SaveAccountTypeEnum["OtherAsset"] = "otherAsset";
     SaveAccountTypeEnum["OtherLiability"] = "otherLiability";
-})(SaveAccountTypeEnum || (SaveAccountTypeEnum = {}));
+})(SaveAccountTypeEnum = exports.SaveAccountTypeEnum || (exports.SaveAccountTypeEnum = {}));
 var SaveAccount = /** @class */ (function (_super) {
     __extends(SaveAccount, _super);
     function SaveAccount() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], SaveAccount.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SaveAccount.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SaveAccount.prototype, "type", void 0);
     return SaveAccount;
-}(SpeakeasyBase));
-export { SaveAccount };
+}(utils_1.SpeakeasyBase));
+exports.SaveAccount = SaveAccount;

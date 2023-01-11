@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeModification } from "./volumemodification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyVolumeResult = exports.ModifyVolumeResultVolumeModification = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyVolumeResultVolumeModification
+/**
+ * Information about the volume modification.
+**/
+var ModifyVolumeResultVolumeModification = /** @class */ (function (_super) {
+    __extends(ModifyVolumeResultVolumeModification, _super);
+    function ModifyVolumeResultVolumeModification() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "endTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "modificationState", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "originalIops", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "originalMultiAttachEnabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "originalSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "originalThroughput", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "originalVolumeType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "progress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "startTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "statusMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "targetIops", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "targetMultiAttachEnabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "targetSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "targetThroughput", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "targetVolumeType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVolumeResultVolumeModification.prototype, "volumeId", void 0);
+    return ModifyVolumeResultVolumeModification;
+}(utils_1.SpeakeasyBase));
+exports.ModifyVolumeResultVolumeModification = ModifyVolumeResultVolumeModification;
 var ModifyVolumeResult = /** @class */ (function (_super) {
     __extends(ModifyVolumeResult, _super);
     function ModifyVolumeResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VolumeModification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyVolumeResultVolumeModification)
     ], ModifyVolumeResult.prototype, "volumeModification", void 0);
     return ModifyVolumeResult;
-}(SpeakeasyBase));
-export { ModifyVolumeResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyVolumeResult = ModifyVolumeResult;

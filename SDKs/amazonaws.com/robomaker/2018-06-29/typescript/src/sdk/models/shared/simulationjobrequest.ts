@@ -43,7 +43,7 @@ export class SimulationJobRequest extends SpeakeasyBase {
   simulationApplications?: SimulationApplicationConfig[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=useDefaultApplications" })
   useDefaultApplications?: boolean;

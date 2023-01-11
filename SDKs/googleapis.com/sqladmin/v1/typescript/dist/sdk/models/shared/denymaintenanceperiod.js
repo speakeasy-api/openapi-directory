@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DenyMaintenancePeriod = void 0;
+var utils_1 = require("../../../internal/utils");
 // DenyMaintenancePeriod
 /**
  * Deny maintenance Periods. This specifies a date range during when all CSA rollout will be denied.
@@ -33,17 +36,17 @@ var DenyMaintenancePeriod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], DenyMaintenancePeriod.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], DenyMaintenancePeriod.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", String)
     ], DenyMaintenancePeriod.prototype, "time", void 0);
     return DenyMaintenancePeriod;
-}(SpeakeasyBase));
-export { DenyMaintenancePeriod };
+}(utils_1.SpeakeasyBase));
+exports.DenyMaintenancePeriod = DenyMaintenancePeriod;

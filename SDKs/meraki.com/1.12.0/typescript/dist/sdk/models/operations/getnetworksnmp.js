@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSnmpResponse = exports.GetNetworkSnmpRequest = exports.GetNetworkSnmpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSnmpPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSnmpPathParams, _super);
     function GetNetworkSnmpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSnmpPathParams.prototype, "networkId", void 0);
     return GetNetworkSnmpPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSnmpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSnmpPathParams = GetNetworkSnmpPathParams;
 var GetNetworkSnmpRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSnmpRequest, _super);
     function GetNetworkSnmpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSnmpPathParams)
     ], GetNetworkSnmpRequest.prototype, "pathParams", void 0);
     return GetNetworkSnmpRequest;
-}(SpeakeasyBase));
-export { GetNetworkSnmpRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSnmpRequest = GetNetworkSnmpRequest;
 var GetNetworkSnmpResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSnmpResponse, _super);
     function GetNetworkSnmpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSnmpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSnmpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSnmpResponse.prototype, "getNetworkSnmp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSnmpResponse.prototype, "getNetworkSnmp200ApplicationJSONObject", void 0);
     return GetNetworkSnmpResponse;
-}(SpeakeasyBase));
-export { GetNetworkSnmpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSnmpResponse = GetNetworkSnmpResponse;

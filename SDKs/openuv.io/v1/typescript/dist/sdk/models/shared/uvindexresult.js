@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UvIndexResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var UvIndexResult = /** @class */ (function (_super) {
     __extends(UvIndexResult, _super);
     function UvIndexResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_time" }),
         __metadata("design:type", String)
     ], UvIndexResult.prototype, "fromTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from_uv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_uv" }),
         __metadata("design:type", Number)
     ], UvIndexResult.prototype, "fromUv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_time" }),
         __metadata("design:type", String)
     ], UvIndexResult.prototype, "toTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_uv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_uv" }),
         __metadata("design:type", Number)
     ], UvIndexResult.prototype, "toUv", void 0);
     return UvIndexResult;
-}(SpeakeasyBase));
-export { UvIndexResult };
+}(utils_1.SpeakeasyBase));
+exports.UvIndexResult = UvIndexResult;

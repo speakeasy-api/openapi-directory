@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayRouteTableVpcAssociation } from "./localgatewayroutetablevpcassociation";
 
 
 
 export class DescribeLocalGatewayRouteTableVpcAssociationsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: LocalGatewayRouteTableVpcAssociation })
-  localGatewayRouteTableVpcAssociations?: LocalGatewayRouteTableVpcAssociation[];
+  @SpeakeasyMetadata()
+  localGatewayRouteTableVpcAssociations?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

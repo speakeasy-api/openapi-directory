@@ -51,7 +51,7 @@ export class DeregisterWorkspaceDirectoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deregisterWorkspaceDirectoryResult?: Map<string, any>;
+  deregisterWorkspaceDirectoryResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAllFacilitiesRequest, GetAllFacilitiesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,7 +33,7 @@ const req: GetAllFacilitiesRequest = {
     },
   },
   headers: {
-    accept: "application/vnd.geo+json",
+    accept: "application/geo+json",
   },
 };
 

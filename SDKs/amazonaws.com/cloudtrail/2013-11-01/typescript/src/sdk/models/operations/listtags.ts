@@ -54,7 +54,7 @@ export class ListTagsRequest extends SpeakeasyBase {
 
 export class ListTagsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cloudTrailArnInvalidException?: any;
+  cloudTrailARNInvalidException?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -78,16 +78,16 @@ export class TaxonomyAttractions200ApplicationJsonData extends SpeakeasyBase {
   sortOrder?: number;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" })
-  thumbnailHiResUrl?: string;
+  thumbnailHiResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
   title?: string;
 
   @SpeakeasyMetadata({ data: "json, name=webURL" })
-  webUrl?: string;
+  webURL?: string;
 }
 
 
@@ -117,10 +117,10 @@ export class TaxonomyAttractions200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -150,5 +150,5 @@ export class TaxonomyAttractionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  taxonomyAttractions200ApplicationJsonObject?: TaxonomyAttractions200ApplicationJson;
+  taxonomyAttractions200ApplicationJSONObject?: TaxonomyAttractions200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteUserTagsTagIdShowsShowIdResponse = exports.DeleteUserTagsTagIdShowsShowIdRequest = exports.DeleteUserTagsTagIdShowsShowIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteUserTagsTagIdShowsShowIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteUserTagsTagIdShowsShowIdPathParams, _super);
     function DeleteUserTagsTagIdShowsShowIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=show_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=show_id" }),
         __metadata("design:type", Number)
     ], DeleteUserTagsTagIdShowsShowIdPathParams.prototype, "showId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tag_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tag_id" }),
         __metadata("design:type", Number)
     ], DeleteUserTagsTagIdShowsShowIdPathParams.prototype, "tagId", void 0);
     return DeleteUserTagsTagIdShowsShowIdPathParams;
-}(SpeakeasyBase));
-export { DeleteUserTagsTagIdShowsShowIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserTagsTagIdShowsShowIdPathParams = DeleteUserTagsTagIdShowsShowIdPathParams;
 var DeleteUserTagsTagIdShowsShowIdRequest = /** @class */ (function (_super) {
     __extends(DeleteUserTagsTagIdShowsShowIdRequest, _super);
     function DeleteUserTagsTagIdShowsShowIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteUserTagsTagIdShowsShowIdPathParams)
     ], DeleteUserTagsTagIdShowsShowIdRequest.prototype, "pathParams", void 0);
     return DeleteUserTagsTagIdShowsShowIdRequest;
-}(SpeakeasyBase));
-export { DeleteUserTagsTagIdShowsShowIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserTagsTagIdShowsShowIdRequest = DeleteUserTagsTagIdShowsShowIdRequest;
 var DeleteUserTagsTagIdShowsShowIdResponse = /** @class */ (function (_super) {
     __extends(DeleteUserTagsTagIdShowsShowIdResponse, _super);
     function DeleteUserTagsTagIdShowsShowIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteUserTagsTagIdShowsShowIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteUserTagsTagIdShowsShowIdResponse.prototype, "statusCode", void 0);
     return DeleteUserTagsTagIdShowsShowIdResponse;
-}(SpeakeasyBase));
-export { DeleteUserTagsTagIdShowsShowIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserTagsTagIdShowsShowIdResponse = DeleteUserTagsTagIdShowsShowIdResponse;

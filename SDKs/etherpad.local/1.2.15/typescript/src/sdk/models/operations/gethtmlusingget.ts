@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetHtmlUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -34,7 +34,7 @@ export class GetHtmlUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,7 +46,7 @@ export class GetHtmlUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetHtmlUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -79,14 +79,14 @@ export class GetHtmlUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getHtmlUsingGet200ApplicationJsonObject?: GetHtmlUsingGet200ApplicationJson;
+  getHTMLUsingGET200ApplicationJSONObject?: GetHtmlUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getHtmlUsingGet400ApplicationJsonObject?: GetHtmlUsingGet400ApplicationJson;
+  getHTMLUsingGET400ApplicationJSONObject?: GetHtmlUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getHtmlUsingGet401ApplicationJsonObject?: GetHtmlUsingGet401ApplicationJson;
+  getHTMLUsingGET401ApplicationJSONObject?: GetHtmlUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getHtmlUsingGet500ApplicationJsonObject?: GetHtmlUsingGet500ApplicationJson;
+  getHTMLUsingGET500ApplicationJSONObject?: GetHtmlUsingGet500ApplicationJson;
 }

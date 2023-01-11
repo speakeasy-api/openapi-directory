@@ -61,7 +61,7 @@ export class MigrationJobInput extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -79,7 +79,7 @@ export class MigrationJobInput extends SpeakeasyBase {
   state?: MigrationJobStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=staticIpConnectivity" })
-  staticIpConnectivity?: Map<string, any>;
+  staticIpConnectivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: MigrationJobTypeEnum;
@@ -119,7 +119,7 @@ export class MigrationJob extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -140,7 +140,7 @@ export class MigrationJob extends SpeakeasyBase {
   state?: MigrationJobStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=staticIpConnectivity" })
-  staticIpConnectivity?: Map<string, any>;
+  staticIpConnectivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: MigrationJobTypeEnum;

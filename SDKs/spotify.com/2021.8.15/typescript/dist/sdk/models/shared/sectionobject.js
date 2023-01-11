@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SectionObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // SectionObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/#section-object - Find more info on the official Spotify Web API Reference
@@ -33,53 +36,53 @@ var SectionObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key_confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key_confidence" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "keyConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loudness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loudness" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "loudness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode_confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode_confidence" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "modeConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tempo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tempo" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "tempo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tempo_confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tempo_confidence" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "tempoConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_signature" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "timeSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_signature_confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_signature_confidence" }),
         __metadata("design:type", Number)
     ], SectionObject.prototype, "timeSignatureConfidence", void 0);
     return SectionObject;
-}(SpeakeasyBase));
-export { SectionObject };
+}(utils_1.SpeakeasyBase));
+exports.SectionObject = SectionObject;

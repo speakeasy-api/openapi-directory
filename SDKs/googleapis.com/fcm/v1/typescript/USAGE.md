@@ -1,0 +1,153 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { FcmProjectsMessagesSendRequest, FcmProjectsMessagesSendResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+
+const sdk = new SDK();
+    
+const req: FcmProjectsMessagesSendRequest = {
+  security: {
+    option1: {
+      oauth2: {
+        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+      },
+      oauth2c: {
+        authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+      },
+    },
+  },
+  pathParams: {
+    parent: "sit",
+  },
+  queryParams: {
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
+  },
+  request: {
+    message: {
+      android: {
+        collapseKey: "dicta",
+        data: {
+          "voluptatum": "et",
+        },
+        directBootOk: false,
+        fcmOptions: {
+          analyticsLabel: "dolorem",
+        },
+        notification: {
+          body: "et",
+          bodyLocArgs: [
+            "iste",
+          ],
+          bodyLocKey: "vitae",
+          bypassProxyNotification: true,
+          channelId: "dolores",
+          clickAction: "illum",
+          color: "debitis",
+          defaultLightSettings: false,
+          defaultSound: false,
+          defaultVibrateTimings: true,
+          eventTime: "id",
+          icon: "aspernatur",
+          image: "accusantium",
+          lightSettings: {
+            color: {
+              alpha: 45.099998,
+              blue: 78.199997,
+              green: 0.100000,
+              red: 49.099998,
+            },
+            lightOffDuration: "omnis",
+            lightOnDuration: "aut",
+          },
+          localOnly: true,
+          notificationCount: 5558237345453186302,
+          notificationPriority: "PRIORITY_MIN",
+          sound: "autem",
+          sticky: true,
+          tag: "nobis",
+          ticker: "odio",
+          title: "qui",
+          titleLocArgs: [
+            "at",
+            "ipsum",
+            "eveniet",
+          ],
+          titleLocKey: "modi",
+          vibrateTimings: [
+            "inventore",
+          ],
+          visibility: "PUBLIC",
+        },
+        priority: "NORMAL",
+        restrictedPackageName: "aut",
+        ttl: "reprehenderit",
+      },
+      apns: {
+        fcmOptions: {
+          analyticsLabel: "tempore",
+          image: "maiores",
+        },
+        headers: {
+          "dolor": "beatae",
+          "veritatis": "in",
+          "et": "omnis",
+        },
+        payload: {
+          "ex": "dolores",
+        },
+      },
+      condition: "placeat",
+      data: {
+        "rerum": "mollitia",
+        "voluptas": "quam",
+      },
+      fcmOptions: {
+        analyticsLabel: "reprehenderit",
+      },
+      name: "qui",
+      notification: {
+        body: "qui",
+        image: "unde",
+        title: "in",
+      },
+      token: "autem",
+      topic: "qui",
+      webpush: {
+        data: {
+          "itaque": "ab",
+          "neque": "ullam",
+          "et": "accusantium",
+        },
+        fcmOptions: {
+          analyticsLabel: "esse",
+          link: "architecto",
+        },
+        headers: {
+          "velit": "cumque",
+        },
+        notification: {
+          "sunt": "voluptates",
+        },
+      },
+    },
+    validateOnly: false,
+  },
+};
+
+sdk.projects.fcmProjectsMessagesSend(req).then((res: FcmProjectsMessagesSendResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

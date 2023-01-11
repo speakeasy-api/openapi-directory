@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaUserCapabilities = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2betaUserCapabilities
 /**
  * The capabilities of a user.
@@ -33,25 +36,25 @@ var GoogleAppsDriveLabelsV2betaUserCapabilities = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canAccessLabelManager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canAccessLabelManager" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaUserCapabilities.prototype, "canAccessLabelManager", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canAdministrateLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canAdministrateLabels" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaUserCapabilities.prototype, "canAdministrateLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateAdminLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateAdminLabels" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaUserCapabilities.prototype, "canCreateAdminLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateSharedLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateSharedLabels" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaUserCapabilities.prototype, "canCreateSharedLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaUserCapabilities.prototype, "name", void 0);
     return GoogleAppsDriveLabelsV2betaUserCapabilities;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaUserCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaUserCapabilities = GoogleAppsDriveLabelsV2betaUserCapabilities;

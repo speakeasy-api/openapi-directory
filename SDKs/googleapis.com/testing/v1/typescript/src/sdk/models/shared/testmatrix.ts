@@ -42,7 +42,11 @@ export enum TestMatrixInvalidMatrixDetailsEnum {
     NoCodeApk = "NO_CODE_APK",
     InvalidInputApk = "INVALID_INPUT_APK",
     InvalidApkPreviewSdk = "INVALID_APK_PREVIEW_SDK",
-    MatrixTooLarge = "MATRIX_TOO_LARGE"
+    MatrixTooLarge = "MATRIX_TOO_LARGE",
+    DeviceQuotaExceeded = "DEVICE_QUOTA_EXCEEDED",
+    TestQuotaExceeded = "TEST_QUOTA_EXCEEDED",
+    ServiceNotActivated = "SERVICE_NOT_ACTIVATED",
+    UnknownPermissionError = "UNKNOWN_PERMISSION_ERROR"
 }
 
 export enum TestMatrixOutcomeSummaryEnum {

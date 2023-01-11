@@ -308,5 +308,5 @@ export class SettingValueModelHaljson extends SpeakeasyBase {
   updatedAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 }

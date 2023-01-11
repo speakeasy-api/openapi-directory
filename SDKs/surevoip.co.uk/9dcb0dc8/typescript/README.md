@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteCustomersAccountAnnouncementsAnnouncementIdRequest, DeleteCustomersAccountAnnouncementsAnnouncementIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
@@ -35,12 +34,12 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteCustomersAccountAnnouncementsAnnouncementIdRequest = {
   pathParams: {
-    account: 8709764731653600972,
-    announcementId: "libero",
+    account: 8717895732742165505,
+    announcementId: "voluptas",
   },
 };
 
-sdk.sdk.deleteCustomersAccountAnnouncementsAnnouncementId(req).then((res: DeleteCustomersAccountAnnouncementsAnnouncementIdResponse | AxiosError) => {
+sdk.announcements.deleteCustomersAccountAnnouncementsAnnouncementId(req).then((res: DeleteCustomersAccountAnnouncementsAnnouncementIdResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,38 +48,92 @@ sdk.sdk.deleteCustomersAccountAnnouncementsAnnouncementId(req).then((res: Delete
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### announcements
 
 * `deleteCustomersAccountAnnouncementsAnnouncementId` - Delete an announcement audio file
-* `get` - List global resources
 * `getAnnouncements` - List global announcements
-* `getAreacodes` - List areacodes
-* `getBilling` - List global billing detail
-* `getCalls` - Validate a phone number by calling it once
-* `getCharges` - List charges
-* `getContacts` - List contacts
-* `getCustomers` - List all customers or find your own account
 * `getCustomersAccountAnnouncements` - List of announcement audio files
 * `getCustomersAccountAnnouncementsAnnouncementId` - Represents an announcement audio file
-* `getFaxes` - List global ongoing faxes
-* `getHosted` - List Hosted VoIP domains
-* `getIpAddress` - Return the IP address from where your API request originated
-* `getMobile` - List mobile accounts
-* `getNumbers` - List available SureVoIP Ofcom number allocations for purchase
+* `postAnnouncements` - Add a new announcement audio file
+
+### areacodes
+
+* `getAreacodes` - List areacodes
 * `getNumbersAreacodes` - Search available numbers by areacode
+
+### billing
+
+* `getBilling` - List global billing detail
+
+### calls
+
+* `getCalls` - Validate a phone number by calling it once
+* `postCalls` - Create phone calls with or without announcements and scheduled hangups
+
+### charges
+
+* `getCharges` - List charges
+* `postCharges` - Create charges for invoices
+
+### contacts
+
+* `getContacts` - List contacts
+
+### customers
+
+* `getCustomer` - Represents a customer
+* `getCustomers` - List all customers or find your own account
+
+### echo
+
+* `postSupportEcho` - Return your POSTed data for testing
+
+### faxes
+
+* `getFaxes` - List global ongoing faxes
+
+### global
+
+* `get` - List global resources
+
+### hosted
+
+* `getHosted` - List Hosted VoIP domains
+
+### mobile
+
+* `getMobile` - List mobile accounts
+
+### numbers
+
+* `getNumbers` - List available SureVoIP Ofcom number allocations for purchase
+
+### partners
+
 * `getPartners` - List SureVoIP Partner accounts
+
+### porting
+
 * `getPorting` - List ported numbers
-* `getServiceStatus` - List all Service Status messages
+
+### sip
+
 * `getSip` - List all SIP accounts
+
+### sms
+
 * `getSms` - List SMS
+
+### support
+
+* `getIpAddress` - Return the IP address from where your API request originated
+* `getServiceStatus` - List all Service Status messages
 * `getSupportIpAddress` - Return the IP address from where your API request originated
 * `getSupportServiceStatus` - List all Service Status messages
+
+### topups
+
 * `getTopups` - List all account credit topups
-* `postAnnouncements` - Add a new announcement audio file
-* `postCalls` - Create phone calls with or without announcements and scheduled hangups
-* `postCharges` - Create charges for invoices
-* `postSupportEcho` - Return your POSTed data for testing
-* `getCustomer` - Represents a customer
 
 <!-- End SDK Available Operations -->
 

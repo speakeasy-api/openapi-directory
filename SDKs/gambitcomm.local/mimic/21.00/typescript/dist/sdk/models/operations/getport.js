@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPortResponse = exports.GetPortRequest = exports.GetPortPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPortPathParams = /** @class */ (function (_super) {
     __extends(GetPortPathParams, _super);
     function GetPortPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetPortPathParams.prototype, "agentNum", void 0);
     return GetPortPathParams;
-}(SpeakeasyBase));
-export { GetPortPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPortPathParams = GetPortPathParams;
 var GetPortRequest = /** @class */ (function (_super) {
     __extends(GetPortRequest, _super);
     function GetPortRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPortPathParams)
     ], GetPortRequest.prototype, "pathParams", void 0);
     return GetPortRequest;
-}(SpeakeasyBase));
-export { GetPortRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPortRequest = GetPortRequest;
 var GetPortResponse = /** @class */ (function (_super) {
     __extends(GetPortResponse, _super);
     function GetPortResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPortResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPortResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetPortResponse.prototype, "getPort200ApplicationJsonString", void 0);
+    ], GetPortResponse.prototype, "getPort200ApplicationJSONString", void 0);
     return GetPortResponse;
-}(SpeakeasyBase));
-export { GetPortResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPortResponse = GetPortResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,134 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchTypePointGeomagIaga2002Response = exports.SearchTypePointGeomagIaga2002Request = exports.SearchTypePointGeomagIaga2002QueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchTypePointGeomagIaga2002QueryParams = /** @class */ (function (_super) {
     __extends(SearchTypePointGeomagIaga2002QueryParams, _super);
     function SearchTypePointGeomagIaga2002QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.data_interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.data_interval" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002DataInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.data_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.data_type" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002DataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.digital_sampling" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.digital_sampling" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002DigitalSampling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.iaga_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.iaga_code" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002IagaCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.source_of_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.source_of_data" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002SourceOfData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.station_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_point_geomag_iaga2002.station_name" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "searchTypePointGeomagIaga2002StationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchTypePointGeomagIaga2002QueryParams.prototype, "todate", void 0);
     return SearchTypePointGeomagIaga2002QueryParams;
-}(SpeakeasyBase));
-export { SearchTypePointGeomagIaga2002QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePointGeomagIaga2002QueryParams = SearchTypePointGeomagIaga2002QueryParams;
 var SearchTypePointGeomagIaga2002Request = /** @class */ (function (_super) {
     __extends(SearchTypePointGeomagIaga2002Request, _super);
     function SearchTypePointGeomagIaga2002Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchTypePointGeomagIaga2002QueryParams)
     ], SearchTypePointGeomagIaga2002Request.prototype, "queryParams", void 0);
     return SearchTypePointGeomagIaga2002Request;
-}(SpeakeasyBase));
-export { SearchTypePointGeomagIaga2002Request };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePointGeomagIaga2002Request = SearchTypePointGeomagIaga2002Request;
 var SearchTypePointGeomagIaga2002Response = /** @class */ (function (_super) {
     __extends(SearchTypePointGeomagIaga2002Response, _super);
     function SearchTypePointGeomagIaga2002Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchTypePointGeomagIaga2002Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchTypePointGeomagIaga2002Response.prototype, "statusCode", void 0);
     return SearchTypePointGeomagIaga2002Response;
-}(SpeakeasyBase));
-export { SearchTypePointGeomagIaga2002Response };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePointGeomagIaga2002Response = SearchTypePointGeomagIaga2002Response;

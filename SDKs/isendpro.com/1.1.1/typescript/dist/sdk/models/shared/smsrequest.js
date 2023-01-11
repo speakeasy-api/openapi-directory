@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SmsRequestGmtZoneEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SmsRequest = exports.SmsRequestNumAzurEnum = exports.SmsRequestGmtZoneEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SmsRequestGmtZoneEnum;
 (function (SmsRequestGmtZoneEnum) {
     SmsRequestGmtZoneEnum["PacificMidway"] = "Pacific/Midway";
     SmsRequestGmtZoneEnum["AmericaAdak"] = "America/Adak";
@@ -115,64 +118,64 @@ export var SmsRequestGmtZoneEnum;
     SmsRequestGmtZoneEnum["PacificChatham"] = "Pacific/Chatham";
     SmsRequestGmtZoneEnum["PacificTongatapu"] = "Pacific/Tongatapu";
     SmsRequestGmtZoneEnum["PacificKiritimati"] = "Pacific/Kiritimati";
-})(SmsRequestGmtZoneEnum || (SmsRequestGmtZoneEnum = {}));
-export var SmsRequestNumAzurEnum;
+})(SmsRequestGmtZoneEnum = exports.SmsRequestGmtZoneEnum || (exports.SmsRequestGmtZoneEnum = {}));
+var SmsRequestNumAzurEnum;
 (function (SmsRequestNumAzurEnum) {
     SmsRequestNumAzurEnum["One"] = "1";
-})(SmsRequestNumAzurEnum || (SmsRequestNumAzurEnum = {}));
+})(SmsRequestNumAzurEnum = exports.SmsRequestNumAzurEnum || (exports.SmsRequestNumAzurEnum = {}));
 var SmsRequest = /** @class */ (function (_super) {
     __extends(SmsRequest, _super);
     function SmsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_envoi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_envoi" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "dateEnvoi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emetteur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emetteur" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "emetteur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gmt_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gmt_zone" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "gmtZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyid" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nostop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nostop" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "nostop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num" }),
         __metadata("design:type", Array)
     ], SmsRequest.prototype, "num", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numAzur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numAzur" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "numAzur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repertoireId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repertoireId" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "repertoireId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sms" }),
         __metadata("design:type", Array)
     ], SmsRequest.prototype, "sms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smslong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smslong" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "smslong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracker" }),
         __metadata("design:type", Array)
     ], SmsRequest.prototype, "tracker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ucs2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ucs2" }),
         __metadata("design:type", String)
     ], SmsRequest.prototype, "ucs2", void 0);
     return SmsRequest;
-}(SpeakeasyBase));
-export { SmsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SmsRequest = SmsRequest;

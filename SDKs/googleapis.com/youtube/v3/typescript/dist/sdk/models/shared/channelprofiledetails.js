@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelProfileDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChannelProfileDetails = /** @class */ (function (_super) {
     __extends(ChannelProfileDetails, _super);
     function ChannelProfileDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], ChannelProfileDetails.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelUrl" }),
         __metadata("design:type", String)
     ], ChannelProfileDetails.prototype, "channelUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ChannelProfileDetails.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileImageUrl" }),
         __metadata("design:type", String)
     ], ChannelProfileDetails.prototype, "profileImageUrl", void 0);
     return ChannelProfileDetails;
-}(SpeakeasyBase));
-export { ChannelProfileDetails };
+}(utils_1.SpeakeasyBase));
+exports.ChannelProfileDetails = ChannelProfileDetails;

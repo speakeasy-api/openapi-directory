@@ -21,7 +21,7 @@ export declare class PutReportDefinitionResponse extends SpeakeasyBase {
     contentType: string;
     duplicateReportNameException?: any;
     internalErrorException?: any;
-    putReportDefinitionResponse?: Map<string, any>;
+    putReportDefinitionResponse?: Record<string, any>;
     reportLimitReachedException?: any;
     statusCode: number;
     validationException?: any;

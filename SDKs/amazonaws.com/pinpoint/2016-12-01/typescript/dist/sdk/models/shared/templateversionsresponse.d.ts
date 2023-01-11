@@ -7,5 +7,5 @@ export declare class TemplateVersionsResponse extends SpeakeasyBase {
     item: TemplateVersionResponse[];
     message?: string;
     nextToken?: string;
-    requestId?: string;
+    requestID?: string;
 }

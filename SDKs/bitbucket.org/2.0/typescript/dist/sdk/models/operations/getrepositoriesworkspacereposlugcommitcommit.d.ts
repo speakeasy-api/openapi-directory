@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitRequest extends
 export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    commit?: Map<string, any>;
-    error?: Map<string, any>;
+    commit?: Record<string, any>;
+    error?: Record<string, any>;
 }

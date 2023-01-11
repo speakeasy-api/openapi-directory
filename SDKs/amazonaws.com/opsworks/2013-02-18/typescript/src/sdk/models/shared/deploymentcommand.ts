@@ -9,7 +9,7 @@ import { DeploymentCommandNameEnum } from "./deploymentcommandnameenum";
 **/
 export class DeploymentCommand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Args" })
-  args?: Map<string, string[]>;
+  args?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=Name" })
   name: DeploymentCommandNameEnum;

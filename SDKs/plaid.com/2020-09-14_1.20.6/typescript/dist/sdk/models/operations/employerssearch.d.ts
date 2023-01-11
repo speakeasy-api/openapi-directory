@@ -5,6 +5,6 @@ export declare class EmployersSearchRequest extends SpeakeasyBase {
 }
 export declare class EmployersSearchResponse extends SpeakeasyBase {
     contentType: string;
-    employersSearchResponse?: Map<string, any>;
+    employersSearchResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EscalationReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Escalation = exports.EscalationReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EscalationReasonEnum;
 (function (EscalationReasonEnum) {
     EscalationReasonEnum["ReasonUnspecified"] = "REASON_UNSPECIFIED";
     EscalationReasonEnum["ResolutionTime"] = "RESOLUTION_TIME";
     EscalationReasonEnum["TechnicalExpertise"] = "TECHNICAL_EXPERTISE";
     EscalationReasonEnum["BusinessImpact"] = "BUSINESS_IMPACT";
-})(EscalationReasonEnum || (EscalationReasonEnum = {}));
+})(EscalationReasonEnum = exports.EscalationReasonEnum || (exports.EscalationReasonEnum = {}));
 // Escalation
 /**
  * An escalation of a support case.
@@ -40,13 +43,13 @@ var Escalation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=justification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=justification" }),
         __metadata("design:type", String)
     ], Escalation.prototype, "justification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], Escalation.prototype, "reason", void 0);
     return Escalation;
-}(SpeakeasyBase));
-export { Escalation };
+}(utils_1.SpeakeasyBase));
+exports.Escalation = Escalation;

@@ -19,7 +19,7 @@ export declare class CreateConnectorDefinitionRequestBodyInitialVersion extends 
 export declare class CreateConnectorDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateConnectorDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateConnectorDefinitionRequest extends SpeakeasyBase {
     headers: CreateConnectorDefinitionHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachmentItem } from "./attachmentitem";
-import { ParticipantRoleEnum } from "./participantroleenum";
-import { ChatItemTypeEnum } from "./chatitemtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Item = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachmentitem_1 = require("./attachmentitem");
+var participantroleenum_1 = require("./participantroleenum");
+var chatitemtypeenum_1 = require("./chatitemtypeenum");
 // Item
 /**
  * An item - message or event - that has been sent.
@@ -36,41 +39,41 @@ var Item = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AbsoluteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AbsoluteTime" }),
         __metadata("design:type", String)
     ], Item.prototype, "absoluteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attachments", elemType: AttachmentItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attachments", elemType: attachmentitem_1.AttachmentItem }),
         __metadata("design:type", Array)
     ], Item.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content" }),
         __metadata("design:type", String)
     ], Item.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContentType" }),
         __metadata("design:type", String)
     ], Item.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisplayName" }),
         __metadata("design:type", String)
     ], Item.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Item.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParticipantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParticipantId" }),
         __metadata("design:type", String)
     ], Item.prototype, "participantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParticipantRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParticipantRole" }),
         __metadata("design:type", String)
     ], Item.prototype, "participantRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Item.prototype, "type", void 0);
     return Item;
-}(SpeakeasyBase));
-export { Item };
+}(utils_1.SpeakeasyBase));
+exports.Item = Item;

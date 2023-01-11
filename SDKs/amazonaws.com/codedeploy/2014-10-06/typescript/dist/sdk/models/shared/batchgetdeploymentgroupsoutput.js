@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentGroupInfo } from "./deploymentgroupinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetDeploymentGroupsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentgroupinfo_1 = require("./deploymentgroupinfo");
 // BatchGetDeploymentGroupsOutput
 /**
  * Represents the output of a <code>BatchGetDeploymentGroups</code> operation.
@@ -34,13 +37,13 @@ var BatchGetDeploymentGroupsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentGroupsInfo", elemType: DeploymentGroupInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentGroupsInfo", elemType: deploymentgroupinfo_1.DeploymentGroupInfo }),
         __metadata("design:type", Array)
     ], BatchGetDeploymentGroupsOutput.prototype, "deploymentGroupsInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], BatchGetDeploymentGroupsOutput.prototype, "errorMessage", void 0);
     return BatchGetDeploymentGroupsOutput;
-}(SpeakeasyBase));
-export { BatchGetDeploymentGroupsOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetDeploymentGroupsOutput = BatchGetDeploymentGroupsOutput;

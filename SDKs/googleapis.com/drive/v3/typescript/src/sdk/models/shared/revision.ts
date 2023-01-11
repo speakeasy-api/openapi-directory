@@ -9,7 +9,7 @@ import { User } from "./user";
 **/
 export class Revision extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=exportLinks" })
-  exportLinks?: Map<string, string>;
+  exportLinks?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

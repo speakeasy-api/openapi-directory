@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities
 /**
  * The capabilities related to this choice on applied metadata.
@@ -33,17 +36,17 @@ var GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities = 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRead" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities.prototype, "canRead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canSearch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canSearch" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities.prototype, "canSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canSelect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canSelect" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities.prototype, "canSelect", void 0);
     return GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities = GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities;

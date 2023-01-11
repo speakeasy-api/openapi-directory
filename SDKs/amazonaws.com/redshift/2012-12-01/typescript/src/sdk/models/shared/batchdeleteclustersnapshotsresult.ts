@@ -1,12 +1,12 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotErrorMessage } from "./snapshoterrormessage";
+import { BatchSnapshotOperationErrorList } from "./batchsnapshotoperationerrorlist";
 
 
 
 export class BatchDeleteClusterSnapshotsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: SnapshotErrorMessage })
-  errors?: SnapshotErrorMessage[];
+  @SpeakeasyMetadata({ elemType: BatchSnapshotOperationErrorList })
+  errors?: BatchSnapshotOperationErrorList[];
 
   @SpeakeasyMetadata()
-  resources?: string[];
+  resources?: Record<string, any>[];
 }

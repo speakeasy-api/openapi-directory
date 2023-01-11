@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1Example } from "./googleclouddatalabelingv1beta1example";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ExampleComparison = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1example_1 = require("./googleclouddatalabelingv1beta1example");
 // GoogleCloudDatalabelingV1beta1ExampleComparison
 /**
  * Example comparisons comparing ground truth output and predictions for a specific input.
@@ -34,13 +37,13 @@ var GoogleCloudDatalabelingV1beta1ExampleComparison = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groundTruthExample" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1Example)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groundTruthExample" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1example_1.GoogleCloudDatalabelingV1beta1Example)
     ], GoogleCloudDatalabelingV1beta1ExampleComparison.prototype, "groundTruthExample", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelCreatedExamples", elemType: GoogleCloudDatalabelingV1beta1Example }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelCreatedExamples", elemType: googleclouddatalabelingv1beta1example_1.GoogleCloudDatalabelingV1beta1Example }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1ExampleComparison.prototype, "modelCreatedExamples", void 0);
     return GoogleCloudDatalabelingV1beta1ExampleComparison;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ExampleComparison };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ExampleComparison = GoogleCloudDatalabelingV1beta1ExampleComparison;

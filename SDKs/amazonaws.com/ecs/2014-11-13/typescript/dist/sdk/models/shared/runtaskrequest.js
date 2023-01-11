@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { LaunchTypeEnum } from "./launchtypeenum";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { TaskOverride } from "./taskoverride";
-import { PlacementConstraint } from "./placementconstraint";
-import { PlacementStrategy } from "./placementstrategy";
-import { PropagateTagsEnum } from "./propagatetagsenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunTaskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var launchtypeenum_1 = require("./launchtypeenum");
+var networkconfiguration_1 = require("./networkconfiguration");
+var taskoverride_1 = require("./taskoverride");
+var placementconstraint_1 = require("./placementconstraint");
+var placementstrategy_1 = require("./placementstrategy");
+var propagatetagsenum_1 = require("./propagatetagsenum");
+var tag_1 = require("./tag");
 var RunTaskRequest = /** @class */ (function (_super) {
     __extends(RunTaskRequest, _super);
     function RunTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], RunTaskRequest.prototype, "capacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], RunTaskRequest.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableECSManagedTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableECSManagedTags" }),
         __metadata("design:type", Boolean)
-    ], RunTaskRequest.prototype, "enableEcsManagedTags", void 0);
+    ], RunTaskRequest.prototype, "enableECSManagedTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableExecuteCommand" }),
         __metadata("design:type", Boolean)
     ], RunTaskRequest.prototype, "enableExecuteCommand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchType" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "launchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], RunTaskRequest.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrides" }),
-        __metadata("design:type", TaskOverride)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrides" }),
+        __metadata("design:type", taskoverride_1.TaskOverride)
     ], RunTaskRequest.prototype, "overrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placementConstraints", elemType: PlacementConstraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placementConstraints", elemType: placementconstraint_1.PlacementConstraint }),
         __metadata("design:type", Array)
     ], RunTaskRequest.prototype, "placementConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placementStrategy", elemType: PlacementStrategy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placementStrategy", elemType: placementstrategy_1.PlacementStrategy }),
         __metadata("design:type", Array)
     ], RunTaskRequest.prototype, "placementStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propagateTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propagateTags" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "propagateTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceId" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedBy" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "startedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], RunTaskRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], RunTaskRequest.prototype, "taskDefinition", void 0);
     return RunTaskRequest;
-}(SpeakeasyBase));
-export { RunTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.RunTaskRequest = RunTaskRequest;

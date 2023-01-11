@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// Artifact
-/**
- * Artifacts of resources. Artifacts are unique (single-value) per resource and are used to store metadata that is too large or numerous to be stored directly on the resource. Since artifacts are stored separately from parent resources, they should generally be used for metadata that is needed infrequently, i.e., not for display in primary views of the resource but perhaps displayed or downloaded upon request. The `ListArtifacts` method allows artifacts to be quickly enumerated and checked for presence without downloading their (potentially-large) contents.
-**/
-var Artifact = /** @class */ (function (_super) {
-    __extends(Artifact, _super);
-    function Artifact() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "contents", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "hash", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "mimeType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeBytes" }),
-        __metadata("design:type", Number)
-    ], Artifact.prototype, "sizeBytes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], Artifact.prototype, "updateTime", void 0);
-    return Artifact;
-}(SpeakeasyBase));
-export { Artifact };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Artifact = exports.ArtifactInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // ArtifactInput
 /**
  * Artifacts of resources. Artifacts are unique (single-value) per resource and are used to store metadata that is too large or numerous to be stored directly on the resource. Since artifacts are stored separately from parent resources, they should generally be used for metadata that is needed infrequently, i.e., not for display in primary views of the resource but perhaps displayed or downloaded upon request. The `ListArtifacts` method allows artifacts to be quickly enumerated and checked for presence without downloading their (potentially-large) contents.
@@ -73,17 +36,57 @@ var ArtifactInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
         __metadata("design:type", String)
     ], ArtifactInput.prototype, "contents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], ArtifactInput.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtifactInput.prototype, "name", void 0);
     return ArtifactInput;
-}(SpeakeasyBase));
-export { ArtifactInput };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactInput = ArtifactInput;
+// Artifact
+/**
+ * Artifacts of resources. Artifacts are unique (single-value) per resource and are used to store metadata that is too large or numerous to be stored directly on the resource. Since artifacts are stored separately from parent resources, they should generally be used for metadata that is needed infrequently, i.e., not for display in primary views of the resource but perhaps displayed or downloaded upon request. The `ListArtifacts` method allows artifacts to be quickly enumerated and checked for presence without downloading their (potentially-large) contents.
+**/
+var Artifact = /** @class */ (function (_super) {
+    __extends(Artifact, _super);
+    function Artifact() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "contents", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "hash", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "mimeType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeBytes" }),
+        __metadata("design:type", Number)
+    ], Artifact.prototype, "sizeBytes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], Artifact.prototype, "updateTime", void 0);
+    return Artifact;
+}(utils_1.SpeakeasyBase));
+exports.Artifact = Artifact;

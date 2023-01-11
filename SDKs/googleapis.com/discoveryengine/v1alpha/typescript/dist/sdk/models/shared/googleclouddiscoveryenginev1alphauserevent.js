@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1alphaCustomAttribute } from "./googleclouddiscoveryenginev1alphacustomattribute";
-import { GoogleCloudDiscoveryengineV1alphaCompletionInfo } from "./googleclouddiscoveryenginev1alphacompletioninfo";
-import { GoogleCloudDiscoveryengineV1alphaDocumentInfo } from "./googleclouddiscoveryenginev1alphadocumentinfo";
-import { GoogleCloudDiscoveryengineV1alphaMediaInfo } from "./googleclouddiscoveryenginev1alphamediainfo";
-import { GoogleCloudDiscoveryengineV1alphaPageInfo } from "./googleclouddiscoveryenginev1alphapageinfo";
-import { GoogleCloudDiscoveryengineV1alphaPanelInfo } from "./googleclouddiscoveryenginev1alphapanelinfo";
-import { GoogleCloudDiscoveryengineV1alphaSearchInfo } from "./googleclouddiscoveryenginev1alphasearchinfo";
-import { GoogleCloudDiscoveryengineV1alphaTransactionInfo } from "./googleclouddiscoveryenginev1alphatransactioninfo";
-import { GoogleCloudDiscoveryengineV1alphaUserInfo } from "./googleclouddiscoveryenginev1alphauserinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaUserEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1alphacustomattribute_1 = require("./googleclouddiscoveryenginev1alphacustomattribute");
+var googleclouddiscoveryenginev1alphacompletioninfo_1 = require("./googleclouddiscoveryenginev1alphacompletioninfo");
+var googleclouddiscoveryenginev1alphadocumentinfo_1 = require("./googleclouddiscoveryenginev1alphadocumentinfo");
+var googleclouddiscoveryenginev1alphamediainfo_1 = require("./googleclouddiscoveryenginev1alphamediainfo");
+var googleclouddiscoveryenginev1alphapageinfo_1 = require("./googleclouddiscoveryenginev1alphapageinfo");
+var googleclouddiscoveryenginev1alphapanelinfo_1 = require("./googleclouddiscoveryenginev1alphapanelinfo");
+var googleclouddiscoveryenginev1alphasearchinfo_1 = require("./googleclouddiscoveryenginev1alphasearchinfo");
+var googleclouddiscoveryenginev1alphatransactioninfo_1 = require("./googleclouddiscoveryenginev1alphatransactioninfo");
+var googleclouddiscoveryenginev1alphauserinfo_1 = require("./googleclouddiscoveryenginev1alphauserinfo");
 // GoogleCloudDiscoveryengineV1alphaUserEvent
 /**
  * UserEvent captures all metadata information Discovery Engine API needs to know about how end users interact with customers' website.
@@ -42,77 +45,77 @@ var GoogleCloudDiscoveryengineV1alphaUserEvent = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: GoogleCloudDiscoveryengineV1alphaCustomAttribute }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: googleclouddiscoveryenginev1alphacustomattribute_1.GoogleCloudDiscoveryengineV1alphaCustomAttribute }),
+        __metadata("design:type", Object)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributionToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributionToken" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "attributionToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completionInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaCompletionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completionInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphacompletioninfo_1.GoogleCloudDiscoveryengineV1alphaCompletionInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "completionInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directUserRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directUserRequest" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "directUserRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documents", elemType: GoogleCloudDiscoveryengineV1alphaDocumentInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documents", elemType: googleclouddiscoveryenginev1alphadocumentinfo_1.GoogleCloudDiscoveryengineV1alphaDocumentInfo }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "documents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "eventTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaMediaInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphamediainfo_1.GoogleCloudDiscoveryengineV1alphaMediaInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "mediaInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaPageInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphapageinfo_1.GoogleCloudDiscoveryengineV1alphaPageInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "pageInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=panel" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaPanelInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=panel" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphapanelinfo_1.GoogleCloudDiscoveryengineV1alphaPanelInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "panel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "promotionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaSearchInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphasearchinfo_1.GoogleCloudDiscoveryengineV1alphaSearchInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "searchInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "sessionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "tagIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaTransactionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphatransactioninfo_1.GoogleCloudDiscoveryengineV1alphaTransactionInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "transactionInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userInfo" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userInfo" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphauserinfo_1.GoogleCloudDiscoveryengineV1alphaUserInfo)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "userInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPseudoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPseudoId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaUserEvent.prototype, "userPseudoId", void 0);
     return GoogleCloudDiscoveryengineV1alphaUserEvent;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaUserEvent };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaUserEvent = GoogleCloudDiscoveryengineV1alphaUserEvent;

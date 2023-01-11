@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GetConnectionsFilter } from "./getconnectionsfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConnectionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var getconnectionsfilter_1 = require("./getconnectionsfilter");
 var GetConnectionsRequest = /** @class */ (function (_super) {
     __extends(GetConnectionsRequest, _super);
     function GetConnectionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], GetConnectionsRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filter" }),
-        __metadata("design:type", GetConnectionsFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filter" }),
+        __metadata("design:type", getconnectionsfilter_1.GetConnectionsFilter)
     ], GetConnectionsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HidePassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HidePassword" }),
         __metadata("design:type", Boolean)
     ], GetConnectionsRequest.prototype, "hidePassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], GetConnectionsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetConnectionsRequest.prototype, "nextToken", void 0);
     return GetConnectionsRequest;
-}(SpeakeasyBase));
-export { GetConnectionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConnectionsRequest = GetConnectionsRequest;

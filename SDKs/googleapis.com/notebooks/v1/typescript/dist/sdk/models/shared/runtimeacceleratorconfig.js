@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RuntimeAcceleratorConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuntimeAcceleratorConfig = exports.RuntimeAcceleratorConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RuntimeAcceleratorConfigTypeEnum;
 (function (RuntimeAcceleratorConfigTypeEnum) {
     RuntimeAcceleratorConfigTypeEnum["AcceleratorTypeUnspecified"] = "ACCELERATOR_TYPE_UNSPECIFIED";
     RuntimeAcceleratorConfigTypeEnum["NvidiaTeslaK80"] = "NVIDIA_TESLA_K80";
@@ -37,7 +40,7 @@ export var RuntimeAcceleratorConfigTypeEnum;
     RuntimeAcceleratorConfigTypeEnum["NvidiaTeslaT4Vws"] = "NVIDIA_TESLA_T4_VWS";
     RuntimeAcceleratorConfigTypeEnum["NvidiaTeslaP100Vws"] = "NVIDIA_TESLA_P100_VWS";
     RuntimeAcceleratorConfigTypeEnum["NvidiaTeslaP4Vws"] = "NVIDIA_TESLA_P4_VWS";
-})(RuntimeAcceleratorConfigTypeEnum || (RuntimeAcceleratorConfigTypeEnum = {}));
+})(RuntimeAcceleratorConfigTypeEnum = exports.RuntimeAcceleratorConfigTypeEnum || (exports.RuntimeAcceleratorConfigTypeEnum = {}));
 // RuntimeAcceleratorConfig
 /**
  * Definition of the types of hardware accelerators that can be used. Definition of the types of hardware accelerators that can be used. See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `nvidia-tesla-k80` * `nvidia-tesla-p100` * `nvidia-tesla-v100` * `nvidia-tesla-p4` * `nvidia-tesla-t4` * `nvidia-tesla-a100`
@@ -48,13 +51,13 @@ var RuntimeAcceleratorConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coreCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coreCount" }),
         __metadata("design:type", String)
     ], RuntimeAcceleratorConfig.prototype, "coreCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RuntimeAcceleratorConfig.prototype, "type", void 0);
     return RuntimeAcceleratorConfig;
-}(SpeakeasyBase));
-export { RuntimeAcceleratorConfig };
+}(utils_1.SpeakeasyBase));
+exports.RuntimeAcceleratorConfig = RuntimeAcceleratorConfig;

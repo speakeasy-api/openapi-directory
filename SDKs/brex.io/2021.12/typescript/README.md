@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CompanyAlternativeSearchRequest, CompanyAlternativeSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,15 +33,15 @@ const req: CompanyAlternativeSearchRequest = {
     },
   },
   pathParams: {
-    country: "nihil",
+    country: "sit",
   },
   request: {
-    address: "qui",
-    name: "natus",
-    number: "et",
-    phone: "facere",
-    url: "necessitatibus",
-    vat: "iste",
+    address: "voluptas",
+    name: "culpa",
+    number: "expedita",
+    phone: "consequuntur",
+    url: "dolor",
+    vat: "expedita",
   },
 };
 

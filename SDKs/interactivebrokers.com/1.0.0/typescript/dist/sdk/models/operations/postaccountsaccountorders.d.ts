@@ -17,7 +17,7 @@ export declare class PostAccountsAccountOrdersRequestBody extends SpeakeasyBase 
     mifid2ExecutionTrader?: string;
     orderType?: number;
     orderRestrictions?: number;
-    outsideRth?: number;
+    outsideRTH?: number;
     price?: number;
     quantity?: number;
     side?: number;

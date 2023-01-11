@@ -1,60 +1,65 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
+// ListFloatingIps200ApplicationJsonFloatingIpsRegion
+/** 
+ * The region that the floating IP is reserved to. When you query a floating IP, the entire region object will be returned.
+**/
 export class ListFloatingIps200ApplicationJsonFloatingIpsRegion extends SpeakeasyBase {
-  @Metadata({ data: "json, name=available" })
+  @SpeakeasyMetadata({ data: "json, name=available" })
   available: boolean;
 
-  @Metadata({ data: "json, name=features" })
+  @SpeakeasyMetadata({ data: "json, name=features" })
   features: any;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=sizes" })
+  @SpeakeasyMetadata({ data: "json, name=sizes" })
   sizes: any;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug: string;
 }
 
 
 export class ListFloatingIps200ApplicationJsonFloatingIps extends SpeakeasyBase {
-  @Metadata({ data: "json, name=droplet" })
+  @SpeakeasyMetadata({ data: "json, name=droplet" })
   droplet?: any;
 
-  @Metadata({ data: "json, name=ip" })
+  @SpeakeasyMetadata({ data: "json, name=ip" })
   ip?: string;
 
-  @Metadata({ data: "json, name=locked" })
+  @SpeakeasyMetadata({ data: "json, name=locked" })
   locked?: boolean;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region?: ListFloatingIps200ApplicationJsonFloatingIpsRegion;
 }
 
 
 export class ListFloatingIps200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListFloatingIps200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListFloatingIps200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -64,51 +69,51 @@ export class ListFloatingIps200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListFloatingIps200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListFloatingIps200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=floating_ips", elemType: operations.ListFloatingIps200ApplicationJsonFloatingIps })
+  @SpeakeasyMetadata({ data: "json, name=floating_ips", elemType: ListFloatingIps200ApplicationJsonFloatingIps })
   floatingIps?: ListFloatingIps200ApplicationJsonFloatingIps[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListFloatingIps200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListFloatingIps200ApplicationJsonMeta;
 }
 
 
 export class ListFloatingIps401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
 export class ListFloatingIpsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listFloatingIps200ApplicationJsonObject?: ListFloatingIps200ApplicationJson;
+  @SpeakeasyMetadata()
+  listFloatingIps200ApplicationJSONObject?: ListFloatingIps200ApplicationJson;
 
-  @Metadata()
-  listFloatingIps401ApplicationJsonObject?: ListFloatingIps401ApplicationJson;
+  @SpeakeasyMetadata()
+  listFloatingIps401ApplicationJSONObject?: ListFloatingIps401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

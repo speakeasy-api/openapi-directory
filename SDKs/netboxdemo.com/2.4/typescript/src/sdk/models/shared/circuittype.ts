@@ -2,7 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class CircuitTypeInput extends SpeakeasyBase {
+export class CircuitType extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: number;
+
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
@@ -11,10 +14,7 @@ export class CircuitTypeInput extends SpeakeasyBase {
 }
 
 
-export class CircuitType extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: number;
-
+export class CircuitTypeInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 

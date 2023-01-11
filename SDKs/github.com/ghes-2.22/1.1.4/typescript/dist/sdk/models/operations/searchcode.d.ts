@@ -27,7 +27,7 @@ export declare class SearchCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    searchCode200ApplicationJsonObject?: SearchCode200ApplicationJson;
-    searchCode503ApplicationJsonObject?: SearchCode503ApplicationJson;
+    searchCode200ApplicationJSONObject?: SearchCode200ApplicationJson;
+    searchCode503ApplicationJSONObject?: SearchCode503ApplicationJson;
     validationError?: shared.ValidationError;
 }

@@ -9,14 +9,14 @@ import { WebpushFcmOptions } from "./webpushfcmoptions";
 **/
 export class WebpushConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=fcmOptions" })
   fcmOptions?: WebpushFcmOptions;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=notification" })
-  notification?: Map<string, any>;
+  notification?: Record<string, any>;
 }

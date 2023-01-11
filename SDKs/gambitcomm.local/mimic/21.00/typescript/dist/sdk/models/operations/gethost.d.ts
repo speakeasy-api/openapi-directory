@@ -8,5 +8,5 @@ export declare class GetHostRequest extends SpeakeasyBase {
 export declare class GetHostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getHost200ApplicationJsonString?: string;
+    getHost200ApplicationJSONString?: string;
 }

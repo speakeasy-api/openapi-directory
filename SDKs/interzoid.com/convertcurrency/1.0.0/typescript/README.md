@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ConvertcurrencyRequest, ConvertcurrencyResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,14 +28,14 @@ const sdk = new SDK();
     
 const req: ConvertcurrencyRequest = {
   queryParams: {
-    amount: "rerum",
-    from: "atque",
-    license: "expedita",
-    to: "aut",
+    amount: "sit",
+    from: "voluptas",
+    license: "culpa",
+    to: "expedita",
   },
 };
 
-sdk.sdk.convertcurrency(req).then((res: ConvertcurrencyResponse | AxiosError) => {
+sdk.liveCurrencyRateConversion.convertcurrency(req).then((res: ConvertcurrencyResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,7 +44,7 @@ sdk.sdk.convertcurrency(req).then((res: ConvertcurrencyResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Live Currency Rate Conversion
 
 * `convertcurrency` - Converts amount in one currency to that of another
 

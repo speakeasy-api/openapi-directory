@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionFilter } from "./dimensionfilter";
-export var DimensionFilterClauseOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionFilterClause = exports.DimensionFilterClauseOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionfilter_1 = require("./dimensionfilter");
+var DimensionFilterClauseOperatorEnum;
 (function (DimensionFilterClauseOperatorEnum) {
     DimensionFilterClauseOperatorEnum["OperatorUnspecified"] = "OPERATOR_UNSPECIFIED";
     DimensionFilterClauseOperatorEnum["Or"] = "OR";
     DimensionFilterClauseOperatorEnum["And"] = "AND";
-})(DimensionFilterClauseOperatorEnum || (DimensionFilterClauseOperatorEnum = {}));
+})(DimensionFilterClauseOperatorEnum = exports.DimensionFilterClauseOperatorEnum || (exports.DimensionFilterClauseOperatorEnum = {}));
 // DimensionFilterClause
 /**
  * A group of dimension filters. Set the operator value to specify how the filters are logically combined.
@@ -40,13 +43,13 @@ var DimensionFilterClause = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: DimensionFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: dimensionfilter_1.DimensionFilter }),
         __metadata("design:type", Array)
     ], DimensionFilterClause.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], DimensionFilterClause.prototype, "operator", void 0);
     return DimensionFilterClause;
-}(SpeakeasyBase));
-export { DimensionFilterClause };
+}(utils_1.SpeakeasyBase));
+exports.DimensionFilterClause = DimensionFilterClause;

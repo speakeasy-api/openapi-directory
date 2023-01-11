@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptEnvironmentAccountConnectionRequest, AcceptEnvironmentAccountConnectionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptEnvironmentAccountConnectionRequest = {
   headers: {
-    xAmzAlgorithm: "numquam",
-    xAmzContentSha256: "quod",
-    xAmzCredential: "quisquam",
-    xAmzDate: "ex",
-    xAmzSecurityToken: "id",
-    xAmzSignature: "ea",
-    xAmzSignedHeaders: "non",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
   },
   request: {
-    id: "quam",
+    id: "fugit",
   },
 };
 
-sdk.sdk.acceptEnvironmentAccountConnection(req).then((res: AcceptEnvironmentAccountConnectionResponse | AxiosError) => {
+sdk.acceptEnvironmentAccountConnection(req).then((res: AcceptEnvironmentAccountConnectionResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -62,7 +62,7 @@ export declare class SubContractorSubContractor extends SpeakeasyBase {
     firstName?: string;
     initials?: string;
     lastName?: string;
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     middleName?: string;
     niNumber?: string;
     partnershipName?: string;

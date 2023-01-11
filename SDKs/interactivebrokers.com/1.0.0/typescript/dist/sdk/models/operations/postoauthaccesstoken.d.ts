@@ -17,6 +17,6 @@ export declare class PostOauthAccessTokenRequest extends SpeakeasyBase {
 }
 export declare class PostOauthAccessTokenResponse extends SpeakeasyBase {
     contentType: string;
-    postOauthAccessToken200ApplicationJsonObject?: PostOauthAccessToken200ApplicationJson;
     statusCode: number;
+    postOauthAccessToken200ApplicationJSONObject?: PostOauthAccessToken200ApplicationJson;
 }

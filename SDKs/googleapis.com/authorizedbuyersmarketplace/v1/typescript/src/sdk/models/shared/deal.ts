@@ -1,13 +1,13 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { CreativeRequirements } from "./creativerequirements";
+import { DeliveryControl } from "./deliverycontrol";
 import { Money } from "./money";
 import { PreferredDealTerms } from "./preferreddealterms";
-import { PrivateAuctionTermsInput } from "./privateauctionterms";
+import { PrivateAuctionTerms } from "./privateauctionterms";
 import { ProgrammaticGuaranteedTerms } from "./programmaticguaranteedterms";
 import { TimeZone } from "./timezone";
 import { MarketplaceTargeting } from "./marketplacetargeting";
-import { CreativeRequirements } from "./creativerequirements";
-import { DeliveryControl } from "./deliverycontrol";
-import { PrivateAuctionTerms } from "./privateauctionterms";
+import { PrivateAuctionTermsInput } from "./privateauctionterms";
 
 
 export enum DealDealTypeEnum {
@@ -15,43 +15,6 @@ export enum DealDealTypeEnum {
     PreferredDeal = "PREFERRED_DEAL",
     PrivateAuction = "PRIVATE_AUCTION",
     ProgrammaticGuaranteed = "PROGRAMMATIC_GUARANTEED"
-}
-
-
-// DealInput
-/** 
- * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
-**/
-export class DealInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=estimatedGrossSpend" })
-  estimatedGrossSpend?: Money;
-
-  @SpeakeasyMetadata({ data: "json, name=flightEndTime" })
-  flightEndTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=flightStartTime" })
-  flightStartTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=preferredDealTerms" })
-  preferredDealTerms?: PreferredDealTerms;
-
-  @SpeakeasyMetadata({ data: "json, name=privateAuctionTerms" })
-  privateAuctionTerms?: PrivateAuctionTermsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=programmaticGuaranteedTerms" })
-  programmaticGuaranteedTerms?: ProgrammaticGuaranteedTerms;
-
-  @SpeakeasyMetadata({ data: "json, name=publisherProfile" })
-  publisherProfile?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=sellerTimeZone" })
-  sellerTimeZone?: TimeZone;
-
-  @SpeakeasyMetadata({ data: "json, name=targeting" })
-  targeting?: MarketplaceTargeting;
 }
 
 
@@ -122,4 +85,41 @@ export class Deal extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// DealInput
+/** 
+ * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
+**/
+export class DealInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=estimatedGrossSpend" })
+  estimatedGrossSpend?: Money;
+
+  @SpeakeasyMetadata({ data: "json, name=flightEndTime" })
+  flightEndTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=flightStartTime" })
+  flightStartTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=preferredDealTerms" })
+  preferredDealTerms?: PreferredDealTerms;
+
+  @SpeakeasyMetadata({ data: "json, name=privateAuctionTerms" })
+  privateAuctionTerms?: PrivateAuctionTermsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=programmaticGuaranteedTerms" })
+  programmaticGuaranteedTerms?: ProgrammaticGuaranteedTerms;
+
+  @SpeakeasyMetadata({ data: "json, name=publisherProfile" })
+  publisherProfile?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sellerTimeZone" })
+  sellerTimeZone?: TimeZone;
+
+  @SpeakeasyMetadata({ data: "json, name=targeting" })
+  targeting?: MarketplaceTargeting;
 }

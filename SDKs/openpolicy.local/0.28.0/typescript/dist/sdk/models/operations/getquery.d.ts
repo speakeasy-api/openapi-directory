@@ -85,5 +85,5 @@ export declare class GetQueryResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;
     contentType: string;
     statusCode: number;
-    getQuery200ApplicationJsonObject?: GetQuery200ApplicationJson;
+    getQuery200ApplicationJSONObject?: GetQuery200ApplicationJson;
 }

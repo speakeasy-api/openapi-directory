@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteFilterPrefix } from "./routefilterprefix";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDirectConnectGatewayAssociationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var routefilterprefix_1 = require("./routefilterprefix");
 var CreateDirectConnectGatewayAssociationRequest = /** @class */ (function (_super) {
     __extends(CreateDirectConnectGatewayAssociationRequest, _super);
     function CreateDirectConnectGatewayAssociationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], CreateDirectConnectGatewayAssociationRequest.prototype, "addAllowedPrefixesToDirectConnectGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], CreateDirectConnectGatewayAssociationRequest.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayId" }),
         __metadata("design:type", String)
     ], CreateDirectConnectGatewayAssociationRequest.prototype, "gatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualGatewayId" }),
         __metadata("design:type", String)
     ], CreateDirectConnectGatewayAssociationRequest.prototype, "virtualGatewayId", void 0);
     return CreateDirectConnectGatewayAssociationRequest;
-}(SpeakeasyBase));
-export { CreateDirectConnectGatewayAssociationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDirectConnectGatewayAssociationRequest = CreateDirectConnectGatewayAssociationRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsBlockIdTransactionIndexResponse = exports.OptionsBlockIdTransactionIndexRequest = exports.OptionsBlockIdTransactionIndexPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsBlockIdTransactionIndexPathParams = /** @class */ (function (_super) {
     __extends(OptionsBlockIdTransactionIndexPathParams, _super);
     function OptionsBlockIdTransactionIndexPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], OptionsBlockIdTransactionIndexPathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=index" }),
         __metadata("design:type", String)
     ], OptionsBlockIdTransactionIndexPathParams.prototype, "index", void 0);
     return OptionsBlockIdTransactionIndexPathParams;
-}(SpeakeasyBase));
-export { OptionsBlockIdTransactionIndexPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdTransactionIndexPathParams = OptionsBlockIdTransactionIndexPathParams;
 var OptionsBlockIdTransactionIndexRequest = /** @class */ (function (_super) {
     __extends(OptionsBlockIdTransactionIndexRequest, _super);
     function OptionsBlockIdTransactionIndexRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsBlockIdTransactionIndexPathParams)
     ], OptionsBlockIdTransactionIndexRequest.prototype, "pathParams", void 0);
     return OptionsBlockIdTransactionIndexRequest;
-}(SpeakeasyBase));
-export { OptionsBlockIdTransactionIndexRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdTransactionIndexRequest = OptionsBlockIdTransactionIndexRequest;
 var OptionsBlockIdTransactionIndexResponse = /** @class */ (function (_super) {
     __extends(OptionsBlockIdTransactionIndexResponse, _super);
     function OptionsBlockIdTransactionIndexResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsBlockIdTransactionIndexResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockIdTransactionIndexResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockIdTransactionIndexResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsBlockIdTransactionIndexResponse.prototype, "statusCode", void 0);
     return OptionsBlockIdTransactionIndexResponse;
-}(SpeakeasyBase));
-export { OptionsBlockIdTransactionIndexResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockIdTransactionIndexResponse = OptionsBlockIdTransactionIndexResponse;

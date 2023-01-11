@@ -7,7 +7,7 @@ import { EvaluationResult } from "./evaluationresult";
 
 export class GetAccuracyMetricsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AutoMLOverrideStrategy" })
-  autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+  autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
 
   @SpeakeasyMetadata({ data: "json, name=OptimizationMetric" })
   optimizationMetric?: OptimizationMetricEnum;

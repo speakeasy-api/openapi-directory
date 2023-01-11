@@ -12,6 +12,6 @@ export declare class LensReview extends SpeakeasyBase {
     nextToken?: string;
     notes?: string;
     pillarReviewSummaries?: PillarReviewSummary[];
-    riskCounts?: Map<string, number>;
+    riskCounts?: Record<string, number>;
     updatedAt?: Date;
 }

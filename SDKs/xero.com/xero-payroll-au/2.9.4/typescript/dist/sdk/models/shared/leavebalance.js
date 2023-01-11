@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaveBalance = void 0;
+var utils_1 = require("../../../internal/utils");
 var LeaveBalance = /** @class */ (function (_super) {
     __extends(LeaveBalance, _super);
     function LeaveBalance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveName" }),
         __metadata("design:type", String)
     ], LeaveBalance.prototype, "leaveName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
         __metadata("design:type", String)
-    ], LeaveBalance.prototype, "leaveTypeId", void 0);
+    ], LeaveBalance.prototype, "leaveTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfUnits" }),
         __metadata("design:type", Number)
     ], LeaveBalance.prototype, "numberOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypeOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypeOfUnits" }),
         __metadata("design:type", String)
     ], LeaveBalance.prototype, "typeOfUnits", void 0);
     return LeaveBalance;
-}(SpeakeasyBase));
-export { LeaveBalance };
+}(utils_1.SpeakeasyBase));
+exports.LeaveBalance = LeaveBalance;

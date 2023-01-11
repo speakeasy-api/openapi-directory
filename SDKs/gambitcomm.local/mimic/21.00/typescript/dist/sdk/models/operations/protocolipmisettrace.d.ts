@@ -9,5 +9,5 @@ export declare class ProtocolIpmiSetTraceRequest extends SpeakeasyBase {
 export declare class ProtocolIpmiSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolIpmiSetTrace200ApplicationJsonString?: string;
+    protocolIpmiSetTrace200ApplicationJSONString?: string;
 }

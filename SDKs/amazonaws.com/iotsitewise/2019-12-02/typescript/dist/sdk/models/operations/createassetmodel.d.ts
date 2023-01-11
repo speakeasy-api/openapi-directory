@@ -16,7 +16,7 @@ export declare class CreateAssetModelRequestBody extends SpeakeasyBase {
     assetModelName: string;
     assetModelProperties?: shared.AssetModelPropertyDefinition[];
     clientToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateAssetModelRequest extends SpeakeasyBase {
     headers: CreateAssetModelHeaders;

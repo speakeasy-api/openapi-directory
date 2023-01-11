@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientAddress = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatientAddress = /** @class */ (function (_super) {
     __extends(PatientAddress, _super);
     function PatientAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=district" }),
         __metadata("design:type", String)
     ], PatientAddress.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line" }),
         __metadata("design:type", String)
     ], PatientAddress.prototype, "line", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pincode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pincode" }),
         __metadata("design:type", String)
     ], PatientAddress.prototype, "pincode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PatientAddress.prototype, "state", void 0);
     return PatientAddress;
-}(SpeakeasyBase));
-export { PatientAddress };
+}(utils_1.SpeakeasyBase));
+exports.PatientAddress = PatientAddress;

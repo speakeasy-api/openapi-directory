@@ -106,11 +106,11 @@ export declare class SmcerRequest extends SpeakeasyBase {
 export declare class SmcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    smcer400ApplicationJsonObject?: Smcer400ApplicationJson;
-    smcer401ApplicationJsonObject?: Smcer401ApplicationJson;
-    smcer404ApplicationJsonObject?: Smcer404ApplicationJson;
-    smcer500ApplicationJsonObject?: Smcer500ApplicationJson;
-    smcer502ApplicationJsonObject?: Smcer502ApplicationJson;
-    smcer503ApplicationJsonObject?: Smcer503ApplicationJson;
-    smcer504ApplicationJsonObject?: Smcer504ApplicationJson;
+    smcer400ApplicationJSONObject?: Smcer400ApplicationJson;
+    smcer401ApplicationJSONObject?: Smcer401ApplicationJson;
+    smcer404ApplicationJSONObject?: Smcer404ApplicationJson;
+    smcer500ApplicationJSONObject?: Smcer500ApplicationJson;
+    smcer502ApplicationJSONObject?: Smcer502ApplicationJson;
+    smcer503ApplicationJSONObject?: Smcer503ApplicationJson;
+    smcer504ApplicationJSONObject?: Smcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWebhooksWebhookTestResponse = exports.GetNetworkWebhooksWebhookTestRequest = exports.GetNetworkWebhooksWebhookTestPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWebhooksWebhookTestPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksWebhookTestPathParams, _super);
     function GetNetworkWebhooksWebhookTestPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWebhooksWebhookTestPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=webhookTestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=webhookTestId" }),
         __metadata("design:type", String)
     ], GetNetworkWebhooksWebhookTestPathParams.prototype, "webhookTestId", void 0);
     return GetNetworkWebhooksWebhookTestPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksWebhookTestPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksWebhookTestPathParams = GetNetworkWebhooksWebhookTestPathParams;
 var GetNetworkWebhooksWebhookTestRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksWebhookTestRequest, _super);
     function GetNetworkWebhooksWebhookTestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWebhooksWebhookTestPathParams)
     ], GetNetworkWebhooksWebhookTestRequest.prototype, "pathParams", void 0);
     return GetNetworkWebhooksWebhookTestRequest;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksWebhookTestRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksWebhookTestRequest = GetNetworkWebhooksWebhookTestRequest;
 var GetNetworkWebhooksWebhookTestResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWebhooksWebhookTestResponse, _super);
     function GetNetworkWebhooksWebhookTestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWebhooksWebhookTestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWebhooksWebhookTestResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWebhooksWebhookTestResponse.prototype, "getNetworkWebhooksWebhookTest200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWebhooksWebhookTestResponse.prototype, "getNetworkWebhooksWebhookTest200ApplicationJSONObject", void 0);
     return GetNetworkWebhooksWebhookTestResponse;
-}(SpeakeasyBase));
-export { GetNetworkWebhooksWebhookTestResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWebhooksWebhookTestResponse = GetNetworkWebhooksWebhookTestResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThreadSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
 // ThreadSubscription
 /**
  * Thread Subscription
@@ -33,33 +36,33 @@ var ThreadSubscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ThreadSubscription.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignored" }),
         __metadata("design:type", Boolean)
     ], ThreadSubscription.prototype, "ignored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ThreadSubscription.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_url" }),
         __metadata("design:type", String)
     ], ThreadSubscription.prototype, "repositoryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscribed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscribed" }),
         __metadata("design:type", Boolean)
     ], ThreadSubscription.prototype, "subscribed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thread_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thread_url" }),
         __metadata("design:type", String)
     ], ThreadSubscription.prototype, "threadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ThreadSubscription.prototype, "url", void 0);
     return ThreadSubscription;
-}(SpeakeasyBase));
-export { ThreadSubscription };
+}(utils_1.SpeakeasyBase));
+exports.ThreadSubscription = ThreadSubscription;

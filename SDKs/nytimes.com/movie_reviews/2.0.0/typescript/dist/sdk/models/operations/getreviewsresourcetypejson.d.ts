@@ -28,6 +28,6 @@ export declare class GetReviewsResourceTypeJsonRequest extends SpeakeasyBase {
 }
 export declare class GetReviewsResourceTypeJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getReviewsResourceTypeJson200ApplicationJsonObject?: GetReviewsResourceTypeJson200ApplicationJson;
     statusCode: number;
+    getReviewsResourceTypeJSON200ApplicationJSONObject?: GetReviewsResourceTypeJson200ApplicationJson;
 }

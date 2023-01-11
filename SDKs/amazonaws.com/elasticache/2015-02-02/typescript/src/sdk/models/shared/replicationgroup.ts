@@ -2,9 +2,9 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
 import { Endpoint } from "./endpoint";
 import { GlobalReplicationGroupInfo } from "./globalreplicationgroupinfo";
-import { LogDeliveryConfiguration } from "./logdeliveryconfiguration";
+import { LogDeliveryConfigurationList } from "./logdeliveryconfigurationlist";
 import { MultiAzStatusEnum } from "./multiazstatusenum";
-import { NodeGroup } from "./nodegroup";
+import { NodeGroupList } from "./nodegrouplist";
 import { ReplicationGroupPendingModifiedValues } from "./replicationgrouppendingmodifiedvalues";
 
 
@@ -47,20 +47,20 @@ export class ReplicationGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   kmsKeyId?: string;
 
-  @SpeakeasyMetadata({ elemType: LogDeliveryConfiguration })
-  logDeliveryConfigurations?: LogDeliveryConfiguration[];
+  @SpeakeasyMetadata({ elemType: LogDeliveryConfigurationList })
+  logDeliveryConfigurations?: LogDeliveryConfigurationList[];
 
   @SpeakeasyMetadata()
-  memberClusters?: string[];
+  memberClusters?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  memberClustersOutpostArns?: string[];
+  memberClustersOutpostArns?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  multiAz?: MultiAzStatusEnum;
+  multiAZ?: MultiAzStatusEnum;
 
-  @SpeakeasyMetadata({ elemType: NodeGroup })
-  nodeGroups?: NodeGroup[];
+  @SpeakeasyMetadata({ elemType: NodeGroupList })
+  nodeGroups?: NodeGroupList[];
 
   @SpeakeasyMetadata()
   pendingModifiedValues?: ReplicationGroupPendingModifiedValues;

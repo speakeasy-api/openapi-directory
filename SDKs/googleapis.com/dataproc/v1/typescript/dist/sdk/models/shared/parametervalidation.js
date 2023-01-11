@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexValidation } from "./regexvalidation";
-import { ValueValidation } from "./valuevalidation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParameterValidation = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexvalidation_1 = require("./regexvalidation");
+var valuevalidation_1 = require("./valuevalidation");
 // ParameterValidation
 /**
  * Configuration for parameter validation.
@@ -35,13 +38,13 @@ var ParameterValidation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regex" }),
-        __metadata("design:type", RegexValidation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regex" }),
+        __metadata("design:type", regexvalidation_1.RegexValidation)
     ], ParameterValidation.prototype, "regex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
-        __metadata("design:type", ValueValidation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
+        __metadata("design:type", valuevalidation_1.ValueValidation)
     ], ParameterValidation.prototype, "values", void 0);
     return ParameterValidation;
-}(SpeakeasyBase));
-export { ParameterValidation };
+}(utils_1.SpeakeasyBase));
+exports.ParameterValidation = ParameterValidation;

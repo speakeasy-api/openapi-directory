@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentAccountConnectionRequesterAccountTypeEnum } from "./environmentaccountconnectionrequesteraccounttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListEnvironmentAccountConnectionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentaccountconnectionrequesteraccounttypeenum_1 = require("./environmentaccountconnectionrequesteraccounttypeenum");
 var ListEnvironmentAccountConnectionsInput = /** @class */ (function (_super) {
     __extends(ListEnvironmentAccountConnectionsInput, _super);
     function ListEnvironmentAccountConnectionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentName" }),
         __metadata("design:type", String)
     ], ListEnvironmentAccountConnectionsInput.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListEnvironmentAccountConnectionsInput.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListEnvironmentAccountConnectionsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedBy" }),
         __metadata("design:type", String)
     ], ListEnvironmentAccountConnectionsInput.prototype, "requestedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statuses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statuses" }),
         __metadata("design:type", Array)
     ], ListEnvironmentAccountConnectionsInput.prototype, "statuses", void 0);
     return ListEnvironmentAccountConnectionsInput;
-}(SpeakeasyBase));
-export { ListEnvironmentAccountConnectionsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListEnvironmentAccountConnectionsInput = ListEnvironmentAccountConnectionsInput;

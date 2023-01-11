@@ -35,7 +35,7 @@ export class GetPlaylistsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   playlist?: shared.Playlist;

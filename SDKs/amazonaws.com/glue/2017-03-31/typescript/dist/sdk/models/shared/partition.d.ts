@@ -9,7 +9,7 @@ export declare class Partition extends SpeakeasyBase {
     databaseName?: string;
     lastAccessTime?: Date;
     lastAnalyzedTime?: Date;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     storageDescriptor?: StorageDescriptor;
     tableName?: string;
     values?: string[];

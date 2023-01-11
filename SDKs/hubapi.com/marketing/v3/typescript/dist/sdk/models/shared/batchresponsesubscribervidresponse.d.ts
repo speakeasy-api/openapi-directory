@@ -10,7 +10,7 @@ export declare enum BatchResponseSubscriberVidResponseStatusEnum {
 export declare class BatchResponseSubscriberVidResponse extends SpeakeasyBase {
     completedAt: Date;
     errors?: StandardError[];
-    links?: Map<string, string>;
+    links?: Record<string, string>;
     numErrors?: number;
     requestedAt?: Date;
     results: SubscriberVidResponse[];

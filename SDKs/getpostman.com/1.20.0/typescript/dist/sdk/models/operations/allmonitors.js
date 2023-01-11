@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllMonitorsResponse = exports.AllMonitors200ApplicationJson = exports.AllMonitors200ApplicationJsonMonitors = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllMonitors200ApplicationJsonMonitors = /** @class */ (function (_super) {
     __extends(AllMonitors200ApplicationJsonMonitors, _super);
     function AllMonitors200ApplicationJsonMonitors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AllMonitors200ApplicationJsonMonitors.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AllMonitors200ApplicationJsonMonitors.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], AllMonitors200ApplicationJsonMonitors.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], AllMonitors200ApplicationJsonMonitors.prototype, "uid", void 0);
     return AllMonitors200ApplicationJsonMonitors;
-}(SpeakeasyBase));
-export { AllMonitors200ApplicationJsonMonitors };
+}(utils_1.SpeakeasyBase));
+exports.AllMonitors200ApplicationJsonMonitors = AllMonitors200ApplicationJsonMonitors;
 var AllMonitors200ApplicationJson = /** @class */ (function (_super) {
     __extends(AllMonitors200ApplicationJson, _super);
     function AllMonitors200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitors", elemType: AllMonitors200ApplicationJsonMonitors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitors", elemType: AllMonitors200ApplicationJsonMonitors }),
         __metadata("design:type", Array)
     ], AllMonitors200ApplicationJson.prototype, "monitors", void 0);
     return AllMonitors200ApplicationJson;
-}(SpeakeasyBase));
-export { AllMonitors200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllMonitors200ApplicationJson = AllMonitors200ApplicationJson;
 var AllMonitorsResponse = /** @class */ (function (_super) {
     __extends(AllMonitorsResponse, _super);
     function AllMonitorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AllMonitorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AllMonitorsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllMonitors200ApplicationJson)
-    ], AllMonitorsResponse.prototype, "allMonitors200ApplicationJsonObject", void 0);
+    ], AllMonitorsResponse.prototype, "allMonitors200ApplicationJSONObject", void 0);
     return AllMonitorsResponse;
-}(SpeakeasyBase));
-export { AllMonitorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AllMonitorsResponse = AllMonitorsResponse;

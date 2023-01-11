@@ -10,7 +10,7 @@ export class CreateAuthorUsingGetQueryParams extends SpeakeasyBase {
 
 export class CreateAuthorUsingGet200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class CreateAuthorUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CreateAuthorUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CreateAuthorUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CreateAuthorUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createAuthorUsingGet200ApplicationJsonObject?: CreateAuthorUsingGet200ApplicationJson;
+  createAuthorUsingGET200ApplicationJSONObject?: CreateAuthorUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingGet400ApplicationJsonObject?: CreateAuthorUsingGet400ApplicationJson;
+  createAuthorUsingGET400ApplicationJSONObject?: CreateAuthorUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingGet401ApplicationJsonObject?: CreateAuthorUsingGet401ApplicationJson;
+  createAuthorUsingGET401ApplicationJSONObject?: CreateAuthorUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createAuthorUsingGet500ApplicationJsonObject?: CreateAuthorUsingGet500ApplicationJson;
+  createAuthorUsingGET500ApplicationJSONObject?: CreateAuthorUsingGet500ApplicationJson;
 }

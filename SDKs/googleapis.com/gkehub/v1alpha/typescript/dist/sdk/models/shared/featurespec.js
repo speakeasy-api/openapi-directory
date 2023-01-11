@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MembershipSpec } from "./membershipspec";
-export var FeatureSpecProvisionGoogleCaEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeatureSpec = exports.FeatureSpecProvisionGoogleCaEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var membershipspec_1 = require("./membershipspec");
+var FeatureSpecProvisionGoogleCaEnum;
 (function (FeatureSpecProvisionGoogleCaEnum) {
     FeatureSpecProvisionGoogleCaEnum["GoogleCaProvisioningUnspecified"] = "GOOGLE_CA_PROVISIONING_UNSPECIFIED";
     FeatureSpecProvisionGoogleCaEnum["Disabled"] = "DISABLED";
     FeatureSpecProvisionGoogleCaEnum["Enabled"] = "ENABLED";
-})(FeatureSpecProvisionGoogleCaEnum || (FeatureSpecProvisionGoogleCaEnum = {}));
+})(FeatureSpecProvisionGoogleCaEnum = exports.FeatureSpecProvisionGoogleCaEnum || (exports.FeatureSpecProvisionGoogleCaEnum = {}));
 // FeatureSpec
 /**
  * **Workload Certificate**: The Hub-wide input for the WorkloadCertificate feature.
@@ -40,13 +43,13 @@ var FeatureSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultConfig" }),
-        __metadata("design:type", MembershipSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultConfig" }),
+        __metadata("design:type", membershipspec_1.MembershipSpec)
     ], FeatureSpec.prototype, "defaultConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisionGoogleCa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisionGoogleCa" }),
         __metadata("design:type", String)
     ], FeatureSpec.prototype, "provisionGoogleCa", void 0);
     return FeatureSpec;
-}(SpeakeasyBase));
-export { FeatureSpec };
+}(utils_1.SpeakeasyBase));
+exports.FeatureSpec = FeatureSpec;

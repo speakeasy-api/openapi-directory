@@ -35,5 +35,5 @@ export declare class SubscriptionPurchaseV2 extends SpeakeasyBase {
     startTime?: string;
     subscribeWithGoogleInfo?: SubscribeWithGoogleInfo;
     subscriptionState?: SubscriptionPurchaseV2SubscriptionStateEnum;
-    testPurchase?: Map<string, any>;
+    testPurchase?: Record<string, any>;
 }

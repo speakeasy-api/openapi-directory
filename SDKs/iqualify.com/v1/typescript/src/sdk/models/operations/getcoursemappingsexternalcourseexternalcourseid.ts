@@ -20,11 +20,11 @@ export class GetCourseMappingsExternalcourseExternalCourseIdResponse extends Spe
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  getCourseMappingsExternalcourseExternalCourseId200ApplicationJsonStrings?: string[];
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getCourseMappingsExternalcourseExternalCourseId200ApplicationJSONStrings?: string[];
 }

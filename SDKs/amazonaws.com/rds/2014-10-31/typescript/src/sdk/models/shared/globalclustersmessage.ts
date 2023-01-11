@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalCluster } from "./globalcluster";
+import { GlobalClusterList } from "./globalclusterlist";
 
 
 
 export class GlobalClustersMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: GlobalCluster })
-  globalClusters?: GlobalCluster[];
+  @SpeakeasyMetadata({ elemType: GlobalClusterList })
+  globalClusters?: GlobalClusterList[];
 
   @SpeakeasyMetadata()
   marker?: string;

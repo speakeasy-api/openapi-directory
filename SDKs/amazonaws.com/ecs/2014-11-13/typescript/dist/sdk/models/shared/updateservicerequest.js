@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { DeploymentConfiguration } from "./deploymentconfiguration";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { PlacementConstraint } from "./placementconstraint";
-import { PlacementStrategy } from "./placementstrategy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateServiceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var deploymentconfiguration_1 = require("./deploymentconfiguration");
+var networkconfiguration_1 = require("./networkconfiguration");
+var placementconstraint_1 = require("./placementconstraint");
+var placementstrategy_1 = require("./placementstrategy");
 var UpdateServiceRequest = /** @class */ (function (_super) {
     __extends(UpdateServiceRequest, _super);
     function UpdateServiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], UpdateServiceRequest.prototype, "capacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], UpdateServiceRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfiguration" }),
-        __metadata("design:type", DeploymentConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfiguration" }),
+        __metadata("design:type", deploymentconfiguration_1.DeploymentConfiguration)
     ], UpdateServiceRequest.prototype, "deploymentConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desiredCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desiredCount" }),
         __metadata("design:type", Number)
     ], UpdateServiceRequest.prototype, "desiredCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableExecuteCommand" }),
         __metadata("design:type", Boolean)
     ], UpdateServiceRequest.prototype, "enableExecuteCommand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forceNewDeployment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forceNewDeployment" }),
         __metadata("design:type", Boolean)
     ], UpdateServiceRequest.prototype, "forceNewDeployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheckGracePeriodSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheckGracePeriodSeconds" }),
         __metadata("design:type", Number)
     ], UpdateServiceRequest.prototype, "healthCheckGracePeriodSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], UpdateServiceRequest.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placementConstraints", elemType: PlacementConstraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placementConstraints", elemType: placementconstraint_1.PlacementConstraint }),
         __metadata("design:type", Array)
     ], UpdateServiceRequest.prototype, "placementConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placementStrategy", elemType: PlacementStrategy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placementStrategy", elemType: placementstrategy_1.PlacementStrategy }),
         __metadata("design:type", Array)
     ], UpdateServiceRequest.prototype, "placementStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], UpdateServiceRequest.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], UpdateServiceRequest.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], UpdateServiceRequest.prototype, "taskDefinition", void 0);
     return UpdateServiceRequest;
-}(SpeakeasyBase));
-export { UpdateServiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceRequest = UpdateServiceRequest;

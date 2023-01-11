@@ -27,5 +27,5 @@ export class ListPartsOutput extends SpeakeasyBase {
   parts?: PartListElement[];
 
   @SpeakeasyMetadata({ data: "json, name=VaultARN" })
-  vaultArn?: string;
+  vaultARN?: string;
 }

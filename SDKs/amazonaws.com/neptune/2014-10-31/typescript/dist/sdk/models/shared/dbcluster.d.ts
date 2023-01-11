@@ -1,16 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { DbClusterOptionGroupStatus } from "./dbclusteroptiongroupstatus";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbClusterRoles } from "./dbclusterroles";
+import { DbClusterMemberList } from "./dbclustermemberlist";
+import { DbClusterOptionGroupMemberships } from "./dbclusteroptiongroupmemberships";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * <p>Contains the details of an Amazon Neptune DB cluster.</p> <p>This data type is used as a response element in the <a>DescribeDBClusters</a> action.</p>
 **/
 export declare class DbCluster extends SpeakeasyBase {
     allocatedStorage?: number;
-    associatedRoles?: DbClusterRole[];
+    associatedRoles?: DbClusterRoles[];
     automaticRestartTime?: Date;
-    availabilityZones?: string[];
+    availabilityZones?: Record<string, any>[];
     backupRetentionPeriod?: number;
     characterSetName?: string;
     cloneGroupId?: string;
@@ -19,8 +19,8 @@ export declare class DbCluster extends SpeakeasyBase {
     crossAccountClone?: boolean;
     dbClusterArn?: string;
     dbClusterIdentifier?: string;
-    dbClusterMembers?: DbClusterMember[];
-    dbClusterOptionGroupMemberships?: DbClusterOptionGroupStatus[];
+    dbClusterMembers?: DbClusterMemberList[];
+    dbClusterOptionGroupMemberships?: DbClusterOptionGroupMemberships[];
     dbClusterParameterGroup?: string;
     dbSubnetGroup?: string;
     databaseName?: string;
@@ -36,15 +36,15 @@ export declare class DbCluster extends SpeakeasyBase {
     kmsKeyId?: string;
     latestRestorableTime?: Date;
     masterUsername?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     percentProgress?: string;
     port?: number;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
-    readReplicaIdentifiers?: string[];
+    readReplicaIdentifiers?: Record<string, any>[];
     readerEndpoint?: string;
     replicationSourceIdentifier?: string;
     status?: string;
     storageEncrypted?: boolean;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

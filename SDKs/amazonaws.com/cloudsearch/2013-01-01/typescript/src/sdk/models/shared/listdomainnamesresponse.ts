@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ListDomainNamesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  domainNames?: Map<string, string>;
+  domainNames?: Record<string, string>;
 }

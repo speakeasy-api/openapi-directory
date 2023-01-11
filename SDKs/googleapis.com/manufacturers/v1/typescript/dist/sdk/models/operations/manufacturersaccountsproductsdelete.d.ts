@@ -28,6 +28,6 @@ export declare class ManufacturersAccountsProductsDeleteRequest extends Speakeas
 }
 export declare class ManufacturersAccountsProductsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

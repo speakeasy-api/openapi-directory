@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InputParameterDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputParameter = exports.InputParameterDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InputParameterDataTypeEnum;
 (function (InputParameterDataTypeEnum) {
     InputParameterDataTypeEnum["DataTypeUnspecified"] = "DATA_TYPE_UNSPECIFIED";
     InputParameterDataTypeEnum["Int"] = "INT";
@@ -70,7 +73,7 @@ export var InputParameterDataTypeEnum;
     InputParameterDataTypeEnum["RefCursor"] = "REF_CURSOR";
     InputParameterDataTypeEnum["TimeWithTimezone"] = "TIME_WITH_TIMEZONE";
     InputParameterDataTypeEnum["TimestampWithTimezone"] = "TIMESTAMP_WITH_TIMEZONE";
-})(InputParameterDataTypeEnum || (InputParameterDataTypeEnum = {}));
+})(InputParameterDataTypeEnum = exports.InputParameterDataTypeEnum || (exports.InputParameterDataTypeEnum = {}));
 // InputParameter
 /**
  * Input Parameter message contains metadata about the parameters required for executing an Action.
@@ -81,25 +84,25 @@ var InputParameter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], InputParameter.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValue" }),
         __metadata("design:type", Object)
     ], InputParameter.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], InputParameter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InputParameter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullable" }),
         __metadata("design:type", Boolean)
     ], InputParameter.prototype, "nullable", void 0);
     return InputParameter;
-}(SpeakeasyBase));
-export { InputParameter };
+}(utils_1.SpeakeasyBase));
+exports.InputParameter = InputParameter;

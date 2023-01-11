@@ -116,5 +116,5 @@ export class GetKeysResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getKeys200ApplicationJsonObject?: GetKeys200ApplicationJson;
+  getKeys200ApplicationJSONObject?: GetKeys200ApplicationJson;
 }

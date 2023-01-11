@@ -21,5 +21,5 @@ export declare class UpdateBRandingConfRequest extends SpeakeasyBase {
 export declare class UpdateBRandingConfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateBRandingConf200ApplicationJsonObject?: UpdateBRandingConf200ApplicationJson;
+    updateBRandingConf200ApplicationJSONObject?: UpdateBRandingConf200ApplicationJson;
 }

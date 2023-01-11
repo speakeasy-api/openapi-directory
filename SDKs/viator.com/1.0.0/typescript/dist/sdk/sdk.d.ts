@@ -5,11 +5,12 @@ import { DeprecatedServices } from "./deprecatedservices";
 import { GeneralServices } from "./generalservices";
 import { ProductServices } from "./productservices";
 import { TaxonomyServices } from "./taxonomyservices";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://viatorapi.viator.com/service", "https://viatorapi.sandbox.viator.com/service"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     bookingServices: BookingServices;
     deprecatedServices: DeprecatedServices;
@@ -18,11 +19,9 @@ export declare class SDK {
     taxonomyServices: TaxonomyServices;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

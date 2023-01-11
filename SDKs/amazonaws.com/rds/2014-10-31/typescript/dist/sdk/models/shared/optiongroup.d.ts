@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Option } from "./option";
+import { OptionsList } from "./optionslist";
 /**
  * <p/>
 **/
@@ -10,6 +10,6 @@ export declare class OptionGroup extends SpeakeasyBase {
     optionGroupArn?: string;
     optionGroupDescription?: string;
     optionGroupName?: string;
-    options?: Option[];
+    options?: OptionsList[];
     vpcId?: string;
 }

@@ -1,6 +1,9 @@
-export var AgentHealthEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentHealthEnum = void 0;
+var AgentHealthEnum;
 (function (AgentHealthEnum) {
     AgentHealthEnum["Healthy"] = "HEALTHY";
     AgentHealthEnum["Unhealthy"] = "UNHEALTHY";
     AgentHealthEnum["Unknown"] = "UNKNOWN";
-})(AgentHealthEnum || (AgentHealthEnum = {}));
+})(AgentHealthEnum = exports.AgentHealthEnum || (exports.AgentHealthEnum = {}));

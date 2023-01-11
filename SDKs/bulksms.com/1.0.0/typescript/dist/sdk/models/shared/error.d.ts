@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * See the [errors page](errors/) for more detail on what kind of errors you can get.
 **/
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     detail?: string;
     status: number;
     title: string;

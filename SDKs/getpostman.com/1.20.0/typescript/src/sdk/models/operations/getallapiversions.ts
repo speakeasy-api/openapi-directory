@@ -52,5 +52,5 @@ export class GetAllApiVersionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllApiVersions200ApplicationJsonObject?: GetAllApiVersions200ApplicationJson;
+  getAllApiVersions200ApplicationJSONObject?: GetAllApiVersions200ApplicationJson;
 }

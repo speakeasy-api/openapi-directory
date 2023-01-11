@@ -72,8 +72,8 @@ export class RetrieveSubaccountsListResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  retrieveSubaccountsList401ApplicationJsonObject?: RetrieveSubaccountsList401ApplicationJson;
+  retrieveSubaccountsList401ApplicationJSONObject?: RetrieveSubaccountsList401ApplicationJson;
 
   @SpeakeasyMetadata()
-  retrieveSubaccountsList404ApplicationJsonObject?: RetrieveSubaccountsList404ApplicationJson;
+  retrieveSubaccountsList404ApplicationJSONObject?: RetrieveSubaccountsList404ApplicationJson;
 }

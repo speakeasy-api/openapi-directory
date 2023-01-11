@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventDataSourceEnum } from "./eventdatasourceenum";
-import { EventClassEnum } from "./eventclassenum";
-import { ResourceCollection } from "./resourcecollection";
-import { EventResource } from "./eventresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventdatasourceenum_1 = require("./eventdatasourceenum");
+var eventclassenum_1 = require("./eventclassenum");
+var resourcecollection_1 = require("./resourcecollection");
+var eventresource_1 = require("./eventresource");
 // Event
 /**
  *  An AWS resource event. AWS resource events and metrics are analyzed by DevOps Guru to find anomalous behavior and provide recommendations to improve your operational solutions.
@@ -37,37 +40,37 @@ var Event = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSource" }),
         __metadata("design:type", String)
     ], Event.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventClass" }),
         __metadata("design:type", String)
     ], Event.prototype, "eventClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventSource" }),
         __metadata("design:type", String)
     ], Event.prototype, "eventSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Event.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Event.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceCollection" }),
-        __metadata("design:type", ResourceCollection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceCollection" }),
+        __metadata("design:type", resourcecollection_1.ResourceCollection)
     ], Event.prototype, "resourceCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources", elemType: EventResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources", elemType: eventresource_1.EventResource }),
         __metadata("design:type", Array)
     ], Event.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Time" }),
         __metadata("design:type", Date)
     ], Event.prototype, "time", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

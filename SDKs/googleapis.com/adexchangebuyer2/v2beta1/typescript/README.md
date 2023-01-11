@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { Adexchangebuyer2AccountsClientsCreateRequest, Adexchangebuyer2AccountsClientsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,36 +30,36 @@ const req: Adexchangebuyer2AccountsClientsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    accountId: "ab",
+    accountId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "non",
-    alt: "proto",
-    callback: "molestias",
-    fields: "possimus",
-    key: "non",
-    oauthToken: "id",
-    prettyPrint: false,
-    quotaUser: "veritatis",
-    uploadType: "sapiente",
-    uploadProtocol: "ducimus",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    clientAccountId: "qui",
-    clientName: "dolore",
-    entityId: "explicabo",
-    entityName: "suscipit",
-    entityType: "AGENCY",
-    partnerClientId: "et",
-    role: "CLIENT_DEAL_VIEWER",
-    status: "ACTIVE",
+    clientAccountId: "dicta",
+    clientName: "debitis",
+    entityId: "voluptatum",
+    entityName: "et",
+    entityType: "ADVERTISER",
+    partnerClientId: "dolorem",
+    role: "CLIENT_DEAL_NEGOTIATOR",
+    status: "CLIENT_STATUS_UNSPECIFIED",
     visibleToSeller: true,
   },
 };

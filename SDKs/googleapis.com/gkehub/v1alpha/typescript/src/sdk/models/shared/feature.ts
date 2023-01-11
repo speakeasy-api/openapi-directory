@@ -22,13 +22,13 @@ export class Feature extends SpeakeasyBase {
   deleteTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=membershipSpecs", elemType: MembershipFeatureSpec })
-  membershipSpecs?: Map<string, MembershipFeatureSpec>;
+  membershipSpecs?: Record<string, MembershipFeatureSpec>;
 
   @SpeakeasyMetadata({ data: "json, name=membershipStates", elemType: MembershipFeatureState })
-  membershipStates?: Map<string, MembershipFeatureState>;
+  membershipStates?: Record<string, MembershipFeatureState>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -37,10 +37,10 @@ export class Feature extends SpeakeasyBase {
   resourceState?: FeatureResourceState;
 
   @SpeakeasyMetadata({ data: "json, name=scopeSpecs" })
-  scopeSpecs?: Map<string, Map<string, any>>;
+  scopeSpecs?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=scopeStates", elemType: ScopeFeatureState })
-  scopeStates?: Map<string, ScopeFeatureState>;
+  scopeStates?: Record<string, ScopeFeatureState>;
 
   @SpeakeasyMetadata({ data: "json, name=spec" })
   spec?: CommonFeatureSpec;
@@ -59,16 +59,16 @@ export class Feature extends SpeakeasyBase {
 **/
 export class FeatureInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=membershipSpecs", elemType: MembershipFeatureSpecInput })
-  membershipSpecs?: Map<string, MembershipFeatureSpecInput>;
+  membershipSpecs?: Record<string, MembershipFeatureSpecInput>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceState" })
   resourceState?: FeatureResourceState;
 
   @SpeakeasyMetadata({ data: "json, name=scopeSpecs" })
-  scopeSpecs?: Map<string, Map<string, any>>;
+  scopeSpecs?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=spec" })
   spec?: CommonFeatureSpec;

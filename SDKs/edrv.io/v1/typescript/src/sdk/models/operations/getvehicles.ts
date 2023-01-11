@@ -71,5 +71,5 @@ export class GetVehiclesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getVehicles200ApplicationJsonObject?: GetVehicles200ApplicationJson;
+  getVehicles200ApplicationJSONObject?: GetVehicles200ApplicationJson;
 }

@@ -1,4 +1,7 @@
-export var KmsGrantOperationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KmsGrantOperationEnum = void 0;
+var KmsGrantOperationEnum;
 (function (KmsGrantOperationEnum) {
     KmsGrantOperationEnum["CreateGrant"] = "CreateGrant";
     KmsGrantOperationEnum["Decrypt"] = "Decrypt";
@@ -14,4 +17,4 @@ export var KmsGrantOperationEnum;
     KmsGrantOperationEnum["RetireGrant"] = "RetireGrant";
     KmsGrantOperationEnum["Sign"] = "Sign";
     KmsGrantOperationEnum["Verify"] = "Verify";
-})(KmsGrantOperationEnum || (KmsGrantOperationEnum = {}));
+})(KmsGrantOperationEnum = exports.KmsGrantOperationEnum || (exports.KmsGrantOperationEnum = {}));

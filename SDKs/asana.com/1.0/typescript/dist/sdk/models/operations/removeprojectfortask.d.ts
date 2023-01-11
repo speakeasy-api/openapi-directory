@@ -11,7 +11,7 @@ export declare class RemoveProjectForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskRemoveProjectRequest;
 }
 export declare class RemoveProjectForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveProjectForTaskRequest extends SpeakeasyBase {
     pathParams: RemoveProjectForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveProjectForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeProjectForTask200ApplicationJsonObject?: RemoveProjectForTask200ApplicationJson;
+    removeProjectForTask200ApplicationJSONObject?: RemoveProjectForTask200ApplicationJson;
 }

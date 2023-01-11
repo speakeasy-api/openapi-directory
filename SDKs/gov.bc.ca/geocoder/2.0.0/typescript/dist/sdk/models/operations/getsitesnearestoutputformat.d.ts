@@ -25,7 +25,7 @@ export declare class GetSitesNearestOutputFormatQueryParams extends SpeakeasyBas
     locationDescriptor?: GetSitesNearestOutputFormatLocationDescriptorEnum;
     maxDistance?: number;
     onlyCivic?: boolean;
-    outputSrs?: number;
+    outputSRS?: number;
     point: string;
     setBack?: number;
 }

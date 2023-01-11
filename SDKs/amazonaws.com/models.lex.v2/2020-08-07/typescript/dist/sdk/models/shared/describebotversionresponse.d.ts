@@ -10,6 +10,6 @@ export declare class DescribeBotVersionResponse extends SpeakeasyBase {
     dataPrivacy?: DataPrivacy;
     description?: string;
     failureReasons?: string[];
-    idleSessionTtlInSeconds?: number;
+    idleSessionTTLInSeconds?: number;
     roleArn?: string;
 }

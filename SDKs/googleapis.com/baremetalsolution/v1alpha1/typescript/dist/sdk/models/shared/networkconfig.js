@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VlanAttachment } from "./vlanattachment";
-export var NetworkConfigBandwidthEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkConfig = exports.NetworkConfigTypeEnum = exports.NetworkConfigServiceCidrEnum = exports.NetworkConfigBandwidthEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var vlanattachment_1 = require("./vlanattachment");
+var NetworkConfigBandwidthEnum;
 (function (NetworkConfigBandwidthEnum) {
     NetworkConfigBandwidthEnum["BandwidthUnspecified"] = "BANDWIDTH_UNSPECIFIED";
     NetworkConfigBandwidthEnum["Bw1Gbps"] = "BW_1_GBPS";
     NetworkConfigBandwidthEnum["Bw2Gbps"] = "BW_2_GBPS";
     NetworkConfigBandwidthEnum["Bw5Gbps"] = "BW_5_GBPS";
     NetworkConfigBandwidthEnum["Bw10Gbps"] = "BW_10_GBPS";
-})(NetworkConfigBandwidthEnum || (NetworkConfigBandwidthEnum = {}));
-export var NetworkConfigServiceCidrEnum;
+})(NetworkConfigBandwidthEnum = exports.NetworkConfigBandwidthEnum || (exports.NetworkConfigBandwidthEnum = {}));
+var NetworkConfigServiceCidrEnum;
 (function (NetworkConfigServiceCidrEnum) {
     NetworkConfigServiceCidrEnum["ServiceCidrUnspecified"] = "SERVICE_CIDR_UNSPECIFIED";
     NetworkConfigServiceCidrEnum["Disabled"] = "DISABLED";
     NetworkConfigServiceCidrEnum["High26"] = "HIGH_26";
     NetworkConfigServiceCidrEnum["High27"] = "HIGH_27";
     NetworkConfigServiceCidrEnum["High28"] = "HIGH_28";
-})(NetworkConfigServiceCidrEnum || (NetworkConfigServiceCidrEnum = {}));
-export var NetworkConfigTypeEnum;
+})(NetworkConfigServiceCidrEnum = exports.NetworkConfigServiceCidrEnum || (exports.NetworkConfigServiceCidrEnum = {}));
+var NetworkConfigTypeEnum;
 (function (NetworkConfigTypeEnum) {
     NetworkConfigTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     NetworkConfigTypeEnum["Client"] = "CLIENT";
     NetworkConfigTypeEnum["Private"] = "PRIVATE";
-})(NetworkConfigTypeEnum || (NetworkConfigTypeEnum = {}));
+})(NetworkConfigTypeEnum = exports.NetworkConfigTypeEnum || (exports.NetworkConfigTypeEnum = {}));
 // NetworkConfig
 /**
  * Configuration parameters for a new network.
@@ -56,37 +59,37 @@ var NetworkConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidth" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "bandwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidr" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceCidr" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "serviceCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userNote" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "userNote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanAttachments", elemType: VlanAttachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanAttachments", elemType: vlanattachment_1.VlanAttachment }),
         __metadata("design:type", Array)
     ], NetworkConfig.prototype, "vlanAttachments", void 0);
     return NetworkConfig;
-}(SpeakeasyBase));
-export { NetworkConfig };
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfig = NetworkConfig;

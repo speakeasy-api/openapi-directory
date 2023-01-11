@@ -29,7 +29,7 @@ export class ReposUploadReleaseAssetQueryParams extends SpeakeasyBase {
 
 export class ReposUploadReleaseAssetRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: ReposUploadReleaseAssetPathParams;

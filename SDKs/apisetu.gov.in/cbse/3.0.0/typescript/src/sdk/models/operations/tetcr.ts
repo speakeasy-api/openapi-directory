@@ -191,23 +191,23 @@ export class TetcrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tetcr400ApplicationJsonObject?: Tetcr400ApplicationJson;
+  tetcr400ApplicationJSONObject?: Tetcr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr401ApplicationJsonObject?: Tetcr401ApplicationJson;
+  tetcr401ApplicationJSONObject?: Tetcr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr404ApplicationJsonObject?: Tetcr404ApplicationJson;
+  tetcr404ApplicationJSONObject?: Tetcr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr500ApplicationJsonObject?: Tetcr500ApplicationJson;
+  tetcr500ApplicationJSONObject?: Tetcr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr502ApplicationJsonObject?: Tetcr502ApplicationJson;
+  tetcr502ApplicationJSONObject?: Tetcr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr503ApplicationJsonObject?: Tetcr503ApplicationJson;
+  tetcr503ApplicationJSONObject?: Tetcr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  tetcr504ApplicationJsonObject?: Tetcr504ApplicationJson;
+  tetcr504ApplicationJSONObject?: Tetcr504ApplicationJson;
 }

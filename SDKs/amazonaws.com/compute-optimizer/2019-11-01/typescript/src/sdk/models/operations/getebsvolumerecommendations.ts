@@ -51,7 +51,7 @@ export class GetEbsVolumeRecommendationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getEbsVolumeRecommendationsResponse?: shared.GetEbsVolumeRecommendationsResponse;
+  getEBSVolumeRecommendationsResponse?: shared.GetEbsVolumeRecommendationsResponse;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

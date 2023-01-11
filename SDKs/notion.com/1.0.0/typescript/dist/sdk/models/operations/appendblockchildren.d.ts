@@ -38,7 +38,7 @@ export declare class AppendBlockChildrenRequest extends SpeakeasyBase {
 }
 export declare class AppendBlockChildrenResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    appendBlockChildren200ApplicationJsonObject?: AppendBlockChildren200ApplicationJson;
+    appendBlockChildren200ApplicationJSONObject?: AppendBlockChildren200ApplicationJson;
 }

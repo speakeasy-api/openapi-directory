@@ -31,6 +31,9 @@ export declare enum StoryResponseStickerNameEnum {
     DeterminedClimbers = "determined_climbers",
     PhoenixSpreadingLove = "phoenix_spreading_love"
 }
+/**
+ * A story represents an activity associated with an object in the Asana system.
+**/
 export declare class StoryResponse extends SpeakeasyBase {
     assignee?: UserCompact;
     createdAt?: Date;

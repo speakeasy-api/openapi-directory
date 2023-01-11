@@ -9,7 +9,7 @@ export declare class UntagResourceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class UntagResourceRequestBody extends SpeakeasyBase {
-    resourceArn: string;
+    resourceARN: string;
     tagKeyList: string[];
 }
 export declare class UntagResourceRequest extends SpeakeasyBase {
@@ -23,5 +23,5 @@ export declare class UntagResourceResponse extends SpeakeasyBase {
     invalidArgumentException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    untagResourceOutput?: Map<string, any>;
+    untagResourceOutput?: Record<string, any>;
 }

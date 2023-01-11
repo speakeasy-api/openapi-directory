@@ -22,5 +22,5 @@ export class GetNetworkApplianceStaticRoutesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceStaticRoutes200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceStaticRoutes200ApplicationJSONObject?: Record<string, any>;
 }

@@ -15,5 +15,5 @@ export declare class GetNetworkSmUsersRequest extends SpeakeasyBase {
 export declare class GetNetworkSmUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmUsers200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmUsers200ApplicationJSONObject?: Record<string, any>;
 }

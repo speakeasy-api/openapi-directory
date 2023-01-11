@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration } from "./googlecloudrecommendationenginev1beta1predictionapikeyregistration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1predictionapikeyregistration_1 = require("./googlecloudrecommendationenginev1beta1predictionapikeyregistration");
 // GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest
 /**
  * Request message for the `CreatePredictionApiKeyRegistration` method.
@@ -34,9 +37,9 @@ var GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequ
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictionApiKeyRegistration" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictionApiKeyRegistration" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1predictionapikeyregistration_1.GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration)
     ], GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest.prototype, "predictionApiKeyRegistration", void 0);
     return GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest = GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest;

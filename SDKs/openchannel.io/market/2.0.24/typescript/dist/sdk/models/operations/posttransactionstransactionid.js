@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostTransactionsTransactionIdResponse = exports.PostTransactionsTransactionIdRequest = exports.PostTransactionsTransactionIdQueryParams = exports.PostTransactionsTransactionIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostTransactionsTransactionIdPathParams = /** @class */ (function (_super) {
     __extends(PostTransactionsTransactionIdPathParams, _super);
     function PostTransactionsTransactionIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
         __metadata("design:type", String)
     ], PostTransactionsTransactionIdPathParams.prototype, "transactionId", void 0);
     return PostTransactionsTransactionIdPathParams;
-}(SpeakeasyBase));
-export { PostTransactionsTransactionIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostTransactionsTransactionIdPathParams = PostTransactionsTransactionIdPathParams;
 var PostTransactionsTransactionIdQueryParams = /** @class */ (function (_super) {
     __extends(PostTransactionsTransactionIdQueryParams, _super);
     function PostTransactionsTransactionIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostTransactionsTransactionIdQueryParams.prototype, "customData", void 0);
     return PostTransactionsTransactionIdQueryParams;
-}(SpeakeasyBase));
-export { PostTransactionsTransactionIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostTransactionsTransactionIdQueryParams = PostTransactionsTransactionIdQueryParams;
 var PostTransactionsTransactionIdRequest = /** @class */ (function (_super) {
     __extends(PostTransactionsTransactionIdRequest, _super);
     function PostTransactionsTransactionIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostTransactionsTransactionIdPathParams)
     ], PostTransactionsTransactionIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostTransactionsTransactionIdQueryParams)
     ], PostTransactionsTransactionIdRequest.prototype, "queryParams", void 0);
     return PostTransactionsTransactionIdRequest;
-}(SpeakeasyBase));
-export { PostTransactionsTransactionIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostTransactionsTransactionIdRequest = PostTransactionsTransactionIdRequest;
 var PostTransactionsTransactionIdResponse = /** @class */ (function (_super) {
     __extends(PostTransactionsTransactionIdResponse, _super);
     function PostTransactionsTransactionIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostTransactionsTransactionIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTransactionsTransactionIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostTransactionsTransactionIdResponse.prototype, "statusCode", void 0);
     return PostTransactionsTransactionIdResponse;
-}(SpeakeasyBase));
-export { PostTransactionsTransactionIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostTransactionsTransactionIdResponse = PostTransactionsTransactionIdResponse;

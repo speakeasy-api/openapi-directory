@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchGetChannelRequest, BatchGetChannelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchGetChannelRequest = {
   headers: {
-    xAmzAlgorithm: "ipsum",
+    xAmzAlgorithm: "sit",
     xAmzContentSha256: "voluptas",
-    xAmzCredential: "est",
-    xAmzDate: "voluptates",
-    xAmzSecurityToken: "repellat",
-    xAmzSignature: "eligendi",
-    xAmzSignedHeaders: "adipisci",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     arns: [
-      "optio",
+      "fugit",
+      "et",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.batchGetChannel(req).then((res: BatchGetChannelResponse | AxiosError) => {
+sdk.batchGetChannel(req).then((res: BatchGetChannelResponse | AxiosError) => {
    // handle response
 });
 ```

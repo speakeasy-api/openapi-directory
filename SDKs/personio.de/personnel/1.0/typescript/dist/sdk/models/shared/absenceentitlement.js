@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AbsenceEntitlement = exports.AbsenceEntitlementValue = exports.AbsenceEntitlementValueTypeEnum = exports.AbsenceEntitlementValueAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var AbsenceEntitlementValueAttributes = /** @class */ (function (_super) {
     __extends(AbsenceEntitlementValueAttributes, _super);
     function AbsenceEntitlementValueAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entitlement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entitlement" }),
         __metadata("design:type", Number)
     ], AbsenceEntitlementValueAttributes.prototype, "entitlement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AbsenceEntitlementValueAttributes.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AbsenceEntitlementValueAttributes.prototype, "name", void 0);
     return AbsenceEntitlementValueAttributes;
-}(SpeakeasyBase));
-export { AbsenceEntitlementValueAttributes };
-export var AbsenceEntitlementValueTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.AbsenceEntitlementValueAttributes = AbsenceEntitlementValueAttributes;
+var AbsenceEntitlementValueTypeEnum;
 (function (AbsenceEntitlementValueTypeEnum) {
     AbsenceEntitlementValueTypeEnum["TimeOffType"] = "TimeOffType";
-})(AbsenceEntitlementValueTypeEnum || (AbsenceEntitlementValueTypeEnum = {}));
+})(AbsenceEntitlementValueTypeEnum = exports.AbsenceEntitlementValueTypeEnum || (exports.AbsenceEntitlementValueTypeEnum = {}));
 var AbsenceEntitlementValue = /** @class */ (function (_super) {
     __extends(AbsenceEntitlementValue, _super);
     function AbsenceEntitlementValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", AbsenceEntitlementValueAttributes)
     ], AbsenceEntitlementValue.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AbsenceEntitlementValue.prototype, "type", void 0);
     return AbsenceEntitlementValue;
-}(SpeakeasyBase));
-export { AbsenceEntitlementValue };
+}(utils_1.SpeakeasyBase));
+exports.AbsenceEntitlementValue = AbsenceEntitlementValue;
 var AbsenceEntitlement = /** @class */ (function (_super) {
     __extends(AbsenceEntitlement, _super);
     function AbsenceEntitlement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], AbsenceEntitlement.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value", elemType: AbsenceEntitlementValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value", elemType: AbsenceEntitlementValue }),
         __metadata("design:type", Array)
     ], AbsenceEntitlement.prototype, "value", void 0);
     return AbsenceEntitlement;
-}(SpeakeasyBase));
-export { AbsenceEntitlement };
+}(utils_1.SpeakeasyBase));
+exports.AbsenceEntitlement = AbsenceEntitlement;

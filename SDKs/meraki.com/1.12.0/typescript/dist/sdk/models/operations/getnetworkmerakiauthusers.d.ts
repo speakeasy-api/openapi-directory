@@ -8,5 +8,5 @@ export declare class GetNetworkMerakiAuthUsersRequest extends SpeakeasyBase {
 export declare class GetNetworkMerakiAuthUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkMerakiAuthUsers200ApplicationJsonObject?: Map<string, any>;
+    getNetworkMerakiAuthUsers200ApplicationJSONObject?: Record<string, any>;
 }

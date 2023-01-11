@@ -44,10 +44,10 @@ export class ProductOrderUboResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productOrderUbo200ApplicationJsonAny?: any;
+  productOrderUbo200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productOrderUboDefaultApplicationJsonAny?: any;
+  productOrderUboDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

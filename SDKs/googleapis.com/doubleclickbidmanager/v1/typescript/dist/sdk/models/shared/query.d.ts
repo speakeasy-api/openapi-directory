@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { QueryMetadata } from "./querymetadata";
-import { Parameters } from "./parameters";
+import { ParametersT } from "./parameters";
 import { QuerySchedule } from "./queryschedule";
 /**
  * Represents a query.
@@ -8,7 +8,7 @@ import { QuerySchedule } from "./queryschedule";
 export declare class Query extends SpeakeasyBase {
     kind?: string;
     metadata?: QueryMetadata;
-    params?: Parameters;
+    params?: ParametersT;
     queryId?: string;
     reportDataEndTimeMs?: string;
     reportDataStartTimeMs?: string;

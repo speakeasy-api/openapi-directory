@@ -12,18 +12,6 @@ export declare enum InstanceGroupConfigPreemptibilityEnum {
 /**
  * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
 **/
-export declare class InstanceGroupConfigInput extends SpeakeasyBase {
-    accelerators?: AcceleratorConfig[];
-    diskConfig?: DiskConfig;
-    imageUri?: string;
-    machineTypeUri?: string;
-    minCpuPlatform?: string;
-    numInstances?: number;
-    preemptibility?: InstanceGroupConfigPreemptibilityEnum;
-}
-/**
- * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
-**/
 export declare class InstanceGroupConfig extends SpeakeasyBase {
     accelerators?: AcceleratorConfig[];
     diskConfig?: DiskConfig;
@@ -33,6 +21,18 @@ export declare class InstanceGroupConfig extends SpeakeasyBase {
     isPreemptible?: boolean;
     machineTypeUri?: string;
     managedGroupConfig?: ManagedGroupConfig;
+    minCpuPlatform?: string;
+    numInstances?: number;
+    preemptibility?: InstanceGroupConfigPreemptibilityEnum;
+}
+/**
+ * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
+**/
+export declare class InstanceGroupConfigInput extends SpeakeasyBase {
+    accelerators?: AcceleratorConfig[];
+    diskConfig?: DiskConfig;
+    imageUri?: string;
+    machineTypeUri?: string;
     minCpuPlatform?: string;
     numInstances?: number;
     preemptibility?: InstanceGroupConfigPreemptibilityEnum;

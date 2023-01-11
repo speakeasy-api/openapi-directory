@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConcurrentAccessRestriction = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConcurrentAccessRestriction = /** @class */ (function (_super) {
     __extends(ConcurrentAccessRestriction, _super);
     function ConcurrentAccessRestriction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceAllowed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceAllowed" }),
         __metadata("design:type", Boolean)
     ], ConcurrentAccessRestriction.prototype, "deviceAllowed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxConcurrentDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxConcurrentDevices" }),
         __metadata("design:type", Number)
     ], ConcurrentAccessRestriction.prototype, "maxConcurrentDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonce" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "nonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "reasonCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restricted" }),
         __metadata("design:type", Boolean)
     ], ConcurrentAccessRestriction.prototype, "restricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signature" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeWindowSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeWindowSeconds" }),
         __metadata("design:type", Number)
     ], ConcurrentAccessRestriction.prototype, "timeWindowSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeId" }),
         __metadata("design:type", String)
     ], ConcurrentAccessRestriction.prototype, "volumeId", void 0);
     return ConcurrentAccessRestriction;
-}(SpeakeasyBase));
-export { ConcurrentAccessRestriction };
+}(utils_1.SpeakeasyBase));
+exports.ConcurrentAccessRestriction = ConcurrentAccessRestriction;

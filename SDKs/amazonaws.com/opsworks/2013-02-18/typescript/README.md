@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssignInstanceRequest, AssignInstanceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssignInstanceRequest = {
   headers: {
-    xAmzAlgorithm: "tempora",
-    xAmzContentSha256: "totam",
-    xAmzCredential: "dolorum",
-    xAmzDate: "blanditiis",
-    xAmzSecurityToken: "culpa",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "soluta",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "OpsWorks_20130218.AssignInstance",
   },
   request: {
-    instanceId: "sint",
+    instanceId: "fugit",
     layerIds: [
-      "beatae",
-      "quae",
-      "ut",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.assignInstance(req).then((res: AssignInstanceResponse | AxiosError) => {
+sdk.assignInstance(req).then((res: AssignInstanceResponse | AxiosError) => {
    // handle response
 });
 ```

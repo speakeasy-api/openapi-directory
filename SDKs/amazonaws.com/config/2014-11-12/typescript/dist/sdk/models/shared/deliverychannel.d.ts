@@ -9,5 +9,5 @@ export declare class DeliveryChannel extends SpeakeasyBase {
     s3BucketName?: string;
     s3KeyPrefix?: string;
     s3KmsKeyArn?: string;
-    snsTopicArn?: string;
+    snsTopicARN?: string;
 }

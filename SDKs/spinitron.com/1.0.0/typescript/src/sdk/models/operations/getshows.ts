@@ -56,11 +56,11 @@ export class GetShowsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  getShows200ApplicationJsonObject?: GetShows200ApplicationJson;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getShows200ApplicationJSONObject?: GetShows200ApplicationJson;
 }

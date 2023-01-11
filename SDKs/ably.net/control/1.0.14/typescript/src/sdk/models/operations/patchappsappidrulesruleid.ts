@@ -38,7 +38,7 @@ export class PatchAppsAppIdRulesRuleIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   ruleResponse?: any;

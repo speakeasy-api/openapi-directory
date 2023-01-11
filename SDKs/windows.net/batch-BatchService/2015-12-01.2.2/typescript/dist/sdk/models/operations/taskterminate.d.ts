@@ -24,6 +24,6 @@ export declare class TaskTerminateRequest extends SpeakeasyBase {
 export declare class TaskTerminateResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

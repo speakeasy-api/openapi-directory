@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceSecurityIntrusionResponse = exports.GetOrganizationApplianceSecurityIntrusionRequest = exports.GetOrganizationApplianceSecurityIntrusionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceSecurityIntrusionPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityIntrusionPathParams, _super);
     function GetOrganizationApplianceSecurityIntrusionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityIntrusionPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceSecurityIntrusionPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityIntrusionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityIntrusionPathParams = GetOrganizationApplianceSecurityIntrusionPathParams;
 var GetOrganizationApplianceSecurityIntrusionRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityIntrusionRequest, _super);
     function GetOrganizationApplianceSecurityIntrusionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceSecurityIntrusionPathParams)
     ], GetOrganizationApplianceSecurityIntrusionRequest.prototype, "pathParams", void 0);
     return GetOrganizationApplianceSecurityIntrusionRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityIntrusionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityIntrusionRequest = GetOrganizationApplianceSecurityIntrusionRequest;
 var GetOrganizationApplianceSecurityIntrusionResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityIntrusionResponse, _super);
     function GetOrganizationApplianceSecurityIntrusionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityIntrusionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceSecurityIntrusionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceSecurityIntrusionResponse.prototype, "getOrganizationApplianceSecurityIntrusion200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceSecurityIntrusionResponse.prototype, "getOrganizationApplianceSecurityIntrusion200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceSecurityIntrusionResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityIntrusionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityIntrusionResponse = GetOrganizationApplianceSecurityIntrusionResponse;

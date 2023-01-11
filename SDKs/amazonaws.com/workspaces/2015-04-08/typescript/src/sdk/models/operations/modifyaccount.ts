@@ -57,7 +57,7 @@ export class ModifyAccountResponse extends SpeakeasyBase {
   invalidResourceStateException?: any;
 
   @SpeakeasyMetadata()
-  modifyAccountResult?: Map<string, any>;
+  modifyAccountResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

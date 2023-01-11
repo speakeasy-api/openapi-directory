@@ -5,6 +5,6 @@ import { JobConfig } from "./jobconfig";
 **/
 export declare class JobTemplate extends SpeakeasyBase {
     config?: JobConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
 }

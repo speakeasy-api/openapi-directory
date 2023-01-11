@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetUsersForTopicResponse = exports.GetGetUsersForTopicRequest = exports.GetGetUsersForTopicQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGetUsersForTopicQueryParams = /** @class */ (function (_super) {
     __extends(GetGetUsersForTopicQueryParams, _super);
     function GetGetUsersForTopicQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetGetUsersForTopicQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetGetUsersForTopicQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=topic_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=topic_id" }),
         __metadata("design:type", Number)
     ], GetGetUsersForTopicQueryParams.prototype, "topicId", void 0);
     return GetGetUsersForTopicQueryParams;
-}(SpeakeasyBase));
-export { GetGetUsersForTopicQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUsersForTopicQueryParams = GetGetUsersForTopicQueryParams;
 var GetGetUsersForTopicRequest = /** @class */ (function (_super) {
     __extends(GetGetUsersForTopicRequest, _super);
     function GetGetUsersForTopicRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetUsersForTopicQueryParams)
     ], GetGetUsersForTopicRequest.prototype, "queryParams", void 0);
     return GetGetUsersForTopicRequest;
-}(SpeakeasyBase));
-export { GetGetUsersForTopicRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUsersForTopicRequest = GetGetUsersForTopicRequest;
 var GetGetUsersForTopicResponse = /** @class */ (function (_super) {
     __extends(GetGetUsersForTopicResponse, _super);
     function GetGetUsersForTopicResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetUsersForTopicResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetUsersForTopicResponse.prototype, "statusCode", void 0);
     return GetGetUsersForTopicResponse;
-}(SpeakeasyBase));
-export { GetGetUsersForTopicResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetUsersForTopicResponse = GetGetUsersForTopicResponse;

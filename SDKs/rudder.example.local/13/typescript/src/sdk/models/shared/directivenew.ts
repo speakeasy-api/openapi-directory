@@ -22,7 +22,7 @@ export class DirectiveNew extends SpeakeasyBase {
   longDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;

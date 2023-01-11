@@ -22,5 +22,5 @@ export class EnterpriseAdminGetTypeStatsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminGetTypeStats200ApplicationJsonAnyOf?: any;
+  enterpriseAdminGetTypeStats200ApplicationJSONAnyOf?: any;
 }

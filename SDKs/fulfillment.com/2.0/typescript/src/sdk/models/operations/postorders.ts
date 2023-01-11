@@ -158,7 +158,7 @@ export class PostOrdersSecurity extends SpeakeasyBase {
 
 export class PostOrdersErrorStandardWithContextV2 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context?: Map<string, any>[];
+  context?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;

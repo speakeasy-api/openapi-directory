@@ -39,7 +39,7 @@ export class PutEventsHeaders extends SpeakeasyBase {
 **/
 export class PutEventsRequestBodyEventsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=BatchItem", elemType: shared.EventsBatch })
-  batchItem?: Map<string, shared.EventsBatch>;
+  batchItem?: Record<string, shared.EventsBatch>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Locale } from "./locale";
-import { QualificationStatusEnum } from "./qualificationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Qualification = void 0;
+var utils_1 = require("../../../internal/utils");
+var locale_1 = require("./locale");
+var qualificationstatusenum_1 = require("./qualificationstatusenum");
 // Qualification
 /**
  * The Qualification data structure represents a Qualification assigned to a user, including the Qualification type and the value (score).
@@ -35,29 +38,29 @@ var Qualification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GrantTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GrantTime" }),
         __metadata("design:type", Date)
     ], Qualification.prototype, "grantTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntegerValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntegerValue" }),
         __metadata("design:type", Number)
     ], Qualification.prototype, "integerValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocaleValue" }),
-        __metadata("design:type", Locale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocaleValue" }),
+        __metadata("design:type", locale_1.Locale)
     ], Qualification.prototype, "localeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeId" }),
         __metadata("design:type", String)
     ], Qualification.prototype, "qualificationTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Qualification.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerId" }),
         __metadata("design:type", String)
     ], Qualification.prototype, "workerId", void 0);
     return Qualification;
-}(SpeakeasyBase));
-export { Qualification };
+}(utils_1.SpeakeasyBase));
+exports.Qualification = Qualification;

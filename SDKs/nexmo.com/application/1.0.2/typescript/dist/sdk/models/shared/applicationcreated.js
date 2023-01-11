@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Links } from "./links";
-import { KeysWithPrivateKey } from "./keyswithprivatekey";
-import { Messages } from "./messages";
-import { Voice } from "./voice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationCreated = void 0;
+var utils_1 = require("../../../internal/utils");
+var links_1 = require("./links");
+var keyswithprivatekey_1 = require("./keyswithprivatekey");
+var messages_1 = require("./messages");
+var voice_1 = require("./voice");
 var ApplicationCreated = /** @class */ (function (_super) {
     __extends(ApplicationCreated, _super);
     function ApplicationCreated() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", links_1.Links)
     ], ApplicationCreated.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApplicationCreated.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keys" }),
-        __metadata("design:type", KeysWithPrivateKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keys" }),
+        __metadata("design:type", keyswithprivatekey_1.KeysWithPrivateKey)
     ], ApplicationCreated.prototype, "keys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messages" }),
-        __metadata("design:type", Messages)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messages" }),
+        __metadata("design:type", messages_1.Messages)
     ], ApplicationCreated.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ApplicationCreated.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voice" }),
-        __metadata("design:type", Voice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voice" }),
+        __metadata("design:type", voice_1.Voice)
     ], ApplicationCreated.prototype, "voice", void 0);
     return ApplicationCreated;
-}(SpeakeasyBase));
-export { ApplicationCreated };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationCreated = ApplicationCreated;

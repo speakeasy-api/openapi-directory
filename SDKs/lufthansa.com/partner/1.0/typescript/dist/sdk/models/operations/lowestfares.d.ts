@@ -24,6 +24,6 @@ export declare class LowestFaresRequest extends SpeakeasyBase {
 }
 export declare class LowestFaresResponse extends SpeakeasyBase {
     contentType: string;
-    lowestFares200ApplicationJsonString?: string;
+    lowestFares200ApplicationJSONString?: string;
     statusCode: number;
 }

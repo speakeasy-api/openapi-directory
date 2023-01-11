@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Gcs } from "./gcs";
-import { Nfs } from "./nfs";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
+var gcs_1 = require("./gcs");
+var nfs_1 = require("./nfs");
 // Volume
 /**
  * Volume describes a volume and parameters for it to be mounted to a VM.
@@ -35,25 +38,25 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceName" }),
         __metadata("design:type", String)
     ], Volume.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcs" }),
-        __metadata("design:type", Gcs)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcs" }),
+        __metadata("design:type", gcs_1.Gcs)
     ], Volume.prototype, "gcs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountOptions" }),
         __metadata("design:type", Array)
     ], Volume.prototype, "mountOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPath" }),
         __metadata("design:type", String)
     ], Volume.prototype, "mountPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfs" }),
-        __metadata("design:type", Nfs)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfs" }),
+        __metadata("design:type", nfs_1.Nfs)
     ], Volume.prototype, "nfs", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

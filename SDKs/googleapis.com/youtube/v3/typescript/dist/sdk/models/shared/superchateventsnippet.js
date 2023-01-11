@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuperStickerMetadata } from "./superstickermetadata";
-import { ChannelProfileDetails } from "./channelprofiledetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuperChatEventSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var superstickermetadata_1 = require("./superstickermetadata");
+var channelprofiledetails_1 = require("./channelprofiledetails");
 var SuperChatEventSnippet = /** @class */ (function (_super) {
     __extends(SuperChatEventSnippet, _super);
     function SuperChatEventSnippet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountMicros" }),
         __metadata("design:type", String)
     ], SuperChatEventSnippet.prototype, "amountMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], SuperChatEventSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commentText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commentText" }),
         __metadata("design:type", String)
     ], SuperChatEventSnippet.prototype, "commentText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], SuperChatEventSnippet.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], SuperChatEventSnippet.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayString" }),
         __metadata("design:type", String)
     ], SuperChatEventSnippet.prototype, "displayString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSuperStickerEvent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSuperStickerEvent" }),
         __metadata("design:type", Boolean)
     ], SuperChatEventSnippet.prototype, "isSuperStickerEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageType" }),
         __metadata("design:type", Number)
     ], SuperChatEventSnippet.prototype, "messageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=superStickerMetadata" }),
-        __metadata("design:type", SuperStickerMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=superStickerMetadata" }),
+        __metadata("design:type", superstickermetadata_1.SuperStickerMetadata)
     ], SuperChatEventSnippet.prototype, "superStickerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supporterDetails" }),
-        __metadata("design:type", ChannelProfileDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supporterDetails" }),
+        __metadata("design:type", channelprofiledetails_1.ChannelProfileDetails)
     ], SuperChatEventSnippet.prototype, "supporterDetails", void 0);
     return SuperChatEventSnippet;
-}(SpeakeasyBase));
-export { SuperChatEventSnippet };
+}(utils_1.SpeakeasyBase));
+exports.SuperChatEventSnippet = SuperChatEventSnippet;

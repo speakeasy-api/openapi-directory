@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ThumbnailDetails } from "./thumbnaildetails";
-export var SearchResultSnippetLiveBroadcastContentEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResultSnippet = exports.SearchResultSnippetLiveBroadcastContentEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var thumbnaildetails_1 = require("./thumbnaildetails");
+var SearchResultSnippetLiveBroadcastContentEnum;
 (function (SearchResultSnippetLiveBroadcastContentEnum) {
     SearchResultSnippetLiveBroadcastContentEnum["None"] = "none";
     SearchResultSnippetLiveBroadcastContentEnum["Upcoming"] = "upcoming";
     SearchResultSnippetLiveBroadcastContentEnum["Live"] = "live";
     SearchResultSnippetLiveBroadcastContentEnum["Completed"] = "completed";
-})(SearchResultSnippetLiveBroadcastContentEnum || (SearchResultSnippetLiveBroadcastContentEnum = {}));
+})(SearchResultSnippetLiveBroadcastContentEnum = exports.SearchResultSnippetLiveBroadcastContentEnum || (exports.SearchResultSnippetLiveBroadcastContentEnum = {}));
 // SearchResultSnippet
 /**
  * Basic details about a search result, including title, description and thumbnails of the item referenced by the search result.
@@ -41,33 +44,33 @@ var SearchResultSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], SearchResultSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelTitle" }),
         __metadata("design:type", String)
     ], SearchResultSnippet.prototype, "channelTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SearchResultSnippet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveBroadcastContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveBroadcastContent" }),
         __metadata("design:type", String)
     ], SearchResultSnippet.prototype, "liveBroadcastContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], SearchResultSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnails" }),
-        __metadata("design:type", ThumbnailDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnails" }),
+        __metadata("design:type", thumbnaildetails_1.ThumbnailDetails)
     ], SearchResultSnippet.prototype, "thumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SearchResultSnippet.prototype, "title", void 0);
     return SearchResultSnippet;
-}(SpeakeasyBase));
-export { SearchResultSnippet };
+}(utils_1.SpeakeasyBase));
+exports.SearchResultSnippet = SearchResultSnippet;

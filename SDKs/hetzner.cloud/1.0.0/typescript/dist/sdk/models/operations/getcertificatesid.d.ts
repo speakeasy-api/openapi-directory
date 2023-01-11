@@ -42,7 +42,7 @@ export declare class GetCertificatesIdCertificateResponseCertificate extends Spe
     domainNames: string[];
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     notValidAfter: string;
     notValidBefore: string;

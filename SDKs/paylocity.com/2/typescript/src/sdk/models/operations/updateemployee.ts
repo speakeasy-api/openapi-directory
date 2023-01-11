@@ -37,6 +37,6 @@ export class UpdateEmployeeResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   statusCode: number;
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

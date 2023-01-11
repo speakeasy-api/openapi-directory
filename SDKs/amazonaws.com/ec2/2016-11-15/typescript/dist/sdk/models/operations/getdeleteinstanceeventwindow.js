@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteInstanceEventWindowActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteInstanceEventWindowResponse = exports.GetDeleteInstanceEventWindowRequest = exports.GetDeleteInstanceEventWindowHeaders = exports.GetDeleteInstanceEventWindowQueryParams = exports.GetDeleteInstanceEventWindowVersionEnum = exports.GetDeleteInstanceEventWindowActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteInstanceEventWindowActionEnum;
 (function (GetDeleteInstanceEventWindowActionEnum) {
     GetDeleteInstanceEventWindowActionEnum["DeleteInstanceEventWindow"] = "DeleteInstanceEventWindow";
-})(GetDeleteInstanceEventWindowActionEnum || (GetDeleteInstanceEventWindowActionEnum = {}));
-export var GetDeleteInstanceEventWindowVersionEnum;
+})(GetDeleteInstanceEventWindowActionEnum = exports.GetDeleteInstanceEventWindowActionEnum || (exports.GetDeleteInstanceEventWindowActionEnum = {}));
+var GetDeleteInstanceEventWindowVersionEnum;
 (function (GetDeleteInstanceEventWindowVersionEnum) {
     GetDeleteInstanceEventWindowVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteInstanceEventWindowVersionEnum || (GetDeleteInstanceEventWindowVersionEnum = {}));
+})(GetDeleteInstanceEventWindowVersionEnum = exports.GetDeleteInstanceEventWindowVersionEnum || (exports.GetDeleteInstanceEventWindowVersionEnum = {}));
 var GetDeleteInstanceEventWindowQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteInstanceEventWindowQueryParams, _super);
     function GetDeleteInstanceEventWindowQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteInstanceEventWindowQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ForceDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ForceDelete" }),
         __metadata("design:type", Boolean)
     ], GetDeleteInstanceEventWindowQueryParams.prototype, "forceDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceEventWindowId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceEventWindowId" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowQueryParams.prototype, "instanceEventWindowId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowQueryParams.prototype, "version", void 0);
     return GetDeleteInstanceEventWindowQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteInstanceEventWindowQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInstanceEventWindowQueryParams = GetDeleteInstanceEventWindowQueryParams;
 var GetDeleteInstanceEventWindowHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteInstanceEventWindowHeaders, _super);
     function GetDeleteInstanceEventWindowHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteInstanceEventWindowHeaders;
-}(SpeakeasyBase));
-export { GetDeleteInstanceEventWindowHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInstanceEventWindowHeaders = GetDeleteInstanceEventWindowHeaders;
 var GetDeleteInstanceEventWindowRequest = /** @class */ (function (_super) {
     __extends(GetDeleteInstanceEventWindowRequest, _super);
     function GetDeleteInstanceEventWindowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteInstanceEventWindowQueryParams)
     ], GetDeleteInstanceEventWindowRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteInstanceEventWindowHeaders)
     ], GetDeleteInstanceEventWindowRequest.prototype, "headers", void 0);
     return GetDeleteInstanceEventWindowRequest;
-}(SpeakeasyBase));
-export { GetDeleteInstanceEventWindowRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInstanceEventWindowRequest = GetDeleteInstanceEventWindowRequest;
 var GetDeleteInstanceEventWindowResponse = /** @class */ (function (_super) {
     __extends(GetDeleteInstanceEventWindowResponse, _super);
     function GetDeleteInstanceEventWindowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteInstanceEventWindowResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteInstanceEventWindowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteInstanceEventWindowResponse.prototype, "statusCode", void 0);
     return GetDeleteInstanceEventWindowResponse;
-}(SpeakeasyBase));
-export { GetDeleteInstanceEventWindowResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteInstanceEventWindowResponse = GetDeleteInstanceEventWindowResponse;

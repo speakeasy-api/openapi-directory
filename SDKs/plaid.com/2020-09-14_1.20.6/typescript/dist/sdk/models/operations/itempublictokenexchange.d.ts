@@ -5,6 +5,6 @@ export declare class ItemPublicTokenExchangeRequest extends SpeakeasyBase {
 }
 export declare class ItemPublicTokenExchangeResponse extends SpeakeasyBase {
     contentType: string;
-    itemPublicTokenExchangeResponse?: Map<string, any>;
+    itemPublicTokenExchangeResponse?: Record<string, any>;
     statusCode: number;
 }

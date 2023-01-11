@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataResource } from "./dataresource";
-import { ReadWriteTypeEnum } from "./readwritetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventSelector = void 0;
+var utils_1 = require("../../../internal/utils");
+var dataresource_1 = require("./dataresource");
+var readwritetypeenum_1 = require("./readwritetypeenum");
 // EventSelector
 /**
  * <p>Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event.</p> <p>You can configure up to five event selectors for a trail.</p> <p>You cannot apply both event selectors and advanced event selectors to a trail.</p>
@@ -35,21 +38,21 @@ var EventSelector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataResources", elemType: DataResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataResources", elemType: dataresource_1.DataResource }),
         __metadata("design:type", Array)
     ], EventSelector.prototype, "dataResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludeManagementEventSources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludeManagementEventSources" }),
         __metadata("design:type", Array)
     ], EventSelector.prototype, "excludeManagementEventSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeManagementEvents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeManagementEvents" }),
         __metadata("design:type", Boolean)
     ], EventSelector.prototype, "includeManagementEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadWriteType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadWriteType" }),
         __metadata("design:type", String)
     ], EventSelector.prototype, "readWriteType", void 0);
     return EventSelector;
-}(SpeakeasyBase));
-export { EventSelector };
+}(utils_1.SpeakeasyBase));
+exports.EventSelector = EventSelector;

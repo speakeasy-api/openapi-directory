@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Addon } from "./addon";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAddonResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var addon_1 = require("./addon");
 var DescribeAddonResponse = /** @class */ (function (_super) {
     __extends(DescribeAddonResponse, _super);
     function DescribeAddonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addon" }),
-        __metadata("design:type", Addon)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addon" }),
+        __metadata("design:type", addon_1.Addon)
     ], DescribeAddonResponse.prototype, "addon", void 0);
     return DescribeAddonResponse;
-}(SpeakeasyBase));
-export { DescribeAddonResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAddonResponse = DescribeAddonResponse;

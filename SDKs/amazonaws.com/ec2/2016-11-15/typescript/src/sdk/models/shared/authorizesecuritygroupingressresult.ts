@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SecurityGroupRule } from "./securitygrouprule";
 
 
 
 export class AuthorizeSecurityGroupIngressResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  return?: boolean;
+  return?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: SecurityGroupRule })
-  securityGroupRules?: SecurityGroupRule[];
+  @SpeakeasyMetadata()
+  securityGroupRules?: Record<string, any>;
 }

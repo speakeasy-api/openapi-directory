@@ -43,8 +43,8 @@ export class PostPortfolioAnalysisDiversificationRatioResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisDiversificationRatio200ApplicationJsonObject?: PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisDiversificationRatio200ApplicationJSONObject?: PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
 }

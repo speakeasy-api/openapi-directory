@@ -9,7 +9,7 @@ import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
 export declare class Stack extends SpeakeasyBase {
     agentVersion?: string;
     arn?: string;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     chefConfiguration?: ChefConfiguration;
     configurationManager?: StackConfigurationManager;
     createdAt?: string;

@@ -12,6 +12,6 @@ export declare class GetAccountsAccountPositionsRequest extends SpeakeasyBase {
 }
 export declare class GetAccountsAccountPositionsResponse extends SpeakeasyBase {
     contentType: string;
-    getAccountsAccountPositions200ApplicationJsonObjects?: GetAccountsAccountPositions200ApplicationJson[];
     statusCode: number;
+    getAccountsAccountPositions200ApplicationJSONObjects?: GetAccountsAccountPositions200ApplicationJson[];
 }

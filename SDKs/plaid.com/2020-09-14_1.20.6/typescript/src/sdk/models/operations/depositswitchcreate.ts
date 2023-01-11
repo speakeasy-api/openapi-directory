@@ -14,7 +14,7 @@ export class DepositSwitchCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  depositSwitchCreateResponse?: Map<string, any>;
+  depositSwitchCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

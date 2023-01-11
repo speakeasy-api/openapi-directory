@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventTypeEnum } from "./eventtypeenum";
-import { StateChangeConfiguration } from "./statechangeconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SystemEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventtypeenum_1 = require("./eventtypeenum");
+var statechangeconfiguration_1 = require("./statechangeconfiguration");
 // SystemEvent
 /**
  * Contains information about alarm state changes.
@@ -35,13 +38,13 @@ var SystemEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], SystemEvent.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateChangeConfiguration" }),
-        __metadata("design:type", StateChangeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateChangeConfiguration" }),
+        __metadata("design:type", statechangeconfiguration_1.StateChangeConfiguration)
     ], SystemEvent.prototype, "stateChangeConfiguration", void 0);
     return SystemEvent;
-}(SpeakeasyBase));
-export { SystemEvent };
+}(utils_1.SpeakeasyBase));
+exports.SystemEvent = SystemEvent;

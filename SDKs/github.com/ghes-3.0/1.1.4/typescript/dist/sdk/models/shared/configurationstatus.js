@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationStatus = exports.ConfigurationStatusProgress = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConfigurationStatusProgress = /** @class */ (function (_super) {
     __extends(ConfigurationStatusProgress, _super);
     function ConfigurationStatusProgress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ConfigurationStatusProgress.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ConfigurationStatusProgress.prototype, "status", void 0);
     return ConfigurationStatusProgress;
-}(SpeakeasyBase));
-export { ConfigurationStatusProgress };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationStatusProgress = ConfigurationStatusProgress;
 var ConfigurationStatus = /** @class */ (function (_super) {
     __extends(ConfigurationStatus, _super);
     function ConfigurationStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress", elemType: ConfigurationStatusProgress }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress", elemType: ConfigurationStatusProgress }),
         __metadata("design:type", Array)
     ], ConfigurationStatus.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ConfigurationStatus.prototype, "status", void 0);
     return ConfigurationStatus;
-}(SpeakeasyBase));
-export { ConfigurationStatus };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationStatus = ConfigurationStatus;

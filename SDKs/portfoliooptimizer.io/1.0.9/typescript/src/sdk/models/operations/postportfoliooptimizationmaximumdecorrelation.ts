@@ -58,8 +58,8 @@ export class PostPortfolioOptimizationMaximumDecorrelationResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMaximumDecorrelation200ApplicationJsonObject?: PostPortfolioOptimizationMaximumDecorrelation200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject?: PostPortfolioOptimizationMaximumDecorrelation200ApplicationJson;
 }

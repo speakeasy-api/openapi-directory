@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VideoFileDetailsVideoStreamRotationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoFileDetailsVideoStream = exports.VideoFileDetailsVideoStreamRotationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VideoFileDetailsVideoStreamRotationEnum;
 (function (VideoFileDetailsVideoStreamRotationEnum) {
     VideoFileDetailsVideoStreamRotationEnum["None"] = "none";
     VideoFileDetailsVideoStreamRotationEnum["Clockwise"] = "clockwise";
     VideoFileDetailsVideoStreamRotationEnum["UpsideDown"] = "upsideDown";
     VideoFileDetailsVideoStreamRotationEnum["CounterClockwise"] = "counterClockwise";
     VideoFileDetailsVideoStreamRotationEnum["Other"] = "other";
-})(VideoFileDetailsVideoStreamRotationEnum || (VideoFileDetailsVideoStreamRotationEnum = {}));
+})(VideoFileDetailsVideoStreamRotationEnum = exports.VideoFileDetailsVideoStreamRotationEnum || (exports.VideoFileDetailsVideoStreamRotationEnum = {}));
 // VideoFileDetailsVideoStream
 /**
  * Information about a video stream.
@@ -41,37 +44,37 @@ var VideoFileDetailsVideoStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspectRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspectRatio" }),
         __metadata("design:type", Number)
     ], VideoFileDetailsVideoStream.prototype, "aspectRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", String)
     ], VideoFileDetailsVideoStream.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codec" }),
         __metadata("design:type", String)
     ], VideoFileDetailsVideoStream.prototype, "codec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRateFps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRateFps" }),
         __metadata("design:type", Number)
     ], VideoFileDetailsVideoStream.prototype, "frameRateFps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heightPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heightPixels" }),
         __metadata("design:type", Number)
     ], VideoFileDetailsVideoStream.prototype, "heightPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotation" }),
         __metadata("design:type", String)
     ], VideoFileDetailsVideoStream.prototype, "rotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendor" }),
         __metadata("design:type", String)
     ], VideoFileDetailsVideoStream.prototype, "vendor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=widthPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=widthPixels" }),
         __metadata("design:type", Number)
     ], VideoFileDetailsVideoStream.prototype, "widthPixels", void 0);
     return VideoFileDetailsVideoStream;
-}(SpeakeasyBase));
-export { VideoFileDetailsVideoStream };
+}(utils_1.SpeakeasyBase));
+exports.VideoFileDetailsVideoStream = VideoFileDetailsVideoStream;

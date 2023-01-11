@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateCapacityProviderRequest, CreateCapacityProviderResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,46 +33,46 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateCapacityProviderRequest = {
   headers: {
-    xAmzAlgorithm: "quaerat",
-    xAmzContentSha256: "dolorem",
-    xAmzCredential: "deserunt",
-    xAmzDate: "assumenda",
-    xAmzSecurityToken: "labore",
-    xAmzSignature: "id",
-    xAmzSignedHeaders: "libero",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
   },
   request: {
     autoScalingGroupProvider: {
-      autoScalingGroupArn: "amet",
+      autoScalingGroupArn: "fugit",
       managedScaling: {
-        instanceWarmupPeriod: 8359258950322430183,
-        maximumScalingStepSize: 6824086522203587541,
-        minimumScalingStepSize: 8833386012590933595,
+        instanceWarmupPeriod: 1543572285742637646,
+        maximumScalingStepSize: 2661732831099943416,
+        minimumScalingStepSize: 8325060299420976708,
         status: "DISABLED",
-        targetCapacity: 7897556196251778201,
+        targetCapacity: 2518412263346885298,
       },
-      managedTerminationProtection: "DISABLED",
+      managedTerminationProtection: "ENABLED",
     },
-    name: "ab",
+    name: "et",
     tags: [
       {
-        key: "facilis",
-        value: "quis",
+        key: "dolorem",
+        value: "et",
       },
       {
-        key: "sunt",
-        value: "quis",
+        key: "voluptate",
+        value: "iste",
       },
       {
-        key: "qui",
-        value: "aut",
+        key: "vitae",
+        value: "totam",
       },
     ],
   },
 };
 
-sdk.sdk.createCapacityProvider(req).then((res: CreateCapacityProviderResponse | AxiosError) => {
+sdk.createCapacityProvider(req).then((res: CreateCapacityProviderResponse | AxiosError) => {
    // handle response
 });
 ```

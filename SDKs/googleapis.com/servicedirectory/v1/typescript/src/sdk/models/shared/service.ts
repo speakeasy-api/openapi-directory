@@ -9,7 +9,7 @@ import { Endpoint } from "./endpoint";
 **/
 export class Service extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endpoints", elemType: Endpoint })
   endpoints?: Endpoint[];
@@ -28,7 +28,7 @@ export class Service extends SpeakeasyBase {
 **/
 export class ServiceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

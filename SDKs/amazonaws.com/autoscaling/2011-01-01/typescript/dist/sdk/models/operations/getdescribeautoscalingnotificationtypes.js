@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeAutoScalingNotificationTypesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeAutoScalingNotificationTypesResponse = exports.GetDescribeAutoScalingNotificationTypesRequest = exports.GetDescribeAutoScalingNotificationTypesHeaders = exports.GetDescribeAutoScalingNotificationTypesQueryParams = exports.GetDescribeAutoScalingNotificationTypesVersionEnum = exports.GetDescribeAutoScalingNotificationTypesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeAutoScalingNotificationTypesActionEnum;
 (function (GetDescribeAutoScalingNotificationTypesActionEnum) {
     GetDescribeAutoScalingNotificationTypesActionEnum["DescribeAutoScalingNotificationTypes"] = "DescribeAutoScalingNotificationTypes";
-})(GetDescribeAutoScalingNotificationTypesActionEnum || (GetDescribeAutoScalingNotificationTypesActionEnum = {}));
-export var GetDescribeAutoScalingNotificationTypesVersionEnum;
+})(GetDescribeAutoScalingNotificationTypesActionEnum = exports.GetDescribeAutoScalingNotificationTypesActionEnum || (exports.GetDescribeAutoScalingNotificationTypesActionEnum = {}));
+var GetDescribeAutoScalingNotificationTypesVersionEnum;
 (function (GetDescribeAutoScalingNotificationTypesVersionEnum) {
     GetDescribeAutoScalingNotificationTypesVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetDescribeAutoScalingNotificationTypesVersionEnum || (GetDescribeAutoScalingNotificationTypesVersionEnum = {}));
+})(GetDescribeAutoScalingNotificationTypesVersionEnum = exports.GetDescribeAutoScalingNotificationTypesVersionEnum || (exports.GetDescribeAutoScalingNotificationTypesVersionEnum = {}));
 var GetDescribeAutoScalingNotificationTypesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeAutoScalingNotificationTypesQueryParams, _super);
     function GetDescribeAutoScalingNotificationTypesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesQueryParams.prototype, "version", void 0);
     return GetDescribeAutoScalingNotificationTypesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeAutoScalingNotificationTypesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAutoScalingNotificationTypesQueryParams = GetDescribeAutoScalingNotificationTypesQueryParams;
 var GetDescribeAutoScalingNotificationTypesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeAutoScalingNotificationTypesHeaders, _super);
     function GetDescribeAutoScalingNotificationTypesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeAutoScalingNotificationTypesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeAutoScalingNotificationTypesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAutoScalingNotificationTypesHeaders = GetDescribeAutoScalingNotificationTypesHeaders;
 var GetDescribeAutoScalingNotificationTypesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeAutoScalingNotificationTypesRequest, _super);
     function GetDescribeAutoScalingNotificationTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeAutoScalingNotificationTypesQueryParams)
     ], GetDescribeAutoScalingNotificationTypesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeAutoScalingNotificationTypesHeaders)
     ], GetDescribeAutoScalingNotificationTypesRequest.prototype, "headers", void 0);
     return GetDescribeAutoScalingNotificationTypesRequest;
-}(SpeakeasyBase));
-export { GetDescribeAutoScalingNotificationTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAutoScalingNotificationTypesRequest = GetDescribeAutoScalingNotificationTypesRequest;
 var GetDescribeAutoScalingNotificationTypesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeAutoScalingNotificationTypesResponse, _super);
     function GetDescribeAutoScalingNotificationTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeAutoScalingNotificationTypesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeAutoScalingNotificationTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeAutoScalingNotificationTypesResponse.prototype, "statusCode", void 0);
     return GetDescribeAutoScalingNotificationTypesResponse;
-}(SpeakeasyBase));
-export { GetDescribeAutoScalingNotificationTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAutoScalingNotificationTypesResponse = GetDescribeAutoScalingNotificationTypesResponse;

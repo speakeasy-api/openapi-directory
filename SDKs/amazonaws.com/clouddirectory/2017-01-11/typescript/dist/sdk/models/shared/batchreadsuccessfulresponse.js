@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchGetLinkAttributesResponse } from "./batchgetlinkattributesresponse";
-import { BatchGetObjectAttributesResponse } from "./batchgetobjectattributesresponse";
-import { BatchGetObjectInformationResponse } from "./batchgetobjectinformationresponse";
-import { BatchListAttachedIndicesResponse } from "./batchlistattachedindicesresponse";
-import { BatchListIncomingTypedLinksResponse } from "./batchlistincomingtypedlinksresponse";
-import { BatchListIndexResponse } from "./batchlistindexresponse";
-import { BatchListObjectAttributesResponse } from "./batchlistobjectattributesresponse";
-import { BatchListObjectChildrenResponse } from "./batchlistobjectchildrenresponse";
-import { BatchListObjectParentPathsResponse } from "./batchlistobjectparentpathsresponse";
-import { BatchListObjectParentsResponse } from "./batchlistobjectparentsresponse";
-import { BatchListObjectPoliciesResponse } from "./batchlistobjectpoliciesresponse";
-import { BatchListOutgoingTypedLinksResponse } from "./batchlistoutgoingtypedlinksresponse";
-import { BatchListPolicyAttachmentsResponse } from "./batchlistpolicyattachmentsresponse";
-import { BatchLookupPolicyResponse } from "./batchlookuppolicyresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchReadSuccessfulResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchgetlinkattributesresponse_1 = require("./batchgetlinkattributesresponse");
+var batchgetobjectattributesresponse_1 = require("./batchgetobjectattributesresponse");
+var batchgetobjectinformationresponse_1 = require("./batchgetobjectinformationresponse");
+var batchlistattachedindicesresponse_1 = require("./batchlistattachedindicesresponse");
+var batchlistincomingtypedlinksresponse_1 = require("./batchlistincomingtypedlinksresponse");
+var batchlistindexresponse_1 = require("./batchlistindexresponse");
+var batchlistobjectattributesresponse_1 = require("./batchlistobjectattributesresponse");
+var batchlistobjectchildrenresponse_1 = require("./batchlistobjectchildrenresponse");
+var batchlistobjectparentpathsresponse_1 = require("./batchlistobjectparentpathsresponse");
+var batchlistobjectparentsresponse_1 = require("./batchlistobjectparentsresponse");
+var batchlistobjectpoliciesresponse_1 = require("./batchlistobjectpoliciesresponse");
+var batchlistoutgoingtypedlinksresponse_1 = require("./batchlistoutgoingtypedlinksresponse");
+var batchlistpolicyattachmentsresponse_1 = require("./batchlistpolicyattachmentsresponse");
+var batchlookuppolicyresponse_1 = require("./batchlookuppolicyresponse");
 // BatchReadSuccessfulResponse
 /**
  * Represents the output of a <code>BatchRead</code> success response operation.
@@ -47,61 +50,61 @@ var BatchReadSuccessfulResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GetLinkAttributes" }),
-        __metadata("design:type", BatchGetLinkAttributesResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GetLinkAttributes" }),
+        __metadata("design:type", batchgetlinkattributesresponse_1.BatchGetLinkAttributesResponse)
     ], BatchReadSuccessfulResponse.prototype, "getLinkAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GetObjectAttributes" }),
-        __metadata("design:type", BatchGetObjectAttributesResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GetObjectAttributes" }),
+        __metadata("design:type", batchgetobjectattributesresponse_1.BatchGetObjectAttributesResponse)
     ], BatchReadSuccessfulResponse.prototype, "getObjectAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GetObjectInformation" }),
-        __metadata("design:type", BatchGetObjectInformationResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GetObjectInformation" }),
+        __metadata("design:type", batchgetobjectinformationresponse_1.BatchGetObjectInformationResponse)
     ], BatchReadSuccessfulResponse.prototype, "getObjectInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListAttachedIndices" }),
-        __metadata("design:type", BatchListAttachedIndicesResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListAttachedIndices" }),
+        __metadata("design:type", batchlistattachedindicesresponse_1.BatchListAttachedIndicesResponse)
     ], BatchReadSuccessfulResponse.prototype, "listAttachedIndices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListIncomingTypedLinks" }),
-        __metadata("design:type", BatchListIncomingTypedLinksResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListIncomingTypedLinks" }),
+        __metadata("design:type", batchlistincomingtypedlinksresponse_1.BatchListIncomingTypedLinksResponse)
     ], BatchReadSuccessfulResponse.prototype, "listIncomingTypedLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListIndex" }),
-        __metadata("design:type", BatchListIndexResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListIndex" }),
+        __metadata("design:type", batchlistindexresponse_1.BatchListIndexResponse)
     ], BatchReadSuccessfulResponse.prototype, "listIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListObjectAttributes" }),
-        __metadata("design:type", BatchListObjectAttributesResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListObjectAttributes" }),
+        __metadata("design:type", batchlistobjectattributesresponse_1.BatchListObjectAttributesResponse)
     ], BatchReadSuccessfulResponse.prototype, "listObjectAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListObjectChildren" }),
-        __metadata("design:type", BatchListObjectChildrenResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListObjectChildren" }),
+        __metadata("design:type", batchlistobjectchildrenresponse_1.BatchListObjectChildrenResponse)
     ], BatchReadSuccessfulResponse.prototype, "listObjectChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListObjectParentPaths" }),
-        __metadata("design:type", BatchListObjectParentPathsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListObjectParentPaths" }),
+        __metadata("design:type", batchlistobjectparentpathsresponse_1.BatchListObjectParentPathsResponse)
     ], BatchReadSuccessfulResponse.prototype, "listObjectParentPaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListObjectParents" }),
-        __metadata("design:type", BatchListObjectParentsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListObjectParents" }),
+        __metadata("design:type", batchlistobjectparentsresponse_1.BatchListObjectParentsResponse)
     ], BatchReadSuccessfulResponse.prototype, "listObjectParents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListObjectPolicies" }),
-        __metadata("design:type", BatchListObjectPoliciesResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListObjectPolicies" }),
+        __metadata("design:type", batchlistobjectpoliciesresponse_1.BatchListObjectPoliciesResponse)
     ], BatchReadSuccessfulResponse.prototype, "listObjectPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListOutgoingTypedLinks" }),
-        __metadata("design:type", BatchListOutgoingTypedLinksResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListOutgoingTypedLinks" }),
+        __metadata("design:type", batchlistoutgoingtypedlinksresponse_1.BatchListOutgoingTypedLinksResponse)
     ], BatchReadSuccessfulResponse.prototype, "listOutgoingTypedLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListPolicyAttachments" }),
-        __metadata("design:type", BatchListPolicyAttachmentsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListPolicyAttachments" }),
+        __metadata("design:type", batchlistpolicyattachmentsresponse_1.BatchListPolicyAttachmentsResponse)
     ], BatchReadSuccessfulResponse.prototype, "listPolicyAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LookupPolicy" }),
-        __metadata("design:type", BatchLookupPolicyResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LookupPolicy" }),
+        __metadata("design:type", batchlookuppolicyresponse_1.BatchLookupPolicyResponse)
     ], BatchReadSuccessfulResponse.prototype, "lookupPolicy", void 0);
     return BatchReadSuccessfulResponse;
-}(SpeakeasyBase));
-export { BatchReadSuccessfulResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchReadSuccessfulResponse = BatchReadSuccessfulResponse;

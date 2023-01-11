@@ -1,5 +1,8 @@
-export var DevicePlatformEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DevicePlatformEnum = void 0;
+var DevicePlatformEnum;
 (function (DevicePlatformEnum) {
     DevicePlatformEnum["Android"] = "ANDROID";
     DevicePlatformEnum["Ios"] = "IOS";
-})(DevicePlatformEnum || (DevicePlatformEnum = {}));
+})(DevicePlatformEnum = exports.DevicePlatformEnum || (exports.DevicePlatformEnum = {}));

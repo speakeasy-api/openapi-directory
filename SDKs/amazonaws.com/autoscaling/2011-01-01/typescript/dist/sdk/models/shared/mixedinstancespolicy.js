@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstancesDistribution } from "./instancesdistribution";
-import { LaunchTemplate } from "./launchtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MixedInstancesPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancesdistribution_1 = require("./instancesdistribution");
+var launchtemplate_1 = require("./launchtemplate");
 // MixedInstancesPolicy
 /**
  * Describes a mixed instances policy. A mixed instances policy contains the instance types Amazon EC2 Auto Scaling can launch, and other information Amazon EC2 Auto Scaling can use to launch instances to help you optimize your costs. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
@@ -35,13 +38,13 @@ var MixedInstancesPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstancesDistribution)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancesdistribution_1.InstancesDistribution)
     ], MixedInstancesPolicy.prototype, "instancesDistribution", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplate)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", launchtemplate_1.LaunchTemplate)
     ], MixedInstancesPolicy.prototype, "launchTemplate", void 0);
     return MixedInstancesPolicy;
-}(SpeakeasyBase));
-export { MixedInstancesPolicy };
+}(utils_1.SpeakeasyBase));
+exports.MixedInstancesPolicy = MixedInstancesPolicy;

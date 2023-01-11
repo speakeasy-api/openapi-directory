@@ -13,17 +13,6 @@ export declare enum BasePlanStateEnum {
 /**
  * A single base plan for a subscription.
 **/
-export declare class BasePlanInput extends SpeakeasyBase {
-    autoRenewingBasePlanType?: AutoRenewingBasePlanType;
-    basePlanId?: string;
-    offerTags?: OfferTag[];
-    otherRegionsConfig?: OtherRegionsBasePlanConfig;
-    prepaidBasePlanType?: PrepaidBasePlanType;
-    regionalConfigs?: RegionalBasePlanConfig[];
-}
-/**
- * A single base plan for a subscription.
-**/
 export declare class BasePlan extends SpeakeasyBase {
     autoRenewingBasePlanType?: AutoRenewingBasePlanType;
     basePlanId?: string;
@@ -32,4 +21,15 @@ export declare class BasePlan extends SpeakeasyBase {
     prepaidBasePlanType?: PrepaidBasePlanType;
     regionalConfigs?: RegionalBasePlanConfig[];
     state?: BasePlanStateEnum;
+}
+/**
+ * A single base plan for a subscription.
+**/
+export declare class BasePlanInput extends SpeakeasyBase {
+    autoRenewingBasePlanType?: AutoRenewingBasePlanType;
+    basePlanId?: string;
+    offerTags?: OfferTag[];
+    otherRegionsConfig?: OtherRegionsBasePlanConfig;
+    prepaidBasePlanType?: PrepaidBasePlanType;
+    regionalConfigs?: RegionalBasePlanConfig[];
 }

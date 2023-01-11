@@ -1,5 +1,8 @@
-export var AggregatedSourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregatedSourceTypeEnum = void 0;
+var AggregatedSourceTypeEnum;
 (function (AggregatedSourceTypeEnum) {
     AggregatedSourceTypeEnum["Account"] = "ACCOUNT";
     AggregatedSourceTypeEnum["Organization"] = "ORGANIZATION";
-})(AggregatedSourceTypeEnum || (AggregatedSourceTypeEnum = {}));
+})(AggregatedSourceTypeEnum = exports.AggregatedSourceTypeEnum || (exports.AggregatedSourceTypeEnum = {}));

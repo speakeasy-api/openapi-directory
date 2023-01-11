@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,89 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BlockDeviceMapping } from "./blockdevicemapping";
-import { AttributeValue } from "./attributevalue";
-import { LaunchPermission } from "./launchpermission";
-import { ProductCode } from "./productcode";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageAttribute = exports.ImageAttributeSriovNetSupport = exports.ImageAttributeRamdiskId = exports.ImageAttributeKernelId = exports.ImageAttributeDescription = exports.ImageAttributeBootMode = void 0;
+var utils_1 = require("../../../internal/utils");
+// ImageAttributeBootMode
+/**
+ * Describes a value for a resource attribute that is a String.
+**/
+var ImageAttributeBootMode = /** @class */ (function (_super) {
+    __extends(ImageAttributeBootMode, _super);
+    function ImageAttributeBootMode() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImageAttributeBootMode.prototype, "value", void 0);
+    return ImageAttributeBootMode;
+}(utils_1.SpeakeasyBase));
+exports.ImageAttributeBootMode = ImageAttributeBootMode;
+// ImageAttributeDescription
+/**
+ * A description for the AMI.
+**/
+var ImageAttributeDescription = /** @class */ (function (_super) {
+    __extends(ImageAttributeDescription, _super);
+    function ImageAttributeDescription() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImageAttributeDescription.prototype, "value", void 0);
+    return ImageAttributeDescription;
+}(utils_1.SpeakeasyBase));
+exports.ImageAttributeDescription = ImageAttributeDescription;
+// ImageAttributeKernelId
+/**
+ * The kernel ID.
+**/
+var ImageAttributeKernelId = /** @class */ (function (_super) {
+    __extends(ImageAttributeKernelId, _super);
+    function ImageAttributeKernelId() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImageAttributeKernelId.prototype, "value", void 0);
+    return ImageAttributeKernelId;
+}(utils_1.SpeakeasyBase));
+exports.ImageAttributeKernelId = ImageAttributeKernelId;
+// ImageAttributeRamdiskId
+/**
+ * The RAM disk ID.
+**/
+var ImageAttributeRamdiskId = /** @class */ (function (_super) {
+    __extends(ImageAttributeRamdiskId, _super);
+    function ImageAttributeRamdiskId() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImageAttributeRamdiskId.prototype, "value", void 0);
+    return ImageAttributeRamdiskId;
+}(utils_1.SpeakeasyBase));
+exports.ImageAttributeRamdiskId = ImageAttributeRamdiskId;
+// ImageAttributeSriovNetSupport
+/**
+ * Indicates whether enhanced networking with the Intel 82599 Virtual Function interface is enabled.
+**/
+var ImageAttributeSriovNetSupport = /** @class */ (function (_super) {
+    __extends(ImageAttributeSriovNetSupport, _super);
+    function ImageAttributeSriovNetSupport() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImageAttributeSriovNetSupport.prototype, "value", void 0);
+    return ImageAttributeSriovNetSupport;
+}(utils_1.SpeakeasyBase));
+exports.ImageAttributeSriovNetSupport = ImageAttributeSriovNetSupport;
 // ImageAttribute
 /**
  * Describes an image attribute.
@@ -37,41 +116,41 @@ var ImageAttribute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: BlockDeviceMapping }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImageAttribute.prototype, "blockDeviceMappings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImageAttributeBootMode)
     ], ImageAttribute.prototype, "bootMode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImageAttributeDescription)
     ], ImageAttribute.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImageAttribute.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImageAttributeKernelId)
     ], ImageAttribute.prototype, "kernelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LaunchPermission }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImageAttribute.prototype, "launchPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ProductCode }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImageAttribute.prototype, "productCodes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImageAttributeRamdiskId)
     ], ImageAttribute.prototype, "ramdiskId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImageAttributeSriovNetSupport)
     ], ImageAttribute.prototype, "sriovNetSupport", void 0);
     return ImageAttribute;
-}(SpeakeasyBase));
-export { ImageAttribute };
+}(utils_1.SpeakeasyBase));
+exports.ImageAttribute = ImageAttribute;

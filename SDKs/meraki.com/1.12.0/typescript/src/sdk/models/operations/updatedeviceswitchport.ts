@@ -118,5 +118,5 @@ export class UpdateDeviceSwitchPortResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceSwitchPort200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceSwitchPort200ApplicationJSONObject?: Record<string, any>;
 }

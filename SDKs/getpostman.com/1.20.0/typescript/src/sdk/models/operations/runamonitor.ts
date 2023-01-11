@@ -223,5 +223,5 @@ export class RunAMonitorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  runAMonitor200ApplicationJsonObject?: RunAMonitor200ApplicationJson;
+  runAMonitor200ApplicationJSONObject?: RunAMonitor200ApplicationJson;
 }

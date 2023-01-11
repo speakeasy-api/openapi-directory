@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnabledMetric } from "./enabledmetric";
-import { Instance } from "./instance";
-import { LaunchTemplateSpecification } from "./launchtemplatespecification";
-import { MixedInstancesPolicy } from "./mixedinstancespolicy";
-import { SuspendedProcess } from "./suspendedprocess";
-import { TagDescription } from "./tagdescription";
-import { WarmPoolConfiguration } from "./warmpoolconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoScalingGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var enabledmetric_1 = require("./enabledmetric");
+var instance_1 = require("./instance");
+var launchtemplatespecification_1 = require("./launchtemplatespecification");
+var mixedinstancespolicy_1 = require("./mixedinstancespolicy");
+var suspendedprocess_1 = require("./suspendedprocess");
+var tagdescription_1 = require("./tagdescription");
+var warmpoolconfiguration_1 = require("./warmpoolconfiguration");
 // AutoScalingGroup
 /**
  * Describes an Auto Scaling group.
@@ -40,129 +43,129 @@ var AutoScalingGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AutoScalingGroup.prototype, "autoScalingGroupArn", void 0);
+    ], AutoScalingGroup.prototype, "autoScalingGroupARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], AutoScalingGroup.prototype, "capacityRebalance", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], AutoScalingGroup.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "defaultCooldown", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "desiredCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: EnabledMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: enabledmetric_1.EnabledMetric }),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "enabledMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "healthCheckGracePeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "healthCheckType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "launchConfigurationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplateSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", launchtemplatespecification_1.LaunchTemplateSpecification)
     ], AutoScalingGroup.prototype, "launchTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "loadBalancerNames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "maxInstanceLifetime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "maxSize", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "minSize", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", MixedInstancesPolicy)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", mixedinstancespolicy_1.MixedInstancesPolicy)
     ], AutoScalingGroup.prototype, "mixedInstancesPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], AutoScalingGroup.prototype, "newInstancesProtectedFromScaleIn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "placementGroup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "predictedCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AutoScalingGroup.prototype, "serviceLinkedRoleArn", void 0);
+    ], AutoScalingGroup.prototype, "serviceLinkedRoleARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: SuspendedProcess }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: suspendedprocess_1.SuspendedProcess }),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "suspendedProcesses", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TagDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tagdescription_1.TagDescription }),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], AutoScalingGroup.prototype, "targetGroupArNs", void 0);
+    ], AutoScalingGroup.prototype, "targetGroupARNs", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], AutoScalingGroup.prototype, "terminationPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingGroup.prototype, "vpcZoneIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", WarmPoolConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", warmpoolconfiguration_1.WarmPoolConfiguration)
     ], AutoScalingGroup.prototype, "warmPoolConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AutoScalingGroup.prototype, "warmPoolSize", void 0);
     return AutoScalingGroup;
-}(SpeakeasyBase));
-export { AutoScalingGroup };
+}(utils_1.SpeakeasyBase));
+exports.AutoScalingGroup = AutoScalingGroup;

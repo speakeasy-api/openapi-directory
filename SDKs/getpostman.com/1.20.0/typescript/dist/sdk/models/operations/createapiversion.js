@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateApiVersionResponse = exports.CreateApiVersionRequest = exports.CreateApiVersion200ApplicationJson = exports.CreateApiVersion200ApplicationJsonVersion = exports.CreateApiVersionRequestBody = exports.CreateApiVersionRequestBodyVersion = exports.CreateApiVersionRequestBodyVersionSource = exports.CreateApiVersionRequestBodyVersionSourceRelations = exports.CreateApiVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateApiVersionPathParams = /** @class */ (function (_super) {
     __extends(CreateApiVersionPathParams, _super);
     function CreateApiVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], CreateApiVersionPathParams.prototype, "apiId", void 0);
     return CreateApiVersionPathParams;
-}(SpeakeasyBase));
-export { CreateApiVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionPathParams = CreateApiVersionPathParams;
 var CreateApiVersionRequestBodyVersionSourceRelations = /** @class */ (function (_super) {
     __extends(CreateApiVersionRequestBodyVersionSourceRelations, _super);
     function CreateApiVersionRequestBodyVersionSourceRelations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation" }),
         __metadata("design:type", Boolean)
     ], CreateApiVersionRequestBodyVersionSourceRelations.prototype, "documentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mock" }),
         __metadata("design:type", Boolean)
     ], CreateApiVersionRequestBodyVersionSourceRelations.prototype, "mock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor" }),
         __metadata("design:type", Boolean)
     ], CreateApiVersionRequestBodyVersionSourceRelations.prototype, "monitor", void 0);
     return CreateApiVersionRequestBodyVersionSourceRelations;
-}(SpeakeasyBase));
-export { CreateApiVersionRequestBodyVersionSourceRelations };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionRequestBodyVersionSourceRelations = CreateApiVersionRequestBodyVersionSourceRelations;
 var CreateApiVersionRequestBodyVersionSource = /** @class */ (function (_super) {
     __extends(CreateApiVersionRequestBodyVersionSource, _super);
     function CreateApiVersionRequestBodyVersionSource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateApiVersionRequestBodyVersionSource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relations" }),
         __metadata("design:type", CreateApiVersionRequestBodyVersionSourceRelations)
     ], CreateApiVersionRequestBodyVersionSource.prototype, "relations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schema" }),
         __metadata("design:type", Boolean)
     ], CreateApiVersionRequestBodyVersionSource.prototype, "schema", void 0);
     return CreateApiVersionRequestBodyVersionSource;
-}(SpeakeasyBase));
-export { CreateApiVersionRequestBodyVersionSource };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionRequestBodyVersionSource = CreateApiVersionRequestBodyVersionSource;
 var CreateApiVersionRequestBodyVersion = /** @class */ (function (_super) {
     __extends(CreateApiVersionRequestBodyVersion, _super);
     function CreateApiVersionRequestBodyVersion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateApiVersionRequestBodyVersion.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", CreateApiVersionRequestBodyVersionSource)
     ], CreateApiVersionRequestBodyVersion.prototype, "source", void 0);
     return CreateApiVersionRequestBodyVersion;
-}(SpeakeasyBase));
-export { CreateApiVersionRequestBodyVersion };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionRequestBodyVersion = CreateApiVersionRequestBodyVersion;
 var CreateApiVersionRequestBody = /** @class */ (function (_super) {
     __extends(CreateApiVersionRequestBody, _super);
     function CreateApiVersionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", CreateApiVersionRequestBodyVersion)
     ], CreateApiVersionRequestBody.prototype, "version", void 0);
     return CreateApiVersionRequestBody;
-}(SpeakeasyBase));
-export { CreateApiVersionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionRequestBody = CreateApiVersionRequestBody;
 var CreateApiVersion200ApplicationJsonVersion = /** @class */ (function (_super) {
     __extends(CreateApiVersion200ApplicationJsonVersion, _super);
     function CreateApiVersion200ApplicationJsonVersion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", String)
     ], CreateApiVersion200ApplicationJsonVersion.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateApiVersion200ApplicationJsonVersion.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateApiVersion200ApplicationJsonVersion.prototype, "name", void 0);
     return CreateApiVersion200ApplicationJsonVersion;
-}(SpeakeasyBase));
-export { CreateApiVersion200ApplicationJsonVersion };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersion200ApplicationJsonVersion = CreateApiVersion200ApplicationJsonVersion;
 var CreateApiVersion200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateApiVersion200ApplicationJson, _super);
     function CreateApiVersion200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", CreateApiVersion200ApplicationJsonVersion)
     ], CreateApiVersion200ApplicationJson.prototype, "version", void 0);
     return CreateApiVersion200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateApiVersion200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersion200ApplicationJson = CreateApiVersion200ApplicationJson;
 var CreateApiVersionRequest = /** @class */ (function (_super) {
     __extends(CreateApiVersionRequest, _super);
     function CreateApiVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateApiVersionPathParams)
     ], CreateApiVersionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateApiVersionRequestBody)
     ], CreateApiVersionRequest.prototype, "request", void 0);
     return CreateApiVersionRequest;
-}(SpeakeasyBase));
-export { CreateApiVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionRequest = CreateApiVersionRequest;
 var CreateApiVersionResponse = /** @class */ (function (_super) {
     __extends(CreateApiVersionResponse, _super);
     function CreateApiVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateApiVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateApiVersionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateApiVersion200ApplicationJson)
-    ], CreateApiVersionResponse.prototype, "createApiVersion200ApplicationJsonObject", void 0);
+    ], CreateApiVersionResponse.prototype, "createApiVersion200ApplicationJSONObject", void 0);
     return CreateApiVersionResponse;
-}(SpeakeasyBase));
-export { CreateApiVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiVersionResponse = CreateApiVersionResponse;

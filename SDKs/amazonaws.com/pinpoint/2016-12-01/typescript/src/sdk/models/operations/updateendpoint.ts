@@ -45,7 +45,7 @@ export class UpdateEndpointRequestBodyEndpointRequest extends SpeakeasyBase {
   address?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string[]>;
+  attributes?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=ChannelType" })
   channelType?: shared.ChannelTypeEnum;
@@ -63,7 +63,7 @@ export class UpdateEndpointRequestBodyEndpointRequest extends SpeakeasyBase {
   location?: shared.EndpointLocation;
 
   @SpeakeasyMetadata({ data: "json, name=Metrics" })
-  metrics?: Map<string, number>;
+  metrics?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=OptOut" })
   optOut?: string;

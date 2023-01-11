@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CorrectiveRecommendations } from "./correctiverecommendations";
-import { VariationDetails } from "./variationdetails";
-import { NameValueList } from "./namevaluelist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComplianceDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var correctiverecommendations_1 = require("./correctiverecommendations");
+var variationdetails_1 = require("./variationdetails");
+var namevaluelist_1 = require("./namevaluelist");
 // ComplianceDetail
 /**
  * This type is used by each listing violation that is returned under the violations container.
@@ -36,29 +39,29 @@ var ComplianceDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=complianceState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=complianceState" }),
         __metadata("design:type", String)
     ], ComplianceDetail.prototype, "complianceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=correctiveRecommendations" }),
-        __metadata("design:type", CorrectiveRecommendations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=correctiveRecommendations" }),
+        __metadata("design:type", correctiverecommendations_1.CorrectiveRecommendations)
     ], ComplianceDetail.prototype, "correctiveRecommendations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ComplianceDetail.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
     ], ComplianceDetail.prototype, "reasonCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variation" }),
-        __metadata("design:type", VariationDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variation" }),
+        __metadata("design:type", variationdetails_1.VariationDetails)
     ], ComplianceDetail.prototype, "variation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=violationData", elemType: NameValueList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=violationData", elemType: namevaluelist_1.NameValueList }),
         __metadata("design:type", Array)
     ], ComplianceDetail.prototype, "violationData", void 0);
     return ComplianceDetail;
-}(SpeakeasyBase));
-export { ComplianceDetail };
+}(utils_1.SpeakeasyBase));
+exports.ComplianceDetail = ComplianceDetail;

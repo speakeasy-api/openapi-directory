@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetRoutingControlStateRequest, GetRoutingControlStateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetRoutingControlStateRequest = {
   headers: {
-    xAmzAlgorithm: "asperiores",
-    xAmzContentSha256: "quasi",
-    xAmzCredential: "eius",
-    xAmzDate: "ea",
-    xAmzSecurityToken: "pariatur",
-    xAmzSignature: "eligendi",
-    xAmzSignedHeaders: "sit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "ToggleCustomerAPI.GetRoutingControlState",
   },
   request: {
-    routingControlArn: "quia",
+    routingControlArn: "fugit",
   },
 };
 
-sdk.sdk.getRoutingControlState(req).then((res: GetRoutingControlStateResponse | AxiosError) => {
+sdk.getRoutingControlState(req).then((res: GetRoutingControlStateResponse | AxiosError) => {
    // handle response
 });
 ```

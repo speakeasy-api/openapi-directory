@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProcessedUpdateAction } from "./processedupdateaction";
-import { UnprocessedUpdateAction } from "./unprocessedupdateaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActionResultsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var processedupdateactionlist_1 = require("./processedupdateactionlist");
+var unprocessedupdateactionlist_1 = require("./unprocessedupdateactionlist");
 var UpdateActionResultsMessage = /** @class */ (function (_super) {
     __extends(UpdateActionResultsMessage, _super);
     function UpdateActionResultsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ProcessedUpdateAction }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: processedupdateactionlist_1.ProcessedUpdateActionList }),
         __metadata("design:type", Array)
     ], UpdateActionResultsMessage.prototype, "processedUpdateActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: UnprocessedUpdateAction }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: unprocessedupdateactionlist_1.UnprocessedUpdateActionList }),
         __metadata("design:type", Array)
     ], UpdateActionResultsMessage.prototype, "unprocessedUpdateActions", void 0);
     return UpdateActionResultsMessage;
-}(SpeakeasyBase));
-export { UpdateActionResultsMessage };
+}(utils_1.SpeakeasyBase));
+exports.UpdateActionResultsMessage = UpdateActionResultsMessage;

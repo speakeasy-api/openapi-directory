@@ -1,5 +1,8 @@
-export var WorkspaceDirectoryTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceDirectoryTypeEnum = void 0;
+var WorkspaceDirectoryTypeEnum;
 (function (WorkspaceDirectoryTypeEnum) {
     WorkspaceDirectoryTypeEnum["SimpleAd"] = "SIMPLE_AD";
     WorkspaceDirectoryTypeEnum["AdConnector"] = "AD_CONNECTOR";
-})(WorkspaceDirectoryTypeEnum || (WorkspaceDirectoryTypeEnum = {}));
+})(WorkspaceDirectoryTypeEnum = exports.WorkspaceDirectoryTypeEnum || (exports.WorkspaceDirectoryTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OnPremClusterClusterTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnPremCluster = exports.OnPremClusterInput = exports.OnPremClusterClusterTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OnPremClusterClusterTypeEnum;
 (function (OnPremClusterClusterTypeEnum) {
     OnPremClusterClusterTypeEnum["ClustertypeUnspecified"] = "CLUSTERTYPE_UNSPECIFIED";
     OnPremClusterClusterTypeEnum["Bootstrap"] = "BOOTSTRAP";
     OnPremClusterClusterTypeEnum["Hybrid"] = "HYBRID";
     OnPremClusterClusterTypeEnum["Standalone"] = "STANDALONE";
     OnPremClusterClusterTypeEnum["User"] = "USER";
-})(OnPremClusterClusterTypeEnum || (OnPremClusterClusterTypeEnum = {}));
-// OnPremCluster
-/**
- * OnPremCluster contains information specific to GKE On-Prem clusters.
-**/
-var OnPremCluster = /** @class */ (function (_super) {
-    __extends(OnPremCluster, _super);
-    function OnPremCluster() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminCluster" }),
-        __metadata("design:type", Boolean)
-    ], OnPremCluster.prototype, "adminCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterMissing" }),
-        __metadata("design:type", Boolean)
-    ], OnPremCluster.prototype, "clusterMissing", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterType" }),
-        __metadata("design:type", String)
-    ], OnPremCluster.prototype, "clusterType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
-        __metadata("design:type", String)
-    ], OnPremCluster.prototype, "resourceLink", void 0);
-    return OnPremCluster;
-}(SpeakeasyBase));
-export { OnPremCluster };
+})(OnPremClusterClusterTypeEnum = exports.OnPremClusterClusterTypeEnum || (exports.OnPremClusterClusterTypeEnum = {}));
 // OnPremClusterInput
 /**
  * OnPremCluster contains information specific to GKE On-Prem clusters.
@@ -69,17 +44,45 @@ var OnPremClusterInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminCluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminCluster" }),
         __metadata("design:type", Boolean)
     ], OnPremClusterInput.prototype, "adminCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterType" }),
         __metadata("design:type", String)
     ], OnPremClusterInput.prototype, "clusterType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
         __metadata("design:type", String)
     ], OnPremClusterInput.prototype, "resourceLink", void 0);
     return OnPremClusterInput;
-}(SpeakeasyBase));
-export { OnPremClusterInput };
+}(utils_1.SpeakeasyBase));
+exports.OnPremClusterInput = OnPremClusterInput;
+// OnPremCluster
+/**
+ * OnPremCluster contains information specific to GKE On-Prem clusters.
+**/
+var OnPremCluster = /** @class */ (function (_super) {
+    __extends(OnPremCluster, _super);
+    function OnPremCluster() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminCluster" }),
+        __metadata("design:type", Boolean)
+    ], OnPremCluster.prototype, "adminCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterMissing" }),
+        __metadata("design:type", Boolean)
+    ], OnPremCluster.prototype, "clusterMissing", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterType" }),
+        __metadata("design:type", String)
+    ], OnPremCluster.prototype, "clusterType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLink" }),
+        __metadata("design:type", String)
+    ], OnPremCluster.prototype, "resourceLink", void 0);
+    return OnPremCluster;
+}(utils_1.SpeakeasyBase));
+exports.OnPremCluster = OnPremCluster;

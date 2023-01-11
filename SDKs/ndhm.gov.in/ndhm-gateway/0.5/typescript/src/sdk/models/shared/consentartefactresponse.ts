@@ -5,7 +5,7 @@ import { Permission } from "./permission";
 import { UsePurpose } from "./usepurpose";
 import { Requester } from "./requester";
 import { ConsentStatusEnum } from "./consentstatusenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 
 
@@ -93,7 +93,7 @@ export class ConsentArtefactResponse extends SpeakeasyBase {
   consent?: ConsentArtefactResponseConsent;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=requestId" })
   requestId: string;

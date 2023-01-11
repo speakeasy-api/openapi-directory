@@ -22,5 +22,5 @@ export class ProtocolMqttGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolMqttGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

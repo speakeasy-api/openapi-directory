@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetDevEndpointsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var BatchGetDevEndpointsRequest = /** @class */ (function (_super) {
     __extends(BatchGetDevEndpointsRequest, _super);
     function BatchGetDevEndpointsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DevEndpointNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DevEndpointNames" }),
         __metadata("design:type", Array)
     ], BatchGetDevEndpointsRequest.prototype, "devEndpointNames", void 0);
     return BatchGetDevEndpointsRequest;
-}(SpeakeasyBase));
-export { BatchGetDevEndpointsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetDevEndpointsRequest = BatchGetDevEndpointsRequest;

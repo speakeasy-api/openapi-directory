@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityStsV1ExchangeTokenRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleIdentityStsV1ExchangeTokenRequest
 /**
  * Request message for ExchangeToken.
@@ -33,33 +36,33 @@ var GoogleIdentityStsV1ExchangeTokenRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audience" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audience" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "audience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grantType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grantType" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedTokenType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedTokenType" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "requestedTokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectToken" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "subjectToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectTokenType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectTokenType" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1ExchangeTokenRequest.prototype, "subjectTokenType", void 0);
     return GoogleIdentityStsV1ExchangeTokenRequest;
-}(SpeakeasyBase));
-export { GoogleIdentityStsV1ExchangeTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityStsV1ExchangeTokenRequest = GoogleIdentityStsV1ExchangeTokenRequest;

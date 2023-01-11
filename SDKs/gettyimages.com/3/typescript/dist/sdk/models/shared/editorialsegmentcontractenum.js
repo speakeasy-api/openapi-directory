@@ -1,4 +1,7 @@
-export var EditorialSegmentContractEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorialSegmentContractEnum = void 0;
+var EditorialSegmentContractEnum;
 (function (EditorialSegmentContractEnum) {
     EditorialSegmentContractEnum["Archival"] = "archival";
     EditorialSegmentContractEnum["Entertainment"] = "entertainment";
@@ -6,4 +9,4 @@ export var EditorialSegmentContractEnum;
     EditorialSegmentContractEnum["Publicity"] = "publicity";
     EditorialSegmentContractEnum["Royalty"] = "royalty";
     EditorialSegmentContractEnum["Sport"] = "sport";
-})(EditorialSegmentContractEnum || (EditorialSegmentContractEnum = {}));
+})(EditorialSegmentContractEnum = exports.EditorialSegmentContractEnum || (exports.EditorialSegmentContractEnum = {}));

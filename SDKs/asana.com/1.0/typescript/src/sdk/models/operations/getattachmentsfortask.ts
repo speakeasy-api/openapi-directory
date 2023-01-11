@@ -50,5 +50,5 @@ export class GetAttachmentsForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAttachmentsForTask200ApplicationJsonObject?: GetAttachmentsForTask200ApplicationJson;
+  getAttachmentsForTask200ApplicationJSONObject?: GetAttachmentsForTask200ApplicationJson;
 }

@@ -26,16 +26,16 @@ export class GetUserContentByDateJson200ApplicationJsonResultsComments extends S
   approveDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=assetID" })
-  assetId?: number;
+  assetID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=assetURL" })
-  assetUrl?: string;
+  assetURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=commentBody" })
   commentBody?: string;
 
   @SpeakeasyMetadata({ data: "json, name=commentID" })
-  commentId?: number;
+  commentID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=commentSequence" })
   commentSequence?: number;
@@ -56,13 +56,13 @@ export class GetUserContentByDateJson200ApplicationJsonResultsComments extends S
   lft?: number;
 
   @SpeakeasyMetadata({ data: "json, name=parentID" })
-  parentId?: any;
+  parentID?: any;
 
   @SpeakeasyMetadata({ data: "json, name=recommendationCount" })
   recommendationCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=replies" })
-  replies?: Map<string, any>[];
+  replies?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=replyCount" })
   replyCount?: number;
@@ -74,7 +74,7 @@ export class GetUserContentByDateJson200ApplicationJsonResultsComments extends S
   status?: string;
 
   @SpeakeasyMetadata({ data: "json, name=statusID" })
-  statusId?: number;
+  statusID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=updateDate" })
   updateDate?: string;
@@ -83,7 +83,7 @@ export class GetUserContentByDateJson200ApplicationJsonResultsComments extends S
   userDisplayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userID" })
-  userId?: number;
+  userID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=userLocation" })
   userLocation?: string;
@@ -92,7 +92,7 @@ export class GetUserContentByDateJson200ApplicationJsonResultsComments extends S
   userTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userURL" })
-  userUrl?: number;
+  userURL?: number;
 }
 
 
@@ -140,7 +140,7 @@ export class GetUserContentByDateJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUserContentByDateJson200ApplicationJsonObject?: GetUserContentByDateJson200ApplicationJson;
+  getUserContentByDateJSON200ApplicationJSONObject?: GetUserContentByDateJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

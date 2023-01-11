@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsDeleteResponse = exports.TeamsDeleteRequest = exports.TeamsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsDeletePathParams = /** @class */ (function (_super) {
     __extends(TeamsDeletePathParams, _super);
     function TeamsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsDeletePathParams.prototype, "teamId", void 0);
     return TeamsDeletePathParams;
-}(SpeakeasyBase));
-export { TeamsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeletePathParams = TeamsDeletePathParams;
 var TeamsDeleteRequest = /** @class */ (function (_super) {
     __extends(TeamsDeleteRequest, _super);
     function TeamsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsDeletePathParams)
     ], TeamsDeleteRequest.prototype, "pathParams", void 0);
     return TeamsDeleteRequest;
-}(SpeakeasyBase));
-export { TeamsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteRequest = TeamsDeleteRequest;
 var TeamsDeleteResponse = /** @class */ (function (_super) {
     __extends(TeamsDeleteResponse, _super);
     function TeamsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsDeleteResponse.prototype, "statusCode", void 0);
     return TeamsDeleteResponse;
-}(SpeakeasyBase));
-export { TeamsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteResponse = TeamsDeleteResponse;

@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class PurchaseReservedInstancesOfferingResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  reservedInstancesId?: string;
+  reservedInstancesId?: Record<string, any>;
 }

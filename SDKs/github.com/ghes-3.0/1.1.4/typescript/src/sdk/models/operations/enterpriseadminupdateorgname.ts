@@ -40,5 +40,5 @@ export class EnterpriseAdminUpdateOrgNameResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminUpdateOrgName202ApplicationJsonObject?: EnterpriseAdminUpdateOrgName202ApplicationJson;
+  enterpriseAdminUpdateOrgName202ApplicationJSONObject?: EnterpriseAdminUpdateOrgName202ApplicationJson;
 }

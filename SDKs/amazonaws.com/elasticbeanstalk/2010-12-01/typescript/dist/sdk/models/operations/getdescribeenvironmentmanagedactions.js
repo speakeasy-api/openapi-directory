@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,119 +23,121 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeEnvironmentManagedActionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeEnvironmentManagedActionsResponse = exports.GetDescribeEnvironmentManagedActionsRequest = exports.GetDescribeEnvironmentManagedActionsHeaders = exports.GetDescribeEnvironmentManagedActionsQueryParams = exports.GetDescribeEnvironmentManagedActionsVersionEnum = exports.GetDescribeEnvironmentManagedActionsStatusEnum = exports.GetDescribeEnvironmentManagedActionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeEnvironmentManagedActionsActionEnum;
 (function (GetDescribeEnvironmentManagedActionsActionEnum) {
     GetDescribeEnvironmentManagedActionsActionEnum["DescribeEnvironmentManagedActions"] = "DescribeEnvironmentManagedActions";
-})(GetDescribeEnvironmentManagedActionsActionEnum || (GetDescribeEnvironmentManagedActionsActionEnum = {}));
-export var GetDescribeEnvironmentManagedActionsStatusEnum;
+})(GetDescribeEnvironmentManagedActionsActionEnum = exports.GetDescribeEnvironmentManagedActionsActionEnum || (exports.GetDescribeEnvironmentManagedActionsActionEnum = {}));
+var GetDescribeEnvironmentManagedActionsStatusEnum;
 (function (GetDescribeEnvironmentManagedActionsStatusEnum) {
     GetDescribeEnvironmentManagedActionsStatusEnum["Scheduled"] = "Scheduled";
     GetDescribeEnvironmentManagedActionsStatusEnum["Pending"] = "Pending";
     GetDescribeEnvironmentManagedActionsStatusEnum["Running"] = "Running";
     GetDescribeEnvironmentManagedActionsStatusEnum["Unknown"] = "Unknown";
-})(GetDescribeEnvironmentManagedActionsStatusEnum || (GetDescribeEnvironmentManagedActionsStatusEnum = {}));
-export var GetDescribeEnvironmentManagedActionsVersionEnum;
+})(GetDescribeEnvironmentManagedActionsStatusEnum = exports.GetDescribeEnvironmentManagedActionsStatusEnum || (exports.GetDescribeEnvironmentManagedActionsStatusEnum = {}));
+var GetDescribeEnvironmentManagedActionsVersionEnum;
 (function (GetDescribeEnvironmentManagedActionsVersionEnum) {
     GetDescribeEnvironmentManagedActionsVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDescribeEnvironmentManagedActionsVersionEnum || (GetDescribeEnvironmentManagedActionsVersionEnum = {}));
+})(GetDescribeEnvironmentManagedActionsVersionEnum = exports.GetDescribeEnvironmentManagedActionsVersionEnum || (exports.GetDescribeEnvironmentManagedActionsVersionEnum = {}));
 var GetDescribeEnvironmentManagedActionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeEnvironmentManagedActionsQueryParams, _super);
     function GetDescribeEnvironmentManagedActionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsQueryParams.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsQueryParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Status" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsQueryParams.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsQueryParams.prototype, "version", void 0);
     return GetDescribeEnvironmentManagedActionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeEnvironmentManagedActionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEnvironmentManagedActionsQueryParams = GetDescribeEnvironmentManagedActionsQueryParams;
 var GetDescribeEnvironmentManagedActionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeEnvironmentManagedActionsHeaders, _super);
     function GetDescribeEnvironmentManagedActionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeEnvironmentManagedActionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeEnvironmentManagedActionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEnvironmentManagedActionsHeaders = GetDescribeEnvironmentManagedActionsHeaders;
 var GetDescribeEnvironmentManagedActionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeEnvironmentManagedActionsRequest, _super);
     function GetDescribeEnvironmentManagedActionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEnvironmentManagedActionsQueryParams)
     ], GetDescribeEnvironmentManagedActionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEnvironmentManagedActionsHeaders)
     ], GetDescribeEnvironmentManagedActionsRequest.prototype, "headers", void 0);
     return GetDescribeEnvironmentManagedActionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeEnvironmentManagedActionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEnvironmentManagedActionsRequest = GetDescribeEnvironmentManagedActionsRequest;
 var GetDescribeEnvironmentManagedActionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeEnvironmentManagedActionsResponse, _super);
     function GetDescribeEnvironmentManagedActionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeEnvironmentManagedActionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeEnvironmentManagedActionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeEnvironmentManagedActionsResponse.prototype, "statusCode", void 0);
     return GetDescribeEnvironmentManagedActionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeEnvironmentManagedActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEnvironmentManagedActionsResponse = GetDescribeEnvironmentManagedActionsResponse;

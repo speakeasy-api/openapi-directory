@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WebAppStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebApp = exports.WebAppInput = exports.WebAppStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WebAppStateEnum;
 (function (WebAppStateEnum) {
     WebAppStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     WebAppStateEnum["Active"] = "ACTIVE";
     WebAppStateEnum["Deleted"] = "DELETED";
-})(WebAppStateEnum || (WebAppStateEnum = {}));
+})(WebAppStateEnum = exports.WebAppStateEnum || (exports.WebAppStateEnum = {}));
 // WebAppInput
 /**
  * Details of a Firebase App for the web.
@@ -39,24 +42,24 @@ var WebAppInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKeyId" }),
         __metadata("design:type", String)
     ], WebAppInput.prototype, "apiKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appUrls" }),
         __metadata("design:type", Array)
     ], WebAppInput.prototype, "appUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], WebAppInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WebAppInput.prototype, "name", void 0);
     return WebAppInput;
-}(SpeakeasyBase));
-export { WebAppInput };
+}(utils_1.SpeakeasyBase));
+exports.WebAppInput = WebAppInput;
 // WebApp
 /**
  * Details of a Firebase App for the web.
@@ -67,37 +70,37 @@ var WebApp = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKeyId" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "apiKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appUrls" }),
         __metadata("design:type", Array)
     ], WebApp.prototype, "appUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webId" }),
         __metadata("design:type", String)
     ], WebApp.prototype, "webId", void 0);
     return WebApp;
-}(SpeakeasyBase));
-export { WebApp };
+}(utils_1.SpeakeasyBase));
+exports.WebApp = WebApp;

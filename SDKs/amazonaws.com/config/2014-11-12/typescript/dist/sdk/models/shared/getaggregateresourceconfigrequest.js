@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateResourceIdentifier } from "./aggregateresourceidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateResourceConfigRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateresourceidentifier_1 = require("./aggregateresourceidentifier");
 var GetAggregateResourceConfigRequest = /** @class */ (function (_super) {
     __extends(GetAggregateResourceConfigRequest, _super);
     function GetAggregateResourceConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregatorName" }),
         __metadata("design:type", String)
     ], GetAggregateResourceConfigRequest.prototype, "configurationAggregatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceIdentifier" }),
-        __metadata("design:type", AggregateResourceIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceIdentifier" }),
+        __metadata("design:type", aggregateresourceidentifier_1.AggregateResourceIdentifier)
     ], GetAggregateResourceConfigRequest.prototype, "resourceIdentifier", void 0);
     return GetAggregateResourceConfigRequest;
-}(SpeakeasyBase));
-export { GetAggregateResourceConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateResourceConfigRequest = GetAggregateResourceConfigRequest;

@@ -11,12 +11,6 @@ export class TeamsListMembersInOrgPathParams extends SpeakeasyBase {
   teamSlug: string;
 }
 
-export enum TeamsListMembersInOrgRoleEnum {
-    Member = "member",
-    Maintainer = "maintainer",
-    All = "all"
-}
-
 
 export class TeamsListMembersInOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -26,7 +20,7 @@ export class TeamsListMembersInOrgQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role" })
-  role?: TeamsListMembersInOrgRoleEnum;
+  role?: shared.TeamSlugEnum;
 }
 
 
@@ -44,7 +38,7 @@ export class TeamsListMembersInOrgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

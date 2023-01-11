@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeUserRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeUserRequest = /** @class */ (function (_super) {
     __extends(DescribeUserRequest, _super);
     function DescribeUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityStoreId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityStoreId" }),
         __metadata("design:type", String)
     ], DescribeUserRequest.prototype, "identityStoreId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserId" }),
         __metadata("design:type", String)
     ], DescribeUserRequest.prototype, "userId", void 0);
     return DescribeUserRequest;
-}(SpeakeasyBase));
-export { DescribeUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeUserRequest = DescribeUserRequest;

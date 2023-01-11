@@ -31,7 +31,7 @@ export class GetSetupV1LocationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  locationListViewModel?: Map<string, any>;
+  locationListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CryptoKeyVersionTemplateAlgorithmEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CryptoKeyVersionTemplate = exports.CryptoKeyVersionTemplateProtectionLevelEnum = exports.CryptoKeyVersionTemplateAlgorithmEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CryptoKeyVersionTemplateAlgorithmEnum;
 (function (CryptoKeyVersionTemplateAlgorithmEnum) {
     CryptoKeyVersionTemplateAlgorithmEnum["CryptoKeyVersionAlgorithmUnspecified"] = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED";
     CryptoKeyVersionTemplateAlgorithmEnum["GoogleSymmetricEncryption"] = "GOOGLE_SYMMETRIC_ENCRYPTION";
@@ -54,15 +57,15 @@ export var CryptoKeyVersionTemplateAlgorithmEnum;
     CryptoKeyVersionTemplateAlgorithmEnum["HmacSha512"] = "HMAC_SHA512";
     CryptoKeyVersionTemplateAlgorithmEnum["HmacSha224"] = "HMAC_SHA224";
     CryptoKeyVersionTemplateAlgorithmEnum["ExternalSymmetricEncryption"] = "EXTERNAL_SYMMETRIC_ENCRYPTION";
-})(CryptoKeyVersionTemplateAlgorithmEnum || (CryptoKeyVersionTemplateAlgorithmEnum = {}));
-export var CryptoKeyVersionTemplateProtectionLevelEnum;
+})(CryptoKeyVersionTemplateAlgorithmEnum = exports.CryptoKeyVersionTemplateAlgorithmEnum || (exports.CryptoKeyVersionTemplateAlgorithmEnum = {}));
+var CryptoKeyVersionTemplateProtectionLevelEnum;
 (function (CryptoKeyVersionTemplateProtectionLevelEnum) {
     CryptoKeyVersionTemplateProtectionLevelEnum["ProtectionLevelUnspecified"] = "PROTECTION_LEVEL_UNSPECIFIED";
     CryptoKeyVersionTemplateProtectionLevelEnum["Software"] = "SOFTWARE";
     CryptoKeyVersionTemplateProtectionLevelEnum["Hsm"] = "HSM";
     CryptoKeyVersionTemplateProtectionLevelEnum["External"] = "EXTERNAL";
     CryptoKeyVersionTemplateProtectionLevelEnum["ExternalVpc"] = "EXTERNAL_VPC";
-})(CryptoKeyVersionTemplateProtectionLevelEnum || (CryptoKeyVersionTemplateProtectionLevelEnum = {}));
+})(CryptoKeyVersionTemplateProtectionLevelEnum = exports.CryptoKeyVersionTemplateProtectionLevelEnum || (exports.CryptoKeyVersionTemplateProtectionLevelEnum = {}));
 // CryptoKeyVersionTemplate
 /**
  * A CryptoKeyVersionTemplate specifies the properties to use when creating a new CryptoKeyVersion, either manually with CreateCryptoKeyVersion or automatically as a result of auto-rotation.
@@ -73,13 +76,13 @@ var CryptoKeyVersionTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
         __metadata("design:type", String)
     ], CryptoKeyVersionTemplate.prototype, "algorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], CryptoKeyVersionTemplate.prototype, "protectionLevel", void 0);
     return CryptoKeyVersionTemplate;
-}(SpeakeasyBase));
-export { CryptoKeyVersionTemplate };
+}(utils_1.SpeakeasyBase));
+exports.CryptoKeyVersionTemplate = CryptoKeyVersionTemplate;

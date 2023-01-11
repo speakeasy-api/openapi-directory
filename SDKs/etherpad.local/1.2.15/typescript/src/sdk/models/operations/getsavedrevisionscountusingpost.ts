@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetSavedRevisionsCountUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class GetSavedRevisionsCountUsingPost200ApplicationJson extends Speakeasy
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class GetSavedRevisionsCountUsingPost400ApplicationJson extends Speakeasy
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class GetSavedRevisionsCountUsingPost401ApplicationJson extends Speakeasy
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class GetSavedRevisionsCountUsingPost500ApplicationJson extends Speakeasy
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class GetSavedRevisionsCountUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingPost200ApplicationJsonObject?: GetSavedRevisionsCountUsingPost200ApplicationJson;
+  getSavedRevisionsCountUsingPOST200ApplicationJSONObject?: GetSavedRevisionsCountUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingPost400ApplicationJsonObject?: GetSavedRevisionsCountUsingPost400ApplicationJson;
+  getSavedRevisionsCountUsingPOST400ApplicationJSONObject?: GetSavedRevisionsCountUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingPost401ApplicationJsonObject?: GetSavedRevisionsCountUsingPost401ApplicationJson;
+  getSavedRevisionsCountUsingPOST401ApplicationJSONObject?: GetSavedRevisionsCountUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSavedRevisionsCountUsingPost500ApplicationJsonObject?: GetSavedRevisionsCountUsingPost500ApplicationJson;
+  getSavedRevisionsCountUsingPOST500ApplicationJSONObject?: GetSavedRevisionsCountUsingPost500ApplicationJson;
 }

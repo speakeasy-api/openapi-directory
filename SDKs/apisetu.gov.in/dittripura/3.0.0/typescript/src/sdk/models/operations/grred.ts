@@ -188,23 +188,23 @@ export class GrredResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  grred400ApplicationJsonObject?: Grred400ApplicationJson;
+  grred400ApplicationJSONObject?: Grred400ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred401ApplicationJsonObject?: Grred401ApplicationJson;
+  grred401ApplicationJSONObject?: Grred401ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred404ApplicationJsonObject?: Grred404ApplicationJson;
+  grred404ApplicationJSONObject?: Grred404ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred500ApplicationJsonObject?: Grred500ApplicationJson;
+  grred500ApplicationJSONObject?: Grred500ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred502ApplicationJsonObject?: Grred502ApplicationJson;
+  grred502ApplicationJSONObject?: Grred502ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred503ApplicationJsonObject?: Grred503ApplicationJson;
+  grred503ApplicationJSONObject?: Grred503ApplicationJson;
 
   @SpeakeasyMetadata()
-  grred504ApplicationJsonObject?: Grred504ApplicationJson;
+  grred504ApplicationJSONObject?: Grred504ApplicationJson;
 }

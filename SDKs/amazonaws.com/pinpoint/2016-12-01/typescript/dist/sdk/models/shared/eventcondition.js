@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventDimensions } from "./eventdimensions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventCondition = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventdimensions_1 = require("./eventdimensions");
 // EventCondition
 /**
  * Specifies the conditions to evaluate for an event that applies to an activity in a journey.
@@ -34,13 +37,13 @@ var EventCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions" }),
-        __metadata("design:type", EventDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions" }),
+        __metadata("design:type", eventdimensions_1.EventDimensions)
     ], EventCondition.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageActivity" }),
         __metadata("design:type", String)
     ], EventCondition.prototype, "messageActivity", void 0);
     return EventCondition;
-}(SpeakeasyBase));
-export { EventCondition };
+}(utils_1.SpeakeasyBase));
+exports.EventCondition = EventCondition;

@@ -1,14 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { VpcLinkStatusEnum } from "./vpclinkstatusenum";
-import { VpcLinkVersionEnum } from "./vpclinkversionenum";
 export declare class GetVpcLinkResponse extends SpeakeasyBase {
-    createdDate?: Date;
-    name?: string;
-    securityGroupIds?: string[];
-    subnetIds?: string[];
-    tags?: Map<string, string>;
-    vpcLinkId?: string;
-    vpcLinkStatus?: VpcLinkStatusEnum;
-    vpcLinkStatusMessage?: string;
-    vpcLinkVersion?: VpcLinkVersionEnum;
+    createdDate?: Record<string, any>;
+    name?: Record<string, any>;
+    securityGroupIds?: Record<string, any>;
+    subnetIds?: Record<string, any>;
+    tags?: Record<string, string>;
+    vpcLinkId?: Record<string, any>;
+    vpcLinkStatus?: Record<string, any>;
+    vpcLinkStatusMessage?: Record<string, any>;
+    vpcLinkVersion?: Record<string, any>;
 }

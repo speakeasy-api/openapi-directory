@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifecycleEvent } from "./lifecycleevent";
-import { TargetStatusEnum } from "./targetstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudFormationTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecycleevent_1 = require("./lifecycleevent");
+var targetstatusenum_1 = require("./targetstatusenum");
 // CloudFormationTarget
 /**
  *  Information about the target to be updated by an AWS CloudFormation blue/green deployment. This target type is used for all deployments initiated by a CloudFormation stack update.
@@ -35,33 +38,33 @@ var CloudFormationTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentId" }),
         __metadata("design:type", String)
     ], CloudFormationTarget.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], CloudFormationTarget.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycleEvents", elemType: LifecycleEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycleEvents", elemType: lifecycleevent_1.LifecycleEvent }),
         __metadata("design:type", Array)
     ], CloudFormationTarget.prototype, "lifecycleEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], CloudFormationTarget.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CloudFormationTarget.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], CloudFormationTarget.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetVersionWeight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetVersionWeight" }),
         __metadata("design:type", Number)
     ], CloudFormationTarget.prototype, "targetVersionWeight", void 0);
     return CloudFormationTarget;
-}(SpeakeasyBase));
-export { CloudFormationTarget };
+}(utils_1.SpeakeasyBase));
+exports.CloudFormationTarget = CloudFormationTarget;

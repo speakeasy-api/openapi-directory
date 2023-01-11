@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProfileMetadata } from "./profilemetadata";
-export var SourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceInput = exports.Source = exports.SourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var profilemetadata_1 = require("./profilemetadata");
+var SourceTypeEnum;
 (function (SourceTypeEnum) {
     SourceTypeEnum["SourceTypeUnspecified"] = "SOURCE_TYPE_UNSPECIFIED";
     SourceTypeEnum["Account"] = "ACCOUNT";
@@ -33,7 +36,7 @@ export var SourceTypeEnum;
     SourceTypeEnum["Contact"] = "CONTACT";
     SourceTypeEnum["OtherContact"] = "OTHER_CONTACT";
     SourceTypeEnum["DomainContact"] = "DOMAIN_CONTACT";
-})(SourceTypeEnum || (SourceTypeEnum = {}));
+})(SourceTypeEnum = exports.SourceTypeEnum || (exports.SourceTypeEnum = {}));
 // Source
 /**
  * The source of a field.
@@ -44,28 +47,28 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Source.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Source.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileMetadata" }),
-        __metadata("design:type", ProfileMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileMetadata" }),
+        __metadata("design:type", profilemetadata_1.ProfileMetadata)
     ], Source.prototype, "profileMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Source.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Source.prototype, "updateTime", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;
 // SourceInput
 /**
  * The source of a field.
@@ -76,17 +79,17 @@ var SourceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], SourceInput.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SourceInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SourceInput.prototype, "type", void 0);
     return SourceInput;
-}(SpeakeasyBase));
-export { SourceInput };
+}(utils_1.SpeakeasyBase));
+exports.SourceInput = SourceInput;

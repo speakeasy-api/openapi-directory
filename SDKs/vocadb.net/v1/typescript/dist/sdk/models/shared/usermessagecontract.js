@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserForApiContract } from "./userforapicontract";
-export var UserMessageContractInboxEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserMessageContract = exports.UserMessageContractInboxEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var userforapicontract_1 = require("./userforapicontract");
+var UserMessageContractInboxEnum;
 (function (UserMessageContractInboxEnum) {
     UserMessageContractInboxEnum["Nothing"] = "Nothing";
     UserMessageContractInboxEnum["Received"] = "Received";
     UserMessageContractInboxEnum["Sent"] = "Sent";
     UserMessageContractInboxEnum["Notifications"] = "Notifications";
-})(UserMessageContractInboxEnum || (UserMessageContractInboxEnum = {}));
+})(UserMessageContractInboxEnum = exports.UserMessageContractInboxEnum || (exports.UserMessageContractInboxEnum = {}));
 var UserMessageContract = /** @class */ (function (_super) {
     __extends(UserMessageContract, _super);
     function UserMessageContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], UserMessageContract.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdFormatted" }),
         __metadata("design:type", String)
     ], UserMessageContract.prototype, "createdFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highPriority" }),
         __metadata("design:type", Boolean)
     ], UserMessageContract.prototype, "highPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], UserMessageContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inbox" }),
         __metadata("design:type", String)
     ], UserMessageContract.prototype, "inbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=read" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read" }),
         __metadata("design:type", Boolean)
     ], UserMessageContract.prototype, "read", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receiver" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receiver" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], UserMessageContract.prototype, "receiver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sender" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sender" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], UserMessageContract.prototype, "sender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], UserMessageContract.prototype, "subject", void 0);
     return UserMessageContract;
-}(SpeakeasyBase));
-export { UserMessageContract };
+}(utils_1.SpeakeasyBase));
+exports.UserMessageContract = UserMessageContract;

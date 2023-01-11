@@ -13,6 +13,6 @@ export declare class ActivityMarkNotificationsAsReadRequest extends SpeakeasyBas
 export declare class ActivityMarkNotificationsAsReadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    activityMarkNotificationsAsRead202ApplicationJsonObject?: ActivityMarkNotificationsAsRead202ApplicationJson;
+    activityMarkNotificationsAsRead202ApplicationJSONObject?: ActivityMarkNotificationsAsRead202ApplicationJson;
     basicError?: shared.BasicError;
 }

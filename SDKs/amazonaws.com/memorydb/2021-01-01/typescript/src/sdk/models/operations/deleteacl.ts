@@ -51,10 +51,10 @@ export class DeleteAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAclResponse?: shared.DeleteAclResponse;
+  deleteACLResponse?: shared.DeleteAclResponse;
 
   @SpeakeasyMetadata()
-  invalidAclStateFault?: any;
+  invalidACLStateFault?: any;
 
   @SpeakeasyMetadata()
   invalidParameterValueException?: any;

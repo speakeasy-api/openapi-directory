@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCancelBundleTaskActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCancelBundleTaskResponse = exports.GetCancelBundleTaskRequest = exports.GetCancelBundleTaskHeaders = exports.GetCancelBundleTaskQueryParams = exports.GetCancelBundleTaskVersionEnum = exports.GetCancelBundleTaskActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCancelBundleTaskActionEnum;
 (function (GetCancelBundleTaskActionEnum) {
     GetCancelBundleTaskActionEnum["CancelBundleTask"] = "CancelBundleTask";
-})(GetCancelBundleTaskActionEnum || (GetCancelBundleTaskActionEnum = {}));
-export var GetCancelBundleTaskVersionEnum;
+})(GetCancelBundleTaskActionEnum = exports.GetCancelBundleTaskActionEnum || (exports.GetCancelBundleTaskActionEnum = {}));
+var GetCancelBundleTaskVersionEnum;
 (function (GetCancelBundleTaskVersionEnum) {
     GetCancelBundleTaskVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCancelBundleTaskVersionEnum || (GetCancelBundleTaskVersionEnum = {}));
+})(GetCancelBundleTaskVersionEnum = exports.GetCancelBundleTaskVersionEnum || (exports.GetCancelBundleTaskVersionEnum = {}));
 var GetCancelBundleTaskQueryParams = /** @class */ (function (_super) {
     __extends(GetCancelBundleTaskQueryParams, _super);
     function GetCancelBundleTaskQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=BundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=BundleId" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskQueryParams.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCancelBundleTaskQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskQueryParams.prototype, "version", void 0);
     return GetCancelBundleTaskQueryParams;
-}(SpeakeasyBase));
-export { GetCancelBundleTaskQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelBundleTaskQueryParams = GetCancelBundleTaskQueryParams;
 var GetCancelBundleTaskHeaders = /** @class */ (function (_super) {
     __extends(GetCancelBundleTaskHeaders, _super);
     function GetCancelBundleTaskHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCancelBundleTaskHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCancelBundleTaskHeaders;
-}(SpeakeasyBase));
-export { GetCancelBundleTaskHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelBundleTaskHeaders = GetCancelBundleTaskHeaders;
 var GetCancelBundleTaskRequest = /** @class */ (function (_super) {
     __extends(GetCancelBundleTaskRequest, _super);
     function GetCancelBundleTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelBundleTaskQueryParams)
     ], GetCancelBundleTaskRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelBundleTaskHeaders)
     ], GetCancelBundleTaskRequest.prototype, "headers", void 0);
     return GetCancelBundleTaskRequest;
-}(SpeakeasyBase));
-export { GetCancelBundleTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelBundleTaskRequest = GetCancelBundleTaskRequest;
 var GetCancelBundleTaskResponse = /** @class */ (function (_super) {
     __extends(GetCancelBundleTaskResponse, _super);
     function GetCancelBundleTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCancelBundleTaskResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCancelBundleTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCancelBundleTaskResponse.prototype, "statusCode", void 0);
     return GetCancelBundleTaskResponse;
-}(SpeakeasyBase));
-export { GetCancelBundleTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelBundleTaskResponse = GetCancelBundleTaskResponse;

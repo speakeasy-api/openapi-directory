@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder } from "./grafeasv1slsaprovenancezerotwoslsabuilder";
-import { GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation } from "./grafeasv1slsaprovenancezerotwoslsainvocation";
-import { GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial } from "./grafeasv1slsaprovenancezerotwoslsamaterial";
-import { GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata } from "./grafeasv1slsaprovenancezerotwoslsametadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlsaProvenanceZeroTwo = void 0;
+var utils_1 = require("../../../internal/utils");
+var grafeasv1slsaprovenancezerotwoslsabuilder_1 = require("./grafeasv1slsaprovenancezerotwoslsabuilder");
+var grafeasv1slsaprovenancezerotwoslsainvocation_1 = require("./grafeasv1slsaprovenancezerotwoslsainvocation");
+var grafeasv1slsaprovenancezerotwoslsamaterial_1 = require("./grafeasv1slsaprovenancezerotwoslsamaterial");
+var grafeasv1slsaprovenancezerotwoslsametadata_1 = require("./grafeasv1slsaprovenancezerotwoslsametadata");
 // SlsaProvenanceZeroTwo
 /**
  * See full explanation of fields at slsa.dev/provenance/v0.2.
@@ -37,29 +40,29 @@ var SlsaProvenanceZeroTwo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildConfig" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildConfig" }),
+        __metadata("design:type", Object)
     ], SlsaProvenanceZeroTwo.prototype, "buildConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildType" }),
         __metadata("design:type", String)
     ], SlsaProvenanceZeroTwo.prototype, "buildType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builder" }),
-        __metadata("design:type", GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builder" }),
+        __metadata("design:type", grafeasv1slsaprovenancezerotwoslsabuilder_1.GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder)
     ], SlsaProvenanceZeroTwo.prototype, "builder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invocation" }),
-        __metadata("design:type", GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invocation" }),
+        __metadata("design:type", grafeasv1slsaprovenancezerotwoslsainvocation_1.GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation)
     ], SlsaProvenanceZeroTwo.prototype, "invocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=materials", elemType: GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=materials", elemType: grafeasv1slsaprovenancezerotwoslsamaterial_1.GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial }),
         __metadata("design:type", Array)
     ], SlsaProvenanceZeroTwo.prototype, "materials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", grafeasv1slsaprovenancezerotwoslsametadata_1.GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata)
     ], SlsaProvenanceZeroTwo.prototype, "metadata", void 0);
     return SlsaProvenanceZeroTwo;
-}(SpeakeasyBase));
-export { SlsaProvenanceZeroTwo };
+}(utils_1.SpeakeasyBase));
+exports.SlsaProvenanceZeroTwo = SlsaProvenanceZeroTwo;

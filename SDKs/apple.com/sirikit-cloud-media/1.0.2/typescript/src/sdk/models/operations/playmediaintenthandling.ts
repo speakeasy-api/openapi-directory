@@ -35,9 +35,6 @@ export class PlayMediaIntentHandlingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   playMediaIntentHandlingInvocationResponses?: any[];
 
   @SpeakeasyMetadata()

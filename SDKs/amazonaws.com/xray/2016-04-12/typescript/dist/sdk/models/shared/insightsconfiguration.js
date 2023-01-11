@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightsConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // InsightsConfiguration
 /**
  * The structure containing configurations related to insights.
@@ -33,13 +36,13 @@ var InsightsConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightsEnabled" }),
         __metadata("design:type", Boolean)
     ], InsightsConfiguration.prototype, "insightsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationsEnabled" }),
         __metadata("design:type", Boolean)
     ], InsightsConfiguration.prototype, "notificationsEnabled", void 0);
     return InsightsConfiguration;
-}(SpeakeasyBase));
-export { InsightsConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.InsightsConfiguration = InsightsConfiguration;

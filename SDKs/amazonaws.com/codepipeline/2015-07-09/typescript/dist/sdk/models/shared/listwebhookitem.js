@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebhookDefinition } from "./webhookdefinition";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWebhookItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var webhookdefinition_1 = require("./webhookdefinition");
+var tag_1 = require("./tag");
 // ListWebhookItem
 /**
  * The detail returned for each webhook after listing webhooks, such as the webhook URL, the webhook name, and the webhook ARN.
@@ -35,33 +38,33 @@ var ListWebhookItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ListWebhookItem.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definition" }),
-        __metadata("design:type", WebhookDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definition" }),
+        __metadata("design:type", webhookdefinition_1.WebhookDefinition)
     ], ListWebhookItem.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", String)
     ], ListWebhookItem.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", String)
     ], ListWebhookItem.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastTriggered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastTriggered" }),
         __metadata("design:type", Date)
     ], ListWebhookItem.prototype, "lastTriggered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ListWebhookItem.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ListWebhookItem.prototype, "url", void 0);
     return ListWebhookItem;
-}(SpeakeasyBase));
-export { ListWebhookItem };
+}(utils_1.SpeakeasyBase));
+exports.ListWebhookItem = ListWebhookItem;

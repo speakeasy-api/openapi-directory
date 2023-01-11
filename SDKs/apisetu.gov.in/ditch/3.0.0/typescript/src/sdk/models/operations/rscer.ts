@@ -188,23 +188,23 @@ export class RscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  rscer400ApplicationJsonObject?: Rscer400ApplicationJson;
+  rscer400ApplicationJSONObject?: Rscer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer401ApplicationJsonObject?: Rscer401ApplicationJson;
+  rscer401ApplicationJSONObject?: Rscer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer404ApplicationJsonObject?: Rscer404ApplicationJson;
+  rscer404ApplicationJSONObject?: Rscer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer500ApplicationJsonObject?: Rscer500ApplicationJson;
+  rscer500ApplicationJSONObject?: Rscer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer502ApplicationJsonObject?: Rscer502ApplicationJson;
+  rscer502ApplicationJSONObject?: Rscer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer503ApplicationJsonObject?: Rscer503ApplicationJson;
+  rscer503ApplicationJSONObject?: Rscer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  rscer504ApplicationJsonObject?: Rscer504ApplicationJson;
+  rscer504ApplicationJSONObject?: Rscer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,130 +14,155 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictImageUrlWithNoStoreResponse = exports.PredictImageUrlWithNoStoreRequest = exports.PredictImageUrlWithNoStoreRequests = exports.PredictImageUrlWithNoStoreHeaders = exports.PredictImageUrlWithNoStoreQueryParams = exports.PredictImageUrlWithNoStorePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PredictImageUrlWithNoStorePathParams = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStorePathParams, _super);
     function PredictImageUrlWithNoStorePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], PredictImageUrlWithNoStorePathParams.prototype, "projectId", void 0);
     return PredictImageUrlWithNoStorePathParams;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStorePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStorePathParams = PredictImageUrlWithNoStorePathParams;
 var PredictImageUrlWithNoStoreQueryParams = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStoreQueryParams, _super);
     function PredictImageUrlWithNoStoreQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=application" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=application" }),
         __metadata("design:type", String)
     ], PredictImageUrlWithNoStoreQueryParams.prototype, "application", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=iterationId" }),
         __metadata("design:type", String)
     ], PredictImageUrlWithNoStoreQueryParams.prototype, "iterationId", void 0);
     return PredictImageUrlWithNoStoreQueryParams;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStoreQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStoreQueryParams = PredictImageUrlWithNoStoreQueryParams;
 var PredictImageUrlWithNoStoreHeaders = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStoreHeaders, _super);
     function PredictImageUrlWithNoStoreHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Prediction-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Prediction-Key" }),
         __metadata("design:type", String)
     ], PredictImageUrlWithNoStoreHeaders.prototype, "predictionKey", void 0);
     return PredictImageUrlWithNoStoreHeaders;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStoreHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStoreHeaders = PredictImageUrlWithNoStoreHeaders;
 var PredictImageUrlWithNoStoreRequests = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStoreRequests, _super);
     function PredictImageUrlWithNoStoreRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/xml" }),
         __metadata("design:type", Uint8Array)
-    ], PredictImageUrlWithNoStoreRequests.prototype, "applicationXml", void 0);
+    ], PredictImageUrlWithNoStoreRequests.prototype, "applicationXML", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ImageUrl)
     ], PredictImageUrlWithNoStoreRequests.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", shared.ImageUrl)
     ], PredictImageUrlWithNoStoreRequests.prototype, "imageUrl1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
         __metadata("design:type", shared.ImageUrl)
     ], PredictImageUrlWithNoStoreRequests.prototype, "imageUrl2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
-    ], PredictImageUrlWithNoStoreRequests.prototype, "textXml", void 0);
+    ], PredictImageUrlWithNoStoreRequests.prototype, "textXML", void 0);
     return PredictImageUrlWithNoStoreRequests;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStoreRequests };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStoreRequests = PredictImageUrlWithNoStoreRequests;
 var PredictImageUrlWithNoStoreRequest = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStoreRequest, _super);
     function PredictImageUrlWithNoStoreRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PredictImageUrlWithNoStorePathParams)
     ], PredictImageUrlWithNoStoreRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PredictImageUrlWithNoStoreQueryParams)
     ], PredictImageUrlWithNoStoreRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PredictImageUrlWithNoStoreHeaders)
     ], PredictImageUrlWithNoStoreRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PredictImageUrlWithNoStoreRequests)
     ], PredictImageUrlWithNoStoreRequest.prototype, "request", void 0);
     return PredictImageUrlWithNoStoreRequest;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStoreRequest };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStoreRequest = PredictImageUrlWithNoStoreRequest;
 var PredictImageUrlWithNoStoreResponse = /** @class */ (function (_super) {
     __extends(PredictImageUrlWithNoStoreResponse, _super);
     function PredictImageUrlWithNoStoreResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PredictImageUrlWithNoStoreResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PredictImageUrlWithNoStoreResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ImagePredictionResultModel)
     ], PredictImageUrlWithNoStoreResponse.prototype, "imagePredictionResultModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PredictImageUrlWithNoStoreResponse.prototype, "statusCode", void 0);
     return PredictImageUrlWithNoStoreResponse;
-}(SpeakeasyBase));
-export { PredictImageUrlWithNoStoreResponse };
+}(utils_1.SpeakeasyBase));
+exports.PredictImageUrlWithNoStoreResponse = PredictImageUrlWithNoStoreResponse;

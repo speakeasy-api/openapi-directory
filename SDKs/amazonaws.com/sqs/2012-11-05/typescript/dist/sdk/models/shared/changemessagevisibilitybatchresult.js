@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchResultErrorEntry } from "./batchresulterrorentry";
-import { ChangeMessageVisibilityBatchResultEntry } from "./changemessagevisibilitybatchresultentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeMessageVisibilityBatchResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchresulterrorentrylist_1 = require("./batchresulterrorentrylist");
+var changemessagevisibilitybatchresultentrylist_1 = require("./changemessagevisibilitybatchresultentrylist");
 // ChangeMessageVisibilityBatchResult
 /**
  * For each message in the batch, the response contains a <code> <a>ChangeMessageVisibilityBatchResultEntry</a> </code> tag if the message succeeds or a <code> <a>BatchResultErrorEntry</a> </code> tag if the message fails.
@@ -35,13 +38,13 @@ var ChangeMessageVisibilityBatchResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: BatchResultErrorEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: batchresulterrorentrylist_1.BatchResultErrorEntryList }),
         __metadata("design:type", Array)
     ], ChangeMessageVisibilityBatchResult.prototype, "failed", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ChangeMessageVisibilityBatchResultEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: changemessagevisibilitybatchresultentrylist_1.ChangeMessageVisibilityBatchResultEntryList }),
         __metadata("design:type", Array)
     ], ChangeMessageVisibilityBatchResult.prototype, "successful", void 0);
     return ChangeMessageVisibilityBatchResult;
-}(SpeakeasyBase));
-export { ChangeMessageVisibilityBatchResult };
+}(utils_1.SpeakeasyBase));
+exports.ChangeMessageVisibilityBatchResult = ChangeMessageVisibilityBatchResult;

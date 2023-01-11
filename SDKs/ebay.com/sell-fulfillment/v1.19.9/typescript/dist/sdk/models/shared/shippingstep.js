@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExtendedContact } from "./extendedcontact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingStep = void 0;
+var utils_1 = require("../../../internal/utils");
+var extendedcontact_1 = require("./extendedcontact");
 // ShippingStep
 /**
  * This type contains shipping information for a fulfillment, including the shipping carrier, the shipping service option, the shipment destination, and the Global Shipping Program reference ID.
@@ -34,21 +37,21 @@ var ShippingStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipTo" }),
-        __metadata("design:type", ExtendedContact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipTo" }),
+        __metadata("design:type", extendedcontact_1.ExtendedContact)
     ], ShippingStep.prototype, "shipTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipToReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipToReferenceId" }),
         __metadata("design:type", String)
     ], ShippingStep.prototype, "shipToReferenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierCode" }),
         __metadata("design:type", String)
     ], ShippingStep.prototype, "shippingCarrierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServiceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServiceCode" }),
         __metadata("design:type", String)
     ], ShippingStep.prototype, "shippingServiceCode", void 0);
     return ShippingStep;
-}(SpeakeasyBase));
-export { ShippingStep };
+}(utils_1.SpeakeasyBase));
+exports.ShippingStep = ShippingStep;

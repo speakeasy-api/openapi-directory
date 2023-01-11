@@ -13,6 +13,6 @@ export declare class VeloAuthRequest extends SpeakeasyBase {
 export declare class VeloAuthResponse extends SpeakeasyBase {
     authResponse?: shared.AuthResponse;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

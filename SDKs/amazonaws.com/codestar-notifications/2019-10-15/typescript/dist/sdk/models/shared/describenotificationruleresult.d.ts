@@ -13,6 +13,6 @@ export declare class DescribeNotificationRuleResult extends SpeakeasyBase {
     name?: string;
     resource?: string;
     status?: NotificationRuleStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     targets?: TargetSummary[];
 }

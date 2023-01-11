@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplateSpecification } from "./launchtemplatespecification";
-import { MixedInstancesPolicy } from "./mixedinstancespolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DesiredConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchtemplatespecification_1 = require("./launchtemplatespecification");
+var mixedinstancespolicy_1 = require("./mixedinstancespolicy");
 // DesiredConfiguration
 /**
  * <p>Describes the desired configuration for an instance refresh. </p> <p>If you specify a desired configuration, you must specify either a <code>LaunchTemplate</code> or a <code>MixedInstancesPolicy</code>. </p>
@@ -35,13 +38,13 @@ var DesiredConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplateSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", launchtemplatespecification_1.LaunchTemplateSpecification)
     ], DesiredConfiguration.prototype, "launchTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", MixedInstancesPolicy)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", mixedinstancespolicy_1.MixedInstancesPolicy)
     ], DesiredConfiguration.prototype, "mixedInstancesPolicy", void 0);
     return DesiredConfiguration;
-}(SpeakeasyBase));
-export { DesiredConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DesiredConfiguration = DesiredConfiguration;

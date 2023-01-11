@@ -7,7 +7,7 @@ export declare class ValidationAuthority extends SpeakeasyBase {
     badTtl: number;
     description: string;
     goodTtl: number;
-    headers: Map<string, string>;
+    headers: Record<string, string>;
     host: string;
     id: string;
     method: string;

@@ -3,7 +3,7 @@ import * as shared from "../shared";
 export declare class PhcerRequestBodyCertificateParameters extends SpeakeasyBase {
     dob: string;
     fullName: string;
-    regnNo: string;
+    regnNO: string;
     uid: string;
 }
 export declare enum PhcerRequestBodyFormatEnum {
@@ -108,11 +108,11 @@ export declare class PhcerRequest extends SpeakeasyBase {
 export declare class PhcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    phcer400ApplicationJsonObject?: Phcer400ApplicationJson;
-    phcer401ApplicationJsonObject?: Phcer401ApplicationJson;
-    phcer404ApplicationJsonObject?: Phcer404ApplicationJson;
-    phcer500ApplicationJsonObject?: Phcer500ApplicationJson;
-    phcer502ApplicationJsonObject?: Phcer502ApplicationJson;
-    phcer503ApplicationJsonObject?: Phcer503ApplicationJson;
-    phcer504ApplicationJsonObject?: Phcer504ApplicationJson;
+    phcer400ApplicationJSONObject?: Phcer400ApplicationJson;
+    phcer401ApplicationJSONObject?: Phcer401ApplicationJson;
+    phcer404ApplicationJSONObject?: Phcer404ApplicationJson;
+    phcer500ApplicationJSONObject?: Phcer500ApplicationJson;
+    phcer502ApplicationJSONObject?: Phcer502ApplicationJson;
+    phcer503ApplicationJSONObject?: Phcer503ApplicationJson;
+    phcer504ApplicationJSONObject?: Phcer504ApplicationJson;
 }

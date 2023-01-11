@@ -47,7 +47,7 @@ export class GetJournalReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getJournalReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getJournalReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

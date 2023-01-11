@@ -1,7 +1,10 @@
-export var AttachmentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachmentStatusEnum = void 0;
+var AttachmentStatusEnum;
 (function (AttachmentStatusEnum) {
     AttachmentStatusEnum["Attaching"] = "ATTACHING";
     AttachmentStatusEnum["Attached"] = "ATTACHED";
     AttachmentStatusEnum["Detaching"] = "DETACHING";
     AttachmentStatusEnum["Detached"] = "DETACHED";
-})(AttachmentStatusEnum || (AttachmentStatusEnum = {}));
+})(AttachmentStatusEnum = exports.AttachmentStatusEnum || (exports.AttachmentStatusEnum = {}));

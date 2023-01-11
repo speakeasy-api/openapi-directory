@@ -11,16 +11,16 @@ export class PostSetupV1ServicesIdAllocationsBulkPathParams extends SpeakeasyBas
 
 export class PostSetupV1ServicesIdAllocationsBulkRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/*+json" })
-  serviceAllocationsInputModel?: Map<string, any>;
+  serviceAllocationsInputModel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  serviceAllocationsInputModel1?: Map<string, any>;
+  serviceAllocationsInputModel1?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" })
-  serviceAllocationsInputModel2?: Map<string, any>;
+  serviceAllocationsInputModel2?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  serviceAllocationsInputModel3?: Map<string, any>;
+  serviceAllocationsInputModel3?: Record<string, any>;
 }
 
 

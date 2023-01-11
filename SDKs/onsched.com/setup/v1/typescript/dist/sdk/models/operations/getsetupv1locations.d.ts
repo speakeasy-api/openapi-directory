@@ -11,6 +11,6 @@ export declare class GetSetupV1LocationsRequest extends SpeakeasyBase {
 }
 export declare class GetSetupV1LocationsResponse extends SpeakeasyBase {
     contentType: string;
-    locationListViewModel?: Map<string, any>;
+    locationListViewModel?: Record<string, any>;
     statusCode: number;
 }

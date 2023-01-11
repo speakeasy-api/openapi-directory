@@ -25,7 +25,7 @@ export declare class AmqpExternalRuleResponseTarget extends SpeakeasyBase {
     url: string;
 }
 export declare class AmqpExternalRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

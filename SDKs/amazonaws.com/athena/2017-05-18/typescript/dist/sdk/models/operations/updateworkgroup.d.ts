@@ -22,5 +22,5 @@ export declare class UpdateWorkGroupResponse extends SpeakeasyBase {
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateWorkGroupOutput?: Map<string, any>;
+    updateWorkGroupOutput?: Record<string, any>;
 }

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+import { ObjectT } from "./object";
 /**
  * A rewrite response.
 **/
@@ -7,7 +7,7 @@ export declare class RewriteResponse extends SpeakeasyBase {
     done?: boolean;
     kind?: string;
     objectSize?: string;
-    resource?: Object;
+    resource?: ObjectT;
     rewriteToken?: string;
     totalBytesRewritten?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3Impression = exports.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
 (function (GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum) {
     GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum["ImpressionTypeUnspecified"] = "IMPRESSION_TYPE_UNSPECIFIED";
     GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum["Presented"] = "PRESENTED";
     GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum["Interacted"] = "INTERACTED";
-})(GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum || (GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum = {}));
+})(GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum = exports.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum || (exports.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum = {}));
 // GoogleMapsPlayablelocationsV3Impression
 /**
  * Encapsulates impression event details.
@@ -39,17 +42,17 @@ var GoogleMapsPlayablelocationsV3Impression = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gameObjectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gameObjectType" }),
         __metadata("design:type", Number)
     ], GoogleMapsPlayablelocationsV3Impression.prototype, "gameObjectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionType" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3Impression.prototype, "impressionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3Impression.prototype, "locationName", void 0);
     return GoogleMapsPlayablelocationsV3Impression;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3Impression };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3Impression = GoogleMapsPlayablelocationsV3Impression;

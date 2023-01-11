@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContactPolicyResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetContactPolicyResult = /** @class */ (function (_super) {
     __extends(GetContactPolicyResult, _super);
     function GetContactPolicyResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactArn" }),
         __metadata("design:type", String)
     ], GetContactPolicyResult.prototype, "contactArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Policy" }),
         __metadata("design:type", String)
     ], GetContactPolicyResult.prototype, "policy", void 0);
     return GetContactPolicyResult;
-}(SpeakeasyBase));
-export { GetContactPolicyResult };
+}(utils_1.SpeakeasyBase));
+exports.GetContactPolicyResult = GetContactPolicyResult;

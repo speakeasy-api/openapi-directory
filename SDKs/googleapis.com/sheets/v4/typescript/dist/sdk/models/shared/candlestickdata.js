@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CandlestickSeries } from "./candlestickseries";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CandlestickData = void 0;
+var utils_1 = require("../../../internal/utils");
+var candlestickseries_1 = require("./candlestickseries");
 // CandlestickData
 /**
  * The Candlestick chart data, each containing the low, open, close, and high values for a series.
@@ -34,21 +37,21 @@ var CandlestickData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeSeries" }),
-        __metadata("design:type", CandlestickSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeSeries" }),
+        __metadata("design:type", candlestickseries_1.CandlestickSeries)
     ], CandlestickData.prototype, "closeSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highSeries" }),
-        __metadata("design:type", CandlestickSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highSeries" }),
+        __metadata("design:type", candlestickseries_1.CandlestickSeries)
     ], CandlestickData.prototype, "highSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lowSeries" }),
-        __metadata("design:type", CandlestickSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lowSeries" }),
+        __metadata("design:type", candlestickseries_1.CandlestickSeries)
     ], CandlestickData.prototype, "lowSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openSeries" }),
-        __metadata("design:type", CandlestickSeries)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openSeries" }),
+        __metadata("design:type", candlestickseries_1.CandlestickSeries)
     ], CandlestickData.prototype, "openSeries", void 0);
     return CandlestickData;
-}(SpeakeasyBase));
-export { CandlestickData };
+}(utils_1.SpeakeasyBase));
+exports.CandlestickData = CandlestickData;

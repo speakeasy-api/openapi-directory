@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudschedulerProjectsLocationsJobsResumeResponse = exports.CloudschedulerProjectsLocationsJobsResumeRequest = exports.CloudschedulerProjectsLocationsJobsResumeSecurity = exports.CloudschedulerProjectsLocationsJobsResumeQueryParams = exports.CloudschedulerProjectsLocationsJobsResumePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudschedulerProjectsLocationsJobsResumePathParams = /** @class */ (function (_super) {
     __extends(CloudschedulerProjectsLocationsJobsResumePathParams, _super);
     function CloudschedulerProjectsLocationsJobsResumePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumePathParams.prototype, "name", void 0);
     return CloudschedulerProjectsLocationsJobsResumePathParams;
-}(SpeakeasyBase));
-export { CloudschedulerProjectsLocationsJobsResumePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudschedulerProjectsLocationsJobsResumePathParams = CloudschedulerProjectsLocationsJobsResumePathParams;
 var CloudschedulerProjectsLocationsJobsResumeQueryParams = /** @class */ (function (_super) {
     __extends(CloudschedulerProjectsLocationsJobsResumeQueryParams, _super);
     function CloudschedulerProjectsLocationsJobsResumeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeQueryParams.prototype, "uploadProtocol", void 0);
     return CloudschedulerProjectsLocationsJobsResumeQueryParams;
-}(SpeakeasyBase));
-export { CloudschedulerProjectsLocationsJobsResumeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudschedulerProjectsLocationsJobsResumeQueryParams = CloudschedulerProjectsLocationsJobsResumeQueryParams;
 var CloudschedulerProjectsLocationsJobsResumeSecurity = /** @class */ (function (_super) {
     __extends(CloudschedulerProjectsLocationsJobsResumeSecurity, _super);
     function CloudschedulerProjectsLocationsJobsResumeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudschedulerProjectsLocationsJobsResumeSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudschedulerProjectsLocationsJobsResumeSecurity.prototype, "oauth2c", void 0);
     return CloudschedulerProjectsLocationsJobsResumeSecurity;
-}(SpeakeasyBase));
-export { CloudschedulerProjectsLocationsJobsResumeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudschedulerProjectsLocationsJobsResumeSecurity = CloudschedulerProjectsLocationsJobsResumeSecurity;
 var CloudschedulerProjectsLocationsJobsResumeRequest = /** @class */ (function (_super) {
     __extends(CloudschedulerProjectsLocationsJobsResumeRequest, _super);
     function CloudschedulerProjectsLocationsJobsResumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudschedulerProjectsLocationsJobsResumePathParams)
     ], CloudschedulerProjectsLocationsJobsResumeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudschedulerProjectsLocationsJobsResumeQueryParams)
     ], CloudschedulerProjectsLocationsJobsResumeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CloudschedulerProjectsLocationsJobsResumeRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudschedulerProjectsLocationsJobsResumeSecurity)
     ], CloudschedulerProjectsLocationsJobsResumeRequest.prototype, "security", void 0);
     return CloudschedulerProjectsLocationsJobsResumeRequest;
-}(SpeakeasyBase));
-export { CloudschedulerProjectsLocationsJobsResumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudschedulerProjectsLocationsJobsResumeRequest = CloudschedulerProjectsLocationsJobsResumeRequest;
 var CloudschedulerProjectsLocationsJobsResumeResponse = /** @class */ (function (_super) {
     __extends(CloudschedulerProjectsLocationsJobsResumeResponse, _super);
     function CloudschedulerProjectsLocationsJobsResumeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudschedulerProjectsLocationsJobsResumeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Job)
     ], CloudschedulerProjectsLocationsJobsResumeResponse.prototype, "job", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudschedulerProjectsLocationsJobsResumeResponse.prototype, "statusCode", void 0);
     return CloudschedulerProjectsLocationsJobsResumeResponse;
-}(SpeakeasyBase));
-export { CloudschedulerProjectsLocationsJobsResumeResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudschedulerProjectsLocationsJobsResumeResponse = CloudschedulerProjectsLocationsJobsResumeResponse;

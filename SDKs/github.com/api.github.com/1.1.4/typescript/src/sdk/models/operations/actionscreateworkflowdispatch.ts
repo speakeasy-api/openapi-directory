@@ -16,7 +16,7 @@ export class ActionsCreateWorkflowDispatchPathParams extends SpeakeasyBase {
 
 export class ActionsCreateWorkflowDispatchRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=inputs" })
-  inputs?: Map<string, string>;
+  inputs?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ref" })
   ref: string;

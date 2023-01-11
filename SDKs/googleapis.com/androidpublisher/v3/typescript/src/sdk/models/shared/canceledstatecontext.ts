@@ -9,13 +9,13 @@ import { UserInitiatedCancellation } from "./userinitiatedcancellation";
 **/
 export class CanceledStateContext extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=developerInitiatedCancellation" })
-  developerInitiatedCancellation?: Map<string, any>;
+  developerInitiatedCancellation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=replacementCancellation" })
-  replacementCancellation?: Map<string, any>;
+  replacementCancellation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=systemInitiatedCancellation" })
-  systemInitiatedCancellation?: Map<string, any>;
+  systemInitiatedCancellation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=userInitiatedCancellation" })
   userInitiatedCancellation?: UserInitiatedCancellation;

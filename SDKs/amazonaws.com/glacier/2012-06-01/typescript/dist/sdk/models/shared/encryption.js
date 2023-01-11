@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionTypeEnum } from "./encryptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Encryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptiontypeenum_1 = require("./encryptiontypeenum");
 // Encryption
 /**
  * Contains information about the encryption used to store the job results in Amazon S3.
@@ -34,17 +37,17 @@ var Encryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionType" }),
         __metadata("design:type", String)
     ], Encryption.prototype, "encryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KMSContext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KMSContext" }),
         __metadata("design:type", String)
     ], Encryption.prototype, "kmsContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KMSKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KMSKeyId" }),
         __metadata("design:type", String)
     ], Encryption.prototype, "kmsKeyId", void 0);
     return Encryption;
-}(SpeakeasyBase));
-export { Encryption };
+}(utils_1.SpeakeasyBase));
+exports.Encryption = Encryption;

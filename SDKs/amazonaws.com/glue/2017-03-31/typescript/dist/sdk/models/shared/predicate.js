@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Condition } from "./condition";
-import { LogicalEnum } from "./logicalenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Predicate = void 0;
+var utils_1 = require("../../../internal/utils");
+var condition_1 = require("./condition");
+var logicalenum_1 = require("./logicalenum");
 // Predicate
 /**
  * Defines the predicate of the trigger, which determines when it fires.
@@ -35,13 +38,13 @@ var Predicate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Conditions", elemType: Condition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Conditions", elemType: condition_1.Condition }),
         __metadata("design:type", Array)
     ], Predicate.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Logical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Logical" }),
         __metadata("design:type", String)
     ], Predicate.prototype, "logical", void 0);
     return Predicate;
-}(SpeakeasyBase));
-export { Predicate };
+}(utils_1.SpeakeasyBase));
+exports.Predicate = Predicate;

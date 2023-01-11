@@ -16,7 +16,7 @@ export enum BatchUpdateContactsRequestSourcesEnum {
 **/
 export class BatchUpdateContactsRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=contacts", elemType: PersonInput })
-  contacts?: Map<string, PersonInput>;
+  contacts?: Record<string, PersonInput>;
 
   @SpeakeasyMetadata({ data: "json, name=readMask" })
   readMask?: string;

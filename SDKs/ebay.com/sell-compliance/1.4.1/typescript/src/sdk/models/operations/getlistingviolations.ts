@@ -23,7 +23,7 @@ export class GetListingViolationsQueryParams extends SpeakeasyBase {
 
 export class GetListingViolationsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-EBAY-C-MARKETPLACE-ID" })
-  xEbayCMarketplaceId: string;
+  xEBAYCMARKETPLACEID: string;
 }
 
 

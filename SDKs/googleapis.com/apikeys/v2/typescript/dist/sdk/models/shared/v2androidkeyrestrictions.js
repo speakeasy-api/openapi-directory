@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V2AndroidApplication } from "./v2androidapplication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V2AndroidKeyRestrictions = void 0;
+var utils_1 = require("../../../internal/utils");
+var v2androidapplication_1 = require("./v2androidapplication");
 // V2AndroidKeyRestrictions
 /**
  * The Android apps that are allowed to use the key.
@@ -34,9 +37,9 @@ var V2AndroidKeyRestrictions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedApplications", elemType: V2AndroidApplication }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedApplications", elemType: v2androidapplication_1.V2AndroidApplication }),
         __metadata("design:type", Array)
     ], V2AndroidKeyRestrictions.prototype, "allowedApplications", void 0);
     return V2AndroidKeyRestrictions;
-}(SpeakeasyBase));
-export { V2AndroidKeyRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.V2AndroidKeyRestrictions = V2AndroidKeyRestrictions;

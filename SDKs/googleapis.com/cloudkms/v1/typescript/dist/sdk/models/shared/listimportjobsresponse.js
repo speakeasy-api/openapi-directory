@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportJob } from "./importjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListImportJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var importjob_1 = require("./importjob");
 // ListImportJobsResponse
 /**
  * Response message for KeyManagementService.ListImportJobs.
@@ -34,17 +37,17 @@ var ListImportJobsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importJobs", elemType: ImportJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importJobs", elemType: importjob_1.ImportJob }),
         __metadata("design:type", Array)
     ], ListImportJobsResponse.prototype, "importJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListImportJobsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], ListImportJobsResponse.prototype, "totalSize", void 0);
     return ListImportJobsResponse;
-}(SpeakeasyBase));
-export { ListImportJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListImportJobsResponse = ListImportJobsResponse;

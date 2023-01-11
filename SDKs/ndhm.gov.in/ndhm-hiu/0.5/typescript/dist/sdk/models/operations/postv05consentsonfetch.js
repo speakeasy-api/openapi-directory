@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,18 +14,43 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var PostV05ConsentsOnFetchServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostV05ConsentsOnFetchResponse = exports.PostV05ConsentsOnFetchRequest = exports.PostV05ConsentsOnFetchRequests = exports.PostV05ConsentsOnFetchHeaders = exports.PostV05ConsentsOnFetchServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.PostV05ConsentsOnFetchServerList = [
     "https://dev.ndhm.gov.in/hiu",
 ];
 var PostV05ConsentsOnFetchHeaders = /** @class */ (function (_super) {
@@ -33,73 +59,73 @@ var PostV05ConsentsOnFetchHeaders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], PostV05ConsentsOnFetchHeaders.prototype, "authorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-HIU-ID" }),
         __metadata("design:type", String)
-    ], PostV05ConsentsOnFetchHeaders.prototype, "xHiuId", void 0);
+    ], PostV05ConsentsOnFetchHeaders.prototype, "xHIUID", void 0);
     return PostV05ConsentsOnFetchHeaders;
-}(SpeakeasyBase));
-export { PostV05ConsentsOnFetchHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostV05ConsentsOnFetchHeaders = PostV05ConsentsOnFetchHeaders;
 var PostV05ConsentsOnFetchRequests = /** @class */ (function (_super) {
     __extends(PostV05ConsentsOnFetchRequests, _super);
     function PostV05ConsentsOnFetchRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/xml" }),
         __metadata("design:type", Uint8Array)
-    ], PostV05ConsentsOnFetchRequests.prototype, "applicationXml", void 0);
+    ], PostV05ConsentsOnFetchRequests.prototype, "applicationXML", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ConsentArtefactResponse)
     ], PostV05ConsentsOnFetchRequests.prototype, "consentArtefactResponse", void 0);
     return PostV05ConsentsOnFetchRequests;
-}(SpeakeasyBase));
-export { PostV05ConsentsOnFetchRequests };
+}(utils_1.SpeakeasyBase));
+exports.PostV05ConsentsOnFetchRequests = PostV05ConsentsOnFetchRequests;
 var PostV05ConsentsOnFetchRequest = /** @class */ (function (_super) {
     __extends(PostV05ConsentsOnFetchRequest, _super);
     function PostV05ConsentsOnFetchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], PostV05ConsentsOnFetchRequest.prototype, "serverUrl", void 0);
+    ], PostV05ConsentsOnFetchRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostV05ConsentsOnFetchHeaders)
     ], PostV05ConsentsOnFetchRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostV05ConsentsOnFetchRequests)
     ], PostV05ConsentsOnFetchRequest.prototype, "request", void 0);
     return PostV05ConsentsOnFetchRequest;
-}(SpeakeasyBase));
-export { PostV05ConsentsOnFetchRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostV05ConsentsOnFetchRequest = PostV05ConsentsOnFetchRequest;
 var PostV05ConsentsOnFetchResponse = /** @class */ (function (_super) {
     __extends(PostV05ConsentsOnFetchResponse, _super);
     function PostV05ConsentsOnFetchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostV05ConsentsOnFetchResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostV05ConsentsOnFetchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], PostV05ConsentsOnFetchResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostV05ConsentsOnFetchResponse.prototype, "statusCode", void 0);
     return PostV05ConsentsOnFetchResponse;
-}(SpeakeasyBase));
-export { PostV05ConsentsOnFetchResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostV05ConsentsOnFetchResponse = PostV05ConsentsOnFetchResponse;

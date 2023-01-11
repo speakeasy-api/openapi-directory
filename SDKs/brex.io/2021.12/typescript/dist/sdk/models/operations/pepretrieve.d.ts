@@ -20,7 +20,7 @@ export declare class PepRetrieveRequest extends SpeakeasyBase {
 }
 export declare class PepRetrieveResponse extends SpeakeasyBase {
     contentType: string;
-    pepRetrieve200ApplicationJsonAny?: any;
-    pepRetrieveDefaultApplicationJsonAny?: any;
+    pepRetrieve200ApplicationJSONAny?: any;
+    pepRetrieveDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

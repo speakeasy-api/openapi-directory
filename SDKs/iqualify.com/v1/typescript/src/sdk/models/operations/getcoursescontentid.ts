@@ -23,7 +23,7 @@ export class GetCoursesContentIdResponse extends SpeakeasyBase {
   courseMetaResponse?: shared.CourseMetaResponse;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

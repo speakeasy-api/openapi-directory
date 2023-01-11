@@ -1,14 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
 
-
-export enum GetSearchVersionNumberAdditionalDataExtExtEnum {
-    Json = "json"
-}
 
 
 export class GetSearchVersionNumberAdditionalDataExtPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ext" })
-  ext: GetSearchVersionNumberAdditionalDataExtExtEnum;
+  ext: shared.VersionNumberEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" })
   versionNumber: number;

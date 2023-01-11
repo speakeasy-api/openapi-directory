@@ -13,12 +13,12 @@ export declare class CreateApiHeaders extends SpeakeasyBase {
  * Represents a CORS configuration. Supported only for HTTP APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html">Configuring CORS</a> for more information.
 **/
 export declare class CreateApiRequestBodyCorsConfiguration extends SpeakeasyBase {
-    allowCredentials?: boolean;
-    allowHeaders?: string[];
-    allowMethods?: string[];
-    allowOrigins?: string[];
-    exposeHeaders?: string[];
-    maxAge?: number;
+    allowCredentials?: Record<string, any>;
+    allowHeaders?: Record<string, any>;
+    allowMethods?: Record<string, any>;
+    allowOrigins?: Record<string, any>;
+    exposeHeaders?: Record<string, any>;
+    maxAge?: Record<string, any>;
 }
 export declare enum CreateApiRequestBodyProtocolTypeEnum {
     Websocket = "WEBSOCKET",
@@ -35,7 +35,7 @@ export declare class CreateApiRequestBody extends SpeakeasyBase {
     protocolType: CreateApiRequestBodyProtocolTypeEnum;
     routeKey?: string;
     routeSelectionExpression?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     target?: string;
     version?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,192 +23,194 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTxResponse = exports.GetTxResponseVout = exports.GetTxResponseVoutScriptPubKey = exports.GetTxResponseVin = exports.GetTxResponseVinScriptSig = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTxResponseVinScriptSig = /** @class */ (function (_super) {
     __extends(GetTxResponseVinScriptSig, _super);
     function GetTxResponseVinScriptSig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asm" }),
         __metadata("design:type", String)
     ], GetTxResponseVinScriptSig.prototype, "asm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hex" }),
         __metadata("design:type", String)
     ], GetTxResponseVinScriptSig.prototype, "hex", void 0);
     return GetTxResponseVinScriptSig;
-}(SpeakeasyBase));
-export { GetTxResponseVinScriptSig };
+}(utils_1.SpeakeasyBase));
+exports.GetTxResponseVinScriptSig = GetTxResponseVinScriptSig;
 var GetTxResponseVin = /** @class */ (function (_super) {
     __extends(GetTxResponseVin, _super);
     function GetTxResponseVin() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=n" }),
         __metadata("design:type", Number)
     ], GetTxResponseVin.prototype, "n", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptSig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptSig" }),
         __metadata("design:type", GetTxResponseVinScriptSig)
     ], GetTxResponseVin.prototype, "scriptSig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sequence" }),
         __metadata("design:type", Number)
     ], GetTxResponseVin.prototype, "sequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txid" }),
         __metadata("design:type", String)
     ], GetTxResponseVin.prototype, "txid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], GetTxResponseVin.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueSat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueSat" }),
         __metadata("design:type", Number)
     ], GetTxResponseVin.prototype, "valueSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vout" }),
         __metadata("design:type", Number)
     ], GetTxResponseVin.prototype, "vout", void 0);
     return GetTxResponseVin;
-}(SpeakeasyBase));
-export { GetTxResponseVin };
+}(utils_1.SpeakeasyBase));
+exports.GetTxResponseVin = GetTxResponseVin;
 var GetTxResponseVoutScriptPubKey = /** @class */ (function (_super) {
     __extends(GetTxResponseVoutScriptPubKey, _super);
     function GetTxResponseVoutScriptPubKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addresses" }),
         __metadata("design:type", Array)
     ], GetTxResponseVoutScriptPubKey.prototype, "addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asm" }),
         __metadata("design:type", String)
     ], GetTxResponseVoutScriptPubKey.prototype, "asm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hex" }),
         __metadata("design:type", String)
     ], GetTxResponseVoutScriptPubKey.prototype, "hex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reqSigs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reqSigs" }),
         __metadata("design:type", Number)
     ], GetTxResponseVoutScriptPubKey.prototype, "reqSigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetTxResponseVoutScriptPubKey.prototype, "type", void 0);
     return GetTxResponseVoutScriptPubKey;
-}(SpeakeasyBase));
-export { GetTxResponseVoutScriptPubKey };
+}(utils_1.SpeakeasyBase));
+exports.GetTxResponseVoutScriptPubKey = GetTxResponseVoutScriptPubKey;
 var GetTxResponseVout = /** @class */ (function (_super) {
     __extends(GetTxResponseVout, _super);
     function GetTxResponseVout() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockheight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockheight" }),
         __metadata("design:type", Number)
     ], GetTxResponseVout.prototype, "blockheight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=n" }),
         __metadata("design:type", Number)
     ], GetTxResponseVout.prototype, "n", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptPubKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptPubKey" }),
         __metadata("design:type", GetTxResponseVoutScriptPubKey)
     ], GetTxResponseVout.prototype, "scriptPubKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used" }),
         __metadata("design:type", Boolean)
     ], GetTxResponseVout.prototype, "used", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usedBlockheight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usedBlockheight" }),
         __metadata("design:type", Number)
     ], GetTxResponseVout.prototype, "usedBlockheight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usedTxid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usedTxid" }),
         __metadata("design:type", String)
     ], GetTxResponseVout.prototype, "usedTxid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], GetTxResponseVout.prototype, "value", void 0);
     return GetTxResponseVout;
-}(SpeakeasyBase));
-export { GetTxResponseVout };
+}(utils_1.SpeakeasyBase));
+exports.GetTxResponseVout = GetTxResponseVout;
 var GetTxResponse = /** @class */ (function (_super) {
     __extends(GetTxResponse, _super);
     function GetTxResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockhash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockhash" }),
         __metadata("design:type", String)
     ], GetTxResponse.prototype, "blockhash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockheight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockheight" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "blockheight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocktime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocktime" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "blocktime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmations" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "confirmations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fee" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "fee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fees" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locktime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locktime" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "locktime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalsent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalsent" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "totalsent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txid" }),
         __metadata("design:type", String)
     ], GetTxResponse.prototype, "txid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueIn" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "valueIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueOut" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "valueOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], GetTxResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vin", elemType: GetTxResponseVin }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vin", elemType: GetTxResponseVin }),
         __metadata("design:type", Array)
     ], GetTxResponse.prototype, "vin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vout", elemType: GetTxResponseVout }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vout", elemType: GetTxResponseVout }),
         __metadata("design:type", Array)
     ], GetTxResponse.prototype, "vout", void 0);
     return GetTxResponse;
-}(SpeakeasyBase));
-export { GetTxResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTxResponse = GetTxResponse;

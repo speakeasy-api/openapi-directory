@@ -4,7 +4,7 @@ export declare enum AppResponseStatusEnum {
     Disabled = "disabled"
 }
 export declare class AppResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     accountId?: string;
     apnsUseSandboxEndpoint?: boolean;
     id?: string;

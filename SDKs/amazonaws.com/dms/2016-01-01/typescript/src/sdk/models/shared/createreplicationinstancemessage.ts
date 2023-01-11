@@ -27,7 +27,7 @@ export class CreateReplicationInstanceMessage extends SpeakeasyBase {
   kmsKeyId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PreferredMaintenanceWindow" })
   preferredMaintenanceWindow?: string;

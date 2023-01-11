@@ -20,5 +20,5 @@ export declare class UpdateNetworkMerakiAuthUserRequest extends SpeakeasyBase {
 export declare class UpdateNetworkMerakiAuthUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkMerakiAuthUser200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkMerakiAuthUser200ApplicationJSONObject?: Record<string, any>;
 }

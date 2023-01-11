@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeMinimum = void 0;
+var utils_1 = require("../../../internal/utils");
 var EpisodeMinimum = /** @class */ (function (_super) {
     __extends(EpisodeMinimum, _super);
     function EpisodeMinimum() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "audio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_length_sec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_length_sec" }),
         __metadata("design:type", Number)
     ], EpisodeMinimum.prototype, "audioLengthSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit_content" }),
         __metadata("design:type", Boolean)
     ], EpisodeMinimum.prototype, "explicitContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_edit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_edit_url" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "listennotesEditUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maybe_audio_invalid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maybe_audio_invalid" }),
         __metadata("design:type", Boolean)
     ], EpisodeMinimum.prototype, "maybeAudioInvalid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pub_date_ms" }),
         __metadata("design:type", Number)
     ], EpisodeMinimum.prototype, "pubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], EpisodeMinimum.prototype, "title", void 0);
     return EpisodeMinimum;
-}(SpeakeasyBase));
-export { EpisodeMinimum };
+}(utils_1.SpeakeasyBase));
+exports.EpisodeMinimum = EpisodeMinimum;

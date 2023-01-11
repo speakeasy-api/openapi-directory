@@ -6,7 +6,7 @@ import { Tag } from "./tag";
 export declare class StartTaskRequest extends SpeakeasyBase {
     cluster?: string;
     containerInstances: string[];
-    enableEcsManagedTags?: boolean;
+    enableECSManagedTags?: boolean;
     enableExecuteCommand?: boolean;
     group?: string;
     networkConfiguration?: NetworkConfiguration;

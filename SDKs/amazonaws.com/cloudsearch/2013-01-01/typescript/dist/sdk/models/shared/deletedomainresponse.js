@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainStatus } from "./domainstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDomainResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainstatus_1 = require("./domainstatus");
 // DeleteDomainResponse
 /**
  * The result of a <code>DeleteDomain</code> request. Contains the status of a newly deleted domain, or no status if the domain has already been completely deleted.
@@ -34,9 +37,9 @@ var DeleteDomainResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DomainStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", domainstatus_1.DomainStatus)
     ], DeleteDomainResponse.prototype, "domainStatus", void 0);
     return DeleteDomainResponse;
-}(SpeakeasyBase));
-export { DeleteDomainResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDomainResponse = DeleteDomainResponse;

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetPayslipPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=PayslipID" })
-  payslipId: string;
+  payslipID: string;
 }
 
 

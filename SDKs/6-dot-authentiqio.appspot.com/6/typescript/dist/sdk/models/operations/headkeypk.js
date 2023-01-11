@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeadKeyPkResponse = exports.HeadKeyPkRequest = exports.HeadKeyPkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var HeadKeyPkPathParams = /** @class */ (function (_super) {
     __extends(HeadKeyPkPathParams, _super);
     function HeadKeyPkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=PK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=PK" }),
         __metadata("design:type", String)
     ], HeadKeyPkPathParams.prototype, "pk", void 0);
     return HeadKeyPkPathParams;
-}(SpeakeasyBase));
-export { HeadKeyPkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.HeadKeyPkPathParams = HeadKeyPkPathParams;
 var HeadKeyPkRequest = /** @class */ (function (_super) {
     __extends(HeadKeyPkRequest, _super);
     function HeadKeyPkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HeadKeyPkPathParams)
     ], HeadKeyPkRequest.prototype, "pathParams", void 0);
     return HeadKeyPkRequest;
-}(SpeakeasyBase));
-export { HeadKeyPkRequest };
+}(utils_1.SpeakeasyBase));
+exports.HeadKeyPkRequest = HeadKeyPkRequest;
 var HeadKeyPkResponse = /** @class */ (function (_super) {
     __extends(HeadKeyPkResponse, _super);
     function HeadKeyPkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], HeadKeyPkResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HeadKeyPkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HeadKeyPkResponse.prototype, "statusCode", void 0);
     return HeadKeyPkResponse;
-}(SpeakeasyBase));
-export { HeadKeyPkResponse };
+}(utils_1.SpeakeasyBase));
+exports.HeadKeyPkResponse = HeadKeyPkResponse;

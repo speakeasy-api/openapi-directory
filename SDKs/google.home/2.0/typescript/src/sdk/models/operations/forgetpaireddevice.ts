@@ -11,10 +11,10 @@ export class ForgetpaireddeviceRequest extends SpeakeasyBase {
 
 export class ForgetpaireddeviceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  forgetpaireddevice200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

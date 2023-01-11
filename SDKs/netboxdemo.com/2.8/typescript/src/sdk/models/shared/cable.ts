@@ -89,7 +89,7 @@ export class Cable extends SpeakeasyBase {
   status?: CableStatus;
 
   @SpeakeasyMetadata({ data: "json, name=termination_a" })
-  terminationA?: Map<string, string>;
+  terminationA?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=termination_a_id" })
   terminationAId: number;
@@ -98,7 +98,7 @@ export class Cable extends SpeakeasyBase {
   terminationAType: string;
 
   @SpeakeasyMetadata({ data: "json, name=termination_b" })
-  terminationB?: Map<string, string>;
+  terminationB?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=termination_b_id" })
   terminationBId: number;

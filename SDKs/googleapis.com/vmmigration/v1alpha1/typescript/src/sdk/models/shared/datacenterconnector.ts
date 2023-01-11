@@ -13,31 +13,6 @@ export enum DatacenterConnectorStateEnum {
 }
 
 
-// DatacenterConnectorInput
-/** 
- * DatacenterConnector message describes a connector between the Source and GCP, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and support vm migration data transfer.
-**/
-export class DatacenterConnectorInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=availableVersions" })
-  availableVersions?: AvailableUpdates;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Status;
-
-  @SpeakeasyMetadata({ data: "json, name=registrationId" })
-  registrationId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
-  serviceAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=upgradeStatus" })
-  upgradeStatus?: UpgradeStatus;
-
-  @SpeakeasyMetadata({ data: "json, name=version" })
-  version?: string;
-}
-
-
 // DatacenterConnector
 /** 
  * DatacenterConnector message describes a connector between the Source and GCP, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and support vm migration data transfer.
@@ -78,6 +53,31 @@ export class DatacenterConnector extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=upgradeStatus" })
+  upgradeStatus?: UpgradeStatus;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: string;
+}
+
+
+// DatacenterConnectorInput
+/** 
+ * DatacenterConnector message describes a connector between the Source and GCP, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and support vm migration data transfer.
+**/
+export class DatacenterConnectorInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=availableVersions" })
+  availableVersions?: AvailableUpdates;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: Status;
+
+  @SpeakeasyMetadata({ data: "json, name=registrationId" })
+  registrationId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
+  serviceAccount?: string;
 
   @SpeakeasyMetadata({ data: "json, name=upgradeStatus" })
   upgradeStatus?: UpgradeStatus;

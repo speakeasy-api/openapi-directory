@@ -27,5 +27,5 @@ export declare class UpdateNetworkApplianceVpnSiteToSiteVpnRequest extends Speak
 export declare class UpdateNetworkApplianceVpnSiteToSiteVpnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceVpnSiteToSiteVpn200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONObject?: Record<string, any>;
 }

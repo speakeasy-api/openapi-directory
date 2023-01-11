@@ -11,39 +11,6 @@ export declare class CompanyCompanyRowType extends SpeakeasyBase {
     id?: string;
     name?: string;
 }
-export declare class CompanyInput extends SpeakeasyBase {
-    abnBranch?: string;
-    abnOrTfn?: string;
-    acn?: string;
-    addresses?: Address[];
-    annualRevenue?: string;
-    bankAccounts?: BankAccount[];
-    birthday?: Date;
-    currency?: CurrencyEnum;
-    customFields?: CustomField[];
-    description?: string;
-    emails?: Email[];
-    fax?: string;
-    firstName?: string;
-    image?: string;
-    industry?: string;
-    lastName?: string;
-    name: string;
-    numberOfEmployees?: string;
-    ownerId?: string;
-    ownership?: string;
-    payeeNumber?: string;
-    phoneNumbers?: PhoneNumber[];
-    readOnly?: boolean;
-    rowType?: CompanyCompanyRowType;
-    salesTaxNumber?: string;
-    salutation?: string;
-    socialLinks?: SocialLink[];
-    status?: string;
-    tags?: string[];
-    vatNumber?: string;
-    websites?: Website[];
-}
 export declare class Company extends SpeakeasyBase {
     abnBranch?: string;
     abnOrTfn?: string;
@@ -83,6 +50,39 @@ export declare class Company extends SpeakeasyBase {
     tags?: string[];
     updatedAt?: Date;
     updatedBy?: string;
+    vatNumber?: string;
+    websites?: Website[];
+}
+export declare class CompanyInput extends SpeakeasyBase {
+    abnBranch?: string;
+    abnOrTfn?: string;
+    acn?: string;
+    addresses?: Address[];
+    annualRevenue?: string;
+    bankAccounts?: BankAccount[];
+    birthday?: Date;
+    currency?: CurrencyEnum;
+    customFields?: CustomField[];
+    description?: string;
+    emails?: Email[];
+    fax?: string;
+    firstName?: string;
+    image?: string;
+    industry?: string;
+    lastName?: string;
+    name: string;
+    numberOfEmployees?: string;
+    ownerId?: string;
+    ownership?: string;
+    payeeNumber?: string;
+    phoneNumbers?: PhoneNumber[];
+    readOnly?: boolean;
+    rowType?: CompanyCompanyRowType;
+    salesTaxNumber?: string;
+    salutation?: string;
+    socialLinks?: SocialLink[];
+    status?: string;
+    tags?: string[];
     vatNumber?: string;
     websites?: Website[];
 }

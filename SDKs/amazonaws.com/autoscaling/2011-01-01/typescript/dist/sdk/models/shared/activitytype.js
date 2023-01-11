@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Activity } from "./activity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityType = void 0;
+var utils_1 = require("../../../internal/utils");
+var activity_1 = require("./activity");
 var ActivityType = /** @class */ (function (_super) {
     __extends(ActivityType, _super);
     function ActivityType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Activity)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", activity_1.Activity)
     ], ActivityType.prototype, "activity", void 0);
     return ActivityType;
-}(SpeakeasyBase));
-export { ActivityType };
+}(utils_1.SpeakeasyBase));
+exports.ActivityType = ActivityType;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInsightsPath } from "./networkinsightspath";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkInsightsPathResult = exports.CreateNetworkInsightsPathResultNetworkInsightsPath = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateNetworkInsightsPathResultNetworkInsightsPath
+/**
+ * Information about the path.
+**/
+var CreateNetworkInsightsPathResultNetworkInsightsPath = /** @class */ (function (_super) {
+    __extends(CreateNetworkInsightsPathResultNetworkInsightsPath, _super);
+    function CreateNetworkInsightsPathResultNetworkInsightsPath() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "createdDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "destination", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "destinationIp", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "destinationPort", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "networkInsightsPathArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "networkInsightsPathId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "protocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "source", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "sourceIp", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInsightsPathResultNetworkInsightsPath.prototype, "tags", void 0);
+    return CreateNetworkInsightsPathResultNetworkInsightsPath;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkInsightsPathResultNetworkInsightsPath = CreateNetworkInsightsPathResultNetworkInsightsPath;
 var CreateNetworkInsightsPathResult = /** @class */ (function (_super) {
     __extends(CreateNetworkInsightsPathResult, _super);
     function CreateNetworkInsightsPathResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", NetworkInsightsPath)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateNetworkInsightsPathResultNetworkInsightsPath)
     ], CreateNetworkInsightsPathResult.prototype, "networkInsightsPath", void 0);
     return CreateNetworkInsightsPathResult;
-}(SpeakeasyBase));
-export { CreateNetworkInsightsPathResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkInsightsPathResult = CreateNetworkInsightsPathResult;

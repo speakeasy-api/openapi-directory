@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstallationMedia } from "./installationmedia";
+import { InstallationMediaList } from "./installationmedialist";
 
 
 
 export class InstallationMediaMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: InstallationMedia })
-  installationMedia?: InstallationMedia[];
+  @SpeakeasyMetadata({ elemType: InstallationMediaList })
+  installationMedia?: InstallationMediaList[];
 
   @SpeakeasyMetadata()
   marker?: string;

@@ -10,7 +10,7 @@ import { Volume } from "./volume";
 export declare class TaskSpec extends SpeakeasyBase {
     computeResource?: ComputeResource;
     environment?: Environment;
-    environments?: Map<string, string>;
+    environments?: Record<string, string>;
     lifecyclePolicies?: LifecyclePolicy[];
     maxRetryCount?: number;
     maxRunDuration?: string;

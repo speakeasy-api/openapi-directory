@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KinesisFirehoseInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // KinesisFirehoseInput
 /**
  *  Identifies an Amazon Kinesis Firehose delivery stream as the streaming source. You provide the delivery stream's Amazon Resource Name (ARN) and an IAM role ARN that enables Amazon Kinesis Analytics to access the stream on your behalf.
@@ -33,13 +36,13 @@ var KinesisFirehoseInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceARN" }),
         __metadata("design:type", String)
-    ], KinesisFirehoseInput.prototype, "resourceArn", void 0);
+    ], KinesisFirehoseInput.prototype, "resourceARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], KinesisFirehoseInput.prototype, "roleArn", void 0);
+    ], KinesisFirehoseInput.prototype, "roleARN", void 0);
     return KinesisFirehoseInput;
-}(SpeakeasyBase));
-export { KinesisFirehoseInput };
+}(utils_1.SpeakeasyBase));
+exports.KinesisFirehoseInput = KinesisFirehoseInput;

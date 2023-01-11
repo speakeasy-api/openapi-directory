@@ -12,7 +12,7 @@ export class TaskObject extends SpeakeasyBase {
   attemptId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=objects", elemType: PipelineObject })
-  objects?: Map<string, PipelineObject>;
+  objects?: Record<string, PipelineObject>;
 
   @SpeakeasyMetadata({ data: "json, name=pipelineId" })
   pipelineId?: string;

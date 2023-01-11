@@ -489,5 +489,5 @@ export class UpdateNetworkWirelessSsidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsid200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsid200ApplicationJSONObject?: Record<string, any>;
 }

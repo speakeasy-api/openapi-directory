@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcurrencyrateRequest, GetcurrencyrateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcurrencyrateRequest = {
   queryParams: {
-    license: "odio",
-    symbol: "ut",
+    license: "sit",
+    symbol: "voluptas",
   },
 };
 
-sdk.sdk.getcurrencyrate(req).then((res: GetcurrencyrateResponse | AxiosError) => {
+sdk.currencyRates.getcurrencyrate(req).then((res: GetcurrencyrateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcurrencyrate(req).then((res: GetcurrencyrateResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currency Rates
 
 * `getcurrencyrate` - Gets a foreign currency rate for one US Dollar
 

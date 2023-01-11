@@ -24,7 +24,7 @@ export declare class ListAssignmentsForHitRequest extends SpeakeasyBase {
 }
 export declare class ListAssignmentsForHitResponse extends SpeakeasyBase {
     contentType: string;
-    listAssignmentsForHitResponse?: shared.ListAssignmentsForHitResponse;
+    listAssignmentsForHITResponse?: shared.ListAssignmentsForHitResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

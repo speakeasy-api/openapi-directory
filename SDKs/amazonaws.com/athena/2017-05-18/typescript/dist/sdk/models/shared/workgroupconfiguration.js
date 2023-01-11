@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EngineVersion } from "./engineversion";
-import { ResultConfiguration } from "./resultconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkGroupConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var engineversion_1 = require("./engineversion");
+var resultconfiguration_1 = require("./resultconfiguration");
 // WorkGroupConfiguration
 /**
  * The configuration of the workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup and whether workgroup settings override query settings, and the data usage limits for the amount of data scanned per query or per workgroup. The workgroup settings override is specified in <code>EnforceWorkGroupConfiguration</code> (true/false) in the <code>WorkGroupConfiguration</code>. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
@@ -35,29 +38,29 @@ var WorkGroupConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BytesScannedCutoffPerQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BytesScannedCutoffPerQuery" }),
         __metadata("design:type", Number)
     ], WorkGroupConfiguration.prototype, "bytesScannedCutoffPerQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnforceWorkGroupConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnforceWorkGroupConfiguration" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfiguration.prototype, "enforceWorkGroupConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
-        __metadata("design:type", EngineVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
+        __metadata("design:type", engineversion_1.EngineVersion)
     ], WorkGroupConfiguration.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublishCloudWatchMetricsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublishCloudWatchMetricsEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfiguration.prototype, "publishCloudWatchMetricsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterPaysEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterPaysEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfiguration.prototype, "requesterPaysEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultConfiguration" }),
-        __metadata("design:type", ResultConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultConfiguration" }),
+        __metadata("design:type", resultconfiguration_1.ResultConfiguration)
     ], WorkGroupConfiguration.prototype, "resultConfiguration", void 0);
     return WorkGroupConfiguration;
-}(SpeakeasyBase));
-export { WorkGroupConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.WorkGroupConfiguration = WorkGroupConfiguration;

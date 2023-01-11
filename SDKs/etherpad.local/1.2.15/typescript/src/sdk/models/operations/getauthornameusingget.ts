@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetAuthorNameUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class GetAuthorNameUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetAuthorNameUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class GetAuthorNameUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class GetAuthorNameUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingGet200ApplicationJsonObject?: GetAuthorNameUsingGet200ApplicationJson;
+  getAuthorNameUsingGET200ApplicationJSONObject?: GetAuthorNameUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingGet400ApplicationJsonObject?: GetAuthorNameUsingGet400ApplicationJson;
+  getAuthorNameUsingGET400ApplicationJSONObject?: GetAuthorNameUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingGet401ApplicationJsonObject?: GetAuthorNameUsingGet401ApplicationJson;
+  getAuthorNameUsingGET401ApplicationJSONObject?: GetAuthorNameUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAuthorNameUsingGet500ApplicationJsonObject?: GetAuthorNameUsingGet500ApplicationJson;
+  getAuthorNameUsingGET500ApplicationJSONObject?: GetAuthorNameUsingGet500ApplicationJson;
 }

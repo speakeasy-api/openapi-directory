@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceResolverInput } from "./serviceresolver";
-import { ServiceResolver } from "./serviceresolver";
-// EkmConnectionInput
-/**
- * An EkmConnection represents an individual EKM connection. It can be used for creating CryptoKeys and CryptoKeyVersions with a ProtectionLevel of EXTERNAL_VPC, as well as performing cryptographic operations using keys created within the EkmConnection.
-**/
-var EkmConnectionInput = /** @class */ (function (_super) {
-    __extends(EkmConnectionInput, _super);
-    function EkmConnectionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], EkmConnectionInput.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceResolvers", elemType: ServiceResolverInput }),
-        __metadata("design:type", Array)
-    ], EkmConnectionInput.prototype, "serviceResolvers", void 0);
-    return EkmConnectionInput;
-}(SpeakeasyBase));
-export { EkmConnectionInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EkmConnectionInput = exports.EkmConnection = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceresolver_1 = require("./serviceresolver");
+var serviceresolver_2 = require("./serviceresolver");
 // EkmConnection
 /**
  * An EkmConnection represents an individual EKM connection. It can be used for creating CryptoKeys and CryptoKeyVersions with a ProtectionLevel of EXTERNAL_VPC, as well as performing cryptographic operations using keys created within the EkmConnection.
@@ -55,21 +38,41 @@ var EkmConnection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], EkmConnection.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], EkmConnection.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EkmConnection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceResolvers", elemType: ServiceResolver }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceResolvers", elemType: serviceresolver_1.ServiceResolver }),
         __metadata("design:type", Array)
     ], EkmConnection.prototype, "serviceResolvers", void 0);
     return EkmConnection;
-}(SpeakeasyBase));
-export { EkmConnection };
+}(utils_1.SpeakeasyBase));
+exports.EkmConnection = EkmConnection;
+// EkmConnectionInput
+/**
+ * An EkmConnection represents an individual EKM connection. It can be used for creating CryptoKeys and CryptoKeyVersions with a ProtectionLevel of EXTERNAL_VPC, as well as performing cryptographic operations using keys created within the EkmConnection.
+**/
+var EkmConnectionInput = /** @class */ (function (_super) {
+    __extends(EkmConnectionInput, _super);
+    function EkmConnectionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], EkmConnectionInput.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceResolvers", elemType: serviceresolver_2.ServiceResolverInput }),
+        __metadata("design:type", Array)
+    ], EkmConnectionInput.prototype, "serviceResolvers", void 0);
+    return EkmConnectionInput;
+}(utils_1.SpeakeasyBase));
+exports.EkmConnectionInput = EkmConnectionInput;

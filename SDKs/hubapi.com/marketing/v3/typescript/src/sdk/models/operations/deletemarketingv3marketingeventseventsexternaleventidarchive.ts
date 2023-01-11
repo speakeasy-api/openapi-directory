@@ -16,9 +16,6 @@ export class DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveQueryPa
 
 
 export class DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" })
   privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
 

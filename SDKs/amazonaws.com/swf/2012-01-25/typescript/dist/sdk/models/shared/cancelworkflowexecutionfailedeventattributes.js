@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CancelWorkflowExecutionFailedCauseEnum } from "./cancelworkflowexecutionfailedcauseenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelWorkflowExecutionFailedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var cancelworkflowexecutionfailedcauseenum_1 = require("./cancelworkflowexecutionfailedcauseenum");
 // CancelWorkflowExecutionFailedEventAttributes
 /**
  * Provides the details of the <code>CancelWorkflowExecutionFailed</code> event.
@@ -34,13 +37,13 @@ var CancelWorkflowExecutionFailedEventAttributes = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], CancelWorkflowExecutionFailedEventAttributes.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decisionTaskCompletedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decisionTaskCompletedEventId" }),
         __metadata("design:type", Number)
     ], CancelWorkflowExecutionFailedEventAttributes.prototype, "decisionTaskCompletedEventId", void 0);
     return CancelWorkflowExecutionFailedEventAttributes;
-}(SpeakeasyBase));
-export { CancelWorkflowExecutionFailedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.CancelWorkflowExecutionFailedEventAttributes = CancelWorkflowExecutionFailedEventAttributes;

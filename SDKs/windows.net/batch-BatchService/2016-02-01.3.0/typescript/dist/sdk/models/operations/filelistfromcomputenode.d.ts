@@ -23,7 +23,7 @@ export declare class FileListFromComputeNodeRequest extends SpeakeasyBase {
 export declare class FileListFromComputeNodeResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     nodeFileListResult?: any;
     statusCode: number;
 }

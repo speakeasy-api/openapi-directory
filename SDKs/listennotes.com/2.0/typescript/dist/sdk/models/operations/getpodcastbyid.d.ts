@@ -12,7 +12,7 @@ export declare class GetPodcastByIdQueryParams extends SpeakeasyBase {
     sort?: GetPodcastByIdSortEnum;
 }
 export declare class GetPodcastByIdHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetPodcastByIdRequest extends SpeakeasyBase {
     pathParams: GetPodcastByIdPathParams;
@@ -21,7 +21,7 @@ export declare class GetPodcastByIdRequest extends SpeakeasyBase {
 }
 export declare class GetPodcastByIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     podcastFull?: shared.PodcastFull;
     statusCode: number;
 }

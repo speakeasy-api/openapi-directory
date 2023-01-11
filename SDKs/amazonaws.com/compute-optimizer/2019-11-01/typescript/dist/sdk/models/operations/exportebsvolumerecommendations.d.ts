@@ -20,7 +20,7 @@ export declare class ExportEbsVolumeRecommendationsRequest extends SpeakeasyBase
 export declare class ExportEbsVolumeRecommendationsResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    exportEbsVolumeRecommendationsResponse?: shared.ExportEbsVolumeRecommendationsResponse;
+    exportEBSVolumeRecommendationsResponse?: shared.ExportEbsVolumeRecommendationsResponse;
     internalServerException?: any;
     invalidParameterValueException?: any;
     limitExceededException?: any;

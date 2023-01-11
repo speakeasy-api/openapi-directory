@@ -1,5 +1,8 @@
-export var AuthorizationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizationStatusEnum = void 0;
+var AuthorizationStatusEnum;
 (function (AuthorizationStatusEnum) {
     AuthorizationStatusEnum["Authorized"] = "Authorized";
     AuthorizationStatusEnum["Revoking"] = "Revoking";
-})(AuthorizationStatusEnum || (AuthorizationStatusEnum = {}));
+})(AuthorizationStatusEnum = exports.AuthorizationStatusEnum || (exports.AuthorizationStatusEnum = {}));

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateApiRequest, CreateApiResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,55 +33,59 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateApiRequest = {
   headers: {
-    xAmzAlgorithm: "quae",
-    xAmzContentSha256: "qui",
-    xAmzCredential: "magni",
-    xAmzDate: "minus",
-    xAmzSecurityToken: "sit",
-    xAmzSignature: "aut",
-    xAmzSignedHeaders: "neque",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    apiKeySelectionExpression: "iusto",
+    apiKeySelectionExpression: "voluptas",
     corsConfiguration: {
-      allowCredentials: false,
-      allowHeaders: [
-        "debitis",
-        "autem",
-      ],
-      allowMethods: [
-        "enim",
-        "ut",
-      ],
-      allowOrigins: [
-        "nihil",
-        "laborum",
-        "recusandae",
-      ],
-      exposeHeaders: [
-        "exercitationem",
-        "iste",
-      ],
-      maxAge: 2856324619161861976,
+      allowCredentials: {
+        "et": "nihil",
+      },
+      allowHeaders: {
+        "dicta": "debitis",
+        "voluptatum": "et",
+        "ut": "dolorem",
+      },
+      allowMethods: {
+        "voluptate": "iste",
+        "vitae": "totam",
+      },
+      allowOrigins: {
+        "illum": "debitis",
+      },
+      exposeHeaders: {
+        "odio": "dolore",
+        "id": "aspernatur",
+      },
+      maxAge: {
+        "totam": "commodi",
+        "quis": "est",
+        "aut": "odit",
+      },
     },
-    credentialsArn: "id",
-    description: "autem",
+    credentialsArn: "non",
+    description: "voluptas",
     disableExecuteApiEndpoint: true,
     disableSchemaValidation: false,
-    name: "omnis",
-    protocolType: "HTTP",
-    routeKey: "qui",
-    routeSelectionExpression: "omnis",
+    name: "illo",
+    protocolType: "WEBSOCKET",
+    routeKey: "officiis",
+    routeSelectionExpression: "autem",
     tags: {
-      "nostrum": "non",
-      "sit": "repellat",
+      "nobis": "odio",
     },
-    target: "quo",
-    version: "dolorum",
+    target: "qui",
+    version: "recusandae",
   },
 };
 
-sdk.sdk.createApi(req).then((res: CreateApiResponse | AxiosError) => {
+sdk.createApi(req).then((res: CreateApiResponse | AxiosError) => {
    // handle response
 });
 ```

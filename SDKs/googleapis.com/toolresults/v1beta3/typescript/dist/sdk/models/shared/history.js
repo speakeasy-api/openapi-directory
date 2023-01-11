@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HistoryTestPlatformEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.History = exports.HistoryTestPlatformEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HistoryTestPlatformEnum;
 (function (HistoryTestPlatformEnum) {
     HistoryTestPlatformEnum["UnknownPlatform"] = "unknownPlatform";
     HistoryTestPlatformEnum["Android"] = "android";
     HistoryTestPlatformEnum["Ios"] = "ios";
-})(HistoryTestPlatformEnum || (HistoryTestPlatformEnum = {}));
+})(HistoryTestPlatformEnum = exports.HistoryTestPlatformEnum || (exports.HistoryTestPlatformEnum = {}));
 // History
 /**
  * A History represents a sorted list of Executions ordered by the start_timestamp_millis field (descending). It can be used to group all the Executions of a continuous build. Note that the ordering only operates on one-dimension. If a repository has multiple branches, it means that multiple histories will need to be used in order to order Executions per branch.
@@ -39,21 +42,21 @@ var History = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], History.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=historyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=historyId" }),
         __metadata("design:type", String)
     ], History.prototype, "historyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], History.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testPlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testPlatform" }),
         __metadata("design:type", String)
     ], History.prototype, "testPlatform", void 0);
     return History;
-}(SpeakeasyBase));
-export { History };
+}(utils_1.SpeakeasyBase));
+exports.History = History;

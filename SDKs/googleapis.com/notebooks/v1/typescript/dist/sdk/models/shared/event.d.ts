@@ -10,7 +10,7 @@ export declare enum EventTypeEnum {
  * The definition of an Event for a managed / semi-managed notebook instance.
 **/
 export declare class Event extends SpeakeasyBase {
-    details?: Map<string, string>;
+    details?: Record<string, string>;
     reportTime?: string;
     type?: EventTypeEnum;
 }

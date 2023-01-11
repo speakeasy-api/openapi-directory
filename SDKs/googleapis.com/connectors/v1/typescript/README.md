@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ConnectorsProjectsLocationsConnectionsCreateRequest, ConnectorsProjectsLocationsConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,147 +30,171 @@ const req: ConnectorsProjectsLocationsConnectionsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "non",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "eligendi",
-    alt: "json",
-    callback: "voluptas",
-    connectionId: "eos",
-    fields: "modi",
-    key: "et",
-    oauthToken: "rem",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    connectionId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "molestias",
-    uploadType: "libero",
-    uploadProtocol: "occaecati",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     authConfig: {
       additionalVariables: [
         {
           boolValue: true,
-          intValue: "eos",
-          key: "rerum",
+          intValue: "et",
+          key: "ut",
           secretValue: {
-            secretVersion: "excepturi",
+            secretVersion: "dolorem",
           },
-          stringValue: "repellendus",
+          stringValue: "et",
         },
       ],
-      authType: "OAUTH2_CLIENT_CREDENTIALS",
+      authType: "AUTH_TYPE_UNSPECIFIED",
       oauth2ClientCredentials: {
-        clientId: "qui",
+        clientId: "iste",
         clientSecret: {
-          secretVersion: "commodi",
+          secretVersion: "vitae",
         },
       },
       oauth2JwtBearer: {
         clientKey: {
-          secretVersion: "dolores",
+          secretVersion: "totam",
         },
         jwtClaims: {
-          audience: "aut",
-          issuer: "necessitatibus",
-          subject: "nesciunt",
+          audience: "dolores",
+          issuer: "illum",
+          subject: "debitis",
         },
       },
       sshPublicKey: {
-        certType: "magni",
+        certType: "vel",
         sshClientCert: {
-          secretVersion: "non",
+          secretVersion: "odio",
         },
         sshClientCertPass: {
-          secretVersion: "distinctio",
+          secretVersion: "dolore",
         },
-        username: "minima",
+        username: "id",
       },
       userPassword: {
         password: {
-          secretVersion: "ut",
+          secretVersion: "aspernatur",
         },
-        username: "aperiam",
+        username: "accusantium",
       },
     },
     configVariables: [
       {
         boolValue: false,
-        intValue: "sunt",
-        key: "animi",
+        intValue: "quis",
+        key: "est",
         secretValue: {
-          secretVersion: "mollitia",
+          secretVersion: "aut",
         },
-        stringValue: "excepturi",
+        stringValue: "odit",
+      },
+      {
+        boolValue: true,
+        intValue: "voluptas",
+        key: "omnis",
+        secretValue: {
+          secretVersion: "aut",
+        },
+        stringValue: "illo",
       },
       {
         boolValue: false,
-        intValue: "ut",
-        key: "ex",
+        intValue: "officiis",
+        key: "autem",
         secretValue: {
-          secretVersion: "ad",
+          secretVersion: "consectetur",
         },
-        stringValue: "assumenda",
+        stringValue: "nobis",
       },
     ],
-    connectorVersion: "eaque",
-    description: "consequatur",
+    connectorVersion: "odio",
+    description: "qui",
     destinationConfigs: [
       {
         destinations: [
           {
-            host: "velit",
-            port: 7322938111960336165,
-            serviceAttachment: "in",
-          },
-          {
-            host: "veritatis",
-            port: 5952822771195429582,
+            host: "ipsum",
+            port: 8902041070398994519,
             serviceAttachment: "modi",
           },
           {
-            host: "est",
-            port: 1427910665186750051,
-            serviceAttachment: "cumque",
+            host: "sint",
+            port: 5392504858645185670,
+            serviceAttachment: "ut",
           },
         ],
-        key: "natus",
+        key: "exercitationem",
       },
       {
         destinations: [
           {
-            host: "beatae",
-            port: 9144606812326692045,
-            serviceAttachment: "amet",
+            host: "reprehenderit",
+            port: 4736217237333769909,
+            serviceAttachment: "maiores",
+          },
+          {
+            host: "incidunt",
+            port: 7242748068272024738,
+            serviceAttachment: "beatae",
+          },
+          {
+            host: "veritatis",
+            port: 2671030200101705776,
+            serviceAttachment: "et",
           },
         ],
-        key: "dolorem",
+        key: "omnis",
+      },
+      {
+        destinations: [
+          {
+            host: "ex",
+            port: 7014402135919778893,
+            serviceAttachment: "placeat",
+          },
+        ],
+        key: "vel",
       },
     ],
     labels: {
-      "similique": "et",
-      "ducimus": "cupiditate",
-      "consequatur": "exercitationem",
+      "mollitia": "voluptas",
+      "quam": "reprehenderit",
+      "qui": "qui",
     },
     lockConfig: {
       locked: false,
-      reason: "voluptas",
+      reason: "in",
     },
     nodeConfig: {
-      maxNodeCount: 6413110699676294475,
-      minNodeCount: 8175015999967088442,
+      maxNodeCount: 7132033595893905170,
+      minNodeCount: 8086159467323165929,
     },
-    serviceAccount: "iste",
+    serviceAccount: "ut",
     status: {
-      description: "corrupti",
-      state: "UPDATING",
-      status: "quia",
+      description: "itaque",
+      state: "DELETING",
+      status: "neque",
     },
     suspended: true,
   },

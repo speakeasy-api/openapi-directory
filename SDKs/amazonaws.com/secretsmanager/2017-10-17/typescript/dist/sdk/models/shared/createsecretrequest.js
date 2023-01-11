@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicaRegionType } from "./replicaregiontype";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSecretRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicaregiontype_1 = require("./replicaregiontype");
+var tag_1 = require("./tag");
 var CreateSecretRequest = /** @class */ (function (_super) {
     __extends(CreateSecretRequest, _super);
     function CreateSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddReplicaRegions", elemType: ReplicaRegionType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddReplicaRegions", elemType: replicaregiontype_1.ReplicaRegionType }),
         __metadata("design:type", Array)
     ], CreateSecretRequest.prototype, "addReplicaRegions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientRequestToken" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForceOverwriteReplicaSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForceOverwriteReplicaSecret" }),
         __metadata("design:type", Boolean)
     ], CreateSecretRequest.prototype, "forceOverwriteReplicaSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretBinary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretBinary" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "secretBinary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretString" }),
         __metadata("design:type", String)
     ], CreateSecretRequest.prototype, "secretString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateSecretRequest.prototype, "tags", void 0);
     return CreateSecretRequest;
-}(SpeakeasyBase));
-export { CreateSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateSecretRequest = CreateSecretRequest;

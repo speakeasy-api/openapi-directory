@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Invite } from "./invite";
-import { UserMetadata } from "./usermetadata";
-import { UserProfileRequest } from "./userprofilerequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OfferingUserAddResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var invite_1 = require("./invite");
+var usermetadata_1 = require("./usermetadata");
+var userprofilerequest_1 = require("./userprofilerequest");
 var OfferingUserAddResponse = /** @class */ (function (_super) {
     __extends(OfferingUserAddResponse, _super);
     function OfferingUserAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], OfferingUserAddResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], OfferingUserAddResponse.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invite" }),
-        __metadata("design:type", Invite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invite" }),
+        __metadata("design:type", invite_1.Invite)
     ], OfferingUserAddResponse.prototype, "invite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isFacilitator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isFacilitator" }),
         __metadata("design:type", Boolean)
     ], OfferingUserAddResponse.prototype, "isFacilitator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isMarker" }),
         __metadata("design:type", Boolean)
     ], OfferingUserAddResponse.prototype, "isMarker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isReadonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isReadonly" }),
         __metadata("design:type", Boolean)
     ], OfferingUserAddResponse.prototype, "isReadonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], OfferingUserAddResponse.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", UserMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", usermetadata_1.UserMetadata)
     ], OfferingUserAddResponse.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personId" }),
         __metadata("design:type", String)
     ], OfferingUserAddResponse.prototype, "personId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", UserProfileRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", userprofilerequest_1.UserProfileRequest)
     ], OfferingUserAddResponse.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendInvite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendInvite" }),
         __metadata("design:type", Boolean)
     ], OfferingUserAddResponse.prototype, "sendInvite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendNotificationEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendNotificationEmail" }),
         __metadata("design:type", Boolean)
     ], OfferingUserAddResponse.prototype, "sendNotificationEmail", void 0);
     return OfferingUserAddResponse;
-}(SpeakeasyBase));
-export { OfferingUserAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.OfferingUserAddResponse = OfferingUserAddResponse;

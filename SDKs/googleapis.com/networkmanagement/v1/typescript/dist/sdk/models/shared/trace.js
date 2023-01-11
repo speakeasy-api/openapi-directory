@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointInfo } from "./endpointinfo";
-import { Step } from "./step";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Trace = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointinfo_1 = require("./endpointinfo");
+var step_1 = require("./step");
 // Trace
 /**
  * Trace represents one simulated packet forwarding path. * Each trace contains multiple ordered steps. * Each step is in a particular state with associated configuration. * State is categorized as final or non-final states. * Each final state has a reason associated. * Each trace must end with a final state (the last step). ``` |---------------------Trace----------------------| Step1(State) Step2(State) --- StepN(State(final)) ```
@@ -35,13 +38,13 @@ var Trace = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointInfo" }),
-        __metadata("design:type", EndpointInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointInfo" }),
+        __metadata("design:type", endpointinfo_1.EndpointInfo)
     ], Trace.prototype, "endpointInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps", elemType: Step }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps", elemType: step_1.Step }),
         __metadata("design:type", Array)
     ], Trace.prototype, "steps", void 0);
     return Trace;
-}(SpeakeasyBase));
-export { Trace };
+}(utils_1.SpeakeasyBase));
+exports.Trace = Trace;

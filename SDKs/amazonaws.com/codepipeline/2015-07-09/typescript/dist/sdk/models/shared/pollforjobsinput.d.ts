@@ -6,5 +6,5 @@ import { ActionTypeId } from "./actiontypeid";
 export declare class PollForJobsInput extends SpeakeasyBase {
     actionTypeId: ActionTypeId;
     maxBatchSize?: number;
-    queryParam?: Map<string, string>;
+    queryParam?: Record<string, string>;
 }

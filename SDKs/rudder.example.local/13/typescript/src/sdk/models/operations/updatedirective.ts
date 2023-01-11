@@ -53,5 +53,5 @@ export class UpdateDirectiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDirective200ApplicationJsonObject?: UpdateDirective200ApplicationJson;
+  updateDirective200ApplicationJSONObject?: UpdateDirective200ApplicationJson;
 }

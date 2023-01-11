@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ProductAdoptionPolicy } from "./productadoptionpolicy";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -12,6 +12,6 @@ export class ProductAdoptionPolicyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=productAdoptionPolicies", elemType: ProductAdoptionPolicy })
   productAdoptionPolicies?: ProductAdoptionPolicy[];
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

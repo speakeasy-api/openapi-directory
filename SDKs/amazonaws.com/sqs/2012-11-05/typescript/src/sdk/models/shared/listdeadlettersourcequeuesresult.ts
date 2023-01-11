@@ -11,5 +11,5 @@ export class ListDeadLetterSourceQueuesResult extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata()
-  queueUrls: string[];
+  queueUrls: Record<string, any>[];
 }

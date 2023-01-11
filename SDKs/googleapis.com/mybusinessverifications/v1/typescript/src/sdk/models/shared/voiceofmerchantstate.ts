@@ -19,11 +19,11 @@ export class VoiceOfMerchantState extends SpeakeasyBase {
   hasVoiceOfMerchant?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=resolveOwnershipConflict" })
-  resolveOwnershipConflict?: Map<string, any>;
+  resolveOwnershipConflict?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=verify" })
   verify?: Verify;
 
   @SpeakeasyMetadata({ data: "json, name=waitForVoiceOfMerchant" })
-  waitForVoiceOfMerchant?: Map<string, any>;
+  waitForVoiceOfMerchant?: Record<string, any>;
 }

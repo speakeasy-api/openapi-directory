@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SubaccountRequestSubAccountEditEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubaccountRequest = exports.SubaccountRequestSubAccountRestrictionTimeEnum = exports.SubaccountRequestSubAccountRestrictionStopEnum = exports.SubaccountRequestSubAccountEditEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SubaccountRequestSubAccountEditEnum;
 (function (SubaccountRequestSubAccountEditEnum) {
     SubaccountRequestSubAccountEditEnum["SetPrice"] = "setPrice";
     SubaccountRequestSubAccountEditEnum["AddCredit"] = "addCredit";
     SubaccountRequestSubAccountEditEnum["SetRestriction"] = "setRestriction";
-})(SubaccountRequestSubAccountEditEnum || (SubaccountRequestSubAccountEditEnum = {}));
-export var SubaccountRequestSubAccountRestrictionStopEnum;
+})(SubaccountRequestSubAccountEditEnum = exports.SubaccountRequestSubAccountEditEnum || (exports.SubaccountRequestSubAccountEditEnum = {}));
+var SubaccountRequestSubAccountRestrictionStopEnum;
 (function (SubaccountRequestSubAccountRestrictionStopEnum) {
     SubaccountRequestSubAccountRestrictionStopEnum["Zero"] = "0";
     SubaccountRequestSubAccountRestrictionStopEnum["One"] = "1";
-})(SubaccountRequestSubAccountRestrictionStopEnum || (SubaccountRequestSubAccountRestrictionStopEnum = {}));
-export var SubaccountRequestSubAccountRestrictionTimeEnum;
+})(SubaccountRequestSubAccountRestrictionStopEnum = exports.SubaccountRequestSubAccountRestrictionStopEnum || (exports.SubaccountRequestSubAccountRestrictionStopEnum = {}));
+var SubaccountRequestSubAccountRestrictionTimeEnum;
 (function (SubaccountRequestSubAccountRestrictionTimeEnum) {
     SubaccountRequestSubAccountRestrictionTimeEnum["Zero"] = "0";
     SubaccountRequestSubAccountRestrictionTimeEnum["One"] = "1";
-})(SubaccountRequestSubAccountRestrictionTimeEnum || (SubaccountRequestSubAccountRestrictionTimeEnum = {}));
+})(SubaccountRequestSubAccountRestrictionTimeEnum = exports.SubaccountRequestSubAccountRestrictionTimeEnum || (exports.SubaccountRequestSubAccountRestrictionTimeEnum = {}));
 var SubaccountRequest = /** @class */ (function (_super) {
     __extends(SubaccountRequest, _super);
     function SubaccountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyid" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountAddCredit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountAddCredit" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountAddCredit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountCountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountCountryCode" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountCountryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountEdit" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountKeyId" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountPrice" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountRestrictionStop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountRestrictionStop" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountRestrictionStop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountRestrictionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountRestrictionTime" }),
         __metadata("design:type", String)
     ], SubaccountRequest.prototype, "subAccountRestrictionTime", void 0);
     return SubaccountRequest;
-}(SpeakeasyBase));
-export { SubaccountRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubaccountRequest = SubaccountRequest;

@@ -5,9 +5,9 @@ import { DataPrivacy } from "./dataprivacy";
 **/
 export declare class BotImportSpecification extends SpeakeasyBase {
     botName: string;
-    botTags?: Map<string, string>;
+    botTags?: Record<string, string>;
     dataPrivacy: DataPrivacy;
-    idleSessionTtlInSeconds?: number;
+    idleSessionTTLInSeconds?: number;
     roleArn: string;
-    testBotAliasTags?: Map<string, string>;
+    testBotAliasTags?: Record<string, string>;
 }

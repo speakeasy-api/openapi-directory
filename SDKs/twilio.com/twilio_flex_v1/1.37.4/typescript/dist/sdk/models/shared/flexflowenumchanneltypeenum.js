@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FlexFlowEnumChannelTypeEnum = void 0;
+var FlexFlowEnumChannelTypeEnum;
+(function (FlexFlowEnumChannelTypeEnum) {
+    FlexFlowEnumChannelTypeEnum["Web"] = "web";
+    FlexFlowEnumChannelTypeEnum["Sms"] = "sms";
+    FlexFlowEnumChannelTypeEnum["Facebook"] = "facebook";
+    FlexFlowEnumChannelTypeEnum["Whatsapp"] = "whatsapp";
+    FlexFlowEnumChannelTypeEnum["Line"] = "line";
+    FlexFlowEnumChannelTypeEnum["Custom"] = "custom";
+})(FlexFlowEnumChannelTypeEnum = exports.FlexFlowEnumChannelTypeEnum || (exports.FlexFlowEnumChannelTypeEnum = {}));

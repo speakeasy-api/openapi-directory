@@ -8,5 +8,5 @@ export declare class GetNetworkSwitchQosRulesRequest extends SpeakeasyBase {
 export declare class GetNetworkSwitchQosRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchQosRules200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchQosRules200ApplicationJSONObject?: Record<string, any>;
 }

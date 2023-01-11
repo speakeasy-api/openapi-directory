@@ -10,5 +10,5 @@ export declare class StoreSetRequest extends SpeakeasyBase {
 export declare class StoreSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    storeSet200ApplicationJsonString?: string;
+    storeSet200ApplicationJSONString?: string;
 }

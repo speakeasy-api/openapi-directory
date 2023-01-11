@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicyCookiesConfig } from "./cachepolicycookiesconfig";
-import { CachePolicyHeadersConfig } from "./cachepolicyheadersconfig";
-import { CachePolicyQueryStringsConfig } from "./cachepolicyquerystringsconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParametersInCacheKeyAndForwardedToOrigin = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachepolicycookiesconfig_1 = require("./cachepolicycookiesconfig");
+var cachepolicyheadersconfig_1 = require("./cachepolicyheadersconfig");
+var cachepolicyquerystringsconfig_1 = require("./cachepolicyquerystringsconfig");
 // ParametersInCacheKeyAndForwardedToOrigin
 /**
  * <p>This object determines the values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.</p> <p>The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but <i>not</i> include them in the cache key, use <code>OriginRequestPolicy</code>.</p>
@@ -36,25 +39,25 @@ var ParametersInCacheKeyAndForwardedToOrigin = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CachePolicyCookiesConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachepolicycookiesconfig_1.CachePolicyCookiesConfig)
     ], ParametersInCacheKeyAndForwardedToOrigin.prototype, "cookiesConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ParametersInCacheKeyAndForwardedToOrigin.prototype, "enableAcceptEncodingBrotli", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ParametersInCacheKeyAndForwardedToOrigin.prototype, "enableAcceptEncodingGzip", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CachePolicyHeadersConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachepolicyheadersconfig_1.CachePolicyHeadersConfig)
     ], ParametersInCacheKeyAndForwardedToOrigin.prototype, "headersConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CachePolicyQueryStringsConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachepolicyquerystringsconfig_1.CachePolicyQueryStringsConfig)
     ], ParametersInCacheKeyAndForwardedToOrigin.prototype, "queryStringsConfig", void 0);
     return ParametersInCacheKeyAndForwardedToOrigin;
-}(SpeakeasyBase));
-export { ParametersInCacheKeyAndForwardedToOrigin };
+}(utils_1.SpeakeasyBase));
+exports.ParametersInCacheKeyAndForwardedToOrigin = ParametersInCacheKeyAndForwardedToOrigin;

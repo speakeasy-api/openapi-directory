@@ -1,4 +1,7 @@
-export var EntityTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntityTypeEnum = void 0;
+var EntityTypeEnum;
 (function (EntityTypeEnum) {
     EntityTypeEnum["VirtualMachine"] = "VirtualMachine";
     EntityTypeEnum["Ec2Instance"] = "EC2Instance";
@@ -34,4 +37,4 @@ export var EntityTypeEnum;
     EntityTypeEnum["VcDatacenter"] = "VCDatacenter";
     EntityTypeEnum["Datastore"] = "Datastore";
     EntityTypeEnum["Folder"] = "Folder";
-})(EntityTypeEnum || (EntityTypeEnum = {}));
+})(EntityTypeEnum = exports.EntityTypeEnum || (exports.EntityTypeEnum = {}));

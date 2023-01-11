@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeAttachmentStateEnum } from "./volumeattachmentstateenum";
 
 
 
@@ -9,20 +8,20 @@ import { VolumeAttachmentStateEnum } from "./volumeattachmentstateenum";
 **/
 export class VolumeAttachment extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  attachTime?: Date;
+  attachTime?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  deleteOnTermination?: boolean;
+  deleteOnTermination?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  device?: string;
+  device?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  instanceId?: string;
+  instanceId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  state?: VolumeAttachmentStateEnum;
+  state?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  volumeId?: string;
+  volumeId?: Record<string, any>;
 }

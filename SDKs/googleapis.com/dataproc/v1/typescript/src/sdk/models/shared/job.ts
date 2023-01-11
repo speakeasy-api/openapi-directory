@@ -41,7 +41,7 @@ export class Job extends SpeakeasyBase {
   jobUuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pigJob" })
   pigJob?: PigJob;
@@ -96,7 +96,7 @@ export class JobInput extends SpeakeasyBase {
   hiveJob?: HiveJob;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pigJob" })
   pigJob?: PigJob;

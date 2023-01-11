@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FindEligibleItemsRequest, FindEligibleItemsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,15 +33,15 @@ const req: FindEligibleItemsRequest = {
     },
   },
   queryParams: {
-    limit: "ea",
-    offset: "nihil",
+    limit: "sit",
+    offset: "voluptas",
   },
   headers: {
-    xEbayCMarketplaceId: "dolorem",
+    xEBAYCMARKETPLACEID: "culpa",
   },
 };
 
-sdk.sdk.findEligibleItems(req).then((res: FindEligibleItemsResponse | AxiosError) => {
+sdk.offer.findEligibleItems(req).then((res: FindEligibleItemsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -51,7 +50,7 @@ sdk.sdk.findEligibleItems(req).then((res: FindEligibleItemsResponse | AxiosError
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### offer
 
 * `findEligibleItems` - This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an &quot;interest&quot; in the listing. If any buyers have shown interest in a listing, the seller can initiate a &quot;negotiation&quot; with them by calling sendOfferToInterestedBuyers, which sends all interested buyers a message that offers the listing at a discount. For details about how to create seller offers to buyers, see Sending offers to buyers.
 * `sendOfferToInterestedBuyers` - This method sends eligible buyers offers to purchase items in a listing at a discount. When a buyer has shown interest in a listing, they become &quot;eligible&quot; to receive a seller-initiated offer to purchase the item(s). Sellers use findEligibleItems to get the set of listings that have interested buyers. If a listing has interested buyers, sellers can use this method (sendOfferToInterestedBuyers) to send an offer to the buyers who are interested in the listing. The offer gives buyers the ability to purchase the associated listings at a discounted price. For details about how to create seller offers to buyers, see Sending offers to buyers.

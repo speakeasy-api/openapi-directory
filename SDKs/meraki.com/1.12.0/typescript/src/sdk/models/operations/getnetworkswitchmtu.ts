@@ -22,5 +22,5 @@ export class GetNetworkSwitchMtuResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchMtu200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchMtu200ApplicationJSONObject?: Record<string, any>;
 }

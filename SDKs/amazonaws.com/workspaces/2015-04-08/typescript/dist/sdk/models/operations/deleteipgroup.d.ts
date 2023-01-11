@@ -20,7 +20,7 @@ export declare class DeleteIpGroupRequest extends SpeakeasyBase {
 export declare class DeleteIpGroupResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteIpGroupResult?: Map<string, any>;
+    deleteIpGroupResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     resourceAssociatedException?: any;
     resourceNotFoundException?: any;

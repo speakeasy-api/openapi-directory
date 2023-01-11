@@ -5,10 +5,10 @@ import { TargetInstanceTypeRightSizingMethodEnum } from "./targetinstancetyperig
 export declare class LaunchConfiguration extends SpeakeasyBase {
     copyPrivateIp?: boolean;
     copyTags?: boolean;
-    ec2LaunchTemplateId?: string;
+    ec2LaunchTemplateID?: string;
     launchDisposition?: LaunchDispositionEnum;
     licensing?: Licensing;
     name?: string;
-    sourceServerId?: string;
+    sourceServerID?: string;
     targetInstanceTypeRightSizingMethod?: TargetInstanceTypeRightSizingMethodEnum;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DkimAttributes } from "./dkimattributes";
-import { IdentityTypeEnum } from "./identitytypeenum";
-import { MailFromAttributes } from "./mailfromattributes";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEmailIdentityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dkimattributes_1 = require("./dkimattributes");
+var identitytypeenum_1 = require("./identitytypeenum");
+var mailfromattributes_1 = require("./mailfromattributes");
+var tag_1 = require("./tag");
 // GetEmailIdentityResponse
 /**
  * Details about an email identity.
@@ -37,29 +40,29 @@ var GetEmailIdentityResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DkimAttributes" }),
-        __metadata("design:type", DkimAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DkimAttributes" }),
+        __metadata("design:type", dkimattributes_1.DkimAttributes)
     ], GetEmailIdentityResponse.prototype, "dkimAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeedbackForwardingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeedbackForwardingStatus" }),
         __metadata("design:type", Boolean)
     ], GetEmailIdentityResponse.prototype, "feedbackForwardingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityType" }),
         __metadata("design:type", String)
     ], GetEmailIdentityResponse.prototype, "identityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailFromAttributes" }),
-        __metadata("design:type", MailFromAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailFromAttributes" }),
+        __metadata("design:type", mailfromattributes_1.MailFromAttributes)
     ], GetEmailIdentityResponse.prototype, "mailFromAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], GetEmailIdentityResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VerifiedForSendingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VerifiedForSendingStatus" }),
         __metadata("design:type", Boolean)
     ], GetEmailIdentityResponse.prototype, "verifiedForSendingStatus", void 0);
     return GetEmailIdentityResponse;
-}(SpeakeasyBase));
-export { GetEmailIdentityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEmailIdentityResponse = GetEmailIdentityResponse;

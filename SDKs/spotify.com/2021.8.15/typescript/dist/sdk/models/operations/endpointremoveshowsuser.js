@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,110 +14,135 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointRemoveShowsUserResponse = exports.EndpointRemoveShowsUserRequest = exports.EndpointRemoveShowsUserSecurity = exports.EndpointRemoveShowsUserRequestBody = exports.EndpointRemoveShowsUserHeaders = exports.EndpointRemoveShowsUserQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EndpointRemoveShowsUserQueryParams = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserQueryParams, _super);
     function EndpointRemoveShowsUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ids" }),
         __metadata("design:type", String)
     ], EndpointRemoveShowsUserQueryParams.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=market" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=market" }),
         __metadata("design:type", String)
     ], EndpointRemoveShowsUserQueryParams.prototype, "market", void 0);
     return EndpointRemoveShowsUserQueryParams;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserQueryParams = EndpointRemoveShowsUserQueryParams;
 var EndpointRemoveShowsUserHeaders = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserHeaders, _super);
     function EndpointRemoveShowsUserHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], EndpointRemoveShowsUserHeaders.prototype, "authorization", void 0);
     return EndpointRemoveShowsUserHeaders;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserHeaders = EndpointRemoveShowsUserHeaders;
 var EndpointRemoveShowsUserRequestBody = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserRequestBody, _super);
     function EndpointRemoveShowsUserRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], EndpointRemoveShowsUserRequestBody.prototype, "ids", void 0);
     return EndpointRemoveShowsUserRequestBody;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserRequestBody = EndpointRemoveShowsUserRequestBody;
 var EndpointRemoveShowsUserSecurity = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserSecurity, _super);
     function EndpointRemoveShowsUserSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeSpotifyAuth)
     ], EndpointRemoveShowsUserSecurity.prototype, "spotifyAuth", void 0);
     return EndpointRemoveShowsUserSecurity;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserSecurity = EndpointRemoveShowsUserSecurity;
 var EndpointRemoveShowsUserRequest = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserRequest, _super);
     function EndpointRemoveShowsUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointRemoveShowsUserQueryParams)
     ], EndpointRemoveShowsUserRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointRemoveShowsUserHeaders)
     ], EndpointRemoveShowsUserRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EndpointRemoveShowsUserRequestBody)
     ], EndpointRemoveShowsUserRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointRemoveShowsUserSecurity)
     ], EndpointRemoveShowsUserRequest.prototype, "security", void 0);
     return EndpointRemoveShowsUserRequest;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserRequest = EndpointRemoveShowsUserRequest;
 var EndpointRemoveShowsUserResponse = /** @class */ (function (_super) {
     __extends(EndpointRemoveShowsUserResponse, _super);
     function EndpointRemoveShowsUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointRemoveShowsUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponseObject)
     ], EndpointRemoveShowsUserResponse.prototype, "errorResponseObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointRemoveShowsUserResponse.prototype, "statusCode", void 0);
     return EndpointRemoveShowsUserResponse;
-}(SpeakeasyBase));
-export { EndpointRemoveShowsUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRemoveShowsUserResponse = EndpointRemoveShowsUserResponse;

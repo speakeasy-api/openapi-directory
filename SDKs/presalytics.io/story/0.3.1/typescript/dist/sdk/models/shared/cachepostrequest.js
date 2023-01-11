@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CachePostRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CachePostRequest = /** @class */ (function (_super) {
     __extends(CachePostRequest, _super);
     function CachePostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_user_id" }),
         __metadata("design:type", String)
     ], CachePostRequest.prototype, "currentUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonce" }),
         __metadata("design:type", String)
     ], CachePostRequest.prototype, "nonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdocument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdocument" }),
         __metadata("design:type", String)
     ], CachePostRequest.prototype, "subdocument", void 0);
     return CachePostRequest;
-}(SpeakeasyBase));
-export { CachePostRequest };
+}(utils_1.SpeakeasyBase));
+exports.CachePostRequest = CachePostRequest;

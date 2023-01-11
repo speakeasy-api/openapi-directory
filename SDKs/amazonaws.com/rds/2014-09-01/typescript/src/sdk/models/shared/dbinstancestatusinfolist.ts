@@ -1,0 +1,17 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+
+export class DbInstanceStatusInfoList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  message?: string;
+
+  @SpeakeasyMetadata()
+  normal?: boolean;
+
+  @SpeakeasyMetadata()
+  status?: string;
+
+  @SpeakeasyMetadata()
+  statusType?: string;
+}

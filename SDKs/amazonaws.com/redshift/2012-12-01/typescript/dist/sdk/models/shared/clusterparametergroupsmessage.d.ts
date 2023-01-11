@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClusterParameterGroup } from "./clusterparametergroup";
+import { ParameterGroupList } from "./parametergrouplist";
 /**
  * Contains the output from the <a>DescribeClusterParameterGroups</a> action.
 **/
 export declare class ClusterParameterGroupsMessage extends SpeakeasyBase {
     marker?: string;
-    parameterGroups?: ClusterParameterGroup[];
+    parameterGroups?: ParameterGroupList[];
 }

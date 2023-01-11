@@ -20,7 +20,7 @@ export declare class DeleteInstanceProfileRequest extends SpeakeasyBase {
 export declare class DeleteInstanceProfileResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteInstanceProfileResult?: Map<string, any>;
+    deleteInstanceProfileResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Webhook extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers: Map<string, string>;
+  headers: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url: string;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest, DeleteWorkspaceIdMembersMemberIdActivitiesIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,9 +33,9 @@ const req: DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest = {
     },
   },
   pathParams: {
-    id: "et",
-    memberId: "ducimus",
-    workspaceId: "qui",
+    id: "sit",
+    memberId: "voluptas",
+    workspaceId: "culpa",
   },
 };
 

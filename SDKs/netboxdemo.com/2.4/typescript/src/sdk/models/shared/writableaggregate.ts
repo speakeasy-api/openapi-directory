@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class WritableAggregateInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=date_added" })
   dateAdded?: Date;

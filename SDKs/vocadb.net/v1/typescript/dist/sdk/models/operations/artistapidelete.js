@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistApiDeleteResponse = exports.ArtistApiDeleteRequest = exports.ArtistApiDeleteQueryParams = exports.ArtistApiDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ArtistApiDeletePathParams = /** @class */ (function (_super) {
     __extends(ArtistApiDeletePathParams, _super);
     function ArtistApiDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], ArtistApiDeletePathParams.prototype, "id", void 0);
     return ArtistApiDeletePathParams;
-}(SpeakeasyBase));
-export { ArtistApiDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiDeletePathParams = ArtistApiDeletePathParams;
 var ArtistApiDeleteQueryParams = /** @class */ (function (_super) {
     __extends(ArtistApiDeleteQueryParams, _super);
     function ArtistApiDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], ArtistApiDeleteQueryParams.prototype, "notes", void 0);
     return ArtistApiDeleteQueryParams;
-}(SpeakeasyBase));
-export { ArtistApiDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiDeleteQueryParams = ArtistApiDeleteQueryParams;
 var ArtistApiDeleteRequest = /** @class */ (function (_super) {
     __extends(ArtistApiDeleteRequest, _super);
     function ArtistApiDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtistApiDeletePathParams)
     ], ArtistApiDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtistApiDeleteQueryParams)
     ], ArtistApiDeleteRequest.prototype, "queryParams", void 0);
     return ArtistApiDeleteRequest;
-}(SpeakeasyBase));
-export { ArtistApiDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiDeleteRequest = ArtistApiDeleteRequest;
 var ArtistApiDeleteResponse = /** @class */ (function (_super) {
     __extends(ArtistApiDeleteResponse, _super);
     function ArtistApiDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ArtistApiDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ArtistApiDeleteResponse.prototype, "statusCode", void 0);
     return ArtistApiDeleteResponse;
-}(SpeakeasyBase));
-export { ArtistApiDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiDeleteResponse = ArtistApiDeleteResponse;

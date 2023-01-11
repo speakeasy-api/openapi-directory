@@ -1,4 +1,7 @@
-export var TaskDefinitionFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskDefinitionFieldEnum = void 0;
+var TaskDefinitionFieldEnum;
 (function (TaskDefinitionFieldEnum) {
     TaskDefinitionFieldEnum["Tags"] = "TAGS";
-})(TaskDefinitionFieldEnum || (TaskDefinitionFieldEnum = {}));
+})(TaskDefinitionFieldEnum = exports.TaskDefinitionFieldEnum || (exports.TaskDefinitionFieldEnum = {}));

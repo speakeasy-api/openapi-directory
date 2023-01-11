@@ -1,7 +1,18 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Organization } from "./organization";
 import { CompactPerson } from "./compactperson";
 
+
+
+export class BillSponsorshipOrganization extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=classification" })
+  classification: string;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name: string;
+}
 
 
 export class BillSponsorship extends SpeakeasyBase {
@@ -15,7 +26,7 @@ export class BillSponsorship extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "json, name=organization" })
-  organization?: Organization;
+  organization?: BillSponsorshipOrganization;
 
   @SpeakeasyMetadata({ data: "json, name=person" })
   person?: CompactPerson;

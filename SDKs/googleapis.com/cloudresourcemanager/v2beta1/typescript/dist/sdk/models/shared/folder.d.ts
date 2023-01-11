@@ -7,17 +7,17 @@ export declare enum FolderLifecycleStateEnum {
 /**
  * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
 **/
-export declare class FolderInput extends SpeakeasyBase {
-    displayName?: string;
-    parent?: string;
-}
-/**
- * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
-**/
 export declare class Folder extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
     lifecycleState?: FolderLifecycleStateEnum;
     name?: string;
+    parent?: string;
+}
+/**
+ * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
+**/
+export declare class FolderInput extends SpeakeasyBase {
+    displayName?: string;
     parent?: string;
 }

@@ -29,7 +29,7 @@ export class GetPregameWinProbabilitiesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata({ elemType: shared.PregameWp })
-  pregameWps?: shared.PregameWp[];
+  pregameWPS?: shared.PregameWp[];
 
   @SpeakeasyMetadata()
   statusCode: number;

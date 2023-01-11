@@ -18,7 +18,7 @@ export class GetModifyDbProxyEndpointQueryParams extends SpeakeasyBase {
   dbProxyEndpointName: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewDBProxyEndpointName" })
-  newDbProxyEndpointName?: string;
+  newDBProxyEndpointName?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetModifyDbProxyEndpointVersionEnum;

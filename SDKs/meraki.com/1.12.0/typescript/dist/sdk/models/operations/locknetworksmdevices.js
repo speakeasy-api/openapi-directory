@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LockNetworkSmDevicesResponse = exports.LockNetworkSmDevicesRequest = exports.LockNetworkSmDevicesRequestBody = exports.LockNetworkSmDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LockNetworkSmDevicesPathParams = /** @class */ (function (_super) {
     __extends(LockNetworkSmDevicesPathParams, _super);
     function LockNetworkSmDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], LockNetworkSmDevicesPathParams.prototype, "networkId", void 0);
     return LockNetworkSmDevicesPathParams;
-}(SpeakeasyBase));
-export { LockNetworkSmDevicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LockNetworkSmDevicesPathParams = LockNetworkSmDevicesPathParams;
 var LockNetworkSmDevicesRequestBody = /** @class */ (function (_super) {
     __extends(LockNetworkSmDevicesRequestBody, _super);
     function LockNetworkSmDevicesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], LockNetworkSmDevicesRequestBody.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pin" }),
         __metadata("design:type", Number)
     ], LockNetworkSmDevicesRequestBody.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", Array)
     ], LockNetworkSmDevicesRequestBody.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], LockNetworkSmDevicesRequestBody.prototype, "serials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiMacs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiMacs" }),
         __metadata("design:type", Array)
     ], LockNetworkSmDevicesRequestBody.prototype, "wifiMacs", void 0);
     return LockNetworkSmDevicesRequestBody;
-}(SpeakeasyBase));
-export { LockNetworkSmDevicesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LockNetworkSmDevicesRequestBody = LockNetworkSmDevicesRequestBody;
 var LockNetworkSmDevicesRequest = /** @class */ (function (_super) {
     __extends(LockNetworkSmDevicesRequest, _super);
     function LockNetworkSmDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LockNetworkSmDevicesPathParams)
     ], LockNetworkSmDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LockNetworkSmDevicesRequestBody)
     ], LockNetworkSmDevicesRequest.prototype, "request", void 0);
     return LockNetworkSmDevicesRequest;
-}(SpeakeasyBase));
-export { LockNetworkSmDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.LockNetworkSmDevicesRequest = LockNetworkSmDevicesRequest;
 var LockNetworkSmDevicesResponse = /** @class */ (function (_super) {
     __extends(LockNetworkSmDevicesResponse, _super);
     function LockNetworkSmDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LockNetworkSmDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LockNetworkSmDevicesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], LockNetworkSmDevicesResponse.prototype, "lockNetworkSmDevices200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], LockNetworkSmDevicesResponse.prototype, "lockNetworkSmDevices200ApplicationJSONObject", void 0);
     return LockNetworkSmDevicesResponse;
-}(SpeakeasyBase));
-export { LockNetworkSmDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.LockNetworkSmDevicesResponse = LockNetworkSmDevicesResponse;

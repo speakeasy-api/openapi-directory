@@ -34,5 +34,5 @@ export class GetDeviceSwitchPortsStatusesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceSwitchPortsStatuses200ApplicationJsonObject?: Map<string, any>;
+  getDeviceSwitchPortsStatuses200ApplicationJSONObject?: Record<string, any>;
 }

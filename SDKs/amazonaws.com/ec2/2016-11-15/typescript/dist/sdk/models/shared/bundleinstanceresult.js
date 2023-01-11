@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BundleTask } from "./bundletask";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleInstanceResult = exports.BundleInstanceResultBundleTask = exports.BundleInstanceResultBundleTaskStorage = exports.BundleInstanceResultBundleTaskBundleTaskError = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3storage_1 = require("./s3storage");
+// BundleInstanceResultBundleTaskBundleTaskError
+/**
+ * If the task fails, a description of the error.
+**/
+var BundleInstanceResultBundleTaskBundleTaskError = /** @class */ (function (_super) {
+    __extends(BundleInstanceResultBundleTaskBundleTaskError, _super);
+    function BundleInstanceResultBundleTaskBundleTaskError() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTaskBundleTaskError.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTaskBundleTaskError.prototype, "message", void 0);
+    return BundleInstanceResultBundleTaskBundleTaskError;
+}(utils_1.SpeakeasyBase));
+exports.BundleInstanceResultBundleTaskBundleTaskError = BundleInstanceResultBundleTaskBundleTaskError;
+// BundleInstanceResultBundleTaskStorage
+/**
+ * The Amazon S3 storage locations.
+**/
+var BundleInstanceResultBundleTaskStorage = /** @class */ (function (_super) {
+    __extends(BundleInstanceResultBundleTaskStorage, _super);
+    function BundleInstanceResultBundleTaskStorage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", s3storage_1.S3Storage)
+    ], BundleInstanceResultBundleTaskStorage.prototype, "s3", void 0);
+    return BundleInstanceResultBundleTaskStorage;
+}(utils_1.SpeakeasyBase));
+exports.BundleInstanceResultBundleTaskStorage = BundleInstanceResultBundleTaskStorage;
+// BundleInstanceResultBundleTask
+/**
+ * Information about the bundle task.
+**/
+var BundleInstanceResultBundleTask = /** @class */ (function (_super) {
+    __extends(BundleInstanceResultBundleTask, _super);
+    function BundleInstanceResultBundleTask() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "bundleId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", BundleInstanceResultBundleTaskBundleTaskError)
+    ], BundleInstanceResultBundleTask.prototype, "bundleTaskError", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "instanceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "progress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "startTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", BundleInstanceResultBundleTaskStorage)
+    ], BundleInstanceResultBundleTask.prototype, "storage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], BundleInstanceResultBundleTask.prototype, "updateTime", void 0);
+    return BundleInstanceResultBundleTask;
+}(utils_1.SpeakeasyBase));
+exports.BundleInstanceResultBundleTask = BundleInstanceResultBundleTask;
 // BundleInstanceResult
 /**
  * Contains the output of BundleInstance.
@@ -34,9 +117,9 @@ var BundleInstanceResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", BundleTask)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", BundleInstanceResultBundleTask)
     ], BundleInstanceResult.prototype, "bundleTask", void 0);
     return BundleInstanceResult;
-}(SpeakeasyBase));
-export { BundleInstanceResult };
+}(utils_1.SpeakeasyBase));
+exports.BundleInstanceResult = BundleInstanceResult;

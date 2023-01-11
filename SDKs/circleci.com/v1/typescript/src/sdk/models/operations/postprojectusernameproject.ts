@@ -14,7 +14,7 @@ export class PostProjectUsernameProjectPathParams extends SpeakeasyBase {
 
 export class PostProjectUsernameProjectRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=build_parameters" })
-  buildParameters?: Map<string, any>;
+  buildParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=parallel" })
   parallel?: string;

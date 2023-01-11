@@ -6,7 +6,7 @@ import { Context } from "./context";
  * The comment score suggestion request message.
 **/
 export declare class SuggestCommentScoreRequest extends SpeakeasyBase {
-    attributeScores?: Map<string, AttributeScores>;
+    attributeScores?: Record<string, AttributeScores>;
     clientToken?: string;
     comment?: TextEntry;
     communityId?: string;

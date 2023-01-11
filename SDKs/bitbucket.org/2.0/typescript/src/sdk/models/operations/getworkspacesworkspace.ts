@@ -38,8 +38,8 @@ export class GetWorkspacesWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  workspace?: Map<string, any>;
+  workspace?: Record<string, any>;
 }

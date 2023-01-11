@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PredictorExecution } from "./predictorexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictorExecutionDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var predictorexecution_1 = require("./predictorexecution");
 // PredictorExecutionDetails
 /**
  * Contains details on the backtests performed to evaluate the accuracy of the predictor. The tests are returned in descending order of accuracy, with the most accurate backtest appearing first. You specify the number of backtests to perform when you call the operation.
@@ -34,9 +37,9 @@ var PredictorExecutionDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorExecutions", elemType: PredictorExecution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorExecutions", elemType: predictorexecution_1.PredictorExecution }),
         __metadata("design:type", Array)
     ], PredictorExecutionDetails.prototype, "predictorExecutions", void 0);
     return PredictorExecutionDetails;
-}(SpeakeasyBase));
-export { PredictorExecutionDetails };
+}(utils_1.SpeakeasyBase));
+exports.PredictorExecutionDetails = PredictorExecutionDetails;

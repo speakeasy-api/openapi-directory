@@ -6,7 +6,7 @@ import { EndpointRequest } from "./endpointrequest";
 
 export class CreateContainerServiceDeploymentRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=containers", elemType: Container })
-  containers?: Map<string, Container>;
+  containers?: Record<string, Container>;
 
   @SpeakeasyMetadata({ data: "json, name=publicEndpoint" })
   publicEndpoint?: EndpointRequest;

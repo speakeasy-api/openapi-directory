@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectToken } from "./objecttoken";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntegratorObjectResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var objecttoken_1 = require("./objecttoken");
 var IntegratorObjectResult = /** @class */ (function (_super) {
     __extends(IntegratorObjectResult, _super);
     function IntegratorObjectResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions" }),
         __metadata("design:type", Array)
     ], IntegratorObjectResult.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], IntegratorObjectResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkUrl" }),
         __metadata("design:type", String)
     ], IntegratorObjectResult.prototype, "linkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], IntegratorObjectResult.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokens", elemType: ObjectToken }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokens", elemType: objecttoken_1.ObjectToken }),
         __metadata("design:type", Array)
     ], IntegratorObjectResult.prototype, "tokens", void 0);
     return IntegratorObjectResult;
-}(SpeakeasyBase));
-export { IntegratorObjectResult };
+}(utils_1.SpeakeasyBase));
+exports.IntegratorObjectResult = IntegratorObjectResult;

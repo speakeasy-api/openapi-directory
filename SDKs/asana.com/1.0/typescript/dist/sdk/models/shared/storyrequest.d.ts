@@ -13,6 +13,9 @@ export declare enum StoryRequestStickerNameEnum {
     DeterminedClimbers = "determined_climbers",
     PhoenixSpreadingLove = "phoenix_spreading_love"
 }
+/**
+ * A story represents an activity associated with an object in the Asana system.
+**/
 export declare class StoryRequestInput extends SpeakeasyBase {
     htmlText?: string;
     isPinned?: boolean;

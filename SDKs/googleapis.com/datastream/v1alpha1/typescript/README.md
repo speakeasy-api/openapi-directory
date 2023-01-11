@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DatastreamProjectsLocationsConnectionProfilesCreateRequest, DatastreamProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,76 +30,80 @@ const req: DatastreamProjectsLocationsConnectionProfilesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "quibusdam",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "possimus",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "nihil",
-    connectionProfileId: "est",
-    fields: "quos",
-    key: "sint",
-    oauthToken: "facilis",
+    callback: "consequuntur",
+    connectionProfileId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "ipsa",
-    requestId: "officia",
-    uploadType: "in",
-    uploadProtocol: "nihil",
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
-    displayName: "illo",
+    displayName: "voluptatum",
     forwardSshConnectivity: {
-      hostname: "quos",
-      password: "facere",
-      port: 9197929128000679882,
-      privateKey: "consequatur",
-      username: "magnam",
+      hostname: "et",
+      password: "ut",
+      port: 161231572858529631,
+      privateKey: "et",
+      username: "voluptate",
     },
     gcsProfile: {
-      bucketName: "aliquid",
-      rootPath: "in",
+      bucketName: "iste",
+      rootPath: "vitae",
     },
     labels: {
-      "vitae": "praesentium",
-      "dolorum": "fugit",
+      "dolores": "illum",
+      "debitis": "vel",
+      "odio": "dolore",
     },
     mysqlProfile: {
-      hostname: "molestiae",
-      password: "quisquam",
-      port: 4830508113816580991,
+      hostname: "id",
+      password: "aspernatur",
+      port: 2914295034816259174,
       sslConfig: {
-        caCertificate: "incidunt",
-        clientCertificate: "dolorum",
-        clientKey: "et",
+        caCertificate: "totam",
+        clientCertificate: "commodi",
+        clientKey: "quis",
       },
-      username: "accusamus",
+      username: "est",
     },
     noConnectivity: {
-      "necessitatibus": "animi",
+      "odit": "non",
+      "voluptas": "omnis",
+      "aut": "illo",
     },
     oracleProfile: {
       connectionAttributes: {
-        "rerum": "voluptas",
+        "officiis": "autem",
+        "consectetur": "nobis",
+        "odio": "qui",
       },
-      databaseService: "placeat",
-      hostname: "non",
-      password: "sit",
-      port: 3924871608859186553,
-      username: "est",
+      databaseService: "recusandae",
+      hostname: "at",
+      password: "ipsum",
+      port: 8902041070398994519,
+      username: "modi",
     },
     privateConnectivity: {
-      privateConnectionName: "rerum",
+      privateConnectionName: "sint",
     },
     staticServiceIpConnectivity: {
-      "error": "distinctio",
-      "veritatis": "quia",
+      "ut": "exercitationem",
     },
   },
 };

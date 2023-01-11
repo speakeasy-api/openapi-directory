@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTeamMembershipsForTeamResponse = exports.GetTeamMembershipsForTeamRequest = exports.GetTeamMembershipsForTeam200ApplicationJson = exports.GetTeamMembershipsForTeamQueryParams = exports.GetTeamMembershipsForTeamPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTeamMembershipsForTeamPathParams = /** @class */ (function (_super) {
     __extends(GetTeamMembershipsForTeamPathParams, _super);
     function GetTeamMembershipsForTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_gid" }),
         __metadata("design:type", String)
     ], GetTeamMembershipsForTeamPathParams.prototype, "teamGid", void 0);
     return GetTeamMembershipsForTeamPathParams;
-}(SpeakeasyBase));
-export { GetTeamMembershipsForTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamMembershipsForTeamPathParams = GetTeamMembershipsForTeamPathParams;
 var GetTeamMembershipsForTeamQueryParams = /** @class */ (function (_super) {
     __extends(GetTeamMembershipsForTeamQueryParams, _super);
     function GetTeamMembershipsForTeamQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetTeamMembershipsForTeamQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], GetTeamMembershipsForTeamQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], GetTeamMembershipsForTeamQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], GetTeamMembershipsForTeamQueryParams.prototype, "optPretty", void 0);
     return GetTeamMembershipsForTeamQueryParams;
-}(SpeakeasyBase));
-export { GetTeamMembershipsForTeamQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamMembershipsForTeamQueryParams = GetTeamMembershipsForTeamQueryParams;
 var GetTeamMembershipsForTeam200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetTeamMembershipsForTeam200ApplicationJson, _super);
     function GetTeamMembershipsForTeam200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: shared.TeamMembershipCompact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: shared.TeamMembershipCompact }),
         __metadata("design:type", Array)
     ], GetTeamMembershipsForTeam200ApplicationJson.prototype, "data", void 0);
     return GetTeamMembershipsForTeam200ApplicationJson;
-}(SpeakeasyBase));
-export { GetTeamMembershipsForTeam200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamMembershipsForTeam200ApplicationJson = GetTeamMembershipsForTeam200ApplicationJson;
 var GetTeamMembershipsForTeamRequest = /** @class */ (function (_super) {
     __extends(GetTeamMembershipsForTeamRequest, _super);
     function GetTeamMembershipsForTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamMembershipsForTeamPathParams)
     ], GetTeamMembershipsForTeamRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamMembershipsForTeamQueryParams)
     ], GetTeamMembershipsForTeamRequest.prototype, "queryParams", void 0);
     return GetTeamMembershipsForTeamRequest;
-}(SpeakeasyBase));
-export { GetTeamMembershipsForTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamMembershipsForTeamRequest = GetTeamMembershipsForTeamRequest;
 var GetTeamMembershipsForTeamResponse = /** @class */ (function (_super) {
     __extends(GetTeamMembershipsForTeamResponse, _super);
     function GetTeamMembershipsForTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTeamMembershipsForTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], GetTeamMembershipsForTeamResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTeamMembershipsForTeamResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamMembershipsForTeam200ApplicationJson)
-    ], GetTeamMembershipsForTeamResponse.prototype, "getTeamMembershipsForTeam200ApplicationJsonObject", void 0);
+    ], GetTeamMembershipsForTeamResponse.prototype, "getTeamMembershipsForTeam200ApplicationJSONObject", void 0);
     return GetTeamMembershipsForTeamResponse;
-}(SpeakeasyBase));
-export { GetTeamMembershipsForTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamMembershipsForTeamResponse = GetTeamMembershipsForTeamResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ComptageRequestComptageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComptageRequest = exports.ComptageRequestSmslongEnum = exports.ComptageRequestNumAzurEnum = exports.ComptageRequestGmtZoneEnum = exports.ComptageRequestComptageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ComptageRequestComptageEnum;
 (function (ComptageRequestComptageEnum) {
     ComptageRequestComptageEnum["One"] = "1";
-})(ComptageRequestComptageEnum || (ComptageRequestComptageEnum = {}));
-export var ComptageRequestGmtZoneEnum;
+})(ComptageRequestComptageEnum = exports.ComptageRequestComptageEnum || (exports.ComptageRequestComptageEnum = {}));
+var ComptageRequestGmtZoneEnum;
 (function (ComptageRequestGmtZoneEnum) {
     ComptageRequestGmtZoneEnum["PacificMidway"] = "Pacific/Midway";
     ComptageRequestGmtZoneEnum["AmericaAdak"] = "America/Adak";
@@ -119,68 +122,68 @@ export var ComptageRequestGmtZoneEnum;
     ComptageRequestGmtZoneEnum["PacificChatham"] = "Pacific/Chatham";
     ComptageRequestGmtZoneEnum["PacificTongatapu"] = "Pacific/Tongatapu";
     ComptageRequestGmtZoneEnum["PacificKiritimati"] = "Pacific/Kiritimati";
-})(ComptageRequestGmtZoneEnum || (ComptageRequestGmtZoneEnum = {}));
-export var ComptageRequestNumAzurEnum;
+})(ComptageRequestGmtZoneEnum = exports.ComptageRequestGmtZoneEnum || (exports.ComptageRequestGmtZoneEnum = {}));
+var ComptageRequestNumAzurEnum;
 (function (ComptageRequestNumAzurEnum) {
     ComptageRequestNumAzurEnum["One"] = "1";
-})(ComptageRequestNumAzurEnum || (ComptageRequestNumAzurEnum = {}));
-export var ComptageRequestSmslongEnum;
+})(ComptageRequestNumAzurEnum = exports.ComptageRequestNumAzurEnum || (exports.ComptageRequestNumAzurEnum = {}));
+var ComptageRequestSmslongEnum;
 (function (ComptageRequestSmslongEnum) {
     ComptageRequestSmslongEnum["NineHundredAndNinetyNine"] = "999";
-})(ComptageRequestSmslongEnum || (ComptageRequestSmslongEnum = {}));
+})(ComptageRequestSmslongEnum = exports.ComptageRequestSmslongEnum || (exports.ComptageRequestSmslongEnum = {}));
 var ComptageRequest = /** @class */ (function (_super) {
     __extends(ComptageRequest, _super);
     function ComptageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comptage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comptage" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "comptage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_envoi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_envoi" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "dateEnvoi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emetteur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emetteur" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "emetteur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gmt_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gmt_zone" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "gmtZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyid" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nostop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nostop" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "nostop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "num", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numAzur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numAzur" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "numAzur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sms" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "sms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smslong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smslong" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "smslong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracker" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "tracker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ucs2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ucs2" }),
         __metadata("design:type", String)
     ], ComptageRequest.prototype, "ucs2", void 0);
     return ComptageRequest;
-}(SpeakeasyBase));
-export { ComptageRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComptageRequest = ComptageRequest;

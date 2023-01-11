@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptCapProgramInPriceResponse = exports.OptCapProgramInPriceRequest = exports.OptCapProgramInPrice200ApplicationJson = exports.OptCapProgramInPrice200ApplicationJsonStatusInfo = exports.OptCapProgramInPriceRequestBody = exports.OptCapProgramInPriceHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptCapProgramInPriceHeaders = /** @class */ (function (_super) {
     __extends(OptCapProgramInPriceHeaders, _super);
     function OptCapProgramInPriceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], OptCapProgramInPriceHeaders.prototype, "authorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
         __metadata("design:type", String)
-    ], OptCapProgramInPriceHeaders.prototype, "wmConsumerChannelType", void 0);
+    ], OptCapProgramInPriceHeaders.prototype, "wmCONSUMERCHANNELTYPE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
         __metadata("design:type", String)
-    ], OptCapProgramInPriceHeaders.prototype, "wmQosCorrelationId", void 0);
+    ], OptCapProgramInPriceHeaders.prototype, "wmQOSCORRELATIONID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
         __metadata("design:type", String)
-    ], OptCapProgramInPriceHeaders.prototype, "wmSecAccessToken", void 0);
+    ], OptCapProgramInPriceHeaders.prototype, "wmSECACCESSTOKEN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
         __metadata("design:type", String)
-    ], OptCapProgramInPriceHeaders.prototype, "wmSvcName", void 0);
+    ], OptCapProgramInPriceHeaders.prototype, "wmSVCNAME", void 0);
     return OptCapProgramInPriceHeaders;
-}(SpeakeasyBase));
-export { OptCapProgramInPriceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPriceHeaders = OptCapProgramInPriceHeaders;
 var OptCapProgramInPriceRequestBody = /** @class */ (function (_super) {
     __extends(OptCapProgramInPriceRequestBody, _super);
     function OptCapProgramInPriceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subsidyEnrolled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subsidyEnrolled" }),
         __metadata("design:type", Boolean)
     ], OptCapProgramInPriceRequestBody.prototype, "subsidyEnrolled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subsidyPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subsidyPreference" }),
         __metadata("design:type", Boolean)
     ], OptCapProgramInPriceRequestBody.prototype, "subsidyPreference", void 0);
     return OptCapProgramInPriceRequestBody;
-}(SpeakeasyBase));
-export { OptCapProgramInPriceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPriceRequestBody = OptCapProgramInPriceRequestBody;
 var OptCapProgramInPrice200ApplicationJsonStatusInfo = /** @class */ (function (_super) {
     __extends(OptCapProgramInPrice200ApplicationJsonStatusInfo, _super);
     function OptCapProgramInPrice200ApplicationJsonStatusInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subsidyEnrolled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subsidyEnrolled" }),
         __metadata("design:type", Boolean)
     ], OptCapProgramInPrice200ApplicationJsonStatusInfo.prototype, "subsidyEnrolled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subsidyPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subsidyPreference" }),
         __metadata("design:type", Boolean)
     ], OptCapProgramInPrice200ApplicationJsonStatusInfo.prototype, "subsidyPreference", void 0);
     return OptCapProgramInPrice200ApplicationJsonStatusInfo;
-}(SpeakeasyBase));
-export { OptCapProgramInPrice200ApplicationJsonStatusInfo };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPrice200ApplicationJsonStatusInfo = OptCapProgramInPrice200ApplicationJsonStatusInfo;
 var OptCapProgramInPrice200ApplicationJson = /** @class */ (function (_super) {
     __extends(OptCapProgramInPrice200ApplicationJson, _super);
     function OptCapProgramInPrice200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=martId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=martId" }),
         __metadata("design:type", String)
     ], OptCapProgramInPrice200ApplicationJson.prototype, "martId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusInfo" }),
         __metadata("design:type", OptCapProgramInPrice200ApplicationJsonStatusInfo)
     ], OptCapProgramInPrice200ApplicationJson.prototype, "statusInfo", void 0);
     return OptCapProgramInPrice200ApplicationJson;
-}(SpeakeasyBase));
-export { OptCapProgramInPrice200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPrice200ApplicationJson = OptCapProgramInPrice200ApplicationJson;
 var OptCapProgramInPriceRequest = /** @class */ (function (_super) {
     __extends(OptCapProgramInPriceRequest, _super);
     function OptCapProgramInPriceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptCapProgramInPriceHeaders)
     ], OptCapProgramInPriceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", OptCapProgramInPriceRequestBody)
     ], OptCapProgramInPriceRequest.prototype, "request", void 0);
     return OptCapProgramInPriceRequest;
-}(SpeakeasyBase));
-export { OptCapProgramInPriceRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPriceRequest = OptCapProgramInPriceRequest;
 var OptCapProgramInPriceResponse = /** @class */ (function (_super) {
     __extends(OptCapProgramInPriceResponse, _super);
     function OptCapProgramInPriceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptCapProgramInPriceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptCapProgramInPriceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptCapProgramInPrice200ApplicationJson)
-    ], OptCapProgramInPriceResponse.prototype, "optCapProgramInPrice200ApplicationJsonObject", void 0);
+    ], OptCapProgramInPriceResponse.prototype, "optCapProgramInPrice200ApplicationJSONObject", void 0);
     return OptCapProgramInPriceResponse;
-}(SpeakeasyBase));
-export { OptCapProgramInPriceResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptCapProgramInPriceResponse = OptCapProgramInPriceResponse;

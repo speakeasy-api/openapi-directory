@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancer = void 0;
+var utils_1 = require("../../../internal/utils");
 // LoadBalancer
 /**
  * <p>The load balancer configuration to use with a service or task set.</p> <p>For specific notes and restrictions regarding the use of load balancers with services and task sets, see the CreateService and CreateTaskSet actions.</p>
@@ -33,21 +36,21 @@ var LoadBalancer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerName" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "containerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPort" }),
         __metadata("design:type", Number)
     ], LoadBalancer.prototype, "containerPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancerName" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroupArn" }),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "targetGroupArn", void 0);
     return LoadBalancer;
-}(SpeakeasyBase));
-export { LoadBalancer };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancer = LoadBalancer;

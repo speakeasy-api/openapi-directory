@@ -4,7 +4,7 @@ export declare class ForgetpaireddeviceRequest extends SpeakeasyBase {
     request: shared.ForgetpaireddeviceRequest;
 }
 export declare class ForgetpaireddeviceResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    forgetpaireddevice200TextPlainObject?: string;
     statusCode: number;
 }

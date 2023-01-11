@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification = exports.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput
 /**
  * Private password leak verification info.
@@ -33,16 +36,16 @@ var GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput = /** @
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedUserCredentialsHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedUserCredentialsHash" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput.prototype, "encryptedUserCredentialsHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lookupHashPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lookupHashPrefix" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput.prototype, "lookupHashPrefix", void 0);
     return GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput = GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput;
 // GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification
 /**
  * Private password leak verification info.
@@ -53,21 +56,21 @@ var GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedLeakMatchPrefixes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedLeakMatchPrefixes" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification.prototype, "encryptedLeakMatchPrefixes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedUserCredentialsHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedUserCredentialsHash" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification.prototype, "encryptedUserCredentialsHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lookupHashPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lookupHashPrefix" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification.prototype, "lookupHashPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reencryptedUserCredentialsHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reencryptedUserCredentialsHash" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification.prototype, "reencryptedUserCredentialsHash", void 0);
     return GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification = GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification;

@@ -18,7 +18,7 @@ export enum JobStateEnum {
 **/
 export class Job extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=deployJob" })
-  deployJob?: Map<string, any>;
+  deployJob?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -30,5 +30,5 @@ export class Job extends SpeakeasyBase {
   state?: JobStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=verifyJob" })
-  verifyJob?: Map<string, any>;
+  verifyJob?: Record<string, any>;
 }

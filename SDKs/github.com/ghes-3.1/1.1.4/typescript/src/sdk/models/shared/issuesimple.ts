@@ -6,6 +6,10 @@ import { Repository } from "./repository";
 
 
 
+// IssueSimpleSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueSimpleSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -66,6 +70,10 @@ export class IssueSimpleSimpleUser extends SpeakeasyBase {
 }
 
 
+// IssueSimpleMilestoneSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueSimpleMilestoneSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -131,6 +139,10 @@ export enum IssueSimpleMilestoneStateEnum {
 }
 
 
+// IssueSimpleMilestone
+/** 
+ * A collection of related issues and pull requests.
+**/
 export class IssueSimpleMilestone extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=closed_at" })
   closedAt: Date;
@@ -266,7 +278,7 @@ export class IssueSimple extends SpeakeasyBase {
   number: number;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=pull_request" })
   pullRequest?: IssueSimplePullRequest;

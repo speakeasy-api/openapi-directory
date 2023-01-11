@@ -38,23 +38,23 @@ export class CreateWithdrawalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createWithdrawal400ApplicationJsonAny?: any;
+  createWithdrawal400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal401ApplicationJsonAny?: any;
+  createWithdrawal401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal403ApplicationJsonAny?: any;
+  createWithdrawal403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal404ApplicationJsonAny?: any;
+  createWithdrawal404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal409ApplicationJsonAny?: any;
+  createWithdrawal409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal429ApplicationJsonAny?: any;
+  createWithdrawal429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createWithdrawal500ApplicationJsonAny?: any;
+  createWithdrawal500ApplicationJSONAny?: any;
 }

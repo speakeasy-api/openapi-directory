@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveCustomFieldSettingForPortfolioResponse = exports.RemoveCustomFieldSettingForPortfolioRequest = exports.RemoveCustomFieldSettingForPortfolio200ApplicationJson = exports.RemoveCustomFieldSettingForPortfolioRequestBody = exports.RemoveCustomFieldSettingForPortfolioQueryParams = exports.RemoveCustomFieldSettingForPortfolioPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var RemoveCustomFieldSettingForPortfolioPathParams = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolioPathParams, _super);
     function RemoveCustomFieldSettingForPortfolioPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=portfolio_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=portfolio_gid" }),
         __metadata("design:type", String)
     ], RemoveCustomFieldSettingForPortfolioPathParams.prototype, "portfolioGid", void 0);
     return RemoveCustomFieldSettingForPortfolioPathParams;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolioPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolioPathParams = RemoveCustomFieldSettingForPortfolioPathParams;
 var RemoveCustomFieldSettingForPortfolioQueryParams = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolioQueryParams, _super);
     function RemoveCustomFieldSettingForPortfolioQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], RemoveCustomFieldSettingForPortfolioQueryParams.prototype, "optPretty", void 0);
     return RemoveCustomFieldSettingForPortfolioQueryParams;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolioQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolioQueryParams = RemoveCustomFieldSettingForPortfolioQueryParams;
 var RemoveCustomFieldSettingForPortfolioRequestBody = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolioRequestBody, _super);
     function RemoveCustomFieldSettingForPortfolioRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", shared.RemoveCustomFieldSettingRequest)
     ], RemoveCustomFieldSettingForPortfolioRequestBody.prototype, "data", void 0);
     return RemoveCustomFieldSettingForPortfolioRequestBody;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolioRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolioRequestBody = RemoveCustomFieldSettingForPortfolioRequestBody;
 var RemoveCustomFieldSettingForPortfolio200ApplicationJson = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolio200ApplicationJson, _super);
     function RemoveCustomFieldSettingForPortfolio200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], RemoveCustomFieldSettingForPortfolio200ApplicationJson.prototype, "data", void 0);
     return RemoveCustomFieldSettingForPortfolio200ApplicationJson;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolio200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolio200ApplicationJson = RemoveCustomFieldSettingForPortfolio200ApplicationJson;
 var RemoveCustomFieldSettingForPortfolioRequest = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolioRequest, _super);
     function RemoveCustomFieldSettingForPortfolioRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveCustomFieldSettingForPortfolioPathParams)
     ], RemoveCustomFieldSettingForPortfolioRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveCustomFieldSettingForPortfolioQueryParams)
     ], RemoveCustomFieldSettingForPortfolioRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", RemoveCustomFieldSettingForPortfolioRequestBody)
     ], RemoveCustomFieldSettingForPortfolioRequest.prototype, "request", void 0);
     return RemoveCustomFieldSettingForPortfolioRequest;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolioRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolioRequest = RemoveCustomFieldSettingForPortfolioRequest;
 var RemoveCustomFieldSettingForPortfolioResponse = /** @class */ (function (_super) {
     __extends(RemoveCustomFieldSettingForPortfolioResponse, _super);
     function RemoveCustomFieldSettingForPortfolioResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveCustomFieldSettingForPortfolioResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], RemoveCustomFieldSettingForPortfolioResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveCustomFieldSettingForPortfolioResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveCustomFieldSettingForPortfolio200ApplicationJson)
-    ], RemoveCustomFieldSettingForPortfolioResponse.prototype, "removeCustomFieldSettingForPortfolio200ApplicationJsonObject", void 0);
+    ], RemoveCustomFieldSettingForPortfolioResponse.prototype, "removeCustomFieldSettingForPortfolio200ApplicationJSONObject", void 0);
     return RemoveCustomFieldSettingForPortfolioResponse;
-}(SpeakeasyBase));
-export { RemoveCustomFieldSettingForPortfolioResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveCustomFieldSettingForPortfolioResponse = RemoveCustomFieldSettingForPortfolioResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AuthenticateAuthenticationGrantTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthenticateResponse = exports.AuthenticateRequest = exports.AuthenticateAccessToken = exports.AuthenticateAuthentication = exports.AuthenticateAuthenticationGrantTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AuthenticateAuthenticationGrantTypeEnum;
 (function (AuthenticateAuthenticationGrantTypeEnum) {
     AuthenticateAuthenticationGrantTypeEnum["AccessToken"] = "AccessToken";
-})(AuthenticateAuthenticationGrantTypeEnum || (AuthenticateAuthenticationGrantTypeEnum = {}));
+})(AuthenticateAuthenticationGrantTypeEnum = exports.AuthenticateAuthenticationGrantTypeEnum || (exports.AuthenticateAuthenticationGrantTypeEnum = {}));
 var AuthenticateAuthentication = /** @class */ (function (_super) {
     __extends(AuthenticateAuthentication, _super);
     function AuthenticateAuthentication() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], AuthenticateAuthentication.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], AuthenticateAuthentication.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grantType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grantType" }),
         __metadata("design:type", String)
     ], AuthenticateAuthentication.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonce" }),
         __metadata("design:type", Number)
     ], AuthenticateAuthentication.prototype, "nonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refreshToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refreshToken" }),
         __metadata("design:type", String)
     ], AuthenticateAuthentication.prototype, "refreshToken", void 0);
     return AuthenticateAuthentication;
-}(SpeakeasyBase));
-export { AuthenticateAuthentication };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateAuthentication = AuthenticateAuthentication;
 var AuthenticateAccessToken = /** @class */ (function (_super) {
     __extends(AuthenticateAccessToken, _super);
     function AuthenticateAccessToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessToken" }),
         __metadata("design:type", String)
     ], AuthenticateAccessToken.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiApplicationId" }),
         __metadata("design:type", Number)
     ], AuthenticateAccessToken.prototype, "apiApplicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessId" }),
         __metadata("design:type", Number)
     ], AuthenticateAccessToken.prototype, "businessId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiry" }),
         __metadata("design:type", Date)
     ], AuthenticateAccessToken.prototype, "expiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", Array)
     ], AuthenticateAccessToken.prototype, "permissions", void 0);
     return AuthenticateAccessToken;
-}(SpeakeasyBase));
-export { AuthenticateAccessToken };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateAccessToken = AuthenticateAccessToken;
 var AuthenticateRequest = /** @class */ (function (_super) {
     __extends(AuthenticateRequest, _super);
     function AuthenticateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AuthenticateAuthentication)
     ], AuthenticateRequest.prototype, "request", void 0);
     return AuthenticateRequest;
-}(SpeakeasyBase));
-export { AuthenticateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateRequest = AuthenticateRequest;
 var AuthenticateResponse = /** @class */ (function (_super) {
     __extends(AuthenticateResponse, _super);
     function AuthenticateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AuthenticateAccessToken)
     ], AuthenticateResponse.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AuthenticateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AuthenticateResponse.prototype, "statusCode", void 0);
     return AuthenticateResponse;
-}(SpeakeasyBase));
-export { AuthenticateResponse };
+}(utils_1.SpeakeasyBase));
+exports.AuthenticateResponse = AuthenticateResponse;

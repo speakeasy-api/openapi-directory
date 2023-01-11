@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActivityContentDetailsBulletin } from "./activitycontentdetailsbulletin";
-import { ActivityContentDetailsChannelItem } from "./activitycontentdetailschannelitem";
-import { ActivityContentDetailsComment } from "./activitycontentdetailscomment";
-import { ActivityContentDetailsFavorite } from "./activitycontentdetailsfavorite";
-import { ActivityContentDetailsLike } from "./activitycontentdetailslike";
-import { ActivityContentDetailsPlaylistItem } from "./activitycontentdetailsplaylistitem";
-import { ActivityContentDetailsPromotedItem } from "./activitycontentdetailspromoteditem";
-import { ActivityContentDetailsRecommendation } from "./activitycontentdetailsrecommendation";
-import { ActivityContentDetailsSocial } from "./activitycontentdetailssocial";
-import { ActivityContentDetailsSubscription } from "./activitycontentdetailssubscription";
-import { ActivityContentDetailsUpload } from "./activitycontentdetailsupload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityContentDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var activitycontentdetailsbulletin_1 = require("./activitycontentdetailsbulletin");
+var activitycontentdetailschannelitem_1 = require("./activitycontentdetailschannelitem");
+var activitycontentdetailscomment_1 = require("./activitycontentdetailscomment");
+var activitycontentdetailsfavorite_1 = require("./activitycontentdetailsfavorite");
+var activitycontentdetailslike_1 = require("./activitycontentdetailslike");
+var activitycontentdetailsplaylistitem_1 = require("./activitycontentdetailsplaylistitem");
+var activitycontentdetailspromoteditem_1 = require("./activitycontentdetailspromoteditem");
+var activitycontentdetailsrecommendation_1 = require("./activitycontentdetailsrecommendation");
+var activitycontentdetailssocial_1 = require("./activitycontentdetailssocial");
+var activitycontentdetailssubscription_1 = require("./activitycontentdetailssubscription");
+var activitycontentdetailsupload_1 = require("./activitycontentdetailsupload");
 // ActivityContentDetails
 /**
  * Details about the content of an activity: the video that was shared, the channel that was subscribed to, etc.
@@ -44,49 +47,49 @@ var ActivityContentDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bulletin" }),
-        __metadata("design:type", ActivityContentDetailsBulletin)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bulletin" }),
+        __metadata("design:type", activitycontentdetailsbulletin_1.ActivityContentDetailsBulletin)
     ], ActivityContentDetails.prototype, "bulletin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelItem" }),
-        __metadata("design:type", ActivityContentDetailsChannelItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelItem" }),
+        __metadata("design:type", activitycontentdetailschannelitem_1.ActivityContentDetailsChannelItem)
     ], ActivityContentDetails.prototype, "channelItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
-        __metadata("design:type", ActivityContentDetailsComment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
+        __metadata("design:type", activitycontentdetailscomment_1.ActivityContentDetailsComment)
     ], ActivityContentDetails.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favorite" }),
-        __metadata("design:type", ActivityContentDetailsFavorite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favorite" }),
+        __metadata("design:type", activitycontentdetailsfavorite_1.ActivityContentDetailsFavorite)
     ], ActivityContentDetails.prototype, "favorite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=like" }),
-        __metadata("design:type", ActivityContentDetailsLike)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=like" }),
+        __metadata("design:type", activitycontentdetailslike_1.ActivityContentDetailsLike)
     ], ActivityContentDetails.prototype, "like", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playlistItem" }),
-        __metadata("design:type", ActivityContentDetailsPlaylistItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playlistItem" }),
+        __metadata("design:type", activitycontentdetailsplaylistitem_1.ActivityContentDetailsPlaylistItem)
     ], ActivityContentDetails.prototype, "playlistItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotedItem" }),
-        __metadata("design:type", ActivityContentDetailsPromotedItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotedItem" }),
+        __metadata("design:type", activitycontentdetailspromoteditem_1.ActivityContentDetailsPromotedItem)
     ], ActivityContentDetails.prototype, "promotedItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendation" }),
-        __metadata("design:type", ActivityContentDetailsRecommendation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendation" }),
+        __metadata("design:type", activitycontentdetailsrecommendation_1.ActivityContentDetailsRecommendation)
     ], ActivityContentDetails.prototype, "recommendation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=social" }),
-        __metadata("design:type", ActivityContentDetailsSocial)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=social" }),
+        __metadata("design:type", activitycontentdetailssocial_1.ActivityContentDetailsSocial)
     ], ActivityContentDetails.prototype, "social", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscription" }),
-        __metadata("design:type", ActivityContentDetailsSubscription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscription" }),
+        __metadata("design:type", activitycontentdetailssubscription_1.ActivityContentDetailsSubscription)
     ], ActivityContentDetails.prototype, "subscription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload" }),
-        __metadata("design:type", ActivityContentDetailsUpload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload" }),
+        __metadata("design:type", activitycontentdetailsupload_1.ActivityContentDetailsUpload)
     ], ActivityContentDetails.prototype, "upload", void 0);
     return ActivityContentDetails;
-}(SpeakeasyBase));
-export { ActivityContentDetails };
+}(utils_1.SpeakeasyBase));
+exports.ActivityContentDetails = ActivityContentDetails;

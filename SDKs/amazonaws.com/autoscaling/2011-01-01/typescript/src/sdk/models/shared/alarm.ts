@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Alarm extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  alarmArn?: string;
+  alarmARN?: string;
 
   @SpeakeasyMetadata()
   alarmName?: string;

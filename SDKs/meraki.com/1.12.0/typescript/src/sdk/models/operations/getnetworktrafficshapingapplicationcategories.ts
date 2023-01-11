@@ -22,5 +22,5 @@ export class GetNetworkTrafficShapingApplicationCategoriesResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkTrafficShapingApplicationCategories200ApplicationJsonObject?: Map<string, any>;
+  getNetworkTrafficShapingApplicationCategories200ApplicationJSONObject?: Record<string, any>;
 }

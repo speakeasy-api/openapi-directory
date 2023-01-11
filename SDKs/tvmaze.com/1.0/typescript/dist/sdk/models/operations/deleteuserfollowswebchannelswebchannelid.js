@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteUserFollowsWebchannelsWebchannelIdResponse = exports.DeleteUserFollowsWebchannelsWebchannelIdRequest = exports.DeleteUserFollowsWebchannelsWebchannelIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteUserFollowsWebchannelsWebchannelIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteUserFollowsWebchannelsWebchannelIdPathParams, _super);
     function DeleteUserFollowsWebchannelsWebchannelIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=webchannel_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=webchannel_id" }),
         __metadata("design:type", Number)
     ], DeleteUserFollowsWebchannelsWebchannelIdPathParams.prototype, "webchannelId", void 0);
     return DeleteUserFollowsWebchannelsWebchannelIdPathParams;
-}(SpeakeasyBase));
-export { DeleteUserFollowsWebchannelsWebchannelIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserFollowsWebchannelsWebchannelIdPathParams = DeleteUserFollowsWebchannelsWebchannelIdPathParams;
 var DeleteUserFollowsWebchannelsWebchannelIdRequest = /** @class */ (function (_super) {
     __extends(DeleteUserFollowsWebchannelsWebchannelIdRequest, _super);
     function DeleteUserFollowsWebchannelsWebchannelIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteUserFollowsWebchannelsWebchannelIdPathParams)
     ], DeleteUserFollowsWebchannelsWebchannelIdRequest.prototype, "pathParams", void 0);
     return DeleteUserFollowsWebchannelsWebchannelIdRequest;
-}(SpeakeasyBase));
-export { DeleteUserFollowsWebchannelsWebchannelIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserFollowsWebchannelsWebchannelIdRequest = DeleteUserFollowsWebchannelsWebchannelIdRequest;
 var DeleteUserFollowsWebchannelsWebchannelIdResponse = /** @class */ (function (_super) {
     __extends(DeleteUserFollowsWebchannelsWebchannelIdResponse, _super);
     function DeleteUserFollowsWebchannelsWebchannelIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteUserFollowsWebchannelsWebchannelIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteUserFollowsWebchannelsWebchannelIdResponse.prototype, "statusCode", void 0);
     return DeleteUserFollowsWebchannelsWebchannelIdResponse;
-}(SpeakeasyBase));
-export { DeleteUserFollowsWebchannelsWebchannelIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteUserFollowsWebchannelsWebchannelIdResponse = DeleteUserFollowsWebchannelsWebchannelIdResponse;

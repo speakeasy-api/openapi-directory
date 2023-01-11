@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
-export var HiuHealthInformationRequestResponseHiRequestSessionStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuHealthInformationRequestResponse = exports.HiuHealthInformationRequestResponseHiRequest = exports.HiuHealthInformationRequestResponseHiRequestSessionStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
+var HiuHealthInformationRequestResponseHiRequestSessionStatusEnum;
 (function (HiuHealthInformationRequestResponseHiRequestSessionStatusEnum) {
     HiuHealthInformationRequestResponseHiRequestSessionStatusEnum["Requested"] = "REQUESTED";
     HiuHealthInformationRequestResponseHiRequestSessionStatusEnum["Acknowledged"] = "ACKNOWLEDGED";
-})(HiuHealthInformationRequestResponseHiRequestSessionStatusEnum || (HiuHealthInformationRequestResponseHiRequestSessionStatusEnum = {}));
+})(HiuHealthInformationRequestResponseHiRequestSessionStatusEnum = exports.HiuHealthInformationRequestResponseHiRequestSessionStatusEnum || (exports.HiuHealthInformationRequestResponseHiRequestSessionStatusEnum = {}));
 var HiuHealthInformationRequestResponseHiRequest = /** @class */ (function (_super) {
     __extends(HiuHealthInformationRequestResponseHiRequest, _super);
     function HiuHealthInformationRequestResponseHiRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionStatus" }),
         __metadata("design:type", String)
     ], HiuHealthInformationRequestResponseHiRequest.prototype, "sessionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], HiuHealthInformationRequestResponseHiRequest.prototype, "transactionId", void 0);
     return HiuHealthInformationRequestResponseHiRequest;
-}(SpeakeasyBase));
-export { HiuHealthInformationRequestResponseHiRequest };
+}(utils_1.SpeakeasyBase));
+exports.HiuHealthInformationRequestResponseHiRequest = HiuHealthInformationRequestResponseHiRequest;
 var HiuHealthInformationRequestResponse = /** @class */ (function (_super) {
     __extends(HiuHealthInformationRequestResponse, _super);
     function HiuHealthInformationRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], HiuHealthInformationRequestResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiRequest" }),
         __metadata("design:type", HiuHealthInformationRequestResponseHiRequest)
     ], HiuHealthInformationRequestResponse.prototype, "hiRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuHealthInformationRequestResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], HiuHealthInformationRequestResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuHealthInformationRequestResponse.prototype, "timestamp", void 0);
     return HiuHealthInformationRequestResponse;
-}(SpeakeasyBase));
-export { HiuHealthInformationRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.HiuHealthInformationRequestResponse = HiuHealthInformationRequestResponse;

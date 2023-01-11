@@ -15,7 +15,7 @@ export declare class StorageDescriptor extends SpeakeasyBase {
     location?: string;
     numberOfBuckets?: number;
     outputFormat?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     schemaReference?: SchemaReference;
     serdeInfo?: SerDeInfo;
     skewedInfo?: SkewedInfo;

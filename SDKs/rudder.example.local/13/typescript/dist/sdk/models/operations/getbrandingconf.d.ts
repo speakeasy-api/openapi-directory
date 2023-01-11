@@ -18,5 +18,5 @@ export declare class GetBrandingConf200ApplicationJson extends SpeakeasyBase {
 export declare class GetBrandingConfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getBrandingConf200ApplicationJsonObject?: GetBrandingConf200ApplicationJson;
+    getBrandingConf200ApplicationJSONObject?: GetBrandingConf200ApplicationJson;
 }

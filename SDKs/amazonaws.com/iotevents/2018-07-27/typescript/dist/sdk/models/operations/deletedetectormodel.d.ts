@@ -17,7 +17,7 @@ export declare class DeleteDetectorModelRequest extends SpeakeasyBase {
 }
 export declare class DeleteDetectorModelResponse extends SpeakeasyBase {
     contentType: string;
-    deleteDetectorModelResponse?: Map<string, any>;
+    deleteDetectorModelResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceInUseException?: any;

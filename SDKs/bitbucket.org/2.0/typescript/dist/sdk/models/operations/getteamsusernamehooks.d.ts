@@ -15,6 +15,6 @@ export declare class GetTeamsUsernameHooksRequest extends SpeakeasyBase {
 export declare class GetTeamsUsernameHooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWebhookSubscriptions?: shared.PaginatedWebhookSubscriptions;
 }

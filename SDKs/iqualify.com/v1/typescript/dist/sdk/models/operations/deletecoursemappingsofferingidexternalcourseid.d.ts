@@ -9,7 +9,7 @@ export declare class DeleteCourseMappingsOfferingIdExternalCourseIdRequest exten
 }
 export declare class DeleteCourseMappingsOfferingIdExternalCourseIdResponse extends SpeakeasyBase {
     contentType: string;
-    deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJsonStrings?: string[];
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
+    deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings?: string[];
 }

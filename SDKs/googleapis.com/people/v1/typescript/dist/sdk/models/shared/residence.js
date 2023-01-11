@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResidenceInput = exports.Residence = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Residence
 /**
  * **DEPRECATED**: Please use `person.locations` instead. A person's past or current residence.
@@ -35,20 +38,20 @@ var Residence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", Boolean)
     ], Residence.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Residence.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Residence.prototype, "value", void 0);
     return Residence;
-}(SpeakeasyBase));
-export { Residence };
+}(utils_1.SpeakeasyBase));
+exports.Residence = Residence;
 // ResidenceInput
 /**
  * **DEPRECATED**: Please use `person.locations` instead. A person's past or current residence.
@@ -59,17 +62,17 @@ var ResidenceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", Boolean)
     ], ResidenceInput.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], ResidenceInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ResidenceInput.prototype, "value", void 0);
     return ResidenceInput;
-}(SpeakeasyBase));
-export { ResidenceInput };
+}(utils_1.SpeakeasyBase));
+exports.ResidenceInput = ResidenceInput;

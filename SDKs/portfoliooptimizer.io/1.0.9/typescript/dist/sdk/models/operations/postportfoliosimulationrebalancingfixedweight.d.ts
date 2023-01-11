@@ -20,6 +20,6 @@ export declare class PostPortfolioSimulationRebalancingFixedWeightRequest extend
 }
 export declare class PostPortfolioSimulationRebalancingFixedWeightResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioSimulationRebalancingFixedWeight200ApplicationJsonObject?: PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson;
     statusCode: number;
+    postPortfolioSimulationRebalancingFixedWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingFixedWeight200ApplicationJson;
 }

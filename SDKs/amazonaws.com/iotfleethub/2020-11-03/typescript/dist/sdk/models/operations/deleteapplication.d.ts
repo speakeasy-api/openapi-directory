@@ -21,7 +21,7 @@ export declare class DeleteApplicationRequest extends SpeakeasyBase {
 }
 export declare class DeleteApplicationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteApplicationResponse?: Map<string, any>;
+    deleteApplicationResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceNotFoundException?: any;

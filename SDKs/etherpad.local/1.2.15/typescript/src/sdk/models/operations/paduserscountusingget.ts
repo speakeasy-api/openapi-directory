@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class PadUsersCountUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class PadUsersCountUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class PadUsersCountUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class PadUsersCountUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class PadUsersCountUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingGet200ApplicationJsonObject?: PadUsersCountUsingGet200ApplicationJson;
+  padUsersCountUsingGET200ApplicationJSONObject?: PadUsersCountUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingGet400ApplicationJsonObject?: PadUsersCountUsingGet400ApplicationJson;
+  padUsersCountUsingGET400ApplicationJSONObject?: PadUsersCountUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingGet401ApplicationJsonObject?: PadUsersCountUsingGet401ApplicationJson;
+  padUsersCountUsingGET401ApplicationJSONObject?: PadUsersCountUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  padUsersCountUsingGet500ApplicationJsonObject?: PadUsersCountUsingGet500ApplicationJson;
+  padUsersCountUsingGET500ApplicationJSONObject?: PadUsersCountUsingGet500ApplicationJson;
 }

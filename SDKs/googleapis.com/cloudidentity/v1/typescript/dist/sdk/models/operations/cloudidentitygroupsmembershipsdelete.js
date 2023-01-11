@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudidentityGroupsMembershipsDeleteResponse = exports.CloudidentityGroupsMembershipsDeleteRequest = exports.CloudidentityGroupsMembershipsDeleteSecurity = exports.CloudidentityGroupsMembershipsDeleteSecurityOption2 = exports.CloudidentityGroupsMembershipsDeleteSecurityOption1 = exports.CloudidentityGroupsMembershipsDeleteQueryParams = exports.CloudidentityGroupsMembershipsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudidentityGroupsMembershipsDeletePathParams = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeletePathParams, _super);
     function CloudidentityGroupsMembershipsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeletePathParams.prototype, "name", void 0);
     return CloudidentityGroupsMembershipsDeletePathParams;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeletePathParams = CloudidentityGroupsMembershipsDeletePathParams;
 var CloudidentityGroupsMembershipsDeleteQueryParams = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteQueryParams, _super);
     function CloudidentityGroupsMembershipsDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customer" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "customer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteQueryParams.prototype, "uploadProtocol", void 0);
     return CloudidentityGroupsMembershipsDeleteQueryParams;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteQueryParams = CloudidentityGroupsMembershipsDeleteQueryParams;
 var CloudidentityGroupsMembershipsDeleteSecurityOption1 = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteSecurityOption1, _super);
     function CloudidentityGroupsMembershipsDeleteSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudidentityGroupsMembershipsDeleteSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudidentityGroupsMembershipsDeleteSecurityOption1.prototype, "oauth2c", void 0);
     return CloudidentityGroupsMembershipsDeleteSecurityOption1;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteSecurityOption1 = CloudidentityGroupsMembershipsDeleteSecurityOption1;
 var CloudidentityGroupsMembershipsDeleteSecurityOption2 = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteSecurityOption2, _super);
     function CloudidentityGroupsMembershipsDeleteSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudidentityGroupsMembershipsDeleteSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudidentityGroupsMembershipsDeleteSecurityOption2.prototype, "oauth2c", void 0);
     return CloudidentityGroupsMembershipsDeleteSecurityOption2;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteSecurityOption2 = CloudidentityGroupsMembershipsDeleteSecurityOption2;
 var CloudidentityGroupsMembershipsDeleteSecurity = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteSecurity, _super);
     function CloudidentityGroupsMembershipsDeleteSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudidentityGroupsMembershipsDeleteSecurityOption1)
     ], CloudidentityGroupsMembershipsDeleteSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudidentityGroupsMembershipsDeleteSecurityOption2)
     ], CloudidentityGroupsMembershipsDeleteSecurity.prototype, "option2", void 0);
     return CloudidentityGroupsMembershipsDeleteSecurity;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteSecurity = CloudidentityGroupsMembershipsDeleteSecurity;
 var CloudidentityGroupsMembershipsDeleteRequest = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteRequest, _super);
     function CloudidentityGroupsMembershipsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsDeletePathParams)
     ], CloudidentityGroupsMembershipsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsDeleteQueryParams)
     ], CloudidentityGroupsMembershipsDeleteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsDeleteSecurity)
     ], CloudidentityGroupsMembershipsDeleteRequest.prototype, "security", void 0);
     return CloudidentityGroupsMembershipsDeleteRequest;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteRequest = CloudidentityGroupsMembershipsDeleteRequest;
 var CloudidentityGroupsMembershipsDeleteResponse = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsDeleteResponse, _super);
     function CloudidentityGroupsMembershipsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], CloudidentityGroupsMembershipsDeleteResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudidentityGroupsMembershipsDeleteResponse.prototype, "statusCode", void 0);
     return CloudidentityGroupsMembershipsDeleteResponse;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsDeleteResponse = CloudidentityGroupsMembershipsDeleteResponse;

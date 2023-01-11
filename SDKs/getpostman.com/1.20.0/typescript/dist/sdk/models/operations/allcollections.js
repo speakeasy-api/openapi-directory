@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllCollectionsResponse = exports.AllCollections200ApplicationJson = exports.AllCollections200ApplicationJsonCollections = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllCollections200ApplicationJsonCollections = /** @class */ (function (_super) {
     __extends(AllCollections200ApplicationJsonCollections, _super);
     function AllCollections200ApplicationJsonCollections() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AllCollections200ApplicationJsonCollections.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AllCollections200ApplicationJsonCollections.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], AllCollections200ApplicationJsonCollections.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], AllCollections200ApplicationJsonCollections.prototype, "uid", void 0);
     return AllCollections200ApplicationJsonCollections;
-}(SpeakeasyBase));
-export { AllCollections200ApplicationJsonCollections };
+}(utils_1.SpeakeasyBase));
+exports.AllCollections200ApplicationJsonCollections = AllCollections200ApplicationJsonCollections;
 var AllCollections200ApplicationJson = /** @class */ (function (_super) {
     __extends(AllCollections200ApplicationJson, _super);
     function AllCollections200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collections", elemType: AllCollections200ApplicationJsonCollections }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collections", elemType: AllCollections200ApplicationJsonCollections }),
         __metadata("design:type", Array)
     ], AllCollections200ApplicationJson.prototype, "collections", void 0);
     return AllCollections200ApplicationJson;
-}(SpeakeasyBase));
-export { AllCollections200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllCollections200ApplicationJson = AllCollections200ApplicationJson;
 var AllCollectionsResponse = /** @class */ (function (_super) {
     __extends(AllCollectionsResponse, _super);
     function AllCollectionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AllCollectionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AllCollectionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllCollections200ApplicationJson)
-    ], AllCollectionsResponse.prototype, "allCollections200ApplicationJsonObject", void 0);
+    ], AllCollectionsResponse.prototype, "allCollections200ApplicationJSONObject", void 0);
     return AllCollectionsResponse;
-}(SpeakeasyBase));
-export { AllCollectionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AllCollectionsResponse = AllCollectionsResponse;

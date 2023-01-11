@@ -3,9 +3,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * The content of the custom verification email template.
 **/
 export declare class GetCustomVerificationEmailTemplateResponse extends SpeakeasyBase {
-    failureRedirectionUrl?: string;
+    failureRedirectionURL?: string;
     fromEmailAddress?: string;
-    successRedirectionUrl?: string;
+    successRedirectionURL?: string;
     templateContent?: string;
     templateName?: string;
     templateSubject?: string;

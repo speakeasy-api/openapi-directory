@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // IosInfo
 /**
  * iOS related attributes to the Dynamic Link..
@@ -33,33 +36,33 @@ var IosInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosAppStoreId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosAppStoreId" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosAppStoreId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosBundleId" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosCustomScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosCustomScheme" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosCustomScheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosFallbackLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosFallbackLink" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosFallbackLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosIpadBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosIpadBundleId" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosIpadBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosIpadFallbackLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosIpadFallbackLink" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosIpadFallbackLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosMinimumVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosMinimumVersion" }),
         __metadata("design:type", String)
     ], IosInfo.prototype, "iosMinimumVersion", void 0);
     return IosInfo;
-}(SpeakeasyBase));
-export { IosInfo };
+}(utils_1.SpeakeasyBase));
+exports.IosInfo = IosInfo;

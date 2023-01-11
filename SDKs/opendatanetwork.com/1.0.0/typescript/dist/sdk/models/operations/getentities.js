@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEntitiesResponse = exports.GetEntitiesRequest = exports.GetEntitiesHeaders = exports.GetEntitiesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEntitiesQueryParams = /** @class */ (function (_super) {
     __extends(GetEntitiesQueryParams, _super);
     function GetEntitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], GetEntitiesQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], GetEntitiesQueryParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_name" }),
         __metadata("design:type", String)
     ], GetEntitiesQueryParams.prototype, "entityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_type" }),
         __metadata("design:type", String)
     ], GetEntitiesQueryParams.prototype, "entityType", void 0);
     return GetEntitiesQueryParams;
-}(SpeakeasyBase));
-export { GetEntitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEntitiesQueryParams = GetEntitiesQueryParams;
 var GetEntitiesHeaders = /** @class */ (function (_super) {
     __extends(GetEntitiesHeaders, _super);
     function GetEntitiesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], GetEntitiesHeaders.prototype, "xAppToken", void 0);
     return GetEntitiesHeaders;
-}(SpeakeasyBase));
-export { GetEntitiesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEntitiesHeaders = GetEntitiesHeaders;
 var GetEntitiesRequest = /** @class */ (function (_super) {
     __extends(GetEntitiesRequest, _super);
     function GetEntitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEntitiesQueryParams)
     ], GetEntitiesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEntitiesHeaders)
     ], GetEntitiesRequest.prototype, "headers", void 0);
     return GetEntitiesRequest;
-}(SpeakeasyBase));
-export { GetEntitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEntitiesRequest = GetEntitiesRequest;
 var GetEntitiesResponse = /** @class */ (function (_super) {
     __extends(GetEntitiesResponse, _super);
     function GetEntitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEntitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEntitiesResponse.prototype, "statusCode", void 0);
     return GetEntitiesResponse;
-}(SpeakeasyBase));
-export { GetEntitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEntitiesResponse = GetEntitiesResponse;

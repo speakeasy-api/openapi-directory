@@ -29,7 +29,7 @@ export class MarkAsArchivedHeaders extends SpeakeasyBase {
 
 export class MarkAsArchivedRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

@@ -8,16 +8,10 @@ export class ContactsCreatePathParams extends SpeakeasyBase {
   accountId: string;
 }
 
-export enum ContactsCreateMergeStrategyEnum {
-    Append = "append",
-    Core = "core",
-    Remove = "remove"
-}
-
 
 export class ContactsCreateQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mergeStrategy" })
-  mergeStrategy?: ContactsCreateMergeStrategyEnum;
+  mergeStrategy?: shared.AccountIdEnum;
 }
 
 
@@ -59,5 +53,5 @@ export class ContactsCreateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  contactsCreate201ApplicationJsonOneOf?: any;
+  contactsCreate201ApplicationJSONOneOf?: any;
 }

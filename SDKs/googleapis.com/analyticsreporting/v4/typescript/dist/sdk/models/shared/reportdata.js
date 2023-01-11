@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRangeValues } from "./daterangevalues";
-import { ReportRow } from "./reportrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportData = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterangevalues_1 = require("./daterangevalues");
+var reportrow_1 = require("./reportrow");
 // ReportData
 /**
  * The data part of the report.
@@ -35,45 +38,45 @@ var ReportData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataLastRefreshed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataLastRefreshed" }),
         __metadata("design:type", String)
     ], ReportData.prototype, "dataLastRefreshed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emptyReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emptyReason" }),
         __metadata("design:type", String)
     ], ReportData.prototype, "emptyReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDataGolden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDataGolden" }),
         __metadata("design:type", Boolean)
     ], ReportData.prototype, "isDataGolden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximums", elemType: DateRangeValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximums", elemType: daterangevalues_1.DateRangeValues }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "maximums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimums", elemType: DateRangeValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimums", elemType: daterangevalues_1.DateRangeValues }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "minimums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowCount" }),
         __metadata("design:type", Number)
     ], ReportData.prototype, "rowCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: ReportRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: reportrow_1.ReportRow }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "rows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samplesReadCounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samplesReadCounts" }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "samplesReadCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samplingSpaceSizes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samplingSpaceSizes" }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "samplingSpaceSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totals", elemType: DateRangeValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totals", elemType: daterangevalues_1.DateRangeValues }),
         __metadata("design:type", Array)
     ], ReportData.prototype, "totals", void 0);
     return ReportData;
-}(SpeakeasyBase));
-export { ReportData };
+}(utils_1.SpeakeasyBase));
+exports.ReportData = ReportData;

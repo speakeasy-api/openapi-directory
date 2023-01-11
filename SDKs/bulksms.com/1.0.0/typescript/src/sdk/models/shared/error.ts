@@ -2,11 +2,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// Error
+// ErrorT
 /** 
  * See the [errors page](errors/) for more detail on what kind of errors you can get.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=detail" })
   detail?: string;
 

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { SimplifiedTrackObject } from "./simplifiedtrackobject";
 import { ArtistObject } from "./artistobject";
 import { CopyrightObject } from "./copyrightobject";
 import { ExternalIdObject } from "./externalidobject";
 import { ExternalUrlObject } from "./externalurlobject";
 import { ImageObject } from "./imageobject";
 import { AlbumRestrictionObject } from "./albumrestrictionobject";
-import { SimplifiedTrackObject } from "./simplifiedtrackobject";
 /**
  * The tracks of the album.
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference

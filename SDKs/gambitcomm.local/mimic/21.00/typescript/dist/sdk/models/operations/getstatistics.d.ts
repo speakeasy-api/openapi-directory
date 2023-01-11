@@ -8,5 +8,5 @@ export declare class GetStatisticsRequest extends SpeakeasyBase {
 export declare class GetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getStatistics200ApplicationJsonInt32Integers?: number[];
+    getStatistics200ApplicationJSONInt32Integers?: number[];
 }

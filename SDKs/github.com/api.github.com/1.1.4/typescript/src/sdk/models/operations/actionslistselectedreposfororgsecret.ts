@@ -47,5 +47,5 @@ export class ActionsListSelectedReposForOrgSecretResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListSelectedReposForOrgSecret200ApplicationJsonObject?: ActionsListSelectedReposForOrgSecret200ApplicationJson;
+  actionsListSelectedReposForOrgSecret200ApplicationJSONObject?: ActionsListSelectedReposForOrgSecret200ApplicationJson;
 }

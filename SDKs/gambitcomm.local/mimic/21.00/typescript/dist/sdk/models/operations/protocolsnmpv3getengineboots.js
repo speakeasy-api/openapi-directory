@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3GetEnginebootsResponse = exports.ProtocolSnmpv3GetEnginebootsRequest = exports.ProtocolSnmpv3GetEnginebootsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3GetEnginebootsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetEnginebootsPathParams, _super);
     function ProtocolSnmpv3GetEnginebootsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GetEnginebootsPathParams.prototype, "agentNum", void 0);
     return ProtocolSnmpv3GetEnginebootsPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetEnginebootsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetEnginebootsPathParams = ProtocolSnmpv3GetEnginebootsPathParams;
 var ProtocolSnmpv3GetEnginebootsRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetEnginebootsRequest, _super);
     function ProtocolSnmpv3GetEnginebootsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3GetEnginebootsPathParams)
     ], ProtocolSnmpv3GetEnginebootsRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3GetEnginebootsRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetEnginebootsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetEnginebootsRequest = ProtocolSnmpv3GetEnginebootsRequest;
 var ProtocolSnmpv3GetEnginebootsResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GetEnginebootsResponse, _super);
     function ProtocolSnmpv3GetEnginebootsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3GetEnginebootsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GetEnginebootsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], ProtocolSnmpv3GetEnginebootsResponse.prototype, "protocolSnmpv3GetEngineboots200ApplicationJsonInt32Integer", void 0);
+    ], ProtocolSnmpv3GetEnginebootsResponse.prototype, "protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer", void 0);
     return ProtocolSnmpv3GetEnginebootsResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GetEnginebootsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GetEnginebootsResponse = ProtocolSnmpv3GetEnginebootsResponse;

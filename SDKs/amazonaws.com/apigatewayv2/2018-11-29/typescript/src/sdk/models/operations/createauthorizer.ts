@@ -44,10 +44,10 @@ export enum CreateAuthorizerRequestBodyAuthorizerTypeEnum {
 **/
 export class CreateAuthorizerRequestBodyJwtConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Audience" })
-  audience?: string[];
+  audience?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Issuer" })
-  issuer?: string;
+  issuer?: Record<string, any>;
 }
 
 

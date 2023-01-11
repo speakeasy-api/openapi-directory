@@ -22,5 +22,5 @@ export class GetSimResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSim200ApplicationJsonString?: string;
+  getSim200ApplicationJSONString?: string;
 }

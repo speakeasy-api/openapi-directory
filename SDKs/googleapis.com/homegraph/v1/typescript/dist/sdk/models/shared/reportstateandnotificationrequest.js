@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StateAndNotificationPayload } from "./stateandnotificationpayload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportStateAndNotificationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var stateandnotificationpayload_1 = require("./stateandnotificationpayload");
 // ReportStateAndNotificationRequest
 /**
  * Request type for the [`ReportStateAndNotification`](#google.home.graph.v1.HomeGraphApiService.ReportStateAndNotification) call. It may include states, notifications, or both. States and notifications are defined per `device_id` (for example, "123" and "456" in the following example). # Example ```json { "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "agentUserId": "1234", "payload": { "devices": { "states": { "123": { "on": true }, "456": { "on": true, "brightness": 10 } }, } } } ```
@@ -34,25 +37,25 @@ var ReportStateAndNotificationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentUserId" }),
         __metadata("design:type", String)
     ], ReportStateAndNotificationRequest.prototype, "agentUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], ReportStateAndNotificationRequest.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followUpToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followUpToken" }),
         __metadata("design:type", String)
     ], ReportStateAndNotificationRequest.prototype, "followUpToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
-        __metadata("design:type", StateAndNotificationPayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
+        __metadata("design:type", stateandnotificationpayload_1.StateAndNotificationPayload)
     ], ReportStateAndNotificationRequest.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ReportStateAndNotificationRequest.prototype, "requestId", void 0);
     return ReportStateAndNotificationRequest;
-}(SpeakeasyBase));
-export { ReportStateAndNotificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReportStateAndNotificationRequest = ReportStateAndNotificationRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionNotification } from "./connectionnotification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVpcEndpointConnectionNotificationResult = exports.CreateVpcEndpointConnectionNotificationResultConnectionNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateVpcEndpointConnectionNotificationResultConnectionNotification
+/**
+ * Information about the notification.
+**/
+var CreateVpcEndpointConnectionNotificationResultConnectionNotification = /** @class */ (function (_super) {
+    __extends(CreateVpcEndpointConnectionNotificationResultConnectionNotification, _super);
+    function CreateVpcEndpointConnectionNotificationResultConnectionNotification() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "connectionEvents", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "connectionNotificationArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "connectionNotificationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "connectionNotificationState", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "connectionNotificationType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "serviceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateVpcEndpointConnectionNotificationResultConnectionNotification.prototype, "vpcEndpointId", void 0);
+    return CreateVpcEndpointConnectionNotificationResultConnectionNotification;
+}(utils_1.SpeakeasyBase));
+exports.CreateVpcEndpointConnectionNotificationResultConnectionNotification = CreateVpcEndpointConnectionNotificationResultConnectionNotification;
 var CreateVpcEndpointConnectionNotificationResult = /** @class */ (function (_super) {
     __extends(CreateVpcEndpointConnectionNotificationResult, _super);
     function CreateVpcEndpointConnectionNotificationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateVpcEndpointConnectionNotificationResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ConnectionNotification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateVpcEndpointConnectionNotificationResultConnectionNotification)
     ], CreateVpcEndpointConnectionNotificationResult.prototype, "connectionNotification", void 0);
     return CreateVpcEndpointConnectionNotificationResult;
-}(SpeakeasyBase));
-export { CreateVpcEndpointConnectionNotificationResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateVpcEndpointConnectionNotificationResult = CreateVpcEndpointConnectionNotificationResult;

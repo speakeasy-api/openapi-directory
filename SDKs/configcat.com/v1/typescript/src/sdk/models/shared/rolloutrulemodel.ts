@@ -14,5 +14,5 @@ export class RolloutRuleModel extends SpeakeasyBase {
   comparisonValue: string;
 
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 }

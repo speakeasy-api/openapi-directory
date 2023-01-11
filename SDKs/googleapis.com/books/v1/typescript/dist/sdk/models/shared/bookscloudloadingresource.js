@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BooksCloudloadingResource = void 0;
+var utils_1 = require("../../../internal/utils");
 var BooksCloudloadingResource = /** @class */ (function (_super) {
     __extends(BooksCloudloadingResource, _super);
     function BooksCloudloadingResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", String)
     ], BooksCloudloadingResource.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingState" }),
         __metadata("design:type", String)
     ], BooksCloudloadingResource.prototype, "processingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], BooksCloudloadingResource.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeId" }),
         __metadata("design:type", String)
     ], BooksCloudloadingResource.prototype, "volumeId", void 0);
     return BooksCloudloadingResource;
-}(SpeakeasyBase));
-export { BooksCloudloadingResource };
+}(utils_1.SpeakeasyBase));
+exports.BooksCloudloadingResource = BooksCloudloadingResource;

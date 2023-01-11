@@ -53,9 +53,6 @@ export class GetAccountsAccountIdScheduledPaymentsResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   obErrorResponse1?: shared.ObErrorResponse1;
 
   @SpeakeasyMetadata()

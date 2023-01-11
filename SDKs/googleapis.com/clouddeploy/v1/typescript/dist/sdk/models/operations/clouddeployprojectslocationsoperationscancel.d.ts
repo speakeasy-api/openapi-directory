@@ -23,11 +23,11 @@ export declare class ClouddeployProjectsLocationsOperationsCancelSecurity extend
 export declare class ClouddeployProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: ClouddeployProjectsLocationsOperationsCancelPathParams;
     queryParams: ClouddeployProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ClouddeployProjectsLocationsOperationsCancelSecurity;
 }
 export declare class ClouddeployProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

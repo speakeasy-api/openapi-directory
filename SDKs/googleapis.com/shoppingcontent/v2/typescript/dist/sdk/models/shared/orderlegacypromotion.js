@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderLegacyPromotionBenefit } from "./orderlegacypromotionbenefit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderLegacyPromotion = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderlegacypromotionbenefit_1 = require("./orderlegacypromotionbenefit");
 var OrderLegacyPromotion = /** @class */ (function (_super) {
     __extends(OrderLegacyPromotion, _super);
     function OrderLegacyPromotion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benefits", elemType: OrderLegacyPromotionBenefit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benefits", elemType: orderlegacypromotionbenefit_1.OrderLegacyPromotionBenefit }),
         __metadata("design:type", Array)
     ], OrderLegacyPromotion.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveDates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveDates" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "effectiveDates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genericRedemptionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genericRedemptionCode" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "genericRedemptionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longTitle" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "longTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productApplicability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productApplicability" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "productApplicability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redemptionChannel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redemptionChannel" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotion.prototype, "redemptionChannel", void 0);
     return OrderLegacyPromotion;
-}(SpeakeasyBase));
-export { OrderLegacyPromotion };
+}(utils_1.SpeakeasyBase));
+exports.OrderLegacyPromotion = OrderLegacyPromotion;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Automatic } from "./automatic";
-import { UserManaged } from "./usermanaged";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Replication = void 0;
+var utils_1 = require("../../../internal/utils");
+var automatic_1 = require("./automatic");
+var usermanaged_1 = require("./usermanaged");
 // Replication
 /**
  * A policy that defines the replication and encryption configuration of data.
@@ -35,13 +38,13 @@ var Replication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automatic" }),
-        __metadata("design:type", Automatic)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automatic" }),
+        __metadata("design:type", automatic_1.Automatic)
     ], Replication.prototype, "automatic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userManaged" }),
-        __metadata("design:type", UserManaged)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userManaged" }),
+        __metadata("design:type", usermanaged_1.UserManaged)
     ], Replication.prototype, "userManaged", void 0);
     return Replication;
-}(SpeakeasyBase));
-export { Replication };
+}(utils_1.SpeakeasyBase));
+exports.Replication = Replication;

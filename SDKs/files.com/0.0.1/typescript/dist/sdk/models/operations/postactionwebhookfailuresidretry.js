@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostActionWebhookFailuresIdRetryResponse = exports.PostActionWebhookFailuresIdRetryRequest = exports.PostActionWebhookFailuresIdRetryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostActionWebhookFailuresIdRetryPathParams = /** @class */ (function (_super) {
     __extends(PostActionWebhookFailuresIdRetryPathParams, _super);
     function PostActionWebhookFailuresIdRetryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostActionWebhookFailuresIdRetryPathParams.prototype, "id", void 0);
     return PostActionWebhookFailuresIdRetryPathParams;
-}(SpeakeasyBase));
-export { PostActionWebhookFailuresIdRetryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostActionWebhookFailuresIdRetryPathParams = PostActionWebhookFailuresIdRetryPathParams;
 var PostActionWebhookFailuresIdRetryRequest = /** @class */ (function (_super) {
     __extends(PostActionWebhookFailuresIdRetryRequest, _super);
     function PostActionWebhookFailuresIdRetryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostActionWebhookFailuresIdRetryPathParams)
     ], PostActionWebhookFailuresIdRetryRequest.prototype, "pathParams", void 0);
     return PostActionWebhookFailuresIdRetryRequest;
-}(SpeakeasyBase));
-export { PostActionWebhookFailuresIdRetryRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostActionWebhookFailuresIdRetryRequest = PostActionWebhookFailuresIdRetryRequest;
 var PostActionWebhookFailuresIdRetryResponse = /** @class */ (function (_super) {
     __extends(PostActionWebhookFailuresIdRetryResponse, _super);
     function PostActionWebhookFailuresIdRetryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostActionWebhookFailuresIdRetryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostActionWebhookFailuresIdRetryResponse.prototype, "statusCode", void 0);
     return PostActionWebhookFailuresIdRetryResponse;
-}(SpeakeasyBase));
-export { PostActionWebhookFailuresIdRetryResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostActionWebhookFailuresIdRetryResponse = PostActionWebhookFailuresIdRetryResponse;

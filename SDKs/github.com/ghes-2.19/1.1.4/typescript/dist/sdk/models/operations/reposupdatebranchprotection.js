@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,37 +14,62 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposUpdateBranchProtectionResponse = exports.ReposUpdateBranchProtectionRequest = exports.ReposUpdateBranchProtection415ApplicationJson = exports.ReposUpdateBranchProtectionRequestBody = exports.ReposUpdateBranchProtectionRequestBodyRestrictions = exports.ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks = exports.ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews = exports.ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions = exports.ReposUpdateBranchProtectionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposUpdateBranchProtectionPathParams = /** @class */ (function (_super) {
     __extends(ReposUpdateBranchProtectionPathParams, _super);
     function ReposUpdateBranchProtectionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=branch" }),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtectionPathParams.prototype, "branch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtectionPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtectionPathParams.prototype, "repo", void 0);
     return ReposUpdateBranchProtectionPathParams;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionPathParams = ReposUpdateBranchProtectionPathParams;
 // ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions
 /**
  * Specify which users and teams can dismiss pull request reviews. Pass an empty `dismissal_restrictions` object to disable. User and team `dismissal_restrictions` are only available for organization-owned repositories. Omit this parameter for personal repositories.
@@ -54,16 +80,16 @@ var ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRes
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teams" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions.prototype, "teams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions.prototype, "users", void 0);
     return ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions = ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions;
 // ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews
 /**
  * Require at least one approving review on a pull request, before merging. Set to `null` to disable.
@@ -74,24 +100,24 @@ var ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismiss_stale_reviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismiss_stale_reviews" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews.prototype, "dismissStaleReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismissal_restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismissal_restrictions" }),
         __metadata("design:type", ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews.prototype, "dismissalRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=require_code_owner_reviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=require_code_owner_reviews" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews.prototype, "requireCodeOwnerReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_approving_review_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_approving_review_count" }),
         __metadata("design:type", Number)
     ], ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews.prototype, "requiredApprovingReviewCount", void 0);
     return ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews = ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews;
 // ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks
 /**
  * Require status checks to pass before merging. Set to `null` to disable.
@@ -102,16 +128,16 @@ var ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strict" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks.prototype, "strict", void 0);
     return ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks = ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks;
 // ReposUpdateBranchProtectionRequestBodyRestrictions
 /**
  * Restrict who can push to the protected branch. User, app, and team `restrictions` are only available for organization-owned repositories. Set to `null` to disable.
@@ -122,117 +148,117 @@ var ReposUpdateBranchProtectionRequestBodyRestrictions = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apps" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRestrictions.prototype, "apps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teams" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRestrictions.prototype, "teams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users" }),
         __metadata("design:type", Array)
     ], ReposUpdateBranchProtectionRequestBodyRestrictions.prototype, "users", void 0);
     return ReposUpdateBranchProtectionRequestBodyRestrictions;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequestBodyRestrictions };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequestBodyRestrictions = ReposUpdateBranchProtectionRequestBodyRestrictions;
 var ReposUpdateBranchProtectionRequestBody = /** @class */ (function (_super) {
     __extends(ReposUpdateBranchProtectionRequestBody, _super);
     function ReposUpdateBranchProtectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_deletions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_deletions" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "allowDeletions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_force_pushes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_force_pushes" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "allowForcePushes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforce_admins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforce_admins" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "enforceAdmins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_linear_history" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_linear_history" }),
         __metadata("design:type", Boolean)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "requiredLinearHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_pull_request_reviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_pull_request_reviews" }),
         __metadata("design:type", ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "requiredPullRequestReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_status_checks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_status_checks" }),
         __metadata("design:type", ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "requiredStatusChecks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
         __metadata("design:type", ReposUpdateBranchProtectionRequestBodyRestrictions)
     ], ReposUpdateBranchProtectionRequestBody.prototype, "restrictions", void 0);
     return ReposUpdateBranchProtectionRequestBody;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequestBody = ReposUpdateBranchProtectionRequestBody;
 var ReposUpdateBranchProtection415ApplicationJson = /** @class */ (function (_super) {
     __extends(ReposUpdateBranchProtection415ApplicationJson, _super);
     function ReposUpdateBranchProtection415ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtection415ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtection415ApplicationJson.prototype, "message", void 0);
     return ReposUpdateBranchProtection415ApplicationJson;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtection415ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtection415ApplicationJson = ReposUpdateBranchProtection415ApplicationJson;
 var ReposUpdateBranchProtectionRequest = /** @class */ (function (_super) {
     __extends(ReposUpdateBranchProtectionRequest, _super);
     function ReposUpdateBranchProtectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposUpdateBranchProtectionPathParams)
     ], ReposUpdateBranchProtectionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposUpdateBranchProtectionRequestBody)
     ], ReposUpdateBranchProtectionRequest.prototype, "request", void 0);
     return ReposUpdateBranchProtectionRequest;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionRequest = ReposUpdateBranchProtectionRequest;
 var ReposUpdateBranchProtectionResponse = /** @class */ (function (_super) {
     __extends(ReposUpdateBranchProtectionResponse, _super);
     function ReposUpdateBranchProtectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposUpdateBranchProtectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposUpdateBranchProtectionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], ReposUpdateBranchProtectionResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ProtectedBranch)
     ], ReposUpdateBranchProtectionResponse.prototype, "protectedBranch", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposUpdateBranchProtection415ApplicationJson)
-    ], ReposUpdateBranchProtectionResponse.prototype, "reposUpdateBranchProtection415ApplicationJsonObject", void 0);
+    ], ReposUpdateBranchProtectionResponse.prototype, "reposUpdateBranchProtection415ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationErrorSimple)
     ], ReposUpdateBranchProtectionResponse.prototype, "validationErrorSimple", void 0);
     return ReposUpdateBranchProtectionResponse;
-}(SpeakeasyBase));
-export { ReposUpdateBranchProtectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposUpdateBranchProtectionResponse = ReposUpdateBranchProtectionResponse;

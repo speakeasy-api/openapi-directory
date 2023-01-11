@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PosBankAccount } from "./posbankaccount";
 import { PaymentCard } from "./paymentcard";
+import { PaymentCardInput } from "./paymentcard";
+import { PosBankAccount } from "./posbankaccount";
 import { CurrencyEnum } from "./currencyenum";
 import { ServiceCharge } from "./servicecharge";
-import { PaymentCardInput } from "./paymentcard";
 import { ServiceChargeInput } from "./servicecharge";
 
 

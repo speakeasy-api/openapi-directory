@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities } from "./googleappsdrivelabelsv2betalabelappliedcapabilities";
-import { GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy } from "./googleappsdrivelabelsv2betalabelappliedlabelpolicy";
-import { GoogleAppsDriveLabelsV2betaUserInfo } from "./googleappsdrivelabelsv2betauserinfo";
-import { GoogleAppsDriveLabelsV2betaLabelDisplayHints } from "./googleappsdrivelabelsv2betalabeldisplayhints";
-import { GoogleAppsDriveLabelsV2betaFieldInput } from "./googleappsdrivelabelsv2betafield";
-import { GoogleAppsDriveLabelsV2betaLifecycleInput } from "./googleappsdrivelabelsv2betalifecycle";
-import { GoogleAppsDriveLabelsV2betaLabelProperties } from "./googleappsdrivelabelsv2betalabelproperties";
-import { GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities } from "./googleappsdrivelabelsv2betalabelschemacapabilities";
-import { GoogleAppsDriveLabelsV2betaField } from "./googleappsdrivelabelsv2betafield";
-import { GoogleAppsDriveLabelsV2betaLifecycle } from "./googleappsdrivelabelsv2betalifecycle";
-import { GoogleAppsDriveLabelsV2betaLockStatus } from "./googleappsdrivelabelsv2betalockstatus";
-export var GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaLabelInput = exports.GoogleAppsDriveLabelsV2betaLabel = exports.GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalabelappliedcapabilities_1 = require("./googleappsdrivelabelsv2betalabelappliedcapabilities");
+var googleappsdrivelabelsv2betalabelappliedlabelpolicy_1 = require("./googleappsdrivelabelsv2betalabelappliedlabelpolicy");
+var googleappsdrivelabelsv2betauserinfo_1 = require("./googleappsdrivelabelsv2betauserinfo");
+var googleappsdrivelabelsv2betalabeldisplayhints_1 = require("./googleappsdrivelabelsv2betalabeldisplayhints");
+var googleappsdrivelabelsv2betafield_1 = require("./googleappsdrivelabelsv2betafield");
+var googleappsdrivelabelsv2betalifecycle_1 = require("./googleappsdrivelabelsv2betalifecycle");
+var googleappsdrivelabelsv2betalockstatus_1 = require("./googleappsdrivelabelsv2betalockstatus");
+var googleappsdrivelabelsv2betalabelproperties_1 = require("./googleappsdrivelabelsv2betalabelproperties");
+var googleappsdrivelabelsv2betalabelschemacapabilities_1 = require("./googleappsdrivelabelsv2betalabelschemacapabilities");
+var googleappsdrivelabelsv2betafield_2 = require("./googleappsdrivelabelsv2betafield");
+var googleappsdrivelabelsv2betalifecycle_2 = require("./googleappsdrivelabelsv2betalifecycle");
+var GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum;
 (function (GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum) {
     GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum["LabelTypeUnspecified"] = "LABEL_TYPE_UNSPECIFIED";
     GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum["Shared"] = "SHARED";
     GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum["Admin"] = "ADMIN";
-})(GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum || (GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = {}));
-// GoogleAppsDriveLabelsV2betaLabelInput
-/**
- * A label defines a taxonomy that can be applied to Drive items in order to organize and search across items. Labels can be simple strings, or can contain fields that describe additional metadata that can be further used to organize and search Drive items.
-**/
-var GoogleAppsDriveLabelsV2betaLabelInput = /** @class */ (function (_super) {
-    __extends(GoogleAppsDriveLabelsV2betaLabelInput, _super);
-    function GoogleAppsDriveLabelsV2betaLabelInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "appliedCapabilities", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedLabelPolicy" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "appliedLabelPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "creator", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabler" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "disabler", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayHints" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelDisplayHints)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "displayHints", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields", elemType: GoogleAppsDriveLabelsV2betaFieldInput }),
-        __metadata("design:type", Array)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "fields", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelType" }),
-        __metadata("design:type", String)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "labelType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnMoreUri" }),
-        __metadata("design:type", String)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "learnMoreUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLifecycleInput)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "lifecycle", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelProperties)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "properties", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "publisher", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionCreator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "revisionCreator", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities)
-    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "schemaCapabilities", void 0);
-    return GoogleAppsDriveLabelsV2betaLabelInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaLabelInput };
+})(GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = exports.GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum || (exports.GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = {}));
 // GoogleAppsDriveLabelsV2betaLabel
 /**
  * A label defines a taxonomy that can be applied to Drive items in order to organize and search across items. Labels can be simple strings, or can contain fields that describe additional metadata that can be further used to organize and search Drive items.
@@ -114,89 +53,153 @@ var GoogleAppsDriveLabelsV2betaLabel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelappliedcapabilities_1.GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "appliedCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedLabelPolicy" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedLabelPolicy" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelappliedlabelpolicy_1.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "appliedLabelPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "disableTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabler" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabler" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "disabler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayHints" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelDisplayHints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayHints" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabeldisplayhints_1.GoogleAppsDriveLabelsV2betaLabelDisplayHints)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "displayHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields", elemType: GoogleAppsDriveLabelsV2betaField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields", elemType: googleappsdrivelabelsv2betafield_1.GoogleAppsDriveLabelsV2betaField }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelType" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "labelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnMoreUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnMoreUri" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "learnMoreUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalifecycle_1.GoogleAppsDriveLabelsV2betaLifecycle)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "lifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockStatus" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLockStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockStatus" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalockstatus_1.GoogleAppsDriveLabelsV2betaLockStatus)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "lockStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelproperties_1.GoogleAppsDriveLabelsV2betaLabelProperties)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "publishTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionCreateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionCreateTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "revisionCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionCreator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionCreator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "revisionCreator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "revisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelschemacapabilities_1.GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities)
     ], GoogleAppsDriveLabelsV2betaLabel.prototype, "schemaCapabilities", void 0);
     return GoogleAppsDriveLabelsV2betaLabel;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaLabel };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaLabel = GoogleAppsDriveLabelsV2betaLabel;
+// GoogleAppsDriveLabelsV2betaLabelInput
+/**
+ * A label defines a taxonomy that can be applied to Drive items in order to organize and search across items. Labels can be simple strings, or can contain fields that describe additional metadata that can be further used to organize and search Drive items.
+**/
+var GoogleAppsDriveLabelsV2betaLabelInput = /** @class */ (function (_super) {
+    __extends(GoogleAppsDriveLabelsV2betaLabelInput, _super);
+    function GoogleAppsDriveLabelsV2betaLabelInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelappliedcapabilities_1.GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "appliedCapabilities", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedLabelPolicy" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelappliedlabelpolicy_1.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "appliedLabelPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "creator", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabler" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "disabler", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayHints" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabeldisplayhints_1.GoogleAppsDriveLabelsV2betaLabelDisplayHints)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "displayHints", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields", elemType: googleappsdrivelabelsv2betafield_2.GoogleAppsDriveLabelsV2betaFieldInput }),
+        __metadata("design:type", Array)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "fields", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelType" }),
+        __metadata("design:type", String)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "labelType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnMoreUri" }),
+        __metadata("design:type", String)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "learnMoreUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalifecycle_2.GoogleAppsDriveLabelsV2betaLifecycleInput)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "lifecycle", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelproperties_1.GoogleAppsDriveLabelsV2betaLabelProperties)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "properties", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "publisher", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionCreator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "revisionCreator", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalabelschemacapabilities_1.GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities)
+    ], GoogleAppsDriveLabelsV2betaLabelInput.prototype, "schemaCapabilities", void 0);
+    return GoogleAppsDriveLabelsV2betaLabelInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaLabelInput = GoogleAppsDriveLabelsV2betaLabelInput;

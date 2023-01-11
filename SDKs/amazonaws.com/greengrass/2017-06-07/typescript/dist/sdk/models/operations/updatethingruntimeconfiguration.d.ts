@@ -31,5 +31,5 @@ export declare class UpdateThingRuntimeConfigurationResponse extends SpeakeasyBa
     contentType: string;
     internalServerErrorException?: any;
     statusCode: number;
-    updateThingRuntimeConfigurationResponse?: Map<string, any>;
+    updateThingRuntimeConfigurationResponse?: Record<string, any>;
 }

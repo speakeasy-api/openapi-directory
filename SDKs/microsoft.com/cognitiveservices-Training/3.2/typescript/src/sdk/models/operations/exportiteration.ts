@@ -1,0 +1,66 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class ExportIterationPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=iterationId" })
+  iterationId: string;
+
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" })
+  projectId: string;
+}
+
+export enum ExportIterationFlavorEnum {
+    Linux = "Linux",
+    Windows = "Windows",
+    Onnx10 = "ONNX10",
+    Onnx12 = "ONNX12",
+    Arm = "ARM",
+    TensorFlowNormal = "TensorFlowNormal",
+    TensorFlowLite = "TensorFlowLite"
+}
+
+export enum ExportIterationPlatformEnum {
+    CoreMl = "CoreML",
+    TensorFlow = "TensorFlow",
+    DockerFile = "DockerFile",
+    Onnx = "ONNX",
+    Vaidk = "VAIDK"
+}
+
+
+export class ExportIterationQueryParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=flavor" })
+  flavor?: ExportIterationFlavorEnum;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=platform" })
+  platform: ExportIterationPlatformEnum;
+}
+
+
+export class ExportIterationRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ExportIterationPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: ExportIterationQueryParams;
+}
+
+
+export class ExportIterationResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  body?: Uint8Array;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  customVisionError?: shared.CustomVisionError;
+
+  @SpeakeasyMetadata()
+  export?: shared.Export;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

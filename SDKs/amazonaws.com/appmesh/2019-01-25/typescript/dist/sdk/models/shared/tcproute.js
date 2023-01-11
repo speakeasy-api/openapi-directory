@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TcpRouteAction } from "./tcprouteaction";
-import { TcpTimeout } from "./tcptimeout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TcpRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var tcprouteaction_1 = require("./tcprouteaction");
+var tcptimeout_1 = require("./tcptimeout");
 // TcpRoute
 /**
  * An object that represents a TCP route type.
@@ -35,13 +38,13 @@ var TcpRoute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", TcpRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", tcprouteaction_1.TcpRouteAction)
     ], TcpRoute.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
-        __metadata("design:type", TcpTimeout)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
+        __metadata("design:type", tcptimeout_1.TcpTimeout)
     ], TcpRoute.prototype, "timeout", void 0);
     return TcpRoute;
-}(SpeakeasyBase));
-export { TcpRoute };
+}(utils_1.SpeakeasyBase));
+exports.TcpRoute = TcpRoute;

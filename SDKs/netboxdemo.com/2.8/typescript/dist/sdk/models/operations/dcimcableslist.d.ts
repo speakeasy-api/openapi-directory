@@ -55,5 +55,5 @@ export declare class DcimCablesListRequest extends SpeakeasyBase {
 export declare class DcimCablesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimCablesList200ApplicationJsonObject?: DcimCablesList200ApplicationJson;
+    dcimCablesList200ApplicationJSONObject?: DcimCablesList200ApplicationJson;
 }

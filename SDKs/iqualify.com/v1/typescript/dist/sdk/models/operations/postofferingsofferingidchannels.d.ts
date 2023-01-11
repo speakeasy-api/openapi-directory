@@ -10,6 +10,6 @@ export declare class PostOfferingsOfferingIdChannelsRequest extends SpeakeasyBas
 export declare class PostOfferingsOfferingIdChannelsResponse extends SpeakeasyBase {
     channelResponse?: shared.ChannelResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

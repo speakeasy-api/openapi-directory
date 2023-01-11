@@ -1,10 +1,10 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudBaremetalsolutionV2LogicalInterface } from "./googlecloudbaremetalsolutionv2logicalinterface";
-import { LunInput } from "./lun";
-import { VolumeInput } from "./volume";
 import { Lun } from "./lun";
 import { Network } from "./network";
 import { Volume } from "./volume";
+import { LunInput } from "./lun";
+import { VolumeInput } from "./volume";
 
 
 export enum InstanceStateEnum {
@@ -18,41 +18,10 @@ export enum InstanceStateEnum {
     Shutdown = "SHUTDOWN"
 }
 
-
-// InstanceInput
-/** 
- * A server.
-**/
-export class InstanceInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=hyperthreadingEnabled" })
-  hyperthreadingEnabled?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=logicalInterfaces", elemType: GoogleCloudBaremetalsolutionV2LogicalInterface })
-  logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
-
-  @SpeakeasyMetadata({ data: "json, name=luns", elemType: LunInput })
-  luns?: LunInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=machineType" })
-  machineType?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=networkTemplate" })
-  networkTemplate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=osImage" })
-  osImage?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=pod" })
-  pod?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=volumes", elemType: VolumeInput })
-  volumes?: VolumeInput[];
+export enum InstanceWorkloadProfileEnum {
+    WorkloadProfileUnspecified = "WORKLOAD_PROFILE_UNSPECIFIED",
+    WorkloadProfileGeneric = "WORKLOAD_PROFILE_GENERIC",
+    WorkloadProfileHana = "WORKLOAD_PROFILE_HANA"
 }
 
 
@@ -74,7 +43,7 @@ export class Instance extends SpeakeasyBase {
   interactiveSerialConsoleEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=logicalInterfaces", elemType: GoogleCloudBaremetalsolutionV2LogicalInterface })
   logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
@@ -111,4 +80,47 @@ export class Instance extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume })
   volumes?: Volume[];
+
+  @SpeakeasyMetadata({ data: "json, name=workloadProfile" })
+  workloadProfile?: InstanceWorkloadProfileEnum;
+}
+
+
+// InstanceInput
+/** 
+ * A server.
+**/
+export class InstanceInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=hyperthreadingEnabled" })
+  hyperthreadingEnabled?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=logicalInterfaces", elemType: GoogleCloudBaremetalsolutionV2LogicalInterface })
+  logicalInterfaces?: GoogleCloudBaremetalsolutionV2LogicalInterface[];
+
+  @SpeakeasyMetadata({ data: "json, name=luns", elemType: LunInput })
+  luns?: LunInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=machineType" })
+  machineType?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=networkTemplate" })
+  networkTemplate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=osImage" })
+  osImage?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=pod" })
+  pod?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=volumes", elemType: VolumeInput })
+  volumes?: VolumeInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=workloadProfile" })
+  workloadProfile?: InstanceWorkloadProfileEnum;
 }

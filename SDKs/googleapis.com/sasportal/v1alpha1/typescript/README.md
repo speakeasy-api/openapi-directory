@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SasportalCustomersListRequest, SasportalCustomersListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: SasportalCustomersListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "explicabo",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "ducimus",
-    fields: "explicabo",
-    key: "voluptas",
-    oauthToken: "non",
-    pageSize: 1559748410318463885,
-    pageToken: "quae",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    pageSize: 6044372234677422456,
+    pageToken: "fugit",
     prettyPrint: false,
-    quotaUser: "voluptas",
-    uploadType: "voluptates",
-    uploadProtocol: "magnam",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

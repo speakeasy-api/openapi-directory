@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { VpcEndpoint } from "./vpcendpoint";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Describes a Redshift-managed VPC endpoint.
 **/
@@ -14,5 +14,5 @@ export declare class EndpointAccess extends SpeakeasyBase {
     resourceOwner?: string;
     subnetGroupName?: string;
     vpcEndpoint?: VpcEndpoint;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

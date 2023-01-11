@@ -17,5 +17,5 @@ export declare class ConvertcurrencyRequest extends SpeakeasyBase {
 export declare class ConvertcurrencyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    convertcurrency200ApplicationJsonObject?: Convertcurrency200ApplicationJson;
+    convertcurrency200ApplicationJSONObject?: Convertcurrency200ApplicationJson;
 }

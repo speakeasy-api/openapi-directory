@@ -74,7 +74,7 @@ export class GetDealersHeavyEquipmentResponse extends SpeakeasyBase {
   dealersResponse?: shared.DealersResponse;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

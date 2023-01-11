@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaListLimits } from "./googleappsdrivelabelsv2betalistlimits";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaUserLimits = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalistlimits_1 = require("./googleappsdrivelabelsv2betalistlimits");
 // GoogleAppsDriveLabelsV2betaUserLimits
 /**
  * Limits for Field.Type.USER.
@@ -34,9 +37,9 @@ var GoogleAppsDriveLabelsV2betaUserLimits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listLimits" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaListLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listLimits" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalistlimits_1.GoogleAppsDriveLabelsV2betaListLimits)
     ], GoogleAppsDriveLabelsV2betaUserLimits.prototype, "listLimits", void 0);
     return GoogleAppsDriveLabelsV2betaUserLimits;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaUserLimits };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaUserLimits = GoogleAppsDriveLabelsV2betaUserLimits;

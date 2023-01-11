@@ -24,6 +24,6 @@ export declare class UntagResourceResponse extends SpeakeasyBase {
     internalServiceException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    untagResourceResponse?: Map<string, any>;
+    untagResourceResponse?: Record<string, any>;
     validationException?: any;
 }

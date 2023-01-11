@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+import { RecordT } from "./record";
 
 
 
@@ -29,8 +29,8 @@ export class ListRecordsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=NextToken" })
   nextToken?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=Records", elemType: Record })
-  records?: Record[];
+  @SpeakeasyMetadata({ data: "json, name=Records", elemType: RecordT })
+  records?: RecordT[];
 
   @SpeakeasyMetadata({ data: "json, name=SyncSessionToken" })
   syncSessionToken?: string;

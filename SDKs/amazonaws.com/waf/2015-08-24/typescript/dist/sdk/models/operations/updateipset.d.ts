@@ -20,7 +20,7 @@ export declare class UpdateIpSetRequest extends SpeakeasyBase {
 export declare class UpdateIpSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateIpSetResponse?: shared.UpdateIpSetResponse;
+    updateIPSetResponse?: shared.UpdateIpSetResponse;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;
     wafInvalidOperationException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Execution } from "./execution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionList = void 0;
+var utils_1 = require("../../../internal/utils");
+var execution_1 = require("./execution");
 // ExecutionList
 /**
  * Executions List
@@ -34,13 +37,13 @@ var ExecutionList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executions", elemType: Execution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executions", elemType: execution_1.Execution }),
         __metadata("design:type", Array)
     ], ExecutionList.prototype, "executions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sum" }),
         __metadata("design:type", Number)
     ], ExecutionList.prototype, "sum", void 0);
     return ExecutionList;
-}(SpeakeasyBase));
-export { ExecutionList };
+}(utils_1.SpeakeasyBase));
+exports.ExecutionList = ExecutionList;

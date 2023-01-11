@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,186 +14,211 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyticsManagementUploadsListResponse = exports.AnalyticsManagementUploadsListRequest = exports.AnalyticsManagementUploadsListSecurity = exports.AnalyticsManagementUploadsListSecurityOption3 = exports.AnalyticsManagementUploadsListSecurityOption2 = exports.AnalyticsManagementUploadsListSecurityOption1 = exports.AnalyticsManagementUploadsListQueryParams = exports.AnalyticsManagementUploadsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AnalyticsManagementUploadsListPathParams = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListPathParams, _super);
     function AnalyticsManagementUploadsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListPathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=customDataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=customDataSourceId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListPathParams.prototype, "customDataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=webPropertyId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListPathParams.prototype, "webPropertyId", void 0);
     return AnalyticsManagementUploadsListPathParams;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListPathParams = AnalyticsManagementUploadsListPathParams;
 var AnalyticsManagementUploadsListQueryParams = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListQueryParams, _super);
     function AnalyticsManagementUploadsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max-results" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max-results" }),
         __metadata("design:type", Number)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start-index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start-index" }),
         __metadata("design:type", Number)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListQueryParams.prototype, "userIp", void 0);
     return AnalyticsManagementUploadsListQueryParams;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListQueryParams = AnalyticsManagementUploadsListQueryParams;
 var AnalyticsManagementUploadsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListSecurityOption1, _super);
     function AnalyticsManagementUploadsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AnalyticsManagementUploadsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AnalyticsManagementUploadsListSecurityOption1.prototype, "oauth2c", void 0);
     return AnalyticsManagementUploadsListSecurityOption1;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListSecurityOption1 = AnalyticsManagementUploadsListSecurityOption1;
 var AnalyticsManagementUploadsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListSecurityOption2, _super);
     function AnalyticsManagementUploadsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AnalyticsManagementUploadsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AnalyticsManagementUploadsListSecurityOption2.prototype, "oauth2c", void 0);
     return AnalyticsManagementUploadsListSecurityOption2;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListSecurityOption2 = AnalyticsManagementUploadsListSecurityOption2;
 var AnalyticsManagementUploadsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListSecurityOption3, _super);
     function AnalyticsManagementUploadsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AnalyticsManagementUploadsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AnalyticsManagementUploadsListSecurityOption3.prototype, "oauth2c", void 0);
     return AnalyticsManagementUploadsListSecurityOption3;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListSecurityOption3 = AnalyticsManagementUploadsListSecurityOption3;
 var AnalyticsManagementUploadsListSecurity = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListSecurity, _super);
     function AnalyticsManagementUploadsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AnalyticsManagementUploadsListSecurityOption1)
     ], AnalyticsManagementUploadsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AnalyticsManagementUploadsListSecurityOption2)
     ], AnalyticsManagementUploadsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", AnalyticsManagementUploadsListSecurityOption3)
     ], AnalyticsManagementUploadsListSecurity.prototype, "option3", void 0);
     return AnalyticsManagementUploadsListSecurity;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListSecurity = AnalyticsManagementUploadsListSecurity;
 var AnalyticsManagementUploadsListRequest = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListRequest, _super);
     function AnalyticsManagementUploadsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementUploadsListPathParams)
     ], AnalyticsManagementUploadsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementUploadsListQueryParams)
     ], AnalyticsManagementUploadsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementUploadsListSecurity)
     ], AnalyticsManagementUploadsListRequest.prototype, "security", void 0);
     return AnalyticsManagementUploadsListRequest;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListRequest = AnalyticsManagementUploadsListRequest;
 var AnalyticsManagementUploadsListResponse = /** @class */ (function (_super) {
     __extends(AnalyticsManagementUploadsListResponse, _super);
     function AnalyticsManagementUploadsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnalyticsManagementUploadsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AnalyticsManagementUploadsListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Uploads)
     ], AnalyticsManagementUploadsListResponse.prototype, "uploads", void 0);
     return AnalyticsManagementUploadsListResponse;
-}(SpeakeasyBase));
-export { AnalyticsManagementUploadsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementUploadsListResponse = AnalyticsManagementUploadsListResponse;

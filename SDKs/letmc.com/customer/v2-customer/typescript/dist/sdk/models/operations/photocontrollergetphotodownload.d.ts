@@ -4,7 +4,7 @@ export declare class PhotoControllerGetPhotoDownloadPathParams extends Speakeasy
 }
 export declare class PhotoControllerGetPhotoDownloadQueryParams extends SpeakeasyBase {
     height?: number;
-    photoId: string;
+    photoID: string;
     token: string;
     width?: number;
 }
@@ -15,6 +15,6 @@ export declare class PhotoControllerGetPhotoDownloadRequest extends SpeakeasyBas
 export declare class PhotoControllerGetPhotoDownloadResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-import { NestedVirtualMachine } from "./nestedvirtualmachine";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpAddressInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedvirtualmachine_1 = require("./nestedvirtualmachine");
 var IpAddressInterface = /** @class */ (function (_super) {
     __extends(IpAddressInterface, _super);
     function IpAddressInterface() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], IpAddressInterface.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], IpAddressInterface.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], IpAddressInterface.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IpAddressInterface.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtual_machine" }),
-        __metadata("design:type", NestedVirtualMachine)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtual_machine" }),
+        __metadata("design:type", nestedvirtualmachine_1.NestedVirtualMachine)
     ], IpAddressInterface.prototype, "virtualMachine", void 0);
     return IpAddressInterface;
-}(SpeakeasyBase));
-export { IpAddressInterface };
+}(utils_1.SpeakeasyBase));
+exports.IpAddressInterface = IpAddressInterface;

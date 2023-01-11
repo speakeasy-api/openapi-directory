@@ -17,7 +17,7 @@ export class TopUpAccountBalanceQueryParams extends SpeakeasyBase {
 
 export class TopUpAccountBalanceRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: TopUpAccountBalanceQueryParams;
@@ -41,5 +41,5 @@ export class TopUpAccountBalanceResponse extends SpeakeasyBase {
   success?: shared.Success;
 
   @SpeakeasyMetadata()
-  topUpAccountBalance401ApplicationJsonOneOf?: any;
+  topUpAccountBalance401ApplicationJSONOneOf?: any;
 }

@@ -78,7 +78,7 @@ export class UpdateNotificationRuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNotificationRuleResult?: Map<string, any>;
+  updateNotificationRuleResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

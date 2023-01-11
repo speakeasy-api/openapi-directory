@@ -12,7 +12,7 @@ import { Amount } from "./amount";
  * Transaction details.
 **/
 export declare class Transactions extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     additionalInformation?: string;
     additionalInformationStructured?: AdditionalInformationStructured;
     balanceAfterTransaction?: Balance;

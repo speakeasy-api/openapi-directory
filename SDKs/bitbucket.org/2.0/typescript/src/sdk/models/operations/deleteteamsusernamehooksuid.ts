@@ -41,5 +41,5 @@ export class DeleteTeamsUsernameHooksUidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

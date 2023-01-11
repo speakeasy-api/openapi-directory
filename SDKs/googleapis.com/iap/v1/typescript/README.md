@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IapProjectsBrandsCreateRequest, IapProjectsBrandsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,30 +30,30 @@ const req: IapProjectsBrandsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "laboriosam",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "porro",
-    alt: "json",
-    callback: "et",
-    fields: "sed",
-    key: "ut",
-    oauthToken: "voluptatem",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "molestias",
-    uploadType: "vel",
-    uploadProtocol: "dolorem",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    applicationTitle: "id",
-    supportEmail: "iste",
+    applicationTitle: "dicta",
+    supportEmail: "debitis",
   },
 };
 

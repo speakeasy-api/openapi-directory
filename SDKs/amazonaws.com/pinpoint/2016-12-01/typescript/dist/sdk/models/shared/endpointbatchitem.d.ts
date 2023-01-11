@@ -8,14 +8,14 @@ import { EndpointUser } from "./endpointuser";
 **/
 export declare class EndpointBatchItem extends SpeakeasyBase {
     address?: string;
-    attributes?: Map<string, string[]>;
+    attributes?: Record<string, string[]>;
     channelType?: ChannelTypeEnum;
     demographic?: EndpointDemographic;
     effectiveDate?: string;
     endpointStatus?: string;
     id?: string;
     location?: EndpointLocation;
-    metrics?: Map<string, number>;
+    metrics?: Record<string, number>;
     optOut?: string;
     requestId?: string;
     user?: EndpointUser;

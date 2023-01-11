@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { TravelimpactmodelFlightsComputeFlightEmissionsRequest, TravelimpactmodelFlightsComputeFlightEmissionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,29 +29,51 @@ const sdk = new SDK();
 const req: TravelimpactmodelFlightsComputeFlightEmissionsRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "necessitatibus",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "vel",
-    fields: "accusamus",
-    key: "quisquam",
-    oauthToken: "aliquid",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "officia",
-    uploadType: "commodi",
-    uploadProtocol: "est",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     flights: [
       {
         departureDate: {
-          day: 39902411189383839,
-          month: 727541421606400517,
-          year: 8695851542853274209,
+          day: 7837839688282259259,
+          month: 2518412263346885298,
+          year: 5617773211005988520,
         },
-        destination: "earum",
-        flightNumber: 4507682604096346908,
-        operatingCarrierCode: "reprehenderit",
-        origin: "hic",
+        destination: "et",
+        flightNumber: 7144924247938981575,
+        operatingCarrierCode: "dolorem",
+        origin: "et",
+      },
+      {
+        departureDate: {
+          day: 7373105480197164748,
+          month: 3287288577352441706,
+          year: 3930927879439176946,
+        },
+        destination: "totam",
+        flightNumber: 2217592893536642650,
+        operatingCarrierCode: "illum",
+        origin: "debitis",
+      },
+      {
+        departureDate: {
+          day: 3706853784096366226,
+          month: 2627038740284806767,
+          year: 6303220950515014660,
+        },
+        destination: "id",
+        flightNumber: 959367522974354090,
+        operatingCarrierCode: "accusantium",
+        origin: "totam",
       },
     ],
   },

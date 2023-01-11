@@ -15,5 +15,5 @@ export declare class OrgsConvertMemberToOutsideCollaboratorResponse extends Spea
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    orgsConvertMemberToOutsideCollaborator403ApplicationJsonObject?: OrgsConvertMemberToOutsideCollaborator403ApplicationJson;
+    orgsConvertMemberToOutsideCollaborator403ApplicationJSONObject?: OrgsConvertMemberToOutsideCollaborator403ApplicationJson;
 }

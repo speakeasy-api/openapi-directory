@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FullProductUpdateRequest } from "./fullproductupdaterequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkImportRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var fullproductupdaterequest_1 = require("./fullproductupdaterequest");
 var BulkImportRequest = /** @class */ (function (_super) {
     __extends(BulkImportRequest, _super);
     function BulkImportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products", elemType: FullProductUpdateRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products", elemType: fullproductupdaterequest_1.FullProductUpdateRequest }),
         __metadata("design:type", Array)
     ], BulkImportRequest.prototype, "products", void 0);
     return BulkImportRequest;
-}(SpeakeasyBase));
-export { BulkImportRequest };
+}(utils_1.SpeakeasyBase));
+exports.BulkImportRequest = BulkImportRequest;

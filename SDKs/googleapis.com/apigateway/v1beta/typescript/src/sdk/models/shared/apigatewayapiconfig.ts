@@ -16,34 +16,6 @@ export enum ApigatewayApiConfigStateEnum {
 }
 
 
-// ApigatewayApiConfigInput
-/** 
- * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
-**/
-export class ApigatewayApiConfigInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=gatewayConfig" })
-  gatewayConfig?: ApigatewayGatewayConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=gatewayServiceAccount" })
-  gatewayServiceAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=grpcServices", elemType: ApigatewayApiConfigGrpcServiceDefinition })
-  grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=managedServiceConfigs", elemType: ApigatewayApiConfigFile })
-  managedServiceConfigs?: ApigatewayApiConfigFile[];
-
-  @SpeakeasyMetadata({ data: "json, name=openapiDocuments", elemType: ApigatewayApiConfigOpenApiDocument })
-  openapiDocuments?: ApigatewayApiConfigOpenApiDocument[];
-}
-
-
 // ApigatewayApiConfig
 /** 
  * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
@@ -65,7 +37,7 @@ export class ApigatewayApiConfig extends SpeakeasyBase {
   grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=managedServiceConfigs", elemType: ApigatewayApiConfigFile })
   managedServiceConfigs?: ApigatewayApiConfigFile[];
@@ -84,4 +56,32 @@ export class ApigatewayApiConfig extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ApigatewayApiConfigInput
+/** 
+ * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
+**/
+export class ApigatewayApiConfigInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=gatewayConfig" })
+  gatewayConfig?: ApigatewayGatewayConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=gatewayServiceAccount" })
+  gatewayServiceAccount?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=grpcServices", elemType: ApigatewayApiConfigGrpcServiceDefinition })
+  grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=managedServiceConfigs", elemType: ApigatewayApiConfigFile })
+  managedServiceConfigs?: ApigatewayApiConfigFile[];
+
+  @SpeakeasyMetadata({ data: "json, name=openapiDocuments", elemType: ApigatewayApiConfigOpenApiDocument })
+  openapiDocuments?: ApigatewayApiConfigOpenApiDocument[];
 }

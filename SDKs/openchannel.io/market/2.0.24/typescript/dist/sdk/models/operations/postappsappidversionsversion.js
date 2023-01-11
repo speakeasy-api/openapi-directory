@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAppsAppIdVersionsVersionResponse = exports.PostAppsAppIdVersionsVersionRequest = exports.PostAppsAppIdVersionsVersionQueryParams = exports.PostAppsAppIdVersionsVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAppsAppIdVersionsVersionPathParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdVersionsVersionPathParams, _super);
     function PostAppsAppIdVersionsVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionPathParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionPathParams.prototype, "version", void 0);
     return PostAppsAppIdVersionsVersionPathParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdVersionsVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdVersionsVersionPathParams = PostAppsAppIdVersionsVersionPathParams;
 var PostAppsAppIdVersionsVersionQueryParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdVersionsVersionQueryParams, _super);
     function PostAppsAppIdVersionsVersionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=allow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=allow" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "allow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=approvalRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=approvalRequired" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "approvalRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=attributes" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=developerId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "developerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=model" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=restrict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=restrict" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "restrict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionQueryParams.prototype, "type", void 0);
     return PostAppsAppIdVersionsVersionQueryParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdVersionsVersionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdVersionsVersionQueryParams = PostAppsAppIdVersionsVersionQueryParams;
 var PostAppsAppIdVersionsVersionRequest = /** @class */ (function (_super) {
     __extends(PostAppsAppIdVersionsVersionRequest, _super);
     function PostAppsAppIdVersionsVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdVersionsVersionPathParams)
     ], PostAppsAppIdVersionsVersionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdVersionsVersionQueryParams)
     ], PostAppsAppIdVersionsVersionRequest.prototype, "queryParams", void 0);
     return PostAppsAppIdVersionsVersionRequest;
-}(SpeakeasyBase));
-export { PostAppsAppIdVersionsVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdVersionsVersionRequest = PostAppsAppIdVersionsVersionRequest;
 var PostAppsAppIdVersionsVersionResponse = /** @class */ (function (_super) {
     __extends(PostAppsAppIdVersionsVersionResponse, _super);
     function PostAppsAppIdVersionsVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAppsAppIdVersionsVersionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAppsAppIdVersionsVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAppsAppIdVersionsVersionResponse.prototype, "statusCode", void 0);
     return PostAppsAppIdVersionsVersionResponse;
-}(SpeakeasyBase));
-export { PostAppsAppIdVersionsVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdVersionsVersionResponse = PostAppsAppIdVersionsVersionResponse;

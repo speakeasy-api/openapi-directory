@@ -51,7 +51,7 @@ export class DeleteProjectResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteProjectResult?: Map<string, any>;
+  deleteProjectResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

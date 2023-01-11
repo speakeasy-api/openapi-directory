@@ -8,5 +8,5 @@ export declare class AccessLoadRequest extends SpeakeasyBase {
 export declare class AccessLoadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    accessLoad200ApplicationJsonStrings?: string[];
+    accessLoad200ApplicationJSONStrings?: string[];
 }

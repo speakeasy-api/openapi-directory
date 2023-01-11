@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortalStatus } from "./portalstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortalSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var portalstatus_1 = require("./portalstatus");
 // PortalSummary
 /**
  * Contains a portal summary.
@@ -34,37 +37,37 @@ var PortalSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", Date)
     ], PortalSummary.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PortalSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PortalSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateDate" }),
         __metadata("design:type", Date)
     ], PortalSummary.prototype, "lastUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PortalSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], PortalSummary.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startUrl" }),
         __metadata("design:type", String)
     ], PortalSummary.prototype, "startUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", PortalStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", portalstatus_1.PortalStatus)
     ], PortalSummary.prototype, "status", void 0);
     return PortalSummary;
-}(SpeakeasyBase));
-export { PortalSummary };
+}(utils_1.SpeakeasyBase));
+exports.PortalSummary = PortalSummary;

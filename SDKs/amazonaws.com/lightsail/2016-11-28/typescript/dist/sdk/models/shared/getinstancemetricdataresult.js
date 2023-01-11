@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricDatapoint } from "./metricdatapoint";
-import { InstanceMetricNameEnum } from "./instancemetricnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInstanceMetricDataResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricdatapoint_1 = require("./metricdatapoint");
+var instancemetricnameenum_1 = require("./instancemetricnameenum");
 var GetInstanceMetricDataResult = /** @class */ (function (_super) {
     __extends(GetInstanceMetricDataResult, _super);
     function GetInstanceMetricDataResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricData", elemType: MetricDatapoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricData", elemType: metricdatapoint_1.MetricDatapoint }),
         __metadata("design:type", Array)
     ], GetInstanceMetricDataResult.prototype, "metricData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], GetInstanceMetricDataResult.prototype, "metricName", void 0);
     return GetInstanceMetricDataResult;
-}(SpeakeasyBase));
-export { GetInstanceMetricDataResult };
+}(utils_1.SpeakeasyBase));
+exports.GetInstanceMetricDataResult = GetInstanceMetricDataResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AquaConfiguration } from "./aquaconfiguration";
-import { ClusterNode } from "./clusternode";
-import { ClusterParameterGroupStatus } from "./clusterparametergroupstatus";
-import { ClusterSecurityGroupMembership } from "./clustersecuritygroupmembership";
-import { ClusterSnapshotCopyStatus } from "./clustersnapshotcopystatus";
-import { DataTransferProgress } from "./datatransferprogress";
-import { DeferredMaintenanceWindow } from "./deferredmaintenancewindow";
-import { ElasticIpStatus } from "./elasticipstatus";
-import { Endpoint } from "./endpoint";
-import { HsmStatus } from "./hsmstatus";
-import { ClusterIamRole } from "./clusteriamrole";
-import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { ResizeInfo } from "./resizeinfo";
-import { RestoreStatus } from "./restorestatus";
-import { ScheduleStateEnum } from "./schedulestateenum";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var aquaconfiguration_1 = require("./aquaconfiguration");
+var clusternode_1 = require("./clusternode");
+var clusterparametergroupstatuslist_1 = require("./clusterparametergroupstatuslist");
+var clustersecuritygroupmembershiplist_1 = require("./clustersecuritygroupmembershiplist");
+var clustersnapshotcopystatus_1 = require("./clustersnapshotcopystatus");
+var datatransferprogress_1 = require("./datatransferprogress");
+var deferredmaintenancewindowslist_1 = require("./deferredmaintenancewindowslist");
+var elasticipstatus_1 = require("./elasticipstatus");
+var endpoint_1 = require("./endpoint");
+var hsmstatus_1 = require("./hsmstatus");
+var clusteriamrolelist_1 = require("./clusteriamrolelist");
+var pendingmodifiedvalues_1 = require("./pendingmodifiedvalues");
+var resizeinfo_1 = require("./resizeinfo");
+var restorestatus_1 = require("./restorestatus");
+var schedulestateenum_1 = require("./schedulestateenum");
+var taglist_1 = require("./taglist");
+var vpcsecuritygroupmembershiplist_1 = require("./vpcsecuritygroupmembershiplist");
 // Cluster
 /**
  * Describes a cluster.
@@ -50,205 +53,205 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "allowVersionUpgrade", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AquaConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", aquaconfiguration_1.AquaConfiguration)
     ], Cluster.prototype, "aquaConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Cluster.prototype, "automatedSnapshotRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "availabilityZoneRelocationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterAvailabilityStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], Cluster.prototype, "clusterCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterNamespaceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterNode }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusternode_1.ClusterNode }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "clusterNodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterParameterGroupStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusterparametergroupstatuslist_1.ClusterParameterGroupStatusList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "clusterParameterGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterRevisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clustersecuritygroupmembershiplist_1.ClusterSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "clusterSecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClusterSnapshotCopyStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", clustersnapshotcopystatus_1.ClusterSnapshotCopyStatus)
     ], Cluster.prototype, "clusterSnapshotCopyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterSubnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "dbName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DataTransferProgress)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", datatransferprogress_1.DataTransferProgress)
     ], Cluster.prototype, "dataTransferProgress", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DeferredMaintenanceWindow }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: deferredmaintenancewindowslist_1.DeferredMaintenanceWindowsList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "deferredMaintenanceWindows", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ElasticIpStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", elasticipstatus_1.ElasticIpStatus)
     ], Cluster.prototype, "elasticIpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "elasticResizeNumberOfNodeOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], Cluster.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "enhancedVpcRouting", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], Cluster.prototype, "expectedNextSnapshotScheduleTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "expectedNextSnapshotScheduleTimeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HsmStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", hsmstatus_1.HsmStatus)
     ], Cluster.prototype, "hsmStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterIamRole }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusteriamrolelist_1.ClusterIamRoleList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "iamRoles", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "maintenanceTrackName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Cluster.prototype, "manualSnapshotRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "masterUsername", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "modifyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], Cluster.prototype, "nextMaintenanceWindowStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "nodeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Cluster.prototype, "numberOfNodes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], Cluster.prototype, "pendingActions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PendingModifiedValues)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pendingmodifiedvalues_1.PendingModifiedValues)
     ], Cluster.prototype, "pendingModifiedValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "publiclyAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResizeInfo)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resizeinfo_1.ResizeInfo)
     ], Cluster.prototype, "resizeInfo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RestoreStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", restorestatus_1.RestoreStatus)
     ], Cluster.prototype, "restoreStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "snapshotScheduleIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "snapshotScheduleState", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: taglist_1.TagList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Cluster.prototype, "totalStorageCapacityInMegaBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Cluster.prototype, "vpcId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: vpcsecuritygroupmembershiplist_1.VpcSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "vpcSecurityGroups", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

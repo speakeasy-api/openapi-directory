@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,18 +14,43 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var PostOrdersOrderRequestV2IntegratorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOrdersResponse = exports.PostOrdersRequest = exports.PostOrdersOrderResponseV2 = exports.PostOrdersOrderResponseV2WarehouseV2 = exports.PostOrdersOrderResponseV2TrackingNumberV2 = exports.PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 = exports.PostOrdersOrderResponseV2ParentOrder = exports.PostOrdersOrderResponseV2ConsigneeV2 = exports.PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2 = exports.PostOrdersOrderResponseV2MerchantV2 = exports.PostOrdersOrderResponseV2StatusEventV2 = exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 = exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State = exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage = exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy = exports.PostOrdersErrorStandardWithContextV2 = exports.PostOrdersSecurity = exports.PostOrdersOrderRequestV2 = exports.PostOrdersOrderRequestV2Warehouse = exports.PostOrdersOrderRequestV2ConsigneeNewV2 = exports.PostOrdersOrderRequestV2Items = exports.PostOrdersOrderRequestV2IntegratorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var PostOrdersOrderRequestV2IntegratorEnum;
 (function (PostOrdersOrderRequestV2IntegratorEnum) {
     PostOrdersOrderRequestV2IntegratorEnum["OneShoppingCart"] = "1ShoppingCart";
     PostOrdersOrderRequestV2IntegratorEnum["ThreedCart"] = "3dCart";
@@ -85,79 +111,79 @@ export var PostOrdersOrderRequestV2IntegratorEnum;
     PostOrdersOrderRequestV2IntegratorEnum["Walmart"] = "Walmart";
     PostOrdersOrderRequestV2IntegratorEnum["WooCommerce"] = "WooCommerce";
     PostOrdersOrderRequestV2IntegratorEnum["Yahoo"] = "Yahoo";
-})(PostOrdersOrderRequestV2IntegratorEnum || (PostOrdersOrderRequestV2IntegratorEnum = {}));
+})(PostOrdersOrderRequestV2IntegratorEnum = exports.PostOrdersOrderRequestV2IntegratorEnum || (exports.PostOrdersOrderRequestV2IntegratorEnum = {}));
 var PostOrdersOrderRequestV2Items = /** @class */ (function (_super) {
     __extends(PostOrdersOrderRequestV2Items, _super);
     function PostOrdersOrderRequestV2Items() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declaredValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declaredValue" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2Items.prototype, "declaredValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderRequestV2Items.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sku" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sku" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2Items.prototype, "sku", void 0);
     return PostOrdersOrderRequestV2Items;
-}(SpeakeasyBase));
-export { PostOrdersOrderRequestV2Items };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderRequestV2Items = PostOrdersOrderRequestV2Items;
 var PostOrdersOrderRequestV2ConsigneeNewV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderRequestV2ConsigneeNewV2, _super);
     function PostOrdersOrderRequestV2ConsigneeNewV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address1" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "address1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address2" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "address2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLocality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLocality" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "addressLocality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressRegion" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "addressRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2ConsigneeNewV2.prototype, "postalCode", void 0);
     return PostOrdersOrderRequestV2ConsigneeNewV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderRequestV2ConsigneeNewV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderRequestV2ConsigneeNewV2 = PostOrdersOrderRequestV2ConsigneeNewV2;
 // PostOrdersOrderRequestV2Warehouse
 /**
  * We automatically select a warehouse based on inventory availability, requested carrier and delivery schedule, and carrier cost. You may however override this process. Because this is not recommended please inform your AE prior to using so they may enable this feature.
@@ -168,80 +194,80 @@ var PostOrdersOrderRequestV2Warehouse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderRequestV2Warehouse.prototype, "id", void 0);
     return PostOrdersOrderRequestV2Warehouse;
-}(SpeakeasyBase));
-export { PostOrdersOrderRequestV2Warehouse };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderRequestV2Warehouse = PostOrdersOrderRequestV2Warehouse;
 var PostOrdersOrderRequestV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderRequestV2, _super);
     function PostOrdersOrderRequestV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integrator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integrator" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2.prototype, "integrator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: PostOrdersOrderRequestV2Items }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: PostOrdersOrderRequestV2Items }),
         __metadata("design:type", Array)
     ], PostOrdersOrderRequestV2.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderRequestV2.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantOrderId" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2.prototype, "merchantOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipient" }),
         __metadata("design:type", PostOrdersOrderRequestV2ConsigneeNewV2)
     ], PostOrdersOrderRequestV2.prototype, "recipient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingMethod" }),
         __metadata("design:type", String)
     ], PostOrdersOrderRequestV2.prototype, "shippingMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warehouse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warehouse" }),
         __metadata("design:type", PostOrdersOrderRequestV2Warehouse)
     ], PostOrdersOrderRequestV2.prototype, "warehouse", void 0);
     return PostOrdersOrderRequestV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderRequestV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderRequestV2 = PostOrdersOrderRequestV2;
 var PostOrdersSecurity = /** @class */ (function (_super) {
     __extends(PostOrdersSecurity, _super);
     function PostOrdersSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeFdcAuth)
     ], PostOrdersSecurity.prototype, "fdcAuth", void 0);
     return PostOrdersSecurity;
-}(SpeakeasyBase));
-export { PostOrdersSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersSecurity = PostOrdersSecurity;
 var PostOrdersErrorStandardWithContextV2 = /** @class */ (function (_super) {
     __extends(PostOrdersErrorStandardWithContextV2, _super);
     function PostOrdersErrorStandardWithContextV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
         __metadata("design:type", Array)
     ], PostOrdersErrorStandardWithContextV2.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostOrdersErrorStandardWithContextV2.prototype, "message", void 0);
     return PostOrdersErrorStandardWithContextV2;
-}(SpeakeasyBase));
-export { PostOrdersErrorStandardWithContextV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersErrorStandardWithContextV2 = PostOrdersErrorStandardWithContextV2;
 // PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy
 /**
  * Responsibility for resolving this issue
@@ -252,389 +278,389 @@ var PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy.prototype, "name", void 0);
     return PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy = PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy;
 var PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage, _super);
     function PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage.prototype, "name", void 0);
     return PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage = PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage;
 var PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State, _super);
     function PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State.prototype, "name", void 0);
     return PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State = PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State;
 var PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2, _super);
     function PostOrdersOrderResponseV2StatusEventV2StatusTypeV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionRequiredBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionRequiredBy" }),
         __metadata("design:type", PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "actionRequiredBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailCode" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "detailCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isClosed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isClosed" }),
         __metadata("design:type", Boolean)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "isClosed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stage" }),
         __metadata("design:type", PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "stage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State)
     ], PostOrdersOrderResponseV2StatusEventV2StatusTypeV2.prototype, "state", void 0);
     return PostOrdersOrderResponseV2StatusEventV2StatusTypeV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 = PostOrdersOrderResponseV2StatusEventV2StatusTypeV2;
 var PostOrdersOrderResponseV2StatusEventV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2StatusEventV2, _super);
     function PostOrdersOrderResponseV2StatusEventV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy)
     ], PostOrdersOrderResponseV2StatusEventV2.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], PostOrdersOrderResponseV2StatusEventV2.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2StatusEventV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2StatusEventV2.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", PostOrdersOrderResponseV2StatusEventV2StatusTypeV2)
     ], PostOrdersOrderResponseV2StatusEventV2.prototype, "status", void 0);
     return PostOrdersOrderResponseV2StatusEventV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2StatusEventV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2StatusEventV2 = PostOrdersOrderResponseV2StatusEventV2;
 var PostOrdersOrderResponseV2MerchantV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2MerchantV2, _super);
     function PostOrdersOrderResponseV2MerchantV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2MerchantV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2MerchantV2.prototype, "name", void 0);
     return PostOrdersOrderResponseV2MerchantV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2MerchantV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2MerchantV2 = PostOrdersOrderResponseV2MerchantV2;
 var PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2, _super);
     function PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iso2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iso2" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2.prototype, "iso2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2.prototype, "name", void 0);
     return PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2 = PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2;
 var PostOrdersOrderResponseV2ConsigneeV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2ConsigneeV2, _super);
     function PostOrdersOrderResponseV2ConsigneeV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address1" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "address1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address2" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "address2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLocality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLocality" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "addressLocality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressRegion" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "addressRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iso" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iso" }),
         __metadata("design:type", PostOrdersOrderResponseV2ConsigneeV2IsoCountryV2)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "iso", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedBy" }),
         __metadata("design:type", shared.OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy)
     ], PostOrdersOrderResponseV2ConsigneeV2.prototype, "updatedBy", void 0);
     return PostOrdersOrderResponseV2ConsigneeV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2ConsigneeV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2ConsigneeV2 = PostOrdersOrderResponseV2ConsigneeV2;
 var PostOrdersOrderResponseV2ParentOrder = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2ParentOrder, _super);
     function PostOrdersOrderResponseV2ParentOrder() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2ParentOrder.prototype, "id", void 0);
     return PostOrdersOrderResponseV2ParentOrder;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2ParentOrder };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2ParentOrder = PostOrdersOrderResponseV2ParentOrder;
 var PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2, _super);
     function PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2.prototype, "id", void 0);
     return PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2 = PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2;
 var PostOrdersOrderResponseV2TrackingNumberV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2TrackingNumberV2, _super);
     function PostOrdersOrderResponseV2TrackingNumberV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barcodeScanValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barcodeScanValue" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2TrackingNumberV2.prototype, "barcodeScanValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrier" }),
         __metadata("design:type", PostOrdersOrderResponseV2TrackingNumberV2CarrierSimpleV2)
     ], PostOrdersOrderResponseV2TrackingNumberV2.prototype, "carrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2TrackingNumberV2.prototype, "value", void 0);
     return PostOrdersOrderResponseV2TrackingNumberV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2TrackingNumberV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2TrackingNumberV2 = PostOrdersOrderResponseV2TrackingNumberV2;
 var PostOrdersOrderResponseV2WarehouseV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2WarehouseV2, _super);
     function PostOrdersOrderResponseV2WarehouseV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2WarehouseV2.prototype, "id", void 0);
     return PostOrdersOrderResponseV2WarehouseV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2WarehouseV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2WarehouseV2 = PostOrdersOrderResponseV2WarehouseV2;
 var PostOrdersOrderResponseV2 = /** @class */ (function (_super) {
     __extends(PostOrdersOrderResponseV2, _super);
     function PostOrdersOrderResponseV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentStatus" }),
         __metadata("design:type", PostOrdersOrderResponseV2StatusEventV2)
     ], PostOrdersOrderResponseV2.prototype, "currentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departDate" }),
         __metadata("design:type", Date)
     ], PostOrdersOrderResponseV2.prototype, "departDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dispatchDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dispatchDate" }),
         __metadata("design:type", Date)
     ], PostOrdersOrderResponseV2.prototype, "dispatchDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostOrdersOrderResponseV2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchant" }),
         __metadata("design:type", PostOrdersOrderResponseV2MerchantV2)
     ], PostOrdersOrderResponseV2.prototype, "merchant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantOrderId" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2.prototype, "merchantOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantShippingMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantShippingMethod" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2.prototype, "merchantShippingMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalConsignee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalConsignee" }),
         __metadata("design:type", PostOrdersOrderResponseV2ConsigneeV2)
     ], PostOrdersOrderResponseV2.prototype, "originalConsignee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentOrder" }),
         __metadata("design:type", PostOrdersOrderResponseV2ParentOrder)
     ], PostOrdersOrderResponseV2.prototype, "parentOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseOrderNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseOrderNum" }),
         __metadata("design:type", String)
     ], PostOrdersOrderResponseV2.prototype, "purchaseOrderNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordedOn" }),
         __metadata("design:type", Date)
     ], PostOrdersOrderResponseV2.prototype, "recordedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingNumbers", elemType: PostOrdersOrderResponseV2TrackingNumberV2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingNumbers", elemType: PostOrdersOrderResponseV2TrackingNumberV2 }),
         __metadata("design:type", Array)
     ], PostOrdersOrderResponseV2.prototype, "trackingNumbers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validatedConsignee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validatedConsignee" }),
         __metadata("design:type", shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee)
     ], PostOrdersOrderResponseV2.prototype, "validatedConsignee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warehouse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warehouse" }),
         __metadata("design:type", PostOrdersOrderResponseV2WarehouseV2)
     ], PostOrdersOrderResponseV2.prototype, "warehouse", void 0);
     return PostOrdersOrderResponseV2;
-}(SpeakeasyBase));
-export { PostOrdersOrderResponseV2 };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersOrderResponseV2 = PostOrdersOrderResponseV2;
 var PostOrdersRequest = /** @class */ (function (_super) {
     __extends(PostOrdersRequest, _super);
     function PostOrdersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostOrdersOrderRequestV2)
     ], PostOrdersRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOrdersSecurity)
     ], PostOrdersRequest.prototype, "security", void 0);
     return PostOrdersRequest;
-}(SpeakeasyBase));
-export { PostOrdersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersRequest = PostOrdersRequest;
 var PostOrdersResponse = /** @class */ (function (_super) {
     __extends(PostOrdersResponse, _super);
     function PostOrdersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOrdersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOrdersErrorStandardWithContextV2)
     ], PostOrdersResponse.prototype, "errorStandardWithContextV2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOrdersOrderResponseV2)
     ], PostOrdersResponse.prototype, "orderResponseV2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOrdersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.OneordersGetResponses404ContentApplication1jsonSchema)
     ], PostOrdersResponse.prototype, "oneordersGetResponses404ContentApplication1jsonSchema", void 0);
     return PostOrdersResponse;
-}(SpeakeasyBase));
-export { PostOrdersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOrdersResponse = PostOrdersResponse;

@@ -14,8 +14,8 @@ export declare class ThreeGetEstimatedPriceRequest extends SpeakeasyBase {
     queryParams: ThreeGetEstimatedPriceQueryParams;
 }
 export declare class ThreeGetEstimatedPriceResponse extends SpeakeasyBase {
-    threeGetEstimatedPrice200ApplicationJsonObject?: ThreeGetEstimatedPrice200ApplicationJson;
+    threeGetEstimatedPrice200ApplicationJSONObject?: ThreeGetEstimatedPrice200ApplicationJson;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

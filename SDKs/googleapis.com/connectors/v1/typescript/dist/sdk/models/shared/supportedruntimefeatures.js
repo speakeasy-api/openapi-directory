@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedRuntimeFeatures = void 0;
+var utils_1 = require("../../../internal/utils");
 // SupportedRuntimeFeatures
 /**
  * Supported runtime features of a connector version. This is passed to the management layer to add a new connector version by the connector developer. Details about how this proto is passed to the management layer is covered in this doc - go/runtime-manifest.
@@ -33,17 +36,17 @@ var SupportedRuntimeFeatures = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionApis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionApis" }),
         __metadata("design:type", Boolean)
     ], SupportedRuntimeFeatures.prototype, "actionApis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityApis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityApis" }),
         __metadata("design:type", Boolean)
     ], SupportedRuntimeFeatures.prototype, "entityApis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sqlQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sqlQuery" }),
         __metadata("design:type", Boolean)
     ], SupportedRuntimeFeatures.prototype, "sqlQuery", void 0);
     return SupportedRuntimeFeatures;
-}(SpeakeasyBase));
-export { SupportedRuntimeFeatures };
+}(utils_1.SpeakeasyBase));
+exports.SupportedRuntimeFeatures = SupportedRuntimeFeatures;

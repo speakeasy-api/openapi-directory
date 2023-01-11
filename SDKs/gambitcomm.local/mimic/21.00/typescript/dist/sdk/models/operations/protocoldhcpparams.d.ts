@@ -8,5 +8,5 @@ export declare class ProtocolDhcpParamsRequest extends SpeakeasyBase {
 export declare class ProtocolDhcpParamsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolDhcpParams200ApplicationJsonObjects?: Map<string, any>[];
+    protocolDhcpParams200ApplicationJSONObjects?: Record<string, any>[];
 }

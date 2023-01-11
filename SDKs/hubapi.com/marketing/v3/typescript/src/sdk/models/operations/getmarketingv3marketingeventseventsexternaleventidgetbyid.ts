@@ -16,9 +16,6 @@ export class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParam
 
 
 export class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
   oauth2Legacy?: shared.SchemeOauth2Legacy;
 

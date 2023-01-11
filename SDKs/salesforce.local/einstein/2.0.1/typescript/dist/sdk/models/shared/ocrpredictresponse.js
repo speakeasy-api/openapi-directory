@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrResult } from "./ocrresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OcrPredictResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrresult_1 = require("./ocrresult");
 var OcrPredictResponse = /** @class */ (function (_super) {
     __extends(OcrPredictResponse, _super);
     function OcrPredictResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], OcrPredictResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilities", elemType: OcrResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilities", elemType: ocrresult_1.OcrResult }),
         __metadata("design:type", Array)
     ], OcrPredictResponse.prototype, "probabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId" }),
         __metadata("design:type", String)
     ], OcrPredictResponse.prototype, "sampleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
         __metadata("design:type", String)
     ], OcrPredictResponse.prototype, "task", void 0);
     return OcrPredictResponse;
-}(SpeakeasyBase));
-export { OcrPredictResponse };
+}(utils_1.SpeakeasyBase));
+exports.OcrPredictResponse = OcrPredictResponse;

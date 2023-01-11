@@ -58,22 +58,22 @@ export class PostAgentQueryParams extends SpeakeasyBase {
   jcrContentProtocolConnectTimeout?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPConnectionClosed" })
-  jcrContentProtocolHttpConnectionClosed?: boolean;
+  jcrContentProtocolHTTPConnectionClosed?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPExpired" })
-  jcrContentProtocolHttpExpired?: string;
+  jcrContentProtocolHTTPExpired?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPHeaders" })
-  jcrContentProtocolHttpHeaders?: string[];
+  jcrContentProtocolHTTPHeaders?: string[];
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPHeaders@TypeHint" })
-  jcrContentProtocolHttpHeadersAtTypeHint?: string;
+  jcrContentProtocolHTTPHeadersAtTypeHint?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPMethod" })
-  jcrContentProtocolHttpMethod?: string;
+  jcrContentProtocolHTTPMethod?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolHTTPSRelaxed" })
-  jcrContentProtocolHttpsRelaxed?: boolean;
+  jcrContentProtocolHTTPSRelaxed?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/protocolInterface" })
   jcrContentProtocolInterface?: string;
@@ -88,10 +88,10 @@ export class PostAgentQueryParams extends SpeakeasyBase {
   jcrContentProxyHost?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/proxyNTLMDomain" })
-  jcrContentProxyNtlmDomain?: string;
+  jcrContentProxyNTLMDomain?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/proxyNTLMHost" })
-  jcrContentProxyNtlmHost?: string;
+  jcrContentProxyNTLMHost?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/proxyPassword" })
   jcrContentProxyPassword?: string;
@@ -127,10 +127,10 @@ export class PostAgentQueryParams extends SpeakeasyBase {
   jcrContentSsl?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/transportNTLMDomain" })
-  jcrContentTransportNtlmDomain?: string;
+  jcrContentTransportNTLMDomain?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/transportNTLMHost" })
-  jcrContentTransportNtlmHost?: string;
+  jcrContentTransportNTLMHost?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jcr:content/transportPassword" })
   jcrContentTransportPassword?: string;

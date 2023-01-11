@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BigQueryQuerySpec } from "./bigqueryqueryspec";
-import { BigQueryTableSpec } from "./bigquerytablespec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BigQueryDataSourceSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var bigqueryqueryspec_1 = require("./bigqueryqueryspec");
+var bigquerytablespec_1 = require("./bigquerytablespec");
 // BigQueryDataSourceSpec
 /**
  * The specification of a BigQuery data source that's connected to a sheet.
@@ -35,17 +38,17 @@ var BigQueryDataSourceSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], BigQueryDataSourceSpec.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=querySpec" }),
-        __metadata("design:type", BigQueryQuerySpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=querySpec" }),
+        __metadata("design:type", bigqueryqueryspec_1.BigQueryQuerySpec)
     ], BigQueryDataSourceSpec.prototype, "querySpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableSpec" }),
-        __metadata("design:type", BigQueryTableSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableSpec" }),
+        __metadata("design:type", bigquerytablespec_1.BigQueryTableSpec)
     ], BigQueryDataSourceSpec.prototype, "tableSpec", void 0);
     return BigQueryDataSourceSpec;
-}(SpeakeasyBase));
-export { BigQueryDataSourceSpec };
+}(utils_1.SpeakeasyBase));
+exports.BigQueryDataSourceSpec = BigQueryDataSourceSpec;

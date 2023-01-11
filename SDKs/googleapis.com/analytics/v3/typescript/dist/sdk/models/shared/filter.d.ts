@@ -52,22 +52,6 @@ export declare class FilterUppercaseDetails extends SpeakeasyBase {
 /**
  * JSON template for an Analytics account filter.
 **/
-export declare class FilterInput extends SpeakeasyBase {
-    accountId?: string;
-    advancedDetails?: FilterAdvancedDetails;
-    excludeDetails?: FilterExpression;
-    id?: string;
-    includeDetails?: FilterExpression;
-    lowercaseDetails?: FilterLowercaseDetails;
-    name?: string;
-    parentLink?: FilterParentLink;
-    searchAndReplaceDetails?: FilterSearchAndReplaceDetails;
-    type?: string;
-    uppercaseDetails?: FilterUppercaseDetails;
-}
-/**
- * JSON template for an Analytics account filter.
-**/
 export declare class Filter extends SpeakeasyBase {
     accountId?: string;
     advancedDetails?: FilterAdvancedDetails;
@@ -83,5 +67,21 @@ export declare class Filter extends SpeakeasyBase {
     selfLink?: string;
     type?: string;
     updated?: Date;
+    uppercaseDetails?: FilterUppercaseDetails;
+}
+/**
+ * JSON template for an Analytics account filter.
+**/
+export declare class FilterInput extends SpeakeasyBase {
+    accountId?: string;
+    advancedDetails?: FilterAdvancedDetails;
+    excludeDetails?: FilterExpression;
+    id?: string;
+    includeDetails?: FilterExpression;
+    lowercaseDetails?: FilterLowercaseDetails;
+    name?: string;
+    parentLink?: FilterParentLink;
+    searchAndReplaceDetails?: FilterSearchAndReplaceDetails;
+    type?: string;
     uppercaseDetails?: FilterUppercaseDetails;
 }

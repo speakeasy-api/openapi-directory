@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CloudWatchLoggingOption extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=LogStreamARN" })
-  logStreamArn: string;
+  logStreamARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn: string;
+  roleARN: string;
 }

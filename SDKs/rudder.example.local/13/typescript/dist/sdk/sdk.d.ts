@@ -6,7 +6,7 @@ import { Directives } from "./directives";
 import { Groups } from "./groups";
 import { Inventories } from "./inventories";
 import { Nodes } from "./nodes";
-import { Parameters } from "./parameters";
+import { ParametersT } from "./parameters";
 import { Rules } from "./rules";
 import { Settings } from "./settings";
 import { System } from "./system";
@@ -18,11 +18,12 @@ import { CreateNode } from "./createnode";
 import { DataSources } from "./datasources";
 import { ScaleOutRelay } from "./scaleoutrelay";
 import { UserManagement } from "./usermanagement";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://rudder.example.local/rudder/api/latest/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     apiInfo: ApiInfo;
     compliance: Compliance;
@@ -30,7 +31,7 @@ export declare class SDK {
     groups: Groups;
     inventories: Inventories;
     nodes: Nodes;
-    parameters: Parameters;
+    parameters: ParametersT;
     rules: Rules;
     settings: Settings;
     system: System;
@@ -44,11 +45,9 @@ export declare class SDK {
     userManagement: UserManagement;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

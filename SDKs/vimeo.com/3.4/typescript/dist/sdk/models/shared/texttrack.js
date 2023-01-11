@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TextTrackTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextTrack = exports.TextTrackTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TextTrackTypeEnum;
 (function (TextTrackTypeEnum) {
     TextTrackTypeEnum["Captions"] = "captions";
     TextTrackTypeEnum["Subtitles"] = "subtitles";
-})(TextTrackTypeEnum || (TextTrackTypeEnum = {}));
+})(TextTrackTypeEnum = exports.TextTrackTypeEnum || (exports.TextTrackTypeEnum = {}));
 var TextTrack = /** @class */ (function (_super) {
     __extends(TextTrack, _super);
     function TextTrack() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], TextTrack.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hls_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hls_link" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "hlsLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hls_link_expires_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hls_link_expires_time" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "hlsLinkExpiresTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_expires_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_expires_time" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "linkExpiresTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], TextTrack.prototype, "uri", void 0);
     return TextTrack;
-}(SpeakeasyBase));
-export { TextTrack };
+}(utils_1.SpeakeasyBase));
+exports.TextTrack = TextTrack;

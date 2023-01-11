@@ -51,7 +51,7 @@ export class DeleteConnectionAliasResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteConnectionAliasResult?: Map<string, any>;
+  deleteConnectionAliasResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

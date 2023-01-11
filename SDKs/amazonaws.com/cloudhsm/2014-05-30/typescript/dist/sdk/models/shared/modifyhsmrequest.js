@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyHsmRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // ModifyHsmRequest
 /**
  * Contains the inputs for the <a>ModifyHsm</a> operation.
@@ -33,29 +36,29 @@ var ModifyHsmRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniIp" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "eniIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExternalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExternalId" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmArn" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "hsmArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamRoleArn" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "iamRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SyslogIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SyslogIp" }),
         __metadata("design:type", String)
     ], ModifyHsmRequest.prototype, "syslogIp", void 0);
     return ModifyHsmRequest;
-}(SpeakeasyBase));
-export { ModifyHsmRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyHsmRequest = ModifyHsmRequest;

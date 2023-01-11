@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetP32SummaryNetReportOutputResponse = exports.GetP32SummaryNetReportOutputRequest = exports.GetP32SummaryNetReportOutputHeaders = exports.GetP32SummaryNetReportOutputQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetP32SummaryNetReportOutputQueryParams = /** @class */ (function (_super) {
     __extends(GetP32SummaryNetReportOutputQueryParams, _super);
     function GetP32SummaryNetReportOutputQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EmployerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EmployerKey" }),
         __metadata("design:type", String)
     ], GetP32SummaryNetReportOutputQueryParams.prototype, "employerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TaxYear" }),
         __metadata("design:type", String)
     ], GetP32SummaryNetReportOutputQueryParams.prototype, "taxYear", void 0);
     return GetP32SummaryNetReportOutputQueryParams;
-}(SpeakeasyBase));
-export { GetP32SummaryNetReportOutputQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetP32SummaryNetReportOutputQueryParams = GetP32SummaryNetReportOutputQueryParams;
 var GetP32SummaryNetReportOutputHeaders = /** @class */ (function (_super) {
     __extends(GetP32SummaryNetReportOutputHeaders, _super);
     function GetP32SummaryNetReportOutputHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Api-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Api-Version" }),
         __metadata("design:type", String)
     ], GetP32SummaryNetReportOutputHeaders.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], GetP32SummaryNetReportOutputHeaders.prototype, "authorization", void 0);
     return GetP32SummaryNetReportOutputHeaders;
-}(SpeakeasyBase));
-export { GetP32SummaryNetReportOutputHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetP32SummaryNetReportOutputHeaders = GetP32SummaryNetReportOutputHeaders;
 var GetP32SummaryNetReportOutputRequest = /** @class */ (function (_super) {
     __extends(GetP32SummaryNetReportOutputRequest, _super);
     function GetP32SummaryNetReportOutputRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetP32SummaryNetReportOutputQueryParams)
     ], GetP32SummaryNetReportOutputRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetP32SummaryNetReportOutputHeaders)
     ], GetP32SummaryNetReportOutputRequest.prototype, "headers", void 0);
     return GetP32SummaryNetReportOutputRequest;
-}(SpeakeasyBase));
-export { GetP32SummaryNetReportOutputRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetP32SummaryNetReportOutputRequest = GetP32SummaryNetReportOutputRequest;
 var GetP32SummaryNetReportOutputResponse = /** @class */ (function (_super) {
     __extends(GetP32SummaryNetReportOutputResponse, _super);
     function GetP32SummaryNetReportOutputResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetP32SummaryNetReportOutputResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], GetP32SummaryNetReportOutputResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
-    ], GetP32SummaryNetReportOutputResponse.prototype, "getP32SummaryNetReportOutput200ApplicationJsonBinaryString", void 0);
+    ], GetP32SummaryNetReportOutputResponse.prototype, "getP32SummaryNetReportOutput200ApplicationJSONBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetP32SummaryNetReportOutputResponse.prototype, "statusCode", void 0);
     return GetP32SummaryNetReportOutputResponse;
-}(SpeakeasyBase));
-export { GetP32SummaryNetReportOutputResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetP32SummaryNetReportOutputResponse = GetP32SummaryNetReportOutputResponse;

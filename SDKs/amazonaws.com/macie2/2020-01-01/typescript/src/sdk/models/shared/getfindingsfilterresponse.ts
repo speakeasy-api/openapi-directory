@@ -27,5 +27,5 @@ export class GetFindingsFilterResponse extends SpeakeasyBase {
   position?: number;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

@@ -11,7 +11,7 @@ export class AssetReportPdfGetRequest extends SpeakeasyBase {
 
 export class AssetReportPdfGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  assetReportPdfGetResponse?: Uint8Array;
+  assetReportPDFGetResponse?: Uint8Array;
 
   @SpeakeasyMetadata()
   contentType: string;

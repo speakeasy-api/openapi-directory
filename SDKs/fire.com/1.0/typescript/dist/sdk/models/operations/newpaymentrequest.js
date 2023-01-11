@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,185 +23,187 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NewPaymentRequestNewPaymentRequestCurrencyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewPaymentRequestResponse = exports.NewPaymentRequestRequest = exports.NewPaymentRequestNewPaymentRequestResponse = exports.NewPaymentRequestNewPaymentRequestResponseTypeEnum = exports.NewPaymentRequestNewPaymentRequest = exports.NewPaymentRequestNewPaymentRequestTypeEnum = exports.NewPaymentRequestNewPaymentRequestOrderDetails = exports.NewPaymentRequestNewPaymentRequestCurrencyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NewPaymentRequestNewPaymentRequestCurrencyEnum;
 (function (NewPaymentRequestNewPaymentRequestCurrencyEnum) {
     NewPaymentRequestNewPaymentRequestCurrencyEnum["Eur"] = "EUR";
     NewPaymentRequestNewPaymentRequestCurrencyEnum["Gbp"] = "GBP";
-})(NewPaymentRequestNewPaymentRequestCurrencyEnum || (NewPaymentRequestNewPaymentRequestCurrencyEnum = {}));
+})(NewPaymentRequestNewPaymentRequestCurrencyEnum = exports.NewPaymentRequestNewPaymentRequestCurrencyEnum || (exports.NewPaymentRequestNewPaymentRequestCurrencyEnum = {}));
 var NewPaymentRequestNewPaymentRequestOrderDetails = /** @class */ (function (_super) {
     __extends(NewPaymentRequestNewPaymentRequestOrderDetails, _super);
     function NewPaymentRequestNewPaymentRequestOrderDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment1" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "comment1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment2" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "comment2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerNumber" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "customerNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryAddressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryAddressLine1" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "deliveryAddressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryAddressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryAddressLine2" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "deliveryAddressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryCity" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "deliveryCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryCountry" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "deliveryCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryPostCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryPostCode" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "deliveryPostCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantCustomerIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantCustomerIdentification" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "merchantCustomerIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNumber" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "merchantNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variableReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variableReference" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestOrderDetails.prototype, "variableReference", void 0);
     return NewPaymentRequestNewPaymentRequestOrderDetails;
-}(SpeakeasyBase));
-export { NewPaymentRequestNewPaymentRequestOrderDetails };
-export var NewPaymentRequestNewPaymentRequestTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.NewPaymentRequestNewPaymentRequestOrderDetails = NewPaymentRequestNewPaymentRequestOrderDetails;
+var NewPaymentRequestNewPaymentRequestTypeEnum;
 (function (NewPaymentRequestNewPaymentRequestTypeEnum) {
     NewPaymentRequestNewPaymentRequestTypeEnum["Other"] = "OTHER";
-})(NewPaymentRequestNewPaymentRequestTypeEnum || (NewPaymentRequestNewPaymentRequestTypeEnum = {}));
+})(NewPaymentRequestNewPaymentRequestTypeEnum = exports.NewPaymentRequestNewPaymentRequestTypeEnum || (exports.NewPaymentRequestNewPaymentRequestTypeEnum = {}));
 var NewPaymentRequestNewPaymentRequest = /** @class */ (function (_super) {
     __extends(NewPaymentRequestNewPaymentRequest, _super);
     function NewPaymentRequestNewPaymentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalFields" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "additionalFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], NewPaymentRequestNewPaymentRequest.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectFields" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "collectFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiry" }),
         __metadata("design:type", Date)
     ], NewPaymentRequestNewPaymentRequest.prototype, "expiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanTo" }),
         __metadata("design:type", Number)
     ], NewPaymentRequestNewPaymentRequest.prototype, "icanTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mandatoryFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mandatoryFields" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "mandatoryFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxNumberPayments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxNumberPayments" }),
         __metadata("design:type", Number)
     ], NewPaymentRequestNewPaymentRequest.prototype, "maxNumberPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=myRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=myRef" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "myRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderDetails" }),
         __metadata("design:type", NewPaymentRequestNewPaymentRequestOrderDetails)
     ], NewPaymentRequestNewPaymentRequest.prototype, "orderDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnUrl" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "returnUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequest.prototype, "type", void 0);
     return NewPaymentRequestNewPaymentRequest;
-}(SpeakeasyBase));
-export { NewPaymentRequestNewPaymentRequest };
-export var NewPaymentRequestNewPaymentRequestResponseTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.NewPaymentRequestNewPaymentRequest = NewPaymentRequestNewPaymentRequest;
+var NewPaymentRequestNewPaymentRequestResponseTypeEnum;
 (function (NewPaymentRequestNewPaymentRequestResponseTypeEnum) {
     NewPaymentRequestNewPaymentRequestResponseTypeEnum["Other"] = "OTHER";
-})(NewPaymentRequestNewPaymentRequestResponseTypeEnum || (NewPaymentRequestNewPaymentRequestResponseTypeEnum = {}));
+})(NewPaymentRequestNewPaymentRequestResponseTypeEnum = exports.NewPaymentRequestNewPaymentRequestResponseTypeEnum || (exports.NewPaymentRequestNewPaymentRequestResponseTypeEnum = {}));
 var NewPaymentRequestNewPaymentRequestResponse = /** @class */ (function (_super) {
     __extends(NewPaymentRequestNewPaymentRequestResponse, _super);
     function NewPaymentRequestNewPaymentRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestResponse.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], NewPaymentRequestNewPaymentRequestResponse.prototype, "type", void 0);
     return NewPaymentRequestNewPaymentRequestResponse;
-}(SpeakeasyBase));
-export { NewPaymentRequestNewPaymentRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewPaymentRequestNewPaymentRequestResponse = NewPaymentRequestNewPaymentRequestResponse;
 var NewPaymentRequestRequest = /** @class */ (function (_super) {
     __extends(NewPaymentRequestRequest, _super);
     function NewPaymentRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NewPaymentRequestNewPaymentRequest)
     ], NewPaymentRequestRequest.prototype, "request", void 0);
     return NewPaymentRequestRequest;
-}(SpeakeasyBase));
-export { NewPaymentRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewPaymentRequestRequest = NewPaymentRequestRequest;
 var NewPaymentRequestResponse = /** @class */ (function (_super) {
     __extends(NewPaymentRequestResponse, _super);
     function NewPaymentRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NewPaymentRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NewPaymentRequestNewPaymentRequestResponse)
     ], NewPaymentRequestResponse.prototype, "newPaymentRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NewPaymentRequestResponse.prototype, "statusCode", void 0);
     return NewPaymentRequestResponse;
-}(SpeakeasyBase));
-export { NewPaymentRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewPaymentRequestResponse = NewPaymentRequestResponse;

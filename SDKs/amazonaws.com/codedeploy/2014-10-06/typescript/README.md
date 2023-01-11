@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddTagsToOnPremisesInstancesRequest, AddTagsToOnPremisesInstancesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,34 +33,29 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddTagsToOnPremisesInstancesRequest = {
   headers: {
-    xAmzAlgorithm: "sed",
-    xAmzContentSha256: "praesentium",
-    xAmzCredential: "excepturi",
-    xAmzDate: "aut",
-    xAmzSecurityToken: "architecto",
-    xAmzSignature: "omnis",
-    xAmzSignedHeaders: "ut",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
   },
   request: {
     instanceNames: [
-      "nisi",
-      "dolores",
+      "et",
     ],
     tags: [
       {
-        key: "dolorem",
-        value: "in",
-      },
-      {
-        key: "est",
-        value: "quos",
+        key: "rerum",
+        value: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.addTagsToOnPremisesInstances(req).then((res: AddTagsToOnPremisesInstancesResponse | AxiosError) => {
+sdk.addTagsToOnPremisesInstances(req).then((res: AddTagsToOnPremisesInstancesResponse | AxiosError) => {
    // handle response
 });
 ```

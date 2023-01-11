@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualificationStatusEnum } from "./qualificationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWorkersWithQualificationTypeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualificationstatusenum_1 = require("./qualificationstatusenum");
 var ListWorkersWithQualificationTypeRequest = /** @class */ (function (_super) {
     __extends(ListWorkersWithQualificationTypeRequest, _super);
     function ListWorkersWithQualificationTypeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListWorkersWithQualificationTypeRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListWorkersWithQualificationTypeRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeId" }),
         __metadata("design:type", String)
     ], ListWorkersWithQualificationTypeRequest.prototype, "qualificationTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ListWorkersWithQualificationTypeRequest.prototype, "status", void 0);
     return ListWorkersWithQualificationTypeRequest;
-}(SpeakeasyBase));
-export { ListWorkersWithQualificationTypeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListWorkersWithQualificationTypeRequest = ListWorkersWithQualificationTypeRequest;

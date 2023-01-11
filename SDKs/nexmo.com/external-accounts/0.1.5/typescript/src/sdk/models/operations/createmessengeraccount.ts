@@ -74,7 +74,7 @@ export class CreateMessengerAccountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createMessengerAccount400ApplicationJsonObject?: CreateMessengerAccount400ApplicationJson;
+  createMessengerAccount400ApplicationJSONObject?: CreateMessengerAccount400ApplicationJson;
 
   @SpeakeasyMetadata()
   messengerAccountResponse?: shared.MessengerAccountResponse;

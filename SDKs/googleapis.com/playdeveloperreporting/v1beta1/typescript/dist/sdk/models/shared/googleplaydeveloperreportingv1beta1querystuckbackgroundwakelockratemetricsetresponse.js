@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayDeveloperReportingV1beta1MetricsRow } from "./googleplaydeveloperreportingv1beta1metricsrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplaydeveloperreportingv1beta1metricsrow_1 = require("./googleplaydeveloperreportingv1beta1metricsrow");
 // GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse
 /**
  * Response message for QueryStuckBackgroundWakelockRateMetricSet.
@@ -34,13 +37,13 @@ var GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSet
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: GooglePlayDeveloperReportingV1beta1MetricsRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: googleplaydeveloperreportingv1beta1metricsrow_1.GooglePlayDeveloperReportingV1beta1MetricsRow }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse.prototype, "rows", void 0);
     return GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse = GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse;

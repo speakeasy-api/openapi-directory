@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PromoteToRelayResponse = exports.PromoteToRelayRequest = exports.PromoteToRelay200ApplicationJson = exports.PromoteToRelay200ApplicationJsonResultEnum = exports.PromoteToRelay200ApplicationJsonActionEnum = exports.PromoteToRelayPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PromoteToRelayPathParams = /** @class */ (function (_super) {
     __extends(PromoteToRelayPathParams, _super);
     function PromoteToRelayPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], PromoteToRelayPathParams.prototype, "nodeId", void 0);
     return PromoteToRelayPathParams;
-}(SpeakeasyBase));
-export { PromoteToRelayPathParams };
-export var PromoteToRelay200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.PromoteToRelayPathParams = PromoteToRelayPathParams;
+var PromoteToRelay200ApplicationJsonActionEnum;
 (function (PromoteToRelay200ApplicationJsonActionEnum) {
     PromoteToRelay200ApplicationJsonActionEnum["PromoteToRelay"] = "promoteToRelay";
-})(PromoteToRelay200ApplicationJsonActionEnum || (PromoteToRelay200ApplicationJsonActionEnum = {}));
-export var PromoteToRelay200ApplicationJsonResultEnum;
+})(PromoteToRelay200ApplicationJsonActionEnum = exports.PromoteToRelay200ApplicationJsonActionEnum || (exports.PromoteToRelay200ApplicationJsonActionEnum = {}));
+var PromoteToRelay200ApplicationJsonResultEnum;
 (function (PromoteToRelay200ApplicationJsonResultEnum) {
     PromoteToRelay200ApplicationJsonResultEnum["Success"] = "success";
     PromoteToRelay200ApplicationJsonResultEnum["Error"] = "error";
-})(PromoteToRelay200ApplicationJsonResultEnum || (PromoteToRelay200ApplicationJsonResultEnum = {}));
+})(PromoteToRelay200ApplicationJsonResultEnum = exports.PromoteToRelay200ApplicationJsonResultEnum || (exports.PromoteToRelay200ApplicationJsonResultEnum = {}));
 var PromoteToRelay200ApplicationJson = /** @class */ (function (_super) {
     __extends(PromoteToRelay200ApplicationJson, _super);
     function PromoteToRelay200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], PromoteToRelay200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], PromoteToRelay200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], PromoteToRelay200ApplicationJson.prototype, "result", void 0);
     return PromoteToRelay200ApplicationJson;
-}(SpeakeasyBase));
-export { PromoteToRelay200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PromoteToRelay200ApplicationJson = PromoteToRelay200ApplicationJson;
 var PromoteToRelayRequest = /** @class */ (function (_super) {
     __extends(PromoteToRelayRequest, _super);
     function PromoteToRelayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PromoteToRelayPathParams)
     ], PromoteToRelayRequest.prototype, "pathParams", void 0);
     return PromoteToRelayRequest;
-}(SpeakeasyBase));
-export { PromoteToRelayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PromoteToRelayRequest = PromoteToRelayRequest;
 var PromoteToRelayResponse = /** @class */ (function (_super) {
     __extends(PromoteToRelayResponse, _super);
     function PromoteToRelayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PromoteToRelayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PromoteToRelayResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PromoteToRelay200ApplicationJson)
-    ], PromoteToRelayResponse.prototype, "promoteToRelay200ApplicationJsonObject", void 0);
+    ], PromoteToRelayResponse.prototype, "promoteToRelay200ApplicationJSONObject", void 0);
     return PromoteToRelayResponse;
-}(SpeakeasyBase));
-export { PromoteToRelayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PromoteToRelayResponse = PromoteToRelayResponse;

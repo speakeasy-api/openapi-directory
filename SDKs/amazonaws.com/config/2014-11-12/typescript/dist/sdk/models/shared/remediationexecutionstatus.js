@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceKey } from "./resourcekey";
-import { RemediationExecutionStateEnum } from "./remediationexecutionstateenum";
-import { RemediationExecutionStep } from "./remediationexecutionstep";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemediationExecutionStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcekey_1 = require("./resourcekey");
+var remediationexecutionstateenum_1 = require("./remediationexecutionstateenum");
+var remediationexecutionstep_1 = require("./remediationexecutionstep");
 // RemediationExecutionStatus
 /**
  * Provides details of the current status of the invoked remediation action for that resource.
@@ -36,25 +39,25 @@ var RemediationExecutionStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InvocationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InvocationTime" }),
         __metadata("design:type", Date)
     ], RemediationExecutionStatus.prototype, "invocationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTime" }),
         __metadata("design:type", Date)
     ], RemediationExecutionStatus.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceKey" }),
-        __metadata("design:type", ResourceKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceKey" }),
+        __metadata("design:type", resourcekey_1.ResourceKey)
     ], RemediationExecutionStatus.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], RemediationExecutionStatus.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StepDetails", elemType: RemediationExecutionStep }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StepDetails", elemType: remediationexecutionstep_1.RemediationExecutionStep }),
         __metadata("design:type", Array)
     ], RemediationExecutionStatus.prototype, "stepDetails", void 0);
     return RemediationExecutionStatus;
-}(SpeakeasyBase));
-export { RemediationExecutionStatus };
+}(utils_1.SpeakeasyBase));
+exports.RemediationExecutionStatus = RemediationExecutionStatus;

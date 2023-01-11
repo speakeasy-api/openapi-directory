@@ -49,7 +49,7 @@ export class CreateVaultResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createVaultOutput?: Map<string, any>;
+  createVaultOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValueException?: any;

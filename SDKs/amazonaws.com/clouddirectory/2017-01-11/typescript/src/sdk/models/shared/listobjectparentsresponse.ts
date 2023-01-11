@@ -11,5 +11,5 @@ export class ListObjectParentsResponse extends SpeakeasyBase {
   parentLinks?: ObjectIdentifierAndLinkNameTuple[];
 
   @SpeakeasyMetadata({ data: "json, name=Parents" })
-  parents?: Map<string, string>;
+  parents?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Registry } from "./registry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeRegistriesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var registry_1 = require("./registry");
 var DescribeRegistriesResponse = /** @class */ (function (_super) {
     __extends(DescribeRegistriesResponse, _super);
     function DescribeRegistriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeRegistriesResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registries", elemType: Registry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registries", elemType: registry_1.Registry }),
         __metadata("design:type", Array)
     ], DescribeRegistriesResponse.prototype, "registries", void 0);
     return DescribeRegistriesResponse;
-}(SpeakeasyBase));
-export { DescribeRegistriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeRegistriesResponse = DescribeRegistriesResponse;

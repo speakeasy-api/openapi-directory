@@ -1,5 +1,8 @@
-export var NotifyWorkersFailureCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotifyWorkersFailureCodeEnum = void 0;
+var NotifyWorkersFailureCodeEnum;
 (function (NotifyWorkersFailureCodeEnum) {
     NotifyWorkersFailureCodeEnum["SoftFailure"] = "SoftFailure";
     NotifyWorkersFailureCodeEnum["HardFailure"] = "HardFailure";
-})(NotifyWorkersFailureCodeEnum || (NotifyWorkersFailureCodeEnum = {}));
+})(NotifyWorkersFailureCodeEnum = exports.NotifyWorkersFailureCodeEnum || (exports.NotifyWorkersFailureCodeEnum = {}));

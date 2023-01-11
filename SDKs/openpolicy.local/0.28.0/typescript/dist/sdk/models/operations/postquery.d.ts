@@ -85,5 +85,5 @@ export declare class PostQueryResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;
     contentType: string;
     statusCode: number;
-    postQuery200ApplicationJsonObject?: PostQuery200ApplicationJson;
+    postQuery200ApplicationJSONObject?: PostQuery200ApplicationJson;
 }

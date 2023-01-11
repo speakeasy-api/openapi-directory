@@ -16,7 +16,7 @@ export declare class Agent extends SpeakeasyBase {
     organizationId?: string;
     os?: string;
     siteId?: string;
-    systemInfo?: Map<string, any>;
+    systemInfo?: Record<string, any>;
     updatedAt?: number;
     version?: string;
 }

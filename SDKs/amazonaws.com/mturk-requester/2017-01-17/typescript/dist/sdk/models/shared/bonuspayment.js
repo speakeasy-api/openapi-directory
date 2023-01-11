@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BonusPayment = void 0;
+var utils_1 = require("../../../internal/utils");
 // BonusPayment
 /**
  * An object representing a Bonus payment paid to a Worker.
@@ -33,25 +36,25 @@ var BonusPayment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentId" }),
         __metadata("design:type", String)
     ], BonusPayment.prototype, "assignmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BonusAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BonusAmount" }),
         __metadata("design:type", String)
     ], BonusPayment.prototype, "bonusAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GrantTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GrantTime" }),
         __metadata("design:type", Date)
     ], BonusPayment.prototype, "grantTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reason" }),
         __metadata("design:type", String)
     ], BonusPayment.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerId" }),
         __metadata("design:type", String)
     ], BonusPayment.prototype, "workerId", void 0);
     return BonusPayment;
-}(SpeakeasyBase));
-export { BonusPayment };
+}(utils_1.SpeakeasyBase));
+exports.BonusPayment = BonusPayment;

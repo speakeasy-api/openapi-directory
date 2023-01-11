@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataTransfer = void 0;
+var utils_1 = require("../../../internal/utils");
 // DataTransfer
 /**
  * Defines the real-time status of a Snow device's data transfer while the device is at AWS. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and export jobs.
@@ -33,21 +36,21 @@ var DataTransfer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BytesTransferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BytesTransferred" }),
         __metadata("design:type", Number)
     ], DataTransfer.prototype, "bytesTransferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectsTransferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectsTransferred" }),
         __metadata("design:type", Number)
     ], DataTransfer.prototype, "objectsTransferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalBytes" }),
         __metadata("design:type", Number)
     ], DataTransfer.prototype, "totalBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalObjects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalObjects" }),
         __metadata("design:type", Number)
     ], DataTransfer.prototype, "totalObjects", void 0);
     return DataTransfer;
-}(SpeakeasyBase));
-export { DataTransfer };
+}(utils_1.SpeakeasyBase));
+exports.DataTransfer = DataTransfer;

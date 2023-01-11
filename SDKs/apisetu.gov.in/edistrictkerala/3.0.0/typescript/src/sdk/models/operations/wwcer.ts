@@ -191,23 +191,23 @@ export class WwcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  wwcer400ApplicationJsonObject?: Wwcer400ApplicationJson;
+  wwcer400ApplicationJSONObject?: Wwcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer401ApplicationJsonObject?: Wwcer401ApplicationJson;
+  wwcer401ApplicationJSONObject?: Wwcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer404ApplicationJsonObject?: Wwcer404ApplicationJson;
+  wwcer404ApplicationJSONObject?: Wwcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer500ApplicationJsonObject?: Wwcer500ApplicationJson;
+  wwcer500ApplicationJSONObject?: Wwcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer502ApplicationJsonObject?: Wwcer502ApplicationJson;
+  wwcer502ApplicationJSONObject?: Wwcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer503ApplicationJsonObject?: Wwcer503ApplicationJson;
+  wwcer503ApplicationJSONObject?: Wwcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  wwcer504ApplicationJsonObject?: Wwcer504ApplicationJson;
+  wwcer504ApplicationJSONObject?: Wwcer504ApplicationJson;
 }

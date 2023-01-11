@@ -31,6 +31,6 @@ export declare class CreateEnvironmentRequest extends SpeakeasyBase {
 export declare class CreateEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createEnvironment200ApplicationJsonObject?: CreateEnvironment200ApplicationJson;
-    createEnvironment400ApplicationJsonObject?: CreateEnvironment400ApplicationJson;
+    createEnvironment200ApplicationJSONObject?: CreateEnvironment200ApplicationJson;
+    createEnvironment400ApplicationJSONObject?: CreateEnvironment400ApplicationJson;
 }

@@ -17,7 +17,7 @@ export declare class GetOrganizationWebhooksLogsRequest extends SpeakeasyBase {
 }
 export declare class GetOrganizationWebhooksLogsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationWebhooksLogs200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationWebhooksLogs200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReleaseEventForApiContract } from "./releaseeventforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartialFindResultReleaseEventForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var releaseeventforapicontract_1 = require("./releaseeventforapicontract");
 var PartialFindResultReleaseEventForApiContract = /** @class */ (function (_super) {
     __extends(PartialFindResultReleaseEventForApiContract, _super);
     function PartialFindResultReleaseEventForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ReleaseEventForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: releaseeventforapicontract_1.ReleaseEventForApiContract }),
         __metadata("design:type", Array)
     ], PartialFindResultReleaseEventForApiContract.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term" }),
         __metadata("design:type", String)
     ], PartialFindResultReleaseEventForApiContract.prototype, "term", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], PartialFindResultReleaseEventForApiContract.prototype, "totalCount", void 0);
     return PartialFindResultReleaseEventForApiContract;
-}(SpeakeasyBase));
-export { PartialFindResultReleaseEventForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.PartialFindResultReleaseEventForApiContract = PartialFindResultReleaseEventForApiContract;

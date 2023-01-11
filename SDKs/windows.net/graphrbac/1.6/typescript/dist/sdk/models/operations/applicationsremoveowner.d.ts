@@ -3,7 +3,7 @@ import * as shared from "../shared";
 export declare class ApplicationsRemoveOwnerPathParams extends SpeakeasyBase {
     applicationObjectId: string;
     ownerObjectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ApplicationsRemoveOwnerQueryParams extends SpeakeasyBase {
     apiVersion: string;

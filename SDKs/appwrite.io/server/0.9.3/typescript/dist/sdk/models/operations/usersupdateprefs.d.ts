@@ -4,7 +4,7 @@ export declare class UsersUpdatePrefsPathParams extends SpeakeasyBase {
     userId: string;
 }
 export declare class UsersUpdatePrefsRequestBody extends SpeakeasyBase {
-    prefs: Map<string, any>;
+    prefs: Record<string, any>;
 }
 export declare class UsersUpdatePrefsSecurity extends SpeakeasyBase {
     key: shared.SchemeKey;
@@ -18,5 +18,5 @@ export declare class UsersUpdatePrefsRequest extends SpeakeasyBase {
 export declare class UsersUpdatePrefsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    preferences?: Map<string, any>;
+    preferences?: Record<string, any>;
 }

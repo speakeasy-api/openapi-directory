@@ -8,7 +8,7 @@ export declare class GetReisezentrenRequest extends SpeakeasyBase {
 }
 export declare class GetReisezentrenResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     travelCenterList?: shared.TravelCenter[];
 }

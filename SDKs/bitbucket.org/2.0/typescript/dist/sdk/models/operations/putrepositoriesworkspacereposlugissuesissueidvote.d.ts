@@ -17,5 +17,5 @@ export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest ex
 export declare class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

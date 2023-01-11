@@ -8,6 +8,6 @@ export declare class GetWinProbabilityDataRequest extends SpeakeasyBase {
 }
 export declare class GetWinProbabilityDataResponse extends SpeakeasyBase {
     contentType: string;
-    playWps?: shared.PlayWp[];
+    playWPS?: shared.PlayWp[];
     statusCode: number;
 }

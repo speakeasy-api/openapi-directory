@@ -1,26 +1,42 @@
-export * from "./accelerator";
-export * from "./altenum";
-export * from "./auditconfig";
-export * from "./auditlogconfig";
-export * from "./binding";
-export * from "./cryptokeyconfig";
-export * from "./dnspeering";
-export * from "./eventpublishconfig";
-export * from "./expr";
-export * from "./instance";
-export * from "./listavailableversionsresponse";
-export * from "./listdnspeeringsresponse";
-export * from "./listinstancesresponse";
-export * from "./listlocationsresponse";
-export * from "./listoperationsresponse";
-export * from "./location";
-export * from "./networkconfig";
-export * from "./operation";
-export * from "./policy";
-export * from "./security";
-export * from "./setiampolicyrequest";
-export * from "./status";
-export * from "./testiampermissionsrequest";
-export * from "./testiampermissionsresponse";
-export * from "./version";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./accelerator"), exports);
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./auditconfig"), exports);
+__exportStar(require("./auditlogconfig"), exports);
+__exportStar(require("./binding"), exports);
+__exportStar(require("./cryptokeyconfig"), exports);
+__exportStar(require("./dnspeering"), exports);
+__exportStar(require("./eventpublishconfig"), exports);
+__exportStar(require("./expr"), exports);
+__exportStar(require("./instance"), exports);
+__exportStar(require("./listavailableversionsresponse"), exports);
+__exportStar(require("./listdnspeeringsresponse"), exports);
+__exportStar(require("./listinstancesresponse"), exports);
+__exportStar(require("./listlocationsresponse"), exports);
+__exportStar(require("./listoperationsresponse"), exports);
+__exportStar(require("./location"), exports);
+__exportStar(require("./networkconfig"), exports);
+__exportStar(require("./operation"), exports);
+__exportStar(require("./policy"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./setiampolicyrequest"), exports);
+__exportStar(require("./status"), exports);
+__exportStar(require("./testiampermissionsrequest"), exports);
+__exportStar(require("./testiampermissionsresponse"), exports);
+__exportStar(require("./version"), exports);
+__exportStar(require("./xgafvenum"), exports);

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePipelineVariableForTeamResponse = exports.CreatePipelineVariableForTeamRequest = exports.CreatePipelineVariableForTeamQueryParams = exports.CreatePipelineVariableForTeamPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatePipelineVariableForTeamPathParams = /** @class */ (function (_super) {
     __extends(CreatePipelineVariableForTeamPathParams, _super);
     function CreatePipelineVariableForTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], CreatePipelineVariableForTeamPathParams.prototype, "username", void 0);
     return CreatePipelineVariableForTeamPathParams;
-}(SpeakeasyBase));
-export { CreatePipelineVariableForTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreatePipelineVariableForTeamPathParams = CreatePipelineVariableForTeamPathParams;
 var CreatePipelineVariableForTeamQueryParams = /** @class */ (function (_super) {
     __extends(CreatePipelineVariableForTeamQueryParams, _super);
     function CreatePipelineVariableForTeamQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=workspace" }),
         __metadata("design:type", String)
     ], CreatePipelineVariableForTeamQueryParams.prototype, "workspace", void 0);
     return CreatePipelineVariableForTeamQueryParams;
-}(SpeakeasyBase));
-export { CreatePipelineVariableForTeamQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreatePipelineVariableForTeamQueryParams = CreatePipelineVariableForTeamQueryParams;
 var CreatePipelineVariableForTeamRequest = /** @class */ (function (_super) {
     __extends(CreatePipelineVariableForTeamRequest, _super);
     function CreatePipelineVariableForTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePipelineVariableForTeamPathParams)
     ], CreatePipelineVariableForTeamRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePipelineVariableForTeamQueryParams)
     ], CreatePipelineVariableForTeamRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CreatePipelineVariableForTeamRequest.prototype, "request", void 0);
     return CreatePipelineVariableForTeamRequest;
-}(SpeakeasyBase));
-export { CreatePipelineVariableForTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePipelineVariableForTeamRequest = CreatePipelineVariableForTeamRequest;
 var CreatePipelineVariableForTeamResponse = /** @class */ (function (_super) {
     __extends(CreatePipelineVariableForTeamResponse, _super);
     function CreatePipelineVariableForTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatePipelineVariableForTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreatePipelineVariableForTeamResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatePipelineVariableForTeamResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreatePipelineVariableForTeamResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreatePipelineVariableForTeamResponse.prototype, "pipelineVariable", void 0);
     return CreatePipelineVariableForTeamResponse;
-}(SpeakeasyBase));
-export { CreatePipelineVariableForTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePipelineVariableForTeamResponse = CreatePipelineVariableForTeamResponse;

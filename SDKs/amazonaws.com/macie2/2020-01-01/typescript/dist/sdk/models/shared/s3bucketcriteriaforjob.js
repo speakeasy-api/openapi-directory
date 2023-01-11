@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CriteriaBlockForJob } from "./criteriablockforjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3BucketCriteriaForJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var criteriablockforjob_1 = require("./criteriablockforjob");
 // S3BucketCriteriaForJob
 /**
  * Specifies property- and tag-based conditions that define criteria for including or excluding S3 buckets from a classification job. Exclude conditions take precedence over include conditions.
@@ -34,13 +37,13 @@ var S3BucketCriteriaForJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludes" }),
-        __metadata("design:type", CriteriaBlockForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludes" }),
+        __metadata("design:type", criteriablockforjob_1.CriteriaBlockForJob)
     ], S3BucketCriteriaForJob.prototype, "excludes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includes" }),
-        __metadata("design:type", CriteriaBlockForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includes" }),
+        __metadata("design:type", criteriablockforjob_1.CriteriaBlockForJob)
     ], S3BucketCriteriaForJob.prototype, "includes", void 0);
     return S3BucketCriteriaForJob;
-}(SpeakeasyBase));
-export { S3BucketCriteriaForJob };
+}(utils_1.SpeakeasyBase));
+exports.S3BucketCriteriaForJob = S3BucketCriteriaForJob;

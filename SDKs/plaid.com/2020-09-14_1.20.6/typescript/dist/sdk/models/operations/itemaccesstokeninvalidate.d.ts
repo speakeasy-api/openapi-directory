@@ -5,6 +5,6 @@ export declare class ItemAccessTokenInvalidateRequest extends SpeakeasyBase {
 }
 export declare class ItemAccessTokenInvalidateResponse extends SpeakeasyBase {
     contentType: string;
-    itemAccessTokenInvalidateResponse?: Map<string, any>;
+    itemAccessTokenInvalidateResponse?: Record<string, any>;
     statusCode: number;
 }

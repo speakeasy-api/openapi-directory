@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeparturesGetForStopRequest, DeparturesGetForStopResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,34 +28,31 @@ const sdk = new SDK();
     
 const req: DeparturesGetForStopRequest = {
   pathParams: {
-    routeType: 6630931860368459851,
-    stopId: 829498391807953224,
+    routeType: 8717895732742165505,
+    stopId: 2259404117704393152,
   },
   queryParams: {
-    dateUtc: "1998-11-11T21:23:48Z",
-    devid: "sed",
-    directionId: 6626872615399574248,
+    dateUtc: "1978-05-13T03:50:47Z",
+    devid: "expedita",
+    directionId: 3390393562759376202,
     expand: [
-      "Route",
-      "Direction",
-      "Disruption",
+      "VehiclePosition",
+      "None",
     ],
-    gtfs: false,
+    gtfs: true,
     includeCancelled: false,
     includeGeopath: true,
     lookBackwards: true,
-    maxResults: 4552221498027089411,
+    maxResults: 7837839688282259259,
     platformNumbers: [
-      5772850537798811911,
-      1368122250028032720,
-      1149259997749928352,
+      5617773211005988520,
     ],
-    signature: "maxime",
-    token: "voluptatum",
+    signature: "et",
+    token: "ut",
   },
 };
 
-sdk.sdk.departuresGetForStop(req).then((res: DeparturesGetForStopResponse | AxiosError) => {
+sdk.departures.departuresGetForStop(req).then((res: DeparturesGetForStopResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -65,31 +61,61 @@ sdk.sdk.departuresGetForStop(req).then((res: DeparturesGetForStopResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Departures
 
 * `departuresGetForStop` - View departures for all routes from a stop
 * `departuresGetForStopAndRoute` - View departures for a specific route from a stop
+
+### Directions
+
 * `directionsForDirection` - View all routes for a direction of travel
 * `directionsForDirectionAndType` - View all routes of a particular type for a direction of travel
 * `directionsForRoute` - View directions that a route travels in
+
+### Disruptions
+
 * `disruptionsGetAllDisruptions` - View all disruptions for all route types
 * `disruptionsGetDisruptionById` - View a specific disruption
 * `disruptionsGetDisruptionModes` - Get all disruption modes
 * `disruptionsGetDisruptionsByRoute` - View all disruptions for a particular route
 * `disruptionsGetDisruptionsByRouteAndStop` - View all disruptions for a particular route and stop
 * `disruptionsGetDisruptionsByStop` - View all disruptions for a particular stop
+
+### FareEstimate
+
 * `fareEstimateGetFareEstimateByZone` - Estimate a fare by zone
+
+### Outlets
+
 * `outletsGetAllOutlets` - List all ticket outlets
 * `outletsGetOutletsByGeolocation` - List ticket outlets near a specific location
+
+### Patterns
+
 * `patternsGetPatternByRun` - View the stopping pattern for a specific trip/service run
+
+### RouteTypes
+
 * `routeTypesGetRouteTypes` - View all route types and their names
+
+### Routes
+
 * `routesOneOrMoreRoutes` - View route names and numbers for all routes
 * `routesRouteFromId` - View route name and number for specific route ID
+
+### Runs
+
 * `runsForRoute` - View all trip/service runs for a specific route ID
 * `runsForRouteAndRouteType` - View all trip/service runs for a specific route ID and route type
 * `runsForRun` - View all trip/service runs for a specific run_ref
 * `runsForRunAndRouteType` - View the trip/service run for a specific run_ref and route type
+
+### Search
+
 * `searchSearch` - View stops, routes and myki ticket outlets that match the search term
+
+### Stops
+
 * `stopsStopDetails` - View facilities at a specific stop (Metro and V/Line stations only)
 * `stopsStopsByGeolocation` - View all stops near a specific location
 * `stopsStopsForRoute` - View all stops on a specific route

@@ -106,11 +106,11 @@ export declare class ErcerRequest extends SpeakeasyBase {
 export declare class ErcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ercer400ApplicationJsonObject?: Ercer400ApplicationJson;
-    ercer401ApplicationJsonObject?: Ercer401ApplicationJson;
-    ercer404ApplicationJsonObject?: Ercer404ApplicationJson;
-    ercer500ApplicationJsonObject?: Ercer500ApplicationJson;
-    ercer502ApplicationJsonObject?: Ercer502ApplicationJson;
-    ercer503ApplicationJsonObject?: Ercer503ApplicationJson;
-    ercer504ApplicationJsonObject?: Ercer504ApplicationJson;
+    ercer400ApplicationJSONObject?: Ercer400ApplicationJson;
+    ercer401ApplicationJSONObject?: Ercer401ApplicationJson;
+    ercer404ApplicationJSONObject?: Ercer404ApplicationJson;
+    ercer500ApplicationJSONObject?: Ercer500ApplicationJson;
+    ercer502ApplicationJSONObject?: Ercer502ApplicationJson;
+    ercer503ApplicationJSONObject?: Ercer503ApplicationJson;
+    ercer504ApplicationJSONObject?: Ercer504ApplicationJson;
 }

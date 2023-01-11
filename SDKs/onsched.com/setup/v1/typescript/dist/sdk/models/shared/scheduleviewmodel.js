@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScheduleViewModel = /** @class */ (function (_super) {
     __extends(ScheduleViewModel, _super);
     function ScheduleViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingsPerSlot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingsPerSlot" }),
         __metadata("design:type", Number)
     ], ScheduleViewModel.prototype, "bookingsPerSlot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedStatus" }),
         __metadata("design:type", Boolean)
     ], ScheduleViewModel.prototype, "deletedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedTime" }),
         __metadata("design:type", Date)
     ], ScheduleViewModel.prototype, "deletedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", Number)
     ], ScheduleViewModel.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], ScheduleViewModel.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroupId" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "resourceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ScheduleViewModel.prototype, "type", void 0);
     return ScheduleViewModel;
-}(SpeakeasyBase));
-export { ScheduleViewModel };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleViewModel = ScheduleViewModel;

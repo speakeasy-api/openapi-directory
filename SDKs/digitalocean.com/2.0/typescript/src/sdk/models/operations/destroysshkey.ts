@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DestroySshKeyPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=ssh_key_identifier" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ssh_key_identifier" })
   sshKeyIdentifier: any;
 }
 
 
-export class DestroySshKeyRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DestroySshKeyPathParams;
-}
-
-
 export class DestroySshKey401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DestroySshKeyRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DestroySshKeyPathParams;
+}
+
+
 export class DestroySshKeyResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  destroySshKey401ApplicationJsonObject?: DestroySshKey401ApplicationJson;
+  @SpeakeasyMetadata()
+  destroySshKey401ApplicationJSONObject?: DestroySshKey401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

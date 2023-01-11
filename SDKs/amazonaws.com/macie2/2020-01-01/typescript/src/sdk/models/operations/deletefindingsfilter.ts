@@ -52,7 +52,7 @@ export class DeleteFindingsFilterResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteFindingsFilterResponse?: Map<string, any>;
+  deleteFindingsFilterResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

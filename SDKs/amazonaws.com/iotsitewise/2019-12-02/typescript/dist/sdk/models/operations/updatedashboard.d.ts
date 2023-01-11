@@ -29,5 +29,5 @@ export declare class UpdateDashboardResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateDashboardResponse?: Map<string, any>;
+    updateDashboardResponse?: Record<string, any>;
 }

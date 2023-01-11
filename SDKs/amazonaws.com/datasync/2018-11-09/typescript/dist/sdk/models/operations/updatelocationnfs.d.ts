@@ -22,5 +22,5 @@ export declare class UpdateLocationNfsResponse extends SpeakeasyBase {
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateLocationNfsResponse?: Map<string, any>;
+    updateLocationNfsResponse?: Record<string, any>;
 }

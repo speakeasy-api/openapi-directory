@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FlowLog } from "./flowlog";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeFlowLogsResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeFlowLogsResult = /** @class */ (function (_super) {
     __extends(DescribeFlowLogsResult, _super);
     function DescribeFlowLogsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: FlowLog }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFlowLogsResult.prototype, "flowLogs", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFlowLogsResult.prototype, "nextToken", void 0);
     return DescribeFlowLogsResult;
-}(SpeakeasyBase));
-export { DescribeFlowLogsResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeFlowLogsResult = DescribeFlowLogsResult;

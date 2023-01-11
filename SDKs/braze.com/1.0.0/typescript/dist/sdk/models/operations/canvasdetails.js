@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CanvasDetailsResponse = exports.CanvasDetailsRequest = exports.CanvasDetailsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CanvasDetailsQueryParams = /** @class */ (function (_super) {
     __extends(CanvasDetailsQueryParams, _super);
     function CanvasDetailsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=canvas_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=canvas_id" }),
         __metadata("design:type", String)
     ], CanvasDetailsQueryParams.prototype, "canvasId", void 0);
     return CanvasDetailsQueryParams;
-}(SpeakeasyBase));
-export { CanvasDetailsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDetailsQueryParams = CanvasDetailsQueryParams;
 var CanvasDetailsRequest = /** @class */ (function (_super) {
     __extends(CanvasDetailsRequest, _super);
     function CanvasDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CanvasDetailsQueryParams)
     ], CanvasDetailsRequest.prototype, "queryParams", void 0);
     return CanvasDetailsRequest;
-}(SpeakeasyBase));
-export { CanvasDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDetailsRequest = CanvasDetailsRequest;
 var CanvasDetailsResponse = /** @class */ (function (_super) {
     __extends(CanvasDetailsResponse, _super);
     function CanvasDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CanvasDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CanvasDetailsResponse.prototype, "statusCode", void 0);
     return CanvasDetailsResponse;
-}(SpeakeasyBase));
-export { CanvasDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CanvasDetailsResponse = CanvasDetailsResponse;

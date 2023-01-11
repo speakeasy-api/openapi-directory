@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignDeleteResponse = exports.SignDeleteRequest = exports.SignDelete200ApplicationJson = exports.SignDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SignDeletePathParams = /** @class */ (function (_super) {
     __extends(SignDeletePathParams, _super);
     function SignDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=job" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=job" }),
         __metadata("design:type", String)
     ], SignDeletePathParams.prototype, "job", void 0);
     return SignDeletePathParams;
-}(SpeakeasyBase));
-export { SignDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SignDeletePathParams = SignDeletePathParams;
 var SignDelete200ApplicationJson = /** @class */ (function (_super) {
     __extends(SignDelete200ApplicationJson, _super);
     function SignDelete200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SignDelete200ApplicationJson.prototype, "status", void 0);
     return SignDelete200ApplicationJson;
-}(SpeakeasyBase));
-export { SignDelete200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SignDelete200ApplicationJson = SignDelete200ApplicationJson;
 var SignDeleteRequest = /** @class */ (function (_super) {
     __extends(SignDeleteRequest, _super);
     function SignDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignDeletePathParams)
     ], SignDeleteRequest.prototype, "pathParams", void 0);
     return SignDeleteRequest;
-}(SpeakeasyBase));
-export { SignDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.SignDeleteRequest = SignDeleteRequest;
 var SignDeleteResponse = /** @class */ (function (_super) {
     __extends(SignDeleteResponse, _super);
     function SignDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SignDeleteResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SignDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SignDeleteResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SignDeleteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignDelete200ApplicationJson)
-    ], SignDeleteResponse.prototype, "signDelete200ApplicationJsonObject", void 0);
+    ], SignDeleteResponse.prototype, "signDelete200ApplicationJSONObject", void 0);
     return SignDeleteResponse;
-}(SpeakeasyBase));
-export { SignDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.SignDeleteResponse = SignDeleteResponse;

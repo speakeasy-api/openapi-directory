@@ -70,8 +70,8 @@ export class GetNameConceptTypeSpecificConceptJsonResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  getNameConceptTypeSpecificConceptJson200ApplicationJsonObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getNameConceptTypeSpecificConceptJSON200ApplicationJSONObject?: GetNameConceptTypeSpecificConceptJson200ApplicationJson;
 }

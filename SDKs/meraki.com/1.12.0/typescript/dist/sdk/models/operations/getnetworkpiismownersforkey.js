@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkPiiSmOwnersForKeyResponse = exports.GetNetworkPiiSmOwnersForKeyRequest = exports.GetNetworkPiiSmOwnersForKeyQueryParams = exports.GetNetworkPiiSmOwnersForKeyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkPiiSmOwnersForKeyPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkPiiSmOwnersForKeyPathParams, _super);
     function GetNetworkPiiSmOwnersForKeyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyPathParams.prototype, "networkId", void 0);
     return GetNetworkPiiSmOwnersForKeyPathParams;
-}(SpeakeasyBase));
-export { GetNetworkPiiSmOwnersForKeyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiSmOwnersForKeyPathParams = GetNetworkPiiSmOwnersForKeyPathParams;
 var GetNetworkPiiSmOwnersForKeyQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkPiiSmOwnersForKeyQueryParams, _super);
     function GetNetworkPiiSmOwnersForKeyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bluetoothMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bluetoothMac" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "bluetoothMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=imei" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=imei" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "imei", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mac" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "mac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serial" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyQueryParams.prototype, "username", void 0);
     return GetNetworkPiiSmOwnersForKeyQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkPiiSmOwnersForKeyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiSmOwnersForKeyQueryParams = GetNetworkPiiSmOwnersForKeyQueryParams;
 var GetNetworkPiiSmOwnersForKeyRequest = /** @class */ (function (_super) {
     __extends(GetNetworkPiiSmOwnersForKeyRequest, _super);
     function GetNetworkPiiSmOwnersForKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkPiiSmOwnersForKeyPathParams)
     ], GetNetworkPiiSmOwnersForKeyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkPiiSmOwnersForKeyQueryParams)
     ], GetNetworkPiiSmOwnersForKeyRequest.prototype, "queryParams", void 0);
     return GetNetworkPiiSmOwnersForKeyRequest;
-}(SpeakeasyBase));
-export { GetNetworkPiiSmOwnersForKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiSmOwnersForKeyRequest = GetNetworkPiiSmOwnersForKeyRequest;
 var GetNetworkPiiSmOwnersForKeyResponse = /** @class */ (function (_super) {
     __extends(GetNetworkPiiSmOwnersForKeyResponse, _super);
     function GetNetworkPiiSmOwnersForKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkPiiSmOwnersForKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkPiiSmOwnersForKeyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkPiiSmOwnersForKeyResponse.prototype, "getNetworkPiiSmOwnersForKey200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkPiiSmOwnersForKeyResponse.prototype, "getNetworkPiiSmOwnersForKey200ApplicationJSONObject", void 0);
     return GetNetworkPiiSmOwnersForKeyResponse;
-}(SpeakeasyBase));
-export { GetNetworkPiiSmOwnersForKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiSmOwnersForKeyResponse = GetNetworkPiiSmOwnersForKeyResponse;

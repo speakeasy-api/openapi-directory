@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 // InstanceInfo
 /**
  * Information about an on-premises instance.
@@ -34,33 +37,33 @@ var InstanceInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deregisterTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deregisterTime" }),
         __metadata("design:type", Date)
     ], InstanceInfo.prototype, "deregisterTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamSessionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamSessionArn" }),
         __metadata("design:type", String)
     ], InstanceInfo.prototype, "iamSessionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamUserArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamUserArn" }),
         __metadata("design:type", String)
     ], InstanceInfo.prototype, "iamUserArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceArn" }),
         __metadata("design:type", String)
     ], InstanceInfo.prototype, "instanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceName" }),
         __metadata("design:type", String)
     ], InstanceInfo.prototype, "instanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registerTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registerTime" }),
         __metadata("design:type", Date)
     ], InstanceInfo.prototype, "registerTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], InstanceInfo.prototype, "tags", void 0);
     return InstanceInfo;
-}(SpeakeasyBase));
-export { InstanceInfo };
+}(utils_1.SpeakeasyBase));
+exports.InstanceInfo = InstanceInfo;

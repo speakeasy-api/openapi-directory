@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagForApiContract } from "./tagforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartialFindResultTagForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var tagforapicontract_1 = require("./tagforapicontract");
 var PartialFindResultTagForApiContract = /** @class */ (function (_super) {
     __extends(PartialFindResultTagForApiContract, _super);
     function PartialFindResultTagForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: TagForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: tagforapicontract_1.TagForApiContract }),
         __metadata("design:type", Array)
     ], PartialFindResultTagForApiContract.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term" }),
         __metadata("design:type", String)
     ], PartialFindResultTagForApiContract.prototype, "term", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], PartialFindResultTagForApiContract.prototype, "totalCount", void 0);
     return PartialFindResultTagForApiContract;
-}(SpeakeasyBase));
-export { PartialFindResultTagForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.PartialFindResultTagForApiContract = PartialFindResultTagForApiContract;

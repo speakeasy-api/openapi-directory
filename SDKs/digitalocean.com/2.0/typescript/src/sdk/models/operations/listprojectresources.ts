@@ -1,39 +1,34 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListProjectResourcesPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" })
   projectId: string;
 }
 
 
-export class ListProjectResourcesRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: ListProjectResourcesPathParams;
-}
-
-
 export class ListProjectResources200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListProjectResources200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListProjectResources200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -43,7 +38,7 @@ export class ListProjectResources200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListProjectResources200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
@@ -53,74 +48,80 @@ export class ListProjectResources200ApplicationJsonMeta extends SpeakeasyBase {
  * The links object contains the `self` object, which contains the resource relationship.
 **/
 export class ListProjectResources200ApplicationJsonResourcesLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=self" })
+  @SpeakeasyMetadata({ data: "json, name=self" })
   self?: string;
 }
 
 export enum ListProjectResources200ApplicationJsonResourcesStatusEnum {
-    Ok = "ok"
-,    NotFound = "not_found"
-,    Assigned = "assigned"
-,    AlreadyAssigned = "already_assigned"
-,    ServiceDown = "service_down"
+    Ok = "ok",
+    NotFound = "not_found",
+    Assigned = "assigned",
+    AlreadyAssigned = "already_assigned",
+    ServiceDown = "service_down"
 }
 
 
 export class ListProjectResources200ApplicationJsonResources extends SpeakeasyBase {
-  @Metadata({ data: "json, name=assigned_at" })
+  @SpeakeasyMetadata({ data: "json, name=assigned_at" })
   assignedAt?: Date;
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListProjectResources200ApplicationJsonResourcesLinks;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status?: ListProjectResources200ApplicationJsonResourcesStatusEnum;
 
-  @Metadata({ data: "json, name=urn" })
+  @SpeakeasyMetadata({ data: "json, name=urn" })
   urn?: string;
 }
 
 
 export class ListProjectResources200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListProjectResources200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListProjectResources200ApplicationJsonMeta;
 
-  @Metadata({ data: "json, name=resources", elemType: operations.ListProjectResources200ApplicationJsonResources })
+  @SpeakeasyMetadata({ data: "json, name=resources", elemType: ListProjectResources200ApplicationJsonResources })
   resources?: ListProjectResources200ApplicationJsonResources[];
 }
 
 
 export class ListProjectResources401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListProjectResourcesRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ListProjectResourcesPathParams;
+}
+
+
 export class ListProjectResourcesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listProjectResources200ApplicationJsonObject?: ListProjectResources200ApplicationJson;
+  @SpeakeasyMetadata()
+  listProjectResources200ApplicationJSONObject?: ListProjectResources200ApplicationJson;
 
-  @Metadata()
-  listProjectResources401ApplicationJsonObject?: ListProjectResources401ApplicationJson;
+  @SpeakeasyMetadata()
+  listProjectResources401ApplicationJSONObject?: ListProjectResources401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

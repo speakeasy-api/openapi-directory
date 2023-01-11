@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrPageResultWithLinesWithLocation } from "./ocrpageresultwithlineswithlocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PdfToLinesWithLocationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrpageresultwithlineswithlocation_1 = require("./ocrpageresultwithlineswithlocation");
 // PdfToLinesWithLocationResult
 /**
  * Response from an OCR to lines with location operation.  Includes the confience rating and converted text result, along with the locations of the lines in the pages.
@@ -34,13 +37,13 @@ var PdfToLinesWithLocationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OcrPages", elemType: OcrPageResultWithLinesWithLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OcrPages", elemType: ocrpageresultwithlineswithlocation_1.OcrPageResultWithLinesWithLocation }),
         __metadata("design:type", Array)
     ], PdfToLinesWithLocationResult.prototype, "ocrPages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], PdfToLinesWithLocationResult.prototype, "successful", void 0);
     return PdfToLinesWithLocationResult;
-}(SpeakeasyBase));
-export { PdfToLinesWithLocationResult };
+}(utils_1.SpeakeasyBase));
+exports.PdfToLinesWithLocationResult = PdfToLinesWithLocationResult;

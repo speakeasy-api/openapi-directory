@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class StaticListener extends SpeakeasyBase {
     lastUpdated?: string;
-    listener?: Map<string, any>;
+    listener?: Record<string, any>;
 }

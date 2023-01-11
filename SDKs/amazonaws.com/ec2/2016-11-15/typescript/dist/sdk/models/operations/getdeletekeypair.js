@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteKeyPairActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteKeyPairResponse = exports.GetDeleteKeyPairRequest = exports.GetDeleteKeyPairHeaders = exports.GetDeleteKeyPairQueryParams = exports.GetDeleteKeyPairVersionEnum = exports.GetDeleteKeyPairActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteKeyPairActionEnum;
 (function (GetDeleteKeyPairActionEnum) {
     GetDeleteKeyPairActionEnum["DeleteKeyPair"] = "DeleteKeyPair";
-})(GetDeleteKeyPairActionEnum || (GetDeleteKeyPairActionEnum = {}));
-export var GetDeleteKeyPairVersionEnum;
+})(GetDeleteKeyPairActionEnum = exports.GetDeleteKeyPairActionEnum || (exports.GetDeleteKeyPairActionEnum = {}));
+var GetDeleteKeyPairVersionEnum;
 (function (GetDeleteKeyPairVersionEnum) {
     GetDeleteKeyPairVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteKeyPairVersionEnum || (GetDeleteKeyPairVersionEnum = {}));
+})(GetDeleteKeyPairVersionEnum = exports.GetDeleteKeyPairVersionEnum || (exports.GetDeleteKeyPairVersionEnum = {}));
 var GetDeleteKeyPairQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteKeyPairQueryParams, _super);
     function GetDeleteKeyPairQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteKeyPairQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=KeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=KeyName" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairQueryParams.prototype, "keyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=KeyPairId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=KeyPairId" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairQueryParams.prototype, "keyPairId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairQueryParams.prototype, "version", void 0);
     return GetDeleteKeyPairQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteKeyPairQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteKeyPairQueryParams = GetDeleteKeyPairQueryParams;
 var GetDeleteKeyPairHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteKeyPairHeaders, _super);
     function GetDeleteKeyPairHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteKeyPairHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteKeyPairHeaders;
-}(SpeakeasyBase));
-export { GetDeleteKeyPairHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteKeyPairHeaders = GetDeleteKeyPairHeaders;
 var GetDeleteKeyPairRequest = /** @class */ (function (_super) {
     __extends(GetDeleteKeyPairRequest, _super);
     function GetDeleteKeyPairRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteKeyPairQueryParams)
     ], GetDeleteKeyPairRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteKeyPairHeaders)
     ], GetDeleteKeyPairRequest.prototype, "headers", void 0);
     return GetDeleteKeyPairRequest;
-}(SpeakeasyBase));
-export { GetDeleteKeyPairRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteKeyPairRequest = GetDeleteKeyPairRequest;
 var GetDeleteKeyPairResponse = /** @class */ (function (_super) {
     __extends(GetDeleteKeyPairResponse, _super);
     function GetDeleteKeyPairResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteKeyPairResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteKeyPairResponse.prototype, "statusCode", void 0);
     return GetDeleteKeyPairResponse;
-}(SpeakeasyBase));
-export { GetDeleteKeyPairResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteKeyPairResponse = GetDeleteKeyPairResponse;

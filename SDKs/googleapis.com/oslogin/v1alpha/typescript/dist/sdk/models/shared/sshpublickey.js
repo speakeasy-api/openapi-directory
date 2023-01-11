@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SshPublicKeyInput = exports.SshPublicKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // SshPublicKey
 /**
  * The SSH public key information associated with a Google account.
@@ -33,24 +36,24 @@ var SshPublicKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTimeUsec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTimeUsec" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "expirationTimeUsec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "name", void 0);
     return SshPublicKey;
-}(SpeakeasyBase));
-export { SshPublicKey };
+}(utils_1.SpeakeasyBase));
+exports.SshPublicKey = SshPublicKey;
 // SshPublicKeyInput
 /**
  * The SSH public key information associated with a Google account.
@@ -61,13 +64,13 @@ var SshPublicKeyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTimeUsec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTimeUsec" }),
         __metadata("design:type", String)
     ], SshPublicKeyInput.prototype, "expirationTimeUsec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], SshPublicKeyInput.prototype, "key", void 0);
     return SshPublicKeyInput;
-}(SpeakeasyBase));
-export { SshPublicKeyInput };
+}(utils_1.SpeakeasyBase));
+exports.SshPublicKeyInput = SshPublicKeyInput;

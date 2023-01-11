@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostTransfersRequest, PostTransfersResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -33,10 +32,10 @@ const req: PostTransfersRequest = {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
-  request: "unde",
+  request: "sit",
 };
 
-sdk.sdk.postTransfers(req).then((res: PostTransfersResponse | AxiosError) => {
+sdk.general.postTransfers(req).then((res: PostTransfersResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,7 +44,7 @@ sdk.sdk.postTransfers(req).then((res: PostTransfersResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `postTransfers` - Transfer funds.
 

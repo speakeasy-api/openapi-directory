@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-import { EntityTypeEnum } from "./entitytypeenum";
-export var ProblemEventAdminStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProblemEvent = exports.ProblemEventSeverityEnum = exports.ProblemEventAdminStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reference_1 = require("./reference");
+var entitytypeenum_1 = require("./entitytypeenum");
+var ProblemEventAdminStateEnum;
 (function (ProblemEventAdminStateEnum) {
     ProblemEventAdminStateEnum["Enabled"] = "ENABLED";
     ProblemEventAdminStateEnum["Disabled"] = "DISABLED";
-})(ProblemEventAdminStateEnum || (ProblemEventAdminStateEnum = {}));
-export var ProblemEventSeverityEnum;
+})(ProblemEventAdminStateEnum = exports.ProblemEventAdminStateEnum || (exports.ProblemEventAdminStateEnum = {}));
+var ProblemEventSeverityEnum;
 (function (ProblemEventSeverityEnum) {
     ProblemEventSeverityEnum["Critical"] = "CRITICAL";
     ProblemEventSeverityEnum["Moderate"] = "MODERATE";
     ProblemEventSeverityEnum["Warning"] = "WARNING";
     ProblemEventSeverityEnum["Info"] = "INFO";
-})(ProblemEventSeverityEnum || (ProblemEventSeverityEnum = {}));
+})(ProblemEventSeverityEnum = exports.ProblemEventSeverityEnum || (exports.ProblemEventSeverityEnum = {}));
 var ProblemEvent = /** @class */ (function (_super) {
     __extends(ProblemEvent, _super);
     function ProblemEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_state" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "adminState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anchor_entities", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anchor_entities", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], ProblemEvent.prototype, "anchorEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
         __metadata("design:type", Boolean)
     ], ProblemEvent.prototype, "archived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_close_time_epoch_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_close_time_epoch_ms" }),
         __metadata("design:type", Number)
     ], ProblemEvent.prototype, "eventCloseTimeEpochMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_tags" }),
         __metadata("design:type", Array)
     ], ProblemEvent.prototype, "eventTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_time_epoch_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_time_epoch_ms" }),
         __metadata("design:type", Number)
     ], ProblemEvent.prototype, "eventTimeEpochMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_entities", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_entities", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], ProblemEvent.prototype, "relatedEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], ProblemEvent.prototype, "severity", void 0);
     return ProblemEvent;
-}(SpeakeasyBase));
-export { ProblemEvent };
+}(utils_1.SpeakeasyBase));
+exports.ProblemEvent = ProblemEvent;

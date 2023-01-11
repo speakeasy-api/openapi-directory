@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CpuInfo } from "./cpuinfo";
-import { MemoryInfo } from "./memoryinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerfEnvironment = void 0;
+var utils_1 = require("../../../internal/utils");
+var cpuinfo_1 = require("./cpuinfo");
+var memoryinfo_1 = require("./memoryinfo");
 // PerfEnvironment
 /**
  * Encapsulates performance environment info
@@ -35,13 +38,13 @@ var PerfEnvironment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuInfo" }),
-        __metadata("design:type", CpuInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuInfo" }),
+        __metadata("design:type", cpuinfo_1.CpuInfo)
     ], PerfEnvironment.prototype, "cpuInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryInfo" }),
-        __metadata("design:type", MemoryInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryInfo" }),
+        __metadata("design:type", memoryinfo_1.MemoryInfo)
     ], PerfEnvironment.prototype, "memoryInfo", void 0);
     return PerfEnvironment;
-}(SpeakeasyBase));
-export { PerfEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.PerfEnvironment = PerfEnvironment;

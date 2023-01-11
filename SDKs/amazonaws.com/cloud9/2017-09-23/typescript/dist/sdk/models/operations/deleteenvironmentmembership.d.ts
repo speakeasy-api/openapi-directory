@@ -21,7 +21,7 @@ export declare class DeleteEnvironmentMembershipResponse extends SpeakeasyBase {
     badRequestException?: any;
     conflictException?: any;
     contentType: string;
-    deleteEnvironmentMembershipResult?: Map<string, any>;
+    deleteEnvironmentMembershipResult?: Record<string, any>;
     forbiddenException?: any;
     internalServerErrorException?: any;
     limitExceededException?: any;

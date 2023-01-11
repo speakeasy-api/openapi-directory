@@ -1,5 +1,8 @@
-export var LayerAvailabilityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerAvailabilityEnum = void 0;
+var LayerAvailabilityEnum;
 (function (LayerAvailabilityEnum) {
     LayerAvailabilityEnum["Available"] = "AVAILABLE";
     LayerAvailabilityEnum["Unavailable"] = "UNAVAILABLE";
-})(LayerAvailabilityEnum || (LayerAvailabilityEnum = {}));
+})(LayerAvailabilityEnum = exports.LayerAvailabilityEnum || (exports.LayerAvailabilityEnum = {}));

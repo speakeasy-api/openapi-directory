@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TournamentHierarchyFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TournamentHierarchyResponse = exports.TournamentHierarchyRequest = exports.TournamentHierarchyPathParams = exports.TournamentHierarchyFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TournamentHierarchyFormatEnum;
 (function (TournamentHierarchyFormatEnum) {
     TournamentHierarchyFormatEnum["Xml"] = "XML";
     TournamentHierarchyFormatEnum["Json"] = "JSON";
-})(TournamentHierarchyFormatEnum || (TournamentHierarchyFormatEnum = {}));
+})(TournamentHierarchyFormatEnum = exports.TournamentHierarchyFormatEnum || (exports.TournamentHierarchyFormatEnum = {}));
 var TournamentHierarchyPathParams = /** @class */ (function (_super) {
     __extends(TournamentHierarchyPathParams, _super);
     function TournamentHierarchyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TournamentHierarchyPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], TournamentHierarchyPathParams.prototype, "season", void 0);
     return TournamentHierarchyPathParams;
-}(SpeakeasyBase));
-export { TournamentHierarchyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TournamentHierarchyPathParams = TournamentHierarchyPathParams;
 var TournamentHierarchyRequest = /** @class */ (function (_super) {
     __extends(TournamentHierarchyRequest, _super);
     function TournamentHierarchyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TournamentHierarchyPathParams)
     ], TournamentHierarchyRequest.prototype, "pathParams", void 0);
     return TournamentHierarchyRequest;
-}(SpeakeasyBase));
-export { TournamentHierarchyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TournamentHierarchyRequest = TournamentHierarchyRequest;
 var TournamentHierarchyResponse = /** @class */ (function (_super) {
     __extends(TournamentHierarchyResponse, _super);
     function TournamentHierarchyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TournamentHierarchyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TournamentHierarchyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TournamentHierarchyResponse.prototype, "tournament", void 0);
     return TournamentHierarchyResponse;
-}(SpeakeasyBase));
-export { TournamentHierarchyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TournamentHierarchyResponse = TournamentHierarchyResponse;

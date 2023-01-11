@@ -25,16 +25,16 @@ export declare class UpdateReplicationConfigurationTemplateRequestBody extends S
     arn?: string;
     associateDefaultSecurityGroup?: boolean;
     bandwidthThrottling?: number;
-    createPublicIp?: boolean;
+    createPublicIP?: boolean;
     dataPlaneRouting?: UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum;
     defaultLargeStagingDiskType?: UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum;
     ebsEncryption?: UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum;
     ebsEncryptionKeyArn?: string;
-    replicationConfigurationTemplateId: string;
+    replicationConfigurationTemplateID: string;
     replicationServerInstanceType?: string;
     replicationServersSecurityGroupsIDs?: string[];
     stagingAreaSubnetId?: string;
-    stagingAreaTags?: Map<string, string>;
+    stagingAreaTags?: Record<string, string>;
     useDedicatedReplicationServer?: boolean;
 }
 export declare class UpdateReplicationConfigurationTemplateRequest extends SpeakeasyBase {

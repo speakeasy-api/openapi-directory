@@ -41,7 +41,7 @@ export class ProjectsCreateForAuthenticatedUserResponse extends SpeakeasyBase {
   project?: shared.Project;
 
   @SpeakeasyMetadata()
-  projectsCreateForAuthenticatedUser415ApplicationJsonObject?: ProjectsCreateForAuthenticatedUser415ApplicationJson;
+  projectsCreateForAuthenticatedUser415ApplicationJSONObject?: ProjectsCreateForAuthenticatedUser415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationErrorSimple?: shared.ValidationErrorSimple;

@@ -21,11 +21,11 @@ export enum LunStorageTypeEnum {
 }
 
 
-// LunInput
+// Lun
 /** 
  * A storage volume logical unit number (LUN).
 **/
-export class LunInput extends SpeakeasyBase {
+export class Lun extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bootLun" })
   bootLun?: boolean;
 
@@ -34,6 +34,9 @@ export class LunInput extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=multiprotocolType" })
   multiprotocolType?: LunMultiprotocolTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=shareable" })
   shareable?: boolean;
@@ -55,11 +58,11 @@ export class LunInput extends SpeakeasyBase {
 }
 
 
-// Lun
+// LunInput
 /** 
  * A storage volume logical unit number (LUN).
 **/
-export class Lun extends SpeakeasyBase {
+export class LunInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bootLun" })
   bootLun?: boolean;
 
@@ -68,9 +71,6 @@ export class Lun extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=multiprotocolType" })
   multiprotocolType?: LunMultiprotocolTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=shareable" })
   shareable?: boolean;

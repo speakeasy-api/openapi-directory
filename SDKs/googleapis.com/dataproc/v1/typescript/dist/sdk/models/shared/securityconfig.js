@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityConfig } from "./identityconfig";
-import { KerberosConfig } from "./kerberosconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecurityConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var identityconfig_1 = require("./identityconfig");
+var kerberosconfig_1 = require("./kerberosconfig");
 // SecurityConfig
 /**
  * Security related configuration, including encryption, Kerberos, etc.
@@ -35,13 +38,13 @@ var SecurityConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityConfig" }),
-        __metadata("design:type", IdentityConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityConfig" }),
+        __metadata("design:type", identityconfig_1.IdentityConfig)
     ], SecurityConfig.prototype, "identityConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kerberosConfig" }),
-        __metadata("design:type", KerberosConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kerberosConfig" }),
+        __metadata("design:type", kerberosconfig_1.KerberosConfig)
     ], SecurityConfig.prototype, "kerberosConfig", void 0);
     return SecurityConfig;
-}(SpeakeasyBase));
-export { SecurityConfig };
+}(utils_1.SpeakeasyBase));
+exports.SecurityConfig = SecurityConfig;

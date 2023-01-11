@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelQuantumTaskRequest, CancelQuantumTaskResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelQuantumTaskRequest = {
   pathParams: {
-    quantumTaskArn: "minima",
+    quantumTaskArn: "sit",
   },
   headers: {
-    xAmzAlgorithm: "hic",
-    xAmzContentSha256: "cumque",
-    xAmzCredential: "quia",
-    xAmzDate: "quasi",
-    xAmzSecurityToken: "inventore",
-    xAmzSignature: "aut",
-    xAmzSignedHeaders: "rerum",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
-    clientToken: "nisi",
+    clientToken: "fugit",
   },
 };
 
-sdk.sdk.cancelQuantumTask(req).then((res: CancelQuantumTaskResponse | AxiosError) => {
+sdk.cancelQuantumTask(req).then((res: CancelQuantumTaskResponse | AxiosError) => {
    // handle response
 });
 ```

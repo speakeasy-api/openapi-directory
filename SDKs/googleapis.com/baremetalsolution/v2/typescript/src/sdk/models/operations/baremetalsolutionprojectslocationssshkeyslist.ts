@@ -77,7 +77,7 @@ export class BaremetalsolutionProjectsLocationsSshKeysListResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  listSshKeysResponse?: shared.ListSshKeysResponse;
+  listSSHKeysResponse?: shared.ListSshKeysResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

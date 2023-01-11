@@ -11,19 +11,19 @@ import { BatchUpdateObjectAttributesResponse } from "./batchupdateobjectattribut
  * Represents the output of a <code>BatchWrite</code> response operation.
 **/
 export declare class BatchWriteOperationResponse extends SpeakeasyBase {
-    addFacetToObject?: Map<string, any>;
+    addFacetToObject?: Record<string, any>;
     attachObject?: BatchAttachObjectResponse;
-    attachPolicy?: Map<string, any>;
+    attachPolicy?: Record<string, any>;
     attachToIndex?: BatchAttachToIndexResponse;
     attachTypedLink?: BatchAttachTypedLinkResponse;
     createIndex?: BatchCreateIndexResponse;
     createObject?: BatchCreateObjectResponse;
-    deleteObject?: Map<string, any>;
+    deleteObject?: Record<string, any>;
     detachFromIndex?: BatchDetachFromIndexResponse;
     detachObject?: BatchDetachObjectResponse;
-    detachPolicy?: Map<string, any>;
-    detachTypedLink?: Map<string, any>;
-    removeFacetFromObject?: Map<string, any>;
-    updateLinkAttributes?: Map<string, any>;
+    detachPolicy?: Record<string, any>;
+    detachTypedLink?: Record<string, any>;
+    removeFacetFromObject?: Record<string, any>;
+    updateLinkAttributes?: Record<string, any>;
     updateObjectAttributes?: BatchUpdateObjectAttributesResponse;
 }

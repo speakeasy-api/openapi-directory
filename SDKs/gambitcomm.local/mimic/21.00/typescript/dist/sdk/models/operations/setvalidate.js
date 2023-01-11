@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetValidateResponse = exports.SetValidateRequest = exports.SetValidatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetValidatePathParams = /** @class */ (function (_super) {
     __extends(SetValidatePathParams, _super);
     function SetValidatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetValidatePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=validate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=validate" }),
         __metadata("design:type", Number)
     ], SetValidatePathParams.prototype, "validate", void 0);
     return SetValidatePathParams;
-}(SpeakeasyBase));
-export { SetValidatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetValidatePathParams = SetValidatePathParams;
 var SetValidateRequest = /** @class */ (function (_super) {
     __extends(SetValidateRequest, _super);
     function SetValidateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetValidatePathParams)
     ], SetValidateRequest.prototype, "pathParams", void 0);
     return SetValidateRequest;
-}(SpeakeasyBase));
-export { SetValidateRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetValidateRequest = SetValidateRequest;
 var SetValidateResponse = /** @class */ (function (_super) {
     __extends(SetValidateResponse, _super);
     function SetValidateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetValidateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetValidateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], SetValidateResponse.prototype, "setValidate200ApplicationJsonInt32Integer", void 0);
+    ], SetValidateResponse.prototype, "setValidate200ApplicationJSONInt32Integer", void 0);
     return SetValidateResponse;
-}(SpeakeasyBase));
-export { SetValidateResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetValidateResponse = SetValidateResponse;

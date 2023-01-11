@@ -35,6 +35,6 @@ export declare class GetDatacentersIdRequest extends SpeakeasyBase {
 }
 export declare class GetDatacentersIdResponse extends SpeakeasyBase {
     contentType: string;
-    getDatacentersId200ApplicationJsonObject?: GetDatacentersId200ApplicationJson;
     statusCode: number;
+    getDatacentersId200ApplicationJSONObject?: GetDatacentersId200ApplicationJson;
 }

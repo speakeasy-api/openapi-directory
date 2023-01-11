@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectLevelStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // ObjectLevelStatistics
 /**
  * Provides information about the total storage size (in bytes) or number of objects that Amazon Macie can't analyze in one or more S3 buckets. In a BucketMetadata or MatchingBucket object, this data is for a specific bucket. In a GetBucketStatisticsResponse object, this data is aggregated for all the buckets in the query results. If versioning is enabled for a bucket, total storage size values are based on the size of the latest version of each applicable object in the bucket.
@@ -33,17 +36,17 @@ var ObjectLevelStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileType" }),
         __metadata("design:type", Number)
     ], ObjectLevelStatistics.prototype, "fileType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageClass" }),
         __metadata("design:type", Number)
     ], ObjectLevelStatistics.prototype, "storageClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ObjectLevelStatistics.prototype, "total", void 0);
     return ObjectLevelStatistics;
-}(SpeakeasyBase));
-export { ObjectLevelStatistics };
+}(utils_1.SpeakeasyBase));
+exports.ObjectLevelStatistics = ObjectLevelStatistics;

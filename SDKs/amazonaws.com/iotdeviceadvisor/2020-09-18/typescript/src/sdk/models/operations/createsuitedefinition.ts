@@ -54,7 +54,7 @@ export class CreateSuiteDefinitionRequestBody extends SpeakeasyBase {
   suiteDefinitionConfiguration?: CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

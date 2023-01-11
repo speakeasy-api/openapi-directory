@@ -11,6 +11,6 @@ export declare class DialogAction extends SpeakeasyBase {
     message?: string;
     messageFormat?: MessageFormatTypeEnum;
     slotToElicit?: string;
-    slots?: Map<string, string>;
+    slots?: Record<string, string>;
     type: DialogActionTypeEnum;
 }

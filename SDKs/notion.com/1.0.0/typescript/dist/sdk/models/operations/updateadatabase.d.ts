@@ -3,7 +3,7 @@ export declare class UpdateADatabasePathParams extends SpeakeasyBase {
     id: string;
 }
 export declare class UpdateADatabaseRequestBodyPropertiesWinePairing extends SpeakeasyBase {
-    richText?: Map<string, any>;
+    richText?: Record<string, any>;
 }
 export declare class UpdateADatabaseRequestBodyProperties extends SpeakeasyBase {
     winePairing?: UpdateADatabaseRequestBodyPropertiesWinePairing;
@@ -40,12 +40,12 @@ export declare class UpdateADatabase200ApplicationJsonPropertiesLink extends Spe
     id?: string;
     name?: string;
     type?: string;
-    url?: Map<string, any>;
+    url?: Record<string, any>;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesName extends SpeakeasyBase {
     id?: string;
     name?: string;
-    title?: Map<string, any>;
+    title?: Record<string, any>;
     type?: string;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesPublisherSelectOptions extends SpeakeasyBase {
@@ -63,13 +63,13 @@ export declare class UpdateADatabase200ApplicationJsonPropertiesPublisher extend
     type?: string;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesPublishingReleaseDate extends SpeakeasyBase {
-    date?: Map<string, any>;
+    date?: Record<string, any>;
     id?: string;
     name?: string;
     type?: string;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesRead extends SpeakeasyBase {
-    checkbox?: Map<string, any>;
+    checkbox?: Record<string, any>;
     id?: string;
     name?: string;
     type?: string;
@@ -105,7 +105,7 @@ export declare class UpdateADatabase200ApplicationJsonPropertiesStatus extends S
 export declare class UpdateADatabase200ApplicationJsonPropertiesSummary extends SpeakeasyBase {
     id?: string;
     name?: string;
-    richText?: Map<string, any>;
+    richText?: Record<string, any>;
     type?: string;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesTypeSelectOptions extends SpeakeasyBase {
@@ -125,11 +125,11 @@ export declare class UpdateADatabase200ApplicationJsonPropertiesType extends Spe
 export declare class UpdateADatabase200ApplicationJsonPropertiesWinePairing extends SpeakeasyBase {
     id?: string;
     name?: string;
-    richText?: Map<string, any>;
+    richText?: Record<string, any>;
     type?: string;
 }
 export declare class UpdateADatabase200ApplicationJsonPropertiesDate extends SpeakeasyBase {
-    date?: Map<string, any>;
+    date?: Record<string, any>;
     id?: string;
     name?: string;
     type?: string;
@@ -182,7 +182,7 @@ export declare class UpdateADatabaseRequest extends SpeakeasyBase {
 }
 export declare class UpdateADatabaseResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    updateADatabase200ApplicationJsonObject?: UpdateADatabase200ApplicationJson;
+    updateADatabase200ApplicationJSONObject?: UpdateADatabase200ApplicationJson;
 }

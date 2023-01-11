@@ -25,20 +25,6 @@ export declare enum TimeOffRequestUnitsEnum {
     Hours = "hours",
     Other = "other"
 }
-export declare class TimeOffRequestInput extends SpeakeasyBase {
-    amount?: number;
-    approvalDate?: string;
-    description?: string;
-    employeeId?: string;
-    endDate?: string;
-    notes?: TimeOffRequestNotes;
-    policyId?: string;
-    requestDate?: string;
-    requestType?: TimeOffRequestRequestTypeEnum;
-    startDate?: string;
-    status?: TimeOffRequestStatusEnum;
-    units?: TimeOffRequestUnitsEnum;
-}
 export declare class TimeOffRequest extends SpeakeasyBase {
     amount?: number;
     approvalDate?: string;
@@ -57,4 +43,18 @@ export declare class TimeOffRequest extends SpeakeasyBase {
     units?: TimeOffRequestUnitsEnum;
     updatedAt?: Date;
     updatedBy?: string;
+}
+export declare class TimeOffRequestInput extends SpeakeasyBase {
+    amount?: number;
+    approvalDate?: string;
+    description?: string;
+    employeeId?: string;
+    endDate?: string;
+    notes?: TimeOffRequestNotes;
+    policyId?: string;
+    requestDate?: string;
+    requestType?: TimeOffRequestRequestTypeEnum;
+    startDate?: string;
+    status?: TimeOffRequestStatusEnum;
+    units?: TimeOffRequestUnitsEnum;
 }

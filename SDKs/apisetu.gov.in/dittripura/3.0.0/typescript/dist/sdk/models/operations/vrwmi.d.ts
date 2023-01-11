@@ -106,11 +106,11 @@ export declare class VrwmiRequest extends SpeakeasyBase {
 export declare class VrwmiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vrwmi400ApplicationJsonObject?: Vrwmi400ApplicationJson;
-    vrwmi401ApplicationJsonObject?: Vrwmi401ApplicationJson;
-    vrwmi404ApplicationJsonObject?: Vrwmi404ApplicationJson;
-    vrwmi500ApplicationJsonObject?: Vrwmi500ApplicationJson;
-    vrwmi502ApplicationJsonObject?: Vrwmi502ApplicationJson;
-    vrwmi503ApplicationJsonObject?: Vrwmi503ApplicationJson;
-    vrwmi504ApplicationJsonObject?: Vrwmi504ApplicationJson;
+    vrwmi400ApplicationJSONObject?: Vrwmi400ApplicationJson;
+    vrwmi401ApplicationJSONObject?: Vrwmi401ApplicationJson;
+    vrwmi404ApplicationJSONObject?: Vrwmi404ApplicationJson;
+    vrwmi500ApplicationJSONObject?: Vrwmi500ApplicationJson;
+    vrwmi502ApplicationJSONObject?: Vrwmi502ApplicationJson;
+    vrwmi503ApplicationJSONObject?: Vrwmi503ApplicationJson;
+    vrwmi504ApplicationJSONObject?: Vrwmi504ApplicationJson;
 }

@@ -1,4 +1,7 @@
-export var DataReplicationErrorStringEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataReplicationErrorStringEnum = void 0;
+var DataReplicationErrorStringEnum;
 (function (DataReplicationErrorStringEnum) {
     DataReplicationErrorStringEnum["AgentNotSeen"] = "AGENT_NOT_SEEN";
     DataReplicationErrorStringEnum["SnapshotsFailure"] = "SNAPSHOTS_FAILURE";
@@ -14,4 +17,4 @@ export var DataReplicationErrorStringEnum;
     DataReplicationErrorStringEnum["FailedToPairReplicationServerWithAgent"] = "FAILED_TO_PAIR_REPLICATION_SERVER_WITH_AGENT";
     DataReplicationErrorStringEnum["FailedToConnectAgentToReplicationServer"] = "FAILED_TO_CONNECT_AGENT_TO_REPLICATION_SERVER";
     DataReplicationErrorStringEnum["FailedToStartDataTransfer"] = "FAILED_TO_START_DATA_TRANSFER";
-})(DataReplicationErrorStringEnum || (DataReplicationErrorStringEnum = {}));
+})(DataReplicationErrorStringEnum = exports.DataReplicationErrorStringEnum || (exports.DataReplicationErrorStringEnum = {}));

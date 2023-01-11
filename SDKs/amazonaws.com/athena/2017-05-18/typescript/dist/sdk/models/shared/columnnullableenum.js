@@ -1,6 +1,9 @@
-export var ColumnNullableEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnNullableEnum = void 0;
+var ColumnNullableEnum;
 (function (ColumnNullableEnum) {
     ColumnNullableEnum["NotNull"] = "NOT_NULL";
     ColumnNullableEnum["Nullable"] = "NULLABLE";
     ColumnNullableEnum["Unknown"] = "UNKNOWN";
-})(ColumnNullableEnum || (ColumnNullableEnum = {}));
+})(ColumnNullableEnum = exports.ColumnNullableEnum || (exports.ColumnNullableEnum = {}));

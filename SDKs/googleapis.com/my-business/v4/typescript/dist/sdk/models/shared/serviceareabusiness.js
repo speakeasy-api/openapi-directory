@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Places } from "./places";
-import { PointRadius } from "./pointradius";
-export var ServiceAreaBusinessBusinessTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceAreaBusiness = exports.ServiceAreaBusinessBusinessTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var places_1 = require("./places");
+var pointradius_1 = require("./pointradius");
+var ServiceAreaBusinessBusinessTypeEnum;
 (function (ServiceAreaBusinessBusinessTypeEnum) {
     ServiceAreaBusinessBusinessTypeEnum["BusinessTypeUnspecified"] = "BUSINESS_TYPE_UNSPECIFIED";
     ServiceAreaBusinessBusinessTypeEnum["CustomerLocationOnly"] = "CUSTOMER_LOCATION_ONLY";
     ServiceAreaBusinessBusinessTypeEnum["CustomerAndBusinessLocation"] = "CUSTOMER_AND_BUSINESS_LOCATION";
-})(ServiceAreaBusinessBusinessTypeEnum || (ServiceAreaBusinessBusinessTypeEnum = {}));
+})(ServiceAreaBusinessBusinessTypeEnum = exports.ServiceAreaBusinessBusinessTypeEnum || (exports.ServiceAreaBusinessBusinessTypeEnum = {}));
 // ServiceAreaBusiness
 /**
  * Service area businesses provide their service at the customer's location (for example, a locksmith or plumber).
@@ -41,17 +44,17 @@ var ServiceAreaBusiness = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessType" }),
         __metadata("design:type", String)
     ], ServiceAreaBusiness.prototype, "businessType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=places" }),
-        __metadata("design:type", Places)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=places" }),
+        __metadata("design:type", places_1.Places)
     ], ServiceAreaBusiness.prototype, "places", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radius" }),
-        __metadata("design:type", PointRadius)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radius" }),
+        __metadata("design:type", pointradius_1.PointRadius)
     ], ServiceAreaBusiness.prototype, "radius", void 0);
     return ServiceAreaBusiness;
-}(SpeakeasyBase));
-export { ServiceAreaBusiness };
+}(utils_1.SpeakeasyBase));
+exports.ServiceAreaBusiness = ServiceAreaBusiness;

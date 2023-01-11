@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UrlNormalization = void 0;
+var utils_1 = require("../../../internal/utils");
 // UrlNormalization
 /**
  * Object representing the normalization actions taken to normalize a url to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided `url_patten` would be known to fail. Complex actions like following redirects are not handled.
@@ -33,13 +36,13 @@ var UrlNormalization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=normalizedUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=normalizedUrl" }),
         __metadata("design:type", String)
     ], UrlNormalization.prototype, "normalizedUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalUrl" }),
         __metadata("design:type", String)
     ], UrlNormalization.prototype, "originalUrl", void 0);
     return UrlNormalization;
-}(SpeakeasyBase));
-export { UrlNormalization };
+}(utils_1.SpeakeasyBase));
+exports.UrlNormalization = UrlNormalization;

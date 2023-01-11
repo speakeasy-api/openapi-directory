@@ -38,7 +38,7 @@ export class GetNextPayPeriodDatesReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getNextPayPeriodDatesReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getNextPayPeriodDatesReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

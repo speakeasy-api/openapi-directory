@@ -44,13 +44,13 @@ export class AppsListInstallationReposForAuthenticatedUserResponse extends Speak
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsListInstallationReposForAuthenticatedUser200ApplicationJsonObject?: AppsListInstallationReposForAuthenticatedUser200ApplicationJson;
+  appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationReposForAuthenticatedUser200ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

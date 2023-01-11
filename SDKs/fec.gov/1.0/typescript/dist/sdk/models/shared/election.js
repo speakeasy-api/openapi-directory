@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Election = void 0;
+var utils_1 = require("../../../internal/utils");
 var Election = /** @class */ (function (_super) {
     __extends(Election, _super);
     function Election() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_election_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_election_year" }),
         __metadata("design:type", Number)
     ], Election.prototype, "candidateElectionYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], Election.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_name" }),
         __metadata("design:type", String)
     ], Election.prototype, "candidateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_pcc_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_pcc_id" }),
         __metadata("design:type", String)
     ], Election.prototype, "candidatePccId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_pcc_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_pcc_name" }),
         __metadata("design:type", String)
     ], Election.prototype, "candidatePccName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cash_on_hand_end_period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cash_on_hand_end_period" }),
         __metadata("design:type", Number)
     ], Election.prototype, "cashOnHandEndPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_ids" }),
         __metadata("design:type", Array)
     ], Election.prototype, "committeeIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverage_end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverage_end_date" }),
         __metadata("design:type", Date)
     ], Election.prototype, "coverageEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=incumbent_challenge_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=incumbent_challenge_full" }),
         __metadata("design:type", String)
     ], Election.prototype, "incumbentChallengeFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party_full" }),
         __metadata("design:type", String)
     ], Election.prototype, "partyFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_disbursements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_disbursements" }),
         __metadata("design:type", Number)
     ], Election.prototype, "totalDisbursements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_receipts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_receipts" }),
         __metadata("design:type", Number)
     ], Election.prototype, "totalReceipts", void 0);
     return Election;
-}(SpeakeasyBase));
-export { Election };
+}(utils_1.SpeakeasyBase));
+exports.Election = Election;

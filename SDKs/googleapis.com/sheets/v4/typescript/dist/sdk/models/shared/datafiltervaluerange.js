@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataFilter } from "./datafilter";
-export var DataFilterValueRangeMajorDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataFilterValueRange = exports.DataFilterValueRangeMajorDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafilter_1 = require("./datafilter");
+var DataFilterValueRangeMajorDimensionEnum;
 (function (DataFilterValueRangeMajorDimensionEnum) {
     DataFilterValueRangeMajorDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     DataFilterValueRangeMajorDimensionEnum["Rows"] = "ROWS";
     DataFilterValueRangeMajorDimensionEnum["Columns"] = "COLUMNS";
-})(DataFilterValueRangeMajorDimensionEnum || (DataFilterValueRangeMajorDimensionEnum = {}));
+})(DataFilterValueRangeMajorDimensionEnum = exports.DataFilterValueRangeMajorDimensionEnum || (exports.DataFilterValueRangeMajorDimensionEnum = {}));
 // DataFilterValueRange
 /**
  * A range of values whose location is specified by a DataFilter.
@@ -40,17 +43,17 @@ var DataFilterValueRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataFilter" }),
-        __metadata("design:type", DataFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataFilter" }),
+        __metadata("design:type", datafilter_1.DataFilter)
     ], DataFilterValueRange.prototype, "dataFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=majorDimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=majorDimension" }),
         __metadata("design:type", String)
     ], DataFilterValueRange.prototype, "majorDimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], DataFilterValueRange.prototype, "values", void 0);
     return DataFilterValueRange;
-}(SpeakeasyBase));
-export { DataFilterValueRange };
+}(utils_1.SpeakeasyBase));
+exports.DataFilterValueRange = DataFilterValueRange;

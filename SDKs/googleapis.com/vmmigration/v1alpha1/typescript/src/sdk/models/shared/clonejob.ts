@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ComputeEngineTargetDetails } from "./computeenginetargetdetails";
-import { TargetVmDetailsInput } from "./targetvmdetails";
-import { Status } from "./status";
 import { TargetVmDetails } from "./targetvmdetails";
+import { Status } from "./status";
 import { CloneStep } from "./clonestep";
+import { TargetVmDetailsInput } from "./targetvmdetails";
 
 
 export enum CloneJobStateEnum {
@@ -15,25 +15,6 @@ export enum CloneJobStateEnum {
     Cancelled = "CANCELLED",
     Cancelling = "CANCELLING",
     AdaptingOs = "ADAPTING_OS"
-}
-
-
-// CloneJobInput
-/** 
- * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
-**/
-export class CloneJobInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" })
-  computeEngineTargetDetails?: ComputeEngineTargetDetails;
-
-  @SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" })
-  computeEngineVmDetails?: TargetVmDetailsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Status;
-
-  @SpeakeasyMetadata({ data: "json, name=targetDetails" })
-  targetDetails?: TargetVmDetailsInput;
 }
 
 
@@ -71,4 +52,23 @@ export class CloneJob extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=targetDetails" })
   targetDetails?: TargetVmDetails;
+}
+
+
+// CloneJobInput
+/** 
+ * CloneJob describes the process of creating a clone of a MigratingVM to the requested target based on the latest successful uploaded snapshots. While the migration cycles of a MigratingVm take place, it is possible to verify the uploaded VM can be started in the cloud, by creating a clone. The clone can be created without any downtime, and it is created using the latest snapshots which are already in the cloud. The cloneJob is only responsible for its work, not its products, which means once it is finished, it will never touch the instance it created. It will only delete it in case of the CloneJob being cancelled or upon failure to clone.
+**/
+export class CloneJobInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" })
+  computeEngineTargetDetails?: ComputeEngineTargetDetails;
+
+  @SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" })
+  computeEngineVmDetails?: TargetVmDetailsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=error" })
+  error?: Status;
+
+  @SpeakeasyMetadata({ data: "json, name=targetDetails" })
+  targetDetails?: TargetVmDetailsInput;
 }

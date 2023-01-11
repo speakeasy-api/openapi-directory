@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1GcsDestination } from "./googleclouddatalabelingv1beta1gcsdestination";
-import { GoogleCloudDatalabelingV1beta1GcsFolderDestination } from "./googleclouddatalabelingv1beta1gcsfolderdestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1OutputConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1gcsdestination_1 = require("./googleclouddatalabelingv1beta1gcsdestination");
+var googleclouddatalabelingv1beta1gcsfolderdestination_1 = require("./googleclouddatalabelingv1beta1gcsfolderdestination");
 // GoogleCloudDatalabelingV1beta1OutputConfig
 /**
  * The configuration of output data.
@@ -35,13 +38,13 @@ var GoogleCloudDatalabelingV1beta1OutputConfig = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsDestination" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1GcsDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsDestination" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1gcsdestination_1.GoogleCloudDatalabelingV1beta1GcsDestination)
     ], GoogleCloudDatalabelingV1beta1OutputConfig.prototype, "gcsDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsFolderDestination" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1GcsFolderDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsFolderDestination" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1gcsfolderdestination_1.GoogleCloudDatalabelingV1beta1GcsFolderDestination)
     ], GoogleCloudDatalabelingV1beta1OutputConfig.prototype, "gcsFolderDestination", void 0);
     return GoogleCloudDatalabelingV1beta1OutputConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1OutputConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1OutputConfig = GoogleCloudDatalabelingV1beta1OutputConfig;

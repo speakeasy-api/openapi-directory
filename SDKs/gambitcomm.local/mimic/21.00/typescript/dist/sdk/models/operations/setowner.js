@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetOwnerResponse = exports.SetOwnerRequest = exports.SetOwnerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetOwnerPathParams = /** @class */ (function (_super) {
     __extends(SetOwnerPathParams, _super);
     function SetOwnerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetOwnerPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], SetOwnerPathParams.prototype, "owner", void 0);
     return SetOwnerPathParams;
-}(SpeakeasyBase));
-export { SetOwnerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetOwnerPathParams = SetOwnerPathParams;
 var SetOwnerRequest = /** @class */ (function (_super) {
     __extends(SetOwnerRequest, _super);
     function SetOwnerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetOwnerPathParams)
     ], SetOwnerRequest.prototype, "pathParams", void 0);
     return SetOwnerRequest;
-}(SpeakeasyBase));
-export { SetOwnerRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetOwnerRequest = SetOwnerRequest;
 var SetOwnerResponse = /** @class */ (function (_super) {
     __extends(SetOwnerResponse, _super);
     function SetOwnerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetOwnerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetOwnerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetOwnerResponse.prototype, "setOwner200ApplicationJsonString", void 0);
+    ], SetOwnerResponse.prototype, "setOwner200ApplicationJSONString", void 0);
     return SetOwnerResponse;
-}(SpeakeasyBase));
-export { SetOwnerResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetOwnerResponse = SetOwnerResponse;

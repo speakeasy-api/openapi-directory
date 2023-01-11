@@ -65,7 +65,7 @@ export class Match extends SpeakeasyBase {
   predictedTime?: number;
 
   @SpeakeasyMetadata({ data: "json, name=score_breakdown" })
-  scoreBreakdown?: Map<string, any>;
+  scoreBreakdown?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=set_number" })
   setNumber: number;

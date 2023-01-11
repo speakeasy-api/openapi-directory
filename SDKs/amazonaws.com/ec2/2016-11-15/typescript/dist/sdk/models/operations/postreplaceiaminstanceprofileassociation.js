@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostReplaceIamInstanceProfileAssociationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostReplaceIamInstanceProfileAssociationResponse = exports.PostReplaceIamInstanceProfileAssociationRequest = exports.PostReplaceIamInstanceProfileAssociationHeaders = exports.PostReplaceIamInstanceProfileAssociationQueryParams = exports.PostReplaceIamInstanceProfileAssociationVersionEnum = exports.PostReplaceIamInstanceProfileAssociationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostReplaceIamInstanceProfileAssociationActionEnum;
 (function (PostReplaceIamInstanceProfileAssociationActionEnum) {
     PostReplaceIamInstanceProfileAssociationActionEnum["ReplaceIamInstanceProfileAssociation"] = "ReplaceIamInstanceProfileAssociation";
-})(PostReplaceIamInstanceProfileAssociationActionEnum || (PostReplaceIamInstanceProfileAssociationActionEnum = {}));
-export var PostReplaceIamInstanceProfileAssociationVersionEnum;
+})(PostReplaceIamInstanceProfileAssociationActionEnum = exports.PostReplaceIamInstanceProfileAssociationActionEnum || (exports.PostReplaceIamInstanceProfileAssociationActionEnum = {}));
+var PostReplaceIamInstanceProfileAssociationVersionEnum;
 (function (PostReplaceIamInstanceProfileAssociationVersionEnum) {
     PostReplaceIamInstanceProfileAssociationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostReplaceIamInstanceProfileAssociationVersionEnum || (PostReplaceIamInstanceProfileAssociationVersionEnum = {}));
+})(PostReplaceIamInstanceProfileAssociationVersionEnum = exports.PostReplaceIamInstanceProfileAssociationVersionEnum || (exports.PostReplaceIamInstanceProfileAssociationVersionEnum = {}));
 var PostReplaceIamInstanceProfileAssociationQueryParams = /** @class */ (function (_super) {
     __extends(PostReplaceIamInstanceProfileAssociationQueryParams, _super);
     function PostReplaceIamInstanceProfileAssociationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationQueryParams.prototype, "version", void 0);
     return PostReplaceIamInstanceProfileAssociationQueryParams;
-}(SpeakeasyBase));
-export { PostReplaceIamInstanceProfileAssociationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceIamInstanceProfileAssociationQueryParams = PostReplaceIamInstanceProfileAssociationQueryParams;
 var PostReplaceIamInstanceProfileAssociationHeaders = /** @class */ (function (_super) {
     __extends(PostReplaceIamInstanceProfileAssociationHeaders, _super);
     function PostReplaceIamInstanceProfileAssociationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostReplaceIamInstanceProfileAssociationHeaders;
-}(SpeakeasyBase));
-export { PostReplaceIamInstanceProfileAssociationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceIamInstanceProfileAssociationHeaders = PostReplaceIamInstanceProfileAssociationHeaders;
 var PostReplaceIamInstanceProfileAssociationRequest = /** @class */ (function (_super) {
     __extends(PostReplaceIamInstanceProfileAssociationRequest, _super);
     function PostReplaceIamInstanceProfileAssociationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReplaceIamInstanceProfileAssociationQueryParams)
     ], PostReplaceIamInstanceProfileAssociationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostReplaceIamInstanceProfileAssociationHeaders)
     ], PostReplaceIamInstanceProfileAssociationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostReplaceIamInstanceProfileAssociationRequest.prototype, "request", void 0);
     return PostReplaceIamInstanceProfileAssociationRequest;
-}(SpeakeasyBase));
-export { PostReplaceIamInstanceProfileAssociationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceIamInstanceProfileAssociationRequest = PostReplaceIamInstanceProfileAssociationRequest;
 var PostReplaceIamInstanceProfileAssociationResponse = /** @class */ (function (_super) {
     __extends(PostReplaceIamInstanceProfileAssociationResponse, _super);
     function PostReplaceIamInstanceProfileAssociationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostReplaceIamInstanceProfileAssociationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostReplaceIamInstanceProfileAssociationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostReplaceIamInstanceProfileAssociationResponse.prototype, "statusCode", void 0);
     return PostReplaceIamInstanceProfileAssociationResponse;
-}(SpeakeasyBase));
-export { PostReplaceIamInstanceProfileAssociationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostReplaceIamInstanceProfileAssociationResponse = PostReplaceIamInstanceProfileAssociationResponse;

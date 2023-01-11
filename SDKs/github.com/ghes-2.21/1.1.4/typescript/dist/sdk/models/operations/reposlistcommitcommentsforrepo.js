@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposListCommitCommentsForRepoResponse = exports.ReposListCommitCommentsForRepoRequest = exports.ReposListCommitCommentsForRepoQueryParams = exports.ReposListCommitCommentsForRepoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposListCommitCommentsForRepoPathParams = /** @class */ (function (_super) {
     __extends(ReposListCommitCommentsForRepoPathParams, _super);
     function ReposListCommitCommentsForRepoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposListCommitCommentsForRepoPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposListCommitCommentsForRepoPathParams.prototype, "repo", void 0);
     return ReposListCommitCommentsForRepoPathParams;
-}(SpeakeasyBase));
-export { ReposListCommitCommentsForRepoPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposListCommitCommentsForRepoPathParams = ReposListCommitCommentsForRepoPathParams;
 var ReposListCommitCommentsForRepoQueryParams = /** @class */ (function (_super) {
     __extends(ReposListCommitCommentsForRepoQueryParams, _super);
     function ReposListCommitCommentsForRepoQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ReposListCommitCommentsForRepoQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], ReposListCommitCommentsForRepoQueryParams.prototype, "perPage", void 0);
     return ReposListCommitCommentsForRepoQueryParams;
-}(SpeakeasyBase));
-export { ReposListCommitCommentsForRepoQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposListCommitCommentsForRepoQueryParams = ReposListCommitCommentsForRepoQueryParams;
 var ReposListCommitCommentsForRepoRequest = /** @class */ (function (_super) {
     __extends(ReposListCommitCommentsForRepoRequest, _super);
     function ReposListCommitCommentsForRepoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposListCommitCommentsForRepoPathParams)
     ], ReposListCommitCommentsForRepoRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposListCommitCommentsForRepoQueryParams)
     ], ReposListCommitCommentsForRepoRequest.prototype, "queryParams", void 0);
     return ReposListCommitCommentsForRepoRequest;
-}(SpeakeasyBase));
-export { ReposListCommitCommentsForRepoRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposListCommitCommentsForRepoRequest = ReposListCommitCommentsForRepoRequest;
 var ReposListCommitCommentsForRepoResponse = /** @class */ (function (_super) {
     __extends(ReposListCommitCommentsForRepoResponse, _super);
     function ReposListCommitCommentsForRepoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposListCommitCommentsForRepoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposListCommitCommentsForRepoResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposListCommitCommentsForRepoResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.CommitComment }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.CommitComment }),
         __metadata("design:type", Array)
     ], ReposListCommitCommentsForRepoResponse.prototype, "commitComments", void 0);
     return ReposListCommitCommentsForRepoResponse;
-}(SpeakeasyBase));
-export { ReposListCommitCommentsForRepoResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposListCommitCommentsForRepoResponse = ReposListCommitCommentsForRepoResponse;

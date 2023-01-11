@@ -20,8 +20,8 @@ export class GoogleCloudDatalabelingV1beta1FeedbackMessage extends SpeakeasyBase
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=operatorFeedbackMetadata" })
-  operatorFeedbackMetadata?: Map<string, any>;
+  operatorFeedbackMetadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=requesterFeedbackMetadata" })
-  requesterFeedbackMetadata?: Map<string, any>;
+  requesterFeedbackMetadata?: Record<string, any>;
 }

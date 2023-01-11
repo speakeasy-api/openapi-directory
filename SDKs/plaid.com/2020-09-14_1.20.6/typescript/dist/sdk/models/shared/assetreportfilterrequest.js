@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetReportFilterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // AssetReportFilterRequest
 /**
  * AssetReportFilterRequest defines the request schema for `/asset_report/filter`
@@ -33,21 +36,21 @@ var AssetReportFilterRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_ids_to_exclude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_ids_to_exclude" }),
         __metadata("design:type", Array)
     ], AssetReportFilterRequest.prototype, "accountIdsToExclude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_report_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_report_token" }),
         __metadata("design:type", String)
     ], AssetReportFilterRequest.prototype, "assetReportToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], AssetReportFilterRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], AssetReportFilterRequest.prototype, "secret", void 0);
     return AssetReportFilterRequest;
-}(SpeakeasyBase));
-export { AssetReportFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.AssetReportFilterRequest = AssetReportFilterRequest;

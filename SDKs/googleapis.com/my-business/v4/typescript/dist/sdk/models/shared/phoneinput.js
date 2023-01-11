@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhoneInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // PhoneInput
 /**
  * Input for PHONE_CALL/SMS verification.
@@ -33,9 +36,9 @@ var PhoneInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], PhoneInput.prototype, "phoneNumber", void 0);
     return PhoneInput;
-}(SpeakeasyBase));
-export { PhoneInput };
+}(utils_1.SpeakeasyBase));
+exports.PhoneInput = PhoneInput;

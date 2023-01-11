@@ -23,7 +23,7 @@ export declare class BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVo
 export declare class BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest extends SpeakeasyBase {
     pathParams: BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotPathParams;
     queryParams: BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotSecurity;
 }
 export declare class BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse extends SpeakeasyBase {

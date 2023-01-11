@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynthesisInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // SynthesisInput
 /**
- * Contains text input to be synthesized. Either `text` or `ssml` must be supplied. Supplying both or neither returns google.rpc.Code.INVALID_ARGUMENT. The input size is limited to 5000 characters.
+ * Contains text input to be synthesized. Either `text` or `ssml` must be supplied. Supplying both or neither returns google.rpc.Code.INVALID_ARGUMENT. The input size is limited to 5000 bytes.
 **/
 var SynthesisInput = /** @class */ (function (_super) {
     __extends(SynthesisInput, _super);
@@ -33,13 +36,13 @@ var SynthesisInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssml" }),
         __metadata("design:type", String)
     ], SynthesisInput.prototype, "ssml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], SynthesisInput.prototype, "text", void 0);
     return SynthesisInput;
-}(SpeakeasyBase));
-export { SynthesisInput };
+}(utils_1.SpeakeasyBase));
+exports.SynthesisInput = SynthesisInput;

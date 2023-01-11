@@ -6,5 +6,6 @@ export declare class GoogleCloudContactcenterinsightsV1Issue extends SpeakeasyBa
     createTime?: string;
     displayName?: string;
     name?: string;
+    sampleUtterances?: string[];
     updateTime?: string;
 }

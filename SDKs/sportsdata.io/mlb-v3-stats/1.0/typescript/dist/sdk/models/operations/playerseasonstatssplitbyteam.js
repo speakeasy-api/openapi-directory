@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonStatsSplitByTeamFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonStatsSplitByTeamResponse = exports.PlayerSeasonStatsSplitByTeamRequest = exports.PlayerSeasonStatsSplitByTeamPathParams = exports.PlayerSeasonStatsSplitByTeamFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonStatsSplitByTeamFormatEnum;
 (function (PlayerSeasonStatsSplitByTeamFormatEnum) {
     PlayerSeasonStatsSplitByTeamFormatEnum["Xml"] = "XML";
     PlayerSeasonStatsSplitByTeamFormatEnum["Json"] = "JSON";
-})(PlayerSeasonStatsSplitByTeamFormatEnum || (PlayerSeasonStatsSplitByTeamFormatEnum = {}));
+})(PlayerSeasonStatsSplitByTeamFormatEnum = exports.PlayerSeasonStatsSplitByTeamFormatEnum || (exports.PlayerSeasonStatsSplitByTeamFormatEnum = {}));
 var PlayerSeasonStatsSplitByTeamPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsSplitByTeamPathParams, _super);
     function PlayerSeasonStatsSplitByTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonStatsSplitByTeamPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonStatsSplitByTeamPathParams.prototype, "season", void 0);
     return PlayerSeasonStatsSplitByTeamPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsSplitByTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsSplitByTeamPathParams = PlayerSeasonStatsSplitByTeamPathParams;
 var PlayerSeasonStatsSplitByTeamRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsSplitByTeamRequest, _super);
     function PlayerSeasonStatsSplitByTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonStatsSplitByTeamPathParams)
     ], PlayerSeasonStatsSplitByTeamRequest.prototype, "pathParams", void 0);
     return PlayerSeasonStatsSplitByTeamRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsSplitByTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsSplitByTeamRequest = PlayerSeasonStatsSplitByTeamRequest;
 var PlayerSeasonStatsSplitByTeamResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonStatsSplitByTeamResponse, _super);
     function PlayerSeasonStatsSplitByTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonStatsSplitByTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonStatsSplitByTeamResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonStatsSplitByTeamResponse.prototype, "statusCode", void 0);
     return PlayerSeasonStatsSplitByTeamResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonStatsSplitByTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonStatsSplitByTeamResponse = PlayerSeasonStatsSplitByTeamResponse;

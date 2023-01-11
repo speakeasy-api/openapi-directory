@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class DescribeClustersRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Filters" })
-  filters?: Map<string, string[]>;
+  filters?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=MaxResults" })
   maxResults?: number;

@@ -73,7 +73,7 @@ export declare class GetServersId200ApplicationJsonServerImage extends Speakeasy
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: GetServersId200ApplicationJsonServerImageOsFlavorEnum;
     osVersion: string;
@@ -102,7 +102,7 @@ export declare enum GetServersId200ApplicationJsonServerPlacementGroupNullableTy
 export declare class GetServersId200ApplicationJsonServerPlacementGroupNullable extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: GetServersId200ApplicationJsonServerPlacementGroupNullableTypeEnum;
@@ -219,7 +219,7 @@ export declare class GetServersId200ApplicationJsonServer extends SpeakeasyBase 
     includedTraffic: number;
     ingoingTraffic: number;
     iso: GetServersId200ApplicationJsonServerIso;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     loadBalancers?: number[];
     locked: boolean;
     name: string;
@@ -242,6 +242,6 @@ export declare class GetServersIdRequest extends SpeakeasyBase {
 }
 export declare class GetServersIdResponse extends SpeakeasyBase {
     contentType: string;
-    getServersId200ApplicationJsonObject?: GetServersId200ApplicationJson;
     statusCode: number;
+    getServersId200ApplicationJSONObject?: GetServersId200ApplicationJson;
 }

@@ -194,23 +194,23 @@ export class CemstResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cemst400ApplicationJsonObject?: Cemst400ApplicationJson;
+  cemst400ApplicationJSONObject?: Cemst400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst401ApplicationJsonObject?: Cemst401ApplicationJson;
+  cemst401ApplicationJSONObject?: Cemst401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst404ApplicationJsonObject?: Cemst404ApplicationJson;
+  cemst404ApplicationJSONObject?: Cemst404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst500ApplicationJsonObject?: Cemst500ApplicationJson;
+  cemst500ApplicationJSONObject?: Cemst500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst502ApplicationJsonObject?: Cemst502ApplicationJson;
+  cemst502ApplicationJSONObject?: Cemst502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst503ApplicationJsonObject?: Cemst503ApplicationJson;
+  cemst503ApplicationJSONObject?: Cemst503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cemst504ApplicationJsonObject?: Cemst504ApplicationJson;
+  cemst504ApplicationJSONObject?: Cemst504ApplicationJson;
 }

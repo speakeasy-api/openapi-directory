@@ -10,7 +10,7 @@ export class LandlordControllerGetTenancyAgreementReportPathParams extends Speak
 
 export class LandlordControllerGetTenancyAgreementReportQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenancyID" })
-  tenancyId: string;
+  tenancyID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" })
   token: string;
@@ -34,7 +34,7 @@ export class LandlordControllerGetTenancyAgreementReportResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: Map<string, any>;
+  object?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

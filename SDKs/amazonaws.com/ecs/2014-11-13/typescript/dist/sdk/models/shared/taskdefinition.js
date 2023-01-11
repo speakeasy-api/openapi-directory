@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerDefinition } from "./containerdefinition";
-import { EphemeralStorage } from "./ephemeralstorage";
-import { InferenceAccelerator } from "./inferenceaccelerator";
-import { IpcModeEnum } from "./ipcmodeenum";
-import { NetworkModeEnum } from "./networkmodeenum";
-import { PidModeEnum } from "./pidmodeenum";
-import { TaskDefinitionPlacementConstraint } from "./taskdefinitionplacementconstraint";
-import { ProxyConfiguration } from "./proxyconfiguration";
-import { Attribute } from "./attribute";
-import { TaskDefinitionStatusEnum } from "./taskdefinitionstatusenum";
-import { Volume } from "./volume";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerdefinition_1 = require("./containerdefinition");
+var ephemeralstorage_1 = require("./ephemeralstorage");
+var inferenceaccelerator_1 = require("./inferenceaccelerator");
+var ipcmodeenum_1 = require("./ipcmodeenum");
+var networkmodeenum_1 = require("./networkmodeenum");
+var pidmodeenum_1 = require("./pidmodeenum");
+var taskdefinitionplacementconstraint_1 = require("./taskdefinitionplacementconstraint");
+var proxyconfiguration_1 = require("./proxyconfiguration");
+var attribute_1 = require("./attribute");
+var taskdefinitionstatusenum_1 = require("./taskdefinitionstatusenum");
+var volume_1 = require("./volume");
 // TaskDefinition
 /**
  * The details of a task definition which describes the container and volume definitions of an Amazon Elastic Container Service task. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task.
@@ -44,97 +47,97 @@ var TaskDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibilities" }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "compatibilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerDefinitions", elemType: ContainerDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerDefinitions", elemType: containerdefinition_1.ContainerDefinition }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "containerDefinitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpu" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "cpu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deregisteredAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deregisteredAt" }),
         __metadata("design:type", Date)
     ], TaskDefinition.prototype, "deregisteredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ephemeralStorage" }),
-        __metadata("design:type", EphemeralStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ephemeralStorage" }),
+        __metadata("design:type", ephemeralstorage_1.EphemeralStorage)
     ], TaskDefinition.prototype, "ephemeralStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionRoleArn" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "executionRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inferenceAccelerators", elemType: InferenceAccelerator }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inferenceAccelerators", elemType: inferenceaccelerator_1.InferenceAccelerator }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "inferenceAccelerators", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipcMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipcMode" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "ipcMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkMode" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "networkMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pidMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pidMode" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "pidMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placementConstraints", elemType: TaskDefinitionPlacementConstraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placementConstraints", elemType: taskdefinitionplacementconstraint_1.TaskDefinitionPlacementConstraint }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "placementConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxyConfiguration" }),
-        __metadata("design:type", ProxyConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxyConfiguration" }),
+        __metadata("design:type", proxyconfiguration_1.ProxyConfiguration)
     ], TaskDefinition.prototype, "proxyConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredAt" }),
         __metadata("design:type", Date)
     ], TaskDefinition.prototype, "registeredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredBy" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "registeredBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiresAttributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiresAttributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "requiresAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiresCompatibilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiresCompatibilities" }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "requiresCompatibilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision" }),
         __metadata("design:type", Number)
     ], TaskDefinition.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinitionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinitionArn" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "taskDefinitionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskRoleArn" }),
         __metadata("design:type", String)
     ], TaskDefinition.prototype, "taskRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volume_1.Volume }),
         __metadata("design:type", Array)
     ], TaskDefinition.prototype, "volumes", void 0);
     return TaskDefinition;
-}(SpeakeasyBase));
-export { TaskDefinition };
+}(utils_1.SpeakeasyBase));
+exports.TaskDefinition = TaskDefinition;

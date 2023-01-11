@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Info } from "./info";
-import { Item } from "./item";
-import { FormSettings } from "./formsettings";
-import { InfoInput } from "./info";
-import { ItemInput } from "./item";
-// Form
-/**
- * A Google Forms document. A form is created in Drive, and deleting a form or changing its access protections is done via the [Drive API](https://developers.google.com/drive/api/v3/about-sdk).
-**/
-var Form = /** @class */ (function (_super) {
-    __extends(Form, _super);
-    function Form() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=formId" }),
-        __metadata("design:type", String)
-    ], Form.prototype, "formId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", Info)
-    ], Form.prototype, "info", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Item }),
-        __metadata("design:type", Array)
-    ], Form.prototype, "items", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedSheetId" }),
-        __metadata("design:type", String)
-    ], Form.prototype, "linkedSheetId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=responderUri" }),
-        __metadata("design:type", String)
-    ], Form.prototype, "responderUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
-        __metadata("design:type", String)
-    ], Form.prototype, "revisionId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", FormSettings)
-    ], Form.prototype, "settings", void 0);
-    return Form;
-}(SpeakeasyBase));
-export { Form };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Form = exports.FormInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var info_1 = require("./info");
+var item_1 = require("./item");
+var formsettings_1 = require("./formsettings");
+var info_2 = require("./info");
+var item_2 = require("./item");
 // FormInput
 /**
  * A Google Forms document. A form is created in Drive, and deleting a form or changing its access protections is done via the [Drive API](https://developers.google.com/drive/api/v3/about-sdk).
@@ -78,17 +41,57 @@ var FormInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", InfoInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", info_1.InfoInput)
     ], FormInput.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ItemInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: item_1.ItemInput }),
         __metadata("design:type", Array)
     ], FormInput.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", FormSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", formsettings_1.FormSettings)
     ], FormInput.prototype, "settings", void 0);
     return FormInput;
-}(SpeakeasyBase));
-export { FormInput };
+}(utils_1.SpeakeasyBase));
+exports.FormInput = FormInput;
+// Form
+/**
+ * A Google Forms document. A form is created in Drive, and deleting a form or changing its access protections is done via the [Drive API](https://developers.google.com/drive/api/v3/about-sdk).
+**/
+var Form = /** @class */ (function (_super) {
+    __extends(Form, _super);
+    function Form() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formId" }),
+        __metadata("design:type", String)
+    ], Form.prototype, "formId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", info_2.Info)
+    ], Form.prototype, "info", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: item_2.Item }),
+        __metadata("design:type", Array)
+    ], Form.prototype, "items", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedSheetId" }),
+        __metadata("design:type", String)
+    ], Form.prototype, "linkedSheetId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responderUri" }),
+        __metadata("design:type", String)
+    ], Form.prototype, "responderUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
+        __metadata("design:type", String)
+    ], Form.prototype, "revisionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", formsettings_1.FormSettings)
+    ], Form.prototype, "settings", void 0);
+    return Form;
+}(utils_1.SpeakeasyBase));
+exports.Form = Form;

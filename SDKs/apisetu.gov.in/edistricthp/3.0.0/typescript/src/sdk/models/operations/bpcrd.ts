@@ -185,23 +185,23 @@ export class BpcrdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bpcrd400ApplicationJsonObject?: Bpcrd400ApplicationJson;
+  bpcrd400ApplicationJSONObject?: Bpcrd400ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd401ApplicationJsonObject?: Bpcrd401ApplicationJson;
+  bpcrd401ApplicationJSONObject?: Bpcrd401ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd404ApplicationJsonObject?: Bpcrd404ApplicationJson;
+  bpcrd404ApplicationJSONObject?: Bpcrd404ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd500ApplicationJsonObject?: Bpcrd500ApplicationJson;
+  bpcrd500ApplicationJSONObject?: Bpcrd500ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd502ApplicationJsonObject?: Bpcrd502ApplicationJson;
+  bpcrd502ApplicationJSONObject?: Bpcrd502ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd503ApplicationJsonObject?: Bpcrd503ApplicationJson;
+  bpcrd503ApplicationJSONObject?: Bpcrd503ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcrd504ApplicationJsonObject?: Bpcrd504ApplicationJson;
+  bpcrd504ApplicationJSONObject?: Bpcrd504ApplicationJson;
 }

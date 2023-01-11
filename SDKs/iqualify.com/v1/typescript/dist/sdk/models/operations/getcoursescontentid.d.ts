@@ -9,6 +9,6 @@ export declare class GetCoursesContentIdRequest extends SpeakeasyBase {
 export declare class GetCoursesContentIdResponse extends SpeakeasyBase {
     contentType: string;
     courseMetaResponse?: shared.CourseMetaResponse;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

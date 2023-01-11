@@ -41,5 +41,5 @@ export class TwilioMessageGetTwilioGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  twilioMessageGetTwilioGet200ApplicationJsonAny?: any;
+  twilioMessageGetTwilioGet200ApplicationJSONAny?: any;
 }

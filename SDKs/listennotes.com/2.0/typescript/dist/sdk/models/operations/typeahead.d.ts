@@ -7,7 +7,7 @@ export declare class TypeaheadQueryParams extends SpeakeasyBase {
     showPodcasts?: number;
 }
 export declare class TypeaheadHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class TypeaheadRequest extends SpeakeasyBase {
     queryParams: TypeaheadQueryParams;
@@ -15,7 +15,7 @@ export declare class TypeaheadRequest extends SpeakeasyBase {
 }
 export declare class TypeaheadResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     typeaheadResponse?: shared.TypeaheadResponse;
 }

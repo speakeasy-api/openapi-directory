@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BalanceLookupResponse = exports.BalanceLookupRequest = exports.BalanceLookupQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BalanceLookupQueryParams = /** @class */ (function (_super) {
     __extends(BalanceLookupQueryParams, _super);
     function BalanceLookupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], BalanceLookupQueryParams.prototype, "apiKey", void 0);
     return BalanceLookupQueryParams;
-}(SpeakeasyBase));
-export { BalanceLookupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BalanceLookupQueryParams = BalanceLookupQueryParams;
 var BalanceLookupRequest = /** @class */ (function (_super) {
     __extends(BalanceLookupRequest, _super);
     function BalanceLookupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BalanceLookupQueryParams)
     ], BalanceLookupRequest.prototype, "queryParams", void 0);
     return BalanceLookupRequest;
-}(SpeakeasyBase));
-export { BalanceLookupRequest };
+}(utils_1.SpeakeasyBase));
+exports.BalanceLookupRequest = BalanceLookupRequest;
 var BalanceLookupResponse = /** @class */ (function (_super) {
     __extends(BalanceLookupResponse, _super);
     function BalanceLookupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], BalanceLookupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BalanceLookupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BalanceLookupResponse.prototype, "statusCode", void 0);
     return BalanceLookupResponse;
-}(SpeakeasyBase));
-export { BalanceLookupResponse };
+}(utils_1.SpeakeasyBase));
+exports.BalanceLookupResponse = BalanceLookupResponse;

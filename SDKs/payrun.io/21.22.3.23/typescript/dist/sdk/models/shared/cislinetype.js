@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CisLineType = exports.CisLineTypeCisLineType = exports.CisLineTypeCisLineTypeTaxTreatmentEnum = exports.CisLineTypeCisLineTypeNominalCode = void 0;
+var utils_1 = require("../../../internal/utils");
 // CisLineTypeCisLineTypeNominalCode
 /**
  * The cis line types' nominal code
@@ -33,60 +36,60 @@ var CisLineTypeCisLineTypeNominalCode = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineTypeNominalCode.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineTypeNominalCode.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineTypeNominalCode.prototype, "atTitle", void 0);
     return CisLineTypeCisLineTypeNominalCode;
-}(SpeakeasyBase));
-export { CisLineTypeCisLineTypeNominalCode };
-export var CisLineTypeCisLineTypeTaxTreatmentEnum;
+}(utils_1.SpeakeasyBase));
+exports.CisLineTypeCisLineTypeNominalCode = CisLineTypeCisLineTypeNominalCode;
+var CisLineTypeCisLineTypeTaxTreatmentEnum;
 (function (CisLineTypeCisLineTypeTaxTreatmentEnum) {
     CisLineTypeCisLineTypeTaxTreatmentEnum["Taxable"] = "Taxable";
     CisLineTypeCisLineTypeTaxTreatmentEnum["NonTaxable"] = "NonTaxable";
     CisLineTypeCisLineTypeTaxTreatmentEnum["Notional"] = "Notional";
     CisLineTypeCisLineTypeTaxTreatmentEnum["Materials"] = "Materials";
-})(CisLineTypeCisLineTypeTaxTreatmentEnum || (CisLineTypeCisLineTypeTaxTreatmentEnum = {}));
+})(CisLineTypeCisLineTypeTaxTreatmentEnum = exports.CisLineTypeCisLineTypeTaxTreatmentEnum || (exports.CisLineTypeCisLineTypeTaxTreatmentEnum = {}));
 var CisLineTypeCisLineType = /** @class */ (function (_super) {
     __extends(CisLineTypeCisLineType, _super);
     function CisLineTypeCisLineType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LineType" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineType.prototype, "lineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NominalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NominalCode" }),
         __metadata("design:type", CisLineTypeCisLineTypeNominalCode)
     ], CisLineTypeCisLineType.prototype, "nominalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxTreatment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxTreatment" }),
         __metadata("design:type", String)
     ], CisLineTypeCisLineType.prototype, "taxTreatment", void 0);
     return CisLineTypeCisLineType;
-}(SpeakeasyBase));
-export { CisLineTypeCisLineType };
+}(utils_1.SpeakeasyBase));
+exports.CisLineTypeCisLineType = CisLineTypeCisLineType;
 var CisLineType = /** @class */ (function (_super) {
     __extends(CisLineType, _super);
     function CisLineType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CisLineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CisLineType" }),
         __metadata("design:type", CisLineTypeCisLineType)
     ], CisLineType.prototype, "cisLineType", void 0);
     return CisLineType;
-}(SpeakeasyBase));
-export { CisLineType };
+}(utils_1.SpeakeasyBase));
+exports.CisLineType = CisLineType;

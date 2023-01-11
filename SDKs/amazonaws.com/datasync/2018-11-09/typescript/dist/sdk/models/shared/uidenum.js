@@ -1,7 +1,10 @@
-export var UidEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UidEnum = void 0;
+var UidEnum;
 (function (UidEnum) {
     UidEnum["None"] = "NONE";
     UidEnum["IntValue"] = "INT_VALUE";
     UidEnum["Name"] = "NAME";
     UidEnum["Both"] = "BOTH";
-})(UidEnum || (UidEnum = {}));
+})(UidEnum = exports.UidEnum || (exports.UidEnum = {}));

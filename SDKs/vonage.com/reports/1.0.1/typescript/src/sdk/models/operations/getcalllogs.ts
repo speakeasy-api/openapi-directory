@@ -8,18 +8,13 @@ export class GetCallLogsPathParams extends SpeakeasyBase {
   accountId: string;
 }
 
-export enum GetCallLogsDirectionEnum {
-    Inbound = "Inbound",
-    Outbound = "Outbound"
-}
-
 
 export class GetCallLogsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destination_user" })
   destinationUser?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: GetCallLogsDirectionEnum;
+  direction?: shared.AccountIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end:gte" })
   endGte?: string;

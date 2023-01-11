@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiResponseSong = exports.ApiResponseSongResponse = exports.ApiResponseSongResponseResults = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApiResponseSongResponseResults
 /**
  * Song item.
@@ -33,16 +36,16 @@ var ApiResponseSongResponseResults = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ApiResponseSongResponseResults.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ApiResponseSongResponseResults.prototype, "name", void 0);
     return ApiResponseSongResponseResults;
-}(SpeakeasyBase));
-export { ApiResponseSongResponseResults };
+}(utils_1.SpeakeasyBase));
+exports.ApiResponseSongResponseResults = ApiResponseSongResponseResults;
 // ApiResponseSongResponse
 /**
  * Contains the response data if the request was successful.
@@ -53,29 +56,29 @@ var ApiResponseSongResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ApiResponseSongResponseResults }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: ApiResponseSongResponseResults }),
         __metadata("design:type", Array)
     ], ApiResponseSongResponse.prototype, "results", void 0);
     return ApiResponseSongResponse;
-}(SpeakeasyBase));
-export { ApiResponseSongResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApiResponseSongResponse = ApiResponseSongResponse;
 var ApiResponseSong = /** @class */ (function (_super) {
     __extends(ApiResponseSong, _super);
     function ApiResponseSong() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", Boolean)
     ], ApiResponseSong.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ApiResponseSong.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", ApiResponseSongResponse)
     ], ApiResponseSong.prototype, "response", void 0);
     return ApiResponseSong;
-}(SpeakeasyBase));
-export { ApiResponseSong };
+}(utils_1.SpeakeasyBase));
+exports.ApiResponseSong = ApiResponseSong;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BidResponseWithoutBidsStatusRow } from "./bidresponsewithoutbidsstatusrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListBidResponsesWithoutBidsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var bidresponsewithoutbidsstatusrow_1 = require("./bidresponsewithoutbidsstatusrow");
 // ListBidResponsesWithoutBidsResponse
 /**
  * Response message for listing all reasons that bid responses were considered to have no applicable bids.
@@ -34,13 +37,13 @@ var ListBidResponsesWithoutBidsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidResponseWithoutBidsStatusRows", elemType: BidResponseWithoutBidsStatusRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidResponseWithoutBidsStatusRows", elemType: bidresponsewithoutbidsstatusrow_1.BidResponseWithoutBidsStatusRow }),
         __metadata("design:type", Array)
     ], ListBidResponsesWithoutBidsResponse.prototype, "bidResponseWithoutBidsStatusRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListBidResponsesWithoutBidsResponse.prototype, "nextPageToken", void 0);
     return ListBidResponsesWithoutBidsResponse;
-}(SpeakeasyBase));
-export { ListBidResponsesWithoutBidsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListBidResponsesWithoutBidsResponse = ListBidResponsesWithoutBidsResponse;

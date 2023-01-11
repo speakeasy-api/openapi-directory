@@ -44,5 +44,5 @@ export class GetWebhookResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getWebhook200ApplicationJsonObject?: GetWebhook200ApplicationJson;
+  getWebhook200ApplicationJSONObject?: GetWebhook200ApplicationJson;
 }

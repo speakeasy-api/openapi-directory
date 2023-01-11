@@ -4,7 +4,7 @@ export declare class AssetReportAuditCopyRemoveRequest extends SpeakeasyBase {
     request: shared.AssetReportAuditCopyRemoveRequest;
 }
 export declare class AssetReportAuditCopyRemoveResponse extends SpeakeasyBase {
-    assetReportAuditCopyRemoveResponse?: Map<string, any>;
+    assetReportAuditCopyRemoveResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

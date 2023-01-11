@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
 // EventSubscription
 /**
  * Describes an event notification subscription created by the <code>CreateEventSubscription</code> operation.
@@ -33,41 +36,41 @@ var EventSubscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustSubscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustSubscriptionId" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "custSubscriptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerAwsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerAwsId" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "customerAwsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], EventSubscription.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventCategoriesList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventCategoriesList" }),
         __metadata("design:type", Array)
     ], EventSubscription.prototype, "eventCategoriesList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsTopicArn" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "snsTopicArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceIdsList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceIdsList" }),
         __metadata("design:type", Array)
     ], EventSubscription.prototype, "sourceIdsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceType" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "sourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionCreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionCreationTime" }),
         __metadata("design:type", String)
     ], EventSubscription.prototype, "subscriptionCreationTime", void 0);
     return EventSubscription;
-}(SpeakeasyBase));
-export { EventSubscription };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscription = EventSubscription;

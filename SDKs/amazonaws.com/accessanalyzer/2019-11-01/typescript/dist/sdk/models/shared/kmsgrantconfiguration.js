@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KmsGrantConstraints } from "./kmsgrantconstraints";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KmsGrantConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var kmsgrantconstraints_1 = require("./kmsgrantconstraints");
 // KmsGrantConfiguration
 /**
  * A proposed grant configuration for a KMS key. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateGrant.html">CreateGrant</a>.
@@ -34,25 +37,25 @@ var KmsGrantConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints" }),
-        __metadata("design:type", KmsGrantConstraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints" }),
+        __metadata("design:type", kmsgrantconstraints_1.KmsGrantConstraints)
     ], KmsGrantConfiguration.prototype, "constraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=granteePrincipal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=granteePrincipal" }),
         __metadata("design:type", String)
     ], KmsGrantConfiguration.prototype, "granteePrincipal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuingAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuingAccount" }),
         __metadata("design:type", String)
     ], KmsGrantConfiguration.prototype, "issuingAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operations" }),
         __metadata("design:type", Array)
     ], KmsGrantConfiguration.prototype, "operations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retiringPrincipal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retiringPrincipal" }),
         __metadata("design:type", String)
     ], KmsGrantConfiguration.prototype, "retiringPrincipal", void 0);
     return KmsGrantConfiguration;
-}(SpeakeasyBase));
-export { KmsGrantConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.KmsGrantConfiguration = KmsGrantConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkType } from "./linktype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgInfoLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var linktype_1 = require("./linktype");
 // AppPkgInfoLinks
 /**
  * Links to resources related to this resource.
@@ -34,17 +37,17 @@ var AppPkgInfoLinks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appD" }),
-        __metadata("design:type", LinkType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appD" }),
+        __metadata("design:type", linktype_1.LinkType)
     ], AppPkgInfoLinks.prototype, "appD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPkgContent" }),
-        __metadata("design:type", LinkType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPkgContent" }),
+        __metadata("design:type", linktype_1.LinkType)
     ], AppPkgInfoLinks.prototype, "appPkgContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", LinkType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", linktype_1.LinkType)
     ], AppPkgInfoLinks.prototype, "self", void 0);
     return AppPkgInfoLinks;
-}(SpeakeasyBase));
-export { AppPkgInfoLinks };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgInfoLinks = AppPkgInfoLinks;

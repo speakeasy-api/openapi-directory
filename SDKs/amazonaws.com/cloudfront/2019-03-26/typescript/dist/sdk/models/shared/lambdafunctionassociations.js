@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LambdaFunctionAssociation } from "./lambdafunctionassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaFunctionAssociations = void 0;
+var utils_1 = require("../../../internal/utils");
+var lambdafunctionassociationlist_1 = require("./lambdafunctionassociationlist");
 // LambdaFunctionAssociations
 /**
  * <p>A complex type that specifies a list of Lambda functions associations for a cache behavior.</p> <p>If you want to invoke one or more Lambda functions triggered by requests that match the <code>PathPattern</code> of the cache behavior, specify the applicable values for <code>Quantity</code> and <code>Items</code>. Note that there can be up to 4 <code>LambdaFunctionAssociation</code> items in this list (one for each possible value of <code>EventType</code>) and each <code>EventType</code> can be associated with the Lambda function only once.</p> <p>If you don't want to invoke any Lambda functions for the requests that match <code>PathPattern</code>, specify <code>0</code> for <code>Quantity</code> and omit <code>Items</code>. </p>
@@ -34,13 +37,13 @@ var LambdaFunctionAssociations = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: LambdaFunctionAssociation }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: lambdafunctionassociationlist_1.LambdaFunctionAssociationList }),
         __metadata("design:type", Array)
     ], LambdaFunctionAssociations.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LambdaFunctionAssociations.prototype, "quantity", void 0);
     return LambdaFunctionAssociations;
-}(SpeakeasyBase));
-export { LambdaFunctionAssociations };
+}(utils_1.SpeakeasyBase));
+exports.LambdaFunctionAssociations = LambdaFunctionAssociations;

@@ -10,5 +10,5 @@ export class GetNetaddrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetaddr200ApplicationJsonObject?: Map<string, number>;
+  getNetaddr200ApplicationJSONObject?: Record<string, number>;
 }

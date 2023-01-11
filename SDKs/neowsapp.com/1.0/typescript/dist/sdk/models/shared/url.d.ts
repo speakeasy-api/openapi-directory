@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Url extends SpeakeasyBase {
     authority?: string;
-    content?: Map<string, any>;
+    content?: Record<string, any>;
     defaultPort?: number;
     file?: string;
     host?: string;

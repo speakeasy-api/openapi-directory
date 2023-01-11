@@ -45,7 +45,7 @@ export class CancelTaskExecutionRequest extends SpeakeasyBase {
 
 export class CancelTaskExecutionResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelTaskExecutionResponse?: Map<string, any>;
+  cancelTaskExecutionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

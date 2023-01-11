@@ -20,5 +20,5 @@ export declare class GetCustomFieldsForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getCustomFieldsForWorkspace200ApplicationJsonObject?: GetCustomFieldsForWorkspace200ApplicationJson;
+    getCustomFieldsForWorkspace200ApplicationJSONObject?: GetCustomFieldsForWorkspace200ApplicationJson;
 }

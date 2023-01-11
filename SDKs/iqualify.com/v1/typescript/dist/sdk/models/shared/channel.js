@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Channel = exports.ChannelGroup = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChannelGroup = /** @class */ (function (_super) {
     __extends(ChannelGroup, _super);
     function ChannelGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoAssign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoAssign" }),
         __metadata("design:type", Boolean)
     ], ChannelGroup.prototype, "autoAssign", void 0);
     return ChannelGroup;
-}(SpeakeasyBase));
-export { ChannelGroup };
+}(utils_1.SpeakeasyBase));
+exports.ChannelGroup = ChannelGroup;
 var Channel = /** @class */ (function (_super) {
     __extends(Channel, _super);
     function Channel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", ChannelGroup)
     ], Channel.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupDiscussion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupDiscussion" }),
         __metadata("design:type", Boolean)
     ], Channel.prototype, "groupDiscussion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isBroadcastOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isBroadcastOnly" }),
         __metadata("design:type", Boolean)
     ], Channel.prototype, "isBroadcastOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateSupport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateSupport" }),
         __metadata("design:type", Boolean)
     ], Channel.prototype, "privateSupport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Channel.prototype, "title", void 0);
     return Channel;
-}(SpeakeasyBase));
-export { Channel };
+}(utils_1.SpeakeasyBase));
+exports.Channel = Channel;

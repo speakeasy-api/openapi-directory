@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TargetRenderFailureCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetRender = exports.TargetRenderRenderingStateEnum = exports.TargetRenderFailureCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TargetRenderFailureCauseEnum;
 (function (TargetRenderFailureCauseEnum) {
     TargetRenderFailureCauseEnum["FailureCauseUnspecified"] = "FAILURE_CAUSE_UNSPECIFIED";
     TargetRenderFailureCauseEnum["CloudBuildUnavailable"] = "CLOUD_BUILD_UNAVAILABLE";
     TargetRenderFailureCauseEnum["ExecutionFailed"] = "EXECUTION_FAILED";
-})(TargetRenderFailureCauseEnum || (TargetRenderFailureCauseEnum = {}));
-export var TargetRenderRenderingStateEnum;
+})(TargetRenderFailureCauseEnum = exports.TargetRenderFailureCauseEnum || (exports.TargetRenderFailureCauseEnum = {}));
+var TargetRenderRenderingStateEnum;
 (function (TargetRenderRenderingStateEnum) {
     TargetRenderRenderingStateEnum["TargetRenderStateUnspecified"] = "TARGET_RENDER_STATE_UNSPECIFIED";
     TargetRenderRenderingStateEnum["Succeeded"] = "SUCCEEDED";
     TargetRenderRenderingStateEnum["Failed"] = "FAILED";
     TargetRenderRenderingStateEnum["InProgress"] = "IN_PROGRESS";
-})(TargetRenderRenderingStateEnum || (TargetRenderRenderingStateEnum = {}));
-// TargetRender
-/**
- * Details of rendering for a single target.
-**/
+})(TargetRenderRenderingStateEnum = exports.TargetRenderRenderingStateEnum || (exports.TargetRenderRenderingStateEnum = {}));
 var TargetRender = /** @class */ (function (_super) {
     __extends(TargetRender, _super);
     function TargetRender() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCause" }),
         __metadata("design:type", String)
     ], TargetRender.prototype, "failureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureMessage" }),
         __metadata("design:type", String)
     ], TargetRender.prototype, "failureMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderingBuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderingBuild" }),
         __metadata("design:type", String)
     ], TargetRender.prototype, "renderingBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderingState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderingState" }),
         __metadata("design:type", String)
     ], TargetRender.prototype, "renderingState", void 0);
     return TargetRender;
-}(SpeakeasyBase));
-export { TargetRender };
+}(utils_1.SpeakeasyBase));
+exports.TargetRender = TargetRender;

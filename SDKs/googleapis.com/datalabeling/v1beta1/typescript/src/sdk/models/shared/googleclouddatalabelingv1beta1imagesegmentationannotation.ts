@@ -9,7 +9,7 @@ import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatal
 **/
 export class GoogleCloudDatalabelingV1beta1ImageSegmentationAnnotation extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotationColors", elemType: GoogleCloudDatalabelingV1beta1AnnotationSpec })
-  annotationColors?: Map<string, GoogleCloudDatalabelingV1beta1AnnotationSpec>;
+  annotationColors?: Record<string, GoogleCloudDatalabelingV1beta1AnnotationSpec>;
 
   @SpeakeasyMetadata({ data: "json, name=imageBytes" })
   imageBytes?: string;

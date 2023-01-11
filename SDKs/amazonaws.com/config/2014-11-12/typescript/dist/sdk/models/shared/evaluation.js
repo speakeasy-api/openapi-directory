@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceTypeEnum } from "./compliancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Evaluation = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancetypeenum_1 = require("./compliancetypeenum");
 // Evaluation
 /**
  * Identifies an Amazon Web Services resource and indicates whether it complies with the Config rule that it was evaluated against.
@@ -34,25 +37,25 @@ var Evaluation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Annotation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Annotation" }),
         __metadata("design:type", String)
     ], Evaluation.prototype, "annotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceResourceId" }),
         __metadata("design:type", String)
     ], Evaluation.prototype, "complianceResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceResourceType" }),
         __metadata("design:type", String)
     ], Evaluation.prototype, "complianceResourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], Evaluation.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrderingTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrderingTimestamp" }),
         __metadata("design:type", Date)
     ], Evaluation.prototype, "orderingTimestamp", void 0);
     return Evaluation;
-}(SpeakeasyBase));
-export { Evaluation };
+}(utils_1.SpeakeasyBase));
+exports.Evaluation = Evaluation;

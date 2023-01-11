@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchInferenceJobSummary } from "./batchinferencejobsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListBatchInferenceJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchinferencejobsummary_1 = require("./batchinferencejobsummary");
 var ListBatchInferenceJobsResponse = /** @class */ (function (_super) {
     __extends(ListBatchInferenceJobsResponse, _super);
     function ListBatchInferenceJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchInferenceJobs", elemType: BatchInferenceJobSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchInferenceJobs", elemType: batchinferencejobsummary_1.BatchInferenceJobSummary }),
         __metadata("design:type", Array)
     ], ListBatchInferenceJobsResponse.prototype, "batchInferenceJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListBatchInferenceJobsResponse.prototype, "nextToken", void 0);
     return ListBatchInferenceJobsResponse;
-}(SpeakeasyBase));
-export { ListBatchInferenceJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListBatchInferenceJobsResponse = ListBatchInferenceJobsResponse;

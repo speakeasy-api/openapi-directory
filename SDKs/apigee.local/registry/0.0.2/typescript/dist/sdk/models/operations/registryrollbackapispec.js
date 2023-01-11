@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryRollbackApiSpecResponse = exports.RegistryRollbackApiSpecRequest = exports.RegistryRollbackApiSpecPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryRollbackApiSpecPathParams = /** @class */ (function (_super) {
     __extends(RegistryRollbackApiSpecPathParams, _super);
     function RegistryRollbackApiSpecPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=api" }),
         __metadata("design:type", String)
     ], RegistryRollbackApiSpecPathParams.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryRollbackApiSpecPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=spec" }),
         __metadata("design:type", String)
     ], RegistryRollbackApiSpecPathParams.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], RegistryRollbackApiSpecPathParams.prototype, "version", void 0);
     return RegistryRollbackApiSpecPathParams;
-}(SpeakeasyBase));
-export { RegistryRollbackApiSpecPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryRollbackApiSpecPathParams = RegistryRollbackApiSpecPathParams;
 var RegistryRollbackApiSpecRequest = /** @class */ (function (_super) {
     __extends(RegistryRollbackApiSpecRequest, _super);
     function RegistryRollbackApiSpecRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryRollbackApiSpecPathParams)
     ], RegistryRollbackApiSpecRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], RegistryRollbackApiSpecRequest.prototype, "request", void 0);
     return RegistryRollbackApiSpecRequest;
-}(SpeakeasyBase));
-export { RegistryRollbackApiSpecRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryRollbackApiSpecRequest = RegistryRollbackApiSpecRequest;
 var RegistryRollbackApiSpecResponse = /** @class */ (function (_super) {
     __extends(RegistryRollbackApiSpecResponse, _super);
     function RegistryRollbackApiSpecResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryRollbackApiSpecResponse.prototype, "apiSpec", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryRollbackApiSpecResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryRollbackApiSpecResponse.prototype, "statusCode", void 0);
     return RegistryRollbackApiSpecResponse;
-}(SpeakeasyBase));
-export { RegistryRollbackApiSpecResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryRollbackApiSpecResponse = RegistryRollbackApiSpecResponse;

@@ -20,7 +20,7 @@ export declare class GoogleCloudBillingBudgetsV1Filter extends SpeakeasyBase {
     creditTypes?: string[];
     creditTypesTreatment?: GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum;
     customPeriod?: GoogleCloudBillingBudgetsV1CustomPeriod;
-    labels?: Map<string, any[]>;
+    labels?: Record<string, any[]>;
     projects?: string[];
     services?: string[];
     subaccounts?: string[];

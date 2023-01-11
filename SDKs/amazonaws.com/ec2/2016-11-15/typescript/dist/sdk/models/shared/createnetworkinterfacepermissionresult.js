@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterfacePermission } from "./networkinterfacepermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkInterfacePermissionResult = exports.CreateNetworkInterfacePermissionResultInterfacePermission = exports.CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState
+/**
+ * Information about the state of the permission.
+**/
+var CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState = /** @class */ (function (_super) {
+    __extends(CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState, _super);
+    function CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState.prototype, "statusMessage", void 0);
+    return CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState = CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState;
+// CreateNetworkInterfacePermissionResultInterfacePermission
+/**
+ * Information about the permission for the network interface.
+**/
+var CreateNetworkInterfacePermissionResultInterfacePermission = /** @class */ (function (_super) {
+    __extends(CreateNetworkInterfacePermissionResultInterfacePermission, _super);
+    function CreateNetworkInterfacePermissionResultInterfacePermission() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "awsAccountId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "awsService", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "networkInterfaceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "networkInterfacePermissionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "permission", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState)
+    ], CreateNetworkInterfacePermissionResultInterfacePermission.prototype, "permissionState", void 0);
+    return CreateNetworkInterfacePermissionResultInterfacePermission;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkInterfacePermissionResultInterfacePermission = CreateNetworkInterfacePermissionResultInterfacePermission;
 // CreateNetworkInterfacePermissionResult
 /**
  * Contains the output of CreateNetworkInterfacePermission.
@@ -34,9 +92,9 @@ var CreateNetworkInterfacePermissionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", NetworkInterfacePermission)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateNetworkInterfacePermissionResultInterfacePermission)
     ], CreateNetworkInterfacePermissionResult.prototype, "interfacePermission", void 0);
     return CreateNetworkInterfacePermissionResult;
-}(SpeakeasyBase));
-export { CreateNetworkInterfacePermissionResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkInterfacePermissionResult = CreateNetworkInterfacePermissionResult;

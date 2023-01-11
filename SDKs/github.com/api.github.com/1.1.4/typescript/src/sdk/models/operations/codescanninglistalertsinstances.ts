@@ -62,5 +62,5 @@ export class CodeScanningListAlertsInstancesResponse extends SpeakeasyBase {
   codeScanningAlertInstances?: shared.CodeScanningAlertInstance[];
 
   @SpeakeasyMetadata()
-  codeScanningListAlertsInstances503ApplicationJsonObject?: CodeScanningListAlertsInstances503ApplicationJson;
+  codeScanningListAlertsInstances503ApplicationJSONObject?: CodeScanningListAlertsInstances503ApplicationJson;
 }

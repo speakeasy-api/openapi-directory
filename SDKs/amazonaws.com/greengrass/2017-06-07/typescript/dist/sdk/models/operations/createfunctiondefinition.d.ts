@@ -20,7 +20,7 @@ export declare class CreateFunctionDefinitionRequestBodyInitialVersion extends S
 export declare class CreateFunctionDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateFunctionDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateFunctionDefinitionRequest extends SpeakeasyBase {
     headers: CreateFunctionDefinitionHeaders;

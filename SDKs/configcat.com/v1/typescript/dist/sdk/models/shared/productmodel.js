@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationModel } from "./organizationmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationmodel_1 = require("./organizationmodel");
 var ProductModel = /** @class */ (function (_super) {
     __extends(ProductModel, _super);
     function ProductModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProductModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", OrganizationModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", organizationmodel_1.OrganizationModel)
     ], ProductModel.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], ProductModel.prototype, "productId", void 0);
     return ProductModel;
-}(SpeakeasyBase));
-export { ProductModel };
+}(utils_1.SpeakeasyBase));
+exports.ProductModel = ProductModel;

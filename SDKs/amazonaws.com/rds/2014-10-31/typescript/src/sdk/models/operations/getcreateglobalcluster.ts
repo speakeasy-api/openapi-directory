@@ -30,7 +30,7 @@ export class GetCreateGlobalClusterQueryParams extends SpeakeasyBase {
   globalClusterIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBClusterIdentifier" })
-  sourceDbClusterIdentifier?: string;
+  sourceDBClusterIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StorageEncrypted" })
   storageEncrypted?: boolean;

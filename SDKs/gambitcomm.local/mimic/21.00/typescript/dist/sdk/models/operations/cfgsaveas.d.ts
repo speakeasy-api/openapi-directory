@@ -10,5 +10,5 @@ export declare class CfgSaveasRequest extends SpeakeasyBase {
 export declare class CfgSaveasResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cfgSaveas200ApplicationJsonObject?: Map<string, number>;
+    cfgSaveas200ApplicationJSONObject?: Record<string, number>;
 }

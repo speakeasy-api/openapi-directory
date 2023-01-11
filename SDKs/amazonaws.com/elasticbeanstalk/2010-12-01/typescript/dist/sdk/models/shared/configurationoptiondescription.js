@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionRestrictionRegex } from "./optionrestrictionregex";
-import { ConfigurationOptionValueTypeEnum } from "./configurationoptionvaluetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationOptionDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionrestrictionregex_1 = require("./optionrestrictionregex");
+var configurationoptionvaluetypeenum_1 = require("./configurationoptionvaluetypeenum");
 // ConfigurationOptionDescription
 /**
  * Describes the possible values for a configuration option.
@@ -35,49 +38,49 @@ var ConfigurationOptionDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationOptionDescription.prototype, "changeSeverity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationOptionDescription.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfigurationOptionDescription.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfigurationOptionDescription.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfigurationOptionDescription.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationOptionDescription.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationOptionDescription.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OptionRestrictionRegex)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", optionrestrictionregex_1.OptionRestrictionRegex)
     ], ConfigurationOptionDescription.prototype, "regex", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ConfigurationOptionDescription.prototype, "userDefined", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ConfigurationOptionDescription.prototype, "valueOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationOptionDescription.prototype, "valueType", void 0);
     return ConfigurationOptionDescription;
-}(SpeakeasyBase));
-export { ConfigurationOptionDescription };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationOptionDescription = ConfigurationOptionDescription;

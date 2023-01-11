@@ -12,8 +12,8 @@ export class ApnsConfig extends SpeakeasyBase {
   fcmOptions?: ApnsFcmOptions;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=payload" })
-  payload?: Map<string, any>;
+  payload?: Record<string, any>;
 }

@@ -35,8 +35,8 @@ export class TinVerificationBasicCheckResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tinVerificationBasicCheck200ApplicationJsonAny?: any;
+  tinVerificationBasicCheck200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  tinVerificationBasicCheckDefaultApplicationJsonAny?: any;
+  tinVerificationBasicCheckDefaultApplicationJSONAny?: any;
 }

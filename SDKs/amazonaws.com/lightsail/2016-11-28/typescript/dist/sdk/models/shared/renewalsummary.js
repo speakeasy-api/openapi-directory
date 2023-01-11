@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainValidationRecord } from "./domainvalidationrecord";
-import { RenewalStatusEnum } from "./renewalstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RenewalSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainvalidationrecord_1 = require("./domainvalidationrecord");
+var renewalstatusenum_1 = require("./renewalstatusenum");
 // RenewalSummary
 /**
  * Describes the status of a SSL/TLS certificate renewal managed by Amazon Lightsail.
@@ -35,21 +38,21 @@ var RenewalSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainValidationRecords", elemType: DomainValidationRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainValidationRecords", elemType: domainvalidationrecord_1.DomainValidationRecord }),
         __metadata("design:type", Array)
     ], RenewalSummary.prototype, "domainValidationRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewalStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewalStatus" }),
         __metadata("design:type", String)
     ], RenewalSummary.prototype, "renewalStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewalStatusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewalStatusReason" }),
         __metadata("design:type", String)
     ], RenewalSummary.prototype, "renewalStatusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], RenewalSummary.prototype, "updatedAt", void 0);
     return RenewalSummary;
-}(SpeakeasyBase));
-export { RenewalSummary };
+}(utils_1.SpeakeasyBase));
+exports.RenewalSummary = RenewalSummary;

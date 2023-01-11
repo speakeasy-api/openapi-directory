@@ -10,7 +10,7 @@ export declare class DescribeSignalingChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DescribeSignalingChannelRequestBody extends SpeakeasyBase {
-    channelArn?: string;
+    channelARN?: string;
     channelName?: string;
 }
 export declare class DescribeSignalingChannelRequest extends SpeakeasyBase {

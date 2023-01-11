@@ -6,7 +6,7 @@ export declare class RegisterSenderQueryParams extends SpeakeasyBase {
     apiSecret: string;
 }
 export declare class RegisterSenderRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: RegisterSenderQueryParams;
     request: shared.RegisterEmailRequest;
 }

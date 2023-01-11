@@ -1,22 +1,38 @@
-export * from "./campaign";
-export * from "./campaignwrapped";
-export * from "./extendedattribute";
-export * from "./language";
-export * from "./languagewrapped";
-export * from "./mediaitem";
-export * from "./mediaitemwrapped";
-export * from "./mediatypeholder";
-export * from "./mediatypeholderwrapped";
-export * from "./message";
-export * from "./meta";
-export * from "./pagination";
-export * from "./source";
-export * from "./sourcewrapped";
-export * from "./syndicatemarshaller";
-export * from "./syndicatemarshallerwrapped";
-export * from "./taglanguagemarshaller";
-export * from "./taglanguagemarshallerwrapped";
-export * from "./tagmarshaller";
-export * from "./tagmarshallerwrapped";
-export * from "./tagtypemarshaller";
-export * from "./tagtypemarshallerwrapped";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./campaign"), exports);
+__exportStar(require("./campaignwrapped"), exports);
+__exportStar(require("./extendedattribute"), exports);
+__exportStar(require("./language"), exports);
+__exportStar(require("./languagewrapped"), exports);
+__exportStar(require("./mediaitem"), exports);
+__exportStar(require("./mediaitemwrapped"), exports);
+__exportStar(require("./mediatypeholder"), exports);
+__exportStar(require("./mediatypeholderwrapped"), exports);
+__exportStar(require("./message"), exports);
+__exportStar(require("./meta"), exports);
+__exportStar(require("./pagination"), exports);
+__exportStar(require("./source"), exports);
+__exportStar(require("./sourcewrapped"), exports);
+__exportStar(require("./syndicatemarshaller"), exports);
+__exportStar(require("./syndicatemarshallerwrapped"), exports);
+__exportStar(require("./taglanguagemarshaller"), exports);
+__exportStar(require("./taglanguagemarshallerwrapped"), exports);
+__exportStar(require("./tagmarshaller"), exports);
+__exportStar(require("./tagmarshallerwrapped"), exports);
+__exportStar(require("./tagtypemarshaller"), exports);
+__exportStar(require("./tagtypemarshallerwrapped"), exports);

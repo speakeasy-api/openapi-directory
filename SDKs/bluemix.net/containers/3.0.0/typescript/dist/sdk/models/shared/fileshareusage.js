@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileshareUsage = void 0;
+var utils_1 = require("../../../internal/utils");
 var FileshareUsage = /** @class */ (function (_super) {
     __extends(FileshareUsage, _super);
     function FileshareUsage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available_space" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available_space" }),
         __metadata("design:type", String)
     ], FileshareUsage.prototype, "availableSpace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_space" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_space" }),
         __metadata("design:type", String)
     ], FileshareUsage.prototype, "totalSpace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used_space" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used_space" }),
         __metadata("design:type", String)
     ], FileshareUsage.prototype, "usedSpace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used_space_percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used_space_percentage" }),
         __metadata("design:type", String)
     ], FileshareUsage.prototype, "usedSpacePercentage", void 0);
     return FileshareUsage;
-}(SpeakeasyBase));
-export { FileshareUsage };
+}(utils_1.SpeakeasyBase));
+exports.FileshareUsage = FileshareUsage;

@@ -8,5 +8,5 @@ export class ObReadConsent1 extends SpeakeasyBase {
   data: ObReadData1;
 
   @SpeakeasyMetadata({ data: "json, name=Risk" })
-  risk: Map<string, any>;
+  risk: Record<string, any>;
 }

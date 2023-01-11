@@ -3,12 +3,12 @@ export declare class ReimbursementType extends SpeakeasyBase {
     accountCode?: string;
     currentRecord?: boolean;
     name?: string;
-    reimbursementTypeId?: string;
-    updatedDateUtc?: string;
+    reimbursementTypeID?: string;
+    updatedDateUTC?: string;
 }
 export declare class ReimbursementTypeInput extends SpeakeasyBase {
     accountCode?: string;
     currentRecord?: boolean;
     name?: string;
-    reimbursementTypeId?: string;
+    reimbursementTypeID?: string;
 }

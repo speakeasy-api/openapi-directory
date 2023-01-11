@@ -36,6 +36,10 @@ export enum StoryResponseStickerNameEnum {
 }
 
 
+// StoryResponse
+/** 
+ * A story represents an activity associated with an object in the Asana system.
+**/
 export class StoryResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=assignee" })
   assignee?: UserCompact;

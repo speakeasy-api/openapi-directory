@@ -15,5 +15,5 @@ export declare class ReposDeleteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposDelete403ApplicationJsonObject?: ReposDelete403ApplicationJson;
+    reposDelete403ApplicationJSONObject?: ReposDelete403ApplicationJson;
 }

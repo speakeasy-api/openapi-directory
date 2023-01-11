@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PostChargeStations201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=chargestation" })
-  chargestation?: Map<string, any>;
+  chargestation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -29,5 +29,5 @@ export class PostChargeStationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postChargeStations201ApplicationJsonObject?: PostChargeStations201ApplicationJson;
+  postChargeStations201ApplicationJSONObject?: PostChargeStations201ApplicationJson;
 }

@@ -48,7 +48,7 @@ export class CreateDataCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createDataCatalogOutput?: Map<string, any>;
+  createDataCatalogOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

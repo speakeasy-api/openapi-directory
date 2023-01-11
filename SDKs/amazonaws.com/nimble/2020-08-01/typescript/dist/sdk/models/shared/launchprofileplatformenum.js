@@ -1,5 +1,8 @@
-export var LaunchProfilePlatformEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchProfilePlatformEnum = void 0;
+var LaunchProfilePlatformEnum;
 (function (LaunchProfilePlatformEnum) {
     LaunchProfilePlatformEnum["Linux"] = "LINUX";
     LaunchProfilePlatformEnum["Windows"] = "WINDOWS";
-})(LaunchProfilePlatformEnum || (LaunchProfilePlatformEnum = {}));
+})(LaunchProfilePlatformEnum = exports.LaunchProfilePlatformEnum || (exports.LaunchProfilePlatformEnum = {}));

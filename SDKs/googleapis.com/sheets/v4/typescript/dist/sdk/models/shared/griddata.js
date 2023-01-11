@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionProperties } from "./dimensionproperties";
-import { RowData } from "./rowdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GridData = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionproperties_1 = require("./dimensionproperties");
+var rowdata_1 = require("./rowdata");
 // GridData
 /**
  * Data in the grid, as well as metadata about the dimensions.
@@ -35,25 +38,25 @@ var GridData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnMetadata", elemType: DimensionProperties }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnMetadata", elemType: dimensionproperties_1.DimensionProperties }),
         __metadata("design:type", Array)
     ], GridData.prototype, "columnMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowData", elemType: RowData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowData", elemType: rowdata_1.RowData }),
         __metadata("design:type", Array)
     ], GridData.prototype, "rowData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowMetadata", elemType: DimensionProperties }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowMetadata", elemType: dimensionproperties_1.DimensionProperties }),
         __metadata("design:type", Array)
     ], GridData.prototype, "rowMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startColumn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startColumn" }),
         __metadata("design:type", Number)
     ], GridData.prototype, "startColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startRow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startRow" }),
         __metadata("design:type", Number)
     ], GridData.prototype, "startRow", void 0);
     return GridData;
-}(SpeakeasyBase));
-export { GridData };
+}(utils_1.SpeakeasyBase));
+exports.GridData = GridData;

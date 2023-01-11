@@ -11,5 +11,5 @@ export declare class NewRequest extends SpeakeasyBase {
 export declare class NewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    new200ApplicationJsonString?: string;
+    new200ApplicationJSONString?: string;
 }

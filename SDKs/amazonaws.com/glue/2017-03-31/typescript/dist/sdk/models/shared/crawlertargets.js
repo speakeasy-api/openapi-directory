@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CatalogTarget } from "./catalogtarget";
-import { DynamoDbTarget } from "./dynamodbtarget";
-import { JdbcTarget } from "./jdbctarget";
-import { MongoDbTarget } from "./mongodbtarget";
-import { S3Target } from "./s3target";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CrawlerTargets = void 0;
+var utils_1 = require("../../../internal/utils");
+var catalogtarget_1 = require("./catalogtarget");
+var dynamodbtarget_1 = require("./dynamodbtarget");
+var jdbctarget_1 = require("./jdbctarget");
+var mongodbtarget_1 = require("./mongodbtarget");
+var s3target_1 = require("./s3target");
 // CrawlerTargets
 /**
  * Specifies data stores to crawl.
@@ -38,25 +41,25 @@ var CrawlerTargets = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogTargets", elemType: CatalogTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogTargets", elemType: catalogtarget_1.CatalogTarget }),
         __metadata("design:type", Array)
     ], CrawlerTargets.prototype, "catalogTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DynamoDBTargets", elemType: DynamoDbTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DynamoDBTargets", elemType: dynamodbtarget_1.DynamoDbTarget }),
         __metadata("design:type", Array)
-    ], CrawlerTargets.prototype, "dynamoDbTargets", void 0);
+    ], CrawlerTargets.prototype, "dynamoDBTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JdbcTargets", elemType: JdbcTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JdbcTargets", elemType: jdbctarget_1.JdbcTarget }),
         __metadata("design:type", Array)
     ], CrawlerTargets.prototype, "jdbcTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MongoDBTargets", elemType: MongoDbTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MongoDBTargets", elemType: mongodbtarget_1.MongoDbTarget }),
         __metadata("design:type", Array)
-    ], CrawlerTargets.prototype, "mongoDbTargets", void 0);
+    ], CrawlerTargets.prototype, "mongoDBTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Targets", elemType: S3Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Targets", elemType: s3target_1.S3Target }),
         __metadata("design:type", Array)
     ], CrawlerTargets.prototype, "s3Targets", void 0);
     return CrawlerTargets;
-}(SpeakeasyBase));
-export { CrawlerTargets };
+}(utils_1.SpeakeasyBase));
+exports.CrawlerTargets = CrawlerTargets;

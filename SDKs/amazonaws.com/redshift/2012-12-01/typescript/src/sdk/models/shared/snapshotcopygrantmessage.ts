@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotCopyGrant } from "./snapshotcopygrant";
+import { SnapshotCopyGrantList } from "./snapshotcopygrantlist";
 
 
 
@@ -11,6 +11,6 @@ export class SnapshotCopyGrantMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: SnapshotCopyGrant })
-  snapshotCopyGrants?: SnapshotCopyGrant[];
+  @SpeakeasyMetadata({ elemType: SnapshotCopyGrantList })
+  snapshotCopyGrants?: SnapshotCopyGrantList[];
 }

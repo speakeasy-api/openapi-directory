@@ -1,50 +1,51 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetCustomerBalance200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=account_balance" })
+  @SpeakeasyMetadata({ data: "json, name=account_balance" })
   accountBalance?: string;
 
-  @Metadata({ data: "json, name=generated_at" })
+  @SpeakeasyMetadata({ data: "json, name=generated_at" })
   generatedAt?: Date;
 
-  @Metadata({ data: "json, name=month_to_date_balance" })
+  @SpeakeasyMetadata({ data: "json, name=month_to_date_balance" })
   monthToDateBalance?: string;
 
-  @Metadata({ data: "json, name=month_to_date_usage" })
+  @SpeakeasyMetadata({ data: "json, name=month_to_date_usage" })
   monthToDateUsage?: string;
 }
 
 
 export class GetCustomerBalance401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
 export class GetCustomerBalanceResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getCustomerBalance200ApplicationJsonObject?: GetCustomerBalance200ApplicationJson;
+  @SpeakeasyMetadata()
+  getCustomerBalance200ApplicationJSONObject?: GetCustomerBalance200ApplicationJson;
 
-  @Metadata()
-  getCustomerBalance401ApplicationJsonObject?: GetCustomerBalance401ApplicationJson;
+  @SpeakeasyMetadata()
+  getCustomerBalance401ApplicationJSONObject?: GetCustomerBalance401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

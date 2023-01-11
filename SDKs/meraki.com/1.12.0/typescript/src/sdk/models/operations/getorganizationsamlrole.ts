@@ -25,5 +25,5 @@ export class GetOrganizationSamlRoleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationSamlRole200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationSamlRole200ApplicationJSONObject?: Record<string, any>;
 }

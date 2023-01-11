@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,99 +14,124 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDataSourceResponse = exports.GetDataSourceRequest = exports.GetDataSource200ApplicationJson = exports.GetDataSource200ApplicationJsonResultEnum = exports.GetDataSource200ApplicationJsonData = exports.GetDataSource200ApplicationJsonActionEnum = exports.GetDataSourcePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetDataSourcePathParams = /** @class */ (function (_super) {
     __extends(GetDataSourcePathParams, _super);
     function GetDataSourcePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=datasourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=datasourceId" }),
         __metadata("design:type", String)
     ], GetDataSourcePathParams.prototype, "datasourceId", void 0);
     return GetDataSourcePathParams;
-}(SpeakeasyBase));
-export { GetDataSourcePathParams };
-export var GetDataSource200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDataSourcePathParams = GetDataSourcePathParams;
+var GetDataSource200ApplicationJsonActionEnum;
 (function (GetDataSource200ApplicationJsonActionEnum) {
     GetDataSource200ApplicationJsonActionEnum["GetDataSource"] = "getDataSource";
-})(GetDataSource200ApplicationJsonActionEnum || (GetDataSource200ApplicationJsonActionEnum = {}));
+})(GetDataSource200ApplicationJsonActionEnum = exports.GetDataSource200ApplicationJsonActionEnum || (exports.GetDataSource200ApplicationJsonActionEnum = {}));
 var GetDataSource200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetDataSource200ApplicationJsonData, _super);
     function GetDataSource200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasources", elemType: shared.Datasource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasources", elemType: shared.Datasource }),
         __metadata("design:type", Array)
     ], GetDataSource200ApplicationJsonData.prototype, "datasources", void 0);
     return GetDataSource200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetDataSource200ApplicationJsonData };
-export var GetDataSource200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDataSource200ApplicationJsonData = GetDataSource200ApplicationJsonData;
+var GetDataSource200ApplicationJsonResultEnum;
 (function (GetDataSource200ApplicationJsonResultEnum) {
     GetDataSource200ApplicationJsonResultEnum["Success"] = "success";
     GetDataSource200ApplicationJsonResultEnum["Error"] = "error";
-})(GetDataSource200ApplicationJsonResultEnum || (GetDataSource200ApplicationJsonResultEnum = {}));
+})(GetDataSource200ApplicationJsonResultEnum = exports.GetDataSource200ApplicationJsonResultEnum || (exports.GetDataSource200ApplicationJsonResultEnum = {}));
 var GetDataSource200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDataSource200ApplicationJson, _super);
     function GetDataSource200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetDataSource200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetDataSource200ApplicationJsonData)
     ], GetDataSource200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetDataSource200ApplicationJson.prototype, "result", void 0);
     return GetDataSource200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDataSource200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDataSource200ApplicationJson = GetDataSource200ApplicationJson;
 var GetDataSourceRequest = /** @class */ (function (_super) {
     __extends(GetDataSourceRequest, _super);
     function GetDataSourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDataSourcePathParams)
     ], GetDataSourceRequest.prototype, "pathParams", void 0);
     return GetDataSourceRequest;
-}(SpeakeasyBase));
-export { GetDataSourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDataSourceRequest = GetDataSourceRequest;
 var GetDataSourceResponse = /** @class */ (function (_super) {
     __extends(GetDataSourceResponse, _super);
     function GetDataSourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDataSourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDataSourceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDataSource200ApplicationJson)
-    ], GetDataSourceResponse.prototype, "getDataSource200ApplicationJsonObject", void 0);
+    ], GetDataSourceResponse.prototype, "getDataSource200ApplicationJSONObject", void 0);
     return GetDataSourceResponse;
-}(SpeakeasyBase));
-export { GetDataSourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDataSourceResponse = GetDataSourceResponse;

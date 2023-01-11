@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,140 +23,142 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamRecord = exports.TeamRecordTotal = exports.TeamRecordHomeGames = exports.TeamRecordConferenceGames = exports.TeamRecordAwayGames = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamRecordAwayGames = /** @class */ (function (_super) {
     __extends(TeamRecordAwayGames, _super);
     function TeamRecordAwayGames() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=games" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=games" }),
         __metadata("design:type", Number)
     ], TeamRecordAwayGames.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=losses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=losses" }),
         __metadata("design:type", Number)
     ], TeamRecordAwayGames.prototype, "losses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], TeamRecordAwayGames.prototype, "ties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wins" }),
         __metadata("design:type", Number)
     ], TeamRecordAwayGames.prototype, "wins", void 0);
     return TeamRecordAwayGames;
-}(SpeakeasyBase));
-export { TeamRecordAwayGames };
+}(utils_1.SpeakeasyBase));
+exports.TeamRecordAwayGames = TeamRecordAwayGames;
 var TeamRecordConferenceGames = /** @class */ (function (_super) {
     __extends(TeamRecordConferenceGames, _super);
     function TeamRecordConferenceGames() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=games" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=games" }),
         __metadata("design:type", Number)
     ], TeamRecordConferenceGames.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=losses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=losses" }),
         __metadata("design:type", Number)
     ], TeamRecordConferenceGames.prototype, "losses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], TeamRecordConferenceGames.prototype, "ties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wins" }),
         __metadata("design:type", Number)
     ], TeamRecordConferenceGames.prototype, "wins", void 0);
     return TeamRecordConferenceGames;
-}(SpeakeasyBase));
-export { TeamRecordConferenceGames };
+}(utils_1.SpeakeasyBase));
+exports.TeamRecordConferenceGames = TeamRecordConferenceGames;
 var TeamRecordHomeGames = /** @class */ (function (_super) {
     __extends(TeamRecordHomeGames, _super);
     function TeamRecordHomeGames() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=games" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=games" }),
         __metadata("design:type", Number)
     ], TeamRecordHomeGames.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=losses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=losses" }),
         __metadata("design:type", Number)
     ], TeamRecordHomeGames.prototype, "losses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], TeamRecordHomeGames.prototype, "ties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wins" }),
         __metadata("design:type", Number)
     ], TeamRecordHomeGames.prototype, "wins", void 0);
     return TeamRecordHomeGames;
-}(SpeakeasyBase));
-export { TeamRecordHomeGames };
+}(utils_1.SpeakeasyBase));
+exports.TeamRecordHomeGames = TeamRecordHomeGames;
 var TeamRecordTotal = /** @class */ (function (_super) {
     __extends(TeamRecordTotal, _super);
     function TeamRecordTotal() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=games" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=games" }),
         __metadata("design:type", Number)
     ], TeamRecordTotal.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=losses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=losses" }),
         __metadata("design:type", Number)
     ], TeamRecordTotal.prototype, "losses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], TeamRecordTotal.prototype, "ties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wins" }),
         __metadata("design:type", Number)
     ], TeamRecordTotal.prototype, "wins", void 0);
     return TeamRecordTotal;
-}(SpeakeasyBase));
-export { TeamRecordTotal };
+}(utils_1.SpeakeasyBase));
+exports.TeamRecordTotal = TeamRecordTotal;
 var TeamRecord = /** @class */ (function (_super) {
     __extends(TeamRecord, _super);
     function TeamRecord() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awayGames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awayGames" }),
         __metadata("design:type", TeamRecordAwayGames)
     ], TeamRecord.prototype, "awayGames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], TeamRecord.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conferenceGames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conferenceGames" }),
         __metadata("design:type", TeamRecordConferenceGames)
     ], TeamRecord.prototype, "conferenceGames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=division" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=division" }),
         __metadata("design:type", String)
     ], TeamRecord.prototype, "division", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeGames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeGames" }),
         __metadata("design:type", TeamRecordHomeGames)
     ], TeamRecord.prototype, "homeGames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], TeamRecord.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", TeamRecordTotal)
     ], TeamRecord.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], TeamRecord.prototype, "year", void 0);
     return TeamRecord;
-}(SpeakeasyBase));
-export { TeamRecord };
+}(utils_1.SpeakeasyBase));
+exports.TeamRecord = TeamRecord;

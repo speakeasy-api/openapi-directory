@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://elasticloadbalancing.{region}.amazonaws.com", "https://elasticloadbalancing.{region}.amazonaws.com", "http://elasticloadbalancing.amazonaws.com", "https://elasticloadbalancing.amazonaws.com", "http://elasticloadbalancing.{region}.amazonaws.com.cn", "https://elasticloadbalancing.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getApplySecurityGroupsToLoadBalancer - <p>Associates one or more security groups with your load balancer in a virtual private cloud (VPC). The specified security groups override the previously associated security groups.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-groups.html#elb-vpc-security-groups">Security Groups for Load Balancers in a VPC</a> in the <i>Classic Load Balancers Guide</i>.</p>
     **/
@@ -212,4 +212,3 @@ export declare class SDK {
     **/
     postSetLoadBalancerPoliciesOfListener(req: operations.PostSetLoadBalancerPoliciesOfListenerRequest, config?: AxiosRequestConfig): Promise<operations.PostSetLoadBalancerPoliciesOfListenerResponse>;
 }
-export {};

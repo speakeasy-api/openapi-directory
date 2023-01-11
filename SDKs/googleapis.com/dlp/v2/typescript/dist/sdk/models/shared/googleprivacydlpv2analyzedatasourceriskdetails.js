@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2CategoricalStatsResult } from "./googleprivacydlpv2categoricalstatsresult";
-import { GooglePrivacyDlpV2DeltaPresenceEstimationResult } from "./googleprivacydlpv2deltapresenceestimationresult";
-import { GooglePrivacyDlpV2KAnonymityResult } from "./googleprivacydlpv2kanonymityresult";
-import { GooglePrivacyDlpV2KMapEstimationResult } from "./googleprivacydlpv2kmapestimationresult";
-import { GooglePrivacyDlpV2LDiversityResult } from "./googleprivacydlpv2ldiversityresult";
-import { GooglePrivacyDlpV2NumericalStatsResult } from "./googleprivacydlpv2numericalstatsresult";
-import { GooglePrivacyDlpV2RequestedRiskAnalysisOptions } from "./googleprivacydlpv2requestedriskanalysisoptions";
-import { GooglePrivacyDlpV2PrivacyMetric } from "./googleprivacydlpv2privacymetric";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2categoricalstatsresult_1 = require("./googleprivacydlpv2categoricalstatsresult");
+var googleprivacydlpv2deltapresenceestimationresult_1 = require("./googleprivacydlpv2deltapresenceestimationresult");
+var googleprivacydlpv2kanonymityresult_1 = require("./googleprivacydlpv2kanonymityresult");
+var googleprivacydlpv2kmapestimationresult_1 = require("./googleprivacydlpv2kmapestimationresult");
+var googleprivacydlpv2ldiversityresult_1 = require("./googleprivacydlpv2ldiversityresult");
+var googleprivacydlpv2numericalstatsresult_1 = require("./googleprivacydlpv2numericalstatsresult");
+var googleprivacydlpv2requestedriskanalysisoptions_1 = require("./googleprivacydlpv2requestedriskanalysisoptions");
+var googleprivacydlpv2privacymetric_1 = require("./googleprivacydlpv2privacymetric");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
 // GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails
 /**
  * Result of a risk analysis operation request.
@@ -42,41 +45,41 @@ var GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoricalStatsResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2CategoricalStatsResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoricalStatsResult" }),
+        __metadata("design:type", googleprivacydlpv2categoricalstatsresult_1.GooglePrivacyDlpV2CategoricalStatsResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "categoricalStatsResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deltaPresenceEstimationResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2DeltaPresenceEstimationResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deltaPresenceEstimationResult" }),
+        __metadata("design:type", googleprivacydlpv2deltapresenceestimationresult_1.GooglePrivacyDlpV2DeltaPresenceEstimationResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "deltaPresenceEstimationResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kAnonymityResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2KAnonymityResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kAnonymityResult" }),
+        __metadata("design:type", googleprivacydlpv2kanonymityresult_1.GooglePrivacyDlpV2KAnonymityResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "kAnonymityResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kMapEstimationResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2KMapEstimationResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kMapEstimationResult" }),
+        __metadata("design:type", googleprivacydlpv2kmapestimationresult_1.GooglePrivacyDlpV2KMapEstimationResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "kMapEstimationResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lDiversityResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2LDiversityResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lDiversityResult" }),
+        __metadata("design:type", googleprivacydlpv2ldiversityresult_1.GooglePrivacyDlpV2LDiversityResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "lDiversityResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numericalStatsResult" }),
-        __metadata("design:type", GooglePrivacyDlpV2NumericalStatsResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numericalStatsResult" }),
+        __metadata("design:type", googleprivacydlpv2numericalstatsresult_1.GooglePrivacyDlpV2NumericalStatsResult)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "numericalStatsResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2RequestedRiskAnalysisOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedOptions" }),
+        __metadata("design:type", googleprivacydlpv2requestedriskanalysisoptions_1.GooglePrivacyDlpV2RequestedRiskAnalysisOptions)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "requestedOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedPrivacyMetric" }),
-        __metadata("design:type", GooglePrivacyDlpV2PrivacyMetric)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedPrivacyMetric" }),
+        __metadata("design:type", googleprivacydlpv2privacymetric_1.GooglePrivacyDlpV2PrivacyMetric)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "requestedPrivacyMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedSourceTable" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedSourceTable" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails.prototype, "requestedSourceTable", void 0);
     return GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails = GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails;

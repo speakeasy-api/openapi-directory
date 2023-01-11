@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3Location } from "./s3location";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OutputLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3location_1 = require("./s3location");
 // OutputLocation
 /**
  * Contains information about the location where the select job results are stored.
@@ -34,9 +37,9 @@ var OutputLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3" }),
-        __metadata("design:type", S3Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3" }),
+        __metadata("design:type", s3location_1.S3Location)
     ], OutputLocation.prototype, "s3", void 0);
     return OutputLocation;
-}(SpeakeasyBase));
-export { OutputLocation };
+}(utils_1.SpeakeasyBase));
+exports.OutputLocation = OutputLocation;

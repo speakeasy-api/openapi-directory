@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { Balance } from "./balance";
-import { AccountReport } from "./accountreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionsResponse200Json = void 0;
+var utils_1 = require("../../../internal/utils");
+var hreftype_1 = require("./hreftype");
+var accountreference16ch_1 = require("./accountreference16ch");
+var balance_1 = require("./balance");
+var accountreport_1 = require("./accountreport");
 // TransactionsResponse200Json
 /**
  * Body of the JSON response for a successful read transaction list request.
@@ -39,21 +42,21 @@ var TransactionsResponse200Json = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links", elemType: hreftype_1.HrefType }),
+        __metadata("design:type", Object)
     ], TransactionsResponse200Json.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], TransactionsResponse200Json.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balances", elemType: Balance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balances", elemType: balance_1.Balance }),
         __metadata("design:type", Array)
     ], TransactionsResponse200Json.prototype, "balances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions" }),
-        __metadata("design:type", AccountReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions" }),
+        __metadata("design:type", accountreport_1.AccountReport)
     ], TransactionsResponse200Json.prototype, "transactions", void 0);
     return TransactionsResponse200Json;
-}(SpeakeasyBase));
-export { TransactionsResponse200Json };
+}(utils_1.SpeakeasyBase));
+exports.TransactionsResponse200Json = TransactionsResponse200Json;

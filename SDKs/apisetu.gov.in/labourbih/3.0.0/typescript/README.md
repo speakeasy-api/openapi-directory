@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AlimwRequest, AlimwResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: AlimwRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      refNo: "commodi",
-      tokenNo: "qui",
+      refNo: "sit",
+      tokenNo: "voluptas",
     },
-    consentArtifact: "quisquam",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "ducimus",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.alimw(req).then((res: AlimwResponse | AxiosError) => {
+sdk.apIs.alimw(req).then((res: AlimwResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.alimw(req).then((res: AlimwResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alimw` - Application for License for Inter State Migrant Workmen
 * `alsbl` - Application/ License for Boilers

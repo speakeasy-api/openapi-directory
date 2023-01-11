@@ -69,5 +69,5 @@ export class UpdateNetworkWirelessBillingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessBilling200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessBilling200ApplicationJSONObject?: Record<string, any>;
 }

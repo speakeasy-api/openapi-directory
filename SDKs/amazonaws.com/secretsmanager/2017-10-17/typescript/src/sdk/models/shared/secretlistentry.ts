@@ -46,13 +46,13 @@ export class SecretListEntry extends SpeakeasyBase {
   rotationEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=RotationLambdaARN" })
-  rotationLambdaArn?: string;
+  rotationLambdaARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RotationRules" })
   rotationRules?: RotationRulesType;
 
   @SpeakeasyMetadata({ data: "json, name=SecretVersionsToStages" })
-  secretVersionsToStages?: Map<string, string[]>;
+  secretVersionsToStages?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag })
   tags?: Tag[];

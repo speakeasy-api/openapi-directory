@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolUpgradeOsResponse = exports.PoolUpgradeOsRequest = exports.PoolUpgradeOsHeaders = exports.PoolUpgradeOsQueryParams = exports.PoolUpgradeOsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PoolUpgradeOsPathParams = /** @class */ (function (_super) {
     __extends(PoolUpgradeOsPathParams, _super);
     function PoolUpgradeOsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsPathParams.prototype, "poolId", void 0);
     return PoolUpgradeOsPathParams;
-}(SpeakeasyBase));
-export { PoolUpgradeOsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolUpgradeOsPathParams = PoolUpgradeOsPathParams;
 var PoolUpgradeOsQueryParams = /** @class */ (function (_super) {
     __extends(PoolUpgradeOsQueryParams, _super);
     function PoolUpgradeOsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], PoolUpgradeOsQueryParams.prototype, "timeout", void 0);
     return PoolUpgradeOsQueryParams;
-}(SpeakeasyBase));
-export { PoolUpgradeOsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolUpgradeOsQueryParams = PoolUpgradeOsQueryParams;
 var PoolUpgradeOsHeaders = /** @class */ (function (_super) {
     __extends(PoolUpgradeOsHeaders, _super);
     function PoolUpgradeOsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], PoolUpgradeOsHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], PoolUpgradeOsHeaders.prototype, "returnClientRequestId", void 0);
     return PoolUpgradeOsHeaders;
-}(SpeakeasyBase));
-export { PoolUpgradeOsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PoolUpgradeOsHeaders = PoolUpgradeOsHeaders;
 var PoolUpgradeOsRequest = /** @class */ (function (_super) {
     __extends(PoolUpgradeOsRequest, _super);
     function PoolUpgradeOsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolUpgradeOsPathParams)
     ], PoolUpgradeOsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolUpgradeOsQueryParams)
     ], PoolUpgradeOsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolUpgradeOsHeaders)
     ], PoolUpgradeOsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PoolUpgradeOsRequest.prototype, "request", void 0);
     return PoolUpgradeOsRequest;
-}(SpeakeasyBase));
-export { PoolUpgradeOsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PoolUpgradeOsRequest = PoolUpgradeOsRequest;
 var PoolUpgradeOsResponse = /** @class */ (function (_super) {
     __extends(PoolUpgradeOsResponse, _super);
     function PoolUpgradeOsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolUpgradeOsResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolUpgradeOsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PoolUpgradeOsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PoolUpgradeOsResponse.prototype, "statusCode", void 0);
     return PoolUpgradeOsResponse;
-}(SpeakeasyBase));
-export { PoolUpgradeOsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolUpgradeOsResponse = PoolUpgradeOsResponse;

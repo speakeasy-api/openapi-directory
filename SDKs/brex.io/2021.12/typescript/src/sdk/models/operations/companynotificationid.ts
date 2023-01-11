@@ -26,10 +26,10 @@ export class CompanyNotificationIdRequest extends SpeakeasyBase {
 
 export class CompanyNotificationIdResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyNotificationId200ApplicationJsonAnies?: any[];
+  companyNotificationId200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companyNotificationIdDefaultApplicationJsonAny?: any;
+  companyNotificationIdDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

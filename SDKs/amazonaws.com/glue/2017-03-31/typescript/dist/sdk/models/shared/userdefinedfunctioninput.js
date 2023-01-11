@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrincipalTypeEnum } from "./principaltypeenum";
-import { ResourceUri } from "./resourceuri";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserDefinedFunctionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var principaltypeenum_1 = require("./principaltypeenum");
+var resourceuri_1 = require("./resourceuri");
 // UserDefinedFunctionInput
 /**
  * A structure used to create or update a user-defined function.
@@ -35,25 +38,25 @@ var UserDefinedFunctionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClassName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClassName" }),
         __metadata("design:type", String)
     ], UserDefinedFunctionInput.prototype, "className", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FunctionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FunctionName" }),
         __metadata("design:type", String)
     ], UserDefinedFunctionInput.prototype, "functionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnerName" }),
         __metadata("design:type", String)
     ], UserDefinedFunctionInput.prototype, "ownerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnerType" }),
         __metadata("design:type", String)
     ], UserDefinedFunctionInput.prototype, "ownerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceUris", elemType: ResourceUri }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceUris", elemType: resourceuri_1.ResourceUri }),
         __metadata("design:type", Array)
     ], UserDefinedFunctionInput.prototype, "resourceUris", void 0);
     return UserDefinedFunctionInput;
-}(SpeakeasyBase));
-export { UserDefinedFunctionInput };
+}(utils_1.SpeakeasyBase));
+exports.UserDefinedFunctionInput = UserDefinedFunctionInput;

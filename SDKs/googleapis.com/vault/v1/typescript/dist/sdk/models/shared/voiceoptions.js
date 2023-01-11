@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VoiceOptionsCoveredDataEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceOptions = exports.VoiceOptionsCoveredDataEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VoiceOptionsCoveredDataEnum;
 (function (VoiceOptionsCoveredDataEnum) {
     VoiceOptionsCoveredDataEnum["CoveredDataUnspecified"] = "COVERED_DATA_UNSPECIFIED";
     VoiceOptionsCoveredDataEnum["TextMessages"] = "TEXT_MESSAGES";
     VoiceOptionsCoveredDataEnum["Voicemails"] = "VOICEMAILS";
     VoiceOptionsCoveredDataEnum["CallLogs"] = "CALL_LOGS";
-})(VoiceOptionsCoveredDataEnum || (VoiceOptionsCoveredDataEnum = {}));
+})(VoiceOptionsCoveredDataEnum = exports.VoiceOptionsCoveredDataEnum || (exports.VoiceOptionsCoveredDataEnum = {}));
 // VoiceOptions
 /**
  * Additional options for Voice search
@@ -40,9 +43,9 @@ var VoiceOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coveredData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coveredData" }),
         __metadata("design:type", Array)
     ], VoiceOptions.prototype, "coveredData", void 0);
     return VoiceOptions;
-}(SpeakeasyBase));
-export { VoiceOptions };
+}(utils_1.SpeakeasyBase));
+exports.VoiceOptions = VoiceOptions;

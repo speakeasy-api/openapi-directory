@@ -11,5 +11,5 @@ export declare class StreamSampleResponse extends SpeakeasyBase {
     error?: any;
     problem?: any;
     statusCode: number;
-    streamSample200ApplicationJsonObject?: Map<string, any>;
+    streamSample200ApplicationJSONObject?: Record<string, any>;
 }

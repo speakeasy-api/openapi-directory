@@ -1,20 +1,36 @@
-export * from "./addapplicationcloudwatchloggingoption";
-export * from "./addapplicationinput";
-export * from "./addapplicationinputprocessingconfiguration";
-export * from "./addapplicationoutput";
-export * from "./addapplicationreferencedatasource";
-export * from "./createapplication";
-export * from "./deleteapplication";
-export * from "./deleteapplicationcloudwatchloggingoption";
-export * from "./deleteapplicationinputprocessingconfiguration";
-export * from "./deleteapplicationoutput";
-export * from "./deleteapplicationreferencedatasource";
-export * from "./describeapplication";
-export * from "./discoverinputschema";
-export * from "./listapplications";
-export * from "./listtagsforresource";
-export * from "./startapplication";
-export * from "./stopapplication";
-export * from "./tagresource";
-export * from "./untagresource";
-export * from "./updateapplication";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./addapplicationcloudwatchloggingoption"), exports);
+__exportStar(require("./addapplicationinput"), exports);
+__exportStar(require("./addapplicationinputprocessingconfiguration"), exports);
+__exportStar(require("./addapplicationoutput"), exports);
+__exportStar(require("./addapplicationreferencedatasource"), exports);
+__exportStar(require("./createapplication"), exports);
+__exportStar(require("./deleteapplication"), exports);
+__exportStar(require("./deleteapplicationcloudwatchloggingoption"), exports);
+__exportStar(require("./deleteapplicationinputprocessingconfiguration"), exports);
+__exportStar(require("./deleteapplicationoutput"), exports);
+__exportStar(require("./deleteapplicationreferencedatasource"), exports);
+__exportStar(require("./describeapplication"), exports);
+__exportStar(require("./discoverinputschema"), exports);
+__exportStar(require("./listapplications"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./startapplication"), exports);
+__exportStar(require("./stopapplication"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./updateapplication"), exports);

@@ -38,16 +38,16 @@ export class PreprocessingUnrotateAdvancedResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnrotateAdvanced200ApplicationJsonByteString?: string;
+  preprocessingUnrotateAdvanced200ApplicationJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnrotateAdvanced200ApplicationXmlByteString?: string;
+  preprocessingUnrotateAdvanced200ApplicationXMLByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnrotateAdvanced200TextJsonByteString?: string;
+  preprocessingUnrotateAdvanced200TextJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnrotateAdvanced200TextXmlByteString?: string;
+  preprocessingUnrotateAdvanced200TextXMLByteString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

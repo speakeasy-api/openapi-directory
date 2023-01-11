@@ -12,5 +12,5 @@ export declare class UpdateDeviceCameraVideoSettingsRequest extends SpeakeasyBas
 export declare class UpdateDeviceCameraVideoSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceCameraVideoSettings200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceCameraVideoSettings200ApplicationJSONObject?: Record<string, any>;
 }

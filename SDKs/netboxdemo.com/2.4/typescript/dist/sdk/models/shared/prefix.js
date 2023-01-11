@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedRole } from "./nestedrole";
-import { NestedSite } from "./nestedsite";
-import { NestedTenant } from "./nestedtenant";
-import { NestedVlan } from "./nestedvlan";
-import { NestedVrf } from "./nestedvrf";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Prefix = exports.PrefixStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedrole_1 = require("./nestedrole");
+var nestedsite_1 = require("./nestedsite");
+var nestedtenant_1 = require("./nestedtenant");
+var nestedvlan_1 = require("./nestedvlan");
+var nestedvrf_1 = require("./nestedvrf");
 var PrefixStatus = /** @class */ (function (_super) {
     __extends(PrefixStatus, _super);
     function PrefixStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], PrefixStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], PrefixStatus.prototype, "value", void 0);
     return PrefixStatus;
-}(SpeakeasyBase));
-export { PrefixStatus };
+}(utils_1.SpeakeasyBase));
+exports.PrefixStatus = PrefixStatus;
 var Prefix = /** @class */ (function (_super) {
     __extends(Prefix, _super);
     function Prefix() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Prefix.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Prefix.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Prefix.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family" }),
         __metadata("design:type", Number)
     ], Prefix.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Prefix.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_pool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_pool" }),
         __metadata("design:type", Boolean)
     ], Prefix.prototype, "isPool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Prefix.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], Prefix.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
-        __metadata("design:type", NestedRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
+        __metadata("design:type", nestedrole_1.NestedRole)
     ], Prefix.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
-        __metadata("design:type", NestedSite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
+        __metadata("design:type", nestedsite_1.NestedSite)
     ], Prefix.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", PrefixStatus)
     ], Prefix.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Prefix.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], Prefix.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
-        __metadata("design:type", NestedVlan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
+        __metadata("design:type", nestedvlan_1.NestedVlan)
     ], Prefix.prototype, "vlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vrf" }),
-        __metadata("design:type", NestedVrf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vrf" }),
+        __metadata("design:type", nestedvrf_1.NestedVrf)
     ], Prefix.prototype, "vrf", void 0);
     return Prefix;
-}(SpeakeasyBase));
-export { Prefix };
+}(utils_1.SpeakeasyBase));
+exports.Prefix = Prefix;

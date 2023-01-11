@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAdministrationRequest, CreateAdministrationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,9 +33,9 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateAdministrationRequest = {
   pathParams: {
-    legalEntityId: 6289420334362467367,
+    legalEntityId: 8717895732742165505,
   },
-  request: "cum",
+  request: "voluptas",
 };
 
 sdk.administrations.createAdministration(req).then((res: CreateAdministrationResponse | AxiosError) => {

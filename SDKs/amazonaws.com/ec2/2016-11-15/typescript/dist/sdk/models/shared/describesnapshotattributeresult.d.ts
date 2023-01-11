@@ -1,8 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CreateVolumePermission } from "./createvolumepermission";
-import { ProductCode } from "./productcode";
 export declare class DescribeSnapshotAttributeResult extends SpeakeasyBase {
-    createVolumePermissions?: CreateVolumePermission[];
-    productCodes?: ProductCode[];
-    snapshotId?: string;
+    createVolumePermissions?: Record<string, any>;
+    productCodes?: Record<string, any>;
+    snapshotId?: Record<string, any>;
 }

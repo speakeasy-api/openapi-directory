@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExportMetadataRequestDatabaseDumpTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportMetadataRequest = exports.ExportMetadataRequestDatabaseDumpTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExportMetadataRequestDatabaseDumpTypeEnum;
 (function (ExportMetadataRequestDatabaseDumpTypeEnum) {
     ExportMetadataRequestDatabaseDumpTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     ExportMetadataRequestDatabaseDumpTypeEnum["Mysql"] = "MYSQL";
     ExportMetadataRequestDatabaseDumpTypeEnum["Avro"] = "AVRO";
-})(ExportMetadataRequestDatabaseDumpTypeEnum || (ExportMetadataRequestDatabaseDumpTypeEnum = {}));
+})(ExportMetadataRequestDatabaseDumpTypeEnum = exports.ExportMetadataRequestDatabaseDumpTypeEnum || (exports.ExportMetadataRequestDatabaseDumpTypeEnum = {}));
 // ExportMetadataRequest
 /**
  * Request message for DataprocMetastore.ExportMetadata.
@@ -39,17 +42,17 @@ var ExportMetadataRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseDumpType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseDumpType" }),
         __metadata("design:type", String)
     ], ExportMetadataRequest.prototype, "databaseDumpType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationGcsFolder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationGcsFolder" }),
         __metadata("design:type", String)
     ], ExportMetadataRequest.prototype, "destinationGcsFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ExportMetadataRequest.prototype, "requestId", void 0);
     return ExportMetadataRequest;
-}(SpeakeasyBase));
-export { ExportMetadataRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExportMetadataRequest = ExportMetadataRequest;

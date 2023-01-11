@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3UserAddResponse = exports.ProtocolSnmpv3UserAddRequest = exports.ProtocolSnmpv3UserAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3UserAddPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3UserAddPathParams, _super);
     function ProtocolSnmpv3UserAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=authKey" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=authProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=authProtocol" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "authProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=privKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=privKey" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "privKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=privProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=privProtocol" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "privProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=securityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=securityName" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "securityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userName" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddPathParams.prototype, "userName", void 0);
     return ProtocolSnmpv3UserAddPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3UserAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3UserAddPathParams = ProtocolSnmpv3UserAddPathParams;
 var ProtocolSnmpv3UserAddRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3UserAddRequest, _super);
     function ProtocolSnmpv3UserAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3UserAddPathParams)
     ], ProtocolSnmpv3UserAddRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3UserAddRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3UserAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3UserAddRequest = ProtocolSnmpv3UserAddRequest;
 var ProtocolSnmpv3UserAddResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3UserAddResponse, _super);
     function ProtocolSnmpv3UserAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3UserAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3UserAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmpv3UserAddResponse.prototype, "protocolSnmpv3UserAdd200ApplicationJsonString", void 0);
+    ], ProtocolSnmpv3UserAddResponse.prototype, "protocolSnmpv3UserAdd200ApplicationJSONString", void 0);
     return ProtocolSnmpv3UserAddResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3UserAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3UserAddResponse = ProtocolSnmpv3UserAddResponse;

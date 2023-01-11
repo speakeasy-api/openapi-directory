@@ -30,5 +30,5 @@ export declare class GetInlineScriptTagsRequest extends SpeakeasyBase {
 export declare class GetInlineScriptTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getInlineScriptTags200ApplicationJsonObject?: GetInlineScriptTags200ApplicationJson;
+    getInlineScriptTags200ApplicationJSONObject?: GetInlineScriptTags200ApplicationJson;
 }

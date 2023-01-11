@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterFileDataStoppingsResponse = exports.FilterFileDataStoppingsRequest = exports.FilterFileDataStoppingsRequestBody = exports.FilterFileDataStoppingsRequestBodyFile = exports.FilterFileDataStoppingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FilterFileDataStoppingsPathParams = /** @class */ (function (_super) {
     __extends(FilterFileDataStoppingsPathParams, _super);
     function FilterFileDataStoppingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=type" }),
         __metadata("design:type", String)
     ], FilterFileDataStoppingsPathParams.prototype, "type", void 0);
     return FilterFileDataStoppingsPathParams;
-}(SpeakeasyBase));
-export { FilterFileDataStoppingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FilterFileDataStoppingsPathParams = FilterFileDataStoppingsPathParams;
 var FilterFileDataStoppingsRequestBodyFile = /** @class */ (function (_super) {
     __extends(FilterFileDataStoppingsRequestBodyFile, _super);
     function FilterFileDataStoppingsRequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], FilterFileDataStoppingsRequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], FilterFileDataStoppingsRequestBodyFile.prototype, "file", void 0);
     return FilterFileDataStoppingsRequestBodyFile;
-}(SpeakeasyBase));
-export { FilterFileDataStoppingsRequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.FilterFileDataStoppingsRequestBodyFile = FilterFileDataStoppingsRequestBodyFile;
 var FilterFileDataStoppingsRequestBody = /** @class */ (function (_super) {
     __extends(FilterFileDataStoppingsRequestBody, _super);
     function FilterFileDataStoppingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", FilterFileDataStoppingsRequestBodyFile)
     ], FilterFileDataStoppingsRequestBody.prototype, "file", void 0);
     return FilterFileDataStoppingsRequestBody;
-}(SpeakeasyBase));
-export { FilterFileDataStoppingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.FilterFileDataStoppingsRequestBody = FilterFileDataStoppingsRequestBody;
 var FilterFileDataStoppingsRequest = /** @class */ (function (_super) {
     __extends(FilterFileDataStoppingsRequest, _super);
     function FilterFileDataStoppingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FilterFileDataStoppingsPathParams)
     ], FilterFileDataStoppingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", FilterFileDataStoppingsRequestBody)
     ], FilterFileDataStoppingsRequest.prototype, "request", void 0);
     return FilterFileDataStoppingsRequest;
-}(SpeakeasyBase));
-export { FilterFileDataStoppingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.FilterFileDataStoppingsRequest = FilterFileDataStoppingsRequest;
 var FilterFileDataStoppingsResponse = /** @class */ (function (_super) {
     __extends(FilterFileDataStoppingsResponse, _super);
     function FilterFileDataStoppingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FilterFileDataStoppingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FilterFileDataStoppingsResponse.prototype, "exudeResponseBean", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FilterFileDataStoppingsResponse.prototype, "statusCode", void 0);
     return FilterFileDataStoppingsResponse;
-}(SpeakeasyBase));
-export { FilterFileDataStoppingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.FilterFileDataStoppingsResponse = FilterFileDataStoppingsResponse;

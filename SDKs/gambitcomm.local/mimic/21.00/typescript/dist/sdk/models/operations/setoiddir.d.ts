@@ -9,5 +9,5 @@ export declare class SetOiddirRequest extends SpeakeasyBase {
 export declare class SetOiddirResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setOiddir200ApplicationJsonString?: string;
+    setOiddir200ApplicationJSONString?: string;
 }

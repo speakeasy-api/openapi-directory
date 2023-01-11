@@ -3,16 +3,6 @@ import { GoogleCloudPaymentsResellerSubscriptionV1Amount } from "./googlecloudpa
 
 
 
-// GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput
-/** 
- * The duration of an introductory pricing promotion.
-**/
-export class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=discountAmount" })
-  discountAmount?: GoogleCloudPaymentsResellerSubscriptionV1Amount;
-}
-
-
 // GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec
 /** 
  * The duration of an introductory pricing promotion.
@@ -29,4 +19,14 @@ export class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPrici
 
   @SpeakeasyMetadata({ data: "json, name=regionCode" })
   regionCode?: string;
+}
+
+
+// GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput
+/** 
+ * The duration of an introductory pricing promotion.
+**/
+export class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=discountAmount" })
+  discountAmount?: GoogleCloudPaymentsResellerSubscriptionV1Amount;
 }

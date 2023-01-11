@@ -3,7 +3,7 @@ export declare class PutServersIdPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class PutServersIdUpdateServerRequest extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 export declare class PutServersId200ApplicationJsonServerDatacenterLocation extends SpeakeasyBase {
@@ -77,7 +77,7 @@ export declare class PutServersId200ApplicationJsonServerImage extends Speakeasy
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: PutServersId200ApplicationJsonServerImageOsFlavorEnum;
     osVersion: string;
@@ -106,7 +106,7 @@ export declare enum PutServersId200ApplicationJsonServerPlacementGroupNullableTy
 export declare class PutServersId200ApplicationJsonServerPlacementGroupNullable extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: PutServersId200ApplicationJsonServerPlacementGroupNullableTypeEnum;
@@ -223,7 +223,7 @@ export declare class PutServersId200ApplicationJsonServer extends SpeakeasyBase 
     includedTraffic: number;
     ingoingTraffic: number;
     iso: PutServersId200ApplicationJsonServerIso;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     loadBalancers?: number[];
     locked: boolean;
     name: string;
@@ -247,6 +247,6 @@ export declare class PutServersIdRequest extends SpeakeasyBase {
 }
 export declare class PutServersIdResponse extends SpeakeasyBase {
     contentType: string;
-    putServersId200ApplicationJsonObject?: PutServersId200ApplicationJson;
     statusCode: number;
+    putServersId200ApplicationJSONObject?: PutServersId200ApplicationJson;
 }

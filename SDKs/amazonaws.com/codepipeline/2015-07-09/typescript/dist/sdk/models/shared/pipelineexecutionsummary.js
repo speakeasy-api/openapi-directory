@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceRevision } from "./sourcerevision";
-import { PipelineExecutionStatusEnum } from "./pipelineexecutionstatusenum";
-import { StopExecutionTrigger } from "./stopexecutiontrigger";
-import { ExecutionTrigger } from "./executiontrigger";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineExecutionSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourcerevision_1 = require("./sourcerevision");
+var pipelineexecutionstatusenum_1 = require("./pipelineexecutionstatusenum");
+var stopexecutiontrigger_1 = require("./stopexecutiontrigger");
+var executiontrigger_1 = require("./executiontrigger");
 // PipelineExecutionSummary
 /**
  * Summary information about a pipeline execution.
@@ -37,33 +40,33 @@ var PipelineExecutionSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], PipelineExecutionSummary.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineExecutionId" }),
         __metadata("design:type", String)
     ], PipelineExecutionSummary.prototype, "pipelineExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceRevisions", elemType: SourceRevision }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceRevisions", elemType: sourcerevision_1.SourceRevision }),
         __metadata("design:type", Array)
     ], PipelineExecutionSummary.prototype, "sourceRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], PipelineExecutionSummary.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PipelineExecutionSummary.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopTrigger" }),
-        __metadata("design:type", StopExecutionTrigger)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopTrigger" }),
+        __metadata("design:type", stopexecutiontrigger_1.StopExecutionTrigger)
     ], PipelineExecutionSummary.prototype, "stopTrigger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger" }),
-        __metadata("design:type", ExecutionTrigger)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger" }),
+        __metadata("design:type", executiontrigger_1.ExecutionTrigger)
     ], PipelineExecutionSummary.prototype, "trigger", void 0);
     return PipelineExecutionSummary;
-}(SpeakeasyBase));
-export { PipelineExecutionSummary };
+}(utils_1.SpeakeasyBase));
+exports.PipelineExecutionSummary = PipelineExecutionSummary;

@@ -108,11 +108,11 @@ export declare class WtrblRequest extends SpeakeasyBase {
 export declare class WtrblResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    wtrbl400ApplicationJsonObject?: Wtrbl400ApplicationJson;
-    wtrbl401ApplicationJsonObject?: Wtrbl401ApplicationJson;
-    wtrbl404ApplicationJsonObject?: Wtrbl404ApplicationJson;
-    wtrbl500ApplicationJsonObject?: Wtrbl500ApplicationJson;
-    wtrbl502ApplicationJsonObject?: Wtrbl502ApplicationJson;
-    wtrbl503ApplicationJsonObject?: Wtrbl503ApplicationJson;
-    wtrbl504ApplicationJsonObject?: Wtrbl504ApplicationJson;
+    wtrbl400ApplicationJSONObject?: Wtrbl400ApplicationJson;
+    wtrbl401ApplicationJSONObject?: Wtrbl401ApplicationJson;
+    wtrbl404ApplicationJSONObject?: Wtrbl404ApplicationJson;
+    wtrbl500ApplicationJSONObject?: Wtrbl500ApplicationJson;
+    wtrbl502ApplicationJSONObject?: Wtrbl502ApplicationJson;
+    wtrbl503ApplicationJSONObject?: Wtrbl503ApplicationJson;
+    wtrbl504ApplicationJSONObject?: Wtrbl504ApplicationJson;
 }

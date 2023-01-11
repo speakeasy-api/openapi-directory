@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DkimAttributes } from "./dkimattributes";
-import { IdentityTypeEnum } from "./identitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEmailIdentityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dkimattributes_1 = require("./dkimattributes");
+var identitytypeenum_1 = require("./identitytypeenum");
 // CreateEmailIdentityResponse
 /**
  * <p>If the email identity is a domain, this object contains tokens that you can use to create a set of CNAME records. To sucessfully verify your domain, you have to add these records to the DNS configuration for your domain.</p> <p>If the email identity is an email address, this object is empty. </p>
@@ -35,17 +38,17 @@ var CreateEmailIdentityResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DkimAttributes" }),
-        __metadata("design:type", DkimAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DkimAttributes" }),
+        __metadata("design:type", dkimattributes_1.DkimAttributes)
     ], CreateEmailIdentityResponse.prototype, "dkimAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityType" }),
         __metadata("design:type", String)
     ], CreateEmailIdentityResponse.prototype, "identityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VerifiedForSendingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VerifiedForSendingStatus" }),
         __metadata("design:type", Boolean)
     ], CreateEmailIdentityResponse.prototype, "verifiedForSendingStatus", void 0);
     return CreateEmailIdentityResponse;
-}(SpeakeasyBase));
-export { CreateEmailIdentityResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateEmailIdentityResponse = CreateEmailIdentityResponse;

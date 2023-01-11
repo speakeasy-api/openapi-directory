@@ -14,10 +14,10 @@ export class SandboxPublicTokenCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sandboxPublicTokenCreateResponse?: Map<string, any>;
+  sandboxPublicTokenCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

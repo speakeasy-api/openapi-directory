@@ -17,7 +17,7 @@ export class ChangeAccountSettingsQueryParams extends SpeakeasyBase {
 
 export class ChangeAccountSettingsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: ChangeAccountSettingsQueryParams;

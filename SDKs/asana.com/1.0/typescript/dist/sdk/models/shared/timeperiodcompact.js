@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TimePeriodCompactPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimePeriodCompact = exports.TimePeriodCompactPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TimePeriodCompactPeriodEnum;
 (function (TimePeriodCompactPeriodEnum) {
     TimePeriodCompactPeriodEnum["Fy"] = "FY";
     TimePeriodCompactPeriodEnum["H1"] = "H1";
@@ -32,32 +35,36 @@ export var TimePeriodCompactPeriodEnum;
     TimePeriodCompactPeriodEnum["Q2"] = "Q2";
     TimePeriodCompactPeriodEnum["Q3"] = "Q3";
     TimePeriodCompactPeriodEnum["Q4"] = "Q4";
-})(TimePeriodCompactPeriodEnum || (TimePeriodCompactPeriodEnum = {}));
+})(TimePeriodCompactPeriodEnum = exports.TimePeriodCompactPeriodEnum || (exports.TimePeriodCompactPeriodEnum = {}));
+// TimePeriodCompact
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 var TimePeriodCompact = /** @class */ (function (_super) {
     __extends(TimePeriodCompact, _super);
     function TimePeriodCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_on" }),
         __metadata("design:type", String)
     ], TimePeriodCompact.prototype, "endOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], TimePeriodCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], TimePeriodCompact.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], TimePeriodCompact.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_on" }),
         __metadata("design:type", String)
     ], TimePeriodCompact.prototype, "startOn", void 0);
     return TimePeriodCompact;
-}(SpeakeasyBase));
-export { TimePeriodCompact };
+}(utils_1.SpeakeasyBase));
+exports.TimePeriodCompact = TimePeriodCompact;

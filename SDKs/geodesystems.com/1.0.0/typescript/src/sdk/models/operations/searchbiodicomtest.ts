@@ -46,7 +46,7 @@ export class SearchBioDicomTestQueryParams extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.bio_dicom_test.PatientID" })
-  searchBioDicomTestPatientId?: string;
+  searchBioDicomTestPatientID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.bio_dicom_test.PatientName" })
   searchBioDicomTestPatientName?: string;

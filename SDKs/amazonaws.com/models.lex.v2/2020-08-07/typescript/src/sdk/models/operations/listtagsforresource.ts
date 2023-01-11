@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class ListTagsForResourcePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 }
 
 

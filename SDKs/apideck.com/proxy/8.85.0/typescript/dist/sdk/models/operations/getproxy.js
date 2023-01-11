@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,155 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetProxyResponse = exports.GetProxyRequest = exports.GetProxy401ApplicationJson = exports.GetProxySecurity = exports.GetProxyHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetProxyHeaders = /** @class */ (function (_super) {
     __extends(GetProxyHeaders, _super);
     function GetProxyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], GetProxyHeaders.prototype, "xApideckAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
         __metadata("design:type", String)
     ], GetProxyHeaders.prototype, "xApideckConsumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-downstream-authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-downstream-authorization" }),
         __metadata("design:type", String)
     ], GetProxyHeaders.prototype, "xApideckDownstreamAuthorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-downstream-url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-downstream-url" }),
         __metadata("design:type", String)
     ], GetProxyHeaders.prototype, "xApideckDownstreamUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
         __metadata("design:type", String)
     ], GetProxyHeaders.prototype, "xApideckServiceId", void 0);
     return GetProxyHeaders;
-}(SpeakeasyBase));
-export { GetProxyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetProxyHeaders = GetProxyHeaders;
 var GetProxySecurity = /** @class */ (function (_super) {
     __extends(GetProxySecurity, _super);
     function GetProxySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetProxySecurity.prototype, "apiKey", void 0);
     return GetProxySecurity;
-}(SpeakeasyBase));
-export { GetProxySecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetProxySecurity = GetProxySecurity;
 var GetProxy401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetProxy401ApplicationJson, _super);
     function GetProxy401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], GetProxy401ApplicationJson.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], GetProxy401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetProxy401ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], GetProxy401ApplicationJson.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], GetProxy401ApplicationJson.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type_name" }),
         __metadata("design:type", String)
     ], GetProxy401ApplicationJson.prototype, "typeName", void 0);
     return GetProxy401ApplicationJson;
-}(SpeakeasyBase));
-export { GetProxy401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetProxy401ApplicationJson = GetProxy401ApplicationJson;
 var GetProxyRequest = /** @class */ (function (_super) {
     __extends(GetProxyRequest, _super);
     function GetProxyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProxyHeaders)
     ], GetProxyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProxySecurity)
     ], GetProxyRequest.prototype, "security", void 0);
     return GetProxyRequest;
-}(SpeakeasyBase));
-export { GetProxyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetProxyRequest = GetProxyRequest;
 var GetProxyResponse = /** @class */ (function (_super) {
     __extends(GetProxyResponse, _super);
     function GetProxyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetProxyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetProxyResponse.prototype, "headers", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetProxyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], GetProxyResponse.prototype, "getProxy200ApplicationJsonAny", void 0);
+    ], GetProxyResponse.prototype, "getProxy200ApplicationJSONAny", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProxy401ApplicationJson)
-    ], GetProxyResponse.prototype, "getProxy401ApplicationJsonObject", void 0);
+    ], GetProxyResponse.prototype, "getProxy401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], GetProxyResponse.prototype, "getProxyDefaultApplicationJsonAny", void 0);
+    ], GetProxyResponse.prototype, "getProxyDefaultApplicationJSONAny", void 0);
     return GetProxyResponse;
-}(SpeakeasyBase));
-export { GetProxyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetProxyResponse = GetProxyResponse;

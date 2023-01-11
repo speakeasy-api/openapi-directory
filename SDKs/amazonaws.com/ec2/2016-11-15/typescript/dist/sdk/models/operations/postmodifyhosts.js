@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyHostsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyHostsResponse = exports.PostModifyHostsRequest = exports.PostModifyHostsHeaders = exports.PostModifyHostsQueryParams = exports.PostModifyHostsVersionEnum = exports.PostModifyHostsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyHostsActionEnum;
 (function (PostModifyHostsActionEnum) {
     PostModifyHostsActionEnum["ModifyHosts"] = "ModifyHosts";
-})(PostModifyHostsActionEnum || (PostModifyHostsActionEnum = {}));
-export var PostModifyHostsVersionEnum;
+})(PostModifyHostsActionEnum = exports.PostModifyHostsActionEnum || (exports.PostModifyHostsActionEnum = {}));
+var PostModifyHostsVersionEnum;
 (function (PostModifyHostsVersionEnum) {
     PostModifyHostsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyHostsVersionEnum || (PostModifyHostsVersionEnum = {}));
+})(PostModifyHostsVersionEnum = exports.PostModifyHostsVersionEnum || (exports.PostModifyHostsVersionEnum = {}));
 var PostModifyHostsQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyHostsQueryParams, _super);
     function PostModifyHostsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyHostsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyHostsQueryParams.prototype, "version", void 0);
     return PostModifyHostsQueryParams;
-}(SpeakeasyBase));
-export { PostModifyHostsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyHostsQueryParams = PostModifyHostsQueryParams;
 var PostModifyHostsHeaders = /** @class */ (function (_super) {
     __extends(PostModifyHostsHeaders, _super);
     function PostModifyHostsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyHostsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyHostsHeaders;
-}(SpeakeasyBase));
-export { PostModifyHostsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyHostsHeaders = PostModifyHostsHeaders;
 var PostModifyHostsRequest = /** @class */ (function (_super) {
     __extends(PostModifyHostsRequest, _super);
     function PostModifyHostsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyHostsQueryParams)
     ], PostModifyHostsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyHostsHeaders)
     ], PostModifyHostsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyHostsRequest.prototype, "request", void 0);
     return PostModifyHostsRequest;
-}(SpeakeasyBase));
-export { PostModifyHostsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyHostsRequest = PostModifyHostsRequest;
 var PostModifyHostsResponse = /** @class */ (function (_super) {
     __extends(PostModifyHostsResponse, _super);
     function PostModifyHostsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyHostsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyHostsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyHostsResponse.prototype, "statusCode", void 0);
     return PostModifyHostsResponse;
-}(SpeakeasyBase));
-export { PostModifyHostsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyHostsResponse = PostModifyHostsResponse;

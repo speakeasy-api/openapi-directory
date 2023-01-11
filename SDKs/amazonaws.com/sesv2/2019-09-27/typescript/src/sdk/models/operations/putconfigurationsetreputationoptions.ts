@@ -61,7 +61,7 @@ export class PutConfigurationSetReputationOptionsResponse extends SpeakeasyBase 
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putConfigurationSetReputationOptionsResponse?: Map<string, any>;
+  putConfigurationSetReputationOptionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

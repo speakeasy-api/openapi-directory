@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudprivatecatalogOrganizationsProductsSearchResponse = exports.CloudprivatecatalogOrganizationsProductsSearchRequest = exports.CloudprivatecatalogOrganizationsProductsSearchSecurity = exports.CloudprivatecatalogOrganizationsProductsSearchQueryParams = exports.CloudprivatecatalogOrganizationsProductsSearchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudprivatecatalogOrganizationsProductsSearchPathParams = /** @class */ (function (_super) {
     __extends(CloudprivatecatalogOrganizationsProductsSearchPathParams, _super);
     function CloudprivatecatalogOrganizationsProductsSearchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=resource" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchPathParams.prototype, "resource", void 0);
     return CloudprivatecatalogOrganizationsProductsSearchPathParams;
-}(SpeakeasyBase));
-export { CloudprivatecatalogOrganizationsProductsSearchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudprivatecatalogOrganizationsProductsSearchPathParams = CloudprivatecatalogOrganizationsProductsSearchPathParams;
 var CloudprivatecatalogOrganizationsProductsSearchQueryParams = /** @class */ (function (_super) {
     __extends(CloudprivatecatalogOrganizationsProductsSearchQueryParams, _super);
     function CloudprivatecatalogOrganizationsProductsSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchQueryParams.prototype, "uploadProtocol", void 0);
     return CloudprivatecatalogOrganizationsProductsSearchQueryParams;
-}(SpeakeasyBase));
-export { CloudprivatecatalogOrganizationsProductsSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudprivatecatalogOrganizationsProductsSearchQueryParams = CloudprivatecatalogOrganizationsProductsSearchQueryParams;
 var CloudprivatecatalogOrganizationsProductsSearchSecurity = /** @class */ (function (_super) {
     __extends(CloudprivatecatalogOrganizationsProductsSearchSecurity, _super);
     function CloudprivatecatalogOrganizationsProductsSearchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudprivatecatalogOrganizationsProductsSearchSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudprivatecatalogOrganizationsProductsSearchSecurity.prototype, "oauth2c", void 0);
     return CloudprivatecatalogOrganizationsProductsSearchSecurity;
-}(SpeakeasyBase));
-export { CloudprivatecatalogOrganizationsProductsSearchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudprivatecatalogOrganizationsProductsSearchSecurity = CloudprivatecatalogOrganizationsProductsSearchSecurity;
 var CloudprivatecatalogOrganizationsProductsSearchRequest = /** @class */ (function (_super) {
     __extends(CloudprivatecatalogOrganizationsProductsSearchRequest, _super);
     function CloudprivatecatalogOrganizationsProductsSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudprivatecatalogOrganizationsProductsSearchPathParams)
     ], CloudprivatecatalogOrganizationsProductsSearchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudprivatecatalogOrganizationsProductsSearchQueryParams)
     ], CloudprivatecatalogOrganizationsProductsSearchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudprivatecatalogOrganizationsProductsSearchSecurity)
     ], CloudprivatecatalogOrganizationsProductsSearchRequest.prototype, "security", void 0);
     return CloudprivatecatalogOrganizationsProductsSearchRequest;
-}(SpeakeasyBase));
-export { CloudprivatecatalogOrganizationsProductsSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudprivatecatalogOrganizationsProductsSearchRequest = CloudprivatecatalogOrganizationsProductsSearchRequest;
 var CloudprivatecatalogOrganizationsProductsSearchResponse = /** @class */ (function (_super) {
     __extends(CloudprivatecatalogOrganizationsProductsSearchResponse, _super);
     function CloudprivatecatalogOrganizationsProductsSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], CloudprivatecatalogOrganizationsProductsSearchResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudprivatecatalogOrganizationsProductsSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudprivatecatalogOrganizationsProductsSearchResponse.prototype, "statusCode", void 0);
     return CloudprivatecatalogOrganizationsProductsSearchResponse;
-}(SpeakeasyBase));
-export { CloudprivatecatalogOrganizationsProductsSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudprivatecatalogOrganizationsProductsSearchResponse = CloudprivatecatalogOrganizationsProductsSearchResponse;

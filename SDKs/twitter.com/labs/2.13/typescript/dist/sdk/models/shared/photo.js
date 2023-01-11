@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PhotoTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Photo = exports.PhotoTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PhotoTypeEnum;
 (function (PhotoTypeEnum) {
     PhotoTypeEnum["Photo"] = "photo";
-})(PhotoTypeEnum || (PhotoTypeEnum = {}));
+})(PhotoTypeEnum = exports.PhotoTypeEnum || (exports.PhotoTypeEnum = {}));
+// Photo
+/**
+ * This contains the list of the fields that are common to all media returned.
+**/
 var Photo = /** @class */ (function (_super) {
     __extends(Photo, _super);
     function Photo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], Photo.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media_key" }),
         __metadata("design:type", String)
     ], Photo.prototype, "mediaKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Photo.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Photo.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], Photo.prototype, "width", void 0);
     return Photo;
-}(SpeakeasyBase));
-export { Photo };
+}(utils_1.SpeakeasyBase));
+exports.Photo = Photo;

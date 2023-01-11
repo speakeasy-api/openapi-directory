@@ -1,5 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnAuthorizationRuleStatus } from "./clientvpnauthorizationrulestatus";
+/**
+ * The current state of the authorization rule.
+**/
+export declare class AuthorizeClientVpnIngressResultStatus extends SpeakeasyBase {
+    code?: Record<string, any>;
+    message?: Record<string, any>;
+}
 export declare class AuthorizeClientVpnIngressResult extends SpeakeasyBase {
-    status?: ClientVpnAuthorizationRuleStatus;
+    status?: AuthorizeClientVpnIngressResultStatus;
 }

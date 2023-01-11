@@ -1,0 +1,60 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./copyfiletos3"), exports);
+__exportStar(require("./createbankaccount"), exports);
+__exportStar(require("./createfee"), exports);
+__exportStar(require("./createinvestor"), exports);
+__exportStar(require("./createportfoliotemplate"), exports);
+__exportStar(require("./createpot"), exports);
+__exportStar(require("./createrebalance"), exports);
+__exportStar(require("./createsinglepaymentintent"), exports);
+__exportStar(require("./createwithdrawal"), exports);
+__exportStar(require("./evaluaterebalance"), exports);
+__exportStar(require("./executebuytrasaction"), exports);
+__exportStar(require("./executeselltrasaction"), exports);
+__exportStar(require("./executeswitchtrasaction"), exports);
+__exportStar(require("./getallbankaccounts"), exports);
+__exportStar(require("./getallfinancialproducts"), exports);
+__exportStar(require("./getallinvestoraccounts"), exports);
+__exportStar(require("./getallinvestors"), exports);
+__exportStar(require("./getallpayments"), exports);
+__exportStar(require("./getallportfoliotemplates"), exports);
+__exportStar(require("./getbankaccount"), exports);
+__exportStar(require("./getbegreeting"), exports);
+__exportStar(require("./getconfiguredinvestmentproductprices"), exports);
+__exportStar(require("./getconfiguredinvestmentproducts"), exports);
+__exportStar(require("./getinvestmentproduct"), exports);
+__exportStar(require("./getinvestmentproductprice"), exports);
+__exportStar(require("./getinvestor"), exports);
+__exportStar(require("./getinvestoraccount"), exports);
+__exportStar(require("./getpayment"), exports);
+__exportStar(require("./getportfoliotemplate"), exports);
+__exportStar(require("./getpot"), exports);
+__exportStar(require("./getpotholdings"), exports);
+__exportStar(require("./getpotpayments"), exports);
+__exportStar(require("./getpots"), exports);
+__exportStar(require("./getpottransactions"), exports);
+__exportStar(require("./getpotvalue"), exports);
+__exportStar(require("./getrates"), exports);
+__exportStar(require("./getrebalancedetails"), exports);
+__exportStar(require("./getswitch"), exports);
+__exportStar(require("./gettotalpotholdings"), exports);
+__exportStar(require("./gettotalpotvalue"), exports);
+__exportStar(require("./updatebankaccount"), exports);
+__exportStar(require("./updateinvestor"), exports);
+__exportStar(require("./updateportfoliotemplate"), exports);
+__exportStar(require("./updatepot"), exports);

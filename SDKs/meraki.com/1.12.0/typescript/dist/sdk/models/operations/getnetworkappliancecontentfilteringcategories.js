@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceContentFilteringCategoriesResponse = exports.GetNetworkApplianceContentFilteringCategoriesRequest = exports.GetNetworkApplianceContentFilteringCategoriesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceContentFilteringCategoriesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceContentFilteringCategoriesPathParams, _super);
     function GetNetworkApplianceContentFilteringCategoriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceContentFilteringCategoriesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceContentFilteringCategoriesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceContentFilteringCategoriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceContentFilteringCategoriesPathParams = GetNetworkApplianceContentFilteringCategoriesPathParams;
 var GetNetworkApplianceContentFilteringCategoriesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceContentFilteringCategoriesRequest, _super);
     function GetNetworkApplianceContentFilteringCategoriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceContentFilteringCategoriesPathParams)
     ], GetNetworkApplianceContentFilteringCategoriesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceContentFilteringCategoriesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceContentFilteringCategoriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceContentFilteringCategoriesRequest = GetNetworkApplianceContentFilteringCategoriesRequest;
 var GetNetworkApplianceContentFilteringCategoriesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceContentFilteringCategoriesResponse, _super);
     function GetNetworkApplianceContentFilteringCategoriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceContentFilteringCategoriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceContentFilteringCategoriesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceContentFilteringCategoriesResponse.prototype, "getNetworkApplianceContentFilteringCategories200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceContentFilteringCategoriesResponse.prototype, "getNetworkApplianceContentFilteringCategories200ApplicationJSONObject", void 0);
     return GetNetworkApplianceContentFilteringCategoriesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceContentFilteringCategoriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceContentFilteringCategoriesResponse = GetNetworkApplianceContentFilteringCategoriesResponse;

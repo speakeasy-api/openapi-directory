@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1CustomerConstraints } from "./googlecloudchannelv1customerconstraints";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Constraints = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1customerconstraints_1 = require("./googlecloudchannelv1customerconstraints");
 // GoogleCloudChannelV1Constraints
 /**
  * Represents the constraints for buying the Offer.
@@ -34,9 +37,9 @@ var GoogleCloudChannelV1Constraints = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerConstraints" }),
-        __metadata("design:type", GoogleCloudChannelV1CustomerConstraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerConstraints" }),
+        __metadata("design:type", googlecloudchannelv1customerconstraints_1.GoogleCloudChannelV1CustomerConstraints)
     ], GoogleCloudChannelV1Constraints.prototype, "customerConstraints", void 0);
     return GoogleCloudChannelV1Constraints;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Constraints };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Constraints = GoogleCloudChannelV1Constraints;

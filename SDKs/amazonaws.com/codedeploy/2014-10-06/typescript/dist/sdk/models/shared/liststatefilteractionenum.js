@@ -1,6 +1,9 @@
-export var ListStateFilterActionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListStateFilterActionEnum = void 0;
+var ListStateFilterActionEnum;
 (function (ListStateFilterActionEnum) {
     ListStateFilterActionEnum["Include"] = "include";
     ListStateFilterActionEnum["Exclude"] = "exclude";
     ListStateFilterActionEnum["Ignore"] = "ignore";
-})(ListStateFilterActionEnum || (ListStateFilterActionEnum = {}));
+})(ListStateFilterActionEnum = exports.ListStateFilterActionEnum || (exports.ListStateFilterActionEnum = {}));

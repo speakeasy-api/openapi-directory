@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualityEnum } from "./qualityenum";
-import { TimeInNanos } from "./timeinnanos";
-import { Variant } from "./variant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetPropertyValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualityenum_1 = require("./qualityenum");
+var timeinnanos_1 = require("./timeinnanos");
+var variant_1 = require("./variant");
 // AssetPropertyValue
 /**
  * Contains asset property value information.
@@ -36,17 +39,17 @@ var AssetPropertyValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], AssetPropertyValue.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
-        __metadata("design:type", TimeInNanos)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
+        __metadata("design:type", timeinnanos_1.TimeInNanos)
     ], AssetPropertyValue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Variant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", variant_1.Variant)
     ], AssetPropertyValue.prototype, "value", void 0);
     return AssetPropertyValue;
-}(SpeakeasyBase));
-export { AssetPropertyValue };
+}(utils_1.SpeakeasyBase));
+exports.AssetPropertyValue = AssetPropertyValue;

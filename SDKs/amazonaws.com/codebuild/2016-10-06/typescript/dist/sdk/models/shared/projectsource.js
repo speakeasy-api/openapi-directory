@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceAuth } from "./sourceauth";
-import { BuildStatusConfig } from "./buildstatusconfig";
-import { GitSubmodulesConfig } from "./gitsubmodulesconfig";
-import { SourceTypeEnum } from "./sourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceauth_1 = require("./sourceauth");
+var buildstatusconfig_1 = require("./buildstatusconfig");
+var gitsubmodulesconfig_1 = require("./gitsubmodulesconfig");
+var sourcetypeenum_1 = require("./sourcetypeenum");
 // ProjectSource
 /**
  * Information about the build input source code for the build project.
@@ -37,45 +40,45 @@ var ProjectSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth" }),
-        __metadata("design:type", SourceAuth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth" }),
+        __metadata("design:type", sourceauth_1.SourceAuth)
     ], ProjectSource.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildStatusConfig" }),
-        __metadata("design:type", BuildStatusConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildStatusConfig" }),
+        __metadata("design:type", buildstatusconfig_1.BuildStatusConfig)
     ], ProjectSource.prototype, "buildStatusConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildspec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildspec" }),
         __metadata("design:type", String)
     ], ProjectSource.prototype, "buildspec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitCloneDepth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitCloneDepth" }),
         __metadata("design:type", Number)
     ], ProjectSource.prototype, "gitCloneDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitSubmodulesConfig" }),
-        __metadata("design:type", GitSubmodulesConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitSubmodulesConfig" }),
+        __metadata("design:type", gitsubmodulesconfig_1.GitSubmodulesConfig)
     ], ProjectSource.prototype, "gitSubmodulesConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insecureSsl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insecureSsl" }),
         __metadata("design:type", Boolean)
     ], ProjectSource.prototype, "insecureSsl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ProjectSource.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportBuildStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportBuildStatus" }),
         __metadata("design:type", Boolean)
     ], ProjectSource.prototype, "reportBuildStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceIdentifier" }),
         __metadata("design:type", String)
     ], ProjectSource.prototype, "sourceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ProjectSource.prototype, "type", void 0);
     return ProjectSource;
-}(SpeakeasyBase));
-export { ProjectSource };
+}(utils_1.SpeakeasyBase));
+exports.ProjectSource = ProjectSource;

@@ -20,5 +20,5 @@ export declare class DcimPowerOutletsListRequest extends SpeakeasyBase {
 export declare class DcimPowerOutletsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPowerOutletsList200ApplicationJsonObject?: DcimPowerOutletsList200ApplicationJson;
+    dcimPowerOutletsList200ApplicationJSONObject?: DcimPowerOutletsList200ApplicationJson;
 }

@@ -188,23 +188,23 @@ export class BacerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bacer400ApplicationJsonObject?: Bacer400ApplicationJson;
+  bacer400ApplicationJSONObject?: Bacer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer401ApplicationJsonObject?: Bacer401ApplicationJson;
+  bacer401ApplicationJSONObject?: Bacer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer404ApplicationJsonObject?: Bacer404ApplicationJson;
+  bacer404ApplicationJSONObject?: Bacer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer500ApplicationJsonObject?: Bacer500ApplicationJson;
+  bacer500ApplicationJSONObject?: Bacer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer502ApplicationJsonObject?: Bacer502ApplicationJson;
+  bacer502ApplicationJSONObject?: Bacer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer503ApplicationJsonObject?: Bacer503ApplicationJson;
+  bacer503ApplicationJSONObject?: Bacer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  bacer504ApplicationJsonObject?: Bacer504ApplicationJson;
+  bacer504ApplicationJSONObject?: Bacer504ApplicationJson;
 }

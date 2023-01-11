@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceFeesUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ServiceFeesUpdateModel = /** @class */ (function (_super) {
     __extends(ServiceFeesUpdateModel, _super);
     function ServiceFeesUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellationFeeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellationFeeAmount" }),
         __metadata("design:type", Number)
     ], ServiceFeesUpdateModel.prototype, "cancellationFeeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellationFeeTaxable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellationFeeTaxable" }),
         __metadata("design:type", Boolean)
     ], ServiceFeesUpdateModel.prototype, "cancellationFeeTaxable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeAmount" }),
         __metadata("design:type", Number)
     ], ServiceFeesUpdateModel.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeTaxable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeTaxable" }),
         __metadata("design:type", Boolean)
     ], ServiceFeesUpdateModel.prototype, "feeTaxable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonRefundable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonRefundable" }),
         __metadata("design:type", Boolean)
     ], ServiceFeesUpdateModel.prototype, "nonRefundable", void 0);
     return ServiceFeesUpdateModel;
-}(SpeakeasyBase));
-export { ServiceFeesUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceFeesUpdateModel = ServiceFeesUpdateModel;

@@ -26,7 +26,7 @@ export class ProjectsGetV2ProjectsGetQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.ProjectsOrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -47,7 +47,7 @@ export class ProjectsGetV2ProjectsGetQueryParams extends SpeakeasyBase {
   sensorType?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceName" })
   sourceName?: string[];
@@ -71,7 +71,7 @@ export class ProjectsGetV2ProjectsGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqProjectsResult?: shared.OpenAqProjectsResult;
+  openAQProjectsResult?: shared.OpenAqProjectsResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

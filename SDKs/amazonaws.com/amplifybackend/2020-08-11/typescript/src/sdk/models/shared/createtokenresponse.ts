@@ -4,14 +4,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateTokenResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AppId" })
-  appId?: string;
+  appId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ChallengeCode" })
-  challengeCode?: string;
+  challengeCode?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=SessionId" })
-  sessionId?: string;
+  sessionId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Ttl" })
-  ttl?: string;
+  ttl?: Record<string, any>;
 }

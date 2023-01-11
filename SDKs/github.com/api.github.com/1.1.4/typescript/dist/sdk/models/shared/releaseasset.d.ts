@@ -3,6 +3,9 @@ export declare enum ReleaseAssetStateEnum {
     Uploaded = "uploaded",
     Open = "open"
 }
+/**
+ * Simple User
+**/
 export declare class ReleaseAssetSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

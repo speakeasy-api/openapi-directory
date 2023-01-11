@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryDefinition } from "./querydefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeQueryDefinitionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var querydefinition_1 = require("./querydefinition");
 var DescribeQueryDefinitionsResponse = /** @class */ (function (_super) {
     __extends(DescribeQueryDefinitionsResponse, _super);
     function DescribeQueryDefinitionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeQueryDefinitionsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryDefinitions", elemType: QueryDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryDefinitions", elemType: querydefinition_1.QueryDefinition }),
         __metadata("design:type", Array)
     ], DescribeQueryDefinitionsResponse.prototype, "queryDefinitions", void 0);
     return DescribeQueryDefinitionsResponse;
-}(SpeakeasyBase));
-export { DescribeQueryDefinitionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeQueryDefinitionsResponse = DescribeQueryDefinitionsResponse;

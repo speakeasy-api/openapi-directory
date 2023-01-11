@@ -1,5 +1,8 @@
-export var ResourceBucketAccessEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceBucketAccessEnum = void 0;
+var ResourceBucketAccessEnum;
 (function (ResourceBucketAccessEnum) {
     ResourceBucketAccessEnum["Allow"] = "allow";
     ResourceBucketAccessEnum["Deny"] = "deny";
-})(ResourceBucketAccessEnum || (ResourceBucketAccessEnum = {}));
+})(ResourceBucketAccessEnum = exports.ResourceBucketAccessEnum || (exports.ResourceBucketAccessEnum = {}));

@@ -22,5 +22,5 @@ export class SplitNetworkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  splitNetwork200ApplicationJsonObject?: Map<string, any>;
+  splitNetwork200ApplicationJSONObject?: Record<string, any>;
 }

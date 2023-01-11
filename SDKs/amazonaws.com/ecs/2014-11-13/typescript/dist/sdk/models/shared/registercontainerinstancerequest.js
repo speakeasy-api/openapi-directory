@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attribute } from "./attribute";
-import { PlatformDevice } from "./platformdevice";
-import { Tag } from "./tag";
-import { Resource } from "./resource";
-import { VersionInfo } from "./versioninfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterContainerInstanceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribute_1 = require("./attribute");
+var platformdevice_1 = require("./platformdevice");
+var tag_1 = require("./tag");
+var resource_1 = require("./resource");
+var versioninfo_1 = require("./versioninfo");
 var RegisterContainerInstanceRequest = /** @class */ (function (_super) {
     __extends(RegisterContainerInstanceRequest, _super);
     function RegisterContainerInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], RegisterContainerInstanceRequest.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], RegisterContainerInstanceRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstanceArn" }),
         __metadata("design:type", String)
     ], RegisterContainerInstanceRequest.prototype, "containerInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceIdentityDocument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceIdentityDocument" }),
         __metadata("design:type", String)
     ], RegisterContainerInstanceRequest.prototype, "instanceIdentityDocument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceIdentityDocumentSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceIdentityDocumentSignature" }),
         __metadata("design:type", String)
     ], RegisterContainerInstanceRequest.prototype, "instanceIdentityDocumentSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformDevices", elemType: PlatformDevice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformDevices", elemType: platformdevice_1.PlatformDevice }),
         __metadata("design:type", Array)
     ], RegisterContainerInstanceRequest.prototype, "platformDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], RegisterContainerInstanceRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResources", elemType: Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResources", elemType: resource_1.Resource }),
         __metadata("design:type", Array)
     ], RegisterContainerInstanceRequest.prototype, "totalResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionInfo" }),
-        __metadata("design:type", VersionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionInfo" }),
+        __metadata("design:type", versioninfo_1.VersionInfo)
     ], RegisterContainerInstanceRequest.prototype, "versionInfo", void 0);
     return RegisterContainerInstanceRequest;
-}(SpeakeasyBase));
-export { RegisterContainerInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegisterContainerInstanceRequest = RegisterContainerInstanceRequest;

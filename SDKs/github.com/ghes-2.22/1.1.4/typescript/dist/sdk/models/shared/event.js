@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Actor } from "./actor";
-import { IssueComment } from "./issuecomment";
-import { IssueSimple } from "./issuesimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = exports.EventRepo = exports.EventPayload = exports.EventPayloadPages = void 0;
+var utils_1 = require("../../../internal/utils");
+var issuecomment_1 = require("./issuecomment");
+var issuesimple_1 = require("./issuesimple");
+var actor_1 = require("./actor");
 var EventPayloadPages = /** @class */ (function (_super) {
     __extends(EventPayloadPages, _super);
     function EventPayloadPages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_name" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "pageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], EventPayloadPages.prototype, "title", void 0);
     return EventPayloadPages;
-}(SpeakeasyBase));
-export { EventPayloadPages };
+}(utils_1.SpeakeasyBase));
+exports.EventPayloadPages = EventPayloadPages;
 var EventPayload = /** @class */ (function (_super) {
     __extends(EventPayload, _super);
     function EventPayload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], EventPayload.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
-        __metadata("design:type", IssueComment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
+        __metadata("design:type", issuecomment_1.IssueComment)
     ], EventPayload.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issue" }),
-        __metadata("design:type", IssueSimple)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issue" }),
+        __metadata("design:type", issuesimple_1.IssueSimple)
     ], EventPayload.prototype, "issue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pages", elemType: EventPayloadPages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages", elemType: EventPayloadPages }),
         __metadata("design:type", Array)
     ], EventPayload.prototype, "pages", void 0);
     return EventPayload;
-}(SpeakeasyBase));
-export { EventPayload };
+}(utils_1.SpeakeasyBase));
+exports.EventPayload = EventPayload;
 var EventRepo = /** @class */ (function (_super) {
     __extends(EventRepo, _super);
     function EventRepo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], EventRepo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EventRepo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], EventRepo.prototype, "url", void 0);
     return EventRepo;
-}(SpeakeasyBase));
-export { EventRepo };
+}(utils_1.SpeakeasyBase));
+exports.EventRepo = EventRepo;
 // Event
 /**
  * Event
@@ -112,37 +115,37 @@ var Event = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actor" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actor" }),
+        __metadata("design:type", actor_1.Actor)
     ], Event.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Event.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Event.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org" }),
+        __metadata("design:type", actor_1.Actor)
     ], Event.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", EventPayload)
     ], Event.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], Event.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repo" }),
         __metadata("design:type", EventRepo)
     ], Event.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Event.prototype, "type", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

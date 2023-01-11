@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DumpFlag } from "./dumpflag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DumpFlags = void 0;
+var utils_1 = require("../../../internal/utils");
+var dumpflag_1 = require("./dumpflag");
 // DumpFlags
 /**
  * Dump flags definition.
@@ -34,9 +37,9 @@ var DumpFlags = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dumpFlags", elemType: DumpFlag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dumpFlags", elemType: dumpflag_1.DumpFlag }),
         __metadata("design:type", Array)
     ], DumpFlags.prototype, "dumpFlags", void 0);
     return DumpFlags;
-}(SpeakeasyBase));
-export { DumpFlags };
+}(utils_1.SpeakeasyBase));
+exports.DumpFlags = DumpFlags;

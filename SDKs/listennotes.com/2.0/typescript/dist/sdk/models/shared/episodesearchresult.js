@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EpisodeSearchResultPodcast } from "./episodesearchresultpodcast";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeSearchResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var episodesearchresultpodcast_1 = require("./episodesearchresultpodcast");
 // EpisodeSearchResult
 /**
  * When **type** is *episode*.
@@ -34,73 +37,73 @@ var EpisodeSearchResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "audio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_length_sec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_length_sec" }),
         __metadata("design:type", Number)
     ], EpisodeSearchResult.prototype, "audioLengthSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_highlighted" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "descriptionHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_original" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "descriptionOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit_content" }),
         __metadata("design:type", Boolean)
     ], EpisodeSearchResult.prototype, "explicitContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itunes_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itunes_id" }),
         __metadata("design:type", Number)
     ], EpisodeSearchResult.prototype, "itunesId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcast" }),
-        __metadata("design:type", EpisodeSearchResultPodcast)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcast" }),
+        __metadata("design:type", episodesearchresultpodcast_1.EpisodeSearchResultPodcast)
     ], EpisodeSearchResult.prototype, "podcast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pub_date_ms" }),
         __metadata("design:type", Number)
     ], EpisodeSearchResult.prototype, "pubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rss" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rss" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "rss", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_highlighted" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "titleHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_original" }),
         __metadata("design:type", String)
     ], EpisodeSearchResult.prototype, "titleOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transcripts_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transcripts_highlighted" }),
         __metadata("design:type", Array)
     ], EpisodeSearchResult.prototype, "transcriptsHighlighted", void 0);
     return EpisodeSearchResult;
-}(SpeakeasyBase));
-export { EpisodeSearchResult };
+}(utils_1.SpeakeasyBase));
+exports.EpisodeSearchResult = EpisodeSearchResult;

@@ -27,5 +27,5 @@ export declare class UpdateConnectionAliasPermissionResponse extends SpeakeasyBa
     resourceLimitExceededException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateConnectionAliasPermissionResult?: Map<string, any>;
+    updateConnectionAliasPermissionResult?: Record<string, any>;
 }

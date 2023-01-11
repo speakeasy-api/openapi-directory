@@ -37,5 +37,5 @@ export class PushLoginRequestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pushLoginRequest200ApplicationJsonObject?: PushLoginRequest200ApplicationJson;
+  pushLoginRequest200ApplicationJSONObject?: PushLoginRequest200ApplicationJson;
 }

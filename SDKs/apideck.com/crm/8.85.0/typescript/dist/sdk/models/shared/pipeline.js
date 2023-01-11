@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,129 +23,147 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-var PipelineStagesInput = /** @class */ (function (_super) {
-    __extends(PipelineStagesInput, _super);
-    function PipelineStagesInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_order" }),
-        __metadata("design:type", Number)
-    ], PipelineStagesInput.prototype, "displayOrder", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], PipelineStagesInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", String)
-    ], PipelineStagesInput.prototype, "value", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=win_probability" }),
-        __metadata("design:type", Number)
-    ], PipelineStagesInput.prototype, "winProbability", void 0);
-    return PipelineStagesInput;
-}(SpeakeasyBase));
-export { PipelineStagesInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineInput = exports.Pipeline = exports.PipelineStagesInput = exports.PipelineStages = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
 var PipelineStages = /** @class */ (function (_super) {
     __extends(PipelineStages, _super);
     function PipelineStages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_order" }),
         __metadata("design:type", Number)
     ], PipelineStages.prototype, "displayOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PipelineStages.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PipelineStages.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PipelineStages.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=win_probability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability" }),
         __metadata("design:type", Number)
     ], PipelineStages.prototype, "winProbability", void 0);
     return PipelineStages;
-}(SpeakeasyBase));
-export { PipelineStages };
-var PipelineInput = /** @class */ (function (_super) {
-    __extends(PipelineInput, _super);
-    function PipelineInput() {
+}(utils_1.SpeakeasyBase));
+exports.PipelineStages = PipelineStages;
+var PipelineStagesInput = /** @class */ (function (_super) {
+    __extends(PipelineStagesInput, _super);
+    function PipelineStagesInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
-        __metadata("design:type", Boolean)
-    ], PipelineInput.prototype, "archived", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", String)
-    ], PipelineInput.prototype, "currency", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_order" }),
         __metadata("design:type", Number)
-    ], PipelineInput.prototype, "displayOrder", void 0);
+    ], PipelineStagesInput.prototype, "displayOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
-    ], PipelineInput.prototype, "id", void 0);
+    ], PipelineStagesInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
-    ], PipelineInput.prototype, "name", void 0);
+    ], PipelineStagesInput.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stages", elemType: PipelineStagesInput }),
-        __metadata("design:type", Array)
-    ], PipelineInput.prototype, "stages", void 0);
-    return PipelineInput;
-}(SpeakeasyBase));
-export { PipelineInput };
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability" }),
+        __metadata("design:type", Number)
+    ], PipelineStagesInput.prototype, "winProbability", void 0);
+    return PipelineStagesInput;
+}(utils_1.SpeakeasyBase));
+exports.PipelineStagesInput = PipelineStagesInput;
 var Pipeline = /** @class */ (function (_super) {
     __extends(Pipeline, _super);
     function Pipeline() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
+        __metadata("design:type", Boolean)
+    ], Pipeline.prototype, "active", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
         __metadata("design:type", Boolean)
     ], Pipeline.prototype, "archived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Pipeline.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], Pipeline.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_order" }),
         __metadata("design:type", Number)
     ], Pipeline.prototype, "displayOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Pipeline.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Pipeline.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stages", elemType: PipelineStages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stages", elemType: PipelineStages }),
         __metadata("design:type", Array)
     ], Pipeline.prototype, "stages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Pipeline.prototype, "updatedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability_enabled" }),
+        __metadata("design:type", Boolean)
+    ], Pipeline.prototype, "winProbabilityEnabled", void 0);
     return Pipeline;
-}(SpeakeasyBase));
-export { Pipeline };
+}(utils_1.SpeakeasyBase));
+exports.Pipeline = Pipeline;
+var PipelineInput = /** @class */ (function (_super) {
+    __extends(PipelineInput, _super);
+    function PipelineInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
+        __metadata("design:type", Boolean)
+    ], PipelineInput.prototype, "active", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
+        __metadata("design:type", Boolean)
+    ], PipelineInput.prototype, "archived", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], PipelineInput.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_order" }),
+        __metadata("design:type", Number)
+    ], PipelineInput.prototype, "displayOrder", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], PipelineInput.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], PipelineInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stages", elemType: PipelineStagesInput }),
+        __metadata("design:type", Array)
+    ], PipelineInput.prototype, "stages", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability_enabled" }),
+        __metadata("design:type", Boolean)
+    ], PipelineInput.prototype, "winProbabilityEnabled", void 0);
+    return PipelineInput;
+}(utils_1.SpeakeasyBase));
+exports.PipelineInput = PipelineInput;

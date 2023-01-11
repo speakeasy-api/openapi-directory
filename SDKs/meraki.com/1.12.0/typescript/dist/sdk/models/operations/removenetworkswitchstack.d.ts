@@ -13,5 +13,5 @@ export declare class RemoveNetworkSwitchStackRequest extends SpeakeasyBase {
 export declare class RemoveNetworkSwitchStackResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    removeNetworkSwitchStack200ApplicationJsonObject?: Map<string, any>;
+    removeNetworkSwitchStack200ApplicationJSONObject?: Record<string, any>;
 }

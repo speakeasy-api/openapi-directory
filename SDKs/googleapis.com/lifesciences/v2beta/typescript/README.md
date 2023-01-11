@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LifesciencesProjectsLocationsListRequest, LifesciencesProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: LifesciencesProjectsLocationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "beatae",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "omnis",
-    alt: "json",
-    callback: "nemo",
-    fields: "delectus",
-    filter: "et",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
     key: "voluptas",
-    oauthToken: "minima",
-    pageSize: 1231700228551566940,
-    pageToken: "eum",
-    prettyPrint: false,
-    quotaUser: "corrupti",
-    uploadType: "aut",
-    uploadProtocol: "libero",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

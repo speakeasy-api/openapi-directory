@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsBillingUsage = exports.ActionsBillingUsageMinutesUsedBreakdown = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsBillingUsageMinutesUsedBreakdown = /** @class */ (function (_super) {
     __extends(ActionsBillingUsageMinutesUsedBreakdown, _super);
     function ActionsBillingUsageMinutesUsedBreakdown() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MACOS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MACOS" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsageMinutesUsedBreakdown.prototype, "macos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UBUNTU" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UBUNTU" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsageMinutesUsedBreakdown.prototype, "ubuntu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WINDOWS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WINDOWS" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsageMinutesUsedBreakdown.prototype, "windows", void 0);
     return ActionsBillingUsageMinutesUsedBreakdown;
-}(SpeakeasyBase));
-export { ActionsBillingUsageMinutesUsedBreakdown };
+}(utils_1.SpeakeasyBase));
+exports.ActionsBillingUsageMinutesUsedBreakdown = ActionsBillingUsageMinutesUsedBreakdown;
 var ActionsBillingUsage = /** @class */ (function (_super) {
     __extends(ActionsBillingUsage, _super);
     function ActionsBillingUsage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=included_minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=included_minutes" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsage.prototype, "includedMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minutes_used_breakdown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minutes_used_breakdown" }),
         __metadata("design:type", ActionsBillingUsageMinutesUsedBreakdown)
     ], ActionsBillingUsage.prototype, "minutesUsedBreakdown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_minutes_used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_minutes_used" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsage.prototype, "totalMinutesUsed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_paid_minutes_used" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_paid_minutes_used" }),
         __metadata("design:type", Number)
     ], ActionsBillingUsage.prototype, "totalPaidMinutesUsed", void 0);
     return ActionsBillingUsage;
-}(SpeakeasyBase));
-export { ActionsBillingUsage };
+}(utils_1.SpeakeasyBase));
+exports.ActionsBillingUsage = ActionsBillingUsage;

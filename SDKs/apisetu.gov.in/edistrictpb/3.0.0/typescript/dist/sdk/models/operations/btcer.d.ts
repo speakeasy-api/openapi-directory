@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class BtcerRequestBodyCertificateParameters extends SpeakeasyBase {
     dob: string;
-    registrationId: string;
+    registrationID: string;
 }
 export declare enum BtcerRequestBodyFormatEnum {
     Pdf = "pdf"
@@ -106,11 +106,11 @@ export declare class BtcerRequest extends SpeakeasyBase {
 export declare class BtcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    btcer400ApplicationJsonObject?: Btcer400ApplicationJson;
-    btcer401ApplicationJsonObject?: Btcer401ApplicationJson;
-    btcer404ApplicationJsonObject?: Btcer404ApplicationJson;
-    btcer500ApplicationJsonObject?: Btcer500ApplicationJson;
-    btcer502ApplicationJsonObject?: Btcer502ApplicationJson;
-    btcer503ApplicationJsonObject?: Btcer503ApplicationJson;
-    btcer504ApplicationJsonObject?: Btcer504ApplicationJson;
+    btcer400ApplicationJSONObject?: Btcer400ApplicationJson;
+    btcer401ApplicationJSONObject?: Btcer401ApplicationJson;
+    btcer404ApplicationJSONObject?: Btcer404ApplicationJson;
+    btcer500ApplicationJSONObject?: Btcer500ApplicationJson;
+    btcer502ApplicationJSONObject?: Btcer502ApplicationJson;
+    btcer503ApplicationJSONObject?: Btcer503ApplicationJson;
+    btcer504ApplicationJSONObject?: Btcer504ApplicationJson;
 }

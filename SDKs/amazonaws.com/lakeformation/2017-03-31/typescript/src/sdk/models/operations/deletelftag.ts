@@ -51,7 +51,7 @@ export class DeleteLfTagResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLfTagResponse?: Map<string, any>;
+  deleteLFTagResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

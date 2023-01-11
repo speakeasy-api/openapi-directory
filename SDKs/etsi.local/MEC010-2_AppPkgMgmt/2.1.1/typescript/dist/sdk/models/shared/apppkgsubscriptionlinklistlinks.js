@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkType } from "./linktype";
-import { SubscriptionsAppPkgSubscription } from "./subscriptionsapppkgsubscription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgSubscriptionLinkListLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var linktype_1 = require("./linktype");
+var subscriptionsapppkgsubscription_1 = require("./subscriptionsapppkgsubscription");
 // AppPkgSubscriptionLinkListLinks
 /**
  * Links to resources related to this resource.
@@ -35,13 +38,13 @@ var AppPkgSubscriptionLinkListLinks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", LinkType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", linktype_1.LinkType)
     ], AppPkgSubscriptionLinkListLinks.prototype, "self", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions", elemType: SubscriptionsAppPkgSubscription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions", elemType: subscriptionsapppkgsubscription_1.SubscriptionsAppPkgSubscription }),
         __metadata("design:type", Array)
     ], AppPkgSubscriptionLinkListLinks.prototype, "subscriptions", void 0);
     return AppPkgSubscriptionLinkListLinks;
-}(SpeakeasyBase));
-export { AppPkgSubscriptionLinkListLinks };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgSubscriptionLinkListLinks = AppPkgSubscriptionLinkListLinks;

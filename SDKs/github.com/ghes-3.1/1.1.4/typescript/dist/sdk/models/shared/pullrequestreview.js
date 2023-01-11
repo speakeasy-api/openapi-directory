@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,138 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorAssociationEnum } from "./authorassociationenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestReview = exports.PullRequestReviewSimpleUser = exports.PullRequestReviewLinks = exports.PullRequestReviewLinksPullRequest = exports.PullRequestReviewLinksHtml = void 0;
+var utils_1 = require("../../../internal/utils");
+var authorassociationenum_1 = require("./authorassociationenum");
 var PullRequestReviewLinksHtml = /** @class */ (function (_super) {
     __extends(PullRequestReviewLinksHtml, _super);
     function PullRequestReviewLinksHtml() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PullRequestReviewLinksHtml.prototype, "href", void 0);
     return PullRequestReviewLinksHtml;
-}(SpeakeasyBase));
-export { PullRequestReviewLinksHtml };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReviewLinksHtml = PullRequestReviewLinksHtml;
 var PullRequestReviewLinksPullRequest = /** @class */ (function (_super) {
     __extends(PullRequestReviewLinksPullRequest, _super);
     function PullRequestReviewLinksPullRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PullRequestReviewLinksPullRequest.prototype, "href", void 0);
     return PullRequestReviewLinksPullRequest;
-}(SpeakeasyBase));
-export { PullRequestReviewLinksPullRequest };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReviewLinksPullRequest = PullRequestReviewLinksPullRequest;
 var PullRequestReviewLinks = /** @class */ (function (_super) {
     __extends(PullRequestReviewLinks, _super);
     function PullRequestReviewLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", PullRequestReviewLinksHtml)
     ], PullRequestReviewLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pull_request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pull_request" }),
         __metadata("design:type", PullRequestReviewLinksPullRequest)
     ], PullRequestReviewLinks.prototype, "pullRequest", void 0);
     return PullRequestReviewLinks;
-}(SpeakeasyBase));
-export { PullRequestReviewLinks };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReviewLinks = PullRequestReviewLinks;
+// PullRequestReviewSimpleUser
+/**
+ * Simple User
+**/
 var PullRequestReviewSimpleUser = /** @class */ (function (_super) {
     __extends(PullRequestReviewSimpleUser, _super);
     function PullRequestReviewSimpleUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PullRequestReviewSimpleUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "organizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=received_events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_events_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "receivedEventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], PullRequestReviewSimpleUser.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_at" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "starredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions_url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "subscriptionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PullRequestReviewSimpleUser.prototype, "url", void 0);
     return PullRequestReviewSimpleUser;
-}(SpeakeasyBase));
-export { PullRequestReviewSimpleUser };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReviewSimpleUser = PullRequestReviewSimpleUser;
 // PullRequestReview
 /**
  * Pull Request Reviews are reviews on pull requests.
@@ -158,57 +165,57 @@ var PullRequestReview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", PullRequestReviewLinks)
     ], PullRequestReview.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_association" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_association" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "authorAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_html" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "bodyHtml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_text" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "bodyText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_id" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "commitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PullRequestReview.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pull_request_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pull_request_url" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "pullRequestUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PullRequestReview.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submitted_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submitted_at" }),
         __metadata("design:type", Date)
     ], PullRequestReview.prototype, "submittedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", PullRequestReviewSimpleUser)
     ], PullRequestReview.prototype, "user", void 0);
     return PullRequestReview;
-}(SpeakeasyBase));
-export { PullRequestReview };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReview = PullRequestReview;

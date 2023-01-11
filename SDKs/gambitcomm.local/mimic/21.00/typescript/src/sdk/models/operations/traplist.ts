@@ -22,5 +22,5 @@ export class TrapListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  trapList200ApplicationJsonStrings?: string[];
+  trapList200ApplicationJSONStrings?: string[];
 }

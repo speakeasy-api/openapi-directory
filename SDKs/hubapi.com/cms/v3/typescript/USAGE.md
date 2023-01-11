@@ -1,0 +1,37 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { GetCmsV3DomainsGetPageRequest, GetCmsV3DomainsGetPageResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+
+const sdk = new SDK();
+    
+const req: GetCmsV3DomainsGetPageRequest = {
+  security: {
+    privateAppsLegacy: {
+      apiKey: "YOUR_API_KEY_HERE",
+    },
+  },
+  queryParams: {
+    after: "sit",
+    archived: false,
+    createdAfter: "1978-05-13T03:50:47Z",
+    createdAt: "2019-04-21T07:38:14Z",
+    createdBefore: "1997-12-26T13:41:25Z",
+    limit: 2669985732393126063,
+    sort: [
+      "voluptas",
+      "fugit",
+    ],
+    updatedAfter: "2011-08-12T10:11:12Z",
+    updatedAt: "2003-05-13T04:57:12Z",
+    updatedBefore: "2004-06-02T10:14:12Z",
+  },
+};
+
+sdk.domains.getCmsV3DomainsGetPage(req).then((res: GetCmsV3DomainsGetPageResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

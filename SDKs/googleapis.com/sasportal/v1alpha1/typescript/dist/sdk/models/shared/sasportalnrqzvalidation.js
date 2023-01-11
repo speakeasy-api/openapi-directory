@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SasPortalNrqzValidationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalNrqzValidation = exports.SasPortalNrqzValidationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SasPortalNrqzValidationStateEnum;
 (function (SasPortalNrqzValidationStateEnum) {
     SasPortalNrqzValidationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     SasPortalNrqzValidationStateEnum["Draft"] = "DRAFT";
     SasPortalNrqzValidationStateEnum["Final"] = "FINAL";
-})(SasPortalNrqzValidationStateEnum || (SasPortalNrqzValidationStateEnum = {}));
+})(SasPortalNrqzValidationStateEnum = exports.SasPortalNrqzValidationStateEnum || (exports.SasPortalNrqzValidationStateEnum = {}));
 // SasPortalNrqzValidation
 /**
  * Information about National Radio Quiet Zone validation.
@@ -39,25 +42,25 @@ var SasPortalNrqzValidation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseId" }),
         __metadata("design:type", String)
     ], SasPortalNrqzValidation.prototype, "caseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpiId" }),
         __metadata("design:type", String)
     ], SasPortalNrqzValidation.prototype, "cpiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], SasPortalNrqzValidation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], SasPortalNrqzValidation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SasPortalNrqzValidation.prototype, "state", void 0);
     return SasPortalNrqzValidation;
-}(SpeakeasyBase));
-export { SasPortalNrqzValidation };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalNrqzValidation = SasPortalNrqzValidation;

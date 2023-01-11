@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EcommerceDeliveryServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EcommerceDeliveryResponse = exports.EcommerceDeliveryRequest = exports.EcommerceDeliveryRequestBody = exports.EcommerceDeliveryHeaders = exports.EcommerceDeliveryServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.EcommerceDeliveryServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var EcommerceDeliveryHeaders = /** @class */ (function (_super) {
@@ -32,93 +35,93 @@ var EcommerceDeliveryHeaders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Content-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Content-Type" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryHeaders.prototype, "contentType", void 0);
     return EcommerceDeliveryHeaders;
-}(SpeakeasyBase));
-export { EcommerceDeliveryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EcommerceDeliveryHeaders = EcommerceDeliveryHeaders;
 var EcommerceDeliveryRequestBody = /** @class */ (function (_super) {
     __extends(EcommerceDeliveryRequestBody, _super);
     function EcommerceDeliveryRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryRequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryRequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=destination_airport_code;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=destination_airport_code;" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryRequestBody.prototype, "destinationAirportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=destination_latitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=destination_latitude;" }),
         __metadata("design:type", Number)
     ], EcommerceDeliveryRequestBody.prototype, "destinationLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=destination_longitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=destination_longitude;" }),
         __metadata("design:type", Number)
     ], EcommerceDeliveryRequestBody.prototype, "destinationLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=origin_airport_code;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=origin_airport_code;" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryRequestBody.prototype, "originAirportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=origin_latitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=origin_latitude;" }),
         __metadata("design:type", Number)
     ], EcommerceDeliveryRequestBody.prototype, "originLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=origin_longitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=origin_longitude;" }),
         __metadata("design:type", Number)
     ], EcommerceDeliveryRequestBody.prototype, "originLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=volumetric_weight;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=volumetric_weight;" }),
         __metadata("design:type", Number)
     ], EcommerceDeliveryRequestBody.prototype, "volumetricWeight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=waybill_type;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=waybill_type;" }),
         __metadata("design:type", String)
     ], EcommerceDeliveryRequestBody.prototype, "waybillType", void 0);
     return EcommerceDeliveryRequestBody;
-}(SpeakeasyBase));
-export { EcommerceDeliveryRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EcommerceDeliveryRequestBody = EcommerceDeliveryRequestBody;
 var EcommerceDeliveryRequest = /** @class */ (function (_super) {
     __extends(EcommerceDeliveryRequest, _super);
     function EcommerceDeliveryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], EcommerceDeliveryRequest.prototype, "serverUrl", void 0);
+    ], EcommerceDeliveryRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EcommerceDeliveryHeaders)
     ], EcommerceDeliveryRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", EcommerceDeliveryRequestBody)
     ], EcommerceDeliveryRequest.prototype, "request", void 0);
     return EcommerceDeliveryRequest;
-}(SpeakeasyBase));
-export { EcommerceDeliveryRequest };
+}(utils_1.SpeakeasyBase));
+exports.EcommerceDeliveryRequest = EcommerceDeliveryRequest;
 var EcommerceDeliveryResponse = /** @class */ (function (_super) {
     __extends(EcommerceDeliveryResponse, _super);
     function EcommerceDeliveryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EcommerceDeliveryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EcommerceDeliveryResponse.prototype, "statusCode", void 0);
     return EcommerceDeliveryResponse;
-}(SpeakeasyBase));
-export { EcommerceDeliveryResponse };
+}(utils_1.SpeakeasyBase));
+exports.EcommerceDeliveryResponse = EcommerceDeliveryResponse;

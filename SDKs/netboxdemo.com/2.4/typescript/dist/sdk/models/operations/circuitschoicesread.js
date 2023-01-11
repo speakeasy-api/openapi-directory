@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CircuitsChoicesReadResponse = exports.CircuitsChoicesReadRequest = exports.CircuitsChoicesReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CircuitsChoicesReadPathParams = /** @class */ (function (_super) {
     __extends(CircuitsChoicesReadPathParams, _super);
     function CircuitsChoicesReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], CircuitsChoicesReadPathParams.prototype, "id", void 0);
     return CircuitsChoicesReadPathParams;
-}(SpeakeasyBase));
-export { CircuitsChoicesReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsChoicesReadPathParams = CircuitsChoicesReadPathParams;
 var CircuitsChoicesReadRequest = /** @class */ (function (_super) {
     __extends(CircuitsChoicesReadRequest, _super);
     function CircuitsChoicesReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CircuitsChoicesReadPathParams)
     ], CircuitsChoicesReadRequest.prototype, "pathParams", void 0);
     return CircuitsChoicesReadRequest;
-}(SpeakeasyBase));
-export { CircuitsChoicesReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsChoicesReadRequest = CircuitsChoicesReadRequest;
 var CircuitsChoicesReadResponse = /** @class */ (function (_super) {
     __extends(CircuitsChoicesReadResponse, _super);
     function CircuitsChoicesReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CircuitsChoicesReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CircuitsChoicesReadResponse.prototype, "statusCode", void 0);
     return CircuitsChoicesReadResponse;
-}(SpeakeasyBase));
-export { CircuitsChoicesReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsChoicesReadResponse = CircuitsChoicesReadResponse;

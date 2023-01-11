@@ -16,6 +16,6 @@ export declare class GetTeamTeamnameRequest extends SpeakeasyBase {
 }
 export declare class GetTeamTeamnameResponse extends SpeakeasyBase {
     contentType: string;
-    getTeamTeamname200ApplicationJsonObject?: GetTeamTeamname200ApplicationJson;
     statusCode: number;
+    getTeamTeamname200ApplicationJSONObject?: GetTeamTeamname200ApplicationJson;
 }

@@ -8,7 +8,7 @@ export declare class VoiceOfMerchantState extends SpeakeasyBase {
     complyWithGuidelines?: ComplyWithGuidelines;
     hasBusinessAuthority?: boolean;
     hasVoiceOfMerchant?: boolean;
-    resolveOwnershipConflict?: Map<string, any>;
+    resolveOwnershipConflict?: Record<string, any>;
     verify?: Verify;
-    waitForVoiceOfMerchant?: Map<string, any>;
+    waitForVoiceOfMerchant?: Record<string, any>;
 }

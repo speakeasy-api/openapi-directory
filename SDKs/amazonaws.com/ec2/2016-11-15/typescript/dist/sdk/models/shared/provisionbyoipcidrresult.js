@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ByoipCidr } from "./byoipcidr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisionByoipCidrResult = exports.ProvisionByoipCidrResultByoipCidr = void 0;
+var utils_1 = require("../../../internal/utils");
+// ProvisionByoipCidrResultByoipCidr
+/**
+ * Information about the address range.
+**/
+var ProvisionByoipCidrResultByoipCidr = /** @class */ (function (_super) {
+    __extends(ProvisionByoipCidrResultByoipCidr, _super);
+    function ProvisionByoipCidrResultByoipCidr() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProvisionByoipCidrResultByoipCidr.prototype, "cidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProvisionByoipCidrResultByoipCidr.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProvisionByoipCidrResultByoipCidr.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProvisionByoipCidrResultByoipCidr.prototype, "statusMessage", void 0);
+    return ProvisionByoipCidrResultByoipCidr;
+}(utils_1.SpeakeasyBase));
+exports.ProvisionByoipCidrResultByoipCidr = ProvisionByoipCidrResultByoipCidr;
 var ProvisionByoipCidrResult = /** @class */ (function (_super) {
     __extends(ProvisionByoipCidrResult, _super);
     function ProvisionByoipCidrResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ByoipCidr)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ProvisionByoipCidrResultByoipCidr)
     ], ProvisionByoipCidrResult.prototype, "byoipCidr", void 0);
     return ProvisionByoipCidrResult;
-}(SpeakeasyBase));
-export { ProvisionByoipCidrResult };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionByoipCidrResult = ProvisionByoipCidrResult;

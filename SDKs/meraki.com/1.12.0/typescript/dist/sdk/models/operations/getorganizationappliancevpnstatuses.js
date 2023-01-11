@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceVpnStatusesResponse = exports.GetOrganizationApplianceVpnStatusesRequest = exports.GetOrganizationApplianceVpnStatusesQueryParams = exports.GetOrganizationApplianceVpnStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceVpnStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnStatusesPathParams, _super);
     function GetOrganizationApplianceVpnStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnStatusesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceVpnStatusesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnStatusesPathParams = GetOrganizationApplianceVpnStatusesPathParams;
 var GetOrganizationApplianceVpnStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnStatusesQueryParams, _super);
     function GetOrganizationApplianceVpnStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnStatusesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=networkIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=networkIds" }),
         __metadata("design:type", Array)
     ], GetOrganizationApplianceVpnStatusesQueryParams.prototype, "networkIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceVpnStatusesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnStatusesQueryParams.prototype, "startingAfter", void 0);
     return GetOrganizationApplianceVpnStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnStatusesQueryParams = GetOrganizationApplianceVpnStatusesQueryParams;
 var GetOrganizationApplianceVpnStatusesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnStatusesRequest, _super);
     function GetOrganizationApplianceVpnStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceVpnStatusesPathParams)
     ], GetOrganizationApplianceVpnStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceVpnStatusesQueryParams)
     ], GetOrganizationApplianceVpnStatusesRequest.prototype, "queryParams", void 0);
     return GetOrganizationApplianceVpnStatusesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnStatusesRequest = GetOrganizationApplianceVpnStatusesRequest;
 var GetOrganizationApplianceVpnStatusesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnStatusesResponse, _super);
     function GetOrganizationApplianceVpnStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationApplianceVpnStatusesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceVpnStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceVpnStatusesResponse.prototype, "getOrganizationApplianceVpnStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceVpnStatusesResponse.prototype, "getOrganizationApplianceVpnStatuses200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceVpnStatusesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnStatusesResponse = GetOrganizationApplianceVpnStatusesResponse;

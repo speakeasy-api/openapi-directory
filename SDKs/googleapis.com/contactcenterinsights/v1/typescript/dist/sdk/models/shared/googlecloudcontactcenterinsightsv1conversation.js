@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1ConversationCallMetadata } from "./googlecloudcontactcenterinsightsv1conversationcallmetadata";
-import { GoogleCloudContactcenterinsightsV1ConversationDataSource } from "./googlecloudcontactcenterinsightsv1conversationdatasource";
-import { GoogleCloudContactcenterinsightsV1DialogflowIntent } from "./googlecloudcontactcenterinsightsv1dialogflowintent";
-import { GoogleCloudContactcenterinsightsV1Analysis } from "./googlecloudcontactcenterinsightsv1analysis";
-import { GoogleCloudContactcenterinsightsV1RuntimeAnnotation } from "./googlecloudcontactcenterinsightsv1runtimeannotation";
-import { GoogleCloudContactcenterinsightsV1ConversationTranscript } from "./googlecloudcontactcenterinsightsv1conversationtranscript";
-import { GoogleCloudContactcenterinsightsV1ConversationDataSourceInput } from "./googlecloudcontactcenterinsightsv1conversationdatasource";
-import { GoogleCloudContactcenterinsightsV1AnalysisInput } from "./googlecloudcontactcenterinsightsv1analysis";
-export var GoogleCloudContactcenterinsightsV1ConversationMediumEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ConversationInput = exports.GoogleCloudContactcenterinsightsV1Conversation = exports.GoogleCloudContactcenterinsightsV1ConversationMediumEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1conversationcallmetadata_1 = require("./googlecloudcontactcenterinsightsv1conversationcallmetadata");
+var googlecloudcontactcenterinsightsv1conversationdatasource_1 = require("./googlecloudcontactcenterinsightsv1conversationdatasource");
+var googlecloudcontactcenterinsightsv1dialogflowintent_1 = require("./googlecloudcontactcenterinsightsv1dialogflowintent");
+var googlecloudcontactcenterinsightsv1analysis_1 = require("./googlecloudcontactcenterinsightsv1analysis");
+var googlecloudcontactcenterinsightsv1runtimeannotation_1 = require("./googlecloudcontactcenterinsightsv1runtimeannotation");
+var googlecloudcontactcenterinsightsv1conversationtranscript_1 = require("./googlecloudcontactcenterinsightsv1conversationtranscript");
+var googlecloudcontactcenterinsightsv1conversationdatasource_2 = require("./googlecloudcontactcenterinsightsv1conversationdatasource");
+var googlecloudcontactcenterinsightsv1analysis_2 = require("./googlecloudcontactcenterinsightsv1analysis");
+var GoogleCloudContactcenterinsightsV1ConversationMediumEnum;
 (function (GoogleCloudContactcenterinsightsV1ConversationMediumEnum) {
     GoogleCloudContactcenterinsightsV1ConversationMediumEnum["MediumUnspecified"] = "MEDIUM_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1ConversationMediumEnum["PhoneCall"] = "PHONE_CALL";
     GoogleCloudContactcenterinsightsV1ConversationMediumEnum["Chat"] = "CHAT";
-})(GoogleCloudContactcenterinsightsV1ConversationMediumEnum || (GoogleCloudContactcenterinsightsV1ConversationMediumEnum = {}));
+})(GoogleCloudContactcenterinsightsV1ConversationMediumEnum = exports.GoogleCloudContactcenterinsightsV1ConversationMediumEnum || (exports.GoogleCloudContactcenterinsightsV1ConversationMediumEnum = {}));
 // GoogleCloudContactcenterinsightsV1Conversation
 /**
  * The conversation resource.
@@ -47,84 +50,84 @@ var GoogleCloudContactcenterinsightsV1Conversation = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callMetadata" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationCallMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callMetadata" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationcallmetadata_1.GoogleCloudContactcenterinsightsV1ConversationCallMetadata)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "callMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationDataSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationdatasource_1.GoogleCloudContactcenterinsightsV1ConversationDataSource)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowIntents", elemType: GoogleCloudContactcenterinsightsV1DialogflowIntent }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowIntents", elemType: googlecloudcontactcenterinsightsv1dialogflowintent_1.GoogleCloudContactcenterinsightsV1DialogflowIntent }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "dialogflowIntents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAnalysis" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1Analysis)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAnalysis" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1analysis_1.GoogleCloudContactcenterinsightsV1Analysis)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "latestAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "medium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=obfuscatedUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=obfuscatedUserId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "obfuscatedUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runtimeAnnotations", elemType: GoogleCloudContactcenterinsightsV1RuntimeAnnotation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runtimeAnnotations", elemType: googlecloudcontactcenterinsightsv1runtimeannotation_1.GoogleCloudContactcenterinsightsV1RuntimeAnnotation }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "runtimeAnnotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transcript" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationTranscript)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transcript" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationtranscript_1.GoogleCloudContactcenterinsightsV1ConversationTranscript)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "transcript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "ttl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=turnCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=turnCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "turnCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Conversation.prototype, "updateTime", void 0);
     return GoogleCloudContactcenterinsightsV1Conversation;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1Conversation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1Conversation = GoogleCloudContactcenterinsightsV1Conversation;
 // GoogleCloudContactcenterinsightsV1ConversationInput
 /**
  * The conversation resource.
@@ -135,57 +138,57 @@ var GoogleCloudContactcenterinsightsV1ConversationInput = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callMetadata" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationCallMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callMetadata" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationcallmetadata_1.GoogleCloudContactcenterinsightsV1ConversationCallMetadata)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "callMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationDataSourceInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationdatasource_2.GoogleCloudContactcenterinsightsV1ConversationDataSourceInput)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAnalysis" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnalysisInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAnalysis" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1analysis_2.GoogleCloudContactcenterinsightsV1AnalysisInput)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "latestAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "medium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=obfuscatedUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=obfuscatedUserId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "obfuscatedUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transcript" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationTranscript)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transcript" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationtranscript_1.GoogleCloudContactcenterinsightsV1ConversationTranscript)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "transcript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationInput.prototype, "ttl", void 0);
     return GoogleCloudContactcenterinsightsV1ConversationInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationInput = GoogleCloudContactcenterinsightsV1ConversationInput;

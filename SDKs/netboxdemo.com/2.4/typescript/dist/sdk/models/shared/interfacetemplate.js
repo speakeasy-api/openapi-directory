@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDeviceType } from "./nesteddevicetype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InterfaceTemplate = exports.InterfaceTemplateFormFactor = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevicetype_1 = require("./nesteddevicetype");
 var InterfaceTemplateFormFactor = /** @class */ (function (_super) {
     __extends(InterfaceTemplateFormFactor, _super);
     function InterfaceTemplateFormFactor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], InterfaceTemplateFormFactor.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], InterfaceTemplateFormFactor.prototype, "value", void 0);
     return InterfaceTemplateFormFactor;
-}(SpeakeasyBase));
-export { InterfaceTemplateFormFactor };
+}(utils_1.SpeakeasyBase));
+exports.InterfaceTemplateFormFactor = InterfaceTemplateFormFactor;
 var InterfaceTemplate = /** @class */ (function (_super) {
     __extends(InterfaceTemplate, _super);
     function InterfaceTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], InterfaceTemplate.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_factor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_factor" }),
         __metadata("design:type", InterfaceTemplateFormFactor)
     ], InterfaceTemplate.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], InterfaceTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], InterfaceTemplate.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InterfaceTemplate.prototype, "name", void 0);
     return InterfaceTemplate;
-}(SpeakeasyBase));
-export { InterfaceTemplate };
+}(utils_1.SpeakeasyBase));
+exports.InterfaceTemplate = InterfaceTemplate;

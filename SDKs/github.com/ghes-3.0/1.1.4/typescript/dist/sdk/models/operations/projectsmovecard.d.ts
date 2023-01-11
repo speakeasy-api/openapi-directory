@@ -36,8 +36,8 @@ export declare class ProjectsMoveCardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsMoveCard201ApplicationJsonObject?: Map<string, any>;
-    projectsMoveCard403ApplicationJsonObject?: ProjectsMoveCard403ApplicationJson;
-    projectsMoveCard503ApplicationJsonObject?: ProjectsMoveCard503ApplicationJson;
+    projectsMoveCard201ApplicationJSONObject?: Record<string, any>;
+    projectsMoveCard403ApplicationJSONObject?: ProjectsMoveCard403ApplicationJson;
+    projectsMoveCard503ApplicationJSONObject?: ProjectsMoveCard503ApplicationJson;
     validationError?: shared.ValidationError;
 }

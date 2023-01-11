@@ -230,5 +230,5 @@ export class DcimPowerFeedsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimPowerFeedsList200ApplicationJsonObject?: DcimPowerFeedsList200ApplicationJson;
+  dcimPowerFeedsList200ApplicationJSONObject?: DcimPowerFeedsList200ApplicationJson;
 }

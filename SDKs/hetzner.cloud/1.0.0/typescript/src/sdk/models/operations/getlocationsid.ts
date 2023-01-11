@@ -52,8 +52,8 @@ export class GetLocationsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLocationsId200ApplicationJsonObject?: GetLocationsId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getLocationsId200ApplicationJSONObject?: GetLocationsId200ApplicationJson;
 }

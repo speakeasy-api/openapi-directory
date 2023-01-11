@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AchievementConfigurationDetail } from "./achievementconfigurationdetail";
-export var AchievementConfigurationAchievementTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AchievementConfiguration = exports.AchievementConfigurationInitialStateEnum = exports.AchievementConfigurationAchievementTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var achievementconfigurationdetail_1 = require("./achievementconfigurationdetail");
+var AchievementConfigurationAchievementTypeEnum;
 (function (AchievementConfigurationAchievementTypeEnum) {
     AchievementConfigurationAchievementTypeEnum["AchievementTypeUnspecified"] = "ACHIEVEMENT_TYPE_UNSPECIFIED";
     AchievementConfigurationAchievementTypeEnum["Standard"] = "STANDARD";
     AchievementConfigurationAchievementTypeEnum["Incremental"] = "INCREMENTAL";
-})(AchievementConfigurationAchievementTypeEnum || (AchievementConfigurationAchievementTypeEnum = {}));
-export var AchievementConfigurationInitialStateEnum;
+})(AchievementConfigurationAchievementTypeEnum = exports.AchievementConfigurationAchievementTypeEnum || (exports.AchievementConfigurationAchievementTypeEnum = {}));
+var AchievementConfigurationInitialStateEnum;
 (function (AchievementConfigurationInitialStateEnum) {
     AchievementConfigurationInitialStateEnum["InitialStateUnspecified"] = "INITIAL_STATE_UNSPECIFIED";
     AchievementConfigurationInitialStateEnum["Hidden"] = "HIDDEN";
     AchievementConfigurationInitialStateEnum["Revealed"] = "REVEALED";
-})(AchievementConfigurationInitialStateEnum || (AchievementConfigurationInitialStateEnum = {}));
+})(AchievementConfigurationInitialStateEnum = exports.AchievementConfigurationInitialStateEnum || (exports.AchievementConfigurationInitialStateEnum = {}));
 // AchievementConfiguration
 /**
  * An achievement configuration resource.
@@ -46,37 +49,37 @@ var AchievementConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=achievementType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=achievementType" }),
         __metadata("design:type", String)
     ], AchievementConfiguration.prototype, "achievementType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=draft" }),
-        __metadata("design:type", AchievementConfigurationDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=draft" }),
+        __metadata("design:type", achievementconfigurationdetail_1.AchievementConfigurationDetail)
     ], AchievementConfiguration.prototype, "draft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AchievementConfiguration.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialState" }),
         __metadata("design:type", String)
     ], AchievementConfiguration.prototype, "initialState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AchievementConfiguration.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
-        __metadata("design:type", AchievementConfigurationDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
+        __metadata("design:type", achievementconfigurationdetail_1.AchievementConfigurationDetail)
     ], AchievementConfiguration.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stepsToUnlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stepsToUnlock" }),
         __metadata("design:type", Number)
     ], AchievementConfiguration.prototype, "stepsToUnlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], AchievementConfiguration.prototype, "token", void 0);
     return AchievementConfiguration;
-}(SpeakeasyBase));
-export { AchievementConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AchievementConfiguration = AchievementConfiguration;

@@ -15,7 +15,7 @@ export declare class DisassociateFromAdministratorAccountResponse extends Speake
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    disassociateFromAdministratorAccountResponse?: Map<string, any>;
+    disassociateFromAdministratorAccountResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

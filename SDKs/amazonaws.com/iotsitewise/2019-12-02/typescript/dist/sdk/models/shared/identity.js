@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupIdentity } from "./groupidentity";
-import { IamRoleIdentity } from "./iamroleidentity";
-import { IamUserIdentity } from "./iamuseridentity";
-import { UserIdentity } from "./useridentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Identity = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupidentity_1 = require("./groupidentity");
+var iamroleidentity_1 = require("./iamroleidentity");
+var iamuseridentity_1 = require("./iamuseridentity");
+var useridentity_1 = require("./useridentity");
 // Identity
 /**
  * <p>Contains an identity that can access an IoT SiteWise Monitor resource.</p> <note> <p>Currently, you can't use Amazon Web Services APIs to retrieve Amazon Web Services SSO identity IDs. You can find the Amazon Web Services SSO identity IDs in the URL of user and group pages in the <a href="https://console.aws.amazon.com/singlesignon">Amazon Web Services SSO console</a>.</p> </note>
@@ -37,21 +40,21 @@ var Identity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
-        __metadata("design:type", GroupIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
+        __metadata("design:type", groupidentity_1.GroupIdentity)
     ], Identity.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamRole" }),
-        __metadata("design:type", IamRoleIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamRole" }),
+        __metadata("design:type", iamroleidentity_1.IamRoleIdentity)
     ], Identity.prototype, "iamRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamUser" }),
-        __metadata("design:type", IamUserIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamUser" }),
+        __metadata("design:type", iamuseridentity_1.IamUserIdentity)
     ], Identity.prototype, "iamUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", useridentity_1.UserIdentity)
     ], Identity.prototype, "user", void 0);
     return Identity;
-}(SpeakeasyBase));
-export { Identity };
+}(utils_1.SpeakeasyBase));
+exports.Identity = Identity;

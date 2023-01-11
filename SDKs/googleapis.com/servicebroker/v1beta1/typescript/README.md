@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ServicebrokerProjectsBrokersCreateRequest, ServicebrokerProjectsBrokersCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: ServicebrokerProjectsBrokersCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "voluptatem",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "placeat",
-    alt: "proto",
-    callback: "itaque",
-    fields: "animi",
-    key: "eum",
-    oauthToken: "non",
-    prettyPrint: false,
-    quotaUser: "vel",
-    uploadType: "nulla",
-    uploadProtocol: "qui",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    createTime: "veritatis",
-    name: "laboriosam",
-    title: "illum",
-    url: "nemo",
+    createTime: "dicta",
+    name: "debitis",
+    title: "voluptatum",
+    url: "et",
   },
 };
 

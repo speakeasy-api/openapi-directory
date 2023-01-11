@@ -14,10 +14,10 @@ export class CreateSolutionRequest extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "json, name=performAutoML" })
-  performAutoMl?: boolean;
+  performAutoML?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=performHPO" })
-  performHpo?: boolean;
+  performHPO?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=recipeArn" })
   recipeArn?: string;

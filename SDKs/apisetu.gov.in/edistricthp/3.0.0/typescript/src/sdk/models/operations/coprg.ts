@@ -185,23 +185,23 @@ export class CoprgResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  coprg400ApplicationJsonObject?: Coprg400ApplicationJson;
+  coprg400ApplicationJSONObject?: Coprg400ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg401ApplicationJsonObject?: Coprg401ApplicationJson;
+  coprg401ApplicationJSONObject?: Coprg401ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg404ApplicationJsonObject?: Coprg404ApplicationJson;
+  coprg404ApplicationJSONObject?: Coprg404ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg500ApplicationJsonObject?: Coprg500ApplicationJson;
+  coprg500ApplicationJSONObject?: Coprg500ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg502ApplicationJsonObject?: Coprg502ApplicationJson;
+  coprg502ApplicationJSONObject?: Coprg502ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg503ApplicationJsonObject?: Coprg503ApplicationJson;
+  coprg503ApplicationJSONObject?: Coprg503ApplicationJson;
 
   @SpeakeasyMetadata()
-  coprg504ApplicationJsonObject?: Coprg504ApplicationJson;
+  coprg504ApplicationJSONObject?: Coprg504ApplicationJson;
 }

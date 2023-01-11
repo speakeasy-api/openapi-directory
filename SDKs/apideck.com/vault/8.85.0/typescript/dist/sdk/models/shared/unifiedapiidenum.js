@@ -1,4 +1,7 @@
-export var UnifiedApiIdEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnifiedApiIdEnum = void 0;
+var UnifiedApiIdEnum;
 (function (UnifiedApiIdEnum) {
     UnifiedApiIdEnum["Vault"] = "vault";
     UnifiedApiIdEnum["Lead"] = "lead";
@@ -25,4 +28,4 @@ export var UnifiedApiIdEnum;
     UnifiedApiIdEnum["ExpenseManagement"] = "expense-management";
     UnifiedApiIdEnum["Calendar"] = "calendar";
     UnifiedApiIdEnum["Procurement"] = "procurement";
-})(UnifiedApiIdEnum || (UnifiedApiIdEnum = {}));
+})(UnifiedApiIdEnum = exports.UnifiedApiIdEnum || (exports.UnifiedApiIdEnum = {}));

@@ -17,5 +17,5 @@ export declare class UpdateNetworkSwitchDscpToCosMappingsRequest extends Speakea
 export declare class UpdateNetworkSwitchDscpToCosMappingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchDscpToCosMappings200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchDscpToCosMappings200ApplicationJSONObject?: Record<string, any>;
 }

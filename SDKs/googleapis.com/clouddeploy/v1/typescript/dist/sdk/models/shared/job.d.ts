@@ -12,9 +12,9 @@ export declare enum JobStateEnum {
  * Job represents an operation for a `Rollout`.
 **/
 export declare class Job extends SpeakeasyBase {
-    deployJob?: Map<string, any>;
+    deployJob?: Record<string, any>;
     id?: string;
     jobRun?: string;
     state?: JobStateEnum;
-    verifyJob?: Map<string, any>;
+    verifyJob?: Record<string, any>;
 }

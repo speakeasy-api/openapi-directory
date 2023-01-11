@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventAttachment = void 0;
+var utils_1 = require("../../../internal/utils");
 var EventAttachment = /** @class */ (function (_super) {
     __extends(EventAttachment, _super);
     function EventAttachment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileId" }),
         __metadata("design:type", String)
     ], EventAttachment.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUrl" }),
         __metadata("design:type", String)
     ], EventAttachment.prototype, "fileUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconLink" }),
         __metadata("design:type", String)
     ], EventAttachment.prototype, "iconLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], EventAttachment.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], EventAttachment.prototype, "title", void 0);
     return EventAttachment;
-}(SpeakeasyBase));
-export { EventAttachment };
+}(utils_1.SpeakeasyBase));
+exports.EventAttachment = EventAttachment;

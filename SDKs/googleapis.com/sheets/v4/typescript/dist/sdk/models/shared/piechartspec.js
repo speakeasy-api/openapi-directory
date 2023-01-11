@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChartData } from "./chartdata";
-export var PieChartSpecLegendPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PieChartSpec = exports.PieChartSpecLegendPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var chartdata_1 = require("./chartdata");
+var PieChartSpecLegendPositionEnum;
 (function (PieChartSpecLegendPositionEnum) {
     PieChartSpecLegendPositionEnum["PieChartLegendPositionUnspecified"] = "PIE_CHART_LEGEND_POSITION_UNSPECIFIED";
     PieChartSpecLegendPositionEnum["BottomLegend"] = "BOTTOM_LEGEND";
@@ -33,7 +36,7 @@ export var PieChartSpecLegendPositionEnum;
     PieChartSpecLegendPositionEnum["TopLegend"] = "TOP_LEGEND";
     PieChartSpecLegendPositionEnum["NoLegend"] = "NO_LEGEND";
     PieChartSpecLegendPositionEnum["LabeledLegend"] = "LABELED_LEGEND";
-})(PieChartSpecLegendPositionEnum || (PieChartSpecLegendPositionEnum = {}));
+})(PieChartSpecLegendPositionEnum = exports.PieChartSpecLegendPositionEnum || (exports.PieChartSpecLegendPositionEnum = {}));
 // PieChartSpec
 /**
  * A pie chart.
@@ -44,25 +47,25 @@ var PieChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], PieChartSpec.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legendPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legendPosition" }),
         __metadata("design:type", String)
     ], PieChartSpec.prototype, "legendPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pieHole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pieHole" }),
         __metadata("design:type", Number)
     ], PieChartSpec.prototype, "pieHole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], PieChartSpec.prototype, "series", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threeDimensional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threeDimensional" }),
         __metadata("design:type", Boolean)
     ], PieChartSpec.prototype, "threeDimensional", void 0);
     return PieChartSpec;
-}(SpeakeasyBase));
-export { PieChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.PieChartSpec = PieChartSpec;

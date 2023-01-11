@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Assignment } from "./assignment";
-import { Date } from "./date";
-import { TimeOfDay } from "./timeofday";
-import { GradeCategory } from "./gradecategory";
-import { IndividualStudentsOptions } from "./individualstudentsoptions";
-import { Material } from "./material";
-import { MultipleChoiceQuestion } from "./multiplechoicequestion";
-export var CourseWorkAssigneeModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CourseWork = exports.CourseWorkWorkTypeEnum = exports.CourseWorkSubmissionModificationModeEnum = exports.CourseWorkStateEnum = exports.CourseWorkAssigneeModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var assignment_1 = require("./assignment");
+var date_1 = require("./date");
+var timeofday_1 = require("./timeofday");
+var gradecategory_1 = require("./gradecategory");
+var individualstudentsoptions_1 = require("./individualstudentsoptions");
+var material_1 = require("./material");
+var multiplechoicequestion_1 = require("./multiplechoicequestion");
+var CourseWorkAssigneeModeEnum;
 (function (CourseWorkAssigneeModeEnum) {
     CourseWorkAssigneeModeEnum["AssigneeModeUnspecified"] = "ASSIGNEE_MODE_UNSPECIFIED";
     CourseWorkAssigneeModeEnum["AllStudents"] = "ALL_STUDENTS";
     CourseWorkAssigneeModeEnum["IndividualStudents"] = "INDIVIDUAL_STUDENTS";
-})(CourseWorkAssigneeModeEnum || (CourseWorkAssigneeModeEnum = {}));
-export var CourseWorkStateEnum;
+})(CourseWorkAssigneeModeEnum = exports.CourseWorkAssigneeModeEnum || (exports.CourseWorkAssigneeModeEnum = {}));
+var CourseWorkStateEnum;
 (function (CourseWorkStateEnum) {
     CourseWorkStateEnum["CourseWorkStateUnspecified"] = "COURSE_WORK_STATE_UNSPECIFIED";
     CourseWorkStateEnum["Published"] = "PUBLISHED";
     CourseWorkStateEnum["Draft"] = "DRAFT";
     CourseWorkStateEnum["Deleted"] = "DELETED";
-})(CourseWorkStateEnum || (CourseWorkStateEnum = {}));
-export var CourseWorkSubmissionModificationModeEnum;
+})(CourseWorkStateEnum = exports.CourseWorkStateEnum || (exports.CourseWorkStateEnum = {}));
+var CourseWorkSubmissionModificationModeEnum;
 (function (CourseWorkSubmissionModificationModeEnum) {
     CourseWorkSubmissionModificationModeEnum["SubmissionModificationModeUnspecified"] = "SUBMISSION_MODIFICATION_MODE_UNSPECIFIED";
     CourseWorkSubmissionModificationModeEnum["ModifiableUntilTurnedIn"] = "MODIFIABLE_UNTIL_TURNED_IN";
     CourseWorkSubmissionModificationModeEnum["Modifiable"] = "MODIFIABLE";
-})(CourseWorkSubmissionModificationModeEnum || (CourseWorkSubmissionModificationModeEnum = {}));
-export var CourseWorkWorkTypeEnum;
+})(CourseWorkSubmissionModificationModeEnum = exports.CourseWorkSubmissionModificationModeEnum || (exports.CourseWorkSubmissionModificationModeEnum = {}));
+var CourseWorkWorkTypeEnum;
 (function (CourseWorkWorkTypeEnum) {
     CourseWorkWorkTypeEnum["CourseWorkTypeUnspecified"] = "COURSE_WORK_TYPE_UNSPECIFIED";
     CourseWorkWorkTypeEnum["Assignment"] = "ASSIGNMENT";
     CourseWorkWorkTypeEnum["ShortAnswerQuestion"] = "SHORT_ANSWER_QUESTION";
     CourseWorkWorkTypeEnum["MultipleChoiceQuestion"] = "MULTIPLE_CHOICE_QUESTION";
-})(CourseWorkWorkTypeEnum || (CourseWorkWorkTypeEnum = {}));
+})(CourseWorkWorkTypeEnum = exports.CourseWorkWorkTypeEnum || (exports.CourseWorkWorkTypeEnum = {}));
 // CourseWork
 /**
  * Course work created by a teacher for students of the course.
@@ -66,97 +69,97 @@ var CourseWork = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateLink" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "alternateLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assigneeMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assigneeMode" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "assigneeMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assignment" }),
-        __metadata("design:type", Assignment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assignment" }),
+        __metadata("design:type", assignment_1.Assignment)
     ], CourseWork.prototype, "assignment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedWithDeveloper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedWithDeveloper" }),
         __metadata("design:type", Boolean)
     ], CourseWork.prototype, "associatedWithDeveloper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=courseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=courseId" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "courseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorUserId" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "creatorUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dueDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dueDate" }),
+        __metadata("design:type", date_1.Date)
     ], CourseWork.prototype, "dueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dueTime" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dueTime" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], CourseWork.prototype, "dueTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeCategory" }),
-        __metadata("design:type", GradeCategory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeCategory" }),
+        __metadata("design:type", gradecategory_1.GradeCategory)
     ], CourseWork.prototype, "gradeCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualStudentsOptions" }),
-        __metadata("design:type", IndividualStudentsOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualStudentsOptions" }),
+        __metadata("design:type", individualstudentsoptions_1.IndividualStudentsOptions)
     ], CourseWork.prototype, "individualStudentsOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=materials", elemType: Material }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=materials", elemType: material_1.Material }),
         __metadata("design:type", Array)
     ], CourseWork.prototype, "materials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPoints" }),
         __metadata("design:type", Number)
     ], CourseWork.prototype, "maxPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multipleChoiceQuestion" }),
-        __metadata("design:type", MultipleChoiceQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multipleChoiceQuestion" }),
+        __metadata("design:type", multiplechoicequestion_1.MultipleChoiceQuestion)
     ], CourseWork.prototype, "multipleChoiceQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledTime" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "scheduledTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submissionModificationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submissionModificationMode" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "submissionModificationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicId" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "topicId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workType" }),
         __metadata("design:type", String)
     ], CourseWork.prototype, "workType", void 0);
     return CourseWork;
-}(SpeakeasyBase));
-export { CourseWork };
+}(utils_1.SpeakeasyBase));
+exports.CourseWork = CourseWork;

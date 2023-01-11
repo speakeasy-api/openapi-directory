@@ -14,7 +14,7 @@ export class CancelBookingQuotePathParams extends SpeakeasyBase {
 
 export class CancelBookingQuoteRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: CancelBookingQuotePathParams;
@@ -23,16 +23,16 @@ export class CancelBookingQuoteRequest extends SpeakeasyBase {
 
 export class CancelBookingQuoteResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  fourHundredAndOneUnauthorized?: shared.FourHundredAndOneUnauthorized;
+  fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
 
   @SpeakeasyMetadata()
-  fourHundredAndSixNotAcceptable?: shared.FourHundredAndSixNotAcceptable;
+  fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
 
   @SpeakeasyMetadata()
-  fiveHundredInternalServerError?: shared.FiveHundredInternalServerError;
+  fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
 
   @SpeakeasyMetadata()
-  fiveHundredAndThreeServiceUnavailable?: shared.FiveHundredAndThreeServiceUnavailable;
+  fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
 
   @SpeakeasyMetadata()
   cancelBookingQuoteResponse?: shared.CancelBookingQuoteResponse;

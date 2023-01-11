@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TemplateCreateMessageBody } from "./templatecreatemessagebody";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInAppTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var templatecreatemessagebody_1 = require("./templatecreatemessagebody");
 var CreateInAppTemplateResponse = /** @class */ (function (_super) {
     __extends(CreateInAppTemplateResponse, _super);
     function CreateInAppTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateCreateMessageBody" }),
-        __metadata("design:type", TemplateCreateMessageBody)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateCreateMessageBody" }),
+        __metadata("design:type", templatecreatemessagebody_1.TemplateCreateMessageBody)
     ], CreateInAppTemplateResponse.prototype, "templateCreateMessageBody", void 0);
     return CreateInAppTemplateResponse;
-}(SpeakeasyBase));
-export { CreateInAppTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateInAppTemplateResponse = CreateInAppTemplateResponse;

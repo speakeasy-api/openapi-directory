@@ -12,7 +12,7 @@ export declare class GetListingCarAuctionIdExtraRequest extends SpeakeasyBase {
 }
 export declare class GetListingCarAuctionIdExtraResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     listingExtraAttributes?: shared.ListingExtraAttributes;
     statusCode: number;
 }

@@ -92,8 +92,8 @@ export class PostServersIdActionsRebuildResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postServersIdActionsRebuild201ApplicationJsonObject?: PostServersIdActionsRebuild201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postServersIdActionsRebuild201ApplicationJSONObject?: PostServersIdActionsRebuild201ApplicationJson;
 }

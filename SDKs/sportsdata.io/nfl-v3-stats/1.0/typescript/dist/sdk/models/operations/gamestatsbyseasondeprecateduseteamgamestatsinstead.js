@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse = exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest = exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams = exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum;
 (function (GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum) {
     GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum["Xml"] = "XML";
     GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum["Json"] = "JSON";
-})(GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum || (GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum = {}));
+})(GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum = exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum || (exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadFormatEnum = {}));
 var GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams = /** @class */ (function (_super) {
     __extends(GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams, _super);
     function GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams.prototype, "season", void 0);
     return GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams;
-}(SpeakeasyBase));
-export { GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams = GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams;
 var GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest = /** @class */ (function (_super) {
     __extends(GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest, _super);
     function GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest.prototype, "pathParams", void 0);
     return GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest;
-}(SpeakeasyBase));
-export { GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest = GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest;
 var GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse = /** @class */ (function (_super) {
     __extends(GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse, _super);
     function GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse.prototype, "statusCode", void 0);
     return GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse;
-}(SpeakeasyBase));
-export { GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse = GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse;

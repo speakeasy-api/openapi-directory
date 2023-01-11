@@ -1,7 +1,10 @@
-export var ShippingOptionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingOptionEnum = void 0;
+var ShippingOptionEnum;
 (function (ShippingOptionEnum) {
     ShippingOptionEnum["SecondDay"] = "SECOND_DAY";
     ShippingOptionEnum["NextDay"] = "NEXT_DAY";
     ShippingOptionEnum["Express"] = "EXPRESS";
     ShippingOptionEnum["Standard"] = "STANDARD";
-})(ShippingOptionEnum || (ShippingOptionEnum = {}));
+})(ShippingOptionEnum = exports.ShippingOptionEnum || (exports.ShippingOptionEnum = {}));

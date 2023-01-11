@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudOrgpolicyV2PolicySpecInput } from "./googlecloudorgpolicyv2policyspec";
-import { GoogleCloudOrgpolicyV2PolicySpec } from "./googlecloudorgpolicyv2policyspec";
-// GoogleCloudOrgpolicyV2AlternatePolicySpecInput
-/**
- * Similar to PolicySpec but with an extra 'launch' field for launch reference. The PolicySpec here is specific for dry-run/darklaunch.
-**/
-var GoogleCloudOrgpolicyV2AlternatePolicySpecInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudOrgpolicyV2AlternatePolicySpecInput, _super);
-    function GoogleCloudOrgpolicyV2AlternatePolicySpecInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=launch" }),
-        __metadata("design:type", String)
-    ], GoogleCloudOrgpolicyV2AlternatePolicySpecInput.prototype, "launch", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2PolicySpecInput)
-    ], GoogleCloudOrgpolicyV2AlternatePolicySpecInput.prototype, "spec", void 0);
-    return GoogleCloudOrgpolicyV2AlternatePolicySpecInput;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2AlternatePolicySpecInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV2AlternatePolicySpecInput = exports.GoogleCloudOrgpolicyV2AlternatePolicySpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudorgpolicyv2policyspec_1 = require("./googlecloudorgpolicyv2policyspec");
+var googlecloudorgpolicyv2policyspec_2 = require("./googlecloudorgpolicyv2policyspec");
 // GoogleCloudOrgpolicyV2AlternatePolicySpec
 /**
  * Similar to PolicySpec but with an extra 'launch' field for launch reference. The PolicySpec here is specific for dry-run/darklaunch.
@@ -55,13 +38,33 @@ var GoogleCloudOrgpolicyV2AlternatePolicySpec = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launch" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV2AlternatePolicySpec.prototype, "launch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2PolicySpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", googlecloudorgpolicyv2policyspec_1.GoogleCloudOrgpolicyV2PolicySpec)
     ], GoogleCloudOrgpolicyV2AlternatePolicySpec.prototype, "spec", void 0);
     return GoogleCloudOrgpolicyV2AlternatePolicySpec;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2AlternatePolicySpec };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2AlternatePolicySpec = GoogleCloudOrgpolicyV2AlternatePolicySpec;
+// GoogleCloudOrgpolicyV2AlternatePolicySpecInput
+/**
+ * Similar to PolicySpec but with an extra 'launch' field for launch reference. The PolicySpec here is specific for dry-run/darklaunch.
+**/
+var GoogleCloudOrgpolicyV2AlternatePolicySpecInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudOrgpolicyV2AlternatePolicySpecInput, _super);
+    function GoogleCloudOrgpolicyV2AlternatePolicySpecInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launch" }),
+        __metadata("design:type", String)
+    ], GoogleCloudOrgpolicyV2AlternatePolicySpecInput.prototype, "launch", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", googlecloudorgpolicyv2policyspec_2.GoogleCloudOrgpolicyV2PolicySpecInput)
+    ], GoogleCloudOrgpolicyV2AlternatePolicySpecInput.prototype, "spec", void 0);
+    return GoogleCloudOrgpolicyV2AlternatePolicySpecInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2AlternatePolicySpecInput = GoogleCloudOrgpolicyV2AlternatePolicySpecInput;

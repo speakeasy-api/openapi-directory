@@ -58,10 +58,10 @@ export class PostAdminMappingsFindByMetadataRequestBodyXPathMatch extends Speake
   matchesXpath: string;
 
   @SpeakeasyMetadata({ data: "json, name=namespaces" })
-  namespaces?: Map<string, any>;
+  namespaces?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=valuePattern" })
-  valuePattern?: Map<string, any>;
+  valuePattern?: Record<string, any>;
 }
 
 
@@ -83,19 +83,19 @@ export class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRequest ex
   basicAuthCredentials?: PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRequestBasicAuthCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=bodyPatterns" })
-  bodyPatterns?: Map<string, any>[];
+  bodyPatterns?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryParameters" })
-  queryParameters?: Map<string, any>;
+  queryParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
@@ -120,7 +120,7 @@ export enum PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponseFau
 
 export class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalProxyRequestHeaders" })
-  additionalProxyRequestHeaders?: Map<string, any>;
+  additionalProxyRequestHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=base64Body" })
   base64Body?: string;
@@ -141,10 +141,10 @@ export class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponse e
   fromConfiguredStub?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=jsonBody" })
-  jsonBody?: Map<string, any>;
+  jsonBody?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=proxyBaseUrl" })
   proxyBaseUrl?: string;
@@ -156,7 +156,7 @@ export class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponse e
   statusMessage?: string;
 
   @SpeakeasyMetadata({ data: "json, name=transformerParameters" })
-  transformerParameters?: Map<string, any>;
+  transformerParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=transformers" })
   transformers?: string[];
@@ -168,7 +168,7 @@ export class PostAdminMappingsFindByMetadata200ApplicationJsonMappings extends S
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -180,7 +180,7 @@ export class PostAdminMappingsFindByMetadata200ApplicationJsonMappings extends S
   persistent?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=postServeActions" })
-  postServeActions?: Map<string, any>;
+  postServeActions?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
@@ -228,8 +228,8 @@ export class PostAdminMappingsFindByMetadataResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAdminMappingsFindByMetadata200ApplicationJsonObject?: PostAdminMappingsFindByMetadata200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAdminMappingsFindByMetadata200ApplicationJSONObject?: PostAdminMappingsFindByMetadata200ApplicationJson;
 }

@@ -34,7 +34,7 @@ export class GoogleCloudRecommenderV1Insight extends SpeakeasyBase {
   category?: GoogleCloudRecommenderV1InsightCategoryEnum;
 
   @SpeakeasyMetadata({ data: "json, name=content" })
-  content?: Map<string, any>;
+  content?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

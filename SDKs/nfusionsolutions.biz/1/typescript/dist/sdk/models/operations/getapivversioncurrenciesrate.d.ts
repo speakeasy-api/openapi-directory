@@ -15,7 +15,7 @@ export declare class GetApiVVersionCurrenciesRateRequest extends SpeakeasyBase {
 export declare class GetApiVVersionCurrenciesRateResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     rateResponses?: shared.RateResponse[];
     statusCode: number;
 }

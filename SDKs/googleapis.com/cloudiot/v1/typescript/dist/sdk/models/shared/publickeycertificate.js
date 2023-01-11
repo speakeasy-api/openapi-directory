@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { X509CertificateDetails } from "./x509certificatedetails";
-export var PublicKeyCertificateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicKeyCertificate = exports.PublicKeyCertificateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var x509certificatedetails_1 = require("./x509certificatedetails");
+var PublicKeyCertificateFormatEnum;
 (function (PublicKeyCertificateFormatEnum) {
     PublicKeyCertificateFormatEnum["UnspecifiedPublicKeyCertificateFormat"] = "UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT";
     PublicKeyCertificateFormatEnum["X509CertificatePem"] = "X509_CERTIFICATE_PEM";
-})(PublicKeyCertificateFormatEnum || (PublicKeyCertificateFormatEnum = {}));
+})(PublicKeyCertificateFormatEnum = exports.PublicKeyCertificateFormatEnum || (exports.PublicKeyCertificateFormatEnum = {}));
 // PublicKeyCertificate
 /**
  * A public key certificate format and data.
@@ -39,17 +42,17 @@ var PublicKeyCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], PublicKeyCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], PublicKeyCertificate.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x509Details" }),
-        __metadata("design:type", X509CertificateDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x509Details" }),
+        __metadata("design:type", x509certificatedetails_1.X509CertificateDetails)
     ], PublicKeyCertificate.prototype, "x509Details", void 0);
     return PublicKeyCertificate;
-}(SpeakeasyBase));
-export { PublicKeyCertificate };
+}(utils_1.SpeakeasyBase));
+exports.PublicKeyCertificate = PublicKeyCertificate;

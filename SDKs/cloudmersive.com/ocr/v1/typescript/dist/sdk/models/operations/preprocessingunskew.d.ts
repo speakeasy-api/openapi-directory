@@ -16,9 +16,9 @@ export declare class PreprocessingUnskewRequest extends SpeakeasyBase {
 }
 export declare class PreprocessingUnskewResponse extends SpeakeasyBase {
     contentType: string;
-    preprocessingUnskew200ApplicationJsonByteString?: string;
-    preprocessingUnskew200ApplicationXmlByteString?: string;
-    preprocessingUnskew200TextJsonByteString?: string;
-    preprocessingUnskew200TextXmlByteString?: string;
+    preprocessingUnskew200ApplicationJSONByteString?: string;
+    preprocessingUnskew200ApplicationXMLByteString?: string;
+    preprocessingUnskew200TextJSONByteString?: string;
+    preprocessingUnskew200TextXMLByteString?: string;
     statusCode: number;
 }

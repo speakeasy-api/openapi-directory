@@ -23,7 +23,7 @@ export declare class DomainsProjectsLocationsRegistrationsResetAuthorizationCode
 export declare class DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest extends SpeakeasyBase {
     pathParams: DomainsProjectsLocationsRegistrationsResetAuthorizationCodePathParams;
     queryParams: DomainsProjectsLocationsRegistrationsResetAuthorizationCodeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DomainsProjectsLocationsRegistrationsResetAuthorizationCodeSecurity;
 }
 export declare class DomainsProjectsLocationsRegistrationsResetAuthorizationCodeResponse extends SpeakeasyBase {

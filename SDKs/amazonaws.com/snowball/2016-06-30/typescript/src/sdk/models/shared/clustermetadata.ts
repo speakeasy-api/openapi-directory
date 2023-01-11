@@ -37,7 +37,7 @@ export class ClusterMetadata extends SpeakeasyBase {
   jobType?: JobTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=KmsKeyARN" })
-  kmsKeyArn?: string;
+  kmsKeyARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Notification" })
   notification?: Notification;
@@ -49,7 +49,7 @@ export class ClusterMetadata extends SpeakeasyBase {
   resources?: JobResource;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ShippingOption" })
   shippingOption?: ShippingOptionEnum;

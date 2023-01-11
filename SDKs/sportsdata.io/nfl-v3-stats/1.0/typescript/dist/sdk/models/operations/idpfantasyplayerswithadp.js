@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IdpFantasyPlayersWithAdpFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdpFantasyPlayersWithAdpResponse = exports.IdpFantasyPlayersWithAdpRequest = exports.IdpFantasyPlayersWithAdpPathParams = exports.IdpFantasyPlayersWithAdpFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IdpFantasyPlayersWithAdpFormatEnum;
 (function (IdpFantasyPlayersWithAdpFormatEnum) {
     IdpFantasyPlayersWithAdpFormatEnum["Xml"] = "XML";
     IdpFantasyPlayersWithAdpFormatEnum["Json"] = "JSON";
-})(IdpFantasyPlayersWithAdpFormatEnum || (IdpFantasyPlayersWithAdpFormatEnum = {}));
+})(IdpFantasyPlayersWithAdpFormatEnum = exports.IdpFantasyPlayersWithAdpFormatEnum || (exports.IdpFantasyPlayersWithAdpFormatEnum = {}));
 var IdpFantasyPlayersWithAdpPathParams = /** @class */ (function (_super) {
     __extends(IdpFantasyPlayersWithAdpPathParams, _super);
     function IdpFantasyPlayersWithAdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], IdpFantasyPlayersWithAdpPathParams.prototype, "format", void 0);
     return IdpFantasyPlayersWithAdpPathParams;
-}(SpeakeasyBase));
-export { IdpFantasyPlayersWithAdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.IdpFantasyPlayersWithAdpPathParams = IdpFantasyPlayersWithAdpPathParams;
 var IdpFantasyPlayersWithAdpRequest = /** @class */ (function (_super) {
     __extends(IdpFantasyPlayersWithAdpRequest, _super);
     function IdpFantasyPlayersWithAdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IdpFantasyPlayersWithAdpPathParams)
     ], IdpFantasyPlayersWithAdpRequest.prototype, "pathParams", void 0);
     return IdpFantasyPlayersWithAdpRequest;
-}(SpeakeasyBase));
-export { IdpFantasyPlayersWithAdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.IdpFantasyPlayersWithAdpRequest = IdpFantasyPlayersWithAdpRequest;
 var IdpFantasyPlayersWithAdpResponse = /** @class */ (function (_super) {
     __extends(IdpFantasyPlayersWithAdpResponse, _super);
     function IdpFantasyPlayersWithAdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdpFantasyPlayersWithAdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], IdpFantasyPlayersWithAdpResponse.prototype, "fantasyPlayers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IdpFantasyPlayersWithAdpResponse.prototype, "statusCode", void 0);
     return IdpFantasyPlayersWithAdpResponse;
-}(SpeakeasyBase));
-export { IdpFantasyPlayersWithAdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.IdpFantasyPlayersWithAdpResponse = IdpFantasyPlayersWithAdpResponse;

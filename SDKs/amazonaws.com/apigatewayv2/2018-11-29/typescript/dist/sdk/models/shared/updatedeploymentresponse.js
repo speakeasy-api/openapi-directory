@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeploymentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeploymentResponse = /** @class */ (function (_super) {
     __extends(UpdateDeploymentResponse, _super);
     function UpdateDeploymentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoDeployed" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoDeployed" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "autoDeployed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedDate" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeploymentId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeploymentId" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeploymentStatus" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeploymentStatus" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "deploymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeploymentStatusMessage" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeploymentStatusMessage" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "deploymentStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
+        __metadata("design:type", Object)
     ], UpdateDeploymentResponse.prototype, "description", void 0);
     return UpdateDeploymentResponse;
-}(SpeakeasyBase));
-export { UpdateDeploymentResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeploymentResponse = UpdateDeploymentResponse;

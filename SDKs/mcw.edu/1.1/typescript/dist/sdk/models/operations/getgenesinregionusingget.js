@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGenesInRegionUsingGetResponse = exports.GetGenesInRegionUsingGetRequest = exports.GetGenesInRegionUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGenesInRegionUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGenesInRegionUsingGetPathParams, _super);
     function GetGenesInRegionUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=chr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=chr" }),
         __metadata("design:type", String)
     ], GetGenesInRegionUsingGetPathParams.prototype, "chr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
         __metadata("design:type", Number)
     ], GetGenesInRegionUsingGetPathParams.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start" }),
         __metadata("design:type", Number)
     ], GetGenesInRegionUsingGetPathParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stop" }),
         __metadata("design:type", Number)
     ], GetGenesInRegionUsingGetPathParams.prototype, "stop", void 0);
     return GetGenesInRegionUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGenesInRegionUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesInRegionUsingGetPathParams = GetGenesInRegionUsingGetPathParams;
 var GetGenesInRegionUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGenesInRegionUsingGetRequest, _super);
     function GetGenesInRegionUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGenesInRegionUsingGetPathParams)
     ], GetGenesInRegionUsingGetRequest.prototype, "pathParams", void 0);
     return GetGenesInRegionUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGenesInRegionUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesInRegionUsingGetRequest = GetGenesInRegionUsingGetRequest;
 var GetGenesInRegionUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGenesInRegionUsingGetResponse, _super);
     function GetGenesInRegionUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGenesInRegionUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGenesInRegionUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGenesInRegionUsingGetResponse.prototype, "statusCode", void 0);
     return GetGenesInRegionUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGenesInRegionUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesInRegionUsingGetResponse = GetGenesInRegionUsingGetResponse;

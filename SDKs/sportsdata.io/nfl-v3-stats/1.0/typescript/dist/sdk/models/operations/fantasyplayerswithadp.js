@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FantasyPlayersWithAdpFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FantasyPlayersWithAdpResponse = exports.FantasyPlayersWithAdpRequest = exports.FantasyPlayersWithAdpPathParams = exports.FantasyPlayersWithAdpFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FantasyPlayersWithAdpFormatEnum;
 (function (FantasyPlayersWithAdpFormatEnum) {
     FantasyPlayersWithAdpFormatEnum["Xml"] = "XML";
     FantasyPlayersWithAdpFormatEnum["Json"] = "JSON";
-})(FantasyPlayersWithAdpFormatEnum || (FantasyPlayersWithAdpFormatEnum = {}));
+})(FantasyPlayersWithAdpFormatEnum = exports.FantasyPlayersWithAdpFormatEnum || (exports.FantasyPlayersWithAdpFormatEnum = {}));
 var FantasyPlayersWithAdpPathParams = /** @class */ (function (_super) {
     __extends(FantasyPlayersWithAdpPathParams, _super);
     function FantasyPlayersWithAdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], FantasyPlayersWithAdpPathParams.prototype, "format", void 0);
     return FantasyPlayersWithAdpPathParams;
-}(SpeakeasyBase));
-export { FantasyPlayersWithAdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayersWithAdpPathParams = FantasyPlayersWithAdpPathParams;
 var FantasyPlayersWithAdpRequest = /** @class */ (function (_super) {
     __extends(FantasyPlayersWithAdpRequest, _super);
     function FantasyPlayersWithAdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FantasyPlayersWithAdpPathParams)
     ], FantasyPlayersWithAdpRequest.prototype, "pathParams", void 0);
     return FantasyPlayersWithAdpRequest;
-}(SpeakeasyBase));
-export { FantasyPlayersWithAdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayersWithAdpRequest = FantasyPlayersWithAdpRequest;
 var FantasyPlayersWithAdpResponse = /** @class */ (function (_super) {
     __extends(FantasyPlayersWithAdpResponse, _super);
     function FantasyPlayersWithAdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FantasyPlayersWithAdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], FantasyPlayersWithAdpResponse.prototype, "fantasyPlayers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FantasyPlayersWithAdpResponse.prototype, "statusCode", void 0);
     return FantasyPlayersWithAdpResponse;
-}(SpeakeasyBase));
-export { FantasyPlayersWithAdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.FantasyPlayersWithAdpResponse = FantasyPlayersWithAdpResponse;

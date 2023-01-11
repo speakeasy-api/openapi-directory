@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RealtimeMetricsSubscriptionConfig } from "./realtimemetricssubscriptionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonitoringSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
+var realtimemetricssubscriptionconfig_1 = require("./realtimemetricssubscriptionconfig");
 // MonitoringSubscription
 /**
  * A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
@@ -34,9 +37,9 @@ var MonitoringSubscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RealtimeMetricsSubscriptionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", realtimemetricssubscriptionconfig_1.RealtimeMetricsSubscriptionConfig)
     ], MonitoringSubscription.prototype, "realtimeMetricsSubscriptionConfig", void 0);
     return MonitoringSubscription;
-}(SpeakeasyBase));
-export { MonitoringSubscription };
+}(utils_1.SpeakeasyBase));
+exports.MonitoringSubscription = MonitoringSubscription;

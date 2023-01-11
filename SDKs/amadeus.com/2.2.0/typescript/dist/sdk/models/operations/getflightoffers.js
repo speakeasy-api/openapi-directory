@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,115 +23,117 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetFlightOffersTravelClassEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFlightOffersResponse = exports.GetFlightOffersRequest = exports.GetFlightOffersQueryParams = exports.GetFlightOffersTravelClassEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetFlightOffersTravelClassEnum;
 (function (GetFlightOffersTravelClassEnum) {
     GetFlightOffersTravelClassEnum["Economy"] = "ECONOMY";
     GetFlightOffersTravelClassEnum["PremiumEconomy"] = "PREMIUM_ECONOMY";
     GetFlightOffersTravelClassEnum["Business"] = "BUSINESS";
     GetFlightOffersTravelClassEnum["First"] = "FIRST";
-})(GetFlightOffersTravelClassEnum || (GetFlightOffersTravelClassEnum = {}));
+})(GetFlightOffersTravelClassEnum = exports.GetFlightOffersTravelClassEnum || (exports.GetFlightOffersTravelClassEnum = {}));
 var GetFlightOffersQueryParams = /** @class */ (function (_super) {
     __extends(GetFlightOffersQueryParams, _super);
     function GetFlightOffersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=adults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=adults" }),
         __metadata("design:type", Number)
     ], GetFlightOffersQueryParams.prototype, "adults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=children" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=children" }),
         __metadata("design:type", Number)
     ], GetFlightOffersQueryParams.prototype, "children", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=currencyCode" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departureDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departureDate" }),
         __metadata("design:type", Date)
     ], GetFlightOffersQueryParams.prototype, "departureDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationLocationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=destinationLocationCode" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "destinationLocationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=excludedAirlineCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=excludedAirlineCodes" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "excludedAirlineCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=includedAirlineCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=includedAirlineCodes" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "includedAirlineCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=infants" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=infants" }),
         __metadata("design:type", Number)
     ], GetFlightOffersQueryParams.prototype, "infants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], GetFlightOffersQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxPrice" }),
         __metadata("design:type", Number)
     ], GetFlightOffersQueryParams.prototype, "maxPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nonStop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nonStop" }),
         __metadata("design:type", Boolean)
     ], GetFlightOffersQueryParams.prototype, "nonStop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=originLocationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=originLocationCode" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "originLocationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=returnDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=returnDate" }),
         __metadata("design:type", Date)
     ], GetFlightOffersQueryParams.prototype, "returnDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=travelClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=travelClass" }),
         __metadata("design:type", String)
     ], GetFlightOffersQueryParams.prototype, "travelClass", void 0);
     return GetFlightOffersQueryParams;
-}(SpeakeasyBase));
-export { GetFlightOffersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFlightOffersQueryParams = GetFlightOffersQueryParams;
 var GetFlightOffersRequest = /** @class */ (function (_super) {
     __extends(GetFlightOffersRequest, _super);
     function GetFlightOffersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFlightOffersQueryParams)
     ], GetFlightOffersRequest.prototype, "queryParams", void 0);
     return GetFlightOffersRequest;
-}(SpeakeasyBase));
-export { GetFlightOffersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFlightOffersRequest = GetFlightOffersRequest;
 var GetFlightOffersResponse = /** @class */ (function (_super) {
     __extends(GetFlightOffersResponse, _super);
     function GetFlightOffersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFlightOffersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetFlightOffersResponse.prototype, "error400", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetFlightOffersResponse.prototype, "error500", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFlightOffersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetFlightOffersResponse.prototype, "success", void 0);
     return GetFlightOffersResponse;
-}(SpeakeasyBase));
-export { GetFlightOffersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFlightOffersResponse = GetFlightOffersResponse;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DescribeDimensionKeysRequest, DescribeDimensionKeysResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,47 +33,45 @@ const sdk = new SDK(WithSecurity(
     
 const req: DescribeDimensionKeysRequest = {
   headers: {
-    xAmzAlgorithm: "hic",
-    xAmzContentSha256: "doloribus",
-    xAmzCredential: "porro",
-    xAmzDate: "est",
-    xAmzSecurityToken: "deserunt",
-    xAmzSignature: "eum",
-    xAmzSignedHeaders: "sit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
   },
   request: {
-    endTime: "2005-09-27T11:34:03Z",
+    endTime: "2011-08-12T10:11:12Z",
     filter: {
-      "totam": "omnis",
+      "rerum": "dicta",
     },
     groupBy: {
       dimensions: [
-        "neque",
-        "officia",
-        "quo",
+        "voluptatum",
       ],
-      group: "alias",
-      limit: 7931175086771856082,
+      group: "et",
+      limit: 7144924247938981575,
     },
-    identifier: "non",
-    maxResults: 4192957126934884321,
-    metric: "sed",
-    nextToken: "consequatur",
+    identifier: "dolorem",
+    maxResults: 7259475919510918339,
+    metric: "voluptate",
+    nextToken: "iste",
     partitionBy: {
       dimensions: [
-        "maiores",
+        "totam",
       ],
-      group: "aliquid",
-      limit: 7497142883454927133,
+      group: "dolores",
+      limit: 1929546706668609706,
     },
-    periodInSeconds: 3056127560860615106,
+    periodInSeconds: 6392442863481646880,
     serviceType: "RDS",
-    startTime: "1973-01-06T22:12:32Z",
+    startTime: "2003-08-14T16:48:00Z",
   },
 };
 
-sdk.sdk.describeDimensionKeys(req).then((res: DescribeDimensionKeysResponse | AxiosError) => {
+sdk.describeDimensionKeys(req).then((res: DescribeDimensionKeysResponse | AxiosError) => {
    // handle response
 });
 ```

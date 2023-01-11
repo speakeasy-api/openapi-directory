@@ -16,13 +16,13 @@ export declare class CreateJobRequest extends SpeakeasyBase {
     deviceConfiguration?: DeviceConfiguration;
     forwardingAddressId?: string;
     jobType?: JobTypeEnum;
-    kmsKeyArn?: string;
+    kmsKeyARN?: string;
     longTermPricingId?: string;
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     remoteManagement?: RemoteManagementEnum;
     resources?: JobResource;
-    roleArn?: string;
+    roleARN?: string;
     shippingOption?: ShippingOptionEnum;
     snowballCapacityPreference?: SnowballCapacityEnum;
     snowballType?: SnowballTypeEnum;

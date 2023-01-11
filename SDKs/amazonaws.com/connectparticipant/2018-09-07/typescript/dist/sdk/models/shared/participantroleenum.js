@@ -1,6 +1,9 @@
-export var ParticipantRoleEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParticipantRoleEnum = void 0;
+var ParticipantRoleEnum;
 (function (ParticipantRoleEnum) {
     ParticipantRoleEnum["Agent"] = "AGENT";
     ParticipantRoleEnum["Customer"] = "CUSTOMER";
     ParticipantRoleEnum["System"] = "SYSTEM";
-})(ParticipantRoleEnum || (ParticipantRoleEnum = {}));
+})(ParticipantRoleEnum = exports.ParticipantRoleEnum || (exports.ParticipantRoleEnum = {}));

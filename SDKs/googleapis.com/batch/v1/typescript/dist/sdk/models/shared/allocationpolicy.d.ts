@@ -8,7 +8,7 @@ import { ServiceAccount } from "./serviceaccount";
 **/
 export declare class AllocationPolicy extends SpeakeasyBase {
     instances?: InstancePolicyOrTemplate[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     location?: LocationPolicy;
     network?: NetworkPolicy;
     serviceAccount?: ServiceAccount;

@@ -12,6 +12,6 @@ export declare class GetConsumerV1ResourcesIdServicesRequest extends SpeakeasyBa
 }
 export declare class GetConsumerV1ResourcesIdServicesResponse extends SpeakeasyBase {
     contentType: string;
-    resourceServiceListViewModel?: Map<string, any>;
+    resourceServiceListViewModel?: Record<string, any>;
     statusCode: number;
 }

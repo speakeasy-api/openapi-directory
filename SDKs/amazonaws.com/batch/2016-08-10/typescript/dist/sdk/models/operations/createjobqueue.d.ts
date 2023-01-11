@@ -18,7 +18,7 @@ export declare class CreateJobQueueRequestBody extends SpeakeasyBase {
     jobQueueName: string;
     priority: number;
     state?: CreateJobQueueRequestBodyStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateJobQueueRequest extends SpeakeasyBase {
     headers: CreateJobQueueHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeBasedCanary } from "./timebasedcanary";
-import { TimeBasedLinear } from "./timebasedlinear";
-import { TrafficRoutingTypeEnum } from "./trafficroutingtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrafficRoutingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var timebasedcanary_1 = require("./timebasedcanary");
+var timebasedlinear_1 = require("./timebasedlinear");
+var trafficroutingtypeenum_1 = require("./trafficroutingtypeenum");
 // TrafficRoutingConfig
 /**
  * The configuration that specifies how traffic is shifted from one version of a Lambda function to another version during an AWS Lambda deployment, or from one Amazon ECS task set to another during an Amazon ECS deployment.
@@ -36,17 +39,17 @@ var TrafficRoutingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeBasedCanary" }),
-        __metadata("design:type", TimeBasedCanary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeBasedCanary" }),
+        __metadata("design:type", timebasedcanary_1.TimeBasedCanary)
     ], TrafficRoutingConfig.prototype, "timeBasedCanary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeBasedLinear" }),
-        __metadata("design:type", TimeBasedLinear)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeBasedLinear" }),
+        __metadata("design:type", timebasedlinear_1.TimeBasedLinear)
     ], TrafficRoutingConfig.prototype, "timeBasedLinear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TrafficRoutingConfig.prototype, "type", void 0);
     return TrafficRoutingConfig;
-}(SpeakeasyBase));
-export { TrafficRoutingConfig };
+}(utils_1.SpeakeasyBase));
+exports.TrafficRoutingConfig = TrafficRoutingConfig;

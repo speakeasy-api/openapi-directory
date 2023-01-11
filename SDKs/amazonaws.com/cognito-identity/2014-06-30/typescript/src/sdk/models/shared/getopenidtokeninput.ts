@@ -11,5 +11,5 @@ export class GetOpenIdTokenInput extends SpeakeasyBase {
   identityId: string;
 
   @SpeakeasyMetadata({ data: "json, name=Logins" })
-  logins?: Map<string, string>;
+  logins?: Record<string, string>;
 }

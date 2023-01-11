@@ -4,7 +4,7 @@ export declare class CreateMlModelInput extends SpeakeasyBase {
     mlModelId: string;
     mlModelName?: string;
     mlModelType: MlModelTypeEnum;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     recipe?: string;
     recipeUri?: string;
     trainingDataSourceId: string;

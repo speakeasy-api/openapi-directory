@@ -26,7 +26,7 @@ export class AddFollowersForTaskRequestBody extends SpeakeasyBase {
 
 export class AddFollowersForTask200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddFollowersForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addFollowersForTask200ApplicationJsonObject?: AddFollowersForTask200ApplicationJson;
+  addFollowersForTask200ApplicationJSONObject?: AddFollowersForTask200ApplicationJson;
 }

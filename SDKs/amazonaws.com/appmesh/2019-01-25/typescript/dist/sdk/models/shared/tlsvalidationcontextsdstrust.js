@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TlsValidationContextSdsTrust = void 0;
+var utils_1 = require("../../../internal/utils");
 // TlsValidationContextSdsTrust
 /**
  * An object that represents a Transport Layer Security (TLS) Secret Discovery Service validation context trust. The proxy must be configured with a local SDS provider via a Unix Domain Socket. See App Mesh <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html">TLS documentation</a> for more info.
@@ -33,9 +36,9 @@ var TlsValidationContextSdsTrust = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretName" }),
         __metadata("design:type", String)
     ], TlsValidationContextSdsTrust.prototype, "secretName", void 0);
     return TlsValidationContextSdsTrust;
-}(SpeakeasyBase));
-export { TlsValidationContextSdsTrust };
+}(utils_1.SpeakeasyBase));
+exports.TlsValidationContextSdsTrust = TlsValidationContextSdsTrust;

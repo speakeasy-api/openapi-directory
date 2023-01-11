@@ -32,7 +32,7 @@ export class GetSolutionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   response?: shared.Response;
@@ -41,5 +41,5 @@ export class GetSolutionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSolution404ApplicationJsonObject?: GetSolution404ApplicationJson;
+  getSolution404ApplicationJSONObject?: GetSolution404ApplicationJson;
 }

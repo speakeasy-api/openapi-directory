@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-import { RowData } from "./rowdata";
-import { GridCoordinate } from "./gridcoordinate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCellsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var rowdata_1 = require("./rowdata");
+var gridcoordinate_1 = require("./gridcoordinate");
 // UpdateCellsRequest
 /**
  * Updates all cells in a range with new data.
@@ -36,21 +39,21 @@ var UpdateCellsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateCellsRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], UpdateCellsRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: RowData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: rowdata_1.RowData }),
         __metadata("design:type", Array)
     ], UpdateCellsRequest.prototype, "rows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
-        __metadata("design:type", GridCoordinate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
+        __metadata("design:type", gridcoordinate_1.GridCoordinate)
     ], UpdateCellsRequest.prototype, "start", void 0);
     return UpdateCellsRequest;
-}(SpeakeasyBase));
-export { UpdateCellsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCellsRequest = UpdateCellsRequest;

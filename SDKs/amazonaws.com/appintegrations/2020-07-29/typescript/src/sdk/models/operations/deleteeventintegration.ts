@@ -49,7 +49,7 @@ export class DeleteEventIntegrationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEventIntegrationResponse?: Map<string, any>;
+  deleteEventIntegrationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServiceError?: any;

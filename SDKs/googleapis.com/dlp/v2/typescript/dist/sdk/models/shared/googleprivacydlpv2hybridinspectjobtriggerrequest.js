@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2HybridContentItem } from "./googleprivacydlpv2hybridcontentitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2HybridInspectJobTriggerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2hybridcontentitem_1 = require("./googleprivacydlpv2hybridcontentitem");
 // GooglePrivacyDlpV2HybridInspectJobTriggerRequest
 /**
  * Request to search for potentially sensitive info in a custom location.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2HybridInspectJobTriggerRequest = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hybridItem" }),
-        __metadata("design:type", GooglePrivacyDlpV2HybridContentItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hybridItem" }),
+        __metadata("design:type", googleprivacydlpv2hybridcontentitem_1.GooglePrivacyDlpV2HybridContentItem)
     ], GooglePrivacyDlpV2HybridInspectJobTriggerRequest.prototype, "hybridItem", void 0);
     return GooglePrivacyDlpV2HybridInspectJobTriggerRequest;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2HybridInspectJobTriggerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2HybridInspectJobTriggerRequest = GooglePrivacyDlpV2HybridInspectJobTriggerRequest;

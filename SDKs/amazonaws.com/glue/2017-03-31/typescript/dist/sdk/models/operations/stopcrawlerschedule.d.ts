@@ -24,5 +24,5 @@ export declare class StopCrawlerScheduleResponse extends SpeakeasyBase {
     schedulerNotRunningException?: any;
     schedulerTransitioningException?: any;
     statusCode: number;
-    stopCrawlerScheduleResponse?: Map<string, any>;
+    stopCrawlerScheduleResponse?: Record<string, any>;
 }

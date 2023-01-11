@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteCertificatesIdResponse = exports.DeleteCertificatesIdRequest = exports.DeleteCertificatesIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteCertificatesIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteCertificatesIdPathParams, _super);
     function DeleteCertificatesIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteCertificatesIdPathParams.prototype, "id", void 0);
     return DeleteCertificatesIdPathParams;
-}(SpeakeasyBase));
-export { DeleteCertificatesIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCertificatesIdPathParams = DeleteCertificatesIdPathParams;
 var DeleteCertificatesIdRequest = /** @class */ (function (_super) {
     __extends(DeleteCertificatesIdRequest, _super);
     function DeleteCertificatesIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteCertificatesIdPathParams)
     ], DeleteCertificatesIdRequest.prototype, "pathParams", void 0);
     return DeleteCertificatesIdRequest;
-}(SpeakeasyBase));
-export { DeleteCertificatesIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCertificatesIdRequest = DeleteCertificatesIdRequest;
 var DeleteCertificatesIdResponse = /** @class */ (function (_super) {
     __extends(DeleteCertificatesIdResponse, _super);
     function DeleteCertificatesIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteCertificatesIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteCertificatesIdResponse.prototype, "statusCode", void 0);
     return DeleteCertificatesIdResponse;
-}(SpeakeasyBase));
-export { DeleteCertificatesIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteCertificatesIdResponse = DeleteCertificatesIdResponse;

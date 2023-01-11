@@ -191,23 +191,23 @@ export class GicerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  gicer400ApplicationJsonObject?: Gicer400ApplicationJson;
+  gicer400ApplicationJSONObject?: Gicer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer401ApplicationJsonObject?: Gicer401ApplicationJson;
+  gicer401ApplicationJSONObject?: Gicer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer404ApplicationJsonObject?: Gicer404ApplicationJson;
+  gicer404ApplicationJSONObject?: Gicer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer500ApplicationJsonObject?: Gicer500ApplicationJson;
+  gicer500ApplicationJSONObject?: Gicer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer502ApplicationJsonObject?: Gicer502ApplicationJson;
+  gicer502ApplicationJSONObject?: Gicer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer503ApplicationJsonObject?: Gicer503ApplicationJson;
+  gicer503ApplicationJSONObject?: Gicer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  gicer504ApplicationJsonObject?: Gicer504ApplicationJson;
+  gicer504ApplicationJSONObject?: Gicer504ApplicationJson;
 }

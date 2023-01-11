@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnMappingStatusEnum = void 0;
+var ColumnMappingStatusEnum;
+(function (ColumnMappingStatusEnum) {
+    ColumnMappingStatusEnum["Warning"] = "warning";
+    ColumnMappingStatusEnum["Success"] = "success";
+    ColumnMappingStatusEnum["Failed"] = "failed";
+})(ColumnMappingStatusEnum = exports.ColumnMappingStatusEnum || (exports.ColumnMappingStatusEnum = {}));

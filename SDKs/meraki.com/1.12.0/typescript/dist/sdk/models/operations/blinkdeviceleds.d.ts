@@ -14,5 +14,5 @@ export declare class BlinkDeviceLedsRequest extends SpeakeasyBase {
 export declare class BlinkDeviceLedsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    blinkDeviceLeds202ApplicationJsonObject?: Map<string, any>;
+    blinkDeviceLeds202ApplicationJSONObject?: Record<string, any>;
 }

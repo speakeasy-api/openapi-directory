@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheSecurityGroup } from "./cachesecuritygroup";
+import { CacheSecurityGroups } from "./cachesecuritygroups";
 
 
 
@@ -8,8 +8,8 @@ import { CacheSecurityGroup } from "./cachesecuritygroup";
  * Represents the output of a <code>DescribeCacheSecurityGroups</code> operation.
 **/
 export class CacheSecurityGroupMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CacheSecurityGroup })
-  cacheSecurityGroups?: CacheSecurityGroup[];
+  @SpeakeasyMetadata({ elemType: CacheSecurityGroups })
+  cacheSecurityGroups?: CacheSecurityGroups[];
 
   @SpeakeasyMetadata()
   marker?: string;

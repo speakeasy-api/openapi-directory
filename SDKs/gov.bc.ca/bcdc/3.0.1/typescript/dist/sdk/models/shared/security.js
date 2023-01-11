@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Security = exports.SchemeInternalApiKey = exports.SchemeGithubAccessCode = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeGithubAccessCode = /** @class */ (function (_super) {
     __extends(SchemeGithubAccessCode, _super);
     function SchemeGithubAccessCode() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeGithubAccessCode.prototype, "authorization", void 0);
     return SchemeGithubAccessCode;
-}(SpeakeasyBase));
-export { SchemeGithubAccessCode };
+}(utils_1.SpeakeasyBase));
+exports.SchemeGithubAccessCode = SchemeGithubAccessCode;
 var SchemeInternalApiKey = /** @class */ (function (_super) {
     __extends(SchemeInternalApiKey, _super);
     function SchemeInternalApiKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=ckan_api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=ckan_api_key" }),
         __metadata("design:type", String)
     ], SchemeInternalApiKey.prototype, "apiKey", void 0);
     return SchemeInternalApiKey;
-}(SpeakeasyBase));
-export { SchemeInternalApiKey };
+}(utils_1.SpeakeasyBase));
+exports.SchemeInternalApiKey = SchemeInternalApiKey;
 var Security = /** @class */ (function (_super) {
     __extends(Security, _super);
     function Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", SchemeGithubAccessCode)
     ], Security.prototype, "githubAccessCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemeInternalApiKey)
     ], Security.prototype, "internalApiKey", void 0);
     return Security;
-}(SpeakeasyBase));
-export { Security };
+}(utils_1.SpeakeasyBase));
+exports.Security = Security;

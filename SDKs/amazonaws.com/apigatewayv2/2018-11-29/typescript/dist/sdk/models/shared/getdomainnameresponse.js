@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainNameConfiguration } from "./domainnameconfiguration";
-import { MutualTlsAuthentication } from "./mutualtlsauthentication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainNameResponse = exports.GetDomainNameResponseMutualTlsAuthentication = void 0;
+var utils_1 = require("../../../internal/utils");
+// GetDomainNameResponseMutualTlsAuthentication
+/**
+ * The mutual TLS authentication configuration for a custom domain name.
+**/
+var GetDomainNameResponseMutualTlsAuthentication = /** @class */ (function (_super) {
+    __extends(GetDomainNameResponseMutualTlsAuthentication, _super);
+    function GetDomainNameResponseMutualTlsAuthentication() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TruststoreUri" }),
+        __metadata("design:type", Object)
+    ], GetDomainNameResponseMutualTlsAuthentication.prototype, "truststoreUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TruststoreVersion" }),
+        __metadata("design:type", Object)
+    ], GetDomainNameResponseMutualTlsAuthentication.prototype, "truststoreVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TruststoreWarnings" }),
+        __metadata("design:type", Object)
+    ], GetDomainNameResponseMutualTlsAuthentication.prototype, "truststoreWarnings", void 0);
+    return GetDomainNameResponseMutualTlsAuthentication;
+}(utils_1.SpeakeasyBase));
+exports.GetDomainNameResponseMutualTlsAuthentication = GetDomainNameResponseMutualTlsAuthentication;
 var GetDomainNameResponse = /** @class */ (function (_super) {
     __extends(GetDomainNameResponse, _super);
     function GetDomainNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiMappingSelectionExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiMappingSelectionExpression" }),
+        __metadata("design:type", Object)
     ], GetDomainNameResponse.prototype, "apiMappingSelectionExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainName" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainName" }),
+        __metadata("design:type", Object)
     ], GetDomainNameResponse.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainNameConfigurations", elemType: DomainNameConfiguration }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainNameConfigurations" }),
+        __metadata("design:type", Object)
     ], GetDomainNameResponse.prototype, "domainNameConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MutualTlsAuthentication" }),
-        __metadata("design:type", MutualTlsAuthentication)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MutualTlsAuthentication" }),
+        __metadata("design:type", GetDomainNameResponseMutualTlsAuthentication)
     ], GetDomainNameResponse.prototype, "mutualTlsAuthentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], GetDomainNameResponse.prototype, "tags", void 0);
     return GetDomainNameResponse;
-}(SpeakeasyBase));
-export { GetDomainNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainNameResponse = GetDomainNameResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationResponse = exports.UpdateOrganizationRequest = exports.UpdateOrganizationRequestBody = exports.UpdateOrganizationRequestBodyApi = exports.UpdateOrganizationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationPathParams, _super);
     function UpdateOrganizationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationPathParams = UpdateOrganizationPathParams;
 // UpdateOrganizationRequestBodyApi
 /**
  * API-specific settings
@@ -45,61 +48,61 @@ var UpdateOrganizationRequestBodyApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateOrganizationRequestBodyApi.prototype, "enabled", void 0);
     return UpdateOrganizationRequestBodyApi;
-}(SpeakeasyBase));
-export { UpdateOrganizationRequestBodyApi };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationRequestBodyApi = UpdateOrganizationRequestBodyApi;
 var UpdateOrganizationRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationRequestBody, _super);
     function UpdateOrganizationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", UpdateOrganizationRequestBodyApi)
     ], UpdateOrganizationRequestBody.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateOrganizationRequestBody.prototype, "name", void 0);
     return UpdateOrganizationRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationRequestBody = UpdateOrganizationRequestBody;
 var UpdateOrganizationRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationRequest, _super);
     function UpdateOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationPathParams)
     ], UpdateOrganizationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationRequestBody)
     ], UpdateOrganizationRequest.prototype, "request", void 0);
     return UpdateOrganizationRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationRequest = UpdateOrganizationRequest;
 var UpdateOrganizationResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationResponse, _super);
     function UpdateOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationResponse.prototype, "updateOrganization200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationResponse.prototype, "updateOrganization200ApplicationJSONObject", void 0);
     return UpdateOrganizationResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationResponse = UpdateOrganizationResponse;

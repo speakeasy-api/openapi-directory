@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,21 +14,46 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetUpdateScalingParametersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateScalingParametersResponse = exports.GetUpdateScalingParametersRequest = exports.GetUpdateScalingParametersHeaders = exports.GetUpdateScalingParametersQueryParams = exports.GetUpdateScalingParametersVersionEnum = exports.GetUpdateScalingParametersScalingParameters = exports.GetUpdateScalingParametersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetUpdateScalingParametersActionEnum;
 (function (GetUpdateScalingParametersActionEnum) {
     GetUpdateScalingParametersActionEnum["UpdateScalingParameters"] = "UpdateScalingParameters";
-})(GetUpdateScalingParametersActionEnum || (GetUpdateScalingParametersActionEnum = {}));
+})(GetUpdateScalingParametersActionEnum = exports.GetUpdateScalingParametersActionEnum || (exports.GetUpdateScalingParametersActionEnum = {}));
 // GetUpdateScalingParametersScalingParameters
 /**
  * The desired instance type and desired number of replicas of each index partition.
@@ -38,117 +64,117 @@ var GetUpdateScalingParametersScalingParameters = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=DesiredInstanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=DesiredInstanceType" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersScalingParameters.prototype, "desiredInstanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=DesiredPartitionCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=DesiredPartitionCount" }),
         __metadata("design:type", Number)
     ], GetUpdateScalingParametersScalingParameters.prototype, "desiredPartitionCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=DesiredReplicationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=DesiredReplicationCount" }),
         __metadata("design:type", Number)
     ], GetUpdateScalingParametersScalingParameters.prototype, "desiredReplicationCount", void 0);
     return GetUpdateScalingParametersScalingParameters;
-}(SpeakeasyBase));
-export { GetUpdateScalingParametersScalingParameters };
-export var GetUpdateScalingParametersVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateScalingParametersScalingParameters = GetUpdateScalingParametersScalingParameters;
+var GetUpdateScalingParametersVersionEnum;
 (function (GetUpdateScalingParametersVersionEnum) {
     GetUpdateScalingParametersVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(GetUpdateScalingParametersVersionEnum || (GetUpdateScalingParametersVersionEnum = {}));
+})(GetUpdateScalingParametersVersionEnum = exports.GetUpdateScalingParametersVersionEnum || (exports.GetUpdateScalingParametersVersionEnum = {}));
 var GetUpdateScalingParametersQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateScalingParametersQueryParams, _super);
     function GetUpdateScalingParametersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ScalingParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ScalingParameters" }),
         __metadata("design:type", GetUpdateScalingParametersScalingParameters)
     ], GetUpdateScalingParametersQueryParams.prototype, "scalingParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersQueryParams.prototype, "version", void 0);
     return GetUpdateScalingParametersQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateScalingParametersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateScalingParametersQueryParams = GetUpdateScalingParametersQueryParams;
 var GetUpdateScalingParametersHeaders = /** @class */ (function (_super) {
     __extends(GetUpdateScalingParametersHeaders, _super);
     function GetUpdateScalingParametersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetUpdateScalingParametersHeaders;
-}(SpeakeasyBase));
-export { GetUpdateScalingParametersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateScalingParametersHeaders = GetUpdateScalingParametersHeaders;
 var GetUpdateScalingParametersRequest = /** @class */ (function (_super) {
     __extends(GetUpdateScalingParametersRequest, _super);
     function GetUpdateScalingParametersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateScalingParametersQueryParams)
     ], GetUpdateScalingParametersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateScalingParametersHeaders)
     ], GetUpdateScalingParametersRequest.prototype, "headers", void 0);
     return GetUpdateScalingParametersRequest;
-}(SpeakeasyBase));
-export { GetUpdateScalingParametersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateScalingParametersRequest = GetUpdateScalingParametersRequest;
 var GetUpdateScalingParametersResponse = /** @class */ (function (_super) {
     __extends(GetUpdateScalingParametersResponse, _super);
     function GetUpdateScalingParametersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateScalingParametersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateScalingParametersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateScalingParametersResponse.prototype, "statusCode", void 0);
     return GetUpdateScalingParametersResponse;
-}(SpeakeasyBase));
-export { GetUpdateScalingParametersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateScalingParametersResponse = GetUpdateScalingParametersResponse;

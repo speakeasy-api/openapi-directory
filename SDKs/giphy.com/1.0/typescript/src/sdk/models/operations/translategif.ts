@@ -32,5 +32,5 @@ export class TranslateGifResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  translateGif200ApplicationJsonObject?: TranslateGif200ApplicationJson;
+  translateGif200ApplicationJSONObject?: TranslateGif200ApplicationJson;
 }

@@ -18,7 +18,7 @@ export declare class ActivatePipelineRequest extends SpeakeasyBase {
     request: shared.ActivatePipelineInput;
 }
 export declare class ActivatePipelineResponse extends SpeakeasyBase {
-    activatePipelineOutput?: Map<string, any>;
+    activatePipelineOutput?: Record<string, any>;
     contentType: string;
     internalServiceError?: any;
     invalidRequestException?: any;

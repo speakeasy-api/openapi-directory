@@ -1,0 +1,112 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTicketsResponse = exports.GetTicketsRequest = exports.GetTicketsQueryParams = exports.GetTicketsTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTicketsTypeEnum;
+(function (GetTicketsTypeEnum) {
+    GetTicketsTypeEnum["ARecord"] = "A_RECORD";
+    GetTicketsTypeEnum["ChildAbuse"] = "CHILD_ABUSE";
+    GetTicketsTypeEnum["Content"] = "CONTENT";
+    GetTicketsTypeEnum["FraudWire"] = "FRAUD_WIRE";
+    GetTicketsTypeEnum["IpBlock"] = "IP_BLOCK";
+    GetTicketsTypeEnum["Malware"] = "MALWARE";
+    GetTicketsTypeEnum["NetworkAbuse"] = "NETWORK_ABUSE";
+    GetTicketsTypeEnum["Phishing"] = "PHISHING";
+    GetTicketsTypeEnum["Spam"] = "SPAM";
+})(GetTicketsTypeEnum = exports.GetTicketsTypeEnum || (exports.GetTicketsTypeEnum = {}));
+var GetTicketsQueryParams = /** @class */ (function (_super) {
+    __extends(GetTicketsQueryParams, _super);
+    function GetTicketsQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=closed" }),
+        __metadata("design:type", Boolean)
+    ], GetTicketsQueryParams.prototype, "closed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdEnd" }),
+        __metadata("design:type", String)
+    ], GetTicketsQueryParams.prototype, "createdEnd", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdStart" }),
+        __metadata("design:type", String)
+    ], GetTicketsQueryParams.prototype, "createdStart", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
+        __metadata("design:type", Number)
+    ], GetTicketsQueryParams.prototype, "limit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
+        __metadata("design:type", Number)
+    ], GetTicketsQueryParams.prototype, "offset", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sourceDomainOrIp" }),
+        __metadata("design:type", String)
+    ], GetTicketsQueryParams.prototype, "sourceDomainOrIp", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=target" }),
+        __metadata("design:type", String)
+    ], GetTicketsQueryParams.prototype, "target", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
+        __metadata("design:type", String)
+    ], GetTicketsQueryParams.prototype, "type", void 0);
+    return GetTicketsQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetTicketsQueryParams = GetTicketsQueryParams;
+var GetTicketsRequest = /** @class */ (function (_super) {
+    __extends(GetTicketsRequest, _super);
+    function GetTicketsRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTicketsQueryParams)
+    ], GetTicketsRequest.prototype, "queryParams", void 0);
+    return GetTicketsRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetTicketsRequest = GetTicketsRequest;
+var GetTicketsResponse = /** @class */ (function (_super) {
+    __extends(GetTicketsResponse, _super);
+    function GetTicketsResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Uint8Array)
+    ], GetTicketsResponse.prototype, "body", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetTicketsResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], GetTicketsResponse.prototype, "statusCode", void 0);
+    return GetTicketsResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetTicketsResponse = GetTicketsResponse;

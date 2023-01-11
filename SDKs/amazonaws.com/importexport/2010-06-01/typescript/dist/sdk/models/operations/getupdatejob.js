@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUpdateJobActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateJobResponse = exports.GetUpdateJobRequest = exports.GetUpdateJobQueryParams = exports.GetUpdateJobVersionEnum = exports.GetUpdateJobOperationEnum = exports.GetUpdateJobJobTypeEnum = exports.GetUpdateJobActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUpdateJobActionEnum;
 (function (GetUpdateJobActionEnum) {
     GetUpdateJobActionEnum["UpdateJob"] = "UpdateJob";
-})(GetUpdateJobActionEnum || (GetUpdateJobActionEnum = {}));
-export var GetUpdateJobJobTypeEnum;
+})(GetUpdateJobActionEnum = exports.GetUpdateJobActionEnum || (exports.GetUpdateJobActionEnum = {}));
+var GetUpdateJobJobTypeEnum;
 (function (GetUpdateJobJobTypeEnum) {
     GetUpdateJobJobTypeEnum["Import"] = "Import";
     GetUpdateJobJobTypeEnum["Export"] = "Export";
-})(GetUpdateJobJobTypeEnum || (GetUpdateJobJobTypeEnum = {}));
-export var GetUpdateJobOperationEnum;
+})(GetUpdateJobJobTypeEnum = exports.GetUpdateJobJobTypeEnum || (exports.GetUpdateJobJobTypeEnum = {}));
+var GetUpdateJobOperationEnum;
 (function (GetUpdateJobOperationEnum) {
     GetUpdateJobOperationEnum["UpdateJob"] = "UpdateJob";
-})(GetUpdateJobOperationEnum || (GetUpdateJobOperationEnum = {}));
-export var GetUpdateJobVersionEnum;
+})(GetUpdateJobOperationEnum = exports.GetUpdateJobOperationEnum || (exports.GetUpdateJobOperationEnum = {}));
+var GetUpdateJobVersionEnum;
 (function (GetUpdateJobVersionEnum) {
     GetUpdateJobVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(GetUpdateJobVersionEnum || (GetUpdateJobVersionEnum = {}));
+})(GetUpdateJobVersionEnum = exports.GetUpdateJobVersionEnum || (exports.GetUpdateJobVersionEnum = {}));
 var GetUpdateJobQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateJobQueryParams, _super);
     function GetUpdateJobQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=APIVersion" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobId" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobType" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Manifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Manifest" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "manifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ValidateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ValidateOnly" }),
         __metadata("design:type", Boolean)
     ], GetUpdateJobQueryParams.prototype, "validateOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateJobQueryParams.prototype, "version", void 0);
     return GetUpdateJobQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateJobQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateJobQueryParams = GetUpdateJobQueryParams;
 var GetUpdateJobRequest = /** @class */ (function (_super) {
     __extends(GetUpdateJobRequest, _super);
     function GetUpdateJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateJobQueryParams)
     ], GetUpdateJobRequest.prototype, "queryParams", void 0);
     return GetUpdateJobRequest;
-}(SpeakeasyBase));
-export { GetUpdateJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateJobRequest = GetUpdateJobRequest;
 var GetUpdateJobResponse = /** @class */ (function (_super) {
     __extends(GetUpdateJobResponse, _super);
     function GetUpdateJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateJobResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateJobResponse.prototype, "statusCode", void 0);
     return GetUpdateJobResponse;
-}(SpeakeasyBase));
-export { GetUpdateJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateJobResponse = GetUpdateJobResponse;

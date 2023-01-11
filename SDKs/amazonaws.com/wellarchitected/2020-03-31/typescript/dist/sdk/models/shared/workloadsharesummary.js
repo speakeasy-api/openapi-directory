@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PermissionTypeEnum } from "./permissiontypeenum";
-import { ShareStatusEnum } from "./sharestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkloadShareSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var permissiontypeenum_1 = require("./permissiontypeenum");
+var sharestatusenum_1 = require("./sharestatusenum");
 // WorkloadShareSummary
 /**
  * A workload share summary return object.
@@ -35,21 +38,21 @@ var WorkloadShareSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PermissionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PermissionType" }),
         __metadata("design:type", String)
     ], WorkloadShareSummary.prototype, "permissionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShareId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShareId" }),
         __metadata("design:type", String)
     ], WorkloadShareSummary.prototype, "shareId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SharedWith" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SharedWith" }),
         __metadata("design:type", String)
     ], WorkloadShareSummary.prototype, "sharedWith", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], WorkloadShareSummary.prototype, "status", void 0);
     return WorkloadShareSummary;
-}(SpeakeasyBase));
-export { WorkloadShareSummary };
+}(utils_1.SpeakeasyBase));
+exports.WorkloadShareSummary = WorkloadShareSummary;

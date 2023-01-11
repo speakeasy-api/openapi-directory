@@ -23,7 +23,7 @@ export declare class CloudsupportCasesCloseSecurity extends SpeakeasyBase {
 export declare class CloudsupportCasesCloseRequest extends SpeakeasyBase {
     pathParams: CloudsupportCasesClosePathParams;
     queryParams: CloudsupportCasesCloseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudsupportCasesCloseSecurity;
 }
 export declare class CloudsupportCasesCloseResponse extends SpeakeasyBase {

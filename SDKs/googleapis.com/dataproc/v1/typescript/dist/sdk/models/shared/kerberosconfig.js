@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KerberosConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // KerberosConfig
 /**
  * Specifies Kerberos related configuration.
@@ -33,65 +36,65 @@ var KerberosConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crossRealmTrustAdminServer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crossRealmTrustAdminServer" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "crossRealmTrustAdminServer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crossRealmTrustKdc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crossRealmTrustKdc" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "crossRealmTrustKdc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crossRealmTrustRealm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crossRealmTrustRealm" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "crossRealmTrustRealm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crossRealmTrustSharedPasswordUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crossRealmTrustSharedPasswordUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "crossRealmTrustSharedPasswordUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableKerberos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableKerberos" }),
         __metadata("design:type", Boolean)
     ], KerberosConfig.prototype, "enableKerberos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kdcDbKeyUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kdcDbKeyUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "kdcDbKeyUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyPasswordUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyPasswordUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "keyPasswordUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keystorePasswordUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keystorePasswordUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "keystorePasswordUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keystoreUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keystoreUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "keystoreUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "kmsKeyUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=realm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=realm" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "realm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPrincipalPasswordUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPrincipalPasswordUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "rootPrincipalPasswordUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tgtLifetimeHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tgtLifetimeHours" }),
         __metadata("design:type", Number)
     ], KerberosConfig.prototype, "tgtLifetimeHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truststorePasswordUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truststorePasswordUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "truststorePasswordUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=truststoreUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=truststoreUri" }),
         __metadata("design:type", String)
     ], KerberosConfig.prototype, "truststoreUri", void 0);
     return KerberosConfig;
-}(SpeakeasyBase));
-export { KerberosConfig };
+}(utils_1.SpeakeasyBase));
+exports.KerberosConfig = KerberosConfig;

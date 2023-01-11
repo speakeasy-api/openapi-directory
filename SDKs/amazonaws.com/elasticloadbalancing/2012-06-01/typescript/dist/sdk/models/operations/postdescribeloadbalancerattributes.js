@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeLoadBalancerAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeLoadBalancerAttributesResponse = exports.PostDescribeLoadBalancerAttributesRequest = exports.PostDescribeLoadBalancerAttributesHeaders = exports.PostDescribeLoadBalancerAttributesQueryParams = exports.PostDescribeLoadBalancerAttributesVersionEnum = exports.PostDescribeLoadBalancerAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeLoadBalancerAttributesActionEnum;
 (function (PostDescribeLoadBalancerAttributesActionEnum) {
     PostDescribeLoadBalancerAttributesActionEnum["DescribeLoadBalancerAttributes"] = "DescribeLoadBalancerAttributes";
-})(PostDescribeLoadBalancerAttributesActionEnum || (PostDescribeLoadBalancerAttributesActionEnum = {}));
-export var PostDescribeLoadBalancerAttributesVersionEnum;
+})(PostDescribeLoadBalancerAttributesActionEnum = exports.PostDescribeLoadBalancerAttributesActionEnum || (exports.PostDescribeLoadBalancerAttributesActionEnum = {}));
+var PostDescribeLoadBalancerAttributesVersionEnum;
 (function (PostDescribeLoadBalancerAttributesVersionEnum) {
     PostDescribeLoadBalancerAttributesVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(PostDescribeLoadBalancerAttributesVersionEnum || (PostDescribeLoadBalancerAttributesVersionEnum = {}));
+})(PostDescribeLoadBalancerAttributesVersionEnum = exports.PostDescribeLoadBalancerAttributesVersionEnum || (exports.PostDescribeLoadBalancerAttributesVersionEnum = {}));
 var PostDescribeLoadBalancerAttributesQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeLoadBalancerAttributesQueryParams, _super);
     function PostDescribeLoadBalancerAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesQueryParams.prototype, "version", void 0);
     return PostDescribeLoadBalancerAttributesQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeLoadBalancerAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLoadBalancerAttributesQueryParams = PostDescribeLoadBalancerAttributesQueryParams;
 var PostDescribeLoadBalancerAttributesHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeLoadBalancerAttributesHeaders, _super);
     function PostDescribeLoadBalancerAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeLoadBalancerAttributesHeaders;
-}(SpeakeasyBase));
-export { PostDescribeLoadBalancerAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLoadBalancerAttributesHeaders = PostDescribeLoadBalancerAttributesHeaders;
 var PostDescribeLoadBalancerAttributesRequest = /** @class */ (function (_super) {
     __extends(PostDescribeLoadBalancerAttributesRequest, _super);
     function PostDescribeLoadBalancerAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLoadBalancerAttributesQueryParams)
     ], PostDescribeLoadBalancerAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLoadBalancerAttributesHeaders)
     ], PostDescribeLoadBalancerAttributesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLoadBalancerAttributesRequest.prototype, "request", void 0);
     return PostDescribeLoadBalancerAttributesRequest;
-}(SpeakeasyBase));
-export { PostDescribeLoadBalancerAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLoadBalancerAttributesRequest = PostDescribeLoadBalancerAttributesRequest;
 var PostDescribeLoadBalancerAttributesResponse = /** @class */ (function (_super) {
     __extends(PostDescribeLoadBalancerAttributesResponse, _super);
     function PostDescribeLoadBalancerAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLoadBalancerAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeLoadBalancerAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeLoadBalancerAttributesResponse.prototype, "statusCode", void 0);
     return PostDescribeLoadBalancerAttributesResponse;
-}(SpeakeasyBase));
-export { PostDescribeLoadBalancerAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLoadBalancerAttributesResponse = PostDescribeLoadBalancerAttributesResponse;

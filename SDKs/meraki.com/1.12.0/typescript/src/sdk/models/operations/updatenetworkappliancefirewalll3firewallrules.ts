@@ -73,5 +73,5 @@ export class UpdateNetworkApplianceFirewallL3FirewallRulesResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceFirewallL3FirewallRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceFirewallL3FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

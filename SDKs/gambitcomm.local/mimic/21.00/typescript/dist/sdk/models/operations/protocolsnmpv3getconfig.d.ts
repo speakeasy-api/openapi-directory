@@ -7,7 +7,7 @@ export declare class ProtocolSnmpv3GetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolSnmpv3GetConfigPathParams;
 }
 export declare class ProtocolSnmpv3GetConfigResponse extends SpeakeasyBase {
-    configSnmPv3?: shared.ConfigSnmPv3;
+    configSNMPv3?: shared.ConfigSnmPv3;
     contentType: string;
     statusCode: number;
 }

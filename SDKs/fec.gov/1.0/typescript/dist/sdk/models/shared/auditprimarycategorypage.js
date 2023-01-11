@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { AuditPrimaryCategory } from "./auditprimarycategory";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditPrimaryCategoryPage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var auditprimarycategory_1 = require("./auditprimarycategory");
 var AuditPrimaryCategoryPage = /** @class */ (function (_super) {
     __extends(AuditPrimaryCategoryPage, _super);
     function AuditPrimaryCategoryPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], AuditPrimaryCategoryPage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: AuditPrimaryCategory }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: auditprimarycategory_1.AuditPrimaryCategory }),
         __metadata("design:type", Array)
     ], AuditPrimaryCategoryPage.prototype, "results", void 0);
     return AuditPrimaryCategoryPage;
-}(SpeakeasyBase));
-export { AuditPrimaryCategoryPage };
+}(utils_1.SpeakeasyBase));
+exports.AuditPrimaryCategoryPage = AuditPrimaryCategoryPage;

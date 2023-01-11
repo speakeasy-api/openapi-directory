@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BooleanRule } from "./booleanrule";
-import { GradientRule } from "./gradientrule";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionalFormatRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var booleanrule_1 = require("./booleanrule");
+var gradientrule_1 = require("./gradientrule");
+var gridrange_1 = require("./gridrange");
 // ConditionalFormatRule
 /**
  * A rule describing a conditional format.
@@ -36,17 +39,17 @@ var ConditionalFormatRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=booleanRule" }),
-        __metadata("design:type", BooleanRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=booleanRule" }),
+        __metadata("design:type", booleanrule_1.BooleanRule)
     ], ConditionalFormatRule.prototype, "booleanRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradientRule" }),
-        __metadata("design:type", GradientRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradientRule" }),
+        __metadata("design:type", gradientrule_1.GradientRule)
     ], ConditionalFormatRule.prototype, "gradientRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranges", elemType: GridRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranges", elemType: gridrange_1.GridRange }),
         __metadata("design:type", Array)
     ], ConditionalFormatRule.prototype, "ranges", void 0);
     return ConditionalFormatRule;
-}(SpeakeasyBase));
-export { ConditionalFormatRule };
+}(utils_1.SpeakeasyBase));
+exports.ConditionalFormatRule = ConditionalFormatRule;

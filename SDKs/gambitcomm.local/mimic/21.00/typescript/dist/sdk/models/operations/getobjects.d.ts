@@ -9,5 +9,5 @@ export declare class GetObjectsRequest extends SpeakeasyBase {
 export declare class GetObjectsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getObjects200ApplicationJsonStrings?: string[];
+    getObjects200ApplicationJSONStrings?: string[];
 }

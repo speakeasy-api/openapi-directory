@@ -20,7 +20,7 @@ export class AgentMetadata extends SpeakeasyBase {
   instanceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=osRelease" })
-  osRelease?: Map<string, string>;
+  osRelease?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidEapOverrideResponse = exports.GetNetworkWirelessSsidEapOverrideRequest = exports.GetNetworkWirelessSsidEapOverridePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidEapOverridePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidEapOverridePathParams, _super);
     function GetNetworkWirelessSsidEapOverridePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidEapOverridePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidEapOverridePathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidEapOverridePathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidEapOverridePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidEapOverridePathParams = GetNetworkWirelessSsidEapOverridePathParams;
 var GetNetworkWirelessSsidEapOverrideRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidEapOverrideRequest, _super);
     function GetNetworkWirelessSsidEapOverrideRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidEapOverridePathParams)
     ], GetNetworkWirelessSsidEapOverrideRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidEapOverrideRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidEapOverrideRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidEapOverrideRequest = GetNetworkWirelessSsidEapOverrideRequest;
 var GetNetworkWirelessSsidEapOverrideResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidEapOverrideResponse, _super);
     function GetNetworkWirelessSsidEapOverrideResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidEapOverrideResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidEapOverrideResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidEapOverrideResponse.prototype, "getNetworkWirelessSsidEapOverride200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidEapOverrideResponse.prototype, "getNetworkWirelessSsidEapOverride200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidEapOverrideResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidEapOverrideResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidEapOverrideResponse = GetNetworkWirelessSsidEapOverrideResponse;

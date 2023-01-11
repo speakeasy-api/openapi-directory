@@ -23,5 +23,5 @@ export declare class GetemailinfoRequest extends SpeakeasyBase {
 export declare class GetemailinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getemailinfo200ApplicationJsonObject?: Getemailinfo200ApplicationJson;
+    getemailinfo200ApplicationJSONObject?: Getemailinfo200ApplicationJson;
 }

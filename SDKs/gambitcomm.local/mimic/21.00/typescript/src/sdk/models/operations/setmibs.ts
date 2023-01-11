@@ -26,5 +26,5 @@ export class SetMibsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setMibs200ApplicationJsonString?: string;
+  setMibs200ApplicationJSONString?: string;
 }

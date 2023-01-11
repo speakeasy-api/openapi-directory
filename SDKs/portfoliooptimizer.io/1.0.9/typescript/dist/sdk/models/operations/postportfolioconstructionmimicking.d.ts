@@ -24,6 +24,6 @@ export declare class PostPortfolioConstructionMimickingRequest extends Speakeasy
 }
 export declare class PostPortfolioConstructionMimickingResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioConstructionMimicking200ApplicationJsonObject?: PostPortfolioConstructionMimicking200ApplicationJson;
     statusCode: number;
+    postPortfolioConstructionMimicking200ApplicationJSONObject?: PostPortfolioConstructionMimicking200ApplicationJson;
 }

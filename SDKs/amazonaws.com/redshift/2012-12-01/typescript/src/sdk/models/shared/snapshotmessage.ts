@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Snapshot } from "./snapshot";
+import { SnapshotList } from "./snapshotlist";
 
 
 
@@ -11,6 +11,6 @@ export class SnapshotMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: Snapshot })
-  snapshots?: Snapshot[];
+  @SpeakeasyMetadata({ elemType: SnapshotList })
+  snapshots?: SnapshotList[];
 }

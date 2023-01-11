@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowChangeAttrResponse = exports.ProtocolNetflowChangeAttrRequest = exports.ProtocolNetflowChangeAttrPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowChangeAttrPathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeAttrPathParams, _super);
     function ProtocolNetflowChangeAttrPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeAttrPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=attr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=attr" }),
         __metadata("design:type", String)
     ], ProtocolNetflowChangeAttrPathParams.prototype, "attr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=field-num" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=field-num" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeAttrPathParams.prototype, "fieldNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=flowset-uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=flowset-uid" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeAttrPathParams.prototype, "flowsetUid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolNetflowChangeAttrPathParams.prototype, "value", void 0);
     return ProtocolNetflowChangeAttrPathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeAttrPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeAttrPathParams = ProtocolNetflowChangeAttrPathParams;
 var ProtocolNetflowChangeAttrRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeAttrRequest, _super);
     function ProtocolNetflowChangeAttrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowChangeAttrPathParams)
     ], ProtocolNetflowChangeAttrRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowChangeAttrRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeAttrRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeAttrRequest = ProtocolNetflowChangeAttrRequest;
 var ProtocolNetflowChangeAttrResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeAttrResponse, _super);
     function ProtocolNetflowChangeAttrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowChangeAttrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeAttrResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowChangeAttrResponse.prototype, "protocolNetflowChangeAttr200ApplicationJsonString", void 0);
+    ], ProtocolNetflowChangeAttrResponse.prototype, "protocolNetflowChangeAttr200ApplicationJSONString", void 0);
     return ProtocolNetflowChangeAttrResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeAttrResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeAttrResponse = ProtocolNetflowChangeAttrResponse;

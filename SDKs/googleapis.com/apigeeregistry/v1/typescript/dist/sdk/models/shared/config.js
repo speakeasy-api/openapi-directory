@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // ConfigInput
 /**
  * Available configurations to provision an Instance.
@@ -33,9 +36,9 @@ var ConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cmekKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cmekKeyName" }),
         __metadata("design:type", String)
     ], ConfigInput.prototype, "cmekKeyName", void 0);
     return ConfigInput;
-}(SpeakeasyBase));
-export { ConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.ConfigInput = ConfigInput;

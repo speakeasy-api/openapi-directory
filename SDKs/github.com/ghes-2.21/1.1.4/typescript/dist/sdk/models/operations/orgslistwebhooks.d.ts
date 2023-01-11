@@ -13,7 +13,7 @@ export declare class OrgsListWebhooksRequest extends SpeakeasyBase {
 }
 export declare class OrgsListWebhooksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     orgHooks?: shared.OrgHook[];

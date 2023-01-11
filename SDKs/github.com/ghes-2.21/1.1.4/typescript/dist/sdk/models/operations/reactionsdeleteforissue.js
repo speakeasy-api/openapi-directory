@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteForIssueResponse = exports.ReactionsDeleteForIssueRequest = exports.ReactionsDeleteForIssuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeleteForIssuePathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssuePathParams, _super);
     function ReactionsDeleteForIssuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=issue_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=issue_number" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssuePathParams.prototype, "issueNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssuePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssuePathParams.prototype, "reactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssuePathParams.prototype, "repo", void 0);
     return ReactionsDeleteForIssuePathParams;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssuePathParams = ReactionsDeleteForIssuePathParams;
 var ReactionsDeleteForIssueRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssueRequest, _super);
     function ReactionsDeleteForIssueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteForIssuePathParams)
     ], ReactionsDeleteForIssueRequest.prototype, "pathParams", void 0);
     return ReactionsDeleteForIssueRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssueRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssueRequest = ReactionsDeleteForIssueRequest;
 var ReactionsDeleteForIssueResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForIssueResponse, _super);
     function ReactionsDeleteForIssueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteForIssueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteForIssueResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteForIssueResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteForIssueResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForIssueResponse = ReactionsDeleteForIssueResponse;

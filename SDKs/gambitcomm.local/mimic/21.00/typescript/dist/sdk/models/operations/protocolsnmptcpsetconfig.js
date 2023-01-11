@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmptcpSetConfigResponse = exports.ProtocolSnmptcpSetConfigRequest = exports.ProtocolSnmptcpSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmptcpSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpSetConfigPathParams, _super);
     function ProtocolSnmptcpSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolSnmptcpSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolSnmptcpSetConfigPathParams.prototype, "value", void 0);
     return ProtocolSnmptcpSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpSetConfigPathParams = ProtocolSnmptcpSetConfigPathParams;
 var ProtocolSnmptcpSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpSetConfigRequest, _super);
     function ProtocolSnmptcpSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmptcpSetConfigPathParams)
     ], ProtocolSnmptcpSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolSnmptcpSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpSetConfigRequest = ProtocolSnmptcpSetConfigRequest;
 var ProtocolSnmptcpSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpSetConfigResponse, _super);
     function ProtocolSnmptcpSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmptcpSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmptcpSetConfigResponse.prototype, "protocolSnmptcpSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolSnmptcpSetConfigResponse.prototype, "protocolSnmptcpSetConfig200ApplicationJSONString", void 0);
     return ProtocolSnmptcpSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpSetConfigResponse = ProtocolSnmptcpSetConfigResponse;

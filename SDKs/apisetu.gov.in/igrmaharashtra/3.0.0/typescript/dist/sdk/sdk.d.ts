@@ -1,22 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { ApIs } from "./apis";
 export declare const ServerList: readonly ["https://apisetu.gov.in/igrmaharashtra/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    apIs: ApIs;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * llcer - Leave and License Certificate
-     *
-     * API to verify Leave and License Certificate.
-    **/
-    llcer(req: operations.LlcerRequest, config?: AxiosRequestConfig): Promise<operations.LlcerResponse>;
+    constructor(props: SDKProps);
 }
-export {};

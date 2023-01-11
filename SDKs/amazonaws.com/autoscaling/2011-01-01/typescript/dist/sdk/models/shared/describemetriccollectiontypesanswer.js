@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricGranularityType } from "./metricgranularitytype";
-import { MetricCollectionType } from "./metriccollectiontype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeMetricCollectionTypesAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricgranularitytype_1 = require("./metricgranularitytype");
+var metriccollectiontype_1 = require("./metriccollectiontype");
 var DescribeMetricCollectionTypesAnswer = /** @class */ (function (_super) {
     __extends(DescribeMetricCollectionTypesAnswer, _super);
     function DescribeMetricCollectionTypesAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricGranularityType }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metricgranularitytype_1.MetricGranularityType }),
         __metadata("design:type", Array)
     ], DescribeMetricCollectionTypesAnswer.prototype, "granularities", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricCollectionType }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metriccollectiontype_1.MetricCollectionType }),
         __metadata("design:type", Array)
     ], DescribeMetricCollectionTypesAnswer.prototype, "metrics", void 0);
     return DescribeMetricCollectionTypesAnswer;
-}(SpeakeasyBase));
-export { DescribeMetricCollectionTypesAnswer };
+}(utils_1.SpeakeasyBase));
+exports.DescribeMetricCollectionTypesAnswer = DescribeMetricCollectionTypesAnswer;

@@ -9,7 +9,7 @@ export declare class GetBestPodcastsQueryParams extends SpeakeasyBase {
     safeMode?: number;
 }
 export declare class GetBestPodcastsHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetBestPodcastsRequest extends SpeakeasyBase {
     queryParams: GetBestPodcastsQueryParams;
@@ -18,6 +18,6 @@ export declare class GetBestPodcastsRequest extends SpeakeasyBase {
 export declare class GetBestPodcastsResponse extends SpeakeasyBase {
     bestPodcastsResponse?: shared.BestPodcastsResponse;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

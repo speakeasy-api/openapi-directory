@@ -17,5 +17,5 @@ export declare class CreateNetworkSwitchStackRoutingStaticRouteRequest extends S
 export declare class CreateNetworkSwitchStackRoutingStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkSwitchStackRoutingStaticRoute201ApplicationJsonObject?: Map<string, any>;
+    createNetworkSwitchStackRoutingStaticRoute201ApplicationJSONObject?: Record<string, any>;
 }

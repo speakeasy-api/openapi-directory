@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceIdentifier } from "./deviceidentifier";
-export var PartnerUnclaimSectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartnerUnclaim = exports.PartnerUnclaimSectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceidentifier_1 = require("./deviceidentifier");
+var PartnerUnclaimSectionTypeEnum;
 (function (PartnerUnclaimSectionTypeEnum) {
     PartnerUnclaimSectionTypeEnum["SectionTypeUnspecified"] = "SECTION_TYPE_UNSPECIFIED";
     PartnerUnclaimSectionTypeEnum["SectionTypeSimLock"] = "SECTION_TYPE_SIM_LOCK";
     PartnerUnclaimSectionTypeEnum["SectionTypeZeroTouch"] = "SECTION_TYPE_ZERO_TOUCH";
-})(PartnerUnclaimSectionTypeEnum || (PartnerUnclaimSectionTypeEnum = {}));
+})(PartnerUnclaimSectionTypeEnum = exports.PartnerUnclaimSectionTypeEnum || (exports.PartnerUnclaimSectionTypeEnum = {}));
 // PartnerUnclaim
 /**
  * Identifies one unclaim request.
@@ -40,25 +43,25 @@ var PartnerUnclaim = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", String)
     ], PartnerUnclaim.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceIdentifier" }),
-        __metadata("design:type", DeviceIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceIdentifier" }),
+        __metadata("design:type", deviceidentifier_1.DeviceIdentifier)
     ], PartnerUnclaim.prototype, "deviceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectionType" }),
         __metadata("design:type", String)
     ], PartnerUnclaim.prototype, "sectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeDays" }),
         __metadata("design:type", Number)
     ], PartnerUnclaim.prototype, "vacationModeDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeExpireTime" }),
         __metadata("design:type", String)
     ], PartnerUnclaim.prototype, "vacationModeExpireTime", void 0);
     return PartnerUnclaim;
-}(SpeakeasyBase));
-export { PartnerUnclaim };
+}(utils_1.SpeakeasyBase));
+exports.PartnerUnclaim = PartnerUnclaim;

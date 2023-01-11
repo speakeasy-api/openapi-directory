@@ -25,5 +25,5 @@ export class SetWriteCommunityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setWriteCommunity200ApplicationJsonString?: string;
+  setWriteCommunity200ApplicationJSONString?: string;
 }

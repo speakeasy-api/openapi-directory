@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ConnectorsProjectsLocationsConnectionsActionsExecuteRequest, ConnectorsProjectsLocationsConnectionsActionsExecuteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: ConnectorsProjectsLocationsConnectionsActionsExecuteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "illum",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "deserunt",
-    alt: "json",
-    callback: "sit",
-    fields: "nemo",
-    key: "et",
-    oauthToken: "animi",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "ratione",
-    uploadType: "ipsa",
-    uploadProtocol: "blanditiis",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     parameters: {
-      "impedit": "molestiae",
-      "provident": "dolores",
-      "tempora": "necessitatibus",
+      "debitis": "voluptatum",
+      "et": "ut",
+      "dolorem": "et",
     },
   },
 };

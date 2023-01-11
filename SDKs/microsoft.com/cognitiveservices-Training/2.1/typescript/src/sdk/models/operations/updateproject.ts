@@ -17,7 +17,7 @@ export class UpdateProjectHeaders extends SpeakeasyBase {
 
 export class UpdateProjectRequestsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   project?: shared.ProjectInput;
@@ -29,7 +29,7 @@ export class UpdateProjectRequestsInput extends SpeakeasyBase {
   project2?: shared.ProjectInput;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

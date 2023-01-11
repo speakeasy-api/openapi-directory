@@ -7,7 +7,6 @@ export declare class PostMarketingV3MarketingEventsEventsExternalEventIdComplete
     externalAccountId: string;
 }
 export declare class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
 }

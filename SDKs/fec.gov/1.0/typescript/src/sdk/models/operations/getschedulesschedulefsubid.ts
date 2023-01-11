@@ -242,8 +242,8 @@ export class GetSchedulesScheduleFSubIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSchedulesScheduleFSubIdDefaultApplicationJsonObject?: GetSchedulesScheduleFSubIdDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSchedulesScheduleFSubIdDefaultApplicationJSONObject?: GetSchedulesScheduleFSubIdDefaultApplicationJson;
 }

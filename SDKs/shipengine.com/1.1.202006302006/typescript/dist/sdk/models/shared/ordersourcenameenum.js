@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderSourceNameEnum = void 0;
+var OrderSourceNameEnum;
+(function (OrderSourceNameEnum) {
+    OrderSourceNameEnum["AmazonCa"] = "amazon_ca";
+    OrderSourceNameEnum["AmazonUs"] = "amazon_us";
+    OrderSourceNameEnum["Brightpearl"] = "brightpearl";
+    OrderSourceNameEnum["ChannelAdvisor"] = "channel_advisor";
+    OrderSourceNameEnum["Cratejoy"] = "cratejoy";
+    OrderSourceNameEnum["Ebay"] = "ebay";
+    OrderSourceNameEnum["Etsy"] = "etsy";
+    OrderSourceNameEnum["Jane"] = "jane";
+    OrderSourceNameEnum["GrouponGoods"] = "groupon_goods";
+    OrderSourceNameEnum["Magento"] = "magento";
+    OrderSourceNameEnum["Paypal"] = "paypal";
+    OrderSourceNameEnum["SellerActive"] = "seller_active";
+    OrderSourceNameEnum["Shopify"] = "shopify";
+    OrderSourceNameEnum["StitchLabs"] = "stitch_labs";
+    OrderSourceNameEnum["Squarespace"] = "squarespace";
+    OrderSourceNameEnum["ThreeDcart"] = "three_dcart";
+    OrderSourceNameEnum["Tophatter"] = "tophatter";
+    OrderSourceNameEnum["Walmart"] = "walmart";
+    OrderSourceNameEnum["WooCommerce"] = "woo_commerce";
+    OrderSourceNameEnum["Volusion"] = "volusion";
+})(OrderSourceNameEnum = exports.OrderSourceNameEnum || (exports.OrderSourceNameEnum = {}));

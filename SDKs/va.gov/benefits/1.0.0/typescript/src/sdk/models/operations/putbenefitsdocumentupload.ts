@@ -58,14 +58,14 @@ export class PutBenefitsDocumentUploadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  putBenefitsDocumentUpload401ApplicationJsonObject?: PutBenefitsDocumentUpload401ApplicationJson;
+  putBenefitsDocumentUpload401ApplicationJSONObject?: PutBenefitsDocumentUpload401ApplicationJson;
 
   @SpeakeasyMetadata()
-  putBenefitsDocumentUpload422ApplicationJsonObject?: PutBenefitsDocumentUpload422ApplicationJson;
+  putBenefitsDocumentUpload422ApplicationJSONObject?: PutBenefitsDocumentUpload422ApplicationJson;
 
   @SpeakeasyMetadata()
-  putBenefitsDocumentUpload429ApplicationJsonObject?: PutBenefitsDocumentUpload429ApplicationJson;
+  putBenefitsDocumentUpload429ApplicationJSONObject?: PutBenefitsDocumentUpload429ApplicationJson;
 
   @SpeakeasyMetadata()
-  putBenefitsDocumentUpload500ApplicationJsonObject?: PutBenefitsDocumentUpload500ApplicationJson;
+  putBenefitsDocumentUpload500ApplicationJSONObject?: PutBenefitsDocumentUpload500ApplicationJson;
 }

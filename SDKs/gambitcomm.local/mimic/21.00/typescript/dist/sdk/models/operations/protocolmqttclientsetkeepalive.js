@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSetKeepaliveResponse = exports.ProtocolMqttClientSetKeepaliveRequest = exports.ProtocolMqttClientSetKeepalivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSetKeepalivePathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetKeepalivePathParams, _super);
     function ProtocolMqttClientSetKeepalivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetKeepalivePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=aliveTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=aliveTime" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetKeepalivePathParams.prototype, "aliveTime", void 0);
     return ProtocolMqttClientSetKeepalivePathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetKeepalivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetKeepalivePathParams = ProtocolMqttClientSetKeepalivePathParams;
 var ProtocolMqttClientSetKeepaliveRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetKeepaliveRequest, _super);
     function ProtocolMqttClientSetKeepaliveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSetKeepalivePathParams)
     ], ProtocolMqttClientSetKeepaliveRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSetKeepaliveRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetKeepaliveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetKeepaliveRequest = ProtocolMqttClientSetKeepaliveRequest;
 var ProtocolMqttClientSetKeepaliveResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetKeepaliveResponse, _super);
     function ProtocolMqttClientSetKeepaliveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetKeepaliveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetKeepaliveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSetKeepaliveResponse.prototype, "protocolMqttClientSetKeepalive200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientSetKeepaliveResponse.prototype, "protocolMqttClientSetKeepalive200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientSetKeepaliveResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetKeepaliveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetKeepaliveResponse = ProtocolMqttClientSetKeepaliveResponse;

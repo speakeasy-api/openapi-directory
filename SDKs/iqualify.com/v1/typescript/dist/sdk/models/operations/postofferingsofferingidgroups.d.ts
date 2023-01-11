@@ -10,6 +10,6 @@ export declare class PostOfferingsOfferingIdGroupsRequest extends SpeakeasyBase 
 export declare class PostOfferingsOfferingIdGroupsResponse extends SpeakeasyBase {
     assessmentGroupResponse?: shared.AssessmentGroupResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

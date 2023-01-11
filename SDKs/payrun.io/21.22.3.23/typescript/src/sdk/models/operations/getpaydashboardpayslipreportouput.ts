@@ -59,7 +59,7 @@ export class GetPayDashboardPayslipReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getPayDashboardPayslipReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getPayDashboardPayslipReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

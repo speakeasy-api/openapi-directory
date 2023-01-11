@@ -18,6 +18,6 @@ export declare class DeleteGroupRequest extends SpeakeasyBase {
 export declare class DeleteGroupResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteGroupResponse?: Map<string, any>;
+    deleteGroupResponse?: Record<string, any>;
     statusCode: number;
 }

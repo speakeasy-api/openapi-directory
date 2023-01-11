@@ -55,7 +55,7 @@ export class RemoveNotificationChannelResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  removeNotificationChannelResponse?: Map<string, any>;
+  removeNotificationChannelResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

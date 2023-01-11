@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2HybridInspectStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2HybridInspectStatistics
 /**
  * Statistics related to processing hybrid inspect requests.
@@ -33,17 +36,17 @@ var GooglePrivacyDlpV2HybridInspectStatistics = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abortedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abortedCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2HybridInspectStatistics.prototype, "abortedCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2HybridInspectStatistics.prototype, "pendingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processedCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2HybridInspectStatistics.prototype, "processedCount", void 0);
     return GooglePrivacyDlpV2HybridInspectStatistics;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2HybridInspectStatistics };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2HybridInspectStatistics = GooglePrivacyDlpV2HybridInspectStatistics;

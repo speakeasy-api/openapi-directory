@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Settings extends SpeakeasyBase {
-    closedCaption: Map<string, any>;
+    closedCaption: Record<string, any>;
     controlNotifications: number;
     countryCode: string;
     locale: string;

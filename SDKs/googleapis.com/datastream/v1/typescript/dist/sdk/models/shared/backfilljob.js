@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-export var BackfillJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackfillJob = exports.BackfillJobTriggerEnum = exports.BackfillJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var BackfillJobStateEnum;
 (function (BackfillJobStateEnum) {
     BackfillJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     BackfillJobStateEnum["NotStarted"] = "NOT_STARTED";
@@ -34,13 +37,13 @@ export var BackfillJobStateEnum;
     BackfillJobStateEnum["Failed"] = "FAILED";
     BackfillJobStateEnum["Completed"] = "COMPLETED";
     BackfillJobStateEnum["Unsupported"] = "UNSUPPORTED";
-})(BackfillJobStateEnum || (BackfillJobStateEnum = {}));
-export var BackfillJobTriggerEnum;
+})(BackfillJobStateEnum = exports.BackfillJobStateEnum || (exports.BackfillJobStateEnum = {}));
+var BackfillJobTriggerEnum;
 (function (BackfillJobTriggerEnum) {
     BackfillJobTriggerEnum["TriggerUnspecified"] = "TRIGGER_UNSPECIFIED";
     BackfillJobTriggerEnum["Automatic"] = "AUTOMATIC";
     BackfillJobTriggerEnum["Manual"] = "MANUAL";
-})(BackfillJobTriggerEnum || (BackfillJobTriggerEnum = {}));
+})(BackfillJobTriggerEnum = exports.BackfillJobTriggerEnum || (exports.BackfillJobTriggerEnum = {}));
 // BackfillJob
 /**
  * Represents a backfill job on a specific stream object.
@@ -51,25 +54,25 @@ var BackfillJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], BackfillJob.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastEndTime" }),
         __metadata("design:type", String)
     ], BackfillJob.prototype, "lastEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStartTime" }),
         __metadata("design:type", String)
     ], BackfillJob.prototype, "lastStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], BackfillJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger" }),
         __metadata("design:type", String)
     ], BackfillJob.prototype, "trigger", void 0);
     return BackfillJob;
-}(SpeakeasyBase));
-export { BackfillJob };
+}(utils_1.SpeakeasyBase));
+exports.BackfillJob = BackfillJob;

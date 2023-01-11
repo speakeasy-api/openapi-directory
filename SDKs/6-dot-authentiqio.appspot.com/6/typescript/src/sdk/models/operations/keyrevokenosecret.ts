@@ -40,5 +40,5 @@ export class KeyRevokeNosecretResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  keyRevokeNosecret200ApplicationJsonObject?: KeyRevokeNosecret200ApplicationJson;
+  keyRevokeNosecret200ApplicationJSONObject?: KeyRevokeNosecret200ApplicationJson;
 }

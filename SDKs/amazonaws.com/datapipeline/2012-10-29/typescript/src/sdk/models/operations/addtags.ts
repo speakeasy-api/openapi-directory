@@ -45,7 +45,7 @@ export class AddTagsRequest extends SpeakeasyBase {
 
 export class AddTagsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addTagsOutput?: Map<string, any>;
+  addTagsOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

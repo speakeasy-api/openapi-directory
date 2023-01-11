@@ -275,7 +275,7 @@ export class GetSearchCarAuctionActiveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   searchResponse?: shared.SearchResponse;

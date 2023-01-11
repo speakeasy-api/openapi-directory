@@ -39,7 +39,7 @@ export class UpdateRecommenderConfigurationHeaders extends SpeakeasyBase {
 **/
 export class UpdateRecommenderConfigurationRequestBodyUpdateRecommenderConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
   description?: string;

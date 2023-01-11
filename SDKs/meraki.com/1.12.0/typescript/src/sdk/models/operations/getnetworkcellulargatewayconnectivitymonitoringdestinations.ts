@@ -22,5 +22,5 @@ export class GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

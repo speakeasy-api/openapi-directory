@@ -1,4 +1,7 @@
-export var RuleTargetEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleTargetEnum = void 0;
+var RuleTargetEnum;
 (function (RuleTargetEnum) {
     RuleTargetEnum["SpecialAll"] = "special:all";
     RuleTargetEnum["SpecialAllExceptPolicyServers"] = "special:all_exceptPolicyServers";
@@ -6,4 +9,4 @@ export var RuleTargetEnum;
     RuleTargetEnum["SpecialAllNodesWithoutRole"] = "special:all_nodes_without_role";
     RuleTargetEnum["PolicyServerDollarPolicyServerId"] = "policyServer:${policyServerId}";
     RuleTargetEnum["GroupDollarNodeGroupId"] = "group:${nodeGroupId}";
-})(RuleTargetEnum || (RuleTargetEnum = {}));
+})(RuleTargetEnum = exports.RuleTargetEnum || (exports.RuleTargetEnum = {}));

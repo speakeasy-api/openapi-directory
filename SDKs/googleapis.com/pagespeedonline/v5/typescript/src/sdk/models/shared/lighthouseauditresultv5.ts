@@ -2,16 +2,12 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// LighthouseAuditResultV5
-/** 
- * An audit's result object in a Lighthouse result.
-**/
 export class LighthouseAuditResultV5 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>;
+  details?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=displayValue" })
   displayValue?: string;

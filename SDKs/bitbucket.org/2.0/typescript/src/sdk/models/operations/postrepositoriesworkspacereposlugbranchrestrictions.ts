@@ -29,7 +29,7 @@ export class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest extends 
   pathParams: PostRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity;
@@ -44,8 +44,8 @@ export class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse extends
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branchrestriction?: Map<string, any>;
+  branchrestriction?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

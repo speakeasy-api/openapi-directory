@@ -1,6 +1,9 @@
-export var LaunchTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchTypeEnum = void 0;
+var LaunchTypeEnum;
 (function (LaunchTypeEnum) {
     LaunchTypeEnum["Ec2"] = "EC2";
     LaunchTypeEnum["Fargate"] = "FARGATE";
     LaunchTypeEnum["External"] = "EXTERNAL";
-})(LaunchTypeEnum || (LaunchTypeEnum = {}));
+})(LaunchTypeEnum = exports.LaunchTypeEnum || (exports.LaunchTypeEnum = {}));

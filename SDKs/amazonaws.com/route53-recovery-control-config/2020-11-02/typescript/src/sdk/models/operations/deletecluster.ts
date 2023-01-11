@@ -52,7 +52,7 @@ export class DeleteClusterResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteClusterResponse?: Map<string, any>;
+  deleteClusterResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

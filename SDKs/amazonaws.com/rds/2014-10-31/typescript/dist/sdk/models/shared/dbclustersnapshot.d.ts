@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 /**
  * <p>Contains the details for an Amazon RDS DB cluster snapshot </p> <p>This data type is used as a response element in the <code>DescribeDBClusterSnapshots</code> action. </p>
 **/
 export declare class DbClusterSnapshot extends SpeakeasyBase {
     allocatedStorage?: number;
-    availabilityZones?: string[];
+    availabilityZones?: Record<string, any>[];
     clusterCreateTime?: Date;
     dbClusterIdentifier?: string;
     dbClusterSnapshotArn?: string;
@@ -21,9 +21,9 @@ export declare class DbClusterSnapshot extends SpeakeasyBase {
     port?: number;
     snapshotCreateTime?: Date;
     snapshotType?: string;
-    sourceDbClusterSnapshotArn?: string;
+    sourceDBClusterSnapshotArn?: string;
     status?: string;
     storageEncrypted?: boolean;
-    tagList?: Tag[];
+    tagList?: TagList[];
     vpcId?: string;
 }

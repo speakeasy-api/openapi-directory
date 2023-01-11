@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetDelayResponse = exports.SetDelayRequest = exports.SetDelayPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetDelayPathParams = /** @class */ (function (_super) {
     __extends(SetDelayPathParams, _super);
     function SetDelayPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetDelayPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=delay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=delay" }),
         __metadata("design:type", Number)
     ], SetDelayPathParams.prototype, "delay", void 0);
     return SetDelayPathParams;
-}(SpeakeasyBase));
-export { SetDelayPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetDelayPathParams = SetDelayPathParams;
 var SetDelayRequest = /** @class */ (function (_super) {
     __extends(SetDelayRequest, _super);
     function SetDelayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetDelayPathParams)
     ], SetDelayRequest.prototype, "pathParams", void 0);
     return SetDelayRequest;
-}(SpeakeasyBase));
-export { SetDelayRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetDelayRequest = SetDelayRequest;
 var SetDelayResponse = /** @class */ (function (_super) {
     __extends(SetDelayResponse, _super);
     function SetDelayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetDelayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetDelayResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], SetDelayResponse.prototype, "setDelay200ApplicationJsonInt32Integer", void 0);
+    ], SetDelayResponse.prototype, "setDelay200ApplicationJSONInt32Integer", void 0);
     return SetDelayResponse;
-}(SpeakeasyBase));
-export { SetDelayResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetDelayResponse = SetDelayResponse;

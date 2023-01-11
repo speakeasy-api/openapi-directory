@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PaymentMeansCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentMeans = exports.PaymentMeansCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PaymentMeansCodeEnum;
 (function (PaymentMeansCodeEnum) {
     PaymentMeansCodeEnum["CreditTransfer"] = "credit_transfer";
     PaymentMeansCodeEnum["DirectDebit"] = "direct_debit";
@@ -42,7 +45,7 @@ export var PaymentMeansCodeEnum;
     PaymentMeansCodeEnum["SgGiro"] = "sg_giro";
     PaymentMeansCodeEnum["SgCard"] = "sg_card";
     PaymentMeansCodeEnum["SgPaynow"] = "sg_paynow";
-})(PaymentMeansCodeEnum || (PaymentMeansCodeEnum = {}));
+})(PaymentMeansCodeEnum = exports.PaymentMeansCodeEnum || (exports.PaymentMeansCodeEnum = {}));
 // PaymentMeans
 /**
  * A PaymentMeans is a way to pay the invoice.
@@ -53,33 +56,33 @@ var PaymentMeans = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branche_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branche_code" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "brancheCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holder" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "holder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mandate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mandate" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "mandate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentId" }),
         __metadata("design:type", String)
     ], PaymentMeans.prototype, "paymentId", void 0);
     return PaymentMeans;
-}(SpeakeasyBase));
-export { PaymentMeans };
+}(utils_1.SpeakeasyBase));
+exports.PaymentMeans = PaymentMeans;

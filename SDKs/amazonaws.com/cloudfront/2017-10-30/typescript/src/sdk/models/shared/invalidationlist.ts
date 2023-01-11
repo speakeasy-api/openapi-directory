@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvalidationSummary } from "./invalidationsummary";
+import { InvalidationSummaryList } from "./invalidationsummarylist";
 
 
 
@@ -11,8 +11,8 @@ export class InvalidationList extends SpeakeasyBase {
   @SpeakeasyMetadata()
   isTruncated: boolean;
 
-  @SpeakeasyMetadata({ elemType: InvalidationSummary })
-  items?: InvalidationSummary[];
+  @SpeakeasyMetadata({ elemType: InvalidationSummaryList })
+  items?: InvalidationSummaryList[];
 
   @SpeakeasyMetadata()
   marker: string;

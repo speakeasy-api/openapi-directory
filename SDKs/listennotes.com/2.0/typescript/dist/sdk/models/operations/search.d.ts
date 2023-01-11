@@ -25,7 +25,7 @@ export declare class SearchQueryParams extends SpeakeasyBase {
     type?: SearchTypeEnum;
 }
 export declare class SearchHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class SearchRequest extends SpeakeasyBase {
     queryParams: SearchQueryParams;
@@ -33,7 +33,7 @@ export declare class SearchRequest extends SpeakeasyBase {
 }
 export declare class SearchResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BoardAsset } from "./boardasset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddBoardAssetsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var boardasset_1 = require("./boardasset");
 var AddBoardAssetsResult = /** @class */ (function (_super) {
     __extends(AddBoardAssetsResult, _super);
     function AddBoardAssetsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets_added", elemType: BoardAsset }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets_added", elemType: boardasset_1.BoardAsset }),
         __metadata("design:type", Array)
     ], AddBoardAssetsResult.prototype, "assetsAdded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets_not_added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets_not_added" }),
         __metadata("design:type", Array)
     ], AddBoardAssetsResult.prototype, "assetsNotAdded", void 0);
     return AddBoardAssetsResult;
-}(SpeakeasyBase));
-export { AddBoardAssetsResult };
+}(utils_1.SpeakeasyBase));
+exports.AddBoardAssetsResult = AddBoardAssetsResult;

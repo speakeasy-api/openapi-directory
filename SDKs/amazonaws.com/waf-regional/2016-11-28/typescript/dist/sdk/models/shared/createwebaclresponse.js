@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebAcl } from "./webacl";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWebAclResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var webacl_1 = require("./webacl");
 var CreateWebAclResponse = /** @class */ (function (_super) {
     __extends(CreateWebAclResponse, _super);
     function CreateWebAclResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], CreateWebAclResponse.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebACL" }),
-        __metadata("design:type", WebAcl)
-    ], CreateWebAclResponse.prototype, "webAcl", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebACL" }),
+        __metadata("design:type", webacl_1.WebAcl)
+    ], CreateWebAclResponse.prototype, "webACL", void 0);
     return CreateWebAclResponse;
-}(SpeakeasyBase));
-export { CreateWebAclResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebAclResponse = CreateWebAclResponse;

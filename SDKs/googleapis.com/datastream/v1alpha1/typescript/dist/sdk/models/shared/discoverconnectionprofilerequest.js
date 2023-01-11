@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionProfileInput } from "./connectionprofile";
-import { MysqlRdbms } from "./mysqlrdbms";
-import { OracleRdbms } from "./oraclerdbms";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoverConnectionProfileRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectionprofile_1 = require("./connectionprofile");
+var mysqlrdbms_1 = require("./mysqlrdbms");
+var oraclerdbms_1 = require("./oraclerdbms");
 // DiscoverConnectionProfileRequestInput
 /**
  * Request message for 'discover' ConnectionProfile request.
@@ -36,29 +39,29 @@ var DiscoverConnectionProfileRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionProfile" }),
-        __metadata("design:type", ConnectionProfileInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionProfile" }),
+        __metadata("design:type", connectionprofile_1.ConnectionProfileInput)
     ], DiscoverConnectionProfileRequestInput.prototype, "connectionProfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionProfileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionProfileName" }),
         __metadata("design:type", String)
     ], DiscoverConnectionProfileRequestInput.prototype, "connectionProfileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mysqlRdbms" }),
-        __metadata("design:type", MysqlRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mysqlRdbms" }),
+        __metadata("design:type", mysqlrdbms_1.MysqlRdbms)
     ], DiscoverConnectionProfileRequestInput.prototype, "mysqlRdbms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oracleRdbms" }),
-        __metadata("design:type", OracleRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oracleRdbms" }),
+        __metadata("design:type", oraclerdbms_1.OracleRdbms)
     ], DiscoverConnectionProfileRequestInput.prototype, "oracleRdbms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursionDepth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursionDepth" }),
         __metadata("design:type", Number)
     ], DiscoverConnectionProfileRequestInput.prototype, "recursionDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursive" }),
         __metadata("design:type", Boolean)
     ], DiscoverConnectionProfileRequestInput.prototype, "recursive", void 0);
     return DiscoverConnectionProfileRequestInput;
-}(SpeakeasyBase));
-export { DiscoverConnectionProfileRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.DiscoverConnectionProfileRequestInput = DiscoverConnectionProfileRequestInput;

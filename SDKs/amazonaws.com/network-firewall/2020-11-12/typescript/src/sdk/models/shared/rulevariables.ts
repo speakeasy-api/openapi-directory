@@ -10,8 +10,8 @@ import { PortSet } from "./portset";
 **/
 export class RuleVariables extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=IPSets", elemType: IpSet })
-  ipSets?: Map<string, IpSet>;
+  ipSets?: Record<string, IpSet>;
 
   @SpeakeasyMetadata({ data: "json, name=PortSets", elemType: PortSet })
-  portSets?: Map<string, PortSet>;
+  portSets?: Record<string, PortSet>;
 }

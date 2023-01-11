@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateConnectorRequest, CreateConnectorResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,49 +33,50 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateConnectorRequest = {
   headers: {
-    xAmzAlgorithm: "atque",
-    xAmzContentSha256: "odio",
-    xAmzCredential: "quam",
-    xAmzDate: "ut",
-    xAmzSecurityToken: "qui",
-    xAmzSignature: "voluptas",
-    xAmzSignedHeaders: "in",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     capacity: {
       autoScaling: {
-        maxWorkerCount: 8330659122177198523,
-        mcuCount: 6845063625500580422,
-        minWorkerCount: 8887929759950233110,
+        maxWorkerCount: 6044372234677422456,
+        mcuCount: 8274930044578894929,
+        minWorkerCount: 1543572285742637646,
         scaleInPolicy: {
-          cpuUtilizationPercentage: 1971677885960265268,
+          cpuUtilizationPercentage: 2661732831099943416,
         },
         scaleOutPolicy: {
-          cpuUtilizationPercentage: 1242866194161234105,
+          cpuUtilizationPercentage: 8325060299420976708,
         },
       },
       provisionedCapacity: {
-        mcuCount: 2209437841303140266,
-        workerCount: 7300439094265252843,
+        mcuCount: 7837839688282259259,
+        workerCount: 2518412263346885298,
       },
     },
     connectorConfiguration: {
-      "dolorem": "facere",
+      "et": "ut",
     },
-    connectorDescription: "magnam",
-    connectorName: "aut",
+    connectorDescription: "dolorem",
+    connectorName: "et",
     kafkaCluster: {
       apacheKafkaCluster: {
-        bootstrapServers: "eum",
+        bootstrapServers: "voluptate",
         vpc: {
           securityGroups: [
-            "perferendis",
-            "quam",
+            "vitae",
+            "totam",
+            "dolores",
           ],
           subnets: [
-            "quas",
-            "qui",
-            "ut",
+            "debitis",
+            "vel",
+            "odio",
           ],
         },
       },
@@ -87,47 +87,53 @@ const req: CreateConnectorRequest = {
     kafkaClusterEncryptionInTransit: {
       encryptionType: "PLAINTEXT",
     },
-    kafkaConnectVersion: "harum",
+    kafkaConnectVersion: "aspernatur",
     logDelivery: {
       workerLogDelivery: {
         cloudWatchLogs: {
-          enabled: false,
-          logGroup: "facilis",
+          enabled: true,
+          logGroup: "totam",
         },
         firehose: {
-          deliveryStream: "blanditiis",
+          deliveryStream: "commodi",
           enabled: true,
         },
         s3: {
-          bucket: "ea",
-          enabled: false,
-          prefix: "non",
+          bucket: "est",
+          enabled: true,
+          prefix: "odit",
         },
       },
     },
     plugins: [
       {
         customPlugin: {
-          customPluginArn: "qui",
-          revision: 1535039728394233189,
+          customPluginArn: "voluptas",
+          revision: 4778690082005258714,
         },
       },
       {
         customPlugin: {
           customPluginArn: "aut",
-          revision: 6522720780889015448,
+          revision: 6972732843819909978,
+        },
+      },
+      {
+        customPlugin: {
+          customPluginArn: "sed",
+          revision: 7845762441295307478,
         },
       },
     ],
-    serviceExecutionRoleArn: "adipisci",
+    serviceExecutionRoleArn: "autem",
     workerConfiguration: {
-      revision: 4051032581715466747,
-      workerConfigurationArn: "praesentium",
+      revision: 8514850266767180993,
+      workerConfigurationArn: "nobis",
     },
   },
 };
 
-sdk.sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
+sdk.createConnector(req).then((res: CreateConnectorResponse | AxiosError) => {
    // handle response
 });
 ```

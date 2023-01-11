@@ -35,11 +35,11 @@ export class GetApiVVersionCurrenciesRateSupportedResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiVVersionCurrenciesRateSupported200ApplicationJsonStrings?: string[];
-
-  @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiVVersionCurrenciesRateSupported200ApplicationJSONStrings?: string[];
 }

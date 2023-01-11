@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetWillretainRequest extends SpeakeasyBas
 export declare class ProtocolMqttClientSetWillretainResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetWillretain200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetWillretain200ApplicationJSONInt32Integers?: number[];
 }

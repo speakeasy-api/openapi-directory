@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LegacyBoxScoresFinalFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LegacyBoxScoresFinalResponse = exports.LegacyBoxScoresFinalRequest = exports.LegacyBoxScoresFinalPathParams = exports.LegacyBoxScoresFinalFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LegacyBoxScoresFinalFormatEnum;
 (function (LegacyBoxScoresFinalFormatEnum) {
     LegacyBoxScoresFinalFormatEnum["Xml"] = "XML";
     LegacyBoxScoresFinalFormatEnum["Json"] = "JSON";
-})(LegacyBoxScoresFinalFormatEnum || (LegacyBoxScoresFinalFormatEnum = {}));
+})(LegacyBoxScoresFinalFormatEnum = exports.LegacyBoxScoresFinalFormatEnum || (exports.LegacyBoxScoresFinalFormatEnum = {}));
 var LegacyBoxScoresFinalPathParams = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresFinalPathParams, _super);
     function LegacyBoxScoresFinalPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresFinalPathParams.prototype, "format", void 0);
     return LegacyBoxScoresFinalPathParams;
-}(SpeakeasyBase));
-export { LegacyBoxScoresFinalPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresFinalPathParams = LegacyBoxScoresFinalPathParams;
 var LegacyBoxScoresFinalRequest = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresFinalRequest, _super);
     function LegacyBoxScoresFinalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LegacyBoxScoresFinalPathParams)
     ], LegacyBoxScoresFinalRequest.prototype, "pathParams", void 0);
     return LegacyBoxScoresFinalRequest;
-}(SpeakeasyBase));
-export { LegacyBoxScoresFinalRequest };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresFinalRequest = LegacyBoxScoresFinalRequest;
 var LegacyBoxScoresFinalResponse = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresFinalResponse, _super);
     function LegacyBoxScoresFinalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LegacyBoxScoresFinalResponse.prototype, "boxScores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LegacyBoxScoresFinalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LegacyBoxScoresFinalResponse.prototype, "statusCode", void 0);
     return LegacyBoxScoresFinalResponse;
-}(SpeakeasyBase));
-export { LegacyBoxScoresFinalResponse };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresFinalResponse = LegacyBoxScoresFinalResponse;

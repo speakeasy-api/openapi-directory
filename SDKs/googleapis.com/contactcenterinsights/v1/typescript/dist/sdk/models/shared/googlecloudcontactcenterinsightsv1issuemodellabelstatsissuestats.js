@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats
-/**
- * Aggregated statistics about an issue.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats = /** @class */ (function (_super) {
     __extends(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats, _super);
     function GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issue" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats.prototype, "issue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labeledConversationsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labeledConversationsCount" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats.prototype, "labeledConversationsCount", void 0);
     return GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats = GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats;

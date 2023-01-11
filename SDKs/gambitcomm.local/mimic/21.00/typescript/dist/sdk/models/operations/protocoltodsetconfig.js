@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTodSetConfigResponse = exports.ProtocolTodSetConfigRequest = exports.ProtocolTodSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTodSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTodSetConfigPathParams, _super);
     function ProtocolTodSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTodSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolTodSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolTodSetConfigPathParams.prototype, "value", void 0);
     return ProtocolTodSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolTodSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTodSetConfigPathParams = ProtocolTodSetConfigPathParams;
 var ProtocolTodSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolTodSetConfigRequest, _super);
     function ProtocolTodSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTodSetConfigPathParams)
     ], ProtocolTodSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolTodSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolTodSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTodSetConfigRequest = ProtocolTodSetConfigRequest;
 var ProtocolTodSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolTodSetConfigResponse, _super);
     function ProtocolTodSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTodSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTodSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTodSetConfigResponse.prototype, "protocolTodSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolTodSetConfigResponse.prototype, "protocolTodSetConfig200ApplicationJSONString", void 0);
     return ProtocolTodSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolTodSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTodSetConfigResponse = ProtocolTodSetConfigResponse;

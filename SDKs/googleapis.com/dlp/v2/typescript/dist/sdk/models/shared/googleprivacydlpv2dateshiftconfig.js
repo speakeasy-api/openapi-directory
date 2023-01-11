@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2CryptoKey } from "./googleprivacydlpv2cryptokey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DateShiftConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2cryptokey_1 = require("./googleprivacydlpv2cryptokey");
 // GooglePrivacyDlpV2DateShiftConfig
 /**
  * Shifts dates by random number of days, with option to be consistent for the same context. See https://cloud.google.com/dlp/docs/concepts-date-shifting to learn more.
@@ -35,21 +38,21 @@ var GooglePrivacyDlpV2DateShiftConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2DateShiftConfig.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKey" }),
-        __metadata("design:type", GooglePrivacyDlpV2CryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKey" }),
+        __metadata("design:type", googleprivacydlpv2cryptokey_1.GooglePrivacyDlpV2CryptoKey)
     ], GooglePrivacyDlpV2DateShiftConfig.prototype, "cryptoKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lowerBoundDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lowerBoundDays" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2DateShiftConfig.prototype, "lowerBoundDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upperBoundDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upperBoundDays" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2DateShiftConfig.prototype, "upperBoundDays", void 0);
     return GooglePrivacyDlpV2DateShiftConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DateShiftConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DateShiftConfig = GooglePrivacyDlpV2DateShiftConfig;

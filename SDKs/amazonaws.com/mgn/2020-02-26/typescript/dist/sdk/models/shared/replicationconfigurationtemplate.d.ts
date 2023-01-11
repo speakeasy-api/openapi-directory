@@ -6,16 +6,16 @@ export declare class ReplicationConfigurationTemplate extends SpeakeasyBase {
     arn?: string;
     associateDefaultSecurityGroup?: boolean;
     bandwidthThrottling?: number;
-    createPublicIp?: boolean;
+    createPublicIP?: boolean;
     dataPlaneRouting?: ReplicationConfigurationDataPlaneRoutingEnum;
     defaultLargeStagingDiskType?: ReplicationConfigurationDefaultLargeStagingDiskTypeEnum;
     ebsEncryption?: ReplicationConfigurationEbsEncryptionEnum;
     ebsEncryptionKeyArn?: string;
-    replicationConfigurationTemplateId: string;
+    replicationConfigurationTemplateID: string;
     replicationServerInstanceType?: string;
     replicationServersSecurityGroupsIDs?: string[];
     stagingAreaSubnetId?: string;
-    stagingAreaTags?: Map<string, string>;
-    tags?: Map<string, string>;
+    stagingAreaTags?: Record<string, string>;
+    tags?: Record<string, string>;
     useDedicatedReplicationServer?: boolean;
 }

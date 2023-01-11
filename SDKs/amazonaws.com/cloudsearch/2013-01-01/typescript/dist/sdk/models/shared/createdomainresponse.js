@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainStatus } from "./domainstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDomainResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainstatus_1 = require("./domainstatus");
 // CreateDomainResponse
 /**
  * The result of a <code>CreateDomainRequest</code>. Contains the status of a newly created domain.
@@ -34,9 +37,9 @@ var CreateDomainResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DomainStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", domainstatus_1.DomainStatus)
     ], CreateDomainResponse.prototype, "domainStatus", void 0);
     return CreateDomainResponse;
-}(SpeakeasyBase));
-export { CreateDomainResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDomainResponse = CreateDomainResponse;

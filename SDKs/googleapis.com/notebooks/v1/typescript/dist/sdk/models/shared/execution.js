@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutionTemplate } from "./executiontemplate";
-export var ExecutionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionInput = exports.Execution = exports.ExecutionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var executiontemplate_1 = require("./executiontemplate");
+var ExecutionStateEnum;
 (function (ExecutionStateEnum) {
     ExecutionStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ExecutionStateEnum["Queued"] = "QUEUED";
@@ -36,31 +39,7 @@ export var ExecutionStateEnum;
     ExecutionStateEnum["Cancelled"] = "CANCELLED";
     ExecutionStateEnum["Expired"] = "EXPIRED";
     ExecutionStateEnum["Initializing"] = "INITIALIZING";
-})(ExecutionStateEnum || (ExecutionStateEnum = {}));
-// ExecutionInput
-/**
- * The definition of a single executed notebook.
-**/
-var ExecutionInput = /** @class */ (function (_super) {
-    __extends(ExecutionInput, _super);
-    function ExecutionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], ExecutionInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionTemplate" }),
-        __metadata("design:type", ExecutionTemplate)
-    ], ExecutionInput.prototype, "executionTemplate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputNotebookFile" }),
-        __metadata("design:type", String)
-    ], ExecutionInput.prototype, "outputNotebookFile", void 0);
-    return ExecutionInput;
-}(SpeakeasyBase));
-export { ExecutionInput };
+})(ExecutionStateEnum = exports.ExecutionStateEnum || (exports.ExecutionStateEnum = {}));
 // Execution
 /**
  * The definition of a single executed notebook.
@@ -71,41 +50,65 @@ var Execution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Execution.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Execution.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Execution.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionTemplate" }),
-        __metadata("design:type", ExecutionTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionTemplate" }),
+        __metadata("design:type", executiontemplate_1.ExecutionTemplate)
     ], Execution.prototype, "executionTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobUri" }),
         __metadata("design:type", String)
     ], Execution.prototype, "jobUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Execution.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputNotebookFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputNotebookFile" }),
         __metadata("design:type", String)
     ], Execution.prototype, "outputNotebookFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Execution.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Execution.prototype, "updateTime", void 0);
     return Execution;
-}(SpeakeasyBase));
-export { Execution };
+}(utils_1.SpeakeasyBase));
+exports.Execution = Execution;
+// ExecutionInput
+/**
+ * The definition of a single executed notebook.
+**/
+var ExecutionInput = /** @class */ (function (_super) {
+    __extends(ExecutionInput, _super);
+    function ExecutionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ExecutionInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionTemplate" }),
+        __metadata("design:type", executiontemplate_1.ExecutionTemplate)
+    ], ExecutionInput.prototype, "executionTemplate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputNotebookFile" }),
+        __metadata("design:type", String)
+    ], ExecutionInput.prototype, "outputNotebookFile", void 0);
+    return ExecutionInput;
+}(utils_1.SpeakeasyBase));
+exports.ExecutionInput = ExecutionInput;

@@ -9,7 +9,7 @@ import { SecurityServiceTypeEnum } from "./securityservicetypeenum";
 **/
 export class PolicySummary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DeleteUnusedFMManagedResources" })
-  deleteUnusedFmManagedResources?: boolean;
+  deleteUnusedFMManagedResources?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=PolicyArn" })
   policyArn?: string;

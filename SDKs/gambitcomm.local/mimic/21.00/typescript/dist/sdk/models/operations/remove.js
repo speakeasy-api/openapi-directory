@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveResponse = exports.RemoveRequest = exports.RemovePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemovePathParams = /** @class */ (function (_super) {
     __extends(RemovePathParams, _super);
     function RemovePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], RemovePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], RemovePathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
         __metadata("design:type", String)
     ], RemovePathParams.prototype, "object", void 0);
     return RemovePathParams;
-}(SpeakeasyBase));
-export { RemovePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RemovePathParams = RemovePathParams;
 var RemoveRequest = /** @class */ (function (_super) {
     __extends(RemoveRequest, _super);
     function RemoveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemovePathParams)
     ], RemoveRequest.prototype, "pathParams", void 0);
     return RemoveRequest;
-}(SpeakeasyBase));
-export { RemoveRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRequest = RemoveRequest;
 var RemoveResponse = /** @class */ (function (_super) {
     __extends(RemoveResponse, _super);
     function RemoveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], RemoveResponse.prototype, "remove200ApplicationJsonString", void 0);
+    ], RemoveResponse.prototype, "remove200ApplicationJSONString", void 0);
     return RemoveResponse;
-}(SpeakeasyBase));
-export { RemoveResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveResponse = RemoveResponse;

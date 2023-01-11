@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { PlaylistTrackObject } from "./playlisttrackobject";
 import { ExternalUrlObject } from "./externalurlobject";
 import { FollowersObject } from "./followersobject";
 import { ImageObject } from "./imageobject";
 import { PublicUserObject } from "./publicuserobject";
-import { PlaylistTrackObject } from "./playlisttrackobject";
 
 
 

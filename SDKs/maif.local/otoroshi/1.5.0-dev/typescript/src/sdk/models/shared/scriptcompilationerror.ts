@@ -11,14 +11,14 @@ export class ScriptCompilationError extends SpeakeasyBase {
   column: string;
 
   @SpeakeasyMetadata({ data: "json, name=file" })
-  file: Map<string, string>;
+  file: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=line" })
   line: string;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
-  message: Map<string, string>;
+  message: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=rawMessage" })
-  rawMessage: Map<string, string>;
+  rawMessage: Record<string, string>;
 }

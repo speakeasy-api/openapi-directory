@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
-import { Secret } from "./secret";
-import { Resources } from "./resources";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pipeline = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
+var secret_1 = require("./secret");
+var resources_1 = require("./resources");
 // Pipeline
 /**
  * Specifies a series of actions to execute, expressed as Docker containers.
@@ -36,25 +39,25 @@ var Pipeline = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], Pipeline.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedEnvironment" }),
-        __metadata("design:type", Secret)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedEnvironment" }),
+        __metadata("design:type", secret_1.Secret)
     ], Pipeline.prototype, "encryptedEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", Object)
     ], Pipeline.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
-        __metadata("design:type", Resources)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
+        __metadata("design:type", resources_1.Resources)
     ], Pipeline.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", String)
     ], Pipeline.prototype, "timeout", void 0);
     return Pipeline;
-}(SpeakeasyBase));
-export { Pipeline };
+}(utils_1.SpeakeasyBase));
+exports.Pipeline = Pipeline;

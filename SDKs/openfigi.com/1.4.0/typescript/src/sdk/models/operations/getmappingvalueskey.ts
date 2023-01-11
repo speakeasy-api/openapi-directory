@@ -35,14 +35,14 @@ export class GetMappingValuesKeyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getMappingValuesKey200ApplicationJsonObject?: GetMappingValuesKey200ApplicationJson;
+  statusCode: number;
+
+  @SpeakeasyMetadata()
+  getMappingValuesKey200ApplicationJSONObject?: GetMappingValuesKey200ApplicationJson;
 
   @SpeakeasyMetadata()
   getMappingValuesKey400WildcardString?: string;
 
   @SpeakeasyMetadata()
   getMappingValuesKey500WildcardString?: string;
-
-  @SpeakeasyMetadata()
-  statusCode: number;
 }

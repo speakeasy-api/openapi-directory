@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoRating } from "./videorating";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoGetRatingResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var videorating_1 = require("./videorating");
 var VideoGetRatingResponse = /** @class */ (function (_super) {
     __extends(VideoGetRatingResponse, _super);
     function VideoGetRatingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], VideoGetRatingResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], VideoGetRatingResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: VideoRating }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: videorating_1.VideoRating }),
         __metadata("design:type", Array)
     ], VideoGetRatingResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], VideoGetRatingResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], VideoGetRatingResponse.prototype, "visitorId", void 0);
     return VideoGetRatingResponse;
-}(SpeakeasyBase));
-export { VideoGetRatingResponse };
+}(utils_1.SpeakeasyBase));
+exports.VideoGetRatingResponse = VideoGetRatingResponse;

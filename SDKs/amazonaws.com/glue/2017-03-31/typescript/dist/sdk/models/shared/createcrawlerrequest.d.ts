@@ -16,6 +16,6 @@ export declare class CreateCrawlerRequest extends SpeakeasyBase {
     schedule?: string;
     schemaChangePolicy?: SchemaChangePolicy;
     tablePrefix?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     targets: CrawlerTargets;
 }

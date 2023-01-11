@@ -10,7 +10,7 @@ export declare class ContactsGetRequest extends SpeakeasyBase {
     queryParams: ContactsGetQueryParams;
 }
 export declare class ContactsGetResponse extends SpeakeasyBase {
-    contactsGet200ApplicationJsonString?: string;
+    contactsGet200ApplicationJSONString?: string;
     contactsGet200TextCsvString?: string;
     contentType: string;
     statusCode: number;

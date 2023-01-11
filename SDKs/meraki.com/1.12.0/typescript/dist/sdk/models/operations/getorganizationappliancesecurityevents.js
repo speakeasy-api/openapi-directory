@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,97 +23,99 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceSecurityEventsResponse = exports.GetOrganizationApplianceSecurityEventsRequest = exports.GetOrganizationApplianceSecurityEventsQueryParams = exports.GetOrganizationApplianceSecurityEventsSortOrderEnum = exports.GetOrganizationApplianceSecurityEventsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceSecurityEventsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityEventsPathParams, _super);
     function GetOrganizationApplianceSecurityEventsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceSecurityEventsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityEventsPathParams };
-export var GetOrganizationApplianceSecurityEventsSortOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityEventsPathParams = GetOrganizationApplianceSecurityEventsPathParams;
+var GetOrganizationApplianceSecurityEventsSortOrderEnum;
 (function (GetOrganizationApplianceSecurityEventsSortOrderEnum) {
     GetOrganizationApplianceSecurityEventsSortOrderEnum["Ascending"] = "ascending";
     GetOrganizationApplianceSecurityEventsSortOrderEnum["Descending"] = "descending";
-})(GetOrganizationApplianceSecurityEventsSortOrderEnum || (GetOrganizationApplianceSecurityEventsSortOrderEnum = {}));
+})(GetOrganizationApplianceSecurityEventsSortOrderEnum = exports.GetOrganizationApplianceSecurityEventsSortOrderEnum || (exports.GetOrganizationApplianceSecurityEventsSortOrderEnum = {}));
 var GetOrganizationApplianceSecurityEventsQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityEventsQueryParams, _super);
     function GetOrganizationApplianceSecurityEventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceSecurityEventsQueryParams.prototype, "timespan", void 0);
     return GetOrganizationApplianceSecurityEventsQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityEventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityEventsQueryParams = GetOrganizationApplianceSecurityEventsQueryParams;
 var GetOrganizationApplianceSecurityEventsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityEventsRequest, _super);
     function GetOrganizationApplianceSecurityEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceSecurityEventsPathParams)
     ], GetOrganizationApplianceSecurityEventsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceSecurityEventsQueryParams)
     ], GetOrganizationApplianceSecurityEventsRequest.prototype, "queryParams", void 0);
     return GetOrganizationApplianceSecurityEventsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityEventsRequest = GetOrganizationApplianceSecurityEventsRequest;
 var GetOrganizationApplianceSecurityEventsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceSecurityEventsResponse, _super);
     function GetOrganizationApplianceSecurityEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceSecurityEventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationApplianceSecurityEventsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceSecurityEventsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceSecurityEventsResponse.prototype, "getOrganizationApplianceSecurityEvents200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceSecurityEventsResponse.prototype, "getOrganizationApplianceSecurityEvents200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceSecurityEventsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceSecurityEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceSecurityEventsResponse = GetOrganizationApplianceSecurityEventsResponse;

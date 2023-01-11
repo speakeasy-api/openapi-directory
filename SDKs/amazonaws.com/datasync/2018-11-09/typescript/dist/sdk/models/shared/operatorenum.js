@@ -1,4 +1,7 @@
-export var OperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperatorEnum = void 0;
+var OperatorEnum;
 (function (OperatorEnum) {
     OperatorEnum["Equals"] = "Equals";
     OperatorEnum["NotEquals"] = "NotEquals";
@@ -10,4 +13,4 @@ export var OperatorEnum;
     OperatorEnum["Contains"] = "Contains";
     OperatorEnum["NotContains"] = "NotContains";
     OperatorEnum["BeginsWith"] = "BeginsWith";
-})(OperatorEnum || (OperatorEnum = {}));
+})(OperatorEnum = exports.OperatorEnum || (exports.OperatorEnum = {}));

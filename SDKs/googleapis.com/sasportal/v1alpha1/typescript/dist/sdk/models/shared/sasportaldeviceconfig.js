@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SasPortalDeviceAirInterface } from "./sasportaldeviceairinterface";
-import { SasPortalInstallationParams } from "./sasportalinstallationparams";
-import { SasPortalDeviceModel } from "./sasportaldevicemodel";
-export var SasPortalDeviceConfigCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDeviceConfig = exports.SasPortalDeviceConfigStateEnum = exports.SasPortalDeviceConfigMeasurementCapabilitiesEnum = exports.SasPortalDeviceConfigCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sasportaldeviceairinterface_1 = require("./sasportaldeviceairinterface");
+var sasportalinstallationparams_1 = require("./sasportalinstallationparams");
+var sasportaldevicemodel_1 = require("./sasportaldevicemodel");
+var SasPortalDeviceConfigCategoryEnum;
 (function (SasPortalDeviceConfigCategoryEnum) {
     SasPortalDeviceConfigCategoryEnum["DeviceCategoryUnspecified"] = "DEVICE_CATEGORY_UNSPECIFIED";
     SasPortalDeviceConfigCategoryEnum["DeviceCategoryA"] = "DEVICE_CATEGORY_A";
     SasPortalDeviceConfigCategoryEnum["DeviceCategoryB"] = "DEVICE_CATEGORY_B";
-})(SasPortalDeviceConfigCategoryEnum || (SasPortalDeviceConfigCategoryEnum = {}));
-export var SasPortalDeviceConfigMeasurementCapabilitiesEnum;
+})(SasPortalDeviceConfigCategoryEnum = exports.SasPortalDeviceConfigCategoryEnum || (exports.SasPortalDeviceConfigCategoryEnum = {}));
+var SasPortalDeviceConfigMeasurementCapabilitiesEnum;
 (function (SasPortalDeviceConfigMeasurementCapabilitiesEnum) {
     SasPortalDeviceConfigMeasurementCapabilitiesEnum["MeasurementCapabilityUnspecified"] = "MEASUREMENT_CAPABILITY_UNSPECIFIED";
     SasPortalDeviceConfigMeasurementCapabilitiesEnum["MeasurementCapabilityReceivedPowerWithGrant"] = "MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT";
     SasPortalDeviceConfigMeasurementCapabilitiesEnum["MeasurementCapabilityReceivedPowerWithoutGrant"] = "MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT";
-})(SasPortalDeviceConfigMeasurementCapabilitiesEnum || (SasPortalDeviceConfigMeasurementCapabilitiesEnum = {}));
-export var SasPortalDeviceConfigStateEnum;
+})(SasPortalDeviceConfigMeasurementCapabilitiesEnum = exports.SasPortalDeviceConfigMeasurementCapabilitiesEnum || (exports.SasPortalDeviceConfigMeasurementCapabilitiesEnum = {}));
+var SasPortalDeviceConfigStateEnum;
 (function (SasPortalDeviceConfigStateEnum) {
     SasPortalDeviceConfigStateEnum["DeviceConfigStateUnspecified"] = "DEVICE_CONFIG_STATE_UNSPECIFIED";
     SasPortalDeviceConfigStateEnum["Draft"] = "DRAFT";
     SasPortalDeviceConfigStateEnum["Final"] = "FINAL";
-})(SasPortalDeviceConfigStateEnum || (SasPortalDeviceConfigStateEnum = {}));
+})(SasPortalDeviceConfigStateEnum = exports.SasPortalDeviceConfigStateEnum || (exports.SasPortalDeviceConfigStateEnum = {}));
 // SasPortalDeviceConfig
 /**
  * Information about the device configuration.
@@ -54,45 +57,45 @@ var SasPortalDeviceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=airInterface" }),
-        __metadata("design:type", SasPortalDeviceAirInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=airInterface" }),
+        __metadata("design:type", sasportaldeviceairinterface_1.SasPortalDeviceAirInterface)
     ], SasPortalDeviceConfig.prototype, "airInterface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callSign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callSign" }),
         __metadata("design:type", String)
     ], SasPortalDeviceConfig.prototype, "callSign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], SasPortalDeviceConfig.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installationParams" }),
-        __metadata("design:type", SasPortalInstallationParams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installationParams" }),
+        __metadata("design:type", sasportalinstallationparams_1.SasPortalInstallationParams)
     ], SasPortalDeviceConfig.prototype, "installationParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSigned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSigned" }),
         __metadata("design:type", Boolean)
     ], SasPortalDeviceConfig.prototype, "isSigned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=measurementCapabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurementCapabilities" }),
         __metadata("design:type", Array)
     ], SasPortalDeviceConfig.prototype, "measurementCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
-        __metadata("design:type", SasPortalDeviceModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
+        __metadata("design:type", sasportaldevicemodel_1.SasPortalDeviceModel)
     ], SasPortalDeviceConfig.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SasPortalDeviceConfig.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], SasPortalDeviceConfig.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], SasPortalDeviceConfig.prototype, "userId", void 0);
     return SasPortalDeviceConfig;
-}(SpeakeasyBase));
-export { SasPortalDeviceConfig };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeviceConfig = SasPortalDeviceConfig;

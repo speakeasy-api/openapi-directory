@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistoricalDownload } from "./historicaldownload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDownloadsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var historicaldownload_1 = require("./historicaldownload");
 var GetDownloadsResponse = /** @class */ (function (_super) {
     __extends(GetDownloadsResponse, _super);
     function GetDownloadsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloads", elemType: HistoricalDownload }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloads", elemType: historicaldownload_1.HistoricalDownload }),
         __metadata("design:type", Array)
     ], GetDownloadsResponse.prototype, "downloads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], GetDownloadsResponse.prototype, "resultCount", void 0);
     return GetDownloadsResponse;
-}(SpeakeasyBase));
-export { GetDownloadsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDownloadsResponse = GetDownloadsResponse;

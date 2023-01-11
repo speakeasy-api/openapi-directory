@@ -5,7 +5,7 @@ import { GoogleCloudPolicyanalyzerV1beta1ObservationPeriod } from "./googlecloud
 
 export class GoogleCloudPolicyanalyzerV1beta1Activity extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=activity" })
-  activity?: Map<string, any>;
+  activity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=activityType" })
   activityType?: string;

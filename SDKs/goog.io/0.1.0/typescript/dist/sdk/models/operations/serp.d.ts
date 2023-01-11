@@ -13,5 +13,5 @@ export declare class SerpResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    serp200ApplicationJsonObject?: Serp200ApplicationJson;
+    serp200ApplicationJSONObject?: Serp200ApplicationJson;
 }

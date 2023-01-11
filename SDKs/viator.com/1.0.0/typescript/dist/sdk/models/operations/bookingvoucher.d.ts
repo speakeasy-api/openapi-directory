@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class BookingVoucherQueryParams extends SpeakeasyBase {
     embeddedResources?: boolean;
-    fullHtml?: boolean;
+    fullHTML?: boolean;
     itemId?: number;
     leadLastName?: string;
     mobileVoucher?: boolean;
@@ -19,8 +19,8 @@ export declare class BookingVoucher200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -32,5 +32,5 @@ export declare class BookingVoucherRequest extends SpeakeasyBase {
 export declare class BookingVoucherResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingVoucher200ApplicationJsonObject?: BookingVoucher200ApplicationJson;
+    bookingVoucher200ApplicationJSONObject?: BookingVoucher200ApplicationJson;
 }

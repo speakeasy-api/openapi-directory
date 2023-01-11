@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerLogoutResponse = exports.SessionControllerLogoutRequest = exports.SessionControllerLogoutQueryParams = exports.SessionControllerLogoutPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerLogoutPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerLogoutPathParams, _super);
     function SessionControllerLogoutPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerLogoutPathParams.prototype, "shortName", void 0);
     return SessionControllerLogoutPathParams;
-}(SpeakeasyBase));
-export { SessionControllerLogoutPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLogoutPathParams = SessionControllerLogoutPathParams;
 var SessionControllerLogoutQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerLogoutQueryParams, _super);
     function SessionControllerLogoutQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], SessionControllerLogoutQueryParams.prototype, "token", void 0);
     return SessionControllerLogoutQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerLogoutQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLogoutQueryParams = SessionControllerLogoutQueryParams;
 var SessionControllerLogoutRequest = /** @class */ (function (_super) {
     __extends(SessionControllerLogoutRequest, _super);
     function SessionControllerLogoutRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerLogoutPathParams)
     ], SessionControllerLogoutRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerLogoutQueryParams)
     ], SessionControllerLogoutRequest.prototype, "queryParams", void 0);
     return SessionControllerLogoutRequest;
-}(SpeakeasyBase));
-export { SessionControllerLogoutRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLogoutRequest = SessionControllerLogoutRequest;
 var SessionControllerLogoutResponse = /** @class */ (function (_super) {
     __extends(SessionControllerLogoutResponse, _super);
     function SessionControllerLogoutResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerLogoutResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerLogoutResponse.prototype, "statusCode", void 0);
     return SessionControllerLogoutResponse;
-}(SpeakeasyBase));
-export { SessionControllerLogoutResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerLogoutResponse = SessionControllerLogoutResponse;

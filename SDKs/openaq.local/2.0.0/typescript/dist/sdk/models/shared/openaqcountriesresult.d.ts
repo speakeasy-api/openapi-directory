@@ -1,7 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
 import { CountriesRow } from "./countriesrow";
+export declare class OpenAqCountriesResultMeta extends SpeakeasyBase {
+    found?: number;
+    license?: string;
+    limit?: number;
+    name?: string;
+    page?: number;
+    website?: string;
+}
 export declare class OpenAqCountriesResult extends SpeakeasyBase {
-    meta?: Meta;
+    meta?: OpenAqCountriesResultMeta;
     results: CountriesRow[];
 }

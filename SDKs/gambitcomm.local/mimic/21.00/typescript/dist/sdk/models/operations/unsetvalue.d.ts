@@ -11,5 +11,5 @@ export declare class UnsetValueRequest extends SpeakeasyBase {
 export declare class UnsetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unsetValue200ApplicationJsonString?: string;
+    unsetValue200ApplicationJSONString?: string;
 }

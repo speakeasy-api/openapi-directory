@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnpublishMockResponse = exports.UnpublishMockRequest = exports.UnpublishMock200ApplicationJson = exports.UnpublishMock200ApplicationJsonMock = exports.UnpublishMockPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UnpublishMockPathParams = /** @class */ (function (_super) {
     __extends(UnpublishMockPathParams, _super);
     function UnpublishMockPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mock_uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mock_uid" }),
         __metadata("design:type", String)
     ], UnpublishMockPathParams.prototype, "mockUid", void 0);
     return UnpublishMockPathParams;
-}(SpeakeasyBase));
-export { UnpublishMockPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UnpublishMockPathParams = UnpublishMockPathParams;
 var UnpublishMock200ApplicationJsonMock = /** @class */ (function (_super) {
     __extends(UnpublishMock200ApplicationJsonMock, _super);
     function UnpublishMock200ApplicationJsonMock() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UnpublishMock200ApplicationJsonMock.prototype, "id", void 0);
     return UnpublishMock200ApplicationJsonMock;
-}(SpeakeasyBase));
-export { UnpublishMock200ApplicationJsonMock };
+}(utils_1.SpeakeasyBase));
+exports.UnpublishMock200ApplicationJsonMock = UnpublishMock200ApplicationJsonMock;
 var UnpublishMock200ApplicationJson = /** @class */ (function (_super) {
     __extends(UnpublishMock200ApplicationJson, _super);
     function UnpublishMock200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mock" }),
         __metadata("design:type", UnpublishMock200ApplicationJsonMock)
     ], UnpublishMock200ApplicationJson.prototype, "mock", void 0);
     return UnpublishMock200ApplicationJson;
-}(SpeakeasyBase));
-export { UnpublishMock200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UnpublishMock200ApplicationJson = UnpublishMock200ApplicationJson;
 var UnpublishMockRequest = /** @class */ (function (_super) {
     __extends(UnpublishMockRequest, _super);
     function UnpublishMockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UnpublishMockPathParams)
     ], UnpublishMockRequest.prototype, "pathParams", void 0);
     return UnpublishMockRequest;
-}(SpeakeasyBase));
-export { UnpublishMockRequest };
+}(utils_1.SpeakeasyBase));
+exports.UnpublishMockRequest = UnpublishMockRequest;
 var UnpublishMockResponse = /** @class */ (function (_super) {
     __extends(UnpublishMockResponse, _super);
     function UnpublishMockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UnpublishMockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UnpublishMockResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UnpublishMock200ApplicationJson)
-    ], UnpublishMockResponse.prototype, "unpublishMock200ApplicationJsonObject", void 0);
+    ], UnpublishMockResponse.prototype, "unpublishMock200ApplicationJSONObject", void 0);
     return UnpublishMockResponse;
-}(SpeakeasyBase));
-export { UnpublishMockResponse };
+}(utils_1.SpeakeasyBase));
+exports.UnpublishMockResponse = UnpublishMockResponse;

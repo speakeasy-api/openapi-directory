@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbSnapshotAttribute } from "./dbsnapshotattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbSnapshotAttributesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbsnapshotattributelist_1 = require("./dbsnapshotattributelist");
 // DbSnapshotAttributesResult
 /**
  * <p>Contains the results of a successful call to the <code>DescribeDBSnapshotAttributes</code> API action.</p> <p>Manual DB snapshot attributes are used to authorize other Amazon Web Services accounts to copy or restore a manual DB snapshot. For more information, see the <code>ModifyDBSnapshotAttribute</code> API action.</p>
@@ -34,13 +37,13 @@ var DbSnapshotAttributesResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DbSnapshotAttribute }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbsnapshotattributelist_1.DbSnapshotAttributeList }),
         __metadata("design:type", Array)
     ], DbSnapshotAttributesResult.prototype, "dbSnapshotAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbSnapshotAttributesResult.prototype, "dbSnapshotIdentifier", void 0);
     return DbSnapshotAttributesResult;
-}(SpeakeasyBase));
-export { DbSnapshotAttributesResult };
+}(utils_1.SpeakeasyBase));
+exports.DbSnapshotAttributesResult = DbSnapshotAttributesResult;

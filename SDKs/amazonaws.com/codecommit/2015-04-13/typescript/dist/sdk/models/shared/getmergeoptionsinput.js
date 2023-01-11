@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConflictDetailLevelTypeEnumEnum } from "./conflictdetailleveltypeenumenum";
-import { ConflictResolutionStrategyTypeEnumEnum } from "./conflictresolutionstrategytypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMergeOptionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var conflictdetailleveltypeenumenum_1 = require("./conflictdetailleveltypeenumenum");
+var conflictresolutionstrategytypeenumenum_1 = require("./conflictresolutionstrategytypeenumenum");
 var GetMergeOptionsInput = /** @class */ (function (_super) {
     __extends(GetMergeOptionsInput, _super);
     function GetMergeOptionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conflictDetailLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conflictDetailLevel" }),
         __metadata("design:type", String)
     ], GetMergeOptionsInput.prototype, "conflictDetailLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conflictResolutionStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conflictResolutionStrategy" }),
         __metadata("design:type", String)
     ], GetMergeOptionsInput.prototype, "conflictResolutionStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationCommitSpecifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationCommitSpecifier" }),
         __metadata("design:type", String)
     ], GetMergeOptionsInput.prototype, "destinationCommitSpecifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], GetMergeOptionsInput.prototype, "repositoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCommitSpecifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCommitSpecifier" }),
         __metadata("design:type", String)
     ], GetMergeOptionsInput.prototype, "sourceCommitSpecifier", void 0);
     return GetMergeOptionsInput;
-}(SpeakeasyBase));
-export { GetMergeOptionsInput };
+}(utils_1.SpeakeasyBase));
+exports.GetMergeOptionsInput = GetMergeOptionsInput;

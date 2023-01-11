@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptDomainTransferFromAnotherAwsAccountRequest, AcceptDomainTransferFromAnotherAwsAccountResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptDomainTransferFromAnotherAwsAccountRequest = {
   headers: {
-    xAmzAlgorithm: "dolorem",
-    xAmzContentSha256: "beatae",
-    xAmzCredential: "at",
-    xAmzDate: "debitis",
-    xAmzSecurityToken: "optio",
-    xAmzSignature: "ut",
-    xAmzSignedHeaders: "at",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
   },
   request: {
-    domainName: "ut",
-    password: "cumque",
+    domainName: "fugit",
+    password: "et",
   },
 };
 
-sdk.sdk.acceptDomainTransferFromAnotherAwsAccount(req).then((res: AcceptDomainTransferFromAnotherAwsAccountResponse | AxiosError) => {
+sdk.acceptDomainTransferFromAnotherAwsAccount(req).then((res: AcceptDomainTransferFromAnotherAwsAccountResponse | AxiosError) => {
    // handle response
 });
 ```

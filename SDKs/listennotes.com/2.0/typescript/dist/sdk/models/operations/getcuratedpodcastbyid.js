@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCuratedPodcastByIdResponse = exports.GetCuratedPodcastByIdRequest = exports.GetCuratedPodcastByIdHeaders = exports.GetCuratedPodcastByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetCuratedPodcastByIdPathParams = /** @class */ (function (_super) {
     __extends(GetCuratedPodcastByIdPathParams, _super);
     function GetCuratedPodcastByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetCuratedPodcastByIdPathParams.prototype, "id", void 0);
     return GetCuratedPodcastByIdPathParams;
-}(SpeakeasyBase));
-export { GetCuratedPodcastByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCuratedPodcastByIdPathParams = GetCuratedPodcastByIdPathParams;
 var GetCuratedPodcastByIdHeaders = /** @class */ (function (_super) {
     __extends(GetCuratedPodcastByIdHeaders, _super);
     function GetCuratedPodcastByIdHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" }),
         __metadata("design:type", String)
-    ], GetCuratedPodcastByIdHeaders.prototype, "xListenApiKey", void 0);
+    ], GetCuratedPodcastByIdHeaders.prototype, "xListenAPIKey", void 0);
     return GetCuratedPodcastByIdHeaders;
-}(SpeakeasyBase));
-export { GetCuratedPodcastByIdHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCuratedPodcastByIdHeaders = GetCuratedPodcastByIdHeaders;
 var GetCuratedPodcastByIdRequest = /** @class */ (function (_super) {
     __extends(GetCuratedPodcastByIdRequest, _super);
     function GetCuratedPodcastByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCuratedPodcastByIdPathParams)
     ], GetCuratedPodcastByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCuratedPodcastByIdHeaders)
     ], GetCuratedPodcastByIdRequest.prototype, "headers", void 0);
     return GetCuratedPodcastByIdRequest;
-}(SpeakeasyBase));
-export { GetCuratedPodcastByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCuratedPodcastByIdRequest = GetCuratedPodcastByIdRequest;
 var GetCuratedPodcastByIdResponse = /** @class */ (function (_super) {
     __extends(GetCuratedPodcastByIdResponse, _super);
     function GetCuratedPodcastByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCuratedPodcastByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CuratedListFull)
     ], GetCuratedPodcastByIdResponse.prototype, "curatedListFull", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCuratedPodcastByIdResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCuratedPodcastByIdResponse.prototype, "statusCode", void 0);
     return GetCuratedPodcastByIdResponse;
-}(SpeakeasyBase));
-export { GetCuratedPodcastByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCuratedPodcastByIdResponse = GetCuratedPodcastByIdResponse;

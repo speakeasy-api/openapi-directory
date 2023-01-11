@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueTokenResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var IssueTokenResponse = /** @class */ (function (_super) {
     __extends(IssueTokenResponse, _super);
     function IssueTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenId" }),
         __metadata("design:type", String)
     ], IssueTokenResponse.prototype, "tokenId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txHex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txHex" }),
         __metadata("design:type", String)
     ], IssueTokenResponse.prototype, "txHex", void 0);
     return IssueTokenResponse;
-}(SpeakeasyBase));
-export { IssueTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenResponse = IssueTokenResponse;

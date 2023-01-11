@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateLinkConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // PrivateLinkConfig
 /**
  * The VPC endpoint, subnet, and security group that an agent uses to access IP addresses in a VPC (Virtual Private Cloud).
@@ -33,21 +36,21 @@ var PrivateLinkConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateLinkEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateLinkEndpoint" }),
         __metadata("design:type", String)
     ], PrivateLinkConfig.prototype, "privateLinkEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupArns" }),
         __metadata("design:type", Array)
     ], PrivateLinkConfig.prototype, "securityGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetArns" }),
         __metadata("design:type", Array)
     ], PrivateLinkConfig.prototype, "subnetArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcEndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcEndpointId" }),
         __metadata("design:type", String)
     ], PrivateLinkConfig.prototype, "vpcEndpointId", void 0);
     return PrivateLinkConfig;
-}(SpeakeasyBase));
-export { PrivateLinkConfig };
+}(utils_1.SpeakeasyBase));
+exports.PrivateLinkConfig = PrivateLinkConfig;

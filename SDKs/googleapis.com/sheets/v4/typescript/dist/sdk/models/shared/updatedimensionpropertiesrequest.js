@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceSheetDimensionRange } from "./datasourcesheetdimensionrange";
-import { DimensionProperties } from "./dimensionproperties";
-import { DimensionRange } from "./dimensionrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDimensionPropertiesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcesheetdimensionrange_1 = require("./datasourcesheetdimensionrange");
+var dimensionproperties_1 = require("./dimensionproperties");
+var dimensionrange_1 = require("./dimensionrange");
 // UpdateDimensionPropertiesRequest
 /**
  * Updates properties of dimensions within the specified range.
@@ -36,21 +39,21 @@ var UpdateDimensionPropertiesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceSheetRange" }),
-        __metadata("design:type", DataSourceSheetDimensionRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceSheetRange" }),
+        __metadata("design:type", datasourcesheetdimensionrange_1.DataSourceSheetDimensionRange)
     ], UpdateDimensionPropertiesRequest.prototype, "dataSourceSheetRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateDimensionPropertiesRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", DimensionProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", dimensionproperties_1.DimensionProperties)
     ], UpdateDimensionPropertiesRequest.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", DimensionRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", dimensionrange_1.DimensionRange)
     ], UpdateDimensionPropertiesRequest.prototype, "range", void 0);
     return UpdateDimensionPropertiesRequest;
-}(SpeakeasyBase));
-export { UpdateDimensionPropertiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDimensionPropertiesRequest = UpdateDimensionPropertiesRequest;

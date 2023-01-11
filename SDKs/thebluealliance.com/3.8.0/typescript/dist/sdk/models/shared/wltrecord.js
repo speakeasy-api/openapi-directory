@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WltRecord = void 0;
+var utils_1 = require("../../../internal/utils");
 // WltRecord
 /**
  * A Win-Loss-Tie record for a team, or an alliance.
@@ -33,17 +36,17 @@ var WltRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=losses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=losses" }),
         __metadata("design:type", Number)
     ], WltRecord.prototype, "losses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], WltRecord.prototype, "ties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wins" }),
         __metadata("design:type", Number)
     ], WltRecord.prototype, "wins", void 0);
     return WltRecord;
-}(SpeakeasyBase));
-export { WltRecord };
+}(utils_1.SpeakeasyBase));
+exports.WltRecord = WltRecord;

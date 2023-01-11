@@ -124,5 +124,5 @@ export class UpdateOrganizationConfigTemplateSwitchProfilePortResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationConfigTemplateSwitchProfilePort200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationConfigTemplateSwitchProfilePort200ApplicationJSONObject?: Record<string, any>;
 }

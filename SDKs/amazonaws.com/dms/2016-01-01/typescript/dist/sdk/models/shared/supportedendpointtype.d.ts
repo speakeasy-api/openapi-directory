@@ -8,5 +8,5 @@ export declare class SupportedEndpointType extends SpeakeasyBase {
     engineDisplayName?: string;
     engineName?: string;
     replicationInstanceEngineMinimumVersion?: string;
-    supportsCdc?: boolean;
+    supportsCDC?: boolean;
 }

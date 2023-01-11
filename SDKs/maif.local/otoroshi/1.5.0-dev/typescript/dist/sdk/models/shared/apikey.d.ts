@@ -9,7 +9,7 @@ export declare class ApiKey extends SpeakeasyBase {
     clientSecret: string;
     dailyQuota?: number;
     enabled: boolean;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     monthlyQuota?: number;
     throttlingQuota?: number;
 }

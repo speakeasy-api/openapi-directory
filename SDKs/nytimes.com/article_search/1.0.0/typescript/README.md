@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetArticlesearchJsonRequest, GetArticlesearchJsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetArticlesearchJsonRequest = {
   queryParams: {
-    beginDate: "sequi",
-    endDate: "voluptate",
-    facetField: "atque",
+    beginDate: "sit",
+    endDate: "voluptas",
+    facetField: "culpa",
     facetFilter: false,
-    fl: "labore",
-    fq: "quia",
+    fl: "consequuntur",
+    fq: "dolor",
     hl: true,
-    page: 5713960080592200897,
-    q: "dolor",
-    sort: "oldest",
+    page: 6044372234677422456,
+    q: "fugit",
+    sort: "newest",
   },
 };
 
-sdk.sdk.getArticlesearchJson(req).then((res: GetArticlesearchJsonResponse | AxiosError) => {
+sdk.stories.getArticlesearchJson(req).then((res: GetArticlesearchJsonResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.getArticlesearchJson(req).then((res: GetArticlesearchJsonResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `getArticlesearchJson` - Article Search
 

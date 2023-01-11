@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecordFormatTypeEnum } from "./recordformattypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationSchema = void 0;
+var utils_1 = require("../../../internal/utils");
+var recordformattypeenum_1 = require("./recordformattypeenum");
 // DestinationSchema
 /**
  * Describes the data format when records are written to the destination. For more information, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-output.html">Configuring Application Output</a>.
@@ -34,9 +37,9 @@ var DestinationSchema = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordFormatType" }),
         __metadata("design:type", String)
     ], DestinationSchema.prototype, "recordFormatType", void 0);
     return DestinationSchema;
-}(SpeakeasyBase));
-export { DestinationSchema };
+}(utils_1.SpeakeasyBase));
+exports.DestinationSchema = DestinationSchema;

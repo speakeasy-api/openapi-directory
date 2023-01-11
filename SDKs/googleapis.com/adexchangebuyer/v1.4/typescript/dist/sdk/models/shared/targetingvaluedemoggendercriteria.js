@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetingValueDemogGenderCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
 var TargetingValueDemogGenderCriteria = /** @class */ (function (_super) {
     __extends(TargetingValueDemogGenderCriteria, _super);
     function TargetingValueDemogGenderCriteria() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=demogGenderCriteriaIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=demogGenderCriteriaIds" }),
         __metadata("design:type", Array)
     ], TargetingValueDemogGenderCriteria.prototype, "demogGenderCriteriaIds", void 0);
     return TargetingValueDemogGenderCriteria;
-}(SpeakeasyBase));
-export { TargetingValueDemogGenderCriteria };
+}(utils_1.SpeakeasyBase));
+exports.TargetingValueDemogGenderCriteria = TargetingValueDemogGenderCriteria;

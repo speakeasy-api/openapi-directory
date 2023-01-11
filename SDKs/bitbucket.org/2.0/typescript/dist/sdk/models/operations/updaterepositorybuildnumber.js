@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryBuildNumberResponse = exports.UpdateRepositoryBuildNumberRequest = exports.UpdateRepositoryBuildNumberPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryBuildNumberPathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryBuildNumberPathParams, _super);
     function UpdateRepositoryBuildNumberPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryBuildNumberPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryBuildNumberPathParams.prototype, "workspace", void 0);
     return UpdateRepositoryBuildNumberPathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryBuildNumberPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryBuildNumberPathParams = UpdateRepositoryBuildNumberPathParams;
 var UpdateRepositoryBuildNumberRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryBuildNumberRequest, _super);
     function UpdateRepositoryBuildNumberRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryBuildNumberPathParams)
     ], UpdateRepositoryBuildNumberRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateRepositoryBuildNumberRequest.prototype, "request", void 0);
     return UpdateRepositoryBuildNumberRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryBuildNumberRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryBuildNumberRequest = UpdateRepositoryBuildNumberRequest;
 var UpdateRepositoryBuildNumberResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryBuildNumberResponse, _super);
     function UpdateRepositoryBuildNumberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryBuildNumberResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryBuildNumberResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryBuildNumberResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryBuildNumberResponse.prototype, "pipelineBuildNumber", void 0);
     return UpdateRepositoryBuildNumberResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryBuildNumberResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryBuildNumberResponse = UpdateRepositoryBuildNumberResponse;

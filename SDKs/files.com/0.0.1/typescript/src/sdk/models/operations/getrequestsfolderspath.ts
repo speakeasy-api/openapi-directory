@@ -20,7 +20,7 @@ export class GetRequestsFoldersPathQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: Map<string, any>;
+  sortBy?: Record<string, any>;
 }
 
 

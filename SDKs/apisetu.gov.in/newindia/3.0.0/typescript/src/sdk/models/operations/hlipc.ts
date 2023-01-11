@@ -194,23 +194,23 @@ export class HlipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  hlipc400ApplicationJsonObject?: Hlipc400ApplicationJson;
+  hlipc400ApplicationJSONObject?: Hlipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc401ApplicationJsonObject?: Hlipc401ApplicationJson;
+  hlipc401ApplicationJSONObject?: Hlipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc404ApplicationJsonObject?: Hlipc404ApplicationJson;
+  hlipc404ApplicationJSONObject?: Hlipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc500ApplicationJsonObject?: Hlipc500ApplicationJson;
+  hlipc500ApplicationJSONObject?: Hlipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc502ApplicationJsonObject?: Hlipc502ApplicationJson;
+  hlipc502ApplicationJSONObject?: Hlipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc503ApplicationJsonObject?: Hlipc503ApplicationJson;
+  hlipc503ApplicationJSONObject?: Hlipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  hlipc504ApplicationJsonObject?: Hlipc504ApplicationJson;
+  hlipc504ApplicationJSONObject?: Hlipc504ApplicationJson;
 }

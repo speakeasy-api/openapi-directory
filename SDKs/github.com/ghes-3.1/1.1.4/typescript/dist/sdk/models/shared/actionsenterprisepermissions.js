@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedActionsEnum } from "./allowedactionsenum";
-import { EnabledOrganizationsEnum } from "./enabledorganizationsenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsEnterprisePermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowedactionsenum_1 = require("./allowedactionsenum");
+var enabledorganizationsenum_1 = require("./enabledorganizationsenum");
 var ActionsEnterprisePermissions = /** @class */ (function (_super) {
     __extends(ActionsEnterprisePermissions, _super);
     function ActionsEnterprisePermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_actions" }),
         __metadata("design:type", String)
     ], ActionsEnterprisePermissions.prototype, "allowedActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled_organizations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled_organizations" }),
         __metadata("design:type", String)
     ], ActionsEnterprisePermissions.prototype, "enabledOrganizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_actions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_actions_url" }),
         __metadata("design:type", String)
     ], ActionsEnterprisePermissions.prototype, "selectedActionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_organizations_url" }),
         __metadata("design:type", String)
     ], ActionsEnterprisePermissions.prototype, "selectedOrganizationsUrl", void 0);
     return ActionsEnterprisePermissions;
-}(SpeakeasyBase));
-export { ActionsEnterprisePermissions };
+}(utils_1.SpeakeasyBase));
+exports.ActionsEnterprisePermissions = ActionsEnterprisePermissions;

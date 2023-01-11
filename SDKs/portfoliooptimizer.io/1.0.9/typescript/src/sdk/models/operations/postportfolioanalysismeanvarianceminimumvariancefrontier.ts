@@ -73,8 +73,8 @@ export class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse ex
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJsonObject?: PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject?: PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJson;
 }

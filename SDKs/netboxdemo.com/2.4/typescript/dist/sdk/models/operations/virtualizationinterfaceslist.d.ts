@@ -22,5 +22,5 @@ export declare class VirtualizationInterfacesListRequest extends SpeakeasyBase {
 export declare class VirtualizationInterfacesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    virtualizationInterfacesList200ApplicationJsonObject?: VirtualizationInterfacesList200ApplicationJson;
+    virtualizationInterfacesList200ApplicationJSONObject?: VirtualizationInterfacesList200ApplicationJson;
 }

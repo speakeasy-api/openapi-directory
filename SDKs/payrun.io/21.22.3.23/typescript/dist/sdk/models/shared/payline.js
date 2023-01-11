@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PayLinePayLinePayCodeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayLine = exports.PayLinePayLine = exports.PayLinePayLinePayCodeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PayLinePayLinePayCodeTypeEnum;
 (function (PayLinePayLinePayCodeTypeEnum) {
     PayLinePayLinePayCodeTypeEnum["NotSet"] = "NotSet";
     PayLinePayLinePayCodeTypeEnum["Payment"] = "Payment";
     PayLinePayLinePayCodeTypeEnum["Deduction"] = "Deduction";
-})(PayLinePayLinePayCodeTypeEnum || (PayLinePayLinePayCodeTypeEnum = {}));
+})(PayLinePayLinePayCodeTypeEnum = exports.PayLinePayLinePayCodeTypeEnum || (exports.PayLinePayLinePayCodeTypeEnum = {}));
 var PayLinePayLine = /** @class */ (function (_super) {
     __extends(PayLinePayLine, _super);
     function PayLinePayLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Calculator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Calculator" }),
         __metadata("design:type", String)
     ], PayLinePayLine.prototype, "calculator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], PayLinePayLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Generated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Generated" }),
         __metadata("design:type", Date)
     ], PayLinePayLine.prototype, "generated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayCode" }),
         __metadata("design:type", String)
     ], PayLinePayLine.prototype, "payCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayCodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayCodeType" }),
         __metadata("design:type", String)
     ], PayLinePayLine.prototype, "payCodeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayRunSequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayRunSequence" }),
         __metadata("design:type", Number)
     ], PayLinePayLine.prototype, "payRunSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentDate" }),
         __metadata("design:type", Date)
     ], PayLinePayLine.prototype, "paymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxPeriod" }),
         __metadata("design:type", Number)
     ], PayLinePayLine.prototype, "taxPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], PayLinePayLine.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", Number)
     ], PayLinePayLine.prototype, "value", void 0);
     return PayLinePayLine;
-}(SpeakeasyBase));
-export { PayLinePayLine };
+}(utils_1.SpeakeasyBase));
+exports.PayLinePayLine = PayLinePayLine;
 var PayLine = /** @class */ (function (_super) {
     __extends(PayLine, _super);
     function PayLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayLine" }),
         __metadata("design:type", PayLinePayLine)
     ], PayLine.prototype, "payLine", void 0);
     return PayLine;
-}(SpeakeasyBase));
-export { PayLine };
+}(utils_1.SpeakeasyBase));
+exports.PayLine = PayLine;

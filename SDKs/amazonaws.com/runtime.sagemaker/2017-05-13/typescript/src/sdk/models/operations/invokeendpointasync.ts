@@ -47,7 +47,7 @@ export class InvokeEndpointAsyncHeaders extends SpeakeasyBase {
   xAmznSageMakerInputLocation: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amzn-SageMaker-RequestTTLSeconds" })
-  xAmznSageMakerRequestTtlSeconds?: number;
+  xAmznSageMakerRequestTTLSeconds?: number;
 }
 
 

@@ -11,7 +11,7 @@ export class LandlordAccountingInvoiceModel extends SpeakeasyBase {
   date?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=InvoiceID" })
-  invoiceId?: string;
+  invoiceID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=IsMaintenanceInvoice" })
   isMaintenanceInvoice?: boolean;

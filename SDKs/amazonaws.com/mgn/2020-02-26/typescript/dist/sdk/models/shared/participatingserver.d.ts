@@ -5,5 +5,5 @@ import { LaunchStatusEnum } from "./launchstatusenum";
 **/
 export declare class ParticipatingServer extends SpeakeasyBase {
     launchStatus?: LaunchStatusEnum;
-    sourceServerId?: string;
+    sourceServerID?: string;
 }

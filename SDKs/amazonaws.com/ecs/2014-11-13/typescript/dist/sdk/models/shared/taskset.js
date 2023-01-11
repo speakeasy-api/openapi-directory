@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { LaunchTypeEnum } from "./launchtypeenum";
-import { LoadBalancer } from "./loadbalancer";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { Scale } from "./scale";
-import { ServiceRegistry } from "./serviceregistry";
-import { StabilityStatusEnum } from "./stabilitystatusenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var launchtypeenum_1 = require("./launchtypeenum");
+var loadbalancer_1 = require("./loadbalancer");
+var networkconfiguration_1 = require("./networkconfiguration");
+var scale_1 = require("./scale");
+var serviceregistry_1 = require("./serviceregistry");
+var stabilitystatusenum_1 = require("./stabilitystatusenum");
+var tag_1 = require("./tag");
 // TaskSet
 /**
  * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. An Amazon ECS task set includes details such as the desired number of tasks, how many tasks are running, and whether the task set serves production traffic.
@@ -41,97 +44,97 @@ var TaskSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], TaskSet.prototype, "capacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterArn" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "clusterArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computedDesiredCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computedDesiredCount" }),
         __metadata("design:type", Number)
     ], TaskSet.prototype, "computedDesiredCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], TaskSet.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchType" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "launchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancers", elemType: LoadBalancer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancers", elemType: loadbalancer_1.LoadBalancer }),
         __metadata("design:type", Array)
     ], TaskSet.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], TaskSet.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingCount" }),
         __metadata("design:type", Number)
     ], TaskSet.prototype, "pendingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformVersion" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runningCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runningCount" }),
         __metadata("design:type", Number)
     ], TaskSet.prototype, "runningCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
-        __metadata("design:type", Scale)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
+        __metadata("design:type", scale_1.Scale)
     ], TaskSet.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceArn" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "serviceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRegistries", elemType: ServiceRegistry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRegistries", elemType: serviceregistry_1.ServiceRegistry }),
         __metadata("design:type", Array)
     ], TaskSet.prototype, "serviceRegistries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stabilityStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stabilityStatus" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "stabilityStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stabilityStatusAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stabilityStatusAt" }),
         __metadata("design:type", Date)
     ], TaskSet.prototype, "stabilityStatusAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedBy" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "startedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], TaskSet.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "taskDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSetArn" }),
         __metadata("design:type", String)
     ], TaskSet.prototype, "taskSetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], TaskSet.prototype, "updatedAt", void 0);
     return TaskSet;
-}(SpeakeasyBase));
-export { TaskSet };
+}(utils_1.SpeakeasyBase));
+exports.TaskSet = TaskSet;

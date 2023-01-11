@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetFlightOffersRequest, GetFlightOffersResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,24 +28,24 @@ const sdk = new SDK();
     
 const req: GetFlightOffersRequest = {
   queryParams: {
-    adults: 3462733497206508461,
-    children: 5902760509050140210,
-    currencyCode: "quam",
-    departureDate: "1996-04-18",
-    destinationLocationCode: "cumque",
-    excludedAirlineCodes: "soluta",
-    includedAirlineCodes: "sunt",
-    infants: 2408550365227740434,
-    max: 5521202747878656476,
-    maxPrice: 5596430475431407243,
+    adults: 8717895732742165505,
+    children: 2259404117704393152,
+    currencyCode: "culpa",
+    departureDate: "2019-04-21",
+    destinationLocationCode: "consequuntur",
+    excludedAirlineCodes: "dolor",
+    includedAirlineCodes: "expedita",
+    infants: 6044372234677422456,
+    max: 8274930044578894929,
+    maxPrice: 1543572285742637646,
     nonStop: true,
-    originLocationCode: "qui",
-    returnDate: "1990-06-29",
-    travelClass: "BUSINESS",
+    originLocationCode: "rerum",
+    returnDate: "2004-06-02",
+    travelClass: "ECONOMY",
   },
 };
 
-sdk.sdk.getFlightOffers(req).then((res: GetFlightOffersResponse | AxiosError) => {
+sdk.shopping.getFlightOffers(req).then((res: GetFlightOffersResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.getFlightOffers(req).then((res: GetFlightOffersResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Shopping
 
 * `getFlightOffers` - Return list of Flight Offers based on searching criteria.
 * `searchFlightOffers` - Return list of Flight Offers based on posted searching criteria.

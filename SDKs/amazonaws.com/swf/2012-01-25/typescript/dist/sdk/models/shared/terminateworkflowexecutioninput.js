@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChildPolicyEnum } from "./childpolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TerminateWorkflowExecutionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var childpolicyenum_1 = require("./childpolicyenum");
 var TerminateWorkflowExecutionInput = /** @class */ (function (_super) {
     __extends(TerminateWorkflowExecutionInput, _super);
     function TerminateWorkflowExecutionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childPolicy" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "childPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runId" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowId" }),
         __metadata("design:type", String)
     ], TerminateWorkflowExecutionInput.prototype, "workflowId", void 0);
     return TerminateWorkflowExecutionInput;
-}(SpeakeasyBase));
-export { TerminateWorkflowExecutionInput };
+}(utils_1.SpeakeasyBase));
+exports.TerminateWorkflowExecutionInput = TerminateWorkflowExecutionInput;

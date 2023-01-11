@@ -12,5 +12,5 @@ export declare class PostGet3dsAvailabilityResponse extends SpeakeasyBase {
     contentType: string;
     serviceError?: any;
     statusCode: number;
-    threeDsAvailabilityResponse?: any;
+    threeDSAvailabilityResponse?: any;
 }

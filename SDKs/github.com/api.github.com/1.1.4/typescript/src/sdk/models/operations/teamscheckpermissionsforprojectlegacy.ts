@@ -38,5 +38,5 @@ export class TeamsCheckPermissionsForProjectLegacyResponse extends SpeakeasyBase
   teamProject?: shared.TeamProject;
 
   @SpeakeasyMetadata()
-  teamsCheckPermissionsForProjectLegacy415ApplicationJsonObject?: TeamsCheckPermissionsForProjectLegacy415ApplicationJson;
+  teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject?: TeamsCheckPermissionsForProjectLegacy415ApplicationJson;
 }

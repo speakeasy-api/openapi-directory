@@ -11,5 +11,5 @@ export declare class AddClientSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     clientCredentialsResponses?: shared.ClientCredentialsResponse[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

@@ -185,23 +185,23 @@ export class FfcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ffcer400ApplicationJsonObject?: Ffcer400ApplicationJson;
+  ffcer400ApplicationJSONObject?: Ffcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer401ApplicationJsonObject?: Ffcer401ApplicationJson;
+  ffcer401ApplicationJSONObject?: Ffcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer404ApplicationJsonObject?: Ffcer404ApplicationJson;
+  ffcer404ApplicationJSONObject?: Ffcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer500ApplicationJsonObject?: Ffcer500ApplicationJson;
+  ffcer500ApplicationJSONObject?: Ffcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer502ApplicationJsonObject?: Ffcer502ApplicationJson;
+  ffcer502ApplicationJSONObject?: Ffcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer503ApplicationJsonObject?: Ffcer503ApplicationJson;
+  ffcer503ApplicationJSONObject?: Ffcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ffcer504ApplicationJsonObject?: Ffcer504ApplicationJson;
+  ffcer504ApplicationJSONObject?: Ffcer504ApplicationJson;
 }

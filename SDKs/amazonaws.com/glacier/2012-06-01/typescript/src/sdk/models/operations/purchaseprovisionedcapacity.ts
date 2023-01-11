@@ -55,7 +55,7 @@ export class PurchaseProvisionedCapacityResponse extends SpeakeasyBase {
   missingParameterValueException?: any;
 
   @SpeakeasyMetadata()
-  purchaseProvisionedCapacityOutput?: Map<string, any>;
+  purchaseProvisionedCapacityOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serviceUnavailableException?: any;

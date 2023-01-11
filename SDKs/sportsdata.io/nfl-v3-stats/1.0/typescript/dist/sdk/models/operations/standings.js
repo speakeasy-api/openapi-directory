@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandingsResponse = exports.StandingsRequest = exports.StandingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StandingsPathParams = /** @class */ (function (_super) {
     __extends(StandingsPathParams, _super);
     function StandingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], StandingsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], StandingsPathParams.prototype, "season", void 0);
     return StandingsPathParams;
-}(SpeakeasyBase));
-export { StandingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StandingsPathParams = StandingsPathParams;
 var StandingsRequest = /** @class */ (function (_super) {
     __extends(StandingsRequest, _super);
     function StandingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StandingsPathParams)
     ], StandingsRequest.prototype, "pathParams", void 0);
     return StandingsRequest;
-}(SpeakeasyBase));
-export { StandingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.StandingsRequest = StandingsRequest;
 var StandingsResponse = /** @class */ (function (_super) {
     __extends(StandingsResponse, _super);
     function StandingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StandingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], StandingsResponse.prototype, "standings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StandingsResponse.prototype, "statusCode", void 0);
     return StandingsResponse;
-}(SpeakeasyBase));
-export { StandingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.StandingsResponse = StandingsResponse;

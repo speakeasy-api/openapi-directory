@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonRedZoneStatsInsideFiveFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonRedZoneStatsInsideFiveResponse = exports.PlayerSeasonRedZoneStatsInsideFiveRequest = exports.PlayerSeasonRedZoneStatsInsideFivePathParams = exports.PlayerSeasonRedZoneStatsInsideFiveFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonRedZoneStatsInsideFiveFormatEnum;
 (function (PlayerSeasonRedZoneStatsInsideFiveFormatEnum) {
     PlayerSeasonRedZoneStatsInsideFiveFormatEnum["Xml"] = "XML";
     PlayerSeasonRedZoneStatsInsideFiveFormatEnum["Json"] = "JSON";
-})(PlayerSeasonRedZoneStatsInsideFiveFormatEnum || (PlayerSeasonRedZoneStatsInsideFiveFormatEnum = {}));
+})(PlayerSeasonRedZoneStatsInsideFiveFormatEnum = exports.PlayerSeasonRedZoneStatsInsideFiveFormatEnum || (exports.PlayerSeasonRedZoneStatsInsideFiveFormatEnum = {}));
 var PlayerSeasonRedZoneStatsInsideFivePathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsInsideFivePathParams, _super);
     function PlayerSeasonRedZoneStatsInsideFivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsInsideFivePathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsInsideFivePathParams.prototype, "season", void 0);
     return PlayerSeasonRedZoneStatsInsideFivePathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsInsideFivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsInsideFivePathParams = PlayerSeasonRedZoneStatsInsideFivePathParams;
 var PlayerSeasonRedZoneStatsInsideFiveRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsInsideFiveRequest, _super);
     function PlayerSeasonRedZoneStatsInsideFiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonRedZoneStatsInsideFivePathParams)
     ], PlayerSeasonRedZoneStatsInsideFiveRequest.prototype, "pathParams", void 0);
     return PlayerSeasonRedZoneStatsInsideFiveRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsInsideFiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsInsideFiveRequest = PlayerSeasonRedZoneStatsInsideFiveRequest;
 var PlayerSeasonRedZoneStatsInsideFiveResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonRedZoneStatsInsideFiveResponse, _super);
     function PlayerSeasonRedZoneStatsInsideFiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonRedZoneStatsInsideFiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonRedZoneStatsInsideFiveResponse.prototype, "playerSeasonRedZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonRedZoneStatsInsideFiveResponse.prototype, "statusCode", void 0);
     return PlayerSeasonRedZoneStatsInsideFiveResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonRedZoneStatsInsideFiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonRedZoneStatsInsideFiveResponse = PlayerSeasonRedZoneStatsInsideFiveResponse;

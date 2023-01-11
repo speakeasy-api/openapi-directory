@@ -9,5 +9,5 @@ export declare class GetNetworkSmBypassActivationLockAttemptRequest extends Spea
 export declare class GetNetworkSmBypassActivationLockAttemptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmBypassActivationLockAttempt200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmBypassActivationLockAttempt200ApplicationJSONObject?: Record<string, any>;
 }

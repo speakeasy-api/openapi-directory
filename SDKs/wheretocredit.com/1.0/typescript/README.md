@@ -16,23 +16,64 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetApi10ProgramsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { PostApi10CalculateRequest, PostApi10CalculateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   }
 ));
+    
+const req: PostApi10CalculateRequest = {
+  request: [
+    {
+      baseFareUSD: 14.200000,
+      id: "expedita",
+      segments: [
+        {
+          bookingClass: "dolor",
+          carrier: "expedita",
+          departure: "1978-05-28T16:08:43Z",
+          destination: "fugit",
+          distance: 28.100000,
+          flightNumber: 8325060299420976708,
+          operatingCarrier: "dicta",
+          origin: "debitis",
+        },
+        {
+          bookingClass: "voluptatum",
+          carrier: "et",
+          departure: "1970-04-14T21:44:49Z",
+          destination: "dolorem",
+          distance: 50.099998,
+          flightNumber: 3287288577352441706,
+          operatingCarrier: "vitae",
+          origin: "totam",
+        },
+        {
+          bookingClass: "dolores",
+          carrier: "illum",
+          departure: "1975-11-02T15:36:54Z",
+          destination: "vel",
+          distance: 20.200001,
+          flightNumber: 4035568504096476779,
+          operatingCarrier: "aspernatur",
+          origin: "accusantium",
+        },
+      ],
+      ticketingCarrier: "totam",
+    },
+  ],
+};
 
-sdk.sdk.getApi10Programs().then((res: GetApi10ProgramsResponse | AxiosError) => {
+sdk.calculate.postApi10Calculate(req).then((res: PostApi10CalculateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -41,10 +82,13 @@ sdk.sdk.getApi10Programs().then((res: GetApi10ProgramsResponse | AxiosError) => 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Calculate
+
+* `postApi10Calculate` - Calculates the number of miles earned for every frequent flyer program.
+
+### Programs
 
 * `getApi10Programs` - Lists all supported frequent flyer programs.
-* `postApi10Calculate` - Calculates the number of miles earned for every frequent flyer program.
 
 <!-- End SDK Available Operations -->
 

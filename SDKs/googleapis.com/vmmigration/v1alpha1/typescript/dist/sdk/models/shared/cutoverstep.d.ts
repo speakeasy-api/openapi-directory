@@ -6,9 +6,9 @@ import { ReplicationCycle } from "./replicationcycle";
 export declare class CutoverStep extends SpeakeasyBase {
     endTime?: string;
     finalSync?: ReplicationCycle;
-    instantiatingMigratedVm?: Map<string, any>;
-    preparingVmDisks?: Map<string, any>;
+    instantiatingMigratedVm?: Record<string, any>;
+    preparingVmDisks?: Record<string, any>;
     previousReplicationCycle?: ReplicationCycle;
-    shuttingDownSourceVm?: Map<string, any>;
+    shuttingDownSourceVm?: Record<string, any>;
     startTime?: string;
 }

@@ -1,4 +1,7 @@
-export var ProtocolExceptionReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolExceptionReasonEnum = void 0;
+var ProtocolExceptionReasonEnum;
 (function (ProtocolExceptionReasonEnum) {
     ProtocolExceptionReasonEnum["Unsupported"] = "unsupported";
     ProtocolExceptionReasonEnum["Unauthorized"] = "unauthorized";
@@ -9,4 +12,4 @@ export var ProtocolExceptionReasonEnum;
     ProtocolExceptionReasonEnum["Internal"] = "internal";
     ProtocolExceptionReasonEnum["Complex"] = "complex";
     ProtocolExceptionReasonEnum["Busy"] = "busy";
-})(ProtocolExceptionReasonEnum || (ProtocolExceptionReasonEnum = {}));
+})(ProtocolExceptionReasonEnum = exports.ProtocolExceptionReasonEnum || (exports.ProtocolExceptionReasonEnum = {}));

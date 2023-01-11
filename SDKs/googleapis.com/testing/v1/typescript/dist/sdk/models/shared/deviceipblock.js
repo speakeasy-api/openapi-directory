@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-export var DeviceIpBlockFormEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceIpBlock = exports.DeviceIpBlockFormEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var DeviceIpBlockFormEnum;
 (function (DeviceIpBlockFormEnum) {
     DeviceIpBlockFormEnum["DeviceFormUnspecified"] = "DEVICE_FORM_UNSPECIFIED";
     DeviceIpBlockFormEnum["Virtual"] = "VIRTUAL";
     DeviceIpBlockFormEnum["Physical"] = "PHYSICAL";
     DeviceIpBlockFormEnum["Emulator"] = "EMULATOR";
-})(DeviceIpBlockFormEnum || (DeviceIpBlockFormEnum = {}));
+})(DeviceIpBlockFormEnum = exports.DeviceIpBlockFormEnum || (exports.DeviceIpBlockFormEnum = {}));
 // DeviceIpBlock
 /**
  * A single device IP block
@@ -41,17 +44,17 @@ var DeviceIpBlock = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addedDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addedDate" }),
+        __metadata("design:type", date_1.Date)
     ], DeviceIpBlock.prototype, "addedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=block" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block" }),
         __metadata("design:type", String)
     ], DeviceIpBlock.prototype, "block", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form" }),
         __metadata("design:type", String)
     ], DeviceIpBlock.prototype, "form", void 0);
     return DeviceIpBlock;
-}(SpeakeasyBase));
-export { DeviceIpBlock };
+}(utils_1.SpeakeasyBase));
+exports.DeviceIpBlock = DeviceIpBlock;

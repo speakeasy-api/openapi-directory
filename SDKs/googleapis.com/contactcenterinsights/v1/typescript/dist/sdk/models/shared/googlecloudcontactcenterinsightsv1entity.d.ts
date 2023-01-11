@@ -15,12 +15,9 @@ export declare enum GoogleCloudContactcenterinsightsV1EntityTypeEnum {
     Number = "NUMBER",
     Price = "PRICE"
 }
-/**
- * The data for an entity annotation. Represents a phrase in the conversation that is a known entity, such as a person, an organization, or location.
-**/
 export declare class GoogleCloudContactcenterinsightsV1Entity extends SpeakeasyBase {
     displayName?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     salience?: number;
     sentiment?: GoogleCloudContactcenterinsightsV1SentimentData;
     type?: GoogleCloudContactcenterinsightsV1EntityTypeEnum;

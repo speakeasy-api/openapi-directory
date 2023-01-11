@@ -18,11 +18,11 @@ export declare class RetrieveADatabase200ApplicationJsonPropertiesAuthor extends
 export declare class RetrieveADatabase200ApplicationJsonPropertiesLink extends SpeakeasyBase {
     id?: string;
     type?: string;
-    url?: Map<string, any>;
+    url?: Record<string, any>;
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesName extends SpeakeasyBase {
     id?: string;
-    title?: Map<string, any>;
+    title?: Record<string, any>;
     type?: string;
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesPublisherSelectOptions extends SpeakeasyBase {
@@ -39,12 +39,12 @@ export declare class RetrieveADatabase200ApplicationJsonPropertiesPublisher exte
     type?: string;
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesPublishingReleaseDate extends SpeakeasyBase {
-    date?: Map<string, any>;
+    date?: Record<string, any>;
     id?: string;
     type?: string;
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesRead extends SpeakeasyBase {
-    checkbox?: Map<string, any>;
+    checkbox?: Record<string, any>;
     id?: string;
     type?: string;
 }
@@ -76,7 +76,7 @@ export declare class RetrieveADatabase200ApplicationJsonPropertiesStatus extends
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesSummary extends SpeakeasyBase {
     id?: string;
-    text?: Map<string, any>;
+    text?: Record<string, any>;
     type?: string;
 }
 export declare class RetrieveADatabase200ApplicationJsonPropertiesTypeSelectOptions extends SpeakeasyBase {
@@ -136,7 +136,7 @@ export declare class RetrieveADatabaseRequest extends SpeakeasyBase {
 }
 export declare class RetrieveADatabaseResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    retrieveADatabase200ApplicationJsonObject?: RetrieveADatabase200ApplicationJson;
+    retrieveADatabase200ApplicationJSONObject?: RetrieveADatabase200ApplicationJson;
 }

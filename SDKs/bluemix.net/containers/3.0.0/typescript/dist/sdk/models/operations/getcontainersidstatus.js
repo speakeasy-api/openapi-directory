@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContainersIdStatusResponse = exports.GetContainersIdStatusRequest = exports.GetContainersIdStatusHeaders = exports.GetContainersIdStatusPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetContainersIdStatusPathParams = /** @class */ (function (_super) {
     __extends(GetContainersIdStatusPathParams, _super);
     function GetContainersIdStatusPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetContainersIdStatusPathParams.prototype, "id", void 0);
     return GetContainersIdStatusPathParams;
-}(SpeakeasyBase));
-export { GetContainersIdStatusPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersIdStatusPathParams = GetContainersIdStatusPathParams;
 var GetContainersIdStatusHeaders = /** @class */ (function (_super) {
     __extends(GetContainersIdStatusHeaders, _super);
     function GetContainersIdStatusHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], GetContainersIdStatusHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], GetContainersIdStatusHeaders.prototype, "xAuthToken", void 0);
     return GetContainersIdStatusHeaders;
-}(SpeakeasyBase));
-export { GetContainersIdStatusHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersIdStatusHeaders = GetContainersIdStatusHeaders;
 var GetContainersIdStatusRequest = /** @class */ (function (_super) {
     __extends(GetContainersIdStatusRequest, _super);
     function GetContainersIdStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersIdStatusPathParams)
     ], GetContainersIdStatusRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetContainersIdStatusHeaders)
     ], GetContainersIdStatusRequest.prototype, "headers", void 0);
     return GetContainersIdStatusRequest;
-}(SpeakeasyBase));
-export { GetContainersIdStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersIdStatusRequest = GetContainersIdStatusRequest;
 var GetContainersIdStatusResponse = /** @class */ (function (_super) {
     __extends(GetContainersIdStatusResponse, _super);
     function GetContainersIdStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetContainersIdStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetContainersIdStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetContainersIdStatusResponse.prototype, "getContainerStatus", void 0);
     return GetContainersIdStatusResponse;
-}(SpeakeasyBase));
-export { GetContainersIdStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetContainersIdStatusResponse = GetContainersIdStatusResponse;

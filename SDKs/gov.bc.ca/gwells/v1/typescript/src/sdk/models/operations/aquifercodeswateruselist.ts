@@ -41,5 +41,5 @@ export class AquiferCodesWaterUseListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  aquiferCodesWaterUseList200ApplicationJsonObject?: AquiferCodesWaterUseList200ApplicationJson;
+  aquiferCodesWaterUseList200ApplicationJSONObject?: AquiferCodesWaterUseList200ApplicationJson;
 }

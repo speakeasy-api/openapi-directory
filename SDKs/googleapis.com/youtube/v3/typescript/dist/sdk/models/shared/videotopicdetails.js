@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoTopicDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // VideoTopicDetails
 /**
  * Freebase topic information related to the video.
@@ -33,17 +36,17 @@ var VideoTopicDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relevantTopicIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relevantTopicIds" }),
         __metadata("design:type", Array)
     ], VideoTopicDetails.prototype, "relevantTopicIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicCategories" }),
         __metadata("design:type", Array)
     ], VideoTopicDetails.prototype, "topicCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicIds" }),
         __metadata("design:type", Array)
     ], VideoTopicDetails.prototype, "topicIds", void 0);
     return VideoTopicDetails;
-}(SpeakeasyBase));
-export { VideoTopicDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoTopicDetails = VideoTopicDetails;

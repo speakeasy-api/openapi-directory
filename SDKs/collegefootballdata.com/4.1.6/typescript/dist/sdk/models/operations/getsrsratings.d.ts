@@ -11,5 +11,5 @@ export declare class GetSrsRatingsRequest extends SpeakeasyBase {
 export declare class GetSrsRatingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    teamSrsRatings?: shared.TeamSrsRating[];
+    teamSRSRatings?: shared.TeamSrsRating[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NotificationProperty } from "./notificationproperty";
-import { WorkerTypeEnum } from "./workertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartJobRunRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var notificationproperty_1 = require("./notificationproperty");
+var workertypeenum_1 = require("./workertypeenum");
 var StartJobRunRequest = /** @class */ (function (_super) {
     __extends(StartJobRunRequest, _super);
     function StartJobRunRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllocatedCapacity" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllocatedCapacity" }),
+        __metadata("design:type", Object)
     ], StartJobRunRequest.prototype, "allocatedCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arguments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arguments" }),
+        __metadata("design:type", Object)
     ], StartJobRunRequest.prototype, "arguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobName" }),
         __metadata("design:type", String)
     ], StartJobRunRequest.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobRunId" }),
         __metadata("design:type", String)
     ], StartJobRunRequest.prototype, "jobRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCapacity" }),
         __metadata("design:type", Number)
     ], StartJobRunRequest.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationProperty" }),
-        __metadata("design:type", NotificationProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationProperty" }),
+        __metadata("design:type", notificationproperty_1.NotificationProperty)
     ], StartJobRunRequest.prototype, "notificationProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfWorkers" }),
         __metadata("design:type", Number)
     ], StartJobRunRequest.prototype, "numberOfWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityConfiguration" }),
         __metadata("design:type", String)
     ], StartJobRunRequest.prototype, "securityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timeout" }),
         __metadata("design:type", Number)
     ], StartJobRunRequest.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerType" }),
         __metadata("design:type", String)
     ], StartJobRunRequest.prototype, "workerType", void 0);
     return StartJobRunRequest;
-}(SpeakeasyBase));
-export { StartJobRunRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartJobRunRequest = StartJobRunRequest;

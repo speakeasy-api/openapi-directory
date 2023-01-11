@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportJobResource } from "./exportjobresource";
-import { JobStatusEnum } from "./jobstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportjobresource_1 = require("./exportjobresource");
+var jobstatusenum_1 = require("./jobstatusenum");
 // ExportJobResponse
 /**
  * Provides information about the status and settings of a job that exports endpoint definitions to a file. The file can be added directly to an Amazon Simple Storage Service (Amazon S3) bucket by using the Amazon Pinpoint API or downloaded directly to a computer by using the Amazon Pinpoint console.
@@ -35,57 +38,57 @@ var ExportJobResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedPieces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedPieces" }),
         __metadata("design:type", Number)
     ], ExportJobResponse.prototype, "completedPieces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletionDate" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "completionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Definition" }),
-        __metadata("design:type", ExportJobResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Definition" }),
+        __metadata("design:type", exportjobresource_1.ExportJobResource)
     ], ExportJobResponse.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailedPieces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailedPieces" }),
         __metadata("design:type", Number)
     ], ExportJobResponse.prototype, "failedPieces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Failures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Failures" }),
         __metadata("design:type", Array)
     ], ExportJobResponse.prototype, "failures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobStatus" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalFailures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalFailures" }),
         __metadata("design:type", Number)
     ], ExportJobResponse.prototype, "totalFailures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalPieces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalPieces" }),
         __metadata("design:type", Number)
     ], ExportJobResponse.prototype, "totalPieces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalProcessed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalProcessed" }),
         __metadata("design:type", Number)
     ], ExportJobResponse.prototype, "totalProcessed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ExportJobResponse.prototype, "type", void 0);
     return ExportJobResponse;
-}(SpeakeasyBase));
-export { ExportJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExportJobResponse = ExportJobResponse;

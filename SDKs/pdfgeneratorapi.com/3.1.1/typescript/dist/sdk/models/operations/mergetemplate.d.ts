@@ -69,10 +69,10 @@ export declare class MergeTemplateRequest extends SpeakeasyBase {
 export declare class MergeTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mergeTemplate200ApplicationJsonObject?: MergeTemplate200ApplicationJson;
-    mergeTemplate401ApplicationJsonObject?: MergeTemplate401ApplicationJson;
-    mergeTemplate403ApplicationJsonObject?: MergeTemplate403ApplicationJson;
-    mergeTemplate404ApplicationJsonObject?: MergeTemplate404ApplicationJson;
-    mergeTemplate422ApplicationJsonObject?: MergeTemplate422ApplicationJson;
-    mergeTemplate500ApplicationJsonObject?: MergeTemplate500ApplicationJson;
+    mergeTemplate200ApplicationJSONObject?: MergeTemplate200ApplicationJson;
+    mergeTemplate401ApplicationJSONObject?: MergeTemplate401ApplicationJson;
+    mergeTemplate403ApplicationJSONObject?: MergeTemplate403ApplicationJson;
+    mergeTemplate404ApplicationJSONObject?: MergeTemplate404ApplicationJson;
+    mergeTemplate422ApplicationJSONObject?: MergeTemplate422ApplicationJson;
+    mergeTemplate500ApplicationJSONObject?: MergeTemplate500ApplicationJson;
 }

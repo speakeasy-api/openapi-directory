@@ -1,13 +1,29 @@
-export * from "./deletecompanyattendancesid";
-export * from "./deletecompanytimeoffsid";
-export * from "./getcompanyattendances";
-export * from "./getcompanyemployees";
-export * from "./getcompanyemployeesemployeeid";
-export * from "./getcompanyemployeesemployeeidprofilepicturewidth";
-export * from "./getcompanytimeoffs";
-export * from "./getcompanytimeoffsid";
-export * from "./getcompanytimeofftypes";
-export * from "./patchcompanyattendancesid";
-export * from "./postcompanyattendances";
-export * from "./postcompanyemployees";
-export * from "./postcompanytimeoffs";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deletecompanyattendancesid"), exports);
+__exportStar(require("./deletecompanytimeoffsid"), exports);
+__exportStar(require("./getcompanyattendances"), exports);
+__exportStar(require("./getcompanyemployees"), exports);
+__exportStar(require("./getcompanyemployeesemployeeid"), exports);
+__exportStar(require("./getcompanyemployeesemployeeidprofilepicturewidth"), exports);
+__exportStar(require("./getcompanytimeoffs"), exports);
+__exportStar(require("./getcompanytimeoffsid"), exports);
+__exportStar(require("./getcompanytimeofftypes"), exports);
+__exportStar(require("./patchcompanyattendancesid"), exports);
+__exportStar(require("./postcompanyattendances"), exports);
+__exportStar(require("./postcompanyemployees"), exports);
+__exportStar(require("./postcompanytimeoffs"), exports);

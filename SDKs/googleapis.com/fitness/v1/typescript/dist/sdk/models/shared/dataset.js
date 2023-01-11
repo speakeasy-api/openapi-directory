@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataPoint } from "./datapoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dataset = void 0;
+var utils_1 = require("../../../internal/utils");
+var datapoint_1 = require("./datapoint");
 // Dataset
 /**
  * A dataset represents a projection container for data points. They do not carry any info of their own. Datasets represent a set of data points from a particular data source. A data point can be found in more than one dataset.
@@ -34,25 +37,25 @@ var Dataset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEndTimeNs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEndTimeNs" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "maxEndTimeNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minStartTimeNs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minStartTimeNs" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "minStartTimeNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=point", elemType: DataPoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=point", elemType: datapoint_1.DataPoint }),
         __metadata("design:type", Array)
     ], Dataset.prototype, "point", void 0);
     return Dataset;
-}(SpeakeasyBase));
-export { Dataset };
+}(utils_1.SpeakeasyBase));
+exports.Dataset = Dataset;

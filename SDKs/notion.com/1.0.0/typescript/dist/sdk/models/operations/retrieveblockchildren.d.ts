@@ -12,7 +12,7 @@ export declare class RetrieveBlockChildren200ApplicationJsonResults extends Spea
     lastEditedTime?: string;
     object?: string;
     type?: string;
-    unsupported?: Map<string, any>;
+    unsupported?: Record<string, any>;
 }
 export declare class RetrieveBlockChildren200ApplicationJson extends SpeakeasyBase {
     hasMore?: boolean;
@@ -26,7 +26,7 @@ export declare class RetrieveBlockChildrenRequest extends SpeakeasyBase {
 }
 export declare class RetrieveBlockChildrenResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    retrieveBlockChildren200ApplicationJsonObject?: RetrieveBlockChildren200ApplicationJson;
+    retrieveBlockChildren200ApplicationJSONObject?: RetrieveBlockChildren200ApplicationJson;
 }

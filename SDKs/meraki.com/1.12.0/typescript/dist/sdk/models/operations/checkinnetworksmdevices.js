@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckinNetworkSmDevicesResponse = exports.CheckinNetworkSmDevicesRequest = exports.CheckinNetworkSmDevicesRequestBody = exports.CheckinNetworkSmDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CheckinNetworkSmDevicesPathParams = /** @class */ (function (_super) {
     __extends(CheckinNetworkSmDevicesPathParams, _super);
     function CheckinNetworkSmDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CheckinNetworkSmDevicesPathParams.prototype, "networkId", void 0);
     return CheckinNetworkSmDevicesPathParams;
-}(SpeakeasyBase));
-export { CheckinNetworkSmDevicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CheckinNetworkSmDevicesPathParams = CheckinNetworkSmDevicesPathParams;
 var CheckinNetworkSmDevicesRequestBody = /** @class */ (function (_super) {
     __extends(CheckinNetworkSmDevicesRequestBody, _super);
     function CheckinNetworkSmDevicesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], CheckinNetworkSmDevicesRequestBody.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", Array)
     ], CheckinNetworkSmDevicesRequestBody.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], CheckinNetworkSmDevicesRequestBody.prototype, "serials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiMacs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiMacs" }),
         __metadata("design:type", Array)
     ], CheckinNetworkSmDevicesRequestBody.prototype, "wifiMacs", void 0);
     return CheckinNetworkSmDevicesRequestBody;
-}(SpeakeasyBase));
-export { CheckinNetworkSmDevicesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CheckinNetworkSmDevicesRequestBody = CheckinNetworkSmDevicesRequestBody;
 var CheckinNetworkSmDevicesRequest = /** @class */ (function (_super) {
     __extends(CheckinNetworkSmDevicesRequest, _super);
     function CheckinNetworkSmDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CheckinNetworkSmDevicesPathParams)
     ], CheckinNetworkSmDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CheckinNetworkSmDevicesRequestBody)
     ], CheckinNetworkSmDevicesRequest.prototype, "request", void 0);
     return CheckinNetworkSmDevicesRequest;
-}(SpeakeasyBase));
-export { CheckinNetworkSmDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.CheckinNetworkSmDevicesRequest = CheckinNetworkSmDevicesRequest;
 var CheckinNetworkSmDevicesResponse = /** @class */ (function (_super) {
     __extends(CheckinNetworkSmDevicesResponse, _super);
     function CheckinNetworkSmDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CheckinNetworkSmDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CheckinNetworkSmDevicesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CheckinNetworkSmDevicesResponse.prototype, "checkinNetworkSmDevices200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CheckinNetworkSmDevicesResponse.prototype, "checkinNetworkSmDevices200ApplicationJSONObject", void 0);
     return CheckinNetworkSmDevicesResponse;
-}(SpeakeasyBase));
-export { CheckinNetworkSmDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.CheckinNetworkSmDevicesResponse = CheckinNetworkSmDevicesResponse;

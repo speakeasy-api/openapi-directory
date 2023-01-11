@@ -19,10 +19,10 @@ export class GetAuthorizableKeystoreRequest extends SpeakeasyBase {
 
 export class GetAuthorizableKeystoreResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  keystoreInfo?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

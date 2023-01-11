@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-export var PivotValueCalculatedDisplayTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotValue = exports.PivotValueSummarizeFunctionEnum = exports.PivotValueCalculatedDisplayTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var PivotValueCalculatedDisplayTypeEnum;
 (function (PivotValueCalculatedDisplayTypeEnum) {
     PivotValueCalculatedDisplayTypeEnum["PivotValueCalculatedDisplayTypeUnspecified"] = "PIVOT_VALUE_CALCULATED_DISPLAY_TYPE_UNSPECIFIED";
     PivotValueCalculatedDisplayTypeEnum["PercentOfRowTotal"] = "PERCENT_OF_ROW_TOTAL";
     PivotValueCalculatedDisplayTypeEnum["PercentOfColumnTotal"] = "PERCENT_OF_COLUMN_TOTAL";
     PivotValueCalculatedDisplayTypeEnum["PercentOfGrandTotal"] = "PERCENT_OF_GRAND_TOTAL";
-})(PivotValueCalculatedDisplayTypeEnum || (PivotValueCalculatedDisplayTypeEnum = {}));
-export var PivotValueSummarizeFunctionEnum;
+})(PivotValueCalculatedDisplayTypeEnum = exports.PivotValueCalculatedDisplayTypeEnum || (exports.PivotValueCalculatedDisplayTypeEnum = {}));
+var PivotValueSummarizeFunctionEnum;
 (function (PivotValueSummarizeFunctionEnum) {
     PivotValueSummarizeFunctionEnum["PivotStandardValueFunctionUnspecified"] = "PIVOT_STANDARD_VALUE_FUNCTION_UNSPECIFIED";
     PivotValueSummarizeFunctionEnum["Sum"] = "SUM";
@@ -48,7 +51,7 @@ export var PivotValueSummarizeFunctionEnum;
     PivotValueSummarizeFunctionEnum["Var"] = "VAR";
     PivotValueSummarizeFunctionEnum["Varp"] = "VARP";
     PivotValueSummarizeFunctionEnum["Custom"] = "CUSTOM";
-})(PivotValueSummarizeFunctionEnum || (PivotValueSummarizeFunctionEnum = {}));
+})(PivotValueSummarizeFunctionEnum = exports.PivotValueSummarizeFunctionEnum || (exports.PivotValueSummarizeFunctionEnum = {}));
 // PivotValue
 /**
  * The definition of how a value in a pivot table should be calculated.
@@ -59,29 +62,29 @@ var PivotValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calculatedDisplayType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calculatedDisplayType" }),
         __metadata("design:type", String)
     ], PivotValue.prototype, "calculatedDisplayType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceColumnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceColumnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], PivotValue.prototype, "dataSourceColumnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formula" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formula" }),
         __metadata("design:type", String)
     ], PivotValue.prototype, "formula", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PivotValue.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceColumnOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceColumnOffset" }),
         __metadata("design:type", Number)
     ], PivotValue.prototype, "sourceColumnOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summarizeFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summarizeFunction" }),
         __metadata("design:type", String)
     ], PivotValue.prototype, "summarizeFunction", void 0);
     return PivotValue;
-}(SpeakeasyBase));
-export { PivotValue };
+}(utils_1.SpeakeasyBase));
+exports.PivotValue = PivotValue;

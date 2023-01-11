@@ -1,4 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListTagsResponse extends SpeakeasyBase {
-    tags?: Map<string, string>;
-}

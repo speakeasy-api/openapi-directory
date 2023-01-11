@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddWordsToWordListResponse = exports.AddWordsToWordListRequest = exports.AddWordsToWordListHeaders = exports.AddWordsToWordListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AddWordsToWordListPathParams = /** @class */ (function (_super) {
     __extends(AddWordsToWordListPathParams, _super);
     function AddWordsToWordListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=permalink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=permalink" }),
         __metadata("design:type", String)
     ], AddWordsToWordListPathParams.prototype, "permalink", void 0);
     return AddWordsToWordListPathParams;
-}(SpeakeasyBase));
-export { AddWordsToWordListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AddWordsToWordListPathParams = AddWordsToWordListPathParams;
 var AddWordsToWordListHeaders = /** @class */ (function (_super) {
     __extends(AddWordsToWordListHeaders, _super);
     function AddWordsToWordListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], AddWordsToWordListHeaders.prototype, "authToken", void 0);
     return AddWordsToWordListHeaders;
-}(SpeakeasyBase));
-export { AddWordsToWordListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AddWordsToWordListHeaders = AddWordsToWordListHeaders;
 var AddWordsToWordListRequest = /** @class */ (function (_super) {
     __extends(AddWordsToWordListRequest, _super);
     function AddWordsToWordListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddWordsToWordListPathParams)
     ], AddWordsToWordListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddWordsToWordListHeaders)
     ], AddWordsToWordListRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Array)
     ], AddWordsToWordListRequest.prototype, "request", void 0);
     return AddWordsToWordListRequest;
-}(SpeakeasyBase));
-export { AddWordsToWordListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddWordsToWordListRequest = AddWordsToWordListRequest;
 var AddWordsToWordListResponse = /** @class */ (function (_super) {
     __extends(AddWordsToWordListResponse, _super);
     function AddWordsToWordListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], AddWordsToWordListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddWordsToWordListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddWordsToWordListResponse.prototype, "statusCode", void 0);
     return AddWordsToWordListResponse;
-}(SpeakeasyBase));
-export { AddWordsToWordListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddWordsToWordListResponse = AddWordsToWordListResponse;

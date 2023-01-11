@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectedApplication } from "./connectedapplication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemApplicationListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectedapplication_1 = require("./connectedapplication");
 // ItemApplicationListResponse
 /**
  * Describes the connected application for a particular end user.
@@ -34,13 +37,13 @@ var ItemApplicationListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applications", elemType: ConnectedApplication }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applications", elemType: connectedapplication_1.ConnectedApplication }),
         __metadata("design:type", Array)
     ], ItemApplicationListResponse.prototype, "applications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_id" }),
         __metadata("design:type", String)
     ], ItemApplicationListResponse.prototype, "requestId", void 0);
     return ItemApplicationListResponse;
-}(SpeakeasyBase));
-export { ItemApplicationListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ItemApplicationListResponse = ItemApplicationListResponse;

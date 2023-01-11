@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSourcesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var source_1 = require("./source");
 // ListSourcesResponse
 /**
  * Response message for 'ListSources' request.
@@ -34,17 +37,17 @@ var ListSourcesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListSourcesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Source }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: source_1.Source }),
         __metadata("design:type", Array)
     ], ListSourcesResponse.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListSourcesResponse.prototype, "unreachable", void 0);
     return ListSourcesResponse;
-}(SpeakeasyBase));
-export { ListSourcesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSourcesResponse = ListSourcesResponse;

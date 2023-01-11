@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetModelStatus } from "./assetmodelstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAssetModelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetmodelstatus_1 = require("./assetmodelstatus");
 var DeleteAssetModelResponse = /** @class */ (function (_super) {
     __extends(DeleteAssetModelResponse, _super);
     function DeleteAssetModelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetModelStatus" }),
-        __metadata("design:type", AssetModelStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetModelStatus" }),
+        __metadata("design:type", assetmodelstatus_1.AssetModelStatus)
     ], DeleteAssetModelResponse.prototype, "assetModelStatus", void 0);
     return DeleteAssetModelResponse;
-}(SpeakeasyBase));
-export { DeleteAssetModelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAssetModelResponse = DeleteAssetModelResponse;

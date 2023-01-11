@@ -111,5 +111,5 @@ export declare class UpdateOrganizationBrandingPolicyRequest extends SpeakeasyBa
 export declare class UpdateOrganizationBrandingPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationBrandingPolicy200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationBrandingPolicy200ApplicationJSONObject?: Record<string, any>;
 }

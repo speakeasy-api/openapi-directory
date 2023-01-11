@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryListApiVersionsResponse = exports.RegistryListApiVersionsRequest = exports.RegistryListApiVersionsQueryParams = exports.RegistryListApiVersionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryListApiVersionsPathParams = /** @class */ (function (_super) {
     __extends(RegistryListApiVersionsPathParams, _super);
     function RegistryListApiVersionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=api" }),
         __metadata("design:type", String)
     ], RegistryListApiVersionsPathParams.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryListApiVersionsPathParams.prototype, "project", void 0);
     return RegistryListApiVersionsPathParams;
-}(SpeakeasyBase));
-export { RegistryListApiVersionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListApiVersionsPathParams = RegistryListApiVersionsPathParams;
 var RegistryListApiVersionsQueryParams = /** @class */ (function (_super) {
     __extends(RegistryListApiVersionsQueryParams, _super);
     function RegistryListApiVersionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], RegistryListApiVersionsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", String)
     ], RegistryListApiVersionsQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_token" }),
         __metadata("design:type", String)
     ], RegistryListApiVersionsQueryParams.prototype, "pageToken", void 0);
     return RegistryListApiVersionsQueryParams;
-}(SpeakeasyBase));
-export { RegistryListApiVersionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListApiVersionsQueryParams = RegistryListApiVersionsQueryParams;
 var RegistryListApiVersionsRequest = /** @class */ (function (_super) {
     __extends(RegistryListApiVersionsRequest, _super);
     function RegistryListApiVersionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryListApiVersionsPathParams)
     ], RegistryListApiVersionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryListApiVersionsQueryParams)
     ], RegistryListApiVersionsRequest.prototype, "queryParams", void 0);
     return RegistryListApiVersionsRequest;
-}(SpeakeasyBase));
-export { RegistryListApiVersionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListApiVersionsRequest = RegistryListApiVersionsRequest;
 var RegistryListApiVersionsResponse = /** @class */ (function (_super) {
     __extends(RegistryListApiVersionsResponse, _super);
     function RegistryListApiVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryListApiVersionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryListApiVersionsResponse.prototype, "listApiVersionsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryListApiVersionsResponse.prototype, "statusCode", void 0);
     return RegistryListApiVersionsResponse;
-}(SpeakeasyBase));
-export { RegistryListApiVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListApiVersionsResponse = RegistryListApiVersionsResponse;

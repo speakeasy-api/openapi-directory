@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Database } from "./database";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDatabaseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var database_1 = require("./database");
 var DescribeDatabaseResponse = /** @class */ (function (_super) {
     __extends(DescribeDatabaseResponse, _super);
     function DescribeDatabaseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Database" }),
-        __metadata("design:type", Database)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Database" }),
+        __metadata("design:type", database_1.Database)
     ], DescribeDatabaseResponse.prototype, "database", void 0);
     return DescribeDatabaseResponse;
-}(SpeakeasyBase));
-export { DescribeDatabaseResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDatabaseResponse = DescribeDatabaseResponse;

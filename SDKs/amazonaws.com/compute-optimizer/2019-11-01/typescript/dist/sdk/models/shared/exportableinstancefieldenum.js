@@ -1,4 +1,7 @@
-export var ExportableInstanceFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportableInstanceFieldEnum = void 0;
+var ExportableInstanceFieldEnum;
 (function (ExportableInstanceFieldEnum) {
     ExportableInstanceFieldEnum["AccountId"] = "AccountId";
     ExportableInstanceFieldEnum["InstanceArn"] = "InstanceArn";
@@ -43,4 +46,4 @@ export var ExportableInstanceFieldEnum;
     ExportableInstanceFieldEnum["RecommendationsSourcesRecommendationSourceArn"] = "RecommendationsSourcesRecommendationSourceArn";
     ExportableInstanceFieldEnum["RecommendationsSourcesRecommendationSourceType"] = "RecommendationsSourcesRecommendationSourceType";
     ExportableInstanceFieldEnum["LastRefreshTimestamp"] = "LastRefreshTimestamp";
-})(ExportableInstanceFieldEnum || (ExportableInstanceFieldEnum = {}));
+})(ExportableInstanceFieldEnum = exports.ExportableInstanceFieldEnum || (exports.ExportableInstanceFieldEnum = {}));

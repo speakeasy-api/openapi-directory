@@ -27,15 +27,15 @@ export declare class Occupants {
     **/
     getOccupantsNearestOutputFormat(req: operations.GetOccupantsNearestOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetOccupantsNearestOutputFormatResponse>;
     /**
-     * getOccupantsOccupantIdOutputFormat - Get an occupant (of a site) by its unique ID
-     *
-     * Represents an individual occupant
-    **/
-    getOccupantsOccupantIdOutputFormat(req: operations.GetOccupantsOccupantIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetOccupantsOccupantIdOutputFormatResponse>;
-    /**
      * getOccupantsWithinOutputFormat - Find occupants of sites in a geographic area
      *
      * Represents all occupants within a given area
     **/
     getOccupantsWithinOutputFormat(req: operations.GetOccupantsWithinOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetOccupantsWithinOutputFormatResponse>;
+    /**
+     * getOccupantsOccupantIdOutputFormat - Get an occupant (of a site) by its unique ID
+     *
+     * Represents an individual occupant
+    **/
+    getOccupantsOccupantIdOutputFormat(req: operations.GetOccupantsOccupantIdOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetOccupantsOccupantIdOutputFormatResponse>;
 }

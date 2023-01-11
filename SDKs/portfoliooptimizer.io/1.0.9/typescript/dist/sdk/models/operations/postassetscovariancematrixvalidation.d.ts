@@ -17,6 +17,6 @@ export declare class PostAssetsCovarianceMatrixValidationRequest extends Speakea
 }
 export declare class PostAssetsCovarianceMatrixValidationResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCovarianceMatrixValidation200ApplicationJsonObject?: PostAssetsCovarianceMatrixValidation200ApplicationJson;
     statusCode: number;
+    postAssetsCovarianceMatrixValidation200ApplicationJSONObject?: PostAssetsCovarianceMatrixValidation200ApplicationJson;
 }

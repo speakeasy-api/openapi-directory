@@ -1,70 +1,75 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionTypeEnum } from "./connectiontypeenum";
-import { ContentHandlingStrategyEnum } from "./contenthandlingstrategyenum";
-import { IntegrationTypeEnum } from "./integrationtypeenum";
-import { PassthroughBehaviorEnum } from "./passthroughbehaviorenum";
-import { TlsConfig } from "./tlsconfig";
 
+
+
+// CreateIntegrationResultTlsConfig
+/** 
+ * The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.
+**/
+export class CreateIntegrationResultTlsConfig extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=ServerNameToVerify" })
+  serverNameToVerify?: Record<string, any>;
+}
 
 
 export class CreateIntegrationResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiGatewayManaged" })
-  apiGatewayManaged?: boolean;
+  apiGatewayManaged?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ConnectionId" })
-  connectionId?: string;
+  connectionId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ConnectionType" })
-  connectionType?: ConnectionTypeEnum;
+  connectionType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ContentHandlingStrategy" })
-  contentHandlingStrategy?: ContentHandlingStrategyEnum;
+  contentHandlingStrategy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CredentialsArn" })
-  credentialsArn?: string;
+  credentialsArn?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
-  description?: string;
+  description?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationId" })
-  integrationId?: string;
+  integrationId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationMethod" })
-  integrationMethod?: string;
+  integrationMethod?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationResponseSelectionExpression" })
-  integrationResponseSelectionExpression?: string;
+  integrationResponseSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationSubtype" })
-  integrationSubtype?: string;
+  integrationSubtype?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationType" })
-  integrationType?: IntegrationTypeEnum;
+  integrationType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=IntegrationUri" })
-  integrationUri?: string;
+  integrationUri?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=PassthroughBehavior" })
-  passthroughBehavior?: PassthroughBehaviorEnum;
+  passthroughBehavior?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=PayloadFormatVersion" })
-  payloadFormatVersion?: string;
+  payloadFormatVersion?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RequestParameters" })
-  requestParameters?: Map<string, string>;
+  requestParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=RequestTemplates" })
-  requestTemplates?: Map<string, string>;
+  requestTemplates?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ResponseParameters" })
-  responseParameters?: Map<string, Map<string, string>>;
+  responseParameters?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata({ data: "json, name=TemplateSelectionExpression" })
-  templateSelectionExpression?: string;
+  templateSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TimeoutInMillis" })
-  timeoutInMillis?: number;
+  timeoutInMillis?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TlsConfig" })
-  tlsConfig?: TlsConfig;
+  tlsConfig?: CreateIntegrationResultTlsConfig;
 }

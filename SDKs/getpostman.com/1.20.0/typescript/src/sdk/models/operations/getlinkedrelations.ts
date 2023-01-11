@@ -115,5 +115,5 @@ export class GetLinkedRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLinkedRelations200ApplicationJsonObject?: GetLinkedRelations200ApplicationJson;
+  getLinkedRelations200ApplicationJSONObject?: GetLinkedRelations200ApplicationJson;
 }

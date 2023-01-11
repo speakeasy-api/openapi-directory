@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ReplicapoolPoolsDeleteRequest, ReplicapoolPoolsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,29 +31,29 @@ const req: ReplicapoolPoolsDeleteRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    poolName: "molestiae",
-    projectName: "occaecati",
-    zone: "molestiae",
+    poolName: "sit",
+    projectName: "voluptas",
+    zone: "culpa",
   },
   queryParams: {
     alt: "json",
-    fields: "dolorum",
-    key: "numquam",
-    oauthToken: "facilis",
-    prettyPrint: false,
-    quotaUser: "aliquid",
-    userIp: "nesciunt",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    quotaUser: "fugit",
+    userIp: "et",
   },
   request: {
     abandonInstances: [
-      "at",
+      "rerum",
     ],
   },
 };

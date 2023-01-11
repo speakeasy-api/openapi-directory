@@ -15,7 +15,7 @@ export declare enum GceClusterConfigPrivateIpv6GoogleAccessEnum {
 export declare class GceClusterConfig extends SpeakeasyBase {
     confidentialInstanceConfig?: ConfidentialInstanceConfig;
     internalIpOnly?: boolean;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     networkUri?: string;
     nodeGroupAffinity?: NodeGroupAffinity;
     privateIpv6GoogleAccess?: GceClusterConfigPrivateIpv6GoogleAccessEnum;

@@ -14,6 +14,6 @@ export declare class GetV1VerificationResultRequest extends SpeakeasyBase {
 }
 export declare class GetV1VerificationResultResponse extends SpeakeasyBase {
     contentType: string;
-    getV1VerificationResult200ApplicationJsonString?: string;
     statusCode: number;
+    getV1VerificationResult200ApplicationJSONString?: string;
 }

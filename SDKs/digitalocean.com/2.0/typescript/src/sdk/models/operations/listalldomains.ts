@@ -1,42 +1,40 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export class ListAllDomains200ApplicationJsonDomains extends SpeakeasyBase {
-  @Metadata({ data: "json, name=ip_address" })
-  ipAddress?: string;
 
-  @Metadata({ data: "json, name=name" })
+export class ListAllDomains200ApplicationJsonDomainsOutput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=zone_file" })
+  @SpeakeasyMetadata({ data: "json, name=zone_file" })
   zoneFile?: string;
 }
 
 
 export class ListAllDomains200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllDomains200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllDomains200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -46,51 +44,51 @@ export class ListAllDomains200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllDomains200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
-export class ListAllDomains200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=domains", elemType: operations.ListAllDomains200ApplicationJsonDomains })
-  domains: ListAllDomains200ApplicationJsonDomains[];
+export class ListAllDomains200ApplicationJsonOutput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=domains", elemType: ListAllDomains200ApplicationJsonDomainsOutput })
+  domains: ListAllDomains200ApplicationJsonDomainsOutput[];
 
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllDomains200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllDomains200ApplicationJsonMeta;
 }
 
 
 export class ListAllDomains401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
-export class ListAllDomainsResponse extends SpeakeasyBase {
-  @Metadata()
+export class ListAllDomainsResponseOutput extends SpeakeasyBase {
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllDomains200ApplicationJsonObject?: ListAllDomains200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllDomains200ApplicationJSONObject?: ListAllDomains200ApplicationJsonOutput;
 
-  @Metadata()
-  listAllDomains401ApplicationJsonObject?: ListAllDomains401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllDomains401ApplicationJSONObject?: ListAllDomains401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -30,7 +30,7 @@ export declare class GitCreateTagRequest extends SpeakeasyBase {
 }
 export declare class GitCreateTagResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     gitTag?: shared.GitTag;
     validationError?: shared.ValidationError;

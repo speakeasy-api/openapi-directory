@@ -19,7 +19,7 @@ export declare class DeleteEvaluationResultsRequest extends SpeakeasyBase {
 }
 export declare class DeleteEvaluationResultsResponse extends SpeakeasyBase {
     contentType: string;
-    deleteEvaluationResultsResponse?: Map<string, any>;
+    deleteEvaluationResultsResponse?: Record<string, any>;
     noSuchConfigRuleException?: any;
     resourceInUseException?: any;
     statusCode: number;

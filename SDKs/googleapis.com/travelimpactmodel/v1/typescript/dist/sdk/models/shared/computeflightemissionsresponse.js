@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FlightWithEmissions } from "./flightwithemissions";
-import { ModelVersion } from "./modelversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeFlightEmissionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var flightwithemissions_1 = require("./flightwithemissions");
+var modelversion_1 = require("./modelversion");
 // ComputeFlightEmissionsResponse
 /**
  * Output definition for the ComputeFlightEmissions response.
@@ -35,13 +38,13 @@ var ComputeFlightEmissionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flightEmissions", elemType: FlightWithEmissions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flightEmissions", elemType: flightwithemissions_1.FlightWithEmissions }),
         __metadata("design:type", Array)
     ], ComputeFlightEmissionsResponse.prototype, "flightEmissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelVersion" }),
-        __metadata("design:type", ModelVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelVersion" }),
+        __metadata("design:type", modelversion_1.ModelVersion)
     ], ComputeFlightEmissionsResponse.prototype, "modelVersion", void 0);
     return ComputeFlightEmissionsResponse;
-}(SpeakeasyBase));
-export { ComputeFlightEmissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ComputeFlightEmissionsResponse = ComputeFlightEmissionsResponse;

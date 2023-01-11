@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewFactorEnumNotificationPlatformsEnum = void 0;
+var NewFactorEnumNotificationPlatformsEnum;
+(function (NewFactorEnumNotificationPlatformsEnum) {
+    NewFactorEnumNotificationPlatformsEnum["Apn"] = "apn";
+    NewFactorEnumNotificationPlatformsEnum["Fcm"] = "fcm";
+    NewFactorEnumNotificationPlatformsEnum["None"] = "none";
+})(NewFactorEnumNotificationPlatformsEnum = exports.NewFactorEnumNotificationPlatformsEnum || (exports.NewFactorEnumNotificationPlatformsEnum = {}));

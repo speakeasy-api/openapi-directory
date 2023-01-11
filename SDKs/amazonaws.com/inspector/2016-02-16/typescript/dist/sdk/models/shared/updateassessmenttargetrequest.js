@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAssessmentTargetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateAssessmentTargetRequest = /** @class */ (function (_super) {
     __extends(UpdateAssessmentTargetRequest, _super);
     function UpdateAssessmentTargetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentTargetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentTargetArn" }),
         __metadata("design:type", String)
     ], UpdateAssessmentTargetRequest.prototype, "assessmentTargetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentTargetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentTargetName" }),
         __metadata("design:type", String)
     ], UpdateAssessmentTargetRequest.prototype, "assessmentTargetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroupArn" }),
         __metadata("design:type", String)
     ], UpdateAssessmentTargetRequest.prototype, "resourceGroupArn", void 0);
     return UpdateAssessmentTargetRequest;
-}(SpeakeasyBase));
-export { UpdateAssessmentTargetRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAssessmentTargetRequest = UpdateAssessmentTargetRequest;

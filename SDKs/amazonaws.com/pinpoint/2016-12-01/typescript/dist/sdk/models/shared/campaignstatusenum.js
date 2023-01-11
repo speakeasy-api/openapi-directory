@@ -1,4 +1,7 @@
-export var CampaignStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignStatusEnum = void 0;
+var CampaignStatusEnum;
 (function (CampaignStatusEnum) {
     CampaignStatusEnum["Scheduled"] = "SCHEDULED";
     CampaignStatusEnum["Executing"] = "EXECUTING";
@@ -7,4 +10,4 @@ export var CampaignStatusEnum;
     CampaignStatusEnum["Paused"] = "PAUSED";
     CampaignStatusEnum["Deleted"] = "DELETED";
     CampaignStatusEnum["Invalid"] = "INVALID";
-})(CampaignStatusEnum || (CampaignStatusEnum = {}));
+})(CampaignStatusEnum = exports.CampaignStatusEnum || (exports.CampaignStatusEnum = {}));

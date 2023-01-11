@@ -31,7 +31,7 @@ export class GetSetupV1CalendarsIdServicesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  serviceListViewModel?: Map<string, any>;
+  serviceListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

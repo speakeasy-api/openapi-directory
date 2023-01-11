@@ -22,7 +22,7 @@ export class UserInviteOptions extends SpeakeasyBase {
   orgDefaultRole?: string;
 
   @SpeakeasyMetadata({ data: "json, name=org_roles" })
-  orgRoles?: Map<string, any>;
+  orgRoles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=subject" })
   subject?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationConfigTemplatesResponse = exports.GetOrganizationConfigTemplatesRequest = exports.GetOrganizationConfigTemplatesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationConfigTemplatesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplatesPathParams, _super);
     function GetOrganizationConfigTemplatesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationConfigTemplatesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationConfigTemplatesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplatesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplatesPathParams = GetOrganizationConfigTemplatesPathParams;
 var GetOrganizationConfigTemplatesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplatesRequest, _super);
     function GetOrganizationConfigTemplatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationConfigTemplatesPathParams)
     ], GetOrganizationConfigTemplatesRequest.prototype, "pathParams", void 0);
     return GetOrganizationConfigTemplatesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplatesRequest = GetOrganizationConfigTemplatesRequest;
 var GetOrganizationConfigTemplatesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplatesResponse, _super);
     function GetOrganizationConfigTemplatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationConfigTemplatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationConfigTemplatesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationConfigTemplatesResponse.prototype, "getOrganizationConfigTemplates200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationConfigTemplatesResponse.prototype, "getOrganizationConfigTemplates200ApplicationJSONObject", void 0);
     return GetOrganizationConfigTemplatesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplatesResponse = GetOrganizationConfigTemplatesResponse;

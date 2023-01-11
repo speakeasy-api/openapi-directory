@@ -18,7 +18,7 @@ export class S3Location extends SpeakeasyBase {
   bucketName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=CannedACL" })
-  cannedAcl?: CannedAclEnum;
+  cannedACL?: CannedAclEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Encryption" })
   encryption?: Encryption;
@@ -30,8 +30,8 @@ export class S3Location extends SpeakeasyBase {
   storageClass?: StorageClassEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Tagging" })
-  tagging?: Map<string, string>;
+  tagging?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=UserMetadata" })
-  userMetadata?: Map<string, string>;
+  userMetadata?: Record<string, string>;
 }

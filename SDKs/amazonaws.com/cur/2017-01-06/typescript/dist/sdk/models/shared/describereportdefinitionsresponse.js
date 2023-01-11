@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportDefinition } from "./reportdefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeReportDefinitionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportdefinition_1 = require("./reportdefinition");
 // DescribeReportDefinitionsResponse
 /**
  * If the action is successful, the service sends back an HTTP 200 response.
@@ -34,13 +37,13 @@ var DescribeReportDefinitionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeReportDefinitionsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportDefinitions", elemType: ReportDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportDefinitions", elemType: reportdefinition_1.ReportDefinition }),
         __metadata("design:type", Array)
     ], DescribeReportDefinitionsResponse.prototype, "reportDefinitions", void 0);
     return DescribeReportDefinitionsResponse;
-}(SpeakeasyBase));
-export { DescribeReportDefinitionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeReportDefinitionsResponse = DescribeReportDefinitionsResponse;

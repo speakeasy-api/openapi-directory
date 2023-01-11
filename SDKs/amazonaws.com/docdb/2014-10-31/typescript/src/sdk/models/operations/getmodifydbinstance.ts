@@ -30,7 +30,7 @@ export class GetModifyDbInstanceQueryParams extends SpeakeasyBase {
   dbInstanceIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewDBInstanceIdentifier" })
-  newDbInstanceIdentifier?: string;
+  newDBInstanceIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PreferredMaintenanceWindow" })
   preferredMaintenanceWindow?: string;

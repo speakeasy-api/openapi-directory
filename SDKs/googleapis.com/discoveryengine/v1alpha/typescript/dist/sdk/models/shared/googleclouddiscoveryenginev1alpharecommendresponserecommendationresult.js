@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1alphaDocument } from "./googleclouddiscoveryenginev1alphadocument";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1alphadocument_1 = require("./googleclouddiscoveryenginev1alphadocument");
 // GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult
 /**
  * RecommendationResult represents a generic recommendation result with associated metadata.
@@ -34,17 +37,17 @@ var GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult = /**
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1alphaDocument)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document" }),
+        __metadata("design:type", googleclouddiscoveryenginev1alphadocument_1.GoogleCloudDiscoveryengineV1alphaDocument)
     ], GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult.prototype, "document", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult.prototype, "metadata", void 0);
     return GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult = GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult;

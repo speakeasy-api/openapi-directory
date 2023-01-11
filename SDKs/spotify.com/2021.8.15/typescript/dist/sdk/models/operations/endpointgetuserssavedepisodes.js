@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,61 +14,86 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointGetUsersSavedEpisodesResponse = exports.EndpointGetUsersSavedEpisodesRequest = exports.EndpointGetUsersSavedEpisodes200ApplicationJson = exports.EndpointGetUsersSavedEpisodesSecurity = exports.EndpointGetUsersSavedEpisodesHeaders = exports.EndpointGetUsersSavedEpisodesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EndpointGetUsersSavedEpisodesQueryParams = /** @class */ (function (_super) {
     __extends(EndpointGetUsersSavedEpisodesQueryParams, _super);
     function EndpointGetUsersSavedEpisodesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=market" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=market" }),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodesQueryParams.prototype, "market", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodesQueryParams.prototype, "offset", void 0);
     return EndpointGetUsersSavedEpisodesQueryParams;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodesQueryParams = EndpointGetUsersSavedEpisodesQueryParams;
 var EndpointGetUsersSavedEpisodesHeaders = /** @class */ (function (_super) {
     __extends(EndpointGetUsersSavedEpisodesHeaders, _super);
     function EndpointGetUsersSavedEpisodesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodesHeaders.prototype, "authorization", void 0);
     return EndpointGetUsersSavedEpisodesHeaders;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodesHeaders = EndpointGetUsersSavedEpisodesHeaders;
 var EndpointGetUsersSavedEpisodesSecurity = /** @class */ (function (_super) {
     __extends(EndpointGetUsersSavedEpisodesSecurity, _super);
     function EndpointGetUsersSavedEpisodesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeSpotifyAuth)
     ], EndpointGetUsersSavedEpisodesSecurity.prototype, "spotifyAuth", void 0);
     return EndpointGetUsersSavedEpisodesSecurity;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodesSecurity = EndpointGetUsersSavedEpisodesSecurity;
 // EndpointGetUsersSavedEpisodes200ApplicationJson
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -78,77 +104,77 @@ var EndpointGetUsersSavedEpisodes200ApplicationJson = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: shared.SavedEpisodeObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: shared.SavedEpisodeObject }),
         __metadata("design:type", Array)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodes200ApplicationJson.prototype, "total", void 0);
     return EndpointGetUsersSavedEpisodes200ApplicationJson;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodes200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodes200ApplicationJson = EndpointGetUsersSavedEpisodes200ApplicationJson;
 var EndpointGetUsersSavedEpisodesRequest = /** @class */ (function (_super) {
     __extends(EndpointGetUsersSavedEpisodesRequest, _super);
     function EndpointGetUsersSavedEpisodesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersSavedEpisodesQueryParams)
     ], EndpointGetUsersSavedEpisodesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersSavedEpisodesHeaders)
     ], EndpointGetUsersSavedEpisodesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersSavedEpisodesSecurity)
     ], EndpointGetUsersSavedEpisodesRequest.prototype, "security", void 0);
     return EndpointGetUsersSavedEpisodesRequest;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodesRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodesRequest = EndpointGetUsersSavedEpisodesRequest;
 var EndpointGetUsersSavedEpisodesResponse = /** @class */ (function (_super) {
     __extends(EndpointGetUsersSavedEpisodesResponse, _super);
     function EndpointGetUsersSavedEpisodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointGetUsersSavedEpisodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponseObject)
     ], EndpointGetUsersSavedEpisodesResponse.prototype, "errorResponseObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointGetUsersSavedEpisodesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersSavedEpisodes200ApplicationJson)
-    ], EndpointGetUsersSavedEpisodesResponse.prototype, "endpointGetUsersSavedEpisodes200ApplicationJsonObject", void 0);
+    ], EndpointGetUsersSavedEpisodesResponse.prototype, "endpointGetUsersSavedEpisodes200ApplicationJSONObject", void 0);
     return EndpointGetUsersSavedEpisodesResponse;
-}(SpeakeasyBase));
-export { EndpointGetUsersSavedEpisodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersSavedEpisodesResponse = EndpointGetUsersSavedEpisodesResponse;

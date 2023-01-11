@@ -23,7 +23,7 @@ export declare class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToSe
 export declare class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest extends SpeakeasyBase {
     pathParams: AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServePathParams;
     queryParams: AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeSecurity;
 }
 export declare class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse extends SpeakeasyBase {

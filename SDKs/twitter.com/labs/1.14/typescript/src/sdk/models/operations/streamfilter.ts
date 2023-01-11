@@ -29,5 +29,5 @@ export class StreamFilterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  streamFilter200ApplicationJsonObject?: Map<string, any>;
+  streamFilter200ApplicationJSONObject?: Record<string, any>;
 }

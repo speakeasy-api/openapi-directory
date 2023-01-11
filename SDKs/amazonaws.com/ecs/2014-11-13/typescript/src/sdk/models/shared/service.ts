@@ -47,7 +47,7 @@ export class Service extends SpeakeasyBase {
   desiredCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=enableECSManagedTags" })
-  enableEcsManagedTags?: boolean;
+  enableECSManagedTags?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" })
   enableExecuteCommand?: boolean;

@@ -11,6 +11,22 @@ export enum ApigatewayGatewayStateEnum {
 }
 
 
+// ApigatewayGatewayInput
+/** 
+ * A Gateway is an API-aware HTTP proxy. It performs API-Method and/or API-Consumer specific actions based on an API Config such as authentication, policy enforcement, and backend selection.
+**/
+export class ApigatewayGatewayInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=apiConfig" })
+  apiConfig?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+}
+
+
 // ApigatewayGateway
 /** 
  * A Gateway is an API-aware HTTP proxy. It performs API-Method and/or API-Consumer specific actions based on an API Config such as authentication, policy enforcement, and backend selection.
@@ -29,7 +45,7 @@ export class ApigatewayGateway extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -39,20 +55,4 @@ export class ApigatewayGateway extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
-}
-
-
-// ApigatewayGatewayInput
-/** 
- * A Gateway is an API-aware HTTP proxy. It performs API-Method and/or API-Consumer specific actions based on an API Config such as authentication, policy enforcement, and backend selection.
-**/
-export class ApigatewayGatewayInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=apiConfig" })
-  apiConfig?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
 }

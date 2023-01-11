@@ -17,5 +17,5 @@ export declare class TemplatesRemoveRequest extends SpeakeasyBase {
 export declare class TemplatesRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    templatesRemove200ApplicationJsonObject?: TemplatesRemove200ApplicationJson;
+    templatesRemove200ApplicationJSONObject?: TemplatesRemove200ApplicationJson;
 }

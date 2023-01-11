@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DocumentSuggesterOptions } from "./documentsuggesteroptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Suggester = void 0;
+var utils_1 = require("../../../internal/utils");
+var documentsuggesteroptions_1 = require("./documentsuggesteroptions");
 // Suggester
 /**
  * Configuration information for a search suggester. Each suggester has a unique name and specifies the text field you want to use for suggestions. The following options can be configured for a suggester: <code>FuzzyMatching</code>, <code>SortExpression</code>.
@@ -34,13 +37,13 @@ var Suggester = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DocumentSuggesterOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", documentsuggesteroptions_1.DocumentSuggesterOptions)
     ], Suggester.prototype, "documentSuggesterOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Suggester.prototype, "suggesterName", void 0);
     return Suggester;
-}(SpeakeasyBase));
-export { Suggester };
+}(utils_1.SpeakeasyBase));
+exports.Suggester = Suggester;

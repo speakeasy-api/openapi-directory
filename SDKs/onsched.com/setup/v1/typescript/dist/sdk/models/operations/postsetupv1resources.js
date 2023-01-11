@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSetupV1ResourcesResponse = exports.PostSetupV1ResourcesRequest = exports.PostSetupV1ResourcesRequests = exports.PostSetupV1ResourcesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostSetupV1ResourcesQueryParams = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesQueryParams, _super);
     function PostSetupV1ResourcesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=googleAuthReturnUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=googleAuthReturnUrl" }),
         __metadata("design:type", String)
     ], PostSetupV1ResourcesQueryParams.prototype, "googleAuthReturnUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outlookAuthReturnUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outlookAuthReturnUrl" }),
         __metadata("design:type", String)
     ], PostSetupV1ResourcesQueryParams.prototype, "outlookAuthReturnUrl", void 0);
     return PostSetupV1ResourcesQueryParams;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesQueryParams = PostSetupV1ResourcesQueryParams;
 var PostSetupV1ResourcesRequests = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesRequests, _super);
     function PostSetupV1ResourcesRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/*+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/*+json" }),
         __metadata("design:type", shared.ResourceInputModel)
     ], PostSetupV1ResourcesRequests.prototype, "resourceInputModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ResourceInputModel)
     ], PostSetupV1ResourcesRequests.prototype, "resourceInputModel1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json-patch+json" }),
         __metadata("design:type", shared.ResourceInputModel)
     ], PostSetupV1ResourcesRequests.prototype, "resourceInputModel2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
         __metadata("design:type", shared.ResourceInputModel)
     ], PostSetupV1ResourcesRequests.prototype, "resourceInputModel3", void 0);
     return PostSetupV1ResourcesRequests;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesRequests };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesRequests = PostSetupV1ResourcesRequests;
 var PostSetupV1ResourcesRequest = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesRequest, _super);
     function PostSetupV1ResourcesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetupV1ResourcesQueryParams)
     ], PostSetupV1ResourcesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetupV1ResourcesRequests)
     ], PostSetupV1ResourcesRequest.prototype, "request", void 0);
     return PostSetupV1ResourcesRequest;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesRequest = PostSetupV1ResourcesRequest;
 var PostSetupV1ResourcesResponse = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesResponse, _super);
     function PostSetupV1ResourcesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetupV1ResourcesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ResourceViewModel)
     ], PostSetupV1ResourcesResponse.prototype, "resourceViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSetupV1ResourcesResponse.prototype, "statusCode", void 0);
     return PostSetupV1ResourcesResponse;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesResponse = PostSetupV1ResourcesResponse;

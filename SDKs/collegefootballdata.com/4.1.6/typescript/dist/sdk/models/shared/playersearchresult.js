@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSearchResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var PlayerSearchResult = /** @class */ (function (_super) {
     __extends(PlayerSearchResult, _super);
     function PlayerSearchResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], PlayerSearchResult.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hometown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hometown" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "hometown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PlayerSearchResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jersey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jersey" }),
         __metadata("design:type", Number)
     ], PlayerSearchResult.prototype, "jersey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamColor" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "teamColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamColorSecondary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamColorSecondary" }),
         __metadata("design:type", String)
     ], PlayerSearchResult.prototype, "teamColorSecondary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
         __metadata("design:type", Number)
     ], PlayerSearchResult.prototype, "weight", void 0);
     return PlayerSearchResult;
-}(SpeakeasyBase));
-export { PlayerSearchResult };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSearchResult = PlayerSearchResult;

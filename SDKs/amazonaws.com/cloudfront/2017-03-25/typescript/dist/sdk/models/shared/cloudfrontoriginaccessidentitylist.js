@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFrontOriginAccessIdentitySummary } from "./cloudfrontoriginaccessidentitysummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudFrontOriginAccessIdentityList = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudfrontoriginaccessidentitysummarylist_1 = require("./cloudfrontoriginaccessidentitysummarylist");
 // CloudFrontOriginAccessIdentityList
 /**
  * Lists the origin access identities for CloudFront.Send a <code>GET</code> request to the <code>/<i>CloudFront API version</i>/origin-access-identity/cloudfront</code> resource. The response includes a <code>CloudFrontOriginAccessIdentityList</code> element with zero or more <code>CloudFrontOriginAccessIdentitySummary</code> child elements. By default, your entire list of origin access identities is returned in one single page. If the list is long, you can paginate it using the <code>MaxItems</code> and <code>Marker</code> parameters.
@@ -34,29 +37,29 @@ var CloudFrontOriginAccessIdentityList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CloudFrontOriginAccessIdentityList.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: CloudFrontOriginAccessIdentitySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: cloudfrontoriginaccessidentitysummarylist_1.CloudFrontOriginAccessIdentitySummaryList }),
         __metadata("design:type", Array)
     ], CloudFrontOriginAccessIdentityList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudFrontOriginAccessIdentityList.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudFrontOriginAccessIdentityList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudFrontOriginAccessIdentityList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudFrontOriginAccessIdentityList.prototype, "quantity", void 0);
     return CloudFrontOriginAccessIdentityList;
-}(SpeakeasyBase));
-export { CloudFrontOriginAccessIdentityList };
+}(utils_1.SpeakeasyBase));
+exports.CloudFrontOriginAccessIdentityList = CloudFrontOriginAccessIdentityList;

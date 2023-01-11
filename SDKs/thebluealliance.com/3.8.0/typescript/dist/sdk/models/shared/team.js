@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Team = void 0;
+var utils_1 = require("../../../internal/utils");
 var Team = /** @class */ (function (_super) {
     __extends(Team, _super);
     function Team() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], Team.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], Team.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], Team.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gmaps_place_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gmaps_place_id" }),
         __metadata("design:type", String)
     ], Team.prototype, "gmapsPlaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gmaps_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gmaps_url" }),
         __metadata("design:type", String)
     ], Team.prototype, "gmapsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home_championship" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_championship" }),
+        __metadata("design:type", Object)
     ], Team.prototype, "homeChampionship", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], Team.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lat" }),
         __metadata("design:type", Number)
     ], Team.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lng" }),
         __metadata("design:type", Number)
     ], Team.prototype, "lng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_name" }),
         __metadata("design:type", String)
     ], Team.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motto" }),
         __metadata("design:type", String)
     ], Team.prototype, "motto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Team.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], Team.prototype, "nickname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postal_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postal_code" }),
         __metadata("design:type", String)
     ], Team.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rookie_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rookie_year" }),
         __metadata("design:type", Number)
     ], Team.prototype, "rookieYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school_name" }),
         __metadata("design:type", String)
     ], Team.prototype, "schoolName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state_prov" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state_prov" }),
         __metadata("design:type", String)
     ], Team.prototype, "stateProv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_number" }),
         __metadata("design:type", Number)
     ], Team.prototype, "teamNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], Team.prototype, "website", void 0);
     return Team;
-}(SpeakeasyBase));
-export { Team };
+}(utils_1.SpeakeasyBase));
+exports.Team = Team;

@@ -16,5 +16,5 @@ export declare class UpdateOrganizationApplianceSecurityIntrusionRequest extends
 export declare class UpdateOrganizationApplianceSecurityIntrusionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationApplianceSecurityIntrusion200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationApplianceSecurityIntrusion200ApplicationJSONObject?: Record<string, any>;
 }

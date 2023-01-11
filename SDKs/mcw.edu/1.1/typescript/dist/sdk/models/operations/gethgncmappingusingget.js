@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHgncMappingUsingGetResponse = exports.GetHgncMappingUsingGetRequest = exports.GetHgncMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetHgncMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetHgncMappingUsingGetPathParams, _super);
     function GetHgncMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetHgncMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetHgncMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetHgncMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHgncMappingUsingGetPathParams = GetHgncMappingUsingGetPathParams;
 var GetHgncMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetHgncMappingUsingGetRequest, _super);
     function GetHgncMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHgncMappingUsingGetPathParams)
     ], GetHgncMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetHgncMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetHgncMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHgncMappingUsingGetRequest = GetHgncMappingUsingGetRequest;
 var GetHgncMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetHgncMappingUsingGetResponse, _super);
     function GetHgncMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetHgncMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHgncMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHgncMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetHgncMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetHgncMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHgncMappingUsingGetResponse = GetHgncMappingUsingGetResponse;

@@ -48,7 +48,7 @@ export class DeleteWorkerBlockResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWorkerBlockResponse?: Map<string, any>;
+  deleteWorkerBlockResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

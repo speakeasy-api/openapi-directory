@@ -17,7 +17,7 @@ export class ProtocolTelnetGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolTelnetGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configTelnet?: shared.ConfigTelnet;
+  configTELNET?: shared.ConfigTelnet;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LegacyBoxScoresDeltaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LegacyBoxScoresDeltaResponse = exports.LegacyBoxScoresDeltaRequest = exports.LegacyBoxScoresDeltaPathParams = exports.LegacyBoxScoresDeltaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LegacyBoxScoresDeltaFormatEnum;
 (function (LegacyBoxScoresDeltaFormatEnum) {
     LegacyBoxScoresDeltaFormatEnum["Xml"] = "XML";
     LegacyBoxScoresDeltaFormatEnum["Json"] = "JSON";
-})(LegacyBoxScoresDeltaFormatEnum || (LegacyBoxScoresDeltaFormatEnum = {}));
+})(LegacyBoxScoresDeltaFormatEnum = exports.LegacyBoxScoresDeltaFormatEnum || (exports.LegacyBoxScoresDeltaFormatEnum = {}));
 var LegacyBoxScoresDeltaPathParams = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaPathParams, _super);
     function LegacyBoxScoresDeltaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaPathParams.prototype, "minutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaPathParams.prototype, "week", void 0);
     return LegacyBoxScoresDeltaPathParams;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaPathParams = LegacyBoxScoresDeltaPathParams;
 var LegacyBoxScoresDeltaRequest = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaRequest, _super);
     function LegacyBoxScoresDeltaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LegacyBoxScoresDeltaPathParams)
     ], LegacyBoxScoresDeltaRequest.prototype, "pathParams", void 0);
     return LegacyBoxScoresDeltaRequest;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaRequest };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaRequest = LegacyBoxScoresDeltaRequest;
 var LegacyBoxScoresDeltaResponse = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaResponse, _super);
     function LegacyBoxScoresDeltaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LegacyBoxScoresDeltaResponse.prototype, "boxScores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LegacyBoxScoresDeltaResponse.prototype, "statusCode", void 0);
     return LegacyBoxScoresDeltaResponse;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaResponse };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaResponse = LegacyBoxScoresDeltaResponse;

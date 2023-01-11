@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ownednumber } from "./ownednumber";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InboundNumbers = void 0;
+var utils_1 = require("../../../internal/utils");
+var ownednumber_1 = require("./ownednumber");
 var InboundNumbers = /** @class */ (function (_super) {
     __extends(InboundNumbers, _super);
     function InboundNumbers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], InboundNumbers.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numbers", elemType: Ownednumber }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numbers", elemType: ownednumber_1.Ownednumber }),
         __metadata("design:type", Array)
     ], InboundNumbers.prototype, "numbers", void 0);
     return InboundNumbers;
-}(SpeakeasyBase));
-export { InboundNumbers };
+}(utils_1.SpeakeasyBase));
+exports.InboundNumbers = InboundNumbers;

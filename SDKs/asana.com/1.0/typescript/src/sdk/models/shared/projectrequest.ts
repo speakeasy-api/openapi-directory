@@ -31,6 +31,10 @@ export enum ProjectRequestCurrentStatusColorEnum {
 }
 
 
+// ProjectRequestCurrentStatusInput
+/** 
+ * A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+**/
 export class ProjectRequestCurrentStatusInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=author" })
   author?: UserCompactInput;
@@ -59,12 +63,20 @@ export enum ProjectRequestDefaultViewEnum {
 }
 
 
+// ProjectRequestWorkspaceInput
+/** 
+ * *Create-only*. The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.
+**/
 export class ProjectRequestWorkspaceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 }
 
 
+// ProjectRequestInput
+/** 
+ * A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
+**/
 export class ProjectRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=archived" })
   archived?: boolean;
@@ -76,7 +88,7 @@ export class ProjectRequestInput extends SpeakeasyBase {
   currentStatus?: ProjectRequestCurrentStatusInput;
 
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, string>;
+  customFields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=default_view" })
   defaultView?: ProjectRequestDefaultViewEnum;

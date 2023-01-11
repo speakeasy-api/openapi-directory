@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MembershipsDuration } from "./membershipsduration";
-import { MembershipsDurationAtLevel } from "./membershipsdurationatlevel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var membershipsduration_1 = require("./membershipsduration");
+var membershipsdurationatlevel_1 = require("./membershipsdurationatlevel");
 var MembershipsDetails = /** @class */ (function (_super) {
     __extends(MembershipsDetails, _super);
     function MembershipsDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessibleLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessibleLevels" }),
         __metadata("design:type", Array)
     ], MembershipsDetails.prototype, "accessibleLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highestAccessibleLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highestAccessibleLevel" }),
         __metadata("design:type", String)
     ], MembershipsDetails.prototype, "highestAccessibleLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highestAccessibleLevelDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highestAccessibleLevelDisplayName" }),
         __metadata("design:type", String)
     ], MembershipsDetails.prototype, "highestAccessibleLevelDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipsDuration" }),
-        __metadata("design:type", MembershipsDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipsDuration" }),
+        __metadata("design:type", membershipsduration_1.MembershipsDuration)
     ], MembershipsDetails.prototype, "membershipsDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipsDurationAtLevels", elemType: MembershipsDurationAtLevel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipsDurationAtLevels", elemType: membershipsdurationatlevel_1.MembershipsDurationAtLevel }),
         __metadata("design:type", Array)
     ], MembershipsDetails.prototype, "membershipsDurationAtLevels", void 0);
     return MembershipsDetails;
-}(SpeakeasyBase));
-export { MembershipsDetails };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsDetails = MembershipsDetails;

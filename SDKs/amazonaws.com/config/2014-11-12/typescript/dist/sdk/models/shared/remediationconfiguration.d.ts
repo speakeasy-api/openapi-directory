@@ -12,7 +12,7 @@ export declare class RemediationConfiguration extends SpeakeasyBase {
     createdByService?: string;
     executionControls?: ExecutionControls;
     maximumAutomaticAttempts?: number;
-    parameters?: Map<string, RemediationParameterValue>;
+    parameters?: Record<string, RemediationParameterValue>;
     resourceType?: string;
     retryAttemptSeconds?: number;
     targetId: string;

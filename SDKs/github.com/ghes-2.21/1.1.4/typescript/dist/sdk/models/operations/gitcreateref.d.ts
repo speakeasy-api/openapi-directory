@@ -15,7 +15,7 @@ export declare class GitCreateRefRequest extends SpeakeasyBase {
 }
 export declare class GitCreateRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     gitRef?: shared.GitRef;
     validationError?: shared.ValidationError;

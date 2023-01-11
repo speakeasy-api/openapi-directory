@@ -19,7 +19,7 @@ export enum EntitlementSourceEnum {
 **/
 export class Entitlement extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data: Map<string, any>;
+  data: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=relatedEntityId" })
   relatedEntityId?: string;

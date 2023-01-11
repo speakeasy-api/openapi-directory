@@ -45,7 +45,7 @@ export class AssociateWebAclRequest extends SpeakeasyBase {
 
 export class AssociateWebAclResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associateWebAclResponse?: Map<string, any>;
+  associateWebACLResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

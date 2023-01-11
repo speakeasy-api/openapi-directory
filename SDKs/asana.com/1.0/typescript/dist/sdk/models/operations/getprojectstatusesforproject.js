@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetProjectStatusesForProjectResponse = exports.GetProjectStatusesForProjectRequest = exports.GetProjectStatusesForProject200ApplicationJson = exports.GetProjectStatusesForProjectQueryParams = exports.GetProjectStatusesForProjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetProjectStatusesForProjectPathParams = /** @class */ (function (_super) {
     __extends(GetProjectStatusesForProjectPathParams, _super);
     function GetProjectStatusesForProjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_gid" }),
         __metadata("design:type", String)
     ], GetProjectStatusesForProjectPathParams.prototype, "projectGid", void 0);
     return GetProjectStatusesForProjectPathParams;
-}(SpeakeasyBase));
-export { GetProjectStatusesForProjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetProjectStatusesForProjectPathParams = GetProjectStatusesForProjectPathParams;
 var GetProjectStatusesForProjectQueryParams = /** @class */ (function (_super) {
     __extends(GetProjectStatusesForProjectQueryParams, _super);
     function GetProjectStatusesForProjectQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetProjectStatusesForProjectQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], GetProjectStatusesForProjectQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], GetProjectStatusesForProjectQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], GetProjectStatusesForProjectQueryParams.prototype, "optPretty", void 0);
     return GetProjectStatusesForProjectQueryParams;
-}(SpeakeasyBase));
-export { GetProjectStatusesForProjectQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetProjectStatusesForProjectQueryParams = GetProjectStatusesForProjectQueryParams;
 var GetProjectStatusesForProject200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetProjectStatusesForProject200ApplicationJson, _super);
     function GetProjectStatusesForProject200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: shared.ProjectStatusCompact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: shared.ProjectStatusCompact }),
         __metadata("design:type", Array)
     ], GetProjectStatusesForProject200ApplicationJson.prototype, "data", void 0);
     return GetProjectStatusesForProject200ApplicationJson;
-}(SpeakeasyBase));
-export { GetProjectStatusesForProject200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetProjectStatusesForProject200ApplicationJson = GetProjectStatusesForProject200ApplicationJson;
 var GetProjectStatusesForProjectRequest = /** @class */ (function (_super) {
     __extends(GetProjectStatusesForProjectRequest, _super);
     function GetProjectStatusesForProjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProjectStatusesForProjectPathParams)
     ], GetProjectStatusesForProjectRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProjectStatusesForProjectQueryParams)
     ], GetProjectStatusesForProjectRequest.prototype, "queryParams", void 0);
     return GetProjectStatusesForProjectRequest;
-}(SpeakeasyBase));
-export { GetProjectStatusesForProjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetProjectStatusesForProjectRequest = GetProjectStatusesForProjectRequest;
 var GetProjectStatusesForProjectResponse = /** @class */ (function (_super) {
     __extends(GetProjectStatusesForProjectResponse, _super);
     function GetProjectStatusesForProjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetProjectStatusesForProjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], GetProjectStatusesForProjectResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetProjectStatusesForProjectResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetProjectStatusesForProject200ApplicationJson)
-    ], GetProjectStatusesForProjectResponse.prototype, "getProjectStatusesForProject200ApplicationJsonObject", void 0);
+    ], GetProjectStatusesForProjectResponse.prototype, "getProjectStatusesForProject200ApplicationJSONObject", void 0);
     return GetProjectStatusesForProjectResponse;
-}(SpeakeasyBase));
-export { GetProjectStatusesForProjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetProjectStatusesForProjectResponse = GetProjectStatusesForProjectResponse;

@@ -140,5 +140,5 @@ export class SecretsSecretsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  secretsSecretsList200ApplicationJsonObject?: SecretsSecretsList200ApplicationJson;
+  secretsSecretsList200ApplicationJSONObject?: SecretsSecretsList200ApplicationJson;
 }

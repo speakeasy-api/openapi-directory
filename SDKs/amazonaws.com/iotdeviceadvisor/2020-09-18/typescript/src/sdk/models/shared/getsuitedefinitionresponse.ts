@@ -26,5 +26,5 @@ export class GetSuiteDefinitionResponse extends SpeakeasyBase {
   suiteDefinitionVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

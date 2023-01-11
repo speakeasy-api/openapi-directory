@@ -16,8 +16,8 @@ export declare class InvokeDeviceMethodHeaders extends SpeakeasyBase {
  * The device method to invoke.
 **/
 export declare class InvokeDeviceMethodRequestBodyDeviceMethod extends SpeakeasyBase {
-    deviceType?: string;
-    methodName?: string;
+    deviceType?: Record<string, any>;
+    methodName?: Record<string, any>;
 }
 export declare class InvokeDeviceMethodRequestBody extends SpeakeasyBase {
     deviceMethod?: InvokeDeviceMethodRequestBodyDeviceMethod;

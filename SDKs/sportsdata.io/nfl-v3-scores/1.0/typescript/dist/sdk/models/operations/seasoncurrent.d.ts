@@ -11,6 +11,6 @@ export declare class SeasonCurrentRequest extends SpeakeasyBase {
 }
 export declare class SeasonCurrentResponse extends SpeakeasyBase {
     contentType: string;
-    seasonCurrent200ApplicationJsonInteger?: number;
+    seasonCurrent200ApplicationJSONInteger?: number;
     statusCode: number;
 }

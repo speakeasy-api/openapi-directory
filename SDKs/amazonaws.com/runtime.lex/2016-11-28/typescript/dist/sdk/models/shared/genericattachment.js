@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Button } from "./button";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenericAttachment = void 0;
+var utils_1 = require("../../../internal/utils");
+var button_1 = require("./button");
 // GenericAttachment
 /**
  * Represents an option rendered to the user when a prompt is shown. It could be an image, a button, a link, or text.
@@ -34,25 +37,25 @@ var GenericAttachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachmentLinkUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachmentLinkUrl" }),
         __metadata("design:type", String)
     ], GenericAttachment.prototype, "attachmentLinkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buttons", elemType: Button }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buttons", elemType: button_1.Button }),
         __metadata("design:type", Array)
     ], GenericAttachment.prototype, "buttons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], GenericAttachment.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subTitle" }),
         __metadata("design:type", String)
     ], GenericAttachment.prototype, "subTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GenericAttachment.prototype, "title", void 0);
     return GenericAttachment;
-}(SpeakeasyBase));
-export { GenericAttachment };
+}(utils_1.SpeakeasyBase));
+exports.GenericAttachment = GenericAttachment;

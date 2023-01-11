@@ -48,7 +48,7 @@ export declare class Device extends SpeakeasyBase {
     cluster?: NestedCluster;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     deviceRole: NestedDeviceRole;
     deviceType: NestedDeviceType;
     displayName?: string;

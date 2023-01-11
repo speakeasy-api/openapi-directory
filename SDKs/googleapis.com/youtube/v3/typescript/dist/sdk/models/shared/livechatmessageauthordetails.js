@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatMessageAuthorDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var LiveChatMessageAuthorDetails = /** @class */ (function (_super) {
     __extends(LiveChatMessageAuthorDetails, _super);
     function LiveChatMessageAuthorDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], LiveChatMessageAuthorDetails.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelUrl" }),
         __metadata("design:type", String)
     ], LiveChatMessageAuthorDetails.prototype, "channelUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], LiveChatMessageAuthorDetails.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isChatModerator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isChatModerator" }),
         __metadata("design:type", Boolean)
     ], LiveChatMessageAuthorDetails.prototype, "isChatModerator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isChatOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isChatOwner" }),
         __metadata("design:type", Boolean)
     ], LiveChatMessageAuthorDetails.prototype, "isChatOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isChatSponsor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isChatSponsor" }),
         __metadata("design:type", Boolean)
     ], LiveChatMessageAuthorDetails.prototype, "isChatSponsor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isVerified" }),
         __metadata("design:type", Boolean)
     ], LiveChatMessageAuthorDetails.prototype, "isVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileImageUrl" }),
         __metadata("design:type", String)
     ], LiveChatMessageAuthorDetails.prototype, "profileImageUrl", void 0);
     return LiveChatMessageAuthorDetails;
-}(SpeakeasyBase));
-export { LiveChatMessageAuthorDetails };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatMessageAuthorDetails = LiveChatMessageAuthorDetails;

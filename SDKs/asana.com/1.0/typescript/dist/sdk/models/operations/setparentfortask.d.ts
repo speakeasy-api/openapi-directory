@@ -22,5 +22,5 @@ export declare class SetParentForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    setParentForTask200ApplicationJsonObject?: SetParentForTask200ApplicationJson;
+    setParentForTask200ApplicationJSONObject?: SetParentForTask200ApplicationJson;
 }

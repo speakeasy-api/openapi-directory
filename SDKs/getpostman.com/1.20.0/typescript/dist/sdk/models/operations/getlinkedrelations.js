@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,208 +23,210 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLinkedRelationsResponse = exports.GetLinkedRelationsRequest = exports.GetLinkedRelations200ApplicationJson = exports.GetLinkedRelations200ApplicationJsonRelations = exports.GetLinkedRelations200ApplicationJsonRelationsMock = exports.GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1 = exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtest = exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e = exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 = exports.GetLinkedRelations200ApplicationJsonRelationsContracttest = exports.GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 = exports.GetLinkedRelationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLinkedRelationsPathParams = /** @class */ (function (_super) {
     __extends(GetLinkedRelationsPathParams, _super);
     function GetLinkedRelationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], GetLinkedRelationsPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], GetLinkedRelationsPathParams.prototype, "apiVersionId", void 0);
     return GetLinkedRelationsPathParams;
-}(SpeakeasyBase));
-export { GetLinkedRelationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelationsPathParams = GetLinkedRelationsPathParams;
 var GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2, _super);
     function GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2.prototype, "updatedAt", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 = GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2;
 var GetLinkedRelations200ApplicationJsonRelationsContracttest = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsContracttest, _super);
     function GetLinkedRelations200ApplicationJsonRelationsContracttest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=2a9b8fa8-88b7-4b86-8372-8e3f6f6e07f2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=2a9b8fa8-88b7-4b86-8372-8e3f6f6e07f2" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2)
     ], GetLinkedRelations200ApplicationJsonRelationsContracttest.prototype, "twoa9b8fa888b74b8683728e3f6f6e07f2", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsContracttest;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsContracttest };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsContracttest = GetLinkedRelations200ApplicationJsonRelationsContracttest;
 var GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533, _super);
     function GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533.prototype, "updatedAt", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 = GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533;
 var GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e, _super);
     function GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e.prototype, "updatedAt", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e = GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e;
 var GetLinkedRelations200ApplicationJsonRelationsIntegrationtest = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsIntegrationtest, _super);
     function GetLinkedRelations200ApplicationJsonRelationsIntegrationtest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=521b0486-ab91-4d3a-9189-43c9380a0533" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=521b0486-ab91-4d3a-9189-43c9380a0533" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtest.prototype, "fiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=a236b715-e682-460b-97b6-c1db24f7612e" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=a236b715-e682-460b-97b6-c1db24f7612e" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e)
     ], GetLinkedRelations200ApplicationJsonRelationsIntegrationtest.prototype, "a236b715E682460b97b6C1db24f7612e", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsIntegrationtest;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsIntegrationtest };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsIntegrationtest = GetLinkedRelations200ApplicationJsonRelationsIntegrationtest;
 var GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1 = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1, _super);
     function GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1.prototype, "url", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1 };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1 = GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1;
 var GetLinkedRelations200ApplicationJsonRelationsMock = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelationsMock, _super);
     function GetLinkedRelations200ApplicationJsonRelationsMock() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=4ccd755f-2c80-481b-a262-49b55e12f5e1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=4ccd755f-2c80-481b-a262-49b55e12f5e1" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsMock4ccd755f2c80481bA26249b55e12f5e1)
     ], GetLinkedRelations200ApplicationJsonRelationsMock.prototype, "fourccd755f2c80481bA26249b55e12f5e1", void 0);
     return GetLinkedRelations200ApplicationJsonRelationsMock;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelationsMock };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelationsMock = GetLinkedRelations200ApplicationJsonRelationsMock;
 var GetLinkedRelations200ApplicationJsonRelations = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJsonRelations, _super);
     function GetLinkedRelations200ApplicationJsonRelations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contracttest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contracttest" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsContracttest)
     ], GetLinkedRelations200ApplicationJsonRelations.prototype, "contracttest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integrationtest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integrationtest" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsIntegrationtest)
     ], GetLinkedRelations200ApplicationJsonRelations.prototype, "integrationtest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mock" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelationsMock)
     ], GetLinkedRelations200ApplicationJsonRelations.prototype, "mock", void 0);
     return GetLinkedRelations200ApplicationJsonRelations;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJsonRelations };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJsonRelations = GetLinkedRelations200ApplicationJsonRelations;
 var GetLinkedRelations200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLinkedRelations200ApplicationJson, _super);
     function GetLinkedRelations200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relations" }),
         __metadata("design:type", GetLinkedRelations200ApplicationJsonRelations)
     ], GetLinkedRelations200ApplicationJson.prototype, "relations", void 0);
     return GetLinkedRelations200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLinkedRelations200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelations200ApplicationJson = GetLinkedRelations200ApplicationJson;
 var GetLinkedRelationsRequest = /** @class */ (function (_super) {
     __extends(GetLinkedRelationsRequest, _super);
     function GetLinkedRelationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLinkedRelationsPathParams)
     ], GetLinkedRelationsRequest.prototype, "pathParams", void 0);
     return GetLinkedRelationsRequest;
-}(SpeakeasyBase));
-export { GetLinkedRelationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelationsRequest = GetLinkedRelationsRequest;
 var GetLinkedRelationsResponse = /** @class */ (function (_super) {
     __extends(GetLinkedRelationsResponse, _super);
     function GetLinkedRelationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLinkedRelationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLinkedRelationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLinkedRelations200ApplicationJson)
-    ], GetLinkedRelationsResponse.prototype, "getLinkedRelations200ApplicationJsonObject", void 0);
+    ], GetLinkedRelationsResponse.prototype, "getLinkedRelations200ApplicationJSONObject", void 0);
     return GetLinkedRelationsResponse;
-}(SpeakeasyBase));
-export { GetLinkedRelationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLinkedRelationsResponse = GetLinkedRelationsResponse;

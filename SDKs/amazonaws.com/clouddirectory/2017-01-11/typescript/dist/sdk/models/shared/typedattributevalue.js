@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedAttributeValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // TypedAttributeValue
 /**
  * Represents the data for a typed attribute. You can set one, and only one, of the elements. Each attribute in an item is a name-value pair. Attributes have a single value.
@@ -33,25 +36,25 @@ var TypedAttributeValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BinaryValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BinaryValue" }),
         __metadata("design:type", String)
     ], TypedAttributeValue.prototype, "binaryValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BooleanValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BooleanValue" }),
         __metadata("design:type", Boolean)
     ], TypedAttributeValue.prototype, "booleanValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatetimeValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatetimeValue" }),
         __metadata("design:type", Date)
     ], TypedAttributeValue.prototype, "datetimeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberValue" }),
         __metadata("design:type", String)
     ], TypedAttributeValue.prototype, "numberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StringValue" }),
         __metadata("design:type", String)
     ], TypedAttributeValue.prototype, "stringValue", void 0);
     return TypedAttributeValue;
-}(SpeakeasyBase));
-export { TypedAttributeValue };
+}(utils_1.SpeakeasyBase));
+exports.TypedAttributeValue = TypedAttributeValue;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MacSecKey } from "./macseckey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateMacSecKeyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var macseckey_1 = require("./macseckey");
 var AssociateMacSecKeyResponse = /** @class */ (function (_super) {
     __extends(AssociateMacSecKeyResponse, _super);
     function AssociateMacSecKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], AssociateMacSecKeyResponse.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=macSecKeys", elemType: MacSecKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=macSecKeys", elemType: macseckey_1.MacSecKey }),
         __metadata("design:type", Array)
     ], AssociateMacSecKeyResponse.prototype, "macSecKeys", void 0);
     return AssociateMacSecKeyResponse;
-}(SpeakeasyBase));
-export { AssociateMacSecKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.AssociateMacSecKeyResponse = AssociateMacSecKeyResponse;

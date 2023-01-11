@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HighShelf1 } from "./highshelf1";
-import { LowShelf1 } from "./lowshelf1";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetEqualizerValuesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var highshelf1_1 = require("./highshelf1");
+var lowshelf1_1 = require("./lowshelf1");
 var SetEqualizerValuesRequest = /** @class */ (function (_super) {
     __extends(SetEqualizerValuesRequest, _super);
     function SetEqualizerValuesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=high_shelf" }),
-        __metadata("design:type", HighShelf1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=high_shelf" }),
+        __metadata("design:type", highshelf1_1.HighShelf1)
     ], SetEqualizerValuesRequest.prototype, "highShelf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=low_shelf" }),
-        __metadata("design:type", LowShelf1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=low_shelf" }),
+        __metadata("design:type", lowshelf1_1.LowShelf1)
     ], SetEqualizerValuesRequest.prototype, "lowShelf", void 0);
     return SetEqualizerValuesRequest;
-}(SpeakeasyBase));
-export { SetEqualizerValuesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetEqualizerValuesRequest = SetEqualizerValuesRequest;

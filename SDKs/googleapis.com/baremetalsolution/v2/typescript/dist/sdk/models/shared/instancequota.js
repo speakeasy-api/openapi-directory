@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceQuota = void 0;
+var utils_1 = require("../../../internal/utils");
 // InstanceQuota
 /**
  * A resource budget.
@@ -33,25 +36,25 @@ var InstanceQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableMachineCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableMachineCount" }),
         __metadata("design:type", Number)
     ], InstanceQuota.prototype, "availableMachineCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcpService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcpService" }),
         __metadata("design:type", String)
     ], InstanceQuota.prototype, "gcpService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], InstanceQuota.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], InstanceQuota.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InstanceQuota.prototype, "name", void 0);
     return InstanceQuota;
-}(SpeakeasyBase));
-export { InstanceQuota };
+}(utils_1.SpeakeasyBase));
+exports.InstanceQuota = InstanceQuota;

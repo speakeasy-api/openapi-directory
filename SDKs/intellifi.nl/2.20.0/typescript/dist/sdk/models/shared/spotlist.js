@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var SpotListInput = /** @class */ (function (_super) {
-    __extends(SpotListInput, _super);
-    function SpotListInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
-        __metadata("design:type", Object)
-    ], SpotListInput.prototype, "custom", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", String)
-    ], SpotListInput.prototype, "label", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
-    ], SpotListInput.prototype, "metadata", void 0);
-    return SpotListInput;
-}(SpeakeasyBase));
-export { SpotListInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpotListInput = exports.SpotList = void 0;
+var utils_1 = require("../../../internal/utils");
 var SpotList = /** @class */ (function (_super) {
     __extends(SpotList, _super);
     function SpotList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], SpotList.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SpotList.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], SpotList.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=list" }),
         __metadata("design:type", String)
     ], SpotList.prototype, "list", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], SpotList.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], SpotList.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], SpotList.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SpotList.prototype, "total", void 0);
     return SpotList;
-}(SpeakeasyBase));
-export { SpotList };
+}(utils_1.SpeakeasyBase));
+exports.SpotList = SpotList;
+var SpotListInput = /** @class */ (function (_super) {
+    __extends(SpotListInput, _super);
+    function SpotListInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
+        __metadata("design:type", Object)
+    ], SpotListInput.prototype, "custom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], SpotListInput.prototype, "label", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], SpotListInput.prototype, "metadata", void 0);
+    return SpotListInput;
+}(utils_1.SpeakeasyBase));
+exports.SpotListInput = SpotListInput;

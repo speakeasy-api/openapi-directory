@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AlsfcRequest, AlsfcResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,7 +30,7 @@ const req: AlsfcRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -41,13 +40,13 @@ const req: AlsfcRequest = {
       uid: "sit",
       lino: "voluptas",
     },
-    consentArtifact: "velit",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "et",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.alsfc(req).then((res: AlsfcResponse | AxiosError) => {
+sdk.apIs.alsfc(req).then((res: AlsfcResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.alsfc(req).then((res: AlsfcResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alsfc` - Application/ License for Factory
 * `clcer` - Registration Certificate for Contract Labour License

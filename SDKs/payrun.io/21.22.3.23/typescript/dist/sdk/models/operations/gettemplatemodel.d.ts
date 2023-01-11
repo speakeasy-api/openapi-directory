@@ -14,6 +14,6 @@ export declare class GetTemplateModelRequest extends SpeakeasyBase {
 export declare class GetTemplateModelResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getTemplateModel200ApplicationJsonBinaryString?: Uint8Array;
+    getTemplateModel200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

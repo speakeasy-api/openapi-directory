@@ -30,5 +30,5 @@ export declare class GetCategorySubscriptionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     categories?: shared.Category[];
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

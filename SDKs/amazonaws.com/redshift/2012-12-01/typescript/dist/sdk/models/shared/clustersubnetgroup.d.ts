@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
-import { Tag } from "./tag";
+import { SubnetList } from "./subnetlist";
+import { TagList } from "./taglist";
 /**
  * Describes a subnet group.
 **/
@@ -8,7 +8,7 @@ export declare class ClusterSubnetGroup extends SpeakeasyBase {
     clusterSubnetGroupName?: string;
     description?: string;
     subnetGroupStatus?: string;
-    subnets?: Subnet[];
-    tags?: Tag[];
+    subnets?: SubnetList[];
+    tags?: TagList[];
     vpcId?: string;
 }

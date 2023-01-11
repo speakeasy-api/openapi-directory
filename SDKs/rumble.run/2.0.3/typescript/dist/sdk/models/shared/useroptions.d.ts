@@ -5,5 +5,5 @@ export declare class UserOptions extends SpeakeasyBase {
     firstName?: string;
     lastName?: string;
     orgDefaultRole?: string;
-    orgRoles?: Map<string, any>;
+    orgRoles?: Record<string, any>;
 }

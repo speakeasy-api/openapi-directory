@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerAgentInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomerAgentInfo
 /**
  * Inventory data for installed discovery agents.
@@ -33,33 +36,33 @@ var CustomerAgentInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "activeAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blackListedAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blackListedAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "blackListedAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthyAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthyAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "healthyAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shutdownAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shutdownAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "shutdownAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "totalAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unhealthyAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unhealthyAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "unhealthyAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unknownAgents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unknownAgents" }),
         __metadata("design:type", Number)
     ], CustomerAgentInfo.prototype, "unknownAgents", void 0);
     return CustomerAgentInfo;
-}(SpeakeasyBase));
-export { CustomerAgentInfo };
+}(utils_1.SpeakeasyBase));
+exports.CustomerAgentInfo = CustomerAgentInfo;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class LeaveEarningsLine extends SpeakeasyBase {
-    earningsRateId?: string;
+    earningsRateID?: string;
     numberOfUnits?: number;
     ratePerUnit?: number;
 }

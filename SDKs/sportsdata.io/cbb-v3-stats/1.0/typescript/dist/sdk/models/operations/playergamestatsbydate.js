@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerGameStatsByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerGameStatsByDateResponse = exports.PlayerGameStatsByDateRequest = exports.PlayerGameStatsByDatePathParams = exports.PlayerGameStatsByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerGameStatsByDateFormatEnum;
 (function (PlayerGameStatsByDateFormatEnum) {
     PlayerGameStatsByDateFormatEnum["Xml"] = "XML";
     PlayerGameStatsByDateFormatEnum["Json"] = "JSON";
-})(PlayerGameStatsByDateFormatEnum || (PlayerGameStatsByDateFormatEnum = {}));
+})(PlayerGameStatsByDateFormatEnum = exports.PlayerGameStatsByDateFormatEnum || (exports.PlayerGameStatsByDateFormatEnum = {}));
 var PlayerGameStatsByDatePathParams = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByDatePathParams, _super);
     function PlayerGameStatsByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByDatePathParams.prototype, "format", void 0);
     return PlayerGameStatsByDatePathParams;
-}(SpeakeasyBase));
-export { PlayerGameStatsByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByDatePathParams = PlayerGameStatsByDatePathParams;
 var PlayerGameStatsByDateRequest = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByDateRequest, _super);
     function PlayerGameStatsByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerGameStatsByDatePathParams)
     ], PlayerGameStatsByDateRequest.prototype, "pathParams", void 0);
     return PlayerGameStatsByDateRequest;
-}(SpeakeasyBase));
-export { PlayerGameStatsByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByDateRequest = PlayerGameStatsByDateRequest;
 var PlayerGameStatsByDateResponse = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByDateResponse, _super);
     function PlayerGameStatsByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerGameStatsByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerGameStatsByDateResponse.prototype, "playerGames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerGameStatsByDateResponse.prototype, "statusCode", void 0);
     return PlayerGameStatsByDateResponse;
-}(SpeakeasyBase));
-export { PlayerGameStatsByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByDateResponse = PlayerGameStatsByDateResponse;

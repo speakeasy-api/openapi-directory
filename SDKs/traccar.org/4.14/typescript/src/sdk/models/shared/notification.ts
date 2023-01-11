@@ -7,7 +7,7 @@ export class Notification extends SpeakeasyBase {
   always?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=calendarId" })
   calendarId?: number;

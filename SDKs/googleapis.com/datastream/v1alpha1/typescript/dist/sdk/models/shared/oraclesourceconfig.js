@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OracleRdbms } from "./oraclerdbms";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OracleSourceConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var oraclerdbms_1 = require("./oraclerdbms");
 // OracleSourceConfig
 /**
  * Oracle data source configuration
@@ -34,17 +37,17 @@ var OracleSourceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowlist" }),
-        __metadata("design:type", OracleRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowlist" }),
+        __metadata("design:type", oraclerdbms_1.OracleRdbms)
     ], OracleSourceConfig.prototype, "allowlist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dropLargeObjects" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dropLargeObjects" }),
+        __metadata("design:type", Object)
     ], OracleSourceConfig.prototype, "dropLargeObjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rejectlist" }),
-        __metadata("design:type", OracleRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rejectlist" }),
+        __metadata("design:type", oraclerdbms_1.OracleRdbms)
     ], OracleSourceConfig.prototype, "rejectlist", void 0);
     return OracleSourceConfig;
-}(SpeakeasyBase));
-export { OracleSourceConfig };
+}(utils_1.SpeakeasyBase));
+exports.OracleSourceConfig = OracleSourceConfig;

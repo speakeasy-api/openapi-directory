@@ -1,14 +1,30 @@
-export * from "./servicebrokergetiampolicy";
-export * from "./servicebrokerprojectsbrokerscreate";
-export * from "./servicebrokerprojectsbrokersinstancesbindingslist";
-export * from "./servicebrokerprojectsbrokersinstanceslist";
-export * from "./servicebrokerprojectsbrokerslist";
-export * from "./servicebrokerprojectsbrokersv2cataloglist";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancescreate";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancespatch";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancesservicebindingscreate";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsdelete";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsget";
-export * from "./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsgetlastoperation";
-export * from "./servicebrokersetiampolicy";
-export * from "./servicebrokertestiampermissions";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./servicebrokergetiampolicy"), exports);
+__exportStar(require("./servicebrokerprojectsbrokerscreate"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersinstancesbindingslist"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersinstanceslist"), exports);
+__exportStar(require("./servicebrokerprojectsbrokerslist"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2cataloglist"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancescreate"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancespatch"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancesservicebindingscreate"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsdelete"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsget"), exports);
+__exportStar(require("./servicebrokerprojectsbrokersv2serviceinstancesservicebindingsgetlastoperation"), exports);
+__exportStar(require("./servicebrokersetiampolicy"), exports);
+__exportStar(require("./servicebrokertestiampermissions"), exports);

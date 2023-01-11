@@ -1,50 +1,40 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
-export enum ListAllSnapshotsResourceTypeEnum {
-    Droplet = "droplet"
-,    Volume = "volume"
-}
 
 
 export class ListAllSnapshotsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=resource_type" })
-  resourceType?: ListAllSnapshotsResourceTypeEnum;
-}
-
-
-export class ListAllSnapshotsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListAllSnapshotsQueryParams;
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resource_type" })
+  resourceType?: shared.Onev21account1keysGetParameters1Enum;
 }
 
 
 export class ListAllSnapshots200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllSnapshots200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllSnapshots200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -54,86 +44,92 @@ export class ListAllSnapshots200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllSnapshots200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 export enum ListAllSnapshots200ApplicationJsonSnapshotsResourceTypeEnum {
-    Droplet = "droplet"
-,    Volume = "volume"
+    Droplet = "droplet",
+    Volume = "volume"
 }
 
 
 export class ListAllSnapshots200ApplicationJsonSnapshots extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt: Date;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=min_disk_size" })
+  @SpeakeasyMetadata({ data: "json, name=min_disk_size" })
   minDiskSize: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=regions" })
+  @SpeakeasyMetadata({ data: "json, name=regions" })
   regions: string[];
 
-  @Metadata({ data: "json, name=resource_id" })
+  @SpeakeasyMetadata({ data: "json, name=resource_id" })
   resourceId: string;
 
-  @Metadata({ data: "json, name=resource_type" })
+  @SpeakeasyMetadata({ data: "json, name=resource_type" })
   resourceType: ListAllSnapshots200ApplicationJsonSnapshotsResourceTypeEnum;
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes: number;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags: string[];
 }
 
 
 export class ListAllSnapshots200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllSnapshots200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllSnapshots200ApplicationJsonMeta;
 
-  @Metadata({ data: "json, name=snapshots", elemType: operations.ListAllSnapshots200ApplicationJsonSnapshots })
+  @SpeakeasyMetadata({ data: "json, name=snapshots", elemType: ListAllSnapshots200ApplicationJsonSnapshots })
   snapshots?: ListAllSnapshots200ApplicationJsonSnapshots[];
 }
 
 
 export class ListAllSnapshots401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListAllSnapshotsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListAllSnapshotsQueryParams;
+}
+
+
 export class ListAllSnapshotsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllSnapshots200ApplicationJsonObject?: ListAllSnapshots200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllSnapshots200ApplicationJSONObject?: ListAllSnapshots200ApplicationJson;
 
-  @Metadata()
-  listAllSnapshots401ApplicationJsonObject?: ListAllSnapshots401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllSnapshots401ApplicationJSONObject?: ListAllSnapshots401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

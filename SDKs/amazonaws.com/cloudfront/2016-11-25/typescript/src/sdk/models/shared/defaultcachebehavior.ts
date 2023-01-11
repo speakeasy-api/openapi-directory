@@ -19,7 +19,7 @@ export class DefaultCacheBehavior extends SpeakeasyBase {
   compress?: boolean;
 
   @SpeakeasyMetadata()
-  defaultTtl?: number;
+  defaultTTL?: number;
 
   @SpeakeasyMetadata()
   forwardedValues: ForwardedValues;
@@ -28,10 +28,10 @@ export class DefaultCacheBehavior extends SpeakeasyBase {
   lambdaFunctionAssociations?: LambdaFunctionAssociations;
 
   @SpeakeasyMetadata()
-  maxTtl?: number;
+  maxTTL?: number;
 
   @SpeakeasyMetadata()
-  minTtl: number;
+  minTTL: number;
 
   @SpeakeasyMetadata()
   smoothStreaming?: boolean;

@@ -26,7 +26,7 @@ export class CompanyMonitorUnregisterRequest extends SpeakeasyBase {
 
 export class CompanyMonitorUnregisterResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyMonitorUnregisterDefaultApplicationJsonAny?: any;
+  companyMonitorUnregisterDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

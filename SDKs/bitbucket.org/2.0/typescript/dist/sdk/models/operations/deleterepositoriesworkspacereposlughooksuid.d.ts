@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest extends 
 export declare class DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

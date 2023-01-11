@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGenBankNucleotideMappingUsingGetResponse = exports.GetGenBankNucleotideMappingUsingGetRequest = exports.GetGenBankNucleotideMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGenBankNucleotideMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGenBankNucleotideMappingUsingGetPathParams, _super);
     function GetGenBankNucleotideMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetGenBankNucleotideMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetGenBankNucleotideMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGenBankNucleotideMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGenBankNucleotideMappingUsingGetPathParams = GetGenBankNucleotideMappingUsingGetPathParams;
 var GetGenBankNucleotideMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGenBankNucleotideMappingUsingGetRequest, _super);
     function GetGenBankNucleotideMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGenBankNucleotideMappingUsingGetPathParams)
     ], GetGenBankNucleotideMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetGenBankNucleotideMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGenBankNucleotideMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGenBankNucleotideMappingUsingGetRequest = GetGenBankNucleotideMappingUsingGetRequest;
 var GetGenBankNucleotideMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGenBankNucleotideMappingUsingGetResponse, _super);
     function GetGenBankNucleotideMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGenBankNucleotideMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGenBankNucleotideMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGenBankNucleotideMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetGenBankNucleotideMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGenBankNucleotideMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGenBankNucleotideMappingUsingGetResponse = GetGenBankNucleotideMappingUsingGetResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { ShippingService } from "./shippingservice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var shippingservice_1 = require("./shippingservice");
 // ShippingOption
 /**
  * This complex type defines a seller's shipping configuration for either a DOMESTIC or INTERNATIONAL shipping option. Shipping options configure the high-level settings for shipments, such as flat-rate or calculated shipping, and any rate tables the seller wants to associate with the policy. Each shippingOption element has a shippingServices container that defines the list of shipping carriers and services that are available for the parent shipping option (that is, for either DOMESTIC or INTERNATIONAL shipping). If a seller offers an international shipping option, they must also offer a domestic shipping option. Note that costType (FLAT_RATE or CALCULATED) is set in shippingOptions and that all associated shipping services must be able to support this cost type.
@@ -35,33 +38,33 @@ var ShippingOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costType" }),
         __metadata("design:type", String)
     ], ShippingOption.prototype, "costType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insuranceFee" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insuranceFee" }),
+        __metadata("design:type", amount_1.Amount)
     ], ShippingOption.prototype, "insuranceFee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insuranceOffered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insuranceOffered" }),
         __metadata("design:type", Boolean)
     ], ShippingOption.prototype, "insuranceOffered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optionType" }),
         __metadata("design:type", String)
     ], ShippingOption.prototype, "optionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageHandlingCost" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageHandlingCost" }),
+        __metadata("design:type", amount_1.Amount)
     ], ShippingOption.prototype, "packageHandlingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateTableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateTableId" }),
         __metadata("design:type", String)
     ], ShippingOption.prototype, "rateTableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServices", elemType: ShippingService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServices", elemType: shippingservice_1.ShippingService }),
         __metadata("design:type", Array)
     ], ShippingOption.prototype, "shippingServices", void 0);
     return ShippingOption;
-}(SpeakeasyBase));
-export { ShippingOption };
+}(utils_1.SpeakeasyBase));
+exports.ShippingOption = ShippingOption;

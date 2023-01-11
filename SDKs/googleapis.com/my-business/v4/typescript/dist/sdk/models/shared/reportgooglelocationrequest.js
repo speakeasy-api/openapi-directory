@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReportGoogleLocationRequestReportReasonBadLocationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportGoogleLocationRequest = exports.ReportGoogleLocationRequestReportReasonBadRecommendationEnum = exports.ReportGoogleLocationRequestReportReasonBadLocationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReportGoogleLocationRequestReportReasonBadLocationEnum;
 (function (ReportGoogleLocationRequestReportReasonBadLocationEnum) {
     ReportGoogleLocationRequestReportReasonBadLocationEnum["BadLocationReasonUnspecified"] = "BAD_LOCATION_REASON_UNSPECIFIED";
     ReportGoogleLocationRequestReportReasonBadLocationEnum["NotALocation"] = "NOT_A_LOCATION";
@@ -33,14 +36,14 @@ export var ReportGoogleLocationRequestReportReasonBadLocationEnum;
     ReportGoogleLocationRequestReportReasonBadLocationEnum["NotABusiness"] = "NOT_A_BUSINESS";
     ReportGoogleLocationRequestReportReasonBadLocationEnum["Moved"] = "MOVED";
     ReportGoogleLocationRequestReportReasonBadLocationEnum["Duplicate"] = "DUPLICATE";
-})(ReportGoogleLocationRequestReportReasonBadLocationEnum || (ReportGoogleLocationRequestReportReasonBadLocationEnum = {}));
-export var ReportGoogleLocationRequestReportReasonBadRecommendationEnum;
+})(ReportGoogleLocationRequestReportReasonBadLocationEnum = exports.ReportGoogleLocationRequestReportReasonBadLocationEnum || (exports.ReportGoogleLocationRequestReportReasonBadLocationEnum = {}));
+var ReportGoogleLocationRequestReportReasonBadRecommendationEnum;
 (function (ReportGoogleLocationRequestReportReasonBadRecommendationEnum) {
     ReportGoogleLocationRequestReportReasonBadRecommendationEnum["BadRecommendationReasonUnspecified"] = "BAD_RECOMMENDATION_REASON_UNSPECIFIED";
     ReportGoogleLocationRequestReportReasonBadRecommendationEnum["NotAStoreFront"] = "NOT_A_STORE_FRONT";
     ReportGoogleLocationRequestReportReasonBadRecommendationEnum["NotPartOfSuggestedChain"] = "NOT_PART_OF_SUGGESTED_CHAIN";
     ReportGoogleLocationRequestReportReasonBadRecommendationEnum["Irrelevant"] = "IRRELEVANT";
-})(ReportGoogleLocationRequestReportReasonBadRecommendationEnum || (ReportGoogleLocationRequestReportReasonBadRecommendationEnum = {}));
+})(ReportGoogleLocationRequestReportReasonBadRecommendationEnum = exports.ReportGoogleLocationRequestReportReasonBadRecommendationEnum || (exports.ReportGoogleLocationRequestReportReasonBadRecommendationEnum = {}));
 // ReportGoogleLocationRequest
 /**
  * Request message for reporting a GoogleLocation.
@@ -51,25 +54,25 @@ var ReportGoogleLocationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationGroupName" }),
         __metadata("design:type", String)
     ], ReportGoogleLocationRequest.prototype, "locationGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportReasonBadLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportReasonBadLocation" }),
         __metadata("design:type", String)
     ], ReportGoogleLocationRequest.prototype, "reportReasonBadLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportReasonBadRecommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportReasonBadRecommendation" }),
         __metadata("design:type", String)
     ], ReportGoogleLocationRequest.prototype, "reportReasonBadRecommendation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportReasonElaboration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportReasonElaboration" }),
         __metadata("design:type", String)
     ], ReportGoogleLocationRequest.prototype, "reportReasonElaboration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportReasonLanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportReasonLanguageCode" }),
         __metadata("design:type", String)
     ], ReportGoogleLocationRequest.prototype, "reportReasonLanguageCode", void 0);
     return ReportGoogleLocationRequest;
-}(SpeakeasyBase));
-export { ReportGoogleLocationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReportGoogleLocationRequest = ReportGoogleLocationRequest;

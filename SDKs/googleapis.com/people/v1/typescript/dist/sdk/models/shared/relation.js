@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationInput = exports.Relation = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Relation
 /**
  * A person's relation to another person.
@@ -35,24 +38,24 @@ var Relation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedType" }),
         __metadata("design:type", String)
     ], Relation.prototype, "formattedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Relation.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
         __metadata("design:type", String)
     ], Relation.prototype, "person", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Relation.prototype, "type", void 0);
     return Relation;
-}(SpeakeasyBase));
-export { Relation };
+}(utils_1.SpeakeasyBase));
+exports.Relation = Relation;
 // RelationInput
 /**
  * A person's relation to another person.
@@ -63,17 +66,17 @@ var RelationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], RelationInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
         __metadata("design:type", String)
     ], RelationInput.prototype, "person", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RelationInput.prototype, "type", void 0);
     return RelationInput;
-}(SpeakeasyBase));
-export { RelationInput };
+}(utils_1.SpeakeasyBase));
+exports.RelationInput = RelationInput;

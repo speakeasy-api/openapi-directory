@@ -8,7 +8,7 @@ export declare class TableMetadata extends SpeakeasyBase {
     createTime?: Date;
     lastAccessTime?: Date;
     name: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     partitionKeys?: Column[];
     tableType?: string;
 }

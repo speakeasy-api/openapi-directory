@@ -47,5 +47,5 @@ export class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJsonObject?: ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJson;
+  actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject?: ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJson;
 }

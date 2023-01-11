@@ -22,7 +22,7 @@ export declare class PutContactPolicyResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
     internalServerException?: any;
-    putContactPolicyResult?: Map<string, any>;
+    putContactPolicyResult?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchemeClientId = exports.SchemeClientCredentialsToken = exports.SchemeAuthorizationCodeToken = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeAuthorizationCodeToken = /** @class */ (function (_super) {
     __extends(SchemeAuthorizationCodeToken, _super);
     function SchemeAuthorizationCodeToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeAuthorizationCodeToken.prototype, "authorization", void 0);
     return SchemeAuthorizationCodeToken;
-}(SpeakeasyBase));
-export { SchemeAuthorizationCodeToken };
+}(utils_1.SpeakeasyBase));
+exports.SchemeAuthorizationCodeToken = SchemeAuthorizationCodeToken;
 var SchemeClientCredentialsToken = /** @class */ (function (_super) {
     __extends(SchemeClientCredentialsToken, _super);
     function SchemeClientCredentialsToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeClientCredentialsToken.prototype, "authorization", void 0);
     return SchemeClientCredentialsToken;
-}(SpeakeasyBase));
-export { SchemeClientCredentialsToken };
+}(utils_1.SpeakeasyBase));
+exports.SchemeClientCredentialsToken = SchemeClientCredentialsToken;
 var SchemeClientId = /** @class */ (function (_super) {
     __extends(SchemeClientId, _super);
     function SchemeClientId() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Client-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Client-Id" }),
         __metadata("design:type", String)
     ], SchemeClientId.prototype, "apiKey", void 0);
     return SchemeClientId;
-}(SpeakeasyBase));
-export { SchemeClientId };
+}(utils_1.SpeakeasyBase));
+exports.SchemeClientId = SchemeClientId;

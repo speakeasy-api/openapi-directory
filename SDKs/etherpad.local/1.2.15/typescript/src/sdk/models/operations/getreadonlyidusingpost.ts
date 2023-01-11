@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetReadOnlyIdUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
 export class GetReadOnlyIdUsingPost200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=readOnlyID" })
-  readOnlyId?: string;
+  readOnlyID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class GetReadOnlyIdUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetReadOnlyIdUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class GetReadOnlyIdUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class GetReadOnlyIdUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getReadOnlyIdUsingPost200ApplicationJsonObject?: GetReadOnlyIdUsingPost200ApplicationJson;
+  getReadOnlyIDUsingPOST200ApplicationJSONObject?: GetReadOnlyIdUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getReadOnlyIdUsingPost400ApplicationJsonObject?: GetReadOnlyIdUsingPost400ApplicationJson;
+  getReadOnlyIDUsingPOST400ApplicationJSONObject?: GetReadOnlyIdUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getReadOnlyIdUsingPost401ApplicationJsonObject?: GetReadOnlyIdUsingPost401ApplicationJson;
+  getReadOnlyIDUsingPOST401ApplicationJSONObject?: GetReadOnlyIdUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getReadOnlyIdUsingPost500ApplicationJsonObject?: GetReadOnlyIdUsingPost500ApplicationJson;
+  getReadOnlyIDUsingPOST500ApplicationJSONObject?: GetReadOnlyIdUsingPost500ApplicationJson;
 }

@@ -17,5 +17,5 @@ export class TableResource extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TableWildcard" })
-  tableWildcard?: Map<string, any>;
+  tableWildcard?: Record<string, any>;
 }

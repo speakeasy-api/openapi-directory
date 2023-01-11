@@ -4,6 +4,9 @@ export declare class LicenseContentLinks extends SpeakeasyBase {
     html: string;
     self: string;
 }
+/**
+ * License Simple
+**/
 export declare class LicenseContentLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;

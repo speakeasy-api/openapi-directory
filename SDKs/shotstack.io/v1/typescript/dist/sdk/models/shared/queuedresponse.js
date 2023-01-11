@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueuedResponseData } from "./queuedresponsedata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueuedResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var queuedresponsedata_1 = require("./queuedresponsedata");
 // QueuedResponse
 /**
  * The response received after a [render request](#render-asset) is submitted. The render task is queued for rendering and a unique render id is returned.
@@ -34,17 +37,17 @@ var QueuedResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], QueuedResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
-        __metadata("design:type", QueuedResponseData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
+        __metadata("design:type", queuedresponsedata_1.QueuedResponseData)
     ], QueuedResponse.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], QueuedResponse.prototype, "success", void 0);
     return QueuedResponse;
-}(SpeakeasyBase));
-export { QueuedResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueuedResponse = QueuedResponse;

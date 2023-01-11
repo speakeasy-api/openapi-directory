@@ -19,7 +19,7 @@ export declare class DeleteAgentRequest extends SpeakeasyBase {
 }
 export declare class DeleteAgentResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAgentResponse?: Map<string, any>;
+    deleteAgentResponse?: Record<string, any>;
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;

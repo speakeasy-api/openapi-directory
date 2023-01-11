@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteMonitorResponse = exports.DeleteMonitorRequest = exports.DeleteMonitor404ApplicationJson = exports.DeleteMonitor404ApplicationJsonError = exports.DeleteMonitor200ApplicationJson = exports.DeleteMonitor200ApplicationJsonMonitor = exports.DeleteMonitorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteMonitorPathParams = /** @class */ (function (_super) {
     __extends(DeleteMonitorPathParams, _super);
     function DeleteMonitorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=monitor_uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=monitor_uid" }),
         __metadata("design:type", String)
     ], DeleteMonitorPathParams.prototype, "monitorUid", void 0);
     return DeleteMonitorPathParams;
-}(SpeakeasyBase));
-export { DeleteMonitorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitorPathParams = DeleteMonitorPathParams;
 var DeleteMonitor200ApplicationJsonMonitor = /** @class */ (function (_super) {
     __extends(DeleteMonitor200ApplicationJsonMonitor, _super);
     function DeleteMonitor200ApplicationJsonMonitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeleteMonitor200ApplicationJsonMonitor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], DeleteMonitor200ApplicationJsonMonitor.prototype, "uid", void 0);
     return DeleteMonitor200ApplicationJsonMonitor;
-}(SpeakeasyBase));
-export { DeleteMonitor200ApplicationJsonMonitor };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitor200ApplicationJsonMonitor = DeleteMonitor200ApplicationJsonMonitor;
 var DeleteMonitor200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteMonitor200ApplicationJson, _super);
     function DeleteMonitor200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor" }),
         __metadata("design:type", DeleteMonitor200ApplicationJsonMonitor)
     ], DeleteMonitor200ApplicationJson.prototype, "monitor", void 0);
     return DeleteMonitor200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteMonitor200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitor200ApplicationJson = DeleteMonitor200ApplicationJson;
 var DeleteMonitor404ApplicationJsonError = /** @class */ (function (_super) {
     __extends(DeleteMonitor404ApplicationJsonError, _super);
     function DeleteMonitor404ApplicationJsonError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteMonitor404ApplicationJsonError.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeleteMonitor404ApplicationJsonError.prototype, "name", void 0);
     return DeleteMonitor404ApplicationJsonError;
-}(SpeakeasyBase));
-export { DeleteMonitor404ApplicationJsonError };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitor404ApplicationJsonError = DeleteMonitor404ApplicationJsonError;
 var DeleteMonitor404ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteMonitor404ApplicationJson, _super);
     function DeleteMonitor404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", DeleteMonitor404ApplicationJsonError)
     ], DeleteMonitor404ApplicationJson.prototype, "error", void 0);
     return DeleteMonitor404ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteMonitor404ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitor404ApplicationJson = DeleteMonitor404ApplicationJson;
 var DeleteMonitorRequest = /** @class */ (function (_super) {
     __extends(DeleteMonitorRequest, _super);
     function DeleteMonitorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteMonitorPathParams)
     ], DeleteMonitorRequest.prototype, "pathParams", void 0);
     return DeleteMonitorRequest;
-}(SpeakeasyBase));
-export { DeleteMonitorRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitorRequest = DeleteMonitorRequest;
 var DeleteMonitorResponse = /** @class */ (function (_super) {
     __extends(DeleteMonitorResponse, _super);
     function DeleteMonitorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteMonitorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteMonitorResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteMonitor200ApplicationJson)
-    ], DeleteMonitorResponse.prototype, "deleteMonitor200ApplicationJsonObject", void 0);
+    ], DeleteMonitorResponse.prototype, "deleteMonitor200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteMonitor404ApplicationJson)
-    ], DeleteMonitorResponse.prototype, "deleteMonitor404ApplicationJsonObject", void 0);
+    ], DeleteMonitorResponse.prototype, "deleteMonitor404ApplicationJSONObject", void 0);
     return DeleteMonitorResponse;
-}(SpeakeasyBase));
-export { DeleteMonitorResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMonitorResponse = DeleteMonitorResponse;

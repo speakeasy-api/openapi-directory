@@ -46,7 +46,7 @@ export class DeleteRobotResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRobotResponse?: Map<string, any>;
+  deleteRobotResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

@@ -1,6 +1,9 @@
-export var S3EncryptionModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3EncryptionModeEnum = void 0;
+var S3EncryptionModeEnum;
 (function (S3EncryptionModeEnum) {
     S3EncryptionModeEnum["Disabled"] = "DISABLED";
     S3EncryptionModeEnum["SseKms"] = "SSE-KMS";
     S3EncryptionModeEnum["SseS3"] = "SSE-S3";
-})(S3EncryptionModeEnum || (S3EncryptionModeEnum = {}));
+})(S3EncryptionModeEnum = exports.S3EncryptionModeEnum || (exports.S3EncryptionModeEnum = {}));

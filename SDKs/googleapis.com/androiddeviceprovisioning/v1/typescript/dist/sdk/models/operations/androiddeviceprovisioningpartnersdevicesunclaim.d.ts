@@ -23,6 +23,6 @@ export declare class AndroiddeviceprovisioningPartnersDevicesUnclaimRequest exte
 }
 export declare class AndroiddeviceprovisioningPartnersDevicesUnclaimResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -28,8 +28,8 @@ export class PostAuthPollResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAuthPoll200ApplicationJsonObject?: PostAuthPoll200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAuthPoll200ApplicationJSONObject?: PostAuthPoll200ApplicationJson;
 }

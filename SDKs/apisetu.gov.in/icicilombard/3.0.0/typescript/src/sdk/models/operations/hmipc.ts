@@ -188,23 +188,23 @@ export class HmipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  hmipc400ApplicationJsonObject?: Hmipc400ApplicationJson;
+  hmipc400ApplicationJSONObject?: Hmipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc401ApplicationJsonObject?: Hmipc401ApplicationJson;
+  hmipc401ApplicationJSONObject?: Hmipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc404ApplicationJsonObject?: Hmipc404ApplicationJson;
+  hmipc404ApplicationJSONObject?: Hmipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc500ApplicationJsonObject?: Hmipc500ApplicationJson;
+  hmipc500ApplicationJSONObject?: Hmipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc502ApplicationJsonObject?: Hmipc502ApplicationJson;
+  hmipc502ApplicationJSONObject?: Hmipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc503ApplicationJsonObject?: Hmipc503ApplicationJson;
+  hmipc503ApplicationJSONObject?: Hmipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  hmipc504ApplicationJsonObject?: Hmipc504ApplicationJson;
+  hmipc504ApplicationJSONObject?: Hmipc504ApplicationJson;
 }

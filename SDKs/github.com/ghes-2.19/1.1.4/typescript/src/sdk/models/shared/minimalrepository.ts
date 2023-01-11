@@ -20,6 +20,10 @@ export class MinimalRepositoryLicense extends SpeakeasyBase {
 }
 
 
+// MinimalRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class MinimalRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -92,6 +96,10 @@ export class MinimalRepositoryPermissions extends SpeakeasyBase {
 }
 
 
+// MinimalRepositoryRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class MinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -113,6 +121,10 @@ export class MinimalRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// MinimalRepositoryRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class MinimalRepositoryRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -497,6 +509,10 @@ export class MinimalRepositoryRepositoryTemplateRepository extends SpeakeasyBase
 }
 
 
+// MinimalRepositoryRepository
+/** 
+ * A git repository
+**/
 export class MinimalRepositoryRepository extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allow_merge_commit" })
   allowMergeCommit?: boolean;

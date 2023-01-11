@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Actor } from "./actor";
-import { ActorInput } from "./actor";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachmentInput = exports.Attachment = void 0;
+var utils_1 = require("../../../internal/utils");
+var actor_1 = require("./actor");
+var actor_2 = require("./actor");
 // Attachment
 /**
  * Represents a file attached to a support case.
@@ -35,32 +38,32 @@ var Attachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_1.Actor)
     ], Attachment.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeBytes" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "sizeBytes", void 0);
     return Attachment;
-}(SpeakeasyBase));
-export { Attachment };
+}(utils_1.SpeakeasyBase));
+exports.Attachment = Attachment;
 // AttachmentInput
 /**
  * Represents a file attached to a support case.
@@ -71,13 +74,13 @@ var AttachmentInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", ActorInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_2.ActorInput)
     ], AttachmentInput.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], AttachmentInput.prototype, "filename", void 0);
     return AttachmentInput;
-}(SpeakeasyBase));
-export { AttachmentInput };
+}(utils_1.SpeakeasyBase));
+exports.AttachmentInput = AttachmentInput;

@@ -25,7 +25,7 @@ export class Group extends SpeakeasyBase {
   groupKey?: EntityKey;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -56,7 +56,7 @@ export class GroupInput extends SpeakeasyBase {
   groupKey?: EntityKey;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parent" })
   parent?: string;

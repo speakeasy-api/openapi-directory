@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsentArtefactReference } from "./consentartefactreference";
-import { ConsentStatusEnum } from "./consentstatusenum";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuConsentRequestStatus = exports.HiuConsentRequestStatusConsentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var consentartefactreference_1 = require("./consentartefactreference");
+var consentstatusenum_1 = require("./consentstatusenum");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 var HiuConsentRequestStatusConsentRequest = /** @class */ (function (_super) {
     __extends(HiuConsentRequestStatusConsentRequest, _super);
     function HiuConsentRequestStatusConsentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtefacts", elemType: ConsentArtefactReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtefacts", elemType: consentartefactreference_1.ConsentArtefactReference }),
         __metadata("design:type", Array)
     ], HiuConsentRequestStatusConsentRequest.prototype, "consentArtefacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HiuConsentRequestStatusConsentRequest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], HiuConsentRequestStatusConsentRequest.prototype, "status", void 0);
     return HiuConsentRequestStatusConsentRequest;
-}(SpeakeasyBase));
-export { HiuConsentRequestStatusConsentRequest };
+}(utils_1.SpeakeasyBase));
+exports.HiuConsentRequestStatusConsentRequest = HiuConsentRequestStatusConsentRequest;
 var HiuConsentRequestStatus = /** @class */ (function (_super) {
     __extends(HiuConsentRequestStatus, _super);
     function HiuConsentRequestStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentRequest" }),
         __metadata("design:type", HiuConsentRequestStatusConsentRequest)
     ], HiuConsentRequestStatus.prototype, "consentRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], HiuConsentRequestStatus.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuConsentRequestStatus.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], HiuConsentRequestStatus.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuConsentRequestStatus.prototype, "timestamp", void 0);
     return HiuConsentRequestStatus;
-}(SpeakeasyBase));
-export { HiuConsentRequestStatus };
+}(utils_1.SpeakeasyBase));
+exports.HiuConsentRequestStatus = HiuConsentRequestStatus;

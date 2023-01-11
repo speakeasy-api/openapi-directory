@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryCatalogData = void 0;
+var utils_1 = require("../../../internal/utils");
 // RepositoryCatalogData
 /**
  * The catalog data for a repository. This data is publicly visible in the Amazon ECR Public Gallery.
@@ -33,33 +36,33 @@ var RepositoryCatalogData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aboutText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aboutText" }),
         __metadata("design:type", String)
     ], RepositoryCatalogData.prototype, "aboutText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=architectures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=architectures" }),
         __metadata("design:type", Array)
     ], RepositoryCatalogData.prototype, "architectures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RepositoryCatalogData.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logoUrl" }),
         __metadata("design:type", String)
     ], RepositoryCatalogData.prototype, "logoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceCertified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceCertified" }),
         __metadata("design:type", Boolean)
     ], RepositoryCatalogData.prototype, "marketplaceCertified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingSystems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingSystems" }),
         __metadata("design:type", Array)
     ], RepositoryCatalogData.prototype, "operatingSystems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageText" }),
         __metadata("design:type", String)
     ], RepositoryCatalogData.prototype, "usageText", void 0);
     return RepositoryCatalogData;
-}(SpeakeasyBase));
-export { RepositoryCatalogData };
+}(utils_1.SpeakeasyBase));
+exports.RepositoryCatalogData = RepositoryCatalogData;

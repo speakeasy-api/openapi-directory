@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemovePermissionResponse = exports.GetRemovePermissionRequest = exports.GetRemovePermissionHeaders = exports.GetRemovePermissionQueryParams = exports.GetRemovePermissionVersionEnum = exports.GetRemovePermissionActionEnum = exports.GetRemovePermissionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRemovePermissionPathParams = /** @class */ (function (_super) {
     __extends(GetRemovePermissionPathParams, _super);
     function GetRemovePermissionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
         __metadata("design:type", Number)
     ], GetRemovePermissionPathParams.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
         __metadata("design:type", String)
     ], GetRemovePermissionPathParams.prototype, "queueName", void 0);
     return GetRemovePermissionPathParams;
-}(SpeakeasyBase));
-export { GetRemovePermissionPathParams };
-export var GetRemovePermissionActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetRemovePermissionPathParams = GetRemovePermissionPathParams;
+var GetRemovePermissionActionEnum;
 (function (GetRemovePermissionActionEnum) {
     GetRemovePermissionActionEnum["RemovePermission"] = "RemovePermission";
-})(GetRemovePermissionActionEnum || (GetRemovePermissionActionEnum = {}));
-export var GetRemovePermissionVersionEnum;
+})(GetRemovePermissionActionEnum = exports.GetRemovePermissionActionEnum || (exports.GetRemovePermissionActionEnum = {}));
+var GetRemovePermissionVersionEnum;
 (function (GetRemovePermissionVersionEnum) {
     GetRemovePermissionVersionEnum["TwoThousandAndTwelve1105"] = "2012-11-05";
-})(GetRemovePermissionVersionEnum || (GetRemovePermissionVersionEnum = {}));
+})(GetRemovePermissionVersionEnum = exports.GetRemovePermissionVersionEnum || (exports.GetRemovePermissionVersionEnum = {}));
 var GetRemovePermissionQueryParams = /** @class */ (function (_super) {
     __extends(GetRemovePermissionQueryParams, _super);
     function GetRemovePermissionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemovePermissionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Label" }),
         __metadata("design:type", String)
     ], GetRemovePermissionQueryParams.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemovePermissionQueryParams.prototype, "version", void 0);
     return GetRemovePermissionQueryParams;
-}(SpeakeasyBase));
-export { GetRemovePermissionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemovePermissionQueryParams = GetRemovePermissionQueryParams;
 var GetRemovePermissionHeaders = /** @class */ (function (_super) {
     __extends(GetRemovePermissionHeaders, _super);
     function GetRemovePermissionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemovePermissionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemovePermissionHeaders;
-}(SpeakeasyBase));
-export { GetRemovePermissionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemovePermissionHeaders = GetRemovePermissionHeaders;
 var GetRemovePermissionRequest = /** @class */ (function (_super) {
     __extends(GetRemovePermissionRequest, _super);
     function GetRemovePermissionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemovePermissionPathParams)
     ], GetRemovePermissionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemovePermissionQueryParams)
     ], GetRemovePermissionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemovePermissionHeaders)
     ], GetRemovePermissionRequest.prototype, "headers", void 0);
     return GetRemovePermissionRequest;
-}(SpeakeasyBase));
-export { GetRemovePermissionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemovePermissionRequest = GetRemovePermissionRequest;
 var GetRemovePermissionResponse = /** @class */ (function (_super) {
     __extends(GetRemovePermissionResponse, _super);
     function GetRemovePermissionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemovePermissionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemovePermissionResponse.prototype, "statusCode", void 0);
     return GetRemovePermissionResponse;
-}(SpeakeasyBase));
-export { GetRemovePermissionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemovePermissionResponse = GetRemovePermissionResponse;

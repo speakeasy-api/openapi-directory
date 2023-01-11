@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GuardianInvitationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GuardianInvitation = exports.GuardianInvitationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GuardianInvitationStateEnum;
 (function (GuardianInvitationStateEnum) {
     GuardianInvitationStateEnum["GuardianInvitationStateUnspecified"] = "GUARDIAN_INVITATION_STATE_UNSPECIFIED";
     GuardianInvitationStateEnum["Pending"] = "PENDING";
     GuardianInvitationStateEnum["Complete"] = "COMPLETE";
-})(GuardianInvitationStateEnum || (GuardianInvitationStateEnum = {}));
+})(GuardianInvitationStateEnum = exports.GuardianInvitationStateEnum || (exports.GuardianInvitationStateEnum = {}));
 // GuardianInvitation
 /**
  * An invitation to become the guardian of a specified user, sent to a specified email address.
@@ -39,25 +42,25 @@ var GuardianInvitation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], GuardianInvitation.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationId" }),
         __metadata("design:type", String)
     ], GuardianInvitation.prototype, "invitationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitedEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitedEmailAddress" }),
         __metadata("design:type", String)
     ], GuardianInvitation.prototype, "invitedEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GuardianInvitation.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studentId" }),
         __metadata("design:type", String)
     ], GuardianInvitation.prototype, "studentId", void 0);
     return GuardianInvitation;
-}(SpeakeasyBase));
-export { GuardianInvitation };
+}(utils_1.SpeakeasyBase));
+exports.GuardianInvitation = GuardianInvitation;

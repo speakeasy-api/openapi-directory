@@ -27,7 +27,7 @@ export class VersionMetaData extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: ArtifactStateEnum;

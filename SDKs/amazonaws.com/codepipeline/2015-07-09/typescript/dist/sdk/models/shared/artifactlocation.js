@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3ArtifactLocation } from "./s3artifactlocation";
-import { ArtifactLocationTypeEnum } from "./artifactlocationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3artifactlocation_1 = require("./s3artifactlocation");
+var artifactlocationtypeenum_1 = require("./artifactlocationtypeenum");
 // ArtifactLocation
 /**
  * Represents information about the location of an artifact.
@@ -35,13 +38,13 @@ var ArtifactLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Location" }),
-        __metadata("design:type", S3ArtifactLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Location" }),
+        __metadata("design:type", s3artifactlocation_1.S3ArtifactLocation)
     ], ArtifactLocation.prototype, "s3Location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ArtifactLocation.prototype, "type", void 0);
     return ArtifactLocation;
-}(SpeakeasyBase));
-export { ArtifactLocation };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactLocation = ArtifactLocation;

@@ -28,7 +28,7 @@ export class RequestApiKeyRequestBody extends SpeakeasyBase {
 
 export class RequestApiKeyRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: RequestApiKeyRequestBody;

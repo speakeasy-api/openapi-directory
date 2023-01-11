@@ -1,5 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1RenewalSettings } from "./googlecloudchannelv1renewalsettings";
+import { GoogleCloudChannelV1RenewalSettingsInput } from "./googlecloudchannelv1renewalsettings";
 
 
 
@@ -25,5 +26,5 @@ export class GoogleCloudChannelV1CommitmentSettings extends SpeakeasyBase {
 **/
 export class GoogleCloudChannelV1CommitmentSettingsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=renewalSettings" })
-  renewalSettings?: GoogleCloudChannelV1RenewalSettings;
+  renewalSettings?: GoogleCloudChannelV1RenewalSettingsInput;
 }

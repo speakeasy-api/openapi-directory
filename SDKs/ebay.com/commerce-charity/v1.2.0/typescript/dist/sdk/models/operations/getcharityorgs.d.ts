@@ -7,7 +7,7 @@ export declare class GetCharityOrgsQueryParams extends SpeakeasyBase {
     registrationIds?: string;
 }
 export declare class GetCharityOrgsHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class GetCharityOrgsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// UserPasswordInput
-/**
- * The username/password for a database user. Used for specifying initial users at cluster creation time.
-**/
-var UserPasswordInput = /** @class */ (function (_super) {
-    __extends(UserPasswordInput, _super);
-    function UserPasswordInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
-        __metadata("design:type", String)
-    ], UserPasswordInput.prototype, "password", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", String)
-    ], UserPasswordInput.prototype, "user", void 0);
-    return UserPasswordInput;
-}(SpeakeasyBase));
-export { UserPasswordInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserPasswordInput = exports.UserPassword = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserPassword
 /**
  * The username/password for a database user. Used for specifying initial users at cluster creation time.
@@ -53,17 +36,37 @@ var UserPassword = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], UserPassword.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordSet" }),
         __metadata("design:type", Boolean)
     ], UserPassword.prototype, "passwordSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], UserPassword.prototype, "user", void 0);
     return UserPassword;
-}(SpeakeasyBase));
-export { UserPassword };
+}(utils_1.SpeakeasyBase));
+exports.UserPassword = UserPassword;
+// UserPasswordInput
+/**
+ * The username/password for a database user. Used for specifying initial users at cluster creation time.
+**/
+var UserPasswordInput = /** @class */ (function (_super) {
+    __extends(UserPasswordInput, _super);
+    function UserPasswordInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
+        __metadata("design:type", String)
+    ], UserPasswordInput.prototype, "password", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", String)
+    ], UserPasswordInput.prototype, "user", void 0);
+    return UserPasswordInput;
+}(utils_1.SpeakeasyBase));
+exports.UserPasswordInput = UserPasswordInput;

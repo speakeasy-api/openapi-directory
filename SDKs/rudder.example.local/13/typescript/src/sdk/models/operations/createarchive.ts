@@ -66,5 +66,5 @@ export class CreateArchiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createArchive200ApplicationJsonObject?: CreateArchive200ApplicationJson;
+  createArchive200ApplicationJSONObject?: CreateArchive200ApplicationJson;
 }

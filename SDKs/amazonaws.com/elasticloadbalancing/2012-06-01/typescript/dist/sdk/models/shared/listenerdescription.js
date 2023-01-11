@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Listener } from "./listener";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListenerDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var listener_1 = require("./listener");
 // ListenerDescription
 /**
  * The policies enabled for a listener.
@@ -34,13 +37,13 @@ var ListenerDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Listener)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", listener_1.Listener)
     ], ListenerDescription.prototype, "listener", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ListenerDescription.prototype, "policyNames", void 0);
     return ListenerDescription;
-}(SpeakeasyBase));
-export { ListenerDescription };
+}(utils_1.SpeakeasyBase));
+exports.ListenerDescription = ListenerDescription;

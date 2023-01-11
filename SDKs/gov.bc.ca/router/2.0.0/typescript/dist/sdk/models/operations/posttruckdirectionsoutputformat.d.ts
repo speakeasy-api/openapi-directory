@@ -21,7 +21,7 @@ export declare class PostTruckDirectionsOutputFormatQueryParams extends Speakeas
     departure?: Date;
     disable?: string;
     distanceUnit?: PostTruckDirectionsOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

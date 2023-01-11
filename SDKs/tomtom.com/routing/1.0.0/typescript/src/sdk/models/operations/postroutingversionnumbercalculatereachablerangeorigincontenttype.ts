@@ -14,11 +14,6 @@ export class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypePat
   versionNumber: number;
 }
 
-export enum PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum {
-    Combustion = "combustion",
-    Electric = "electric"
-}
-
 
 export class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=accelerationEfficiency" })
@@ -91,7 +86,7 @@ export class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeQue
   vehicleCommercial?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vehicleEngineType" })
-  vehicleEngineType?: PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
+  vehicleEngineType?: shared.DownhillEfficiencyEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vehicleHeight" })
   vehicleHeight?: number;
@@ -118,7 +113,7 @@ export class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeQue
 
 export class PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   calculateReachableRangePostDataParameters?: shared.CalculateReachableRangePostDataParameters;

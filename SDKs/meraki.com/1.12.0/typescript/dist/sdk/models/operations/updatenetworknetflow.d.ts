@@ -16,5 +16,5 @@ export declare class UpdateNetworkNetflowRequest extends SpeakeasyBase {
 export declare class UpdateNetworkNetflowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkNetflow200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkNetflow200ApplicationJSONObject?: Record<string, any>;
 }

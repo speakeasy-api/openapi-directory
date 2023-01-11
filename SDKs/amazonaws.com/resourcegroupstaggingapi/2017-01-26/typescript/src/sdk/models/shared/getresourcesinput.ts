@@ -14,7 +14,7 @@ export class GetResourcesInput extends SpeakeasyBase {
   paginationToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARNList" })
-  resourceArnList?: string[];
+  resourceARNList?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=ResourceTypeFilters" })
   resourceTypeFilters?: string[];

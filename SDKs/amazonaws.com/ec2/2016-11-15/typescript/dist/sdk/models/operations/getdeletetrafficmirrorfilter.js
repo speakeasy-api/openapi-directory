@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteTrafficMirrorFilterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteTrafficMirrorFilterResponse = exports.GetDeleteTrafficMirrorFilterRequest = exports.GetDeleteTrafficMirrorFilterHeaders = exports.GetDeleteTrafficMirrorFilterQueryParams = exports.GetDeleteTrafficMirrorFilterVersionEnum = exports.GetDeleteTrafficMirrorFilterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteTrafficMirrorFilterActionEnum;
 (function (GetDeleteTrafficMirrorFilterActionEnum) {
     GetDeleteTrafficMirrorFilterActionEnum["DeleteTrafficMirrorFilter"] = "DeleteTrafficMirrorFilter";
-})(GetDeleteTrafficMirrorFilterActionEnum || (GetDeleteTrafficMirrorFilterActionEnum = {}));
-export var GetDeleteTrafficMirrorFilterVersionEnum;
+})(GetDeleteTrafficMirrorFilterActionEnum = exports.GetDeleteTrafficMirrorFilterActionEnum || (exports.GetDeleteTrafficMirrorFilterActionEnum = {}));
+var GetDeleteTrafficMirrorFilterVersionEnum;
 (function (GetDeleteTrafficMirrorFilterVersionEnum) {
     GetDeleteTrafficMirrorFilterVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteTrafficMirrorFilterVersionEnum || (GetDeleteTrafficMirrorFilterVersionEnum = {}));
+})(GetDeleteTrafficMirrorFilterVersionEnum = exports.GetDeleteTrafficMirrorFilterVersionEnum || (exports.GetDeleteTrafficMirrorFilterVersionEnum = {}));
 var GetDeleteTrafficMirrorFilterQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteTrafficMirrorFilterQueryParams, _super);
     function GetDeleteTrafficMirrorFilterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteTrafficMirrorFilterQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TrafficMirrorFilterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TrafficMirrorFilterId" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterQueryParams.prototype, "trafficMirrorFilterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterQueryParams.prototype, "version", void 0);
     return GetDeleteTrafficMirrorFilterQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteTrafficMirrorFilterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteTrafficMirrorFilterQueryParams = GetDeleteTrafficMirrorFilterQueryParams;
 var GetDeleteTrafficMirrorFilterHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteTrafficMirrorFilterHeaders, _super);
     function GetDeleteTrafficMirrorFilterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteTrafficMirrorFilterHeaders;
-}(SpeakeasyBase));
-export { GetDeleteTrafficMirrorFilterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteTrafficMirrorFilterHeaders = GetDeleteTrafficMirrorFilterHeaders;
 var GetDeleteTrafficMirrorFilterRequest = /** @class */ (function (_super) {
     __extends(GetDeleteTrafficMirrorFilterRequest, _super);
     function GetDeleteTrafficMirrorFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteTrafficMirrorFilterQueryParams)
     ], GetDeleteTrafficMirrorFilterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteTrafficMirrorFilterHeaders)
     ], GetDeleteTrafficMirrorFilterRequest.prototype, "headers", void 0);
     return GetDeleteTrafficMirrorFilterRequest;
-}(SpeakeasyBase));
-export { GetDeleteTrafficMirrorFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteTrafficMirrorFilterRequest = GetDeleteTrafficMirrorFilterRequest;
 var GetDeleteTrafficMirrorFilterResponse = /** @class */ (function (_super) {
     __extends(GetDeleteTrafficMirrorFilterResponse, _super);
     function GetDeleteTrafficMirrorFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteTrafficMirrorFilterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteTrafficMirrorFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteTrafficMirrorFilterResponse.prototype, "statusCode", void 0);
     return GetDeleteTrafficMirrorFilterResponse;
-}(SpeakeasyBase));
-export { GetDeleteTrafficMirrorFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteTrafficMirrorFilterResponse = GetDeleteTrafficMirrorFilterResponse;

@@ -76,8 +76,8 @@ export class TaxRatesByCountryCodeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  taxRatesByCountryCode200ApplicationJsonObject?: TaxRatesByCountryCode200ApplicationJson;
+  taxRatesByCountryCode200ApplicationJSONObject?: TaxRatesByCountryCode200ApplicationJson;
 
   @SpeakeasyMetadata()
-  taxRatesByCountryCode500ApplicationJsonObject?: TaxRatesByCountryCode500ApplicationJson;
+  taxRatesByCountryCode500ApplicationJSONObject?: TaxRatesByCountryCode500ApplicationJson;
 }

@@ -16,7 +16,7 @@ export class Metrics extends SpeakeasyBase {
   errorMetrics?: ErrorMetric[];
 
   @SpeakeasyMetadata({ data: "json, name=RMSE" })
-  rmse?: number;
+  rmse?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=WeightedQuantileLosses", elemType: WeightedQuantileLoss })
   weightedQuantileLosses?: WeightedQuantileLoss[];

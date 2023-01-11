@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CopyPadUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" })
-  destinationId?: string;
+  destinationID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" })
   force?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" })
-  sourceId?: string;
+  sourceID?: string;
 }
 
 
@@ -19,7 +19,7 @@ export class CopyPadUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CopyPadUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CopyPadUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CopyPadUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CopyPadUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  copyPadUsingPost200ApplicationJsonObject?: CopyPadUsingPost200ApplicationJson;
+  copyPadUsingPOST200ApplicationJSONObject?: CopyPadUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingPost400ApplicationJsonObject?: CopyPadUsingPost400ApplicationJson;
+  copyPadUsingPOST400ApplicationJSONObject?: CopyPadUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingPost401ApplicationJsonObject?: CopyPadUsingPost401ApplicationJson;
+  copyPadUsingPOST401ApplicationJSONObject?: CopyPadUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingPost500ApplicationJsonObject?: CopyPadUsingPost500ApplicationJson;
+  copyPadUsingPOST500ApplicationJSONObject?: CopyPadUsingPost500ApplicationJson;
 }

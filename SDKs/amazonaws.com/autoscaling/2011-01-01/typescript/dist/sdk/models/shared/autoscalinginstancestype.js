@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingInstanceDetails } from "./autoscalinginstancedetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoScalingInstancesType = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalinginstancedetails_1 = require("./autoscalinginstancedetails");
 var AutoScalingInstancesType = /** @class */ (function (_super) {
     __extends(AutoScalingInstancesType, _super);
     function AutoScalingInstancesType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AutoScalingInstanceDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: autoscalinginstancedetails_1.AutoScalingInstanceDetails }),
         __metadata("design:type", Array)
     ], AutoScalingInstancesType.prototype, "autoScalingInstances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AutoScalingInstancesType.prototype, "nextToken", void 0);
     return AutoScalingInstancesType;
-}(SpeakeasyBase));
-export { AutoScalingInstancesType };
+}(utils_1.SpeakeasyBase));
+exports.AutoScalingInstancesType = AutoScalingInstancesType;

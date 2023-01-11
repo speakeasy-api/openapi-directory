@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostConfigApacheSlingGetServletResponse = exports.PostConfigApacheSlingGetServletRequest = exports.PostConfigApacheSlingGetServletQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostConfigApacheSlingGetServletQueryParams = /** @class */ (function (_super) {
     __extends(PostConfigApacheSlingGetServletQueryParams, _super);
     function PostConfigApacheSlingGetServletQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.html" }),
         __metadata("design:type", Boolean)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableHtml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.html@TypeHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.html@TypeHint" }),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableHtmlAtTypeHint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.txt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.txt" }),
         __metadata("design:type", Boolean)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableTxt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.txt@TypeHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.txt@TypeHint" }),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableTxtAtTypeHint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.xml" }),
         __metadata("design:type", Boolean)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableXml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enable.xml@TypeHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enable.xml@TypeHint" }),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "enableXmlAtTypeHint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=json.maximumresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=json.maximumresults" }),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "jsonMaximumresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=json.maximumresults@TypeHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=json.maximumresults@TypeHint" }),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletQueryParams.prototype, "jsonMaximumresultsAtTypeHint", void 0);
     return PostConfigApacheSlingGetServletQueryParams;
-}(SpeakeasyBase));
-export { PostConfigApacheSlingGetServletQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigApacheSlingGetServletQueryParams = PostConfigApacheSlingGetServletQueryParams;
 var PostConfigApacheSlingGetServletRequest = /** @class */ (function (_super) {
     __extends(PostConfigApacheSlingGetServletRequest, _super);
     function PostConfigApacheSlingGetServletRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostConfigApacheSlingGetServletQueryParams)
     ], PostConfigApacheSlingGetServletRequest.prototype, "queryParams", void 0);
     return PostConfigApacheSlingGetServletRequest;
-}(SpeakeasyBase));
-export { PostConfigApacheSlingGetServletRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigApacheSlingGetServletRequest = PostConfigApacheSlingGetServletRequest;
 var PostConfigApacheSlingGetServletResponse = /** @class */ (function (_super) {
     __extends(PostConfigApacheSlingGetServletResponse, _super);
     function PostConfigApacheSlingGetServletResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostConfigApacheSlingGetServletResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostConfigApacheSlingGetServletResponse.prototype, "statusCode", void 0);
     return PostConfigApacheSlingGetServletResponse;
-}(SpeakeasyBase));
-export { PostConfigApacheSlingGetServletResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigApacheSlingGetServletResponse = PostConfigApacheSlingGetServletResponse;

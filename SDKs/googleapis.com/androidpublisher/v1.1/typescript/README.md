@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AndroidpublisherInapppurchasesGetRequest, AndroidpublisherInapppurchasesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: AndroidpublisherInapppurchasesGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    packageName: "omnis",
-    productId: "enim",
-    token: "aspernatur",
+    packageName: "sit",
+    productId: "voluptas",
+    token: "culpa",
   },
   queryParams: {
     alt: "json",
-    fields: "blanditiis",
-    key: "perferendis",
-    oauthToken: "voluptas",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "facilis",
-    userIp: "explicabo",
+    quotaUser: "fugit",
+    userIp: "et",
   },
 };
 

@@ -17,7 +17,7 @@ export class ProtocolSyslogGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolSyslogGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configSyslog?: shared.ConfigSyslog;
+  configSYSLOG?: shared.ConfigSyslog;
 
   @SpeakeasyMetadata()
   contentType: string;

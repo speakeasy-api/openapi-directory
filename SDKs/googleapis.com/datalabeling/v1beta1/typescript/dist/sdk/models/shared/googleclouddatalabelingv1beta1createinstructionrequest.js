@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1Instruction } from "./googleclouddatalabelingv1beta1instruction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1CreateInstructionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1instruction_1 = require("./googleclouddatalabelingv1beta1instruction");
 // GoogleCloudDatalabelingV1beta1CreateInstructionRequest
 /**
  * Request message for CreateInstruction.
@@ -34,9 +37,9 @@ var GoogleCloudDatalabelingV1beta1CreateInstructionRequest = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instruction" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1Instruction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instruction" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1instruction_1.GoogleCloudDatalabelingV1beta1Instruction)
     ], GoogleCloudDatalabelingV1beta1CreateInstructionRequest.prototype, "instruction", void 0);
     return GoogleCloudDatalabelingV1beta1CreateInstructionRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1CreateInstructionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1CreateInstructionRequest = GoogleCloudDatalabelingV1beta1CreateInstructionRequest;

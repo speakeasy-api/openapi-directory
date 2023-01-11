@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FantasyDefenseSeasonStatsByTeamFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FantasyDefenseSeasonStatsByTeamResponse = exports.FantasyDefenseSeasonStatsByTeamRequest = exports.FantasyDefenseSeasonStatsByTeamPathParams = exports.FantasyDefenseSeasonStatsByTeamFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FantasyDefenseSeasonStatsByTeamFormatEnum;
 (function (FantasyDefenseSeasonStatsByTeamFormatEnum) {
     FantasyDefenseSeasonStatsByTeamFormatEnum["Xml"] = "XML";
     FantasyDefenseSeasonStatsByTeamFormatEnum["Json"] = "JSON";
-})(FantasyDefenseSeasonStatsByTeamFormatEnum || (FantasyDefenseSeasonStatsByTeamFormatEnum = {}));
+})(FantasyDefenseSeasonStatsByTeamFormatEnum = exports.FantasyDefenseSeasonStatsByTeamFormatEnum || (exports.FantasyDefenseSeasonStatsByTeamFormatEnum = {}));
 var FantasyDefenseSeasonStatsByTeamPathParams = /** @class */ (function (_super) {
     __extends(FantasyDefenseSeasonStatsByTeamPathParams, _super);
     function FantasyDefenseSeasonStatsByTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], FantasyDefenseSeasonStatsByTeamPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], FantasyDefenseSeasonStatsByTeamPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team" }),
         __metadata("design:type", String)
     ], FantasyDefenseSeasonStatsByTeamPathParams.prototype, "team", void 0);
     return FantasyDefenseSeasonStatsByTeamPathParams;
-}(SpeakeasyBase));
-export { FantasyDefenseSeasonStatsByTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FantasyDefenseSeasonStatsByTeamPathParams = FantasyDefenseSeasonStatsByTeamPathParams;
 var FantasyDefenseSeasonStatsByTeamRequest = /** @class */ (function (_super) {
     __extends(FantasyDefenseSeasonStatsByTeamRequest, _super);
     function FantasyDefenseSeasonStatsByTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FantasyDefenseSeasonStatsByTeamPathParams)
     ], FantasyDefenseSeasonStatsByTeamRequest.prototype, "pathParams", void 0);
     return FantasyDefenseSeasonStatsByTeamRequest;
-}(SpeakeasyBase));
-export { FantasyDefenseSeasonStatsByTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.FantasyDefenseSeasonStatsByTeamRequest = FantasyDefenseSeasonStatsByTeamRequest;
 var FantasyDefenseSeasonStatsByTeamResponse = /** @class */ (function (_super) {
     __extends(FantasyDefenseSeasonStatsByTeamResponse, _super);
     function FantasyDefenseSeasonStatsByTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FantasyDefenseSeasonStatsByTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FantasyDefenseSeasonStatsByTeamResponse.prototype, "fantasyDefenseSeason", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FantasyDefenseSeasonStatsByTeamResponse.prototype, "statusCode", void 0);
     return FantasyDefenseSeasonStatsByTeamResponse;
-}(SpeakeasyBase));
-export { FantasyDefenseSeasonStatsByTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.FantasyDefenseSeasonStatsByTeamResponse = FantasyDefenseSeasonStatsByTeamResponse;

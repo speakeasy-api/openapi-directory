@@ -20,7 +20,7 @@ export declare class DeleteTableRequest extends SpeakeasyBase {
 export declare class DeleteTableResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteTableResponse?: Map<string, any>;
+    deleteTableResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

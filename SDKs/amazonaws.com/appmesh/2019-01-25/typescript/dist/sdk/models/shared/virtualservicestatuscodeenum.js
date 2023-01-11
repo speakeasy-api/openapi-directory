@@ -1,6 +1,9 @@
-export var VirtualServiceStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualServiceStatusCodeEnum = void 0;
+var VirtualServiceStatusCodeEnum;
 (function (VirtualServiceStatusCodeEnum) {
     VirtualServiceStatusCodeEnum["Active"] = "ACTIVE";
     VirtualServiceStatusCodeEnum["Inactive"] = "INACTIVE";
     VirtualServiceStatusCodeEnum["Deleted"] = "DELETED";
-})(VirtualServiceStatusCodeEnum || (VirtualServiceStatusCodeEnum = {}));
+})(VirtualServiceStatusCodeEnum = exports.VirtualServiceStatusCodeEnum || (exports.VirtualServiceStatusCodeEnum = {}));

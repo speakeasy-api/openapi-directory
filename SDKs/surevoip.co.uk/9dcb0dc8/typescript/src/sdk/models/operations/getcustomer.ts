@@ -70,5 +70,5 @@ export class GetCustomerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCustomer200ApplicationJsonObject?: GetCustomer200ApplicationJson;
+  getCustomer200ApplicationJSONObject?: GetCustomer200ApplicationJson;
 }

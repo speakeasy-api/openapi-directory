@@ -197,23 +197,23 @@ export class SkmstResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  skmst400ApplicationJsonObject?: Skmst400ApplicationJson;
+  skmst400ApplicationJSONObject?: Skmst400ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst401ApplicationJsonObject?: Skmst401ApplicationJson;
+  skmst401ApplicationJSONObject?: Skmst401ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst404ApplicationJsonObject?: Skmst404ApplicationJson;
+  skmst404ApplicationJSONObject?: Skmst404ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst500ApplicationJsonObject?: Skmst500ApplicationJson;
+  skmst500ApplicationJSONObject?: Skmst500ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst502ApplicationJsonObject?: Skmst502ApplicationJson;
+  skmst502ApplicationJSONObject?: Skmst502ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst503ApplicationJsonObject?: Skmst503ApplicationJson;
+  skmst503ApplicationJSONObject?: Skmst503ApplicationJson;
 
   @SpeakeasyMetadata()
-  skmst504ApplicationJsonObject?: Skmst504ApplicationJson;
+  skmst504ApplicationJSONObject?: Skmst504ApplicationJson;
 }

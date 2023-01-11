@@ -15,6 +15,7 @@ export declare class AppPkgIdGetRequest extends SpeakeasyBase {
     queryParams: AppPkgIdGetQueryParams;
 }
 export declare class AppPkgIdGetResponse extends SpeakeasyBase {
+    appD?: string;
     body?: Uint8Array;
     contentType: string;
     problemDetails?: shared.ProblemDetails;

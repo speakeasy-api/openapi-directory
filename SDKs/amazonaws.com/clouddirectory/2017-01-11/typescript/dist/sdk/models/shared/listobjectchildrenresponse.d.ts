@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListObjectChildrenResponse extends SpeakeasyBase {
-    children?: Map<string, string>;
+    children?: Record<string, string>;
     nextToken?: string;
 }

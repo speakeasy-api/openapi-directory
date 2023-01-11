@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyParameter } from "./policyparameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReviewPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var policyparameter_1 = require("./policyparameter");
 // ReviewPolicy
 /**
  *  HIT Review Policy data structures represent HIT review policies, which you specify when you create a HIT.
@@ -34,13 +37,13 @@ var ReviewPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters", elemType: PolicyParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters", elemType: policyparameter_1.PolicyParameter }),
         __metadata("design:type", Array)
     ], ReviewPolicy.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyName" }),
         __metadata("design:type", String)
     ], ReviewPolicy.prototype, "policyName", void 0);
     return ReviewPolicy;
-}(SpeakeasyBase));
-export { ReviewPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ReviewPolicy = ReviewPolicy;

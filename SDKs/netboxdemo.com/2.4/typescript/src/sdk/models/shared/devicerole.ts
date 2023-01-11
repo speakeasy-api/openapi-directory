@@ -2,9 +2,12 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class DeviceRoleInput extends SpeakeasyBase {
+export class DeviceRole extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color: string;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: number;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -17,12 +20,9 @@ export class DeviceRoleInput extends SpeakeasyBase {
 }
 
 
-export class DeviceRole extends SpeakeasyBase {
+export class DeviceRoleInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color: string;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: number;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

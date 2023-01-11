@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class CallbackCompletionBatchRequest extends SpeakeasyBase {
     callbackId: string;
-    outputFields: Map<string, string>;
+    outputFields: Record<string, string>;
 }

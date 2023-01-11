@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,95 +23,97 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FindTheRelativesOfAnEntityRelationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindTheRelativesOfAnEntityResponse = exports.FindTheRelativesOfAnEntityRequest = exports.FindTheRelativesOfAnEntityHeaders = exports.FindTheRelativesOfAnEntityQueryParams = exports.FindTheRelativesOfAnEntityPathParams = exports.FindTheRelativesOfAnEntityRelationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FindTheRelativesOfAnEntityRelationEnum;
 (function (FindTheRelativesOfAnEntityRelationEnum) {
     FindTheRelativesOfAnEntityRelationEnum["Parent"] = "parent";
     FindTheRelativesOfAnEntityRelationEnum["Child"] = "child";
     FindTheRelativesOfAnEntityRelationEnum["Sibling"] = "sibling";
     FindTheRelativesOfAnEntityRelationEnum["Peer"] = "peer";
-})(FindTheRelativesOfAnEntityRelationEnum || (FindTheRelativesOfAnEntityRelationEnum = {}));
+})(FindTheRelativesOfAnEntityRelationEnum = exports.FindTheRelativesOfAnEntityRelationEnum || (exports.FindTheRelativesOfAnEntityRelationEnum = {}));
 var FindTheRelativesOfAnEntityPathParams = /** @class */ (function (_super) {
     __extends(FindTheRelativesOfAnEntityPathParams, _super);
     function FindTheRelativesOfAnEntityPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=relation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=relation" }),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityPathParams.prototype, "relation", void 0);
     return FindTheRelativesOfAnEntityPathParams;
-}(SpeakeasyBase));
-export { FindTheRelativesOfAnEntityPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FindTheRelativesOfAnEntityPathParams = FindTheRelativesOfAnEntityPathParams;
 var FindTheRelativesOfAnEntityQueryParams = /** @class */ (function (_super) {
     __extends(FindTheRelativesOfAnEntityQueryParams, _super);
     function FindTheRelativesOfAnEntityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityQueryParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], FindTheRelativesOfAnEntityQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=variable_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=variable_id" }),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityQueryParams.prototype, "variableId", void 0);
     return FindTheRelativesOfAnEntityQueryParams;
-}(SpeakeasyBase));
-export { FindTheRelativesOfAnEntityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FindTheRelativesOfAnEntityQueryParams = FindTheRelativesOfAnEntityQueryParams;
 var FindTheRelativesOfAnEntityHeaders = /** @class */ (function (_super) {
     __extends(FindTheRelativesOfAnEntityHeaders, _super);
     function FindTheRelativesOfAnEntityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityHeaders.prototype, "xAppToken", void 0);
     return FindTheRelativesOfAnEntityHeaders;
-}(SpeakeasyBase));
-export { FindTheRelativesOfAnEntityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.FindTheRelativesOfAnEntityHeaders = FindTheRelativesOfAnEntityHeaders;
 var FindTheRelativesOfAnEntityRequest = /** @class */ (function (_super) {
     __extends(FindTheRelativesOfAnEntityRequest, _super);
     function FindTheRelativesOfAnEntityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindTheRelativesOfAnEntityPathParams)
     ], FindTheRelativesOfAnEntityRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindTheRelativesOfAnEntityQueryParams)
     ], FindTheRelativesOfAnEntityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindTheRelativesOfAnEntityHeaders)
     ], FindTheRelativesOfAnEntityRequest.prototype, "headers", void 0);
     return FindTheRelativesOfAnEntityRequest;
-}(SpeakeasyBase));
-export { FindTheRelativesOfAnEntityRequest };
+}(utils_1.SpeakeasyBase));
+exports.FindTheRelativesOfAnEntityRequest = FindTheRelativesOfAnEntityRequest;
 var FindTheRelativesOfAnEntityResponse = /** @class */ (function (_super) {
     __extends(FindTheRelativesOfAnEntityResponse, _super);
     function FindTheRelativesOfAnEntityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FindTheRelativesOfAnEntityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FindTheRelativesOfAnEntityResponse.prototype, "statusCode", void 0);
     return FindTheRelativesOfAnEntityResponse;
-}(SpeakeasyBase));
-export { FindTheRelativesOfAnEntityResponse };
+}(utils_1.SpeakeasyBase));
+exports.FindTheRelativesOfAnEntityResponse = FindTheRelativesOfAnEntityResponse;

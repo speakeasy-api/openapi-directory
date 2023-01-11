@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Asset } from "./asset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserAsset = void 0;
+var utils_1 = require("../../../internal/utils");
+var asset_1 = require("./asset");
 // UserAsset
 /**
  * Data about the user's asset.
@@ -34,9 +37,9 @@ var UserAsset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset" }),
-        __metadata("design:type", Asset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset" }),
+        __metadata("design:type", asset_1.Asset)
     ], UserAsset.prototype, "asset", void 0);
     return UserAsset;
-}(SpeakeasyBase));
-export { UserAsset };
+}(utils_1.SpeakeasyBase));
+exports.UserAsset = UserAsset;

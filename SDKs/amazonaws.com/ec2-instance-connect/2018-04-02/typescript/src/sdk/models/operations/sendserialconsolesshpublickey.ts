@@ -60,7 +60,7 @@ export class SendSerialConsoleSshPublicKeyResponse extends SpeakeasyBase {
   invalidArgsException?: any;
 
   @SpeakeasyMetadata()
-  sendSerialConsoleSshPublicKeyResponse?: shared.SendSerialConsoleSshPublicKeyResponse;
+  sendSerialConsoleSSHPublicKeyResponse?: shared.SendSerialConsoleSshPublicKeyResponse;
 
   @SpeakeasyMetadata()
   serialConsoleAccessDisabledException?: any;

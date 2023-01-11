@@ -230,5 +230,5 @@ export class CircuitsCircuitsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  circuitsCircuitsList200ApplicationJsonObject?: CircuitsCircuitsList200ApplicationJson;
+  circuitsCircuitsList200ApplicationJSONObject?: CircuitsCircuitsList200ApplicationJson;
 }

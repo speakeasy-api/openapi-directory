@@ -3,11 +3,11 @@ import { ErrorParameter } from "./errorparameter";
 
 
 
-// Error
+// ErrorT
 /** 
  * This type contains a error or warning related to a call request.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=category" })
   category?: string;
 

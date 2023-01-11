@@ -36,6 +36,10 @@ export enum InstallationRepositorySelectionEnum {
 }
 
 
+// InstallationSimpleUser
+/** 
+ * Simple User
+**/
 export class InstallationSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

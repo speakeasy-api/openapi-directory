@@ -17,5 +17,5 @@ export declare class ContactsRemoveRequest extends SpeakeasyBase {
 export declare class ContactsRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    contactsRemove200ApplicationJsonObject?: ContactsRemove200ApplicationJson;
+    contactsRemove200ApplicationJSONObject?: ContactsRemove200ApplicationJson;
 }

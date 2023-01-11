@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTrainedModelsResponse = exports.GetTrainedModelsRequest = exports.GetTrainedModelsSecurity = exports.GetTrainedModelsQueryParams = exports.GetTrainedModelsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTrainedModelsPathParams = /** @class */ (function (_super) {
     __extends(GetTrainedModelsPathParams, _super);
     function GetTrainedModelsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=datasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=datasetId" }),
         __metadata("design:type", String)
     ], GetTrainedModelsPathParams.prototype, "datasetId", void 0);
     return GetTrainedModelsPathParams;
-}(SpeakeasyBase));
-export { GetTrainedModelsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTrainedModelsPathParams = GetTrainedModelsPathParams;
 var GetTrainedModelsQueryParams = /** @class */ (function (_super) {
     __extends(GetTrainedModelsQueryParams, _super);
     function GetTrainedModelsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=count" }),
         __metadata("design:type", String)
     ], GetTrainedModelsQueryParams.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], GetTrainedModelsQueryParams.prototype, "offset", void 0);
     return GetTrainedModelsQueryParams;
-}(SpeakeasyBase));
-export { GetTrainedModelsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTrainedModelsQueryParams = GetTrainedModelsQueryParams;
 var GetTrainedModelsSecurity = /** @class */ (function (_super) {
     __extends(GetTrainedModelsSecurity, _super);
     function GetTrainedModelsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", shared.SchemeBearerToken)
     ], GetTrainedModelsSecurity.prototype, "bearerToken", void 0);
     return GetTrainedModelsSecurity;
-}(SpeakeasyBase));
-export { GetTrainedModelsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetTrainedModelsSecurity = GetTrainedModelsSecurity;
 var GetTrainedModelsRequest = /** @class */ (function (_super) {
     __extends(GetTrainedModelsRequest, _super);
     function GetTrainedModelsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTrainedModelsPathParams)
     ], GetTrainedModelsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTrainedModelsQueryParams)
     ], GetTrainedModelsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTrainedModelsSecurity)
     ], GetTrainedModelsRequest.prototype, "security", void 0);
     return GetTrainedModelsRequest;
-}(SpeakeasyBase));
-export { GetTrainedModelsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTrainedModelsRequest = GetTrainedModelsRequest;
 var GetTrainedModelsResponse = /** @class */ (function (_super) {
     __extends(GetTrainedModelsResponse, _super);
     function GetTrainedModelsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTrainedModelsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ModelList)
     ], GetTrainedModelsResponse.prototype, "modelList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTrainedModelsResponse.prototype, "statusCode", void 0);
     return GetTrainedModelsResponse;
-}(SpeakeasyBase));
-export { GetTrainedModelsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTrainedModelsResponse = GetTrainedModelsResponse;

@@ -48,7 +48,7 @@ export class GistSimple extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: GistSimpleFiles })
-  files?: Map<string, GistSimpleFiles>;
+  files?: Record<string, GistSimpleFiles>;
 
   @SpeakeasyMetadata({ data: "json, name=forks_url" })
   forksUrl?: string;

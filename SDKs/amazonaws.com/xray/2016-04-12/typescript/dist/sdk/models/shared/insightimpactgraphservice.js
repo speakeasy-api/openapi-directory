@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightImpactGraphEdge } from "./insightimpactgraphedge";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightImpactGraphService = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightimpactgraphedge_1 = require("./insightimpactgraphedge");
 // InsightImpactGraphService
 /**
  * Information about an application that processed requests, users that made requests, or downstream services, resources, and applications that an application used.
@@ -34,29 +37,29 @@ var InsightImpactGraphService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], InsightImpactGraphService.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Edges", elemType: InsightImpactGraphEdge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Edges", elemType: insightimpactgraphedge_1.InsightImpactGraphEdge }),
         __metadata("design:type", Array)
     ], InsightImpactGraphService.prototype, "edges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], InsightImpactGraphService.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Names" }),
         __metadata("design:type", Array)
     ], InsightImpactGraphService.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", Number)
     ], InsightImpactGraphService.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], InsightImpactGraphService.prototype, "type", void 0);
     return InsightImpactGraphService;
-}(SpeakeasyBase));
-export { InsightImpactGraphService };
+}(utils_1.SpeakeasyBase));
+exports.InsightImpactGraphService = InsightImpactGraphService;

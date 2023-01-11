@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBundlesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBundlesRequest = /** @class */ (function (_super) {
     __extends(GetBundlesRequest, _super);
     function GetBundlesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeInactive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeInactive" }),
         __metadata("design:type", Boolean)
     ], GetBundlesRequest.prototype, "includeInactive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], GetBundlesRequest.prototype, "pageToken", void 0);
     return GetBundlesRequest;
-}(SpeakeasyBase));
-export { GetBundlesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBundlesRequest = GetBundlesRequest;

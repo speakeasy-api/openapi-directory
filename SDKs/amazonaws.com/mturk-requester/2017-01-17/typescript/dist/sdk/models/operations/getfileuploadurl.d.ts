@@ -19,7 +19,7 @@ export declare class GetFileUploadUrlRequest extends SpeakeasyBase {
 }
 export declare class GetFileUploadUrlResponse extends SpeakeasyBase {
     contentType: string;
-    getFileUploadUrlResponse?: shared.GetFileUploadUrlResponse;
+    getFileUploadURLResponse?: shared.GetFileUploadUrlResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

@@ -18,7 +18,7 @@ export declare class DeregisterJobDefinitionRequest extends SpeakeasyBase {
 export declare class DeregisterJobDefinitionResponse extends SpeakeasyBase {
     clientException?: any;
     contentType: string;
-    deregisterJobDefinitionResponse?: Map<string, any>;
+    deregisterJobDefinitionResponse?: Record<string, any>;
     serverException?: any;
     statusCode: number;
 }

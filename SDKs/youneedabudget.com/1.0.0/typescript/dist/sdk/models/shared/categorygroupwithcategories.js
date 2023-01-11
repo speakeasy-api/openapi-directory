@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryGroupWithCategories = void 0;
+var utils_1 = require("../../../internal/utils");
+var category_1 = require("./category");
 var CategoryGroupWithCategories = /** @class */ (function (_super) {
     __extends(CategoryGroupWithCategories, _super);
     function CategoryGroupWithCategories() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories", elemType: Category }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: category_1.Category }),
         __metadata("design:type", Array)
     ], CategoryGroupWithCategories.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], CategoryGroupWithCategories.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], CategoryGroupWithCategories.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CategoryGroupWithCategories.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CategoryGroupWithCategories.prototype, "name", void 0);
     return CategoryGroupWithCategories;
-}(SpeakeasyBase));
-export { CategoryGroupWithCategories };
+}(utils_1.SpeakeasyBase));
+exports.CategoryGroupWithCategories = CategoryGroupWithCategories;

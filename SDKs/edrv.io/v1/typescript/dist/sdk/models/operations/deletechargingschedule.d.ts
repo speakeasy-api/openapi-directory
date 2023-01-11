@@ -3,7 +3,7 @@ export declare class DeletechargingscheduleRequestBody extends SpeakeasyBase {
     id?: string;
 }
 export declare class Deletechargingschedule201ApplicationJson extends SpeakeasyBase {
-    command?: Map<string, any>;
+    command?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
@@ -13,5 +13,5 @@ export declare class DeletechargingscheduleRequest extends SpeakeasyBase {
 export declare class DeletechargingscheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deletechargingschedule201ApplicationJsonObject?: Deletechargingschedule201ApplicationJson;
+    deletechargingschedule201ApplicationJSONObject?: Deletechargingschedule201ApplicationJson;
 }

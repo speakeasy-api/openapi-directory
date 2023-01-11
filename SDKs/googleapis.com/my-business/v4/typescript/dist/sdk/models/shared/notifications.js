@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NotificationsNotificationTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Notifications = exports.NotificationsNotificationTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NotificationsNotificationTypesEnum;
 (function (NotificationsNotificationTypesEnum) {
     NotificationsNotificationTypesEnum["NotificationTypeUnspecified"] = "NOTIFICATION_TYPE_UNSPECIFIED";
     NotificationsNotificationTypesEnum["GoogleUpdate"] = "GOOGLE_UPDATE";
@@ -35,7 +38,7 @@ export var NotificationsNotificationTypesEnum;
     NotificationsNotificationTypesEnum["NewAnswer"] = "NEW_ANSWER";
     NotificationsNotificationTypesEnum["UpdatedAnswer"] = "UPDATED_ANSWER";
     NotificationsNotificationTypesEnum["UpdatedLocationState"] = "UPDATED_LOCATION_STATE";
-})(NotificationsNotificationTypesEnum || (NotificationsNotificationTypesEnum = {}));
+})(NotificationsNotificationTypesEnum = exports.NotificationsNotificationTypesEnum || (exports.NotificationsNotificationTypesEnum = {}));
 // Notifications
 /**
  * A Google Cloud Pub/Sub topic where notifications can be published when a location is updated or has a new review. There will be only one notification settings resource per-account.
@@ -46,17 +49,17 @@ var Notifications = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Notifications.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationTypes" }),
         __metadata("design:type", Array)
     ], Notifications.prototype, "notificationTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicName" }),
         __metadata("design:type", String)
     ], Notifications.prototype, "topicName", void 0);
     return Notifications;
-}(SpeakeasyBase));
-export { Notifications };
+}(utils_1.SpeakeasyBase));
+exports.Notifications = Notifications;

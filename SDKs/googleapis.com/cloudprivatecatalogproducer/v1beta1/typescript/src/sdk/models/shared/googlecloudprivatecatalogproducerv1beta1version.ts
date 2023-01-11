@@ -9,7 +9,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudPrivatecatalogproducerV1beta1Version extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=asset" })
-  asset?: Map<string, any>;
+  asset?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -21,7 +21,7 @@ export class GoogleCloudPrivatecatalogproducerV1beta1Version extends SpeakeasyBa
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=originalAsset" })
-  originalAsset?: Map<string, any>;
+  originalAsset?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;

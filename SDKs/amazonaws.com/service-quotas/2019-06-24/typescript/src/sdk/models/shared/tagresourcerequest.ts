@@ -5,7 +5,7 @@ import { Tag } from "./tag";
 
 export class TagResourceRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag })
   tags: Tag[];

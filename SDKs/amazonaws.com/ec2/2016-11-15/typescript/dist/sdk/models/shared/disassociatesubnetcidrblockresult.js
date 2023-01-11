@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubnetIpv6CidrBlockAssociation } from "./subnetipv6cidrblockassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateSubnetCidrBlockResult = exports.DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation = exports.DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = void 0;
+var utils_1 = require("../../../internal/utils");
+// DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState
+/**
+ * Information about the state of the CIDR block.
+**/
+var DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = /** @class */ (function (_super) {
+    __extends(DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState, _super);
+    function DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState.prototype, "statusMessage", void 0);
+    return DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState;
+}(utils_1.SpeakeasyBase));
+exports.DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState = DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState;
+// DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation
+/**
+ * Information about the IPv6 CIDR block association.
+**/
+var DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation = /** @class */ (function (_super) {
+    __extends(DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation, _super);
+    function DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation.prototype, "associationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation.prototype, "ipv6CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState)
+    ], DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation.prototype, "ipv6CidrBlockState", void 0);
+    return DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation;
+}(utils_1.SpeakeasyBase));
+exports.DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation = DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation;
 var DisassociateSubnetCidrBlockResult = /** @class */ (function (_super) {
     __extends(DisassociateSubnetCidrBlockResult, _super);
     function DisassociateSubnetCidrBlockResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SubnetIpv6CidrBlockAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation)
     ], DisassociateSubnetCidrBlockResult.prototype, "ipv6CidrBlockAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DisassociateSubnetCidrBlockResult.prototype, "subnetId", void 0);
     return DisassociateSubnetCidrBlockResult;
-}(SpeakeasyBase));
-export { DisassociateSubnetCidrBlockResult };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateSubnetCidrBlockResult = DisassociateSubnetCidrBlockResult;

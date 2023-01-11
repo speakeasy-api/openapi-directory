@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConferenceSolutionKey } from "./conferencesolutionkey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConferenceSolution = void 0;
+var utils_1 = require("../../../internal/utils");
+var conferencesolutionkey_1 = require("./conferencesolutionkey");
 var ConferenceSolution = /** @class */ (function (_super) {
     __extends(ConferenceSolution, _super);
     function ConferenceSolution() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconUri" }),
         __metadata("design:type", String)
     ], ConferenceSolution.prototype, "iconUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
-        __metadata("design:type", ConferenceSolutionKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", conferencesolutionkey_1.ConferenceSolutionKey)
     ], ConferenceSolution.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConferenceSolution.prototype, "name", void 0);
     return ConferenceSolution;
-}(SpeakeasyBase));
-export { ConferenceSolution };
+}(utils_1.SpeakeasyBase));
+exports.ConferenceSolution = ConferenceSolution;

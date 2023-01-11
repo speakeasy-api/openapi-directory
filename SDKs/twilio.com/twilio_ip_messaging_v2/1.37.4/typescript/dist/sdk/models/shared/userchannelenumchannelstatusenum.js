@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserChannelEnumChannelStatusEnum = void 0;
+var UserChannelEnumChannelStatusEnum;
+(function (UserChannelEnumChannelStatusEnum) {
+    UserChannelEnumChannelStatusEnum["Joined"] = "joined";
+    UserChannelEnumChannelStatusEnum["Invited"] = "invited";
+    UserChannelEnumChannelStatusEnum["NotParticipating"] = "not_participating";
+})(UserChannelEnumChannelStatusEnum = exports.UserChannelEnumChannelStatusEnum || (exports.UserChannelEnumChannelStatusEnum = {}));

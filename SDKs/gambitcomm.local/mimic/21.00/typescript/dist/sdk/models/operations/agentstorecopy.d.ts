@@ -9,5 +9,5 @@ export declare class AgentStoreCopyRequest extends SpeakeasyBase {
 export declare class AgentStoreCopyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    agentStoreCopy200ApplicationJsonString?: string;
+    agentStoreCopy200ApplicationJSONString?: string;
 }

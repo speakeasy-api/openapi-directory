@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeleteRequest } from "./deleterequest";
-import { PutRequest } from "./putrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WriteRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var deleterequest_1 = require("./deleterequest");
+var putrequest_1 = require("./putrequest");
 // WriteRequest
 /**
  * This structure is a Union of PutRequest and DeleteRequest. It can contain exactly one of <code>PutRequest</code> or <code>DeleteRequest</code>. Never Both. This is enforced in the code.
@@ -35,13 +38,13 @@ var WriteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteRequest" }),
-        __metadata("design:type", DeleteRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteRequest" }),
+        __metadata("design:type", deleterequest_1.DeleteRequest)
     ], WriteRequest.prototype, "deleteRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PutRequest" }),
-        __metadata("design:type", PutRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PutRequest" }),
+        __metadata("design:type", putrequest_1.PutRequest)
     ], WriteRequest.prototype, "putRequest", void 0);
     return WriteRequest;
-}(SpeakeasyBase));
-export { WriteRequest };
+}(utils_1.SpeakeasyBase));
+exports.WriteRequest = WriteRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Process } from "./process";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Project = void 0;
+var utils_1 = require("../../../internal/utils");
+var process_1 = require("./process");
 var Project = /** @class */ (function (_super) {
     __extends(Project, _super);
     function Project() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Project.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_id" }),
         __metadata("design:type", String)
     ], Project.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Project.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paypal_payment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paypal_payment_id" }),
         __metadata("design:type", String)
     ], Project.prototype, "paypalPaymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=process" }),
-        __metadata("design:type", Process)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=process" }),
+        __metadata("design:type", process_1.Process)
     ], Project.prototype, "process", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=process_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=process_id" }),
         __metadata("design:type", String)
     ], Project.prototype, "processId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_number" }),
         __metadata("design:type", Number)
     ], Project.prototype, "projectNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_title" }),
         __metadata("design:type", String)
     ], Project.prototype, "projectTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_file_id" }),
         __metadata("design:type", String)
     ], Project.prototype, "resultFileId", void 0);
     return Project;
-}(SpeakeasyBase));
-export { Project };
+}(utils_1.SpeakeasyBase));
+exports.Project = Project;

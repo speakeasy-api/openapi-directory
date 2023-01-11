@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CidrBlock } from "./cidrblock";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MasterAuthorizedNetworksConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var cidrblock_1 = require("./cidrblock");
 // MasterAuthorizedNetworksConfig
 /**
  * Configuration options for the master authorized networks feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes master through HTTPS except traffic from the given CIDR blocks, Google Compute Engine Public IPs and Google Prod IPs.
@@ -34,13 +37,13 @@ var MasterAuthorizedNetworksConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cidrBlocks", elemType: CidrBlock }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cidrBlocks", elemType: cidrblock_1.CidrBlock }),
         __metadata("design:type", Array)
     ], MasterAuthorizedNetworksConfig.prototype, "cidrBlocks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], MasterAuthorizedNetworksConfig.prototype, "enabled", void 0);
     return MasterAuthorizedNetworksConfig;
-}(SpeakeasyBase));
-export { MasterAuthorizedNetworksConfig };
+}(utils_1.SpeakeasyBase));
+exports.MasterAuthorizedNetworksConfig = MasterAuthorizedNetworksConfig;

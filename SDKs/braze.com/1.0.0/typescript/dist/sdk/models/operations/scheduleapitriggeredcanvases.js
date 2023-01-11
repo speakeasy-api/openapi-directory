@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleApiTriggeredCanvasesResponse = exports.ScheduleApiTriggeredCanvasesRequest = exports.ScheduleApiTriggeredCanvasesRequestBody = exports.ScheduleApiTriggeredCanvasesRequestBodySchedule = exports.ScheduleApiTriggeredCanvasesRequestBodyRecipients = exports.ScheduleApiTriggeredCanvasesRequestBodyAudience = exports.ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd = exports.ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute, _super);
     function ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparison" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparison" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute.prototype, "comparison", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_attribute_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_attribute_name" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute.prototype, "customAttributeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute.prototype, "value", void 0);
     return ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute = ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute;
 var ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd, _super);
     function ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_attribute" }),
         __metadata("design:type", ScheduleApiTriggeredCanvasesRequestBodyAudienceAndCustomAttribute)
     ], ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd.prototype, "customAttribute", void 0);
     return ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd = ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd;
 var ScheduleApiTriggeredCanvasesRequestBodyAudience = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBodyAudience, _super);
     function ScheduleApiTriggeredCanvasesRequestBodyAudience() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AND", elemType: ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AND", elemType: ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd }),
         __metadata("design:type", Array)
     ], ScheduleApiTriggeredCanvasesRequestBodyAudience.prototype, "and", void 0);
     return ScheduleApiTriggeredCanvasesRequestBodyAudience;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBodyAudience };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBodyAudience = ScheduleApiTriggeredCanvasesRequestBodyAudience;
 var ScheduleApiTriggeredCanvasesRequestBodyRecipients = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBodyRecipients, _super);
     function ScheduleApiTriggeredCanvasesRequestBodyRecipients() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canvas_entry_properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canvas_entry_properties" }),
+        __metadata("design:type", Object)
     ], ScheduleApiTriggeredCanvasesRequestBodyRecipients.prototype, "canvasEntryProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_user_id" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyRecipients.prototype, "externalUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trigger_properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trigger_properties" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyRecipients.prototype, "triggerProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_alias" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodyRecipients.prototype, "userAlias", void 0);
     return ScheduleApiTriggeredCanvasesRequestBodyRecipients;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBodyRecipients };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBodyRecipients = ScheduleApiTriggeredCanvasesRequestBodyRecipients;
 var ScheduleApiTriggeredCanvasesRequestBodySchedule = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBodySchedule, _super);
     function ScheduleApiTriggeredCanvasesRequestBodySchedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=at_optimal_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=at_optimal_time" }),
         __metadata("design:type", Boolean)
     ], ScheduleApiTriggeredCanvasesRequestBodySchedule.prototype, "atOptimalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=in_local_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=in_local_time" }),
         __metadata("design:type", Boolean)
     ], ScheduleApiTriggeredCanvasesRequestBodySchedule.prototype, "inLocalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBodySchedule.prototype, "time", void 0);
     return ScheduleApiTriggeredCanvasesRequestBodySchedule;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBodySchedule };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBodySchedule = ScheduleApiTriggeredCanvasesRequestBodySchedule;
 var ScheduleApiTriggeredCanvasesRequestBody = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequestBody, _super);
     function ScheduleApiTriggeredCanvasesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audience" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audience" }),
         __metadata("design:type", ScheduleApiTriggeredCanvasesRequestBodyAudience)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "audience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=broadcast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=broadcast" }),
         __metadata("design:type", Boolean)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "broadcast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canvas_entry_properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canvas_entry_properties" }),
+        __metadata("design:type", Object)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "canvasEntryProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canvas_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canvas_id" }),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "canvasId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipients", elemType: ScheduleApiTriggeredCanvasesRequestBodyRecipients }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipients", elemType: ScheduleApiTriggeredCanvasesRequestBodyRecipients }),
         __metadata("design:type", Array)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "recipients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
         __metadata("design:type", ScheduleApiTriggeredCanvasesRequestBodySchedule)
     ], ScheduleApiTriggeredCanvasesRequestBody.prototype, "schedule", void 0);
     return ScheduleApiTriggeredCanvasesRequestBody;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequestBody = ScheduleApiTriggeredCanvasesRequestBody;
 var ScheduleApiTriggeredCanvasesRequest = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesRequest, _super);
     function ScheduleApiTriggeredCanvasesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ScheduleApiTriggeredCanvasesRequestBody)
     ], ScheduleApiTriggeredCanvasesRequest.prototype, "request", void 0);
     return ScheduleApiTriggeredCanvasesRequest;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesRequest = ScheduleApiTriggeredCanvasesRequest;
 var ScheduleApiTriggeredCanvasesResponse = /** @class */ (function (_super) {
     __extends(ScheduleApiTriggeredCanvasesResponse, _super);
     function ScheduleApiTriggeredCanvasesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduleApiTriggeredCanvasesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduleApiTriggeredCanvasesResponse.prototype, "statusCode", void 0);
     return ScheduleApiTriggeredCanvasesResponse;
-}(SpeakeasyBase));
-export { ScheduleApiTriggeredCanvasesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleApiTriggeredCanvasesResponse = ScheduleApiTriggeredCanvasesResponse;

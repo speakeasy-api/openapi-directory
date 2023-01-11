@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RacesScheduleFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RacesScheduleResponse = exports.RacesScheduleRequest = exports.RacesSchedulePathParams = exports.RacesScheduleFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RacesScheduleFormatEnum;
 (function (RacesScheduleFormatEnum) {
     RacesScheduleFormatEnum["Xml"] = "xml";
     RacesScheduleFormatEnum["Json"] = "json";
-})(RacesScheduleFormatEnum || (RacesScheduleFormatEnum = {}));
+})(RacesScheduleFormatEnum = exports.RacesScheduleFormatEnum || (exports.RacesScheduleFormatEnum = {}));
 var RacesSchedulePathParams = /** @class */ (function (_super) {
     __extends(RacesSchedulePathParams, _super);
     function RacesSchedulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], RacesSchedulePathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], RacesSchedulePathParams.prototype, "season", void 0);
     return RacesSchedulePathParams;
-}(SpeakeasyBase));
-export { RacesSchedulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RacesSchedulePathParams = RacesSchedulePathParams;
 var RacesScheduleRequest = /** @class */ (function (_super) {
     __extends(RacesScheduleRequest, _super);
     function RacesScheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RacesSchedulePathParams)
     ], RacesScheduleRequest.prototype, "pathParams", void 0);
     return RacesScheduleRequest;
-}(SpeakeasyBase));
-export { RacesScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.RacesScheduleRequest = RacesScheduleRequest;
 var RacesScheduleResponse = /** @class */ (function (_super) {
     __extends(RacesScheduleResponse, _super);
     function RacesScheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RacesScheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], RacesScheduleResponse.prototype, "races", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RacesScheduleResponse.prototype, "statusCode", void 0);
     return RacesScheduleResponse;
-}(SpeakeasyBase));
-export { RacesScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.RacesScheduleResponse = RacesScheduleResponse;

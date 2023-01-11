@@ -9,7 +9,7 @@ export declare class PostUsersUserEmailPermissionsPermissionNameRequest extends 
 }
 export declare class PostUsersUserEmailPermissionsPermissionNameResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     userResponse?: shared.UserResponse;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecommenderV1RecommendationStateInfoStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1RecommendationStateInfo = exports.GoogleCloudRecommenderV1RecommendationStateInfoStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecommenderV1RecommendationStateInfoStateEnum;
 (function (GoogleCloudRecommenderV1RecommendationStateInfoStateEnum) {
     GoogleCloudRecommenderV1RecommendationStateInfoStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleCloudRecommenderV1RecommendationStateInfoStateEnum["Active"] = "ACTIVE";
@@ -31,7 +34,7 @@ export var GoogleCloudRecommenderV1RecommendationStateInfoStateEnum;
     GoogleCloudRecommenderV1RecommendationStateInfoStateEnum["Succeeded"] = "SUCCEEDED";
     GoogleCloudRecommenderV1RecommendationStateInfoStateEnum["Failed"] = "FAILED";
     GoogleCloudRecommenderV1RecommendationStateInfoStateEnum["Dismissed"] = "DISMISSED";
-})(GoogleCloudRecommenderV1RecommendationStateInfoStateEnum || (GoogleCloudRecommenderV1RecommendationStateInfoStateEnum = {}));
+})(GoogleCloudRecommenderV1RecommendationStateInfoStateEnum = exports.GoogleCloudRecommenderV1RecommendationStateInfoStateEnum || (exports.GoogleCloudRecommenderV1RecommendationStateInfoStateEnum = {}));
 // GoogleCloudRecommenderV1RecommendationStateInfo
 /**
  * Information for state. Contains state and metadata.
@@ -42,13 +45,13 @@ var GoogleCloudRecommenderV1RecommendationStateInfo = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1RecommendationStateInfo.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateMetadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateMetadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1RecommendationStateInfo.prototype, "stateMetadata", void 0);
     return GoogleCloudRecommenderV1RecommendationStateInfo;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1RecommendationStateInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1RecommendationStateInfo = GoogleCloudRecommenderV1RecommendationStateInfo;

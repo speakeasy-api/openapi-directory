@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IndividualInput = exports.Individual = void 0;
+var utils_1 = require("../../../internal/utils");
 var Individual = /** @class */ (function (_super) {
     __extends(Individual, _super);
     function Individual() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateOfBirth" }),
         __metadata("design:type", String)
     ], Individual.prototype, "dateOfBirth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", Object)
     ], Individual.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nationalIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nationalIdentification" }),
         __metadata("design:type", String)
     ], Individual.prototype, "nationalIdentification", void 0);
     return Individual;
-}(SpeakeasyBase));
-export { Individual };
+}(utils_1.SpeakeasyBase));
+exports.Individual = Individual;
 var IndividualInput = /** @class */ (function (_super) {
     __extends(IndividualInput, _super);
     function IndividualInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", Object)
     ], IndividualInput.prototype, "name", void 0);
     return IndividualInput;
-}(SpeakeasyBase));
-export { IndividualInput };
+}(utils_1.SpeakeasyBase));
+exports.IndividualInput = IndividualInput;

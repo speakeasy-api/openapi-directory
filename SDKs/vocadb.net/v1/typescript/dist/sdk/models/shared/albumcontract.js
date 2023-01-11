@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionalDateTimeContract } from "./optionaldatetimecontract";
-import { ReleaseEventForApiContract } from "./releaseeventforapicontract";
-import { ReleaseEventForApiContractInput } from "./releaseeventforapicontract";
-export var AlbumContractDiscTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumContractInput = exports.AlbumContract = exports.AlbumContractStatusEnum = exports.AlbumContractDiscTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionaldatetimecontract_1 = require("./optionaldatetimecontract");
+var releaseeventforapicontract_1 = require("./releaseeventforapicontract");
+var releaseeventforapicontract_2 = require("./releaseeventforapicontract");
+var AlbumContractDiscTypeEnum;
 (function (AlbumContractDiscTypeEnum) {
     AlbumContractDiscTypeEnum["Unknown"] = "Unknown";
     AlbumContractDiscTypeEnum["Album"] = "Album";
@@ -40,139 +43,139 @@ export var AlbumContractDiscTypeEnum;
     AlbumContractDiscTypeEnum["Fanmade"] = "Fanmade";
     AlbumContractDiscTypeEnum["Instrumental"] = "Instrumental";
     AlbumContractDiscTypeEnum["Other"] = "Other";
-})(AlbumContractDiscTypeEnum || (AlbumContractDiscTypeEnum = {}));
-export var AlbumContractStatusEnum;
+})(AlbumContractDiscTypeEnum = exports.AlbumContractDiscTypeEnum || (exports.AlbumContractDiscTypeEnum = {}));
+var AlbumContractStatusEnum;
 (function (AlbumContractStatusEnum) {
     AlbumContractStatusEnum["Draft"] = "Draft";
     AlbumContractStatusEnum["Finished"] = "Finished";
     AlbumContractStatusEnum["Approved"] = "Approved";
     AlbumContractStatusEnum["Locked"] = "Locked";
-})(AlbumContractStatusEnum || (AlbumContractStatusEnum = {}));
+})(AlbumContractStatusEnum = exports.AlbumContractStatusEnum || (exports.AlbumContractStatusEnum = {}));
 var AlbumContract = /** @class */ (function (_super) {
     __extends(AlbumContract, _super);
     function AlbumContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistString" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "artistString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverPictureMime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverPictureMime" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "coverPictureMime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], AlbumContract.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], AlbumContract.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discType" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "discType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AlbumContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingAverage" }),
         __metadata("design:type", Number)
     ], AlbumContract.prototype, "ratingAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingCount" }),
         __metadata("design:type", Number)
     ], AlbumContract.prototype, "ratingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
-        __metadata("design:type", OptionalDateTimeContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
+        __metadata("design:type", optionaldatetimecontract_1.OptionalDateTimeContract)
     ], AlbumContract.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseEvent" }),
-        __metadata("design:type", ReleaseEventForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseEvent" }),
+        __metadata("design:type", releaseeventforapicontract_1.ReleaseEventForApiContract)
     ], AlbumContract.prototype, "releaseEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AlbumContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], AlbumContract.prototype, "version", void 0);
     return AlbumContract;
-}(SpeakeasyBase));
-export { AlbumContract };
+}(utils_1.SpeakeasyBase));
+exports.AlbumContract = AlbumContract;
 var AlbumContractInput = /** @class */ (function (_super) {
     __extends(AlbumContractInput, _super);
     function AlbumContractInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistString" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "artistString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverPictureMime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverPictureMime" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "coverPictureMime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], AlbumContractInput.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], AlbumContractInput.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discType" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "discType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AlbumContractInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingAverage" }),
         __metadata("design:type", Number)
     ], AlbumContractInput.prototype, "ratingAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingCount" }),
         __metadata("design:type", Number)
     ], AlbumContractInput.prototype, "ratingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
-        __metadata("design:type", OptionalDateTimeContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
+        __metadata("design:type", optionaldatetimecontract_1.OptionalDateTimeContract)
     ], AlbumContractInput.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseEvent" }),
-        __metadata("design:type", ReleaseEventForApiContractInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseEvent" }),
+        __metadata("design:type", releaseeventforapicontract_2.ReleaseEventForApiContractInput)
     ], AlbumContractInput.prototype, "releaseEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AlbumContractInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], AlbumContractInput.prototype, "version", void 0);
     return AlbumContractInput;
-}(SpeakeasyBase));
-export { AlbumContractInput };
+}(utils_1.SpeakeasyBase));
+exports.AlbumContractInput = AlbumContractInput;

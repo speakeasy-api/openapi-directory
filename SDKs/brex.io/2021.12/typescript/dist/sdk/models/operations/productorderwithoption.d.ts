@@ -14,7 +14,7 @@ export declare class ProductOrderWithOptionRequest extends SpeakeasyBase {
 }
 export declare class ProductOrderWithOptionResponse extends SpeakeasyBase {
     contentType: string;
-    productOrderWithOption200ApplicationJsonAny?: any;
-    productOrderWithOptionDefaultApplicationJsonAny?: any;
+    productOrderWithOption200ApplicationJSONAny?: any;
+    productOrderWithOptionDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlanDataTypeOfPlanBasedOnTheSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlanData = exports.PlanDataServiceThatProvisionedThePlanEnum = exports.PlanDataTypeOfPlanBasedOnTheSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlanDataTypeOfPlanBasedOnTheSourceEnum;
 (function (PlanDataTypeOfPlanBasedOnTheSourceEnum) {
     PlanDataTypeOfPlanBasedOnTheSourceEnum["Starter"] = "STARTER";
     PlanDataTypeOfPlanBasedOnTheSourceEnum["Sfdc1MEdition"] = "SFDC_1M_EDITION";
@@ -31,31 +34,31 @@ export var PlanDataTypeOfPlanBasedOnTheSourceEnum;
     PlanDataTypeOfPlanBasedOnTheSourceEnum["Silver"] = "SILVER";
     PlanDataTypeOfPlanBasedOnTheSourceEnum["Gold"] = "GOLD";
     PlanDataTypeOfPlanBasedOnTheSourceEnum["DatasetDownload"] = "DATASET_DOWNLOAD";
-})(PlanDataTypeOfPlanBasedOnTheSourceEnum || (PlanDataTypeOfPlanBasedOnTheSourceEnum = {}));
-export var PlanDataServiceThatProvisionedThePlanEnum;
+})(PlanDataTypeOfPlanBasedOnTheSourceEnum = exports.PlanDataTypeOfPlanBasedOnTheSourceEnum || (exports.PlanDataTypeOfPlanBasedOnTheSourceEnum = {}));
+var PlanDataServiceThatProvisionedThePlanEnum;
 (function (PlanDataServiceThatProvisionedThePlanEnum) {
     PlanDataServiceThatProvisionedThePlanEnum["Salesforce"] = "SALESFORCE";
     PlanDataServiceThatProvisionedThePlanEnum["Heroku"] = "HEROKU";
     PlanDataServiceThatProvisionedThePlanEnum["SfAutoProvision"] = "SF_AUTO_PROVISION";
     PlanDataServiceThatProvisionedThePlanEnum["SfAutoProvisionBound"] = "SF_AUTO_PROVISION_BOUND";
-})(PlanDataServiceThatProvisionedThePlanEnum || (PlanDataServiceThatProvisionedThePlanEnum = {}));
+})(PlanDataServiceThatProvisionedThePlanEnum = exports.PlanDataServiceThatProvisionedThePlanEnum || (exports.PlanDataServiceThatProvisionedThePlanEnum = {}));
 var PlanData = /** @class */ (function (_super) {
     __extends(PlanData, _super);
     function PlanData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], PlanData.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan" }),
         __metadata("design:type", String)
     ], PlanData.prototype, "plan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], PlanData.prototype, "source", void 0);
     return PlanData;
-}(SpeakeasyBase));
-export { PlanData };
+}(utils_1.SpeakeasyBase));
+exports.PlanData = PlanData;

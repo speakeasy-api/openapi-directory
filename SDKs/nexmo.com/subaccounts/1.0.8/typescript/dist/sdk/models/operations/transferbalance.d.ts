@@ -42,7 +42,7 @@ export declare class TransferBalanceResponse extends SpeakeasyBase {
     statusCode: number;
     transferBalanceResponse?: any;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    transferBalance401ApplicationJsonObject?: TransferBalance401ApplicationJson;
-    transferBalance404ApplicationJsonObject?: TransferBalance404ApplicationJson;
-    transferBalance422ApplicationJsonObject?: TransferBalance422ApplicationJson;
+    transferBalance401ApplicationJSONObject?: TransferBalance401ApplicationJson;
+    transferBalance404ApplicationJSONObject?: TransferBalance404ApplicationJson;
+    transferBalance422ApplicationJSONObject?: TransferBalance422ApplicationJson;
 }

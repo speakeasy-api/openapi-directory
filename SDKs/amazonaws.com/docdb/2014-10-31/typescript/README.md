@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,22 +34,22 @@ const sdk = new SDK(WithSecurity(
 const req: GetAddSourceIdentifierToSubscriptionRequest = {
   queryParams: {
     action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "molestias",
-    subscriptionName: "molestias",
+    sourceIdentifier: "voluptas",
+    subscriptionName: "culpa",
     version: "2014-10-31",
   },
   headers: {
-    xAmzAlgorithm: "animi",
-    xAmzContentSha256: "nesciunt",
-    xAmzCredential: "nihil",
-    xAmzDate: "aspernatur",
-    xAmzSecurityToken: "hic",
-    xAmzSignature: "vitae",
-    xAmzSignedHeaders: "libero",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
+    xAmzDate: "voluptas",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -73,11 +72,7 @@ sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentif
 * `getDeleteGlobalCluster` - <p>Deletes a global cluster. The primary and secondary clusters must already be detached or deleted before attempting to delete a global cluster.</p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>
 * `getDescribeDbClusterSnapshotAttributes` - <p>Returns a list of cluster snapshot attribute names and values for a manual DB cluster snapshot.</p> <p>When you share snapshots with other accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the <code>restore</code> attribute and a list of IDs for the accounts that are authorized to copy or restore the manual cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then the manual cluster snapshot is public and can be copied or restored by all accounts.</p>
 * `getFailoverDbCluster` - <p>Forces a failover for a cluster.</p> <p>A failover for a cluster promotes one of the Amazon DocumentDB replicas (read-only instances) in the cluster to be the primary instance (the cluster writer).</p> <p>If the primary instance fails, Amazon DocumentDB automatically fails over to an Amazon DocumentDB replica, if one exists. You can force a failover when you want to simulate a failure of a primary instance for testing.</p>
-* `getModifyDbCluster` - Modifies a setting for an Amazon DocumentDB cluster. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. 
-* `getModifyDbClusterSnapshotAttribute` - <p>Adds an attribute and values to, or removes an attribute and values from, a manual cluster snapshot.</p> <p>To share a manual cluster snapshot with other accounts, specify <code>restore</code> as the <code>AttributeName</code>, and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the accounts that are authorized to restore the manual cluster snapshot. Use the value <code>all</code> to make the manual cluster snapshot public, which means that it can be copied or restored by all accounts. Do not add the <code>all</code> value for any manual cluster snapshots that contain private information that you don't want available to all accounts. If a manual cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this case.</p>
 * `getModifyDbInstance` - Modifies settings for an instance. You can change one or more database configuration parameters by specifying these parameters and the new values in the request.
-* `getModifyDbSubnetGroup` - Modifies an existing subnet group. subnet groups must contain at least one subnet in at least two Availability Zones in the Region.
-* `getModifyEventSubscription` - Modifies an existing Amazon DocumentDB event notification subscription.
 * `getModifyGlobalCluster` - <p>Modify a setting for an Amazon DocumentDB global cluster. You can change one or more configuration parameters (for example: deletion protection), or the global cluster identifier by specifying these parameters and the new values in the request.</p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>
 * `getRebootDbInstance` - <p>You might need to reboot your instance, usually for maintenance reasons. For example, if you make certain changes, or if you change the cluster parameter group that is associated with the instance, you must reboot the instance for the changes to take effect. </p> <p>Rebooting an instance restarts the database engine service. Rebooting an instance results in a momentary outage, during which the instance status is set to <i>rebooting</i>. </p>
 * `getRemoveFromGlobalCluster` - <p>Detaches an Amazon DocumentDB secondary cluster from a global cluster. The cluster becomes a standalone cluster with read-write capability instead of being read-only and receiving data from a primary in a different region. </p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>

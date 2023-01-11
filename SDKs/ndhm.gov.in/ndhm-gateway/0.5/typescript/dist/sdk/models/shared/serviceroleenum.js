@@ -1,7 +1,10 @@
-export var ServiceRoleEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceRoleEnum = void 0;
+var ServiceRoleEnum;
 (function (ServiceRoleEnum) {
     ServiceRoleEnum["Hip"] = "HIP";
     ServiceRoleEnum["Hiu"] = "HIU";
     ServiceRoleEnum["HipAndHiu"] = "HIP_AND_HIU";
     ServiceRoleEnum["HealthLocker"] = "HEALTH_LOCKER";
-})(ServiceRoleEnum || (ServiceRoleEnum = {}));
+})(ServiceRoleEnum = exports.ServiceRoleEnum || (exports.ServiceRoleEnum = {}));

@@ -23,5 +23,5 @@ export declare class UpdateDeviceDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateDeviceDefinitionResponse?: Map<string, any>;
+    updateDeviceDefinitionResponse?: Record<string, any>;
 }

@@ -91,5 +91,5 @@ export declare class RunAMonitorRequest extends SpeakeasyBase {
 export declare class RunAMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    runAMonitor200ApplicationJsonObject?: RunAMonitor200ApplicationJson;
+    runAMonitor200ApplicationJSONObject?: RunAMonitor200ApplicationJson;
 }

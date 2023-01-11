@@ -194,23 +194,23 @@ export class BpcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bpcer400ApplicationJsonObject?: Bpcer400ApplicationJson;
+  bpcer400ApplicationJSONObject?: Bpcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer401ApplicationJsonObject?: Bpcer401ApplicationJson;
+  bpcer401ApplicationJSONObject?: Bpcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer404ApplicationJsonObject?: Bpcer404ApplicationJson;
+  bpcer404ApplicationJSONObject?: Bpcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer500ApplicationJsonObject?: Bpcer500ApplicationJson;
+  bpcer500ApplicationJSONObject?: Bpcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer502ApplicationJsonObject?: Bpcer502ApplicationJson;
+  bpcer502ApplicationJSONObject?: Bpcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer503ApplicationJsonObject?: Bpcer503ApplicationJson;
+  bpcer503ApplicationJSONObject?: Bpcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  bpcer504ApplicationJsonObject?: Bpcer504ApplicationJson;
+  bpcer504ApplicationJSONObject?: Bpcer504ApplicationJson;
 }

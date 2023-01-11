@@ -1,19 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserRef } from "./userref";
 import { AccountRef } from "./accountref";
 import { ProfileRef } from "./profileref";
 import { WebPropertyRef } from "./webpropertyref";
+import { UserRef } from "./userref";
 
-
-
-// EntityUserLinkPermissionsInput
-/** 
- * Permissions the user has for this entity.
-**/
-export class EntityUserLinkPermissionsInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=local" })
-  local?: string[];
-}
 
 
 // EntityUserLinkEntity
@@ -45,28 +35,13 @@ export class EntityUserLinkPermissions extends SpeakeasyBase {
 }
 
 
-// EntityUserLinkInput
+// EntityUserLinkPermissionsInput
 /** 
- * JSON template for an Analytics Entity-User Link. Returns permissions that a user has for an entity.
+ * Permissions the user has for this entity.
 **/
-export class EntityUserLinkInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=entity" })
-  entity?: EntityUserLinkEntity;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=kind" })
-  kind?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=permissions" })
-  permissions?: EntityUserLinkPermissionsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=selfLink" })
-  selfLink?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=userRef" })
-  userRef?: UserRef;
+export class EntityUserLinkPermissionsInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=local" })
+  local?: string[];
 }
 
 
@@ -86,6 +61,31 @@ export class EntityUserLink extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=permissions" })
   permissions?: EntityUserLinkPermissions;
+
+  @SpeakeasyMetadata({ data: "json, name=selfLink" })
+  selfLink?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=userRef" })
+  userRef?: UserRef;
+}
+
+
+// EntityUserLinkInput
+/** 
+ * JSON template for an Analytics Entity-User Link. Returns permissions that a user has for an entity.
+**/
+export class EntityUserLinkInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=entity" })
+  entity?: EntityUserLinkEntity;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=kind" })
+  kind?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=permissions" })
+  permissions?: EntityUserLinkPermissionsInput;
 
   @SpeakeasyMetadata({ data: "json, name=selfLink" })
   selfLink?: string;

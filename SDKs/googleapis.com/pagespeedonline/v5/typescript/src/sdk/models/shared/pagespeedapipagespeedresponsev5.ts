@@ -11,7 +11,7 @@ import { PagespeedVersion } from "./pagespeedversion";
 **/
 export class PagespeedApiPagespeedResponseV5 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=analysisUTCTimestamp" })
-  analysisUtcTimestamp?: string;
+  analysisUTCTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=captchaResult" })
   captchaResult?: string;

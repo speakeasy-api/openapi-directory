@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioOptimizationInverseVarianceWeightedResponse = exports.PostPortfolioOptimizationInverseVarianceWeightedRequest = exports.PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson = exports.PostPortfolioOptimizationInverseVarianceWeightedRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioOptimizationInverseVarianceWeightedRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationInverseVarianceWeightedRequestBody, _super);
     function PostPortfolioOptimizationInverseVarianceWeightedRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostPortfolioOptimizationInverseVarianceWeightedRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsVariances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsVariances" }),
         __metadata("design:type", Array)
     ], PostPortfolioOptimizationInverseVarianceWeightedRequestBody.prototype, "assetsVariances", void 0);
     return PostPortfolioOptimizationInverseVarianceWeightedRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationInverseVarianceWeightedRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationInverseVarianceWeightedRequestBody = PostPortfolioOptimizationInverseVarianceWeightedRequestBody;
 var PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson, _super);
     function PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson.prototype, "assetsWeights", void 0);
     return PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson = PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
 var PostPortfolioOptimizationInverseVarianceWeightedRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationInverseVarianceWeightedRequest, _super);
     function PostPortfolioOptimizationInverseVarianceWeightedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioOptimizationInverseVarianceWeightedRequestBody)
     ], PostPortfolioOptimizationInverseVarianceWeightedRequest.prototype, "request", void 0);
     return PostPortfolioOptimizationInverseVarianceWeightedRequest;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationInverseVarianceWeightedRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationInverseVarianceWeightedRequest = PostPortfolioOptimizationInverseVarianceWeightedRequest;
 var PostPortfolioOptimizationInverseVarianceWeightedResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationInverseVarianceWeightedResponse, _super);
     function PostPortfolioOptimizationInverseVarianceWeightedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioOptimizationInverseVarianceWeightedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson)
-    ], PostPortfolioOptimizationInverseVarianceWeightedResponse.prototype, "postPortfolioOptimizationInverseVarianceWeighted200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioOptimizationInverseVarianceWeightedResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson)
+    ], PostPortfolioOptimizationInverseVarianceWeightedResponse.prototype, "postPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject", void 0);
     return PostPortfolioOptimizationInverseVarianceWeightedResponse;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationInverseVarianceWeightedResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationInverseVarianceWeightedResponse = PostPortfolioOptimizationInverseVarianceWeightedResponse;

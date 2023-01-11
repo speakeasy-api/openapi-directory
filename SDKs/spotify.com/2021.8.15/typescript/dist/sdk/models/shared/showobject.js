@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CopyrightObject } from "./copyrightobject";
-import { SimplifiedEpisodeObject } from "./simplifiedepisodeobject";
-import { ExternalUrlObject } from "./externalurlobject";
-import { ImageObject } from "./imageobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShowObject = exports.ShowObjectEpisodes = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplifiedepisodeobject_1 = require("./simplifiedepisodeobject");
+var copyrightobject_1 = require("./copyrightobject");
+var externalurlobject_1 = require("./externalurlobject");
+var imageobject_1 = require("./imageobject");
 // ShowObjectEpisodes
 /**
  * A list of the show's episodes.
@@ -38,36 +41,36 @@ var ShowObjectEpisodes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ShowObjectEpisodes.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedEpisodeObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedepisodeobject_1.SimplifiedEpisodeObject }),
         __metadata("design:type", Array)
     ], ShowObjectEpisodes.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ShowObjectEpisodes.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ShowObjectEpisodes.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], ShowObjectEpisodes.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], ShowObjectEpisodes.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ShowObjectEpisodes.prototype, "total", void 0);
     return ShowObjectEpisodes;
-}(SpeakeasyBase));
-export { ShowObjectEpisodes };
+}(utils_1.SpeakeasyBase));
+exports.ShowObjectEpisodes = ShowObjectEpisodes;
 // ShowObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-showobject - Find more info on the official Spotify Web API Reference
@@ -78,73 +81,73 @@ var ShowObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available_markets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available_markets" }),
         __metadata("design:type", Array)
     ], ShowObject.prototype, "availableMarkets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyrights", elemType: CopyrightObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyrights", elemType: copyrightobject_1.CopyrightObject }),
         __metadata("design:type", Array)
     ], ShowObject.prototype, "copyrights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episodes" }),
         __metadata("design:type", ShowObjectEpisodes)
     ], ShowObject.prototype, "episodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit" }),
         __metadata("design:type", Boolean)
     ], ShowObject.prototype, "explicit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_urls" }),
-        __metadata("design:type", ExternalUrlObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_urls" }),
+        __metadata("design:type", externalurlobject_1.ExternalUrlObject)
     ], ShowObject.prototype, "externalUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_description" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "htmlDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imageobject_1.ImageObject }),
         __metadata("design:type", Array)
     ], ShowObject.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_externally_hosted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_externally_hosted" }),
         __metadata("design:type", Boolean)
     ], ShowObject.prototype, "isExternallyHosted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], ShowObject.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media_type" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "mediaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ShowObject.prototype, "uri", void 0);
     return ShowObject;
-}(SpeakeasyBase));
-export { ShowObject };
+}(utils_1.SpeakeasyBase));
+exports.ShowObject = ShowObject;

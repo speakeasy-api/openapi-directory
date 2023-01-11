@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Flight = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
 // Flight
 /**
  * All details related to a single request item for a direct flight emission estimates.
@@ -34,25 +37,25 @@ var Flight = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departureDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departureDate" }),
+        __metadata("design:type", date_1.Date)
     ], Flight.prototype, "departureDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], Flight.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flightNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flightNumber" }),
         __metadata("design:type", Number)
     ], Flight.prototype, "flightNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingCarrierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingCarrierCode" }),
         __metadata("design:type", String)
     ], Flight.prototype, "operatingCarrierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin" }),
         __metadata("design:type", String)
     ], Flight.prototype, "origin", void 0);
     return Flight;
-}(SpeakeasyBase));
-export { Flight };
+}(utils_1.SpeakeasyBase));
+exports.Flight = Flight;

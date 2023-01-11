@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepeatedEnumAttributeValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // RepeatedEnumAttributeValue
 /**
  * Values for an attribute with a `value_type` of REPEATED_ENUM. This consists of two lists of value IDs: those that are set (true) and those that are unset (false). Values absent are considered unknown. At least one value must be specified.
@@ -33,13 +36,13 @@ var RepeatedEnumAttributeValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setValues" }),
         __metadata("design:type", Array)
     ], RepeatedEnumAttributeValue.prototype, "setValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unsetValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unsetValues" }),
         __metadata("design:type", Array)
     ], RepeatedEnumAttributeValue.prototype, "unsetValues", void 0);
     return RepeatedEnumAttributeValue;
-}(SpeakeasyBase));
-export { RepeatedEnumAttributeValue };
+}(utils_1.SpeakeasyBase));
+exports.RepeatedEnumAttributeValue = RepeatedEnumAttributeValue;

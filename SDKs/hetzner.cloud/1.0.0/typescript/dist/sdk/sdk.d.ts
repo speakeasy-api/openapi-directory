@@ -24,10 +24,11 @@ import { ServerTypes } from "./servertypes";
 import { Servers } from "./servers";
 import { VolumeActions } from "./volumeactions";
 import { Volumes } from "./volumes";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.hetzner.cloud/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     actions: Actions;
     certificateActions: CertificateActions;
@@ -35,7 +36,7 @@ export declare class SDK {
     datacenters: Datacenters;
     firewallActions: FirewallActions;
     firewalls: Firewalls;
-    floatingIpActions: FloatingIpActions;
+    floatingIPActions: FloatingIpActions;
     floatingIPs: FloatingIPs;
     isOs: IsOs;
     imageActions: ImageActions;
@@ -60,6 +61,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

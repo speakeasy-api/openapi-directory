@@ -25,5 +25,5 @@ export class ProtocolIpmiGetAttrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolIpmiGetAttr200ApplicationJsonString?: string;
+  protocolIpmiGetAttr200ApplicationJSONString?: string;
 }

@@ -10,7 +10,7 @@ export declare enum AndroidConfigPriorityEnum {
 **/
 export declare class AndroidConfig extends SpeakeasyBase {
     collapseKey?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     directBootOk?: boolean;
     fcmOptions?: AndroidFcmOptions;
     notification?: AndroidNotification;

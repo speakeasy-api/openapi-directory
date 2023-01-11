@@ -1,68 +1,69 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetDockerCredentialsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=expiry_seconds" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expiry_seconds" })
   expirySeconds?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=read_write" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=read_write" })
   readWrite?: boolean;
 }
 
 
-export class GetDockerCredentialsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: GetDockerCredentialsQueryParams;
-}
-
-
 export class GetDockerCredentials200ApplicationJsonAuthsRegistryDigitaloceanCom extends SpeakeasyBase {
-  @Metadata({ data: "json, name=auth" })
+  @SpeakeasyMetadata({ data: "json, name=auth" })
   auth?: string;
 }
 
 
 export class GetDockerCredentials200ApplicationJsonAuths extends SpeakeasyBase {
-  @Metadata({ data: "json, name=registry.digitalocean.com" })
+  @SpeakeasyMetadata({ data: "json, name=registry.digitalocean.com" })
   registryDigitaloceanCom?: GetDockerCredentials200ApplicationJsonAuthsRegistryDigitaloceanCom;
 }
 
 
 export class GetDockerCredentials200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=auths" })
+  @SpeakeasyMetadata({ data: "json, name=auths" })
   auths?: GetDockerCredentials200ApplicationJsonAuths;
 }
 
 
 export class GetDockerCredentials401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDockerCredentialsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: GetDockerCredentialsQueryParams;
+}
+
+
 export class GetDockerCredentialsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDockerCredentials200ApplicationJsonObject?: GetDockerCredentials200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDockerCredentials200ApplicationJSONObject?: GetDockerCredentials200ApplicationJson;
 
-  @Metadata()
-  getDockerCredentials401ApplicationJsonObject?: GetDockerCredentials401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDockerCredentials401ApplicationJSONObject?: GetDockerCredentials401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

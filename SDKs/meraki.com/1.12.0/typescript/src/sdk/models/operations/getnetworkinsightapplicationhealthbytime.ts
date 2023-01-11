@@ -43,5 +43,5 @@ export class GetNetworkInsightApplicationHealthByTimeResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkInsightApplicationHealthByTime200ApplicationJsonObject?: Map<string, any>;
+  getNetworkInsightApplicationHealthByTime200ApplicationJSONObject?: Record<string, any>;
 }

@@ -17,26 +17,26 @@ export declare enum EndpointStateEnum {
 /**
  * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
 **/
-export declare class EndpointInput extends SpeakeasyBase {
-    description?: string;
-    labels?: Map<string, string>;
-    network?: string;
-    severity?: EndpointSeverityEnum;
-    trafficLogs?: boolean;
-}
-/**
- * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
-**/
 export declare class Endpoint extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     endpointForwardingRule?: string;
     endpointIp?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     network?: string;
     severity?: EndpointSeverityEnum;
     state?: EndpointStateEnum;
     trafficLogs?: boolean;
     updateTime?: string;
+}
+/**
+ * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
+**/
+export declare class EndpointInput extends SpeakeasyBase {
+    description?: string;
+    labels?: Record<string, string>;
+    network?: string;
+    severity?: EndpointSeverityEnum;
+    trafficLogs?: boolean;
 }

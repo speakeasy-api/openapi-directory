@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1betaUserEvent } from "./googleclouddiscoveryenginev1betauserevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1betauserevent_1 = require("./googleclouddiscoveryenginev1betauserevent");
 // GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource
 /**
  * The inline source for the input config for ImportUserEvents method.
@@ -34,9 +37,9 @@ var GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEvents", elemType: GoogleCloudDiscoveryengineV1betaUserEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEvents", elemType: googleclouddiscoveryenginev1betauserevent_1.GoogleCloudDiscoveryengineV1betaUserEvent }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource.prototype, "userEvents", void 0);
     return GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource = GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource;

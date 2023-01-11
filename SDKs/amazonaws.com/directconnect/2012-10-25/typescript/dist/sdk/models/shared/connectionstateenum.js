@@ -1,4 +1,7 @@
-export var ConnectionStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionStateEnum = void 0;
+var ConnectionStateEnum;
 (function (ConnectionStateEnum) {
     ConnectionStateEnum["Ordering"] = "ordering";
     ConnectionStateEnum["Requested"] = "requested";
@@ -9,4 +12,4 @@ export var ConnectionStateEnum;
     ConnectionStateEnum["Deleted"] = "deleted";
     ConnectionStateEnum["Rejected"] = "rejected";
     ConnectionStateEnum["Unknown"] = "unknown";
-})(ConnectionStateEnum || (ConnectionStateEnum = {}));
+})(ConnectionStateEnum = exports.ConnectionStateEnum || (exports.ConnectionStateEnum = {}));

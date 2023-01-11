@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,9 +28,9 @@ const sdk = new SDK();
     
 const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
   pathParams: {
-    org: "non",
-    repositoryId: 9060325543781010971,
-    runnerGroupId: 7738228592722990311,
+    org: "sit",
+    repositoryId: 2259404117704393152,
+    runnerGroupId: 6050128673802995827,
   },
 };
 

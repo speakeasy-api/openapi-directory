@@ -1,0 +1,47 @@
+import { AxiosInstance } from "axios";
+import { Security } from "./models/shared";
+import { Addresses } from "./addresses";
+import { Batches } from "./batches";
+import { CarrierAccounts } from "./carrieraccounts";
+import { Carriers } from "./carriers";
+import { Downloads } from "./downloads";
+import { Insurance } from "./insurance";
+import { Labels } from "./labels";
+import { Manifests } from "./manifests";
+import { PackageTypes } from "./packagetypes";
+import { Rates } from "./rates";
+import { Shipments } from "./shipments";
+import { Tags } from "./tags";
+import { Tracking } from "./tracking";
+import { Warehouses } from "./warehouses";
+import { Webhooks } from "./webhooks";
+export declare const ServerList: readonly ["https://api.shipengine.com"];
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
+export declare class SDK {
+    addresses: Addresses;
+    batches: Batches;
+    carrierAccounts: CarrierAccounts;
+    carriers: Carriers;
+    downloads: Downloads;
+    insurance: Insurance;
+    labels: Labels;
+    manifests: Manifests;
+    packageTypes: PackageTypes;
+    rates: Rates;
+    shipments: Shipments;
+    tags: Tags;
+    tracking: Tracking;
+    warehouses: Warehouses;
+    webhooks: Webhooks;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    constructor(props: SDKProps);
+}

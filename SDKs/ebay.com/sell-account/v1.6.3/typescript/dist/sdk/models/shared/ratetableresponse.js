@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RateTable } from "./ratetable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateTableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ratetable_1 = require("./ratetable");
 // RateTableResponse
 /**
  * The response container for with information on a seller's shipping rate tables.
@@ -34,9 +37,9 @@ var RateTableResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateTables", elemType: RateTable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateTables", elemType: ratetable_1.RateTable }),
         __metadata("design:type", Array)
     ], RateTableResponse.prototype, "rateTables", void 0);
     return RateTableResponse;
-}(SpeakeasyBase));
-export { RateTableResponse };
+}(utils_1.SpeakeasyBase));
+exports.RateTableResponse = RateTableResponse;

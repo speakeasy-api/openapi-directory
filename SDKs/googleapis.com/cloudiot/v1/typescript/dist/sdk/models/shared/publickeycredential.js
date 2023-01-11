@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PublicKeyCredentialFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicKeyCredential = exports.PublicKeyCredentialFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PublicKeyCredentialFormatEnum;
 (function (PublicKeyCredentialFormatEnum) {
     PublicKeyCredentialFormatEnum["UnspecifiedPublicKeyFormat"] = "UNSPECIFIED_PUBLIC_KEY_FORMAT";
     PublicKeyCredentialFormatEnum["RsaPem"] = "RSA_PEM";
     PublicKeyCredentialFormatEnum["RsaX509Pem"] = "RSA_X509_PEM";
     PublicKeyCredentialFormatEnum["Es256Pem"] = "ES256_PEM";
     PublicKeyCredentialFormatEnum["Es256X509Pem"] = "ES256_X509_PEM";
-})(PublicKeyCredentialFormatEnum || (PublicKeyCredentialFormatEnum = {}));
+})(PublicKeyCredentialFormatEnum = exports.PublicKeyCredentialFormatEnum || (exports.PublicKeyCredentialFormatEnum = {}));
 // PublicKeyCredential
 /**
  * A public key format and data.
@@ -41,13 +44,13 @@ var PublicKeyCredential = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], PublicKeyCredential.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], PublicKeyCredential.prototype, "key", void 0);
     return PublicKeyCredential;
-}(SpeakeasyBase));
-export { PublicKeyCredential };
+}(utils_1.SpeakeasyBase));
+exports.PublicKeyCredential = PublicKeyCredential;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PaymentAuditCurrencyEnum } from "./paymentauditcurrencyenum";
-export var FxSummaryFundingStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FxSummary = exports.FxSummaryStatusEnum = exports.FxSummaryFundingStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var paymentauditcurrencyenum_1 = require("./paymentauditcurrencyenum");
+var FxSummaryFundingStatusEnum;
 (function (FxSummaryFundingStatusEnum) {
     FxSummaryFundingStatusEnum["Funded"] = "FUNDED";
     FxSummaryFundingStatusEnum["Instructed"] = "INSTRUCTED";
     FxSummaryFundingStatusEnum["Unfunded"] = "UNFUNDED";
-})(FxSummaryFundingStatusEnum || (FxSummaryFundingStatusEnum = {}));
-export var FxSummaryStatusEnum;
+})(FxSummaryFundingStatusEnum = exports.FxSummaryFundingStatusEnum || (exports.FxSummaryFundingStatusEnum = {}));
+var FxSummaryStatusEnum;
 (function (FxSummaryStatusEnum) {
     FxSummaryStatusEnum["Unquoted"] = "UNQUOTED";
     FxSummaryStatusEnum["Quoted"] = "QUOTED";
     FxSummaryStatusEnum["Expired"] = "EXPIRED";
     FxSummaryStatusEnum["Executed"] = "EXECUTED";
-})(FxSummaryStatusEnum || (FxSummaryStatusEnum = {}));
+})(FxSummaryStatusEnum = exports.FxSummaryStatusEnum || (exports.FxSummaryStatusEnum = {}));
 var FxSummary = /** @class */ (function (_super) {
     __extends(FxSummary, _super);
     function FxSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], FxSummary.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingStatus" }),
         __metadata("design:type", String)
     ], FxSummary.prototype, "fundingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invertedRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invertedRate" }),
         __metadata("design:type", Number)
     ], FxSummary.prototype, "invertedRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentCurrency" }),
         __metadata("design:type", String)
     ], FxSummary.prototype, "paymentCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quoteId" }),
         __metadata("design:type", String)
     ], FxSummary.prototype, "quoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", Number)
     ], FxSummary.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCurrency" }),
         __metadata("design:type", String)
     ], FxSummary.prototype, "sourceCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], FxSummary.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCost" }),
         __metadata("design:type", Number)
     ], FxSummary.prototype, "totalCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPaymentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPaymentAmount" }),
         __metadata("design:type", Number)
     ], FxSummary.prototype, "totalPaymentAmount", void 0);
     return FxSummary;
-}(SpeakeasyBase));
-export { FxSummary };
+}(utils_1.SpeakeasyBase));
+exports.FxSummary = FxSummary;

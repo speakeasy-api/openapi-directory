@@ -23,7 +23,7 @@ export class MailerSettings extends SpeakeasyBase {
   eu?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;

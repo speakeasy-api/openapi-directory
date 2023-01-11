@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesAddonsListResponse = exports.NodesAddonsListRequest = exports.NodesAddonsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesAddonsListPathParams = /** @class */ (function (_super) {
     __extends(NodesAddonsListPathParams, _super);
     function NodesAddonsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesAddonsListPathParams.prototype, "nodeId", void 0);
     return NodesAddonsListPathParams;
-}(SpeakeasyBase));
-export { NodesAddonsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesAddonsListPathParams = NodesAddonsListPathParams;
 var NodesAddonsListRequest = /** @class */ (function (_super) {
     __extends(NodesAddonsListRequest, _super);
     function NodesAddonsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesAddonsListPathParams)
     ], NodesAddonsListRequest.prototype, "pathParams", void 0);
     return NodesAddonsListRequest;
-}(SpeakeasyBase));
-export { NodesAddonsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesAddonsListRequest = NodesAddonsListRequest;
 var NodesAddonsListResponse = /** @class */ (function (_super) {
     __extends(NodesAddonsListResponse, _super);
     function NodesAddonsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], NodesAddonsListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesAddonsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesAddonsListResponse.prototype, "statusCode", void 0);
     return NodesAddonsListResponse;
-}(SpeakeasyBase));
-export { NodesAddonsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesAddonsListResponse = NodesAddonsListResponse;

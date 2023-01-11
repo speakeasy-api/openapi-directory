@@ -805,11 +805,11 @@ export enum ParametersTypeEnum {
 }
 
 
-// Parameters
+// ParametersT
 /** 
  * Parameters of a query or report.
 **/
-export class Parameters extends SpeakeasyBase {
+export class ParametersT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=filters", elemType: FilterPair })
   filters?: FilterPair[];
 

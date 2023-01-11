@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Column } from "./googlecloudchannelv1column";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Report = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1column_1 = require("./googlecloudchannelv1column");
 // GoogleCloudChannelV1Report
 /**
  * The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
@@ -34,21 +37,21 @@ var GoogleCloudChannelV1Report = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns", elemType: GoogleCloudChannelV1Column }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns", elemType: googlecloudchannelv1column_1.GoogleCloudChannelV1Column }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1Report.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Report.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Report.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Report.prototype, "name", void 0);
     return GoogleCloudChannelV1Report;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Report };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Report = GoogleCloudChannelV1Report;

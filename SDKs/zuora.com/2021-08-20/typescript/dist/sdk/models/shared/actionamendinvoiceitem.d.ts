@@ -1,0 +1,38 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class ActionAmendInvoiceItem extends SpeakeasyBase {
+    accountingCode?: string;
+    appliedToInvoiceItemId?: string;
+    chargeAmount?: number;
+    chargeDate?: Date;
+    chargeDescription?: string;
+    chargeId?: string;
+    chargeName?: string;
+    chargeNumber?: string;
+    chargeType?: string;
+    createdById?: string;
+    createdDate?: Date;
+    invoiceId?: string;
+    processingType?: number;
+    productDescription?: string;
+    productId?: string;
+    productName?: string;
+    productRatePlanChargeId?: string;
+    quantity?: number;
+    ratePlanChargeId?: string;
+    revRecCode?: string;
+    revRecStartDate?: Date;
+    revRecTriggerCondition?: string;
+    sku?: string;
+    serviceEndDate?: Date;
+    serviceStartDate?: Date;
+    subscriptionId?: string;
+    subscriptionNumber?: string;
+    taxAmount?: number;
+    taxCode?: string;
+    taxExemptAmount?: number;
+    taxMode?: string;
+    uom?: string;
+    unitPrice?: number;
+    updatedById?: string;
+    updatedDate?: Date;
+}

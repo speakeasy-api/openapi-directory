@@ -13,7 +13,7 @@ import { MetricDimension } from "./metricdimension";
 **/
 export class SegmentDimensions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes", elemType: AttributeDimension })
-  attributes?: Map<string, AttributeDimension>;
+  attributes?: Record<string, AttributeDimension>;
 
   @SpeakeasyMetadata({ data: "json, name=Behavior" })
   behavior?: SegmentBehaviors;
@@ -25,8 +25,8 @@ export class SegmentDimensions extends SpeakeasyBase {
   location?: SegmentLocation;
 
   @SpeakeasyMetadata({ data: "json, name=Metrics", elemType: MetricDimension })
-  metrics?: Map<string, MetricDimension>;
+  metrics?: Record<string, MetricDimension>;
 
   @SpeakeasyMetadata({ data: "json, name=UserAttributes", elemType: AttributeDimension })
-  userAttributes?: Map<string, AttributeDimension>;
+  userAttributes?: Record<string, AttributeDimension>;
 }

@@ -69,7 +69,7 @@ export class UpdateRoutingControlStatesResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateRoutingControlStatesResponse?: Map<string, any>;
+  updateRoutingControlStatesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

@@ -14,7 +14,7 @@ export declare class GetOrganizationDevicesRequest extends SpeakeasyBase {
 }
 export declare class GetOrganizationDevicesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationDevices200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationDevices200ApplicationJSONObject?: Record<string, any>;
 }

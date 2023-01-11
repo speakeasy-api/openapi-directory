@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceTrafficShapingUplinkSelectionRequest ext
 export declare class GetNetworkApplianceTrafficShapingUplinkSelectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceTrafficShapingUplinkSelection200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONObject?: Record<string, any>;
 }

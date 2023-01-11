@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostContainersNameOrIdUnpauseResponse = exports.PostContainersNameOrIdUnpauseRequest = exports.PostContainersNameOrIdUnpauseHeaders = exports.PostContainersNameOrIdUnpausePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostContainersNameOrIdUnpausePathParams = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdUnpausePathParams, _super);
     function PostContainersNameOrIdUnpausePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdUnpausePathParams.prototype, "nameOrId", void 0);
     return PostContainersNameOrIdUnpausePathParams;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdUnpausePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdUnpausePathParams = PostContainersNameOrIdUnpausePathParams;
 var PostContainersNameOrIdUnpauseHeaders = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdUnpauseHeaders, _super);
     function PostContainersNameOrIdUnpauseHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdUnpauseHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdUnpauseHeaders.prototype, "xAuthToken", void 0);
     return PostContainersNameOrIdUnpauseHeaders;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdUnpauseHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdUnpauseHeaders = PostContainersNameOrIdUnpauseHeaders;
 var PostContainersNameOrIdUnpauseRequest = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdUnpauseRequest, _super);
     function PostContainersNameOrIdUnpauseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdUnpausePathParams)
     ], PostContainersNameOrIdUnpauseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdUnpauseHeaders)
     ], PostContainersNameOrIdUnpauseRequest.prototype, "headers", void 0);
     return PostContainersNameOrIdUnpauseRequest;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdUnpauseRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdUnpauseRequest = PostContainersNameOrIdUnpauseRequest;
 var PostContainersNameOrIdUnpauseResponse = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdUnpauseResponse, _super);
     function PostContainersNameOrIdUnpauseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostContainersNameOrIdUnpauseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostContainersNameOrIdUnpauseResponse.prototype, "statusCode", void 0);
     return PostContainersNameOrIdUnpauseResponse;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdUnpauseResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdUnpauseResponse = PostContainersNameOrIdUnpauseResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Settings = void 0;
+var utils_1 = require("../../../internal/utils");
 var Settings = /** @class */ (function (_super) {
     __extends(Settings, _super);
     function Settings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closed_caption" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closed_caption" }),
+        __metadata("design:type", Object)
     ], Settings.prototype, "closedCaption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=control_notifications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=control_notifications" }),
         __metadata("design:type", Number)
     ], Settings.prototype, "controlNotifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country_code" }),
         __metadata("design:type", String)
     ], Settings.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], Settings.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_standby" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_standby" }),
         __metadata("design:type", Number)
     ], Settings.prototype, "networkStandby", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system_sound_effects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system_sound_effects" }),
         __metadata("design:type", Boolean)
     ], Settings.prototype, "systemSoundEffects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_format" }),
         __metadata("design:type", Number)
     ], Settings.prototype, "timeFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], Settings.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wake_on_cast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wake_on_cast" }),
         __metadata("design:type", Number)
     ], Settings.prototype, "wakeOnCast", void 0);
     return Settings;
-}(SpeakeasyBase));
-export { Settings };
+}(utils_1.SpeakeasyBase));
+exports.Settings = Settings;

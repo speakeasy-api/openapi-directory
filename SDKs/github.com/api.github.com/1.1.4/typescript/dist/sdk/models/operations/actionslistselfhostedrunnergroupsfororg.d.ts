@@ -18,5 +18,5 @@ export declare class ActionsListSelfHostedRunnerGroupsForOrgRequest extends Spea
 export declare class ActionsListSelfHostedRunnerGroupsForOrgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelfHostedRunnerGroupsForOrg200ApplicationJsonObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson;
+    actionsListSelfHostedRunnerGroupsForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJson;
 }

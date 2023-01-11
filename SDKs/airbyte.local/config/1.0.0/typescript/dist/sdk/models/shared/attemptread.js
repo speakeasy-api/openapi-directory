@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttemptStatusEnum } from "./attemptstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttemptRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var attemptstatusenum_1 = require("./attemptstatusenum");
 var AttemptRead = /** @class */ (function (_super) {
     __extends(AttemptRead, _super);
     function AttemptRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesSynced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesSynced" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "bytesSynced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endedAt" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "endedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordsSynced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordsSynced" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "recordsSynced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AttemptRead.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Number)
     ], AttemptRead.prototype, "updatedAt", void 0);
     return AttemptRead;
-}(SpeakeasyBase));
-export { AttemptRead };
+}(utils_1.SpeakeasyBase));
+exports.AttemptRead = AttemptRead;

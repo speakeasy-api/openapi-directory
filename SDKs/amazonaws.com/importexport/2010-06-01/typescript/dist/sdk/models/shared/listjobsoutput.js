@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Job } from "./job";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListJobsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var job_1 = require("./job");
 // ListJobsOutput
 /**
  * Output structure for the ListJobs operation.
@@ -34,13 +37,13 @@ var ListJobsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ListJobsOutput.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Job }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: job_1.Job }),
         __metadata("design:type", Array)
     ], ListJobsOutput.prototype, "jobs", void 0);
     return ListJobsOutput;
-}(SpeakeasyBase));
-export { ListJobsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListJobsOutput = ListJobsOutput;

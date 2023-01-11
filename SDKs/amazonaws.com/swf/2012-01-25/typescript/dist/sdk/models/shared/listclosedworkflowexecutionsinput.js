@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloseStatusFilter } from "./closestatusfilter";
-import { ExecutionTimeFilter } from "./executiontimefilter";
-import { WorkflowExecutionFilter } from "./workflowexecutionfilter";
-import { TagFilter } from "./tagfilter";
-import { WorkflowTypeFilter } from "./workflowtypefilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListClosedWorkflowExecutionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var closestatusfilter_1 = require("./closestatusfilter");
+var executiontimefilter_1 = require("./executiontimefilter");
+var workflowexecutionfilter_1 = require("./workflowexecutionfilter");
+var tagfilter_1 = require("./tagfilter");
+var workflowtypefilter_1 = require("./workflowtypefilter");
 var ListClosedWorkflowExecutionsInput = /** @class */ (function (_super) {
     __extends(ListClosedWorkflowExecutionsInput, _super);
     function ListClosedWorkflowExecutionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeStatusFilter" }),
-        __metadata("design:type", CloseStatusFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeStatusFilter" }),
+        __metadata("design:type", closestatusfilter_1.CloseStatusFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "closeStatusFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeTimeFilter" }),
-        __metadata("design:type", ExecutionTimeFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeTimeFilter" }),
+        __metadata("design:type", executiontimefilter_1.ExecutionTimeFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "closeTimeFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], ListClosedWorkflowExecutionsInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionFilter" }),
-        __metadata("design:type", WorkflowExecutionFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionFilter" }),
+        __metadata("design:type", workflowexecutionfilter_1.WorkflowExecutionFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "executionFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPageSize" }),
         __metadata("design:type", Number)
     ], ListClosedWorkflowExecutionsInput.prototype, "maximumPageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListClosedWorkflowExecutionsInput.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseOrder" }),
         __metadata("design:type", Boolean)
     ], ListClosedWorkflowExecutionsInput.prototype, "reverseOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimeFilter" }),
-        __metadata("design:type", ExecutionTimeFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimeFilter" }),
+        __metadata("design:type", executiontimefilter_1.ExecutionTimeFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "startTimeFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagFilter" }),
-        __metadata("design:type", TagFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagFilter" }),
+        __metadata("design:type", tagfilter_1.TagFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "tagFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeFilter" }),
-        __metadata("design:type", WorkflowTypeFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeFilter" }),
+        __metadata("design:type", workflowtypefilter_1.WorkflowTypeFilter)
     ], ListClosedWorkflowExecutionsInput.prototype, "typeFilter", void 0);
     return ListClosedWorkflowExecutionsInput;
-}(SpeakeasyBase));
-export { ListClosedWorkflowExecutionsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListClosedWorkflowExecutionsInput = ListClosedWorkflowExecutionsInput;

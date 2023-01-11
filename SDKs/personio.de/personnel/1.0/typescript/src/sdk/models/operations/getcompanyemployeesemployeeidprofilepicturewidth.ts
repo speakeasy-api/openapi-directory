@@ -22,8 +22,8 @@ export class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse extends Sp
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString?: Uint8Array;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString?: Uint8Array;
 }

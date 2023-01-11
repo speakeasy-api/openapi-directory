@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ApiOverviewSshKeyFingerprints extends SpeakeasyBase {
-    sha256Dsa?: string;
-    sha256Rsa?: string;
+    sha256DSA?: string;
+    sha256RSA?: string;
 }
 /**
  * Api Overview

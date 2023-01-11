@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBatchResponse = exports.GetBatchRequest = exports.GetBatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBatchPathParams = /** @class */ (function (_super) {
     __extends(GetBatchPathParams, _super);
     function GetBatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetBatchPathParams.prototype, "id", void 0);
     return GetBatchPathParams;
-}(SpeakeasyBase));
-export { GetBatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchPathParams = GetBatchPathParams;
 var GetBatchRequest = /** @class */ (function (_super) {
     __extends(GetBatchRequest, _super);
     function GetBatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBatchPathParams)
     ], GetBatchRequest.prototype, "pathParams", void 0);
     return GetBatchRequest;
-}(SpeakeasyBase));
-export { GetBatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchRequest = GetBatchRequest;
 var GetBatchResponse = /** @class */ (function (_super) {
     __extends(GetBatchResponse, _super);
     function GetBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetBatchResponse.prototype, "batch", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBatchResponse.prototype, "statusCode", void 0);
     return GetBatchResponse;
-}(SpeakeasyBase));
-export { GetBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchResponse = GetBatchResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketingEventEmailSubscriber = void 0;
+var utils_1 = require("../../../internal/utils");
 var MarketingEventEmailSubscriber = /** @class */ (function (_super) {
     __extends(MarketingEventEmailSubscriber, _super);
     function MarketingEventEmailSubscriber() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactProperties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactProperties" }),
+        __metadata("design:type", Object)
     ], MarketingEventEmailSubscriber.prototype, "contactProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], MarketingEventEmailSubscriber.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactionDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactionDateTime" }),
         __metadata("design:type", Number)
     ], MarketingEventEmailSubscriber.prototype, "interactionDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], MarketingEventEmailSubscriber.prototype, "properties", void 0);
     return MarketingEventEmailSubscriber;
-}(SpeakeasyBase));
-export { MarketingEventEmailSubscriber };
+}(utils_1.SpeakeasyBase));
+exports.MarketingEventEmailSubscriber = MarketingEventEmailSubscriber;

@@ -69,5 +69,5 @@ export class UpdateNetworkWirelessSsidEapOverrideResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidEapOverride200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidEapOverride200ApplicationJSONObject?: Record<string, any>;
 }

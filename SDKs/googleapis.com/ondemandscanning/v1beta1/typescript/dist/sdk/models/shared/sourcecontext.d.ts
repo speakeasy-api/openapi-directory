@@ -9,5 +9,5 @@ export declare class SourceContext extends SpeakeasyBase {
     cloudRepo?: CloudRepoSourceContext;
     gerrit?: GerritSourceContext;
     git?: GitSourceContext;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
 }

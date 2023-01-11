@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadData1 = void 0;
+var utils_1 = require("../../../internal/utils");
 var ObReadData1 = /** @class */ (function (_super) {
     __extends(ObReadData1, _super);
     function ObReadData1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpirationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpirationDateTime" }),
         __metadata("design:type", Date)
     ], ObReadData1.prototype, "expirationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", Array)
     ], ObReadData1.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionFromDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionFromDateTime" }),
         __metadata("design:type", Date)
     ], ObReadData1.prototype, "transactionFromDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionToDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionToDateTime" }),
         __metadata("design:type", Date)
     ], ObReadData1.prototype, "transactionToDateTime", void 0);
     return ObReadData1;
-}(SpeakeasyBase));
-export { ObReadData1 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadData1 = ObReadData1;

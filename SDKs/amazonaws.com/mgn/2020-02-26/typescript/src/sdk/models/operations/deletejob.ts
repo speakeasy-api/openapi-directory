@@ -28,7 +28,7 @@ export class DeleteJobHeaders extends SpeakeasyBase {
 
 export class DeleteJobRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId: string;
+  jobID: string;
 }
 
 
@@ -49,7 +49,7 @@ export class DeleteJobResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteJobResponse?: Map<string, any>;
+  deleteJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

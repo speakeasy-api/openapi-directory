@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldTypeDefinition } from "./fieldtypedefinition";
-export var InputFieldDefinitionSupportedValueTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputFieldDefinition = exports.InputFieldDefinitionSupportedValueTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldtypedefinition_1 = require("./fieldtypedefinition");
+var InputFieldDefinitionSupportedValueTypesEnum;
 (function (InputFieldDefinitionSupportedValueTypesEnum) {
     InputFieldDefinitionSupportedValueTypesEnum["StaticValue"] = "STATIC_VALUE";
     InputFieldDefinitionSupportedValueTypesEnum["ObjectProperty"] = "OBJECT_PROPERTY";
     InputFieldDefinitionSupportedValueTypesEnum["FieldData"] = "FIELD_DATA";
-})(InputFieldDefinitionSupportedValueTypesEnum || (InputFieldDefinitionSupportedValueTypesEnum = {}));
+})(InputFieldDefinitionSupportedValueTypesEnum = exports.InputFieldDefinitionSupportedValueTypesEnum || (exports.InputFieldDefinitionSupportedValueTypesEnum = {}));
 // InputFieldDefinition
 /**
  * Configuration for an input field on the custom action
@@ -40,17 +43,17 @@ var InputFieldDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isRequired" }),
         __metadata("design:type", Boolean)
     ], InputFieldDefinition.prototype, "isRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedValueTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedValueTypes" }),
         __metadata("design:type", Array)
     ], InputFieldDefinition.prototype, "supportedValueTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeDefinition" }),
-        __metadata("design:type", FieldTypeDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeDefinition" }),
+        __metadata("design:type", fieldtypedefinition_1.FieldTypeDefinition)
     ], InputFieldDefinition.prototype, "typeDefinition", void 0);
     return InputFieldDefinition;
-}(SpeakeasyBase));
-export { InputFieldDefinition };
+}(utils_1.SpeakeasyBase));
+exports.InputFieldDefinition = InputFieldDefinition;

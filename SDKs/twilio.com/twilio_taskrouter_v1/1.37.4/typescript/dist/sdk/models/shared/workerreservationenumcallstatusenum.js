@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkerReservationEnumCallStatusEnum = void 0;
+var WorkerReservationEnumCallStatusEnum;
+(function (WorkerReservationEnumCallStatusEnum) {
+    WorkerReservationEnumCallStatusEnum["Initiated"] = "initiated";
+    WorkerReservationEnumCallStatusEnum["Ringing"] = "ringing";
+    WorkerReservationEnumCallStatusEnum["Answered"] = "answered";
+    WorkerReservationEnumCallStatusEnum["Completed"] = "completed";
+})(WorkerReservationEnumCallStatusEnum = exports.WorkerReservationEnumCallStatusEnum || (exports.WorkerReservationEnumCallStatusEnum = {}));

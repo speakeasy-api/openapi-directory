@@ -1,6 +1,9 @@
-export var CsvHeaderOptionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CsvHeaderOptionEnum = void 0;
+var CsvHeaderOptionEnum;
 (function (CsvHeaderOptionEnum) {
     CsvHeaderOptionEnum["Unknown"] = "UNKNOWN";
     CsvHeaderOptionEnum["Present"] = "PRESENT";
     CsvHeaderOptionEnum["Absent"] = "ABSENT";
-})(CsvHeaderOptionEnum || (CsvHeaderOptionEnum = {}));
+})(CsvHeaderOptionEnum = exports.CsvHeaderOptionEnum || (exports.CsvHeaderOptionEnum = {}));

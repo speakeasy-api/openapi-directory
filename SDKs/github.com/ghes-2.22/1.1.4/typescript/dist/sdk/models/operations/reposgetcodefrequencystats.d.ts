@@ -10,5 +10,5 @@ export declare class ReposGetCodeFrequencyStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     codeFrequencyStats?: number[][];
-    reposGetCodeFrequencyStats202ApplicationJsonObject?: Map<string, any>;
+    reposGetCodeFrequencyStats202ApplicationJSONObject?: Record<string, any>;
 }

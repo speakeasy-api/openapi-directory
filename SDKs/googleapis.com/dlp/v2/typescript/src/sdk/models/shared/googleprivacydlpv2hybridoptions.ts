@@ -12,7 +12,7 @@ export class GooglePrivacyDlpV2HybridOptions extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=requiredFindingLabelKeys" })
   requiredFindingLabelKeys?: string[];

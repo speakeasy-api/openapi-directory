@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,57 +14,82 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateLinkAttributesResponse = exports.UpdateLinkAttributesRequest = exports.UpdateLinkAttributesRequestBody = exports.UpdateLinkAttributesRequestBodyTypedLinkSpecifier = exports.UpdateLinkAttributesHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateLinkAttributesHeaders = /** @class */ (function (_super) {
     __extends(UpdateLinkAttributesHeaders, _super);
     function UpdateLinkAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
         __metadata("design:type", String)
     ], UpdateLinkAttributesHeaders.prototype, "xAmzDataPartition", void 0);
     return UpdateLinkAttributesHeaders;
-}(SpeakeasyBase));
-export { UpdateLinkAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLinkAttributesHeaders = UpdateLinkAttributesHeaders;
 // UpdateLinkAttributesRequestBodyTypedLinkSpecifier
 /**
  * Contains all the information that is used to uniquely identify a typed link. The parameters discussed in this topic are used to uniquely specify the typed link being operated on. The <a>AttachTypedLink</a> API returns a typed link specifier while the <a>DetachTypedLink</a> API accepts one as input. Similarly, the <a>ListIncomingTypedLinks</a> and <a>ListOutgoingTypedLinks</a> API operations provide typed link specifiers as output. You can also construct a typed link specifier from scratch.
@@ -74,109 +100,109 @@ var UpdateLinkAttributesRequestBodyTypedLinkSpecifier = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityAttributeValues", elemType: shared.AttributeNameAndValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityAttributeValues", elemType: shared.AttributeNameAndValue }),
         __metadata("design:type", Array)
     ], UpdateLinkAttributesRequestBodyTypedLinkSpecifier.prototype, "identityAttributeValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceObjectReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceObjectReference" }),
         __metadata("design:type", shared.ObjectReference)
     ], UpdateLinkAttributesRequestBodyTypedLinkSpecifier.prototype, "sourceObjectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetObjectReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetObjectReference" }),
         __metadata("design:type", shared.ObjectReference)
     ], UpdateLinkAttributesRequestBodyTypedLinkSpecifier.prototype, "targetObjectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkFacet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkFacet" }),
         __metadata("design:type", shared.TypedLinkSchemaAndFacetName)
     ], UpdateLinkAttributesRequestBodyTypedLinkSpecifier.prototype, "typedLinkFacet", void 0);
     return UpdateLinkAttributesRequestBodyTypedLinkSpecifier;
-}(SpeakeasyBase));
-export { UpdateLinkAttributesRequestBodyTypedLinkSpecifier };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLinkAttributesRequestBodyTypedLinkSpecifier = UpdateLinkAttributesRequestBodyTypedLinkSpecifier;
 var UpdateLinkAttributesRequestBody = /** @class */ (function (_super) {
     __extends(UpdateLinkAttributesRequestBody, _super);
     function UpdateLinkAttributesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeUpdates", elemType: shared.LinkAttributeUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeUpdates", elemType: shared.LinkAttributeUpdate }),
         __metadata("design:type", Array)
     ], UpdateLinkAttributesRequestBody.prototype, "attributeUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkSpecifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkSpecifier" }),
         __metadata("design:type", UpdateLinkAttributesRequestBodyTypedLinkSpecifier)
     ], UpdateLinkAttributesRequestBody.prototype, "typedLinkSpecifier", void 0);
     return UpdateLinkAttributesRequestBody;
-}(SpeakeasyBase));
-export { UpdateLinkAttributesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLinkAttributesRequestBody = UpdateLinkAttributesRequestBody;
 var UpdateLinkAttributesRequest = /** @class */ (function (_super) {
     __extends(UpdateLinkAttributesRequest, _super);
     function UpdateLinkAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateLinkAttributesHeaders)
     ], UpdateLinkAttributesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateLinkAttributesRequestBody)
     ], UpdateLinkAttributesRequest.prototype, "request", void 0);
     return UpdateLinkAttributesRequest;
-}(SpeakeasyBase));
-export { UpdateLinkAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLinkAttributesRequest = UpdateLinkAttributesRequest;
 var UpdateLinkAttributesResponse = /** @class */ (function (_super) {
     __extends(UpdateLinkAttributesResponse, _super);
     function UpdateLinkAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AccessDeniedException)
     ], UpdateLinkAttributesResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateLinkAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.DirectoryNotEnabledException)
     ], UpdateLinkAttributesResponse.prototype, "directoryNotEnabledException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.FacetValidationException)
     ], UpdateLinkAttributesResponse.prototype, "facetValidationException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InternalServiceException)
     ], UpdateLinkAttributesResponse.prototype, "internalServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InvalidArnException)
     ], UpdateLinkAttributesResponse.prototype, "invalidArnException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LimitExceededException)
     ], UpdateLinkAttributesResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ResourceNotFoundException)
     ], UpdateLinkAttributesResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RetryableConflictException)
     ], UpdateLinkAttributesResponse.prototype, "retryableConflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateLinkAttributesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateLinkAttributesResponse.prototype, "updateLinkAttributesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationException)
     ], UpdateLinkAttributesResponse.prototype, "validationException", void 0);
     return UpdateLinkAttributesResponse;
-}(SpeakeasyBase));
-export { UpdateLinkAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLinkAttributesResponse = UpdateLinkAttributesResponse;

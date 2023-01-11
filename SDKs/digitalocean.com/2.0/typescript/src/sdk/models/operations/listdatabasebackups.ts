@@ -1,62 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListDatabaseBackupsPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
-export class ListDatabaseBackupsRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: ListDatabaseBackupsPathParams;
-}
-
-
 export class ListDatabaseBackups200ApplicationJsonBackups extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt: Date;
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes: number;
 }
 
 
 export class ListDatabaseBackups200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=backups", elemType: operations.ListDatabaseBackups200ApplicationJsonBackups })
+  @SpeakeasyMetadata({ data: "json, name=backups", elemType: ListDatabaseBackups200ApplicationJsonBackups })
   backups: ListDatabaseBackups200ApplicationJsonBackups[];
 }
 
 
 export class ListDatabaseBackups401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListDatabaseBackupsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ListDatabaseBackupsPathParams;
+}
+
+
 export class ListDatabaseBackupsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listDatabaseBackups200ApplicationJsonObject?: ListDatabaseBackups200ApplicationJson;
+  @SpeakeasyMetadata()
+  listDatabaseBackups200ApplicationJSONObject?: ListDatabaseBackups200ApplicationJson;
 
-  @Metadata()
-  listDatabaseBackups401ApplicationJsonObject?: ListDatabaseBackups401ApplicationJson;
+  @SpeakeasyMetadata()
+  listDatabaseBackups401ApplicationJSONObject?: ListDatabaseBackups401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

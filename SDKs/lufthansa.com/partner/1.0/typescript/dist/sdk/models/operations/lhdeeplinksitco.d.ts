@@ -32,6 +32,6 @@ export declare class LhDeepLinksItcoRequest extends SpeakeasyBase {
 }
 export declare class LhDeepLinksItcoResponse extends SpeakeasyBase {
     contentType: string;
-    lhDeepLinksItco200ApplicationJsonString?: string;
+    lhDeepLinksITCO200ApplicationJSONString?: string;
     statusCode: number;
 }

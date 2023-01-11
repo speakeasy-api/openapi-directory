@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppliedLicense } from "./appliedlicense";
-import { ComputeScheduling } from "./computescheduling";
-import { NetworkInterface } from "./networkinterface";
-export var ComputeEngineTargetDetailsBootOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeEngineTargetDetails = exports.ComputeEngineTargetDetailsLicenseTypeEnum = exports.ComputeEngineTargetDetailsDiskTypeEnum = exports.ComputeEngineTargetDetailsBootOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appliedlicense_1 = require("./appliedlicense");
+var computescheduling_1 = require("./computescheduling");
+var networkinterface_1 = require("./networkinterface");
+var ComputeEngineTargetDetailsBootOptionEnum;
 (function (ComputeEngineTargetDetailsBootOptionEnum) {
     ComputeEngineTargetDetailsBootOptionEnum["ComputeEngineBootOptionUnspecified"] = "COMPUTE_ENGINE_BOOT_OPTION_UNSPECIFIED";
     ComputeEngineTargetDetailsBootOptionEnum["ComputeEngineBootOptionEfi"] = "COMPUTE_ENGINE_BOOT_OPTION_EFI";
     ComputeEngineTargetDetailsBootOptionEnum["ComputeEngineBootOptionBios"] = "COMPUTE_ENGINE_BOOT_OPTION_BIOS";
-})(ComputeEngineTargetDetailsBootOptionEnum || (ComputeEngineTargetDetailsBootOptionEnum = {}));
-export var ComputeEngineTargetDetailsDiskTypeEnum;
+})(ComputeEngineTargetDetailsBootOptionEnum = exports.ComputeEngineTargetDetailsBootOptionEnum || (exports.ComputeEngineTargetDetailsBootOptionEnum = {}));
+var ComputeEngineTargetDetailsDiskTypeEnum;
 (function (ComputeEngineTargetDetailsDiskTypeEnum) {
     ComputeEngineTargetDetailsDiskTypeEnum["ComputeEngineDiskTypeUnspecified"] = "COMPUTE_ENGINE_DISK_TYPE_UNSPECIFIED";
     ComputeEngineTargetDetailsDiskTypeEnum["ComputeEngineDiskTypeStandard"] = "COMPUTE_ENGINE_DISK_TYPE_STANDARD";
     ComputeEngineTargetDetailsDiskTypeEnum["ComputeEngineDiskTypeSsd"] = "COMPUTE_ENGINE_DISK_TYPE_SSD";
     ComputeEngineTargetDetailsDiskTypeEnum["ComputeEngineDiskTypeBalanced"] = "COMPUTE_ENGINE_DISK_TYPE_BALANCED";
-})(ComputeEngineTargetDetailsDiskTypeEnum || (ComputeEngineTargetDetailsDiskTypeEnum = {}));
-export var ComputeEngineTargetDetailsLicenseTypeEnum;
+})(ComputeEngineTargetDetailsDiskTypeEnum = exports.ComputeEngineTargetDetailsDiskTypeEnum || (exports.ComputeEngineTargetDetailsDiskTypeEnum = {}));
+var ComputeEngineTargetDetailsLicenseTypeEnum;
 (function (ComputeEngineTargetDetailsLicenseTypeEnum) {
     ComputeEngineTargetDetailsLicenseTypeEnum["ComputeEngineLicenseTypeDefault"] = "COMPUTE_ENGINE_LICENSE_TYPE_DEFAULT";
     ComputeEngineTargetDetailsLicenseTypeEnum["ComputeEngineLicenseTypePayg"] = "COMPUTE_ENGINE_LICENSE_TYPE_PAYG";
     ComputeEngineTargetDetailsLicenseTypeEnum["ComputeEngineLicenseTypeByol"] = "COMPUTE_ENGINE_LICENSE_TYPE_BYOL";
-})(ComputeEngineTargetDetailsLicenseTypeEnum || (ComputeEngineTargetDetailsLicenseTypeEnum = {}));
+})(ComputeEngineTargetDetailsLicenseTypeEnum = exports.ComputeEngineTargetDetailsLicenseTypeEnum || (exports.ComputeEngineTargetDetailsLicenseTypeEnum = {}));
 // ComputeEngineTargetDetails
 /**
  * ComputeEngineTargetDetails is a collection of details for creating a VM in a target Compute Engine project.
@@ -55,77 +58,77 @@ var ComputeEngineTargetDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalLicenses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalLicenses" }),
         __metadata("design:type", Array)
     ], ComputeEngineTargetDetails.prototype, "additionalLicenses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedLicense" }),
-        __metadata("design:type", AppliedLicense)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedLicense" }),
+        __metadata("design:type", appliedlicense_1.AppliedLicense)
     ], ComputeEngineTargetDetails.prototype, "appliedLicense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootOption" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "bootOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeScheduling" }),
-        __metadata("design:type", ComputeScheduling)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeScheduling" }),
+        __metadata("design:type", computescheduling_1.ComputeScheduling)
     ], ComputeEngineTargetDetails.prototype, "computeScheduling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskType" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "diskType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ComputeEngineTargetDetails.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "licenseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineTypeSeries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineTypeSeries" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "machineTypeSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ComputeEngineTargetDetails.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], ComputeEngineTargetDetails.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkTags" }),
         __metadata("design:type", Array)
     ], ComputeEngineTargetDetails.prototype, "networkTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secureBoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secureBoot" }),
         __metadata("design:type", Boolean)
     ], ComputeEngineTargetDetails.prototype, "secureBoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmName" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "vmName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], ComputeEngineTargetDetails.prototype, "zone", void 0);
     return ComputeEngineTargetDetails;
-}(SpeakeasyBase));
-export { ComputeEngineTargetDetails };
+}(utils_1.SpeakeasyBase));
+exports.ComputeEngineTargetDetails = ComputeEngineTargetDetails;

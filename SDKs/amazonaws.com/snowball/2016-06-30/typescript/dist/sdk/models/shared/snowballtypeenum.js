@@ -1,4 +1,7 @@
-export var SnowballTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnowballTypeEnum = void 0;
+var SnowballTypeEnum;
 (function (SnowballTypeEnum) {
     SnowballTypeEnum["Standard"] = "STANDARD";
     SnowballTypeEnum["Edge"] = "EDGE";
@@ -7,4 +10,4 @@ export var SnowballTypeEnum;
     SnowballTypeEnum["EdgeS"] = "EDGE_S";
     SnowballTypeEnum["Snc1Hdd"] = "SNC1_HDD";
     SnowballTypeEnum["Snc1Ssd"] = "SNC1_SSD";
-})(SnowballTypeEnum || (SnowballTypeEnum = {}));
+})(SnowballTypeEnum = exports.SnowballTypeEnum || (exports.SnowballTypeEnum = {}));

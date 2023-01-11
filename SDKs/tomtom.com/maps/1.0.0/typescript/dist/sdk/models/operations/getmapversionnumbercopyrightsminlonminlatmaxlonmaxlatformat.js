@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse = exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest = exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams = exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams = exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum;
 (function (GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum) {
     GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum["Json"] = "json";
     GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum["Jsonp"] = "jsonp";
     GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum["Xml"] = "xml";
-})(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum || (GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum = {}));
+})(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum = exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum || (exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum = {}));
 var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams, _super);
     function GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=maxLat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=maxLat" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "maxLat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=maxLon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=maxLon" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "maxLon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minLat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minLat" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "minLat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minLon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minLon" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "minLon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.prototype, "versionNumber", void 0);
     return GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams;
 var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams, _super);
     function GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams.prototype, "callback", void 0);
     return GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams;
 var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest, _super);
     function GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest.prototype, "queryParams", void 0);
     return GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest;
 var GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse, _super);
     function GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse.prototype, "statusCode", void 0);
     return GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse;

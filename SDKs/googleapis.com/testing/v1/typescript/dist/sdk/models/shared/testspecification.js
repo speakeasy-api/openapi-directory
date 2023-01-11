@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidInstrumentationTest } from "./androidinstrumentationtest";
-import { AndroidRoboTest } from "./androidrobotest";
-import { AndroidTestLoop } from "./androidtestloop";
-import { IosTestLoop } from "./iostestloop";
-import { IosTestSetup } from "./iostestsetup";
-import { IosXcTest } from "./iosxctest";
-import { TestSetup } from "./testsetup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidinstrumentationtest_1 = require("./androidinstrumentationtest");
+var androidrobotest_1 = require("./androidrobotest");
+var androidtestloop_1 = require("./androidtestloop");
+var iostestloop_1 = require("./iostestloop");
+var iostestsetup_1 = require("./iostestsetup");
+var iosxctest_1 = require("./iosxctest");
+var testsetup_1 = require("./testsetup");
 // TestSpecification
 /**
  * A description of how to run the test.
@@ -40,45 +43,45 @@ var TestSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidInstrumentationTest" }),
-        __metadata("design:type", AndroidInstrumentationTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidInstrumentationTest" }),
+        __metadata("design:type", androidinstrumentationtest_1.AndroidInstrumentationTest)
     ], TestSpecification.prototype, "androidInstrumentationTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidRoboTest" }),
-        __metadata("design:type", AndroidRoboTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidRoboTest" }),
+        __metadata("design:type", androidrobotest_1.AndroidRoboTest)
     ], TestSpecification.prototype, "androidRoboTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidTestLoop" }),
-        __metadata("design:type", AndroidTestLoop)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidTestLoop" }),
+        __metadata("design:type", androidtestloop_1.AndroidTestLoop)
     ], TestSpecification.prototype, "androidTestLoop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disablePerformanceMetrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disablePerformanceMetrics" }),
         __metadata("design:type", Boolean)
     ], TestSpecification.prototype, "disablePerformanceMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableVideoRecording" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableVideoRecording" }),
         __metadata("design:type", Boolean)
     ], TestSpecification.prototype, "disableVideoRecording", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosTestLoop" }),
-        __metadata("design:type", IosTestLoop)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosTestLoop" }),
+        __metadata("design:type", iostestloop_1.IosTestLoop)
     ], TestSpecification.prototype, "iosTestLoop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosTestSetup" }),
-        __metadata("design:type", IosTestSetup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosTestSetup" }),
+        __metadata("design:type", iostestsetup_1.IosTestSetup)
     ], TestSpecification.prototype, "iosTestSetup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosXcTest" }),
-        __metadata("design:type", IosXcTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosXcTest" }),
+        __metadata("design:type", iosxctest_1.IosXcTest)
     ], TestSpecification.prototype, "iosXcTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSetup" }),
-        __metadata("design:type", TestSetup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSetup" }),
+        __metadata("design:type", testsetup_1.TestSetup)
     ], TestSpecification.prototype, "testSetup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTimeout" }),
         __metadata("design:type", String)
     ], TestSpecification.prototype, "testTimeout", void 0);
     return TestSpecification;
-}(SpeakeasyBase));
-export { TestSpecification };
+}(utils_1.SpeakeasyBase));
+exports.TestSpecification = TestSpecification;

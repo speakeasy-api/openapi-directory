@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Stage } from "./stage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Plan = void 0;
+var utils_1 = require("../../../internal/utils");
+var stage_1 = require("./stage");
 // Plan
 /**
  * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
@@ -34,9 +37,9 @@ var Plan = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stages", elemType: Stage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stages", elemType: stage_1.Stage }),
         __metadata("design:type", Array)
     ], Plan.prototype, "stages", void 0);
     return Plan;
-}(SpeakeasyBase));
-export { Plan };
+}(utils_1.SpeakeasyBase));
+exports.Plan = Plan;

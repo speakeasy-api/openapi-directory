@@ -12,8 +12,8 @@ export class Create extends SpeakeasyBase {
   copy?: Copy;
 
   @SpeakeasyMetadata({ data: "json, name=new" })
-  new?: Map<string, any>;
+  new?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=upload" })
-  upload?: Map<string, any>;
+  upload?: Record<string, any>;
 }

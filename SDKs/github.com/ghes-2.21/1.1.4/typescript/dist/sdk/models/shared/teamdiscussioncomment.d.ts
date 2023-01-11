@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ReactionRollup } from "./reactionrollup";
+/**
+ * Simple User
+**/
 export declare class TeamDiscussionCommentSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

@@ -59,5 +59,5 @@ export class GetuserConversationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetuserConversations200ApplicationJson })
-  getuserConversations200ApplicationJsonObjects?: GetuserConversations200ApplicationJson[];
+  getuserConversations200ApplicationJSONObjects?: GetuserConversations200ApplicationJson[];
 }

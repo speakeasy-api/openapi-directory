@@ -1,7 +1,10 @@
-export var DiskSnapshotStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiskSnapshotStateEnum = void 0;
+var DiskSnapshotStateEnum;
 (function (DiskSnapshotStateEnum) {
     DiskSnapshotStateEnum["Pending"] = "pending";
     DiskSnapshotStateEnum["Completed"] = "completed";
     DiskSnapshotStateEnum["Error"] = "error";
     DiskSnapshotStateEnum["Unknown"] = "unknown";
-})(DiskSnapshotStateEnum || (DiskSnapshotStateEnum = {}));
+})(DiskSnapshotStateEnum = exports.DiskSnapshotStateEnum || (exports.DiskSnapshotStateEnum = {}));

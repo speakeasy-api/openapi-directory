@@ -155,7 +155,7 @@ export class BookingPastbooking200ApplicationJsonDataItemSummaries extends Speak
   priceFormatted?: string;
 
   @SpeakeasyMetadata({ data: "json, name=priceUSD" })
-  priceUsd?: number;
+  priceUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=productCode" })
   productCode?: string;
@@ -206,7 +206,7 @@ export class BookingPastbooking200ApplicationJsonDataItemSummaries extends Speak
   voucherRequirements?: string;
 
   @SpeakeasyMetadata({ data: "json, name=voucherURL" })
-  voucherUrl?: string;
+  voucherURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=vouchers" })
   vouchers?: string;
@@ -258,7 +258,7 @@ export class BookingPastbooking200ApplicationJsonData extends SpeakeasyBase {
   totalPriceFormatted?: string;
 
   @SpeakeasyMetadata({ data: "json, name=totalPriceUSD" })
-  totalPriceUsd?: number;
+  totalPriceUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=userId" })
   userId?: string;
@@ -267,7 +267,7 @@ export class BookingPastbooking200ApplicationJsonData extends SpeakeasyBase {
   voucherKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=voucherURL" })
-  voucherUrl?: string;
+  voucherURL?: string;
 }
 
 
@@ -297,10 +297,10 @@ export class BookingPastbooking200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -330,5 +330,5 @@ export class BookingPastbookingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingPastbooking200ApplicationJsonObject?: BookingPastbooking200ApplicationJson;
+  bookingPastbooking200ApplicationJSONObject?: BookingPastbooking200ApplicationJson;
 }

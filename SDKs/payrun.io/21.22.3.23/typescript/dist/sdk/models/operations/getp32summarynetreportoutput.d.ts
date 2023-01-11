@@ -15,6 +15,6 @@ export declare class GetP32SummaryNetReportOutputRequest extends SpeakeasyBase {
 export declare class GetP32SummaryNetReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getP32SummaryNetReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getP32SummaryNetReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

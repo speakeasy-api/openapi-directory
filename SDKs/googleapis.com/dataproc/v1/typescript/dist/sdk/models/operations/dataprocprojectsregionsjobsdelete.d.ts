@@ -29,6 +29,6 @@ export declare class DataprocProjectsRegionsJobsDeleteRequest extends SpeakeasyB
 }
 export declare class DataprocProjectsRegionsJobsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

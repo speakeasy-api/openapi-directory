@@ -24,11 +24,11 @@ export declare class Adexchangebuyer2AccountsCreativesStopWatchingSecurity exten
 export declare class Adexchangebuyer2AccountsCreativesStopWatchingRequest extends SpeakeasyBase {
     pathParams: Adexchangebuyer2AccountsCreativesStopWatchingPathParams;
     queryParams: Adexchangebuyer2AccountsCreativesStopWatchingQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: Adexchangebuyer2AccountsCreativesStopWatchingSecurity;
 }
 export declare class Adexchangebuyer2AccountsCreativesStopWatchingResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

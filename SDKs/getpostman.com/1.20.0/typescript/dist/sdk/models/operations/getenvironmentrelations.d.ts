@@ -17,5 +17,5 @@ export declare class GetEnvironmentRelationsRequest extends SpeakeasyBase {
 export declare class GetEnvironmentRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEnvironmentRelations200ApplicationJsonObject?: GetEnvironmentRelations200ApplicationJson;
+    getEnvironmentRelations200ApplicationJSONObject?: GetEnvironmentRelations200ApplicationJson;
 }

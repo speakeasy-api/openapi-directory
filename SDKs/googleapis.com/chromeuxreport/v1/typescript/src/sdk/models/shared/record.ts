@@ -5,11 +5,11 @@ import { Metric } from "./metric";
 
 
 
-// Record
+// RecordT
 /** 
  * Record is a single Chrome UX report data record. It contains use experience statistics for a single url pattern and set of dimensions.
 **/
-export class Record extends SpeakeasyBase {
+export class RecordT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=collectionPeriod" })
   collectionPeriod?: CollectionPeriod;
 
@@ -17,5 +17,5 @@ export class Record extends SpeakeasyBase {
   key?: Key;
 
   @SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric })
-  metrics?: Map<string, Metric>;
+  metrics?: Record<string, Metric>;
 }

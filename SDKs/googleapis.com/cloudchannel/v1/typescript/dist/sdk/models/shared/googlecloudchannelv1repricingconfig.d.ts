@@ -1,5 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1RepricingAdjustment } from "./googlecloudchannelv1repricingadjustment";
+import { GoogleCloudChannelV1ConditionalOverride } from "./googlecloudchannelv1conditionaloverride";
 import { GoogleTypeDate } from "./googletypedate";
 import { GoogleCloudChannelV1RepricingConfigEntitlementGranularity } from "./googlecloudchannelv1repricingconfigentitlementgranularity";
 export declare enum GoogleCloudChannelV1RepricingConfigRebillingBasisEnum {
@@ -12,7 +13,8 @@ export declare enum GoogleCloudChannelV1RepricingConfigRebillingBasisEnum {
 **/
 export declare class GoogleCloudChannelV1RepricingConfig extends SpeakeasyBase {
     adjustment?: GoogleCloudChannelV1RepricingAdjustment;
-    channelPartnerGranularity?: Map<string, any>;
+    channelPartnerGranularity?: Record<string, any>;
+    conditionalOverrides?: GoogleCloudChannelV1ConditionalOverride[];
     effectiveInvoiceMonth?: GoogleTypeDate;
     entitlementGranularity?: GoogleCloudChannelV1RepricingConfigEntitlementGranularity;
     rebillingBasis?: GoogleCloudChannelV1RepricingConfigRebillingBasisEnum;

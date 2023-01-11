@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PvcerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ENROL_NO" })
-  enrolNo: string;
+  enrolNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=FullName" })
   fullName: string;
@@ -191,23 +191,23 @@ export class PvcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pvcer400ApplicationJsonObject?: Pvcer400ApplicationJson;
+  pvcer400ApplicationJSONObject?: Pvcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer401ApplicationJsonObject?: Pvcer401ApplicationJson;
+  pvcer401ApplicationJSONObject?: Pvcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer404ApplicationJsonObject?: Pvcer404ApplicationJson;
+  pvcer404ApplicationJSONObject?: Pvcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer500ApplicationJsonObject?: Pvcer500ApplicationJson;
+  pvcer500ApplicationJSONObject?: Pvcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer502ApplicationJsonObject?: Pvcer502ApplicationJson;
+  pvcer502ApplicationJSONObject?: Pvcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer503ApplicationJsonObject?: Pvcer503ApplicationJson;
+  pvcer503ApplicationJSONObject?: Pvcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pvcer504ApplicationJsonObject?: Pvcer504ApplicationJson;
+  pvcer504ApplicationJSONObject?: Pvcer504ApplicationJson;
 }

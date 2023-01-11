@@ -28,7 +28,7 @@ export declare class GoogleCloudFunctionRuleResponseTarget extends SpeakeasyBase
     signingKeyId?: string;
 }
 export declare class GoogleCloudFunctionRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

@@ -4,10 +4,6 @@ import { OfferingTransactionTypeEnum } from "./offeringtransactiontypeenum";
 
 
 
-// OfferingStatus
-/** 
- * The status of the offering.
-**/
 export class OfferingStatus extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=effectiveOn" })
   effectiveOn?: Date;

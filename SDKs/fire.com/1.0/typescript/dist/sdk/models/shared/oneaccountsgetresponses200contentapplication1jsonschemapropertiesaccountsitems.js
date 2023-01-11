@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems = exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum = exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency = exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum;
 (function (OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum) {
     OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum["Eur"] = "EUR";
     OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum["Gbp"] = "GBP";
-})(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum || (OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum = {}));
+})(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum = exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum || (exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrencyCodeEnum = {}));
 var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency = /** @class */ (function (_super) {
     __extends(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency, _super);
     function OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency.prototype, "description", void 0);
     return OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency;
-}(SpeakeasyBase));
-export { OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency };
-export var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency = OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency;
+var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum;
 (function (OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum) {
     OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum["Live"] = "LIVE";
     OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum["Migrated"] = "MIGRATED";
-})(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum || (OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum = {}));
+})(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum = exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum || (exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsStatusEnum = {}));
 var OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems = /** @class */ (function (_super) {
     __extends(OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems, _super);
     function OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cbic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cbic" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "cbic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ccan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ccan" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "ccan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ciban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ciban" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "ciban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cnsc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cnsc" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "cnsc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colour" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "colour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsCurrency)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultAccount" }),
         __metadata("design:type", Boolean)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "defaultAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directDebitsAllowed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directDebitsAllowed" }),
         __metadata("design:type", Boolean)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "directDebitsAllowed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ican" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ican" }),
         __metadata("design:type", Number)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "ican", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems.prototype, "status", void 0);
     return OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems;
-}(SpeakeasyBase));
-export { OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems };
+}(utils_1.SpeakeasyBase));
+exports.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems = OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItems;

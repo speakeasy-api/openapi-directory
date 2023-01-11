@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForecastSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // ForecastSummary
 /**
  * Provides a summary of the forecast properties used in the <a>ListForecasts</a> operation. To get the complete set of properties, call the <a>DescribeForecast</a> operation, and provide the <code>ForecastArn</code> that is listed in the summary.
@@ -33,37 +36,37 @@ var ForecastSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], ForecastSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetGroupArn" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastArn" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "forecastArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastName" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "forecastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], ForecastSummary.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorArn" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "predictorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ForecastSummary.prototype, "status", void 0);
     return ForecastSummary;
-}(SpeakeasyBase));
-export { ForecastSummary };
+}(utils_1.SpeakeasyBase));
+exports.ForecastSummary = ForecastSummary;

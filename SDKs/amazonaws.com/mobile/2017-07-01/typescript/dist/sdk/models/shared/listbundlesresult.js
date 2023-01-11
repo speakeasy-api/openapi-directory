@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BundleDetails } from "./bundledetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListBundlesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var bundledetails_1 = require("./bundledetails");
 // ListBundlesResult
 /**
  *  Result structure contains a list of all available bundles with details.
@@ -34,13 +37,13 @@ var ListBundlesResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleList", elemType: BundleDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleList", elemType: bundledetails_1.BundleDetails }),
         __metadata("design:type", Array)
     ], ListBundlesResult.prototype, "bundleList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListBundlesResult.prototype, "nextToken", void 0);
     return ListBundlesResult;
-}(SpeakeasyBase));
-export { ListBundlesResult };
+}(utils_1.SpeakeasyBase));
+exports.ListBundlesResult = ListBundlesResult;

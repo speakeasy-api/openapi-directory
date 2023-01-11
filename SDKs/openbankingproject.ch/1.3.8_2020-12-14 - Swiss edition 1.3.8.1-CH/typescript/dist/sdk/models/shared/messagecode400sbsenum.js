@@ -1,4 +1,7 @@
-export var MessageCode400SbsEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageCode400SbsEnum = void 0;
+var MessageCode400SbsEnum;
 (function (MessageCode400SbsEnum) {
     MessageCode400SbsEnum["FormatError"] = "FORMAT_ERROR";
     MessageCode400SbsEnum["ParameterNotConsistent"] = "PARAMETER_NOT_CONSISTENT";
@@ -13,4 +16,4 @@ export var MessageCode400SbsEnum;
     MessageCode400SbsEnum["ScaInvalid"] = "SCA_INVALID";
     MessageCode400SbsEnum["ConsentUnknown"] = "CONSENT_UNKNOWN";
     MessageCode400SbsEnum["ReferenceMixInvalid"] = "REFERENCE_MIX_INVALID";
-})(MessageCode400SbsEnum || (MessageCode400SbsEnum = {}));
+})(MessageCode400SbsEnum = exports.MessageCode400SbsEnum || (exports.MessageCode400SbsEnum = {}));

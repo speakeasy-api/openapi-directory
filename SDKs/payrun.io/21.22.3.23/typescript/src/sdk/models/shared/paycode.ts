@@ -49,7 +49,7 @@ export class PayCodePayCode extends SpeakeasyBase {
   effectiveDate?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Niable" })
   niable?: boolean;

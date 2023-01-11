@@ -112,8 +112,8 @@ export class CreateWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createWorkspace200ApplicationJsonObject?: CreateWorkspace200ApplicationJson;
+  createWorkspace200ApplicationJSONObject?: CreateWorkspace200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createWorkspace400ApplicationJsonObject?: CreateWorkspace400ApplicationJson;
+  createWorkspace400ApplicationJSONObject?: CreateWorkspace400ApplicationJson;
 }

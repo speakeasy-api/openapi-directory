@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveValidatedUserResponse = exports.RemoveValidatedUserRequest = exports.RemoveValidatedUser200ApplicationJson = exports.RemoveValidatedUser200ApplicationJsonResultEnum = exports.RemoveValidatedUser200ApplicationJsonActionEnum = exports.RemoveValidatedUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoveValidatedUserPathParams = /** @class */ (function (_super) {
     __extends(RemoveValidatedUserPathParams, _super);
     function RemoveValidatedUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], RemoveValidatedUserPathParams.prototype, "username", void 0);
     return RemoveValidatedUserPathParams;
-}(SpeakeasyBase));
-export { RemoveValidatedUserPathParams };
-export var RemoveValidatedUser200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.RemoveValidatedUserPathParams = RemoveValidatedUserPathParams;
+var RemoveValidatedUser200ApplicationJsonActionEnum;
 (function (RemoveValidatedUser200ApplicationJsonActionEnum) {
     RemoveValidatedUser200ApplicationJsonActionEnum["ListUsers"] = "listUsers";
-})(RemoveValidatedUser200ApplicationJsonActionEnum || (RemoveValidatedUser200ApplicationJsonActionEnum = {}));
-export var RemoveValidatedUser200ApplicationJsonResultEnum;
+})(RemoveValidatedUser200ApplicationJsonActionEnum = exports.RemoveValidatedUser200ApplicationJsonActionEnum || (exports.RemoveValidatedUser200ApplicationJsonActionEnum = {}));
+var RemoveValidatedUser200ApplicationJsonResultEnum;
 (function (RemoveValidatedUser200ApplicationJsonResultEnum) {
     RemoveValidatedUser200ApplicationJsonResultEnum["Success"] = "success";
     RemoveValidatedUser200ApplicationJsonResultEnum["Error"] = "error";
-})(RemoveValidatedUser200ApplicationJsonResultEnum || (RemoveValidatedUser200ApplicationJsonResultEnum = {}));
+})(RemoveValidatedUser200ApplicationJsonResultEnum = exports.RemoveValidatedUser200ApplicationJsonResultEnum || (exports.RemoveValidatedUser200ApplicationJsonResultEnum = {}));
 var RemoveValidatedUser200ApplicationJson = /** @class */ (function (_super) {
     __extends(RemoveValidatedUser200ApplicationJson, _super);
     function RemoveValidatedUser200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], RemoveValidatedUser200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], RemoveValidatedUser200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], RemoveValidatedUser200ApplicationJson.prototype, "result", void 0);
     return RemoveValidatedUser200ApplicationJson;
-}(SpeakeasyBase));
-export { RemoveValidatedUser200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RemoveValidatedUser200ApplicationJson = RemoveValidatedUser200ApplicationJson;
 var RemoveValidatedUserRequest = /** @class */ (function (_super) {
     __extends(RemoveValidatedUserRequest, _super);
     function RemoveValidatedUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveValidatedUserPathParams)
     ], RemoveValidatedUserRequest.prototype, "pathParams", void 0);
     return RemoveValidatedUserRequest;
-}(SpeakeasyBase));
-export { RemoveValidatedUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemoveValidatedUserRequest = RemoveValidatedUserRequest;
 var RemoveValidatedUserResponse = /** @class */ (function (_super) {
     __extends(RemoveValidatedUserResponse, _super);
     function RemoveValidatedUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveValidatedUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveValidatedUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveValidatedUser200ApplicationJson)
-    ], RemoveValidatedUserResponse.prototype, "removeValidatedUser200ApplicationJsonObject", void 0);
+    ], RemoveValidatedUserResponse.prototype, "removeValidatedUser200ApplicationJSONObject", void 0);
     return RemoveValidatedUserResponse;
-}(SpeakeasyBase));
-export { RemoveValidatedUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveValidatedUserResponse = RemoveValidatedUserResponse;

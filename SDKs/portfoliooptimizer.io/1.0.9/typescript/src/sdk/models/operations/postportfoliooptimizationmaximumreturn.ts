@@ -58,8 +58,8 @@ export class PostPortfolioOptimizationMaximumReturnResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMaximumReturn200ApplicationJsonObject?: PostPortfolioOptimizationMaximumReturn200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMaximumReturn200ApplicationJSONObject?: PostPortfolioOptimizationMaximumReturn200ApplicationJson;
 }

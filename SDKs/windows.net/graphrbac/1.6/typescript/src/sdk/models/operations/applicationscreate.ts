@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class ApplicationsCreatePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -38,7 +38,7 @@ export class ApplicationsCreateRequest extends SpeakeasyBase {
 
 export class ApplicationsCreateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  application?: Map<string, Map<string, any>>;
+  application?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -5,7 +5,7 @@ import { StandardUnitEnum } from "./standardunitenum";
 **/
 export declare class Datapoint extends SpeakeasyBase {
     average?: number;
-    extendedStatistics?: Map<string, number>;
+    extendedStatistics?: Record<string, number>;
     maximum?: number;
     minimum?: number;
     sampleCount?: number;

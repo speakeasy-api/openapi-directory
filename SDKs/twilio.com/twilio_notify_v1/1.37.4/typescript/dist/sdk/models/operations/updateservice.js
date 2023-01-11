@@ -1,0 +1,187 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateServiceResponse = exports.UpdateServiceRequest = exports.UpdateServiceSecurity = exports.UpdateServiceUpdateServiceRequest = exports.UpdateServicePathParams = exports.UpdateServiceServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.UpdateServiceServerList = [
+    "https://notify.twilio.com",
+];
+var UpdateServicePathParams = /** @class */ (function (_super) {
+    __extends(UpdateServicePathParams, _super);
+    function UpdateServicePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Sid" }),
+        __metadata("design:type", String)
+    ], UpdateServicePathParams.prototype, "sid", void 0);
+    return UpdateServicePathParams;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServicePathParams = UpdateServicePathParams;
+var UpdateServiceUpdateServiceRequest = /** @class */ (function (_super) {
+    __extends(UpdateServiceUpdateServiceRequest, _super);
+    function UpdateServiceUpdateServiceRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=AlexaSkillId;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "alexaSkillId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=ApnCredentialSid;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "apnCredentialSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DefaultAlexaNotificationProtocolVersion;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "defaultAlexaNotificationProtocolVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DefaultApnNotificationProtocolVersion;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "defaultApnNotificationProtocolVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DefaultFcmNotificationProtocolVersion;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "defaultFcmNotificationProtocolVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DefaultGcmNotificationProtocolVersion;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "defaultGcmNotificationProtocolVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DeliveryCallbackEnabled;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateServiceUpdateServiceRequest.prototype, "deliveryCallbackEnabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DeliveryCallbackUrl;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "deliveryCallbackUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=FacebookMessengerPageId;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "facebookMessengerPageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=FcmCredentialSid;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "fcmCredentialSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=FriendlyName;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "friendlyName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=GcmCredentialSid;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "gcmCredentialSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=LogEnabled;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateServiceUpdateServiceRequest.prototype, "logEnabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=MessagingServiceSid;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceUpdateServiceRequest.prototype, "messagingServiceSid", void 0);
+    return UpdateServiceUpdateServiceRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceUpdateServiceRequest = UpdateServiceUpdateServiceRequest;
+var UpdateServiceSecurity = /** @class */ (function (_super) {
+    __extends(UpdateServiceSecurity, _super);
+    function UpdateServiceSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], UpdateServiceSecurity.prototype, "accountSidAuthToken", void 0);
+    return UpdateServiceSecurity;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceSecurity = UpdateServiceSecurity;
+var UpdateServiceRequest = /** @class */ (function (_super) {
+    __extends(UpdateServiceRequest, _super);
+    function UpdateServiceRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateServiceRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateServicePathParams)
+    ], UpdateServiceRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        __metadata("design:type", UpdateServiceUpdateServiceRequest)
+    ], UpdateServiceRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateServiceSecurity)
+    ], UpdateServiceRequest.prototype, "security", void 0);
+    return UpdateServiceRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceRequest = UpdateServiceRequest;
+var UpdateServiceResponse = /** @class */ (function (_super) {
+    __extends(UpdateServiceResponse, _super);
+    function UpdateServiceResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateServiceResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], UpdateServiceResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.NotifyV1Service)
+    ], UpdateServiceResponse.prototype, "notifyV1Service", void 0);
+    return UpdateServiceResponse;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceResponse = UpdateServiceResponse;

@@ -60,7 +60,7 @@ export class CreateDeploymentJobRequestBody extends SpeakeasyBase {
   fleet: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

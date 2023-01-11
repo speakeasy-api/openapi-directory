@@ -20,5 +20,5 @@ export declare class GetSystemInfo200ApplicationJson extends SpeakeasyBase {
 export declare class GetSystemInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSystemInfo200ApplicationJsonObject?: GetSystemInfo200ApplicationJson;
+    getSystemInfo200ApplicationJSONObject?: GetSystemInfo200ApplicationJson;
 }

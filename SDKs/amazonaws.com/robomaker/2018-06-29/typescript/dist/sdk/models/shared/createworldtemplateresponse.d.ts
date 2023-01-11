@@ -4,5 +4,5 @@ export declare class CreateWorldTemplateResponse extends SpeakeasyBase {
     clientRequestToken?: string;
     createdAt?: Date;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

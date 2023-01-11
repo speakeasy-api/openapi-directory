@@ -17,5 +17,5 @@ export declare class CreateSchemaResponse extends SpeakeasyBase {
     schemaStatus?: SchemaStatusEnum;
     schemaVersionId?: string;
     schemaVersionStatus?: SchemaVersionStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

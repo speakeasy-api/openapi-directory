@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudtasksProjectsLocationsQueuesPurgeResponse = exports.CloudtasksProjectsLocationsQueuesPurgeRequest = exports.CloudtasksProjectsLocationsQueuesPurgeSecurity = exports.CloudtasksProjectsLocationsQueuesPurgeQueryParams = exports.CloudtasksProjectsLocationsQueuesPurgePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudtasksProjectsLocationsQueuesPurgePathParams = /** @class */ (function (_super) {
     __extends(CloudtasksProjectsLocationsQueuesPurgePathParams, _super);
     function CloudtasksProjectsLocationsQueuesPurgePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgePathParams.prototype, "name", void 0);
     return CloudtasksProjectsLocationsQueuesPurgePathParams;
-}(SpeakeasyBase));
-export { CloudtasksProjectsLocationsQueuesPurgePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudtasksProjectsLocationsQueuesPurgePathParams = CloudtasksProjectsLocationsQueuesPurgePathParams;
 var CloudtasksProjectsLocationsQueuesPurgeQueryParams = /** @class */ (function (_super) {
     __extends(CloudtasksProjectsLocationsQueuesPurgeQueryParams, _super);
     function CloudtasksProjectsLocationsQueuesPurgeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeQueryParams.prototype, "uploadProtocol", void 0);
     return CloudtasksProjectsLocationsQueuesPurgeQueryParams;
-}(SpeakeasyBase));
-export { CloudtasksProjectsLocationsQueuesPurgeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudtasksProjectsLocationsQueuesPurgeQueryParams = CloudtasksProjectsLocationsQueuesPurgeQueryParams;
 var CloudtasksProjectsLocationsQueuesPurgeSecurity = /** @class */ (function (_super) {
     __extends(CloudtasksProjectsLocationsQueuesPurgeSecurity, _super);
     function CloudtasksProjectsLocationsQueuesPurgeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudtasksProjectsLocationsQueuesPurgeSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudtasksProjectsLocationsQueuesPurgeSecurity.prototype, "oauth2c", void 0);
     return CloudtasksProjectsLocationsQueuesPurgeSecurity;
-}(SpeakeasyBase));
-export { CloudtasksProjectsLocationsQueuesPurgeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudtasksProjectsLocationsQueuesPurgeSecurity = CloudtasksProjectsLocationsQueuesPurgeSecurity;
 var CloudtasksProjectsLocationsQueuesPurgeRequest = /** @class */ (function (_super) {
     __extends(CloudtasksProjectsLocationsQueuesPurgeRequest, _super);
     function CloudtasksProjectsLocationsQueuesPurgeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudtasksProjectsLocationsQueuesPurgePathParams)
     ], CloudtasksProjectsLocationsQueuesPurgeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudtasksProjectsLocationsQueuesPurgeQueryParams)
     ], CloudtasksProjectsLocationsQueuesPurgeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CloudtasksProjectsLocationsQueuesPurgeRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudtasksProjectsLocationsQueuesPurgeSecurity)
     ], CloudtasksProjectsLocationsQueuesPurgeRequest.prototype, "security", void 0);
     return CloudtasksProjectsLocationsQueuesPurgeRequest;
-}(SpeakeasyBase));
-export { CloudtasksProjectsLocationsQueuesPurgeRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudtasksProjectsLocationsQueuesPurgeRequest = CloudtasksProjectsLocationsQueuesPurgeRequest;
 var CloudtasksProjectsLocationsQueuesPurgeResponse = /** @class */ (function (_super) {
     __extends(CloudtasksProjectsLocationsQueuesPurgeResponse, _super);
     function CloudtasksProjectsLocationsQueuesPurgeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudtasksProjectsLocationsQueuesPurgeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Queue1)
     ], CloudtasksProjectsLocationsQueuesPurgeResponse.prototype, "queue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudtasksProjectsLocationsQueuesPurgeResponse.prototype, "statusCode", void 0);
     return CloudtasksProjectsLocationsQueuesPurgeResponse;
-}(SpeakeasyBase));
-export { CloudtasksProjectsLocationsQueuesPurgeResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudtasksProjectsLocationsQueuesPurgeResponse = CloudtasksProjectsLocationsQueuesPurgeResponse;

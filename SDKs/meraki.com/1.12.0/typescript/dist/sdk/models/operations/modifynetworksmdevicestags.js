@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyNetworkSmDevicesTagsResponse = exports.ModifyNetworkSmDevicesTagsRequest = exports.ModifyNetworkSmDevicesTagsRequestBody = exports.ModifyNetworkSmDevicesTagsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ModifyNetworkSmDevicesTagsPathParams = /** @class */ (function (_super) {
     __extends(ModifyNetworkSmDevicesTagsPathParams, _super);
     function ModifyNetworkSmDevicesTagsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], ModifyNetworkSmDevicesTagsPathParams.prototype, "networkId", void 0);
     return ModifyNetworkSmDevicesTagsPathParams;
-}(SpeakeasyBase));
-export { ModifyNetworkSmDevicesTagsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ModifyNetworkSmDevicesTagsPathParams = ModifyNetworkSmDevicesTagsPathParams;
 var ModifyNetworkSmDevicesTagsRequestBody = /** @class */ (function (_super) {
     __extends(ModifyNetworkSmDevicesTagsRequestBody, _super);
     function ModifyNetworkSmDevicesTagsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", Array)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "serials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateAction" }),
         __metadata("design:type", String)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "updateAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiMacs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiMacs" }),
         __metadata("design:type", Array)
     ], ModifyNetworkSmDevicesTagsRequestBody.prototype, "wifiMacs", void 0);
     return ModifyNetworkSmDevicesTagsRequestBody;
-}(SpeakeasyBase));
-export { ModifyNetworkSmDevicesTagsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ModifyNetworkSmDevicesTagsRequestBody = ModifyNetworkSmDevicesTagsRequestBody;
 var ModifyNetworkSmDevicesTagsRequest = /** @class */ (function (_super) {
     __extends(ModifyNetworkSmDevicesTagsRequest, _super);
     function ModifyNetworkSmDevicesTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ModifyNetworkSmDevicesTagsPathParams)
     ], ModifyNetworkSmDevicesTagsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ModifyNetworkSmDevicesTagsRequestBody)
     ], ModifyNetworkSmDevicesTagsRequest.prototype, "request", void 0);
     return ModifyNetworkSmDevicesTagsRequest;
-}(SpeakeasyBase));
-export { ModifyNetworkSmDevicesTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyNetworkSmDevicesTagsRequest = ModifyNetworkSmDevicesTagsRequest;
 var ModifyNetworkSmDevicesTagsResponse = /** @class */ (function (_super) {
     __extends(ModifyNetworkSmDevicesTagsResponse, _super);
     function ModifyNetworkSmDevicesTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ModifyNetworkSmDevicesTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ModifyNetworkSmDevicesTagsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ModifyNetworkSmDevicesTagsResponse.prototype, "modifyNetworkSmDevicesTags200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyNetworkSmDevicesTagsResponse.prototype, "modifyNetworkSmDevicesTags200ApplicationJSONObject", void 0);
     return ModifyNetworkSmDevicesTagsResponse;
-}(SpeakeasyBase));
-export { ModifyNetworkSmDevicesTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ModifyNetworkSmDevicesTagsResponse = ModifyNetworkSmDevicesTagsResponse;

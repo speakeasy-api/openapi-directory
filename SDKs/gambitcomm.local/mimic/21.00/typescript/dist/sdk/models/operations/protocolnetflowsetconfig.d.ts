@@ -10,5 +10,5 @@ export declare class ProtocolNetflowSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowSetConfig200ApplicationJsonString?: string;
+    protocolNetflowSetConfig200ApplicationJSONString?: string;
 }

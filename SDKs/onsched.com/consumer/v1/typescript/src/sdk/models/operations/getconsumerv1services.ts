@@ -49,7 +49,7 @@ export class GetConsumerV1ServicesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  serviceListViewModel?: Map<string, any>;
+  serviceListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

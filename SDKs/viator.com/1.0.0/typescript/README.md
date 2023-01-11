@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BookingAvailabilityRequest, BookingAvailabilityResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,19 +33,19 @@ const sdk = new SDK(WithSecurity(
     
 const req: BookingAvailabilityRequest = {
   headers: {
-    acceptLanguage: "fugit",
+    acceptLanguage: "sit",
   },
   request: {
     ageBands: [
       {
-        bandId: 2837564563700335116,
-        count: 7814107300403322708,
+        bandId: 6050128673802995827,
+        count: 501233450539197794,
       },
     ],
-    currencyCode: "laudantium",
-    month: "voluptatem",
-    productCode: "voluptatem",
-    year: "dolor",
+    currencyCode: "consequuntur",
+    month: "dolor",
+    productCode: "expedita",
+    year: "voluptas",
   },
 };
 

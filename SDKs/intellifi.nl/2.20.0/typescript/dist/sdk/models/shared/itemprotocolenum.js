@@ -1,4 +1,7 @@
-export var ItemProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemProtocolEnum = void 0;
+var ItemProtocolEnum;
 (function (ItemProtocolEnum) {
     ItemProtocolEnum["Altbeacon"] = "altbeacon";
     ItemProtocolEnum["Uniwear"] = "uniwear";
@@ -8,4 +11,4 @@ export var ItemProtocolEnum;
     ItemProtocolEnum["Epcgen2"] = "epcgen2";
     ItemProtocolEnum["Ibeacon"] = "ibeacon";
     ItemProtocolEnum["Nanoble"] = "nanoble";
-})(ItemProtocolEnum || (ItemProtocolEnum = {}));
+})(ItemProtocolEnum = exports.ItemProtocolEnum || (exports.ItemProtocolEnum = {}));

@@ -32,5 +32,5 @@ export class FindGlobalAuthModuleByIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  findGlobalAuthModuleById200ApplicationJsonOneOf?: any;
+  findGlobalAuthModuleById200ApplicationJSONOneOf?: any;
 }

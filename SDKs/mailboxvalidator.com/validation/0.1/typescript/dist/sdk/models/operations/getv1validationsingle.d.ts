@@ -13,6 +13,6 @@ export declare class GetV1ValidationSingleRequest extends SpeakeasyBase {
 }
 export declare class GetV1ValidationSingleResponse extends SpeakeasyBase {
     contentType: string;
-    getV1ValidationSingle200ApplicationJsonString?: string;
     statusCode: number;
+    getV1ValidationSingle200ApplicationJSONString?: string;
 }

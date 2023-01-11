@@ -11,13 +11,14 @@ import { VisionExamples } from "./visionexamples";
 import { VisionModels } from "./visionmodels";
 import { VisionPrediction } from "./visionprediction";
 import { VisionTraining } from "./visiontraining";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://salesforce.local"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     authorization: Authorization;
-    checkApiUsage: CheckApiUsage;
+    checkAPIUsage: CheckApiUsage;
     languageDatasets: LanguageDatasets;
     languageExamples: LanguageExamples;
     languageModels: LanguageModels;
@@ -34,6 +35,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

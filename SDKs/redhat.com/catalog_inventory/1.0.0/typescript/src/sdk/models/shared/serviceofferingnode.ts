@@ -10,7 +10,7 @@ export class ServiceOfferingNode extends SpeakeasyBase {
   createdAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=extra" })
-  extra?: Map<string, any>;
+  extra?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

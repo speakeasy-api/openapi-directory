@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportFileFormatEnum } from "./reportfileformatenum";
-import { ReportTypeEnum } from "./reporttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssessmentReportRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportfileformatenum_1 = require("./reportfileformatenum");
+var reporttypeenum_1 = require("./reporttypeenum");
 var GetAssessmentReportRequest = /** @class */ (function (_super) {
     __extends(GetAssessmentReportRequest, _super);
     function GetAssessmentReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArn" }),
         __metadata("design:type", String)
     ], GetAssessmentReportRequest.prototype, "assessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportFileFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportFileFormat" }),
         __metadata("design:type", String)
     ], GetAssessmentReportRequest.prototype, "reportFileFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportType" }),
         __metadata("design:type", String)
     ], GetAssessmentReportRequest.prototype, "reportType", void 0);
     return GetAssessmentReportRequest;
-}(SpeakeasyBase));
-export { GetAssessmentReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssessmentReportRequest = GetAssessmentReportRequest;

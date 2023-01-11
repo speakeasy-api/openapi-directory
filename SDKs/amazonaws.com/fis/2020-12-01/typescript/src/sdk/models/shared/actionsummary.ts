@@ -15,8 +15,8 @@ export class ActionSummary extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets", elemType: ActionTarget })
-  targets?: Map<string, ActionTarget>;
+  targets?: Record<string, ActionTarget>;
 }

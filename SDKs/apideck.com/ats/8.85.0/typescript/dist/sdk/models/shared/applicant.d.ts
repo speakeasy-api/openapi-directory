@@ -19,37 +19,6 @@ export declare class ApplicantWebsites extends SpeakeasyBase {
     type?: ApplicantWebsitesTypeEnum;
     url: string;
 }
-export declare class ApplicantInput extends SpeakeasyBase {
-    addresses?: Address[];
-    anonymized?: boolean;
-    applications?: string[];
-    archived?: boolean;
-    birthday?: Date;
-    confidential?: boolean;
-    coordinatorId?: string;
-    coverLetter?: string;
-    deleted?: boolean;
-    emails?: Email[];
-    firstName?: string;
-    followers?: string[];
-    headline?: string;
-    initials?: string;
-    lastName?: string;
-    middleName?: string;
-    name?: string;
-    ownerId?: string;
-    phoneNumbers?: PhoneNumber[];
-    photoUrl?: string;
-    positionId?: string;
-    recordUrl?: string;
-    recruiterId?: string;
-    socialLinks?: ApplicantSocialLinks[];
-    sources?: string[];
-    stageId?: string;
-    tags?: string[];
-    title?: string;
-    websites?: ApplicantWebsites[];
-}
 export declare class Applicant extends SpeakeasyBase {
     addresses?: Address[];
     anonymized?: boolean;
@@ -92,5 +61,36 @@ export declare class Applicant extends SpeakeasyBase {
     title?: string;
     updatedAt?: Date;
     updatedBy?: string;
+    websites?: ApplicantWebsites[];
+}
+export declare class ApplicantInput extends SpeakeasyBase {
+    addresses?: Address[];
+    anonymized?: boolean;
+    applications?: string[];
+    archived?: boolean;
+    birthday?: Date;
+    confidential?: boolean;
+    coordinatorId?: string;
+    coverLetter?: string;
+    deleted?: boolean;
+    emails?: Email[];
+    firstName?: string;
+    followers?: string[];
+    headline?: string;
+    initials?: string;
+    lastName?: string;
+    middleName?: string;
+    name?: string;
+    ownerId?: string;
+    phoneNumbers?: PhoneNumber[];
+    photoUrl?: string;
+    positionId?: string;
+    recordUrl?: string;
+    recruiterId?: string;
+    socialLinks?: ApplicantSocialLinks[];
+    sources?: string[];
+    stageId?: string;
+    tags?: string[];
+    title?: string;
     websites?: ApplicantWebsites[];
 }

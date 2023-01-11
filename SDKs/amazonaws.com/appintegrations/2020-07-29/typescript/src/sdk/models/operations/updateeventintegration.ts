@@ -73,5 +73,5 @@ export class UpdateEventIntegrationResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateEventIntegrationResponse?: Map<string, any>;
+  updateEventIntegrationResponse?: Record<string, any>;
 }

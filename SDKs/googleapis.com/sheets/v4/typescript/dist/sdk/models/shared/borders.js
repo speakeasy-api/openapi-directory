@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Border } from "./border";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Borders = void 0;
+var utils_1 = require("../../../internal/utils");
+var border_1 = require("./border");
 // Borders
 /**
  * The borders of the cell.
@@ -34,21 +37,21 @@ var Borders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottom" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottom" }),
+        __metadata("design:type", border_1.Border)
     ], Borders.prototype, "bottom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=left" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=left" }),
+        __metadata("design:type", border_1.Border)
     ], Borders.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=right" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=right" }),
+        __metadata("design:type", border_1.Border)
     ], Borders.prototype, "right", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=top" }),
-        __metadata("design:type", Border)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=top" }),
+        __metadata("design:type", border_1.Border)
     ], Borders.prototype, "top", void 0);
     return Borders;
-}(SpeakeasyBase));
-export { Borders };
+}(utils_1.SpeakeasyBase));
+exports.Borders = Borders;

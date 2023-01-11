@@ -17,6 +17,6 @@ export declare class PostOauthLiveSessionTokenRequest extends SpeakeasyBase {
 }
 export declare class PostOauthLiveSessionTokenResponse extends SpeakeasyBase {
     contentType: string;
-    postOauthLiveSessionToken200ApplicationJsonObject?: PostOauthLiveSessionToken200ApplicationJson;
     statusCode: number;
+    postOauthLiveSessionToken200ApplicationJSONObject?: PostOauthLiveSessionToken200ApplicationJson;
 }

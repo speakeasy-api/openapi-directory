@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationSimple = void 0;
+var utils_1 = require("../../../internal/utils");
 // OrganizationSimple
 /**
  * Organization Simple
@@ -33,53 +36,53 @@ var OrganizationSimple = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooks_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooks_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "hooksUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], OrganizationSimple.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "issuesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "membersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_members_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_members_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "publicMembersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], OrganizationSimple.prototype, "url", void 0);
     return OrganizationSimple;
-}(SpeakeasyBase));
-export { OrganizationSimple };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationSimple = OrganizationSimple;

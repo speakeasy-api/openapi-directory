@@ -54,7 +54,7 @@ export class ModifySelfservicePermissionsResponse extends SpeakeasyBase {
   invalidParameterValuesException?: any;
 
   @SpeakeasyMetadata()
-  modifySelfservicePermissionsResult?: Map<string, any>;
+  modifySelfservicePermissionsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

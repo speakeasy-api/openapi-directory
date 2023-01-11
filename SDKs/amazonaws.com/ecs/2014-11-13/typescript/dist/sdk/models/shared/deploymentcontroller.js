@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentControllerTypeEnum } from "./deploymentcontrollertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentController = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentcontrollertypeenum_1 = require("./deploymentcontrollertypeenum");
 // DeploymentController
 /**
  * The deployment controller to use for the service. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS Deployment Types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -34,9 +37,9 @@ var DeploymentController = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DeploymentController.prototype, "type", void 0);
     return DeploymentController;
-}(SpeakeasyBase));
-export { DeploymentController };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentController = DeploymentController;

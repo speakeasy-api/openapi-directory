@@ -8,7 +8,7 @@ export declare class GetSettingsOrganizationsRequest extends SpeakeasyBase {
 }
 export declare class GetSettingsOrganizationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     organizations?: shared.Organization[];
     statusCode: number;
 }

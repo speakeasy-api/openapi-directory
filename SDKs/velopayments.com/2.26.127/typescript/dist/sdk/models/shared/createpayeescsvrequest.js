@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayeeTypeEnum } from "./payeetypeenum";
-export var CreatePayeesCsvRequestAddressCountryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayeesCsvRequest = exports.CreatePayeesCsvRequestPaymentChannelCurrencyEnum = exports.CreatePayeesCsvRequestPaymentChannelCountryCodeEnum = exports.CreatePayeesCsvRequestAddressCountryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var payeetypeenum_1 = require("./payeetypeenum");
+var CreatePayeesCsvRequestAddressCountryEnum;
 (function (CreatePayeesCsvRequestAddressCountryEnum) {
     CreatePayeesCsvRequestAddressCountryEnum["Af"] = "AF";
     CreatePayeesCsvRequestAddressCountryEnum["Ax"] = "AX";
@@ -275,8 +278,8 @@ export var CreatePayeesCsvRequestAddressCountryEnum;
     CreatePayeesCsvRequestAddressCountryEnum["Ye"] = "YE";
     CreatePayeesCsvRequestAddressCountryEnum["Zm"] = "ZM";
     CreatePayeesCsvRequestAddressCountryEnum["Zw"] = "ZW";
-})(CreatePayeesCsvRequestAddressCountryEnum || (CreatePayeesCsvRequestAddressCountryEnum = {}));
-export var CreatePayeesCsvRequestPaymentChannelCountryCodeEnum;
+})(CreatePayeesCsvRequestAddressCountryEnum = exports.CreatePayeesCsvRequestAddressCountryEnum || (exports.CreatePayeesCsvRequestAddressCountryEnum = {}));
+var CreatePayeesCsvRequestPaymentChannelCountryCodeEnum;
 (function (CreatePayeesCsvRequestPaymentChannelCountryCodeEnum) {
     CreatePayeesCsvRequestPaymentChannelCountryCodeEnum["Af"] = "AF";
     CreatePayeesCsvRequestPaymentChannelCountryCodeEnum["Ax"] = "AX";
@@ -527,134 +530,134 @@ export var CreatePayeesCsvRequestPaymentChannelCountryCodeEnum;
     CreatePayeesCsvRequestPaymentChannelCountryCodeEnum["Ye"] = "YE";
     CreatePayeesCsvRequestPaymentChannelCountryCodeEnum["Zm"] = "ZM";
     CreatePayeesCsvRequestPaymentChannelCountryCodeEnum["Zw"] = "ZW";
-})(CreatePayeesCsvRequestPaymentChannelCountryCodeEnum || (CreatePayeesCsvRequestPaymentChannelCountryCodeEnum = {}));
-export var CreatePayeesCsvRequestPaymentChannelCurrencyEnum;
+})(CreatePayeesCsvRequestPaymentChannelCountryCodeEnum = exports.CreatePayeesCsvRequestPaymentChannelCountryCodeEnum || (exports.CreatePayeesCsvRequestPaymentChannelCountryCodeEnum = {}));
+var CreatePayeesCsvRequestPaymentChannelCurrencyEnum;
 (function (CreatePayeesCsvRequestPaymentChannelCurrencyEnum) {
     CreatePayeesCsvRequestPaymentChannelCurrencyEnum["Usd"] = "USD";
     CreatePayeesCsvRequestPaymentChannelCurrencyEnum["Gbp"] = "GBP";
     CreatePayeesCsvRequestPaymentChannelCurrencyEnum["Eur"] = "EUR";
-})(CreatePayeesCsvRequestPaymentChannelCurrencyEnum || (CreatePayeesCsvRequestPaymentChannelCurrencyEnum = {}));
+})(CreatePayeesCsvRequestPaymentChannelCurrencyEnum = exports.CreatePayeesCsvRequestPaymentChannelCurrencyEnum || (exports.CreatePayeesCsvRequestPaymentChannelCurrencyEnum = {}));
 var CreatePayeesCsvRequest = /** @class */ (function (_super) {
     __extends(CreatePayeesCsvRequest, _super);
     function CreatePayeesCsvRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressCity" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressCountry" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressCountyOrProvince" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressCountyOrProvince" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressCountyOrProvince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine1" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine2" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine3" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressLine3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine4" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressLine4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressZipOrPostcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressZipOrPostcode" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "addressZipOrPostcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challengeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challengeDescription" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "challengeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challengeValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challengeValue" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "challengeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyEIN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyEIN" }),
         __metadata("design:type", String)
-    ], CreatePayeesCsvRequest.prototype, "companyEin", void 0);
+    ], CreatePayeesCsvRequest.prototype, "companyEIN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyOperatingName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyOperatingName" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "companyOperatingName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualDateOfBirth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualDateOfBirth" }),
         __metadata("design:type", Date)
     ], CreatePayeesCsvRequest.prototype, "individualDateOfBirth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualFirstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualFirstName" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "individualFirstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualLastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualLastName" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "individualLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualNationalIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualNationalIdentification" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "individualNationalIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualOtherNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualOtherNames" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "individualOtherNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualTitle" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "individualTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeLanguage" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "payeeLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelAccountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelAccountName" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelAccountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelAccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelAccountNumber" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelAccountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelCountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelCountryCode" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelCountryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelCurrency" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelIban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelIban" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelIban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelRoutingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelRoutingNumber" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "paymentChannelRoutingNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteId" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "remoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvRequest.prototype, "type", void 0);
     return CreatePayeesCsvRequest;
-}(SpeakeasyBase));
-export { CreatePayeesCsvRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayeesCsvRequest = CreatePayeesCsvRequest;

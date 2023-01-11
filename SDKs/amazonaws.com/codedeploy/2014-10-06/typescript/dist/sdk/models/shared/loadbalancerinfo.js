@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ElbInfo } from "./elbinfo";
-import { TargetGroupInfo } from "./targetgroupinfo";
-import { TargetGroupPairInfo } from "./targetgrouppairinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var elbinfo_1 = require("./elbinfo");
+var targetgroupinfo_1 = require("./targetgroupinfo");
+var targetgrouppairinfo_1 = require("./targetgrouppairinfo");
 // LoadBalancerInfo
 /**
  * Information about the Elastic Load Balancing load balancer or target group used in a deployment.
@@ -36,17 +39,17 @@ var LoadBalancerInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elbInfoList", elemType: ElbInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elbInfoList", elemType: elbinfo_1.ElbInfo }),
         __metadata("design:type", Array)
     ], LoadBalancerInfo.prototype, "elbInfoList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroupInfoList", elemType: TargetGroupInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroupInfoList", elemType: targetgroupinfo_1.TargetGroupInfo }),
         __metadata("design:type", Array)
     ], LoadBalancerInfo.prototype, "targetGroupInfoList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroupPairInfoList", elemType: TargetGroupPairInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroupPairInfoList", elemType: targetgrouppairinfo_1.TargetGroupPairInfo }),
         __metadata("design:type", Array)
     ], LoadBalancerInfo.prototype, "targetGroupPairInfoList", void 0);
     return LoadBalancerInfo;
-}(SpeakeasyBase));
-export { LoadBalancerInfo };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancerInfo = LoadBalancerInfo;

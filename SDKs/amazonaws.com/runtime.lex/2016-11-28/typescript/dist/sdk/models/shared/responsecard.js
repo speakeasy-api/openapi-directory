@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentTypeEnum } from "./contenttypeenum";
-import { GenericAttachment } from "./genericattachment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResponseCard = void 0;
+var utils_1 = require("../../../internal/utils");
+var contenttypeenum_1 = require("./contenttypeenum");
+var genericattachment_1 = require("./genericattachment");
 // ResponseCard
 /**
  * If you configure a response card when creating your bots, Amazon Lex substitutes the session attributes and slot values that are available, and then returns it. The response card can also come from a Lambda function ( <code>dialogCodeHook</code> and <code>fulfillmentActivity</code> on an intent).
@@ -35,17 +38,17 @@ var ResponseCard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentType" }),
         __metadata("design:type", String)
     ], ResponseCard.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genericAttachments", elemType: GenericAttachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genericAttachments", elemType: genericattachment_1.GenericAttachment }),
         __metadata("design:type", Array)
     ], ResponseCard.prototype, "genericAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ResponseCard.prototype, "version", void 0);
     return ResponseCard;
-}(SpeakeasyBase));
-export { ResponseCard };
+}(utils_1.SpeakeasyBase));
+exports.ResponseCard = ResponseCard;

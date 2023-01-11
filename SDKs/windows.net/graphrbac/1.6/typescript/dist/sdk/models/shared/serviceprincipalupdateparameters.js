@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicePrincipalUpdateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
 // ServicePrincipalUpdateParameters
 /**
- * Request parameters for update an existing service principal.
+ * Active Directory service principal common properties shared among GET, POST and PATCH
 **/
 var ServicePrincipalUpdateParameters = /** @class */ (function (_super) {
     __extends(ServicePrincipalUpdateParameters, _super);
@@ -33,29 +36,29 @@ var ServicePrincipalUpdateParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountEnabled" }),
         __metadata("design:type", Boolean)
     ], ServicePrincipalUpdateParameters.prototype, "accountEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appRoleAssignmentRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appRoleAssignmentRequired" }),
         __metadata("design:type", Boolean)
     ], ServicePrincipalUpdateParameters.prototype, "appRoleAssignmentRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyCredentials" }),
         __metadata("design:type", Array)
     ], ServicePrincipalUpdateParameters.prototype, "keyCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordCredentials" }),
         __metadata("design:type", Array)
     ], ServicePrincipalUpdateParameters.prototype, "passwordCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicePrincipalType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicePrincipalType" }),
         __metadata("design:type", String)
     ], ServicePrincipalUpdateParameters.prototype, "servicePrincipalType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], ServicePrincipalUpdateParameters.prototype, "tags", void 0);
     return ServicePrincipalUpdateParameters;
-}(SpeakeasyBase));
-export { ServicePrincipalUpdateParameters };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalUpdateParameters = ServicePrincipalUpdateParameters;

@@ -19,7 +19,7 @@ export declare class DeleteConfigurationSetResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    deleteConfigurationSetResponse?: Map<string, any>;
+    deleteConfigurationSetResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

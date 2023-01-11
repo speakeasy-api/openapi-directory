@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var GoogleCloudFunctionRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudFunctionRulePost = exports.GoogleCloudFunctionRulePostTarget = exports.GoogleCloudFunctionRulePostTargetHeaders = exports.GoogleCloudFunctionRulePostTargetFormatEnum = exports.GoogleCloudFunctionRulePostRuleTypeEnum = exports.GoogleCloudFunctionRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var GoogleCloudFunctionRulePostRequestModeEnum;
 (function (GoogleCloudFunctionRulePostRequestModeEnum) {
     GoogleCloudFunctionRulePostRequestModeEnum["Single"] = "single";
     GoogleCloudFunctionRulePostRequestModeEnum["Batch"] = "batch";
-})(GoogleCloudFunctionRulePostRequestModeEnum || (GoogleCloudFunctionRulePostRequestModeEnum = {}));
-export var GoogleCloudFunctionRulePostRuleTypeEnum;
+})(GoogleCloudFunctionRulePostRequestModeEnum = exports.GoogleCloudFunctionRulePostRequestModeEnum || (exports.GoogleCloudFunctionRulePostRequestModeEnum = {}));
+var GoogleCloudFunctionRulePostRuleTypeEnum;
 (function (GoogleCloudFunctionRulePostRuleTypeEnum) {
     GoogleCloudFunctionRulePostRuleTypeEnum["HttpGoogleCloudFunction"] = "http/google-cloud-function";
-})(GoogleCloudFunctionRulePostRuleTypeEnum || (GoogleCloudFunctionRulePostRuleTypeEnum = {}));
-export var GoogleCloudFunctionRulePostTargetFormatEnum;
+})(GoogleCloudFunctionRulePostRuleTypeEnum = exports.GoogleCloudFunctionRulePostRuleTypeEnum || (exports.GoogleCloudFunctionRulePostRuleTypeEnum = {}));
+var GoogleCloudFunctionRulePostTargetFormatEnum;
 (function (GoogleCloudFunctionRulePostTargetFormatEnum) {
     GoogleCloudFunctionRulePostTargetFormatEnum["Json"] = "json";
-})(GoogleCloudFunctionRulePostTargetFormatEnum || (GoogleCloudFunctionRulePostTargetFormatEnum = {}));
+})(GoogleCloudFunctionRulePostTargetFormatEnum = exports.GoogleCloudFunctionRulePostTargetFormatEnum || (exports.GoogleCloudFunctionRulePostTargetFormatEnum = {}));
 var GoogleCloudFunctionRulePostTargetHeaders = /** @class */ (function (_super) {
     __extends(GoogleCloudFunctionRulePostTargetHeaders, _super);
     function GoogleCloudFunctionRulePostTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTargetHeaders.prototype, "value", void 0);
     return GoogleCloudFunctionRulePostTargetHeaders;
-}(SpeakeasyBase));
-export { GoogleCloudFunctionRulePostTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudFunctionRulePostTargetHeaders = GoogleCloudFunctionRulePostTargetHeaders;
 var GoogleCloudFunctionRulePostTarget = /** @class */ (function (_super) {
     __extends(GoogleCloudFunctionRulePostTarget, _super);
     function GoogleCloudFunctionRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudFunctionRulePostTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionName" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTarget.prototype, "functionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: GoogleCloudFunctionRulePostTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: GoogleCloudFunctionRulePostTargetHeaders }),
         __metadata("design:type", Array)
     ], GoogleCloudFunctionRulePostTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTarget.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTarget.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePostTarget.prototype, "signingKeyId", void 0);
     return GoogleCloudFunctionRulePostTarget;
-}(SpeakeasyBase));
-export { GoogleCloudFunctionRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudFunctionRulePostTarget = GoogleCloudFunctionRulePostTarget;
 var GoogleCloudFunctionRulePost = /** @class */ (function (_super) {
     __extends(GoogleCloudFunctionRulePost, _super);
     function GoogleCloudFunctionRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], GoogleCloudFunctionRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], GoogleCloudFunctionRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", GoogleCloudFunctionRulePostTarget)
     ], GoogleCloudFunctionRulePost.prototype, "target", void 0);
     return GoogleCloudFunctionRulePost;
-}(SpeakeasyBase));
-export { GoogleCloudFunctionRulePost };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudFunctionRulePost = GoogleCloudFunctionRulePost;

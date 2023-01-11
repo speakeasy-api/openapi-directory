@@ -11,26 +11,10 @@ export class IssuesListMilestonesPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum IssuesListMilestonesDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum IssuesListMilestonesSortEnum {
-    DueOn = "due_on",
-    Completeness = "completeness"
-}
-
-export enum IssuesListMilestonesStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class IssuesListMilestonesQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: IssuesListMilestonesDirectionEnum;
+  direction?: shared.RepoEnum4;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -39,10 +23,10 @@ export class IssuesListMilestonesQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: IssuesListMilestonesSortEnum;
+  sort?: shared.RepoEnum3;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: IssuesListMilestonesStateEnum;
+  state?: shared.RepoEnum2;
 }
 
 
@@ -60,7 +44,7 @@ export class IssuesListMilestonesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

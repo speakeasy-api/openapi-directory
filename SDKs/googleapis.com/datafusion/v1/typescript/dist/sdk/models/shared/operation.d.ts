@@ -6,7 +6,7 @@ import { Status } from "./status";
 export declare class Operation extends SpeakeasyBase {
     done?: boolean;
     error?: Status;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
-    response?: Map<string, any>;
+    response?: Record<string, any>;
 }

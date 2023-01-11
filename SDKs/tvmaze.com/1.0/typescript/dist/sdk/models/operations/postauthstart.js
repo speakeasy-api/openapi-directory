@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAuthStartResponse = exports.PostAuthStartRequest = exports.PostAuthStart200ApplicationJson = exports.PostAuthStartRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAuthStartRequestBody = /** @class */ (function (_super) {
     __extends(PostAuthStartRequestBody, _super);
     function PostAuthStartRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PostAuthStartRequestBody.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email_confirmation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_confirmation" }),
         __metadata("design:type", Boolean)
     ], PostAuthStartRequestBody.prototype, "emailConfirmation", void 0);
     return PostAuthStartRequestBody;
-}(SpeakeasyBase));
-export { PostAuthStartRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthStartRequestBody = PostAuthStartRequestBody;
 var PostAuthStart200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAuthStart200ApplicationJson, _super);
     function PostAuthStart200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirm_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirm_url" }),
         __metadata("design:type", String)
     ], PostAuthStart200ApplicationJson.prototype, "confirmUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], PostAuthStart200ApplicationJson.prototype, "token", void 0);
     return PostAuthStart200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAuthStart200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthStart200ApplicationJson = PostAuthStart200ApplicationJson;
 var PostAuthStartRequest = /** @class */ (function (_super) {
     __extends(PostAuthStartRequest, _super);
     function PostAuthStartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAuthStartRequestBody)
     ], PostAuthStartRequest.prototype, "request", void 0);
     return PostAuthStartRequest;
-}(SpeakeasyBase));
-export { PostAuthStartRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthStartRequest = PostAuthStartRequest;
 var PostAuthStartResponse = /** @class */ (function (_super) {
     __extends(PostAuthStartResponse, _super);
     function PostAuthStartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAuthStartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAuthStart200ApplicationJson)
-    ], PostAuthStartResponse.prototype, "postAuthStart200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAuthStartResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAuthStart200ApplicationJson)
+    ], PostAuthStartResponse.prototype, "postAuthStart200ApplicationJSONObject", void 0);
     return PostAuthStartResponse;
-}(SpeakeasyBase));
-export { PostAuthStartResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthStartResponse = PostAuthStartResponse;

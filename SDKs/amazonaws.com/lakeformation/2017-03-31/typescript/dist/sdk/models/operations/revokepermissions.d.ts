@@ -22,6 +22,6 @@ export declare class RevokePermissionsResponse extends SpeakeasyBase {
     contentType: string;
     entityNotFoundException?: any;
     invalidInputException?: any;
-    revokePermissionsResponse?: Map<string, any>;
+    revokePermissionsResponse?: Record<string, any>;
     statusCode: number;
 }

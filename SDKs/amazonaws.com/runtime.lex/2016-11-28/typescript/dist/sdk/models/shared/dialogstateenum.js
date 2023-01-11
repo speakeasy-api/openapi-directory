@@ -1,4 +1,7 @@
-export var DialogStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DialogStateEnum = void 0;
+var DialogStateEnum;
 (function (DialogStateEnum) {
     DialogStateEnum["ElicitIntent"] = "ElicitIntent";
     DialogStateEnum["ConfirmIntent"] = "ConfirmIntent";
@@ -6,4 +9,4 @@ export var DialogStateEnum;
     DialogStateEnum["Fulfilled"] = "Fulfilled";
     DialogStateEnum["ReadyForFulfillment"] = "ReadyForFulfillment";
     DialogStateEnum["Failed"] = "Failed";
-})(DialogStateEnum || (DialogStateEnum = {}));
+})(DialogStateEnum = exports.DialogStateEnum || (exports.DialogStateEnum = {}));

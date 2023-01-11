@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Endpoint } from "./endpoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Node = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpoint_1 = require("./endpoint");
 // Node
 /**
  * Represents an individual node within a DAX cluster.
@@ -34,29 +37,29 @@ var Node = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], Node.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Endpoint" }),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Endpoint" }),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], Node.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeCreateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeCreateTime" }),
         __metadata("design:type", Date)
     ], Node.prototype, "nodeCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeId" }),
         __metadata("design:type", String)
     ], Node.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeStatus" }),
         __metadata("design:type", String)
     ], Node.prototype, "nodeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterGroupStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterGroupStatus" }),
         __metadata("design:type", String)
     ], Node.prototype, "parameterGroupStatus", void 0);
     return Node;
-}(SpeakeasyBase));
-export { Node };
+}(utils_1.SpeakeasyBase));
+exports.Node = Node;

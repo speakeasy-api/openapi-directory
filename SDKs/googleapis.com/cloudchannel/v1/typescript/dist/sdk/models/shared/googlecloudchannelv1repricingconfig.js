@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1RepricingAdjustment } from "./googlecloudchannelv1repricingadjustment";
-import { GoogleTypeDate } from "./googletypedate";
-import { GoogleCloudChannelV1RepricingConfigEntitlementGranularity } from "./googlecloudchannelv1repricingconfigentitlementgranularity";
-export var GoogleCloudChannelV1RepricingConfigRebillingBasisEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1RepricingConfig = exports.GoogleCloudChannelV1RepricingConfigRebillingBasisEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1repricingadjustment_1 = require("./googlecloudchannelv1repricingadjustment");
+var googlecloudchannelv1conditionaloverride_1 = require("./googlecloudchannelv1conditionaloverride");
+var googletypedate_1 = require("./googletypedate");
+var googlecloudchannelv1repricingconfigentitlementgranularity_1 = require("./googlecloudchannelv1repricingconfigentitlementgranularity");
+var GoogleCloudChannelV1RepricingConfigRebillingBasisEnum;
 (function (GoogleCloudChannelV1RepricingConfigRebillingBasisEnum) {
     GoogleCloudChannelV1RepricingConfigRebillingBasisEnum["RebillingBasisUnspecified"] = "REBILLING_BASIS_UNSPECIFIED";
     GoogleCloudChannelV1RepricingConfigRebillingBasisEnum["CostAtList"] = "COST_AT_LIST";
     GoogleCloudChannelV1RepricingConfigRebillingBasisEnum["DirectCustomerCost"] = "DIRECT_CUSTOMER_COST";
-})(GoogleCloudChannelV1RepricingConfigRebillingBasisEnum || (GoogleCloudChannelV1RepricingConfigRebillingBasisEnum = {}));
+})(GoogleCloudChannelV1RepricingConfigRebillingBasisEnum = exports.GoogleCloudChannelV1RepricingConfigRebillingBasisEnum || (exports.GoogleCloudChannelV1RepricingConfigRebillingBasisEnum = {}));
 // GoogleCloudChannelV1RepricingConfig
 /**
  * Configuration for repricing a Google bill over a period of time.
@@ -42,25 +46,29 @@ var GoogleCloudChannelV1RepricingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adjustment" }),
-        __metadata("design:type", GoogleCloudChannelV1RepricingAdjustment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adjustment" }),
+        __metadata("design:type", googlecloudchannelv1repricingadjustment_1.GoogleCloudChannelV1RepricingAdjustment)
     ], GoogleCloudChannelV1RepricingConfig.prototype, "adjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelPartnerGranularity" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelPartnerGranularity" }),
+        __metadata("design:type", Object)
     ], GoogleCloudChannelV1RepricingConfig.prototype, "channelPartnerGranularity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveInvoiceMonth" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditionalOverrides", elemType: googlecloudchannelv1conditionaloverride_1.GoogleCloudChannelV1ConditionalOverride }),
+        __metadata("design:type", Array)
+    ], GoogleCloudChannelV1RepricingConfig.prototype, "conditionalOverrides", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveInvoiceMonth" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudChannelV1RepricingConfig.prototype, "effectiveInvoiceMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entitlementGranularity" }),
-        __metadata("design:type", GoogleCloudChannelV1RepricingConfigEntitlementGranularity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entitlementGranularity" }),
+        __metadata("design:type", googlecloudchannelv1repricingconfigentitlementgranularity_1.GoogleCloudChannelV1RepricingConfigEntitlementGranularity)
     ], GoogleCloudChannelV1RepricingConfig.prototype, "entitlementGranularity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rebillingBasis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rebillingBasis" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1RepricingConfig.prototype, "rebillingBasis", void 0);
     return GoogleCloudChannelV1RepricingConfig;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1RepricingConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1RepricingConfig = GoogleCloudChannelV1RepricingConfig;

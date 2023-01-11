@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTargetExpressionByEnsgidResponse = exports.GetTargetExpressionByEnsgidRequest = exports.GetTargetExpressionByEnsgidQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTargetExpressionByEnsgidQueryParams = /** @class */ (function (_super) {
     __extends(GetTargetExpressionByEnsgidQueryParams, _super);
     function GetTargetExpressionByEnsgidQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gene" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gene" }),
         __metadata("design:type", String)
     ], GetTargetExpressionByEnsgidQueryParams.prototype, "gene", void 0);
     return GetTargetExpressionByEnsgidQueryParams;
-}(SpeakeasyBase));
-export { GetTargetExpressionByEnsgidQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetExpressionByEnsgidQueryParams = GetTargetExpressionByEnsgidQueryParams;
 var GetTargetExpressionByEnsgidRequest = /** @class */ (function (_super) {
     __extends(GetTargetExpressionByEnsgidRequest, _super);
     function GetTargetExpressionByEnsgidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTargetExpressionByEnsgidQueryParams)
     ], GetTargetExpressionByEnsgidRequest.prototype, "queryParams", void 0);
     return GetTargetExpressionByEnsgidRequest;
-}(SpeakeasyBase));
-export { GetTargetExpressionByEnsgidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetExpressionByEnsgidRequest = GetTargetExpressionByEnsgidRequest;
 var GetTargetExpressionByEnsgidResponse = /** @class */ (function (_super) {
     __extends(GetTargetExpressionByEnsgidResponse, _super);
     function GetTargetExpressionByEnsgidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTargetExpressionByEnsgidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTargetExpressionByEnsgidResponse.prototype, "statusCode", void 0);
     return GetTargetExpressionByEnsgidResponse;
-}(SpeakeasyBase));
-export { GetTargetExpressionByEnsgidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetExpressionByEnsgidResponse = GetTargetExpressionByEnsgidResponse;

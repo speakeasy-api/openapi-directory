@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderShipmentLineItemShipment = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderShipmentLineItemShipment = /** @class */ (function (_super) {
     __extends(OrderShipmentLineItemShipment, _super);
     function OrderShipmentLineItemShipment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItemId" }),
         __metadata("design:type", String)
     ], OrderShipmentLineItemShipment.prototype, "lineItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], OrderShipmentLineItemShipment.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], OrderShipmentLineItemShipment.prototype, "quantity", void 0);
     return OrderShipmentLineItemShipment;
-}(SpeakeasyBase));
-export { OrderShipmentLineItemShipment };
+}(utils_1.SpeakeasyBase));
+exports.OrderShipmentLineItemShipment = OrderShipmentLineItemShipment;

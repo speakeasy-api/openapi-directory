@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableInterfaceConnectionInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableInterfaceConnectionInput = /** @class */ (function (_super) {
     __extends(WritableInterfaceConnectionInput, _super);
     function WritableInterfaceConnectionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", Boolean)
     ], WritableInterfaceConnectionInput.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface_a" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface_a" }),
         __metadata("design:type", Number)
     ], WritableInterfaceConnectionInput.prototype, "interfaceA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface_b" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface_b" }),
         __metadata("design:type", Number)
     ], WritableInterfaceConnectionInput.prototype, "interfaceB", void 0);
     return WritableInterfaceConnectionInput;
-}(SpeakeasyBase));
-export { WritableInterfaceConnectionInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableInterfaceConnectionInput = WritableInterfaceConnectionInput;

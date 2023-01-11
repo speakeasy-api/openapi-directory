@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 export declare enum BackfillJobStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     NotStarted = "NOT_STARTED",
@@ -19,7 +19,7 @@ export declare enum BackfillJobTriggerEnum {
  * Represents a backfill job on a specific stream object.
 **/
 export declare class BackfillJob extends SpeakeasyBase {
-    errors?: Error[];
+    errors?: ErrorT[];
     lastEndTime?: string;
     lastStartTime?: string;
     state?: BackfillJobStateEnum;

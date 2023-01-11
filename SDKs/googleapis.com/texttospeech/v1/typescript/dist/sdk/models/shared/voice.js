@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VoiceSsmlGenderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Voice = exports.VoiceSsmlGenderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VoiceSsmlGenderEnum;
 (function (VoiceSsmlGenderEnum) {
     VoiceSsmlGenderEnum["SsmlVoiceGenderUnspecified"] = "SSML_VOICE_GENDER_UNSPECIFIED";
     VoiceSsmlGenderEnum["Male"] = "MALE";
     VoiceSsmlGenderEnum["Female"] = "FEMALE";
     VoiceSsmlGenderEnum["Neutral"] = "NEUTRAL";
-})(VoiceSsmlGenderEnum || (VoiceSsmlGenderEnum = {}));
+})(VoiceSsmlGenderEnum = exports.VoiceSsmlGenderEnum || (exports.VoiceSsmlGenderEnum = {}));
 // Voice
 /**
  * Description of a voice supported by the TTS service.
@@ -40,21 +43,21 @@ var Voice = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCodes" }),
         __metadata("design:type", Array)
     ], Voice.prototype, "languageCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Voice.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=naturalSampleRateHertz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=naturalSampleRateHertz" }),
         __metadata("design:type", Number)
     ], Voice.prototype, "naturalSampleRateHertz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssmlGender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssmlGender" }),
         __metadata("design:type", String)
     ], Voice.prototype, "ssmlGender", void 0);
     return Voice;
-}(SpeakeasyBase));
-export { Voice };
+}(utils_1.SpeakeasyBase));
+exports.Voice = Voice;

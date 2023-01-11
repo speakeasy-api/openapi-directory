@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Builder } from "./builder";
-import { PlatformSummary } from "./platformsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePlatformVersionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var builder_1 = require("./builder");
+var platformsummary_1 = require("./platformsummary");
 var CreatePlatformVersionResult = /** @class */ (function (_super) {
     __extends(CreatePlatformVersionResult, _super);
     function CreatePlatformVersionResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Builder)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", builder_1.Builder)
     ], CreatePlatformVersionResult.prototype, "builder", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PlatformSummary)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", platformsummary_1.PlatformSummary)
     ], CreatePlatformVersionResult.prototype, "platformSummary", void 0);
     return CreatePlatformVersionResult;
-}(SpeakeasyBase));
-export { CreatePlatformVersionResult };
+}(utils_1.SpeakeasyBase));
+exports.CreatePlatformVersionResult = CreatePlatformVersionResult;

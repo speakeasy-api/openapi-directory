@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LandlordMaintenanceCertificateModel } from "./landlordmaintenancecertificatemodel";
-import { LettingsLandlordDocument } from "./lettingslandlorddocument";
-import { LandlordLettingsInspectionModel } from "./landlordlettingsinspectionmodel";
-import { LandlordMaintenancePreferenceModel } from "./landlordmaintenancepreferencemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordTenancyModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var landlordmaintenancecertificatemodel_1 = require("./landlordmaintenancecertificatemodel");
+var lettingslandlorddocument_1 = require("./lettingslandlorddocument");
+var landlordlettingsinspectionmodel_1 = require("./landlordlettingsinspectionmodel");
+var landlordmaintenancepreferencemodel_1 = require("./landlordmaintenancepreferencemodel");
 // LandlordTenancyModel
 /**
  * Landlord Tenancy Model.
@@ -37,85 +40,85 @@ var LandlordTenancyModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActualEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActualEndDate" }),
         __metadata("design:type", Date)
     ], LandlordTenancyModel.prototype, "actualEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Beds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Beds" }),
         __metadata("design:type", Number)
     ], LandlordTenancyModel.prototype, "beds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Bond" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Bond" }),
         __metadata("design:type", Number)
     ], LandlordTenancyModel.prototype, "bond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BranchID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BranchID" }),
         __metadata("design:type", String)
-    ], LandlordTenancyModel.prototype, "branchId", void 0);
+    ], LandlordTenancyModel.prototype, "branchID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Certificates", elemType: LandlordMaintenanceCertificateModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Certificates", elemType: landlordmaintenancecertificatemodel_1.LandlordMaintenanceCertificateModel }),
         __metadata("design:type", Array)
     ], LandlordTenancyModel.prototype, "certificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Documents", elemType: LettingsLandlordDocument }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Documents", elemType: lettingslandlorddocument_1.LettingsLandlordDocument }),
         __metadata("design:type", Array)
     ], LandlordTenancyModel.prototype, "documents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FixedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FixedDate" }),
         __metadata("design:type", Date)
     ], LandlordTenancyModel.prototype, "fixedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlobalReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlobalReference" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "globalReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ID" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inspections", elemType: LandlordLettingsInspectionModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inspections", elemType: landlordlettingsinspectionmodel_1.LandlordLettingsInspectionModel }),
         __metadata("design:type", Array)
     ], LandlordTenancyModel.prototype, "inspections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ManagedRent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ManagedRent" }),
         __metadata("design:type", Boolean)
     ], LandlordTenancyModel.prototype, "managedRent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Preferences", elemType: LandlordMaintenancePreferenceModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Preferences", elemType: landlordmaintenancepreferencemodel_1.LandlordMaintenancePreferenceModel }),
         __metadata("design:type", Array)
     ], LandlordTenancyModel.prototype, "preferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousRentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousRentAmount" }),
         __metadata("design:type", Number)
     ], LandlordTenancyModel.prototype, "previousRentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PropertyAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PropertyAddress" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "propertyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rent" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "rent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RentAmount" }),
         __metadata("design:type", Number)
     ], LandlordTenancyModel.prototype, "rentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", Date)
     ], LandlordTenancyModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenancyProperty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenancyProperty" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "tenancyProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenancyState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenancyState" }),
         __metadata("design:type", String)
     ], LandlordTenancyModel.prototype, "tenancyState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenants" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenants" }),
         __metadata("design:type", Array)
     ], LandlordTenancyModel.prototype, "tenants", void 0);
     return LandlordTenancyModel;
-}(SpeakeasyBase));
-export { LandlordTenancyModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordTenancyModel = LandlordTenancyModel;

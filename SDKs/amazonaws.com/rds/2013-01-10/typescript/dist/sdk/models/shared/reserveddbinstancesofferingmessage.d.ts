@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ReservedDbInstancesOffering } from "./reserveddbinstancesoffering";
+import { ReservedDbInstancesOfferingList } from "./reserveddbinstancesofferinglist";
 export declare class ReservedDbInstancesOfferingMessage extends SpeakeasyBase {
     marker?: string;
-    reservedDbInstancesOfferings?: ReservedDbInstancesOffering[];
+    reservedDBInstancesOfferings?: ReservedDbInstancesOfferingList[];
 }

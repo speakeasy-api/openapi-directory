@@ -13,6 +13,6 @@ export declare class GetGamePpaRequest extends SpeakeasyBase {
 }
 export declare class GetGamePpaResponse extends SpeakeasyBase {
     contentType: string;
-    gamePpas?: shared.GamePpa[];
+    gamePPAS?: shared.GamePpa[];
     statusCode: number;
 }

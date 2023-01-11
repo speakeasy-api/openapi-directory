@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualGatewayListenerTlsFileCertificate } from "./virtualgatewaylistenertlsfilecertificate";
-import { VirtualGatewayListenerTlsSdsCertificate } from "./virtualgatewaylistenertlssdscertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualGatewayClientTlsCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualgatewaylistenertlsfilecertificate_1 = require("./virtualgatewaylistenertlsfilecertificate");
+var virtualgatewaylistenertlssdscertificate_1 = require("./virtualgatewaylistenertlssdscertificate");
 // VirtualGatewayClientTlsCertificate
 /**
  * An object that represents the virtual gateway's client's Transport Layer Security (TLS) certificate.
@@ -35,13 +38,13 @@ var VirtualGatewayClientTlsCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", VirtualGatewayListenerTlsFileCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", virtualgatewaylistenertlsfilecertificate_1.VirtualGatewayListenerTlsFileCertificate)
     ], VirtualGatewayClientTlsCertificate.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sds" }),
-        __metadata("design:type", VirtualGatewayListenerTlsSdsCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sds" }),
+        __metadata("design:type", virtualgatewaylistenertlssdscertificate_1.VirtualGatewayListenerTlsSdsCertificate)
     ], VirtualGatewayClientTlsCertificate.prototype, "sds", void 0);
     return VirtualGatewayClientTlsCertificate;
-}(SpeakeasyBase));
-export { VirtualGatewayClientTlsCertificate };
+}(utils_1.SpeakeasyBase));
+exports.VirtualGatewayClientTlsCertificate = VirtualGatewayClientTlsCertificate;

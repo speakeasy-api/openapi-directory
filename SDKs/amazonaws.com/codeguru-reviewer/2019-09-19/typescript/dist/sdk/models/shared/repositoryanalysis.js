@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepositoryHeadSourceCodeType } from "./repositoryheadsourcecodetype";
-import { SourceCodeType } from "./sourcecodetype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryAnalysis = void 0;
+var utils_1 = require("../../../internal/utils");
+var repositoryheadsourcecodetype_1 = require("./repositoryheadsourcecodetype");
+var sourcecodetype_1 = require("./sourcecodetype");
 // RepositoryAnalysis
 /**
  *  A code review type that analyzes all code under a specified branch in an associated repository. The associated repository is specified using its ARN when you call <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CreateCodeReview"> <code>CreateCodeReview</code> </a>.
@@ -35,13 +38,13 @@ var RepositoryAnalysis = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RepositoryHead" }),
-        __metadata("design:type", RepositoryHeadSourceCodeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RepositoryHead" }),
+        __metadata("design:type", repositoryheadsourcecodetype_1.RepositoryHeadSourceCodeType)
     ], RepositoryAnalysis.prototype, "repositoryHead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceCodeType" }),
-        __metadata("design:type", SourceCodeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceCodeType" }),
+        __metadata("design:type", sourcecodetype_1.SourceCodeType)
     ], RepositoryAnalysis.prototype, "sourceCodeType", void 0);
     return RepositoryAnalysis;
-}(SpeakeasyBase));
-export { RepositoryAnalysis };
+}(utils_1.SpeakeasyBase));
+exports.RepositoryAnalysis = RepositoryAnalysis;

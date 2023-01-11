@@ -4,29 +4,14 @@ export declare class PullsListPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum PullsListDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-export declare enum PullsListSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Popularity = "popularity",
-    LongRunning = "long-running"
-}
-export declare enum PullsListStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
 export declare class PullsListQueryParams extends SpeakeasyBase {
     base?: string;
-    direction?: PullsListDirectionEnum;
+    direction?: shared.RepoEnum4;
     head?: string;
     page?: number;
     perPage?: number;
-    sort?: PullsListSortEnum;
-    state?: PullsListStateEnum;
+    sort?: shared.RepoEnum5;
+    state?: shared.RepoEnum2;
 }
 export declare class PullsListRequest extends SpeakeasyBase {
     pathParams: PullsListPathParams;
@@ -34,7 +19,7 @@ export declare class PullsListRequest extends SpeakeasyBase {
 }
 export declare class PullsListResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     pullRequestSimples?: shared.PullRequestSimple[];
     validationError?: shared.ValidationError;

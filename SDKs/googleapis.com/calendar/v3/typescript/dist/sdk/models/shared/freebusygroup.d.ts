@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
+/**
+ * List of calendars that are members of this group.
+**/
 export declare class FreeBusyGroup extends SpeakeasyBase {
     calendars?: string[];
-    errors?: Error[];
+    errors?: ErrorT[];
 }

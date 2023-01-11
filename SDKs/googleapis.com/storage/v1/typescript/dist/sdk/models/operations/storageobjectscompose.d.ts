@@ -52,6 +52,6 @@ export declare class StorageObjectsComposeRequest extends SpeakeasyBase {
 }
 export declare class StorageObjectsComposeResponse extends SpeakeasyBase {
     contentType: string;
-    object?: shared.Object;
+    object?: shared.ObjectT;
     statusCode: number;
 }

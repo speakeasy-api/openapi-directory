@@ -47,7 +47,7 @@ export class AddTagsToVaultHeaders extends SpeakeasyBase {
 
 export class AddTagsToVaultRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

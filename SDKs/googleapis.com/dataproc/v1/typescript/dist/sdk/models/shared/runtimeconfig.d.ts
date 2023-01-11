@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class RuntimeConfig extends SpeakeasyBase {
     containerImage?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     version?: string;
 }

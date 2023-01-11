@@ -1,4 +1,7 @@
-export var ProductsEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductsEnum = void 0;
+var ProductsEnum;
 (function (ProductsEnum) {
     ProductsEnum["Assets"] = "assets";
     ProductsEnum["Auth"] = "auth";
@@ -13,4 +16,4 @@ export var ProductsEnum;
     ProductsEnum["IncomeVerification"] = "income_verification";
     ProductsEnum["DepositSwitch"] = "deposit_switch";
     ProductsEnum["StandingOrders"] = "standing_orders";
-})(ProductsEnum || (ProductsEnum = {}));
+})(ProductsEnum = exports.ProductsEnum || (exports.ProductsEnum = {}));

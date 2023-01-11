@@ -97,7 +97,7 @@ export declare class GetCarDealerInventoryActiveRequest extends SpeakeasyBase {
 }
 export declare class GetCarDealerInventoryActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

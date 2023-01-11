@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueEventProjectCard = void 0;
+var utils_1 = require("../../../internal/utils");
 // IssueEventProjectCard
 /**
  * Issue Event Project Card
@@ -33,29 +36,29 @@ var IssueEventProjectCard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=column_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=column_name" }),
         __metadata("design:type", String)
     ], IssueEventProjectCard.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], IssueEventProjectCard.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_column_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_column_name" }),
         __metadata("design:type", String)
     ], IssueEventProjectCard.prototype, "previousColumnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_id" }),
         __metadata("design:type", Number)
     ], IssueEventProjectCard.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_url" }),
         __metadata("design:type", String)
     ], IssueEventProjectCard.prototype, "projectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IssueEventProjectCard.prototype, "url", void 0);
     return IssueEventProjectCard;
-}(SpeakeasyBase));
-export { IssueEventProjectCard };
+}(utils_1.SpeakeasyBase));
+exports.IssueEventProjectCard = IssueEventProjectCard;

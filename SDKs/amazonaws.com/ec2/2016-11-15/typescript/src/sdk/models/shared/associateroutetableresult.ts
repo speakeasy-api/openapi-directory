@@ -1,12 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteTableAssociationState } from "./routetableassociationstate";
 
+
+
+// AssociateRouteTableResultAssociationState
+/** 
+ * The state of the association.
+**/
+export class AssociateRouteTableResultAssociationState extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  state?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  statusMessage?: Record<string, any>;
+}
 
 
 export class AssociateRouteTableResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associationId?: string;
+  associationId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  associationState?: RouteTableAssociationState;
+  associationState?: AssociateRouteTableResultAssociationState;
 }

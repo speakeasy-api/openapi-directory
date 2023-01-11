@@ -24,6 +24,6 @@ export declare class ProjectsAddCollaboratorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsAddCollaborator415ApplicationJsonObject?: ProjectsAddCollaborator415ApplicationJson;
+    projectsAddCollaborator415ApplicationJSONObject?: ProjectsAddCollaborator415ApplicationJson;
     validationError?: shared.ValidationError;
 }

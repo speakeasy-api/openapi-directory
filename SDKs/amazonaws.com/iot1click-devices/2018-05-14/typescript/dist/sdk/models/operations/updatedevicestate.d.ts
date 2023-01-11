@@ -25,5 +25,5 @@ export declare class UpdateDeviceStateResponse extends SpeakeasyBase {
     invalidRequestException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateDeviceStateResponse?: Map<string, any>;
+    updateDeviceStateResponse?: Record<string, any>;
 }

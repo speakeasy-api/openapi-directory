@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeGenEdge } from "./codegenedge";
-import { CodeGenNode } from "./codegennode";
-import { LanguageEnum } from "./languageenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateScriptRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var codegenedge_1 = require("./codegenedge");
+var codegennode_1 = require("./codegennode");
+var languageenum_1 = require("./languageenum");
 var CreateScriptRequest = /** @class */ (function (_super) {
     __extends(CreateScriptRequest, _super);
     function CreateScriptRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DagEdges", elemType: CodeGenEdge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DagEdges", elemType: codegenedge_1.CodeGenEdge }),
         __metadata("design:type", Array)
     ], CreateScriptRequest.prototype, "dagEdges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DagNodes", elemType: CodeGenNode }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DagNodes", elemType: codegennode_1.CodeGenNode }),
         __metadata("design:type", Array)
     ], CreateScriptRequest.prototype, "dagNodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Language" }),
         __metadata("design:type", String)
     ], CreateScriptRequest.prototype, "language", void 0);
     return CreateScriptRequest;
-}(SpeakeasyBase));
-export { CreateScriptRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateScriptRequest = CreateScriptRequest;

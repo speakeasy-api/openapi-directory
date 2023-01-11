@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Image } from "./image";
-import { MarketingPrice } from "./marketingprice";
-import { Amount } from "./amount";
-import { ShippingOption } from "./shippingoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
+var marketingprice_1 = require("./marketingprice");
+var amount_1 = require("./amount");
+var shippingoption_1 = require("./shippingoption");
 // EventItem
 /**
  * The detailed data returned for the event item.
@@ -37,81 +40,81 @@ var EventItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalImages", elemType: Image }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalImages", elemType: image_1.Image }),
         __metadata("design:type", Array)
     ], EventItem.prototype, "additionalImages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryAncestorIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryAncestorIds" }),
         __metadata("design:type", Array)
     ], EventItem.prototype, "categoryAncestorIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=energyEfficiencyClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=energyEfficiencyClass" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "energyEfficiencyClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.Image)
     ], EventItem.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemAffiliateWebUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemAffiliateWebUrl" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "itemAffiliateWebUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemGroupId" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "itemGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemGroupType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemGroupType" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "itemGroupType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemWebUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemWebUrl" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "itemWebUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legacyItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legacyItemId" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "legacyItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketingPrice" }),
-        __metadata("design:type", MarketingPrice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketingPrice" }),
+        __metadata("design:type", marketingprice_1.MarketingPrice)
     ], EventItem.prototype, "marketingPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", amount_1.Amount)
     ], EventItem.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qualifiedPrograms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qualifiedPrograms" }),
         __metadata("design:type", Array)
     ], EventItem.prototype, "qualifiedPrograms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingOptions", elemType: ShippingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingOptions", elemType: shippingoption_1.ShippingOption }),
         __metadata("design:type", Array)
     ], EventItem.prototype, "shippingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unitPrice" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unitPrice" }),
+        __metadata("design:type", amount_1.Amount)
     ], EventItem.prototype, "unitPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unitPricingMeasure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unitPricingMeasure" }),
         __metadata("design:type", String)
     ], EventItem.prototype, "unitPricingMeasure", void 0);
     return EventItem;
-}(SpeakeasyBase));
-export { EventItem };
+}(utils_1.SpeakeasyBase));
+exports.EventItem = EventItem;

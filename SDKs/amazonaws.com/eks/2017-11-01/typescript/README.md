@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateEncryptionConfigRequest, AssociateEncryptionConfigResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,51 +33,35 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateEncryptionConfigRequest = {
   pathParams: {
-    name: "temporibus",
+    name: "sit",
   },
   headers: {
-    xAmzAlgorithm: "nemo",
-    xAmzContentSha256: "ea",
-    xAmzCredential: "vero",
-    xAmzDate: "debitis",
-    xAmzSecurityToken: "vitae",
-    xAmzSignature: "illo",
-    xAmzSignedHeaders: "dolor",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
-    clientRequestToken: "aut",
+    clientRequestToken: "fugit",
     encryptionConfig: [
       {
         provider: {
-          keyArn: "iusto",
+          keyArn: "nihil",
         },
         resources: [
-          "voluptas",
-          "quod",
-        ],
-      },
-      {
-        provider: {
-          keyArn: "maxime",
-        },
-        resources: [
-          "eligendi",
-        ],
-      },
-      {
-        provider: {
-          keyArn: "dolorum",
-        },
-        resources: [
-          "magni",
-          "nostrum",
+          "dicta",
+          "debitis",
+          "voluptatum",
         ],
       },
     ],
   },
 };
 
-sdk.sdk.associateEncryptionConfig(req).then((res: AssociateEncryptionConfigResponse | AxiosError) => {
+sdk.associateEncryptionConfig(req).then((res: AssociateEncryptionConfigResponse | AxiosError) => {
    // handle response
 });
 ```

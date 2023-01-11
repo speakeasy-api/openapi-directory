@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Requester = exports.RequesterIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
 var RequesterIdentifier = /** @class */ (function (_super) {
     __extends(RequesterIdentifier, _super);
     function RequesterIdentifier() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system" }),
         __metadata("design:type", String)
     ], RequesterIdentifier.prototype, "system", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RequesterIdentifier.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], RequesterIdentifier.prototype, "value", void 0);
     return RequesterIdentifier;
-}(SpeakeasyBase));
-export { RequesterIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.RequesterIdentifier = RequesterIdentifier;
 var Requester = /** @class */ (function (_super) {
     __extends(Requester, _super);
     function Requester() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", RequesterIdentifier)
     ], Requester.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Requester.prototype, "name", void 0);
     return Requester;
-}(SpeakeasyBase));
-export { Requester };
+}(utils_1.SpeakeasyBase));
+exports.Requester = Requester;

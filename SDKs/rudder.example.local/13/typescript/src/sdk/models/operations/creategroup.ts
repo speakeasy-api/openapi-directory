@@ -44,5 +44,5 @@ export class CreateGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createGroup200ApplicationJsonObject?: CreateGroup200ApplicationJson;
+  createGroup200ApplicationJSONObject?: CreateGroup200ApplicationJson;
 }

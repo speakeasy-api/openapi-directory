@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnprocessedTraceSegment } from "./unprocessedtracesegment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutTraceSegmentsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var unprocessedtracesegment_1 = require("./unprocessedtracesegment");
 var PutTraceSegmentsResult = /** @class */ (function (_super) {
     __extends(PutTraceSegmentsResult, _super);
     function PutTraceSegmentsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedTraceSegments", elemType: UnprocessedTraceSegment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedTraceSegments", elemType: unprocessedtracesegment_1.UnprocessedTraceSegment }),
         __metadata("design:type", Array)
     ], PutTraceSegmentsResult.prototype, "unprocessedTraceSegments", void 0);
     return PutTraceSegmentsResult;
-}(SpeakeasyBase));
-export { PutTraceSegmentsResult };
+}(utils_1.SpeakeasyBase));
+exports.PutTraceSegmentsResult = PutTraceSegmentsResult;

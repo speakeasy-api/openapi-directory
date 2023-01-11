@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RemotebuildexecutionProjectsInstancesCreateRequest, RemotebuildexecutionProjectsInstancesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,100 +30,106 @@ const req: RemotebuildexecutionProjectsInstancesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "totam",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "ea",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "rerum",
-    fields: "consequatur",
-    key: "qui",
-    oauthToken: "aut",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "exercitationem",
-    uploadType: "aut",
-    uploadProtocol: "doloremque",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     instance: {
       featurePolicy: {
+        actionHermeticity: "ACTION_HERMETICITY_BEST_EFFORT",
+        actionIsolation: "ACTION_ISOLATION_UNSPECIFIED",
         containerImageSources: {
           allowedValues: [
-            "totam",
+            "et",
           ],
-          policy: "ALLOWED",
+          policy: "RESTRICTED",
         },
         dockerAddCapabilities: {
           allowedValues: [
-            "vel",
-            "aspernatur",
+            "et",
+            "voluptate",
+            "iste",
           ],
           policy: "POLICY_UNSPECIFIED",
         },
         dockerChrootPath: {
           allowedValues: [
-            "porro",
-            "rerum",
-          ],
-          policy: "FORBIDDEN",
-        },
-        dockerNetwork: {
-          allowedValues: [
-            "hic",
-          ],
-          policy: "ALLOWED",
-        },
-        dockerPrivileged: {
-          allowedValues: [
-            "quia",
-            "saepe",
-          ],
-          policy: "RESTRICTED",
-        },
-        dockerRunAsContainerProvidedUser: {
-          allowedValues: [
-            "voluptatem",
-          ],
-          policy: "ALLOWED",
-        },
-        dockerRunAsRoot: {
-          allowedValues: [
-            "reiciendis",
-          ],
-          policy: "ALLOWED",
-        },
-        dockerRuntime: {
-          allowedValues: [
-            "natus",
-            "earum",
-            "et",
+            "dolores",
+            "illum",
+            "debitis",
           ],
           policy: "POLICY_UNSPECIFIED",
         },
-        dockerSiblingContainers: {
+        dockerNetwork: {
           allowedValues: [
-            "consequatur",
-            "ut",
+            "dolore",
+          ],
+          policy: "POLICY_UNSPECIFIED",
+        },
+        dockerPrivileged: {
+          allowedValues: [
+            "accusantium",
           ],
           policy: "ALLOWED",
         },
-        linuxIsolation: "GVISOR",
-        vmVerification: "VM_VERIFICATION_UNSPECIFIED",
+        dockerRunAsContainerProvidedUser: {
+          allowedValues: [
+            "quis",
+            "est",
+          ],
+          policy: "POLICY_UNSPECIFIED",
+        },
+        dockerRunAsRoot: {
+          allowedValues: [
+            "non",
+            "voluptas",
+          ],
+          policy: "RESTRICTED",
+        },
+        dockerRuntime: {
+          allowedValues: [
+            "illo",
+          ],
+          policy: "FORBIDDEN",
+        },
+        dockerSiblingContainers: {
+          allowedValues: [
+            "autem",
+            "consectetur",
+          ],
+          policy: "POLICY_UNSPECIFIED",
+        },
+        linuxExecution: "LINUX_EXECUTION_UNRESTRICTED",
+        linuxIsolation: "LINUX_ISOLATION_UNSPECIFIED",
+        macExecution: "MAC_EXECUTION_UNSPECIFIED",
+        vmVerification: "VM_VERIFICATION_GCP_TOKEN",
+        windowsExecution: "WINDOWS_EXECUTION_UNRESTRICTED",
       },
-      location: "numquam",
-      loggingEnabled: true,
-      name: "vel",
-      state: "STATE_UNSPECIFIED",
+      location: "eveniet",
+      loggingEnabled: false,
+      name: "sint",
+      state: "CREATING",
     },
-    instanceId: "voluptatem",
-    parent: "nostrum",
+    instanceId: "ut",
+    parent: "exercitationem",
   },
 };
 

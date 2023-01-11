@@ -10,5 +10,5 @@ export declare class AppsListData extends SpeakeasyBase {
     listId?: string;
     listName: string;
     listUpdateToken?: string;
-    previousAppsList?: Map<string, App[]>;
+    previousAppsList?: Record<string, App[]>;
 }

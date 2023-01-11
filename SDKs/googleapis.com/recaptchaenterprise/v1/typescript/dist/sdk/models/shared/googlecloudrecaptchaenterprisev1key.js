@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecaptchaenterpriseV1AndroidKeySettings } from "./googlecloudrecaptchaenterprisev1androidkeysettings";
-import { GoogleCloudRecaptchaenterpriseV1IosKeySettings } from "./googlecloudrecaptchaenterprisev1ioskeysettings";
-import { GoogleCloudRecaptchaenterpriseV1TestingOptions } from "./googlecloudrecaptchaenterprisev1testingoptions";
-import { GoogleCloudRecaptchaenterpriseV1WafSettings } from "./googlecloudrecaptchaenterprisev1wafsettings";
-import { GoogleCloudRecaptchaenterpriseV1WebKeySettings } from "./googlecloudrecaptchaenterprisev1webkeysettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1Key = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecaptchaenterprisev1androidkeysettings_1 = require("./googlecloudrecaptchaenterprisev1androidkeysettings");
+var googlecloudrecaptchaenterprisev1ioskeysettings_1 = require("./googlecloudrecaptchaenterprisev1ioskeysettings");
+var googlecloudrecaptchaenterprisev1testingoptions_1 = require("./googlecloudrecaptchaenterprisev1testingoptions");
+var googlecloudrecaptchaenterprisev1wafsettings_1 = require("./googlecloudrecaptchaenterprisev1wafsettings");
+var googlecloudrecaptchaenterprisev1webkeysettings_1 = require("./googlecloudrecaptchaenterprisev1webkeysettings");
 // GoogleCloudRecaptchaenterpriseV1Key
 /**
  * A key used to identify and configure applications (web and/or mobile) that use reCAPTCHA Enterprise.
@@ -38,41 +41,41 @@ var GoogleCloudRecaptchaenterpriseV1Key = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidSettings" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1AndroidKeySettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidSettings" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1androidkeysettings_1.GoogleCloudRecaptchaenterpriseV1AndroidKeySettings)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "androidSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosSettings" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1IosKeySettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosSettings" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1ioskeysettings_1.GoogleCloudRecaptchaenterpriseV1IosKeySettings)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "iosSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testingOptions" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1TestingOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testingOptions" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1testingoptions_1.GoogleCloudRecaptchaenterpriseV1TestingOptions)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "testingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wafSettings" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1WafSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wafSettings" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1wafsettings_1.GoogleCloudRecaptchaenterpriseV1WafSettings)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "wafSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webSettings" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1WebKeySettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webSettings" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1webkeysettings_1.GoogleCloudRecaptchaenterpriseV1WebKeySettings)
     ], GoogleCloudRecaptchaenterpriseV1Key.prototype, "webSettings", void 0);
     return GoogleCloudRecaptchaenterpriseV1Key;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1Key };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1Key = GoogleCloudRecaptchaenterpriseV1Key;

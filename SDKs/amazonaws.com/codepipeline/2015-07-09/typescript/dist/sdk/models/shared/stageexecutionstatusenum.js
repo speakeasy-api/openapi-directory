@@ -1,4 +1,7 @@
-export var StageExecutionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StageExecutionStatusEnum = void 0;
+var StageExecutionStatusEnum;
 (function (StageExecutionStatusEnum) {
     StageExecutionStatusEnum["Cancelled"] = "Cancelled";
     StageExecutionStatusEnum["InProgress"] = "InProgress";
@@ -6,4 +9,4 @@ export var StageExecutionStatusEnum;
     StageExecutionStatusEnum["Stopped"] = "Stopped";
     StageExecutionStatusEnum["Stopping"] = "Stopping";
     StageExecutionStatusEnum["Succeeded"] = "Succeeded";
-})(StageExecutionStatusEnum || (StageExecutionStatusEnum = {}));
+})(StageExecutionStatusEnum = exports.StageExecutionStatusEnum || (exports.StageExecutionStatusEnum = {}));

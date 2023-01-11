@@ -54,7 +54,7 @@ export class PutExternalEvaluationResponse extends SpeakeasyBase {
   noSuchConfigRuleException?: any;
 
   @SpeakeasyMetadata()
-  putExternalEvaluationResponse?: Map<string, any>;
+  putExternalEvaluationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

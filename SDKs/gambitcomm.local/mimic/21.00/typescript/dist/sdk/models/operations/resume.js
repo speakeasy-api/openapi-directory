@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResumeResponse = exports.ResumeRequest = exports.ResumePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResumePathParams = /** @class */ (function (_super) {
     __extends(ResumePathParams, _super);
     function ResumePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ResumePathParams.prototype, "agentNum", void 0);
     return ResumePathParams;
-}(SpeakeasyBase));
-export { ResumePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ResumePathParams = ResumePathParams;
 var ResumeRequest = /** @class */ (function (_super) {
     __extends(ResumeRequest, _super);
     function ResumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResumePathParams)
     ], ResumeRequest.prototype, "pathParams", void 0);
     return ResumeRequest;
-}(SpeakeasyBase));
-export { ResumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResumeRequest = ResumeRequest;
 var ResumeResponse = /** @class */ (function (_super) {
     __extends(ResumeResponse, _super);
     function ResumeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResumeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResumeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ResumeResponse.prototype, "resume200ApplicationJsonString", void 0);
+    ], ResumeResponse.prototype, "resume200ApplicationJSONString", void 0);
     return ResumeResponse;
-}(SpeakeasyBase));
-export { ResumeResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResumeResponse = ResumeResponse;

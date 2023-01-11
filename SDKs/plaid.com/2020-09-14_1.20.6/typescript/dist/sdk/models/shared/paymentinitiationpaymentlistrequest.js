@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentInitiationPaymentListRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // PaymentInitiationPaymentListRequest
 /**
  * PaymentInitiationPaymentListRequest defines the request schema for `/payment_initiation/payment/list`
@@ -33,21 +36,21 @@ var PaymentInitiationPaymentListRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], PaymentInitiationPaymentListRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], PaymentInitiationPaymentListRequest.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursor" }),
         __metadata("design:type", String)
     ], PaymentInitiationPaymentListRequest.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], PaymentInitiationPaymentListRequest.prototype, "secret", void 0);
     return PaymentInitiationPaymentListRequest;
-}(SpeakeasyBase));
-export { PaymentInitiationPaymentListRequest };
+}(utils_1.SpeakeasyBase));
+exports.PaymentInitiationPaymentListRequest = PaymentInitiationPaymentListRequest;

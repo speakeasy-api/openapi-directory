@@ -12,5 +12,5 @@ export declare class CodeCoverage extends SpeakeasyBase {
     lineCoveragePercentage?: number;
     linesCovered?: number;
     linesMissed?: number;
-    reportArn?: string;
+    reportARN?: string;
 }

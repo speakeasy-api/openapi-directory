@@ -19,7 +19,7 @@ export declare class CreateDeviceDefinitionRequestBodyInitialVersion extends Spe
 export declare class CreateDeviceDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateDeviceDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateDeviceDefinitionRequest extends SpeakeasyBase {
     headers: CreateDeviceDefinitionHeaders;

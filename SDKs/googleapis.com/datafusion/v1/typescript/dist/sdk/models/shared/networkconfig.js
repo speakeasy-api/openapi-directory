@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // NetworkConfig
 /**
  * Network configuration for a Data Fusion instance. These configurations are used for peering with the customer network. Configurations are optional when a public Data Fusion instance is to be created. However, providing these configurations allows several benefits, such as reduced network latency while accessing the customer resources from managed Data Fusion instance nodes, as well as access to the customer on-prem resources.
@@ -33,13 +36,13 @@ var NetworkConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAllocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAllocation" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "ipAllocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], NetworkConfig.prototype, "network", void 0);
     return NetworkConfig;
-}(SpeakeasyBase));
-export { NetworkConfig };
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfig = NetworkConfig;

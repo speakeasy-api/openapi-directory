@@ -5,5 +5,5 @@ export declare class SetLogRequest extends SpeakeasyBase {
 export declare class SetLogResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setLog200ApplicationJsonString?: string;
+    setLog200ApplicationJSONString?: string;
 }

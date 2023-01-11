@@ -41,8 +41,8 @@ export class GetWorkspacesWorkspaceProjectsProjectKeyResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  project?: Map<string, any>;
+  project?: Record<string, any>;
 }

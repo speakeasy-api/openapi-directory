@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ReviewObject extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ownerAvatarURL" })
-  ownerAvatarUrl?: string;
+  ownerAvatarURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ownerCountry" })
   ownerCountry?: string;

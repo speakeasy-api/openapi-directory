@@ -107,11 +107,11 @@ export declare class ImcerRequest extends SpeakeasyBase {
 export declare class ImcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    imcer400ApplicationJsonObject?: Imcer400ApplicationJson;
-    imcer401ApplicationJsonObject?: Imcer401ApplicationJson;
-    imcer404ApplicationJsonObject?: Imcer404ApplicationJson;
-    imcer500ApplicationJsonObject?: Imcer500ApplicationJson;
-    imcer502ApplicationJsonObject?: Imcer502ApplicationJson;
-    imcer503ApplicationJsonObject?: Imcer503ApplicationJson;
-    imcer504ApplicationJsonObject?: Imcer504ApplicationJson;
+    imcer400ApplicationJSONObject?: Imcer400ApplicationJson;
+    imcer401ApplicationJSONObject?: Imcer401ApplicationJson;
+    imcer404ApplicationJSONObject?: Imcer404ApplicationJson;
+    imcer500ApplicationJSONObject?: Imcer500ApplicationJson;
+    imcer502ApplicationJSONObject?: Imcer502ApplicationJson;
+    imcer503ApplicationJSONObject?: Imcer503ApplicationJson;
+    imcer504ApplicationJSONObject?: Imcer504ApplicationJson;
 }

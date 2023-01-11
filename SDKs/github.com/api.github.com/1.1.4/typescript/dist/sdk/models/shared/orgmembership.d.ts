@@ -3,6 +3,9 @@ import { OrganizationSimple } from "./organizationsimple";
 export declare class OrgMembershipPermissions extends SpeakeasyBase {
     canCreateRepository: boolean;
 }
+/**
+ * Simple User
+**/
 export declare class OrgMembershipSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

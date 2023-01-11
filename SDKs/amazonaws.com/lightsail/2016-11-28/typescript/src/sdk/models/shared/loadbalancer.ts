@@ -19,7 +19,7 @@ export class LoadBalancer extends SpeakeasyBase {
   arn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=configurationOptions" })
-  configurationOptions?: Map<string, string>;
+  configurationOptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt?: Date;

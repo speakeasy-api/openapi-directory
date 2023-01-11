@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { SyndicateMarshaller } from "./syndicatemarshaller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyndicateMarshallerWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var syndicatemarshaller_1 = require("./syndicatemarshaller");
 var SyndicateMarshallerWrapped = /** @class */ (function (_super) {
     __extends(SyndicateMarshallerWrapped, _super);
     function SyndicateMarshallerWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], SyndicateMarshallerWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], SyndicateMarshallerWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: SyndicateMarshaller }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: syndicatemarshaller_1.SyndicateMarshaller }),
         __metadata("design:type", Array)
     ], SyndicateMarshallerWrapped.prototype, "results", void 0);
     return SyndicateMarshallerWrapped;
-}(SpeakeasyBase));
-export { SyndicateMarshallerWrapped };
+}(utils_1.SpeakeasyBase));
+exports.SyndicateMarshallerWrapped = SyndicateMarshallerWrapped;

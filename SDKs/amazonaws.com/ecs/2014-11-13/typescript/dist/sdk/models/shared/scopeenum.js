@@ -1,5 +1,8 @@
-export var ScopeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScopeEnum = void 0;
+var ScopeEnum;
 (function (ScopeEnum) {
     ScopeEnum["Task"] = "task";
     ScopeEnum["Shared"] = "shared";
-})(ScopeEnum || (ScopeEnum = {}));
+})(ScopeEnum = exports.ScopeEnum || (exports.ScopeEnum = {}));

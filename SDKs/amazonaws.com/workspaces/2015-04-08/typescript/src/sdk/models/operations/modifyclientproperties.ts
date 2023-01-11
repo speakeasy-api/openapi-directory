@@ -54,7 +54,7 @@ export class ModifyClientPropertiesResponse extends SpeakeasyBase {
   invalidParameterValuesException?: any;
 
   @SpeakeasyMetadata()
-  modifyClientPropertiesResult?: Map<string, any>;
+  modifyClientPropertiesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

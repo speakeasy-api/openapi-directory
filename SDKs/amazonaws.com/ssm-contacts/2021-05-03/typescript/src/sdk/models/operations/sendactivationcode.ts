@@ -60,7 +60,7 @@ export class SendActivationCodeResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  sendActivationCodeResult?: Map<string, any>;
+  sendActivationCodeResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serviceQuotaExceededException?: any;

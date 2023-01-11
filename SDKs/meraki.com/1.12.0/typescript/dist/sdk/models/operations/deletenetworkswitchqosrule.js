@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkSwitchQosRuleResponse = exports.DeleteNetworkSwitchQosRuleRequest = exports.DeleteNetworkSwitchQosRulePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkSwitchQosRulePathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchQosRulePathParams, _super);
     function DeleteNetworkSwitchQosRulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchQosRulePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=qosRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=qosRuleId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchQosRulePathParams.prototype, "qosRuleId", void 0);
     return DeleteNetworkSwitchQosRulePathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchQosRulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchQosRulePathParams = DeleteNetworkSwitchQosRulePathParams;
 var DeleteNetworkSwitchQosRuleRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchQosRuleRequest, _super);
     function DeleteNetworkSwitchQosRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkSwitchQosRulePathParams)
     ], DeleteNetworkSwitchQosRuleRequest.prototype, "pathParams", void 0);
     return DeleteNetworkSwitchQosRuleRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchQosRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchQosRuleRequest = DeleteNetworkSwitchQosRuleRequest;
 var DeleteNetworkSwitchQosRuleResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchQosRuleResponse, _super);
     function DeleteNetworkSwitchQosRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchQosRuleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkSwitchQosRuleResponse.prototype, "statusCode", void 0);
     return DeleteNetworkSwitchQosRuleResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchQosRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchQosRuleResponse = DeleteNetworkSwitchQosRuleResponse;

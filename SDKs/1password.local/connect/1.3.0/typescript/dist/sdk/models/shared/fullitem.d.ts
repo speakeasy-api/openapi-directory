@@ -1,12 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Field } from "./field";
-import { File } from "./file";
 import { FieldInput } from "./field";
 import { FileInput } from "./file";
-export declare enum FullItemStateEnum {
-    Archived = "ARCHIVED",
-    Deleted = "DELETED"
-}
+import { Field } from "./field";
+import { File } from "./file";
 export declare enum FullItemCategoryEnum {
     Login = "LOGIN",
     Password = "PASSWORD",
@@ -40,6 +36,23 @@ export declare class FullItemUrls extends SpeakeasyBase {
 export declare class FullItemVault extends SpeakeasyBase {
     id: string;
 }
+export declare enum FullItemStateEnum {
+    Archived = "ARCHIVED",
+    Deleted = "DELETED"
+}
+export declare class FullItemInput extends SpeakeasyBase {
+    category: FullItemCategoryEnum;
+    favorite?: boolean;
+    fields?: FieldInput[];
+    files?: FileInput[];
+    id?: string;
+    sections?: FullItemSections[];
+    tags?: string[];
+    title?: string;
+    urls?: FullItemUrls[];
+    vault: FullItemVault;
+    version?: number;
+}
 export declare class FullItem extends SpeakeasyBase {
     category: FullItemCategoryEnum;
     createdAt?: Date;
@@ -53,19 +66,6 @@ export declare class FullItem extends SpeakeasyBase {
     tags?: string[];
     title?: string;
     updatedAt?: Date;
-    urls?: FullItemUrls[];
-    vault: FullItemVault;
-    version?: number;
-}
-export declare class FullItemInput extends SpeakeasyBase {
-    category: FullItemCategoryEnum;
-    favorite?: boolean;
-    fields?: FieldInput[];
-    files?: FileInput[];
-    id?: string;
-    sections?: FullItemSections[];
-    tags?: string[];
-    title?: string;
     urls?: FullItemUrls[];
     vault: FullItemVault;
     version?: number;

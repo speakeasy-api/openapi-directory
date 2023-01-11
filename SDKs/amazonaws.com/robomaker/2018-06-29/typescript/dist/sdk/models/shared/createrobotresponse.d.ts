@@ -6,5 +6,5 @@ export declare class CreateRobotResponse extends SpeakeasyBase {
     createdAt?: Date;
     greengrassGroupId?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -62,5 +62,5 @@ export declare class DcimConsoleServerPortsListRequest extends SpeakeasyBase {
 export declare class DcimConsoleServerPortsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimConsoleServerPortsList200ApplicationJsonObject?: DcimConsoleServerPortsList200ApplicationJson;
+    dcimConsoleServerPortsList200ApplicationJSONObject?: DcimConsoleServerPortsList200ApplicationJson;
 }

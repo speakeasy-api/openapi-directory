@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RvBuild } from "./rvbuild";
-import { NestDealer } from "./nestdealer";
-import { ListingNestExtraAttributes } from "./listingnestextraattributes";
-import { ListingNestMedia } from "./listingnestmedia";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeavyEquipmentsListing = void 0;
+var utils_1 = require("../../../internal/utils");
+var rvbuild_1 = require("./rvbuild");
+var nestdealer_1 = require("./nestdealer");
+var listingnestextraattributes_1 = require("./listingnestextraattributes");
+var listingnestmedia_1 = require("./listingnestmedia");
 // HeavyEquipmentsListing
 /**
  * Represents a full list of attributes available with Marketcheck for a car
@@ -37,97 +40,97 @@ var HeavyEquipmentsListing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build" }),
-        __metadata("design:type", RvBuild)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build" }),
+        __metadata("design:type", rvbuild_1.RvBuild)
     ], HeavyEquipmentsListing.prototype, "build", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealer" }),
-        __metadata("design:type", NestDealer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealer" }),
+        __metadata("design:type", nestdealer_1.NestDealer)
     ], HeavyEquipmentsListing.prototype, "dealer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dp_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dp_url" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "dpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exterior_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exterior_color" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "exteriorColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extra" }),
-        __metadata("design:type", ListingNestExtraAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extra" }),
+        __metadata("design:type", listingnestextraattributes_1.ListingNestExtraAttributes)
     ], HeavyEquipmentsListing.prototype, "extra", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_seen_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_seen_at" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "firstSeenAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_seen_at_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_seen_at_date" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "firstSeenAtDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heading" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "heading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interior_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interior_color" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "interiorColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventory_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventory_type" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "inventoryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_seen_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_seen_at" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "lastSeenAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_seen_at_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_seen_at_date" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "lastSeenAtDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media" }),
-        __metadata("design:type", ListingNestMedia)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media" }),
+        __metadata("design:type", listingnestmedia_1.ListingNestMedia)
     ], HeavyEquipmentsListing.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "miles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msrp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msrp" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "msrp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scraped_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scraped_at" }),
         __metadata("design:type", Number)
     ], HeavyEquipmentsListing.prototype, "scrapedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scraped_at_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scraped_at_date" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "scrapedAtDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seller_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seller_type" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "sellerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stock_no" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stock_no" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "stockNo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vin" }),
         __metadata("design:type", String)
     ], HeavyEquipmentsListing.prototype, "vin", void 0);
     return HeavyEquipmentsListing;
-}(SpeakeasyBase));
-export { HeavyEquipmentsListing };
+}(utils_1.SpeakeasyBase));
+exports.HeavyEquipmentsListing = HeavyEquipmentsListing;

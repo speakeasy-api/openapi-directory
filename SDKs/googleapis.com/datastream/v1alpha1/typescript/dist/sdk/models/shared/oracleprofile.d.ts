@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Oracle database profile.
 **/
 export declare class OracleProfile extends SpeakeasyBase {
-    connectionAttributes?: Map<string, string>;
+    connectionAttributes?: Record<string, string>;
     databaseService?: string;
     hostname?: string;
     password?: string;

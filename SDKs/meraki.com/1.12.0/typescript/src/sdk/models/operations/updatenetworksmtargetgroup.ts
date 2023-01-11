@@ -37,5 +37,5 @@ export class UpdateNetworkSmTargetGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSmTargetGroup200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSmTargetGroup200ApplicationJSONObject?: Record<string, any>;
 }

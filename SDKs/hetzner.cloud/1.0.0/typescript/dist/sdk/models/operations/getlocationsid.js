@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLocationsIdResponse = exports.GetLocationsIdRequest = exports.GetLocationsId200ApplicationJson = exports.GetLocationsId200ApplicationJsonLocation = exports.GetLocationsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLocationsIdPathParams = /** @class */ (function (_super) {
     __extends(GetLocationsIdPathParams, _super);
     function GetLocationsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetLocationsIdPathParams.prototype, "id", void 0);
     return GetLocationsIdPathParams;
-}(SpeakeasyBase));
-export { GetLocationsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsIdPathParams = GetLocationsIdPathParams;
 var GetLocationsId200ApplicationJsonLocation = /** @class */ (function (_super) {
     __extends(GetLocationsId200ApplicationJsonLocation, _super);
     function GetLocationsId200ApplicationJsonLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetLocationsId200ApplicationJsonLocation.prototype, "networkZone", void 0);
     return GetLocationsId200ApplicationJsonLocation;
-}(SpeakeasyBase));
-export { GetLocationsId200ApplicationJsonLocation };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsId200ApplicationJsonLocation = GetLocationsId200ApplicationJsonLocation;
 var GetLocationsId200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLocationsId200ApplicationJson, _super);
     function GetLocationsId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", GetLocationsId200ApplicationJsonLocation)
     ], GetLocationsId200ApplicationJson.prototype, "location", void 0);
     return GetLocationsId200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLocationsId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsId200ApplicationJson = GetLocationsId200ApplicationJson;
 var GetLocationsIdRequest = /** @class */ (function (_super) {
     __extends(GetLocationsIdRequest, _super);
     function GetLocationsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLocationsIdPathParams)
     ], GetLocationsIdRequest.prototype, "pathParams", void 0);
     return GetLocationsIdRequest;
-}(SpeakeasyBase));
-export { GetLocationsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsIdRequest = GetLocationsIdRequest;
 var GetLocationsIdResponse = /** @class */ (function (_super) {
     __extends(GetLocationsIdResponse, _super);
     function GetLocationsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLocationsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetLocationsId200ApplicationJson)
-    ], GetLocationsIdResponse.prototype, "getLocationsId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLocationsIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetLocationsId200ApplicationJson)
+    ], GetLocationsIdResponse.prototype, "getLocationsId200ApplicationJSONObject", void 0);
     return GetLocationsIdResponse;
-}(SpeakeasyBase));
-export { GetLocationsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsIdResponse = GetLocationsIdResponse;

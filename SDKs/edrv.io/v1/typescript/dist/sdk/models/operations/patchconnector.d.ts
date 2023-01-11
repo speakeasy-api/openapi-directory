@@ -13,7 +13,7 @@ export declare class PatchConnectorRequestBody extends SpeakeasyBase {
 export declare class PatchConnector201ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PatchConnectorRequest extends SpeakeasyBase {
     pathParams: PatchConnectorPathParams;
@@ -22,5 +22,5 @@ export declare class PatchConnectorRequest extends SpeakeasyBase {
 export declare class PatchConnectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchConnector201ApplicationJsonObject?: PatchConnector201ApplicationJson;
+    patchConnector201ApplicationJSONObject?: PatchConnector201ApplicationJson;
 }

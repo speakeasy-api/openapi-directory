@@ -133,11 +133,11 @@ export class UpdateWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWorkspace200ApplicationJsonObject?: UpdateWorkspace200ApplicationJson;
+  updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateWorkspace403ApplicationJsonObject?: UpdateWorkspace403ApplicationJson;
+  updateWorkspace403ApplicationJSONObject?: UpdateWorkspace403ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateWorkspace404ApplicationJsonObject?: UpdateWorkspace404ApplicationJson;
+  updateWorkspace404ApplicationJSONObject?: UpdateWorkspace404ApplicationJson;
 }

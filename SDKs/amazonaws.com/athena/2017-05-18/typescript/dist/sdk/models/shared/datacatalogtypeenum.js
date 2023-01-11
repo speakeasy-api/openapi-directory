@@ -1,6 +1,9 @@
-export var DataCatalogTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataCatalogTypeEnum = void 0;
+var DataCatalogTypeEnum;
 (function (DataCatalogTypeEnum) {
     DataCatalogTypeEnum["Lambda"] = "LAMBDA";
     DataCatalogTypeEnum["Glue"] = "GLUE";
     DataCatalogTypeEnum["Hive"] = "HIVE";
-})(DataCatalogTypeEnum || (DataCatalogTypeEnum = {}));
+})(DataCatalogTypeEnum = exports.DataCatalogTypeEnum || (exports.DataCatalogTypeEnum = {}));

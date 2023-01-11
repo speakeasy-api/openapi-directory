@@ -65,13 +65,13 @@ export class GetMostemailedSectionTimePeriodJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getMostemailedSectionTimePeriodJson200ApplicationJsonObject?: GetMostemailedSectionTimePeriodJson200ApplicationJson;
+  getMostemailedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getMostemailedSectionTimePeriodJson400ApplicationJsonObject?: GetMostemailedSectionTimePeriodJson400ApplicationJson;
+  getMostemailedSectionTimePeriodJSON400ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getMostemailedSectionTimePeriodJson403ApplicationJsonObject?: Map<string, any>;
+  getMostemailedSectionTimePeriodJSON403ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

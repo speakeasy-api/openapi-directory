@@ -22,5 +22,5 @@ export declare class GetTasksResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTasks200ApplicationJsonObject?: GetTasks200ApplicationJson;
+    getTasks200ApplicationJSONObject?: GetTasks200ApplicationJson;
 }

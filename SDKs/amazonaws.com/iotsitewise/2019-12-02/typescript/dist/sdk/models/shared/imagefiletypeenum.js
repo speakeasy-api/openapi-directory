@@ -1,4 +1,7 @@
-export var ImageFileTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageFileTypeEnum = void 0;
+var ImageFileTypeEnum;
 (function (ImageFileTypeEnum) {
     ImageFileTypeEnum["Png"] = "PNG";
-})(ImageFileTypeEnum || (ImageFileTypeEnum = {}));
+})(ImageFileTypeEnum = exports.ImageFileTypeEnum || (exports.ImageFileTypeEnum = {}));

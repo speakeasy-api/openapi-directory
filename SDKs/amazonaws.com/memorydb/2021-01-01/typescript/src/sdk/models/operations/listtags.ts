@@ -54,7 +54,7 @@ export class ListTagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  invalidArnFault?: any;
+  invalidARNFault?: any;
 
   @SpeakeasyMetadata()
   invalidClusterStateFault?: any;

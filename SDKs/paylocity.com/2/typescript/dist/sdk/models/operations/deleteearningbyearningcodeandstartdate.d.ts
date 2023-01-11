@@ -16,5 +16,5 @@ export declare class DeleteEarningByEarningCodeAndStartDateRequest extends Speak
 export declare class DeleteEarningByEarningCodeAndStartDateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

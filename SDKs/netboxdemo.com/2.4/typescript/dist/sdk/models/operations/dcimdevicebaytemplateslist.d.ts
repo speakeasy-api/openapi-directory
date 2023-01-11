@@ -18,5 +18,5 @@ export declare class DcimDeviceBayTemplatesListRequest extends SpeakeasyBase {
 export declare class DcimDeviceBayTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimDeviceBayTemplatesList200ApplicationJsonObject?: DcimDeviceBayTemplatesList200ApplicationJson;
+    dcimDeviceBayTemplatesList200ApplicationJSONObject?: DcimDeviceBayTemplatesList200ApplicationJson;
 }

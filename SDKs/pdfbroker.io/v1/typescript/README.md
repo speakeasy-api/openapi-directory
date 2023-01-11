@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApiPdfResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     oAuth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -32,7 +31,7 @@ const sdk = new SDK(WithSecurity(
   }
 ));
 
-sdk.sdk.getApiPdf().then((res: GetApiPdfResponse | AxiosError) => {
+sdk.pdf.getApiPdf().then((res: GetApiPdfResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -41,7 +40,7 @@ sdk.sdk.getApiPdf().then((res: GetApiPdfResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pdf
 
 * `getApiPdf` - Basic method to verify api is up and running
 * `postApiPdfWkhtmltopdf` - Generate pdf file from url using the excellent tool wkhtmltopdf.

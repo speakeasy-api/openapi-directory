@@ -16,24 +16,23 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { BroadcastTxRequest, BroadcastTxResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAddressRequest, GetAddressResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: BroadcastTxRequest = {
-  request: {
-    txHex: "quia",
+const req: GetAddressRequest = {
+  pathParams: {
+    address: "sit",
   },
 };
 
-sdk.sdk.broadcastTx(req).then((res: BroadcastTxResponse | AxiosError) => {
+sdk.insight.getAddress(req).then((res: GetAddressResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -42,13 +41,10 @@ sdk.sdk.broadcastTx(req).then((res: BroadcastTxResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Insight
 
-* `broadcastTx` - Broadcasts a signed raw transaction to the network
-* `burnToken` - Builds a transaction that burns an NTP1 Token
 * `getAddress` - Returns address object
 * `getAddressBalance` - Returns address balance in sats
-* `getAddressInfo` - Information On a Neblio Address
 * `getAddressTotalReceived` - Returns total received by address in sats
 * `getAddressTotalSent` - Returns total sent by address in sats
 * `getAddressUnconfirmedBalance` - Returns address unconfirmed balance in sats
@@ -58,42 +54,60 @@ sdk.sdk.broadcastTx(req).then((res: BroadcastTxResponse | AxiosError) => {
 * `getRawTx` - Returns raw transaction hex
 * `getStatus` - Utility API for calling several blockchain node functions
 * `getSync` - Get node sync status
+* `getTx` - Returns transaction object
+* `getTxs` - Get transactions by block or address
+* `sendTx` - Broadcasts a signed raw transaction to the network (not NTP1 specific)
+
+### JSON-RPC
+
+* `jsonRpc` - Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
+
+### NTP1
+
+* `broadcastTx` - Broadcasts a signed raw transaction to the network
+* `burnToken` - Builds a transaction that burns an NTP1 Token
+* `getAddressInfo` - Information On a Neblio Address
 * `getTokenHolders` - Get Addresses Holding a Token
 * `getTokenId` - Returns the tokenId representing a token
 * `getTokenMetadata` - Get Metadata of Token
 * `getTokenMetadataOfUtxo` - Get UTXO Metadata of Token
 * `getTransactionInfo` - Information On an NTP1 Transaction
-* `getTx` - Returns transaction object
-* `getTxs` - Get transactions by block or address
 * `issueToken` - Builds a transaction that issues a new NTP1 Token
-* `jsonRpc` - Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
 * `sendToken` - Builds a transaction that sends an NTP1 Token
-* `sendTx` - Broadcasts a signed raw transaction to the network (not NTP1 specific)
-* `testnetBroadcastTx` - Broadcasts a signed raw transaction to the network
-* `testnetBurnToken` - Builds a transaction that burns an NTP1 Token
+
+### Testnet-Faucet
+
+* `testnetGetFaucet` - Withdraws testnet NEBL to the specified address
+
+### Testnet-Insight
+
 * `testnetGetAddress` - Returns address object
 * `testnetGetAddressBalance` - Returns address balance in sats
-* `testnetGetAddressInfo` - Information On a Neblio Address
 * `testnetGetAddressTotalReceived` - Returns total received by address in sats
 * `testnetGetAddressTotalSent` - Returns total sent by address in sats
 * `testnetGetAddressUnconfirmedBalance` - Returns address unconfirmed balance in sats
 * `testnetGetAddressUtxos` - Returns all UTXOs at a given address
 * `testnetGetBlock` - Returns information regarding a Neblio block
 * `testnetGetBlockIndex` - Returns block hash of block
-* `testnetGetFaucet` - Withdraws testnet NEBL to the specified address
 * `testnetGetRawTx` - Returns raw transaction hex
 * `testnetGetStatus` - Utility API for calling several blockchain node functions
 * `testnetGetSync` - Get node sync status
+* `testnetGetTx` - Returns transaction object
+* `testnetGetTxs` - Get transactions by block or address
+* `testnetSendTx` - Broadcasts a signed raw transaction to the network (not NTP1 specific)
+
+### Testnet-NTP1
+
+* `testnetBroadcastTx` - Broadcasts a signed raw transaction to the network
+* `testnetBurnToken` - Builds a transaction that burns an NTP1 Token
+* `testnetGetAddressInfo` - Information On a Neblio Address
 * `testnetGetTokenHolders` - Get Addresses Holding a Token
 * `testnetGetTokenId` - Returns the tokenId representing a token
 * `testnetGetTokenMetadata` - Get Metadata of Token
 * `testnetGetTokenMetadataOfUtxo` - Get UTXO Metadata of Token
 * `testnetGetTransactionInfo` - Information On an NTP1 Transaction
-* `testnetGetTx` - Returns transaction object
-* `testnetGetTxs` - Get transactions by block or address
 * `testnetIssueToken` - Builds a transaction that issues a new NTP1 Token
 * `testnetSendToken` - Builds a transaction that sends an NTP1 Token
-* `testnetSendTx` - Broadcasts a signed raw transaction to the network (not NTP1 specific)
 
 <!-- End SDK Available Operations -->
 

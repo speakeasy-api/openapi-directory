@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactStore } from "./artifactstore";
-import { StageDeclaration } from "./stagedeclaration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineDeclaration = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifactstore_1 = require("./artifactstore");
+var stagedeclaration_1 = require("./stagedeclaration");
 // PipelineDeclaration
 /**
  * Represents the structure of actions and stages to be performed in the pipeline.
@@ -35,29 +38,29 @@ var PipelineDeclaration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactStore" }),
-        __metadata("design:type", ArtifactStore)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactStore" }),
+        __metadata("design:type", artifactstore_1.ArtifactStore)
     ], PipelineDeclaration.prototype, "artifactStore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactStores", elemType: ArtifactStore }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactStores", elemType: artifactstore_1.ArtifactStore }),
+        __metadata("design:type", Object)
     ], PipelineDeclaration.prototype, "artifactStores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PipelineDeclaration.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], PipelineDeclaration.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stages", elemType: StageDeclaration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stages", elemType: stagedeclaration_1.StageDeclaration }),
         __metadata("design:type", Array)
     ], PipelineDeclaration.prototype, "stages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], PipelineDeclaration.prototype, "version", void 0);
     return PipelineDeclaration;
-}(SpeakeasyBase));
-export { PipelineDeclaration };
+}(utils_1.SpeakeasyBase));
+exports.PipelineDeclaration = PipelineDeclaration;

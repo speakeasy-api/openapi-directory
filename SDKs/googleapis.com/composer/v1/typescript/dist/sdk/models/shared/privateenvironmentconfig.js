@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkingConfig } from "./networkingconfig";
-import { PrivateClusterConfig } from "./privateclusterconfig";
-import { PrivateClusterConfigInput } from "./privateclusterconfig";
-// PrivateEnvironmentConfig
-/**
- * The configuration information for configuring a Private IP Cloud Composer environment.
-**/
-var PrivateEnvironmentConfig = /** @class */ (function (_super) {
-    __extends(PrivateEnvironmentConfig, _super);
-    function PrivateEnvironmentConfig() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudComposerConnectionSubnetwork" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "cloudComposerConnectionSubnetwork", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudComposerNetworkIpv4CidrBlock" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "cloudComposerNetworkIpv4CidrBlock", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudComposerNetworkIpv4ReservedRange" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "cloudComposerNetworkIpv4ReservedRange", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlIpv4CidrBlock" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "cloudSqlIpv4CidrBlock", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivateEnvironment" }),
-        __metadata("design:type", Boolean)
-    ], PrivateEnvironmentConfig.prototype, "enablePrivateEnvironment", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivatelyUsedPublicIps" }),
-        __metadata("design:type", Boolean)
-    ], PrivateEnvironmentConfig.prototype, "enablePrivatelyUsedPublicIps", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkingConfig" }),
-        __metadata("design:type", NetworkingConfig)
-    ], PrivateEnvironmentConfig.prototype, "networkingConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateClusterConfig" }),
-        __metadata("design:type", PrivateClusterConfig)
-    ], PrivateEnvironmentConfig.prototype, "privateClusterConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=webServerIpv4CidrBlock" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "webServerIpv4CidrBlock", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=webServerIpv4ReservedRange" }),
-        __metadata("design:type", String)
-    ], PrivateEnvironmentConfig.prototype, "webServerIpv4ReservedRange", void 0);
-    return PrivateEnvironmentConfig;
-}(SpeakeasyBase));
-export { PrivateEnvironmentConfig };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateEnvironmentConfig = exports.PrivateEnvironmentConfigInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkingconfig_1 = require("./networkingconfig");
+var privateclusterconfig_1 = require("./privateclusterconfig");
+var privateclusterconfig_2 = require("./privateclusterconfig");
 // PrivateEnvironmentConfigInput
 /**
  * The configuration information for configuring a Private IP Cloud Composer environment.
@@ -88,37 +39,89 @@ var PrivateEnvironmentConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudComposerConnectionSubnetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudComposerConnectionSubnetwork" }),
         __metadata("design:type", String)
     ], PrivateEnvironmentConfigInput.prototype, "cloudComposerConnectionSubnetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudComposerNetworkIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudComposerNetworkIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], PrivateEnvironmentConfigInput.prototype, "cloudComposerNetworkIpv4CidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], PrivateEnvironmentConfigInput.prototype, "cloudSqlIpv4CidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivateEnvironment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivateEnvironment" }),
         __metadata("design:type", Boolean)
     ], PrivateEnvironmentConfigInput.prototype, "enablePrivateEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePrivatelyUsedPublicIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivatelyUsedPublicIps" }),
         __metadata("design:type", Boolean)
     ], PrivateEnvironmentConfigInput.prototype, "enablePrivatelyUsedPublicIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkingConfig" }),
-        __metadata("design:type", NetworkingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkingConfig" }),
+        __metadata("design:type", networkingconfig_1.NetworkingConfig)
     ], PrivateEnvironmentConfigInput.prototype, "networkingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateClusterConfig" }),
-        __metadata("design:type", PrivateClusterConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateClusterConfig" }),
+        __metadata("design:type", privateclusterconfig_1.PrivateClusterConfigInput)
     ], PrivateEnvironmentConfigInput.prototype, "privateClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webServerIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webServerIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], PrivateEnvironmentConfigInput.prototype, "webServerIpv4CidrBlock", void 0);
     return PrivateEnvironmentConfigInput;
-}(SpeakeasyBase));
-export { PrivateEnvironmentConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.PrivateEnvironmentConfigInput = PrivateEnvironmentConfigInput;
+// PrivateEnvironmentConfig
+/**
+ * The configuration information for configuring a Private IP Cloud Composer environment.
+**/
+var PrivateEnvironmentConfig = /** @class */ (function (_super) {
+    __extends(PrivateEnvironmentConfig, _super);
+    function PrivateEnvironmentConfig() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudComposerConnectionSubnetwork" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "cloudComposerConnectionSubnetwork", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudComposerNetworkIpv4CidrBlock" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "cloudComposerNetworkIpv4CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudComposerNetworkIpv4ReservedRange" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "cloudComposerNetworkIpv4ReservedRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlIpv4CidrBlock" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "cloudSqlIpv4CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivateEnvironment" }),
+        __metadata("design:type", Boolean)
+    ], PrivateEnvironmentConfig.prototype, "enablePrivateEnvironment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePrivatelyUsedPublicIps" }),
+        __metadata("design:type", Boolean)
+    ], PrivateEnvironmentConfig.prototype, "enablePrivatelyUsedPublicIps", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkingConfig" }),
+        __metadata("design:type", networkingconfig_1.NetworkingConfig)
+    ], PrivateEnvironmentConfig.prototype, "networkingConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateClusterConfig" }),
+        __metadata("design:type", privateclusterconfig_2.PrivateClusterConfig)
+    ], PrivateEnvironmentConfig.prototype, "privateClusterConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webServerIpv4CidrBlock" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "webServerIpv4CidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webServerIpv4ReservedRange" }),
+        __metadata("design:type", String)
+    ], PrivateEnvironmentConfig.prototype, "webServerIpv4ReservedRange", void 0);
+    return PrivateEnvironmentConfig;
+}(utils_1.SpeakeasyBase));
+exports.PrivateEnvironmentConfig = PrivateEnvironmentConfig;

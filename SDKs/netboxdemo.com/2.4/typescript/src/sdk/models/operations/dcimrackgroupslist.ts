@@ -56,5 +56,5 @@ export class DcimRackGroupsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimRackGroupsList200ApplicationJsonObject?: DcimRackGroupsList200ApplicationJson;
+  dcimRackGroupsList200ApplicationJSONObject?: DcimRackGroupsList200ApplicationJson;
 }

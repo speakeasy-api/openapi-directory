@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,148 +23,150 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomerViewModel = /** @class */ (function (_super) {
     __extends(CustomerViewModel, _super);
     function CustomerViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=birthdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birthdate" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "birthdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessName" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdOn" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "createdOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedStatus" }),
         __metadata("design:type", Boolean)
     ], CustomerViewModel.prototype, "deletedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedTime" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "deletedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], CustomerViewModel.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailInfo" }),
         __metadata("design:type", Boolean)
     ], CustomerViewModel.prototype, "emailInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailPromotion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailPromotion" }),
         __metadata("design:type", Boolean)
     ], CustomerViewModel.prototype, "emailPromotion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstname" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "firstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupId" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inviteEmailSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inviteEmailSent" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "inviteEmailSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastVisitDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastVisitDate" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "lastVisitDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastname" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedBy" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "modifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedOn" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "modifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationType" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "notificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredBy" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "registeredBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationDate" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "registrationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeCustomerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeCustomerId" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "stripeCustomerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionId" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "subscriptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationDate" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "verificationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedBy" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "verifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=welcomeEmailSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=welcomeEmailSent" }),
         __metadata("design:type", String)
     ], CustomerViewModel.prototype, "welcomeEmailSent", void 0);
     return CustomerViewModel;
-}(SpeakeasyBase));
-export { CustomerViewModel };
+}(utils_1.SpeakeasyBase));
+exports.CustomerViewModel = CustomerViewModel;

@@ -25,6 +25,6 @@ export declare class SearchDatabasesByLfTagsResponse extends SpeakeasyBase {
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    searchDatabasesByLfTagsResponse?: shared.SearchDatabasesByLfTagsResponse;
+    searchDatabasesByLFTagsResponse?: shared.SearchDatabasesByLfTagsResponse;
     statusCode: number;
 }

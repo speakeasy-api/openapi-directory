@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOneApplicationResponse = exports.GetOneApplicationRequest = exports.GetOneApplicationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOneApplicationPathParams = /** @class */ (function (_super) {
     __extends(GetOneApplicationPathParams, _super);
     function GetOneApplicationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
         __metadata("design:type", String)
     ], GetOneApplicationPathParams.prototype, "applicationId", void 0);
     return GetOneApplicationPathParams;
-}(SpeakeasyBase));
-export { GetOneApplicationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOneApplicationPathParams = GetOneApplicationPathParams;
 var GetOneApplicationRequest = /** @class */ (function (_super) {
     __extends(GetOneApplicationRequest, _super);
     function GetOneApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOneApplicationPathParams)
     ], GetOneApplicationRequest.prototype, "pathParams", void 0);
     return GetOneApplicationRequest;
-}(SpeakeasyBase));
-export { GetOneApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOneApplicationRequest = GetOneApplicationRequest;
 var GetOneApplicationResponse = /** @class */ (function (_super) {
     __extends(GetOneApplicationResponse, _super);
     function GetOneApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetOneApplicationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOneApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOneApplicationResponse.prototype, "statusCode", void 0);
     return GetOneApplicationResponse;
-}(SpeakeasyBase));
-export { GetOneApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOneApplicationResponse = GetOneApplicationResponse;

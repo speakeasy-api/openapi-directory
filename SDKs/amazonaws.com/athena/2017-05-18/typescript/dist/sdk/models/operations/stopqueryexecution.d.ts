@@ -22,5 +22,5 @@ export declare class StopQueryExecutionResponse extends SpeakeasyBase {
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    stopQueryExecutionOutput?: Map<string, any>;
+    stopQueryExecutionOutput?: Record<string, any>;
 }

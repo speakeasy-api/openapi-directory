@@ -2,9 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PrcptRequestBodyCertificateParameters extends SpeakeasyBase {
     fullName: string;
-    piDob: string;
-    piFinYear: string;
-    piPolicynbr: string;
+    piDOB: string;
+    piFINYEAR: string;
+    piPOLICYNBR: string;
 }
 export declare enum PrcptRequestBodyFormatEnum {
     Pdf = "pdf"
@@ -108,11 +108,11 @@ export declare class PrcptRequest extends SpeakeasyBase {
 export declare class PrcptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    prcpt400ApplicationJsonObject?: Prcpt400ApplicationJson;
-    prcpt401ApplicationJsonObject?: Prcpt401ApplicationJson;
-    prcpt404ApplicationJsonObject?: Prcpt404ApplicationJson;
-    prcpt500ApplicationJsonObject?: Prcpt500ApplicationJson;
-    prcpt502ApplicationJsonObject?: Prcpt502ApplicationJson;
-    prcpt503ApplicationJsonObject?: Prcpt503ApplicationJson;
-    prcpt504ApplicationJsonObject?: Prcpt504ApplicationJson;
+    prcpt400ApplicationJSONObject?: Prcpt400ApplicationJson;
+    prcpt401ApplicationJSONObject?: Prcpt401ApplicationJson;
+    prcpt404ApplicationJSONObject?: Prcpt404ApplicationJson;
+    prcpt500ApplicationJSONObject?: Prcpt500ApplicationJson;
+    prcpt502ApplicationJSONObject?: Prcpt502ApplicationJson;
+    prcpt503ApplicationJSONObject?: Prcpt503ApplicationJson;
+    prcpt504ApplicationJSONObject?: Prcpt504ApplicationJson;
 }

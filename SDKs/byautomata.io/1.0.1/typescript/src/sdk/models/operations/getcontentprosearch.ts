@@ -47,8 +47,8 @@ export class GetContentproSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getContentproSearch200ApplicationJsonObject?: GetContentproSearch200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getContentproSearch200ApplicationJSONObject?: GetContentproSearch200ApplicationJson;
 }

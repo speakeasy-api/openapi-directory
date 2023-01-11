@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRange } from "./daterange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InventoryFilterCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterange_1 = require("./daterange");
 // InventoryFilterCriteria
 /**
  * The container for the filter fields. This container is used to set the filter criteria for the order report. A seller can set date range filters and/or can retrieve orders in a specific state.
@@ -34,21 +37,21 @@ var InventoryFilterCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], InventoryFilterCriteria.prototype, "creationDateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingFormat" }),
         __metadata("design:type", String)
     ], InventoryFilterCriteria.prototype, "listingFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingStatus" }),
         __metadata("design:type", String)
     ], InventoryFilterCriteria.prototype, "listingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedDateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedDateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], InventoryFilterCriteria.prototype, "modifiedDateRange", void 0);
     return InventoryFilterCriteria;
-}(SpeakeasyBase));
-export { InventoryFilterCriteria };
+}(utils_1.SpeakeasyBase));
+exports.InventoryFilterCriteria = InventoryFilterCriteria;

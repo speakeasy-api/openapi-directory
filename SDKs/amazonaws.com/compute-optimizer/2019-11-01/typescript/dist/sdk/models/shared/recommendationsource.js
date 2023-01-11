@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationSourceTypeEnum } from "./recommendationsourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationsourcetypeenum_1 = require("./recommendationsourcetypeenum");
 // RecommendationSource
 /**
  * Describes the source of a recommendation, such as an Amazon EC2 instance or Auto Scaling group.
@@ -34,13 +37,13 @@ var RecommendationSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationSourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationSourceArn" }),
         __metadata("design:type", String)
     ], RecommendationSource.prototype, "recommendationSourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationSourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationSourceType" }),
         __metadata("design:type", String)
     ], RecommendationSource.prototype, "recommendationSourceType", void 0);
     return RecommendationSource;
-}(SpeakeasyBase));
-export { RecommendationSource };
+}(utils_1.SpeakeasyBase));
+exports.RecommendationSource = RecommendationSource;

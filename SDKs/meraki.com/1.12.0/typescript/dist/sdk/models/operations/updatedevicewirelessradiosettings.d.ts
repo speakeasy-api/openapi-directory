@@ -29,5 +29,5 @@ export declare class UpdateDeviceWirelessRadioSettingsRequest extends SpeakeasyB
 export declare class UpdateDeviceWirelessRadioSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceWirelessRadioSettings200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceWirelessRadioSettings200ApplicationJSONObject?: Record<string, any>;
 }

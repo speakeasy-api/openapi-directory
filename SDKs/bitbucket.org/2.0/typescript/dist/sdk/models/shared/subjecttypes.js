@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubjectTypes = exports.SubjectTypesUser = exports.SubjectTypesUserLink = exports.SubjectTypesTeam = exports.SubjectTypesTeamLink = exports.SubjectTypesRepository = exports.SubjectTypesRepositoryLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // SubjectTypesRepositoryLink
 /**
  * A link to a resource related to this object.
@@ -33,28 +36,28 @@ var SubjectTypesRepositoryLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SubjectTypesRepositoryLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubjectTypesRepositoryLink.prototype, "name", void 0);
     return SubjectTypesRepositoryLink;
-}(SpeakeasyBase));
-export { SubjectTypesRepositoryLink };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesRepositoryLink = SubjectTypesRepositoryLink;
 var SubjectTypesRepository = /** @class */ (function (_super) {
     __extends(SubjectTypesRepository, _super);
     function SubjectTypesRepository() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", SubjectTypesRepositoryLink)
     ], SubjectTypesRepository.prototype, "events", void 0);
     return SubjectTypesRepository;
-}(SpeakeasyBase));
-export { SubjectTypesRepository };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesRepository = SubjectTypesRepository;
 // SubjectTypesTeamLink
 /**
  * A link to a resource related to this object.
@@ -65,28 +68,28 @@ var SubjectTypesTeamLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SubjectTypesTeamLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubjectTypesTeamLink.prototype, "name", void 0);
     return SubjectTypesTeamLink;
-}(SpeakeasyBase));
-export { SubjectTypesTeamLink };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesTeamLink = SubjectTypesTeamLink;
 var SubjectTypesTeam = /** @class */ (function (_super) {
     __extends(SubjectTypesTeam, _super);
     function SubjectTypesTeam() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", SubjectTypesTeamLink)
     ], SubjectTypesTeam.prototype, "events", void 0);
     return SubjectTypesTeam;
-}(SpeakeasyBase));
-export { SubjectTypesTeam };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesTeam = SubjectTypesTeam;
 // SubjectTypesUserLink
 /**
  * A link to a resource related to this object.
@@ -97,28 +100,28 @@ var SubjectTypesUserLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SubjectTypesUserLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubjectTypesUserLink.prototype, "name", void 0);
     return SubjectTypesUserLink;
-}(SpeakeasyBase));
-export { SubjectTypesUserLink };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesUserLink = SubjectTypesUserLink;
 var SubjectTypesUser = /** @class */ (function (_super) {
     __extends(SubjectTypesUser, _super);
     function SubjectTypesUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", SubjectTypesUserLink)
     ], SubjectTypesUser.prototype, "events", void 0);
     return SubjectTypesUser;
-}(SpeakeasyBase));
-export { SubjectTypesUser };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypesUser = SubjectTypesUser;
 // SubjectTypes
 /**
  * The mapping of resource/subject types pointing to their individual event types.
@@ -129,17 +132,17 @@ var SubjectTypes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository" }),
         __metadata("design:type", SubjectTypesRepository)
     ], SubjectTypes.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", SubjectTypesTeam)
     ], SubjectTypes.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", SubjectTypesUser)
     ], SubjectTypes.prototype, "user", void 0);
     return SubjectTypes;
-}(SpeakeasyBase));
-export { SubjectTypes };
+}(utils_1.SpeakeasyBase));
+exports.SubjectTypes = SubjectTypes;

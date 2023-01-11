@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostV1VerificationSendFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostV1VerificationSendResponse = exports.PostV1VerificationSendRequest = exports.PostV1VerificationSendQueryParams = exports.PostV1VerificationSendFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostV1VerificationSendFormatEnum;
 (function (PostV1VerificationSendFormatEnum) {
     PostV1VerificationSendFormatEnum["Json"] = "json";
     PostV1VerificationSendFormatEnum["Xml"] = "xml";
-})(PostV1VerificationSendFormatEnum || (PostV1VerificationSendFormatEnum = {}));
+})(PostV1VerificationSendFormatEnum = exports.PostV1VerificationSendFormatEnum || (exports.PostV1VerificationSendFormatEnum = {}));
 var PostV1VerificationSendQueryParams = /** @class */ (function (_super) {
     __extends(PostV1VerificationSendQueryParams, _super);
     function PostV1VerificationSendQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=country_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=country_code" }),
         __metadata("design:type", String)
     ], PostV1VerificationSendQueryParams.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], PostV1VerificationSendQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], PostV1VerificationSendQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mesg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mesg" }),
         __metadata("design:type", String)
     ], PostV1VerificationSendQueryParams.prototype, "mesg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tel" }),
         __metadata("design:type", String)
     ], PostV1VerificationSendQueryParams.prototype, "tel", void 0);
     return PostV1VerificationSendQueryParams;
-}(SpeakeasyBase));
-export { PostV1VerificationSendQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostV1VerificationSendQueryParams = PostV1VerificationSendQueryParams;
 var PostV1VerificationSendRequest = /** @class */ (function (_super) {
     __extends(PostV1VerificationSendRequest, _super);
     function PostV1VerificationSendRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostV1VerificationSendQueryParams)
     ], PostV1VerificationSendRequest.prototype, "queryParams", void 0);
     return PostV1VerificationSendRequest;
-}(SpeakeasyBase));
-export { PostV1VerificationSendRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostV1VerificationSendRequest = PostV1VerificationSendRequest;
 var PostV1VerificationSendResponse = /** @class */ (function (_super) {
     __extends(PostV1VerificationSendResponse, _super);
     function PostV1VerificationSendResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostV1VerificationSendResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], PostV1VerificationSendResponse.prototype, "postV1VerificationSend200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostV1VerificationSendResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], PostV1VerificationSendResponse.prototype, "postV1VerificationSend200ApplicationJSONString", void 0);
     return PostV1VerificationSendResponse;
-}(SpeakeasyBase));
-export { PostV1VerificationSendResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostV1VerificationSendResponse = PostV1VerificationSendResponse;

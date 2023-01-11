@@ -5,6 +5,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class StreamKey extends SpeakeasyBase {
     arn?: string;
     channelArn?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     value?: string;
 }

@@ -20,7 +20,7 @@ export declare class DeactivateContactChannelRequest extends SpeakeasyBase {
 export declare class DeactivateContactChannelResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deactivateContactChannelResult?: Map<string, any>;
+    deactivateContactChannelResult?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

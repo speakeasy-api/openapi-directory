@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAuthorizeDataShareActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAuthorizeDataShareResponse = exports.PostAuthorizeDataShareRequest = exports.PostAuthorizeDataShareHeaders = exports.PostAuthorizeDataShareQueryParams = exports.PostAuthorizeDataShareVersionEnum = exports.PostAuthorizeDataShareActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAuthorizeDataShareActionEnum;
 (function (PostAuthorizeDataShareActionEnum) {
     PostAuthorizeDataShareActionEnum["AuthorizeDataShare"] = "AuthorizeDataShare";
-})(PostAuthorizeDataShareActionEnum || (PostAuthorizeDataShareActionEnum = {}));
-export var PostAuthorizeDataShareVersionEnum;
+})(PostAuthorizeDataShareActionEnum = exports.PostAuthorizeDataShareActionEnum || (exports.PostAuthorizeDataShareActionEnum = {}));
+var PostAuthorizeDataShareVersionEnum;
 (function (PostAuthorizeDataShareVersionEnum) {
     PostAuthorizeDataShareVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostAuthorizeDataShareVersionEnum || (PostAuthorizeDataShareVersionEnum = {}));
+})(PostAuthorizeDataShareVersionEnum = exports.PostAuthorizeDataShareVersionEnum || (exports.PostAuthorizeDataShareVersionEnum = {}));
 var PostAuthorizeDataShareQueryParams = /** @class */ (function (_super) {
     __extends(PostAuthorizeDataShareQueryParams, _super);
     function PostAuthorizeDataShareQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareQueryParams.prototype, "version", void 0);
     return PostAuthorizeDataShareQueryParams;
-}(SpeakeasyBase));
-export { PostAuthorizeDataShareQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeDataShareQueryParams = PostAuthorizeDataShareQueryParams;
 var PostAuthorizeDataShareHeaders = /** @class */ (function (_super) {
     __extends(PostAuthorizeDataShareHeaders, _super);
     function PostAuthorizeDataShareHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAuthorizeDataShareHeaders;
-}(SpeakeasyBase));
-export { PostAuthorizeDataShareHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeDataShareHeaders = PostAuthorizeDataShareHeaders;
 var PostAuthorizeDataShareRequest = /** @class */ (function (_super) {
     __extends(PostAuthorizeDataShareRequest, _super);
     function PostAuthorizeDataShareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAuthorizeDataShareQueryParams)
     ], PostAuthorizeDataShareRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAuthorizeDataShareHeaders)
     ], PostAuthorizeDataShareRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAuthorizeDataShareRequest.prototype, "request", void 0);
     return PostAuthorizeDataShareRequest;
-}(SpeakeasyBase));
-export { PostAuthorizeDataShareRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeDataShareRequest = PostAuthorizeDataShareRequest;
 var PostAuthorizeDataShareResponse = /** @class */ (function (_super) {
     __extends(PostAuthorizeDataShareResponse, _super);
     function PostAuthorizeDataShareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAuthorizeDataShareResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAuthorizeDataShareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAuthorizeDataShareResponse.prototype, "statusCode", void 0);
     return PostAuthorizeDataShareResponse;
-}(SpeakeasyBase));
-export { PostAuthorizeDataShareResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizeDataShareResponse = PostAuthorizeDataShareResponse;

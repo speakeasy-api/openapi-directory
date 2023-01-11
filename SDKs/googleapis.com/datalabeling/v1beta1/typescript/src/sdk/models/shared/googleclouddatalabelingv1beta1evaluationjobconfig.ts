@@ -15,7 +15,7 @@ import { GoogleCloudDatalabelingV1beta1TextClassificationConfig } from "./google
 **/
 export class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=bigqueryImportKeys" })
-  bigqueryImportKeys?: Map<string, string>;
+  bigqueryImportKeys?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=boundingPolyConfig" })
   boundingPolyConfig?: GoogleCloudDatalabelingV1beta1BoundingPolyConfig;

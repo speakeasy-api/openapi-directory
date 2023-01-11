@@ -12,7 +12,7 @@ export declare class UpdateStreamRequestBody extends SpeakeasyBase {
     currentVersion: string;
     deviceName?: string;
     mediaType?: string;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class UpdateStreamRequest extends SpeakeasyBase {
@@ -27,6 +27,6 @@ export declare class UpdateStreamResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateStreamOutput?: Map<string, any>;
+    updateStreamOutput?: Record<string, any>;
     versionMismatchException?: any;
 }

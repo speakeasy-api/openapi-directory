@@ -20,7 +20,7 @@ export class DescribeTaskOutput extends SpeakeasyBase {
   state?: TaskStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets" })
   targets?: string[];

@@ -8,7 +8,7 @@ export declare class ImageAttachment extends SpeakeasyBase {
     imageWidth: number;
     name?: string;
     objectId: number;
-    parent?: Map<string, string>;
+    parent?: Record<string, string>;
 }
 export declare class ImageAttachmentInput extends SpeakeasyBase {
     contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CryptoKey } from "./cryptokey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListCryptoKeysResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cryptokey_1 = require("./cryptokey");
 // ListCryptoKeysResponse
 /**
  * Response message for KeyManagementService.ListCryptoKeys.
@@ -34,17 +37,17 @@ var ListCryptoKeysResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKeys", elemType: CryptoKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKeys", elemType: cryptokey_1.CryptoKey }),
         __metadata("design:type", Array)
     ], ListCryptoKeysResponse.prototype, "cryptoKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListCryptoKeysResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], ListCryptoKeysResponse.prototype, "totalSize", void 0);
     return ListCryptoKeysResponse;
-}(SpeakeasyBase));
-export { ListCryptoKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListCryptoKeysResponse = ListCryptoKeysResponse;

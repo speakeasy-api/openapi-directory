@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonThirdDownStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonThirdDownStatsResponse = exports.PlayerSeasonThirdDownStatsRequest = exports.PlayerSeasonThirdDownStatsPathParams = exports.PlayerSeasonThirdDownStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonThirdDownStatsFormatEnum;
 (function (PlayerSeasonThirdDownStatsFormatEnum) {
     PlayerSeasonThirdDownStatsFormatEnum["Xml"] = "XML";
     PlayerSeasonThirdDownStatsFormatEnum["Json"] = "JSON";
-})(PlayerSeasonThirdDownStatsFormatEnum || (PlayerSeasonThirdDownStatsFormatEnum = {}));
+})(PlayerSeasonThirdDownStatsFormatEnum = exports.PlayerSeasonThirdDownStatsFormatEnum || (exports.PlayerSeasonThirdDownStatsFormatEnum = {}));
 var PlayerSeasonThirdDownStatsPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonThirdDownStatsPathParams, _super);
     function PlayerSeasonThirdDownStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonThirdDownStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonThirdDownStatsPathParams.prototype, "season", void 0);
     return PlayerSeasonThirdDownStatsPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonThirdDownStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonThirdDownStatsPathParams = PlayerSeasonThirdDownStatsPathParams;
 var PlayerSeasonThirdDownStatsRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonThirdDownStatsRequest, _super);
     function PlayerSeasonThirdDownStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonThirdDownStatsPathParams)
     ], PlayerSeasonThirdDownStatsRequest.prototype, "pathParams", void 0);
     return PlayerSeasonThirdDownStatsRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonThirdDownStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonThirdDownStatsRequest = PlayerSeasonThirdDownStatsRequest;
 var PlayerSeasonThirdDownStatsResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonThirdDownStatsResponse, _super);
     function PlayerSeasonThirdDownStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonThirdDownStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonThirdDownStatsResponse.prototype, "playerSeasonThirdDowns", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonThirdDownStatsResponse.prototype, "statusCode", void 0);
     return PlayerSeasonThirdDownStatsResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonThirdDownStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonThirdDownStatsResponse = PlayerSeasonThirdDownStatsResponse;

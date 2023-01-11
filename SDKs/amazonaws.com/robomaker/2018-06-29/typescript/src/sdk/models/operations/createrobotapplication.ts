@@ -64,7 +64,7 @@ export class CreateRobotApplicationRequestBody extends SpeakeasyBase {
   sources?: shared.SourceConfig[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

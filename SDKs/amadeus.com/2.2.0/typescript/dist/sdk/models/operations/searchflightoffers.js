@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchFlightOffersResponse = exports.SearchFlightOffersRequest = exports.SearchFlightOffersHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchFlightOffersHeaders = /** @class */ (function (_super) {
     __extends(SearchFlightOffersHeaders, _super);
     function SearchFlightOffersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HTTP-Method-Override" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-HTTP-Method-Override" }),
         __metadata("design:type", String)
-    ], SearchFlightOffersHeaders.prototype, "xHttpMethodOverride", void 0);
+    ], SearchFlightOffersHeaders.prototype, "xHTTPMethodOverride", void 0);
     return SearchFlightOffersHeaders;
-}(SpeakeasyBase));
-export { SearchFlightOffersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.SearchFlightOffersHeaders = SearchFlightOffersHeaders;
 var SearchFlightOffersRequest = /** @class */ (function (_super) {
     __extends(SearchFlightOffersRequest, _super);
     function SearchFlightOffersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchFlightOffersHeaders)
     ], SearchFlightOffersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.amadeus+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.amadeus+json" }),
         __metadata("design:type", Object)
     ], SearchFlightOffersRequest.prototype, "request", void 0);
     return SearchFlightOffersRequest;
-}(SpeakeasyBase));
-export { SearchFlightOffersRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchFlightOffersRequest = SearchFlightOffersRequest;
 var SearchFlightOffersResponse = /** @class */ (function (_super) {
     __extends(SearchFlightOffersResponse, _super);
     function SearchFlightOffersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchFlightOffersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SearchFlightOffersResponse.prototype, "error400", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SearchFlightOffersResponse.prototype, "error500", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchFlightOffersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SearchFlightOffersResponse.prototype, "success", void 0);
     return SearchFlightOffersResponse;
-}(SpeakeasyBase));
-export { SearchFlightOffersResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchFlightOffersResponse = SearchFlightOffersResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPaymentsResellerSubscriptionV1Amount } from "./googlecloudpaymentsresellersubscriptionv1amount";
-// GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput
-/**
- * The duration of an introductory pricing promotion.
-**/
-var GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput, _super);
-    function GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountAmount" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Amount)
-    ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput.prototype, "discountAmount", void 0);
-    return GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput = exports.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpaymentsresellersubscriptionv1amount_1 = require("./googlecloudpaymentsresellersubscriptionv1amount");
 // GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec
 /**
  * The duration of an introductory pricing promotion.
@@ -50,21 +37,37 @@ var GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountAmount" }),
-        __metadata("design:type", GoogleCloudPaymentsResellerSubscriptionV1Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountAmount" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1amount_1.GoogleCloudPaymentsResellerSubscriptionV1Amount)
     ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec.prototype, "discountAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discountRatioMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountRatioMicros" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec.prototype, "discountRatioMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recurrenceCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurrenceCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec.prototype, "recurrenceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionCode" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec.prototype, "regionCode", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec = GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec;
+// GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput
+/**
+ * The duration of an introductory pricing promotion.
+**/
+var GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput, _super);
+    function GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountAmount" }),
+        __metadata("design:type", googlecloudpaymentsresellersubscriptionv1amount_1.GoogleCloudPaymentsResellerSubscriptionV1Amount)
+    ], GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput.prototype, "discountAmount", void 0);
+    return GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput = GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput;

@@ -18,6 +18,6 @@ export declare class GetApiVVersionMetalsSpotPerformanceResponse extends Speakea
     body?: Uint8Array;
     contentType: string;
     intervalCollectionResponses?: shared.IntervalCollectionResponse[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
 }

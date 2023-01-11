@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Http = void 0;
+var utils_1 = require("../../../internal/utils");
 // Http
 /**
  * Information about an HTTP request.
@@ -33,25 +36,25 @@ var Http = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientIp" }),
         __metadata("design:type", String)
     ], Http.prototype, "clientIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HttpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HttpMethod" }),
         __metadata("design:type", String)
     ], Http.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HttpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HttpStatus" }),
         __metadata("design:type", Number)
     ], Http.prototype, "httpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HttpURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HttpURL" }),
         __metadata("design:type", String)
-    ], Http.prototype, "httpUrl", void 0);
+    ], Http.prototype, "httpURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserAgent" }),
         __metadata("design:type", String)
     ], Http.prototype, "userAgent", void 0);
     return Http;
-}(SpeakeasyBase));
-export { Http };
+}(utils_1.SpeakeasyBase));
+exports.Http = Http;

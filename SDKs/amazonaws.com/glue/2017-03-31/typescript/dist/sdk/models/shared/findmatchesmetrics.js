@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnImportance } from "./columnimportance";
-import { ConfusionMatrix } from "./confusionmatrix";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindMatchesMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnimportance_1 = require("./columnimportance");
+var confusionmatrix_1 = require("./confusionmatrix");
 // FindMatchesMetrics
 /**
  * The evaluation metrics for the find matches algorithm. The quality of your machine learning transform is measured by getting your transform to predict some matches and comparing the results to known matches from the same dataset. The quality metrics are based on a subset of your data, so they are not precise.
@@ -35,29 +38,29 @@ var FindMatchesMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AreaUnderPRCurve" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AreaUnderPRCurve" }),
         __metadata("design:type", Number)
-    ], FindMatchesMetrics.prototype, "areaUnderPrCurve", void 0);
+    ], FindMatchesMetrics.prototype, "areaUnderPRCurve", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnImportances", elemType: ColumnImportance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnImportances", elemType: columnimportance_1.ColumnImportance }),
         __metadata("design:type", Array)
     ], FindMatchesMetrics.prototype, "columnImportances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfusionMatrix" }),
-        __metadata("design:type", ConfusionMatrix)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfusionMatrix" }),
+        __metadata("design:type", confusionmatrix_1.ConfusionMatrix)
     ], FindMatchesMetrics.prototype, "confusionMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=F1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=F1" }),
         __metadata("design:type", Number)
     ], FindMatchesMetrics.prototype, "f1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Precision" }),
         __metadata("design:type", Number)
     ], FindMatchesMetrics.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Recall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Recall" }),
         __metadata("design:type", Number)
     ], FindMatchesMetrics.prototype, "recall", void 0);
     return FindMatchesMetrics;
-}(SpeakeasyBase));
-export { FindMatchesMetrics };
+}(utils_1.SpeakeasyBase));
+exports.FindMatchesMetrics = FindMatchesMetrics;

@@ -11,7 +11,7 @@ export class DbClusterSnapshot extends SpeakeasyBase {
   allocatedStorage?: number;
 
   @SpeakeasyMetadata()
-  availabilityZones?: string[];
+  availabilityZones?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   clusterCreateTime?: Date;
@@ -56,7 +56,7 @@ export class DbClusterSnapshot extends SpeakeasyBase {
   snapshotType?: string;
 
   @SpeakeasyMetadata()
-  sourceDbClusterSnapshotArn?: string;
+  sourceDBClusterSnapshotArn?: string;
 
   @SpeakeasyMetadata()
   status?: string;

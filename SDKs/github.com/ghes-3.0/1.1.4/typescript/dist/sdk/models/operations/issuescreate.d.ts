@@ -29,10 +29,10 @@ export declare class IssuesCreateRequest extends SpeakeasyBase {
 }
 export declare class IssuesCreateResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issue?: shared.Issue;
-    issuesCreate503ApplicationJsonObject?: IssuesCreate503ApplicationJson;
+    issuesCreate503ApplicationJSONObject?: IssuesCreate503ApplicationJson;
     validationError?: shared.ValidationError;
 }

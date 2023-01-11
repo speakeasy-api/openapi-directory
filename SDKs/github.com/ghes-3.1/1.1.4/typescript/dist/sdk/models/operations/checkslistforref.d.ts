@@ -5,14 +5,10 @@ export declare class ChecksListForRefPathParams extends SpeakeasyBase {
     ref: string;
     repo: string;
 }
-export declare enum ChecksListForRefFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
 export declare class ChecksListForRefQueryParams extends SpeakeasyBase {
     appId?: number;
     checkName?: string;
-    filter?: ChecksListForRefFilterEnum;
+    filter?: shared.StatusEnum1;
     page?: number;
     perPage?: number;
     status?: shared.StatusEnum;
@@ -27,7 +23,7 @@ export declare class ChecksListForRefRequest extends SpeakeasyBase {
 }
 export declare class ChecksListForRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    checksListForRef200ApplicationJsonObject?: ChecksListForRef200ApplicationJson;
+    checksListForRef200ApplicationJSONObject?: ChecksListForRef200ApplicationJson;
 }

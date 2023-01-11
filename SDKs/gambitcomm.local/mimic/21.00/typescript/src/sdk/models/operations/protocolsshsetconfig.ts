@@ -28,5 +28,5 @@ export class ProtocolSshSetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSshSetConfig200ApplicationJsonString?: string;
+  protocolSshSetConfig200ApplicationJSONString?: string;
 }

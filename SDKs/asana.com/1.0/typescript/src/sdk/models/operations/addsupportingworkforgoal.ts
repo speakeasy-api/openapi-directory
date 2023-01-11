@@ -26,7 +26,7 @@ export class AddSupportingWorkForGoalRequestBody extends SpeakeasyBase {
 
 export class AddSupportingWorkForGoal200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddSupportingWorkForGoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addSupportingWorkForGoal200ApplicationJsonObject?: AddSupportingWorkForGoal200ApplicationJson;
+  addSupportingWorkForGoal200ApplicationJSONObject?: AddSupportingWorkForGoal200ApplicationJson;
 }

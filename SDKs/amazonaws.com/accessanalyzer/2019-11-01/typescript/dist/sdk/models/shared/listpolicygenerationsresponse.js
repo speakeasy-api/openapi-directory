@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyGeneration } from "./policygeneration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPolicyGenerationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var policygeneration_1 = require("./policygeneration");
 var ListPolicyGenerationsResponse = /** @class */ (function (_super) {
     __extends(ListPolicyGenerationsResponse, _super);
     function ListPolicyGenerationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListPolicyGenerationsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyGenerations", elemType: PolicyGeneration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyGenerations", elemType: policygeneration_1.PolicyGeneration }),
         __metadata("design:type", Array)
     ], ListPolicyGenerationsResponse.prototype, "policyGenerations", void 0);
     return ListPolicyGenerationsResponse;
-}(SpeakeasyBase));
-export { ListPolicyGenerationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyGenerationsResponse = ListPolicyGenerationsResponse;

@@ -20,7 +20,7 @@ export declare class GetAwsDefaultServiceQuotaRequest extends SpeakeasyBase {
 export declare class GetAwsDefaultServiceQuotaResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    getAwsDefaultServiceQuotaResponse?: shared.GetAwsDefaultServiceQuotaResponse;
+    getAWSDefaultServiceQuotaResponse?: shared.GetAwsDefaultServiceQuotaResponse;
     illegalArgumentException?: any;
     noSuchResourceException?: any;
     serviceException?: any;

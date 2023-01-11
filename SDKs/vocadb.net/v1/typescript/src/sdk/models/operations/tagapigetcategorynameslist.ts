@@ -36,11 +36,11 @@ export class TagApiGetCategoryNamesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagApiGetCategoryNamesList200ApplicationJsonStrings?: string[];
+  tagApiGetCategoryNamesList200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   tagApiGetCategoryNamesList200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  tagApiGetCategoryNamesList200TextJsonStrings?: string[];
+  tagApiGetCategoryNamesList200TextJSONStrings?: string[];
 }

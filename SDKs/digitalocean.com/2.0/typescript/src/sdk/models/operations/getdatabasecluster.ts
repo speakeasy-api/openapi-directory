@@ -1,53 +1,54 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetDatabaseClusterPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
-export class GetDatabaseClusterRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetDatabaseClusterPathParams;
-}
-
-
 export class GetDatabaseCluster200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=database" })
+  @SpeakeasyMetadata({ data: "json, name=database" })
   database: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItems;
 }
 
 
 export class GetDatabaseCluster401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDatabaseClusterRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetDatabaseClusterPathParams;
+}
+
+
 export class GetDatabaseClusterResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDatabaseCluster200ApplicationJsonObject?: GetDatabaseCluster200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDatabaseCluster200ApplicationJSONObject?: GetDatabaseCluster200ApplicationJson;
 
-  @Metadata()
-  getDatabaseCluster401ApplicationJsonObject?: GetDatabaseCluster401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDatabaseCluster401ApplicationJSONObject?: GetDatabaseCluster401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

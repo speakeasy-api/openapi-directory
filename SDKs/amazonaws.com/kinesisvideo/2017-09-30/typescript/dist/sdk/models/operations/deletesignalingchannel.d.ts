@@ -9,7 +9,7 @@ export declare class DeleteSignalingChannelHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteSignalingChannelRequestBody extends SpeakeasyBase {
-    channelArn: string;
+    channelARN: string;
     currentVersion?: string;
 }
 export declare class DeleteSignalingChannelRequest extends SpeakeasyBase {
@@ -20,7 +20,7 @@ export declare class DeleteSignalingChannelResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     clientLimitExceededException?: any;
     contentType: string;
-    deleteSignalingChannelOutput?: Map<string, any>;
+    deleteSignalingChannelOutput?: Record<string, any>;
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

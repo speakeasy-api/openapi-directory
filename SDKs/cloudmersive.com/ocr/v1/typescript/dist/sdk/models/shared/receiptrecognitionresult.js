@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReceiptLineItem } from "./receiptlineitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiptRecognitionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var receiptlineitem_1 = require("./receiptlineitem");
 // ReceiptRecognitionResult
 /**
  * Result of recognizing a receipt, to extract the key information from the receipt
@@ -34,41 +37,41 @@ var ReceiptRecognitionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressString" }),
         __metadata("design:type", String)
     ], ReceiptRecognitionResult.prototype, "addressString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BusinessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BusinessName" }),
         __metadata("design:type", String)
     ], ReceiptRecognitionResult.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BusinessWebsite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BusinessWebsite" }),
         __metadata("design:type", String)
     ], ReceiptRecognitionResult.prototype, "businessWebsite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PhoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PhoneNumber" }),
         __metadata("design:type", String)
     ], ReceiptRecognitionResult.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptItems", elemType: ReceiptLineItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptItems", elemType: receiptlineitem_1.ReceiptLineItem }),
         __metadata("design:type", Array)
     ], ReceiptRecognitionResult.prototype, "receiptItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptSubTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptSubTotal" }),
         __metadata("design:type", Number)
     ], ReceiptRecognitionResult.prototype, "receiptSubTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptTotal" }),
         __metadata("design:type", Number)
     ], ReceiptRecognitionResult.prototype, "receiptTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], ReceiptRecognitionResult.prototype, "successful", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], ReceiptRecognitionResult.prototype, "timestamp", void 0);
     return ReceiptRecognitionResult;
-}(SpeakeasyBase));
-export { ReceiptRecognitionResult };
+}(utils_1.SpeakeasyBase));
+exports.ReceiptRecognitionResult = ReceiptRecognitionResult;

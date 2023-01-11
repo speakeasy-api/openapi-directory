@@ -38,7 +38,7 @@ export class GetCarHistoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.HistoricalListing })
   historicalListings?: shared.HistoricalListing[];

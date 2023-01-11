@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RetentionProperties } from "./retentionproperties";
-import { TableStatusEnum } from "./tablestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Table = void 0;
+var utils_1 = require("../../../internal/utils");
+var retentionproperties_1 = require("./retentionproperties");
+var tablestatusenum_1 = require("./tablestatusenum");
 // Table
 /**
  * Table represents a database table in Timestream. Tables contain one or more related time series. You can modify the retention duration of the memory store and the magnetic store for a table.
@@ -35,33 +38,33 @@ var Table = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], Table.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], Table.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], Table.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTime" }),
         __metadata("design:type", Date)
     ], Table.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetentionProperties" }),
-        __metadata("design:type", RetentionProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetentionProperties" }),
+        __metadata("design:type", retentionproperties_1.RetentionProperties)
     ], Table.prototype, "retentionProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], Table.prototype, "tableName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableStatus" }),
         __metadata("design:type", String)
     ], Table.prototype, "tableStatus", void 0);
     return Table;
-}(SpeakeasyBase));
-export { Table };
+}(utils_1.SpeakeasyBase));
+exports.Table = Table;

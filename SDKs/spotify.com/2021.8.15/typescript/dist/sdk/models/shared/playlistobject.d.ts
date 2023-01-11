@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { PlaylistTrackObject } from "./playlisttrackobject";
 import { ExternalUrlObject } from "./externalurlobject";
 import { FollowersObject } from "./followersobject";
 import { ImageObject } from "./imageobject";
 import { PublicUserObject } from "./publicuserobject";
-import { PlaylistTrackObject } from "./playlisttrackobject";
 /**
  * Information about the tracks of the playlist. Note, a track object may be `null`. This can happen if a track is no longer available.
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference

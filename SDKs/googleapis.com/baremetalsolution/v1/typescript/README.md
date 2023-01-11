@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BaremetalsolutionOperationsCancelRequest, BaremetalsolutionOperationsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,30 +30,31 @@ const req: BaremetalsolutionOperationsCancelRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "non",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "reprehenderit",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "doloribus",
-    fields: "nihil",
-    key: "commodi",
-    oauthToken: "consequatur",
-    prettyPrint: false,
-    quotaUser: "reprehenderit",
-    uploadType: "tempore",
-    uploadProtocol: "consequatur",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "soluta": "molestiae",
-    "minima": "illum",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

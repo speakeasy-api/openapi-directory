@@ -1,6 +1,9 @@
-export var ScalarAttributeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScalarAttributeTypeEnum = void 0;
+var ScalarAttributeTypeEnum;
 (function (ScalarAttributeTypeEnum) {
     ScalarAttributeTypeEnum["S"] = "S";
     ScalarAttributeTypeEnum["N"] = "N";
     ScalarAttributeTypeEnum["B"] = "B";
-})(ScalarAttributeTypeEnum || (ScalarAttributeTypeEnum = {}));
+})(ScalarAttributeTypeEnum = exports.ScalarAttributeTypeEnum || (exports.ScalarAttributeTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceVpnThirdPartyVpnPeersResponse = exports.GetOrganizationApplianceVpnThirdPartyVpnPeersRequest = exports.GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams, _super);
     function GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams = GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams;
 var GetOrganizationApplianceVpnThirdPartyVpnPeersRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnThirdPartyVpnPeersRequest, _super);
     function GetOrganizationApplianceVpnThirdPartyVpnPeersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams)
     ], GetOrganizationApplianceVpnThirdPartyVpnPeersRequest.prototype, "pathParams", void 0);
     return GetOrganizationApplianceVpnThirdPartyVpnPeersRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnThirdPartyVpnPeersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnThirdPartyVpnPeersRequest = GetOrganizationApplianceVpnThirdPartyVpnPeersRequest;
 var GetOrganizationApplianceVpnThirdPartyVpnPeersResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceVpnThirdPartyVpnPeersResponse, _super);
     function GetOrganizationApplianceVpnThirdPartyVpnPeersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceVpnThirdPartyVpnPeersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceVpnThirdPartyVpnPeersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceVpnThirdPartyVpnPeersResponse.prototype, "getOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceVpnThirdPartyVpnPeersResponse.prototype, "getOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceVpnThirdPartyVpnPeersResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceVpnThirdPartyVpnPeersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceVpnThirdPartyVpnPeersResponse = GetOrganizationApplianceVpnThirdPartyVpnPeersResponse;

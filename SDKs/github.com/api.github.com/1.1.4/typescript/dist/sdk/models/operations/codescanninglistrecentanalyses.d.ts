@@ -26,5 +26,5 @@ export declare class CodeScanningListRecentAnalysesResponse extends SpeakeasyBas
     statusCode: number;
     basicError?: shared.BasicError;
     codeScanningAnalyses?: shared.CodeScanningAnalysis[];
-    codeScanningListRecentAnalyses503ApplicationJsonObject?: CodeScanningListRecentAnalyses503ApplicationJson;
+    codeScanningListRecentAnalyses503ApplicationJSONObject?: CodeScanningListRecentAnalyses503ApplicationJson;
 }

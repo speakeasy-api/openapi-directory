@@ -158,5 +158,5 @@ export class DcimCablesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimCablesList200ApplicationJsonObject?: DcimCablesList200ApplicationJson;
+  dcimCablesList200ApplicationJSONObject?: DcimCablesList200ApplicationJson;
 }

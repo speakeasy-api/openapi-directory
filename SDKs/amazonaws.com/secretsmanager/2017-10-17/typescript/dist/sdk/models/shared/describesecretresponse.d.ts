@@ -16,8 +16,8 @@ export declare class DescribeSecretResponse extends SpeakeasyBase {
     primaryRegion?: string;
     replicationStatus?: ReplicationStatusType[];
     rotationEnabled?: boolean;
-    rotationLambdaArn?: string;
+    rotationLambdaARN?: string;
     rotationRules?: RotationRulesType;
     tags?: Tag[];
-    versionIdsToStages?: Map<string, string[]>;
+    versionIdsToStages?: Record<string, string[]>;
 }

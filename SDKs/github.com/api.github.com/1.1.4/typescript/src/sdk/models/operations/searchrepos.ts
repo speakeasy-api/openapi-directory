@@ -66,10 +66,10 @@ export class SearchReposResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchRepos200ApplicationJsonObject?: SearchRepos200ApplicationJson;
+  searchRepos200ApplicationJSONObject?: SearchRepos200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchRepos503ApplicationJsonObject?: SearchRepos503ApplicationJson;
+  searchRepos503ApplicationJSONObject?: SearchRepos503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

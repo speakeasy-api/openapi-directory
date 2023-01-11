@@ -17,7 +17,7 @@ export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest ex
 }
 export declare class EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJsonObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson;
+    enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJson;
 }

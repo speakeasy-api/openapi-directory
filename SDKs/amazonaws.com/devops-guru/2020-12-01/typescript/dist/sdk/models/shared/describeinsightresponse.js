@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProactiveInsight } from "./proactiveinsight";
-import { ReactiveInsight } from "./reactiveinsight";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeInsightResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var proactiveinsight_1 = require("./proactiveinsight");
+var reactiveinsight_1 = require("./reactiveinsight");
 var DescribeInsightResponse = /** @class */ (function (_super) {
     __extends(DescribeInsightResponse, _super);
     function DescribeInsightResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProactiveInsight" }),
-        __metadata("design:type", ProactiveInsight)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProactiveInsight" }),
+        __metadata("design:type", proactiveinsight_1.ProactiveInsight)
     ], DescribeInsightResponse.prototype, "proactiveInsight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReactiveInsight" }),
-        __metadata("design:type", ReactiveInsight)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReactiveInsight" }),
+        __metadata("design:type", reactiveinsight_1.ReactiveInsight)
     ], DescribeInsightResponse.prototype, "reactiveInsight", void 0);
     return DescribeInsightResponse;
-}(SpeakeasyBase));
-export { DescribeInsightResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeInsightResponse = DescribeInsightResponse;

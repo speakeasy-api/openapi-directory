@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompatibilityEnum } from "./compatibilityenum";
-import { DataFormatEnum } from "./dataformatenum";
-import { RegistryId } from "./registryid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSchemaInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var compatibilityenum_1 = require("./compatibilityenum");
+var dataformatenum_1 = require("./dataformatenum");
+var registryid_1 = require("./registryid");
 var CreateSchemaInput = /** @class */ (function (_super) {
     __extends(CreateSchemaInput, _super);
     function CreateSchemaInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Compatibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Compatibility" }),
         __metadata("design:type", String)
     ], CreateSchemaInput.prototype, "compatibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataFormat" }),
         __metadata("design:type", String)
     ], CreateSchemaInput.prototype, "dataFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateSchemaInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistryId" }),
-        __metadata("design:type", RegistryId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistryId" }),
+        __metadata("design:type", registryid_1.RegistryId)
     ], CreateSchemaInput.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaDefinition" }),
         __metadata("design:type", String)
     ], CreateSchemaInput.prototype, "schemaDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaName" }),
         __metadata("design:type", String)
     ], CreateSchemaInput.prototype, "schemaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], CreateSchemaInput.prototype, "tags", void 0);
     return CreateSchemaInput;
-}(SpeakeasyBase));
-export { CreateSchemaInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateSchemaInput = CreateSchemaInput;

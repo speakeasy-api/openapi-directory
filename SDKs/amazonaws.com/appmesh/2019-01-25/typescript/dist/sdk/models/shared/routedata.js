@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceMetadata } from "./resourcemetadata";
-import { RouteSpec } from "./routespec";
-import { RouteStatus } from "./routestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteData = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcemetadata_1 = require("./resourcemetadata");
+var routespec_1 = require("./routespec");
+var routestatus_1 = require("./routestatus");
 // RouteData
 /**
  * An object that represents a route returned by a describe operation.
@@ -36,29 +39,29 @@ var RouteData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], RouteData.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ResourceMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", resourcemetadata_1.ResourceMetadata)
     ], RouteData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routeName" }),
         __metadata("design:type", String)
     ], RouteData.prototype, "routeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", RouteSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", routespec_1.RouteSpec)
     ], RouteData.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", RouteStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", routestatus_1.RouteStatus)
     ], RouteData.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualRouterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualRouterName" }),
         __metadata("design:type", String)
     ], RouteData.prototype, "virtualRouterName", void 0);
     return RouteData;
-}(SpeakeasyBase));
-export { RouteData };
+}(utils_1.SpeakeasyBase));
+exports.RouteData = RouteData;

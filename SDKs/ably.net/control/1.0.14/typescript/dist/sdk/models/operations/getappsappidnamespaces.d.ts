@@ -13,6 +13,6 @@ export declare class GetAppsAppIdNamespacesRequest extends SpeakeasyBase {
 export declare class GetAppsAppIdNamespacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     namespaceResponses?: shared.NamespaceResponse[];
 }

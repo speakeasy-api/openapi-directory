@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeBackup } from "./volumebackup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListVolumeBackupsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var volumebackup_1 = require("./volumebackup");
 // ListVolumeBackupsResponse
 /**
  * Response message for ListVolumeBackups.
@@ -34,13 +37,13 @@ var ListVolumeBackupsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListVolumeBackupsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeBackups", elemType: VolumeBackup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeBackups", elemType: volumebackup_1.VolumeBackup }),
         __metadata("design:type", Array)
     ], ListVolumeBackupsResponse.prototype, "volumeBackups", void 0);
     return ListVolumeBackupsResponse;
-}(SpeakeasyBase));
-export { ListVolumeBackupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListVolumeBackupsResponse = ListVolumeBackupsResponse;

@@ -1,4 +1,7 @@
-export var TriggerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerTypeEnum = void 0;
+var TriggerTypeEnum;
 (function (TriggerTypeEnum) {
     TriggerTypeEnum["SnoozeTimeout"] = "SNOOZE_TIMEOUT";
-})(TriggerTypeEnum || (TriggerTypeEnum = {}));
+})(TriggerTypeEnum = exports.TriggerTypeEnum || (exports.TriggerTypeEnum = {}));

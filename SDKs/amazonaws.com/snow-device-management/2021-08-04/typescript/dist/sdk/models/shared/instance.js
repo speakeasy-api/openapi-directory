@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceBlockDeviceMapping } from "./instanceblockdevicemapping";
-import { CpuOptions } from "./cpuoptions";
-import { SecurityGroupIdentifier } from "./securitygroupidentifier";
-import { InstanceState } from "./instancestate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceblockdevicemapping_1 = require("./instanceblockdevicemapping");
+var cpuoptions_1 = require("./cpuoptions");
+var securitygroupidentifier_1 = require("./securitygroupidentifier");
+var instancestate_1 = require("./instancestate");
 // Instance
 /**
  * The description of an instance. Currently, Amazon EC2 instances are the only supported instance type.
@@ -37,57 +40,57 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amiLaunchIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amiLaunchIndex" }),
         __metadata("design:type", Number)
     ], Instance.prototype, "amiLaunchIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockDeviceMappings", elemType: InstanceBlockDeviceMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockDeviceMappings", elemType: instanceblockdevicemapping_1.InstanceBlockDeviceMapping }),
         __metadata("design:type", Array)
     ], Instance.prototype, "blockDeviceMappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuOptions" }),
-        __metadata("design:type", CpuOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuOptions" }),
+        __metadata("design:type", cpuoptions_1.CpuOptions)
     ], Instance.prototype, "cpuOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Instance.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpAddress" }),
         __metadata("design:type", String)
     ], Instance.prototype, "privateIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIpAddress" }),
         __metadata("design:type", String)
     ], Instance.prototype, "publicIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootDeviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootDeviceName" }),
         __metadata("design:type", String)
     ], Instance.prototype, "rootDeviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityGroups", elemType: SecurityGroupIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityGroups", elemType: securitygroupidentifier_1.SecurityGroupIdentifier }),
         __metadata("design:type", Array)
     ], Instance.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", InstanceState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", instancestate_1.InstanceState)
     ], Instance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Instance.prototype, "updatedAt", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

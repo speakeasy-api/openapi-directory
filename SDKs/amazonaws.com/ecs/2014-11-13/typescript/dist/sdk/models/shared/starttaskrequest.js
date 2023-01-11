@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkConfiguration } from "./networkconfiguration";
-import { TaskOverride } from "./taskoverride";
-import { PropagateTagsEnum } from "./propagatetagsenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartTaskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkconfiguration_1 = require("./networkconfiguration");
+var taskoverride_1 = require("./taskoverride");
+var propagatetagsenum_1 = require("./propagatetagsenum");
+var tag_1 = require("./tag");
 var StartTaskRequest = /** @class */ (function (_super) {
     __extends(StartTaskRequest, _super);
     function StartTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstances" }),
         __metadata("design:type", Array)
     ], StartTaskRequest.prototype, "containerInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableECSManagedTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableECSManagedTags" }),
         __metadata("design:type", Boolean)
-    ], StartTaskRequest.prototype, "enableEcsManagedTags", void 0);
+    ], StartTaskRequest.prototype, "enableECSManagedTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableExecuteCommand" }),
         __metadata("design:type", Boolean)
     ], StartTaskRequest.prototype, "enableExecuteCommand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkConfiguration" }),
-        __metadata("design:type", NetworkConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkConfiguration" }),
+        __metadata("design:type", networkconfiguration_1.NetworkConfiguration)
     ], StartTaskRequest.prototype, "networkConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrides" }),
-        __metadata("design:type", TaskOverride)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrides" }),
+        __metadata("design:type", taskoverride_1.TaskOverride)
     ], StartTaskRequest.prototype, "overrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propagateTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propagateTags" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "propagateTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceId" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedBy" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "startedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], StartTaskRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskDefinition" }),
         __metadata("design:type", String)
     ], StartTaskRequest.prototype, "taskDefinition", void 0);
     return StartTaskRequest;
-}(SpeakeasyBase));
-export { StartTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartTaskRequest = StartTaskRequest;

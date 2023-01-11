@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SasPortalInstallationParamsHeightTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalInstallationParams = exports.SasPortalInstallationParamsHeightTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SasPortalInstallationParamsHeightTypeEnum;
 (function (SasPortalInstallationParamsHeightTypeEnum) {
     SasPortalInstallationParamsHeightTypeEnum["HeightTypeUnspecified"] = "HEIGHT_TYPE_UNSPECIFIED";
     SasPortalInstallationParamsHeightTypeEnum["HeightTypeAgl"] = "HEIGHT_TYPE_AGL";
     SasPortalInstallationParamsHeightTypeEnum["HeightTypeAmsl"] = "HEIGHT_TYPE_AMSL";
-})(SasPortalInstallationParamsHeightTypeEnum || (SasPortalInstallationParamsHeightTypeEnum = {}));
+})(SasPortalInstallationParamsHeightTypeEnum = exports.SasPortalInstallationParamsHeightTypeEnum || (exports.SasPortalInstallationParamsHeightTypeEnum = {}));
 // SasPortalInstallationParams
 /**
  * Information about the device installation parameters.
@@ -39,61 +42,61 @@ var SasPortalInstallationParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaAzimuth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaAzimuth" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "antennaAzimuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaBeamwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaBeamwidth" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "antennaBeamwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaDowntilt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaDowntilt" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "antennaDowntilt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaGain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaGain" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "antennaGain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaModel" }),
         __metadata("design:type", String)
     ], SasPortalInstallationParams.prototype, "antennaModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpeCbsdIndication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpeCbsdIndication" }),
         __metadata("design:type", Boolean)
     ], SasPortalInstallationParams.prototype, "cpeCbsdIndication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eirpCapability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eirpCapability" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "eirpCapability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heightType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heightType" }),
         __metadata("design:type", String)
     ], SasPortalInstallationParams.prototype, "heightType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=horizontalAccuracy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=horizontalAccuracy" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "horizontalAccuracy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indoorDeployment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indoorDeployment" }),
         __metadata("design:type", Boolean)
     ], SasPortalInstallationParams.prototype, "indoorDeployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verticalAccuracy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verticalAccuracy" }),
         __metadata("design:type", Number)
     ], SasPortalInstallationParams.prototype, "verticalAccuracy", void 0);
     return SasPortalInstallationParams;
-}(SpeakeasyBase));
-export { SasPortalInstallationParams };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalInstallationParams = SasPortalInstallationParams;

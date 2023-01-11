@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAddressResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAddressResponse = /** @class */ (function (_super) {
     __extends(GetAddressResponse, _super);
     function GetAddressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addrStr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addrStr" }),
         __metadata("design:type", String)
     ], GetAddressResponse.prototype, "addrStr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balanceSat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balanceSat" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "balanceSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalReceived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalReceived" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "totalReceived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalReceivedSat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalReceivedSat" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "totalReceivedSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSent" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "totalSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSentSat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSentSat" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "totalSentSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions" }),
         __metadata("design:type", Array)
     ], GetAddressResponse.prototype, "transactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txAppearances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txAppearances" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "txAppearances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unconfirmedBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unconfirmedBalance" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "unconfirmedBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unconfirmedBalanceSat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unconfirmedBalanceSat" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "unconfirmedBalanceSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unconfirmedTxAppearances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unconfirmedTxAppearances" }),
         __metadata("design:type", Number)
     ], GetAddressResponse.prototype, "unconfirmedTxAppearances", void 0);
     return GetAddressResponse;
-}(SpeakeasyBase));
-export { GetAddressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAddressResponse = GetAddressResponse;

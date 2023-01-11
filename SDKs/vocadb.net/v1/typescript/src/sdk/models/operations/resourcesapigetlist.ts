@@ -28,10 +28,10 @@ export class ResourcesApiGetListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  resourcesApiGetList200ApplicationJsonObject?: Map<string, Map<string, string>>;
+  resourcesApiGetList200ApplicationJSONObject?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata()
-  resourcesApiGetList200TextJsonObject?: Map<string, Map<string, string>>;
+  resourcesApiGetList200TextJSONObject?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata()
   statusCode: number;

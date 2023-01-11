@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CountryStats = void 0;
+var utils_1 = require("../../../internal/utils");
 var CountryStats = /** @class */ (function (_super) {
     __extends(CountryStats, _super);
     function CountryStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active_cases" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "activeCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cases_per_mill_pop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cases_per_mill_pop" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "casesPerMillPop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], CountryStats.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag" }),
         __metadata("design:type", String)
     ], CountryStats.prototype, "flag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_update" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_update" }),
         __metadata("design:type", Date)
     ], CountryStats.prototype, "lastUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_cases" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "newCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_deaths" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "newDeaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serious_critical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serious_critical" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "seriousCritical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_cases" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "totalCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_deaths" }),
         __metadata("design:type", Number)
     ], CountryStats.prototype, "totalDeaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_recovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_recovered" }),
         __metadata("design:type", String)
     ], CountryStats.prototype, "totalRecovered", void 0);
     return CountryStats;
-}(SpeakeasyBase));
-export { CountryStats };
+}(utils_1.SpeakeasyBase));
+exports.CountryStats = CountryStats;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AreasCountriesRequest, AreasCountriesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: AreasCountriesRequest = {
   pathParams: {
-    format: "json",
+    format: "xml",
   },
 };
 
-sdk.sdk.areasCountries(req).then((res: AreasCountriesResponse | AxiosError) => {
+sdk.areasCountries(req).then((res: AreasCountriesResponse | AxiosError) => {
    // handle response
 });
 ```

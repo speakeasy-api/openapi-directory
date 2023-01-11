@@ -35,7 +35,7 @@ export class PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest
   pathParams: PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity;
@@ -50,8 +50,8 @@ export class PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
   statusCode: number;
 
   @SpeakeasyMetadata()
-  commitstatus?: Map<string, any>;
+  commitstatus?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

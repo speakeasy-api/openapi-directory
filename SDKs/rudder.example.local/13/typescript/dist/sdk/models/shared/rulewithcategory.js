@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleWithCategory = exports.RuleWithCategoryTags = void 0;
+var utils_1 = require("../../../internal/utils");
 var RuleWithCategoryTags = /** @class */ (function (_super) {
     __extends(RuleWithCategoryTags, _super);
     function RuleWithCategoryTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RuleWithCategoryTags.prototype, "name", void 0);
     return RuleWithCategoryTags;
-}(SpeakeasyBase));
-export { RuleWithCategoryTags };
+}(utils_1.SpeakeasyBase));
+exports.RuleWithCategoryTags = RuleWithCategoryTags;
 var RuleWithCategory = /** @class */ (function (_super) {
     __extends(RuleWithCategory, _super);
     function RuleWithCategory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], RuleWithCategory.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directives" }),
         __metadata("design:type", Array)
     ], RuleWithCategory.prototype, "directives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], RuleWithCategory.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], RuleWithCategory.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RuleWithCategory.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longDescription" }),
         __metadata("design:type", String)
     ], RuleWithCategory.prototype, "longDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortDescription" }),
         __metadata("design:type", String)
     ], RuleWithCategory.prototype, "shortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system" }),
         __metadata("design:type", Boolean)
     ], RuleWithCategory.prototype, "system", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: RuleWithCategoryTags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: RuleWithCategoryTags }),
         __metadata("design:type", Array)
     ], RuleWithCategory.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", Array)
     ], RuleWithCategory.prototype, "targets", void 0);
     return RuleWithCategory;
-}(SpeakeasyBase));
-export { RuleWithCategory };
+}(utils_1.SpeakeasyBase));
+exports.RuleWithCategory = RuleWithCategory;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnAuthorizationRuleStatus } from "./clientvpnauthorizationrulestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizeClientVpnIngressResult = exports.AuthorizeClientVpnIngressResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// AuthorizeClientVpnIngressResultStatus
+/**
+ * The current state of the authorization rule.
+**/
+var AuthorizeClientVpnIngressResultStatus = /** @class */ (function (_super) {
+    __extends(AuthorizeClientVpnIngressResultStatus, _super);
+    function AuthorizeClientVpnIngressResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AuthorizeClientVpnIngressResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AuthorizeClientVpnIngressResultStatus.prototype, "message", void 0);
+    return AuthorizeClientVpnIngressResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.AuthorizeClientVpnIngressResultStatus = AuthorizeClientVpnIngressResultStatus;
 var AuthorizeClientVpnIngressResult = /** @class */ (function (_super) {
     __extends(AuthorizeClientVpnIngressResult, _super);
     function AuthorizeClientVpnIngressResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientVpnAuthorizationRuleStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AuthorizeClientVpnIngressResultStatus)
     ], AuthorizeClientVpnIngressResult.prototype, "status", void 0);
     return AuthorizeClientVpnIngressResult;
-}(SpeakeasyBase));
-export { AuthorizeClientVpnIngressResult };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizeClientVpnIngressResult = AuthorizeClientVpnIngressResult;

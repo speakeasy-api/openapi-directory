@@ -22,5 +22,5 @@ export class GetNetworkMerakiAuthUsersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkMerakiAuthUsers200ApplicationJsonObject?: Map<string, any>;
+  getNetworkMerakiAuthUsers200ApplicationJSONObject?: Record<string, any>;
 }

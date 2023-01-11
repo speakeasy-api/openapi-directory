@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-export var InsertRangeRequestShiftDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsertRangeRequest = exports.InsertRangeRequestShiftDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var InsertRangeRequestShiftDimensionEnum;
 (function (InsertRangeRequestShiftDimensionEnum) {
     InsertRangeRequestShiftDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     InsertRangeRequestShiftDimensionEnum["Rows"] = "ROWS";
     InsertRangeRequestShiftDimensionEnum["Columns"] = "COLUMNS";
-})(InsertRangeRequestShiftDimensionEnum || (InsertRangeRequestShiftDimensionEnum = {}));
+})(InsertRangeRequestShiftDimensionEnum = exports.InsertRangeRequestShiftDimensionEnum || (exports.InsertRangeRequestShiftDimensionEnum = {}));
 // InsertRangeRequest
 /**
  * Inserts cells into a range, shifting the existing cells over or down.
@@ -40,13 +43,13 @@ var InsertRangeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], InsertRangeRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shiftDimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shiftDimension" }),
         __metadata("design:type", String)
     ], InsertRangeRequest.prototype, "shiftDimension", void 0);
     return InsertRangeRequest;
-}(SpeakeasyBase));
-export { InsertRangeRequest };
+}(utils_1.SpeakeasyBase));
+exports.InsertRangeRequest = InsertRangeRequest;

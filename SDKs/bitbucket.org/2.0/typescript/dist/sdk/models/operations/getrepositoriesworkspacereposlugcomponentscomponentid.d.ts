@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugComponentsComponentIdReques
 export declare class GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    component?: Map<string, any>;
-    error?: Map<string, any>;
+    component?: Record<string, any>;
+    error?: Record<string, any>;
 }

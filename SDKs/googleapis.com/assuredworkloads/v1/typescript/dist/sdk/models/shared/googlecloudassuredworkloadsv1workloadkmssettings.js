@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1WorkloadKmsSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudAssuredworkloadsV1WorkloadKmsSettings
 /**
  * Settings specific to the Key Management Service. This message is deprecated. In order to create a Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field.
@@ -33,13 +36,13 @@ var GoogleCloudAssuredworkloadsV1WorkloadKmsSettings = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextRotationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextRotationTime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadKmsSettings.prototype, "nextRotationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationPeriod" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadKmsSettings.prototype, "rotationPeriod", void 0);
     return GoogleCloudAssuredworkloadsV1WorkloadKmsSettings;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1WorkloadKmsSettings };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1WorkloadKmsSettings = GoogleCloudAssuredworkloadsV1WorkloadKmsSettings;

@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,8 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Media = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Media = /** @class */ (function () {
     function Media(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -20,322 +46,6 @@ var Media = /** @class */ (function () {
         this._sdkVersion = sdkVersion;
         this._genVersion = genVersion;
     }
-    /**
-     * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
-     *
-     * Get the list of featured content in the syndication system
-    **/
-    Media.prototype.getResourcesMediaFeaturedJson = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaFeaturedJsonRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = baseURL.replace(/\/$/, "") + "/resources/media/featured.json";
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.mediaItems = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdContent - Get content for MediaItem
-     *
-     * The actual media content (html, image, etc...)
-    **/
-    Media.prototype.getResourcesMediaIdContent = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdContentRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/content", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getResourcesMediaIdContent200ApplicationJsonString = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data);
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdEmbedJson - Get embed code for MediaItem
-     *
-     * Get the javascript or iframe embed code for this item (to embed it on a web page).
-    **/
-    Media.prototype.getResourcesMediaIdEmbedJson = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdEmbedJsonRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/embed.json", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getResourcesMediaIdEmbedJson200ApplicationJsonString = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data);
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdJson - Get MediaItem by ID
-     *
-     * Information about a specific media item
-    **/
-    Media.prototype.getResourcesMediaIdJson = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdJsonRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}.json", req.pathParams);
-        var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdPreviewJpg - Get Tag by ID
-     *
-     * Get the jpg preview of the content item where applicable.
-    **/
-    Media.prototype.getResourcesMediaIdPreviewJpg = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdPreviewJpgRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/preview.jpg", req.pathParams);
-        var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getResourcesMediaIdPreviewJpg200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdRelatedMediaFormat - Get related MediaItems by ID
-     *
-     * Get the media related to the current media item.
-    **/
-    Media.prototype.getResourcesMediaIdRelatedMediaFormat = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdRelatedMediaFormatRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/relatedMedia.{format}", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdSyndicateFormat - Get syndicated content for MediaItem
-     *
-     * Get syndicated content.
-    **/
-    Media.prototype.getResourcesMediaIdSyndicateFormat = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdSyndicateFormatRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/syndicate.{format}", req.pathParams);
-        var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
-        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.syndicateMarshallerWrapped = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdThumbnailJpg - Get JPG thumbnail for MediaItem
-     *
-     * Get the jpg thumbnail of the content item where applicable.
-    **/
-    Media.prototype.getResourcesMediaIdThumbnailJpg = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdThumbnailJpgRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/thumbnail.jpg", req.pathParams);
-        var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getResourcesMediaIdThumbnailJpg200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
-    /**
-     * getResourcesMediaIdYoutubeMetaDataJson - Get Youtube metadata for MediaItem
-     *
-     * Youtube meta-data for a video item.
-    **/
-    Media.prototype.getResourcesMediaIdYoutubeMetaDataJson = function (req, config) {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest(req);
-        }
-        var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/{id}/youtubeMetaData.json", req.pathParams);
-        var client = this._defaultClient;
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
-            var _a, _b;
-            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
-            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
-                throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType };
-            switch (true) {
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getResourcesMediaIdYoutubeMetaDataJson200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
-                    }
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    break;
-                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
-                    break;
-            }
-            return res;
-        })
-            .catch(function (error) { throw error; });
-    };
     /**
      * getResourcesMediaJson - Get MediaItems
      *
@@ -348,10 +58,10 @@ var Media = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/resources/media.json";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -359,7 +69,7 @@ var Media = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -369,8 +79,42 @@ var Media = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
+     *
+     * Get the list of featured content in the syndication system
+    **/
+    Media.prototype.getResourcesMediaFeaturedJson = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaFeaturedJsonRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/resources/media/featured.json";
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.mediaItems = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
     };
     /**
      * getResourcesMediaMostPopularMediaFormat - Get MediaItems by popularity
@@ -382,12 +126,12 @@ var Media = /** @class */ (function () {
             req = new operations.GetResourcesMediaMostPopularMediaFormatRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/resources/media/mostPopularMedia.{format}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/resources/media/mostPopularMedia.{format}", req.pathParams);
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -395,7 +139,7 @@ var Media = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -405,8 +149,7 @@ var Media = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getResourcesMediaSearchResultsJson - Get MediaItems by search query
@@ -420,10 +163,10 @@ var Media = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/resources/media/searchResults.json";
         var client = this._defaultClient;
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get" }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -431,7 +174,7 @@ var Media = /** @class */ (function () {
             var res = { statusCode: httpRes.status, contentType: contentType };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
@@ -441,9 +184,280 @@ var Media = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
+    };
+    /**
+     * getResourcesMediaIdJson - Get MediaItem by ID
+     *
+     * Information about a specific media item
+    **/
+    Media.prototype.getResourcesMediaIdJson = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdJsonRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}.json", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdContent - Get content for MediaItem
+     *
+     * The actual media content (html, image, etc...)
+    **/
+    Media.prototype.getResourcesMediaIdContent = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdContentRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/content", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getResourcesMediaIdContent200ApplicationJSONString = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data);
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdEmbedJson - Get embed code for MediaItem
+     *
+     * Get the javascript or iframe embed code for this item (to embed it on a web page).
+    **/
+    Media.prototype.getResourcesMediaIdEmbedJson = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdEmbedJsonRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/embed.json", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getResourcesMediaIdEmbedJSON200ApplicationJSONString = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data);
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdPreviewJpg - Get Tag by ID
+     *
+     * Get the jpg preview of the content item where applicable.
+    **/
+    Media.prototype.getResourcesMediaIdPreviewJpg = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdPreviewJpgRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/preview.jpg", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getResourcesMediaIdPreviewJpg200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdRelatedMediaFormat - Get related MediaItems by ID
+     *
+     * Get the media related to the current media item.
+    **/
+    Media.prototype.getResourcesMediaIdRelatedMediaFormat = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdRelatedMediaFormatRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/relatedMedia.{format}", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.mediaItemWrappeds = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdSyndicateFormat - Get syndicated content for MediaItem
+     *
+     * Get syndicated content.
+    **/
+    Media.prototype.getResourcesMediaIdSyndicateFormat = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdSyndicateFormatRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/syndicate.{format}", req.pathParams);
+        var client = this._defaultClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.syndicateMarshallerWrapped = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdThumbnailJpg - Get JPG thumbnail for MediaItem
+     *
+     * Get the jpg thumbnail of the content item where applicable.
+    **/
+    Media.prototype.getResourcesMediaIdThumbnailJpg = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdThumbnailJpgRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/thumbnail.jpg", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getResourcesMediaIdThumbnailJpg200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getResourcesMediaIdYoutubeMetaDataJson - Get Youtube metadata for MediaItem
+     *
+     * Youtube meta-data for a video item.
+    **/
+    Media.prototype.getResourcesMediaIdYoutubeMetaDataJson = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/resources/media/{id}/youtubeMetaData.json", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
+                    break;
+            }
+            return res;
+        });
     };
     return Media;
 }());
-export { Media };
+exports.Media = Media;

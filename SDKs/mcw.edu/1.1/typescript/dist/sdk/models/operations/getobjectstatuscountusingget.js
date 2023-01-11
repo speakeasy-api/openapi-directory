@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetObjectStatusCountUsingGetResponse = exports.GetObjectStatusCountUsingGetRequest = exports.GetObjectStatusCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetObjectStatusCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetObjectStatusCountUsingGetPathParams, _super);
     function GetObjectStatusCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectStatusCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetObjectStatusCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetObjectStatusCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetObjectStatusCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetObjectStatusCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusCountUsingGetPathParams = GetObjectStatusCountUsingGetPathParams;
 var GetObjectStatusCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetObjectStatusCountUsingGetRequest, _super);
     function GetObjectStatusCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetObjectStatusCountUsingGetPathParams)
     ], GetObjectStatusCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetObjectStatusCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetObjectStatusCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusCountUsingGetRequest = GetObjectStatusCountUsingGetRequest;
 var GetObjectStatusCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetObjectStatusCountUsingGetResponse, _super);
     function GetObjectStatusCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetObjectStatusCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetObjectStatusCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetObjectStatusCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetObjectStatusCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetObjectStatusCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectStatusCountUsingGetResponse = GetObjectStatusCountUsingGetResponse;

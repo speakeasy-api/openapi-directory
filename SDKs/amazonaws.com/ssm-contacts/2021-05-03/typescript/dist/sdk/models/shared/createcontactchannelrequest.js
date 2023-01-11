@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactChannelAddress } from "./contactchanneladdress";
-import { ChannelTypeEnum } from "./channeltypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateContactChannelRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactchanneladdress_1 = require("./contactchanneladdress");
+var channeltypeenum_1 = require("./channeltypeenum");
 var CreateContactChannelRequest = /** @class */ (function (_super) {
     __extends(CreateContactChannelRequest, _super);
     function CreateContactChannelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactId" }),
         __metadata("design:type", String)
     ], CreateContactChannelRequest.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeferActivation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeferActivation" }),
         __metadata("design:type", Boolean)
     ], CreateContactChannelRequest.prototype, "deferActivation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryAddress" }),
-        __metadata("design:type", ContactChannelAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryAddress" }),
+        __metadata("design:type", contactchanneladdress_1.ContactChannelAddress)
     ], CreateContactChannelRequest.prototype, "deliveryAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], CreateContactChannelRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateContactChannelRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], CreateContactChannelRequest.prototype, "type", void 0);
     return CreateContactChannelRequest;
-}(SpeakeasyBase));
-export { CreateContactChannelRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateContactChannelRequest = CreateContactChannelRequest;

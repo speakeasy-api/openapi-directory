@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostChangePasswordActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostChangePasswordResponse = exports.PostChangePasswordRequest = exports.PostChangePasswordHeaders = exports.PostChangePasswordQueryParams = exports.PostChangePasswordVersionEnum = exports.PostChangePasswordActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostChangePasswordActionEnum;
 (function (PostChangePasswordActionEnum) {
     PostChangePasswordActionEnum["ChangePassword"] = "ChangePassword";
-})(PostChangePasswordActionEnum || (PostChangePasswordActionEnum = {}));
-export var PostChangePasswordVersionEnum;
+})(PostChangePasswordActionEnum = exports.PostChangePasswordActionEnum || (exports.PostChangePasswordActionEnum = {}));
+var PostChangePasswordVersionEnum;
 (function (PostChangePasswordVersionEnum) {
     PostChangePasswordVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostChangePasswordVersionEnum || (PostChangePasswordVersionEnum = {}));
+})(PostChangePasswordVersionEnum = exports.PostChangePasswordVersionEnum || (exports.PostChangePasswordVersionEnum = {}));
 var PostChangePasswordQueryParams = /** @class */ (function (_super) {
     __extends(PostChangePasswordQueryParams, _super);
     function PostChangePasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostChangePasswordQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostChangePasswordQueryParams.prototype, "version", void 0);
     return PostChangePasswordQueryParams;
-}(SpeakeasyBase));
-export { PostChangePasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostChangePasswordQueryParams = PostChangePasswordQueryParams;
 var PostChangePasswordHeaders = /** @class */ (function (_super) {
     __extends(PostChangePasswordHeaders, _super);
     function PostChangePasswordHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostChangePasswordHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostChangePasswordHeaders;
-}(SpeakeasyBase));
-export { PostChangePasswordHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostChangePasswordHeaders = PostChangePasswordHeaders;
 var PostChangePasswordRequest = /** @class */ (function (_super) {
     __extends(PostChangePasswordRequest, _super);
     function PostChangePasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostChangePasswordQueryParams)
     ], PostChangePasswordRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostChangePasswordHeaders)
     ], PostChangePasswordRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostChangePasswordRequest.prototype, "request", void 0);
     return PostChangePasswordRequest;
-}(SpeakeasyBase));
-export { PostChangePasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostChangePasswordRequest = PostChangePasswordRequest;
 var PostChangePasswordResponse = /** @class */ (function (_super) {
     __extends(PostChangePasswordResponse, _super);
     function PostChangePasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostChangePasswordResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostChangePasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostChangePasswordResponse.prototype, "statusCode", void 0);
     return PostChangePasswordResponse;
-}(SpeakeasyBase));
-export { PostChangePasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostChangePasswordResponse = PostChangePasswordResponse;

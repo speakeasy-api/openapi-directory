@@ -15,6 +15,6 @@ export declare class GetNextPayPeriodDatesReportOutputRequest extends SpeakeasyB
 export declare class GetNextPayPeriodDatesReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getNextPayPeriodDatesReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getNextPayPeriodDatesReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

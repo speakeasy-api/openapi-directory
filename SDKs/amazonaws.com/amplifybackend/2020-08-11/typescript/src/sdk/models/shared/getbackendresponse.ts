@@ -4,20 +4,20 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetBackendResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AmplifyMetaConfig" })
-  amplifyMetaConfig?: string;
+  amplifyMetaConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AppId" })
-  appId?: string;
+  appId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AppName" })
-  appName?: string;
+  appName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=BackendEnvironmentList" })
-  backendEnvironmentList?: string[];
+  backendEnvironmentList?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=BackendEnvironmentName" })
-  backendEnvironmentName?: string;
+  backendEnvironmentName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Error" })
-  error?: string;
+  error?: Record<string, any>;
 }

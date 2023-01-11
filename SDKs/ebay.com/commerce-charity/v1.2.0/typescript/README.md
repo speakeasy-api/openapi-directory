@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCharityOrgRequest, GetCharityOrgResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,14 +33,14 @@ const req: GetCharityOrgRequest = {
     },
   },
   pathParams: {
-    charityOrgId: "sapiente",
+    charityOrgId: "sit",
   },
   headers: {
-    xEbayCMarketplaceId: "qui",
+    xEBAYCMARKETPLACEID: "voluptas",
   },
 };
 
-sdk.sdk.getCharityOrg(req).then((res: GetCharityOrgResponse | AxiosError) => {
+sdk.charityOrg.getCharityOrg(req).then((res: GetCharityOrgResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,7 +49,7 @@ sdk.sdk.getCharityOrg(req).then((res: GetCharityOrgResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### charity_org
 
 * `getCharityOrg` - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID. The call returns the full details for the charitable organization that matches the specified ID.
 * `getCharityOrgByLegacyId` - This call allows users to retrieve the details for a specific charitable organization using its legacy charity ID, which has also been referred to as the charity number, external ID, and PayPal Giving Fund ID. The legacy charity ID&nbsp;is separate from eBay&rsquo;s generic charity ID.

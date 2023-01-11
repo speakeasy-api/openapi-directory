@@ -5,7 +5,7 @@ export declare class ContactRequestMobile extends SpeakeasyBase {
     number?: string;
 }
 export declare class ContactRequest extends SpeakeasyBase {
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     email?: string;
     firstName?: string;
     id?: string;

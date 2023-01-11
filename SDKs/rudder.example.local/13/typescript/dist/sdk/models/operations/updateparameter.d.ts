@@ -28,5 +28,5 @@ export declare class UpdateParameterRequest extends SpeakeasyBase {
 export declare class UpdateParameterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateParameter200ApplicationJsonObject?: UpdateParameter200ApplicationJson;
+    updateParameter200ApplicationJSONObject?: UpdateParameter200ApplicationJson;
 }

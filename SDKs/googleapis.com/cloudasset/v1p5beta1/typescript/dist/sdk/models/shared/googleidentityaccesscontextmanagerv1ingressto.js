@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1ApiOperation } from "./googleidentityaccesscontextmanagerv1apioperation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1IngressTo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1apioperation_1 = require("./googleidentityaccesscontextmanagerv1apioperation");
 // GoogleIdentityAccesscontextmanagerV1IngressTo
 /**
  * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the target resource of the request. The request must satisfy what is defined in `operations` AND `resources` in order to match.
@@ -34,13 +37,13 @@ var GoogleIdentityAccesscontextmanagerV1IngressTo = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operations", elemType: GoogleIdentityAccesscontextmanagerV1ApiOperation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operations", elemType: googleidentityaccesscontextmanagerv1apioperation_1.GoogleIdentityAccesscontextmanagerV1ApiOperation }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1IngressTo.prototype, "operations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1IngressTo.prototype, "resources", void 0);
     return GoogleIdentityAccesscontextmanagerV1IngressTo;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1IngressTo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1IngressTo = GoogleIdentityAccesscontextmanagerV1IngressTo;

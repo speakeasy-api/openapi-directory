@@ -22,5 +22,5 @@ export class GetNetworkCellularGatewaySubnetPoolResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCellularGatewaySubnetPool200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCellularGatewaySubnetPool200ApplicationJSONObject?: Record<string, any>;
 }

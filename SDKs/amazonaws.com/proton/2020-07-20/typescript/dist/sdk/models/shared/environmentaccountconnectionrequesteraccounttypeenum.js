@@ -1,5 +1,8 @@
-export var EnvironmentAccountConnectionRequesterAccountTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentAccountConnectionRequesterAccountTypeEnum = void 0;
+var EnvironmentAccountConnectionRequesterAccountTypeEnum;
 (function (EnvironmentAccountConnectionRequesterAccountTypeEnum) {
     EnvironmentAccountConnectionRequesterAccountTypeEnum["ManagementAccount"] = "MANAGEMENT_ACCOUNT";
     EnvironmentAccountConnectionRequesterAccountTypeEnum["EnvironmentAccount"] = "ENVIRONMENT_ACCOUNT";
-})(EnvironmentAccountConnectionRequesterAccountTypeEnum || (EnvironmentAccountConnectionRequesterAccountTypeEnum = {}));
+})(EnvironmentAccountConnectionRequesterAccountTypeEnum = exports.EnvironmentAccountConnectionRequesterAccountTypeEnum || (exports.EnvironmentAccountConnectionRequesterAccountTypeEnum = {}));

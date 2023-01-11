@@ -188,23 +188,23 @@ export class IticrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  iticr400ApplicationJsonObject?: Iticr400ApplicationJson;
+  iticr400ApplicationJSONObject?: Iticr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr401ApplicationJsonObject?: Iticr401ApplicationJson;
+  iticr401ApplicationJSONObject?: Iticr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr404ApplicationJsonObject?: Iticr404ApplicationJson;
+  iticr404ApplicationJSONObject?: Iticr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr500ApplicationJsonObject?: Iticr500ApplicationJson;
+  iticr500ApplicationJSONObject?: Iticr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr502ApplicationJsonObject?: Iticr502ApplicationJson;
+  iticr502ApplicationJSONObject?: Iticr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr503ApplicationJsonObject?: Iticr503ApplicationJson;
+  iticr503ApplicationJSONObject?: Iticr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  iticr504ApplicationJsonObject?: Iticr504ApplicationJson;
+  iticr504ApplicationJSONObject?: Iticr504ApplicationJson;
 }

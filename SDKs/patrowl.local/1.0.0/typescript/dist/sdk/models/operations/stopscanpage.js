@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopScanPageResponse = exports.StopScanPageRequest = exports.StopScanPagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StopScanPagePathParams = /** @class */ (function (_super) {
     __extends(StopScanPagePathParams, _super);
     function StopScanPagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=scanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=scanId" }),
         __metadata("design:type", Number)
     ], StopScanPagePathParams.prototype, "scanId", void 0);
     return StopScanPagePathParams;
-}(SpeakeasyBase));
-export { StopScanPagePathParams };
+}(utils_1.SpeakeasyBase));
+exports.StopScanPagePathParams = StopScanPagePathParams;
 var StopScanPageRequest = /** @class */ (function (_super) {
     __extends(StopScanPageRequest, _super);
     function StopScanPageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StopScanPagePathParams)
     ], StopScanPageRequest.prototype, "pathParams", void 0);
     return StopScanPageRequest;
-}(SpeakeasyBase));
-export { StopScanPageRequest };
+}(utils_1.SpeakeasyBase));
+exports.StopScanPageRequest = StopScanPageRequest;
 var StopScanPageResponse = /** @class */ (function (_super) {
     __extends(StopScanPageResponse, _super);
     function StopScanPageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StopScanPageResponse.prototype, "apiResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StopScanPageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StopScanPageResponse.prototype, "statusCode", void 0);
     return StopScanPageResponse;
-}(SpeakeasyBase));
-export { StopScanPageResponse };
+}(utils_1.SpeakeasyBase));
+exports.StopScanPageResponse = StopScanPageResponse;

@@ -35,9 +35,6 @@ export class GetSandboxSandboxIdResponse extends SpeakeasyBase {
   errorResponse?: shared.ErrorResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   sandbox?: shared.Sandbox;
 
   @SpeakeasyMetadata()

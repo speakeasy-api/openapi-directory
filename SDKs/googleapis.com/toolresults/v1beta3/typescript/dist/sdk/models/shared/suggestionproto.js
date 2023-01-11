@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SafeHtmlProto } from "./safehtmlproto";
-import { RegionProto } from "./regionproto";
-export var SuggestionProtoPriorityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuggestionProto = exports.SuggestionProtoPriorityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var safehtmlproto_1 = require("./safehtmlproto");
+var regionproto_1 = require("./regionproto");
+var SuggestionProtoPriorityEnum;
 (function (SuggestionProtoPriorityEnum) {
     SuggestionProtoPriorityEnum["UnknownPriority"] = "unknownPriority";
     SuggestionProtoPriorityEnum["Error"] = "error";
     SuggestionProtoPriorityEnum["Warning"] = "warning";
     SuggestionProtoPriorityEnum["Info"] = "info";
-})(SuggestionProtoPriorityEnum || (SuggestionProtoPriorityEnum = {}));
+})(SuggestionProtoPriorityEnum = exports.SuggestionProtoPriorityEnum || (exports.SuggestionProtoPriorityEnum = {}));
 var SuggestionProto = /** @class */ (function (_super) {
     __extends(SuggestionProto, _super);
     function SuggestionProto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=helpUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=helpUrl" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "helpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longMessage" }),
-        __metadata("design:type", SafeHtmlProto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longMessage" }),
+        __metadata("design:type", safehtmlproto_1.SafeHtmlProto)
     ], SuggestionProto.prototype, "longMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pseudoResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pseudoResourceId" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "pseudoResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
-        __metadata("design:type", RegionProto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
+        __metadata("design:type", regionproto_1.RegionProto)
     ], SuggestionProto.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenId" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "screenId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryPriority" }),
         __metadata("design:type", Number)
     ], SuggestionProto.prototype, "secondaryPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortMessage" }),
-        __metadata("design:type", SafeHtmlProto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortMessage" }),
+        __metadata("design:type", safehtmlproto_1.SafeHtmlProto)
     ], SuggestionProto.prototype, "shortMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SuggestionProto.prototype, "title", void 0);
     return SuggestionProto;
-}(SpeakeasyBase));
-export { SuggestionProto };
+}(utils_1.SpeakeasyBase));
+exports.SuggestionProto = SuggestionProto;

@@ -19,7 +19,7 @@ export declare class DeleteQualificationTypeRequest extends SpeakeasyBase {
 }
 export declare class DeleteQualificationTypeResponse extends SpeakeasyBase {
     contentType: string;
-    deleteQualificationTypeResponse?: Map<string, any>;
+    deleteQualificationTypeResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

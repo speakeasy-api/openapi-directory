@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetDealersGetDealersByIdGetQueryParams extends SpeakeasyBase {
-    dealerId: number;
+    dealerID: number;
     jwt: string;
 }
 export declare class GetDealersGetDealersByIdGetRequest extends SpeakeasyBase {

@@ -30,7 +30,7 @@ export declare class CompanyIdDatasetRequest extends SpeakeasyBase {
     security: CompanyIdDatasetSecurity;
 }
 export declare class CompanyIdDatasetResponse extends SpeakeasyBase {
-    companyIdDatasetDefaultApplicationJsonAny?: any;
+    companyIdDatasetDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
     oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany?: any;

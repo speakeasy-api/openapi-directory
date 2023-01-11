@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetHeartbeatServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHeartbeatResponse = exports.GetHeartbeatRequest = exports.GetHeartbeatServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.GetHeartbeatServerList = [
     "http://localhost:8080",
 ];
 var GetHeartbeatRequest = /** @class */ (function (_super) {
@@ -32,29 +35,29 @@ var GetHeartbeatRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetHeartbeatRequest.prototype, "serverUrl", void 0);
+    ], GetHeartbeatRequest.prototype, "serverURL", void 0);
     return GetHeartbeatRequest;
-}(SpeakeasyBase));
-export { GetHeartbeatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHeartbeatRequest = GetHeartbeatRequest;
 var GetHeartbeatResponse = /** @class */ (function (_super) {
     __extends(GetHeartbeatResponse, _super);
     function GetHeartbeatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHeartbeatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHeartbeatResponse.prototype, "getHeartbeat200TextPlainString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHeartbeatResponse.prototype, "statusCode", void 0);
     return GetHeartbeatResponse;
-}(SpeakeasyBase));
-export { GetHeartbeatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHeartbeatResponse = GetHeartbeatResponse;

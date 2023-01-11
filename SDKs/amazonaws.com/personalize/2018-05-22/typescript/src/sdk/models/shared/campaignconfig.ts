@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CampaignConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=itemExplorationConfig" })
-  itemExplorationConfig?: Map<string, string>;
+  itemExplorationConfig?: Record<string, string>;
 }

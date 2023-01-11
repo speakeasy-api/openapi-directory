@@ -35,5 +35,5 @@ export class DeleteAppsAppIdNamespacesNamespaceIdResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

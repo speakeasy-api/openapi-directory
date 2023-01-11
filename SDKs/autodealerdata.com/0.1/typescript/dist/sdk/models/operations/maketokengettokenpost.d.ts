@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class MakeTokenGetTokenPostQueryParams extends SpeakeasyBase {
-    apiId: string;
+    apiID: string;
     apiKey: string;
 }
 export declare class MakeTokenGetTokenPostRequest extends SpeakeasyBase {

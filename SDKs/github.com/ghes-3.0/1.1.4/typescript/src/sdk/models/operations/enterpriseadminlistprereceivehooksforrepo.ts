@@ -11,12 +11,6 @@ export class EnterpriseAdminListPreReceiveHooksForRepoPathParams extends Speakea
   repo: string;
 }
 
-export enum EnterpriseAdminListPreReceiveHooksForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Name = "name"
-}
-
 
 export class EnterpriseAdminListPreReceiveHooksForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
@@ -29,7 +23,7 @@ export class EnterpriseAdminListPreReceiveHooksForRepoQueryParams extends Speake
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: EnterpriseAdminListPreReceiveHooksForRepoSortEnum;
+  sort?: shared.DirectionEnum2;
 }
 
 

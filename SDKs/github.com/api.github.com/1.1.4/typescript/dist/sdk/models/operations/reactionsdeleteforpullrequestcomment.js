@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteForPullRequestCommentResponse = exports.ReactionsDeleteForPullRequestCommentRequest = exports.ReactionsDeleteForPullRequestCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeleteForPullRequestCommentPathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForPullRequestCommentPathParams, _super);
     function ReactionsDeleteForPullRequestCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForPullRequestCommentPathParams.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForPullRequestCommentPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForPullRequestCommentPathParams.prototype, "reactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForPullRequestCommentPathParams.prototype, "repo", void 0);
     return ReactionsDeleteForPullRequestCommentPathParams;
-}(SpeakeasyBase));
-export { ReactionsDeleteForPullRequestCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForPullRequestCommentPathParams = ReactionsDeleteForPullRequestCommentPathParams;
 var ReactionsDeleteForPullRequestCommentRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForPullRequestCommentRequest, _super);
     function ReactionsDeleteForPullRequestCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteForPullRequestCommentPathParams)
     ], ReactionsDeleteForPullRequestCommentRequest.prototype, "pathParams", void 0);
     return ReactionsDeleteForPullRequestCommentRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteForPullRequestCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForPullRequestCommentRequest = ReactionsDeleteForPullRequestCommentRequest;
 var ReactionsDeleteForPullRequestCommentResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForPullRequestCommentResponse, _super);
     function ReactionsDeleteForPullRequestCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteForPullRequestCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteForPullRequestCommentResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteForPullRequestCommentResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteForPullRequestCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForPullRequestCommentResponse = ReactionsDeleteForPullRequestCommentResponse;

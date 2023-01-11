@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PerfSample } from "./perfsample";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchCreatePerfSamplesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var perfsample_1 = require("./perfsample");
 var BatchCreatePerfSamplesResponse = /** @class */ (function (_super) {
     __extends(BatchCreatePerfSamplesResponse, _super);
     function BatchCreatePerfSamplesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfSamples", elemType: PerfSample }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfSamples", elemType: perfsample_1.PerfSample }),
         __metadata("design:type", Array)
     ], BatchCreatePerfSamplesResponse.prototype, "perfSamples", void 0);
     return BatchCreatePerfSamplesResponse;
-}(SpeakeasyBase));
-export { BatchCreatePerfSamplesResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchCreatePerfSamplesResponse = BatchCreatePerfSamplesResponse;

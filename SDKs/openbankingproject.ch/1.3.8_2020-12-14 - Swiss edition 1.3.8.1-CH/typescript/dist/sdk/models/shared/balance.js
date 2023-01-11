@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { BalanceTypeEnum } from "./balancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Balance = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var balancetypeenum_1 = require("./balancetypeenum");
 // Balance
 /**
  * A single balance element.
@@ -36,29 +39,29 @@ var Balance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balanceAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balanceAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Balance.prototype, "balanceAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balanceType" }),
         __metadata("design:type", String)
     ], Balance.prototype, "balanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditLimitIncluded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditLimitIncluded" }),
         __metadata("design:type", Boolean)
     ], Balance.prototype, "creditLimitIncluded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChangeDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChangeDateTime" }),
         __metadata("design:type", Date)
     ], Balance.prototype, "lastChangeDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastCommittedTransaction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastCommittedTransaction" }),
         __metadata("design:type", String)
     ], Balance.prototype, "lastCommittedTransaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceDate" }),
         __metadata("design:type", Date)
     ], Balance.prototype, "referenceDate", void 0);
     return Balance;
-}(SpeakeasyBase));
-export { Balance };
+}(utils_1.SpeakeasyBase));
+exports.Balance = Balance;

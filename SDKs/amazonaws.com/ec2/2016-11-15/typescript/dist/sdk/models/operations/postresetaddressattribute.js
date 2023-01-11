@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostResetAddressAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostResetAddressAttributeResponse = exports.PostResetAddressAttributeRequest = exports.PostResetAddressAttributeHeaders = exports.PostResetAddressAttributeQueryParams = exports.PostResetAddressAttributeVersionEnum = exports.PostResetAddressAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostResetAddressAttributeActionEnum;
 (function (PostResetAddressAttributeActionEnum) {
     PostResetAddressAttributeActionEnum["ResetAddressAttribute"] = "ResetAddressAttribute";
-})(PostResetAddressAttributeActionEnum || (PostResetAddressAttributeActionEnum = {}));
-export var PostResetAddressAttributeVersionEnum;
+})(PostResetAddressAttributeActionEnum = exports.PostResetAddressAttributeActionEnum || (exports.PostResetAddressAttributeActionEnum = {}));
+var PostResetAddressAttributeVersionEnum;
 (function (PostResetAddressAttributeVersionEnum) {
     PostResetAddressAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostResetAddressAttributeVersionEnum || (PostResetAddressAttributeVersionEnum = {}));
+})(PostResetAddressAttributeVersionEnum = exports.PostResetAddressAttributeVersionEnum || (exports.PostResetAddressAttributeVersionEnum = {}));
 var PostResetAddressAttributeQueryParams = /** @class */ (function (_super) {
     __extends(PostResetAddressAttributeQueryParams, _super);
     function PostResetAddressAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeQueryParams.prototype, "version", void 0);
     return PostResetAddressAttributeQueryParams;
-}(SpeakeasyBase));
-export { PostResetAddressAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostResetAddressAttributeQueryParams = PostResetAddressAttributeQueryParams;
 var PostResetAddressAttributeHeaders = /** @class */ (function (_super) {
     __extends(PostResetAddressAttributeHeaders, _super);
     function PostResetAddressAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostResetAddressAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostResetAddressAttributeHeaders;
-}(SpeakeasyBase));
-export { PostResetAddressAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostResetAddressAttributeHeaders = PostResetAddressAttributeHeaders;
 var PostResetAddressAttributeRequest = /** @class */ (function (_super) {
     __extends(PostResetAddressAttributeRequest, _super);
     function PostResetAddressAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostResetAddressAttributeQueryParams)
     ], PostResetAddressAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostResetAddressAttributeHeaders)
     ], PostResetAddressAttributeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostResetAddressAttributeRequest.prototype, "request", void 0);
     return PostResetAddressAttributeRequest;
-}(SpeakeasyBase));
-export { PostResetAddressAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostResetAddressAttributeRequest = PostResetAddressAttributeRequest;
 var PostResetAddressAttributeResponse = /** @class */ (function (_super) {
     __extends(PostResetAddressAttributeResponse, _super);
     function PostResetAddressAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostResetAddressAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostResetAddressAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostResetAddressAttributeResponse.prototype, "statusCode", void 0);
     return PostResetAddressAttributeResponse;
-}(SpeakeasyBase));
-export { PostResetAddressAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostResetAddressAttributeResponse = PostResetAddressAttributeResponse;

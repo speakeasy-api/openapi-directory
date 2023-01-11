@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamGameStatsByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamGameStatsByDateResponse = exports.TeamGameStatsByDateRequest = exports.TeamGameStatsByDatePathParams = exports.TeamGameStatsByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamGameStatsByDateFormatEnum;
 (function (TeamGameStatsByDateFormatEnum) {
     TeamGameStatsByDateFormatEnum["Xml"] = "xml";
     TeamGameStatsByDateFormatEnum["Json"] = "json";
-})(TeamGameStatsByDateFormatEnum || (TeamGameStatsByDateFormatEnum = {}));
+})(TeamGameStatsByDateFormatEnum = exports.TeamGameStatsByDateFormatEnum || (exports.TeamGameStatsByDateFormatEnum = {}));
 var TeamGameStatsByDatePathParams = /** @class */ (function (_super) {
     __extends(TeamGameStatsByDatePathParams, _super);
     function TeamGameStatsByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], TeamGameStatsByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamGameStatsByDatePathParams.prototype, "format", void 0);
     return TeamGameStatsByDatePathParams;
-}(SpeakeasyBase));
-export { TeamGameStatsByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsByDatePathParams = TeamGameStatsByDatePathParams;
 var TeamGameStatsByDateRequest = /** @class */ (function (_super) {
     __extends(TeamGameStatsByDateRequest, _super);
     function TeamGameStatsByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamGameStatsByDatePathParams)
     ], TeamGameStatsByDateRequest.prototype, "pathParams", void 0);
     return TeamGameStatsByDateRequest;
-}(SpeakeasyBase));
-export { TeamGameStatsByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsByDateRequest = TeamGameStatsByDateRequest;
 var TeamGameStatsByDateResponse = /** @class */ (function (_super) {
     __extends(TeamGameStatsByDateResponse, _super);
     function TeamGameStatsByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamGameStatsByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamGameStatsByDateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamGameStatsByDateResponse.prototype, "teamGames", void 0);
     return TeamGameStatsByDateResponse;
-}(SpeakeasyBase));
-export { TeamGameStatsByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamGameStatsByDateResponse = TeamGameStatsByDateResponse;

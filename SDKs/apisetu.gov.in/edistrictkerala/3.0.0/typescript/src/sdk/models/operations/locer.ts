@@ -191,23 +191,23 @@ export class LocerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  locer400ApplicationJsonObject?: Locer400ApplicationJson;
+  locer400ApplicationJSONObject?: Locer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer401ApplicationJsonObject?: Locer401ApplicationJson;
+  locer401ApplicationJSONObject?: Locer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer404ApplicationJsonObject?: Locer404ApplicationJson;
+  locer404ApplicationJSONObject?: Locer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer500ApplicationJsonObject?: Locer500ApplicationJson;
+  locer500ApplicationJSONObject?: Locer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer502ApplicationJsonObject?: Locer502ApplicationJson;
+  locer502ApplicationJSONObject?: Locer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer503ApplicationJsonObject?: Locer503ApplicationJson;
+  locer503ApplicationJSONObject?: Locer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  locer504ApplicationJsonObject?: Locer504ApplicationJson;
+  locer504ApplicationJSONObject?: Locer504ApplicationJson;
 }

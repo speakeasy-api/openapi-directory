@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressAttribute } from "./addressattribute";
 
 
 
 export class DescribeAddressesAttributeResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: AddressAttribute })
-  addresses?: AddressAttribute[];
+  @SpeakeasyMetadata()
+  addresses?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

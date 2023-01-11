@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfigManagementHierarchyControllerDeploymentStateExtensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementHierarchyControllerDeploymentState = exports.ConfigManagementHierarchyControllerDeploymentStateHncEnum = exports.ConfigManagementHierarchyControllerDeploymentStateExtensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConfigManagementHierarchyControllerDeploymentStateExtensionEnum;
 (function (ConfigManagementHierarchyControllerDeploymentStateExtensionEnum) {
     ConfigManagementHierarchyControllerDeploymentStateExtensionEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementHierarchyControllerDeploymentStateExtensionEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementHierarchyControllerDeploymentStateExtensionEnum["Installed"] = "INSTALLED";
     ConfigManagementHierarchyControllerDeploymentStateExtensionEnum["Error"] = "ERROR";
-})(ConfigManagementHierarchyControllerDeploymentStateExtensionEnum || (ConfigManagementHierarchyControllerDeploymentStateExtensionEnum = {}));
-export var ConfigManagementHierarchyControllerDeploymentStateHncEnum;
+})(ConfigManagementHierarchyControllerDeploymentStateExtensionEnum = exports.ConfigManagementHierarchyControllerDeploymentStateExtensionEnum || (exports.ConfigManagementHierarchyControllerDeploymentStateExtensionEnum = {}));
+var ConfigManagementHierarchyControllerDeploymentStateHncEnum;
 (function (ConfigManagementHierarchyControllerDeploymentStateHncEnum) {
     ConfigManagementHierarchyControllerDeploymentStateHncEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementHierarchyControllerDeploymentStateHncEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementHierarchyControllerDeploymentStateHncEnum["Installed"] = "INSTALLED";
     ConfigManagementHierarchyControllerDeploymentStateHncEnum["Error"] = "ERROR";
-})(ConfigManagementHierarchyControllerDeploymentStateHncEnum || (ConfigManagementHierarchyControllerDeploymentStateHncEnum = {}));
+})(ConfigManagementHierarchyControllerDeploymentStateHncEnum = exports.ConfigManagementHierarchyControllerDeploymentStateHncEnum || (exports.ConfigManagementHierarchyControllerDeploymentStateHncEnum = {}));
 // ConfigManagementHierarchyControllerDeploymentState
 /**
  * Deployment state for Hierarchy Controller
@@ -47,13 +50,13 @@ var ConfigManagementHierarchyControllerDeploymentState = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], ConfigManagementHierarchyControllerDeploymentState.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hnc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hnc" }),
         __metadata("design:type", String)
     ], ConfigManagementHierarchyControllerDeploymentState.prototype, "hnc", void 0);
     return ConfigManagementHierarchyControllerDeploymentState;
-}(SpeakeasyBase));
-export { ConfigManagementHierarchyControllerDeploymentState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementHierarchyControllerDeploymentState = ConfigManagementHierarchyControllerDeploymentState;

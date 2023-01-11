@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DpicrRequest, DpicrResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: DpicrRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certNo: "exercitationem",
-      fullName: "ut",
+      certNO: "sit",
+      fullName: "voluptas",
     },
-    consentArtifact: "ipsum",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "assumenda",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.dpicr(req).then((res: DpicrResponse | AxiosError) => {
+sdk.apIs.dpicr(req).then((res: DpicrResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.dpicr(req).then((res: DpicrResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dpicr` - Disabled Person Identity Card/ Certificate
 * `govid` - ID Card

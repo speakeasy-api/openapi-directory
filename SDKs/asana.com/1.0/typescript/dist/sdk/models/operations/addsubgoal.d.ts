@@ -11,7 +11,7 @@ export declare class AddSubgoalRequestBody extends SpeakeasyBase {
     data?: shared.GoalAddSubgoalRequest;
 }
 export declare class AddSubgoal200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddSubgoalRequest extends SpeakeasyBase {
     pathParams: AddSubgoalPathParams;
@@ -22,5 +22,5 @@ export declare class AddSubgoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addSubgoal200ApplicationJsonObject?: AddSubgoal200ApplicationJson;
+    addSubgoal200ApplicationJSONObject?: AddSubgoal200ApplicationJson;
 }

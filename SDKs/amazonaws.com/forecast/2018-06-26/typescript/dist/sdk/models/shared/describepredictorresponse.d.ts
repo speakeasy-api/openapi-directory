@@ -9,8 +9,8 @@ import { OptimizationMetricEnum } from "./optimizationmetricenum";
 import { PredictorExecutionDetails } from "./predictorexecutiondetails";
 export declare class DescribePredictorResponse extends SpeakeasyBase {
     algorithmArn?: string;
-    autoMlAlgorithmArns?: string[];
-    autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+    autoMLAlgorithmArns?: string[];
+    autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
     creationTime?: Date;
     datasetImportJobArns?: string[];
     encryptionConfig?: EncryptionConfig;
@@ -24,11 +24,11 @@ export declare class DescribePredictorResponse extends SpeakeasyBase {
     lastModificationTime?: Date;
     message?: string;
     optimizationMetric?: OptimizationMetricEnum;
-    performAutoMl?: boolean;
-    performHpo?: boolean;
+    performAutoML?: boolean;
+    performHPO?: boolean;
     predictorArn?: string;
     predictorExecutionDetails?: PredictorExecutionDetails;
     predictorName?: string;
     status?: string;
-    trainingParameters?: Map<string, string>;
+    trainingParameters?: Record<string, string>;
 }

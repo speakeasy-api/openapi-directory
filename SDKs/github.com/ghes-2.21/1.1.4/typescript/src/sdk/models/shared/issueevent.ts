@@ -10,6 +10,10 @@ import { Team } from "./team";
 
 
 
+// IssueEventSimpleUser
+/** 
+ * Simple User
+**/
 export class IssueEventSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -121,7 +125,7 @@ export class IssueEvent extends SpeakeasyBase {
   nodeId: string;
 
   @SpeakeasyMetadata({ data: "json, name=performed_via_github_app" })
-  performedViaGithubApp?: Map<string, any>;
+  performedViaGithubApp?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=project_card" })
   projectCard?: IssueEventProjectCard;

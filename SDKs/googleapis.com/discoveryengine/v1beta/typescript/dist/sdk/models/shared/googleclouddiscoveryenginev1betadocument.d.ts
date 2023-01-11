@@ -8,5 +8,5 @@ export declare class GoogleCloudDiscoveryengineV1betaDocument extends SpeakeasyB
     name?: string;
     parentDocumentId?: string;
     schemaId?: string;
-    structData?: Map<string, any>;
+    structData?: Record<string, any>;
 }

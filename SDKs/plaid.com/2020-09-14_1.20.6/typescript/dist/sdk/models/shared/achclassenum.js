@@ -1,4 +1,7 @@
-export var AchClassEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AchClassEnum = void 0;
+var AchClassEnum;
 (function (AchClassEnum) {
     AchClassEnum["Arc"] = "arc";
     AchClassEnum["Cbr"] = "cbr";
@@ -15,4 +18,4 @@ export var AchClassEnum;
     AchClassEnum["Rck"] = "rck";
     AchClassEnum["Tel"] = "tel";
     AchClassEnum["Web"] = "web";
-})(AchClassEnum || (AchClassEnum = {}));
+})(AchClassEnum = exports.AchClassEnum || (exports.AchClassEnum = {}));

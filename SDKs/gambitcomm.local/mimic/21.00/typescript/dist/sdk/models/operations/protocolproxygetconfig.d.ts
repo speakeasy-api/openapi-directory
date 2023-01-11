@@ -7,7 +7,7 @@ export declare class ProtocolProxyGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolProxyGetConfigPathParams;
 }
 export declare class ProtocolProxyGetConfigResponse extends SpeakeasyBase {
-    configProxy?: shared.ConfigProxy;
+    configPROXY?: shared.ConfigProxy;
     contentType: string;
     statusCode: number;
 }

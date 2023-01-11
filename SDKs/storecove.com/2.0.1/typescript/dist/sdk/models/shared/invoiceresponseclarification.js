@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InvoiceResponseClarificationClarificationCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceResponseClarification = exports.InvoiceResponseClarificationClarificationCodeTypeEnum = exports.InvoiceResponseClarificationClarificationCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InvoiceResponseClarificationClarificationCodeEnum;
 (function (InvoiceResponseClarificationClarificationCodeEnum) {
     InvoiceResponseClarificationClarificationCodeEnum["Ref"] = "REF";
     InvoiceResponseClarificationClarificationCodeEnum["Leg"] = "LEG";
@@ -42,12 +45,12 @@ export var InvoiceResponseClarificationClarificationCodeEnum;
     InvoiceResponseClarificationClarificationCodeEnum["Cnf"] = "CNF";
     InvoiceResponseClarificationClarificationCodeEnum["Cnp"] = "CNP";
     InvoiceResponseClarificationClarificationCodeEnum["Cna"] = "CNA";
-})(InvoiceResponseClarificationClarificationCodeEnum || (InvoiceResponseClarificationClarificationCodeEnum = {}));
-export var InvoiceResponseClarificationClarificationCodeTypeEnum;
+})(InvoiceResponseClarificationClarificationCodeEnum = exports.InvoiceResponseClarificationClarificationCodeEnum || (exports.InvoiceResponseClarificationClarificationCodeEnum = {}));
+var InvoiceResponseClarificationClarificationCodeTypeEnum;
 (function (InvoiceResponseClarificationClarificationCodeTypeEnum) {
     InvoiceResponseClarificationClarificationCodeTypeEnum["OpStatusReason"] = "OPStatusReason";
     InvoiceResponseClarificationClarificationCodeTypeEnum["OpStatusAction"] = "OPStatusAction";
-})(InvoiceResponseClarificationClarificationCodeTypeEnum || (InvoiceResponseClarificationClarificationCodeTypeEnum = {}));
+})(InvoiceResponseClarificationClarificationCodeTypeEnum = exports.InvoiceResponseClarificationClarificationCodeTypeEnum || (exports.InvoiceResponseClarificationClarificationCodeTypeEnum = {}));
 // InvoiceResponseClarification
 /**
  * A clarification for why a received invoice was rejected (RE) or under query (UQ) and what action to take.
@@ -58,17 +61,17 @@ var InvoiceResponseClarification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clarification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clarification" }),
         __metadata("design:type", String)
     ], InvoiceResponseClarification.prototype, "clarification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clarificationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clarificationCode" }),
         __metadata("design:type", String)
     ], InvoiceResponseClarification.prototype, "clarificationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clarificationCodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clarificationCodeType" }),
         __metadata("design:type", String)
     ], InvoiceResponseClarification.prototype, "clarificationCodeType", void 0);
     return InvoiceResponseClarification;
-}(SpeakeasyBase));
-export { InvoiceResponseClarification };
+}(utils_1.SpeakeasyBase));
+exports.InvoiceResponseClarification = InvoiceResponseClarification;

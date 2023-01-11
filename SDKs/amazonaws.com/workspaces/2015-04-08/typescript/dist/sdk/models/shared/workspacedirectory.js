@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceDirectoryTypeEnum } from "./workspacedirectorytypeenum";
-import { SelfservicePermissions } from "./selfservicepermissions";
-import { WorkspaceDirectoryStateEnum } from "./workspacedirectorystateenum";
-import { TenancyEnum } from "./tenancyenum";
-import { WorkspaceAccessProperties } from "./workspaceaccessproperties";
-import { DefaultWorkspaceCreationProperties } from "./defaultworkspacecreationproperties";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceDirectory = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspacedirectorytypeenum_1 = require("./workspacedirectorytypeenum");
+var selfservicepermissions_1 = require("./selfservicepermissions");
+var workspacedirectorystateenum_1 = require("./workspacedirectorystateenum");
+var tenancyenum_1 = require("./tenancyenum");
+var workspaceaccessproperties_1 = require("./workspaceaccessproperties");
+var defaultworkspacecreationproperties_1 = require("./defaultworkspacecreationproperties");
 // WorkspaceDirectory
 /**
  * Describes a directory that is used with Amazon WorkSpaces.
@@ -39,69 +42,69 @@ var WorkspaceDirectory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Alias" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerUserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerUserName" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "customerUserName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryId" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "directoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryName" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "directoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryType" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "directoryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DnsIpAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DnsIpAddresses" }),
         __metadata("design:type", Array)
     ], WorkspaceDirectory.prototype, "dnsIpAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamRoleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamRoleId" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "iamRoleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegistrationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegistrationCode" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "registrationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SelfservicePermissions" }),
-        __metadata("design:type", SelfservicePermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SelfservicePermissions" }),
+        __metadata("design:type", selfservicepermissions_1.SelfservicePermissions)
     ], WorkspaceDirectory.prototype, "selfservicePermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], WorkspaceDirectory.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenancy" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "tenancy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceAccessProperties" }),
-        __metadata("design:type", WorkspaceAccessProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceAccessProperties" }),
+        __metadata("design:type", workspaceaccessproperties_1.WorkspaceAccessProperties)
     ], WorkspaceDirectory.prototype, "workspaceAccessProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceCreationProperties" }),
-        __metadata("design:type", DefaultWorkspaceCreationProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceCreationProperties" }),
+        __metadata("design:type", defaultworkspacecreationproperties_1.DefaultWorkspaceCreationProperties)
     ], WorkspaceDirectory.prototype, "workspaceCreationProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceSecurityGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceSecurityGroupId" }),
         __metadata("design:type", String)
     ], WorkspaceDirectory.prototype, "workspaceSecurityGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipGroupIds" }),
         __metadata("design:type", Array)
     ], WorkspaceDirectory.prototype, "ipGroupIds", void 0);
     return WorkspaceDirectory;
-}(SpeakeasyBase));
-export { WorkspaceDirectory };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceDirectory = WorkspaceDirectory;

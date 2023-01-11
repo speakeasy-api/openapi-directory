@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CustomConfigurationFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomConfiguration = exports.CustomConfigurationFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CustomConfigurationFormatEnum;
 (function (CustomConfigurationFormatEnum) {
     CustomConfigurationFormatEnum["Csv"] = "CSV";
     CustomConfigurationFormatEnum["Hl7"] = "HL7";
-})(CustomConfigurationFormatEnum || (CustomConfigurationFormatEnum = {}));
+})(CustomConfigurationFormatEnum = exports.CustomConfigurationFormatEnum || (exports.CustomConfigurationFormatEnum = {}));
 // CustomConfiguration
 /**
  * A custom configuration for a custom schema
@@ -38,29 +41,29 @@ var CustomConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], CustomConfiguration.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameFormat" }),
         __metadata("design:type", String)
     ], CustomConfiguration.prototype, "nameFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingOrganization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingOrganization" }),
         __metadata("design:type", String)
     ], CustomConfiguration.prototype, "receivingOrganization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaName" }),
         __metadata("design:type", String)
     ], CustomConfiguration.prototype, "schemaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transport" }),
         __metadata("design:type", Object)
     ], CustomConfiguration.prototype, "transport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomConfiguration.prototype, "type", void 0);
     return CustomConfiguration;
-}(SpeakeasyBase));
-export { CustomConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.CustomConfiguration = CustomConfiguration;

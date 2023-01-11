@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamoDbTarget = void 0;
+var utils_1 = require("../../../internal/utils");
 // DynamoDbTarget
 /**
  * Specifies an Amazon DynamoDB table to crawl.
@@ -33,17 +36,17 @@ var DynamoDbTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Path" }),
         __metadata("design:type", String)
     ], DynamoDbTarget.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scanAll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scanAll" }),
         __metadata("design:type", Boolean)
     ], DynamoDbTarget.prototype, "scanAll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scanRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scanRate" }),
         __metadata("design:type", Number)
     ], DynamoDbTarget.prototype, "scanRate", void 0);
     return DynamoDbTarget;
-}(SpeakeasyBase));
-export { DynamoDbTarget };
+}(utils_1.SpeakeasyBase));
+exports.DynamoDbTarget = DynamoDbTarget;

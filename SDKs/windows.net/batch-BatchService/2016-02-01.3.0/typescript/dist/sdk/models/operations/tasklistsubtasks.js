@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskListSubtasksResponse = exports.TaskListSubtasksRequest = exports.TaskListSubtasksHeaders = exports.TaskListSubtasksQueryParams = exports.TaskListSubtasksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaskListSubtasksPathParams = /** @class */ (function (_super) {
     __extends(TaskListSubtasksPathParams, _super);
     function TaskListSubtasksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], TaskListSubtasksPathParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taskId" }),
         __metadata("design:type", String)
     ], TaskListSubtasksPathParams.prototype, "taskId", void 0);
     return TaskListSubtasksPathParams;
-}(SpeakeasyBase));
-export { TaskListSubtasksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskListSubtasksPathParams = TaskListSubtasksPathParams;
 var TaskListSubtasksQueryParams = /** @class */ (function (_super) {
     __extends(TaskListSubtasksQueryParams, _super);
     function TaskListSubtasksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$select" }),
         __metadata("design:type", String)
     ], TaskListSubtasksQueryParams.prototype, "dollarSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], TaskListSubtasksQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], TaskListSubtasksQueryParams.prototype, "timeout", void 0);
     return TaskListSubtasksQueryParams;
-}(SpeakeasyBase));
-export { TaskListSubtasksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskListSubtasksQueryParams = TaskListSubtasksQueryParams;
 var TaskListSubtasksHeaders = /** @class */ (function (_super) {
     __extends(TaskListSubtasksHeaders, _super);
     function TaskListSubtasksHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], TaskListSubtasksHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], TaskListSubtasksHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], TaskListSubtasksHeaders.prototype, "returnClientRequestId", void 0);
     return TaskListSubtasksHeaders;
-}(SpeakeasyBase));
-export { TaskListSubtasksHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TaskListSubtasksHeaders = TaskListSubtasksHeaders;
 var TaskListSubtasksRequest = /** @class */ (function (_super) {
     __extends(TaskListSubtasksRequest, _super);
     function TaskListSubtasksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListSubtasksPathParams)
     ], TaskListSubtasksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListSubtasksQueryParams)
     ], TaskListSubtasksRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskListSubtasksHeaders)
     ], TaskListSubtasksRequest.prototype, "headers", void 0);
     return TaskListSubtasksRequest;
-}(SpeakeasyBase));
-export { TaskListSubtasksRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskListSubtasksRequest = TaskListSubtasksRequest;
 var TaskListSubtasksResponse = /** @class */ (function (_super) {
     __extends(TaskListSubtasksResponse, _super);
     function TaskListSubtasksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskListSubtasksResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskListSubtasksResponse.prototype, "cloudTaskListSubtasksResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaskListSubtasksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TaskListSubtasksResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaskListSubtasksResponse.prototype, "statusCode", void 0);
     return TaskListSubtasksResponse;
-}(SpeakeasyBase));
-export { TaskListSubtasksResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaskListSubtasksResponse = TaskListSubtasksResponse;

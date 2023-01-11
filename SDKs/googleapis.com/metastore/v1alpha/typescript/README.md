@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MetastoreProjectsLocationsFederationsCreateRequest, MetastoreProjectsLocationsFederationsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,51 +30,42 @@ const req: MetastoreProjectsLocationsFederationsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "ducimus",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "voluptate",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "qui",
-    federationId: "quis",
-    fields: "quis",
-    key: "commodi",
-    oauthToken: "molestiae",
+    callback: "consequuntur",
+    federationId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "cumque",
-    requestId: "incidunt",
-    uploadType: "omnis",
-    uploadProtocol: "corrupti",
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
     backendMetastores: {
-      "beatae": {
-        metastoreType: "METASTORE_TYPE_UNSPECIFIED",
-        name: "ut",
-      },
-      "debitis": {
-        metastoreType: "BIGQUERY",
-        name: "repudiandae",
-      },
-      "voluptas": {
+      "et": {
         metastoreType: "DATAPROC_METASTORE",
-        name: "et",
+        name: "dolorem",
       },
     },
     labels: {
-      "odio": "ut",
-      "assumenda": "dolores",
-      "inventore": "nostrum",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
-    name: "fuga",
-    version: "harum",
+    name: "dolores",
+    version: "illum",
   },
 };
 
@@ -94,6 +84,7 @@ sdk.projects.metastoreProjectsLocationsFederationsCreate(req).then((res: Metasto
 * `metastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `metastoreProjectsLocationsList` - Lists information about the supported locations for this service.
 * `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `metastoreProjectsLocationsServicesAlterLocation` - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
 * `metastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
 * `metastoreProjectsLocationsServicesBackupsDelete` - Deletes a single backup.
 * `metastoreProjectsLocationsServicesBackupsList` - Lists backups in a service.
@@ -107,6 +98,8 @@ sdk.projects.metastoreProjectsLocationsFederationsCreate(req).then((res: Metasto
 * `metastoreProjectsLocationsServicesMetadataImportsGet` - Gets details of a single import.
 * `metastoreProjectsLocationsServicesMetadataImportsList` - Lists imports in a service.
 * `metastoreProjectsLocationsServicesMetadataImportsPatch` - Updates a single import. Only the description field of MetadataImport is supported to be updated.
+* `metastoreProjectsLocationsServicesMoveTableToDatabase` - Move a table to another database.
+* `metastoreProjectsLocationsServicesQueryMetadata` - Query DPMS metadata.
 * `metastoreProjectsLocationsServicesRemoveIamPolicy` - Removes the attached IAM policies for a resource
 * `metastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
 

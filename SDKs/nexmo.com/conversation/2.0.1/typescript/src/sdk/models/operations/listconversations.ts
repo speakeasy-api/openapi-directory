@@ -87,5 +87,5 @@ export class ListConversationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listConversations200ApplicationJsonObject?: ListConversations200ApplicationJson;
+  listConversations200ApplicationJSONObject?: ListConversations200ApplicationJson;
 }

@@ -23,5 +23,5 @@ export class GetLogsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLogs200TextPlainBinaryString?: Uint8Array;
+  getLogs200TextPlainBinaryString?: string;
 }

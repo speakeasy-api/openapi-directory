@@ -18,5 +18,5 @@ export declare class UpdateNetworkSwitchDhcpServerPolicyRequest extends Speakeas
 export declare class UpdateNetworkSwitchDhcpServerPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchDhcpServerPolicy200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchDhcpServerPolicy200ApplicationJSONObject?: Record<string, any>;
 }

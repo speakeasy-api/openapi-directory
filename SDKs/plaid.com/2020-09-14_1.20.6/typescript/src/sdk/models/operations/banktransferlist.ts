@@ -11,13 +11,13 @@ export class BankTransferListRequest extends SpeakeasyBase {
 
 export class BankTransferListResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  bankTransferListResponse?: Map<string, any>;
+  bankTransferListResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

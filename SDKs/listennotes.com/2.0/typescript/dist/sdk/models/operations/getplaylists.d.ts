@@ -11,7 +11,7 @@ export declare class GetPlaylistsQueryParams extends SpeakeasyBase {
     sort?: GetPlaylistsSortEnum;
 }
 export declare class GetPlaylistsHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetPlaylistsRequest extends SpeakeasyBase {
     queryParams: GetPlaylistsQueryParams;
@@ -19,7 +19,7 @@ export declare class GetPlaylistsRequest extends SpeakeasyBase {
 }
 export declare class GetPlaylistsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     playlistsResponse?: shared.PlaylistsResponse;
     statusCode: number;
 }

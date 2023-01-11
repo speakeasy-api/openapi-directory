@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateClusterRequest = /** @class */ (function (_super) {
     __extends(UpdateClusterRequest, _super);
     function UpdateClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterName" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationTopicArn" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "notificationTopicArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationTopicStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationTopicStatus" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "notificationTopicStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterGroupName" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "parameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreferredMaintenanceWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreferredMaintenanceWindow" }),
         __metadata("design:type", String)
     ], UpdateClusterRequest.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], UpdateClusterRequest.prototype, "securityGroupIds", void 0);
     return UpdateClusterRequest;
-}(SpeakeasyBase));
-export { UpdateClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateClusterRequest = UpdateClusterRequest;

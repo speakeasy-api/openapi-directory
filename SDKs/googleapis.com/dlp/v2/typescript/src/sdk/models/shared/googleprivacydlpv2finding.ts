@@ -35,7 +35,7 @@ export class GooglePrivacyDlpV2Finding extends SpeakeasyBase {
   jobName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=likelihood" })
   likelihood?: GooglePrivacyDlpV2FindingLikelihoodEnum;

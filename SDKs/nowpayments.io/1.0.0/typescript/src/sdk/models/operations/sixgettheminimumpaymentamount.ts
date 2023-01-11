@@ -31,13 +31,13 @@ export class SixGetTheMinimumPaymentAmountRequest extends SpeakeasyBase {
 
 export class SixGetTheMinimumPaymentAmountResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  sixGetTheMinimumPaymentAmount200ApplicationJsonObject?: SixGetTheMinimumPaymentAmount200ApplicationJson;
+  sixGetTheMinimumPaymentAmount200ApplicationJSONObject?: SixGetTheMinimumPaymentAmount200ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

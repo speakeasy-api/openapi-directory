@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LiveStreamConfigurationIssueSeverityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveStreamConfigurationIssue = exports.LiveStreamConfigurationIssueTypeEnum = exports.LiveStreamConfigurationIssueSeverityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LiveStreamConfigurationIssueSeverityEnum;
 (function (LiveStreamConfigurationIssueSeverityEnum) {
     LiveStreamConfigurationIssueSeverityEnum["Info"] = "info";
     LiveStreamConfigurationIssueSeverityEnum["Warning"] = "warning";
     LiveStreamConfigurationIssueSeverityEnum["Error"] = "error";
-})(LiveStreamConfigurationIssueSeverityEnum || (LiveStreamConfigurationIssueSeverityEnum = {}));
-export var LiveStreamConfigurationIssueTypeEnum;
+})(LiveStreamConfigurationIssueSeverityEnum = exports.LiveStreamConfigurationIssueSeverityEnum || (exports.LiveStreamConfigurationIssueSeverityEnum = {}));
+var LiveStreamConfigurationIssueTypeEnum;
 (function (LiveStreamConfigurationIssueTypeEnum) {
     LiveStreamConfigurationIssueTypeEnum["GopSizeOver"] = "gopSizeOver";
     LiveStreamConfigurationIssueTypeEnum["GopSizeLong"] = "gopSizeLong";
@@ -65,28 +68,28 @@ export var LiveStreamConfigurationIssueTypeEnum;
     LiveStreamConfigurationIssueTypeEnum["VideoResolutionUnsupported"] = "videoResolutionUnsupported";
     LiveStreamConfigurationIssueTypeEnum["VideoIngestionStarved"] = "videoIngestionStarved";
     LiveStreamConfigurationIssueTypeEnum["VideoIngestionFasterThanRealtime"] = "videoIngestionFasterThanRealtime";
-})(LiveStreamConfigurationIssueTypeEnum || (LiveStreamConfigurationIssueTypeEnum = {}));
+})(LiveStreamConfigurationIssueTypeEnum = exports.LiveStreamConfigurationIssueTypeEnum || (exports.LiveStreamConfigurationIssueTypeEnum = {}));
 var LiveStreamConfigurationIssue = /** @class */ (function (_super) {
     __extends(LiveStreamConfigurationIssue, _super);
     function LiveStreamConfigurationIssue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LiveStreamConfigurationIssue.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], LiveStreamConfigurationIssue.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], LiveStreamConfigurationIssue.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LiveStreamConfigurationIssue.prototype, "type", void 0);
     return LiveStreamConfigurationIssue;
-}(SpeakeasyBase));
-export { LiveStreamConfigurationIssue };
+}(utils_1.SpeakeasyBase));
+exports.LiveStreamConfigurationIssue = LiveStreamConfigurationIssue;

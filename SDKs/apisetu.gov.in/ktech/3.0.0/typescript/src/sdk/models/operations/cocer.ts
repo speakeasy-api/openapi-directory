@@ -194,23 +194,23 @@ export class CocerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cocer400ApplicationJsonObject?: Cocer400ApplicationJson;
+  cocer400ApplicationJSONObject?: Cocer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer401ApplicationJsonObject?: Cocer401ApplicationJson;
+  cocer401ApplicationJSONObject?: Cocer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer404ApplicationJsonObject?: Cocer404ApplicationJson;
+  cocer404ApplicationJSONObject?: Cocer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer500ApplicationJsonObject?: Cocer500ApplicationJson;
+  cocer500ApplicationJSONObject?: Cocer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer502ApplicationJsonObject?: Cocer502ApplicationJson;
+  cocer502ApplicationJSONObject?: Cocer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer503ApplicationJsonObject?: Cocer503ApplicationJson;
+  cocer503ApplicationJSONObject?: Cocer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cocer504ApplicationJsonObject?: Cocer504ApplicationJson;
+  cocer504ApplicationJSONObject?: Cocer504ApplicationJson;
 }

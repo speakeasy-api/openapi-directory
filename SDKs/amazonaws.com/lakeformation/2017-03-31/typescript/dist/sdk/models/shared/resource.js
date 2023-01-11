@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataLocationResource } from "./datalocationresource";
-import { DatabaseResource } from "./databaseresource";
-import { LfTagKeyResource } from "./lftagkeyresource";
-import { LfTagPolicyResource } from "./lftagpolicyresource";
-import { TableResource } from "./tableresource";
-import { TableWithColumnsResource } from "./tablewithcolumnsresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resource = void 0;
+var utils_1 = require("../../../internal/utils");
+var datalocationresource_1 = require("./datalocationresource");
+var databaseresource_1 = require("./databaseresource");
+var lftagkeyresource_1 = require("./lftagkeyresource");
+var lftagpolicyresource_1 = require("./lftagpolicyresource");
+var tableresource_1 = require("./tableresource");
+var tablewithcolumnsresource_1 = require("./tablewithcolumnsresource");
 // Resource
 /**
  * A structure for the resource.
@@ -39,33 +42,33 @@ var Resource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Catalog" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Catalog" }),
+        __metadata("design:type", Object)
     ], Resource.prototype, "catalog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataLocation" }),
-        __metadata("design:type", DataLocationResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataLocation" }),
+        __metadata("design:type", datalocationresource_1.DataLocationResource)
     ], Resource.prototype, "dataLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Database" }),
-        __metadata("design:type", DatabaseResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Database" }),
+        __metadata("design:type", databaseresource_1.DatabaseResource)
     ], Resource.prototype, "database", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTag" }),
-        __metadata("design:type", LfTagKeyResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTag" }),
+        __metadata("design:type", lftagkeyresource_1.LfTagKeyResource)
     ], Resource.prototype, "lfTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTagPolicy" }),
-        __metadata("design:type", LfTagPolicyResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTagPolicy" }),
+        __metadata("design:type", lftagpolicyresource_1.LfTagPolicyResource)
     ], Resource.prototype, "lfTagPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Table" }),
-        __metadata("design:type", TableResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Table" }),
+        __metadata("design:type", tableresource_1.TableResource)
     ], Resource.prototype, "table", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableWithColumns" }),
-        __metadata("design:type", TableWithColumnsResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableWithColumns" }),
+        __metadata("design:type", tablewithcolumnsresource_1.TableWithColumnsResource)
     ], Resource.prototype, "tableWithColumns", void 0);
     return Resource;
-}(SpeakeasyBase));
-export { Resource };
+}(utils_1.SpeakeasyBase));
+exports.Resource = Resource;

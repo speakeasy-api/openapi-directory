@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,204 +23,208 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum = exports.GetPersonalCurrentAccountsErrorObject = exports.GetPersonalCurrentAccounts503ErrorObject = exports.GetPersonalCurrentAccounts503ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts503ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts500ErrorObject = exports.GetPersonalCurrentAccounts500ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts500ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts429ErrorObject = exports.GetPersonalCurrentAccounts429ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts429ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts408ErrorObject = exports.GetPersonalCurrentAccounts408ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts408ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts400ErrorObject = exports.GetPersonalCurrentAccounts400ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts400ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccountsHeaders = void 0;
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility = void 0;
+exports.GetPersonalCurrentAccountsResponse = exports.GetPersonalCurrentAccountsRequest = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPersonalCurrentAccountsHeaders = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccountsHeaders, _super);
     function GetPersonalCurrentAccountsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsHeaders.prototype, "ifNoneMatch", void 0);
     return GetPersonalCurrentAccountsHeaders;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccountsHeaders };
-export var GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccountsHeaders = GetPersonalCurrentAccountsHeaders;
+var GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum;
 (function (GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum) {
     GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum["YouHaveSentARequestWhichCouldNotBeUnderstood"] = "You have sent a request which could not be understood.";
-})(GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum || (GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum = {}));
-export var GetPersonalCurrentAccounts400ErrorObjectStatusEnum;
+})(GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum || (exports.GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum = {}));
+var GetPersonalCurrentAccounts400ErrorObjectStatusEnum;
 (function (GetPersonalCurrentAccounts400ErrorObjectStatusEnum) {
     GetPersonalCurrentAccounts400ErrorObjectStatusEnum["FourHundred"] = "400";
-})(GetPersonalCurrentAccounts400ErrorObjectStatusEnum || (GetPersonalCurrentAccounts400ErrorObjectStatusEnum = {}));
-export var GetPersonalCurrentAccounts400ErrorObjectTitleEnum;
+})(GetPersonalCurrentAccounts400ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts400ErrorObjectStatusEnum || (exports.GetPersonalCurrentAccounts400ErrorObjectStatusEnum = {}));
+var GetPersonalCurrentAccounts400ErrorObjectTitleEnum;
 (function (GetPersonalCurrentAccounts400ErrorObjectTitleEnum) {
     GetPersonalCurrentAccounts400ErrorObjectTitleEnum["BadRequest"] = "Bad request";
-})(GetPersonalCurrentAccounts400ErrorObjectTitleEnum || (GetPersonalCurrentAccounts400ErrorObjectTitleEnum = {}));
+})(GetPersonalCurrentAccounts400ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts400ErrorObjectTitleEnum || (exports.GetPersonalCurrentAccounts400ErrorObjectTitleEnum = {}));
 var GetPersonalCurrentAccounts400ErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts400ErrorObject, _super);
     function GetPersonalCurrentAccounts400ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts400ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts400ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts400ErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccounts400ErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts400ErrorObject };
-export var GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts400ErrorObject = GetPersonalCurrentAccounts400ErrorObject;
+var GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum;
 (function (GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum) {
     GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum["YourClientHasFailedToSubmitARequestAndATimeoutHasOccurred"] = "Your client has failed to submit a request, and a timeout has occurred.";
-})(GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum || (GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum = {}));
-export var GetPersonalCurrentAccounts408ErrorObjectStatusEnum;
+})(GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum || (exports.GetPersonalCurrentAccounts408ErrorObjectDescriptionEnum = {}));
+var GetPersonalCurrentAccounts408ErrorObjectStatusEnum;
 (function (GetPersonalCurrentAccounts408ErrorObjectStatusEnum) {
     GetPersonalCurrentAccounts408ErrorObjectStatusEnum["FourHundredAndEight"] = "408";
-})(GetPersonalCurrentAccounts408ErrorObjectStatusEnum || (GetPersonalCurrentAccounts408ErrorObjectStatusEnum = {}));
-export var GetPersonalCurrentAccounts408ErrorObjectTitleEnum;
+})(GetPersonalCurrentAccounts408ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts408ErrorObjectStatusEnum || (exports.GetPersonalCurrentAccounts408ErrorObjectStatusEnum = {}));
+var GetPersonalCurrentAccounts408ErrorObjectTitleEnum;
 (function (GetPersonalCurrentAccounts408ErrorObjectTitleEnum) {
     GetPersonalCurrentAccounts408ErrorObjectTitleEnum["ClientTimeout"] = "Client timeout";
-})(GetPersonalCurrentAccounts408ErrorObjectTitleEnum || (GetPersonalCurrentAccounts408ErrorObjectTitleEnum = {}));
+})(GetPersonalCurrentAccounts408ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts408ErrorObjectTitleEnum || (exports.GetPersonalCurrentAccounts408ErrorObjectTitleEnum = {}));
 var GetPersonalCurrentAccounts408ErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts408ErrorObject, _super);
     function GetPersonalCurrentAccounts408ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts408ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts408ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts408ErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccounts408ErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts408ErrorObject };
-export var GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts408ErrorObject = GetPersonalCurrentAccounts408ErrorObject;
+var GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum;
 (function (GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum) {
     GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum["YouHaveRequestedThisResourceTooOftenSlowDown"] = "You have requested this resource too often. Slow down.";
-})(GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum || (GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum = {}));
-export var GetPersonalCurrentAccounts429ErrorObjectStatusEnum;
+})(GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum || (exports.GetPersonalCurrentAccounts429ErrorObjectDescriptionEnum = {}));
+var GetPersonalCurrentAccounts429ErrorObjectStatusEnum;
 (function (GetPersonalCurrentAccounts429ErrorObjectStatusEnum) {
     GetPersonalCurrentAccounts429ErrorObjectStatusEnum["FourHundredAndTwentyNine"] = "429";
-})(GetPersonalCurrentAccounts429ErrorObjectStatusEnum || (GetPersonalCurrentAccounts429ErrorObjectStatusEnum = {}));
-export var GetPersonalCurrentAccounts429ErrorObjectTitleEnum;
+})(GetPersonalCurrentAccounts429ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts429ErrorObjectStatusEnum || (exports.GetPersonalCurrentAccounts429ErrorObjectStatusEnum = {}));
+var GetPersonalCurrentAccounts429ErrorObjectTitleEnum;
 (function (GetPersonalCurrentAccounts429ErrorObjectTitleEnum) {
     GetPersonalCurrentAccounts429ErrorObjectTitleEnum["TooManyRequests"] = "Too many requests";
-})(GetPersonalCurrentAccounts429ErrorObjectTitleEnum || (GetPersonalCurrentAccounts429ErrorObjectTitleEnum = {}));
+})(GetPersonalCurrentAccounts429ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts429ErrorObjectTitleEnum || (exports.GetPersonalCurrentAccounts429ErrorObjectTitleEnum = {}));
 var GetPersonalCurrentAccounts429ErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts429ErrorObject, _super);
     function GetPersonalCurrentAccounts429ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts429ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts429ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts429ErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccounts429ErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts429ErrorObject };
-export var GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts429ErrorObject = GetPersonalCurrentAccounts429ErrorObject;
+var GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum;
 (function (GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum) {
     GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum["AnErrorOccurredOnTheServerNoFurtherInformationIsAvailable"] = "An error occurred on the server. No further information is available.";
-})(GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum || (GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum = {}));
-export var GetPersonalCurrentAccounts500ErrorObjectStatusEnum;
+})(GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum || (exports.GetPersonalCurrentAccounts500ErrorObjectDescriptionEnum = {}));
+var GetPersonalCurrentAccounts500ErrorObjectStatusEnum;
 (function (GetPersonalCurrentAccounts500ErrorObjectStatusEnum) {
     GetPersonalCurrentAccounts500ErrorObjectStatusEnum["FiveHundred"] = "500";
-})(GetPersonalCurrentAccounts500ErrorObjectStatusEnum || (GetPersonalCurrentAccounts500ErrorObjectStatusEnum = {}));
-export var GetPersonalCurrentAccounts500ErrorObjectTitleEnum;
+})(GetPersonalCurrentAccounts500ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts500ErrorObjectStatusEnum || (exports.GetPersonalCurrentAccounts500ErrorObjectStatusEnum = {}));
+var GetPersonalCurrentAccounts500ErrorObjectTitleEnum;
 (function (GetPersonalCurrentAccounts500ErrorObjectTitleEnum) {
     GetPersonalCurrentAccounts500ErrorObjectTitleEnum["InternalServerError"] = "Internal server error";
-})(GetPersonalCurrentAccounts500ErrorObjectTitleEnum || (GetPersonalCurrentAccounts500ErrorObjectTitleEnum = {}));
+})(GetPersonalCurrentAccounts500ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts500ErrorObjectTitleEnum || (exports.GetPersonalCurrentAccounts500ErrorObjectTitleEnum = {}));
 var GetPersonalCurrentAccounts500ErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts500ErrorObject, _super);
     function GetPersonalCurrentAccounts500ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts500ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts500ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts500ErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccounts500ErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts500ErrorObject };
-export var GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts500ErrorObject = GetPersonalCurrentAccounts500ErrorObject;
+var GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum;
 (function (GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum) {
     GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum["TheServiceIsTemporarilyUnavailable"] = "The service is temporarily unavailable.";
-})(GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum || (GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum = {}));
-export var GetPersonalCurrentAccounts503ErrorObjectStatusEnum;
+})(GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum = exports.GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum || (exports.GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum = {}));
+var GetPersonalCurrentAccounts503ErrorObjectStatusEnum;
 (function (GetPersonalCurrentAccounts503ErrorObjectStatusEnum) {
     GetPersonalCurrentAccounts503ErrorObjectStatusEnum["FiveHundredAndThree"] = "503";
-})(GetPersonalCurrentAccounts503ErrorObjectStatusEnum || (GetPersonalCurrentAccounts503ErrorObjectStatusEnum = {}));
-export var GetPersonalCurrentAccounts503ErrorObjectTitleEnum;
+})(GetPersonalCurrentAccounts503ErrorObjectStatusEnum = exports.GetPersonalCurrentAccounts503ErrorObjectStatusEnum || (exports.GetPersonalCurrentAccounts503ErrorObjectStatusEnum = {}));
+var GetPersonalCurrentAccounts503ErrorObjectTitleEnum;
 (function (GetPersonalCurrentAccounts503ErrorObjectTitleEnum) {
     GetPersonalCurrentAccounts503ErrorObjectTitleEnum["ServiceTemporarilyUnavailable"] = "Service temporarily unavailable";
-})(GetPersonalCurrentAccounts503ErrorObjectTitleEnum || (GetPersonalCurrentAccounts503ErrorObjectTitleEnum = {}));
+})(GetPersonalCurrentAccounts503ErrorObjectTitleEnum = exports.GetPersonalCurrentAccounts503ErrorObjectTitleEnum || (exports.GetPersonalCurrentAccounts503ErrorObjectTitleEnum = {}));
 var GetPersonalCurrentAccounts503ErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts503ErrorObject, _super);
     function GetPersonalCurrentAccounts503ErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts503ErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts503ErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts503ErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccounts503ErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts503ErrorObject };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts503ErrorObject = GetPersonalCurrentAccounts503ErrorObject;
 var GetPersonalCurrentAccountsErrorObject = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccountsErrorObject, _super);
     function GetPersonalCurrentAccountsErrorObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsErrorObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsErrorObject.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsErrorObject.prototype, "title", void 0);
     return GetPersonalCurrentAccountsErrorObject;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccountsErrorObject };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccountsErrorObject = GetPersonalCurrentAccountsErrorObject;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum["Atm"] = "ATM";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum["Branch"] = "Branch";
@@ -233,8 +238,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum["PostOffice"] = "PostOffice";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum["RelationshipManager"] = "RelationshipManager";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum["Text"] = "Text";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["CashDeposit"] = "CashDeposit";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["Deposit"] = "Deposit";
@@ -243,7 +248,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["InternetLogon"] = "InternetLogon";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["MobileLogon"] = "MobileLogon";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum["RegularDeposit"] = "RegularDeposit";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail
 /**
  * Benefit detail
@@ -254,56 +259,56 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitDescription" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitID" }),
         __metadata("design:type", String)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitId", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitName" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitValue" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "benefitValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Counter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Counter" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "counter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CriteriaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CriteriaType" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "criteriaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultToAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultToAccounts" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "defaultToAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumCriteria" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "maximumCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumCriteria" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "minimumCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PromotionEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PromotionEndDate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "promotionEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PromotionStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PromotionStartDate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail.prototype, "promotionStartDate", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem
 /**
  * Benefit Item
@@ -314,34 +319,34 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitDetail", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitDetail", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "benefitDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitSubTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup
 /**
  * Benefit Interest Group
@@ -352,16 +357,16 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitItem" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup.prototype, "benefitItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitSubType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup.prototype, "benefitSubType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits
 /**
  * Benefit
@@ -372,16 +377,16 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Benefit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Benefit" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits.prototype, "benefit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BenefitGroup", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BenefitGroup", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits.prototype, "benefitGroup", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem
 /**
  * Card Pricing
@@ -392,34 +397,34 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExchangeRateAdjustment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExchangeRateAdjustment" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem.prototype, "exchangeRateAdjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingProductStateEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing
 /**
  * Card Price
@@ -430,17 +435,17 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CAPricingItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CAPricingItem" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricingCaPricingItem)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing.prototype, "caPricingItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductState" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing.prototype, "productState", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum["BasicCard"] = "BasicCard";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum["BusinessQuickLodgeCard"] = "BusinessQuickLodgeCard";
@@ -453,8 +458,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum["DepositCard"] = "DepositCard";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum["OperatorCard"] = "OperatorCard";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum["PocaCard"] = "POCACard";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum["Daily"] = "Daily";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum["Weekly"] = "Weekly";
@@ -463,26 +468,26 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum["HalfYearly"] = "Half-Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum["Overnight"] = "Overnight";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum["Banded"] = "Banded";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum["Tiered"] = "Tiered";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum["Whole"] = "Whole";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum["Fixed"] = "Fixed";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum["Variable"] = "Variable";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum["Apr"] = "APR";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum["Aer"] = "AER";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum["Gross"] = "Gross";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum["Net"] = "Net";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum["RepApr"] = "RepApr";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers
 /**
  * Credit Interest Tiers
@@ -493,47 +498,47 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=APRAERRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=APRAERRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "apraerRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DailyChargeForMaximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DailyChargeForMaximum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "dailyChargeForMaximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DailyChargeForMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DailyChargeForMinimum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "dailyChargeForMinimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InterestTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InterestTier" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "interestTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateComparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateComparisonType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "rateComparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierValueMaximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierValueMaximum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "tierValueMaximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierValueMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierValueMinimum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers.prototype, "tierValueMinimum", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum["Compound"] = "Compound";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum["PayAway"] = "PayAway";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum["SelfCredit"] = "SelfCredit";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum["SimpleInterest"] = "SimpleInterest";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem
 /**
  * Credit Interest item
@@ -544,66 +549,66 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CalculationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "calculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CalculationMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CalculationMethod" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "calculationMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FixedInterestLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FixedInterestLength" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "fixedInterestLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InterestNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InterestNotes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "interestNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InterestRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InterestRateType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "interestRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InterestTiers", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InterestTiers", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItemInterestTiers }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "interestTiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentMethod" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "paymentMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupInterestTierSubTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup
 /**
  * Credit Interest Group
@@ -614,16 +619,16 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditInterestItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditInterestItem" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroupCreditInterestItem)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup.prototype, "creditInterestItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InterestTierSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InterestTierSubType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup.prototype, "interestTierSubType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest
 /**
  * Credit Interest
@@ -634,27 +639,27 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditCharged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditCharged" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest.prototype, "creditCharged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditInterestGroup", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditInterestGroup", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterestCreditInterestGroup }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest.prototype, "creditInterestGroup", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum["Hard"] = "Hard";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum["Soft"] = "Soft";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScoreEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum["Hard"] = "Hard";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum["Soft"] = "Soft";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["AnyBusinessCustomer"] = "AnyBusinessCustomer";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["BusinessOnly"] = "BusinessOnly";
@@ -675,15 +680,15 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["StudentsOnly"] = "StudentsOnly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["TwoMonthsOfCourseStart"] = "TwoMonthsOfCourseStart";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum["UcasFulltimeTwoYears"] = "UCASFulltimeTwoYears";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityEligibilityTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["ExistingCustomers"] = "ExistingCustomers";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["NewCustomersOnly"] = "NewCustomersOnly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["SwitchersOnly"] = "SwitchersOnly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum["StartUp"] = "StartUp";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMarketingEligibilityEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["HalfYearly"] = "HalfYearly";
@@ -691,8 +696,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Quarterly"] = "Quarterly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Weekly"] = "Weekly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum["Yearly"] = "Yearly";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityMinimumIncomeFrequencyEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Uk"] = "UK";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Eea"] = "EEA";
@@ -703,14 +708,14 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["GbSct"] = "GB - SCT";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["GbWls"] = "GB - WLS";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum["Irl"] = "IRL";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilityResidencyRestrictedRegionEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["Joint"] = "Joint";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["SoleIncome"] = "SoleIncome";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["SoleOrJoint"] = "SoleOrJoint";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum["Turnover"] = "Turnover";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibilitySingleJointIncomeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility
 /**
  * Eligibility
@@ -721,146 +726,146 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgeRestricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgeRestricted" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "ageRestricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualBusinessTurnover" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualBusinessTurnover" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "annualBusinessTurnover", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualBusinessTurnoverCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualBusinessTurnoverCurrency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "annualBusinessTurnoverCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityName" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityNotes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibilityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibilityType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "eligibilityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncomeCondition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncomeCondition" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "incomeCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncomeTurnoverRelated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncomeTurnoverRelated" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "incomeTurnoverRelated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MarketingEligibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MarketingEligibility" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "marketingEligibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxNumberOfAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxNumberOfAccounts" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maxNumberOfAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumAge" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumAgeToOpen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumAgeToOpen" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumAgeToOpen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumOpeningAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumOpeningAmount" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "maximumOpeningAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinIncomeTurnoverPaidIntoAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinIncomeTurnoverPaidIntoAccount" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minIncomeTurnoverPaidIntoAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumAge" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumDeposit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumDeposit" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumDeposit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeTurnoverAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeTurnoverAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeTurnoverAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumIncomeTurnoverCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumIncomeTurnoverCurrency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumIncomeTurnoverCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalance" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalanceCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalanceCurrency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalanceCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumOperatingBalanceExists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumOperatingBalanceExists" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "minimumOperatingBalanceExists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMaximumAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMaximumAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMaximumAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMaximumCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMaximumCurrency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMaximumCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMinimum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMinimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OpeningDepositMinimumCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OpeningDepositMinimumCurrency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "openingDepositMinimumCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OtherFinancialHoldingRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OtherFinancialHoldingRequired" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "otherFinancialHoldingRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousBankruptcy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousBankruptcy" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "previousBankruptcy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyRestricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyRestricted" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "residencyRestricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyRestrictedRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyRestrictedRegion" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "residencyRestrictedRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SingleJointIncome" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SingleJointIncome" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "singleJointIncome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThirdSectorOrganisations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThirdSectorOrganisations" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility.prototype, "thirdSectorOrganisations", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetailsFeatureSubTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails
 /**
  * Feature Details
@@ -871,54 +876,54 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CriteriaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CriteriaType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "criteriaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureDescription" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "featureDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureName" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "featureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureSubType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "featureSubType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureValue" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "featureValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureProductStateEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature
 /**
  * Account Features
@@ -929,37 +934,37 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExistingFeature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExistingFeature" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "existingFeature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureDetails", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureDetails", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeatureFeatureDetails }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "featureDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductState" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "productState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["AccountClosing"] = "AccountClosing";
@@ -982,7 +987,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["StatementMonthly"] = "StatementMonthly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["Weekly"] = "Weekly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum["Yearly"] = "Yearly";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails
 /**
  * Fee Sub Details
@@ -993,49 +998,49 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeHigherTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeHigherTier" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeHigherTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeLowerTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeLowerTier" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeLowerTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeMax" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeMin" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndChargesNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndChargesNotes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "feesAndChargesNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Negotiable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Negotiable" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "negotiable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RepresentativeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RepresentativeRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails.prototype, "representativeRate", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["Other"] = "Other";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["AtmDonation"] = "ATMDonation";
@@ -1407,7 +1412,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterCashInOwn"] = "CounterCashInOwn";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterPaidTrans"] = "CounterPaidTrans";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum["CounterCashFeePercent"] = "CounterCashFeePercent";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail
 /**
  * Fee Detail
@@ -1418,42 +1423,42 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeSubDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeSubDetails" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "feeSubDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "feeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Other" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Other" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "other", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails
 /**
  * Fee Details
@@ -1464,16 +1469,16 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeDetail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeDetail" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetail)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails.prototype, "feeDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeSubType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeSubType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails.prototype, "feeSubType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees
 /**
  * Fees
@@ -1484,42 +1489,42 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeDetails", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeDetails", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetails }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeHigherTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeHigherTier" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeHigherTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeLowerTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeLowerTier" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "feeLowerTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees.prototype, "stopPromotionOrFutureTerms", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesProductStateEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges
 /**
  * Fees And Charges
@@ -1530,17 +1535,17 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Fees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Fees" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFees)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductState" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges.prototype, "productState", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum["AndroidPay"] = "AndroidPay";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum["ApplePay"] = "ApplePay";
@@ -1550,12 +1555,12 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum["PayM"] = "PayM";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum["SamsungPay"] = "SamsungPay";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum["VodafoneWallet"] = "VodafoneWallet";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum["Uk"] = "UK";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum["Eu"] = "EU";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand
 /**
  * Brand
@@ -1566,16 +1571,16 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkID" }),
         __metadata("design:type", String)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkId", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrademarkIPOCode" }),
         __metadata("design:type", String)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkIpoCode", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand.prototype, "trademarkIPOCode", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName
 /**
  * Organisation Name
@@ -1586,12 +1591,12 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LegalName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LegalName" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName.prototype, "legalName", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation
 /**
  * Parent organisation
@@ -1602,20 +1607,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BIC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BIC" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "bic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LEI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LEI" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "lei", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganisationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganisationName" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation.prototype, "organisationName", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation
 /**
  * Organisation
@@ -1626,22 +1631,22 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Brand" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentOrganisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentOrganisation" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation.prototype, "parentOrganisation", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum["No"] = "No";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum["Yes"] = "Yes";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeeChargeNegotiableIndicatorEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum["Daily"] = "Daily";
@@ -1652,8 +1657,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum["Daily"] = "Daily";
@@ -1664,7 +1669,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency
 /**
  * Other Code Type
@@ -1675,20 +1680,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency
 /**
  * Other Code Type
@@ -1699,20 +1704,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType
 /**
  * Other Code Type
@@ -1723,20 +1728,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType
 /**
  * Other Code Type
@@ -1747,27 +1752,27 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum["Gross"] = "Gross";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum["Net"] = "Net";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum["Periodic"] = "Periodic";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum["Minimum"] = "Minimum";
@@ -1781,7 +1786,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum["Item"] = "Item";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum["EmergencyLending"] = "EmergencyLending";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges
 /**
  * Overdraft Fees Charges
@@ -1792,54 +1797,54 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeApplicationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeCalculationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherApplicationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeOtherApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherCalculationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeOtherCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndChargesFeeChargeRateOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeRateOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges.prototype, "feeChargeType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum["FutureMultipleTerms"] = "FutureMultipleTerms";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum["Promotional"] = "Promotional";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum["Regular"] = "Regular";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftProductStateEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType
 /**
  * Other Code Type
@@ -1850,27 +1855,27 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum["Unarranged"] = "Unarranged";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum["Arranged"] = "Arranged";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum["Daily"] = "Daily";
@@ -1881,8 +1886,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum["Daily"] = "Daily";
@@ -1893,7 +1898,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency
 /**
  * Other Code Type
@@ -1904,20 +1909,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency
 /**
  * Other Code Type
@@ -1928,20 +1933,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType
 /**
  * Other Code Type
@@ -1952,20 +1957,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType
 /**
  * Other Code Type
@@ -1976,27 +1981,27 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum["Gross"] = "Gross";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum["Net"] = "Net";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum["Periodic"] = "Periodic";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum["Minimum"] = "Minimum";
@@ -2010,7 +2015,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum["Item"] = "Item";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum["EmergencyLending"] = "EmergencyLending";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges
 /**
  * Overdraft Fees Charges
@@ -2021,49 +2026,49 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeApplicationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeCalculationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherApplicationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeOtherApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherCalculationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeOtherCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeRateOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges.prototype, "feeChargeType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum["Daily"] = "Daily";
@@ -2074,8 +2079,8 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum["AcademicTerm"] = "AcademicTerm";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum["Daily"] = "Daily";
@@ -2086,7 +2091,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum["Yearly"] = "Yearly";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum["Overnight"] = "Overnight";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency
 /**
  * Other Code Type
@@ -2097,20 +2102,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency
 /**
  * Other Code Type
@@ -2121,20 +2126,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType
 /**
  * Other Code Type
@@ -2145,20 +2150,20 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType
 /**
  * Other Code Type
@@ -2169,27 +2174,27 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType.prototype, "name", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum["Gross"] = "Gross";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum["Net"] = "Net";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum["Periodic"] = "Periodic";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum["Minimum"] = "Minimum";
@@ -2203,7 +2208,7 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum["Item"] = "Item";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum["EmergencyLending"] = "EmergencyLending";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum["Other"] = "Other";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges
 /**
  * Overdraft Fees Charges
@@ -2214,48 +2219,48 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeApplicationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeCalculationFrequency" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherApplicationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherApplicationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeOtherApplicationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherCalculationFrequency" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherCalculationFrequency)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeOtherCalculationFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRate" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeRateOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeRateType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges.prototype, "feeChargeType", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand
 /**
  * Tiers
@@ -2266,32 +2271,32 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EAR" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EAR" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "ear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "feesAndCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierBandIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierBandIdentification" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "tierBandIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierValueMaximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierValueMaximum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "tierValueMaximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierValueMinimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierValueMinimum" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand.prototype, "tierValueMinimum", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand;
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet
 /**
  * Tier Bandset
@@ -2302,49 +2307,49 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArrangementOtherType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArrangementOtherType" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetArrangementOtherType)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "arrangementOtherType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArrangementType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArrangementType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "arrangementType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BufferAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BufferAmount" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "bufferAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CMADefinedIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CMADefinedIndicator" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "cmaDefinedIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EAR" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EAR" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "ear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetFeesAndCharges }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "feesAndCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverdraftTierBand", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverdraftTierBand", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "overdraftTierBand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TierBandSetIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TierBandSetIdentification" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet.prototype, "tierBandSetIdentification", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum["Committed"] = "Committed";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum["OnDemand"] = "OnDemand";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft
 /**
  * Overdraft
@@ -2355,57 +2360,57 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateOfChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateOfChange" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "dateOfChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeeChargeNegotiableIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeeChargeNegotiableIndicator" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "feeChargeNegotiableIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftFeesAndCharges }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "feesAndCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LengthPromotionalInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LengthPromotionalInDays" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "lengthPromotionalInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumMonthlyOverdraftCharge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumMonthlyOverdraftCharge" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "maximumMonthlyOverdraftCharge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverdraftProductState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverdraftProductState" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "overdraftProductState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverdraftTierBandSet", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverdraftTierBandSet", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSet }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "overdraftTierBandSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverdraftType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverdraftType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "overdraftType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "startPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopPromotionOrFutureTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopPromotionOrFutureTerms" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "stopPromotionOrFutureTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Term" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft.prototype, "term", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["Basic"] = "Basic";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["Business"] = "Business";
@@ -2420,11 +2425,11 @@ export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Plus
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["Student"] = "Student";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["YoungAdult"] = "YoungAdult";
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum["Youth"] = "Youth";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum["Pca"] = "PCA";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum = {}));
 // GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData
 /**
  * Personal Current Account
@@ -2435,249 +2440,249 @@ var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDat
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccessChannels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccessChannels" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "accessChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Benefits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Benefits" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CAPricing", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CAPricing", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCaPricing }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "caPricing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CardNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CardNotes" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "cardNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CardType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CardType" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "cardType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CardWithdrawalLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CardWithdrawalLimit" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "cardWithdrawalLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChequeBookAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChequeBookAvailable" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "chequeBookAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Contactless" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Contactless" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "contactless", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditInterest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditInterest" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditInterest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningForGettingAnAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningForGettingAnAccount" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningForGettingAnAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningForIDVerification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningForIDVerification" }),
         __metadata("design:type", Boolean)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningForIdVerification", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningForIDVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore" }),
         __metadata("design:type", Array)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningIdVerificationIsAHardOrSoftCreditScore", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningIDVerificationText" }),
         __metadata("design:type", Array)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningIdVerificationText", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningIDVerificationText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditScoringPartOfAccountOpeningText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditScoringPartOfAccountOpeningText" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "creditScoringPartOfAccountOpeningText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Currency" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Eligibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Eligibility" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "eligibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Feature", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Feature", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "feature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeesAndCharges", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "feesAndCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InternationalPaymentsSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InternationalPaymentsSupported" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "internationalPaymentsSupported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumMonthlyCharge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumMonthlyCharge" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "maximumMonthlyCharge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MobileWallet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MobileWallet" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "mobileWallet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Organisation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Organisation" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "organisation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Overdraft", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Overdraft", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "overdraft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverdraftOffered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverdraftOffered" }),
         __metadata("design:type", Boolean)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "overdraftOffered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductDescription" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductIdentifier" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductName" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductSegment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductSegment" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductType" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductURL" }),
         __metadata("design:type", Array)
-    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productUrl", void 0);
+    ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "productURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TsandCs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TsandCs" }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData.prototype, "tsandCs", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData };
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData;
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum["UseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions"] = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum["HttpsWwwOpenbankingOrgUkOpenLicence"] = "https://www.openbanking.org.uk/open-licence";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
-export var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum = {}));
+var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum;
 (function (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum) {
     GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum["HttpsWwwOpenbankingOrgUkTerms"] = "https://www.openbanking.org.uk/terms";
-})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
+})(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum || (exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum = {}));
 var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData, _super);
     function GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Agreement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Agreement" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "agreement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=License" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=License" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TermsOfUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TermsOfUse" }),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "termsOfUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalResults" }),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.prototype, "totalResults", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData;
 var GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson, _super);
     function GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData }),
         __metadata("design:type", Array)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData)
     ], GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson.prototype, "meta", void 0);
     return GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson = GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson;
 var GetPersonalCurrentAccountsRequest = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccountsRequest, _super);
     function GetPersonalCurrentAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccountsHeaders)
     ], GetPersonalCurrentAccountsRequest.prototype, "headers", void 0);
     return GetPersonalCurrentAccountsRequest;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccountsRequest = GetPersonalCurrentAccountsRequest;
 var GetPersonalCurrentAccountsResponse = /** @class */ (function (_super) {
     __extends(GetPersonalCurrentAccountsResponse, _super);
     function GetPersonalCurrentAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccounts400ErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "fourHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccounts408ErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "fourHundredAndEightErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccounts429ErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "fourHundredAndTwentyNineErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccounts500ErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "fiveHundredErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccounts503ErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "fiveHundredAndThreeErrorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPersonalCurrentAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPersonalCurrentAccountsErrorObject)
     ], GetPersonalCurrentAccountsResponse.prototype, "errorObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson)
-    ], GetPersonalCurrentAccountsResponse.prototype, "getPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPersonalCurrentAccountsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPersonalCurrentAccountsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson)
+    ], GetPersonalCurrentAccountsResponse.prototype, "getPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject", void 0);
     return GetPersonalCurrentAccountsResponse;
-}(SpeakeasyBase));
-export { GetPersonalCurrentAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPersonalCurrentAccountsResponse = GetPersonalCurrentAccountsResponse;

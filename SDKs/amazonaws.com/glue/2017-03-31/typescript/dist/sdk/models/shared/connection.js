@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionTypeEnum } from "./connectiontypeenum";
-import { PhysicalConnectionRequirements } from "./physicalconnectionrequirements";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Connection = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectiontypeenum_1 = require("./connectiontypeenum");
+var physicalconnectionrequirements_1 = require("./physicalconnectionrequirements");
 // Connection
 /**
  * Defines a connection to a data source.
@@ -35,41 +38,41 @@ var Connection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionProperties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionProperties" }),
+        __metadata("design:type", Object)
     ], Connection.prototype, "connectionProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionType" }),
         __metadata("design:type", String)
     ], Connection.prototype, "connectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], Connection.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Connection.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedBy" }),
         __metadata("design:type", String)
     ], Connection.prototype, "lastUpdatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTime" }),
         __metadata("design:type", Date)
     ], Connection.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MatchCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MatchCriteria" }),
         __metadata("design:type", Array)
     ], Connection.prototype, "matchCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Connection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PhysicalConnectionRequirements" }),
-        __metadata("design:type", PhysicalConnectionRequirements)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PhysicalConnectionRequirements" }),
+        __metadata("design:type", physicalconnectionrequirements_1.PhysicalConnectionRequirements)
     ], Connection.prototype, "physicalConnectionRequirements", void 0);
     return Connection;
-}(SpeakeasyBase));
-export { Connection };
+}(utils_1.SpeakeasyBase));
+exports.Connection = Connection;

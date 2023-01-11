@@ -22,7 +22,7 @@ export class RemovePasswordV1RequestBody extends SpeakeasyBase {
 
 export class RemovePasswordV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -52,5 +52,5 @@ export class RemovePasswordV1Response extends SpeakeasyBase {
   removePasswordV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  removePasswordV14XxApplicationProblemPlusJsonObject?: RemovePasswordV14XxApplicationProblemPlusJson;
+  removePasswordV14XXApplicationProblemPlusJsonObject?: RemovePasswordV14XxApplicationProblemPlusJson;
 }

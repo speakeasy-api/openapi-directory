@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchPolicy } from "./batchpolicy";
-import { SimulationJobSummary } from "./simulationjobsummary";
-import { FailedCreateSimulationJobRequest } from "./failedcreatesimulationjobrequest";
-import { SimulationJobBatchErrorCodeEnum } from "./simulationjobbatcherrorcodeenum";
-import { SimulationJobRequest } from "./simulationjobrequest";
-import { SimulationJobBatchStatusEnum } from "./simulationjobbatchstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeSimulationJobBatchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchpolicy_1 = require("./batchpolicy");
+var simulationjobsummary_1 = require("./simulationjobsummary");
+var failedcreatesimulationjobrequest_1 = require("./failedcreatesimulationjobrequest");
+var simulationjobbatcherrorcodeenum_1 = require("./simulationjobbatcherrorcodeenum");
+var simulationjobrequest_1 = require("./simulationjobrequest");
+var simulationjobbatchstatusenum_1 = require("./simulationjobbatchstatusenum");
 var DescribeSimulationJobBatchResponse = /** @class */ (function (_super) {
     __extends(DescribeSimulationJobBatchResponse, _super);
     function DescribeSimulationJobBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], DescribeSimulationJobBatchResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchPolicy" }),
-        __metadata("design:type", BatchPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchPolicy" }),
+        __metadata("design:type", batchpolicy_1.BatchPolicy)
     ], DescribeSimulationJobBatchResponse.prototype, "batchPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRequestToken" }),
         __metadata("design:type", String)
     ], DescribeSimulationJobBatchResponse.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], DescribeSimulationJobBatchResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdRequests", elemType: SimulationJobSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdRequests", elemType: simulationjobsummary_1.SimulationJobSummary }),
         __metadata("design:type", Array)
     ], DescribeSimulationJobBatchResponse.prototype, "createdRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedRequests", elemType: FailedCreateSimulationJobRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedRequests", elemType: failedcreatesimulationjobrequest_1.FailedCreateSimulationJobRequest }),
         __metadata("design:type", Array)
     ], DescribeSimulationJobBatchResponse.prototype, "failedRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCode" }),
         __metadata("design:type", String)
     ], DescribeSimulationJobBatchResponse.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], DescribeSimulationJobBatchResponse.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], DescribeSimulationJobBatchResponse.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingRequests", elemType: SimulationJobRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingRequests", elemType: simulationjobrequest_1.SimulationJobRequest }),
         __metadata("design:type", Array)
     ], DescribeSimulationJobBatchResponse.prototype, "pendingRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DescribeSimulationJobBatchResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], DescribeSimulationJobBatchResponse.prototype, "tags", void 0);
     return DescribeSimulationJobBatchResponse;
-}(SpeakeasyBase));
-export { DescribeSimulationJobBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeSimulationJobBatchResponse = DescribeSimulationJobBatchResponse;

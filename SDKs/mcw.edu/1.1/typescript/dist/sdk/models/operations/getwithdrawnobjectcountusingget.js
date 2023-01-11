@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWithdrawnObjectCountUsingGetResponse = exports.GetWithdrawnObjectCountUsingGetRequest = exports.GetWithdrawnObjectCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWithdrawnObjectCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetWithdrawnObjectCountUsingGetPathParams, _super);
     function GetWithdrawnObjectCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetWithdrawnObjectCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetWithdrawnObjectCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetWithdrawnObjectCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetWithdrawnObjectCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetWithdrawnObjectCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWithdrawnObjectCountUsingGetPathParams = GetWithdrawnObjectCountUsingGetPathParams;
 var GetWithdrawnObjectCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetWithdrawnObjectCountUsingGetRequest, _super);
     function GetWithdrawnObjectCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWithdrawnObjectCountUsingGetPathParams)
     ], GetWithdrawnObjectCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetWithdrawnObjectCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetWithdrawnObjectCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWithdrawnObjectCountUsingGetRequest = GetWithdrawnObjectCountUsingGetRequest;
 var GetWithdrawnObjectCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetWithdrawnObjectCountUsingGetResponse, _super);
     function GetWithdrawnObjectCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetWithdrawnObjectCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWithdrawnObjectCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWithdrawnObjectCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetWithdrawnObjectCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetWithdrawnObjectCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWithdrawnObjectCountUsingGetResponse = GetWithdrawnObjectCountUsingGetResponse;

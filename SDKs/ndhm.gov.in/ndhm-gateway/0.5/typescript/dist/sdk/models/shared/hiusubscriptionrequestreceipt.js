@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuSubscriptionRequestReceipt = exports.HiuSubscriptionRequestReceiptSubscriptionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 var HiuSubscriptionRequestReceiptSubscriptionRequest = /** @class */ (function (_super) {
     __extends(HiuSubscriptionRequestReceiptSubscriptionRequest, _super);
     function HiuSubscriptionRequestReceiptSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HiuSubscriptionRequestReceiptSubscriptionRequest.prototype, "id", void 0);
     return HiuSubscriptionRequestReceiptSubscriptionRequest;
-}(SpeakeasyBase));
-export { HiuSubscriptionRequestReceiptSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionRequestReceiptSubscriptionRequest = HiuSubscriptionRequestReceiptSubscriptionRequest;
 var HiuSubscriptionRequestReceipt = /** @class */ (function (_super) {
     __extends(HiuSubscriptionRequestReceipt, _super);
     function HiuSubscriptionRequestReceipt() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], HiuSubscriptionRequestReceipt.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuSubscriptionRequestReceipt.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], HiuSubscriptionRequestReceipt.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionRequest" }),
         __metadata("design:type", HiuSubscriptionRequestReceiptSubscriptionRequest)
     ], HiuSubscriptionRequestReceipt.prototype, "subscriptionRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuSubscriptionRequestReceipt.prototype, "timestamp", void 0);
     return HiuSubscriptionRequestReceipt;
-}(SpeakeasyBase));
-export { HiuSubscriptionRequestReceipt };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionRequestReceipt = HiuSubscriptionRequestReceipt;

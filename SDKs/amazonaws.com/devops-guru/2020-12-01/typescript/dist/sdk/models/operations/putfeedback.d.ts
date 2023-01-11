@@ -28,7 +28,7 @@ export declare class PutFeedbackResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
     internalServerException?: any;
-    putFeedbackResponse?: Map<string, any>;
+    putFeedbackResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

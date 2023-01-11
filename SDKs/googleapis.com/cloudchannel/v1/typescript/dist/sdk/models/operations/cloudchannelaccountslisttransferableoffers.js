@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,138 +14,163 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudchannelAccountsListTransferableOffersResponse = exports.CloudchannelAccountsListTransferableOffersRequest = exports.CloudchannelAccountsListTransferableOffersSecurity = exports.CloudchannelAccountsListTransferableOffersQueryParams = exports.CloudchannelAccountsListTransferableOffersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudchannelAccountsListTransferableOffersPathParams = /** @class */ (function (_super) {
     __extends(CloudchannelAccountsListTransferableOffersPathParams, _super);
     function CloudchannelAccountsListTransferableOffersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersPathParams.prototype, "parent", void 0);
     return CloudchannelAccountsListTransferableOffersPathParams;
-}(SpeakeasyBase));
-export { CloudchannelAccountsListTransferableOffersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudchannelAccountsListTransferableOffersPathParams = CloudchannelAccountsListTransferableOffersPathParams;
 var CloudchannelAccountsListTransferableOffersQueryParams = /** @class */ (function (_super) {
     __extends(CloudchannelAccountsListTransferableOffersQueryParams, _super);
     function CloudchannelAccountsListTransferableOffersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersQueryParams.prototype, "uploadProtocol", void 0);
     return CloudchannelAccountsListTransferableOffersQueryParams;
-}(SpeakeasyBase));
-export { CloudchannelAccountsListTransferableOffersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudchannelAccountsListTransferableOffersQueryParams = CloudchannelAccountsListTransferableOffersQueryParams;
 var CloudchannelAccountsListTransferableOffersSecurity = /** @class */ (function (_super) {
     __extends(CloudchannelAccountsListTransferableOffersSecurity, _super);
     function CloudchannelAccountsListTransferableOffersSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudchannelAccountsListTransferableOffersSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudchannelAccountsListTransferableOffersSecurity.prototype, "oauth2c", void 0);
     return CloudchannelAccountsListTransferableOffersSecurity;
-}(SpeakeasyBase));
-export { CloudchannelAccountsListTransferableOffersSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudchannelAccountsListTransferableOffersSecurity = CloudchannelAccountsListTransferableOffersSecurity;
 var CloudchannelAccountsListTransferableOffersRequest = /** @class */ (function (_super) {
     __extends(CloudchannelAccountsListTransferableOffersRequest, _super);
     function CloudchannelAccountsListTransferableOffersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudchannelAccountsListTransferableOffersPathParams)
     ], CloudchannelAccountsListTransferableOffersRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudchannelAccountsListTransferableOffersQueryParams)
     ], CloudchannelAccountsListTransferableOffersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.GoogleCloudChannelV1ListTransferableOffersRequest)
     ], CloudchannelAccountsListTransferableOffersRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudchannelAccountsListTransferableOffersSecurity)
     ], CloudchannelAccountsListTransferableOffersRequest.prototype, "security", void 0);
     return CloudchannelAccountsListTransferableOffersRequest;
-}(SpeakeasyBase));
-export { CloudchannelAccountsListTransferableOffersRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudchannelAccountsListTransferableOffersRequest = CloudchannelAccountsListTransferableOffersRequest;
 var CloudchannelAccountsListTransferableOffersResponse = /** @class */ (function (_super) {
     __extends(CloudchannelAccountsListTransferableOffersResponse, _super);
     function CloudchannelAccountsListTransferableOffersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudchannelAccountsListTransferableOffersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GoogleCloudChannelV1ListTransferableOffersResponse)
     ], CloudchannelAccountsListTransferableOffersResponse.prototype, "googleCloudChannelV1ListTransferableOffersResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudchannelAccountsListTransferableOffersResponse.prototype, "statusCode", void 0);
     return CloudchannelAccountsListTransferableOffersResponse;
-}(SpeakeasyBase));
-export { CloudchannelAccountsListTransferableOffersResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudchannelAccountsListTransferableOffersResponse = CloudchannelAccountsListTransferableOffersResponse;

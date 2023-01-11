@@ -1,4 +1,7 @@
-export var TargetHealthReasonEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetHealthReasonEnumEnum = void 0;
+var TargetHealthReasonEnumEnum;
 (function (TargetHealthReasonEnumEnum) {
     TargetHealthReasonEnumEnum["ElbRegistrationInProgress"] = "Elb.RegistrationInProgress";
     TargetHealthReasonEnumEnum["ElbInitialHealthChecking"] = "Elb.InitialHealthChecking";
@@ -12,4 +15,4 @@ export var TargetHealthReasonEnumEnum;
     TargetHealthReasonEnumEnum["TargetIpUnusable"] = "Target.IpUnusable";
     TargetHealthReasonEnumEnum["TargetHealthCheckDisabled"] = "Target.HealthCheckDisabled";
     TargetHealthReasonEnumEnum["ElbInternalError"] = "Elb.InternalError";
-})(TargetHealthReasonEnumEnum || (TargetHealthReasonEnumEnum = {}));
+})(TargetHealthReasonEnumEnum = exports.TargetHealthReasonEnumEnum || (exports.TargetHealthReasonEnumEnum = {}));

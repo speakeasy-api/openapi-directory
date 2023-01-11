@@ -58,7 +58,7 @@ export class StopStreamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopStreamResponse?: Map<string, any>;
+  stopStreamResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   streamUnavailable?: any;

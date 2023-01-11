@@ -50,13 +50,13 @@ export class GetStatisticsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getStatisticsId400ApplicationJsonObject?: GetStatisticsId400ApplicationJson;
+  getStatisticsId400ApplicationJSONObject?: GetStatisticsId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatisticsId401ApplicationJsonObject?: GetStatisticsId401ApplicationJson;
+  getStatisticsId401ApplicationJSONObject?: GetStatisticsId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getStatisticsId500ApplicationJsonObject?: GetStatisticsId500ApplicationJson;
+  getStatisticsId500ApplicationJSONObject?: GetStatisticsId500ApplicationJson;
 
   @SpeakeasyMetadata()
   getStatisticsResponse?: shared.GetStatisticsResponse;

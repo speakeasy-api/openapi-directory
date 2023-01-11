@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveTagsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveTagsResponse = exports.GetRemoveTagsRequest = exports.GetRemoveTagsHeaders = exports.GetRemoveTagsQueryParams = exports.GetRemoveTagsVersionEnum = exports.GetRemoveTagsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveTagsActionEnum;
 (function (GetRemoveTagsActionEnum) {
     GetRemoveTagsActionEnum["RemoveTags"] = "RemoveTags";
-})(GetRemoveTagsActionEnum || (GetRemoveTagsActionEnum = {}));
-export var GetRemoveTagsVersionEnum;
+})(GetRemoveTagsActionEnum = exports.GetRemoveTagsActionEnum || (exports.GetRemoveTagsActionEnum = {}));
+var GetRemoveTagsVersionEnum;
 (function (GetRemoveTagsVersionEnum) {
     GetRemoveTagsVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(GetRemoveTagsVersionEnum || (GetRemoveTagsVersionEnum = {}));
+})(GetRemoveTagsVersionEnum = exports.GetRemoveTagsVersionEnum || (exports.GetRemoveTagsVersionEnum = {}));
 var GetRemoveTagsQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveTagsQueryParams, _super);
     function GetRemoveTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveTagsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ResourceArns" }),
         __metadata("design:type", Array)
     ], GetRemoveTagsQueryParams.prototype, "resourceArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TagKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TagKeys" }),
         __metadata("design:type", Array)
     ], GetRemoveTagsQueryParams.prototype, "tagKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveTagsQueryParams.prototype, "version", void 0);
     return GetRemoveTagsQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsQueryParams = GetRemoveTagsQueryParams;
 var GetRemoveTagsHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveTagsHeaders, _super);
     function GetRemoveTagsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveTagsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveTagsHeaders;
-}(SpeakeasyBase));
-export { GetRemoveTagsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsHeaders = GetRemoveTagsHeaders;
 var GetRemoveTagsRequest = /** @class */ (function (_super) {
     __extends(GetRemoveTagsRequest, _super);
     function GetRemoveTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveTagsQueryParams)
     ], GetRemoveTagsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveTagsHeaders)
     ], GetRemoveTagsRequest.prototype, "headers", void 0);
     return GetRemoveTagsRequest;
-}(SpeakeasyBase));
-export { GetRemoveTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsRequest = GetRemoveTagsRequest;
 var GetRemoveTagsResponse = /** @class */ (function (_super) {
     __extends(GetRemoveTagsResponse, _super);
     function GetRemoveTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveTagsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveTagsResponse.prototype, "statusCode", void 0);
     return GetRemoveTagsResponse;
-}(SpeakeasyBase));
-export { GetRemoveTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveTagsResponse = GetRemoveTagsResponse;

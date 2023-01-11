@@ -28,5 +28,5 @@ export class ChecksRerequestSuiteResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checksRerequestSuite201ApplicationJsonObject?: Map<string, any>;
+  checksRerequestSuite201ApplicationJSONObject?: Record<string, any>;
 }

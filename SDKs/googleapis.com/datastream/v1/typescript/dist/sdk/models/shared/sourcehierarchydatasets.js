@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatasetTemplate } from "./datasettemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceHierarchyDatasets = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasettemplate_1 = require("./datasettemplate");
 // SourceHierarchyDatasets
 /**
  * Destination datasets are created so that hierarchy of the destination data objects matches the source hierarchy.
@@ -34,9 +37,9 @@ var SourceHierarchyDatasets = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetTemplate" }),
-        __metadata("design:type", DatasetTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetTemplate" }),
+        __metadata("design:type", datasettemplate_1.DatasetTemplate)
     ], SourceHierarchyDatasets.prototype, "datasetTemplate", void 0);
     return SourceHierarchyDatasets;
-}(SpeakeasyBase));
-export { SourceHierarchyDatasets };
+}(utils_1.SpeakeasyBase));
+exports.SourceHierarchyDatasets = SourceHierarchyDatasets;

@@ -19,7 +19,7 @@ export declare class DeleteLoggingConfigurationRequest extends SpeakeasyBase {
 }
 export declare class DeleteLoggingConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteLoggingConfigurationResponse?: Map<string, any>;
+    deleteLoggingConfigurationResponse?: Record<string, any>;
     statusCode: number;
     wafInternalErrorException?: any;
     wafNonexistentItemException?: any;

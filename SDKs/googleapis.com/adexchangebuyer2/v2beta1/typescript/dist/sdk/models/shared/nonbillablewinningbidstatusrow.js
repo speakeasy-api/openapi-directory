@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricValue } from "./metricvalue";
-import { RowDimensions } from "./rowdimensions";
-export var NonBillableWinningBidStatusRowStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NonBillableWinningBidStatusRow = exports.NonBillableWinningBidStatusRowStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricvalue_1 = require("./metricvalue");
+var rowdimensions_1 = require("./rowdimensions");
+var NonBillableWinningBidStatusRowStatusEnum;
 (function (NonBillableWinningBidStatusRowStatusEnum) {
     NonBillableWinningBidStatusRowStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     NonBillableWinningBidStatusRowStatusEnum["AdNotRendered"] = "AD_NOT_RENDERED";
     NonBillableWinningBidStatusRowStatusEnum["InvalidImpression"] = "INVALID_IMPRESSION";
     NonBillableWinningBidStatusRowStatusEnum["FatalVastError"] = "FATAL_VAST_ERROR";
     NonBillableWinningBidStatusRowStatusEnum["LostInMediation"] = "LOST_IN_MEDIATION";
-})(NonBillableWinningBidStatusRowStatusEnum || (NonBillableWinningBidStatusRowStatusEnum = {}));
+})(NonBillableWinningBidStatusRowStatusEnum = exports.NonBillableWinningBidStatusRowStatusEnum || (exports.NonBillableWinningBidStatusRowStatusEnum = {}));
 // NonBillableWinningBidStatusRow
 /**
  * The number of winning bids with the specified dimension values for which the buyer was not billed, as described by the specified status.
@@ -43,17 +46,17 @@ var NonBillableWinningBidStatusRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidCount" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidCount" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], NonBillableWinningBidStatusRow.prototype, "bidCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowDimensions" }),
-        __metadata("design:type", RowDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowDimensions" }),
+        __metadata("design:type", rowdimensions_1.RowDimensions)
     ], NonBillableWinningBidStatusRow.prototype, "rowDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], NonBillableWinningBidStatusRow.prototype, "status", void 0);
     return NonBillableWinningBidStatusRow;
-}(SpeakeasyBase));
-export { NonBillableWinningBidStatusRow };
+}(utils_1.SpeakeasyBase));
+exports.NonBillableWinningBidStatusRow = NonBillableWinningBidStatusRow;

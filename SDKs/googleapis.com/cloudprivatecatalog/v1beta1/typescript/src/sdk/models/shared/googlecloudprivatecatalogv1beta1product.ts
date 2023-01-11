@@ -15,7 +15,7 @@ export class GoogleCloudPrivatecatalogV1beta1Product extends SpeakeasyBase {
   createTime?: string;
 
   @SpeakeasyMetadata()
-  displayMetadata?: Map<string, any>;
+  displayMetadata?: Record<string, any>;
 
   @SpeakeasyMetadata()
   iconUri?: string;

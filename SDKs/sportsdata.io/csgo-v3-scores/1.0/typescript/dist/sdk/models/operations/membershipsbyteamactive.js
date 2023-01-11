@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipsByTeamActiveFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsByTeamActiveResponse = exports.MembershipsByTeamActiveRequest = exports.MembershipsByTeamActivePathParams = exports.MembershipsByTeamActiveFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipsByTeamActiveFormatEnum;
 (function (MembershipsByTeamActiveFormatEnum) {
     MembershipsByTeamActiveFormatEnum["Xml"] = "xml";
     MembershipsByTeamActiveFormatEnum["Json"] = "json";
-})(MembershipsByTeamActiveFormatEnum || (MembershipsByTeamActiveFormatEnum = {}));
+})(MembershipsByTeamActiveFormatEnum = exports.MembershipsByTeamActiveFormatEnum || (exports.MembershipsByTeamActiveFormatEnum = {}));
 var MembershipsByTeamActivePathParams = /** @class */ (function (_super) {
     __extends(MembershipsByTeamActivePathParams, _super);
     function MembershipsByTeamActivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], MembershipsByTeamActivePathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=teamid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=teamid" }),
         __metadata("design:type", String)
     ], MembershipsByTeamActivePathParams.prototype, "teamid", void 0);
     return MembershipsByTeamActivePathParams;
-}(SpeakeasyBase));
-export { MembershipsByTeamActivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamActivePathParams = MembershipsByTeamActivePathParams;
 var MembershipsByTeamActiveRequest = /** @class */ (function (_super) {
     __extends(MembershipsByTeamActiveRequest, _super);
     function MembershipsByTeamActiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MembershipsByTeamActivePathParams)
     ], MembershipsByTeamActiveRequest.prototype, "pathParams", void 0);
     return MembershipsByTeamActiveRequest;
-}(SpeakeasyBase));
-export { MembershipsByTeamActiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamActiveRequest = MembershipsByTeamActiveRequest;
 var MembershipsByTeamActiveResponse = /** @class */ (function (_super) {
     __extends(MembershipsByTeamActiveResponse, _super);
     function MembershipsByTeamActiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MembershipsByTeamActiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MembershipsByTeamActiveResponse.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MembershipsByTeamActiveResponse.prototype, "statusCode", void 0);
     return MembershipsByTeamActiveResponse;
-}(SpeakeasyBase));
-export { MembershipsByTeamActiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamActiveResponse = MembershipsByTeamActiveResponse;

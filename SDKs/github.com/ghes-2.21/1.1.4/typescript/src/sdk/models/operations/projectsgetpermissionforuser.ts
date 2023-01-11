@@ -38,7 +38,7 @@ export class ProjectsGetPermissionForUserResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsGetPermissionForUser415ApplicationJsonObject?: ProjectsGetPermissionForUser415ApplicationJson;
+  projectsGetPermissionForUser415ApplicationJSONObject?: ProjectsGetPermissionForUser415ApplicationJson;
 
   @SpeakeasyMetadata()
   repositoryCollaboratorPermission?: shared.RepositoryCollaboratorPermission;

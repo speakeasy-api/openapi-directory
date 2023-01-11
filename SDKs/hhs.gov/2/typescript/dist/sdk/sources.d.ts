@@ -9,6 +9,12 @@ export declare class Sources {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
+     * getResourcesSourcesJson - Get Sources
+     *
+     * Source Listings
+    **/
+    getResourcesSourcesJson(req: operations.GetResourcesSourcesJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesJsonResponse>;
+    /**
      * getResourcesSourcesIdJson - Get Source by ID
      *
      * Information about a specific source.
@@ -20,10 +26,4 @@ export declare class Sources {
      * MediaItem
     **/
     getResourcesSourcesIdSyndicateFormat(req: operations.GetResourcesSourcesIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesIdSyndicateFormatResponse>;
-    /**
-     * getResourcesSourcesJson - Get Sources
-     *
-     * Source Listings
-    **/
-    getResourcesSourcesJson(req: operations.GetResourcesSourcesJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesSourcesJsonResponse>;
 }

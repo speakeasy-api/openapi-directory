@@ -21,6 +21,6 @@ export declare class ComputeNodeDisableSchedulingRequest extends SpeakeasyBase {
 export declare class ComputeNodeDisableSchedulingResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

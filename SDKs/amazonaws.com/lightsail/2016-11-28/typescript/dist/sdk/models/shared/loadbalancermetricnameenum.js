@@ -1,4 +1,7 @@
-export var LoadBalancerMetricNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerMetricNameEnum = void 0;
+var LoadBalancerMetricNameEnum;
 (function (LoadBalancerMetricNameEnum) {
     LoadBalancerMetricNameEnum["ClientTlsNegotiationErrorCount"] = "ClientTLSNegotiationErrorCount";
     LoadBalancerMetricNameEnum["HealthyHostCount"] = "HealthyHostCount";
@@ -12,4 +15,4 @@ export var LoadBalancerMetricNameEnum;
     LoadBalancerMetricNameEnum["InstanceResponseTime"] = "InstanceResponseTime";
     LoadBalancerMetricNameEnum["RejectedConnectionCount"] = "RejectedConnectionCount";
     LoadBalancerMetricNameEnum["RequestCount"] = "RequestCount";
-})(LoadBalancerMetricNameEnum || (LoadBalancerMetricNameEnum = {}));
+})(LoadBalancerMetricNameEnum = exports.LoadBalancerMetricNameEnum || (exports.LoadBalancerMetricNameEnum = {}));

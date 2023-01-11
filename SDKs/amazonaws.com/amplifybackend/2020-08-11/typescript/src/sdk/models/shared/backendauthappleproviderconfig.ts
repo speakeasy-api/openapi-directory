@@ -8,14 +8,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class BackendAuthAppleProviderConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientId" })
-  clientId?: string;
+  clientId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=KeyId" })
-  keyId?: string;
+  keyId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=PrivateKey" })
-  privateKey?: string;
+  privateKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TeamId" })
-  teamId?: string;
+  teamId?: Record<string, any>;
 }

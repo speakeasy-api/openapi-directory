@@ -10,5 +10,5 @@ export class GetOpenApiSpecResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOpenApiSpec200TextPlainBinaryString?: Uint8Array;
+  getOpenApiSpec200TextPlainBinaryString?: string;
 }

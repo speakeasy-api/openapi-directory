@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteApiKeysIdResponse = exports.DeleteApiKeysIdRequest = exports.DeleteApiKeysIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteApiKeysIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteApiKeysIdPathParams, _super);
     function DeleteApiKeysIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteApiKeysIdPathParams.prototype, "id", void 0);
     return DeleteApiKeysIdPathParams;
-}(SpeakeasyBase));
-export { DeleteApiKeysIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApiKeysIdPathParams = DeleteApiKeysIdPathParams;
 var DeleteApiKeysIdRequest = /** @class */ (function (_super) {
     __extends(DeleteApiKeysIdRequest, _super);
     function DeleteApiKeysIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteApiKeysIdPathParams)
     ], DeleteApiKeysIdRequest.prototype, "pathParams", void 0);
     return DeleteApiKeysIdRequest;
-}(SpeakeasyBase));
-export { DeleteApiKeysIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApiKeysIdRequest = DeleteApiKeysIdRequest;
 var DeleteApiKeysIdResponse = /** @class */ (function (_super) {
     __extends(DeleteApiKeysIdResponse, _super);
     function DeleteApiKeysIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteApiKeysIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteApiKeysIdResponse.prototype, "statusCode", void 0);
     return DeleteApiKeysIdResponse;
-}(SpeakeasyBase));
-export { DeleteApiKeysIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApiKeysIdResponse = DeleteApiKeysIdResponse;

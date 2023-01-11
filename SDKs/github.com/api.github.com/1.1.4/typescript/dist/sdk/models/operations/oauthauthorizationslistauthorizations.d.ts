@@ -10,7 +10,7 @@ export declare class OauthAuthorizationsListAuthorizationsRequest extends Speake
 }
 export declare class OauthAuthorizationsListAuthorizationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     authorizations?: shared.Authorization[];
     basicError?: shared.BasicError;

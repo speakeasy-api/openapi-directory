@@ -1,4 +1,7 @@
-export var FailureTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailureTypeEnum = void 0;
+var FailureTypeEnum;
 (function (FailureTypeEnum) {
     FailureTypeEnum["UpdateCancelled"] = "UpdateCancelled";
     FailureTypeEnum["CancellationFailed"] = "CancellationFailed";
@@ -7,4 +10,4 @@ export var FailureTypeEnum;
     FailureTypeEnum["InternalFailure"] = "InternalFailure";
     FailureTypeEnum["InvalidEnvironmentState"] = "InvalidEnvironmentState";
     FailureTypeEnum["PermissionsError"] = "PermissionsError";
-})(FailureTypeEnum || (FailureTypeEnum = {}));
+})(FailureTypeEnum = exports.FailureTypeEnum || (exports.FailureTypeEnum = {}));

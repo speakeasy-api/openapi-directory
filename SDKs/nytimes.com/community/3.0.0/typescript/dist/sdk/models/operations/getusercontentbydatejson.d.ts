@@ -11,29 +11,29 @@ export declare class GetUserContentByDateJson200ApplicationJsonDebug extends Spe
 }
 export declare class GetUserContentByDateJson200ApplicationJsonResultsComments extends SpeakeasyBase {
     approveDate?: string;
-    assetId?: number;
-    assetUrl?: string;
+    assetID?: number;
+    assetURL?: string;
     commentBody?: string;
-    commentId?: number;
+    commentID?: number;
     commentSequence?: number;
     commentTitle?: string;
     commentType?: string;
     createDate?: string;
     editorsSelection?: number;
     lft?: number;
-    parentId?: any;
+    parentID?: any;
     recommendationCount?: number;
-    replies?: Map<string, any>[];
+    replies?: Record<string, any>[];
     replyCount?: number;
     rgt?: number;
     status?: string;
-    statusId?: number;
+    statusID?: number;
     updateDate?: string;
     userDisplayName?: string;
-    userId?: number;
+    userID?: number;
     userLocation?: string;
     userTitle?: string;
-    userUrl?: number;
+    userURL?: number;
 }
 export declare class GetUserContentByDateJson200ApplicationJsonResults extends SpeakeasyBase {
     apiTimestamp?: string;
@@ -53,6 +53,6 @@ export declare class GetUserContentByDateJsonRequest extends SpeakeasyBase {
 }
 export declare class GetUserContentByDateJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentByDateJson200ApplicationJsonObject?: GetUserContentByDateJson200ApplicationJson;
+    getUserContentByDateJSON200ApplicationJSONObject?: GetUserContentByDateJson200ApplicationJson;
     statusCode: number;
 }

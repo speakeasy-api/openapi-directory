@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedClientInput } from "./allowedclient";
 import { AllowedClient } from "./allowedclient";
+import { AllowedClientInput } from "./allowedclient";
 
 
 export enum NfsShareStateEnum {
@@ -18,28 +18,6 @@ export enum NfsShareStorageTypeEnum {
 }
 
 
-// NfsShareInput
-/** 
- * An NFS share.
-**/
-export class NfsShareInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=allowedClients", elemType: AllowedClientInput })
-  allowedClients?: AllowedClientInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=requestedSizeGib" })
-  requestedSizeGib?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=storageType" })
-  storageType?: NfsShareStorageTypeEnum;
-}
-
-
 // NfsShare
 /** 
  * An NFS share.
@@ -52,7 +30,7 @@ export class NfsShare extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -71,4 +49,26 @@ export class NfsShare extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=volume" })
   volume?: string;
+}
+
+
+// NfsShareInput
+/** 
+ * An NFS share.
+**/
+export class NfsShareInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=allowedClients", elemType: AllowedClientInput })
+  allowedClients?: AllowedClientInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=requestedSizeGib" })
+  requestedSizeGib?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=storageType" })
+  storageType?: NfsShareStorageTypeEnum;
 }

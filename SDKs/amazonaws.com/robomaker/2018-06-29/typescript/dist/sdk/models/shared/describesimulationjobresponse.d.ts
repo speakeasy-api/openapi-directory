@@ -30,6 +30,6 @@ export declare class DescribeSimulationJobResponse extends SpeakeasyBase {
     simulationApplications?: SimulationApplicationConfig[];
     simulationTimeMillis?: number;
     status?: SimulationJobStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     vpcConfig?: VpcConfigResponse;
 }

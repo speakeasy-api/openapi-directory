@@ -11,7 +11,7 @@ export declare class StartTestHeaders extends SpeakeasyBase {
 }
 export declare class StartTestRequestBody extends SpeakeasyBase {
     sourceServerIDs: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartTestRequest extends SpeakeasyBase {
     headers: StartTestHeaders;

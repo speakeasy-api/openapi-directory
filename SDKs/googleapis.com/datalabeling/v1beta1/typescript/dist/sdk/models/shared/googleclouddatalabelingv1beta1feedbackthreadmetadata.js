@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata = exports.GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum;
 (function (GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum) {
     GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum["FeedbackThreadStatusUnspecified"] = "FEEDBACK_THREAD_STATUS_UNSPECIFIED";
     GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum["New"] = "NEW";
     GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum["Replied"] = "REPLIED";
-})(GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum || (GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum = {}));
+})(GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum = exports.GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum || (exports.GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum = {}));
 var GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata = /** @class */ (function (_super) {
     __extends(GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata, _super);
     function GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata.prototype, "thumbnail", void 0);
     return GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata = GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata;

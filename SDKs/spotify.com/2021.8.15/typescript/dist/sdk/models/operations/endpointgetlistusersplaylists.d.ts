@@ -35,5 +35,5 @@ export declare class EndpointGetListUsersPlaylistsResponse extends SpeakeasyBase
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetListUsersPlaylists200ApplicationJsonObject?: EndpointGetListUsersPlaylists200ApplicationJson;
+    endpointGetListUsersPlaylists200ApplicationJSONObject?: EndpointGetListUsersPlaylists200ApplicationJson;
 }

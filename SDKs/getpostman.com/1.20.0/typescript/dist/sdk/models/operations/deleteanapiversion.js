@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAnApiVersionResponse = exports.DeleteAnApiVersionRequest = exports.DeleteAnApiVersion200ApplicationJson = exports.DeleteAnApiVersion200ApplicationJsonVersion = exports.DeleteAnApiVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAnApiVersionPathParams = /** @class */ (function (_super) {
     __extends(DeleteAnApiVersionPathParams, _super);
     function DeleteAnApiVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], DeleteAnApiVersionPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], DeleteAnApiVersionPathParams.prototype, "apiVersionId", void 0);
     return DeleteAnApiVersionPathParams;
-}(SpeakeasyBase));
-export { DeleteAnApiVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiVersionPathParams = DeleteAnApiVersionPathParams;
 var DeleteAnApiVersion200ApplicationJsonVersion = /** @class */ (function (_super) {
     __extends(DeleteAnApiVersion200ApplicationJsonVersion, _super);
     function DeleteAnApiVersion200ApplicationJsonVersion() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeleteAnApiVersion200ApplicationJsonVersion.prototype, "id", void 0);
     return DeleteAnApiVersion200ApplicationJsonVersion;
-}(SpeakeasyBase));
-export { DeleteAnApiVersion200ApplicationJsonVersion };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiVersion200ApplicationJsonVersion = DeleteAnApiVersion200ApplicationJsonVersion;
 var DeleteAnApiVersion200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteAnApiVersion200ApplicationJson, _super);
     function DeleteAnApiVersion200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", DeleteAnApiVersion200ApplicationJsonVersion)
     ], DeleteAnApiVersion200ApplicationJson.prototype, "version", void 0);
     return DeleteAnApiVersion200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteAnApiVersion200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiVersion200ApplicationJson = DeleteAnApiVersion200ApplicationJson;
 var DeleteAnApiVersionRequest = /** @class */ (function (_super) {
     __extends(DeleteAnApiVersionRequest, _super);
     function DeleteAnApiVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAnApiVersionPathParams)
     ], DeleteAnApiVersionRequest.prototype, "pathParams", void 0);
     return DeleteAnApiVersionRequest;
-}(SpeakeasyBase));
-export { DeleteAnApiVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiVersionRequest = DeleteAnApiVersionRequest;
 var DeleteAnApiVersionResponse = /** @class */ (function (_super) {
     __extends(DeleteAnApiVersionResponse, _super);
     function DeleteAnApiVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAnApiVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAnApiVersionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAnApiVersion200ApplicationJson)
-    ], DeleteAnApiVersionResponse.prototype, "deleteAnApiVersion200ApplicationJsonObject", void 0);
+    ], DeleteAnApiVersionResponse.prototype, "deleteAnApiVersion200ApplicationJSONObject", void 0);
     return DeleteAnApiVersionResponse;
-}(SpeakeasyBase));
-export { DeleteAnApiVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnApiVersionResponse = DeleteAnApiVersionResponse;

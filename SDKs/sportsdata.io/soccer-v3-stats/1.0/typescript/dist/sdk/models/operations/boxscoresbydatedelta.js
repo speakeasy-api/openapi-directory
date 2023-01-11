@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BoxScoresByDateDeltaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoxScoresByDateDeltaResponse = exports.BoxScoresByDateDeltaRequest = exports.BoxScoresByDateDeltaPathParams = exports.BoxScoresByDateDeltaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BoxScoresByDateDeltaFormatEnum;
 (function (BoxScoresByDateDeltaFormatEnum) {
     BoxScoresByDateDeltaFormatEnum["Xml"] = "xml";
     BoxScoresByDateDeltaFormatEnum["Json"] = "json";
-})(BoxScoresByDateDeltaFormatEnum || (BoxScoresByDateDeltaFormatEnum = {}));
+})(BoxScoresByDateDeltaFormatEnum = exports.BoxScoresByDateDeltaFormatEnum || (exports.BoxScoresByDateDeltaFormatEnum = {}));
 var BoxScoresByDateDeltaPathParams = /** @class */ (function (_super) {
     __extends(BoxScoresByDateDeltaPathParams, _super);
     function BoxScoresByDateDeltaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], BoxScoresByDateDeltaPathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BoxScoresByDateDeltaPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], BoxScoresByDateDeltaPathParams.prototype, "minutes", void 0);
     return BoxScoresByDateDeltaPathParams;
-}(SpeakeasyBase));
-export { BoxScoresByDateDeltaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresByDateDeltaPathParams = BoxScoresByDateDeltaPathParams;
 var BoxScoresByDateDeltaRequest = /** @class */ (function (_super) {
     __extends(BoxScoresByDateDeltaRequest, _super);
     function BoxScoresByDateDeltaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BoxScoresByDateDeltaPathParams)
     ], BoxScoresByDateDeltaRequest.prototype, "pathParams", void 0);
     return BoxScoresByDateDeltaRequest;
-}(SpeakeasyBase));
-export { BoxScoresByDateDeltaRequest };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresByDateDeltaRequest = BoxScoresByDateDeltaRequest;
 var BoxScoresByDateDeltaResponse = /** @class */ (function (_super) {
     __extends(BoxScoresByDateDeltaResponse, _super);
     function BoxScoresByDateDeltaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BoxScoresByDateDeltaResponse.prototype, "boxScores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BoxScoresByDateDeltaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BoxScoresByDateDeltaResponse.prototype, "statusCode", void 0);
     return BoxScoresByDateDeltaResponse;
-}(SpeakeasyBase));
-export { BoxScoresByDateDeltaResponse };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresByDateDeltaResponse = BoxScoresByDateDeltaResponse;

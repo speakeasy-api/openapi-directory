@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Categories } from "./categories";
-import { Transcript } from "./transcript";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeContactAnalysisSegment = void 0;
+var utils_1 = require("../../../internal/utils");
+var categories_1 = require("./categories");
+var transcript_1 = require("./transcript");
 // RealtimeContactAnalysisSegment
 /**
  * An analyzed segment for a real-time analysis session.
@@ -35,13 +38,13 @@ var RealtimeContactAnalysisSegment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Categories" }),
-        __metadata("design:type", Categories)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Categories" }),
+        __metadata("design:type", categories_1.Categories)
     ], RealtimeContactAnalysisSegment.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Transcript" }),
-        __metadata("design:type", Transcript)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Transcript" }),
+        __metadata("design:type", transcript_1.Transcript)
     ], RealtimeContactAnalysisSegment.prototype, "transcript", void 0);
     return RealtimeContactAnalysisSegment;
-}(SpeakeasyBase));
-export { RealtimeContactAnalysisSegment };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeContactAnalysisSegment = RealtimeContactAnalysisSegment;

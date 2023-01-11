@@ -6,7 +6,7 @@ export declare class CalculateMatrixRequest extends SpeakeasyBase {
 export declare class CalculateMatrixResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     jobId?: shared.JobId;
     statusCode: number;
 }

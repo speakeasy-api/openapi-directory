@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AutoRenewingBasePlanTypeProrationModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoRenewingBasePlanType = exports.AutoRenewingBasePlanTypeResubscribeStateEnum = exports.AutoRenewingBasePlanTypeProrationModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AutoRenewingBasePlanTypeProrationModeEnum;
 (function (AutoRenewingBasePlanTypeProrationModeEnum) {
     AutoRenewingBasePlanTypeProrationModeEnum["SubscriptionProrationModeUnspecified"] = "SUBSCRIPTION_PRORATION_MODE_UNSPECIFIED";
     AutoRenewingBasePlanTypeProrationModeEnum["SubscriptionProrationModeChargeOnNextBillingDate"] = "SUBSCRIPTION_PRORATION_MODE_CHARGE_ON_NEXT_BILLING_DATE";
     AutoRenewingBasePlanTypeProrationModeEnum["SubscriptionProrationModeChargeFullPriceImmediately"] = "SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY";
-})(AutoRenewingBasePlanTypeProrationModeEnum || (AutoRenewingBasePlanTypeProrationModeEnum = {}));
-export var AutoRenewingBasePlanTypeResubscribeStateEnum;
+})(AutoRenewingBasePlanTypeProrationModeEnum = exports.AutoRenewingBasePlanTypeProrationModeEnum || (exports.AutoRenewingBasePlanTypeProrationModeEnum = {}));
+var AutoRenewingBasePlanTypeResubscribeStateEnum;
 (function (AutoRenewingBasePlanTypeResubscribeStateEnum) {
     AutoRenewingBasePlanTypeResubscribeStateEnum["ResubscribeStateUnspecified"] = "RESUBSCRIBE_STATE_UNSPECIFIED";
     AutoRenewingBasePlanTypeResubscribeStateEnum["ResubscribeStateActive"] = "RESUBSCRIBE_STATE_ACTIVE";
     AutoRenewingBasePlanTypeResubscribeStateEnum["ResubscribeStateInactive"] = "RESUBSCRIBE_STATE_INACTIVE";
-})(AutoRenewingBasePlanTypeResubscribeStateEnum || (AutoRenewingBasePlanTypeResubscribeStateEnum = {}));
+})(AutoRenewingBasePlanTypeResubscribeStateEnum = exports.AutoRenewingBasePlanTypeResubscribeStateEnum || (exports.AutoRenewingBasePlanTypeResubscribeStateEnum = {}));
 // AutoRenewingBasePlanType
 /**
  * Represents a base plan that automatically renews at the end of its subscription period.
@@ -45,29 +48,29 @@ var AutoRenewingBasePlanType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingPeriodDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingPeriodDuration" }),
         __metadata("design:type", String)
     ], AutoRenewingBasePlanType.prototype, "billingPeriodDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gracePeriodDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gracePeriodDuration" }),
         __metadata("design:type", String)
     ], AutoRenewingBasePlanType.prototype, "gracePeriodDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legacyCompatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legacyCompatible" }),
         __metadata("design:type", Boolean)
     ], AutoRenewingBasePlanType.prototype, "legacyCompatible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legacyCompatibleSubscriptionOfferId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legacyCompatibleSubscriptionOfferId" }),
         __metadata("design:type", String)
     ], AutoRenewingBasePlanType.prototype, "legacyCompatibleSubscriptionOfferId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prorationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prorationMode" }),
         __metadata("design:type", String)
     ], AutoRenewingBasePlanType.prototype, "prorationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resubscribeState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resubscribeState" }),
         __metadata("design:type", String)
     ], AutoRenewingBasePlanType.prototype, "resubscribeState", void 0);
     return AutoRenewingBasePlanType;
-}(SpeakeasyBase));
-export { AutoRenewingBasePlanType };
+}(utils_1.SpeakeasyBase));
+exports.AutoRenewingBasePlanType = AutoRenewingBasePlanType;

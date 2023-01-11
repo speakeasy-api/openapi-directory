@@ -15,10 +15,10 @@ export declare class ConsumerConnection extends SpeakeasyBase {
     icon?: string;
     id?: string;
     logo?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     serviceId?: string;
-    settings?: Map<string, any>;
+    settings?: Record<string, any>;
     state?: ConsumerConnectionStateEnum;
     tagLine?: string;
     unifiedApi?: string;

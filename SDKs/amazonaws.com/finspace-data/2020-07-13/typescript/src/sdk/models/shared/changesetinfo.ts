@@ -19,7 +19,7 @@ export class ChangesetInfo extends SpeakeasyBase {
   changesetArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=changesetLabels" })
-  changesetLabels?: Map<string, string>;
+  changesetLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=createTimestamp" })
   createTimestamp?: Date;
@@ -31,7 +31,7 @@ export class ChangesetInfo extends SpeakeasyBase {
   errorInfo?: ErrorInfo;
 
   @SpeakeasyMetadata({ data: "json, name=formatParams" })
-  formatParams?: Map<string, string>;
+  formatParams?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=formatType" })
   formatType?: FormatTypeEnum;
@@ -40,7 +40,7 @@ export class ChangesetInfo extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=sourceParams" })
-  sourceParams?: Map<string, string>;
+  sourceParams?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sourceType" })
   sourceType?: SourceTypeEnum;

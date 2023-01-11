@@ -21,5 +21,5 @@ export declare class DcimRackGroupsListRequest extends SpeakeasyBase {
 export declare class DcimRackGroupsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRackGroupsList200ApplicationJsonObject?: DcimRackGroupsList200ApplicationJson;
+    dcimRackGroupsList200ApplicationJSONObject?: DcimRackGroupsList200ApplicationJson;
 }

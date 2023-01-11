@@ -29,7 +29,7 @@ export class ObjectChange extends SpeakeasyBase {
   action?: ObjectChangeAction;
 
   @SpeakeasyMetadata({ data: "json, name=changed_object" })
-  changedObject?: Map<string, string>;
+  changedObject?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=changed_object_id" })
   changedObjectId: number;

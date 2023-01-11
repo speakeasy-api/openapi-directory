@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LocalDiskInitializeParamsDiskTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalDiskInitializeParams = exports.LocalDiskInitializeParamsDiskTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LocalDiskInitializeParamsDiskTypeEnum;
 (function (LocalDiskInitializeParamsDiskTypeEnum) {
     LocalDiskInitializeParamsDiskTypeEnum["DiskTypeUnspecified"] = "DISK_TYPE_UNSPECIFIED";
     LocalDiskInitializeParamsDiskTypeEnum["PdStandard"] = "PD_STANDARD";
     LocalDiskInitializeParamsDiskTypeEnum["PdSsd"] = "PD_SSD";
     LocalDiskInitializeParamsDiskTypeEnum["PdBalanced"] = "PD_BALANCED";
     LocalDiskInitializeParamsDiskTypeEnum["PdExtreme"] = "PD_EXTREME";
-})(LocalDiskInitializeParamsDiskTypeEnum || (LocalDiskInitializeParamsDiskTypeEnum = {}));
+})(LocalDiskInitializeParamsDiskTypeEnum = exports.LocalDiskInitializeParamsDiskTypeEnum || (exports.LocalDiskInitializeParamsDiskTypeEnum = {}));
 // LocalDiskInitializeParams
 /**
  * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new runtime. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
@@ -41,25 +44,25 @@ var LocalDiskInitializeParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LocalDiskInitializeParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskName" }),
         __metadata("design:type", String)
     ], LocalDiskInitializeParams.prototype, "diskName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskSizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskSizeGb" }),
         __metadata("design:type", String)
     ], LocalDiskInitializeParams.prototype, "diskSizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskType" }),
         __metadata("design:type", String)
     ], LocalDiskInitializeParams.prototype, "diskType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], LocalDiskInitializeParams.prototype, "labels", void 0);
     return LocalDiskInitializeParams;
-}(SpeakeasyBase));
-export { LocalDiskInitializeParams };
+}(utils_1.SpeakeasyBase));
+exports.LocalDiskInitializeParams = LocalDiskInitializeParams;

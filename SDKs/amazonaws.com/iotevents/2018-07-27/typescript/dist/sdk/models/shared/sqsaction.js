@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Payload } from "./payload";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SqsAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var payload_1 = require("./payload");
 // SqsAction
 /**
  * Sends information about the detector model instance and the event that triggered the action to an Amazon SQS queue.
@@ -34,17 +37,17 @@ var SqsAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
-        __metadata("design:type", Payload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
+        __metadata("design:type", payload_1.Payload)
     ], SqsAction.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueUrl" }),
         __metadata("design:type", String)
     ], SqsAction.prototype, "queueUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useBase64" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useBase64" }),
         __metadata("design:type", Boolean)
     ], SqsAction.prototype, "useBase64", void 0);
     return SqsAction;
-}(SpeakeasyBase));
-export { SqsAction };
+}(utils_1.SpeakeasyBase));
+exports.SqsAction = SqsAction;

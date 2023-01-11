@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GcpUserAccessBinding = void 0;
+var utils_1 = require("../../../internal/utils");
 // GcpUserAccessBinding
 /**
  * Restricts access to Cloud Console and Google Cloud APIs for a set of users using Context-Aware Access.
@@ -33,17 +36,17 @@ var GcpUserAccessBinding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessLevels" }),
         __metadata("design:type", Array)
     ], GcpUserAccessBinding.prototype, "accessLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupKey" }),
         __metadata("design:type", String)
     ], GcpUserAccessBinding.prototype, "groupKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GcpUserAccessBinding.prototype, "name", void 0);
     return GcpUserAccessBinding;
-}(SpeakeasyBase));
-export { GcpUserAccessBinding };
+}(utils_1.SpeakeasyBase));
+exports.GcpUserAccessBinding = GcpUserAccessBinding;

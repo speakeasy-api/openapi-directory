@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Document } from "./document";
-export var AnalyzeEntitiesRequestEncodingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzeEntitiesRequest = exports.AnalyzeEntitiesRequestEncodingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var document_1 = require("./document");
+var AnalyzeEntitiesRequestEncodingTypeEnum;
 (function (AnalyzeEntitiesRequestEncodingTypeEnum) {
     AnalyzeEntitiesRequestEncodingTypeEnum["None"] = "NONE";
     AnalyzeEntitiesRequestEncodingTypeEnum["Utf8"] = "UTF8";
     AnalyzeEntitiesRequestEncodingTypeEnum["Utf16"] = "UTF16";
     AnalyzeEntitiesRequestEncodingTypeEnum["Utf32"] = "UTF32";
-})(AnalyzeEntitiesRequestEncodingTypeEnum || (AnalyzeEntitiesRequestEncodingTypeEnum = {}));
+})(AnalyzeEntitiesRequestEncodingTypeEnum = exports.AnalyzeEntitiesRequestEncodingTypeEnum || (exports.AnalyzeEntitiesRequestEncodingTypeEnum = {}));
 // AnalyzeEntitiesRequest
 /**
  * The entity analysis request message.
@@ -41,13 +44,13 @@ var AnalyzeEntitiesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document" }),
-        __metadata("design:type", Document)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document" }),
+        __metadata("design:type", document_1.Document)
     ], AnalyzeEntitiesRequest.prototype, "document", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodingType" }),
         __metadata("design:type", String)
     ], AnalyzeEntitiesRequest.prototype, "encodingType", void 0);
     return AnalyzeEntitiesRequest;
-}(SpeakeasyBase));
-export { AnalyzeEntitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzeEntitiesRequest = AnalyzeEntitiesRequest;

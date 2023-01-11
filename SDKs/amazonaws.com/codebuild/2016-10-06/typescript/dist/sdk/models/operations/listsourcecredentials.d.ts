@@ -15,7 +15,7 @@ export declare class ListSourceCredentialsHeaders extends SpeakeasyBase {
 }
 export declare class ListSourceCredentialsRequest extends SpeakeasyBase {
     headers: ListSourceCredentialsHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class ListSourceCredentialsResponse extends SpeakeasyBase {
     contentType: string;

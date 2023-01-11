@@ -38,7 +38,7 @@ export class ProjectsRemoveCollaboratorResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsRemoveCollaborator415ApplicationJsonObject?: ProjectsRemoveCollaborator415ApplicationJson;
+  projectsRemoveCollaborator415ApplicationJSONObject?: ProjectsRemoveCollaborator415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

@@ -1,4 +1,7 @@
-export var MatchFieldTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchFieldTypeEnum = void 0;
+var MatchFieldTypeEnum;
 (function (MatchFieldTypeEnum) {
     MatchFieldTypeEnum["Uri"] = "URI";
     MatchFieldTypeEnum["QueryString"] = "QUERY_STRING";
@@ -7,4 +10,4 @@ export var MatchFieldTypeEnum;
     MatchFieldTypeEnum["Body"] = "BODY";
     MatchFieldTypeEnum["SingleQueryArg"] = "SINGLE_QUERY_ARG";
     MatchFieldTypeEnum["AllQueryArgs"] = "ALL_QUERY_ARGS";
-})(MatchFieldTypeEnum || (MatchFieldTypeEnum = {}));
+})(MatchFieldTypeEnum = exports.MatchFieldTypeEnum || (exports.MatchFieldTypeEnum = {}));

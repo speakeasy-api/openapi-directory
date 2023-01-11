@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogicalNetworkInterface } from "./logicalnetworkinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBaremetalsolutionV2LogicalInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var logicalnetworkinterface_1 = require("./logicalnetworkinterface");
 // GoogleCloudBaremetalsolutionV2LogicalInterface
 /**
  * Each logical interface represents a logical abstraction of the underlying physical interface (for eg. bond, nic) of the instance. Each logical interface can effectively map to multiple network-IP pairs and still be mapped to one underlying physical interface.
@@ -34,17 +37,17 @@ var GoogleCloudBaremetalsolutionV2LogicalInterface = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interfaceIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interfaceIndex" }),
         __metadata("design:type", Number)
     ], GoogleCloudBaremetalsolutionV2LogicalInterface.prototype, "interfaceIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logicalNetworkInterfaces", elemType: LogicalNetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logicalNetworkInterfaces", elemType: logicalnetworkinterface_1.LogicalNetworkInterface }),
         __metadata("design:type", Array)
     ], GoogleCloudBaremetalsolutionV2LogicalInterface.prototype, "logicalNetworkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudBaremetalsolutionV2LogicalInterface.prototype, "name", void 0);
     return GoogleCloudBaremetalsolutionV2LogicalInterface;
-}(SpeakeasyBase));
-export { GoogleCloudBaremetalsolutionV2LogicalInterface };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBaremetalsolutionV2LogicalInterface = GoogleCloudBaremetalsolutionV2LogicalInterface;

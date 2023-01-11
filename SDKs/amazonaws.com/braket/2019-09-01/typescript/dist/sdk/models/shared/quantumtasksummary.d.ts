@@ -12,5 +12,5 @@ export declare class QuantumTaskSummary extends SpeakeasyBase {
     quantumTaskArn: string;
     shots: number;
     status: QuantumTaskStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

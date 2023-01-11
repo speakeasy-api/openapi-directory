@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPayLinesWithTagResponse = exports.GetPayLinesWithTagRequest = exports.GetPayLinesWithTagHeaders = exports.GetPayLinesWithTagPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetPayLinesWithTagPathParams = /** @class */ (function (_super) {
     __extends(GetPayLinesWithTagPathParams, _super);
     function GetPayLinesWithTagPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EmployeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EmployeeId" }),
         __metadata("design:type", String)
     ], GetPayLinesWithTagPathParams.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
         __metadata("design:type", String)
     ], GetPayLinesWithTagPathParams.prototype, "employerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=TagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=TagId" }),
         __metadata("design:type", String)
     ], GetPayLinesWithTagPathParams.prototype, "tagId", void 0);
     return GetPayLinesWithTagPathParams;
-}(SpeakeasyBase));
-export { GetPayLinesWithTagPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPayLinesWithTagPathParams = GetPayLinesWithTagPathParams;
 var GetPayLinesWithTagHeaders = /** @class */ (function (_super) {
     __extends(GetPayLinesWithTagHeaders, _super);
     function GetPayLinesWithTagHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Api-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Api-Version" }),
         __metadata("design:type", String)
     ], GetPayLinesWithTagHeaders.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], GetPayLinesWithTagHeaders.prototype, "authorization", void 0);
     return GetPayLinesWithTagHeaders;
-}(SpeakeasyBase));
-export { GetPayLinesWithTagHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPayLinesWithTagHeaders = GetPayLinesWithTagHeaders;
 var GetPayLinesWithTagRequest = /** @class */ (function (_super) {
     __extends(GetPayLinesWithTagRequest, _super);
     function GetPayLinesWithTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPayLinesWithTagPathParams)
     ], GetPayLinesWithTagRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPayLinesWithTagHeaders)
     ], GetPayLinesWithTagRequest.prototype, "headers", void 0);
     return GetPayLinesWithTagRequest;
-}(SpeakeasyBase));
-export { GetPayLinesWithTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPayLinesWithTagRequest = GetPayLinesWithTagRequest;
 var GetPayLinesWithTagResponse = /** @class */ (function (_super) {
     __extends(GetPayLinesWithTagResponse, _super);
     function GetPayLinesWithTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPayLinesWithTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], GetPayLinesWithTagResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LinkCollection)
     ], GetPayLinesWithTagResponse.prototype, "linkCollection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPayLinesWithTagResponse.prototype, "statusCode", void 0);
     return GetPayLinesWithTagResponse;
-}(SpeakeasyBase));
-export { GetPayLinesWithTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPayLinesWithTagResponse = GetPayLinesWithTagResponse;

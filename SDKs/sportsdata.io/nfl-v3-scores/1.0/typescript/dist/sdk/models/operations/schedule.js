@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScheduleFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleResponse = exports.ScheduleRequest = exports.SchedulePathParams = exports.ScheduleFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScheduleFormatEnum;
 (function (ScheduleFormatEnum) {
     ScheduleFormatEnum["Xml"] = "XML";
     ScheduleFormatEnum["Json"] = "JSON";
-})(ScheduleFormatEnum || (ScheduleFormatEnum = {}));
+})(ScheduleFormatEnum = exports.ScheduleFormatEnum || (exports.ScheduleFormatEnum = {}));
 var SchedulePathParams = /** @class */ (function (_super) {
     __extends(SchedulePathParams, _super);
     function SchedulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], SchedulePathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], SchedulePathParams.prototype, "season", void 0);
     return SchedulePathParams;
-}(SpeakeasyBase));
-export { SchedulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SchedulePathParams = SchedulePathParams;
 var ScheduleRequest = /** @class */ (function (_super) {
     __extends(ScheduleRequest, _super);
     function ScheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SchedulePathParams)
     ], ScheduleRequest.prototype, "pathParams", void 0);
     return ScheduleRequest;
-}(SpeakeasyBase));
-export { ScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleRequest = ScheduleRequest;
 var ScheduleResponse = /** @class */ (function (_super) {
     __extends(ScheduleResponse, _super);
     function ScheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScheduleResponse.prototype, "schedules", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScheduleResponse.prototype, "statusCode", void 0);
     return ScheduleResponse;
-}(SpeakeasyBase));
-export { ScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleResponse = ScheduleResponse;

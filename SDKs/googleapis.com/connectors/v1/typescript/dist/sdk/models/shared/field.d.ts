@@ -50,7 +50,7 @@ export declare enum FieldDataTypeEnum {
  * Metadata of an entity field.
 **/
 export declare class Field extends SpeakeasyBase {
-    additionalDetails?: Map<string, any>;
+    additionalDetails?: Record<string, any>;
     dataType?: FieldDataTypeEnum;
     defaultValue?: any;
     description?: string;

@@ -18,7 +18,7 @@ export declare class PutAccountSendingAttributesRequest extends SpeakeasyBase {
 export declare class PutAccountSendingAttributesResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    putAccountSendingAttributesResponse?: Map<string, any>;
+    putAccountSendingAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

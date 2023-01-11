@@ -13,7 +13,7 @@ export declare class GetArtifactRuleConfigRequest extends SpeakeasyBase {
 }
 export declare class GetArtifactRuleConfigResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     rule?: shared.Rule;
     statusCode: number;
 }

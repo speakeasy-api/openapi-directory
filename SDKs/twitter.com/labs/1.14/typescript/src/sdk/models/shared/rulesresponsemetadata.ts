@@ -7,5 +7,5 @@ export class RulesResponseMetadata extends SpeakeasyBase {
   sent: string;
 
   @SpeakeasyMetadata({ data: "json, name=summary" })
-  summary?: Map<string, any>;
+  summary?: Record<string, any>;
 }

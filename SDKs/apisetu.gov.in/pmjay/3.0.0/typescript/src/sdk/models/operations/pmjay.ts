@@ -194,23 +194,23 @@ export class PmjayResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pmjay400ApplicationJsonObject?: Pmjay400ApplicationJson;
+  pmjay400ApplicationJSONObject?: Pmjay400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay401ApplicationJsonObject?: Pmjay401ApplicationJson;
+  pmjay401ApplicationJSONObject?: Pmjay401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay404ApplicationJsonObject?: Pmjay404ApplicationJson;
+  pmjay404ApplicationJSONObject?: Pmjay404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay500ApplicationJsonObject?: Pmjay500ApplicationJson;
+  pmjay500ApplicationJSONObject?: Pmjay500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay502ApplicationJsonObject?: Pmjay502ApplicationJson;
+  pmjay502ApplicationJSONObject?: Pmjay502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay503ApplicationJsonObject?: Pmjay503ApplicationJson;
+  pmjay503ApplicationJSONObject?: Pmjay503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pmjay504ApplicationJsonObject?: Pmjay504ApplicationJson;
+  pmjay504ApplicationJSONObject?: Pmjay504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Key } from "./key";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var key_1 = require("./key");
 var GetItemInput = /** @class */ (function (_super) {
     __extends(GetItemInput, _super);
     function GetItemInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributesToGet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributesToGet" }),
         __metadata("design:type", Array)
     ], GetItemInput.prototype, "attributesToGet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsistentRead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsistentRead" }),
         __metadata("design:type", Boolean)
     ], GetItemInput.prototype, "consistentRead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Key" }),
-        __metadata("design:type", Key)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Key" }),
+        __metadata("design:type", key_1.Key)
     ], GetItemInput.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], GetItemInput.prototype, "tableName", void 0);
     return GetItemInput;
-}(SpeakeasyBase));
-export { GetItemInput };
+}(utils_1.SpeakeasyBase));
+exports.GetItemInput = GetItemInput;

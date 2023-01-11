@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderableClusterOption } from "./orderableclusteroption";
+import { OrderableClusterOptionsList } from "./orderableclusteroptionslist";
 
 
 
@@ -11,6 +11,6 @@ export class OrderableClusterOptionsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: OrderableClusterOption })
-  orderableClusterOptions?: OrderableClusterOption[];
+  @SpeakeasyMetadata({ elemType: OrderableClusterOptionsList })
+  orderableClusterOptions?: OrderableClusterOptionsList[];
 }

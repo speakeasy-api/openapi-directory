@@ -23,6 +23,6 @@ export declare class UpdateComponentResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateComponentResponse?: Map<string, any>;
+    updateComponentResponse?: Record<string, any>;
     validationException?: any;
 }

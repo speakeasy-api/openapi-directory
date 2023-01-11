@@ -15,5 +15,5 @@ export declare class CheckinNetworkSmDevicesRequest extends SpeakeasyBase {
 export declare class CheckinNetworkSmDevicesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checkinNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+    checkinNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

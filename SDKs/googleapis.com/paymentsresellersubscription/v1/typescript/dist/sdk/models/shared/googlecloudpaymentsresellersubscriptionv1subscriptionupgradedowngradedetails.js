@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails = exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum;
 (function (GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum) {
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum["BillingCycleSpecUnspecified"] = "BILLING_CYCLE_SPEC_UNSPECIFIED";
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum["BillingCycleSpecAlignWithPreviousSubscription"] = "BILLING_CYCLE_SPEC_ALIGN_WITH_PREVIOUS_SUBSCRIPTION";
     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum["BillingCycleSpecStartImmediately"] = "BILLING_CYCLE_SPEC_START_IMMEDIATELY";
-})(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum || (GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum = {}));
+})(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum = exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum || (exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum = {}));
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
 /**
  * Details about the previous subscription that this new subscription upgrades/downgrades from.
@@ -39,13 +42,13 @@ var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingCycleSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingCycleSpec" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails.prototype, "billingCycleSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousSubscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousSubscriptionId" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails.prototype, "previousSubscriptionId", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails;

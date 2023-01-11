@@ -79,8 +79,8 @@ export class GetClientClientIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getClientClientId200ApplicationJsonObject?: GetClientClientId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getClientClientId200ApplicationJSONObject?: GetClientClientId200ApplicationJson;
 }

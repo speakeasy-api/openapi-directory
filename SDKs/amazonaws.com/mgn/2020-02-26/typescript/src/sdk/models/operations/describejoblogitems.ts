@@ -38,7 +38,7 @@ export class DescribeJobLogItemsHeaders extends SpeakeasyBase {
 
 export class DescribeJobLogItemsRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId: string;
+  jobID: string;
 
   @SpeakeasyMetadata({ data: "json, name=maxResults" })
   maxResults?: number;

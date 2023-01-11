@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetNumbersBaseRequest, GetNumbersBaseResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,9 +33,9 @@ const req: GetNumbersBaseRequest = {
     },
   },
   queryParams: {
-    from: 728171767558320508,
-    number: 4202576256773833716,
-    to: 7402369184756779626,
+    from: 8717895732742165505,
+    number: 2259404117704393152,
+    to: 6050128673802995827,
   },
 };
 

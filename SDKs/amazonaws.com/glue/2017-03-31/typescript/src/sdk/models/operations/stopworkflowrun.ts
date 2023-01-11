@@ -66,5 +66,5 @@ export class StopWorkflowRunResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopWorkflowRunResponse?: Map<string, any>;
+  stopWorkflowRunResponse?: Record<string, any>;
 }

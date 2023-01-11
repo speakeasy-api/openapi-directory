@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolProxySetConfigResponse = exports.ProtocolProxySetConfigRequest = exports.ProtocolProxySetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolProxySetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolProxySetConfigPathParams, _super);
     function ProtocolProxySetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolProxySetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolProxySetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolProxySetConfigPathParams.prototype, "value", void 0);
     return ProtocolProxySetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolProxySetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetConfigPathParams = ProtocolProxySetConfigPathParams;
 var ProtocolProxySetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolProxySetConfigRequest, _super);
     function ProtocolProxySetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolProxySetConfigPathParams)
     ], ProtocolProxySetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolProxySetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolProxySetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetConfigRequest = ProtocolProxySetConfigRequest;
 var ProtocolProxySetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolProxySetConfigResponse, _super);
     function ProtocolProxySetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolProxySetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolProxySetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolProxySetConfigResponse.prototype, "protocolProxySetConfig200ApplicationJsonString", void 0);
+    ], ProtocolProxySetConfigResponse.prototype, "protocolProxySetConfig200ApplicationJSONString", void 0);
     return ProtocolProxySetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolProxySetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxySetConfigResponse = ProtocolProxySetConfigResponse;

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetDeviceRegistrationResult extends SpeakeasyBase {
-    cacheTtl?: string;
+    cacheTTL?: string;
     deviceRegistration?: string;
 }

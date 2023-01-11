@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbInstanceAutomatedBackupsReplication } from "./dbinstanceautomatedbackupsreplication";
+import { DbInstanceAutomatedBackupsReplicationList } from "./dbinstanceautomatedbackupsreplicationlist";
 import { RestoreWindow } from "./restorewindow";
 
 
@@ -24,8 +24,8 @@ export class DbInstanceAutomatedBackup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbInstanceAutomatedBackupsArn?: string;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceAutomatedBackupsReplication })
-  dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplication[];
+  @SpeakeasyMetadata({ elemType: DbInstanceAutomatedBackupsReplicationList })
+  dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplicationList[];
 
   @SpeakeasyMetadata()
   dbInstanceIdentifier?: string;

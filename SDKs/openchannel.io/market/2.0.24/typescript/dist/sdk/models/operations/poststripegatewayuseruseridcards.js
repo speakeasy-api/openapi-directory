@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostStripeGatewayUserUserIdCardsResponse = exports.PostStripeGatewayUserUserIdCardsRequest = exports.PostStripeGatewayUserUserIdCardsQueryParams = exports.PostStripeGatewayUserUserIdCardsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostStripeGatewayUserUserIdCardsPathParams = /** @class */ (function (_super) {
     __extends(PostStripeGatewayUserUserIdCardsPathParams, _super);
     function PostStripeGatewayUserUserIdCardsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], PostStripeGatewayUserUserIdCardsPathParams.prototype, "userId", void 0);
     return PostStripeGatewayUserUserIdCardsPathParams;
-}(SpeakeasyBase));
-export { PostStripeGatewayUserUserIdCardsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostStripeGatewayUserUserIdCardsPathParams = PostStripeGatewayUserUserIdCardsPathParams;
 var PostStripeGatewayUserUserIdCardsQueryParams = /** @class */ (function (_super) {
     __extends(PostStripeGatewayUserUserIdCardsQueryParams, _super);
     function PostStripeGatewayUserUserIdCardsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=isDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=isDefault" }),
         __metadata("design:type", Boolean)
     ], PostStripeGatewayUserUserIdCardsQueryParams.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], PostStripeGatewayUserUserIdCardsQueryParams.prototype, "token", void 0);
     return PostStripeGatewayUserUserIdCardsQueryParams;
-}(SpeakeasyBase));
-export { PostStripeGatewayUserUserIdCardsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostStripeGatewayUserUserIdCardsQueryParams = PostStripeGatewayUserUserIdCardsQueryParams;
 var PostStripeGatewayUserUserIdCardsRequest = /** @class */ (function (_super) {
     __extends(PostStripeGatewayUserUserIdCardsRequest, _super);
     function PostStripeGatewayUserUserIdCardsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostStripeGatewayUserUserIdCardsPathParams)
     ], PostStripeGatewayUserUserIdCardsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostStripeGatewayUserUserIdCardsQueryParams)
     ], PostStripeGatewayUserUserIdCardsRequest.prototype, "queryParams", void 0);
     return PostStripeGatewayUserUserIdCardsRequest;
-}(SpeakeasyBase));
-export { PostStripeGatewayUserUserIdCardsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostStripeGatewayUserUserIdCardsRequest = PostStripeGatewayUserUserIdCardsRequest;
 var PostStripeGatewayUserUserIdCardsResponse = /** @class */ (function (_super) {
     __extends(PostStripeGatewayUserUserIdCardsResponse, _super);
     function PostStripeGatewayUserUserIdCardsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostStripeGatewayUserUserIdCardsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostStripeGatewayUserUserIdCardsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostStripeGatewayUserUserIdCardsResponse.prototype, "statusCode", void 0);
     return PostStripeGatewayUserUserIdCardsResponse;
-}(SpeakeasyBase));
-export { PostStripeGatewayUserUserIdCardsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostStripeGatewayUserUserIdCardsResponse = PostStripeGatewayUserUserIdCardsResponse;

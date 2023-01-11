@@ -18,7 +18,7 @@ export declare class GetOrganizationConfigurationChangesRequest extends Speakeas
 }
 export declare class GetOrganizationConfigurationChangesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationConfigurationChanges200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationConfigurationChanges200ApplicationJSONObject?: Record<string, any>;
 }

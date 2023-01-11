@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MappingJobIdTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MappingJob = exports.MappingJobStateCodeEnum = exports.MappingJobOptionTypeEnum = exports.MappingJobIdTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MappingJobIdTypeEnum;
 (function (MappingJobIdTypeEnum) {
     MappingJobIdTypeEnum["IdIsin"] = "ID_ISIN";
     MappingJobIdTypeEnum["IdBbUnique"] = "ID_BB_UNIQUE";
@@ -49,13 +52,13 @@ export var MappingJobIdTypeEnum;
     MappingJobIdTypeEnum["IdShortCode"] = "ID_SHORT_CODE";
     MappingJobIdTypeEnum["BaseTicker"] = "BASE_TICKER";
     MappingJobIdTypeEnum["VendorIndexCode"] = "VENDOR_INDEX_CODE";
-})(MappingJobIdTypeEnum || (MappingJobIdTypeEnum = {}));
-export var MappingJobOptionTypeEnum;
+})(MappingJobIdTypeEnum = exports.MappingJobIdTypeEnum || (exports.MappingJobIdTypeEnum = {}));
+var MappingJobOptionTypeEnum;
 (function (MappingJobOptionTypeEnum) {
     MappingJobOptionTypeEnum["Put"] = "Put";
     MappingJobOptionTypeEnum["Call"] = "Call";
-})(MappingJobOptionTypeEnum || (MappingJobOptionTypeEnum = {}));
-export var MappingJobStateCodeEnum;
+})(MappingJobOptionTypeEnum = exports.MappingJobOptionTypeEnum || (exports.MappingJobOptionTypeEnum = {}));
+var MappingJobStateCodeEnum;
 (function (MappingJobStateCodeEnum) {
     MappingJobStateCodeEnum["Ab"] = "AB";
     MappingJobStateCodeEnum["Ac"] = "AC";
@@ -199,7 +202,7 @@ export var MappingJobStateCodeEnum;
     MappingJobStateCodeEnum["Yt"] = "YT";
     MappingJobStateCodeEnum["Yu"] = "YU";
     MappingJobStateCodeEnum["Zj"] = "ZJ";
-})(MappingJobStateCodeEnum || (MappingJobStateCodeEnum = {}));
+})(MappingJobStateCodeEnum = exports.MappingJobStateCodeEnum || (exports.MappingJobStateCodeEnum = {}));
 // MappingJob
 /**
  * For V3: securityType2 is required when idType is BASE_TICKER or ID_EXCH_SYMBOL.  expiration is required when securityType2 is Option or Warrant.  maturity is required when securityType2 is Pool.
@@ -210,69 +213,69 @@ var MappingJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contractSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contractSize" }),
         __metadata("design:type", Array)
     ], MappingJob.prototype, "contractSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coupon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coupon" }),
         __metadata("design:type", Array)
     ], MappingJob.prototype, "coupon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchCode" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "exchCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiration" }),
         __metadata("design:type", Array)
     ], MappingJob.prototype, "expiration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idType" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "idType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idValue" }),
         __metadata("design:type", Object)
     ], MappingJob.prototype, "idValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeUnlistedEquities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeUnlistedEquities" }),
         __metadata("design:type", Boolean)
     ], MappingJob.prototype, "includeUnlistedEquities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketSecDes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketSecDes" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "marketSecDes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maturity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maturity" }),
         __metadata("design:type", Array)
     ], MappingJob.prototype, "maturity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=micCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=micCode" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "micCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optionType" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "optionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityType" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "securityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityType2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityType2" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "securityType2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateCode" }),
         __metadata("design:type", String)
     ], MappingJob.prototype, "stateCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strike" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strike" }),
         __metadata("design:type", Array)
     ], MappingJob.prototype, "strike", void 0);
     return MappingJob;
-}(SpeakeasyBase));
-export { MappingJob };
+}(utils_1.SpeakeasyBase));
+exports.MappingJob = MappingJob;

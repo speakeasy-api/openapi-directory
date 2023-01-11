@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Connection } from "./connection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateConnectionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var connection_1 = require("./connection");
 var UpdateConnectionResponse = /** @class */ (function (_super) {
     __extends(UpdateConnectionResponse, _super);
     function UpdateConnectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Connection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", connection_1.Connection)
     ], UpdateConnectionResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UpdateConnectionResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], UpdateConnectionResponse.prototype, "statusCode", void 0);
     return UpdateConnectionResponse;
-}(SpeakeasyBase));
-export { UpdateConnectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateConnectionResponse = UpdateConnectionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEmailTemplateResponse = exports.UpdateEmailTemplateRequest = exports.UpdateEmailTemplateRequestBody = exports.UpdateEmailTemplateRequestBodyTemplateContent = exports.UpdateEmailTemplateHeaders = exports.UpdateEmailTemplatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateEmailTemplatePathParams = /** @class */ (function (_super) {
     __extends(UpdateEmailTemplatePathParams, _super);
     function UpdateEmailTemplatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplatePathParams.prototype, "templateName", void 0);
     return UpdateEmailTemplatePathParams;
-}(SpeakeasyBase));
-export { UpdateEmailTemplatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplatePathParams = UpdateEmailTemplatePathParams;
 var UpdateEmailTemplateHeaders = /** @class */ (function (_super) {
     __extends(UpdateEmailTemplateHeaders, _super);
     function UpdateEmailTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateEmailTemplateHeaders;
-}(SpeakeasyBase));
-export { UpdateEmailTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplateHeaders = UpdateEmailTemplateHeaders;
 // UpdateEmailTemplateRequestBodyTemplateContent
 /**
  * The content of the email, composed of a subject line, an HTML part, and a text-only part.
@@ -81,81 +84,81 @@ var UpdateEmailTemplateRequestBodyTemplateContent = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Html" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateRequestBodyTemplateContent.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateRequestBodyTemplateContent.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Text" }),
         __metadata("design:type", String)
     ], UpdateEmailTemplateRequestBodyTemplateContent.prototype, "text", void 0);
     return UpdateEmailTemplateRequestBodyTemplateContent;
-}(SpeakeasyBase));
-export { UpdateEmailTemplateRequestBodyTemplateContent };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplateRequestBodyTemplateContent = UpdateEmailTemplateRequestBodyTemplateContent;
 var UpdateEmailTemplateRequestBody = /** @class */ (function (_super) {
     __extends(UpdateEmailTemplateRequestBody, _super);
     function UpdateEmailTemplateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateContent" }),
         __metadata("design:type", UpdateEmailTemplateRequestBodyTemplateContent)
     ], UpdateEmailTemplateRequestBody.prototype, "templateContent", void 0);
     return UpdateEmailTemplateRequestBody;
-}(SpeakeasyBase));
-export { UpdateEmailTemplateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplateRequestBody = UpdateEmailTemplateRequestBody;
 var UpdateEmailTemplateRequest = /** @class */ (function (_super) {
     __extends(UpdateEmailTemplateRequest, _super);
     function UpdateEmailTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateEmailTemplatePathParams)
     ], UpdateEmailTemplateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateEmailTemplateHeaders)
     ], UpdateEmailTemplateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateEmailTemplateRequestBody)
     ], UpdateEmailTemplateRequest.prototype, "request", void 0);
     return UpdateEmailTemplateRequest;
-}(SpeakeasyBase));
-export { UpdateEmailTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplateRequest = UpdateEmailTemplateRequest;
 var UpdateEmailTemplateResponse = /** @class */ (function (_super) {
     __extends(UpdateEmailTemplateResponse, _super);
     function UpdateEmailTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateEmailTemplateResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateEmailTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateEmailTemplateResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateEmailTemplateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateEmailTemplateResponse.prototype, "tooManyRequestsException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateEmailTemplateResponse.prototype, "updateEmailTemplateResponse", void 0);
     return UpdateEmailTemplateResponse;
-}(SpeakeasyBase));
-export { UpdateEmailTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEmailTemplateResponse = UpdateEmailTemplateResponse;

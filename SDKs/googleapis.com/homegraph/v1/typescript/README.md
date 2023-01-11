@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { HomegraphAgentUsersDeleteRequest, HomegraphAgentUsersDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: HomegraphAgentUsersDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    agentUserId: "quas",
+    agentUserId: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "excepturi",
-    alt: "proto",
-    callback: "enim",
-    fields: "aut",
-    key: "numquam",
-    oauthToken: "aliquam",
-    prettyPrint: false,
-    quotaUser: "sint",
-    requestId: "odio",
-    uploadType: "consequatur",
-    uploadProtocol: "veritatis",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    requestId: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

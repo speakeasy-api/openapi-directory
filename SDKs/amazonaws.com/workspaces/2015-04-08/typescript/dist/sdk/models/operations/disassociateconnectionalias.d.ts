@@ -20,7 +20,7 @@ export declare class DisassociateConnectionAliasRequest extends SpeakeasyBase {
 export declare class DisassociateConnectionAliasResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    disassociateConnectionAliasResult?: Map<string, any>;
+    disassociateConnectionAliasResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     operationNotSupportedException?: any;

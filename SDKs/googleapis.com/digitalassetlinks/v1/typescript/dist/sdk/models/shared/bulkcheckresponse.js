@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CheckResponse } from "./checkresponse";
-export var BulkCheckResponseBulkErrorCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkCheckResponse = exports.BulkCheckResponseBulkErrorCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var checkresponse_1 = require("./checkresponse");
+var BulkCheckResponseBulkErrorCodeEnum;
 (function (BulkCheckResponseBulkErrorCodeEnum) {
     BulkCheckResponseBulkErrorCodeEnum["ErrorCodeUnspecified"] = "ERROR_CODE_UNSPECIFIED";
     BulkCheckResponseBulkErrorCodeEnum["ErrorCodeInvalidQuery"] = "ERROR_CODE_INVALID_QUERY";
@@ -37,7 +40,7 @@ export var BulkCheckResponseBulkErrorCodeEnum;
     BulkCheckResponseBulkErrorCodeEnum["ErrorCodeMalformedContent"] = "ERROR_CODE_MALFORMED_CONTENT";
     BulkCheckResponseBulkErrorCodeEnum["ErrorCodeSecureAssetIncludesInsecure"] = "ERROR_CODE_SECURE_ASSET_INCLUDES_INSECURE";
     BulkCheckResponseBulkErrorCodeEnum["ErrorCodeFetchBudgetExhausted"] = "ERROR_CODE_FETCH_BUDGET_EXHAUSTED";
-})(BulkCheckResponseBulkErrorCodeEnum || (BulkCheckResponseBulkErrorCodeEnum = {}));
+})(BulkCheckResponseBulkErrorCodeEnum = exports.BulkCheckResponseBulkErrorCodeEnum || (exports.BulkCheckResponseBulkErrorCodeEnum = {}));
 // BulkCheckResponse
 /**
  * Response for BulkCheck call. Results are sent in a list in the same order in which they were sent. Individual check errors are described in the appropriate check_results entry. If the entire call fails, the response will include a bulk_error_code field describing the error.
@@ -48,13 +51,13 @@ var BulkCheckResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bulkErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bulkErrorCode" }),
         __metadata("design:type", String)
     ], BulkCheckResponse.prototype, "bulkErrorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkResults", elemType: CheckResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkResults", elemType: checkresponse_1.CheckResponse }),
         __metadata("design:type", Array)
     ], BulkCheckResponse.prototype, "checkResults", void 0);
     return BulkCheckResponse;
-}(SpeakeasyBase));
-export { BulkCheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.BulkCheckResponse = BulkCheckResponse;

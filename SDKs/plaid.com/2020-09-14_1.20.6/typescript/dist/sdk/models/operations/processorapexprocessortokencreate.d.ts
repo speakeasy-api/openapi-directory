@@ -5,6 +5,6 @@ export declare class ProcessorApexProcessorTokenCreateRequest extends SpeakeasyB
 }
 export declare class ProcessorApexProcessorTokenCreateResponse extends SpeakeasyBase {
     contentType: string;
-    processorTokenCreateResponse?: Map<string, any>;
+    processorTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

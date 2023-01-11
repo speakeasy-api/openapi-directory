@@ -26,7 +26,7 @@ export class DialogAction extends SpeakeasyBase {
   slotToElicit?: string;
 
   @SpeakeasyMetadata({ data: "json, name=slots" })
-  slots?: Map<string, string>;
+  slots?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: DialogActionTypeEnum;

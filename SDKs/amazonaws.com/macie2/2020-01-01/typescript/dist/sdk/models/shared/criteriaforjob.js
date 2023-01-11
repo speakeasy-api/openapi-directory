@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleCriterionForJob } from "./simplecriterionforjob";
-import { TagCriterionForJob } from "./tagcriterionforjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CriteriaForJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplecriterionforjob_1 = require("./simplecriterionforjob");
+var tagcriterionforjob_1 = require("./tagcriterionforjob");
 // CriteriaForJob
 /**
  * Specifies a property- or tag-based condition that defines criteria for including or excluding S3 buckets from a classification job.
@@ -35,13 +38,13 @@ var CriteriaForJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simpleCriterion" }),
-        __metadata("design:type", SimpleCriterionForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simpleCriterion" }),
+        __metadata("design:type", simplecriterionforjob_1.SimpleCriterionForJob)
     ], CriteriaForJob.prototype, "simpleCriterion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagCriterion" }),
-        __metadata("design:type", TagCriterionForJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagCriterion" }),
+        __metadata("design:type", tagcriterionforjob_1.TagCriterionForJob)
     ], CriteriaForJob.prototype, "tagCriterion", void 0);
     return CriteriaForJob;
-}(SpeakeasyBase));
-export { CriteriaForJob };
+}(utils_1.SpeakeasyBase));
+exports.CriteriaForJob = CriteriaForJob;

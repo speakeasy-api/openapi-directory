@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteResponse = exports.ReactionsDeleteRequest = exports.ReactionsDeleteHeaders = exports.ReactionsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeletePathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeletePathParams, _super);
     function ReactionsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeletePathParams.prototype, "reactionId", void 0);
     return ReactionsDeletePathParams;
-}(SpeakeasyBase));
-export { ReactionsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeletePathParams = ReactionsDeletePathParams;
 var ReactionsDeleteHeaders = /** @class */ (function (_super) {
     __extends(ReactionsDeleteHeaders, _super);
     function ReactionsDeleteHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=accept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=accept" }),
         __metadata("design:type", String)
     ], ReactionsDeleteHeaders.prototype, "accept", void 0);
     return ReactionsDeleteHeaders;
-}(SpeakeasyBase));
-export { ReactionsDeleteHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteHeaders = ReactionsDeleteHeaders;
 var ReactionsDeleteRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteRequest, _super);
     function ReactionsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeletePathParams)
     ], ReactionsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteHeaders)
     ], ReactionsDeleteRequest.prototype, "headers", void 0);
     return ReactionsDeleteRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteRequest = ReactionsDeleteRequest;
 var ReactionsDeleteResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteResponse, _super);
     function ReactionsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteResponse = ReactionsDeleteResponse;

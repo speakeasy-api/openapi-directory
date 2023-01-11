@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PartitionIndex } from "./partitionindex";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePartitionIndexRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var partitionindex_1 = require("./partitionindex");
 var CreatePartitionIndexRequest = /** @class */ (function (_super) {
     __extends(CreatePartitionIndexRequest, _super);
     function CreatePartitionIndexRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], CreatePartitionIndexRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], CreatePartitionIndexRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionIndex" }),
-        __metadata("design:type", PartitionIndex)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionIndex" }),
+        __metadata("design:type", partitionindex_1.PartitionIndex)
     ], CreatePartitionIndexRequest.prototype, "partitionIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], CreatePartitionIndexRequest.prototype, "tableName", void 0);
     return CreatePartitionIndexRequest;
-}(SpeakeasyBase));
-export { CreatePartitionIndexRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePartitionIndexRequest = CreatePartitionIndexRequest;

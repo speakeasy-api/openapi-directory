@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class SetTimerAction extends SpeakeasyBase {
     durationExpression?: string;
-    seconds?: number;
+    seconds?: Record<string, any>;
     timerName: string;
 }

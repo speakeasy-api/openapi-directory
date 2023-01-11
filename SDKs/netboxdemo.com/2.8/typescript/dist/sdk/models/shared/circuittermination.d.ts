@@ -17,7 +17,7 @@ export declare enum CircuitTerminationTerminationEnum {
 export declare class CircuitTermination extends SpeakeasyBase {
     cable?: NestedCable;
     circuit: NestedCircuit;
-    connectedEndpoint?: Map<string, string>;
+    connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: CircuitTerminationConnectionStatus;
     description?: string;

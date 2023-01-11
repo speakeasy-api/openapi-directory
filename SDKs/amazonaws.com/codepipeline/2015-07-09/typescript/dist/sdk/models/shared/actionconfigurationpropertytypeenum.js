@@ -1,6 +1,9 @@
-export var ActionConfigurationPropertyTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionConfigurationPropertyTypeEnum = void 0;
+var ActionConfigurationPropertyTypeEnum;
 (function (ActionConfigurationPropertyTypeEnum) {
     ActionConfigurationPropertyTypeEnum["String"] = "String";
     ActionConfigurationPropertyTypeEnum["Number"] = "Number";
     ActionConfigurationPropertyTypeEnum["Boolean"] = "Boolean";
-})(ActionConfigurationPropertyTypeEnum || (ActionConfigurationPropertyTypeEnum = {}));
+})(ActionConfigurationPropertyTypeEnum = exports.ActionConfigurationPropertyTypeEnum || (exports.ActionConfigurationPropertyTypeEnum = {}));

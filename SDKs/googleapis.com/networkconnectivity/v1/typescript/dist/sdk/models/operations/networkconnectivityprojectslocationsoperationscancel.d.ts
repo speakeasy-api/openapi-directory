@@ -23,11 +23,11 @@ export declare class NetworkconnectivityProjectsLocationsOperationsCancelSecurit
 export declare class NetworkconnectivityProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: NetworkconnectivityProjectsLocationsOperationsCancelPathParams;
     queryParams: NetworkconnectivityProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: NetworkconnectivityProjectsLocationsOperationsCancelSecurity;
 }
 export declare class NetworkconnectivityProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

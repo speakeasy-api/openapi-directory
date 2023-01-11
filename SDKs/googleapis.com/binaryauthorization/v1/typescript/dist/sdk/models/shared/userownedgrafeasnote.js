@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttestorPublicKey } from "./attestorpublickey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserOwnedGrafeasNote = exports.UserOwnedGrafeasNoteInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var attestorpublickey_1 = require("./attestorpublickey");
 // UserOwnedGrafeasNoteInput
 /**
  * An user owned Grafeas note references a Grafeas Attestation.Authority Note created by the user.
@@ -34,16 +37,16 @@ var UserOwnedGrafeasNoteInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noteReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noteReference" }),
         __metadata("design:type", String)
     ], UserOwnedGrafeasNoteInput.prototype, "noteReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKeys", elemType: AttestorPublicKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKeys", elemType: attestorpublickey_1.AttestorPublicKey }),
         __metadata("design:type", Array)
     ], UserOwnedGrafeasNoteInput.prototype, "publicKeys", void 0);
     return UserOwnedGrafeasNoteInput;
-}(SpeakeasyBase));
-export { UserOwnedGrafeasNoteInput };
+}(utils_1.SpeakeasyBase));
+exports.UserOwnedGrafeasNoteInput = UserOwnedGrafeasNoteInput;
 // UserOwnedGrafeasNote
 /**
  * An user owned Grafeas note references a Grafeas Attestation.Authority Note created by the user.
@@ -54,17 +57,17 @@ var UserOwnedGrafeasNote = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delegationServiceAccountEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delegationServiceAccountEmail" }),
         __metadata("design:type", String)
     ], UserOwnedGrafeasNote.prototype, "delegationServiceAccountEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noteReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noteReference" }),
         __metadata("design:type", String)
     ], UserOwnedGrafeasNote.prototype, "noteReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKeys", elemType: AttestorPublicKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKeys", elemType: attestorpublickey_1.AttestorPublicKey }),
         __metadata("design:type", Array)
     ], UserOwnedGrafeasNote.prototype, "publicKeys", void 0);
     return UserOwnedGrafeasNote;
-}(SpeakeasyBase));
-export { UserOwnedGrafeasNote };
+}(utils_1.SpeakeasyBase));
+exports.UserOwnedGrafeasNote = UserOwnedGrafeasNote;

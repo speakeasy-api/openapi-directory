@@ -32,7 +32,7 @@ export class ActivityMarkNotificationsAsReadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  activityMarkNotificationsAsRead202ApplicationJsonObject?: ActivityMarkNotificationsAsRead202ApplicationJson;
+  activityMarkNotificationsAsRead202ApplicationJSONObject?: ActivityMarkNotificationsAsRead202ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

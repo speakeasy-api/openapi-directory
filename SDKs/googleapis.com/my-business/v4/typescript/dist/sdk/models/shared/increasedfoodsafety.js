@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncreasedFoodSafety = exports.IncreasedFoodSafetySingleUseFoodMenusExceptionEnum = exports.IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum = exports.IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum = exports.IncreasedFoodSafetyDisposableFlatwareExceptionEnum = exports.IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum;
 (function (IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum) {
     IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum || (IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum = {}));
-export var IncreasedFoodSafetyDisposableFlatwareExceptionEnum;
+})(IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum = exports.IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum || (exports.IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum = {}));
+var IncreasedFoodSafetyDisposableFlatwareExceptionEnum;
 (function (IncreasedFoodSafetyDisposableFlatwareExceptionEnum) {
     IncreasedFoodSafetyDisposableFlatwareExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     IncreasedFoodSafetyDisposableFlatwareExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     IncreasedFoodSafetyDisposableFlatwareExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     IncreasedFoodSafetyDisposableFlatwareExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(IncreasedFoodSafetyDisposableFlatwareExceptionEnum || (IncreasedFoodSafetyDisposableFlatwareExceptionEnum = {}));
-export var IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum;
+})(IncreasedFoodSafetyDisposableFlatwareExceptionEnum = exports.IncreasedFoodSafetyDisposableFlatwareExceptionEnum || (exports.IncreasedFoodSafetyDisposableFlatwareExceptionEnum = {}));
+var IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum;
 (function (IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum) {
     IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum || (IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum = {}));
-export var IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum;
+})(IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum = exports.IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum || (exports.IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum = {}));
+var IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum;
 (function (IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum) {
     IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum || (IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum = {}));
-export var IncreasedFoodSafetySingleUseFoodMenusExceptionEnum;
+})(IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum = exports.IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum || (exports.IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum = {}));
+var IncreasedFoodSafetySingleUseFoodMenusExceptionEnum;
 (function (IncreasedFoodSafetySingleUseFoodMenusExceptionEnum) {
     IncreasedFoodSafetySingleUseFoodMenusExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     IncreasedFoodSafetySingleUseFoodMenusExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     IncreasedFoodSafetySingleUseFoodMenusExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     IncreasedFoodSafetySingleUseFoodMenusExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(IncreasedFoodSafetySingleUseFoodMenusExceptionEnum || (IncreasedFoodSafetySingleUseFoodMenusExceptionEnum = {}));
+})(IncreasedFoodSafetySingleUseFoodMenusExceptionEnum = exports.IncreasedFoodSafetySingleUseFoodMenusExceptionEnum || (exports.IncreasedFoodSafetySingleUseFoodMenusExceptionEnum = {}));
 // IncreasedFoodSafety
 /**
  * Increased food safety measures implemented by the hotel during COVID-19.
@@ -68,45 +71,45 @@ var IncreasedFoodSafety = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diningAreasAdditionalSanitation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diningAreasAdditionalSanitation" }),
         __metadata("design:type", Boolean)
     ], IncreasedFoodSafety.prototype, "diningAreasAdditionalSanitation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diningAreasAdditionalSanitationException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diningAreasAdditionalSanitationException" }),
         __metadata("design:type", String)
     ], IncreasedFoodSafety.prototype, "diningAreasAdditionalSanitationException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disposableFlatware" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disposableFlatware" }),
         __metadata("design:type", Boolean)
     ], IncreasedFoodSafety.prototype, "disposableFlatware", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disposableFlatwareException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disposableFlatwareException" }),
         __metadata("design:type", String)
     ], IncreasedFoodSafety.prototype, "disposableFlatwareException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foodPreparationAndServingAdditionalSafety" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foodPreparationAndServingAdditionalSafety" }),
         __metadata("design:type", Boolean)
     ], IncreasedFoodSafety.prototype, "foodPreparationAndServingAdditionalSafety", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foodPreparationAndServingAdditionalSafetyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foodPreparationAndServingAdditionalSafetyException" }),
         __metadata("design:type", String)
     ], IncreasedFoodSafety.prototype, "foodPreparationAndServingAdditionalSafetyException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualPackagedMeals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualPackagedMeals" }),
         __metadata("design:type", Boolean)
     ], IncreasedFoodSafety.prototype, "individualPackagedMeals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualPackagedMealsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualPackagedMealsException" }),
         __metadata("design:type", String)
     ], IncreasedFoodSafety.prototype, "individualPackagedMealsException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleUseFoodMenus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleUseFoodMenus" }),
         __metadata("design:type", Boolean)
     ], IncreasedFoodSafety.prototype, "singleUseFoodMenus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleUseFoodMenusException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleUseFoodMenusException" }),
         __metadata("design:type", String)
     ], IncreasedFoodSafety.prototype, "singleUseFoodMenusException", void 0);
     return IncreasedFoodSafety;
-}(SpeakeasyBase));
-export { IncreasedFoodSafety };
+}(utils_1.SpeakeasyBase));
+exports.IncreasedFoodSafety = IncreasedFoodSafety;

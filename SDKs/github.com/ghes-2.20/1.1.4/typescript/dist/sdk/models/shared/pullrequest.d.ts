@@ -13,6 +13,9 @@ export declare class PullRequestLinks extends SpeakeasyBase {
     self: Link;
     statuses: Link;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -34,6 +37,9 @@ export declare class PullRequestSimpleUser extends SpeakeasyBase {
     type: string;
     url: string;
 }
+/**
+ * License Simple
+**/
 export declare class PullRequestBaseRepoLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -326,6 +332,9 @@ export declare class PullRequestLabels extends SpeakeasyBase {
     nodeId?: string;
     url?: string;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestMilestoneSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -351,6 +360,9 @@ export declare enum PullRequestMilestoneStateEnum {
     Open = "open",
     Closed = "closed"
 }
+/**
+ * A collection of related issues and pull requests.
+**/
 export declare class PullRequestMilestone extends SpeakeasyBase {
     closedAt: Date;
     closedIssues: number;

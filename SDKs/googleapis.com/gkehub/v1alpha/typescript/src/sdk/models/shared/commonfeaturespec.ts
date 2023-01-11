@@ -15,13 +15,13 @@ export class CommonFeatureSpec extends SpeakeasyBase {
   anthosobservability?: AnthosObservabilityFeatureSpec;
 
   @SpeakeasyMetadata({ data: "json, name=appdevexperience" })
-  appdevexperience?: Map<string, any>;
+  appdevexperience?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=cloudauditlogging" })
   cloudauditlogging?: CloudAuditLoggingFeatureSpec;
 
   @SpeakeasyMetadata({ data: "json, name=fleetobservability" })
-  fleetobservability?: Map<string, any>;
+  fleetobservability?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=multiclusteringress" })
   multiclusteringress?: MultiClusterIngressFeatureSpec;

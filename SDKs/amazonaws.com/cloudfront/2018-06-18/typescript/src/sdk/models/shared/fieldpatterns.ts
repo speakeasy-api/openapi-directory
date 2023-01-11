@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class FieldPatterns extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items?: string[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

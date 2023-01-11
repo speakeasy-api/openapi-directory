@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,184 +23,186 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnlineSettingsViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var OnlineSettingsViewModel = /** @class */ (function (_super) {
     __extends(OnlineSettingsViewModel, _super);
     function OnlineSettingsViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityForm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityForm" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "availabilityForm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadUnit" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "bookAheadUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookAheadValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookAheadValue" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "bookAheadValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookInAdvance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookInAdvance" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "bookInAdvance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookWithAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookWithAccount" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "bookWithAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingConfirmationMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingConfirmationMessage" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "bookingConfirmationMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingMessage" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "bookingMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingPolicy" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "bookingPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingTimerMins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingTimerMins" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "bookingTimerMins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessId" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "businessId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyId" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerBookingsPerDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerBookingsPerDay" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "customerBookingsPerDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerVerification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerVerification" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "customerVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultService" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "defaultService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultToCustomerTimezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultToCustomerTimezone" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "defaultToCustomerTimezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableAuthorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableAuthorization" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "disableAuthorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableWorldTimezones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableWorldTimezones" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "enableWorldTimezones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=familyMembersEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=familyMembersEnabled" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "familyMembersEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstAvailable" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "firstAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formFlow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formFlow" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "formFlow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideBreadCrumbNav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideBreadCrumbNav" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideBreadCrumbNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideContinueBooking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideContinueBooking" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideContinueBooking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideLocationNav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideLocationNav" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideLocationNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideNavBar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideNavBar" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideNavBar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideServiceGroupsNav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideServiceGroupsNav" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideServiceGroupsNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideServicesNav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideServicesNav" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "hideServicesNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lateCancelAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lateCancelAction" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "lateCancelAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lateCancelHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lateCancelHours" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "lateCancelHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lateRescheduleAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lateRescheduleAction" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "lateRescheduleAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lateRescheduleHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lateRescheduleHours" }),
         __metadata("design:type", Number)
     ], OnlineSettingsViewModel.prototype, "lateRescheduleHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveMode" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "liveMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceAnyLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceAnyLabel" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "resourceAnyLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceLabel" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "resourceLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceSelection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceSelection" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "resourceSelection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnToAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnToAvailability" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "returnToAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnToService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnToService" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "returnToService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceLabel" }),
         __metadata("design:type", String)
     ], OnlineSettingsViewModel.prototype, "serviceLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showBusinessLogo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showBusinessLogo" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "showBusinessLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showOnSchedLogo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showOnSchedLogo" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "showOnSchedLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showServiceGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showServiceGroups" }),
         __metadata("design:type", Boolean)
     ], OnlineSettingsViewModel.prototype, "showServiceGroups", void 0);
     return OnlineSettingsViewModel;
-}(SpeakeasyBase));
-export { OnlineSettingsViewModel };
+}(utils_1.SpeakeasyBase));
+exports.OnlineSettingsViewModel = OnlineSettingsViewModel;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VmUtilizationMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
 // VmUtilizationMetrics
 /**
  * Utilization metrics values for a single VM.
@@ -33,69 +36,69 @@ var VmUtilizationMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuAverage" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "cpuAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuAveragePercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuAveragePercent" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "cpuAveragePercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuMax" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "cpuMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuMaxPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuMaxPercent" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "cpuMaxPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskIoRateAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskIoRateAverage" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "diskIoRateAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskIoRateAverageKbps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskIoRateAverageKbps" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "diskIoRateAverageKbps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskIoRateMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskIoRateMax" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "diskIoRateMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskIoRateMaxKbps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskIoRateMaxKbps" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "diskIoRateMaxKbps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryAverage" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "memoryAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryAveragePercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryAveragePercent" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "memoryAveragePercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryMax" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "memoryMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryMaxPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryMaxPercent" }),
         __metadata("design:type", Number)
     ], VmUtilizationMetrics.prototype, "memoryMaxPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkThroughputAverage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkThroughputAverage" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "networkThroughputAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkThroughputAverageKbps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkThroughputAverageKbps" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "networkThroughputAverageKbps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkThroughputMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkThroughputMax" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "networkThroughputMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkThroughputMaxKbps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkThroughputMaxKbps" }),
         __metadata("design:type", String)
     ], VmUtilizationMetrics.prototype, "networkThroughputMaxKbps", void 0);
     return VmUtilizationMetrics;
-}(SpeakeasyBase));
-export { VmUtilizationMetrics };
+}(utils_1.SpeakeasyBase));
+exports.VmUtilizationMetrics = VmUtilizationMetrics;

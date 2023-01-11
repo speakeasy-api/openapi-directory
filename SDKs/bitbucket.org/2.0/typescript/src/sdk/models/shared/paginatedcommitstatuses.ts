@@ -23,5 +23,5 @@ export class PaginatedCommitstatuses extends SpeakeasyBase {
   size?: number;
 
   @SpeakeasyMetadata({ data: "json, name=values" })
-  values?: Map<string, any>[];
+  values?: Record<string, any>[];
 }

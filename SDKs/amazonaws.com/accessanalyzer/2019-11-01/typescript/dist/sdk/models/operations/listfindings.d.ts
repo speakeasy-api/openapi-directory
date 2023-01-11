@@ -22,7 +22,7 @@ export declare class ListFindingsRequestBodySort extends SpeakeasyBase {
 }
 export declare class ListFindingsRequestBody extends SpeakeasyBase {
     analyzerArn: string;
-    filter?: Map<string, shared.Criterion>;
+    filter?: Record<string, shared.Criterion>;
     maxResults?: number;
     nextToken?: string;
     sort?: ListFindingsRequestBodySort;

@@ -57,8 +57,8 @@ export class UpdateTagsForDomainResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 
   @SpeakeasyMetadata()
-  updateTagsForDomainResponse?: Map<string, any>;
+  updateTagsForDomainResponse?: Record<string, any>;
 }

@@ -9,5 +9,5 @@ export declare class GetMibRequest extends SpeakeasyBase {
 export declare class GetMibResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMib200ApplicationJsonString?: string;
+    getMib200ApplicationJSONString?: string;
 }

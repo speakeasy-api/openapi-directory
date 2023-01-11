@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateCloudFrontOriginAccessIdentity20181105Request, CreateCloudFrontOriginAccessIdentity20181105Response } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,18 +33,18 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateCloudFrontOriginAccessIdentity20181105Request = {
   headers: {
-    xAmzAlgorithm: "quam",
-    xAmzContentSha256: "iste",
-    xAmzCredential: "architecto",
-    xAmzDate: "eos",
-    xAmzSecurityToken: "aut",
-    xAmzSignature: "ut",
-    xAmzSignedHeaders: "enim",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
-  request: "placeat".encode(),
+  request: "voluptas".encode(),
 };
 
-sdk.sdk.createCloudFrontOriginAccessIdentity20181105(req).then((res: CreateCloudFrontOriginAccessIdentity20181105Response | AxiosError) => {
+sdk.createCloudFrontOriginAccessIdentity20181105(req).then((res: CreateCloudFrontOriginAccessIdentity20181105Response | AxiosError) => {
    // handle response
 });
 ```

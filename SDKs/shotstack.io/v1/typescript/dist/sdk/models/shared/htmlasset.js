@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HtmlAssetPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HtmlAsset = exports.HtmlAssetPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HtmlAssetPositionEnum;
 (function (HtmlAssetPositionEnum) {
     HtmlAssetPositionEnum["Top"] = "top";
     HtmlAssetPositionEnum["TopRight"] = "topRight";
@@ -34,7 +37,7 @@ export var HtmlAssetPositionEnum;
     HtmlAssetPositionEnum["Left"] = "left";
     HtmlAssetPositionEnum["TopLeft"] = "topLeft";
     HtmlAssetPositionEnum["Center"] = "center";
-})(HtmlAssetPositionEnum || (HtmlAssetPositionEnum = {}));
+})(HtmlAssetPositionEnum = exports.HtmlAssetPositionEnum || (exports.HtmlAssetPositionEnum = {}));
 // HtmlAsset
 /**
  * The HtmlAsset clip type lets you create text based layout and formatting using HTML and CSS. You can also set the height and width of a bounding box for the HTML content to sit within. Text and elements will wrap within the bounding box.
@@ -45,33 +48,33 @@ var HtmlAsset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], HtmlAsset.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=css" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=css" }),
         __metadata("design:type", String)
     ], HtmlAsset.prototype, "css", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], HtmlAsset.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], HtmlAsset.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], HtmlAsset.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], HtmlAsset.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], HtmlAsset.prototype, "width", void 0);
     return HtmlAsset;
-}(SpeakeasyBase));
-export { HtmlAsset };
+}(utils_1.SpeakeasyBase));
+exports.HtmlAsset = HtmlAsset;

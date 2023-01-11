@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterface } from "./networkinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttemptContainerDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkinterface_1 = require("./networkinterface");
 // AttemptContainerDetail
 /**
  * An object representing the details of a container that's part of a job attempt.
@@ -34,29 +37,29 @@ var AttemptContainerDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstanceArn" }),
         __metadata("design:type", String)
     ], AttemptContainerDetail.prototype, "containerInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitCode" }),
         __metadata("design:type", Number)
     ], AttemptContainerDetail.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamName" }),
         __metadata("design:type", String)
     ], AttemptContainerDetail.prototype, "logStreamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], AttemptContainerDetail.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], AttemptContainerDetail.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskArn" }),
         __metadata("design:type", String)
     ], AttemptContainerDetail.prototype, "taskArn", void 0);
     return AttemptContainerDetail;
-}(SpeakeasyBase));
-export { AttemptContainerDetail };
+}(utils_1.SpeakeasyBase));
+exports.AttemptContainerDetail = AttemptContainerDetail;

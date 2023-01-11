@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,159 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GamesConfigurationAchievementConfigurationsGetResponse = exports.GamesConfigurationAchievementConfigurationsGetRequest = exports.GamesConfigurationAchievementConfigurationsGetSecurity = exports.GamesConfigurationAchievementConfigurationsGetQueryParams = exports.GamesConfigurationAchievementConfigurationsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GamesConfigurationAchievementConfigurationsGetPathParams = /** @class */ (function (_super) {
     __extends(GamesConfigurationAchievementConfigurationsGetPathParams, _super);
     function GamesConfigurationAchievementConfigurationsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=achievementId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=achievementId" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetPathParams.prototype, "achievementId", void 0);
     return GamesConfigurationAchievementConfigurationsGetPathParams;
-}(SpeakeasyBase));
-export { GamesConfigurationAchievementConfigurationsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GamesConfigurationAchievementConfigurationsGetPathParams = GamesConfigurationAchievementConfigurationsGetPathParams;
 var GamesConfigurationAchievementConfigurationsGetQueryParams = /** @class */ (function (_super) {
     __extends(GamesConfigurationAchievementConfigurationsGetQueryParams, _super);
     function GamesConfigurationAchievementConfigurationsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetQueryParams.prototype, "uploadProtocol", void 0);
     return GamesConfigurationAchievementConfigurationsGetQueryParams;
-}(SpeakeasyBase));
-export { GamesConfigurationAchievementConfigurationsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GamesConfigurationAchievementConfigurationsGetQueryParams = GamesConfigurationAchievementConfigurationsGetQueryParams;
 var GamesConfigurationAchievementConfigurationsGetSecurity = /** @class */ (function (_super) {
     __extends(GamesConfigurationAchievementConfigurationsGetSecurity, _super);
     function GamesConfigurationAchievementConfigurationsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], GamesConfigurationAchievementConfigurationsGetSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], GamesConfigurationAchievementConfigurationsGetSecurity.prototype, "oauth2c", void 0);
     return GamesConfigurationAchievementConfigurationsGetSecurity;
-}(SpeakeasyBase));
-export { GamesConfigurationAchievementConfigurationsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GamesConfigurationAchievementConfigurationsGetSecurity = GamesConfigurationAchievementConfigurationsGetSecurity;
 var GamesConfigurationAchievementConfigurationsGetRequest = /** @class */ (function (_super) {
     __extends(GamesConfigurationAchievementConfigurationsGetRequest, _super);
     function GamesConfigurationAchievementConfigurationsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesConfigurationAchievementConfigurationsGetPathParams)
     ], GamesConfigurationAchievementConfigurationsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesConfigurationAchievementConfigurationsGetQueryParams)
     ], GamesConfigurationAchievementConfigurationsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesConfigurationAchievementConfigurationsGetSecurity)
     ], GamesConfigurationAchievementConfigurationsGetRequest.prototype, "security", void 0);
     return GamesConfigurationAchievementConfigurationsGetRequest;
-}(SpeakeasyBase));
-export { GamesConfigurationAchievementConfigurationsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GamesConfigurationAchievementConfigurationsGetRequest = GamesConfigurationAchievementConfigurationsGetRequest;
 var GamesConfigurationAchievementConfigurationsGetResponse = /** @class */ (function (_super) {
     __extends(GamesConfigurationAchievementConfigurationsGetResponse, _super);
     function GamesConfigurationAchievementConfigurationsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AchievementConfiguration)
     ], GamesConfigurationAchievementConfigurationsGetResponse.prototype, "achievementConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GamesConfigurationAchievementConfigurationsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GamesConfigurationAchievementConfigurationsGetResponse.prototype, "statusCode", void 0);
     return GamesConfigurationAchievementConfigurationsGetResponse;
-}(SpeakeasyBase));
-export { GamesConfigurationAchievementConfigurationsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GamesConfigurationAchievementConfigurationsGetResponse = GamesConfigurationAchievementConfigurationsGetResponse;

@@ -20,7 +20,7 @@ export declare class DeleteWebhookRequest extends SpeakeasyBase {
 export declare class DeleteWebhookResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteWebhookOutput?: Map<string, any>;
+    deleteWebhookOutput?: Record<string, any>;
     statusCode: number;
     validationException?: any;
 }

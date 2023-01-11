@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetAttributePoolUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class GetAttributePoolUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class GetAttributePoolUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class GetAttributePoolUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class GetAttributePoolUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class GetAttributePoolUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingPost200ApplicationJsonObject?: GetAttributePoolUsingPost200ApplicationJson;
+  getAttributePoolUsingPOST200ApplicationJSONObject?: GetAttributePoolUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingPost400ApplicationJsonObject?: GetAttributePoolUsingPost400ApplicationJson;
+  getAttributePoolUsingPOST400ApplicationJSONObject?: GetAttributePoolUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingPost401ApplicationJsonObject?: GetAttributePoolUsingPost401ApplicationJson;
+  getAttributePoolUsingPOST401ApplicationJSONObject?: GetAttributePoolUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingPost500ApplicationJsonObject?: GetAttributePoolUsingPost500ApplicationJson;
+  getAttributePoolUsingPOST500ApplicationJSONObject?: GetAttributePoolUsingPost500ApplicationJson;
 }

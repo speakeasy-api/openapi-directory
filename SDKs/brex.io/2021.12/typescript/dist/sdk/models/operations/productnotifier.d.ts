@@ -12,7 +12,7 @@ export declare class ProductNotifierRequest extends SpeakeasyBase {
 }
 export declare class ProductNotifierResponse extends SpeakeasyBase {
     contentType: string;
-    productNotifier200ApplicationJsonAny?: any;
-    productNotifierDefaultApplicationJsonAny?: any;
+    productNotifier200ApplicationJSONAny?: any;
+    productNotifierDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

@@ -105,11 +105,11 @@ export declare class UgdcnRequest extends SpeakeasyBase {
 export declare class UgdcnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ugdcn400ApplicationJsonObject?: Ugdcn400ApplicationJson;
-    ugdcn401ApplicationJsonObject?: Ugdcn401ApplicationJson;
-    ugdcn404ApplicationJsonObject?: Ugdcn404ApplicationJson;
-    ugdcn500ApplicationJsonObject?: Ugdcn500ApplicationJson;
-    ugdcn502ApplicationJsonObject?: Ugdcn502ApplicationJson;
-    ugdcn503ApplicationJsonObject?: Ugdcn503ApplicationJson;
-    ugdcn504ApplicationJsonObject?: Ugdcn504ApplicationJson;
+    ugdcn400ApplicationJSONObject?: Ugdcn400ApplicationJson;
+    ugdcn401ApplicationJSONObject?: Ugdcn401ApplicationJson;
+    ugdcn404ApplicationJSONObject?: Ugdcn404ApplicationJson;
+    ugdcn500ApplicationJSONObject?: Ugdcn500ApplicationJson;
+    ugdcn502ApplicationJSONObject?: Ugdcn502ApplicationJson;
+    ugdcn503ApplicationJSONObject?: Ugdcn503ApplicationJson;
+    ugdcn504ApplicationJSONObject?: Ugdcn504ApplicationJson;
 }

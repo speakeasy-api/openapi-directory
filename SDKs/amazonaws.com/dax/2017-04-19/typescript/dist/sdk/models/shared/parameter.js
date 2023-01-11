@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChangeTypeEnum } from "./changetypeenum";
-import { IsModifiableEnum } from "./ismodifiableenum";
-import { NodeTypeSpecificValue } from "./nodetypespecificvalue";
-import { ParameterTypeEnum } from "./parametertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Parameter = void 0;
+var utils_1 = require("../../../internal/utils");
+var changetypeenum_1 = require("./changetypeenum");
+var ismodifiableenum_1 = require("./ismodifiableenum");
+var nodetypespecificvalue_1 = require("./nodetypespecificvalue");
+var parametertypeenum_1 = require("./parametertypeenum");
 // Parameter
 /**
  * Describes an individual setting that controls some aspect of DAX behavior.
@@ -37,45 +40,45 @@ var Parameter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowedValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowedValues" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "allowedValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeType" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "changeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataType" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsModifiable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsModifiable" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "isModifiable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeTypeSpecificValues", elemType: NodeTypeSpecificValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeTypeSpecificValues", elemType: nodetypespecificvalue_1.NodeTypeSpecificValue }),
         __metadata("design:type", Array)
     ], Parameter.prototype, "nodeTypeSpecificValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterName" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "parameterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterType" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "parameterType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterValue" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "parameterValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
         __metadata("design:type", String)
     ], Parameter.prototype, "source", void 0);
     return Parameter;
-}(SpeakeasyBase));
-export { Parameter };
+}(utils_1.SpeakeasyBase));
+exports.Parameter = Parameter;

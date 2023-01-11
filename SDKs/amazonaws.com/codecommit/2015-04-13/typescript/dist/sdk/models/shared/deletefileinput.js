@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteFileInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteFileInput = /** @class */ (function (_super) {
     __extends(DeleteFileInput, _super);
     function DeleteFileInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchName" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "branchName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitMessage" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "commitMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keepEmptyFolders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keepEmptyFolders" }),
         __metadata("design:type", Boolean)
     ], DeleteFileInput.prototype, "keepEmptyFolders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentCommitId" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "parentCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], DeleteFileInput.prototype, "repositoryName", void 0);
     return DeleteFileInput;
-}(SpeakeasyBase));
-export { DeleteFileInput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteFileInput = DeleteFileInput;

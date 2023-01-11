@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheNode } from "./cachenode";
-import { CacheParameterGroupStatus } from "./cacheparametergroupstatus";
-import { CacheSecurityGroupMembership } from "./cachesecuritygroupmembership";
-import { Endpoint } from "./endpoint";
-import { LogDeliveryConfiguration } from "./logdeliveryconfiguration";
-import { NotificationConfiguration } from "./notificationconfiguration";
-import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { SecurityGroupMembership } from "./securitygroupmembership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CacheCluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachenodelist_1 = require("./cachenodelist");
+var cacheparametergroupstatus_1 = require("./cacheparametergroupstatus");
+var cachesecuritygroupmembershiplist_1 = require("./cachesecuritygroupmembershiplist");
+var endpoint_1 = require("./endpoint");
+var logdeliveryconfigurationlist_1 = require("./logdeliveryconfigurationlist");
+var notificationconfiguration_1 = require("./notificationconfiguration");
+var pendingmodifiedvalues_1 = require("./pendingmodifiedvalues");
+var securitygroupmembership_1 = require("./securitygroupmembership");
 // CacheCluster
 /**
  * Contains all of the attributes of a specific cluster.
@@ -41,125 +44,125 @@ var CacheCluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CacheCluster.prototype, "atRestEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CacheCluster.prototype, "authTokenEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], CacheCluster.prototype, "authTokenLastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CacheCluster.prototype, "autoMinorVersionUpgrade", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], CacheCluster.prototype, "cacheClusterCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "cacheClusterId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "cacheClusterStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: CacheNode }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: cachenodelist_1.CacheNodeList }),
         __metadata("design:type", Array)
     ], CacheCluster.prototype, "cacheNodes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CacheParameterGroupStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cacheparametergroupstatus_1.CacheParameterGroupStatus)
     ], CacheCluster.prototype, "cacheParameterGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: CacheSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: cachesecuritygroupmembershiplist_1.CacheSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], CacheCluster.prototype, "cacheSecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "cacheSubnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "clientDownloadLandingPage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], CacheCluster.prototype, "configurationEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LogDeliveryConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: logdeliveryconfigurationlist_1.LogDeliveryConfigurationList }),
         __metadata("design:type", Array)
     ], CacheCluster.prototype, "logDeliveryConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", NotificationConfiguration)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", notificationconfiguration_1.NotificationConfiguration)
     ], CacheCluster.prototype, "notificationConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CacheCluster.prototype, "numCacheNodes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PendingModifiedValues)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pendingmodifiedvalues_1.PendingModifiedValues)
     ], CacheCluster.prototype, "pendingModifiedValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "preferredAvailabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "preferredOutpostArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "replicationGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CacheCluster.prototype, "replicationGroupLogDeliveryEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: SecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: securitygroupmembership_1.SecurityGroupMembership }),
         __metadata("design:type", Array)
     ], CacheCluster.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CacheCluster.prototype, "snapshotRetentionLimit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheCluster.prototype, "snapshotWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CacheCluster.prototype, "transitEncryptionEnabled", void 0);
     return CacheCluster;
-}(SpeakeasyBase));
-export { CacheCluster };
+}(utils_1.SpeakeasyBase));
+exports.CacheCluster = CacheCluster;

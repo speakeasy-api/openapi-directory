@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GroupUpdateQueryCompositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupUpdate = exports.GroupUpdateQuery = exports.GroupUpdateQueryWhere = exports.GroupUpdateQueryCompositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GroupUpdateQueryCompositionEnum;
 (function (GroupUpdateQueryCompositionEnum) {
     GroupUpdateQueryCompositionEnum["And"] = "and";
     GroupUpdateQueryCompositionEnum["Or"] = "or";
-})(GroupUpdateQueryCompositionEnum || (GroupUpdateQueryCompositionEnum = {}));
+})(GroupUpdateQueryCompositionEnum = exports.GroupUpdateQueryCompositionEnum || (exports.GroupUpdateQueryCompositionEnum = {}));
 var GroupUpdateQueryWhere = /** @class */ (function (_super) {
     __extends(GroupUpdateQueryWhere, _super);
     function GroupUpdateQueryWhere() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], GroupUpdateQueryWhere.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], GroupUpdateQueryWhere.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], GroupUpdateQueryWhere.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GroupUpdateQueryWhere.prototype, "value", void 0);
     return GroupUpdateQueryWhere;
-}(SpeakeasyBase));
-export { GroupUpdateQueryWhere };
+}(utils_1.SpeakeasyBase));
+exports.GroupUpdateQueryWhere = GroupUpdateQueryWhere;
 // GroupUpdateQuery
 /**
  * The criteria defining the group. If not provided, the group will be empty.
@@ -62,49 +65,49 @@ var GroupUpdateQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=composition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=composition" }),
         __metadata("design:type", String)
     ], GroupUpdateQuery.prototype, "composition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=select" }),
         __metadata("design:type", String)
     ], GroupUpdateQuery.prototype, "select", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=where", elemType: GroupUpdateQueryWhere }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=where", elemType: GroupUpdateQueryWhere }),
         __metadata("design:type", Array)
     ], GroupUpdateQuery.prototype, "where", void 0);
     return GroupUpdateQuery;
-}(SpeakeasyBase));
-export { GroupUpdateQuery };
+}(utils_1.SpeakeasyBase));
+exports.GroupUpdateQuery = GroupUpdateQuery;
 var GroupUpdate = /** @class */ (function (_super) {
     __extends(GroupUpdate, _super);
     function GroupUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], GroupUpdate.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GroupUpdate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GroupUpdate.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamic" }),
         __metadata("design:type", Boolean)
     ], GroupUpdate.prototype, "dynamic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], GroupUpdate.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", GroupUpdateQuery)
     ], GroupUpdate.prototype, "query", void 0);
     return GroupUpdate;
-}(SpeakeasyBase));
-export { GroupUpdate };
+}(utils_1.SpeakeasyBase));
+exports.GroupUpdate = GroupUpdate;

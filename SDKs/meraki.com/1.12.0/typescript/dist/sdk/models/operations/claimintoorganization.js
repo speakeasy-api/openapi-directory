@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimIntoOrganizationResponse = exports.ClaimIntoOrganizationRequest = exports.ClaimIntoOrganizationRequestBody = exports.ClaimIntoOrganizationRequestBodyLicenses = exports.ClaimIntoOrganizationRequestBodyLicensesModeEnum = exports.ClaimIntoOrganizationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ClaimIntoOrganizationPathParams = /** @class */ (function (_super) {
     __extends(ClaimIntoOrganizationPathParams, _super);
     function ClaimIntoOrganizationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], ClaimIntoOrganizationPathParams.prototype, "organizationId", void 0);
     return ClaimIntoOrganizationPathParams;
-}(SpeakeasyBase));
-export { ClaimIntoOrganizationPathParams };
-export var ClaimIntoOrganizationRequestBodyLicensesModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.ClaimIntoOrganizationPathParams = ClaimIntoOrganizationPathParams;
+var ClaimIntoOrganizationRequestBodyLicensesModeEnum;
 (function (ClaimIntoOrganizationRequestBodyLicensesModeEnum) {
     ClaimIntoOrganizationRequestBodyLicensesModeEnum["AddDevices"] = "addDevices";
     ClaimIntoOrganizationRequestBodyLicensesModeEnum["Renew"] = "renew";
-})(ClaimIntoOrganizationRequestBodyLicensesModeEnum || (ClaimIntoOrganizationRequestBodyLicensesModeEnum = {}));
+})(ClaimIntoOrganizationRequestBodyLicensesModeEnum = exports.ClaimIntoOrganizationRequestBodyLicensesModeEnum || (exports.ClaimIntoOrganizationRequestBodyLicensesModeEnum = {}));
 var ClaimIntoOrganizationRequestBodyLicenses = /** @class */ (function (_super) {
     __extends(ClaimIntoOrganizationRequestBodyLicenses, _super);
     function ClaimIntoOrganizationRequestBodyLicenses() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ClaimIntoOrganizationRequestBodyLicenses.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], ClaimIntoOrganizationRequestBodyLicenses.prototype, "mode", void 0);
     return ClaimIntoOrganizationRequestBodyLicenses;
-}(SpeakeasyBase));
-export { ClaimIntoOrganizationRequestBodyLicenses };
+}(utils_1.SpeakeasyBase));
+exports.ClaimIntoOrganizationRequestBodyLicenses = ClaimIntoOrganizationRequestBodyLicenses;
 var ClaimIntoOrganizationRequestBody = /** @class */ (function (_super) {
     __extends(ClaimIntoOrganizationRequestBody, _super);
     function ClaimIntoOrganizationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenses", elemType: ClaimIntoOrganizationRequestBodyLicenses }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenses", elemType: ClaimIntoOrganizationRequestBodyLicenses }),
         __metadata("design:type", Array)
     ], ClaimIntoOrganizationRequestBody.prototype, "licenses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orders" }),
         __metadata("design:type", Array)
     ], ClaimIntoOrganizationRequestBody.prototype, "orders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], ClaimIntoOrganizationRequestBody.prototype, "serials", void 0);
     return ClaimIntoOrganizationRequestBody;
-}(SpeakeasyBase));
-export { ClaimIntoOrganizationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ClaimIntoOrganizationRequestBody = ClaimIntoOrganizationRequestBody;
 var ClaimIntoOrganizationRequest = /** @class */ (function (_super) {
     __extends(ClaimIntoOrganizationRequest, _super);
     function ClaimIntoOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClaimIntoOrganizationPathParams)
     ], ClaimIntoOrganizationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ClaimIntoOrganizationRequestBody)
     ], ClaimIntoOrganizationRequest.prototype, "request", void 0);
     return ClaimIntoOrganizationRequest;
-}(SpeakeasyBase));
-export { ClaimIntoOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ClaimIntoOrganizationRequest = ClaimIntoOrganizationRequest;
 var ClaimIntoOrganizationResponse = /** @class */ (function (_super) {
     __extends(ClaimIntoOrganizationResponse, _super);
     function ClaimIntoOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClaimIntoOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ClaimIntoOrganizationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ClaimIntoOrganizationResponse.prototype, "claimIntoOrganization200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ClaimIntoOrganizationResponse.prototype, "claimIntoOrganization200ApplicationJSONObject", void 0);
     return ClaimIntoOrganizationResponse;
-}(SpeakeasyBase));
-export { ClaimIntoOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ClaimIntoOrganizationResponse = ClaimIntoOrganizationResponse;

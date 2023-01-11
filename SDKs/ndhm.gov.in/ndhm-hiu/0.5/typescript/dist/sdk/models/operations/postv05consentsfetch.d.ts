@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05ConsentsFetchHeaders extends SpeakeasyBase {
     authorization: string;
-    xCmId: string;
+    xCMID: string;
 }
 export declare class PostV05ConsentsFetchRequest extends SpeakeasyBase {
     headers: PostV05ConsentsFetchHeaders;

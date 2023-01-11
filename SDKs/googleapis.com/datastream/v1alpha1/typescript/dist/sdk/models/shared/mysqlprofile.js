@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MysqlSslConfigInput } from "./mysqlsslconfig";
-import { MysqlSslConfig } from "./mysqlsslconfig";
-// MysqlProfileInput
-/**
- * MySQL database profile.
-**/
-var MysqlProfileInput = /** @class */ (function (_super) {
-    __extends(MysqlProfileInput, _super);
-    function MysqlProfileInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
-        __metadata("design:type", String)
-    ], MysqlProfileInput.prototype, "hostname", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
-        __metadata("design:type", String)
-    ], MysqlProfileInput.prototype, "password", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
-        __metadata("design:type", Number)
-    ], MysqlProfileInput.prototype, "port", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sslConfig" }),
-        __metadata("design:type", MysqlSslConfigInput)
-    ], MysqlProfileInput.prototype, "sslConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
-        __metadata("design:type", String)
-    ], MysqlProfileInput.prototype, "username", void 0);
-    return MysqlProfileInput;
-}(SpeakeasyBase));
-export { MysqlProfileInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MysqlProfileInput = exports.MysqlProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var mysqlsslconfig_1 = require("./mysqlsslconfig");
+var mysqlsslconfig_2 = require("./mysqlsslconfig");
 // MysqlProfile
 /**
  * MySQL database profile.
@@ -67,25 +38,57 @@ var MysqlProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], MysqlProfile.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], MysqlProfile.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], MysqlProfile.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sslConfig" }),
-        __metadata("design:type", MysqlSslConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sslConfig" }),
+        __metadata("design:type", mysqlsslconfig_1.MysqlSslConfig)
     ], MysqlProfile.prototype, "sslConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], MysqlProfile.prototype, "username", void 0);
     return MysqlProfile;
-}(SpeakeasyBase));
-export { MysqlProfile };
+}(utils_1.SpeakeasyBase));
+exports.MysqlProfile = MysqlProfile;
+// MysqlProfileInput
+/**
+ * MySQL database profile.
+**/
+var MysqlProfileInput = /** @class */ (function (_super) {
+    __extends(MysqlProfileInput, _super);
+    function MysqlProfileInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
+        __metadata("design:type", String)
+    ], MysqlProfileInput.prototype, "hostname", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
+        __metadata("design:type", String)
+    ], MysqlProfileInput.prototype, "password", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
+        __metadata("design:type", Number)
+    ], MysqlProfileInput.prototype, "port", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sslConfig" }),
+        __metadata("design:type", mysqlsslconfig_2.MysqlSslConfigInput)
+    ], MysqlProfileInput.prototype, "sslConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
+        __metadata("design:type", String)
+    ], MysqlProfileInput.prototype, "username", void 0);
+    return MysqlProfileInput;
+}(utils_1.SpeakeasyBase));
+exports.MysqlProfileInput = MysqlProfileInput;

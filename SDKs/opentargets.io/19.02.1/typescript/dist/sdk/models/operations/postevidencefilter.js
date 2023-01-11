@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostEvidenceFilterResponse = exports.PostEvidenceFilterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostEvidenceFilterRequest = /** @class */ (function (_super) {
     __extends(PostEvidenceFilterRequest, _super);
     function PostEvidenceFilterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], PostEvidenceFilterRequest.prototype, "request", void 0);
     return PostEvidenceFilterRequest;
-}(SpeakeasyBase));
-export { PostEvidenceFilterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostEvidenceFilterRequest = PostEvidenceFilterRequest;
 var PostEvidenceFilterResponse = /** @class */ (function (_super) {
     __extends(PostEvidenceFilterResponse, _super);
     function PostEvidenceFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostEvidenceFilterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostEvidenceFilterResponse.prototype, "statusCode", void 0);
     return PostEvidenceFilterResponse;
-}(SpeakeasyBase));
-export { PostEvidenceFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostEvidenceFilterResponse = PostEvidenceFilterResponse;

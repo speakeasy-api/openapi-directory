@@ -12,7 +12,7 @@ export class MetricTransformation extends SpeakeasyBase {
   defaultValue?: number;
 
   @SpeakeasyMetadata({ data: "json, name=dimensions" })
-  dimensions?: Map<string, string>;
+  dimensions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=metricName" })
   metricName: string;

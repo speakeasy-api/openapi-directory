@@ -1,4 +1,7 @@
-export var ContinuousExportStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContinuousExportStatusEnum = void 0;
+var ContinuousExportStatusEnum;
 (function (ContinuousExportStatusEnum) {
     ContinuousExportStatusEnum["StartInProgress"] = "START_IN_PROGRESS";
     ContinuousExportStatusEnum["StartFailed"] = "START_FAILED";
@@ -7,4 +10,4 @@ export var ContinuousExportStatusEnum;
     ContinuousExportStatusEnum["StopInProgress"] = "STOP_IN_PROGRESS";
     ContinuousExportStatusEnum["StopFailed"] = "STOP_FAILED";
     ContinuousExportStatusEnum["Inactive"] = "INACTIVE";
-})(ContinuousExportStatusEnum || (ContinuousExportStatusEnum = {}));
+})(ContinuousExportStatusEnum = exports.ContinuousExportStatusEnum || (exports.ContinuousExportStatusEnum = {}));

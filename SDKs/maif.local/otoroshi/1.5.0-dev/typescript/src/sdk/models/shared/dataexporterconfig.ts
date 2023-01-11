@@ -60,13 +60,13 @@ export class DataExporterConfig extends SpeakeasyBase {
   location?: Location;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=projection" })
-  projection?: Map<string, string>;
+  projection?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sendWorkers" })
   sendWorkers?: number;

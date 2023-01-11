@@ -1,10 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-/**
- * An audit's result object in a Lighthouse result.
-**/
 export declare class LighthouseAuditResultV5 extends SpeakeasyBase {
     description?: string;
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     displayValue?: string;
     errorMessage?: string;
     explanation?: string;

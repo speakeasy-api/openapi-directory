@@ -1,11 +1,27 @@
-export * from "./discoveryengineprojectslocationsdatastoresbranchesdocumentscreate";
-export * from "./discoveryengineprojectslocationsdatastoresbranchesdocumentsdelete";
-export * from "./discoveryengineprojectslocationsdatastoresbranchesdocumentsimport";
-export * from "./discoveryengineprojectslocationsdatastoresbranchesdocumentslist";
-export * from "./discoveryengineprojectslocationsdatastoresbranchesdocumentspatch";
-export * from "./discoveryengineprojectslocationsdatastoresservingconfigsrecommend";
-export * from "./discoveryengineprojectslocationsdatastoresusereventscollect";
-export * from "./discoveryengineprojectslocationsdatastoresusereventsimport";
-export * from "./discoveryengineprojectslocationsdatastoresusereventswrite";
-export * from "./discoveryengineprojectsoperationsget";
-export * from "./discoveryengineprojectsoperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./discoveryengineprojectslocationsdatastoresbranchesdocumentscreate"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresbranchesdocumentsdelete"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresbranchesdocumentsimport"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresbranchesdocumentslist"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresbranchesdocumentspatch"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresservingconfigsrecommend"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresusereventscollect"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresusereventsimport"), exports);
+__exportStar(require("./discoveryengineprojectslocationsdatastoresusereventswrite"), exports);
+__exportStar(require("./discoveryengineprojectsoperationsget"), exports);
+__exportStar(require("./discoveryengineprojectsoperationslist"), exports);

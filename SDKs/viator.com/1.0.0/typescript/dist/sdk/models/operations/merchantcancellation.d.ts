@@ -33,8 +33,8 @@ export declare class MerchantCancellation200ApplicationJson extends SpeakeasyBas
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -54,8 +54,8 @@ export declare class MerchantCancellation400ApplicationJson extends SpeakeasyBas
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -67,6 +67,6 @@ export declare class MerchantCancellationRequest extends SpeakeasyBase {
 export declare class MerchantCancellationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    merchantCancellation200ApplicationJsonObject?: MerchantCancellation200ApplicationJson;
-    merchantCancellation400ApplicationJsonObject?: MerchantCancellation400ApplicationJson;
+    merchantCancellation200ApplicationJSONObject?: MerchantCancellation200ApplicationJson;
+    merchantCancellation400ApplicationJSONObject?: MerchantCancellation400ApplicationJson;
 }

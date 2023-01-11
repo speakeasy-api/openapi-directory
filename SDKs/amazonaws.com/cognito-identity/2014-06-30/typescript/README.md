@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateIdentityPoolRequest, CreateIdentityPoolResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,13 +33,13 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateIdentityPoolRequest = {
   headers: {
-    xAmzAlgorithm: "repudiandae",
-    xAmzContentSha256: "praesentium",
-    xAmzCredential: "tempora",
-    xAmzDate: "est",
-    xAmzSecurityToken: "aut",
-    xAmzSignature: "dignissimos",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
   },
   request: {
@@ -48,40 +47,31 @@ const req: CreateIdentityPoolRequest = {
     allowUnauthenticatedIdentities: false,
     cognitoIdentityProviders: [
       {
-        clientId: "magni",
-        providerName: "expedita",
-        serverSideTokenCheck: false,
-      },
-      {
-        clientId: "dolor",
-        providerName: "consequatur",
+        clientId: "rerum",
+        providerName: "dicta",
         serverSideTokenCheck: true,
       },
     ],
-    developerProviderName: "occaecati",
-    identityPoolName: "veniam",
+    developerProviderName: "voluptatum",
+    identityPoolName: "et",
     identityPoolTags: {
-      "sint": "laudantium",
-      "explicabo": "maiores",
-      "ducimus": "et",
+      "dolorem": "et",
+      "voluptate": "iste",
+      "vitae": "totam",
     },
-    openIdConnectProviderArNs: [
-      "omnis",
-      "ut",
-      "libero",
+    openIdConnectProviderARNs: [
+      "illum",
     ],
-    samlProviderArNs: [
-      "qui",
-      "sit",
-      "quasi",
+    samlProviderARNs: [
+      "vel",
     ],
     supportedLoginProviders: {
-      "voluptate": "ut",
+      "dolore": "id",
     },
   },
 };
 
-sdk.sdk.createIdentityPool(req).then((res: CreateIdentityPoolResponse | AxiosError) => {
+sdk.createIdentityPool(req).then((res: CreateIdentityPoolResponse | AxiosError) => {
    // handle response
 });
 ```

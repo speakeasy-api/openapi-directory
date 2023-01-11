@@ -32,5 +32,5 @@ export class GetHealthcheckResultResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getHealthcheckResult200ApplicationJsonObject?: GetHealthcheckResult200ApplicationJson;
+  getHealthcheckResult200ApplicationJSONObject?: GetHealthcheckResult200ApplicationJson;
 }

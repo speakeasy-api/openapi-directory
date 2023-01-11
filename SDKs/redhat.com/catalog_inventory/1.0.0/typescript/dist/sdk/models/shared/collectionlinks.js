@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionLinks = /** @class */ (function (_super) {
     __extends(CollectionLinks, _super);
     function CollectionLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first" }),
         __metadata("design:type", String)
     ], CollectionLinks.prototype, "first", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last" }),
         __metadata("design:type", String)
     ], CollectionLinks.prototype, "last", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], CollectionLinks.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], CollectionLinks.prototype, "prev", void 0);
     return CollectionLinks;
-}(SpeakeasyBase));
-export { CollectionLinks };
+}(utils_1.SpeakeasyBase));
+exports.CollectionLinks = CollectionLinks;

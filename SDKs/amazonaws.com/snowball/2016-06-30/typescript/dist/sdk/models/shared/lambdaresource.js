@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventTriggerDefinition } from "./eventtriggerdefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventtriggerdefinition_1 = require("./eventtriggerdefinition");
 // LambdaResource
 /**
  * Identifies
@@ -34,13 +37,13 @@ var LambdaResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventTriggers", elemType: EventTriggerDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventTriggers", elemType: eventtriggerdefinition_1.EventTriggerDefinition }),
         __metadata("design:type", Array)
     ], LambdaResource.prototype, "eventTriggers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LambdaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LambdaArn" }),
         __metadata("design:type", String)
     ], LambdaResource.prototype, "lambdaArn", void 0);
     return LambdaResource;
-}(SpeakeasyBase));
-export { LambdaResource };
+}(utils_1.SpeakeasyBase));
+exports.LambdaResource = LambdaResource;

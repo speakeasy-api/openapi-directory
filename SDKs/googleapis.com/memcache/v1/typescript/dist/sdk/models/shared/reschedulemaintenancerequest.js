@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RescheduleMaintenanceRequestRescheduleTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RescheduleMaintenanceRequest = exports.RescheduleMaintenanceRequestRescheduleTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RescheduleMaintenanceRequestRescheduleTypeEnum;
 (function (RescheduleMaintenanceRequestRescheduleTypeEnum) {
     RescheduleMaintenanceRequestRescheduleTypeEnum["RescheduleTypeUnspecified"] = "RESCHEDULE_TYPE_UNSPECIFIED";
     RescheduleMaintenanceRequestRescheduleTypeEnum["Immediate"] = "IMMEDIATE";
     RescheduleMaintenanceRequestRescheduleTypeEnum["NextAvailableWindow"] = "NEXT_AVAILABLE_WINDOW";
     RescheduleMaintenanceRequestRescheduleTypeEnum["SpecificTime"] = "SPECIFIC_TIME";
-})(RescheduleMaintenanceRequestRescheduleTypeEnum || (RescheduleMaintenanceRequestRescheduleTypeEnum = {}));
+})(RescheduleMaintenanceRequestRescheduleTypeEnum = exports.RescheduleMaintenanceRequestRescheduleTypeEnum || (exports.RescheduleMaintenanceRequestRescheduleTypeEnum = {}));
 // RescheduleMaintenanceRequest
 /**
  * Request for RescheduleMaintenance.
@@ -40,13 +43,13 @@ var RescheduleMaintenanceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rescheduleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rescheduleType" }),
         __metadata("design:type", String)
     ], RescheduleMaintenanceRequest.prototype, "rescheduleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTime" }),
         __metadata("design:type", String)
     ], RescheduleMaintenanceRequest.prototype, "scheduleTime", void 0);
     return RescheduleMaintenanceRequest;
-}(SpeakeasyBase));
-export { RescheduleMaintenanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RescheduleMaintenanceRequest = RescheduleMaintenanceRequest;

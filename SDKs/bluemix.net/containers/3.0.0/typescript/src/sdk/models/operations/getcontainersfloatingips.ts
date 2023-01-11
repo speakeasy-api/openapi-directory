@@ -31,7 +31,7 @@ export class GetContainersFloatingIpsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  floatingIps?: any[];
+  floatingIPS?: any[];
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -46,7 +46,7 @@ export class DeleteVpcLinkResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteVpcLinkResponse?: Map<string, any>;
+  deleteVpcLinkResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

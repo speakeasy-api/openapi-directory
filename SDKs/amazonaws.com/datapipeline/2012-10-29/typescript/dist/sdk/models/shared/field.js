@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Field = void 0;
+var utils_1 = require("../../../internal/utils");
 // Field
 /**
  * A key-value pair that describes a property of a pipeline object. The value is specified as either a string value (<code>StringValue</code>) or a reference to another object (<code>RefValue</code>) but not as both.
@@ -33,17 +36,17 @@ var Field = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], Field.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refValue" }),
         __metadata("design:type", String)
     ], Field.prototype, "refValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], Field.prototype, "stringValue", void 0);
     return Field;
-}(SpeakeasyBase));
-export { Field };
+}(utils_1.SpeakeasyBase));
+exports.Field = Field;

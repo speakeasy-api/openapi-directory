@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimesheetStatusEnum } from "./timesheetstatusenum";
-import { TimesheetLineInput } from "./timesheetline";
-import { ValidationError } from "./validationerror";
-import { TimesheetLine } from "./timesheetline";
-var TimesheetInput = /** @class */ (function (_super) {
-    __extends(TimesheetInput, _super);
-    function TimesheetInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
-        __metadata("design:type", String)
-    ], TimesheetInput.prototype, "employeeId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
-        __metadata("design:type", String)
-    ], TimesheetInput.prototype, "endDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hours" }),
-        __metadata("design:type", Number)
-    ], TimesheetInput.prototype, "hours", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
-        __metadata("design:type", String)
-    ], TimesheetInput.prototype, "startDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
-        __metadata("design:type", String)
-    ], TimesheetInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetID" }),
-        __metadata("design:type", String)
-    ], TimesheetInput.prototype, "timesheetId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetLines", elemType: TimesheetLineInput }),
-        __metadata("design:type", Array)
-    ], TimesheetInput.prototype, "timesheetLines", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
-        __metadata("design:type", Array)
-    ], TimesheetInput.prototype, "validationErrors", void 0);
-    return TimesheetInput;
-}(SpeakeasyBase));
-export { TimesheetInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimesheetInput = exports.Timesheet = void 0;
+var utils_1 = require("../../../internal/utils");
+var timesheetstatusenum_1 = require("./timesheetstatusenum");
+var timesheetline_1 = require("./timesheetline");
+var validationerror_1 = require("./validationerror");
+var timesheetline_2 = require("./timesheetline");
 var Timesheet = /** @class */ (function (_super) {
     __extends(Timesheet, _super);
     function Timesheet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], Timesheet.prototype, "employeeId", void 0);
+    ], Timesheet.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", String)
     ], Timesheet.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hours" }),
         __metadata("design:type", Number)
     ], Timesheet.prototype, "hours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", String)
     ], Timesheet.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Timesheet.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetID" }),
         __metadata("design:type", String)
-    ], Timesheet.prototype, "timesheetId", void 0);
+    ], Timesheet.prototype, "timesheetID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimesheetLines", elemType: TimesheetLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetLines", elemType: timesheetline_1.TimesheetLine }),
         __metadata("design:type", Array)
     ], Timesheet.prototype, "timesheetLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], Timesheet.prototype, "updatedDateUtc", void 0);
+    ], Timesheet.prototype, "updatedDateUTC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], Timesheet.prototype, "validationErrors", void 0);
     return Timesheet;
-}(SpeakeasyBase));
-export { Timesheet };
+}(utils_1.SpeakeasyBase));
+exports.Timesheet = Timesheet;
+var TimesheetInput = /** @class */ (function (_super) {
+    __extends(TimesheetInput, _super);
+    function TimesheetInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
+        __metadata("design:type", String)
+    ], TimesheetInput.prototype, "employeeID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
+        __metadata("design:type", String)
+    ], TimesheetInput.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hours" }),
+        __metadata("design:type", Number)
+    ], TimesheetInput.prototype, "hours", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
+        __metadata("design:type", String)
+    ], TimesheetInput.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
+        __metadata("design:type", String)
+    ], TimesheetInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetID" }),
+        __metadata("design:type", String)
+    ], TimesheetInput.prototype, "timesheetID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimesheetLines", elemType: timesheetline_2.TimesheetLineInput }),
+        __metadata("design:type", Array)
+    ], TimesheetInput.prototype, "timesheetLines", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValidationErrors", elemType: validationerror_1.ValidationError }),
+        __metadata("design:type", Array)
+    ], TimesheetInput.prototype, "validationErrors", void 0);
+    return TimesheetInput;
+}(utils_1.SpeakeasyBase));
+exports.TimesheetInput = TimesheetInput;

@@ -8,6 +8,6 @@ export declare class HeadSettingsOrganizationsRequest extends SpeakeasyBase {
 }
 export declare class HeadSettingsOrganizationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

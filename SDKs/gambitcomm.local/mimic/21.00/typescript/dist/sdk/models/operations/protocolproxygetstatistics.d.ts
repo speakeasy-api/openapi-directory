@@ -8,5 +8,5 @@ export declare class ProtocolProxyGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolProxyGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolProxyGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolProxyGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

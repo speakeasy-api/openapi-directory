@@ -31,8 +31,8 @@ export class PostAuthStartResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAuthStart200ApplicationJsonObject?: PostAuthStart200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAuthStart200ApplicationJSONObject?: PostAuthStart200ApplicationJson;
 }

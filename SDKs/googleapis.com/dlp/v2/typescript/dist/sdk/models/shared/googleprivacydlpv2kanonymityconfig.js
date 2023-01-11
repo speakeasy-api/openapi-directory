@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2EntityId } from "./googleprivacydlpv2entityid";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KAnonymityConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2entityid_1 = require("./googleprivacydlpv2entityid");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
 // GooglePrivacyDlpV2KAnonymityConfig
 /**
  * k-anonymity metric, used for analysis of reidentification risk.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2KAnonymityConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityId" }),
-        __metadata("design:type", GooglePrivacyDlpV2EntityId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityId" }),
+        __metadata("design:type", googleprivacydlpv2entityid_1.GooglePrivacyDlpV2EntityId)
     ], GooglePrivacyDlpV2KAnonymityConfig.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quasiIds", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quasiIds", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KAnonymityConfig.prototype, "quasiIds", void 0);
     return GooglePrivacyDlpV2KAnonymityConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KAnonymityConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KAnonymityConfig = GooglePrivacyDlpV2KAnonymityConfig;

@@ -9,7 +9,7 @@ export declare class UntagStreamHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class UntagStreamRequestBody extends SpeakeasyBase {
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
     tagKeyList: string[];
 }
@@ -25,5 +25,5 @@ export declare class UntagStreamResponse extends SpeakeasyBase {
     notAuthorizedException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    untagStreamOutput?: Map<string, any>;
+    untagStreamOutput?: Record<string, any>;
 }

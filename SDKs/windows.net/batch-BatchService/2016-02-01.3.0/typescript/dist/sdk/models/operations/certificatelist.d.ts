@@ -19,6 +19,6 @@ export declare class CertificateListResponse extends SpeakeasyBase {
     batchError?: any;
     certificateListResult?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

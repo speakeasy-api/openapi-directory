@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoEntity } from "./autoentity";
-import { ErrorsEntity } from "./errorsentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoentity_1 = require("./autoentity");
+var errorsentity_1 = require("./errorsentity");
 // StatusEntity
 /**
  * Test webhook.
@@ -35,33 +38,33 @@ var StatusEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickwrap_body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickwrap_body" }),
         __metadata("design:type", String)
     ], StatusEntity.prototype, "clickwrapBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickwrap_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickwrap_id" }),
         __metadata("design:type", Number)
     ], StatusEntity.prototype, "clickwrapId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], StatusEntity.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", AutoEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", autoentity_1.AutoEntity)
     ], StatusEntity.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", ErrorsEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errorsentity_1.ErrorsEntity)
     ], StatusEntity.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], StatusEntity.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], StatusEntity.prototype, "status", void 0);
     return StatusEntity;
-}(SpeakeasyBase));
-export { StatusEntity };
+}(utils_1.SpeakeasyBase));
+exports.StatusEntity = StatusEntity;

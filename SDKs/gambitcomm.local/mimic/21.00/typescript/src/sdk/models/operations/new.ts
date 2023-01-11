@@ -29,5 +29,5 @@ export class NewResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  new200ApplicationJsonString?: string;
+  new200ApplicationJSONString?: string;
 }

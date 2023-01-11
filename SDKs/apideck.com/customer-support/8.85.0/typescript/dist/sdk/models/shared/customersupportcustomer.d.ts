@@ -10,20 +10,6 @@ export declare enum CustomerSupportCustomerStatusEnum {
     GdprErasureRequest = "gdpr-erasure-request",
     Unknown = "unknown"
 }
-export declare class CustomerSupportCustomerInput extends SpeakeasyBase {
-    addresses?: Address[];
-    bankAccounts?: BankAccount;
-    companyName?: string;
-    currency?: CurrencyEnum;
-    emails?: Email[];
-    firstName?: string;
-    individual?: boolean;
-    lastName?: string;
-    notes?: string;
-    phoneNumbers?: PhoneNumber[];
-    status?: CustomerSupportCustomerStatusEnum;
-    taxNumber?: string;
-}
 export declare class CustomerSupportCustomer extends SpeakeasyBase {
     addresses?: Address[];
     bankAccounts?: BankAccount;
@@ -42,4 +28,18 @@ export declare class CustomerSupportCustomer extends SpeakeasyBase {
     taxNumber?: string;
     updatedAt?: Date;
     updatedBy?: string;
+}
+export declare class CustomerSupportCustomerInput extends SpeakeasyBase {
+    addresses?: Address[];
+    bankAccounts?: BankAccount;
+    companyName?: string;
+    currency?: CurrencyEnum;
+    emails?: Email[];
+    firstName?: string;
+    individual?: boolean;
+    lastName?: string;
+    notes?: string;
+    phoneNumbers?: PhoneNumber[];
+    status?: CustomerSupportCustomerStatusEnum;
+    taxNumber?: string;
 }

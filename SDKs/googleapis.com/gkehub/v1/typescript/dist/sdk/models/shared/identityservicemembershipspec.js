@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityServiceAuthMethodInput } from "./identityserviceauthmethod";
-import { IdentityServiceAuthMethod } from "./identityserviceauthmethod";
-// IdentityServiceMembershipSpecInput
-/**
- * **Anthos Identity Service**: Configuration for a single Membership.
-**/
-var IdentityServiceMembershipSpecInput = /** @class */ (function (_super) {
-    __extends(IdentityServiceMembershipSpecInput, _super);
-    function IdentityServiceMembershipSpecInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=authMethods", elemType: IdentityServiceAuthMethodInput }),
-        __metadata("design:type", Array)
-    ], IdentityServiceMembershipSpecInput.prototype, "authMethods", void 0);
-    return IdentityServiceMembershipSpecInput;
-}(SpeakeasyBase));
-export { IdentityServiceMembershipSpecInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityServiceMembershipSpecInput = exports.IdentityServiceMembershipSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var identityserviceauthmethod_1 = require("./identityserviceauthmethod");
+var identityserviceauthmethod_2 = require("./identityserviceauthmethod");
 // IdentityServiceMembershipSpec
 /**
  * **Anthos Identity Service**: Configuration for a single Membership.
@@ -51,9 +38,25 @@ var IdentityServiceMembershipSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authMethods", elemType: IdentityServiceAuthMethod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authMethods", elemType: identityserviceauthmethod_1.IdentityServiceAuthMethod }),
         __metadata("design:type", Array)
     ], IdentityServiceMembershipSpec.prototype, "authMethods", void 0);
     return IdentityServiceMembershipSpec;
-}(SpeakeasyBase));
-export { IdentityServiceMembershipSpec };
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceMembershipSpec = IdentityServiceMembershipSpec;
+// IdentityServiceMembershipSpecInput
+/**
+ * **Anthos Identity Service**: Configuration for a single Membership.
+**/
+var IdentityServiceMembershipSpecInput = /** @class */ (function (_super) {
+    __extends(IdentityServiceMembershipSpecInput, _super);
+    function IdentityServiceMembershipSpecInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authMethods", elemType: identityserviceauthmethod_2.IdentityServiceAuthMethodInput }),
+        __metadata("design:type", Array)
+    ], IdentityServiceMembershipSpecInput.prototype, "authMethods", void 0);
+    return IdentityServiceMembershipSpecInput;
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceMembershipSpecInput = IdentityServiceMembershipSpecInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse = exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest = exports.UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson = exports.UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult = exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams = /** @class */ (function (_super) {
     __extends(UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams, _super);
     function UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams.prototype, "startDate", void 0);
     return UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams;
-}(SpeakeasyBase));
-export { UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams = UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams;
 var UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult = /** @class */ (function (_super) {
     __extends(UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult, _super);
     function UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccelerationScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccelerationScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "accelerationScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BrakingScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BrakingScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "brakingScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompanyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompanyId" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CorneringScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CorneringScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "corneringScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceToken" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "deviceToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DistractedScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DistractedScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "distractedScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverallScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverallScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "overallScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpeedingScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpeedingScore" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult.prototype, "speedingScore", void 0);
     return UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult;
-}(SpeakeasyBase));
-export { UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult };
+}(utils_1.SpeakeasyBase));
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult = UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult;
 var UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson = /** @class */ (function (_super) {
     __extends(UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson, _super);
     function UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors" }),
         __metadata("design:type", Array)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Result" }),
         __metadata("design:type", UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonResult)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson.prototype, "title", void 0);
     return UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
-}(SpeakeasyBase));
-export { UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson = UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
 var UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest = /** @class */ (function (_super) {
     __extends(UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest, _super);
     function UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserSafeScoringAccumulatedValueV1ScoringsIndividualQueryParams)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest.prototype, "queryParams", void 0);
     return UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest;
-}(SpeakeasyBase));
-export { UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest = UserSafeScoringAccumulatedValueV1ScoringsIndividualRequest;
 var UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse = /** @class */ (function (_super) {
     __extends(UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse, _super);
     function UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson)
-    ], UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse.prototype, "userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonObject", void 0);
+    ], UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse.prototype, "userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject", void 0);
     return UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse;
-}(SpeakeasyBase));
-export { UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse = UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse;

@@ -9,15 +9,15 @@ export declare class Languages {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getResourcesLanguagesIdJson - Get Language by ID
-     *
-     * Information about a specific language
-    **/
-    getResourcesLanguagesIdJson(req: operations.GetResourcesLanguagesIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesLanguagesIdJsonResponse>;
-    /**
      * getResourcesLanguagesJson - Get Languages
      *
      * Language Listings
     **/
     getResourcesLanguagesJson(req: operations.GetResourcesLanguagesJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesLanguagesJsonResponse>;
+    /**
+     * getResourcesLanguagesIdJson - Get Language by ID
+     *
+     * Information about a specific language
+    **/
+    getResourcesLanguagesIdJson(req: operations.GetResourcesLanguagesIdJsonRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesLanguagesIdJsonResponse>;
 }

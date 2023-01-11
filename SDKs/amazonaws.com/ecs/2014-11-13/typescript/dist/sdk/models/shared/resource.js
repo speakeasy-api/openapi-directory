@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resource = void 0;
+var utils_1 = require("../../../internal/utils");
 // Resource
 /**
  * Describes the resources available for a container instance.
@@ -33,29 +36,29 @@ var Resource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doubleValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doubleValue" }),
         __metadata("design:type", Number)
     ], Resource.prototype, "doubleValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integerValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integerValue" }),
         __metadata("design:type", Number)
     ], Resource.prototype, "integerValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longValue" }),
         __metadata("design:type", Number)
     ], Resource.prototype, "longValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Resource.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringSetValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringSetValue" }),
         __metadata("design:type", Array)
     ], Resource.prototype, "stringSetValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Resource.prototype, "type", void 0);
     return Resource;
-}(SpeakeasyBase));
-export { Resource };
+}(utils_1.SpeakeasyBase));
+exports.Resource = Resource;

@@ -1,5 +1,8 @@
-export var DirectConnectGatewayAttachmentTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectConnectGatewayAttachmentTypeEnum = void 0;
+var DirectConnectGatewayAttachmentTypeEnum;
 (function (DirectConnectGatewayAttachmentTypeEnum) {
     DirectConnectGatewayAttachmentTypeEnum["TransitVirtualInterface"] = "TransitVirtualInterface";
     DirectConnectGatewayAttachmentTypeEnum["PrivateVirtualInterface"] = "PrivateVirtualInterface";
-})(DirectConnectGatewayAttachmentTypeEnum || (DirectConnectGatewayAttachmentTypeEnum = {}));
+})(DirectConnectGatewayAttachmentTypeEnum = exports.DirectConnectGatewayAttachmentTypeEnum || (exports.DirectConnectGatewayAttachmentTypeEnum = {}));

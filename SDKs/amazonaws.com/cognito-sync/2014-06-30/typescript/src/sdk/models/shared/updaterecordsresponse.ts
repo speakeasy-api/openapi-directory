@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+import { RecordT } from "./record";
 
 
 
@@ -8,6 +8,6 @@ import { Record } from "./record";
  * Returned for a successful UpdateRecordsRequest.
 **/
 export class UpdateRecordsResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=Records", elemType: Record })
-  records?: Record[];
+  @SpeakeasyMetadata({ data: "json, name=Records", elemType: RecordT })
+  records?: RecordT[];
 }

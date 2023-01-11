@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PersonFollowEmbedded extends SpeakeasyBase {
-    person?: Map<string, any>;
+    person?: Record<string, any>;
 }
 export declare class PersonFollow extends SpeakeasyBase {
     embedded?: PersonFollowEmbedded;

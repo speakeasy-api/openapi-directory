@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpreadsheetProperties } from "./spreadsheetproperties";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSpreadsheetPropertiesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var spreadsheetproperties_1 = require("./spreadsheetproperties");
 // UpdateSpreadsheetPropertiesRequest
 /**
  * Updates properties of a spreadsheet.
@@ -34,13 +37,13 @@ var UpdateSpreadsheetPropertiesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateSpreadsheetPropertiesRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", SpreadsheetProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", spreadsheetproperties_1.SpreadsheetProperties)
     ], UpdateSpreadsheetPropertiesRequest.prototype, "properties", void 0);
     return UpdateSpreadsheetPropertiesRequest;
-}(SpeakeasyBase));
-export { UpdateSpreadsheetPropertiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSpreadsheetPropertiesRequest = UpdateSpreadsheetPropertiesRequest;

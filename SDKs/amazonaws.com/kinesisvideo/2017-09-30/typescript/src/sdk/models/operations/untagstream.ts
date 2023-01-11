@@ -28,7 +28,7 @@ export class UntagStreamHeaders extends SpeakeasyBase {
 
 export class UntagStreamRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
@@ -70,5 +70,5 @@ export class UntagStreamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  untagStreamOutput?: Map<string, any>;
+  untagStreamOutput?: Record<string, any>;
 }

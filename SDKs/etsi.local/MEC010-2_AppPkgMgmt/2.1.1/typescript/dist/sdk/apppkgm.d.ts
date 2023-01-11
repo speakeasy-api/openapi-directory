@@ -92,4 +92,10 @@ export declare class AppPkgm {
      * used to retrieve the information of subscriptions to individual application package resource in MEO package
     **/
     subscriptionsGet(config?: AxiosRequestConfig): Promise<operations.SubscriptionsGetResponse>;
+    /**
+     * subscriptionsPost - Subscribe to notifications about on-boarding an application package
+     *
+     * Subscribe to notifications about on-boarding an application package
+    **/
+    subscriptionsPost(req: operations.SubscriptionsPostRequest, config?: AxiosRequestConfig): Promise<operations.SubscriptionsPostResponse>;
 }

@@ -15,7 +15,7 @@ export declare class JobGetAllJobsLifetimeStatisticsRequest extends SpeakeasyBas
 export declare class JobGetAllJobsLifetimeStatisticsResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     jobStatistics?: any;
     statusCode: number;
 }

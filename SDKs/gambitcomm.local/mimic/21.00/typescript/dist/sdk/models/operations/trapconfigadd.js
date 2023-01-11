@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrapConfigAddResponse = exports.TrapConfigAddRequest = exports.TrapConfigAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TrapConfigAddPathParams = /** @class */ (function (_super) {
     __extends(TrapConfigAddPathParams, _super);
     function TrapConfigAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=IP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=IP" }),
         __metadata("design:type", String)
     ], TrapConfigAddPathParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], TrapConfigAddPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], TrapConfigAddPathParams.prototype, "port", void 0);
     return TrapConfigAddPathParams;
-}(SpeakeasyBase));
-export { TrapConfigAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TrapConfigAddPathParams = TrapConfigAddPathParams;
 var TrapConfigAddRequest = /** @class */ (function (_super) {
     __extends(TrapConfigAddRequest, _super);
     function TrapConfigAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TrapConfigAddPathParams)
     ], TrapConfigAddRequest.prototype, "pathParams", void 0);
     return TrapConfigAddRequest;
-}(SpeakeasyBase));
-export { TrapConfigAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.TrapConfigAddRequest = TrapConfigAddRequest;
 var TrapConfigAddResponse = /** @class */ (function (_super) {
     __extends(TrapConfigAddResponse, _super);
     function TrapConfigAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TrapConfigAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TrapConfigAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], TrapConfigAddResponse.prototype, "trapConfigAdd200ApplicationJsonString", void 0);
+    ], TrapConfigAddResponse.prototype, "trapConfigAdd200ApplicationJSONString", void 0);
     return TrapConfigAddResponse;
-}(SpeakeasyBase));
-export { TrapConfigAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.TrapConfigAddResponse = TrapConfigAddResponse;

@@ -131,20 +131,20 @@ export class MergeTemplatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mergeTemplates200ApplicationJsonObject?: MergeTemplates200ApplicationJson;
+  mergeTemplates200ApplicationJSONObject?: MergeTemplates200ApplicationJson;
 
   @SpeakeasyMetadata()
-  mergeTemplates401ApplicationJsonObject?: MergeTemplates401ApplicationJson;
+  mergeTemplates401ApplicationJSONObject?: MergeTemplates401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mergeTemplates403ApplicationJsonObject?: MergeTemplates403ApplicationJson;
+  mergeTemplates403ApplicationJSONObject?: MergeTemplates403ApplicationJson;
 
   @SpeakeasyMetadata()
-  mergeTemplates404ApplicationJsonObject?: MergeTemplates404ApplicationJson;
+  mergeTemplates404ApplicationJSONObject?: MergeTemplates404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mergeTemplates422ApplicationJsonObject?: MergeTemplates422ApplicationJson;
+  mergeTemplates422ApplicationJSONObject?: MergeTemplates422ApplicationJson;
 
   @SpeakeasyMetadata()
-  mergeTemplates500ApplicationJsonObject?: MergeTemplates500ApplicationJson;
+  mergeTemplates500ApplicationJSONObject?: MergeTemplates500ApplicationJson;
 }

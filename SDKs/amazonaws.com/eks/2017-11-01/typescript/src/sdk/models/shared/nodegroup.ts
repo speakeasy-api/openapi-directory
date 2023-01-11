@@ -39,7 +39,7 @@ export class Nodegroup extends SpeakeasyBase {
   instanceTypes?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=launchTemplate" })
   launchTemplate?: LaunchTemplateSpecification;
@@ -75,7 +75,7 @@ export class Nodegroup extends SpeakeasyBase {
   subnets?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=taints", elemType: Taint })
   taints?: Taint[];

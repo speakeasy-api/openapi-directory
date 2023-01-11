@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetweatherRequest, GetweatherResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: GetweatherRequest = {
   queryParams: {
-    city: "dolor",
-    license: "aut",
-    state: "ipsa",
+    city: "sit",
+    license: "voluptas",
+    state: "culpa",
   },
 };
 
-sdk.sdk.getweather(req).then((res: GetweatherResponse | AxiosError) => {
+sdk.weatherByCityAndState.getweather(req).then((res: GetweatherResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,7 +43,7 @@ sdk.sdk.getweather(req).then((res: GetweatherResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Weather by City and State
 
 * `getweather` - Gets current weather information for a US city and state
 

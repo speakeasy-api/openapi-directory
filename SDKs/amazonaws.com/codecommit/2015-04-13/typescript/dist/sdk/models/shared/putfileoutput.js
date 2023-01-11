@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutFileOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutFileOutput = /** @class */ (function (_super) {
     __extends(PutFileOutput, _super);
     function PutFileOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobId" }),
         __metadata("design:type", String)
     ], PutFileOutput.prototype, "blobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitId" }),
         __metadata("design:type", String)
     ], PutFileOutput.prototype, "commitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treeId" }),
         __metadata("design:type", String)
     ], PutFileOutput.prototype, "treeId", void 0);
     return PutFileOutput;
-}(SpeakeasyBase));
-export { PutFileOutput };
+}(utils_1.SpeakeasyBase));
+exports.PutFileOutput = PutFileOutput;

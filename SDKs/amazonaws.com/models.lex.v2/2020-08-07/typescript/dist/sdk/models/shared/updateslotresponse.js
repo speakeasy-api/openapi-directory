@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MultipleValuesSetting } from "./multiplevaluessetting";
-import { ObfuscationSetting } from "./obfuscationsetting";
-import { SlotValueElicitationSetting } from "./slotvalueelicitationsetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSlotResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var multiplevaluessetting_1 = require("./multiplevaluessetting");
+var obfuscationsetting_1 = require("./obfuscationsetting");
+var slotvalueelicitationsetting_1 = require("./slotvalueelicitationsetting");
 var UpdateSlotResponse = /** @class */ (function (_super) {
     __extends(UpdateSlotResponse, _super);
     function UpdateSlotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], UpdateSlotResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentId" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "intentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], UpdateSlotResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multipleValuesSetting" }),
-        __metadata("design:type", MultipleValuesSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multipleValuesSetting" }),
+        __metadata("design:type", multiplevaluessetting_1.MultipleValuesSetting)
     ], UpdateSlotResponse.prototype, "multipleValuesSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=obfuscationSetting" }),
-        __metadata("design:type", ObfuscationSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=obfuscationSetting" }),
+        __metadata("design:type", obfuscationsetting_1.ObfuscationSetting)
     ], UpdateSlotResponse.prototype, "obfuscationSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotId" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "slotId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotName" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "slotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeId" }),
         __metadata("design:type", String)
     ], UpdateSlotResponse.prototype, "slotTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueElicitationSetting" }),
-        __metadata("design:type", SlotValueElicitationSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueElicitationSetting" }),
+        __metadata("design:type", slotvalueelicitationsetting_1.SlotValueElicitationSetting)
     ], UpdateSlotResponse.prototype, "valueElicitationSetting", void 0);
     return UpdateSlotResponse;
-}(SpeakeasyBase));
-export { UpdateSlotResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSlotResponse = UpdateSlotResponse;

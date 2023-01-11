@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupDetail } from "./groupdetail";
-import { ManagedPolicyDetail } from "./managedpolicydetail";
-import { RoleDetail } from "./roledetail";
-import { UserDetail } from "./userdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAccountAuthorizationDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupdetail_1 = require("./groupdetail");
+var managedpolicydetail_1 = require("./managedpolicydetail");
+var roledetail_1 = require("./roledetail");
+var userdetail_1 = require("./userdetail");
 // GetAccountAuthorizationDetailsResponse
 /**
  * Contains the response to a successful <a>GetAccountAuthorizationDetails</a> request.
@@ -37,29 +40,29 @@ var GetAccountAuthorizationDetailsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: GroupDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: groupdetail_1.GroupDetail }),
         __metadata("design:type", Array)
     ], GetAccountAuthorizationDetailsResponse.prototype, "groupDetailList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GetAccountAuthorizationDetailsResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAccountAuthorizationDetailsResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ManagedPolicyDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: managedpolicydetail_1.ManagedPolicyDetail }),
         __metadata("design:type", Array)
     ], GetAccountAuthorizationDetailsResponse.prototype, "policies", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: RoleDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: roledetail_1.RoleDetail }),
         __metadata("design:type", Array)
     ], GetAccountAuthorizationDetailsResponse.prototype, "roleDetailList", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: UserDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: userdetail_1.UserDetail }),
         __metadata("design:type", Array)
     ], GetAccountAuthorizationDetailsResponse.prototype, "userDetailList", void 0);
     return GetAccountAuthorizationDetailsResponse;
-}(SpeakeasyBase));
-export { GetAccountAuthorizationDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAccountAuthorizationDetailsResponse = GetAccountAuthorizationDetailsResponse;

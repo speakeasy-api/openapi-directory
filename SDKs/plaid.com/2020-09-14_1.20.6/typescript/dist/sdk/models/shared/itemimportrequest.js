@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ItemImportRequestOptions } from "./itemimportrequestoptions";
-import { ItemImportRequestUserAuth } from "./itemimportrequestuserauth";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemImportRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var itemimportrequestoptions_1 = require("./itemimportrequestoptions");
+var itemimportrequestuserauth_1 = require("./itemimportrequestuserauth");
 // ItemImportRequest
 /**
  * ItemImportRequest defines the request schema for `/item/import`
@@ -35,25 +38,25 @@ var ItemImportRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], ItemImportRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", ItemImportRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", itemimportrequestoptions_1.ItemImportRequestOptions)
     ], ItemImportRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products" }),
         __metadata("design:type", Array)
     ], ItemImportRequest.prototype, "products", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], ItemImportRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_auth" }),
-        __metadata("design:type", ItemImportRequestUserAuth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_auth" }),
+        __metadata("design:type", itemimportrequestuserauth_1.ItemImportRequestUserAuth)
     ], ItemImportRequest.prototype, "userAuth", void 0);
     return ItemImportRequest;
-}(SpeakeasyBase));
-export { ItemImportRequest };
+}(utils_1.SpeakeasyBase));
+exports.ItemImportRequest = ItemImportRequest;

@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListOrderTypeEnum = void 0;
+var ListOrderTypeEnum;
+(function (ListOrderTypeEnum) {
+    ListOrderTypeEnum["Asc"] = "asc";
+    ListOrderTypeEnum["Desc"] = "desc";
+})(ListOrderTypeEnum = exports.ListOrderTypeEnum || (exports.ListOrderTypeEnum = {}));

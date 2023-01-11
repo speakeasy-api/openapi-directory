@@ -1,17 +1,33 @@
-export * from "./recommendationengineprojectslocationscatalogscatalogitemscreate";
-export * from "./recommendationengineprojectslocationscatalogscatalogitemsimport";
-export * from "./recommendationengineprojectslocationscatalogscatalogitemslist";
-export * from "./recommendationengineprojectslocationscatalogscatalogitemspatch";
-export * from "./recommendationengineprojectslocationscatalogseventstoresplacementspredict";
-export * from "./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationscreate";
-export * from "./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationsdelete";
-export * from "./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationslist";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventscollect";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventsimport";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventslist";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventspurge";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventsrejoin";
-export * from "./recommendationengineprojectslocationscatalogseventstoresusereventswrite";
-export * from "./recommendationengineprojectslocationscatalogslist";
-export * from "./recommendationengineprojectslocationscatalogsoperationsget";
-export * from "./recommendationengineprojectslocationscatalogsoperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./recommendationengineprojectslocationscatalogscatalogitemscreate"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogscatalogitemsimport"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogscatalogitemslist"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogscatalogitemspatch"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresplacementspredict"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationscreate"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationsdelete"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstorespredictionapikeyregistrationslist"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventscollect"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventsimport"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventslist"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventspurge"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventsrejoin"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogseventstoresusereventswrite"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogslist"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogsoperationsget"), exports);
+__exportStar(require("./recommendationengineprojectslocationscatalogsoperationslist"), exports);

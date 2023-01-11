@@ -38,14 +38,14 @@ export declare class CreateEndpointMessage extends SpeakeasyBase {
     kafkaSettings?: KafkaSettings;
     kinesisSettings?: KinesisSettings;
     kmsKeyId?: string;
-    microsoftSqlServerSettings?: MicrosoftSqlServerSettings;
+    microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
     mongoDbSettings?: MongoDbSettings;
-    mySqlSettings?: MySqlSettings;
+    mySQLSettings?: MySqlSettings;
     neptuneSettings?: NeptuneSettings;
     oracleSettings?: OracleSettings;
     password?: string;
     port?: number;
-    postgreSqlSettings?: PostgreSqlSettings;
+    postgreSQLSettings?: PostgreSqlSettings;
     redisSettings?: RedisSettings;
     redshiftSettings?: RedshiftSettings;
     resourceIdentifier?: string;

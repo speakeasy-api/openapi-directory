@@ -9,6 +9,6 @@ export declare class LiveStreamListResponse extends SpeakeasyBase {
     nextPageToken?: string;
     pageInfo?: PageInfo;
     prevPageToken?: string;
-    tokenPagination?: Map<string, any>;
+    tokenPagination?: Record<string, any>;
     visitorId?: string;
 }

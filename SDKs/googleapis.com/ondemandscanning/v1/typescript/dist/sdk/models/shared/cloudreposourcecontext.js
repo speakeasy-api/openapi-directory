@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AliasContext } from "./aliascontext";
-import { RepoId } from "./repoid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudRepoSourceContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var aliascontext_1 = require("./aliascontext");
+var repoid_1 = require("./repoid");
 // CloudRepoSourceContext
 /**
  * A CloudRepoSourceContext denotes a particular revision in a Google Cloud Source Repo.
@@ -35,17 +38,17 @@ var CloudRepoSourceContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliasContext" }),
-        __metadata("design:type", AliasContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliasContext" }),
+        __metadata("design:type", aliascontext_1.AliasContext)
     ], CloudRepoSourceContext.prototype, "aliasContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repoId" }),
-        __metadata("design:type", RepoId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repoId" }),
+        __metadata("design:type", repoid_1.RepoId)
     ], CloudRepoSourceContext.prototype, "repoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], CloudRepoSourceContext.prototype, "revisionId", void 0);
     return CloudRepoSourceContext;
-}(SpeakeasyBase));
-export { CloudRepoSourceContext };
+}(utils_1.SpeakeasyBase));
+exports.CloudRepoSourceContext = CloudRepoSourceContext;

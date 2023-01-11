@@ -29,5 +29,5 @@ export declare class ExternalUnifiedEvent extends SpeakeasyBase {
     objectId: string;
     objectType: string;
     occurredAt: Date;
-    properties: Map<string, string>;
+    properties: Record<string, string>;
 }

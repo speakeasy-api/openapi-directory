@@ -22,6 +22,6 @@ export declare class RestoreWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     invalidParameterValuesException?: any;
     resourceNotFoundException?: any;
-    restoreWorkspaceResult?: Map<string, any>;
+    restoreWorkspaceResult?: Record<string, any>;
     statusCode: number;
 }

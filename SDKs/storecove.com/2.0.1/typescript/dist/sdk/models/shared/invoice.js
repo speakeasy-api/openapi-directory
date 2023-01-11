@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountingCustomerParty } from "./accountingcustomerparty";
-import { AccountingSupplierParty } from "./accountingsupplierparty";
-import { AllowanceCharge } from "./allowancecharge";
-import { Delivery } from "./delivery";
-import { CurrencyCodeEnum } from "./currencycodeenum";
-import { InvoiceLine } from "./invoiceline";
-import { PaymentMeans } from "./paymentmeans";
-import { TaxSubtotal } from "./taxsubtotal";
-export var InvoiceTypeOfInvoiceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Invoice = exports.InvoiceTaxSystemEnum = exports.InvoiceTaxExemptReasonEnum = exports.InvoiceThePaymentTerms = exports.InvoicePaymentMeansCodeEnum = exports.InvoiceTypeOfInvoiceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountingcustomerparty_1 = require("./accountingcustomerparty");
+var accountingsupplierparty_1 = require("./accountingsupplierparty");
+var allowancecharge_1 = require("./allowancecharge");
+var delivery_1 = require("./delivery");
+var currencycodeenum_1 = require("./currencycodeenum");
+var invoiceline_1 = require("./invoiceline");
+var paymentmeans_1 = require("./paymentmeans");
+var taxsubtotal_1 = require("./taxsubtotal");
+var InvoiceTypeOfInvoiceEnum;
 (function (InvoiceTypeOfInvoiceEnum) {
     InvoiceTypeOfInvoiceEnum["ThreeHundredAndEighty"] = "380";
     InvoiceTypeOfInvoiceEnum["ThreeHundredAndEightyOne"] = "381";
     InvoiceTypeOfInvoiceEnum["ThreeHundredAndEightyFour"] = "384";
-})(InvoiceTypeOfInvoiceEnum || (InvoiceTypeOfInvoiceEnum = {}));
-export var InvoicePaymentMeansCodeEnum;
+})(InvoiceTypeOfInvoiceEnum = exports.InvoiceTypeOfInvoiceEnum || (exports.InvoiceTypeOfInvoiceEnum = {}));
+var InvoicePaymentMeansCodeEnum;
 (function (InvoicePaymentMeansCodeEnum) {
     InvoicePaymentMeansCodeEnum["OnlinePaymentService"] = "online_payment_service";
     InvoicePaymentMeansCodeEnum["BankCard"] = "bank_card";
@@ -56,7 +59,7 @@ export var InvoicePaymentMeansCodeEnum;
     InvoicePaymentMeansCodeEnum["FortyNine"] = "49";
     InvoicePaymentMeansCodeEnum["FiftySeven"] = "57";
     InvoicePaymentMeansCodeEnum["FiftyEight"] = "58";
-})(InvoicePaymentMeansCodeEnum || (InvoicePaymentMeansCodeEnum = {}));
+})(InvoicePaymentMeansCodeEnum = exports.InvoicePaymentMeansCodeEnum || (exports.InvoicePaymentMeansCodeEnum = {}));
 // InvoiceThePaymentTerms
 /**
  * The payment terms of the invoice.
@@ -67,13 +70,13 @@ var InvoiceThePaymentTerms = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], InvoiceThePaymentTerms.prototype, "note", void 0);
     return InvoiceThePaymentTerms;
-}(SpeakeasyBase));
-export { InvoiceThePaymentTerms };
-export var InvoiceTaxExemptReasonEnum;
+}(utils_1.SpeakeasyBase));
+exports.InvoiceThePaymentTerms = InvoiceThePaymentTerms;
+var InvoiceTaxExemptReasonEnum;
 (function (InvoiceTaxExemptReasonEnum) {
     InvoiceTaxExemptReasonEnum["Export"] = "export";
     InvoiceTaxExemptReasonEnum["ReverseCharge"] = "reverse_charge";
@@ -81,13 +84,13 @@ export var InvoiceTaxExemptReasonEnum;
     InvoiceTaxExemptReasonEnum["Exempt"] = "exempt";
     InvoiceTaxExemptReasonEnum["OutsideScope"] = "outside_scope";
     InvoiceTaxExemptReasonEnum["IntraCommunity"] = "intra_community";
-})(InvoiceTaxExemptReasonEnum || (InvoiceTaxExemptReasonEnum = {}));
-export var InvoiceTaxSystemEnum;
+})(InvoiceTaxExemptReasonEnum = exports.InvoiceTaxExemptReasonEnum || (exports.InvoiceTaxExemptReasonEnum = {}));
+var InvoiceTaxSystemEnum;
 (function (InvoiceTaxSystemEnum) {
     InvoiceTaxSystemEnum["TaxLineAmounts"] = "tax_line_amounts";
     InvoiceTaxSystemEnum["TaxLinePercentages"] = "tax_line_percentages";
     InvoiceTaxSystemEnum["TaxNoTax"] = "tax_no_tax";
-})(InvoiceTaxSystemEnum || (InvoiceTaxSystemEnum = {}));
+})(InvoiceTaxSystemEnum = exports.InvoiceTaxSystemEnum || (exports.InvoiceTaxSystemEnum = {}));
 // Invoice
 /**
  * The invoice to send.  Provide either invoice, or invoiceData, but not both.
@@ -98,141 +101,141 @@ var Invoice = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountingCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountingCost" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "accountingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountingCustomerParty" }),
-        __metadata("design:type", AccountingCustomerParty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountingCustomerParty" }),
+        __metadata("design:type", accountingcustomerparty_1.AccountingCustomerParty)
     ], Invoice.prototype, "accountingCustomerParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountingSupplierParty" }),
-        __metadata("design:type", AccountingSupplierParty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountingSupplierParty" }),
+        __metadata("design:type", accountingsupplierparty_1.AccountingSupplierParty)
     ], Invoice.prototype, "accountingSupplierParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowanceCharges", elemType: AllowanceCharge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowanceCharges", elemType: allowancecharge_1.AllowanceCharge }),
         __metadata("design:type", Array)
     ], Invoice.prototype, "allowanceCharges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountIncludingVat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountIncludingVat" }),
         __metadata("design:type", Number)
     ], Invoice.prototype, "amountIncludingVat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingReference" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "billingReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyerReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyerReference" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "buyerReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumerTaxMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumerTaxMode" }),
         __metadata("design:type", Boolean)
     ], Invoice.prototype, "consumerTaxMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contractDocumentReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contractDocumentReference" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "contractDocumentReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delivery" }),
-        __metadata("design:type", Delivery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delivery" }),
+        __metadata("design:type", delivery_1.Delivery)
     ], Invoice.prototype, "delivery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentCurrencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentCurrencyCode" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "documentCurrencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dueDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dueDate" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "dueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceLines", elemType: InvoiceLine }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceLines", elemType: invoiceline_1.InvoiceLine }),
         __metadata("design:type", Array)
     ], Invoice.prototype, "invoiceLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceNumber" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "invoiceNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoicePeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoicePeriod" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "invoicePeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceType" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "invoiceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueDate" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "issueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderReference" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "orderReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMeansArray", elemType: PaymentMeans }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMeansArray", elemType: paymentmeans_1.PaymentMeans }),
         __metadata("design:type", Array)
     ], Invoice.prototype, "paymentMeansArray", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMeansBic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMeansBic" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "paymentMeansBic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMeansCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMeansCode" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "paymentMeansCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMeansIban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMeansIban" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "paymentMeansIban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMeansPaymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMeansPaymentId" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "paymentMeansPaymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentTerms" }),
         __metadata("design:type", InvoiceThePaymentTerms)
     ], Invoice.prototype, "paymentTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prepaidAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prepaidAmount" }),
         __metadata("design:type", Number)
     ], Invoice.prototype, "prepaidAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectReference" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "projectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salesOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salesOrderId" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "salesOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxExemptReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxExemptReason" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "taxExemptReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxPointDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxPointDate" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "taxPointDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxSubtotals", elemType: TaxSubtotal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxSubtotals", elemType: taxsubtotal_1.TaxSubtotal }),
         __metadata("design:type", Array)
     ], Invoice.prototype, "taxSubtotals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxSystem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxSystem" }),
         __metadata("design:type", String)
     ], Invoice.prototype, "taxSystem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ublExtensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ublExtensions" }),
         __metadata("design:type", Array)
     ], Invoice.prototype, "ublExtensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vatReverseCharge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vatReverseCharge" }),
         __metadata("design:type", Boolean)
     ], Invoice.prototype, "vatReverseCharge", void 0);
     return Invoice;
-}(SpeakeasyBase));
-export { Invoice };
+}(utils_1.SpeakeasyBase));
+exports.Invoice = Invoice;

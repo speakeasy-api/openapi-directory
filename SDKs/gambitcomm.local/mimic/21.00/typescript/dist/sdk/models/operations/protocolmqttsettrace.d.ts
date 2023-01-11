@@ -9,5 +9,5 @@ export declare class ProtocolMqttSetTraceRequest extends SpeakeasyBase {
 export declare class ProtocolMqttSetTraceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttSetTrace200ApplicationJsonString?: string;
+    protocolMqttSetTrace200ApplicationJSONString?: string;
 }

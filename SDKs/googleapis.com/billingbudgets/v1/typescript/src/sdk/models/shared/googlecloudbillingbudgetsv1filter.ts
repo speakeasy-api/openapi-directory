@@ -35,7 +35,7 @@ export class GoogleCloudBillingBudgetsV1Filter extends SpeakeasyBase {
   customPeriod?: GoogleCloudBillingBudgetsV1CustomPeriod;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any[]>;
+  labels?: Record<string, any[]>;
 
   @SpeakeasyMetadata({ data: "json, name=projects" })
   projects?: string[];

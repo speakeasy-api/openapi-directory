@@ -1,5 +1,8 @@
-export var PredictiveScalingModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictiveScalingModeEnum = void 0;
+var PredictiveScalingModeEnum;
 (function (PredictiveScalingModeEnum) {
     PredictiveScalingModeEnum["ForecastAndScale"] = "ForecastAndScale";
     PredictiveScalingModeEnum["ForecastOnly"] = "ForecastOnly";
-})(PredictiveScalingModeEnum || (PredictiveScalingModeEnum = {}));
+})(PredictiveScalingModeEnum = exports.PredictiveScalingModeEnum || (exports.PredictiveScalingModeEnum = {}));

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetPadIdUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=roID" })
-  roId?: string;
+  roID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class GetPadIdUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class GetPadIdUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class GetPadIdUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class GetPadIdUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class GetPadIdUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPadIdUsingGet200ApplicationJsonObject?: GetPadIdUsingGet200ApplicationJson;
+  getPadIDUsingGET200ApplicationJSONObject?: GetPadIdUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPadIdUsingGet400ApplicationJsonObject?: GetPadIdUsingGet400ApplicationJson;
+  getPadIDUsingGET400ApplicationJSONObject?: GetPadIdUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPadIdUsingGet401ApplicationJsonObject?: GetPadIdUsingGet401ApplicationJson;
+  getPadIDUsingGET401ApplicationJSONObject?: GetPadIdUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPadIdUsingGet500ApplicationJsonObject?: GetPadIdUsingGet500ApplicationJson;
+  getPadIDUsingGET500ApplicationJSONObject?: GetPadIdUsingGet500ApplicationJson;
 }

@@ -6,5 +6,5 @@ export declare class DeviceSummary extends SpeakeasyBase {
     associatedWithJob?: string;
     managedDeviceArn?: string;
     managedDeviceId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

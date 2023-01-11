@@ -1,7 +1,10 @@
-export var SpeechMarkTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpeechMarkTypeEnum = void 0;
+var SpeechMarkTypeEnum;
 (function (SpeechMarkTypeEnum) {
     SpeechMarkTypeEnum["Sentence"] = "sentence";
     SpeechMarkTypeEnum["Ssml"] = "ssml";
     SpeechMarkTypeEnum["Viseme"] = "viseme";
     SpeechMarkTypeEnum["Word"] = "word";
-})(SpeechMarkTypeEnum || (SpeechMarkTypeEnum = {}));
+})(SpeechMarkTypeEnum = exports.SpeechMarkTypeEnum || (exports.SpeechMarkTypeEnum = {}));

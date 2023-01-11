@@ -18,7 +18,7 @@ export class GetFailoverDbClusterQueryParams extends SpeakeasyBase {
   dbClusterIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetDBInstanceIdentifier" })
-  targetDbInstanceIdentifier?: string;
+  targetDBInstanceIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetFailoverDbClusterVersionEnum;

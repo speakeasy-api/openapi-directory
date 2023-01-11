@@ -36,7 +36,7 @@ export class ComputeEnvironmentDetail extends SpeakeasyBase {
   statusReason?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: CeTypeEnum;

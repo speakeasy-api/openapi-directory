@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagApiGetNamesResponse = exports.TagApiGetNamesRequest = exports.TagApiGetNamesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagApiGetNamesQueryParams = /** @class */ (function (_super) {
     __extends(TagApiGetNamesQueryParams, _super);
     function TagApiGetNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=allowAliases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=allowAliases" }),
         __metadata("design:type", Boolean)
     ], TagApiGetNamesQueryParams.prototype, "allowAliases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], TagApiGetNamesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], TagApiGetNamesQueryParams.prototype, "query", void 0);
     return TagApiGetNamesQueryParams;
-}(SpeakeasyBase));
-export { TagApiGetNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetNamesQueryParams = TagApiGetNamesQueryParams;
 var TagApiGetNamesRequest = /** @class */ (function (_super) {
     __extends(TagApiGetNamesRequest, _super);
     function TagApiGetNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiGetNamesQueryParams)
     ], TagApiGetNamesRequest.prototype, "queryParams", void 0);
     return TagApiGetNamesRequest;
-}(SpeakeasyBase));
-export { TagApiGetNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetNamesRequest = TagApiGetNamesRequest;
 var TagApiGetNamesResponse = /** @class */ (function (_super) {
     __extends(TagApiGetNamesResponse, _super);
     function TagApiGetNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], TagApiGetNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagApiGetNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagApiGetNamesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], TagApiGetNamesResponse.prototype, "tagApiGetNames200ApplicationJsonStrings", void 0);
+    ], TagApiGetNamesResponse.prototype, "tagApiGetNames200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TagApiGetNamesResponse.prototype, "tagApiGetNames200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], TagApiGetNamesResponse.prototype, "tagApiGetNames200TextJsonStrings", void 0);
+    ], TagApiGetNamesResponse.prototype, "tagApiGetNames200TextJSONStrings", void 0);
     return TagApiGetNamesResponse;
-}(SpeakeasyBase));
-export { TagApiGetNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetNamesResponse = TagApiGetNamesResponse;

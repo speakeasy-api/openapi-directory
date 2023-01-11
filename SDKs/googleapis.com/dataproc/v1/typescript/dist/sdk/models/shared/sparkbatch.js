@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SparkBatch = void 0;
+var utils_1 = require("../../../internal/utils");
 // SparkBatch
 /**
  * A configuration for running an Apache Spark (https://spark.apache.org/) batch workload.
@@ -33,29 +36,29 @@ var SparkBatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveUris" }),
         __metadata("design:type", Array)
     ], SparkBatch.prototype, "archiveUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=args" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=args" }),
         __metadata("design:type", Array)
     ], SparkBatch.prototype, "args", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUris" }),
         __metadata("design:type", Array)
     ], SparkBatch.prototype, "fileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jarFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jarFileUris" }),
         __metadata("design:type", Array)
     ], SparkBatch.prototype, "jarFileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainClass" }),
         __metadata("design:type", String)
     ], SparkBatch.prototype, "mainClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainJarFileUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainJarFileUri" }),
         __metadata("design:type", String)
     ], SparkBatch.prototype, "mainJarFileUri", void 0);
     return SparkBatch;
-}(SpeakeasyBase));
-export { SparkBatch };
+}(utils_1.SpeakeasyBase));
+exports.SparkBatch = SparkBatch;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchPathwaysUsingGetResponse = exports.SearchPathwaysUsingGetRequest = exports.SearchPathwaysUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchPathwaysUsingGetPathParams = /** @class */ (function (_super) {
     __extends(SearchPathwaysUsingGetPathParams, _super);
     function SearchPathwaysUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=searchString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=searchString" }),
         __metadata("design:type", String)
     ], SearchPathwaysUsingGetPathParams.prototype, "searchString", void 0);
     return SearchPathwaysUsingGetPathParams;
-}(SpeakeasyBase));
-export { SearchPathwaysUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchPathwaysUsingGetPathParams = SearchPathwaysUsingGetPathParams;
 var SearchPathwaysUsingGetRequest = /** @class */ (function (_super) {
     __extends(SearchPathwaysUsingGetRequest, _super);
     function SearchPathwaysUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchPathwaysUsingGetPathParams)
     ], SearchPathwaysUsingGetRequest.prototype, "pathParams", void 0);
     return SearchPathwaysUsingGetRequest;
-}(SpeakeasyBase));
-export { SearchPathwaysUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchPathwaysUsingGetRequest = SearchPathwaysUsingGetRequest;
 var SearchPathwaysUsingGetResponse = /** @class */ (function (_super) {
     __extends(SearchPathwaysUsingGetResponse, _super);
     function SearchPathwaysUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SearchPathwaysUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchPathwaysUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchPathwaysUsingGetResponse.prototype, "statusCode", void 0);
     return SearchPathwaysUsingGetResponse;
-}(SpeakeasyBase));
-export { SearchPathwaysUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchPathwaysUsingGetResponse = SearchPathwaysUsingGetResponse;

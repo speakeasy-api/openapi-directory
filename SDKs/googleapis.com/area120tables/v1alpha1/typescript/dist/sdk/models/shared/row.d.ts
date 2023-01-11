@@ -6,5 +6,5 @@ export declare class Row extends SpeakeasyBase {
     createTime?: string;
     name?: string;
     updateTime?: string;
-    values?: Map<string, any>;
+    values?: Record<string, any>;
 }

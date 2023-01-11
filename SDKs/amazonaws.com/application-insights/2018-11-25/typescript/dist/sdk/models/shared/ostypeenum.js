@@ -1,5 +1,8 @@
-export var OsTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OsTypeEnum = void 0;
+var OsTypeEnum;
 (function (OsTypeEnum) {
     OsTypeEnum["Windows"] = "WINDOWS";
     OsTypeEnum["Linux"] = "LINUX";
-})(OsTypeEnum || (OsTypeEnum = {}));
+})(OsTypeEnum = exports.OsTypeEnum || (exports.OsTypeEnum = {}));

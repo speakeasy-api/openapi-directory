@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchWordsResponse = exports.SearchWordsRequest = exports.SearchWordsQueryParams = exports.SearchWordsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchWordsPathParams = /** @class */ (function (_super) {
     __extends(SearchWordsPathParams, _super);
     function SearchWordsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=query" }),
         __metadata("design:type", String)
     ], SearchWordsPathParams.prototype, "query", void 0);
     return SearchWordsPathParams;
-}(SpeakeasyBase));
-export { SearchWordsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchWordsPathParams = SearchWordsPathParams;
 var SearchWordsQueryParams = /** @class */ (function (_super) {
     __extends(SearchWordsQueryParams, _super);
     function SearchWordsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=allowRegex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=allowRegex" }),
         __metadata("design:type", String)
     ], SearchWordsQueryParams.prototype, "allowRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=caseSensitive" }),
         __metadata("design:type", String)
     ], SearchWordsQueryParams.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
         __metadata("design:type", String)
     ], SearchWordsQueryParams.prototype, "excludePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
         __metadata("design:type", String)
     ], SearchWordsQueryParams.prototype, "includePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "maxCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxDictionaryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxDictionaryCount" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "maxDictionaryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxLength" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "minCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minDictionaryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minDictionaryCount" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "minDictionaryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minLength" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "minLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchWordsQueryParams.prototype, "skip", void 0);
     return SearchWordsQueryParams;
-}(SpeakeasyBase));
-export { SearchWordsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchWordsQueryParams = SearchWordsQueryParams;
 var SearchWordsRequest = /** @class */ (function (_super) {
     __extends(SearchWordsRequest, _super);
     function SearchWordsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchWordsPathParams)
     ], SearchWordsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchWordsQueryParams)
     ], SearchWordsRequest.prototype, "queryParams", void 0);
     return SearchWordsRequest;
-}(SpeakeasyBase));
-export { SearchWordsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchWordsRequest = SearchWordsRequest;
 var SearchWordsResponse = /** @class */ (function (_super) {
     __extends(SearchWordsResponse, _super);
     function SearchWordsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SearchWordsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchWordsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchWordsResponse.prototype, "statusCode", void 0);
     return SearchWordsResponse;
-}(SpeakeasyBase));
-export { SearchWordsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchWordsResponse = SearchWordsResponse;

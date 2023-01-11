@@ -12,8 +12,8 @@ export class SetIdentityPoolRolesInput extends SpeakeasyBase {
   identityPoolId: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleMappings", elemType: RoleMapping })
-  roleMappings?: Map<string, RoleMapping>;
+  roleMappings?: Record<string, RoleMapping>;
 
   @SpeakeasyMetadata({ data: "json, name=Roles" })
-  roles: Map<string, string>;
+  roles: Record<string, string>;
 }

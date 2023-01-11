@@ -97,5 +97,5 @@ export class UpdateMockResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMock200ApplicationJsonObject?: UpdateMock200ApplicationJson;
+  updateMock200ApplicationJSONObject?: UpdateMock200ApplicationJson;
 }

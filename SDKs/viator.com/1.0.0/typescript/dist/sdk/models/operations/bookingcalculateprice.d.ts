@@ -54,7 +54,7 @@ export declare class BookingCalculateprice200ApplicationJsonDataItineraryItemSum
     pickupHotelName?: string;
     price?: number;
     priceFormatted?: string;
-    priceUsd?: number;
+    priceUSD?: number;
     productCode?: string;
     productPulledDown?: boolean;
     productTitle?: string;
@@ -74,7 +74,7 @@ export declare class BookingCalculateprice200ApplicationJsonDataItineraryItemSum
     voucherKey?: string;
     voucherOption?: string;
     voucherRequirements?: string;
-    voucherUrl?: string;
+    voucherURL?: string;
     vouchers?: string;
 }
 /**
@@ -91,16 +91,16 @@ export declare class BookingCalculateprice200ApplicationJsonDataItinerary extend
     itemSummaries?: BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries[];
     itineraryId?: number;
     omniPreRuleList?: number;
-    paypalRedirectUrl?: string;
+    paypalRedirectURL?: string;
     rulesApplied?: string[];
     securityToken?: string;
     sortOrder?: number;
     totalPrice?: number;
     totalPriceFormatted?: string;
-    totalPriceUsd?: number;
+    totalPriceUSD?: number;
     userId?: number;
     voucherKey?: string;
-    voucherUrl?: string;
+    voucherURL?: string;
 }
 export declare class BookingCalculateprice200ApplicationJsonData extends SpeakeasyBase {
     currencyCode?: string;
@@ -127,8 +127,8 @@ export declare class BookingCalculateprice200ApplicationJson extends SpeakeasyBa
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -140,5 +140,5 @@ export declare class BookingCalculatepriceRequest extends SpeakeasyBase {
 export declare class BookingCalculatepriceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingCalculateprice200ApplicationJsonObject?: BookingCalculateprice200ApplicationJson;
+    bookingCalculateprice200ApplicationJSONObject?: BookingCalculateprice200ApplicationJson;
 }

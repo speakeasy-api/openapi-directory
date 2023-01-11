@@ -49,6 +49,6 @@ export declare class GetServerTypesIdRequest extends SpeakeasyBase {
 }
 export declare class GetServerTypesIdResponse extends SpeakeasyBase {
     contentType: string;
-    getServerTypesId200ApplicationJsonObject?: GetServerTypesId200ApplicationJson;
     statusCode: number;
+    getServerTypesId200ApplicationJSONObject?: GetServerTypesId200ApplicationJson;
 }

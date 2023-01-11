@@ -6,8 +6,8 @@ export declare class NodeGroupConfiguration extends SpeakeasyBase {
     nodeGroupId?: string;
     primaryAvailabilityZone?: string;
     primaryOutpostArn?: string;
-    replicaAvailabilityZones?: string[];
+    replicaAvailabilityZones?: Record<string, any>[];
     replicaCount?: number;
-    replicaOutpostArns?: string[];
+    replicaOutpostArns?: Record<string, any>[];
     slots?: string;
 }

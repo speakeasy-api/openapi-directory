@@ -60,7 +60,7 @@ export class StartConfigRulesEvaluationResponse extends SpeakeasyBase {
   resourceInUseException?: any;
 
   @SpeakeasyMetadata()
-  startConfigRulesEvaluationResponse?: Map<string, any>;
+  startConfigRulesEvaluationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

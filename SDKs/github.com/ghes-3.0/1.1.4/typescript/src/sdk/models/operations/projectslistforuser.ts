@@ -8,12 +8,6 @@ export class ProjectsListForUserPathParams extends SpeakeasyBase {
   username: string;
 }
 
-export enum ProjectsListForUserStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class ProjectsListForUserQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -23,7 +17,7 @@ export class ProjectsListForUserQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: ProjectsListForUserStateEnum;
+  state?: shared.UsernameEnum1;
 }
 
 
@@ -50,7 +44,7 @@ export class ProjectsListForUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -59,7 +53,7 @@ export class ProjectsListForUserResponse extends SpeakeasyBase {
   projects?: shared.Project[];
 
   @SpeakeasyMetadata()
-  projectsListForUser415ApplicationJsonObject?: ProjectsListForUser415ApplicationJson;
+  projectsListForUser415ApplicationJSONObject?: ProjectsListForUser415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

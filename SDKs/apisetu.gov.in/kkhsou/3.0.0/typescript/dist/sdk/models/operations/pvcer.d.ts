@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PvcerRequestBodyCertificateParameters extends SpeakeasyBase {
-    enrolNo: string;
+    enrolNO: string;
     fullName: string;
     year: string;
 }
@@ -107,11 +107,11 @@ export declare class PvcerRequest extends SpeakeasyBase {
 export declare class PvcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pvcer400ApplicationJsonObject?: Pvcer400ApplicationJson;
-    pvcer401ApplicationJsonObject?: Pvcer401ApplicationJson;
-    pvcer404ApplicationJsonObject?: Pvcer404ApplicationJson;
-    pvcer500ApplicationJsonObject?: Pvcer500ApplicationJson;
-    pvcer502ApplicationJsonObject?: Pvcer502ApplicationJson;
-    pvcer503ApplicationJsonObject?: Pvcer503ApplicationJson;
-    pvcer504ApplicationJsonObject?: Pvcer504ApplicationJson;
+    pvcer400ApplicationJSONObject?: Pvcer400ApplicationJson;
+    pvcer401ApplicationJSONObject?: Pvcer401ApplicationJson;
+    pvcer404ApplicationJSONObject?: Pvcer404ApplicationJson;
+    pvcer500ApplicationJSONObject?: Pvcer500ApplicationJson;
+    pvcer502ApplicationJSONObject?: Pvcer502ApplicationJson;
+    pvcer503ApplicationJSONObject?: Pvcer503ApplicationJson;
+    pvcer504ApplicationJSONObject?: Pvcer504ApplicationJson;
 }

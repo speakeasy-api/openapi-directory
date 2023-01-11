@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Accelerator } from "./accelerator";
-import { AttachedDisk } from "./attacheddisk";
-export var InstancePolicyProvisioningModelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancePolicy = exports.InstancePolicyProvisioningModelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accelerator_1 = require("./accelerator");
+var attacheddisk_1 = require("./attacheddisk");
+var InstancePolicyProvisioningModelEnum;
 (function (InstancePolicyProvisioningModelEnum) {
     InstancePolicyProvisioningModelEnum["ProvisioningModelUnspecified"] = "PROVISIONING_MODEL_UNSPECIFIED";
     InstancePolicyProvisioningModelEnum["Standard"] = "STANDARD";
     InstancePolicyProvisioningModelEnum["Spot"] = "SPOT";
     InstancePolicyProvisioningModelEnum["Preemptible"] = "PREEMPTIBLE";
-})(InstancePolicyProvisioningModelEnum || (InstancePolicyProvisioningModelEnum = {}));
+})(InstancePolicyProvisioningModelEnum = exports.InstancePolicyProvisioningModelEnum || (exports.InstancePolicyProvisioningModelEnum = {}));
 // InstancePolicy
 /**
  * InstancePolicy describes an instance type and resources attached to each VM created by this InstancePolicy.
@@ -42,25 +45,25 @@ var InstancePolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accelerators", elemType: Accelerator }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accelerators", elemType: accelerator_1.Accelerator }),
         __metadata("design:type", Array)
     ], InstancePolicy.prototype, "accelerators", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disks", elemType: AttachedDisk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disks", elemType: attacheddisk_1.AttachedDisk }),
         __metadata("design:type", Array)
     ], InstancePolicy.prototype, "disks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], InstancePolicy.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minCpuPlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minCpuPlatform" }),
         __metadata("design:type", String)
     ], InstancePolicy.prototype, "minCpuPlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioningModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioningModel" }),
         __metadata("design:type", String)
     ], InstancePolicy.prototype, "provisioningModel", void 0);
     return InstancePolicy;
-}(SpeakeasyBase));
-export { InstancePolicy };
+}(utils_1.SpeakeasyBase));
+exports.InstancePolicy = InstancePolicy;

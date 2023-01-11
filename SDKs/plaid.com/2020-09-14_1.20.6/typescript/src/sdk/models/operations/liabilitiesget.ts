@@ -14,7 +14,7 @@ export class LiabilitiesGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  liabilitiesGetResponse?: Map<string, any>;
+  liabilitiesGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

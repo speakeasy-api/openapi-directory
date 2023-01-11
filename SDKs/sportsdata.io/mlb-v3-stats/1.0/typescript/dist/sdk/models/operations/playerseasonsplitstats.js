@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonSplitStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonSplitStatsResponse = exports.PlayerSeasonSplitStatsRequest = exports.PlayerSeasonSplitStatsPathParams = exports.PlayerSeasonSplitStatsSplitEnum = exports.PlayerSeasonSplitStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonSplitStatsFormatEnum;
 (function (PlayerSeasonSplitStatsFormatEnum) {
     PlayerSeasonSplitStatsFormatEnum["Xml"] = "XML";
     PlayerSeasonSplitStatsFormatEnum["Json"] = "JSON";
-})(PlayerSeasonSplitStatsFormatEnum || (PlayerSeasonSplitStatsFormatEnum = {}));
-export var PlayerSeasonSplitStatsSplitEnum;
+})(PlayerSeasonSplitStatsFormatEnum = exports.PlayerSeasonSplitStatsFormatEnum || (exports.PlayerSeasonSplitStatsFormatEnum = {}));
+var PlayerSeasonSplitStatsSplitEnum;
 (function (PlayerSeasonSplitStatsSplitEnum) {
     PlayerSeasonSplitStatsSplitEnum["L"] = "L";
     PlayerSeasonSplitStatsSplitEnum["R"] = "R";
     PlayerSeasonSplitStatsSplitEnum["S"] = "S";
-})(PlayerSeasonSplitStatsSplitEnum || (PlayerSeasonSplitStatsSplitEnum = {}));
+})(PlayerSeasonSplitStatsSplitEnum = exports.PlayerSeasonSplitStatsSplitEnum || (exports.PlayerSeasonSplitStatsSplitEnum = {}));
 var PlayerSeasonSplitStatsPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonSplitStatsPathParams, _super);
     function PlayerSeasonSplitStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonSplitStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonSplitStatsPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=split" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=split" }),
         __metadata("design:type", String)
     ], PlayerSeasonSplitStatsPathParams.prototype, "split", void 0);
     return PlayerSeasonSplitStatsPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonSplitStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonSplitStatsPathParams = PlayerSeasonSplitStatsPathParams;
 var PlayerSeasonSplitStatsRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonSplitStatsRequest, _super);
     function PlayerSeasonSplitStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonSplitStatsPathParams)
     ], PlayerSeasonSplitStatsRequest.prototype, "pathParams", void 0);
     return PlayerSeasonSplitStatsRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonSplitStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonSplitStatsRequest = PlayerSeasonSplitStatsRequest;
 var PlayerSeasonSplitStatsResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonSplitStatsResponse, _super);
     function PlayerSeasonSplitStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonSplitStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonSplitStatsResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonSplitStatsResponse.prototype, "statusCode", void 0);
     return PlayerSeasonSplitStatsResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonSplitStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonSplitStatsResponse = PlayerSeasonSplitStatsResponse;

@@ -1,13 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class MergeDocumentsV1RequestBodyFile extends SpeakeasyBase {
-    content: Uint8Array;
-    file: string;
-}
 export declare class MergeDocumentsV1RequestBody extends SpeakeasyBase {
-    file?: MergeDocumentsV1RequestBodyFile[];
+    file?: Uint8Array[];
 }
 export declare class MergeDocumentsV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -19,5 +15,5 @@ export declare class MergeDocumentsV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     mergeDocumentsV1200ApplicationPdfBinaryString?: Uint8Array;
-    mergeDocumentsV14XxApplicationProblemPlusJsonObject?: MergeDocumentsV14XxApplicationProblemPlusJson;
+    mergeDocumentsV14XXApplicationProblemPlusJsonObject?: MergeDocumentsV14XxApplicationProblemPlusJson;
 }

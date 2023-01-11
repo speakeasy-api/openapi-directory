@@ -2,31 +2,19 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetSalesCountCarTypeEnum {
-    New = "new",
-    Used = "used"
-}
-
-export enum GetSalesCountCountryEnum {
-    UsLower = "us",
-    CaLower = "ca",
-    UsUpper = "US",
-    CaUpper = "CA"
-}
-
 
 export class GetSalesCountQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
   apiKey?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=car_type" })
-  carType?: GetSalesCountCarTypeEnum;
+  carType?: shared.ApiKeyEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=city_state" })
   cityState?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=country" })
-  country?: GetSalesCountCountryEnum;
+  country?: shared.ApiKeyEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=make" })
   make?: string;
@@ -62,7 +50,7 @@ export class GetSalesCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   sales?: shared.Sales;

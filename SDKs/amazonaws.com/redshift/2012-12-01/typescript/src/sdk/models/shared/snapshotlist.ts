@@ -1,0 +1,113 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { AccountsWithRestoreAccessList } from "./accountswithrestoreaccesslist";
+import { TagList } from "./taglist";
+
+
+
+// SnapshotList
+/** 
+ * Describes a snapshot.
+**/
+export class SnapshotList extends SpeakeasyBase {
+  @SpeakeasyMetadata({ elemType: AccountsWithRestoreAccessList })
+  accountsWithRestoreAccess?: AccountsWithRestoreAccessList[];
+
+  @SpeakeasyMetadata()
+  actualIncrementalBackupSizeInMegaBytes?: number;
+
+  @SpeakeasyMetadata()
+  availabilityZone?: string;
+
+  @SpeakeasyMetadata()
+  backupProgressInMegaBytes?: number;
+
+  @SpeakeasyMetadata()
+  clusterCreateTime?: Date;
+
+  @SpeakeasyMetadata()
+  clusterIdentifier?: string;
+
+  @SpeakeasyMetadata()
+  clusterVersion?: string;
+
+  @SpeakeasyMetadata()
+  currentBackupRateInMegaBytesPerSecond?: number;
+
+  @SpeakeasyMetadata()
+  dbName?: string;
+
+  @SpeakeasyMetadata()
+  elapsedTimeInSeconds?: number;
+
+  @SpeakeasyMetadata()
+  encrypted?: boolean;
+
+  @SpeakeasyMetadata()
+  encryptedWithHSM?: boolean;
+
+  @SpeakeasyMetadata()
+  engineFullVersion?: string;
+
+  @SpeakeasyMetadata()
+  enhancedVpcRouting?: boolean;
+
+  @SpeakeasyMetadata()
+  estimatedSecondsToCompletion?: number;
+
+  @SpeakeasyMetadata()
+  kmsKeyId?: string;
+
+  @SpeakeasyMetadata()
+  maintenanceTrackName?: string;
+
+  @SpeakeasyMetadata()
+  manualSnapshotRemainingDays?: number;
+
+  @SpeakeasyMetadata()
+  manualSnapshotRetentionPeriod?: number;
+
+  @SpeakeasyMetadata()
+  masterUsername?: string;
+
+  @SpeakeasyMetadata()
+  nodeType?: string;
+
+  @SpeakeasyMetadata()
+  numberOfNodes?: number;
+
+  @SpeakeasyMetadata()
+  ownerAccount?: string;
+
+  @SpeakeasyMetadata()
+  port?: number;
+
+  @SpeakeasyMetadata()
+  restorableNodeTypes?: Record<string, any>[];
+
+  @SpeakeasyMetadata()
+  snapshotCreateTime?: Date;
+
+  @SpeakeasyMetadata()
+  snapshotIdentifier?: string;
+
+  @SpeakeasyMetadata()
+  snapshotRetentionStartTime?: Date;
+
+  @SpeakeasyMetadata()
+  snapshotType?: string;
+
+  @SpeakeasyMetadata()
+  sourceRegion?: string;
+
+  @SpeakeasyMetadata()
+  status?: string;
+
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
+
+  @SpeakeasyMetadata()
+  totalBackupSizeInMegaBytes?: number;
+
+  @SpeakeasyMetadata()
+  vpcId?: string;
+}

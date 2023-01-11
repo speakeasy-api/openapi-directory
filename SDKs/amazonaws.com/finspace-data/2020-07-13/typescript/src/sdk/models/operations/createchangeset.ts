@@ -55,19 +55,19 @@ export class CreateChangesetRequestBody extends SpeakeasyBase {
   changeType: CreateChangesetRequestBodyChangeTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=formatParams" })
-  formatParams?: Map<string, string>;
+  formatParams?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=formatType" })
   formatType?: CreateChangesetRequestBodyFormatTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=sourceParams" })
-  sourceParams: Map<string, string>;
+  sourceParams: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sourceType" })
   sourceType: CreateChangesetRequestBodySourceTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

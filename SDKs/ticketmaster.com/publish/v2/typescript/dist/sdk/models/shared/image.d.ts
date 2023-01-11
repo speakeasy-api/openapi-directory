@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare enum ImageRatioEnum {
-    OneHundredAndSixtyNine = "169",
-    ThirtyTwo = "32",
-    FortyThree = "43"
+    Sixteen9 = "16_9",
+    Three2 = "3_2",
+    Four3 = "4_3"
 }
 /**
  * Image

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupRetentionSettings } from "./backupretentionsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var backupretentionsettings_1 = require("./backupretentionsettings");
 // BackupConfiguration
 /**
  * Database instance backup configuration.
@@ -34,41 +37,41 @@ var BackupConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupRetentionSettings" }),
-        __metadata("design:type", BackupRetentionSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupRetentionSettings" }),
+        __metadata("design:type", backupretentionsettings_1.BackupRetentionSettings)
     ], BackupConfiguration.prototype, "backupRetentionSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binaryLogEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binaryLogEnabled" }),
         __metadata("design:type", Boolean)
     ], BackupConfiguration.prototype, "binaryLogEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BackupConfiguration.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BackupConfiguration.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], BackupConfiguration.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointInTimeRecoveryEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointInTimeRecoveryEnabled" }),
         __metadata("design:type", Boolean)
     ], BackupConfiguration.prototype, "pointInTimeRecoveryEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationLogArchivingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationLogArchivingEnabled" }),
         __metadata("design:type", Boolean)
     ], BackupConfiguration.prototype, "replicationLogArchivingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], BackupConfiguration.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionLogRetentionDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionLogRetentionDays" }),
         __metadata("design:type", Number)
     ], BackupConfiguration.prototype, "transactionLogRetentionDays", void 0);
     return BackupConfiguration;
-}(SpeakeasyBase));
-export { BackupConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.BackupConfiguration = BackupConfiguration;

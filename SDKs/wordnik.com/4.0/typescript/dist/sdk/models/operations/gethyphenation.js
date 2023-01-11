@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,85 +23,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHyphenationResponse = exports.GetHyphenationRequest = exports.GetHyphenationQueryParams = exports.GetHyphenationUseCanonicalEnum = exports.GetHyphenationSourceDictionaryEnum = exports.GetHyphenationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetHyphenationPathParams = /** @class */ (function (_super) {
     __extends(GetHyphenationPathParams, _super);
     function GetHyphenationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetHyphenationPathParams.prototype, "word", void 0);
     return GetHyphenationPathParams;
-}(SpeakeasyBase));
-export { GetHyphenationPathParams };
-export var GetHyphenationSourceDictionaryEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetHyphenationPathParams = GetHyphenationPathParams;
+var GetHyphenationSourceDictionaryEnum;
 (function (GetHyphenationSourceDictionaryEnum) {
     GetHyphenationSourceDictionaryEnum["Ahd"] = "ahd";
     GetHyphenationSourceDictionaryEnum["Century"] = "century";
     GetHyphenationSourceDictionaryEnum["Wiktionary"] = "wiktionary";
     GetHyphenationSourceDictionaryEnum["Webster"] = "webster";
     GetHyphenationSourceDictionaryEnum["Wordnet"] = "wordnet";
-})(GetHyphenationSourceDictionaryEnum || (GetHyphenationSourceDictionaryEnum = {}));
-export var GetHyphenationUseCanonicalEnum;
+})(GetHyphenationSourceDictionaryEnum = exports.GetHyphenationSourceDictionaryEnum || (exports.GetHyphenationSourceDictionaryEnum = {}));
+var GetHyphenationUseCanonicalEnum;
 (function (GetHyphenationUseCanonicalEnum) {
     GetHyphenationUseCanonicalEnum["False"] = "false";
     GetHyphenationUseCanonicalEnum["True"] = "true";
-})(GetHyphenationUseCanonicalEnum || (GetHyphenationUseCanonicalEnum = {}));
+})(GetHyphenationUseCanonicalEnum = exports.GetHyphenationUseCanonicalEnum || (exports.GetHyphenationUseCanonicalEnum = {}));
 var GetHyphenationQueryParams = /** @class */ (function (_super) {
     __extends(GetHyphenationQueryParams, _super);
     function GetHyphenationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetHyphenationQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceDictionary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sourceDictionary" }),
         __metadata("design:type", String)
     ], GetHyphenationQueryParams.prototype, "sourceDictionary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetHyphenationQueryParams.prototype, "useCanonical", void 0);
     return GetHyphenationQueryParams;
-}(SpeakeasyBase));
-export { GetHyphenationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHyphenationQueryParams = GetHyphenationQueryParams;
 var GetHyphenationRequest = /** @class */ (function (_super) {
     __extends(GetHyphenationRequest, _super);
     function GetHyphenationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHyphenationPathParams)
     ], GetHyphenationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHyphenationQueryParams)
     ], GetHyphenationRequest.prototype, "queryParams", void 0);
     return GetHyphenationRequest;
-}(SpeakeasyBase));
-export { GetHyphenationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHyphenationRequest = GetHyphenationRequest;
 var GetHyphenationResponse = /** @class */ (function (_super) {
     __extends(GetHyphenationResponse, _super);
     function GetHyphenationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetHyphenationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHyphenationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHyphenationResponse.prototype, "statusCode", void 0);
     return GetHyphenationResponse;
-}(SpeakeasyBase));
-export { GetHyphenationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHyphenationResponse = GetHyphenationResponse;

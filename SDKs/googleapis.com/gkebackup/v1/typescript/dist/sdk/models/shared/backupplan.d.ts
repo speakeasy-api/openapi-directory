@@ -5,18 +5,6 @@ import { RetentionPolicy } from "./retentionpolicy";
 /**
  * Defines the configuration and scheduling for a "line" of Backups.
 **/
-export declare class BackupPlanInput extends SpeakeasyBase {
-    backupConfig?: BackupConfig;
-    backupSchedule?: Schedule;
-    cluster?: string;
-    deactivated?: boolean;
-    description?: string;
-    labels?: Map<string, string>;
-    retentionPolicy?: RetentionPolicy;
-}
-/**
- * Defines the configuration and scheduling for a "line" of Backups.
-**/
 export declare class BackupPlan extends SpeakeasyBase {
     backupConfig?: BackupConfig;
     backupSchedule?: Schedule;
@@ -25,10 +13,22 @@ export declare class BackupPlan extends SpeakeasyBase {
     deactivated?: boolean;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     protectedPodCount?: number;
     retentionPolicy?: RetentionPolicy;
     uid?: string;
     updateTime?: string;
+}
+/**
+ * Defines the configuration and scheduling for a "line" of Backups.
+**/
+export declare class BackupPlanInput extends SpeakeasyBase {
+    backupConfig?: BackupConfig;
+    backupSchedule?: Schedule;
+    cluster?: string;
+    deactivated?: boolean;
+    description?: string;
+    labels?: Record<string, string>;
+    retentionPolicy?: RetentionPolicy;
 }

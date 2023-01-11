@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceId } from "./resourceid";
-export var ActivityContentDetailsSocialTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityContentDetailsSocial = exports.ActivityContentDetailsSocialTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceid_1 = require("./resourceid");
+var ActivityContentDetailsSocialTypeEnum;
 (function (ActivityContentDetailsSocialTypeEnum) {
     ActivityContentDetailsSocialTypeEnum["Unspecified"] = "unspecified";
     ActivityContentDetailsSocialTypeEnum["GooglePlus"] = "googlePlus";
     ActivityContentDetailsSocialTypeEnum["Facebook"] = "facebook";
     ActivityContentDetailsSocialTypeEnum["Twitter"] = "twitter";
-})(ActivityContentDetailsSocialTypeEnum || (ActivityContentDetailsSocialTypeEnum = {}));
+})(ActivityContentDetailsSocialTypeEnum = exports.ActivityContentDetailsSocialTypeEnum || (exports.ActivityContentDetailsSocialTypeEnum = {}));
 // ActivityContentDetailsSocial
 /**
  * Details about a social network post.
@@ -41,25 +44,25 @@ var ActivityContentDetailsSocial = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsSocial.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsSocial.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceUrl" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsSocial.prototype, "referenceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
-        __metadata("design:type", ResourceId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
+        __metadata("design:type", resourceid_1.ResourceId)
     ], ActivityContentDetailsSocial.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsSocial.prototype, "type", void 0);
     return ActivityContentDetailsSocial;
-}(SpeakeasyBase));
-export { ActivityContentDetailsSocial };
+}(utils_1.SpeakeasyBase));
+exports.ActivityContentDetailsSocial = ActivityContentDetailsSocial;

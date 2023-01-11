@@ -13,20 +13,6 @@ export declare enum SubscriptionOfferStateEnum {
 /**
  * A single, temporary offer
 **/
-export declare class SubscriptionOfferInput extends SpeakeasyBase {
-    basePlanId?: string;
-    offerId?: string;
-    offerTags?: OfferTag[];
-    otherRegionsConfig?: OtherRegionsSubscriptionOfferConfig;
-    packageName?: string;
-    phases?: SubscriptionOfferPhase[];
-    productId?: string;
-    regionalConfigs?: RegionalSubscriptionOfferConfig[];
-    targeting?: SubscriptionOfferTargeting;
-}
-/**
- * A single, temporary offer
-**/
 export declare class SubscriptionOffer extends SpeakeasyBase {
     basePlanId?: string;
     offerId?: string;
@@ -37,5 +23,19 @@ export declare class SubscriptionOffer extends SpeakeasyBase {
     productId?: string;
     regionalConfigs?: RegionalSubscriptionOfferConfig[];
     state?: SubscriptionOfferStateEnum;
+    targeting?: SubscriptionOfferTargeting;
+}
+/**
+ * A single, temporary offer
+**/
+export declare class SubscriptionOfferInput extends SpeakeasyBase {
+    basePlanId?: string;
+    offerId?: string;
+    offerTags?: OfferTag[];
+    otherRegionsConfig?: OtherRegionsSubscriptionOfferConfig;
+    packageName?: string;
+    phases?: SubscriptionOfferPhase[];
+    productId?: string;
+    regionalConfigs?: RegionalSubscriptionOfferConfig[];
     targeting?: SubscriptionOfferTargeting;
 }

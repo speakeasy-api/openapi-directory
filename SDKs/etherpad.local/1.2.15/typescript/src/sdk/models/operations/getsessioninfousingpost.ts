@@ -4,16 +4,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetSessionInfoUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sessionID" })
-  sessionId?: string;
+  sessionID?: string;
 }
 
 
 export class GetSessionInfoUsingPost200ApplicationJsonDataInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -46,7 +46,7 @@ export class GetSessionInfoUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetSessionInfoUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class GetSessionInfoUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class GetSessionInfoUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSessionInfoUsingPost200ApplicationJsonObject?: GetSessionInfoUsingPost200ApplicationJson;
+  getSessionInfoUsingPOST200ApplicationJSONObject?: GetSessionInfoUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSessionInfoUsingPost400ApplicationJsonObject?: GetSessionInfoUsingPost400ApplicationJson;
+  getSessionInfoUsingPOST400ApplicationJSONObject?: GetSessionInfoUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSessionInfoUsingPost401ApplicationJsonObject?: GetSessionInfoUsingPost401ApplicationJson;
+  getSessionInfoUsingPOST401ApplicationJSONObject?: GetSessionInfoUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getSessionInfoUsingPost500ApplicationJsonObject?: GetSessionInfoUsingPost500ApplicationJson;
+  getSessionInfoUsingPOST500ApplicationJSONObject?: GetSessionInfoUsingPost500ApplicationJson;
 }

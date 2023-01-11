@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheNode } from "./cachenode";
+import { CacheNodeList } from "./cachenodelist";
 import { CacheParameterGroupStatus } from "./cacheparametergroupstatus";
-import { CacheSecurityGroupMembership } from "./cachesecuritygroupmembership";
+import { CacheSecurityGroupMembershipList } from "./cachesecuritygroupmembershiplist";
 import { Endpoint } from "./endpoint";
-import { LogDeliveryConfiguration } from "./logdeliveryconfiguration";
+import { LogDeliveryConfigurationList } from "./logdeliveryconfigurationlist";
 import { NotificationConfiguration } from "./notificationconfiguration";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
 import { SecurityGroupMembership } from "./securitygroupmembership";
@@ -42,14 +42,14 @@ export class CacheCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   cacheNodeType?: string;
 
-  @SpeakeasyMetadata({ elemType: CacheNode })
-  cacheNodes?: CacheNode[];
+  @SpeakeasyMetadata({ elemType: CacheNodeList })
+  cacheNodes?: CacheNodeList[];
 
   @SpeakeasyMetadata()
   cacheParameterGroup?: CacheParameterGroupStatus;
 
-  @SpeakeasyMetadata({ elemType: CacheSecurityGroupMembership })
-  cacheSecurityGroups?: CacheSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: CacheSecurityGroupMembershipList })
+  cacheSecurityGroups?: CacheSecurityGroupMembershipList[];
 
   @SpeakeasyMetadata()
   cacheSubnetGroupName?: string;
@@ -66,8 +66,8 @@ export class CacheCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   engineVersion?: string;
 
-  @SpeakeasyMetadata({ elemType: LogDeliveryConfiguration })
-  logDeliveryConfigurations?: LogDeliveryConfiguration[];
+  @SpeakeasyMetadata({ elemType: LogDeliveryConfigurationList })
+  logDeliveryConfigurations?: LogDeliveryConfigurationList[];
 
   @SpeakeasyMetadata()
   notificationConfiguration?: NotificationConfiguration;

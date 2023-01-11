@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VehicleTypeNetworkDataProviderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VehicleType = exports.VehicleTypeNetworkDataProviderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VehicleTypeNetworkDataProviderEnum;
 (function (VehicleTypeNetworkDataProviderEnum) {
     VehicleTypeNetworkDataProviderEnum["Openstreetmap"] = "openstreetmap";
     VehicleTypeNetworkDataProviderEnum["Tomtom"] = "tomtom";
-})(VehicleTypeNetworkDataProviderEnum || (VehicleTypeNetworkDataProviderEnum = {}));
+})(VehicleTypeNetworkDataProviderEnum = exports.VehicleTypeNetworkDataProviderEnum || (exports.VehicleTypeNetworkDataProviderEnum = {}));
 var VehicleType = /** @class */ (function (_super) {
     __extends(VehicleType, _super);
     function VehicleType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacity" }),
         __metadata("design:type", Array)
     ], VehicleType.prototype, "capacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consider_traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consider_traffic" }),
         __metadata("design:type", Boolean)
     ], VehicleType.prototype, "considerTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cost_per_activation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cost_per_activation" }),
         __metadata("design:type", Number)
     ], VehicleType.prototype, "costPerActivation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cost_per_meter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cost_per_meter" }),
         __metadata("design:type", Number)
     ], VehicleType.prototype, "costPerMeter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cost_per_second" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cost_per_second" }),
         __metadata("design:type", Number)
     ], VehicleType.prototype, "costPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_data_provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_data_provider" }),
         __metadata("design:type", String)
     ], VehicleType.prototype, "networkDataProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", Object)
     ], VehicleType.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_time_factor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_time_factor" }),
         __metadata("design:type", Number)
     ], VehicleType.prototype, "serviceTimeFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speed_factor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speed_factor" }),
         __metadata("design:type", Number)
     ], VehicleType.prototype, "speedFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type_id" }),
         __metadata("design:type", String)
     ], VehicleType.prototype, "typeId", void 0);
     return VehicleType;
-}(SpeakeasyBase));
-export { VehicleType };
+}(utils_1.SpeakeasyBase));
+exports.VehicleType = VehicleType;

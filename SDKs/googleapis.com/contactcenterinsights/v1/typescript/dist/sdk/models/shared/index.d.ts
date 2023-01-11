@@ -3,6 +3,7 @@ export * from "./googlecloudcontactcenterinsightsv1analysis";
 export * from "./googlecloudcontactcenterinsightsv1analysisresult";
 export * from "./googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata";
 export * from "./googlecloudcontactcenterinsightsv1annotationboundary";
+export * from "./googlecloudcontactcenterinsightsv1annotatorselector";
 export * from "./googlecloudcontactcenterinsightsv1answerfeedback";
 export * from "./googlecloudcontactcenterinsightsv1articlesuggestiondata";
 export * from "./googlecloudcontactcenterinsightsv1bulkanalyzeconversationsrequest";

@@ -70,5 +70,5 @@ export class GetShopScriptTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getShopScriptTag200ApplicationJsonObject?: GetShopScriptTag200ApplicationJson;
+  getShopScriptTag200ApplicationJSONObject?: GetShopScriptTag200ApplicationJson;
 }

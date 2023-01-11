@@ -70,11 +70,11 @@ export class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse extends
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJsonObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
+  userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject?: UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJson;
 }

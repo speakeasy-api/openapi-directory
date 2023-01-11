@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddressesOutputFormatRequest, GetAddressesOutputFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,40 +33,40 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetAddressesOutputFormatRequest = {
   pathParams: {
-    outputFormat: "json",
+    outputFormat: "csv",
   },
   queryParams: {
-    addressString: "adipisci",
+    addressString: "voluptas",
     autoComplete: true,
-    bbox: "nesciunt",
+    bbox: "expedita",
     brief: true,
-    centre: "ut",
-    civicNumber: "eaque",
-    civicNumberSuffix: "sint",
-    echo: false,
-    extrapolate: true,
+    centre: "dolor",
+    civicNumber: "expedita",
+    civicNumberSuffix: "voluptas",
+    echo: true,
+    extrapolate: false,
     interpolation: "adaptive",
-    localities: "qui",
-    localityName: "occaecati",
-    locationDescriptor: "frontDoorPoint",
-    matchPrecision: "est",
-    matchPrecisionNot: "voluptates",
-    maxDistance: 52.099998,
-    maxResults: 427930109320837905,
-    minScore: 4622879939173555609,
-    notLocalities: "aut",
-    outputSrs: 1463774971675998561,
-    parcelPoint: "quo",
-    provinceCode: "et",
-    setBack: 4124723190876299895,
-    siteName: "saepe",
-    streetDirection: "SW",
-    streetName: "qui",
-    streetQualifier: "ea",
-    streetType: "voluptas",
-    unitDesignator: "SUITE",
-    unitNumber: "rerum",
-    unitNumberSuffix: "iste",
+    localities: "rerum",
+    localityName: "dicta",
+    locationDescriptor: "any",
+    matchPrecision: "voluptatum",
+    matchPrecisionNot: "et",
+    maxDistance: 11.100000,
+    maxResults: 7259475919510918339,
+    minScore: 7373105480197164748,
+    notLocalities: "iste",
+    outputSRS: 3930927879439176946,
+    parcelPoint: "totam",
+    provinceCode: "dolores",
+    setBack: 1929546706668609706,
+    siteName: "debitis",
+    streetDirection: "N",
+    streetName: "odio",
+    streetQualifier: "dolore",
+    streetType: "id",
+    unitDesignator: "TH",
+    unitNumber: "accusantium",
+    unitNumberSuffix: "totam",
   },
 };
 
@@ -83,18 +82,18 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 ### intersections
 
 * `getAddressesOutputFormat` - Geocode an address
-* `getIntersectionsIntersectionIdOutputFormat` - Get an intersection by its unique ID
 * `getIntersectionsNearOutputFormat` - Find intersections near to a geographic point
 * `getIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
 * `getIntersectionsWithinOutputFormat` - Find intersections in a geographic area
+* `getIntersectionsIntersectionIdOutputFormat` - Get an intersection by its unique ID
 
 ### occupants
 
 * `getOccupantsAddressesOutputFormat` - Geocode an address and identify site occupants
 * `getOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
 * `getOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
-* `getOccupantsOccupantIdOutputFormat` - Get an occupant (of a site) by its unique ID
 * `getOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
+* `getOccupantsOccupantIdOutputFormat` - Get an occupant (of a site) by its unique ID
 
 ### parcels
 
@@ -105,9 +104,9 @@ sdk.intersections.getAddressesOutputFormat(req).then((res: GetAddressesOutputFor
 * `getAddressesOutputFormat` - Geocode an address
 * `getSitesNearOutputFormat` - Find sites near to a geographic point
 * `getSitesNearestOutputFormat` - Find the site nearest to a geographic point
+* `getSitesWithinOutputFormat` - Find sites in a geographic area
 * `getSitesSiteIdOutputFormat` - Get a site by its unique ID
 * `getSitesSiteIdSubsitesOutputFormat` - Represents all subsites of a given site
-* `getSitesWithinOutputFormat` - Find sites in a geographic area
 
 <!-- End SDK Available Operations -->
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplate } from "./launchtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLaunchTemplatesResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeLaunchTemplatesResult = /** @class */ (function (_super) {
     __extends(DescribeLaunchTemplatesResult, _super);
     function DescribeLaunchTemplatesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: LaunchTemplate }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeLaunchTemplatesResult.prototype, "launchTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeLaunchTemplatesResult.prototype, "nextToken", void 0);
     return DescribeLaunchTemplatesResult;
-}(SpeakeasyBase));
-export { DescribeLaunchTemplatesResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLaunchTemplatesResult = DescribeLaunchTemplatesResult;

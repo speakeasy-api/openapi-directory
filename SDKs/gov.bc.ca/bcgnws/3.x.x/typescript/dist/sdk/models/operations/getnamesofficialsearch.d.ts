@@ -24,7 +24,7 @@ export declare class GetNamesOfficialSearchQueryParams extends SpeakeasyBase {
     itemsPerPage?: number;
     name: string;
     outputFormat: GetNamesOfficialSearchOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesOfficialSearchOutputStyleEnum;
     sortBy?: GetNamesOfficialSearchSortByEnum;
     startIndex?: number;

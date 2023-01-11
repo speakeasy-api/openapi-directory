@@ -12,5 +12,5 @@ export class GoogleCloudRecommenderV1RecommendationContent extends SpeakeasyBase
   operationGroups?: GoogleCloudRecommenderV1OperationGroup[];
 
   @SpeakeasyMetadata({ data: "json, name=overview" })
-  overview?: Map<string, any>;
+  overview?: Record<string, any>;
 }

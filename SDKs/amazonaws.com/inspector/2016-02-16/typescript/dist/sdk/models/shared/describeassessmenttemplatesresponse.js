@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssessmentTemplate } from "./assessmenttemplate";
-import { FailedItemDetails } from "./faileditemdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAssessmentTemplatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var assessmenttemplate_1 = require("./assessmenttemplate");
+var faileditemdetails_1 = require("./faileditemdetails");
 var DescribeAssessmentTemplatesResponse = /** @class */ (function (_super) {
     __extends(DescribeAssessmentTemplatesResponse, _super);
     function DescribeAssessmentTemplatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentTemplates", elemType: AssessmentTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentTemplates", elemType: assessmenttemplate_1.AssessmentTemplate }),
         __metadata("design:type", Array)
     ], DescribeAssessmentTemplatesResponse.prototype, "assessmentTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedItems", elemType: faileditemdetails_1.FailedItemDetails }),
+        __metadata("design:type", Object)
     ], DescribeAssessmentTemplatesResponse.prototype, "failedItems", void 0);
     return DescribeAssessmentTemplatesResponse;
-}(SpeakeasyBase));
-export { DescribeAssessmentTemplatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAssessmentTemplatesResponse = DescribeAssessmentTemplatesResponse;

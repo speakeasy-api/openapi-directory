@@ -13,5 +13,5 @@ export declare class ExportWirelessCsvRequest extends SpeakeasyBase {
 export declare class ExportWirelessCsvResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    exportWirelessCsv200TextCsvBinaryString?: Uint8Array;
+    exportWirelessCSV200TextCSVBinaryString?: Uint8Array;
 }

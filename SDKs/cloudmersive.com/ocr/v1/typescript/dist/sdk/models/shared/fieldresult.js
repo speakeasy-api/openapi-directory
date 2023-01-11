@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrPhotoTextElement } from "./ocrphototextelement";
-import { FormFieldDefinition } from "./formfielddefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrphototextelement_1 = require("./ocrphototextelement");
+var formfielddefinition_1 = require("./formfielddefinition");
 // FieldResult
 /**
  * A pairing target field and actual value read from form
@@ -35,13 +38,13 @@ var FieldResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FieldValues", elemType: OcrPhotoTextElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FieldValues", elemType: ocrphototextelement_1.OcrPhotoTextElement }),
         __metadata("design:type", Array)
     ], FieldResult.prototype, "fieldValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetField" }),
-        __metadata("design:type", FormFieldDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetField" }),
+        __metadata("design:type", formfielddefinition_1.FormFieldDefinition)
     ], FieldResult.prototype, "targetField", void 0);
     return FieldResult;
-}(SpeakeasyBase));
-export { FieldResult };
+}(utils_1.SpeakeasyBase));
+exports.FieldResult = FieldResult;

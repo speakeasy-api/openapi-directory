@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetOnDisconnectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetOnDisconnect200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetOnDisconnect200ApplicationJSONInt32Integers?: number[];
 }

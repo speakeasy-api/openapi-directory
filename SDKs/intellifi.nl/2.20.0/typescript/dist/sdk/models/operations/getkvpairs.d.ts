@@ -36,5 +36,5 @@ export declare class GetKvPairsRequest extends SpeakeasyBase {
 export declare class GetKvPairsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getKvPairs200ApplicationJsonObject?: GetKvPairs200ApplicationJson;
+    getKvPairs200ApplicationJSONObject?: GetKvPairs200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuppressedDestinationAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // SuppressedDestinationAttributes
 /**
  * An object that contains additional attributes that are related an email address that is on the suppression list for your account.
@@ -33,13 +36,13 @@ var SuppressedDestinationAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeedbackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeedbackId" }),
         __metadata("design:type", String)
     ], SuppressedDestinationAttributes.prototype, "feedbackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageId" }),
         __metadata("design:type", String)
     ], SuppressedDestinationAttributes.prototype, "messageId", void 0);
     return SuppressedDestinationAttributes;
-}(SpeakeasyBase));
-export { SuppressedDestinationAttributes };
+}(utils_1.SpeakeasyBase));
+exports.SuppressedDestinationAttributes = SuppressedDestinationAttributes;

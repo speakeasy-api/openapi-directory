@@ -43,5 +43,5 @@ export class LockNetworkSmDevicesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lockNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+  lockNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

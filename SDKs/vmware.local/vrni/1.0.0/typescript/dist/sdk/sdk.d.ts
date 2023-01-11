@@ -7,10 +7,11 @@ import { Info } from "./info";
 import { Infrastructure } from "./infrastructure";
 import { Microsegmentation } from "./microsegmentation";
 import { Search } from "./search";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://vmware.local", "https://vrni.example.com/api/ni"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     applications: Applications;
     authentication: Authentication;
@@ -26,6 +27,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

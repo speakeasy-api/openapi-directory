@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdsTimelineResponse = exports.GetUsersIdsTimelineRequest = exports.GetUsersIdsTimelineQueryParams = exports.GetUsersIdsTimelinePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdsTimelinePathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsTimelinePathParams, _super);
     function GetUsersIdsTimelinePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetUsersIdsTimelinePathParams.prototype, "ids", void 0);
     return GetUsersIdsTimelinePathParams;
-}(SpeakeasyBase));
-export { GetUsersIdsTimelinePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsTimelinePathParams = GetUsersIdsTimelinePathParams;
 var GetUsersIdsTimelineQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsTimelineQueryParams, _super);
     function GetUsersIdsTimelineQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdsTimelineQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdsTimelineQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsTimelineQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdsTimelineQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdsTimelineQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdsTimelineQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsTimelineQueryParams.prototype, "todate", void 0);
     return GetUsersIdsTimelineQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdsTimelineQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsTimelineQueryParams = GetUsersIdsTimelineQueryParams;
 var GetUsersIdsTimelineRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdsTimelineRequest, _super);
     function GetUsersIdsTimelineRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsTimelinePathParams)
     ], GetUsersIdsTimelineRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsTimelineQueryParams)
     ], GetUsersIdsTimelineRequest.prototype, "queryParams", void 0);
     return GetUsersIdsTimelineRequest;
-}(SpeakeasyBase));
-export { GetUsersIdsTimelineRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsTimelineRequest = GetUsersIdsTimelineRequest;
 var GetUsersIdsTimelineResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdsTimelineResponse, _super);
     function GetUsersIdsTimelineResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdsTimelineResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdsTimelineResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdsTimelineResponse.prototype, "statusCode", void 0);
     return GetUsersIdsTimelineResponse;
-}(SpeakeasyBase));
-export { GetUsersIdsTimelineResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsTimelineResponse = GetUsersIdsTimelineResponse;

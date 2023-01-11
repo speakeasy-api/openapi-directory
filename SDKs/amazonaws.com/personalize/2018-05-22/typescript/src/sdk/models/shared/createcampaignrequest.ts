@@ -8,7 +8,7 @@ export class CreateCampaignRequest extends SpeakeasyBase {
   campaignConfig?: CampaignConfig;
 
   @SpeakeasyMetadata({ data: "json, name=minProvisionedTPS" })
-  minProvisionedTps?: number;
+  minProvisionedTPS?: number;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

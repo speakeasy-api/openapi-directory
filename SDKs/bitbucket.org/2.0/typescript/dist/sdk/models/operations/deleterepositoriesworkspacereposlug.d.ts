@@ -20,5 +20,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugRequest extends Speakeas
 export declare class DeleteRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

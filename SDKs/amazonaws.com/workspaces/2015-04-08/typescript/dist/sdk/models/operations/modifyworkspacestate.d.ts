@@ -21,7 +21,7 @@ export declare class ModifyWorkspaceStateResponse extends SpeakeasyBase {
     contentType: string;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
-    modifyWorkspaceStateResult?: Map<string, any>;
+    modifyWorkspaceStateResult?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RepositoryFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryInput = exports.Repository = exports.RepositoryFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RepositoryFormatEnum;
 (function (RepositoryFormatEnum) {
     RepositoryFormatEnum["FormatUnspecified"] = "FORMAT_UNSPECIFIED";
     RepositoryFormatEnum["Docker"] = "DOCKER";
@@ -32,47 +35,7 @@ export var RepositoryFormatEnum;
     RepositoryFormatEnum["Apt"] = "APT";
     RepositoryFormatEnum["Yum"] = "YUM";
     RepositoryFormatEnum["Python"] = "PYTHON";
-})(RepositoryFormatEnum || (RepositoryFormatEnum = {}));
-// RepositoryInput
-/**
- * A Repository for storing artifacts with a specific format.
-**/
-var RepositoryInput = /** @class */ (function (_super) {
-    __extends(RepositoryInput, _super);
-    function RepositoryInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "format", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyName" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "kmsKeyName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], RepositoryInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], RepositoryInput.prototype, "updateTime", void 0);
-    return RepositoryInput;
-}(SpeakeasyBase));
-export { RepositoryInput };
+})(RepositoryFormatEnum = exports.RepositoryFormatEnum || (exports.RepositoryFormatEnum = {}));
 // Repository
 /**
  * A Repository for storing artifacts with a specific format.
@@ -83,41 +46,81 @@ var Repository = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Repository.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Repository.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], Repository.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyName" }),
         __metadata("design:type", String)
     ], Repository.prototype, "kmsKeyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Repository.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Repository.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=satisfiesPzs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=satisfiesPzs" }),
         __metadata("design:type", Boolean)
     ], Repository.prototype, "satisfiesPzs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeBytes" }),
         __metadata("design:type", String)
     ], Repository.prototype, "sizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Repository.prototype, "updateTime", void 0);
     return Repository;
-}(SpeakeasyBase));
-export { Repository };
+}(utils_1.SpeakeasyBase));
+exports.Repository = Repository;
+// RepositoryInput
+/**
+ * A Repository for storing artifacts with a specific format.
+**/
+var RepositoryInput = /** @class */ (function (_super) {
+    __extends(RepositoryInput, _super);
+    function RepositoryInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "format", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyName" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "kmsKeyName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], RepositoryInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], RepositoryInput.prototype, "updateTime", void 0);
+    return RepositoryInput;
+}(utils_1.SpeakeasyBase));
+exports.RepositoryInput = RepositoryInput;

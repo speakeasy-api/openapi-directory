@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PagespeedonlinePagespeedapiRunpagespeedRequest, PagespeedonlinePagespeedapiRunpagespeedResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,20 +29,20 @@ const sdk = new SDK();
 const req: PagespeedonlinePagespeedapiRunpagespeedRequest = {
   queryParams: {
     alt: "json",
-    fields: "cupiditate",
+    fields: "voluptas",
     filterThirdPartyResources: true,
-    key: "adipisci",
-    locale: "eveniet",
-    oauthToken: "nulla",
+    key: "expedita",
+    locale: "consequuntur",
+    oauthToken: "dolor",
     prettyPrint: true,
-    quotaUser: "repudiandae",
+    quotaUser: "voluptas",
     rule: [
-      "assumenda",
+      "et",
     ],
-    screenshot: false,
-    strategy: "desktop",
-    url: "a",
-    userIp: "ut",
+    screenshot: true,
+    strategy: "mobile",
+    url: "dicta",
+    userIp: "debitis",
   },
 };
 

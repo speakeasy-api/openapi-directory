@@ -14,6 +14,6 @@ export declare class PostAppsAppIdQueuesRequest extends SpeakeasyBase {
 export declare class PostAppsAppIdQueuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     queueResponse?: shared.QueueResponse;
 }

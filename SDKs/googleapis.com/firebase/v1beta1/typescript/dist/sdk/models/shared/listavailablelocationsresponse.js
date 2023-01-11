@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Location } from "./location";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAvailableLocationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var location_1 = require("./location");
 var ListAvailableLocationsResponse = /** @class */ (function (_super) {
     __extends(ListAvailableLocationsResponse, _super);
     function ListAvailableLocationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations", elemType: Location }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations", elemType: location_1.Location }),
         __metadata("design:type", Array)
     ], ListAvailableLocationsResponse.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListAvailableLocationsResponse.prototype, "nextPageToken", void 0);
     return ListAvailableLocationsResponse;
-}(SpeakeasyBase));
-export { ListAvailableLocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAvailableLocationsResponse = ListAvailableLocationsResponse;

@@ -50,5 +50,5 @@ export class AddCustomFieldSettingForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addCustomFieldSettingForProject200ApplicationJsonObject?: AddCustomFieldSettingForProject200ApplicationJson;
+  addCustomFieldSettingForProject200ApplicationJSONObject?: AddCustomFieldSettingForProject200ApplicationJson;
 }

@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1AssociationInfo } from "./googlecloudchannelv1associationinfo";
-import { GoogleCloudChannelV1CommitmentSettingsInput } from "./googlecloudchannelv1commitmentsettings";
-import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
-import { GoogleCloudChannelV1TrialSettings } from "./googlecloudchannelv1trialsettings";
 import { GoogleCloudChannelV1CommitmentSettings } from "./googlecloudchannelv1commitmentsettings";
 import { GoogleCloudChannelV1Parameter } from "./googlecloudchannelv1parameter";
 import { GoogleCloudChannelV1ProvisionedService } from "./googlecloudchannelv1provisionedservice";
+import { GoogleCloudChannelV1TrialSettings } from "./googlecloudchannelv1trialsettings";
+import { GoogleCloudChannelV1CommitmentSettingsInput } from "./googlecloudchannelv1commitmentsettings";
+import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
 export declare enum GoogleCloudChannelV1EntitlementProvisioningStateEnum {
     ProvisioningStateUnspecified = "PROVISIONING_STATE_UNSPECIFIED",
     Active = "ACTIVE",
@@ -18,17 +18,6 @@ export declare enum GoogleCloudChannelV1EntitlementSuspensionReasonsEnum {
     RenewalWithTypeCancel = "RENEWAL_WITH_TYPE_CANCEL",
     PendingTosAcceptance = "PENDING_TOS_ACCEPTANCE",
     Other = "OTHER"
-}
-/**
- * An entitlement is a representation of a customer's ability to use a service.
-**/
-export declare class GoogleCloudChannelV1EntitlementInput extends SpeakeasyBase {
-    associationInfo?: GoogleCloudChannelV1AssociationInfo;
-    commitmentSettings?: GoogleCloudChannelV1CommitmentSettingsInput;
-    offer?: string;
-    parameters?: GoogleCloudChannelV1ParameterInput[];
-    purchaseOrderId?: string;
-    trialSettings?: GoogleCloudChannelV1TrialSettings;
 }
 /**
  * An entitlement is a representation of a customer's ability to use a service.
@@ -46,4 +35,15 @@ export declare class GoogleCloudChannelV1Entitlement extends SpeakeasyBase {
     suspensionReasons?: GoogleCloudChannelV1EntitlementSuspensionReasonsEnum[];
     trialSettings?: GoogleCloudChannelV1TrialSettings;
     updateTime?: string;
+}
+/**
+ * An entitlement is a representation of a customer's ability to use a service.
+**/
+export declare class GoogleCloudChannelV1EntitlementInput extends SpeakeasyBase {
+    associationInfo?: GoogleCloudChannelV1AssociationInfo;
+    commitmentSettings?: GoogleCloudChannelV1CommitmentSettingsInput;
+    offer?: string;
+    parameters?: GoogleCloudChannelV1ParameterInput[];
+    purchaseOrderId?: string;
+    trialSettings?: GoogleCloudChannelV1TrialSettings;
 }

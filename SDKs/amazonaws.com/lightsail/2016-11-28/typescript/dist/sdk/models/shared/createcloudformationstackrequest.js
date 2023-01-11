@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceEntry } from "./instanceentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCloudFormationStackRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceentry_1 = require("./instanceentry");
 var CreateCloudFormationStackRequest = /** @class */ (function (_super) {
     __extends(CreateCloudFormationStackRequest, _super);
     function CreateCloudFormationStackRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: InstanceEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instanceentry_1.InstanceEntry }),
         __metadata("design:type", Array)
     ], CreateCloudFormationStackRequest.prototype, "instances", void 0);
     return CreateCloudFormationStackRequest;
-}(SpeakeasyBase));
-export { CreateCloudFormationStackRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCloudFormationStackRequest = CreateCloudFormationStackRequest;

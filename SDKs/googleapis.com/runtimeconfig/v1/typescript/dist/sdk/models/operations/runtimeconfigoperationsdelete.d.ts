@@ -35,6 +35,6 @@ export declare class RuntimeconfigOperationsDeleteRequest extends SpeakeasyBase 
 }
 export declare class RuntimeconfigOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

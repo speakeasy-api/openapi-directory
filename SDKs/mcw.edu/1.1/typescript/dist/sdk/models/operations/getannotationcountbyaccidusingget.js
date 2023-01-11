@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAnnotationCountByAccIdUsingGetResponse = exports.GetAnnotationCountByAccIdUsingGetRequest = exports.GetAnnotationCountByAccIdUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAnnotationCountByAccIdUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetAnnotationCountByAccIdUsingGetPathParams, _super);
     function GetAnnotationCountByAccIdUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accId" }),
         __metadata("design:type", String)
     ], GetAnnotationCountByAccIdUsingGetPathParams.prototype, "accId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=includeChildren" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=includeChildren" }),
         __metadata("design:type", Boolean)
     ], GetAnnotationCountByAccIdUsingGetPathParams.prototype, "includeChildren", void 0);
     return GetAnnotationCountByAccIdUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetAnnotationCountByAccIdUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationCountByAccIdUsingGetPathParams = GetAnnotationCountByAccIdUsingGetPathParams;
 var GetAnnotationCountByAccIdUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetAnnotationCountByAccIdUsingGetRequest, _super);
     function GetAnnotationCountByAccIdUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAnnotationCountByAccIdUsingGetPathParams)
     ], GetAnnotationCountByAccIdUsingGetRequest.prototype, "pathParams", void 0);
     return GetAnnotationCountByAccIdUsingGetRequest;
-}(SpeakeasyBase));
-export { GetAnnotationCountByAccIdUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationCountByAccIdUsingGetRequest = GetAnnotationCountByAccIdUsingGetRequest;
 var GetAnnotationCountByAccIdUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetAnnotationCountByAccIdUsingGetResponse, _super);
     function GetAnnotationCountByAccIdUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAnnotationCountByAccIdUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAnnotationCountByAccIdUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAnnotationCountByAccIdUsingGetResponse.prototype, "statusCode", void 0);
     return GetAnnotationCountByAccIdUsingGetResponse;
-}(SpeakeasyBase));
-export { GetAnnotationCountByAccIdUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationCountByAccIdUsingGetResponse = GetAnnotationCountByAccIdUsingGetResponse;

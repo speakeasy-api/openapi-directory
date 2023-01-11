@@ -9,14 +9,14 @@ import { FindingSource } from "./findingsource";
 export declare class AccessPreviewFinding extends SpeakeasyBase {
     action?: string[];
     changeType: FindingChangeTypeEnum;
-    condition?: Map<string, string>;
+    condition?: Record<string, string>;
     createdAt: Date;
     error?: string;
     existingFindingId?: string;
     existingFindingStatus?: FindingStatusEnum;
     id: string;
     isPublic?: boolean;
-    principal?: Map<string, string>;
+    principal?: Record<string, string>;
     resource?: string;
     resourceOwnerAccount: string;
     resourceType: ResourceTypeEnum;

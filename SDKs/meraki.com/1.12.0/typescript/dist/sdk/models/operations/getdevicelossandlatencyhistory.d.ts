@@ -22,5 +22,5 @@ export declare class GetDeviceLossAndLatencyHistoryRequest extends SpeakeasyBase
 export declare class GetDeviceLossAndLatencyHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceLossAndLatencyHistory200ApplicationJsonObject?: Map<string, any>;
+    getDeviceLossAndLatencyHistory200ApplicationJSONObject?: Record<string, any>;
 }

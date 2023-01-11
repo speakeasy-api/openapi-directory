@@ -60,7 +60,7 @@ export class StartApplicationResponse extends SpeakeasyBase {
   resourceNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  startApplicationResponse?: Map<string, any>;
+  startApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

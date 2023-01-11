@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateConformancePackComplianceSummary } from "./aggregateconformancepackcompliancesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateConformancePackComplianceSummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateconformancepackcompliancesummary_1 = require("./aggregateconformancepackcompliancesummary");
 var GetAggregateConformancePackComplianceSummaryResponse = /** @class */ (function (_super) {
     __extends(GetAggregateConformancePackComplianceSummaryResponse, _super);
     function GetAggregateConformancePackComplianceSummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AggregateConformancePackComplianceSummaries", elemType: AggregateConformancePackComplianceSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AggregateConformancePackComplianceSummaries", elemType: aggregateconformancepackcompliancesummary_1.AggregateConformancePackComplianceSummary }),
         __metadata("design:type", Array)
     ], GetAggregateConformancePackComplianceSummaryResponse.prototype, "aggregateConformancePackComplianceSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupByKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupByKey" }),
         __metadata("design:type", String)
     ], GetAggregateConformancePackComplianceSummaryResponse.prototype, "groupByKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetAggregateConformancePackComplianceSummaryResponse.prototype, "nextToken", void 0);
     return GetAggregateConformancePackComplianceSummaryResponse;
-}(SpeakeasyBase));
-export { GetAggregateConformancePackComplianceSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateConformancePackComplianceSummaryResponse = GetAggregateConformancePackComplianceSummaryResponse;

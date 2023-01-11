@@ -1,4 +1,7 @@
-export var UlimitNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UlimitNameEnum = void 0;
+var UlimitNameEnum;
 (function (UlimitNameEnum) {
     UlimitNameEnum["Core"] = "core";
     UlimitNameEnum["Cpu"] = "cpu";
@@ -15,4 +18,4 @@ export var UlimitNameEnum;
     UlimitNameEnum["Rttime"] = "rttime";
     UlimitNameEnum["Sigpending"] = "sigpending";
     UlimitNameEnum["Stack"] = "stack";
-})(UlimitNameEnum || (UlimitNameEnum = {}));
+})(UlimitNameEnum = exports.UlimitNameEnum || (exports.UlimitNameEnum = {}));

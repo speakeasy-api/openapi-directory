@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchResult } from "./searchresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PackageSearchResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchresult_1 = require("./searchresult");
 var PackageSearchResult = /** @class */ (function (_super) {
     __extends(PackageSearchResult, _super);
     function PackageSearchResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
         __metadata("design:type", String)
     ], PackageSearchResult.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: SearchResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: searchresult_1.SearchResult }),
         __metadata("design:type", Array)
     ], PackageSearchResult.prototype, "results", void 0);
     return PackageSearchResult;
-}(SpeakeasyBase));
-export { PackageSearchResult };
+}(utils_1.SpeakeasyBase));
+exports.PackageSearchResult = PackageSearchResult;

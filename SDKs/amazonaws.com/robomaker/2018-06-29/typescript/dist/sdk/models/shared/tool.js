@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExitBehaviorEnum } from "./exitbehaviorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tool = void 0;
+var utils_1 = require("../../../internal/utils");
+var exitbehaviorenum_1 = require("./exitbehaviorenum");
 // Tool
 /**
  * Information about a tool. Tools are used in a simulation job.
@@ -34,25 +37,25 @@ var Tool = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], Tool.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitBehavior" }),
         __metadata("design:type", String)
     ], Tool.prototype, "exitBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Tool.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamOutputToCloudWatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamOutputToCloudWatch" }),
         __metadata("design:type", Boolean)
     ], Tool.prototype, "streamOutputToCloudWatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamUI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamUI" }),
         __metadata("design:type", Boolean)
-    ], Tool.prototype, "streamUi", void 0);
+    ], Tool.prototype, "streamUI", void 0);
     return Tool;
-}(SpeakeasyBase));
-export { Tool };
+}(utils_1.SpeakeasyBase));
+exports.Tool = Tool;

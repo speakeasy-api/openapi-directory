@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreatePayee2Input } from "./createpayee2";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayeesRequest2Input = void 0;
+var utils_1 = require("../../../internal/utils");
+var createpayee2_1 = require("./createpayee2");
 var CreatePayeesRequest2Input = /** @class */ (function (_super) {
     __extends(CreatePayeesRequest2Input, _super);
     function CreatePayeesRequest2Input() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payees", elemType: CreatePayee2Input }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payees", elemType: createpayee2_1.CreatePayee2Input }),
         __metadata("design:type", Array)
     ], CreatePayeesRequest2Input.prototype, "payees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], CreatePayeesRequest2Input.prototype, "payorId", void 0);
     return CreatePayeesRequest2Input;
-}(SpeakeasyBase));
-export { CreatePayeesRequest2Input };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayeesRequest2Input = CreatePayeesRequest2Input;

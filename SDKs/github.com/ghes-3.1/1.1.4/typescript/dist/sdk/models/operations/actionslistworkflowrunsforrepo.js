@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,118 +14,143 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsListWorkflowRunsForRepoResponse = exports.ActionsListWorkflowRunsForRepoRequest = exports.ActionsListWorkflowRunsForRepo200ApplicationJson = exports.ActionsListWorkflowRunsForRepoQueryParams = exports.ActionsListWorkflowRunsForRepoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ActionsListWorkflowRunsForRepoPathParams = /** @class */ (function (_super) {
     __extends(ActionsListWorkflowRunsForRepoPathParams, _super);
     function ActionsListWorkflowRunsForRepoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoPathParams.prototype, "repo", void 0);
     return ActionsListWorkflowRunsForRepoPathParams;
-}(SpeakeasyBase));
-export { ActionsListWorkflowRunsForRepoPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListWorkflowRunsForRepoPathParams = ActionsListWorkflowRunsForRepoPathParams;
 var ActionsListWorkflowRunsForRepoQueryParams = /** @class */ (function (_super) {
     __extends(ActionsListWorkflowRunsForRepoQueryParams, _super);
     function ActionsListWorkflowRunsForRepoQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=actor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=actor" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=branch" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "branch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=event" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoQueryParams.prototype, "status", void 0);
     return ActionsListWorkflowRunsForRepoQueryParams;
-}(SpeakeasyBase));
-export { ActionsListWorkflowRunsForRepoQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListWorkflowRunsForRepoQueryParams = ActionsListWorkflowRunsForRepoQueryParams;
 var ActionsListWorkflowRunsForRepo200ApplicationJson = /** @class */ (function (_super) {
     __extends(ActionsListWorkflowRunsForRepo200ApplicationJson, _super);
     function ActionsListWorkflowRunsForRepo200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_count" }),
         __metadata("design:type", Number)
     ], ActionsListWorkflowRunsForRepo200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflow_runs", elemType: shared.WorkflowRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflow_runs", elemType: shared.WorkflowRun }),
         __metadata("design:type", Array)
     ], ActionsListWorkflowRunsForRepo200ApplicationJson.prototype, "workflowRuns", void 0);
     return ActionsListWorkflowRunsForRepo200ApplicationJson;
-}(SpeakeasyBase));
-export { ActionsListWorkflowRunsForRepo200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListWorkflowRunsForRepo200ApplicationJson = ActionsListWorkflowRunsForRepo200ApplicationJson;
 var ActionsListWorkflowRunsForRepoRequest = /** @class */ (function (_super) {
     __extends(ActionsListWorkflowRunsForRepoRequest, _super);
     function ActionsListWorkflowRunsForRepoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListWorkflowRunsForRepoPathParams)
     ], ActionsListWorkflowRunsForRepoRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListWorkflowRunsForRepoQueryParams)
     ], ActionsListWorkflowRunsForRepoRequest.prototype, "queryParams", void 0);
     return ActionsListWorkflowRunsForRepoRequest;
-}(SpeakeasyBase));
-export { ActionsListWorkflowRunsForRepoRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListWorkflowRunsForRepoRequest = ActionsListWorkflowRunsForRepoRequest;
 var ActionsListWorkflowRunsForRepoResponse = /** @class */ (function (_super) {
     __extends(ActionsListWorkflowRunsForRepoResponse, _super);
     function ActionsListWorkflowRunsForRepoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsListWorkflowRunsForRepoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsListWorkflowRunsForRepoResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsListWorkflowRunsForRepoResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsListWorkflowRunsForRepo200ApplicationJson)
-    ], ActionsListWorkflowRunsForRepoResponse.prototype, "actionsListWorkflowRunsForRepo200ApplicationJsonObject", void 0);
+    ], ActionsListWorkflowRunsForRepoResponse.prototype, "actionsListWorkflowRunsForRepo200ApplicationJSONObject", void 0);
     return ActionsListWorkflowRunsForRepoResponse;
-}(SpeakeasyBase));
-export { ActionsListWorkflowRunsForRepoResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsListWorkflowRunsForRepoResponse = ActionsListWorkflowRunsForRepoResponse;

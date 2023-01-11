@@ -1,4 +1,7 @@
-export var ImageDetailFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageDetailFieldValuesEnum = void 0;
+var ImageDetailFieldValuesEnum;
 (function (ImageDetailFieldValuesEnum) {
     ImageDetailFieldValuesEnum["AllowedUse"] = "allowed_use";
     ImageDetailFieldValuesEnum["AlternativeIds"] = "alternative_ids";
@@ -49,4 +52,4 @@ export var ImageDetailFieldValuesEnum;
     ImageDetailFieldValuesEnum["Thumb"] = "thumb";
     ImageDetailFieldValuesEnum["Title"] = "title";
     ImageDetailFieldValuesEnum["UriOembed"] = "uri_oembed";
-})(ImageDetailFieldValuesEnum || (ImageDetailFieldValuesEnum = {}));
+})(ImageDetailFieldValuesEnum = exports.ImageDetailFieldValuesEnum || (exports.ImageDetailFieldValuesEnum = {}));

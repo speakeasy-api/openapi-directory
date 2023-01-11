@@ -1,4 +1,7 @@
-export var ServiceNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceNameEnum = void 0;
+var ServiceNameEnum;
 (function (ServiceNameEnum) {
     ServiceNameEnum["ApiGateway"] = "API_GATEWAY";
     ServiceNameEnum["ApplicationElb"] = "APPLICATION_ELB";
@@ -25,4 +28,4 @@ export var ServiceNameEnum;
     ServiceNameEnum["Sqs"] = "SQS";
     ServiceNameEnum["StepFunctions"] = "STEP_FUNCTIONS";
     ServiceNameEnum["Swf"] = "SWF";
-})(ServiceNameEnum || (ServiceNameEnum = {}));
+})(ServiceNameEnum = exports.ServiceNameEnum || (exports.ServiceNameEnum = {}));

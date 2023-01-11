@@ -6,7 +6,7 @@ import { ComplianceViolator } from "./complianceviolator";
 export declare class PolicyComplianceDetail extends SpeakeasyBase {
     evaluationLimitExceeded?: boolean;
     expiredAt?: Date;
-    issueInfoMap?: Map<string, string>;
+    issueInfoMap?: Record<string, string>;
     memberAccount?: string;
     policyId?: string;
     policyOwner?: string;

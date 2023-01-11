@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShippingSettings } from "./shippingsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingsettingsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var shippingsettings_1 = require("./shippingsettings");
 var ShippingsettingsListResponse = /** @class */ (function (_super) {
     __extends(ShippingsettingsListResponse, _super);
     function ShippingsettingsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ShippingsettingsListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ShippingsettingsListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: ShippingSettings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: shippingsettings_1.ShippingSettings }),
         __metadata("design:type", Array)
     ], ShippingsettingsListResponse.prototype, "resources", void 0);
     return ShippingsettingsListResponse;
-}(SpeakeasyBase));
-export { ShippingsettingsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ShippingsettingsListResponse = ShippingsettingsListResponse;

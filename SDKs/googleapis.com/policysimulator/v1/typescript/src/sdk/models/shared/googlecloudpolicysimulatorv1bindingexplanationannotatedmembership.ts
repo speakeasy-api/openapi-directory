@@ -16,10 +16,6 @@ export enum GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRel
 }
 
 
-// GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership
-/** 
- * Details about whether the binding includes the principal.
-**/
 export class GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=membership" })
   membership?: GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum;

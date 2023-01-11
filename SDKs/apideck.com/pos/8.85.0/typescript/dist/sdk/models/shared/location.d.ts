@@ -6,14 +6,6 @@ export declare enum LocationStatusEnum {
     Inactive = "inactive",
     Other = "other"
 }
-export declare class LocationInput extends SpeakeasyBase {
-    address?: Address;
-    businessName?: string;
-    currency?: CurrencyEnum;
-    merchantId?: string;
-    name?: string;
-    status?: LocationStatusEnum;
-}
 export declare class Location extends SpeakeasyBase {
     address?: Address;
     businessName?: string;
@@ -26,4 +18,12 @@ export declare class Location extends SpeakeasyBase {
     status?: LocationStatusEnum;
     updatedAt?: Date;
     updatedBy?: string;
+}
+export declare class LocationInput extends SpeakeasyBase {
+    address?: Address;
+    businessName?: string;
+    currency?: CurrencyEnum;
+    merchantId?: string;
+    name?: string;
+    status?: LocationStatusEnum;
 }

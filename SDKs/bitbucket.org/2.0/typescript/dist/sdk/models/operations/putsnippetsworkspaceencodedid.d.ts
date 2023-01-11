@@ -17,6 +17,6 @@ export declare class PutSnippetsWorkspaceEncodedIdResponse extends SpeakeasyBase
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    snippet?: Map<string, any>;
+    error?: Record<string, any>;
+    snippet?: Record<string, any>;
 }

@@ -8,5 +8,5 @@ export declare class GetDeviceSwitchWarmSpareRequest extends SpeakeasyBase {
 export declare class GetDeviceSwitchWarmSpareResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceSwitchWarmSpare200ApplicationJsonObject?: Map<string, any>;
+    getDeviceSwitchWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

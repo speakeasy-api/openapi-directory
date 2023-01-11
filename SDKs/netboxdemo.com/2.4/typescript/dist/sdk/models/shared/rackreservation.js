@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedRack } from "./nestedrack";
-import { NestedTenant } from "./nestedtenant";
-import { NestedUser } from "./nesteduser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RackReservation = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedrack_1 = require("./nestedrack");
+var nestedtenant_1 = require("./nestedtenant");
+var nesteduser_1 = require("./nesteduser");
 var RackReservation = /** @class */ (function (_super) {
     __extends(RackReservation, _super);
     function RackReservation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], RackReservation.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], RackReservation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RackReservation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rack" }),
-        __metadata("design:type", NestedRack)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rack" }),
+        __metadata("design:type", nestedrack_1.NestedRack)
     ], RackReservation.prototype, "rack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], RackReservation.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", Array)
     ], RackReservation.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", NestedUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", nesteduser_1.NestedUser)
     ], RackReservation.prototype, "user", void 0);
     return RackReservation;
-}(SpeakeasyBase));
-export { RackReservation };
+}(utils_1.SpeakeasyBase));
+exports.RackReservation = RackReservation;

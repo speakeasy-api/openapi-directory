@@ -8,5 +8,5 @@ export declare class GetPortRequest extends SpeakeasyBase {
 export declare class GetPortResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPort200ApplicationJsonString?: string;
+    getPort200ApplicationJSONString?: string;
 }

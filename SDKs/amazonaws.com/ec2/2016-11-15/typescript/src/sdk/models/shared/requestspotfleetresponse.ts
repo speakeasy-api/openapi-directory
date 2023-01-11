@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class RequestSpotFleetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  spotFleetRequestId?: string;
+  spotFleetRequestId?: Record<string, any>;
 }

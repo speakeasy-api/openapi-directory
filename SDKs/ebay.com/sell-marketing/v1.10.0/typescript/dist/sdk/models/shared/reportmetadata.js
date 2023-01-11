@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionMetadata } from "./dimensionmetadata";
-import { MetricMetadata } from "./metricmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionmetadata_1 = require("./dimensionmetadata");
+var metricmetadata_1 = require("./metricmetadata");
 // ReportMetadata
 /**
  * This type defines the fields included in the report.
@@ -35,25 +38,25 @@ var ReportMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionMetadata", elemType: DimensionMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionMetadata", elemType: dimensionmetadata_1.DimensionMetadata }),
         __metadata("design:type", Array)
     ], ReportMetadata.prototype, "dimensionMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxNumberOfDimensionsToRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxNumberOfDimensionsToRequest" }),
         __metadata("design:type", Number)
     ], ReportMetadata.prototype, "maxNumberOfDimensionsToRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxNumberOfMetricsToRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxNumberOfMetricsToRequest" }),
         __metadata("design:type", Number)
     ], ReportMetadata.prototype, "maxNumberOfMetricsToRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricMetadata", elemType: MetricMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricMetadata", elemType: metricmetadata_1.MetricMetadata }),
         __metadata("design:type", Array)
     ], ReportMetadata.prototype, "metricMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportType" }),
         __metadata("design:type", String)
     ], ReportMetadata.prototype, "reportType", void 0);
     return ReportMetadata;
-}(SpeakeasyBase));
-export { ReportMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ReportMetadata = ReportMetadata;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FxSummaryV3 } from "./fxsummaryv3";
-import { SourceAccountSummaryV3 } from "./sourceaccountsummaryv3";
-import { PayoutStatusV3Enum } from "./payoutstatusv3enum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutSummaryAuditV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var fxsummaryv3_1 = require("./fxsummaryv3");
+var sourceaccountsummaryv3_1 = require("./sourceaccountsummaryv3");
+var payoutstatusv3enum_1 = require("./payoutstatusv3enum");
 var PayoutSummaryAuditV3 = /** @class */ (function (_super) {
     __extends(PayoutSummaryAuditV3, _super);
     function PayoutSummaryAuditV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fxSummaries", elemType: FxSummaryV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fxSummaries", elemType: fxsummaryv3_1.FxSummaryV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryAuditV3.prototype, "fxSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instructedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instructedDateTime" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "instructedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payoutId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payoutId" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "payoutId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payoutMemo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payoutMemo" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "payoutMemo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAccountSummary", elemType: SourceAccountSummaryV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAccountSummary", elemType: sourceaccountsummaryv3_1.SourceAccountSummaryV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryAuditV3.prototype, "sourceAccountSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submittedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submittedDateTime" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "submittedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalFailedPayments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalFailedPayments" }),
         __metadata("design:type", Number)
     ], PayoutSummaryAuditV3.prototype, "totalFailedPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalIncompletePayments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalIncompletePayments" }),
         __metadata("design:type", Number)
     ], PayoutSummaryAuditV3.prototype, "totalIncompletePayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPayments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPayments" }),
         __metadata("design:type", Number)
     ], PayoutSummaryAuditV3.prototype, "totalPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withdrawnDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withdrawnDateTime" }),
         __metadata("design:type", String)
     ], PayoutSummaryAuditV3.prototype, "withdrawnDateTime", void 0);
     return PayoutSummaryAuditV3;
-}(SpeakeasyBase));
-export { PayoutSummaryAuditV3 };
+}(utils_1.SpeakeasyBase));
+exports.PayoutSummaryAuditV3 = PayoutSummaryAuditV3;

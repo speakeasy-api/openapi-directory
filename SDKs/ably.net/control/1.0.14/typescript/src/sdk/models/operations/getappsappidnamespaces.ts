@@ -32,7 +32,7 @@ export class GetAppsAppIdNamespacesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.NamespaceResponse })
   namespaceResponses?: shared.NamespaceResponse[];

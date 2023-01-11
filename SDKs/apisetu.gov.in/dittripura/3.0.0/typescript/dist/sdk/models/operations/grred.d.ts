@@ -106,11 +106,11 @@ export declare class GrredRequest extends SpeakeasyBase {
 export declare class GrredResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    grred400ApplicationJsonObject?: Grred400ApplicationJson;
-    grred401ApplicationJsonObject?: Grred401ApplicationJson;
-    grred404ApplicationJsonObject?: Grred404ApplicationJson;
-    grred500ApplicationJsonObject?: Grred500ApplicationJson;
-    grred502ApplicationJsonObject?: Grred502ApplicationJson;
-    grred503ApplicationJsonObject?: Grred503ApplicationJson;
-    grred504ApplicationJsonObject?: Grred504ApplicationJson;
+    grred400ApplicationJSONObject?: Grred400ApplicationJson;
+    grred401ApplicationJSONObject?: Grred401ApplicationJson;
+    grred404ApplicationJSONObject?: Grred404ApplicationJson;
+    grred500ApplicationJSONObject?: Grred500ApplicationJson;
+    grred502ApplicationJSONObject?: Grred502ApplicationJson;
+    grred503ApplicationJSONObject?: Grred503ApplicationJson;
+    grred504ApplicationJSONObject?: Grred504ApplicationJson;
 }

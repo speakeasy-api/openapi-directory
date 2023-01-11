@@ -15,5 +15,5 @@ export declare class VoiceTemplateResponse extends SpeakeasyBase {
     templateType: TemplateTypeEnum;
     version?: string;
     voiceId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

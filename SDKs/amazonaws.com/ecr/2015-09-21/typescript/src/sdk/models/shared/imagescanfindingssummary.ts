@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ImageScanFindingsSummary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=findingSeverityCounts" })
-  findingSeverityCounts?: Map<string, number>;
+  findingSeverityCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=imageScanCompletedAt" })
   imageScanCompletedAt?: Date;

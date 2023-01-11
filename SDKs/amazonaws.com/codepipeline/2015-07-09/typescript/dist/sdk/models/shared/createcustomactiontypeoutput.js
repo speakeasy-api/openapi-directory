@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionType } from "./actiontype";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomActionTypeOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var actiontype_1 = require("./actiontype");
+var tag_1 = require("./tag");
 // CreateCustomActionTypeOutput
 /**
  * Represents the output of a <code>CreateCustomActionType</code> operation.
@@ -35,13 +38,13 @@ var CreateCustomActionTypeOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionType" }),
-        __metadata("design:type", ActionType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionType" }),
+        __metadata("design:type", actiontype_1.ActionType)
     ], CreateCustomActionTypeOutput.prototype, "actionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateCustomActionTypeOutput.prototype, "tags", void 0);
     return CreateCustomActionTypeOutput;
-}(SpeakeasyBase));
-export { CreateCustomActionTypeOutput };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomActionTypeOutput = CreateCustomActionTypeOutput;

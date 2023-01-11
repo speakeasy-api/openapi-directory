@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceVpnBgpRequest extends SpeakeasyBase {
 export declare class GetNetworkApplianceVpnBgpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceVpnBgp200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceVpnBgp200ApplicationJSONObject?: Record<string, any>;
 }

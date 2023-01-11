@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MysqlRdbms } from "./mysqlrdbms";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MysqlSourceConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var mysqlrdbms_1 = require("./mysqlrdbms");
 // MysqlSourceConfig
 /**
  * MySQL source configuration
@@ -34,13 +37,13 @@ var MysqlSourceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowlist" }),
-        __metadata("design:type", MysqlRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowlist" }),
+        __metadata("design:type", mysqlrdbms_1.MysqlRdbms)
     ], MysqlSourceConfig.prototype, "allowlist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rejectlist" }),
-        __metadata("design:type", MysqlRdbms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rejectlist" }),
+        __metadata("design:type", mysqlrdbms_1.MysqlRdbms)
     ], MysqlSourceConfig.prototype, "rejectlist", void 0);
     return MysqlSourceConfig;
-}(SpeakeasyBase));
-export { MysqlSourceConfig };
+}(utils_1.SpeakeasyBase));
+exports.MysqlSourceConfig = MysqlSourceConfig;

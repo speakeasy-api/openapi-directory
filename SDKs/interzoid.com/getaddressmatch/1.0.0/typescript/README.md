@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetaddressmatchRequest, GetaddressmatchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetaddressmatchRequest = {
   queryParams: {
-    address: "omnis",
-    license: "dicta",
+    address: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getaddressmatch(req).then((res: GetaddressmatchResponse | AxiosError) => {
+sdk.streetAddressSimilarityKey.getaddressmatch(req).then((res: GetaddressmatchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getaddressmatch(req).then((res: GetaddressmatchResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Street Address Similarity Key
 
 * `getaddressmatch` - Gets a similarity key for matching purposes for address data
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Variant = void 0;
+var utils_1 = require("../../../internal/utils");
 // Variant
 /**
  * Contains an asset property value (of a single type only).
@@ -33,21 +36,21 @@ var Variant = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=booleanValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=booleanValue" }),
         __metadata("design:type", Boolean)
     ], Variant.prototype, "booleanValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doubleValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doubleValue" }),
         __metadata("design:type", Number)
     ], Variant.prototype, "doubleValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integerValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integerValue" }),
         __metadata("design:type", Number)
     ], Variant.prototype, "integerValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], Variant.prototype, "stringValue", void 0);
     return Variant;
-}(SpeakeasyBase));
-export { Variant };
+}(utils_1.SpeakeasyBase));
+exports.Variant = Variant;

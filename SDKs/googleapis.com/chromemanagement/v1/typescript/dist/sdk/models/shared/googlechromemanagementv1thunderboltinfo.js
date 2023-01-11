@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1ThunderboltInfo = exports.GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum;
 (function (GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum) {
     GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum["ThunderboltSecurityLevelUnspecified"] = "THUNDERBOLT_SECURITY_LEVEL_UNSPECIFIED";
     GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum["ThunderboltSecurityNoneLevel"] = "THUNDERBOLT_SECURITY_NONE_LEVEL";
@@ -32,7 +35,7 @@ export var GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum;
     GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum["ThunderboltSecurityDpOnlyLevel"] = "THUNDERBOLT_SECURITY_DP_ONLY_LEVEL";
     GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum["ThunderboltSecurityUsbOnlyLevel"] = "THUNDERBOLT_SECURITY_USB_ONLY_LEVEL";
     GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum["ThunderboltSecurityNoPcieLevel"] = "THUNDERBOLT_SECURITY_NO_PCIE_LEVEL";
-})(GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum || (GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum = {}));
+})(GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum = exports.GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum || (exports.GoogleChromeManagementV1ThunderboltInfoSecurityLevelEnum = {}));
 // GoogleChromeManagementV1ThunderboltInfo
 /**
  * Thunderbolt bus info. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceSecurityStatus](https://chromeenterprise.google/policies/#ReportDeviceSecurityStatus) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: No * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
@@ -43,9 +46,9 @@ var GoogleChromeManagementV1ThunderboltInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityLevel" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1ThunderboltInfo.prototype, "securityLevel", void 0);
     return GoogleChromeManagementV1ThunderboltInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1ThunderboltInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1ThunderboltInfo = GoogleChromeManagementV1ThunderboltInfo;

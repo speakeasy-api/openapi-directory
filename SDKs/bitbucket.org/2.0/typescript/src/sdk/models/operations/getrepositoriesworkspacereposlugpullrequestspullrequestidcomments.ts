@@ -44,7 +44,7 @@ export class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedPullrequestComments?: shared.PaginatedPullrequestComments;

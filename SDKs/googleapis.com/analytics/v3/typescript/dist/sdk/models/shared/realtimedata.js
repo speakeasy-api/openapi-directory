@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeData = exports.RealtimeDataQuery = exports.RealtimeDataProfileInfo = exports.RealtimeDataColumnHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var RealtimeDataColumnHeaders = /** @class */ (function (_super) {
     __extends(RealtimeDataColumnHeaders, _super);
     function RealtimeDataColumnHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnType" }),
         __metadata("design:type", String)
     ], RealtimeDataColumnHeaders.prototype, "columnType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], RealtimeDataColumnHeaders.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RealtimeDataColumnHeaders.prototype, "name", void 0);
     return RealtimeDataColumnHeaders;
-}(SpeakeasyBase));
-export { RealtimeDataColumnHeaders };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeDataColumnHeaders = RealtimeDataColumnHeaders;
 // RealtimeDataProfileInfo
 /**
  * Information for the view (profile), for which the real time data was requested.
@@ -53,32 +56,32 @@ var RealtimeDataProfileInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileId" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "profileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileName" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "profileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableId" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "tableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], RealtimeDataProfileInfo.prototype, "webPropertyId", void 0);
     return RealtimeDataProfileInfo;
-}(SpeakeasyBase));
-export { RealtimeDataProfileInfo };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeDataProfileInfo = RealtimeDataProfileInfo;
 // RealtimeDataQuery
 /**
  * Real time data request query parameters.
@@ -89,32 +92,32 @@ var RealtimeDataQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", String)
     ], RealtimeDataQuery.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
         __metadata("design:type", String)
     ], RealtimeDataQuery.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", String)
     ], RealtimeDataQuery.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max-results" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max-results" }),
         __metadata("design:type", Number)
     ], RealtimeDataQuery.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
     ], RealtimeDataQuery.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", Array)
     ], RealtimeDataQuery.prototype, "sort", void 0);
     return RealtimeDataQuery;
-}(SpeakeasyBase));
-export { RealtimeDataQuery };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeDataQuery = RealtimeDataQuery;
 // RealtimeData
 /**
  * Real time data for a given view (profile).
@@ -125,41 +128,41 @@ var RealtimeData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnHeaders", elemType: RealtimeDataColumnHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnHeaders", elemType: RealtimeDataColumnHeaders }),
         __metadata("design:type", Array)
     ], RealtimeData.prototype, "columnHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RealtimeData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], RealtimeData.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileInfo" }),
         __metadata("design:type", RealtimeDataProfileInfo)
     ], RealtimeData.prototype, "profileInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", RealtimeDataQuery)
     ], RealtimeData.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows" }),
         __metadata("design:type", Array)
     ], RealtimeData.prototype, "rows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], RealtimeData.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], RealtimeData.prototype, "totalResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalsForAllResults" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalsForAllResults" }),
+        __metadata("design:type", Object)
     ], RealtimeData.prototype, "totalsForAllResults", void 0);
     return RealtimeData;
-}(SpeakeasyBase));
-export { RealtimeData };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeData = RealtimeData;

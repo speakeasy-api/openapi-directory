@@ -1,4 +1,7 @@
-export var FilterNameStringTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterNameStringTypeEnum = void 0;
+var FilterNameStringTypeEnum;
 (function (FilterNameStringTypeEnum) {
     FilterNameStringTypeEnum["Description"] = "description";
     FilterNameStringTypeEnum["Name"] = "name";
@@ -6,4 +9,4 @@ export var FilterNameStringTypeEnum;
     FilterNameStringTypeEnum["TagValue"] = "tag-value";
     FilterNameStringTypeEnum["PrimaryRegion"] = "primary-region";
     FilterNameStringTypeEnum["All"] = "all";
-})(FilterNameStringTypeEnum || (FilterNameStringTypeEnum = {}));
+})(FilterNameStringTypeEnum = exports.FilterNameStringTypeEnum || (exports.FilterNameStringTypeEnum = {}));

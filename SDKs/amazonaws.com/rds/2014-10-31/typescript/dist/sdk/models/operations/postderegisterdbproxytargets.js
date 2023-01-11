@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeregisterDbProxyTargetsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeregisterDbProxyTargetsResponse = exports.PostDeregisterDbProxyTargetsRequest = exports.PostDeregisterDbProxyTargetsHeaders = exports.PostDeregisterDbProxyTargetsQueryParams = exports.PostDeregisterDbProxyTargetsVersionEnum = exports.PostDeregisterDbProxyTargetsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeregisterDbProxyTargetsActionEnum;
 (function (PostDeregisterDbProxyTargetsActionEnum) {
     PostDeregisterDbProxyTargetsActionEnum["DeregisterDbProxyTargets"] = "DeregisterDBProxyTargets";
-})(PostDeregisterDbProxyTargetsActionEnum || (PostDeregisterDbProxyTargetsActionEnum = {}));
-export var PostDeregisterDbProxyTargetsVersionEnum;
+})(PostDeregisterDbProxyTargetsActionEnum = exports.PostDeregisterDbProxyTargetsActionEnum || (exports.PostDeregisterDbProxyTargetsActionEnum = {}));
+var PostDeregisterDbProxyTargetsVersionEnum;
 (function (PostDeregisterDbProxyTargetsVersionEnum) {
     PostDeregisterDbProxyTargetsVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDeregisterDbProxyTargetsVersionEnum || (PostDeregisterDbProxyTargetsVersionEnum = {}));
+})(PostDeregisterDbProxyTargetsVersionEnum = exports.PostDeregisterDbProxyTargetsVersionEnum || (exports.PostDeregisterDbProxyTargetsVersionEnum = {}));
 var PostDeregisterDbProxyTargetsQueryParams = /** @class */ (function (_super) {
     __extends(PostDeregisterDbProxyTargetsQueryParams, _super);
     function PostDeregisterDbProxyTargetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsQueryParams.prototype, "version", void 0);
     return PostDeregisterDbProxyTargetsQueryParams;
-}(SpeakeasyBase));
-export { PostDeregisterDbProxyTargetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeregisterDbProxyTargetsQueryParams = PostDeregisterDbProxyTargetsQueryParams;
 var PostDeregisterDbProxyTargetsHeaders = /** @class */ (function (_super) {
     __extends(PostDeregisterDbProxyTargetsHeaders, _super);
     function PostDeregisterDbProxyTargetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeregisterDbProxyTargetsHeaders;
-}(SpeakeasyBase));
-export { PostDeregisterDbProxyTargetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeregisterDbProxyTargetsHeaders = PostDeregisterDbProxyTargetsHeaders;
 var PostDeregisterDbProxyTargetsRequest = /** @class */ (function (_super) {
     __extends(PostDeregisterDbProxyTargetsRequest, _super);
     function PostDeregisterDbProxyTargetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeregisterDbProxyTargetsQueryParams)
     ], PostDeregisterDbProxyTargetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeregisterDbProxyTargetsHeaders)
     ], PostDeregisterDbProxyTargetsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeregisterDbProxyTargetsRequest.prototype, "request", void 0);
     return PostDeregisterDbProxyTargetsRequest;
-}(SpeakeasyBase));
-export { PostDeregisterDbProxyTargetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeregisterDbProxyTargetsRequest = PostDeregisterDbProxyTargetsRequest;
 var PostDeregisterDbProxyTargetsResponse = /** @class */ (function (_super) {
     __extends(PostDeregisterDbProxyTargetsResponse, _super);
     function PostDeregisterDbProxyTargetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeregisterDbProxyTargetsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeregisterDbProxyTargetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeregisterDbProxyTargetsResponse.prototype, "statusCode", void 0);
     return PostDeregisterDbProxyTargetsResponse;
-}(SpeakeasyBase));
-export { PostDeregisterDbProxyTargetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeregisterDbProxyTargetsResponse = PostDeregisterDbProxyTargetsResponse;

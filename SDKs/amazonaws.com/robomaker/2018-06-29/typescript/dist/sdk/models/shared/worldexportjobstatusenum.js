@@ -1,4 +1,7 @@
-export var WorldExportJobStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorldExportJobStatusEnum = void 0;
+var WorldExportJobStatusEnum;
 (function (WorldExportJobStatusEnum) {
     WorldExportJobStatusEnum["Pending"] = "Pending";
     WorldExportJobStatusEnum["Running"] = "Running";
@@ -6,4 +9,4 @@ export var WorldExportJobStatusEnum;
     WorldExportJobStatusEnum["Failed"] = "Failed";
     WorldExportJobStatusEnum["Canceling"] = "Canceling";
     WorldExportJobStatusEnum["Canceled"] = "Canceled";
-})(WorldExportJobStatusEnum || (WorldExportJobStatusEnum = {}));
+})(WorldExportJobStatusEnum = exports.WorldExportJobStatusEnum || (exports.WorldExportJobStatusEnum = {}));

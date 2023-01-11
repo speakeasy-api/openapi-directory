@@ -7,16 +7,16 @@ export class UpdatePriceHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType?: string;
+  wmCONSUMERCHANNELTYPE?: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 export enum UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum {
@@ -109,7 +109,7 @@ export enum UpdatePriceRequestBodyReplaceAllEnum {
 
 export class UpdatePriceRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=definitions" })
-  definitions?: Map<string, any>;
+  definitions?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=offerId" })
   offerId?: string;
@@ -176,7 +176,7 @@ export class UpdatePrice200ApplicationJsonErrors extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=errorIdentifiers" })
-  errorIdentifiers?: Map<string, Map<string, any>>;
+  errorIdentifiers?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=field" })
   field?: string;
@@ -236,5 +236,5 @@ export class UpdatePriceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePrice200ApplicationJsonObject?: UpdatePrice200ApplicationJson;
+  updatePrice200ApplicationJSONObject?: UpdatePrice200ApplicationJson;
 }

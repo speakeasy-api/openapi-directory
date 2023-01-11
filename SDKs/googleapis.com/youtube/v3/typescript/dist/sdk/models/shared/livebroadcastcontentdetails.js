@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonitorStreamInfo } from "./monitorstreaminfo";
-export var LiveBroadcastContentDetailsClosedCaptionsTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveBroadcastContentDetails = exports.LiveBroadcastContentDetailsStereoLayoutEnum = exports.LiveBroadcastContentDetailsProjectionEnum = exports.LiveBroadcastContentDetailsLatencyPreferenceEnum = exports.LiveBroadcastContentDetailsClosedCaptionsTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var monitorstreaminfo_1 = require("./monitorstreaminfo");
+var LiveBroadcastContentDetailsClosedCaptionsTypeEnum;
 (function (LiveBroadcastContentDetailsClosedCaptionsTypeEnum) {
     LiveBroadcastContentDetailsClosedCaptionsTypeEnum["ClosedCaptionsTypeUnspecified"] = "closedCaptionsTypeUnspecified";
     LiveBroadcastContentDetailsClosedCaptionsTypeEnum["ClosedCaptionsDisabled"] = "closedCaptionsDisabled";
     LiveBroadcastContentDetailsClosedCaptionsTypeEnum["ClosedCaptionsHttpPost"] = "closedCaptionsHttpPost";
     LiveBroadcastContentDetailsClosedCaptionsTypeEnum["ClosedCaptionsEmbedded"] = "closedCaptionsEmbedded";
-})(LiveBroadcastContentDetailsClosedCaptionsTypeEnum || (LiveBroadcastContentDetailsClosedCaptionsTypeEnum = {}));
-export var LiveBroadcastContentDetailsLatencyPreferenceEnum;
+})(LiveBroadcastContentDetailsClosedCaptionsTypeEnum = exports.LiveBroadcastContentDetailsClosedCaptionsTypeEnum || (exports.LiveBroadcastContentDetailsClosedCaptionsTypeEnum = {}));
+var LiveBroadcastContentDetailsLatencyPreferenceEnum;
 (function (LiveBroadcastContentDetailsLatencyPreferenceEnum) {
     LiveBroadcastContentDetailsLatencyPreferenceEnum["LatencyPreferenceUnspecified"] = "latencyPreferenceUnspecified";
     LiveBroadcastContentDetailsLatencyPreferenceEnum["Normal"] = "normal";
     LiveBroadcastContentDetailsLatencyPreferenceEnum["Low"] = "low";
     LiveBroadcastContentDetailsLatencyPreferenceEnum["UltraLow"] = "ultraLow";
-})(LiveBroadcastContentDetailsLatencyPreferenceEnum || (LiveBroadcastContentDetailsLatencyPreferenceEnum = {}));
-export var LiveBroadcastContentDetailsProjectionEnum;
+})(LiveBroadcastContentDetailsLatencyPreferenceEnum = exports.LiveBroadcastContentDetailsLatencyPreferenceEnum || (exports.LiveBroadcastContentDetailsLatencyPreferenceEnum = {}));
+var LiveBroadcastContentDetailsProjectionEnum;
 (function (LiveBroadcastContentDetailsProjectionEnum) {
     LiveBroadcastContentDetailsProjectionEnum["ProjectionUnspecified"] = "projectionUnspecified";
     LiveBroadcastContentDetailsProjectionEnum["Rectangular"] = "rectangular";
     LiveBroadcastContentDetailsProjectionEnum["ThreeHundredAndSixty"] = "360";
     LiveBroadcastContentDetailsProjectionEnum["Mesh"] = "mesh";
-})(LiveBroadcastContentDetailsProjectionEnum || (LiveBroadcastContentDetailsProjectionEnum = {}));
-export var LiveBroadcastContentDetailsStereoLayoutEnum;
+})(LiveBroadcastContentDetailsProjectionEnum = exports.LiveBroadcastContentDetailsProjectionEnum || (exports.LiveBroadcastContentDetailsProjectionEnum = {}));
+var LiveBroadcastContentDetailsStereoLayoutEnum;
 (function (LiveBroadcastContentDetailsStereoLayoutEnum) {
     LiveBroadcastContentDetailsStereoLayoutEnum["StereoLayoutUnspecified"] = "stereoLayoutUnspecified";
     LiveBroadcastContentDetailsStereoLayoutEnum["Mono"] = "mono";
     LiveBroadcastContentDetailsStereoLayoutEnum["LeftRight"] = "leftRight";
     LiveBroadcastContentDetailsStereoLayoutEnum["TopBottom"] = "topBottom";
-})(LiveBroadcastContentDetailsStereoLayoutEnum || (LiveBroadcastContentDetailsStereoLayoutEnum = {}));
+})(LiveBroadcastContentDetailsStereoLayoutEnum = exports.LiveBroadcastContentDetailsStereoLayoutEnum || (exports.LiveBroadcastContentDetailsStereoLayoutEnum = {}));
 // LiveBroadcastContentDetails
 /**
  * Detailed settings of a broadcast.
@@ -62,73 +65,73 @@ var LiveBroadcastContentDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundStreamId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundStreamId" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "boundStreamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundStreamLastUpdateTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundStreamLastUpdateTimeMs" }),
         __metadata("design:type", Date)
     ], LiveBroadcastContentDetails.prototype, "boundStreamLastUpdateTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closedCaptionsType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closedCaptionsType" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "closedCaptionsType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableAutoStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableAutoStart" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableAutoStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableAutoStop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableAutoStop" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableAutoStop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableClosedCaptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableClosedCaptions" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableClosedCaptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableContentEncryption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableContentEncryption" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableContentEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableDvr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableDvr" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableDvr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableEmbed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableEmbed" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableEmbed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableLowLatency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableLowLatency" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "enableLowLatency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latencyPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latencyPreference" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "latencyPreference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mesh" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mesh" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "mesh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitorStream" }),
-        __metadata("design:type", MonitorStreamInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitorStream" }),
+        __metadata("design:type", monitorstreaminfo_1.MonitorStreamInfo)
     ], LiveBroadcastContentDetails.prototype, "monitorStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projection" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordFromStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordFromStart" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "recordFromStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startWithSlate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startWithSlate" }),
         __metadata("design:type", Boolean)
     ], LiveBroadcastContentDetails.prototype, "startWithSlate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stereoLayout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stereoLayout" }),
         __metadata("design:type", String)
     ], LiveBroadcastContentDetails.prototype, "stereoLayout", void 0);
     return LiveBroadcastContentDetails;
-}(SpeakeasyBase));
-export { LiveBroadcastContentDetails };
+}(utils_1.SpeakeasyBase));
+exports.LiveBroadcastContentDetails = LiveBroadcastContentDetails;

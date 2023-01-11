@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessMeshStatusesResponse = exports.GetNetworkWirelessMeshStatusesRequest = exports.GetNetworkWirelessMeshStatusesQueryParams = exports.GetNetworkWirelessMeshStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessMeshStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessMeshStatusesPathParams, _super);
     function GetNetworkWirelessMeshStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessMeshStatusesPathParams.prototype, "networkId", void 0);
     return GetNetworkWirelessMeshStatusesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessMeshStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessMeshStatusesPathParams = GetNetworkWirelessMeshStatusesPathParams;
 var GetNetworkWirelessMeshStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessMeshStatusesQueryParams, _super);
     function GetNetworkWirelessMeshStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessMeshStatusesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessMeshStatusesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessMeshStatusesQueryParams.prototype, "startingAfter", void 0);
     return GetNetworkWirelessMeshStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessMeshStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessMeshStatusesQueryParams = GetNetworkWirelessMeshStatusesQueryParams;
 var GetNetworkWirelessMeshStatusesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessMeshStatusesRequest, _super);
     function GetNetworkWirelessMeshStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessMeshStatusesPathParams)
     ], GetNetworkWirelessMeshStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessMeshStatusesQueryParams)
     ], GetNetworkWirelessMeshStatusesRequest.prototype, "queryParams", void 0);
     return GetNetworkWirelessMeshStatusesRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessMeshStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessMeshStatusesRequest = GetNetworkWirelessMeshStatusesRequest;
 var GetNetworkWirelessMeshStatusesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessMeshStatusesResponse, _super);
     function GetNetworkWirelessMeshStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessMeshStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkWirelessMeshStatusesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessMeshStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessMeshStatusesResponse.prototype, "getNetworkWirelessMeshStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessMeshStatusesResponse.prototype, "getNetworkWirelessMeshStatuses200ApplicationJSONObject", void 0);
     return GetNetworkWirelessMeshStatusesResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessMeshStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessMeshStatusesResponse = GetNetworkWirelessMeshStatusesResponse;

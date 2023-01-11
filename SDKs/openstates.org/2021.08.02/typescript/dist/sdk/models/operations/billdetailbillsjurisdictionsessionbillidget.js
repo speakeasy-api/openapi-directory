@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BillDetailBillsJurisdictionSessionBillIdGetResponse = exports.BillDetailBillsJurisdictionSessionBillIdGetRequest = exports.BillDetailBillsJurisdictionSessionBillIdGetHeaders = exports.BillDetailBillsJurisdictionSessionBillIdGetQueryParams = exports.BillDetailBillsJurisdictionSessionBillIdGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BillDetailBillsJurisdictionSessionBillIdGetPathParams = /** @class */ (function (_super) {
     __extends(BillDetailBillsJurisdictionSessionBillIdGetPathParams, _super);
     function BillDetailBillsJurisdictionSessionBillIdGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=bill_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=bill_id" }),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetPathParams.prototype, "billId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jurisdiction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jurisdiction" }),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetPathParams.prototype, "jurisdiction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=session" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=session" }),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetPathParams.prototype, "session", void 0);
     return BillDetailBillsJurisdictionSessionBillIdGetPathParams;
-}(SpeakeasyBase));
-export { BillDetailBillsJurisdictionSessionBillIdGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BillDetailBillsJurisdictionSessionBillIdGetPathParams = BillDetailBillsJurisdictionSessionBillIdGetPathParams;
 var BillDetailBillsJurisdictionSessionBillIdGetQueryParams = /** @class */ (function (_super) {
     __extends(BillDetailBillsJurisdictionSessionBillIdGetQueryParams, _super);
     function BillDetailBillsJurisdictionSessionBillIdGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apikey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apikey" }),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetQueryParams.prototype, "apikey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include" }),
         __metadata("design:type", Array)
     ], BillDetailBillsJurisdictionSessionBillIdGetQueryParams.prototype, "include", void 0);
     return BillDetailBillsJurisdictionSessionBillIdGetQueryParams;
-}(SpeakeasyBase));
-export { BillDetailBillsJurisdictionSessionBillIdGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BillDetailBillsJurisdictionSessionBillIdGetQueryParams = BillDetailBillsJurisdictionSessionBillIdGetQueryParams;
 var BillDetailBillsJurisdictionSessionBillIdGetHeaders = /** @class */ (function (_super) {
     __extends(BillDetailBillsJurisdictionSessionBillIdGetHeaders, _super);
     function BillDetailBillsJurisdictionSessionBillIdGetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-api-key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-api-key" }),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetHeaders.prototype, "xApiKey", void 0);
     return BillDetailBillsJurisdictionSessionBillIdGetHeaders;
-}(SpeakeasyBase));
-export { BillDetailBillsJurisdictionSessionBillIdGetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BillDetailBillsJurisdictionSessionBillIdGetHeaders = BillDetailBillsJurisdictionSessionBillIdGetHeaders;
 var BillDetailBillsJurisdictionSessionBillIdGetRequest = /** @class */ (function (_super) {
     __extends(BillDetailBillsJurisdictionSessionBillIdGetRequest, _super);
     function BillDetailBillsJurisdictionSessionBillIdGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BillDetailBillsJurisdictionSessionBillIdGetPathParams)
     ], BillDetailBillsJurisdictionSessionBillIdGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BillDetailBillsJurisdictionSessionBillIdGetQueryParams)
     ], BillDetailBillsJurisdictionSessionBillIdGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BillDetailBillsJurisdictionSessionBillIdGetHeaders)
     ], BillDetailBillsJurisdictionSessionBillIdGetRequest.prototype, "headers", void 0);
     return BillDetailBillsJurisdictionSessionBillIdGetRequest;
-}(SpeakeasyBase));
-export { BillDetailBillsJurisdictionSessionBillIdGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.BillDetailBillsJurisdictionSessionBillIdGetRequest = BillDetailBillsJurisdictionSessionBillIdGetRequest;
 var BillDetailBillsJurisdictionSessionBillIdGetResponse = /** @class */ (function (_super) {
     __extends(BillDetailBillsJurisdictionSessionBillIdGetResponse, _super);
     function BillDetailBillsJurisdictionSessionBillIdGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Bill)
     ], BillDetailBillsJurisdictionSessionBillIdGetResponse.prototype, "bill", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BillDetailBillsJurisdictionSessionBillIdGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.HttpValidationError)
     ], BillDetailBillsJurisdictionSessionBillIdGetResponse.prototype, "httpValidationError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BillDetailBillsJurisdictionSessionBillIdGetResponse.prototype, "statusCode", void 0);
     return BillDetailBillsJurisdictionSessionBillIdGetResponse;
-}(SpeakeasyBase));
-export { BillDetailBillsJurisdictionSessionBillIdGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.BillDetailBillsJurisdictionSessionBillIdGetResponse = BillDetailBillsJurisdictionSessionBillIdGetResponse;

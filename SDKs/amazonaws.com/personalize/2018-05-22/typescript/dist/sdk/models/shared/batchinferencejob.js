@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchInferenceJobConfig } from "./batchinferencejobconfig";
-import { BatchInferenceJobInput } from "./batchinferencejobinput";
-import { BatchInferenceJobOutput } from "./batchinferencejoboutput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchInferenceJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchinferencejobconfig_1 = require("./batchinferencejobconfig");
+var batchinferencejobinput_1 = require("./batchinferencejobinput");
+var batchinferencejoboutput_1 = require("./batchinferencejoboutput");
 // BatchInferenceJob
 /**
  * Contains information on a batch inference job.
@@ -36,57 +39,57 @@ var BatchInferenceJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchInferenceJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchInferenceJobArn" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "batchInferenceJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchInferenceJobConfig" }),
-        __metadata("design:type", BatchInferenceJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchInferenceJobConfig" }),
+        __metadata("design:type", batchinferencejobconfig_1.BatchInferenceJobConfig)
     ], BatchInferenceJob.prototype, "batchInferenceJobConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], BatchInferenceJob.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterArn" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "filterArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobInput" }),
-        __metadata("design:type", BatchInferenceJobInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobInput" }),
+        __metadata("design:type", batchinferencejobinput_1.BatchInferenceJobInput)
     ], BatchInferenceJob.prototype, "jobInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobOutput" }),
-        __metadata("design:type", BatchInferenceJobOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobOutput" }),
+        __metadata("design:type", batchinferencejoboutput_1.BatchInferenceJobOutput)
     ], BatchInferenceJob.prototype, "jobOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], BatchInferenceJob.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numResults" }),
         __metadata("design:type", Number)
     ], BatchInferenceJob.prototype, "numResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=solutionVersionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=solutionVersionArn" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "solutionVersionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], BatchInferenceJob.prototype, "status", void 0);
     return BatchInferenceJob;
-}(SpeakeasyBase));
-export { BatchInferenceJob };
+}(utils_1.SpeakeasyBase));
+exports.BatchInferenceJob = BatchInferenceJob;

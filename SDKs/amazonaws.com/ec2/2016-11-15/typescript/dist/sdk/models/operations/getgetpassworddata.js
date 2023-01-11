@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetPasswordDataActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetPasswordDataResponse = exports.GetGetPasswordDataRequest = exports.GetGetPasswordDataHeaders = exports.GetGetPasswordDataQueryParams = exports.GetGetPasswordDataVersionEnum = exports.GetGetPasswordDataActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetPasswordDataActionEnum;
 (function (GetGetPasswordDataActionEnum) {
     GetGetPasswordDataActionEnum["GetPasswordData"] = "GetPasswordData";
-})(GetGetPasswordDataActionEnum || (GetGetPasswordDataActionEnum = {}));
-export var GetGetPasswordDataVersionEnum;
+})(GetGetPasswordDataActionEnum = exports.GetGetPasswordDataActionEnum || (exports.GetGetPasswordDataActionEnum = {}));
+var GetGetPasswordDataVersionEnum;
 (function (GetGetPasswordDataVersionEnum) {
     GetGetPasswordDataVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetGetPasswordDataVersionEnum || (GetGetPasswordDataVersionEnum = {}));
+})(GetGetPasswordDataVersionEnum = exports.GetGetPasswordDataVersionEnum || (exports.GetGetPasswordDataVersionEnum = {}));
 var GetGetPasswordDataQueryParams = /** @class */ (function (_super) {
     __extends(GetGetPasswordDataQueryParams, _super);
     function GetGetPasswordDataQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetGetPasswordDataQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataQueryParams.prototype, "version", void 0);
     return GetGetPasswordDataQueryParams;
-}(SpeakeasyBase));
-export { GetGetPasswordDataQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPasswordDataQueryParams = GetGetPasswordDataQueryParams;
 var GetGetPasswordDataHeaders = /** @class */ (function (_super) {
     __extends(GetGetPasswordDataHeaders, _super);
     function GetGetPasswordDataHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetPasswordDataHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetPasswordDataHeaders;
-}(SpeakeasyBase));
-export { GetGetPasswordDataHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPasswordDataHeaders = GetGetPasswordDataHeaders;
 var GetGetPasswordDataRequest = /** @class */ (function (_super) {
     __extends(GetGetPasswordDataRequest, _super);
     function GetGetPasswordDataRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetPasswordDataQueryParams)
     ], GetGetPasswordDataRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetPasswordDataHeaders)
     ], GetGetPasswordDataRequest.prototype, "headers", void 0);
     return GetGetPasswordDataRequest;
-}(SpeakeasyBase));
-export { GetGetPasswordDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPasswordDataRequest = GetGetPasswordDataRequest;
 var GetGetPasswordDataResponse = /** @class */ (function (_super) {
     __extends(GetGetPasswordDataResponse, _super);
     function GetGetPasswordDataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetPasswordDataResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetPasswordDataResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetPasswordDataResponse.prototype, "statusCode", void 0);
     return GetGetPasswordDataResponse;
-}(SpeakeasyBase));
-export { GetGetPasswordDataResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetPasswordDataResponse = GetGetPasswordDataResponse;

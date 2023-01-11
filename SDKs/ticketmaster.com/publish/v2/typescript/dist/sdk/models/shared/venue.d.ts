@@ -20,15 +20,15 @@ export declare enum VenueTypeEnum {
  * Venue
 **/
 export declare class Venue extends SpeakeasyBase {
-    accessibleSeatingDetails?: Map<string, string>;
+    accessibleSeatingDetails?: Record<string, string>;
     active?: boolean;
-    additionalInfos?: Map<string, string>;
+    additionalInfos?: Record<string, string>;
     address?: Address;
     boxOfficeInfo?: VenueBoxOfficeInfo;
     city?: City;
     country?: Country;
     currency?: string;
-    descriptions?: Map<string, string>;
+    descriptions?: Record<string, string>;
     discoverable?: boolean;
     distance?: number;
     dma?: Dma[];
@@ -36,11 +36,11 @@ export declare class Venue extends SpeakeasyBase {
     images?: Image[];
     location?: Location;
     markets?: Market[];
-    names?: Map<string, string>;
-    parkingDetails?: Map<string, string>;
+    names?: Record<string, string>;
+    parkingDetails?: Record<string, string>;
     postalCode?: string;
-    references?: Map<string, string>;
-    relationships?: Map<string, any>[];
+    references?: Record<string, string>;
+    relationships?: Record<string, any>[];
     social?: Social;
     source?: Source;
     state?: State;

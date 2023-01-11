@@ -5,6 +5,6 @@ import { ActiveContextTimeToLive } from "./activecontexttimetolive";
 **/
 export declare class ActiveContext extends SpeakeasyBase {
     name: string;
-    parameters: Map<string, string>;
+    parameters: Record<string, string>;
     timeToLive: ActiveContextTimeToLive;
 }

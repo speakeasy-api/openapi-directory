@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleAByStateCandidate = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScheduleAByStateCandidate = /** @class */ (function (_super) {
     __extends(ScheduleAByStateCandidate, _super);
     function ScheduleAByStateCandidate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], ScheduleAByStateCandidate.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], ScheduleAByStateCandidate.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycle" }),
         __metadata("design:type", Number)
     ], ScheduleAByStateCandidate.prototype, "cycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ScheduleAByStateCandidate.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state_full" }),
         __metadata("design:type", String)
     ], ScheduleAByStateCandidate.prototype, "stateFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ScheduleAByStateCandidate.prototype, "total", void 0);
     return ScheduleAByStateCandidate;
-}(SpeakeasyBase));
-export { ScheduleAByStateCandidate };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleAByStateCandidate = ScheduleAByStateCandidate;

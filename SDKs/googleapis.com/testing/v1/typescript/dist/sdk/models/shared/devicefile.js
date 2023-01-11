@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObbFile } from "./obbfile";
-import { RegularFile } from "./regularfile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceFile = void 0;
+var utils_1 = require("../../../internal/utils");
+var obbfile_1 = require("./obbfile");
+var regularfile_1 = require("./regularfile");
 // DeviceFile
 /**
  * A single device file description.
@@ -35,13 +38,13 @@ var DeviceFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=obbFile" }),
-        __metadata("design:type", ObbFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=obbFile" }),
+        __metadata("design:type", obbfile_1.ObbFile)
     ], DeviceFile.prototype, "obbFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regularFile" }),
-        __metadata("design:type", RegularFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularFile" }),
+        __metadata("design:type", regularfile_1.RegularFile)
     ], DeviceFile.prototype, "regularFile", void 0);
     return DeviceFile;
-}(SpeakeasyBase));
-export { DeviceFile };
+}(utils_1.SpeakeasyBase));
+exports.DeviceFile = DeviceFile;

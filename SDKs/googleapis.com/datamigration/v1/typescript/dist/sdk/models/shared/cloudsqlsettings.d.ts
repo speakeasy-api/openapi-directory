@@ -38,7 +38,7 @@ export declare class CloudSqlSettings extends SpeakeasyBase {
     collation?: string;
     dataDiskSizeGb?: string;
     dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
-    databaseFlags?: Map<string, string>;
+    databaseFlags?: Record<string, string>;
     databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
     ipConfig?: SqlIpConfig;
     rootPassword?: string;
@@ -47,7 +47,7 @@ export declare class CloudSqlSettings extends SpeakeasyBase {
     sourceId?: string;
     storageAutoResizeLimit?: string;
     tier?: string;
-    userLabels?: Map<string, string>;
+    userLabels?: Record<string, string>;
     zone?: string;
 }
 /**
@@ -61,7 +61,7 @@ export declare class CloudSqlSettingsInput extends SpeakeasyBase {
     collation?: string;
     dataDiskSizeGb?: string;
     dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
-    databaseFlags?: Map<string, string>;
+    databaseFlags?: Record<string, string>;
     databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
     ipConfig?: SqlIpConfig;
     rootPassword?: string;
@@ -69,6 +69,6 @@ export declare class CloudSqlSettingsInput extends SpeakeasyBase {
     sourceId?: string;
     storageAutoResizeLimit?: string;
     tier?: string;
-    userLabels?: Map<string, string>;
+    userLabels?: Record<string, string>;
     zone?: string;
 }

@@ -13,7 +13,7 @@ export declare class CreateStatementsRequest extends SpeakeasyBase {
 }
 export declare class CreateStatementsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statements?: shared.Statements;
     statusCode: number;
 }

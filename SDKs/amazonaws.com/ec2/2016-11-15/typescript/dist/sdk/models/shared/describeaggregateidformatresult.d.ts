@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { IdFormat } from "./idformat";
 export declare class DescribeAggregateIdFormatResult extends SpeakeasyBase {
-    statuses?: IdFormat[];
-    useLongIdsAggregated?: boolean;
+    statuses?: Record<string, any>;
+    useLongIdsAggregated?: Record<string, any>;
 }

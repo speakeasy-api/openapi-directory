@@ -1,6 +1,9 @@
-export var EncodingTypeValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncodingTypeValueEnum = void 0;
+var EncodingTypeValueEnum;
 (function (EncodingTypeValueEnum) {
     EncodingTypeValueEnum["Plain"] = "plain";
     EncodingTypeValueEnum["PlainDictionary"] = "plain-dictionary";
     EncodingTypeValueEnum["RleDictionary"] = "rle-dictionary";
-})(EncodingTypeValueEnum || (EncodingTypeValueEnum = {}));
+})(EncodingTypeValueEnum = exports.EncodingTypeValueEnum || (exports.EncodingTypeValueEnum = {}));

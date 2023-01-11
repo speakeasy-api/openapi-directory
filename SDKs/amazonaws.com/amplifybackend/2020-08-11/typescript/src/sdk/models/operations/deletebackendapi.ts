@@ -36,28 +36,82 @@ export class DeleteBackendApiHeaders extends SpeakeasyBase {
 }
 
 
+// DeleteBackendApiRequestBodyResourceConfigConflictResolution
+/** 
+ * The conflict resolution strategy for your data stored in the data models.
+**/
+export class DeleteBackendApiRequestBodyResourceConfigConflictResolution extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=ResolutionStrategy" })
+  resolutionStrategy?: Record<string, any>;
+}
+
+
+// DeleteBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings
+/** 
+ * Describes settings for the authentication mode.
+**/
+export class DeleteBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=CognitoUserPoolId" })
+  cognitoUserPoolId?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=Description" })
+  description?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=ExpirationTime" })
+  expirationTime?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDAuthTTL" })
+  openIDAuthTTL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDClientId" })
+  openIDClientID?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDIatTTL" })
+  openIDIatTTL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDIssueURL" })
+  openIDIssueURL?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=OpenIDProviderName" })
+  openIDProviderName?: Record<string, any>;
+}
+
+
+// DeleteBackendApiRequestBodyResourceConfigDefaultAuthType
+/** 
+ * The default authentication type for interacting with the configured data models in your Amplify project.
+**/
+export class DeleteBackendApiRequestBodyResourceConfigDefaultAuthType extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=Mode" })
+  mode?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=Settings" })
+  settings?: DeleteBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings;
+}
+
+
 // DeleteBackendApiRequestBodyResourceConfig
 /** 
  * The resource config for the data model, configured as a part of the Amplify project.
 **/
 export class DeleteBackendApiRequestBodyResourceConfig extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=AdditionalAuthTypes", elemType: shared.BackendApiAuthType })
-  additionalAuthTypes?: shared.BackendApiAuthType[];
+  @SpeakeasyMetadata({ data: "json, name=AdditionalAuthTypes" })
+  additionalAuthTypes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiName" })
-  apiName?: string;
+  apiName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ConflictResolution" })
-  conflictResolution?: shared.BackendApiConflictResolution;
+  conflictResolution?: DeleteBackendApiRequestBodyResourceConfigConflictResolution;
 
   @SpeakeasyMetadata({ data: "json, name=DefaultAuthType" })
-  defaultAuthType?: shared.BackendApiAuthType;
+  defaultAuthType?: DeleteBackendApiRequestBodyResourceConfigDefaultAuthType;
 
   @SpeakeasyMetadata({ data: "json, name=Service" })
-  service?: string;
+  service?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TransformSchema" })
-  transformSchema?: string;
+  transformSchema?: Record<string, any>;
 }
 
 
@@ -90,7 +144,7 @@ export class DeleteBackendApiResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteBackendApiResponse?: shared.DeleteBackendApiResponse;
+  deleteBackendAPIResponse?: shared.DeleteBackendApiResponse;
 
   @SpeakeasyMetadata()
   gatewayTimeoutException?: any;

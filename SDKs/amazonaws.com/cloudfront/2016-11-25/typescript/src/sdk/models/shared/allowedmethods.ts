@@ -1,6 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { CachedMethods } from "./cachedmethods";
-import { MethodEnum } from "./methodenum";
 
 
 
@@ -13,7 +12,7 @@ export class AllowedMethods extends SpeakeasyBase {
   cachedMethods?: CachedMethods;
 
   @SpeakeasyMetadata()
-  items: MethodEnum[];
+  items: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

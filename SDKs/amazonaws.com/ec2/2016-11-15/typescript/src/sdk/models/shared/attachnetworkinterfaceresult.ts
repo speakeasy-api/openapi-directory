@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class AttachNetworkInterfaceResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  attachmentId?: string;
+  attachmentId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  networkCardIndex?: number;
+  networkCardIndex?: Record<string, any>;
 }

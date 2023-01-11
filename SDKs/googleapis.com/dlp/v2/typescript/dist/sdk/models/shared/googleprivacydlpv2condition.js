@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2Value } from "./googleprivacydlpv2value";
-export var GooglePrivacyDlpV2ConditionOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Condition = exports.GooglePrivacyDlpV2ConditionOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2value_1 = require("./googleprivacydlpv2value");
+var GooglePrivacyDlpV2ConditionOperatorEnum;
 (function (GooglePrivacyDlpV2ConditionOperatorEnum) {
     GooglePrivacyDlpV2ConditionOperatorEnum["RelationalOperatorUnspecified"] = "RELATIONAL_OPERATOR_UNSPECIFIED";
     GooglePrivacyDlpV2ConditionOperatorEnum["EqualTo"] = "EQUAL_TO";
@@ -35,7 +38,7 @@ export var GooglePrivacyDlpV2ConditionOperatorEnum;
     GooglePrivacyDlpV2ConditionOperatorEnum["GreaterThanOrEquals"] = "GREATER_THAN_OR_EQUALS";
     GooglePrivacyDlpV2ConditionOperatorEnum["LessThanOrEquals"] = "LESS_THAN_OR_EQUALS";
     GooglePrivacyDlpV2ConditionOperatorEnum["Exists"] = "EXISTS";
-})(GooglePrivacyDlpV2ConditionOperatorEnum || (GooglePrivacyDlpV2ConditionOperatorEnum = {}));
+})(GooglePrivacyDlpV2ConditionOperatorEnum = exports.GooglePrivacyDlpV2ConditionOperatorEnum || (exports.GooglePrivacyDlpV2ConditionOperatorEnum = {}));
 // GooglePrivacyDlpV2Condition
 /**
  * The field type of `value` and `field` do not need to match to be considered equal, but not all comparisons are possible. EQUAL_TO and NOT_EQUAL_TO attempt to compare even with incompatible types, but all other comparisons are invalid with incompatible types. A `value` of type: - `string` can be compared against all other types - `boolean` can only be compared against other booleans - `integer` can be compared against doubles or a string if the string value can be parsed as an integer. - `double` can be compared against integers or a string if the string can be parsed as a double. - `Timestamp` can be compared against strings in RFC 3339 date string format. - `TimeOfDay` can be compared against timestamps and strings in the format of 'HH:mm:ss'. If we fail to compare do to type mismatch, a warning will be given and the condition will evaluate to false.
@@ -46,17 +49,17 @@ var GooglePrivacyDlpV2Condition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2Condition.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Condition.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", GooglePrivacyDlpV2Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", googleprivacydlpv2value_1.GooglePrivacyDlpV2Value)
     ], GooglePrivacyDlpV2Condition.prototype, "value", void 0);
     return GooglePrivacyDlpV2Condition;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Condition };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Condition = GooglePrivacyDlpV2Condition;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeoAnnotationdata } from "./geoannotationdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Annotationsdata = void 0;
+var utils_1 = require("../../../internal/utils");
+var geoannotationdata_1 = require("./geoannotationdata");
 var Annotationsdata = /** @class */ (function (_super) {
     __extends(Annotationsdata, _super);
     function Annotationsdata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: GeoAnnotationdata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: geoannotationdata_1.GeoAnnotationdata }),
         __metadata("design:type", Array)
     ], Annotationsdata.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Annotationsdata.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], Annotationsdata.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalItems" }),
         __metadata("design:type", Number)
     ], Annotationsdata.prototype, "totalItems", void 0);
     return Annotationsdata;
-}(SpeakeasyBase));
-export { Annotationsdata };
+}(utils_1.SpeakeasyBase));
+exports.Annotationsdata = Annotationsdata;

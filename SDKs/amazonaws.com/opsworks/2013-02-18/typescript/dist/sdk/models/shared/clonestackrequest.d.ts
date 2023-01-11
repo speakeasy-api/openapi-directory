@@ -5,7 +5,7 @@ import { Source } from "./source";
 import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
 export declare class CloneStackRequest extends SpeakeasyBase {
     agentVersion?: string;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     chefConfiguration?: ChefConfiguration;
     cloneAppIds?: string[];
     clonePermissions?: boolean;

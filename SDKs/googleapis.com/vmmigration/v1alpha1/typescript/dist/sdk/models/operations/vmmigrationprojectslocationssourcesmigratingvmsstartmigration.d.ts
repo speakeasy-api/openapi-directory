@@ -23,7 +23,7 @@ export declare class VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrati
 export declare class VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationRequest extends SpeakeasyBase {
     pathParams: VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationPathParams;
     queryParams: VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationSecurity;
 }
 export declare class VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationResponse extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Logo } from "./logo";
-import { Translation } from "./translation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Category = void 0;
+var utils_1 = require("../../../internal/utils");
+var logo_1 = require("./logo");
+var translation_1 = require("./translation");
 var Category = /** @class */ (function (_super) {
     __extends(Category, _super);
     function Category() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], Category.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Category.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Category.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Category.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listing_description_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listing_description_text_template" }),
         __metadata("design:type", String)
     ], Category.prototype, "listingDescriptionTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listing_features_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listing_features_text_template" }),
         __metadata("design:type", String)
     ], Category.prototype, "listingFeaturesTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listing_pricing_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listing_pricing_text_template" }),
         __metadata("design:type", String)
     ], Category.prototype, "listingPricingTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
-        __metadata("design:type", Logo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
+        __metadata("design:type", logo_1.Logo)
     ], Category.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Category.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Category.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translations", elemType: Translation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translations", elemType: translation_1.Translation }),
         __metadata("design:type", Array)
     ], Category.prototype, "translations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Category.prototype, "updatedAt", void 0);
     return Category;
-}(SpeakeasyBase));
-export { Category };
+}(utils_1.SpeakeasyBase));
+exports.Category = Category;

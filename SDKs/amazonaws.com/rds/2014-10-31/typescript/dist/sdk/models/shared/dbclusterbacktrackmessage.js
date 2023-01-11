@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterBacktrack } from "./dbclusterbacktrack";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbClusterBacktrackMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbclusterbacktracklist_1 = require("./dbclusterbacktracklist");
 // DbClusterBacktrackMessage
 /**
  * Contains the result of a successful invocation of the <code>DescribeDBClusterBacktracks</code> action.
@@ -34,13 +37,13 @@ var DbClusterBacktrackMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DbClusterBacktrack }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbclusterbacktracklist_1.DbClusterBacktrackList }),
         __metadata("design:type", Array)
     ], DbClusterBacktrackMessage.prototype, "dbClusterBacktracks", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbClusterBacktrackMessage.prototype, "marker", void 0);
     return DbClusterBacktrackMessage;
-}(SpeakeasyBase));
-export { DbClusterBacktrackMessage };
+}(utils_1.SpeakeasyBase));
+exports.DbClusterBacktrackMessage = DbClusterBacktrackMessage;

@@ -56,7 +56,7 @@ export class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse extend
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedCommitstatuses?: shared.PaginatedCommitstatuses;

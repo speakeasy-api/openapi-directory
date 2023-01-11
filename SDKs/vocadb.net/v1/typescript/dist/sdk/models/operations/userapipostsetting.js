@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserApiPostSettingResponse = exports.UserApiPostSettingRequest = exports.UserApiPostSettingRequests = exports.UserApiPostSettingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserApiPostSettingPathParams = /** @class */ (function (_super) {
     __extends(UserApiPostSettingPathParams, _super);
     function UserApiPostSettingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], UserApiPostSettingPathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=settingName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=settingName" }),
         __metadata("design:type", String)
     ], UserApiPostSettingPathParams.prototype, "settingName", void 0);
     return UserApiPostSettingPathParams;
-}(SpeakeasyBase));
-export { UserApiPostSettingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostSettingPathParams = UserApiPostSettingPathParams;
 var UserApiPostSettingRequests = /** @class */ (function (_super) {
     __extends(UserApiPostSettingRequests, _super);
     function UserApiPostSettingRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], UserApiPostSettingRequests.prototype, "string", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", String)
     ], UserApiPostSettingRequests.prototype, "string1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/xml" }),
         __metadata("design:type", String)
     ], UserApiPostSettingRequests.prototype, "string2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
         __metadata("design:type", String)
     ], UserApiPostSettingRequests.prototype, "string3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", String)
     ], UserApiPostSettingRequests.prototype, "string4", void 0);
     return UserApiPostSettingRequests;
-}(SpeakeasyBase));
-export { UserApiPostSettingRequests };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostSettingRequests = UserApiPostSettingRequests;
 var UserApiPostSettingRequest = /** @class */ (function (_super) {
     __extends(UserApiPostSettingRequest, _super);
     function UserApiPostSettingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiPostSettingPathParams)
     ], UserApiPostSettingRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiPostSettingRequests)
     ], UserApiPostSettingRequest.prototype, "request", void 0);
     return UserApiPostSettingRequest;
-}(SpeakeasyBase));
-export { UserApiPostSettingRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostSettingRequest = UserApiPostSettingRequest;
 var UserApiPostSettingResponse = /** @class */ (function (_super) {
     __extends(UserApiPostSettingResponse, _super);
     function UserApiPostSettingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiPostSettingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserApiPostSettingResponse.prototype, "statusCode", void 0);
     return UserApiPostSettingResponse;
-}(SpeakeasyBase));
-export { UserApiPostSettingResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserApiPostSettingResponse = UserApiPostSettingResponse;

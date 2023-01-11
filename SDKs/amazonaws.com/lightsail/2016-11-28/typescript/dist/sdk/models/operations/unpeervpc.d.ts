@@ -15,7 +15,7 @@ export declare class UnpeerVpcHeaders extends SpeakeasyBase {
 }
 export declare class UnpeerVpcRequest extends SpeakeasyBase {
     headers: UnpeerVpcHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UnpeerVpcResponse extends SpeakeasyBase {
     accessDeniedException?: any;

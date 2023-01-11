@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressSearchResult } from "./addresssearchresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddressSearchResponseSchema = void 0;
+var utils_1 = require("../../../internal/utils");
+var addresssearchresult_1 = require("./addresssearchresult");
 var AddressSearchResponseSchema = /** @class */ (function (_super) {
     __extends(AddressSearchResponseSchema, _super);
     function AddressSearchResponseSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AddressSearchResponseSchema.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AddressSearchResponseSchema.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", AddressSearchResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", addresssearchresult_1.AddressSearchResult)
     ], AddressSearchResponseSchema.prototype, "result", void 0);
     return AddressSearchResponseSchema;
-}(SpeakeasyBase));
-export { AddressSearchResponseSchema };
+}(utils_1.SpeakeasyBase));
+exports.AddressSearchResponseSchema = AddressSearchResponseSchema;

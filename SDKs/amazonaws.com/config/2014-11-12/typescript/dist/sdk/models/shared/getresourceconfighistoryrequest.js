@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChronologicalOrderEnum } from "./chronologicalorderenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourceConfigHistoryRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var chronologicalorderenum_1 = require("./chronologicalorderenum");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // GetResourceConfigHistoryRequest
 /**
  * The input for the <a>GetResourceConfigHistory</a> action.
@@ -35,33 +38,33 @@ var GetResourceConfigHistoryRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chronologicalOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chronologicalOrder" }),
         __metadata("design:type", String)
     ], GetResourceConfigHistoryRequest.prototype, "chronologicalOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earlierTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earlierTime" }),
         __metadata("design:type", Date)
     ], GetResourceConfigHistoryRequest.prototype, "earlierTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=laterTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=laterTime" }),
         __metadata("design:type", Date)
     ], GetResourceConfigHistoryRequest.prototype, "laterTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], GetResourceConfigHistoryRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetResourceConfigHistoryRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], GetResourceConfigHistoryRequest.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], GetResourceConfigHistoryRequest.prototype, "resourceType", void 0);
     return GetResourceConfigHistoryRequest;
-}(SpeakeasyBase));
-export { GetResourceConfigHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourceConfigHistoryRequest = GetResourceConfigHistoryRequest;

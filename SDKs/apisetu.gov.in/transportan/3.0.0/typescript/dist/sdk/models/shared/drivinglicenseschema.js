@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,336 +23,338 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DrivingLicenseSchema = exports.DrivingLicenseSchemaIssuedTo = exports.DrivingLicenseSchemaIssuedToPerson = exports.DrivingLicenseSchemaIssuedToPersonPhoto = exports.DrivingLicenseSchemaIssuedToPersonAddress = exports.DrivingLicenseSchemaIssuedBy = exports.DrivingLicenseSchemaIssuedByOrganization = exports.DrivingLicenseSchemaIssuedByOrganizationAddress = exports.DrivingLicenseSchemaCertificateData = exports.DrivingLicenseSchemaCertificateDataDrivingLicense = void 0;
+var utils_1 = require("../../../internal/utils");
 var DrivingLicenseSchemaCertificateDataDrivingLicense = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaCertificateDataDrivingLicense, _super);
     function DrivingLicenseSchemaCertificateDataDrivingLicense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaCertificateDataDrivingLicense.prototype, "abbreviation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaCertificateDataDrivingLicense.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaCertificateDataDrivingLicense.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaCertificateDataDrivingLicense.prototype, "endorseDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaCertificateDataDrivingLicense.prototype, "issueDate", void 0);
     return DrivingLicenseSchemaCertificateDataDrivingLicense;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaCertificateDataDrivingLicense };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaCertificateDataDrivingLicense = DrivingLicenseSchemaCertificateDataDrivingLicense;
 var DrivingLicenseSchemaCertificateData = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaCertificateData, _super);
     function DrivingLicenseSchemaCertificateData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaCertificateDataDrivingLicense)
     ], DrivingLicenseSchemaCertificateData.prototype, "drivingLicense", void 0);
     return DrivingLicenseSchemaCertificateData;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaCertificateData };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaCertificateData = DrivingLicenseSchemaCertificateData;
 var DrivingLicenseSchemaIssuedByOrganizationAddress = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedByOrganizationAddress, _super);
     function DrivingLicenseSchemaIssuedByOrganizationAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "house", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "landmark", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganizationAddress.prototype, "vtc", void 0);
     return DrivingLicenseSchemaIssuedByOrganizationAddress;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedByOrganizationAddress };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedByOrganizationAddress = DrivingLicenseSchemaIssuedByOrganizationAddress;
 var DrivingLicenseSchemaIssuedByOrganization = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedByOrganization, _super);
     function DrivingLicenseSchemaIssuedByOrganization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedByOrganizationAddress)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "tin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedByOrganization.prototype, "uid", void 0);
     return DrivingLicenseSchemaIssuedByOrganization;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedByOrganization };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedByOrganization = DrivingLicenseSchemaIssuedByOrganization;
 var DrivingLicenseSchemaIssuedBy = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedBy, _super);
     function DrivingLicenseSchemaIssuedBy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedByOrganization)
     ], DrivingLicenseSchemaIssuedBy.prototype, "organization", void 0);
     return DrivingLicenseSchemaIssuedBy;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedBy };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedBy = DrivingLicenseSchemaIssuedBy;
 var DrivingLicenseSchemaIssuedToPersonAddress = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedToPersonAddress, _super);
     function DrivingLicenseSchemaIssuedToPersonAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "house", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "landmark", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "line1", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "line2", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonAddress.prototype, "vtc", void 0);
     return DrivingLicenseSchemaIssuedToPersonAddress;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedToPersonAddress };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedToPersonAddress = DrivingLicenseSchemaIssuedToPersonAddress;
 var DrivingLicenseSchemaIssuedToPersonPhoto = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedToPersonPhoto, _super);
     function DrivingLicenseSchemaIssuedToPersonPhoto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPersonPhoto.prototype, "format", void 0);
     return DrivingLicenseSchemaIssuedToPersonPhoto;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedToPersonPhoto };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedToPersonPhoto = DrivingLicenseSchemaIssuedToPersonPhoto;
 var DrivingLicenseSchemaIssuedToPerson = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedToPerson, _super);
     function DrivingLicenseSchemaIssuedToPerson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedToPersonAddress)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedToPersonPhoto)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "photo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "dob", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "maritalStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "religion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "swd", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "swdIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchemaIssuedToPerson.prototype, "uid", void 0);
     return DrivingLicenseSchemaIssuedToPerson;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedToPerson };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedToPerson = DrivingLicenseSchemaIssuedToPerson;
 var DrivingLicenseSchemaIssuedTo = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchemaIssuedTo, _super);
     function DrivingLicenseSchemaIssuedTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedToPerson)
     ], DrivingLicenseSchemaIssuedTo.prototype, "person", void 0);
     return DrivingLicenseSchemaIssuedTo;
-}(SpeakeasyBase));
-export { DrivingLicenseSchemaIssuedTo };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchemaIssuedTo = DrivingLicenseSchemaIssuedTo;
 var DrivingLicenseSchema = /** @class */ (function (_super) {
     __extends(DrivingLicenseSchema, _super);
     function DrivingLicenseSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaCertificateData)
     ], DrivingLicenseSchema.prototype, "certificateData", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedBy)
     ], DrivingLicenseSchema.prototype, "issuedBy", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivingLicenseSchemaIssuedTo)
     ], DrivingLicenseSchema.prototype, "issuedTo", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "expiryDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "issueDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "issuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DrivingLicenseSchema.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DrivingLicenseSchema.prototype, "prevNumber", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivingLicenseSchema.prototype, "validFromDate", void 0);
     return DrivingLicenseSchema;
-}(SpeakeasyBase));
-export { DrivingLicenseSchema };
+}(utils_1.SpeakeasyBase));
+exports.DrivingLicenseSchema = DrivingLicenseSchema;

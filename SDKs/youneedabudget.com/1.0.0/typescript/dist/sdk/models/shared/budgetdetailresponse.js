@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BudgetDetail } from "./budgetdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BudgetDetailResponse = exports.BudgetDetailResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var budgetdetail_1 = require("./budgetdetail");
 var BudgetDetailResponseData = /** @class */ (function (_super) {
     __extends(BudgetDetailResponseData, _super);
     function BudgetDetailResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budget" }),
-        __metadata("design:type", BudgetDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budget" }),
+        __metadata("design:type", budgetdetail_1.BudgetDetail)
     ], BudgetDetailResponseData.prototype, "budget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], BudgetDetailResponseData.prototype, "serverKnowledge", void 0);
     return BudgetDetailResponseData;
-}(SpeakeasyBase));
-export { BudgetDetailResponseData };
+}(utils_1.SpeakeasyBase));
+exports.BudgetDetailResponseData = BudgetDetailResponseData;
 var BudgetDetailResponse = /** @class */ (function (_super) {
     __extends(BudgetDetailResponse, _super);
     function BudgetDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BudgetDetailResponseData)
     ], BudgetDetailResponse.prototype, "data", void 0);
     return BudgetDetailResponse;
-}(SpeakeasyBase));
-export { BudgetDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.BudgetDetailResponse = BudgetDetailResponse;

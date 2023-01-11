@@ -15,7 +15,7 @@ export class UpdateAppRequest extends SpeakeasyBase {
   appSource?: Source;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=DataSources", elemType: DataSource })
   dataSources?: DataSource[];

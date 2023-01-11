@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetReviewsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // BatchGetReviewsRequest
 /**
  * Request message for Reviews.BatchGetReviews.
@@ -33,25 +36,25 @@ var BatchGetReviewsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreRatingOnlyReviews" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreRatingOnlyReviews" }),
         __metadata("design:type", Boolean)
     ], BatchGetReviewsRequest.prototype, "ignoreRatingOnlyReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationNames" }),
         __metadata("design:type", Array)
     ], BatchGetReviewsRequest.prototype, "locationNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderBy" }),
         __metadata("design:type", String)
     ], BatchGetReviewsRequest.prototype, "orderBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], BatchGetReviewsRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], BatchGetReviewsRequest.prototype, "pageToken", void 0);
     return BatchGetReviewsRequest;
-}(SpeakeasyBase));
-export { BatchGetReviewsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetReviewsRequest = BatchGetReviewsRequest;

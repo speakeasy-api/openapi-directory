@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormTableColumnDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
 // FormTableColumnDefinition
 /**
  * Definition of a column within a table for OCR data extraction from images
@@ -33,29 +36,29 @@ var FormTableColumnDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowNumericDigits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowNumericDigits" }),
         __metadata("design:type", Boolean)
     ], FormTableColumnDefinition.prototype, "allowNumericDigits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnchorMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnchorMode" }),
         __metadata("design:type", String)
     ], FormTableColumnDefinition.prototype, "anchorMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnID" }),
         __metadata("design:type", String)
-    ], FormTableColumnDefinition.prototype, "columnId", void 0);
+    ], FormTableColumnDefinition.prototype, "columnID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataType" }),
         __metadata("design:type", String)
     ], FormTableColumnDefinition.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinimumCharacterCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinimumCharacterCount" }),
         __metadata("design:type", Number)
     ], FormTableColumnDefinition.prototype, "minimumCharacterCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopAnchor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopAnchor" }),
         __metadata("design:type", String)
     ], FormTableColumnDefinition.prototype, "topAnchor", void 0);
     return FormTableColumnDefinition;
-}(SpeakeasyBase));
-export { FormTableColumnDefinition };
+}(utils_1.SpeakeasyBase));
+exports.FormTableColumnDefinition = FormTableColumnDefinition;

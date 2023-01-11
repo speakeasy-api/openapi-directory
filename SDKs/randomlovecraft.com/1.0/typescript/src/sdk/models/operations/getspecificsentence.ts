@@ -29,5 +29,5 @@ export class GetSpecificSentenceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSpecificSentence200ApplicationJsonObject?: GetSpecificSentence200ApplicationJson;
+  getSpecificSentence200ApplicationJSONObject?: GetSpecificSentence200ApplicationJson;
 }

@@ -49,7 +49,7 @@ export class DeleteLoggerDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLoggerDefinitionResponse?: Map<string, any>;
+  deleteLoggerDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

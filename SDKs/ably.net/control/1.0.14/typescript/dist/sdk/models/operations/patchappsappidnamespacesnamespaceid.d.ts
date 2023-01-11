@@ -15,6 +15,6 @@ export declare class PatchAppsAppIdNamespacesNamespaceIdRequest extends Speakeas
 export declare class PatchAppsAppIdNamespacesNamespaceIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     namespaceResponse?: shared.NamespaceResponse;
 }

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListDistributionsByWebAclId20181105PathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }
 
 

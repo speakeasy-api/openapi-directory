@@ -9,14 +9,14 @@ export declare class SpotGetAntennaReportLocations extends SpeakeasyBase {
 }
 export declare class SpotGet extends SpeakeasyBase {
     antennaReportLocations?: SpotGetAntennaReportLocations[];
-    config?: Map<string, any>;
-    configRequest?: Map<string, any>;
+    config?: Record<string, any>;
+    configRequest?: Record<string, any>;
     geoCoords?: GeoCoords;
     id?: string;
     isOnline?: boolean;
     requestCounter?: number;
-    senses?: Map<string, any>;
-    sensesRequest?: Map<string, any>;
+    senses?: Record<string, any>;
+    sensesRequest?: Record<string, any>;
     serialNumber?: number;
     status?: any;
     timeCreated?: string;

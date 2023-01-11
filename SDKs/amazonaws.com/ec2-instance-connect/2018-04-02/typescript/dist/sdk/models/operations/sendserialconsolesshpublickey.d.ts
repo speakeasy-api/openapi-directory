@@ -23,7 +23,7 @@ export declare class SendSerialConsoleSshPublicKeyResponse extends SpeakeasyBase
     ec2InstanceNotFoundException?: any;
     ec2InstanceTypeInvalidException?: any;
     invalidArgsException?: any;
-    sendSerialConsoleSshPublicKeyResponse?: shared.SendSerialConsoleSshPublicKeyResponse;
+    sendSerialConsoleSSHPublicKeyResponse?: shared.SendSerialConsoleSshPublicKeyResponse;
     serialConsoleAccessDisabledException?: any;
     serialConsoleSessionLimitExceededException?: any;
     serialConsoleSessionUnavailableException?: any;

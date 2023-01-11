@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateRawData } from "./certificaterawdata";
-import { ManagedCertificate } from "./managedcertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorizedCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificaterawdata_1 = require("./certificaterawdata");
+var managedcertificate_1 = require("./managedcertificate");
 // AuthorizedCertificate
 /**
  * An SSL certificate that a user has been authorized to administer. A user is authorized to administer any certificate that applies to one of their authorized domains.
@@ -35,41 +38,41 @@ var AuthorizedCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateRawData" }),
-        __metadata("design:type", CertificateRawData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateRawData" }),
+        __metadata("design:type", certificaterawdata_1.CertificateRawData)
     ], AuthorizedCertificate.prototype, "certificateRawData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], AuthorizedCertificate.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainMappingsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainMappingsCount" }),
         __metadata("design:type", Number)
     ], AuthorizedCertificate.prototype, "domainMappingsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainNames" }),
         __metadata("design:type", Array)
     ], AuthorizedCertificate.prototype, "domainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], AuthorizedCertificate.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AuthorizedCertificate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedCertificate" }),
-        __metadata("design:type", ManagedCertificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedCertificate" }),
+        __metadata("design:type", managedcertificate_1.ManagedCertificate)
     ], AuthorizedCertificate.prototype, "managedCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AuthorizedCertificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleDomainMappings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleDomainMappings" }),
         __metadata("design:type", Array)
     ], AuthorizedCertificate.prototype, "visibleDomainMappings", void 0);
     return AuthorizedCertificate;
-}(SpeakeasyBase));
-export { AuthorizedCertificate };
+}(utils_1.SpeakeasyBase));
+exports.AuthorizedCertificate = AuthorizedCertificate;

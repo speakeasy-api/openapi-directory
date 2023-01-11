@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiaCountrySettings } from "./liacountrysettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiaSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var liacountrysettings_1 = require("./liacountrysettings");
 // LiaSettings
 /**
  * Local Inventory ads (LIA) settings. All methods except listposdataproviders require the admin role.
@@ -34,17 +37,17 @@ var LiaSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], LiaSettings.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countrySettings", elemType: LiaCountrySettings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countrySettings", elemType: liacountrysettings_1.LiaCountrySettings }),
         __metadata("design:type", Array)
     ], LiaSettings.prototype, "countrySettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LiaSettings.prototype, "kind", void 0);
     return LiaSettings;
-}(SpeakeasyBase));
-export { LiaSettings };
+}(utils_1.SpeakeasyBase));
+exports.LiaSettings = LiaSettings;

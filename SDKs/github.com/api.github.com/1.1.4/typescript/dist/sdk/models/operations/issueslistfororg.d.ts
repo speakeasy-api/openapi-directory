@@ -3,33 +3,15 @@ import * as shared from "../shared";
 export declare class IssuesListForOrgPathParams extends SpeakeasyBase {
     org: string;
 }
-export declare enum IssuesListForOrgFilterEnum {
-    Assigned = "assigned",
-    Created = "created",
-    Mentioned = "mentioned",
-    Subscribed = "subscribed",
-    Repos = "repos",
-    All = "all"
-}
-export declare enum IssuesListForOrgSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
-export declare enum IssuesListForOrgStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
 export declare class IssuesListForOrgQueryParams extends SpeakeasyBase {
     direction?: shared.DirectionEnum;
-    filter?: IssuesListForOrgFilterEnum;
+    filter?: shared.OrgEnum;
     labels?: string;
     page?: number;
     perPage?: number;
     since?: string;
-    sort?: IssuesListForOrgSortEnum;
-    state?: IssuesListForOrgStateEnum;
+    sort?: shared.LabelsEnum;
+    state?: shared.OrgEnum1;
 }
 export declare class IssuesListForOrgRequest extends SpeakeasyBase {
     pathParams: IssuesListForOrgPathParams;
@@ -37,7 +19,7 @@ export declare class IssuesListForOrgRequest extends SpeakeasyBase {
 }
 export declare class IssuesListForOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issues?: shared.Issue[];

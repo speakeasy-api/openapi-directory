@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmTargetGroupResponse = exports.GetNetworkSmTargetGroupRequest = exports.GetNetworkSmTargetGroupQueryParams = exports.GetNetworkSmTargetGroupPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmTargetGroupPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmTargetGroupPathParams, _super);
     function GetNetworkSmTargetGroupPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmTargetGroupPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=targetGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=targetGroupId" }),
         __metadata("design:type", String)
     ], GetNetworkSmTargetGroupPathParams.prototype, "targetGroupId", void 0);
     return GetNetworkSmTargetGroupPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmTargetGroupPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmTargetGroupPathParams = GetNetworkSmTargetGroupPathParams;
 var GetNetworkSmTargetGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmTargetGroupQueryParams, _super);
     function GetNetworkSmTargetGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=withDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=withDetails" }),
         __metadata("design:type", Boolean)
     ], GetNetworkSmTargetGroupQueryParams.prototype, "withDetails", void 0);
     return GetNetworkSmTargetGroupQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkSmTargetGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmTargetGroupQueryParams = GetNetworkSmTargetGroupQueryParams;
 var GetNetworkSmTargetGroupRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmTargetGroupRequest, _super);
     function GetNetworkSmTargetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmTargetGroupPathParams)
     ], GetNetworkSmTargetGroupRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmTargetGroupQueryParams)
     ], GetNetworkSmTargetGroupRequest.prototype, "queryParams", void 0);
     return GetNetworkSmTargetGroupRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmTargetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmTargetGroupRequest = GetNetworkSmTargetGroupRequest;
 var GetNetworkSmTargetGroupResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmTargetGroupResponse, _super);
     function GetNetworkSmTargetGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmTargetGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmTargetGroupResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmTargetGroupResponse.prototype, "getNetworkSmTargetGroup200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmTargetGroupResponse.prototype, "getNetworkSmTargetGroup200ApplicationJSONObject", void 0);
     return GetNetworkSmTargetGroupResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmTargetGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmTargetGroupResponse = GetNetworkSmTargetGroupResponse;

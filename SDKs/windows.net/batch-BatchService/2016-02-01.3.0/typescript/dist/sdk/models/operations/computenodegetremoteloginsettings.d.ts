@@ -21,6 +21,6 @@ export declare class ComputeNodeGetRemoteLoginSettingsResponse extends Speakeasy
     batchError?: any;
     computeNodeGetRemoteLoginSettingsResult?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

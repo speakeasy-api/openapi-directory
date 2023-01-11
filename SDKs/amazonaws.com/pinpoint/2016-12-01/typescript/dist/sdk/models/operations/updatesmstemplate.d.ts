@@ -24,7 +24,7 @@ export declare class UpdateSmsTemplateRequestBodySmsTemplateRequest extends Spea
     defaultSubstitutions?: string;
     recommenderId?: string;
     templateDescription?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class UpdateSmsTemplateRequestBody extends SpeakeasyBase {
     smsTemplateRequest: UpdateSmsTemplateRequestBodySmsTemplateRequest;

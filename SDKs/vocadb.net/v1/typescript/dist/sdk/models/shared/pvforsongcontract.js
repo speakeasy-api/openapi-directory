@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PvExtendedMetadata } from "./pvextendedmetadata";
-import { SongContract } from "./songcontract";
-export var PvForSongContractPvTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PvForSongContract = exports.PvForSongContractServiceEnum = exports.PvForSongContractPvTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var pvextendedmetadata_1 = require("./pvextendedmetadata");
+var songcontract_1 = require("./songcontract");
+var PvForSongContractPvTypeEnum;
 (function (PvForSongContractPvTypeEnum) {
     PvForSongContractPvTypeEnum["Original"] = "Original";
     PvForSongContractPvTypeEnum["Reprint"] = "Reprint";
     PvForSongContractPvTypeEnum["Other"] = "Other";
-})(PvForSongContractPvTypeEnum || (PvForSongContractPvTypeEnum = {}));
-export var PvForSongContractServiceEnum;
+})(PvForSongContractPvTypeEnum = exports.PvForSongContractPvTypeEnum || (exports.PvForSongContractPvTypeEnum = {}));
+var PvForSongContractServiceEnum;
 (function (PvForSongContractServiceEnum) {
     PvForSongContractServiceEnum["NicoNicoDouga"] = "NicoNicoDouga";
     PvForSongContractServiceEnum["Youtube"] = "Youtube";
@@ -43,68 +46,68 @@ export var PvForSongContractServiceEnum;
     PvForSongContractServiceEnum["LocalFile"] = "LocalFile";
     PvForSongContractServiceEnum["Creofuga"] = "Creofuga";
     PvForSongContractServiceEnum["Bandcamp"] = "Bandcamp";
-})(PvForSongContractServiceEnum || (PvForSongContractServiceEnum = {}));
+})(PvForSongContractServiceEnum = exports.PvForSongContractServiceEnum || (exports.PvForSongContractServiceEnum = {}));
 var PvForSongContract = /** @class */ (function (_super) {
     __extends(PvForSongContract, _super);
     function PvForSongContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", Number)
     ], PvForSongContract.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], PvForSongContract.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extendedMetadata" }),
-        __metadata("design:type", PvExtendedMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendedMetadata" }),
+        __metadata("design:type", pvextendedmetadata_1.PvExtendedMetadata)
     ], PvForSongContract.prototype, "extendedMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PvForSongContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], PvForSongContract.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishDate" }),
         __metadata("design:type", Date)
     ], PvForSongContract.prototype, "publishDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvId" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "pvId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvType" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "pvType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=song" }),
-        __metadata("design:type", SongContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=song" }),
+        __metadata("design:type", songcontract_1.SongContract)
     ], PvForSongContract.prototype, "song", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbUrl" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "thumbUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PvForSongContract.prototype, "url", void 0);
     return PvForSongContract;
-}(SpeakeasyBase));
-export { PvForSongContract };
+}(utils_1.SpeakeasyBase));
+exports.PvForSongContract = PvForSongContract;

@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidTrafficShapingRulesResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsidTrafficShapingRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsidTrafficShapingRules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -71,7 +71,7 @@ export class CreateEmailTemplateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createEmailTemplateResponse?: Map<string, any>;
+  createEmailTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

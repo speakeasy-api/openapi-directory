@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDomainMetadataActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDomainMetadataResponse = exports.PostDomainMetadataRequest = exports.PostDomainMetadataQueryParams = exports.PostDomainMetadataVersionEnum = exports.PostDomainMetadataActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDomainMetadataActionEnum;
 (function (PostDomainMetadataActionEnum) {
     PostDomainMetadataActionEnum["DomainMetadata"] = "DomainMetadata";
-})(PostDomainMetadataActionEnum || (PostDomainMetadataActionEnum = {}));
-export var PostDomainMetadataVersionEnum;
+})(PostDomainMetadataActionEnum = exports.PostDomainMetadataActionEnum || (exports.PostDomainMetadataActionEnum = {}));
+var PostDomainMetadataVersionEnum;
 (function (PostDomainMetadataVersionEnum) {
     PostDomainMetadataVersionEnum["TwoThousandAndNine0415"] = "2009-04-15";
-})(PostDomainMetadataVersionEnum || (PostDomainMetadataVersionEnum = {}));
+})(PostDomainMetadataVersionEnum = exports.PostDomainMetadataVersionEnum || (exports.PostDomainMetadataVersionEnum = {}));
 var PostDomainMetadataQueryParams = /** @class */ (function (_super) {
     __extends(PostDomainMetadataQueryParams, _super);
     function PostDomainMetadataQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDomainMetadataQueryParams.prototype, "version", void 0);
     return PostDomainMetadataQueryParams;
-}(SpeakeasyBase));
-export { PostDomainMetadataQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDomainMetadataQueryParams = PostDomainMetadataQueryParams;
 var PostDomainMetadataRequest = /** @class */ (function (_super) {
     __extends(PostDomainMetadataRequest, _super);
     function PostDomainMetadataRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDomainMetadataQueryParams)
     ], PostDomainMetadataRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDomainMetadataRequest.prototype, "request", void 0);
     return PostDomainMetadataRequest;
-}(SpeakeasyBase));
-export { PostDomainMetadataRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDomainMetadataRequest = PostDomainMetadataRequest;
 var PostDomainMetadataResponse = /** @class */ (function (_super) {
     __extends(PostDomainMetadataResponse, _super);
     function PostDomainMetadataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDomainMetadataResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDomainMetadataResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDomainMetadataResponse.prototype, "statusCode", void 0);
     return PostDomainMetadataResponse;
-}(SpeakeasyBase));
-export { PostDomainMetadataResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDomainMetadataResponse = PostDomainMetadataResponse;

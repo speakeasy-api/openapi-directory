@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackfillJob } from "./backfilljob";
-import { Error } from "./error";
-import { SourceObjectIdentifier } from "./sourceobjectidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var backfilljob_1 = require("./backfilljob");
+var error_1 = require("./error");
+var sourceobjectidentifier_1 = require("./sourceobjectidentifier");
 // StreamObject
 /**
  * A specific stream object (e.g a specific DB table).
@@ -36,33 +39,33 @@ var StreamObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backfillJob" }),
-        __metadata("design:type", BackfillJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backfillJob" }),
+        __metadata("design:type", backfilljob_1.BackfillJob)
     ], StreamObject.prototype, "backfillJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], StreamObject.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], StreamObject.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], StreamObject.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], StreamObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceObject" }),
-        __metadata("design:type", SourceObjectIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceObject" }),
+        __metadata("design:type", sourceobjectidentifier_1.SourceObjectIdentifier)
     ], StreamObject.prototype, "sourceObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], StreamObject.prototype, "updateTime", void 0);
     return StreamObject;
-}(SpeakeasyBase));
-export { StreamObject };
+}(utils_1.SpeakeasyBase));
+exports.StreamObject = StreamObject;

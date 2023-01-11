@@ -3,7 +3,7 @@ import { StoryCollaborator } from "./storycollaborator";
 import { OoxmlDocument } from "./ooxmldocument";
 import { StoryOutlineHistory } from "./storyoutlinehistory";
 /**
- * Model for story objects
+ * Base model for all types
 **/
 export declare class Story extends SpeakeasyBase {
     collaborators?: StoryCollaborator[];

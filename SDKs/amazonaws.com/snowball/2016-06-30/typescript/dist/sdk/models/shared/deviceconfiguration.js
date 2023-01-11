@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnowconeDeviceConfiguration } from "./snowconedeviceconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var snowconedeviceconfiguration_1 = require("./snowconedeviceconfiguration");
 // DeviceConfiguration
 /**
  * The container for <code>SnowconeDeviceConfiguration</code>.
@@ -34,9 +37,9 @@ var DeviceConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowconeDeviceConfiguration" }),
-        __metadata("design:type", SnowconeDeviceConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowconeDeviceConfiguration" }),
+        __metadata("design:type", snowconedeviceconfiguration_1.SnowconeDeviceConfiguration)
     ], DeviceConfiguration.prototype, "snowconeDeviceConfiguration", void 0);
     return DeviceConfiguration;
-}(SpeakeasyBase));
-export { DeviceConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DeviceConfiguration = DeviceConfiguration;

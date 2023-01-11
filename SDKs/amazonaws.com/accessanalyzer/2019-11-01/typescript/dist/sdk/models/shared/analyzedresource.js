@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { FindingStatusEnum } from "./findingstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyzedResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var findingstatusenum_1 = require("./findingstatusenum");
 // AnalyzedResource
 /**
  * Contains details about the analyzed resource.
@@ -35,49 +38,49 @@ var AnalyzedResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions" }),
         __metadata("design:type", Array)
     ], AnalyzedResource.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyzedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyzedAt" }),
         __metadata("design:type", Date)
     ], AnalyzedResource.prototype, "analyzedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], AnalyzedResource.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], AnalyzedResource.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublic" }),
         __metadata("design:type", Boolean)
     ], AnalyzedResource.prototype, "isPublic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArn" }),
         __metadata("design:type", String)
     ], AnalyzedResource.prototype, "resourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOwnerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOwnerAccount" }),
         __metadata("design:type", String)
     ], AnalyzedResource.prototype, "resourceOwnerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], AnalyzedResource.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedVia" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedVia" }),
         __metadata("design:type", Array)
     ], AnalyzedResource.prototype, "sharedVia", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AnalyzedResource.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], AnalyzedResource.prototype, "updatedAt", void 0);
     return AnalyzedResource;
-}(SpeakeasyBase));
-export { AnalyzedResource };
+}(utils_1.SpeakeasyBase));
+exports.AnalyzedResource = AnalyzedResource;

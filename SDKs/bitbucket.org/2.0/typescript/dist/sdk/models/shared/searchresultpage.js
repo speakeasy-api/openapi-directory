@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SearchCodeSearchResult } from "./searchcodesearchresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResultPage = void 0;
+var utils_1 = require("../../../internal/utils");
+var searchcodesearchresult_1 = require("./searchcodesearchresult");
 var SearchResultPage = /** @class */ (function (_super) {
     __extends(SearchResultPage, _super);
     function SearchResultPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResultPage.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], SearchResultPage.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagelen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagelen" }),
         __metadata("design:type", Number)
     ], SearchResultPage.prototype, "pagelen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResultPage.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_substituted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_substituted" }),
         __metadata("design:type", Boolean)
     ], SearchResultPage.prototype, "querySubstituted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], SearchResultPage.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: SearchCodeSearchResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: searchcodesearchresult_1.SearchCodeSearchResult }),
         __metadata("design:type", Array)
     ], SearchResultPage.prototype, "values", void 0);
     return SearchResultPage;
-}(SpeakeasyBase));
-export { SearchResultPage };
+}(utils_1.SpeakeasyBase));
+exports.SearchResultPage = SearchResultPage;

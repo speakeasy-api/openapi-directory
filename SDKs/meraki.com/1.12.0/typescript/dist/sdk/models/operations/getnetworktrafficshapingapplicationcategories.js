@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkTrafficShapingApplicationCategoriesResponse = exports.GetNetworkTrafficShapingApplicationCategoriesRequest = exports.GetNetworkTrafficShapingApplicationCategoriesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkTrafficShapingApplicationCategoriesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficShapingApplicationCategoriesPathParams, _super);
     function GetNetworkTrafficShapingApplicationCategoriesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkTrafficShapingApplicationCategoriesPathParams.prototype, "networkId", void 0);
     return GetNetworkTrafficShapingApplicationCategoriesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkTrafficShapingApplicationCategoriesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficShapingApplicationCategoriesPathParams = GetNetworkTrafficShapingApplicationCategoriesPathParams;
 var GetNetworkTrafficShapingApplicationCategoriesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficShapingApplicationCategoriesRequest, _super);
     function GetNetworkTrafficShapingApplicationCategoriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkTrafficShapingApplicationCategoriesPathParams)
     ], GetNetworkTrafficShapingApplicationCategoriesRequest.prototype, "pathParams", void 0);
     return GetNetworkTrafficShapingApplicationCategoriesRequest;
-}(SpeakeasyBase));
-export { GetNetworkTrafficShapingApplicationCategoriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficShapingApplicationCategoriesRequest = GetNetworkTrafficShapingApplicationCategoriesRequest;
 var GetNetworkTrafficShapingApplicationCategoriesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficShapingApplicationCategoriesResponse, _super);
     function GetNetworkTrafficShapingApplicationCategoriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkTrafficShapingApplicationCategoriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkTrafficShapingApplicationCategoriesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkTrafficShapingApplicationCategoriesResponse.prototype, "getNetworkTrafficShapingApplicationCategories200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkTrafficShapingApplicationCategoriesResponse.prototype, "getNetworkTrafficShapingApplicationCategories200ApplicationJSONObject", void 0);
     return GetNetworkTrafficShapingApplicationCategoriesResponse;
-}(SpeakeasyBase));
-export { GetNetworkTrafficShapingApplicationCategoriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficShapingApplicationCategoriesResponse = GetNetworkTrafficShapingApplicationCategoriesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1TransferEligibility = exports.GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum;
 (function (GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum) {
     GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum["ReasonUnspecified"] = "REASON_UNSPECIFIED";
     GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum["PendingTosAcceptance"] = "PENDING_TOS_ACCEPTANCE";
     GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum["SkuNotEligible"] = "SKU_NOT_ELIGIBLE";
     GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum["SkuSuspended"] = "SKU_SUSPENDED";
-})(GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum || (GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum = {}));
+})(GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum = exports.GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum || (exports.GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum = {}));
 // GoogleCloudChannelV1TransferEligibility
 /**
  * Specifies transfer eligibility of a SKU.
@@ -40,17 +43,17 @@ var GoogleCloudChannelV1TransferEligibility = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1TransferEligibility.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ineligibilityReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ineligibilityReason" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1TransferEligibility.prototype, "ineligibilityReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEligible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEligible" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1TransferEligibility.prototype, "isEligible", void 0);
     return GoogleCloudChannelV1TransferEligibility;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1TransferEligibility };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1TransferEligibility = GoogleCloudChannelV1TransferEligibility;

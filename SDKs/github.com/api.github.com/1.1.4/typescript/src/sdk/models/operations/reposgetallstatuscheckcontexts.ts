@@ -32,5 +32,5 @@ export class ReposGetAllStatusCheckContextsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposGetAllStatusCheckContexts200ApplicationJsonStrings?: string[];
+  reposGetAllStatusCheckContexts200ApplicationJSONStrings?: string[];
 }

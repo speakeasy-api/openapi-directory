@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BatterVsPitcherStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatterVsPitcherStatsResponse = exports.BatterVsPitcherStatsRequest = exports.BatterVsPitcherStatsPathParams = exports.BatterVsPitcherStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BatterVsPitcherStatsFormatEnum;
 (function (BatterVsPitcherStatsFormatEnum) {
     BatterVsPitcherStatsFormatEnum["Xml"] = "XML";
     BatterVsPitcherStatsFormatEnum["Json"] = "JSON";
-})(BatterVsPitcherStatsFormatEnum || (BatterVsPitcherStatsFormatEnum = {}));
+})(BatterVsPitcherStatsFormatEnum = exports.BatterVsPitcherStatsFormatEnum || (exports.BatterVsPitcherStatsFormatEnum = {}));
 var BatterVsPitcherStatsPathParams = /** @class */ (function (_super) {
     __extends(BatterVsPitcherStatsPathParams, _super);
     function BatterVsPitcherStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BatterVsPitcherStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hitterid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hitterid" }),
         __metadata("design:type", String)
     ], BatterVsPitcherStatsPathParams.prototype, "hitterid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pitcherid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pitcherid" }),
         __metadata("design:type", String)
     ], BatterVsPitcherStatsPathParams.prototype, "pitcherid", void 0);
     return BatterVsPitcherStatsPathParams;
-}(SpeakeasyBase));
-export { BatterVsPitcherStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BatterVsPitcherStatsPathParams = BatterVsPitcherStatsPathParams;
 var BatterVsPitcherStatsRequest = /** @class */ (function (_super) {
     __extends(BatterVsPitcherStatsRequest, _super);
     function BatterVsPitcherStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BatterVsPitcherStatsPathParams)
     ], BatterVsPitcherStatsRequest.prototype, "pathParams", void 0);
     return BatterVsPitcherStatsRequest;
-}(SpeakeasyBase));
-export { BatterVsPitcherStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatterVsPitcherStatsRequest = BatterVsPitcherStatsRequest;
 var BatterVsPitcherStatsResponse = /** @class */ (function (_super) {
     __extends(BatterVsPitcherStatsResponse, _super);
     function BatterVsPitcherStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BatterVsPitcherStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BatterVsPitcherStatsResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BatterVsPitcherStatsResponse.prototype, "statusCode", void 0);
     return BatterVsPitcherStatsResponse;
-}(SpeakeasyBase));
-export { BatterVsPitcherStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatterVsPitcherStatsResponse = BatterVsPitcherStatsResponse;

@@ -16,7 +16,7 @@ export declare class ObjectChangeAction extends SpeakeasyBase {
 }
 export declare class ObjectChange extends SpeakeasyBase {
     action?: ObjectChangeAction;
-    changedObject?: Map<string, string>;
+    changedObject?: Record<string, string>;
     changedObjectId: number;
     changedObjectType?: string;
     id?: number;

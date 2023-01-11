@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 /**
  * The basic data structure of a dataset.
 **/
-export declare class Record extends SpeakeasyBase {
+export declare class RecordT extends SpeakeasyBase {
     deviceLastModifiedDate?: Date;
     key?: string;
     lastModifiedBy?: string;

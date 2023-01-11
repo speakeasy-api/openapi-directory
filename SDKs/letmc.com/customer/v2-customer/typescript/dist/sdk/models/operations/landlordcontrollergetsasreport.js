@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordControllerGetSasReportResponse = exports.LandlordControllerGetSasReportRequest = exports.LandlordControllerGetSasReportQueryParams = exports.LandlordControllerGetSasReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LandlordControllerGetSasReportPathParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetSasReportPathParams, _super);
     function LandlordControllerGetSasReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], LandlordControllerGetSasReportPathParams.prototype, "shortName", void 0);
     return LandlordControllerGetSasReportPathParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetSasReportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetSasReportPathParams = LandlordControllerGetSasReportPathParams;
 var LandlordControllerGetSasReportQueryParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetSasReportQueryParams, _super);
     function LandlordControllerGetSasReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], LandlordControllerGetSasReportQueryParams.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=yearEnd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=yearEnd" }),
         __metadata("design:type", Number)
     ], LandlordControllerGetSasReportQueryParams.prototype, "yearEnd", void 0);
     return LandlordControllerGetSasReportQueryParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetSasReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetSasReportQueryParams = LandlordControllerGetSasReportQueryParams;
 var LandlordControllerGetSasReportRequest = /** @class */ (function (_super) {
     __extends(LandlordControllerGetSasReportRequest, _super);
     function LandlordControllerGetSasReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetSasReportPathParams)
     ], LandlordControllerGetSasReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetSasReportQueryParams)
     ], LandlordControllerGetSasReportRequest.prototype, "queryParams", void 0);
     return LandlordControllerGetSasReportRequest;
-}(SpeakeasyBase));
-export { LandlordControllerGetSasReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetSasReportRequest = LandlordControllerGetSasReportRequest;
 var LandlordControllerGetSasReportResponse = /** @class */ (function (_super) {
     __extends(LandlordControllerGetSasReportResponse, _super);
     function LandlordControllerGetSasReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LandlordControllerGetSasReportResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LandlordControllerGetSasReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], LandlordControllerGetSasReportResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LandlordControllerGetSasReportResponse.prototype, "statusCode", void 0);
     return LandlordControllerGetSasReportResponse;
-}(SpeakeasyBase));
-export { LandlordControllerGetSasReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetSasReportResponse = LandlordControllerGetSasReportResponse;

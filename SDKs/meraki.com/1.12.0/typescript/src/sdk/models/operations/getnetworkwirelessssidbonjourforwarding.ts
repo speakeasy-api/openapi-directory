@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidBonjourForwardingResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsidBonjourForwarding200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsidBonjourForwarding200ApplicationJSONObject?: Record<string, any>;
 }

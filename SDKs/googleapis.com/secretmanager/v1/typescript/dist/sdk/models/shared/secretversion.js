@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationStatus } from "./replicationstatus";
-export var SecretVersionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecretVersion = exports.SecretVersionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationstatus_1 = require("./replicationstatus");
+var SecretVersionStateEnum;
 (function (SecretVersionStateEnum) {
     SecretVersionStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     SecretVersionStateEnum["Enabled"] = "ENABLED";
     SecretVersionStateEnum["Disabled"] = "DISABLED";
     SecretVersionStateEnum["Destroyed"] = "DESTROYED";
-})(SecretVersionStateEnum || (SecretVersionStateEnum = {}));
+})(SecretVersionStateEnum = exports.SecretVersionStateEnum || (exports.SecretVersionStateEnum = {}));
 // SecretVersion
 /**
  * A secret version resource in the Secret Manager API.
@@ -41,33 +44,33 @@ var SecretVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSpecifiedPayloadChecksum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSpecifiedPayloadChecksum" }),
         __metadata("design:type", Boolean)
     ], SecretVersion.prototype, "clientSpecifiedPayloadChecksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], SecretVersion.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destroyTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destroyTime" }),
         __metadata("design:type", String)
     ], SecretVersion.prototype, "destroyTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], SecretVersion.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SecretVersion.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationStatus" }),
-        __metadata("design:type", ReplicationStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationStatus" }),
+        __metadata("design:type", replicationstatus_1.ReplicationStatus)
     ], SecretVersion.prototype, "replicationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SecretVersion.prototype, "state", void 0);
     return SecretVersion;
-}(SpeakeasyBase));
-export { SecretVersion };
+}(utils_1.SpeakeasyBase));
+exports.SecretVersion = SecretVersion;

@@ -68,5 +68,5 @@ export class ChangePendingNodeStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  changePendingNodeStatus200ApplicationJsonObject?: ChangePendingNodeStatus200ApplicationJson;
+  changePendingNodeStatus200ApplicationJSONObject?: ChangePendingNodeStatus200ApplicationJson;
 }

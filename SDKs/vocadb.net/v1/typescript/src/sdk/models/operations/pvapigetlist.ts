@@ -58,7 +58,7 @@ export class PvApiGetListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  partialFindResultPvForSongContract?: shared.PartialFindResultPvForSongContract;
+  partialFindResultPVForSongContract?: shared.PartialFindResultPvForSongContract;
 
   @SpeakeasyMetadata()
   statusCode: number;

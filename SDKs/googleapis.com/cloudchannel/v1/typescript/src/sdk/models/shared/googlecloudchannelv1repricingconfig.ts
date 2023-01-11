@@ -1,5 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudChannelV1RepricingAdjustment } from "./googlecloudchannelv1repricingadjustment";
+import { GoogleCloudChannelV1ConditionalOverride } from "./googlecloudchannelv1conditionaloverride";
 import { GoogleTypeDate } from "./googletypedate";
 import { GoogleCloudChannelV1RepricingConfigEntitlementGranularity } from "./googlecloudchannelv1repricingconfigentitlementgranularity";
 
@@ -20,7 +21,10 @@ export class GoogleCloudChannelV1RepricingConfig extends SpeakeasyBase {
   adjustment?: GoogleCloudChannelV1RepricingAdjustment;
 
   @SpeakeasyMetadata({ data: "json, name=channelPartnerGranularity" })
-  channelPartnerGranularity?: Map<string, any>;
+  channelPartnerGranularity?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=conditionalOverrides", elemType: GoogleCloudChannelV1ConditionalOverride })
+  conditionalOverrides?: GoogleCloudChannelV1ConditionalOverride[];
 
   @SpeakeasyMetadata({ data: "json, name=effectiveInvoiceMonth" })
   effectiveInvoiceMonth?: GoogleTypeDate;

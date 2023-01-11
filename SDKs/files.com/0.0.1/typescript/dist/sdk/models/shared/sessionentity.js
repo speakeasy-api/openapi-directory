@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // SessionEntity
 /**
  * Create user session (log in)
@@ -33,77 +36,77 @@ var SessionEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_2fa_method_sms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_2fa_method_sms" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "allowed2faMethodSms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_2fa_method_totp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_2fa_method_totp" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "allowed2faMethodTotp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_2fa_method_u2f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_2fa_method_u2f" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "allowed2faMethodU2f", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_2fa_method_yubi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_2fa_method_yubi" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "allowed2faMethodYubi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SessionEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], SessionEntity.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login_token" }),
         __metadata("design:type", String)
     ], SessionEntity.prototype, "loginToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login_token_domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login_token_domain" }),
         __metadata("design:type", String)
     ], SessionEntity.prototype, "loginTokenDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_dir_listing_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_dir_listing_size" }),
         __metadata("design:type", Number)
     ], SessionEntity.prototype, "maxDirListingSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiple_regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiple_regions" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "multipleRegions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=read_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read_only" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root_path" }),
         __metadata("design:type", String)
     ], SessionEntity.prototype, "rootPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_id" }),
         __metadata("design:type", Number)
     ], SessionEntity.prototype, "siteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssl_required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssl_required" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "sslRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tls_disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tls_disabled" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "tlsDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=two_factor_setup_needed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=two_factor_setup_needed" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "twoFactorSetupNeeded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_provided_modified_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_provided_modified_at" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "useProvidedModifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windows_mode_ftp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windows_mode_ftp" }),
         __metadata("design:type", Boolean)
     ], SessionEntity.prototype, "windowsModeFtp", void 0);
     return SessionEntity;
-}(SpeakeasyBase));
-export { SessionEntity };
+}(utils_1.SpeakeasyBase));
+exports.SessionEntity = SessionEntity;

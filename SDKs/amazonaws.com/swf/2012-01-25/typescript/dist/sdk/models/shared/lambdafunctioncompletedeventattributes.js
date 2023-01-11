@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaFunctionCompletedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // LambdaFunctionCompletedEventAttributes
 /**
  * Provides the details of the <code>LambdaFunctionCompleted</code> event. It isn't set for other event types.
@@ -33,17 +36,17 @@ var LambdaFunctionCompletedEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], LambdaFunctionCompletedEventAttributes.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEventId" }),
         __metadata("design:type", Number)
     ], LambdaFunctionCompletedEventAttributes.prototype, "scheduledEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedEventId" }),
         __metadata("design:type", Number)
     ], LambdaFunctionCompletedEventAttributes.prototype, "startedEventId", void 0);
     return LambdaFunctionCompletedEventAttributes;
-}(SpeakeasyBase));
-export { LambdaFunctionCompletedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.LambdaFunctionCompletedEventAttributes = LambdaFunctionCompletedEventAttributes;

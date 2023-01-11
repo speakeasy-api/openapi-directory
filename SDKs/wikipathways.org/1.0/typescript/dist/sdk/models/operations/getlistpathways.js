@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListPathwaysFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListPathwaysResponse = exports.GetListPathwaysRequest = exports.GetListPathwaysQueryParams = exports.GetListPathwaysFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListPathwaysFormatEnum;
 (function (GetListPathwaysFormatEnum) {
     GetListPathwaysFormatEnum["Json"] = "json";
     GetListPathwaysFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetListPathwaysFormatEnum;
     GetListPathwaysFormatEnum["Dump"] = "dump";
     GetListPathwaysFormatEnum["Jpg"] = "jpg";
     GetListPathwaysFormatEnum["Pdf"] = "pdf";
-})(GetListPathwaysFormatEnum || (GetListPathwaysFormatEnum = {}));
+})(GetListPathwaysFormatEnum = exports.GetListPathwaysFormatEnum || (exports.GetListPathwaysFormatEnum = {}));
 var GetListPathwaysQueryParams = /** @class */ (function (_super) {
     __extends(GetListPathwaysQueryParams, _super);
     function GetListPathwaysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetListPathwaysQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=organism" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=organism" }),
         __metadata("design:type", String)
     ], GetListPathwaysQueryParams.prototype, "organism", void 0);
     return GetListPathwaysQueryParams;
-}(SpeakeasyBase));
-export { GetListPathwaysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListPathwaysQueryParams = GetListPathwaysQueryParams;
 var GetListPathwaysRequest = /** @class */ (function (_super) {
     __extends(GetListPathwaysRequest, _super);
     function GetListPathwaysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListPathwaysQueryParams)
     ], GetListPathwaysRequest.prototype, "queryParams", void 0);
     return GetListPathwaysRequest;
-}(SpeakeasyBase));
-export { GetListPathwaysRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListPathwaysRequest = GetListPathwaysRequest;
 var GetListPathwaysResponse = /** @class */ (function (_super) {
     __extends(GetListPathwaysResponse, _super);
     function GetListPathwaysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListPathwaysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListPathwaysResponse.prototype, "statusCode", void 0);
     return GetListPathwaysResponse;
-}(SpeakeasyBase));
-export { GetListPathwaysResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListPathwaysResponse = GetListPathwaysResponse;

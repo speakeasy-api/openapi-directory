@@ -1,4 +1,7 @@
-export var ClusterStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterStatusEnum = void 0;
+var ClusterStatusEnum;
 (function (ClusterStatusEnum) {
     ClusterStatusEnum["Creating"] = "CREATING";
     ClusterStatusEnum["Active"] = "ACTIVE";
@@ -6,4 +9,4 @@ export var ClusterStatusEnum;
     ClusterStatusEnum["Failed"] = "FAILED";
     ClusterStatusEnum["Updating"] = "UPDATING";
     ClusterStatusEnum["Pending"] = "PENDING";
-})(ClusterStatusEnum || (ClusterStatusEnum = {}));
+})(ClusterStatusEnum = exports.ClusterStatusEnum || (exports.ClusterStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchAssociateApprovalRuleTemplateWithRepositoriesError } from "./batchassociateapprovalruletemplatewithrepositorieserror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchassociateapprovalruletemplatewithrepositorieserror_1 = require("./batchassociateapprovalruletemplatewithrepositorieserror");
 var BatchAssociateApprovalRuleTemplateWithRepositoriesOutput = /** @class */ (function (_super) {
     __extends(BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, _super);
     function BatchAssociateApprovalRuleTemplateWithRepositoriesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedRepositoryNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedRepositoryNames" }),
         __metadata("design:type", Array)
     ], BatchAssociateApprovalRuleTemplateWithRepositoriesOutput.prototype, "associatedRepositoryNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: BatchAssociateApprovalRuleTemplateWithRepositoriesError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: batchassociateapprovalruletemplatewithrepositorieserror_1.BatchAssociateApprovalRuleTemplateWithRepositoriesError }),
         __metadata("design:type", Array)
     ], BatchAssociateApprovalRuleTemplateWithRepositoriesOutput.prototype, "errors", void 0);
     return BatchAssociateApprovalRuleTemplateWithRepositoriesOutput;
-}(SpeakeasyBase));
-export { BatchAssociateApprovalRuleTemplateWithRepositoriesOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput = BatchAssociateApprovalRuleTemplateWithRepositoriesOutput;

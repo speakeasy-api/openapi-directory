@@ -25,8 +25,8 @@ export declare class PostAdminMappingsFindByMetadataRequestBodyXmlEquality exten
 }
 export declare class PostAdminMappingsFindByMetadataRequestBodyXPathMatch extends SpeakeasyBase {
     matchesXpath: string;
-    namespaces?: Map<string, any>;
-    valuePattern?: Map<string, any>;
+    namespaces?: Record<string, any>;
+    valuePattern?: Record<string, any>;
 }
 /**
  * Pre-emptive basic auth credentials to match against
@@ -37,11 +37,11 @@ export declare class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRe
 }
 export declare class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRequest extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRequestBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -54,28 +54,28 @@ export declare enum PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRes
     RandomDataThenClose = "RANDOM_DATA_THEN_CLOSE"
 }
 export declare class PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponse extends SpeakeasyBase {
-    additionalProxyRequestHeaders?: Map<string, any>;
+    additionalProxyRequestHeaders?: Record<string, any>;
     base64Body?: string;
     body?: string;
     bodyFileName?: string;
     fault?: PostAdminMappingsFindByMetadata200ApplicationJsonMappingsResponseFaultEnum;
     fixedDelayMilliseconds?: number;
     fromConfiguredStub?: boolean;
-    headers?: Map<string, any>;
-    jsonBody?: Map<string, any>;
+    headers?: Record<string, any>;
+    jsonBody?: Record<string, any>;
     proxyBaseUrl?: string;
     status?: number;
     statusMessage?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class PostAdminMappingsFindByMetadata200ApplicationJsonMappings extends SpeakeasyBase {
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     newScenarioState?: string;
     persistent?: boolean;
-    postServeActions?: Map<string, any>;
+    postServeActions?: Record<string, any>;
     priority?: number;
     request?: PostAdminMappingsFindByMetadata200ApplicationJsonMappingsRequest;
     requiredScenarioState?: string;
@@ -95,6 +95,6 @@ export declare class PostAdminMappingsFindByMetadataRequest extends SpeakeasyBas
 }
 export declare class PostAdminMappingsFindByMetadataResponse extends SpeakeasyBase {
     contentType: string;
-    postAdminMappingsFindByMetadata200ApplicationJsonObject?: PostAdminMappingsFindByMetadata200ApplicationJson;
     statusCode: number;
+    postAdminMappingsFindByMetadata200ApplicationJSONObject?: PostAdminMappingsFindByMetadata200ApplicationJson;
 }

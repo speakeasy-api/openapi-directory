@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DialogCodeHookSettings } from "./dialogcodehooksettings";
-import { FulfillmentCodeHookSettings } from "./fulfillmentcodehooksettings";
-import { InputContext } from "./inputcontext";
-import { IntentClosingSetting } from "./intentclosingsetting";
-import { IntentConfirmationSetting } from "./intentconfirmationsetting";
-import { KendraConfiguration } from "./kendraconfiguration";
-import { OutputContext } from "./outputcontext";
-import { SampleUtterance } from "./sampleutterance";
-import { SlotPriority } from "./slotpriority";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeIntentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dialogcodehooksettings_1 = require("./dialogcodehooksettings");
+var fulfillmentcodehooksettings_1 = require("./fulfillmentcodehooksettings");
+var inputcontext_1 = require("./inputcontext");
+var intentclosingsetting_1 = require("./intentclosingsetting");
+var intentconfirmationsetting_1 = require("./intentconfirmationsetting");
+var kendraconfiguration_1 = require("./kendraconfiguration");
+var outputcontext_1 = require("./outputcontext");
+var sampleutterance_1 = require("./sampleutterance");
+var slotpriority_1 = require("./slotpriority");
 var DescribeIntentResponse = /** @class */ (function (_super) {
     __extends(DescribeIntentResponse, _super);
     function DescribeIntentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DescribeIntentResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogCodeHook" }),
-        __metadata("design:type", DialogCodeHookSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogCodeHook" }),
+        __metadata("design:type", dialogcodehooksettings_1.DialogCodeHookSettings)
     ], DescribeIntentResponse.prototype, "dialogCodeHook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fulfillmentCodeHook" }),
-        __metadata("design:type", FulfillmentCodeHookSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillmentCodeHook" }),
+        __metadata("design:type", fulfillmentcodehooksettings_1.FulfillmentCodeHookSettings)
     ], DescribeIntentResponse.prototype, "fulfillmentCodeHook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputContexts", elemType: InputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputContexts", elemType: inputcontext_1.InputContext }),
         __metadata("design:type", Array)
     ], DescribeIntentResponse.prototype, "inputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentClosingSetting" }),
-        __metadata("design:type", IntentClosingSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentClosingSetting" }),
+        __metadata("design:type", intentclosingsetting_1.IntentClosingSetting)
     ], DescribeIntentResponse.prototype, "intentClosingSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentConfirmationSetting" }),
-        __metadata("design:type", IntentConfirmationSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentConfirmationSetting" }),
+        __metadata("design:type", intentconfirmationsetting_1.IntentConfirmationSetting)
     ], DescribeIntentResponse.prototype, "intentConfirmationSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentId" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "intentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kendraConfiguration" }),
-        __metadata("design:type", KendraConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kendraConfiguration" }),
+        __metadata("design:type", kendraconfiguration_1.KendraConfiguration)
     ], DescribeIntentResponse.prototype, "kendraConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], DescribeIntentResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputContexts", elemType: OutputContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputContexts", elemType: outputcontext_1.OutputContext }),
         __metadata("design:type", Array)
     ], DescribeIntentResponse.prototype, "outputContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentIntentSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentIntentSignature" }),
         __metadata("design:type", String)
     ], DescribeIntentResponse.prototype, "parentIntentSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleUtterances", elemType: SampleUtterance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleUtterances", elemType: sampleutterance_1.SampleUtterance }),
         __metadata("design:type", Array)
     ], DescribeIntentResponse.prototype, "sampleUtterances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotPriorities", elemType: SlotPriority }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotPriorities", elemType: slotpriority_1.SlotPriority }),
         __metadata("design:type", Array)
     ], DescribeIntentResponse.prototype, "slotPriorities", void 0);
     return DescribeIntentResponse;
-}(SpeakeasyBase));
-export { DescribeIntentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeIntentResponse = DescribeIntentResponse;

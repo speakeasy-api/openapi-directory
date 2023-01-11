@@ -13,5 +13,5 @@ export class CreateRegistryResponse extends SpeakeasyBase {
   registryName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

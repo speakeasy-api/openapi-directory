@@ -21,7 +21,7 @@ export class GetPlaylistsQueryParams extends SpeakeasyBase {
 
 export class GetPlaylistsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -39,7 +39,7 @@ export class GetPlaylistsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   playlistsResponse?: shared.PlaylistsResponse;

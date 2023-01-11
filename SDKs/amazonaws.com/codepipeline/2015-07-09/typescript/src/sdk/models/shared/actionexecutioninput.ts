@@ -13,7 +13,7 @@ export class ActionExecutionInput extends SpeakeasyBase {
   actionTypeId?: ActionTypeId;
 
   @SpeakeasyMetadata({ data: "json, name=configuration" })
-  configuration?: Map<string, string>;
+  configuration?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=inputArtifacts", elemType: ArtifactDetail })
   inputArtifacts?: ArtifactDetail[];
@@ -25,7 +25,7 @@ export class ActionExecutionInput extends SpeakeasyBase {
   region?: string;
 
   @SpeakeasyMetadata({ data: "json, name=resolvedConfiguration" })
-  resolvedConfiguration?: Map<string, string>;
+  resolvedConfiguration?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=roleArn" })
   roleArn?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TenancyTenantsDeleteResponse = exports.TenancyTenantsDeleteRequest = exports.TenancyTenantsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TenancyTenantsDeletePathParams = /** @class */ (function (_super) {
     __extends(TenancyTenantsDeletePathParams, _super);
     function TenancyTenantsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], TenancyTenantsDeletePathParams.prototype, "id", void 0);
     return TenancyTenantsDeletePathParams;
-}(SpeakeasyBase));
-export { TenancyTenantsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TenancyTenantsDeletePathParams = TenancyTenantsDeletePathParams;
 var TenancyTenantsDeleteRequest = /** @class */ (function (_super) {
     __extends(TenancyTenantsDeleteRequest, _super);
     function TenancyTenantsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TenancyTenantsDeletePathParams)
     ], TenancyTenantsDeleteRequest.prototype, "pathParams", void 0);
     return TenancyTenantsDeleteRequest;
-}(SpeakeasyBase));
-export { TenancyTenantsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.TenancyTenantsDeleteRequest = TenancyTenantsDeleteRequest;
 var TenancyTenantsDeleteResponse = /** @class */ (function (_super) {
     __extends(TenancyTenantsDeleteResponse, _super);
     function TenancyTenantsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TenancyTenantsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TenancyTenantsDeleteResponse.prototype, "statusCode", void 0);
     return TenancyTenantsDeleteResponse;
-}(SpeakeasyBase));
-export { TenancyTenantsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.TenancyTenantsDeleteResponse = TenancyTenantsDeleteResponse;

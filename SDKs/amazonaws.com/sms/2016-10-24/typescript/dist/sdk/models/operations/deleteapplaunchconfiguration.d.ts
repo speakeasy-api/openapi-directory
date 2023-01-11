@@ -19,7 +19,7 @@ export declare class DeleteAppLaunchConfigurationRequest extends SpeakeasyBase {
 }
 export declare class DeleteAppLaunchConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAppLaunchConfigurationResponse?: Map<string, any>;
+    deleteAppLaunchConfigurationResponse?: Record<string, any>;
     internalError?: any;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;

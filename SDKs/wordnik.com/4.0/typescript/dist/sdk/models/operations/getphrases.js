@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPhrasesResponse = exports.GetPhrasesRequest = exports.GetPhrasesQueryParams = exports.GetPhrasesUseCanonicalEnum = exports.GetPhrasesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPhrasesPathParams = /** @class */ (function (_super) {
     __extends(GetPhrasesPathParams, _super);
     function GetPhrasesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetPhrasesPathParams.prototype, "word", void 0);
     return GetPhrasesPathParams;
-}(SpeakeasyBase));
-export { GetPhrasesPathParams };
-export var GetPhrasesUseCanonicalEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPhrasesPathParams = GetPhrasesPathParams;
+var GetPhrasesUseCanonicalEnum;
 (function (GetPhrasesUseCanonicalEnum) {
     GetPhrasesUseCanonicalEnum["False"] = "false";
     GetPhrasesUseCanonicalEnum["True"] = "true";
-})(GetPhrasesUseCanonicalEnum || (GetPhrasesUseCanonicalEnum = {}));
+})(GetPhrasesUseCanonicalEnum = exports.GetPhrasesUseCanonicalEnum || (exports.GetPhrasesUseCanonicalEnum = {}));
 var GetPhrasesQueryParams = /** @class */ (function (_super) {
     __extends(GetPhrasesQueryParams, _super);
     function GetPhrasesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetPhrasesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetPhrasesQueryParams.prototype, "useCanonical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=wlmi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=wlmi" }),
         __metadata("design:type", Number)
     ], GetPhrasesQueryParams.prototype, "wlmi", void 0);
     return GetPhrasesQueryParams;
-}(SpeakeasyBase));
-export { GetPhrasesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPhrasesQueryParams = GetPhrasesQueryParams;
 var GetPhrasesRequest = /** @class */ (function (_super) {
     __extends(GetPhrasesRequest, _super);
     function GetPhrasesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPhrasesPathParams)
     ], GetPhrasesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPhrasesQueryParams)
     ], GetPhrasesRequest.prototype, "queryParams", void 0);
     return GetPhrasesRequest;
-}(SpeakeasyBase));
-export { GetPhrasesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPhrasesRequest = GetPhrasesRequest;
 var GetPhrasesResponse = /** @class */ (function (_super) {
     __extends(GetPhrasesResponse, _super);
     function GetPhrasesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPhrasesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPhrasesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPhrasesResponse.prototype, "statusCode", void 0);
     return GetPhrasesResponse;
-}(SpeakeasyBase));
-export { GetPhrasesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPhrasesResponse = GetPhrasesResponse;

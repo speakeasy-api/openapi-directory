@@ -37,5 +37,5 @@ export class PostPackageUpdateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postPackageUpdateDefaultApplicationJsonString?: string;
+  postPackageUpdateDefaultApplicationJSONString?: string;
 }

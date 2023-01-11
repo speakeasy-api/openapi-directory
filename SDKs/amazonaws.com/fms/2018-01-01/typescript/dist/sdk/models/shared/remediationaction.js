@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2AssociateRouteTableAction } from "./ec2associateroutetableaction";
-import { Ec2CopyRouteTableAction } from "./ec2copyroutetableaction";
-import { Ec2CreateRouteAction } from "./ec2createrouteaction";
-import { Ec2CreateRouteTableAction } from "./ec2createroutetableaction";
-import { Ec2DeleteRouteAction } from "./ec2deleterouteaction";
-import { Ec2ReplaceRouteAction } from "./ec2replacerouteaction";
-import { Ec2ReplaceRouteTableAssociationAction } from "./ec2replaceroutetableassociationaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemediationAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var ec2associateroutetableaction_1 = require("./ec2associateroutetableaction");
+var ec2copyroutetableaction_1 = require("./ec2copyroutetableaction");
+var ec2createrouteaction_1 = require("./ec2createrouteaction");
+var ec2createroutetableaction_1 = require("./ec2createroutetableaction");
+var ec2deleterouteaction_1 = require("./ec2deleterouteaction");
+var ec2replacerouteaction_1 = require("./ec2replacerouteaction");
+var ec2replaceroutetableassociationaction_1 = require("./ec2replaceroutetableassociationaction");
 // RemediationAction
 /**
  * Information about an individual action you can take to remediate a violation.
@@ -40,37 +43,37 @@ var RemediationAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], RemediationAction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2AssociateRouteTableAction" }),
-        __metadata("design:type", Ec2AssociateRouteTableAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2AssociateRouteTableAction" }),
+        __metadata("design:type", ec2associateroutetableaction_1.Ec2AssociateRouteTableAction)
     ], RemediationAction.prototype, "ec2AssociateRouteTableAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2CopyRouteTableAction" }),
-        __metadata("design:type", Ec2CopyRouteTableAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2CopyRouteTableAction" }),
+        __metadata("design:type", ec2copyroutetableaction_1.Ec2CopyRouteTableAction)
     ], RemediationAction.prototype, "ec2CopyRouteTableAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2CreateRouteAction" }),
-        __metadata("design:type", Ec2CreateRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2CreateRouteAction" }),
+        __metadata("design:type", ec2createrouteaction_1.Ec2CreateRouteAction)
     ], RemediationAction.prototype, "ec2CreateRouteAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2CreateRouteTableAction" }),
-        __metadata("design:type", Ec2CreateRouteTableAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2CreateRouteTableAction" }),
+        __metadata("design:type", ec2createroutetableaction_1.Ec2CreateRouteTableAction)
     ], RemediationAction.prototype, "ec2CreateRouteTableAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2DeleteRouteAction" }),
-        __metadata("design:type", Ec2DeleteRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2DeleteRouteAction" }),
+        __metadata("design:type", ec2deleterouteaction_1.Ec2DeleteRouteAction)
     ], RemediationAction.prototype, "ec2DeleteRouteAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2ReplaceRouteAction" }),
-        __metadata("design:type", Ec2ReplaceRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2ReplaceRouteAction" }),
+        __metadata("design:type", ec2replacerouteaction_1.Ec2ReplaceRouteAction)
     ], RemediationAction.prototype, "ec2ReplaceRouteAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EC2ReplaceRouteTableAssociationAction" }),
-        __metadata("design:type", Ec2ReplaceRouteTableAssociationAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EC2ReplaceRouteTableAssociationAction" }),
+        __metadata("design:type", ec2replaceroutetableassociationaction_1.Ec2ReplaceRouteTableAssociationAction)
     ], RemediationAction.prototype, "ec2ReplaceRouteTableAssociationAction", void 0);
     return RemediationAction;
-}(SpeakeasyBase));
-export { RemediationAction };
+}(utils_1.SpeakeasyBase));
+exports.RemediationAction = RemediationAction;

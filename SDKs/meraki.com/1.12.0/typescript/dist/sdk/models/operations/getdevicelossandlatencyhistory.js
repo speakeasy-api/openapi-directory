@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,90 +23,92 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceLossAndLatencyHistoryResponse = exports.GetDeviceLossAndLatencyHistoryRequest = exports.GetDeviceLossAndLatencyHistoryQueryParams = exports.GetDeviceLossAndLatencyHistoryUplinkEnum = exports.GetDeviceLossAndLatencyHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceLossAndLatencyHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceLossAndLatencyHistoryPathParams, _super);
     function GetDeviceLossAndLatencyHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryPathParams.prototype, "serial", void 0);
     return GetDeviceLossAndLatencyHistoryPathParams;
-}(SpeakeasyBase));
-export { GetDeviceLossAndLatencyHistoryPathParams };
-export var GetDeviceLossAndLatencyHistoryUplinkEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLossAndLatencyHistoryPathParams = GetDeviceLossAndLatencyHistoryPathParams;
+var GetDeviceLossAndLatencyHistoryUplinkEnum;
 (function (GetDeviceLossAndLatencyHistoryUplinkEnum) {
     GetDeviceLossAndLatencyHistoryUplinkEnum["Wan1"] = "wan1";
     GetDeviceLossAndLatencyHistoryUplinkEnum["Wan2"] = "wan2";
     GetDeviceLossAndLatencyHistoryUplinkEnum["Cellular"] = "cellular";
-})(GetDeviceLossAndLatencyHistoryUplinkEnum || (GetDeviceLossAndLatencyHistoryUplinkEnum = {}));
+})(GetDeviceLossAndLatencyHistoryUplinkEnum = exports.GetDeviceLossAndLatencyHistoryUplinkEnum || (exports.GetDeviceLossAndLatencyHistoryUplinkEnum = {}));
 var GetDeviceLossAndLatencyHistoryQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceLossAndLatencyHistoryQueryParams, _super);
     function GetDeviceLossAndLatencyHistoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ip" }),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resolution" }),
         __metadata("design:type", Number)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uplink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uplink" }),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryQueryParams.prototype, "uplink", void 0);
     return GetDeviceLossAndLatencyHistoryQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceLossAndLatencyHistoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLossAndLatencyHistoryQueryParams = GetDeviceLossAndLatencyHistoryQueryParams;
 var GetDeviceLossAndLatencyHistoryRequest = /** @class */ (function (_super) {
     __extends(GetDeviceLossAndLatencyHistoryRequest, _super);
     function GetDeviceLossAndLatencyHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceLossAndLatencyHistoryPathParams)
     ], GetDeviceLossAndLatencyHistoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceLossAndLatencyHistoryQueryParams)
     ], GetDeviceLossAndLatencyHistoryRequest.prototype, "queryParams", void 0);
     return GetDeviceLossAndLatencyHistoryRequest;
-}(SpeakeasyBase));
-export { GetDeviceLossAndLatencyHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLossAndLatencyHistoryRequest = GetDeviceLossAndLatencyHistoryRequest;
 var GetDeviceLossAndLatencyHistoryResponse = /** @class */ (function (_super) {
     __extends(GetDeviceLossAndLatencyHistoryResponse, _super);
     function GetDeviceLossAndLatencyHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceLossAndLatencyHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceLossAndLatencyHistoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceLossAndLatencyHistoryResponse.prototype, "getDeviceLossAndLatencyHistory200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceLossAndLatencyHistoryResponse.prototype, "getDeviceLossAndLatencyHistory200ApplicationJSONObject", void 0);
     return GetDeviceLossAndLatencyHistoryResponse;
-}(SpeakeasyBase));
-export { GetDeviceLossAndLatencyHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLossAndLatencyHistoryResponse = GetDeviceLossAndLatencyHistoryResponse;

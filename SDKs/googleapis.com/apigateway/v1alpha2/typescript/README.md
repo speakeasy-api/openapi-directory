@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest, ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    resource: "ut",
+    resource: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "aut",
-    alt: "proto",
-    callback: "ipsum",
-    fields: "corporis",
-    key: "quas",
-    oauthToken: "velit",
-    optionsRequestedPolicyVersion: 3990556079943495899,
-    prettyPrint: true,
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    optionsRequestedPolicyVersion: 8274930044578894929,
+    prettyPrint: false,
     quotaUser: "nihil",
-    uploadType: "nemo",
-    uploadProtocol: "nostrum",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

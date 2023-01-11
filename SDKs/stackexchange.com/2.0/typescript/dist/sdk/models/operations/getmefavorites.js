@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMeFavoritesOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeFavoritesResponse = exports.GetMeFavoritesRequest = exports.GetMeFavoritesQueryParams = exports.GetMeFavoritesSortEnum = exports.GetMeFavoritesOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMeFavoritesOrderEnum;
 (function (GetMeFavoritesOrderEnum) {
     GetMeFavoritesOrderEnum["Desc"] = "desc";
     GetMeFavoritesOrderEnum["Asc"] = "asc";
-})(GetMeFavoritesOrderEnum || (GetMeFavoritesOrderEnum = {}));
-export var GetMeFavoritesSortEnum;
+})(GetMeFavoritesOrderEnum = exports.GetMeFavoritesOrderEnum || (exports.GetMeFavoritesOrderEnum = {}));
+var GetMeFavoritesSortEnum;
 (function (GetMeFavoritesSortEnum) {
     GetMeFavoritesSortEnum["Activity"] = "activity";
     GetMeFavoritesSortEnum["Creation"] = "creation";
     GetMeFavoritesSortEnum["Votes"] = "votes";
     GetMeFavoritesSortEnum["Added"] = "added";
-})(GetMeFavoritesSortEnum || (GetMeFavoritesSortEnum = {}));
+})(GetMeFavoritesSortEnum = exports.GetMeFavoritesSortEnum || (exports.GetMeFavoritesSortEnum = {}));
 var GetMeFavoritesQueryParams = /** @class */ (function (_super) {
     __extends(GetMeFavoritesQueryParams, _super);
     function GetMeFavoritesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetMeFavoritesQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetMeFavoritesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetMeFavoritesQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetMeFavoritesQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetMeFavoritesQueryParams.prototype, "todate", void 0);
     return GetMeFavoritesQueryParams;
-}(SpeakeasyBase));
-export { GetMeFavoritesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeFavoritesQueryParams = GetMeFavoritesQueryParams;
 var GetMeFavoritesRequest = /** @class */ (function (_super) {
     __extends(GetMeFavoritesRequest, _super);
     function GetMeFavoritesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeFavoritesQueryParams)
     ], GetMeFavoritesRequest.prototype, "queryParams", void 0);
     return GetMeFavoritesRequest;
-}(SpeakeasyBase));
-export { GetMeFavoritesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeFavoritesRequest = GetMeFavoritesRequest;
 var GetMeFavoritesResponse = /** @class */ (function (_super) {
     __extends(GetMeFavoritesResponse, _super);
     function GetMeFavoritesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeFavoritesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeFavoritesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeFavoritesResponse.prototype, "statusCode", void 0);
     return GetMeFavoritesResponse;
-}(SpeakeasyBase));
-export { GetMeFavoritesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeFavoritesResponse = GetMeFavoritesResponse;

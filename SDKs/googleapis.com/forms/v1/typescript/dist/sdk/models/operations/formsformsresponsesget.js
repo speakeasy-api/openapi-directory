@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,190 +14,215 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormsFormsResponsesGetResponse = exports.FormsFormsResponsesGetRequest = exports.FormsFormsResponsesGetSecurity = exports.FormsFormsResponsesGetSecurityOption3 = exports.FormsFormsResponsesGetSecurityOption2 = exports.FormsFormsResponsesGetSecurityOption1 = exports.FormsFormsResponsesGetQueryParams = exports.FormsFormsResponsesGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FormsFormsResponsesGetPathParams = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetPathParams, _super);
     function FormsFormsResponsesGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=formId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=formId" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetPathParams.prototype, "formId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=responseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=responseId" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetPathParams.prototype, "responseId", void 0);
     return FormsFormsResponsesGetPathParams;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetPathParams = FormsFormsResponsesGetPathParams;
 var FormsFormsResponsesGetQueryParams = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetQueryParams, _super);
     function FormsFormsResponsesGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], FormsFormsResponsesGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetQueryParams.prototype, "uploadProtocol", void 0);
     return FormsFormsResponsesGetQueryParams;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetQueryParams = FormsFormsResponsesGetQueryParams;
 var FormsFormsResponsesGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetSecurityOption1, _super);
     function FormsFormsResponsesGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsResponsesGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsResponsesGetSecurityOption1.prototype, "oauth2c", void 0);
     return FormsFormsResponsesGetSecurityOption1;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetSecurityOption1 = FormsFormsResponsesGetSecurityOption1;
 var FormsFormsResponsesGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetSecurityOption2, _super);
     function FormsFormsResponsesGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsResponsesGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsResponsesGetSecurityOption2.prototype, "oauth2c", void 0);
     return FormsFormsResponsesGetSecurityOption2;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetSecurityOption2 = FormsFormsResponsesGetSecurityOption2;
 var FormsFormsResponsesGetSecurityOption3 = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetSecurityOption3, _super);
     function FormsFormsResponsesGetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsResponsesGetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsResponsesGetSecurityOption3.prototype, "oauth2c", void 0);
     return FormsFormsResponsesGetSecurityOption3;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetSecurityOption3 = FormsFormsResponsesGetSecurityOption3;
 var FormsFormsResponsesGetSecurity = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetSecurity, _super);
     function FormsFormsResponsesGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsResponsesGetSecurityOption1)
     ], FormsFormsResponsesGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsResponsesGetSecurityOption2)
     ], FormsFormsResponsesGetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsResponsesGetSecurityOption3)
     ], FormsFormsResponsesGetSecurity.prototype, "option3", void 0);
     return FormsFormsResponsesGetSecurity;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetSecurity = FormsFormsResponsesGetSecurity;
 var FormsFormsResponsesGetRequest = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetRequest, _super);
     function FormsFormsResponsesGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsResponsesGetPathParams)
     ], FormsFormsResponsesGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsResponsesGetQueryParams)
     ], FormsFormsResponsesGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsResponsesGetSecurity)
     ], FormsFormsResponsesGetRequest.prototype, "security", void 0);
     return FormsFormsResponsesGetRequest;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetRequest = FormsFormsResponsesGetRequest;
 var FormsFormsResponsesGetResponse = /** @class */ (function (_super) {
     __extends(FormsFormsResponsesGetResponse, _super);
     function FormsFormsResponsesGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FormsFormsResponsesGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.FormResponse)
     ], FormsFormsResponsesGetResponse.prototype, "formResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FormsFormsResponsesGetResponse.prototype, "statusCode", void 0);
     return FormsFormsResponsesGetResponse;
-}(SpeakeasyBase));
-export { FormsFormsResponsesGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsResponsesGetResponse = FormsFormsResponsesGetResponse;

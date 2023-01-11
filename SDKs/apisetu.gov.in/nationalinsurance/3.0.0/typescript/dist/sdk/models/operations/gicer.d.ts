@@ -107,11 +107,11 @@ export declare class GicerRequest extends SpeakeasyBase {
 export declare class GicerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    gicer400ApplicationJsonObject?: Gicer400ApplicationJson;
-    gicer401ApplicationJsonObject?: Gicer401ApplicationJson;
-    gicer404ApplicationJsonObject?: Gicer404ApplicationJson;
-    gicer500ApplicationJsonObject?: Gicer500ApplicationJson;
-    gicer502ApplicationJsonObject?: Gicer502ApplicationJson;
-    gicer503ApplicationJsonObject?: Gicer503ApplicationJson;
-    gicer504ApplicationJsonObject?: Gicer504ApplicationJson;
+    gicer400ApplicationJSONObject?: Gicer400ApplicationJson;
+    gicer401ApplicationJSONObject?: Gicer401ApplicationJson;
+    gicer404ApplicationJSONObject?: Gicer404ApplicationJson;
+    gicer500ApplicationJSONObject?: Gicer500ApplicationJson;
+    gicer502ApplicationJSONObject?: Gicer502ApplicationJson;
+    gicer503ApplicationJSONObject?: Gicer503ApplicationJson;
+    gicer504ApplicationJSONObject?: Gicer504ApplicationJson;
 }

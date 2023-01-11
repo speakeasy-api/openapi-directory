@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayloadTypeEnum } from "./payloadtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Payload = void 0;
+var utils_1 = require("../../../internal/utils");
+var payloadtypeenum_1 = require("./payloadtypeenum");
 // Payload
 /**
  * <p>Information needed to configure the payload.</p> <p>By default, AWS IoT Events generates a standard payload in JSON for any action. This action payload contains all attribute-value pairs that have the information about the detector model instance and the event triggered the action. To configure the action payload, you can use <code>contentExpression</code>.</p>
@@ -34,13 +37,13 @@ var Payload = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentExpression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentExpression" }),
         __metadata("design:type", String)
     ], Payload.prototype, "contentExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Payload.prototype, "type", void 0);
     return Payload;
-}(SpeakeasyBase));
-export { Payload };
+}(utils_1.SpeakeasyBase));
+exports.Payload = Payload;

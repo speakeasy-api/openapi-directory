@@ -28,7 +28,7 @@ export class GetSetupV1CalendarsIdBlocksRequest extends SpeakeasyBase {
 
 export class GetSetupV1CalendarsIdBlocksResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  calendarBlockListViewModel?: Map<string, any>;
+  calendarBlockListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

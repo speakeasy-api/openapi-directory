@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CostMatrix = exports.CostMatrixTypeEnum = exports.CostMatrixData = exports.CostMatrixDataInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // CostMatrixDataInfo
 /**
  * Additional information for your request
@@ -33,16 +36,16 @@ var CostMatrixDataInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyrights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyrights" }),
         __metadata("design:type", Array)
     ], CostMatrixDataInfo.prototype, "copyrights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=took" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=took" }),
         __metadata("design:type", Number)
     ], CostMatrixDataInfo.prototype, "took", void 0);
     return CostMatrixDataInfo;
-}(SpeakeasyBase));
-export { CostMatrixDataInfo };
+}(utils_1.SpeakeasyBase));
+exports.CostMatrixDataInfo = CostMatrixDataInfo;
 // CostMatrixData
 /**
  * JSON data of matrix response
@@ -53,46 +56,46 @@ var CostMatrixData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distances" }),
         __metadata("design:type", Array)
     ], CostMatrixData.prototype, "distances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
         __metadata("design:type", CostMatrixDataInfo)
     ], CostMatrixData.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=times" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=times" }),
         __metadata("design:type", Array)
     ], CostMatrixData.prototype, "times", void 0);
     return CostMatrixData;
-}(SpeakeasyBase));
-export { CostMatrixData };
-export var CostMatrixTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.CostMatrixData = CostMatrixData;
+var CostMatrixTypeEnum;
 (function (CostMatrixTypeEnum) {
     CostMatrixTypeEnum["Default"] = "default";
     CostMatrixTypeEnum["Google"] = "google";
-})(CostMatrixTypeEnum || (CostMatrixTypeEnum = {}));
+})(CostMatrixTypeEnum = exports.CostMatrixTypeEnum || (exports.CostMatrixTypeEnum = {}));
 var CostMatrix = /** @class */ (function (_super) {
     __extends(CostMatrix, _super);
     function CostMatrix() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CostMatrixData)
     ], CostMatrix.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_ids" }),
         __metadata("design:type", Array)
     ], CostMatrix.prototype, "locationIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], CostMatrix.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CostMatrix.prototype, "type", void 0);
     return CostMatrix;
-}(SpeakeasyBase));
-export { CostMatrix };
+}(utils_1.SpeakeasyBase));
+exports.CostMatrix = CostMatrix;

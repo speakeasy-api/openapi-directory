@@ -48,7 +48,7 @@ export class DeletePermissionPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deletePermissionPolicyResponse?: Map<string, any>;
+  deletePermissionPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SplitOidResponse = exports.SplitOidRequest = exports.SplitOidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SplitOidPathParams = /** @class */ (function (_super) {
     __extends(SplitOidPathParams, _super);
     function SplitOidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=OID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=OID" }),
         __metadata("design:type", String)
     ], SplitOidPathParams.prototype, "oid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SplitOidPathParams.prototype, "agentNum", void 0);
     return SplitOidPathParams;
-}(SpeakeasyBase));
-export { SplitOidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SplitOidPathParams = SplitOidPathParams;
 var SplitOidRequest = /** @class */ (function (_super) {
     __extends(SplitOidRequest, _super);
     function SplitOidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SplitOidPathParams)
     ], SplitOidRequest.prototype, "pathParams", void 0);
     return SplitOidRequest;
-}(SpeakeasyBase));
-export { SplitOidRequest };
+}(utils_1.SpeakeasyBase));
+exports.SplitOidRequest = SplitOidRequest;
 var SplitOidResponse = /** @class */ (function (_super) {
     __extends(SplitOidResponse, _super);
     function SplitOidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SplitOidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SplitOidResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], SplitOidResponse.prototype, "splitOid200ApplicationJsonStrings", void 0);
+    ], SplitOidResponse.prototype, "splitOid200ApplicationJSONStrings", void 0);
     return SplitOidResponse;
-}(SpeakeasyBase));
-export { SplitOidResponse };
+}(utils_1.SpeakeasyBase));
+exports.SplitOidResponse = SplitOidResponse;

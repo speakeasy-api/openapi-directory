@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,130 +14,155 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyticsManagementRemarketingAudienceUpdateResponse = exports.AnalyticsManagementRemarketingAudienceUpdateRequest = exports.AnalyticsManagementRemarketingAudienceUpdateSecurity = exports.AnalyticsManagementRemarketingAudienceUpdateQueryParams = exports.AnalyticsManagementRemarketingAudienceUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AnalyticsManagementRemarketingAudienceUpdatePathParams = /** @class */ (function (_super) {
     __extends(AnalyticsManagementRemarketingAudienceUpdatePathParams, _super);
     function AnalyticsManagementRemarketingAudienceUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdatePathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=remarketingAudienceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=remarketingAudienceId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdatePathParams.prototype, "remarketingAudienceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=webPropertyId" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdatePathParams.prototype, "webPropertyId", void 0);
     return AnalyticsManagementRemarketingAudienceUpdatePathParams;
-}(SpeakeasyBase));
-export { AnalyticsManagementRemarketingAudienceUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementRemarketingAudienceUpdatePathParams = AnalyticsManagementRemarketingAudienceUpdatePathParams;
 var AnalyticsManagementRemarketingAudienceUpdateQueryParams = /** @class */ (function (_super) {
     __extends(AnalyticsManagementRemarketingAudienceUpdateQueryParams, _super);
     function AnalyticsManagementRemarketingAudienceUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateQueryParams.prototype, "userIp", void 0);
     return AnalyticsManagementRemarketingAudienceUpdateQueryParams;
-}(SpeakeasyBase));
-export { AnalyticsManagementRemarketingAudienceUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementRemarketingAudienceUpdateQueryParams = AnalyticsManagementRemarketingAudienceUpdateQueryParams;
 var AnalyticsManagementRemarketingAudienceUpdateSecurity = /** @class */ (function (_super) {
     __extends(AnalyticsManagementRemarketingAudienceUpdateSecurity, _super);
     function AnalyticsManagementRemarketingAudienceUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AnalyticsManagementRemarketingAudienceUpdateSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AnalyticsManagementRemarketingAudienceUpdateSecurity.prototype, "oauth2c", void 0);
     return AnalyticsManagementRemarketingAudienceUpdateSecurity;
-}(SpeakeasyBase));
-export { AnalyticsManagementRemarketingAudienceUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementRemarketingAudienceUpdateSecurity = AnalyticsManagementRemarketingAudienceUpdateSecurity;
 var AnalyticsManagementRemarketingAudienceUpdateRequest = /** @class */ (function (_super) {
     __extends(AnalyticsManagementRemarketingAudienceUpdateRequest, _super);
     function AnalyticsManagementRemarketingAudienceUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementRemarketingAudienceUpdatePathParams)
     ], AnalyticsManagementRemarketingAudienceUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementRemarketingAudienceUpdateQueryParams)
     ], AnalyticsManagementRemarketingAudienceUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.RemarketingAudienceInput)
     ], AnalyticsManagementRemarketingAudienceUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsManagementRemarketingAudienceUpdateSecurity)
     ], AnalyticsManagementRemarketingAudienceUpdateRequest.prototype, "security", void 0);
     return AnalyticsManagementRemarketingAudienceUpdateRequest;
-}(SpeakeasyBase));
-export { AnalyticsManagementRemarketingAudienceUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementRemarketingAudienceUpdateRequest = AnalyticsManagementRemarketingAudienceUpdateRequest;
 var AnalyticsManagementRemarketingAudienceUpdateResponse = /** @class */ (function (_super) {
     __extends(AnalyticsManagementRemarketingAudienceUpdateResponse, _super);
     function AnalyticsManagementRemarketingAudienceUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnalyticsManagementRemarketingAudienceUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RemarketingAudience)
     ], AnalyticsManagementRemarketingAudienceUpdateResponse.prototype, "remarketingAudience", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AnalyticsManagementRemarketingAudienceUpdateResponse.prototype, "statusCode", void 0);
     return AnalyticsManagementRemarketingAudienceUpdateResponse;
-}(SpeakeasyBase));
-export { AnalyticsManagementRemarketingAudienceUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsManagementRemarketingAudienceUpdateResponse = AnalyticsManagementRemarketingAudienceUpdateResponse;

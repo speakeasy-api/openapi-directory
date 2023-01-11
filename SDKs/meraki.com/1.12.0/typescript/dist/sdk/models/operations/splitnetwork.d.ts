@@ -8,5 +8,5 @@ export declare class SplitNetworkRequest extends SpeakeasyBase {
 export declare class SplitNetworkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    splitNetwork200ApplicationJsonObject?: Map<string, any>;
+    splitNetwork200ApplicationJSONObject?: Record<string, any>;
 }

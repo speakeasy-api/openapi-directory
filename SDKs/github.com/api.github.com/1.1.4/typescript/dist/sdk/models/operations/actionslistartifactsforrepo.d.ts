@@ -18,7 +18,7 @@ export declare class ActionsListArtifactsForRepoRequest extends SpeakeasyBase {
 }
 export declare class ActionsListArtifactsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListArtifactsForRepo200ApplicationJsonObject?: ActionsListArtifactsForRepo200ApplicationJson;
+    actionsListArtifactsForRepo200ApplicationJSONObject?: ActionsListArtifactsForRepo200ApplicationJson;
 }

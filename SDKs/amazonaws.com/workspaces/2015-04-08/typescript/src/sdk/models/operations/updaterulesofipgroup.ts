@@ -66,5 +66,5 @@ export class UpdateRulesOfIpGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateRulesOfIpGroupResult?: Map<string, any>;
+  updateRulesOfIpGroupResult?: Record<string, any>;
 }

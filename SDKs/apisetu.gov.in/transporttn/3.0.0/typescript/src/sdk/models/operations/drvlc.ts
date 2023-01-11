@@ -198,23 +198,23 @@ export class DrvlcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  drvlc400ApplicationJsonObject?: Drvlc400ApplicationJson;
+  drvlc400ApplicationJSONObject?: Drvlc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc401ApplicationJsonObject?: Drvlc401ApplicationJson;
+  drvlc401ApplicationJSONObject?: Drvlc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc404ApplicationJsonObject?: Drvlc404ApplicationJson;
+  drvlc404ApplicationJSONObject?: Drvlc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc500ApplicationJsonObject?: Drvlc500ApplicationJson;
+  drvlc500ApplicationJSONObject?: Drvlc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc502ApplicationJsonObject?: Drvlc502ApplicationJson;
+  drvlc502ApplicationJSONObject?: Drvlc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc503ApplicationJsonObject?: Drvlc503ApplicationJson;
+  drvlc503ApplicationJSONObject?: Drvlc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  drvlc504ApplicationJsonObject?: Drvlc504ApplicationJson;
+  drvlc504ApplicationJSONObject?: Drvlc504ApplicationJson;
 }

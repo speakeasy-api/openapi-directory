@@ -38,11 +38,11 @@ export class FindFormsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  findForms200ApplicationJsonObject?: FindForms200ApplicationJson;
+  findForms200ApplicationJSONObject?: FindForms200ApplicationJson;
 
   @SpeakeasyMetadata()
-  findForms401ApplicationJsonAny?: any;
+  findForms401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  findForms429ApplicationJsonAny?: any;
+  findForms429ApplicationJSONAny?: any;
 }

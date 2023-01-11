@@ -9,7 +9,7 @@ import { AttributeScores } from "./attributescores";
 **/
 export class AnalyzeCommentResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributeScores", elemType: AttributeScores })
-  attributeScores?: Map<string, AttributeScores>;
+  attributeScores?: Record<string, AttributeScores>;
 
   @SpeakeasyMetadata({ data: "json, name=clientToken" })
   clientToken?: string;

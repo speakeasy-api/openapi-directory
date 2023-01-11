@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayConnectPeer } from "./transitgatewayconnectpeer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTransitGatewayConnectPeerResult = exports.CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer = exports.CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration
+/**
+ * The Connect peer details.
+**/
+var CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration, _super);
+    function CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration.prototype, "bgpConfigurations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration.prototype, "insideCidrBlocks", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration.prototype, "peerAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration.prototype, "protocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration.prototype, "transitGatewayAddress", void 0);
+    return CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration = CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration;
+// CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer
+/**
+ * Information about the Connect peer.
+**/
+var CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer, _super);
+    function CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "connectPeerConfiguration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "transitGatewayAttachmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer.prototype, "transitGatewayConnectPeerId", void 0);
+    return CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer = CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer;
 var CreateTransitGatewayConnectPeerResult = /** @class */ (function (_super) {
     __extends(CreateTransitGatewayConnectPeerResult, _super);
     function CreateTransitGatewayConnectPeerResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayConnectPeer)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayConnectPeerResultTransitGatewayConnectPeer)
     ], CreateTransitGatewayConnectPeerResult.prototype, "transitGatewayConnectPeer", void 0);
     return CreateTransitGatewayConnectPeerResult;
-}(SpeakeasyBase));
-export { CreateTransitGatewayConnectPeerResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayConnectPeerResult = CreateTransitGatewayConnectPeerResult;

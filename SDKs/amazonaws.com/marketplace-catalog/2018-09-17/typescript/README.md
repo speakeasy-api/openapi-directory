@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelChangeSetRequest, CancelChangeSetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelChangeSetRequest = {
   queryParams: {
-    catalog: "voluptas",
-    changeSetId: "atque",
+    catalog: "sit",
+    changeSetId: "voluptas",
   },
   headers: {
-    xAmzAlgorithm: "et",
-    xAmzContentSha256: "nobis",
-    xAmzCredential: "ipsum",
+    xAmzAlgorithm: "culpa",
+    xAmzContentSha256: "expedita",
+    xAmzCredential: "consequuntur",
     xAmzDate: "dolor",
-    xAmzSecurityToken: "est",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "id",
+    xAmzSecurityToken: "expedita",
+    xAmzSignature: "voluptas",
+    xAmzSignedHeaders: "fugit",
   },
 };
 
-sdk.sdk.cancelChangeSet(req).then((res: CancelChangeSetResponse | AxiosError) => {
+sdk.cancelChangeSet(req).then((res: CancelChangeSetResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Asset } from "./asset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statement = void 0;
+var utils_1 = require("../../../internal/utils");
+var asset_1 = require("./asset");
 // Statement
 /**
  * Describes a reliable statement that has been made about the relationship between a source asset and a target asset. Statements are always made by the source asset, either directly or by delegating to a statement list that is stored elsewhere. For more detailed definitions of statements and assets, please refer to our [API documentation landing page](/digital-asset-links/v1/getting-started).
@@ -34,17 +37,17 @@ var Statement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relation" }),
         __metadata("design:type", String)
     ], Statement.prototype, "relation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", Asset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", asset_1.Asset)
     ], Statement.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
-        __metadata("design:type", Asset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
+        __metadata("design:type", asset_1.Asset)
     ], Statement.prototype, "target", void 0);
     return Statement;
-}(SpeakeasyBase));
-export { Statement };
+}(utils_1.SpeakeasyBase));
+exports.Statement = Statement;

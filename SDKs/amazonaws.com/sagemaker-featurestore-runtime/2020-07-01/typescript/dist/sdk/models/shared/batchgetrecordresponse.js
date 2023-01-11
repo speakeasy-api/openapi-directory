@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchGetRecordError } from "./batchgetrecorderror";
-import { BatchGetRecordResultDetail } from "./batchgetrecordresultdetail";
-import { BatchGetRecordIdentifier } from "./batchgetrecordidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetRecordResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchgetrecorderror_1 = require("./batchgetrecorderror");
+var batchgetrecordresultdetail_1 = require("./batchgetrecordresultdetail");
+var batchgetrecordidentifier_1 = require("./batchgetrecordidentifier");
 var BatchGetRecordResponse = /** @class */ (function (_super) {
     __extends(BatchGetRecordResponse, _super);
     function BatchGetRecordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors", elemType: BatchGetRecordError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors", elemType: batchgetrecorderror_1.BatchGetRecordError }),
         __metadata("design:type", Array)
     ], BatchGetRecordResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Records", elemType: BatchGetRecordResultDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Records", elemType: batchgetrecordresultdetail_1.BatchGetRecordResultDetail }),
         __metadata("design:type", Array)
     ], BatchGetRecordResponse.prototype, "records", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedIdentifiers", elemType: BatchGetRecordIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedIdentifiers", elemType: batchgetrecordidentifier_1.BatchGetRecordIdentifier }),
         __metadata("design:type", Array)
     ], BatchGetRecordResponse.prototype, "unprocessedIdentifiers", void 0);
     return BatchGetRecordResponse;
-}(SpeakeasyBase));
-export { BatchGetRecordResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetRecordResponse = BatchGetRecordResponse;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListDistributionsByWebAclId20181105PathParams extends SpeakeasyBase {
-    webAclId: string;
+    webACLId: string;
 }
 export declare class ListDistributionsByWebAclId20181105QueryParams extends SpeakeasyBase {
     marker?: string;

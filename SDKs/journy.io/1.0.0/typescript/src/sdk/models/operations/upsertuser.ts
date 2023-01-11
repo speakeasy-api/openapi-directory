@@ -24,7 +24,7 @@ export class UpsertUserRequestBody extends SpeakeasyBase {
   identification: UpsertUserRequestBodyIdentification;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, any>;
+  properties?: Record<string, any>;
 }
 
 
@@ -37,6 +37,10 @@ export class UpsertUser201ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser201ApplicationJson
+/** 
+ * The object was created
+**/
 export class UpsertUser201ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -52,13 +56,13 @@ export class UpsertUser201ApplicationJson extends SpeakeasyBase {
 **/
 export class UpsertUser400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -68,7 +72,7 @@ export class UpsertUser400ApplicationJsonErrorsParameters extends SpeakeasyBase 
 **/
 export class UpsertUser400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: UpsertUser400ApplicationJsonErrorsParameters;
@@ -84,6 +88,10 @@ export class UpsertUser400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class UpsertUser400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: UpsertUser400ApplicationJsonErrors;
@@ -105,6 +113,10 @@ export class UpsertUser401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertUser401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -123,6 +135,10 @@ export class UpsertUser403ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser403ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertUser403ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -141,6 +157,10 @@ export class UpsertUser429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertUser429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -159,6 +179,10 @@ export class UpsertUser500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// UpsertUser500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class UpsertUser500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -179,26 +203,26 @@ export class UpsertUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  upsertUser201ApplicationJsonObject?: UpsertUser201ApplicationJson;
+  upsertUser201ApplicationJSONObject?: UpsertUser201ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertUser400ApplicationJsonObject?: UpsertUser400ApplicationJson;
+  upsertUser400ApplicationJSONObject?: UpsertUser400ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertUser401ApplicationJsonObject?: UpsertUser401ApplicationJson;
+  upsertUser401ApplicationJSONObject?: UpsertUser401ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertUser403ApplicationJsonObject?: UpsertUser403ApplicationJson;
+  upsertUser403ApplicationJSONObject?: UpsertUser403ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertUser429ApplicationJsonObject?: UpsertUser429ApplicationJson;
+  upsertUser429ApplicationJSONObject?: UpsertUser429ApplicationJson;
 
   @SpeakeasyMetadata()
-  upsertUser500ApplicationJsonObject?: UpsertUser500ApplicationJson;
+  upsertUser500ApplicationJSONObject?: UpsertUser500ApplicationJson;
 }

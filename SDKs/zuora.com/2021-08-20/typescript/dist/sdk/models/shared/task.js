@@ -1,0 +1,185 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Task = exports.TaskStatusEnum = exports.TaskActionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TaskActionTypeEnum;
+(function (TaskActionTypeEnum) {
+    TaskActionTypeEnum["Approval"] = "Approval";
+    TaskActionTypeEnum["Attachment"] = "Attachment";
+    TaskActionTypeEnum["BillingBillRun"] = "Billing::BillRun";
+    TaskActionTypeEnum["BillingCurrencyConversion"] = "Billing::CurrencyConversion";
+    TaskActionTypeEnum["BillingCustomInvoice"] = "Billing::CustomInvoice";
+    TaskActionTypeEnum["Callout"] = "Callout";
+    TaskActionTypeEnum["Cancel"] = "Cancel";
+    TaskActionTypeEnum["Create"] = "Create";
+    TaskActionTypeEnum["CustomObjectCreate"] = "CustomObject::Create";
+    TaskActionTypeEnum["CustomObjectDelete"] = "CustomObject::Delete";
+    TaskActionTypeEnum["CustomObjectQuery"] = "CustomObject::Query";
+    TaskActionTypeEnum["CustomObjectUpdate"] = "CustomObject::Update";
+    TaskActionTypeEnum["DataBillingPreviewRun"] = "Data::BillingPreviewRun";
+    TaskActionTypeEnum["DataLink"] = "Data::Link";
+    TaskActionTypeEnum["Delay"] = "Delay";
+    TaskActionTypeEnum["Delete"] = "Delete";
+    TaskActionTypeEnum["DownloadSftp"] = "Download::SFTP";
+    TaskActionTypeEnum["Email"] = "Email";
+    TaskActionTypeEnum["Export"] = "Export";
+    TaskActionTypeEnum["FileCustomPdfCustomDocument"] = "File::CustomPDF::CustomDocument";
+    TaskActionTypeEnum["If"] = "If";
+    TaskActionTypeEnum["InvoiceGenerate"] = "InvoiceGenerate";
+    TaskActionTypeEnum["Iterate"] = "Iterate";
+    TaskActionTypeEnum["LogicCsvTranslator"] = "Logic::CSVTranslator";
+    TaskActionTypeEnum["LogicCase"] = "Logic::Case";
+    TaskActionTypeEnum["LogicCustomCode"] = "Logic::CustomCode";
+    TaskActionTypeEnum["LogicJsonTransform"] = "Logic::JSONTransform";
+    TaskActionTypeEnum["LogicLambda"] = "Logic::Lambda";
+    TaskActionTypeEnum["LogicResponseFormatter"] = "Logic::ResponseFormatter";
+    TaskActionTypeEnum["LogicXmlTransform"] = "Logic::XMLTransform";
+    TaskActionTypeEnum["NewProduct"] = "NewProduct";
+    TaskActionTypeEnum["NotificationsGoogleCloudPrint"] = "Notifications::GoogleCloudPrint";
+    TaskActionTypeEnum["NotificationsPhoneCall"] = "Notifications::PhoneCall";
+    TaskActionTypeEnum["NotificationsSms"] = "Notifications::SMS";
+    TaskActionTypeEnum["PaymentGatewayReconciliation"] = "Payment::GatewayReconciliation";
+    TaskActionTypeEnum["PaymentPaymentRun"] = "Payment::PaymentRun";
+    TaskActionTypeEnum["Query"] = "Query";
+    TaskActionTypeEnum["RemoveProduct"] = "RemoveProduct";
+    TaskActionTypeEnum["ReportingReportData"] = "Reporting::ReportData";
+    TaskActionTypeEnum["ReportingRunReport"] = "Reporting::RunReport";
+    TaskActionTypeEnum["Resume"] = "Resume";
+    TaskActionTypeEnum["Suspend"] = "Suspend";
+    TaskActionTypeEnum["UiPage"] = "UI::Page";
+    TaskActionTypeEnum["UiStop"] = "UI::Stop";
+    TaskActionTypeEnum["Update"] = "Update";
+    TaskActionTypeEnum["UploadFtp"] = "Upload::FTP";
+    TaskActionTypeEnum["UploadSftp"] = "Upload::SFTP";
+    TaskActionTypeEnum["WriteOff"] = "WriteOff";
+})(TaskActionTypeEnum = exports.TaskActionTypeEnum || (exports.TaskActionTypeEnum = {}));
+var TaskStatusEnum;
+(function (TaskStatusEnum) {
+    TaskStatusEnum["Queued"] = "Queued";
+    TaskStatusEnum["Processing"] = "Processing";
+    TaskStatusEnum["Pending"] = "Pending";
+    TaskStatusEnum["Success"] = "Success";
+    TaskStatusEnum["Stopped"] = "Stopped";
+    TaskStatusEnum["Error"] = "Error";
+})(TaskStatusEnum = exports.TaskStatusEnum || (exports.TaskStatusEnum = {}));
+// Task
+/**
+ * A task.
+ *
+**/
+var Task = /** @class */ (function (_super) {
+    __extends(Task, _super);
+    function Task() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action_type" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "actionType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=call_type" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "callType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concurrent_limit" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "concurrentLimit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
+    ], Task.prototype, "data", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "endTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_class" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "errorClass", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_details" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "errorDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instance" }),
+        __metadata("design:type", Boolean)
+    ], Task.prototype, "instance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "object", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object_id" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "objectId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=original_task_id" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "originalTaskId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=original_workflow_id" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "originalWorkflowId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
+        __metadata("design:type", Object)
+    ], Task.prototype, "parameters", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "startTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], Task.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Array)
+    ], Task.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task_id" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "taskId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflow_id" }),
+        __metadata("design:type", Number)
+    ], Task.prototype, "workflowId", void 0);
+    return Task;
+}(utils_1.SpeakeasyBase));
+exports.Task = Task;

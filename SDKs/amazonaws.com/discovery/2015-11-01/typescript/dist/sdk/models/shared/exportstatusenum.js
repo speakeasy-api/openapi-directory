@@ -1,6 +1,9 @@
-export var ExportStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportStatusEnum = void 0;
+var ExportStatusEnum;
 (function (ExportStatusEnum) {
     ExportStatusEnum["Failed"] = "FAILED";
     ExportStatusEnum["Succeeded"] = "SUCCEEDED";
     ExportStatusEnum["InProgress"] = "IN_PROGRESS";
-})(ExportStatusEnum || (ExportStatusEnum = {}));
+})(ExportStatusEnum = exports.ExportStatusEnum || (exports.ExportStatusEnum = {}));

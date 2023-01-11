@@ -19,14 +19,14 @@ export declare class AdvancedSeasonStatDefensePassingPlays extends SpeakeasyBase
     ppa?: number;
     rate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStatDefenseRushingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     rate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStatDefenseStandardDowns extends SpeakeasyBase {
     explosiveness?: number;
@@ -55,7 +55,7 @@ export declare class AdvancedSeasonStatDefense extends SpeakeasyBase {
     standardDowns?: AdvancedSeasonStatDefenseStandardDowns;
     stuffRate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStatOffenseFieldPosition extends SpeakeasyBase {
     averagePredictedPoints?: number;
@@ -77,14 +77,14 @@ export declare class AdvancedSeasonStatOffensePassingPlays extends SpeakeasyBase
     ppa?: number;
     rate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStatOffenseRushingPlays extends SpeakeasyBase {
     explosiveness?: number;
     ppa?: number;
     rate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStatOffenseStandardDowns extends SpeakeasyBase {
     explosiveness?: number;
@@ -113,7 +113,7 @@ export declare class AdvancedSeasonStatOffense extends SpeakeasyBase {
     standardDowns?: AdvancedSeasonStatOffenseStandardDowns;
     stuffRate?: number;
     successRate?: number;
-    totalPpa?: number;
+    totalPPA?: number;
 }
 export declare class AdvancedSeasonStat extends SpeakeasyBase {
     conference?: string;

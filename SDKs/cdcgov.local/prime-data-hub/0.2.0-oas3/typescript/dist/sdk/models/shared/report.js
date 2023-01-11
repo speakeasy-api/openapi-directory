@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Destination } from "./destination";
-import { Detail } from "./detail";
-import { ItemRouting } from "./itemrouting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Report = void 0;
+var utils_1 = require("../../../internal/utils");
+var destination_1 = require("./destination");
+var detail_1 = require("./detail");
+var itemrouting_1 = require("./itemrouting");
 var Report = /** @class */ (function (_super) {
     __extends(Report, _super);
     function Report() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationCount" }),
         __metadata("design:type", Number)
     ], Report.prototype, "destinationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: Destination }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: destination_1.Destination }),
         __metadata("design:type", Array)
     ], Report.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCount" }),
         __metadata("design:type", Number)
     ], Report.prototype, "errorCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Detail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: detail_1.Detail }),
         __metadata("design:type", Array)
     ], Report.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Report.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportItemCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportItemCount" }),
         __metadata("design:type", Number)
     ], Report.prototype, "reportItemCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routing", elemType: ItemRouting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routing", elemType: itemrouting_1.ItemRouting }),
         __metadata("design:type", Array)
     ], Report.prototype, "routing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], Report.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], Report.prototype, "topic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warningCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warningCount" }),
         __metadata("design:type", Number)
     ], Report.prototype, "warningCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Detail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: detail_1.Detail }),
         __metadata("design:type", Array)
     ], Report.prototype, "warnings", void 0);
     return Report;
-}(SpeakeasyBase));
-export { Report };
+}(utils_1.SpeakeasyBase));
+exports.Report = Report;

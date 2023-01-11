@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class V3StopGeosearch extends SpeakeasyBase {
     disruptionIds?: number[];
     routeType?: number;
-    routes?: Map<string, any>[];
+    routes?: Record<string, any>[];
     stopDistance?: number;
     stopId?: number;
     stopLandmark?: string;

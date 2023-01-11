@@ -10,5 +10,5 @@ export class FavicoFaviconIcoGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  favicoFaviconIcoGet200ApplicationJsonAny?: any;
+  favicoFaviconIcoGet200ApplicationJSONAny?: any;
 }

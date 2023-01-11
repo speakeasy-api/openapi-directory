@@ -9,7 +9,7 @@ import { SupportDataSetTypeEnum } from "./supportdatasettypeenum";
 **/
 export class StartSupportDataExportRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=customerDefinedValues" })
-  customerDefinedValues?: Map<string, string>;
+  customerDefinedValues?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=dataSetType" })
   dataSetType: SupportDataSetTypeEnum;

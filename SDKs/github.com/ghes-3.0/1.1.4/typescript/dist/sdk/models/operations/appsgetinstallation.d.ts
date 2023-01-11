@@ -13,7 +13,7 @@ export declare class AppsGetInstallationRequest extends SpeakeasyBase {
 export declare class AppsGetInstallationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsGetInstallation415ApplicationJsonObject?: AppsGetInstallation415ApplicationJson;
+    appsGetInstallation415ApplicationJSONObject?: AppsGetInstallation415ApplicationJson;
     basicError?: shared.BasicError;
     installation?: shared.Installation;
 }

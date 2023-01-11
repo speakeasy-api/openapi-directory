@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesTagsFormatResponse = exports.GetResourcesTagsFormatRequest = exports.GetResourcesTagsFormatQueryParams = exports.GetResourcesTagsFormatPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetResourcesTagsFormatPathParams = /** @class */ (function (_super) {
     __extends(GetResourcesTagsFormatPathParams, _super);
     function GetResourcesTagsFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatPathParams.prototype, "format", void 0);
     return GetResourcesTagsFormatPathParams;
-}(SpeakeasyBase));
-export { GetResourcesTagsFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsFormatPathParams = GetResourcesTagsFormatPathParams;
 var GetResourcesTagsFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesTagsFormatQueryParams, _super);
     function GetResourcesTagsFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=max" }),
         __metadata("design:type", Number)
     ], GetResourcesTagsFormatQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=mediaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=mediaId" }),
         __metadata("design:type", Number)
     ], GetResourcesTagsFormatQueryParams.prototype, "mediaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=nameContains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=nameContains" }),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatQueryParams.prototype, "nameContains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=offset" }),
         __metadata("design:type", Number)
     ], GetResourcesTagsFormatQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=sort" }),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=typeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=typeId" }),
         __metadata("design:type", Number)
     ], GetResourcesTagsFormatQueryParams.prototype, "typeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=typeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=typeName" }),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatQueryParams.prototype, "typeName", void 0);
     return GetResourcesTagsFormatQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesTagsFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsFormatQueryParams = GetResourcesTagsFormatQueryParams;
 var GetResourcesTagsFormatRequest = /** @class */ (function (_super) {
     __extends(GetResourcesTagsFormatRequest, _super);
     function GetResourcesTagsFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesTagsFormatPathParams)
     ], GetResourcesTagsFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesTagsFormatQueryParams)
     ], GetResourcesTagsFormatRequest.prototype, "queryParams", void 0);
     return GetResourcesTagsFormatRequest;
-}(SpeakeasyBase));
-export { GetResourcesTagsFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsFormatRequest = GetResourcesTagsFormatRequest;
 var GetResourcesTagsFormatResponse = /** @class */ (function (_super) {
     __extends(GetResourcesTagsFormatResponse, _super);
     function GetResourcesTagsFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesTagsFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesTagsFormatResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.TagMarshallerWrapped }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.TagMarshallerWrapped }),
         __metadata("design:type", Array)
     ], GetResourcesTagsFormatResponse.prototype, "tagMarshallerWrappeds", void 0);
     return GetResourcesTagsFormatResponse;
-}(SpeakeasyBase));
-export { GetResourcesTagsFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesTagsFormatResponse = GetResourcesTagsFormatResponse;

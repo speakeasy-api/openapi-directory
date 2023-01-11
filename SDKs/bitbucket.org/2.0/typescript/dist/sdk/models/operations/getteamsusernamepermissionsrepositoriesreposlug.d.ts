@@ -21,6 +21,6 @@ export declare class GetTeamsUsernamePermissionsRepositoriesRepoSlugRequest exte
 export declare class GetTeamsUsernamePermissionsRepositoriesRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedRepositoryPermissions?: shared.PaginatedRepositoryPermissions;
 }

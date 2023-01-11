@@ -5,7 +5,7 @@ import { FunctionStageEnum } from "./functionstageenum";
 **/
 export declare class FunctionMetadata extends SpeakeasyBase {
     createdTime?: Date;
-    functionArn: string;
+    functionARN: string;
     lastModifiedTime: Date;
     stage?: FunctionStageEnum;
 }

@@ -16,12 +16,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdM
 export declare class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergePathParams;
     queryParams: PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pullrequest?: Map<string, any>;
+    error?: Record<string, any>;
+    pullrequest?: Record<string, any>;
 }

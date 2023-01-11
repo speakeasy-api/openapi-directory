@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CutoffTime } from "./cutofftime";
-import { BusinessDayConfig } from "./businessdayconfig";
-import { HolidayCutoff } from "./holidaycutoff";
-import { TransitTable } from "./transittable";
-import { WarehouseBasedDeliveryTime } from "./warehousebaseddeliverytime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryTime = void 0;
+var utils_1 = require("../../../internal/utils");
+var cutofftime_1 = require("./cutofftime");
+var businessdayconfig_1 = require("./businessdayconfig");
+var holidaycutoff_1 = require("./holidaycutoff");
+var transittable_1 = require("./transittable");
+var warehousebaseddeliverytime_1 = require("./warehousebaseddeliverytime");
 var DeliveryTime = /** @class */ (function (_super) {
     __extends(DeliveryTime, _super);
     function DeliveryTime() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cutoffTime" }),
-        __metadata("design:type", CutoffTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cutoffTime" }),
+        __metadata("design:type", cutofftime_1.CutoffTime)
     ], DeliveryTime.prototype, "cutoffTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=handlingBusinessDayConfig" }),
-        __metadata("design:type", BusinessDayConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=handlingBusinessDayConfig" }),
+        __metadata("design:type", businessdayconfig_1.BusinessDayConfig)
     ], DeliveryTime.prototype, "handlingBusinessDayConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holidayCutoffs", elemType: HolidayCutoff }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holidayCutoffs", elemType: holidaycutoff_1.HolidayCutoff }),
         __metadata("design:type", Array)
     ], DeliveryTime.prototype, "holidayCutoffs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxHandlingTimeInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxHandlingTimeInDays" }),
         __metadata("design:type", Number)
     ], DeliveryTime.prototype, "maxHandlingTimeInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxTransitTimeInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxTransitTimeInDays" }),
         __metadata("design:type", Number)
     ], DeliveryTime.prototype, "maxTransitTimeInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minHandlingTimeInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minHandlingTimeInDays" }),
         __metadata("design:type", Number)
     ], DeliveryTime.prototype, "minHandlingTimeInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minTransitTimeInDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minTransitTimeInDays" }),
         __metadata("design:type", Number)
     ], DeliveryTime.prototype, "minTransitTimeInDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transitBusinessDayConfig" }),
-        __metadata("design:type", BusinessDayConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transitBusinessDayConfig" }),
+        __metadata("design:type", businessdayconfig_1.BusinessDayConfig)
     ], DeliveryTime.prototype, "transitBusinessDayConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transitTimeTable" }),
-        __metadata("design:type", TransitTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transitTimeTable" }),
+        __metadata("design:type", transittable_1.TransitTable)
     ], DeliveryTime.prototype, "transitTimeTable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warehouseBasedDeliveryTimes", elemType: WarehouseBasedDeliveryTime }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warehouseBasedDeliveryTimes", elemType: warehousebaseddeliverytime_1.WarehouseBasedDeliveryTime }),
         __metadata("design:type", Array)
     ], DeliveryTime.prototype, "warehouseBasedDeliveryTimes", void 0);
     return DeliveryTime;
-}(SpeakeasyBase));
-export { DeliveryTime };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryTime = DeliveryTime;

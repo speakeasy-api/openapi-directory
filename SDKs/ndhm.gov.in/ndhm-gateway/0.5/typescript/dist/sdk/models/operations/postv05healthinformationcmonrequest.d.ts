@@ -2,10 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05HealthInformationCmOnRequestHeaders extends SpeakeasyBase {
     authorization: string;
-    xHiuId: string;
+    xHIUID: string;
 }
 export declare class PostV05HealthInformationCmOnRequestRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     hiuHealthInformationRequestResponse?: shared.HiuHealthInformationRequestResponse;
 }
 export declare class PostV05HealthInformationCmOnRequestRequest extends SpeakeasyBase {

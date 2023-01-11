@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CopyPadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" })
-  destinationId?: string;
+  destinationID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" })
   force?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" })
-  sourceId?: string;
+  sourceID?: string;
 }
 
 
@@ -19,7 +19,7 @@ export class CopyPadUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CopyPadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CopyPadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class CopyPadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class CopyPadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  copyPadUsingGet200ApplicationJsonObject?: CopyPadUsingGet200ApplicationJson;
+  copyPadUsingGET200ApplicationJSONObject?: CopyPadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingGet400ApplicationJsonObject?: CopyPadUsingGet400ApplicationJson;
+  copyPadUsingGET400ApplicationJSONObject?: CopyPadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingGet401ApplicationJsonObject?: CopyPadUsingGet401ApplicationJson;
+  copyPadUsingGET401ApplicationJSONObject?: CopyPadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyPadUsingGet500ApplicationJsonObject?: CopyPadUsingGet500ApplicationJson;
+  copyPadUsingGET500ApplicationJSONObject?: CopyPadUsingGet500ApplicationJson;
 }

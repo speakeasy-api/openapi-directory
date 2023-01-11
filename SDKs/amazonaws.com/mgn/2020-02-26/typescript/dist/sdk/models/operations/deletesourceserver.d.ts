@@ -9,7 +9,7 @@ export declare class DeleteSourceServerHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteSourceServerRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class DeleteSourceServerRequest extends SpeakeasyBase {
     headers: DeleteSourceServerHeaders;
@@ -18,7 +18,7 @@ export declare class DeleteSourceServerRequest extends SpeakeasyBase {
 export declare class DeleteSourceServerResponse extends SpeakeasyBase {
     conflictException?: any;
     contentType: string;
-    deleteSourceServerResponse?: Map<string, any>;
+    deleteSourceServerResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     uninitializedAccountException?: any;

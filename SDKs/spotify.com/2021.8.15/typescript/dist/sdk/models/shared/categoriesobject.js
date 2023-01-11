@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryObject } from "./categoryobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoriesObject = exports.CategoriesObjectCategories = void 0;
+var utils_1 = require("../../../internal/utils");
+var categoryobject_1 = require("./categoryobject");
 // CategoriesObjectCategories
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -34,45 +37,45 @@ var CategoriesObjectCategories = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], CategoriesObjectCategories.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: CategoryObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: categoryobject_1.CategoryObject }),
         __metadata("design:type", Array)
     ], CategoriesObjectCategories.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], CategoriesObjectCategories.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], CategoriesObjectCategories.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], CategoriesObjectCategories.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], CategoriesObjectCategories.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], CategoriesObjectCategories.prototype, "total", void 0);
     return CategoriesObjectCategories;
-}(SpeakeasyBase));
-export { CategoriesObjectCategories };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesObjectCategories = CategoriesObjectCategories;
 var CategoriesObject = /** @class */ (function (_super) {
     __extends(CategoriesObject, _super);
     function CategoriesObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", CategoriesObjectCategories)
     ], CategoriesObject.prototype, "categories", void 0);
     return CategoriesObject;
-}(SpeakeasyBase));
-export { CategoriesObject };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesObject = CategoriesObject;

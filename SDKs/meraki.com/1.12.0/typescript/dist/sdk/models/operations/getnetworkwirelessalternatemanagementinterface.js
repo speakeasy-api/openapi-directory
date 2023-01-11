@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessAlternateManagementInterfaceResponse = exports.GetNetworkWirelessAlternateManagementInterfaceRequest = exports.GetNetworkWirelessAlternateManagementInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessAlternateManagementInterfacePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAlternateManagementInterfacePathParams, _super);
     function GetNetworkWirelessAlternateManagementInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessAlternateManagementInterfacePathParams.prototype, "networkId", void 0);
     return GetNetworkWirelessAlternateManagementInterfacePathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAlternateManagementInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAlternateManagementInterfacePathParams = GetNetworkWirelessAlternateManagementInterfacePathParams;
 var GetNetworkWirelessAlternateManagementInterfaceRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAlternateManagementInterfaceRequest, _super);
     function GetNetworkWirelessAlternateManagementInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessAlternateManagementInterfacePathParams)
     ], GetNetworkWirelessAlternateManagementInterfaceRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessAlternateManagementInterfaceRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAlternateManagementInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAlternateManagementInterfaceRequest = GetNetworkWirelessAlternateManagementInterfaceRequest;
 var GetNetworkWirelessAlternateManagementInterfaceResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAlternateManagementInterfaceResponse, _super);
     function GetNetworkWirelessAlternateManagementInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessAlternateManagementInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessAlternateManagementInterfaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessAlternateManagementInterfaceResponse.prototype, "getNetworkWirelessAlternateManagementInterface200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessAlternateManagementInterfaceResponse.prototype, "getNetworkWirelessAlternateManagementInterface200ApplicationJSONObject", void 0);
     return GetNetworkWirelessAlternateManagementInterfaceResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAlternateManagementInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAlternateManagementInterfaceResponse = GetNetworkWirelessAlternateManagementInterfaceResponse;

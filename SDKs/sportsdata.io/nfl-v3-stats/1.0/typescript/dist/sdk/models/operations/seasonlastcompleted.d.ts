@@ -7,6 +7,6 @@ export declare class SeasonLastCompletedRequest extends SpeakeasyBase {
 }
 export declare class SeasonLastCompletedResponse extends SpeakeasyBase {
     contentType: string;
-    seasonLastCompleted200ApplicationJsonInteger?: number;
+    seasonLastCompleted200ApplicationJSONInteger?: number;
     statusCode: number;
 }

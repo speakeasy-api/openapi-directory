@@ -62,7 +62,7 @@ export class BatchProjectsLocationsOperationsCancelRequest extends SpeakeasyBase
   queryParams: BatchProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: BatchProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class BatchProjectsLocationsOperationsCancelResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

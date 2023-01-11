@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyClusterSnapshotScheduleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyClusterSnapshotScheduleResponse = exports.GetModifyClusterSnapshotScheduleRequest = exports.GetModifyClusterSnapshotScheduleHeaders = exports.GetModifyClusterSnapshotScheduleQueryParams = exports.GetModifyClusterSnapshotScheduleVersionEnum = exports.GetModifyClusterSnapshotScheduleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyClusterSnapshotScheduleActionEnum;
 (function (GetModifyClusterSnapshotScheduleActionEnum) {
     GetModifyClusterSnapshotScheduleActionEnum["ModifyClusterSnapshotSchedule"] = "ModifyClusterSnapshotSchedule";
-})(GetModifyClusterSnapshotScheduleActionEnum || (GetModifyClusterSnapshotScheduleActionEnum = {}));
-export var GetModifyClusterSnapshotScheduleVersionEnum;
+})(GetModifyClusterSnapshotScheduleActionEnum = exports.GetModifyClusterSnapshotScheduleActionEnum || (exports.GetModifyClusterSnapshotScheduleActionEnum = {}));
+var GetModifyClusterSnapshotScheduleVersionEnum;
 (function (GetModifyClusterSnapshotScheduleVersionEnum) {
     GetModifyClusterSnapshotScheduleVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetModifyClusterSnapshotScheduleVersionEnum || (GetModifyClusterSnapshotScheduleVersionEnum = {}));
+})(GetModifyClusterSnapshotScheduleVersionEnum = exports.GetModifyClusterSnapshotScheduleVersionEnum || (exports.GetModifyClusterSnapshotScheduleVersionEnum = {}));
 var GetModifyClusterSnapshotScheduleQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyClusterSnapshotScheduleQueryParams, _super);
     function GetModifyClusterSnapshotScheduleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DisassociateSchedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DisassociateSchedule" }),
         __metadata("design:type", Boolean)
     ], GetModifyClusterSnapshotScheduleQueryParams.prototype, "disassociateSchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ScheduleIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ScheduleIdentifier" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleQueryParams.prototype, "scheduleIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleQueryParams.prototype, "version", void 0);
     return GetModifyClusterSnapshotScheduleQueryParams;
-}(SpeakeasyBase));
-export { GetModifyClusterSnapshotScheduleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterSnapshotScheduleQueryParams = GetModifyClusterSnapshotScheduleQueryParams;
 var GetModifyClusterSnapshotScheduleHeaders = /** @class */ (function (_super) {
     __extends(GetModifyClusterSnapshotScheduleHeaders, _super);
     function GetModifyClusterSnapshotScheduleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyClusterSnapshotScheduleHeaders;
-}(SpeakeasyBase));
-export { GetModifyClusterSnapshotScheduleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterSnapshotScheduleHeaders = GetModifyClusterSnapshotScheduleHeaders;
 var GetModifyClusterSnapshotScheduleRequest = /** @class */ (function (_super) {
     __extends(GetModifyClusterSnapshotScheduleRequest, _super);
     function GetModifyClusterSnapshotScheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyClusterSnapshotScheduleQueryParams)
     ], GetModifyClusterSnapshotScheduleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyClusterSnapshotScheduleHeaders)
     ], GetModifyClusterSnapshotScheduleRequest.prototype, "headers", void 0);
     return GetModifyClusterSnapshotScheduleRequest;
-}(SpeakeasyBase));
-export { GetModifyClusterSnapshotScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterSnapshotScheduleRequest = GetModifyClusterSnapshotScheduleRequest;
 var GetModifyClusterSnapshotScheduleResponse = /** @class */ (function (_super) {
     __extends(GetModifyClusterSnapshotScheduleResponse, _super);
     function GetModifyClusterSnapshotScheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyClusterSnapshotScheduleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyClusterSnapshotScheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyClusterSnapshotScheduleResponse.prototype, "statusCode", void 0);
     return GetModifyClusterSnapshotScheduleResponse;
-}(SpeakeasyBase));
-export { GetModifyClusterSnapshotScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyClusterSnapshotScheduleResponse = GetModifyClusterSnapshotScheduleResponse;

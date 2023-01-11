@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompositeMedia } from "./compositemedia";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiffUploadResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var compositemedia_1 = require("./compositemedia");
 // DiffUploadResponse
 /**
  * # gdata.* are outside protos with mising documentation
@@ -34,13 +37,13 @@ var DiffUploadResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectVersion" }),
         __metadata("design:type", String)
     ], DiffUploadResponse.prototype, "objectVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalObject" }),
-        __metadata("design:type", CompositeMedia)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalObject" }),
+        __metadata("design:type", compositemedia_1.CompositeMedia)
     ], DiffUploadResponse.prototype, "originalObject", void 0);
     return DiffUploadResponse;
-}(SpeakeasyBase));
-export { DiffUploadResponse };
+}(utils_1.SpeakeasyBase));
+exports.DiffUploadResponse = DiffUploadResponse;

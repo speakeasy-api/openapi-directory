@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRetiredObjectDiffUsingGetResponse = exports.GetRetiredObjectDiffUsingGetRequest = exports.GetRetiredObjectDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRetiredObjectDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetRetiredObjectDiffUsingGetPathParams, _super);
     function GetRetiredObjectDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetRetiredObjectDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetRetiredObjectDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetRetiredObjectDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetRetiredObjectDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetRetiredObjectDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetRetiredObjectDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetRetiredObjectDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectDiffUsingGetPathParams = GetRetiredObjectDiffUsingGetPathParams;
 var GetRetiredObjectDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetRetiredObjectDiffUsingGetRequest, _super);
     function GetRetiredObjectDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRetiredObjectDiffUsingGetPathParams)
     ], GetRetiredObjectDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetRetiredObjectDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetRetiredObjectDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectDiffUsingGetRequest = GetRetiredObjectDiffUsingGetRequest;
 var GetRetiredObjectDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetRetiredObjectDiffUsingGetResponse, _super);
     function GetRetiredObjectDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRetiredObjectDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRetiredObjectDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRetiredObjectDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetRetiredObjectDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetRetiredObjectDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectDiffUsingGetResponse = GetRetiredObjectDiffUsingGetResponse;

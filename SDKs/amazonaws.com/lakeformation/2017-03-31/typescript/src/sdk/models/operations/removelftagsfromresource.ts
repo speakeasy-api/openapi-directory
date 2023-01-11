@@ -69,7 +69,7 @@ export class RemoveLfTagsFromResourceResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  removeLfTagsFromResourceResponse?: shared.RemoveLfTagsFromResourceResponse;
+  removeLFTagsFromResourceResponse?: shared.RemoveLfTagsFromResourceResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

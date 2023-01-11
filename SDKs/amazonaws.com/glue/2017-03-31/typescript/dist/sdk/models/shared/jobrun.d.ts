@@ -7,8 +7,8 @@ import { WorkerTypeEnum } from "./workertypeenum";
  * Contains information about a job run.
 **/
 export declare class JobRun extends SpeakeasyBase {
-    allocatedCapacity?: number;
-    arguments?: Map<string, string>;
+    allocatedCapacity?: Record<string, any>;
+    arguments?: Record<string, string>;
     attempt?: number;
     completedOn?: Date;
     errorMessage?: string;

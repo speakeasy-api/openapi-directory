@@ -17,5 +17,5 @@ export declare class WorkflowRun extends SpeakeasyBase {
     statistics?: WorkflowRunStatistics;
     status?: WorkflowRunStatusEnum;
     workflowRunId?: string;
-    workflowRunProperties?: Map<string, string>;
+    workflowRunProperties?: Record<string, string>;
 }

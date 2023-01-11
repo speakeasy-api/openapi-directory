@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WkHtmlToPdfAdvancedOptions } from "./wkhtmltopdfadvancedoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WkHtmlToPdfUrlToPdfRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var wkhtmltopdfadvancedoptions_1 = require("./wkhtmltopdfadvancedoptions");
 var WkHtmlToPdfUrlToPdfRequest = /** @class */ (function (_super) {
     __extends(WkHtmlToPdfUrlToPdfRequest, _super);
     function WkHtmlToPdfUrlToPdfRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
         __metadata("design:type", String)
     ], WkHtmlToPdfUrlToPdfRequest.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inlinePdf" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inlinePdf" }),
         __metadata("design:type", Boolean)
     ], WkHtmlToPdfUrlToPdfRequest.prototype, "inlinePdf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", WkHtmlToPdfAdvancedOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", wkhtmltopdfadvancedoptions_1.WkHtmlToPdfAdvancedOptions)
     ], WkHtmlToPdfUrlToPdfRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], WkHtmlToPdfUrlToPdfRequest.prototype, "url", void 0);
     return WkHtmlToPdfUrlToPdfRequest;
-}(SpeakeasyBase));
-export { WkHtmlToPdfUrlToPdfRequest };
+}(utils_1.SpeakeasyBase));
+exports.WkHtmlToPdfUrlToPdfRequest = WkHtmlToPdfUrlToPdfRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RootV1StatisticsConsolidatedResponse = exports.RootV1StatisticsConsolidatedRequest = exports.RootV1StatisticsConsolidatedQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RootV1StatisticsConsolidatedQueryParams = /** @class */ (function (_super) {
     __extends(RootV1StatisticsConsolidatedQueryParams, _super);
     function RootV1StatisticsConsolidatedQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AppId" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CompanyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CompanyId" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DeviceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DeviceToken" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "deviceToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EndDate" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StartDate" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Tag" }),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedQueryParams.prototype, "tag", void 0);
     return RootV1StatisticsConsolidatedQueryParams;
-}(SpeakeasyBase));
-export { RootV1StatisticsConsolidatedQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RootV1StatisticsConsolidatedQueryParams = RootV1StatisticsConsolidatedQueryParams;
 var RootV1StatisticsConsolidatedRequest = /** @class */ (function (_super) {
     __extends(RootV1StatisticsConsolidatedRequest, _super);
     function RootV1StatisticsConsolidatedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RootV1StatisticsConsolidatedQueryParams)
     ], RootV1StatisticsConsolidatedRequest.prototype, "queryParams", void 0);
     return RootV1StatisticsConsolidatedRequest;
-}(SpeakeasyBase));
-export { RootV1StatisticsConsolidatedRequest };
+}(utils_1.SpeakeasyBase));
+exports.RootV1StatisticsConsolidatedRequest = RootV1StatisticsConsolidatedRequest;
 var RootV1StatisticsConsolidatedResponse = /** @class */ (function (_super) {
     __extends(RootV1StatisticsConsolidatedResponse, _super);
     function RootV1StatisticsConsolidatedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RootV1StatisticsConsolidatedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], RootV1StatisticsConsolidatedResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RootV1StatisticsConsolidatedResponse.prototype, "statusCode", void 0);
     return RootV1StatisticsConsolidatedResponse;
-}(SpeakeasyBase));
-export { RootV1StatisticsConsolidatedResponse };
+}(utils_1.SpeakeasyBase));
+exports.RootV1StatisticsConsolidatedResponse = RootV1StatisticsConsolidatedResponse;

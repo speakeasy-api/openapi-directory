@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceRequest } from "./workspacerequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailedCreateWorkspaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspacerequest_1 = require("./workspacerequest");
 // FailedCreateWorkspaceRequest
 /**
  * Describes a WorkSpace that cannot be created.
@@ -34,17 +37,17 @@ var FailedCreateWorkspaceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], FailedCreateWorkspaceRequest.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], FailedCreateWorkspaceRequest.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceRequest" }),
-        __metadata("design:type", WorkspaceRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceRequest" }),
+        __metadata("design:type", workspacerequest_1.WorkspaceRequest)
     ], FailedCreateWorkspaceRequest.prototype, "workspaceRequest", void 0);
     return FailedCreateWorkspaceRequest;
-}(SpeakeasyBase));
-export { FailedCreateWorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.FailedCreateWorkspaceRequest = FailedCreateWorkspaceRequest;

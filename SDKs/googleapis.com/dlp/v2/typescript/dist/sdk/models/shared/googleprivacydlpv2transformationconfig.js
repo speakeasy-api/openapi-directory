@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2TransformationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2TransformationConfig
 /**
  * User specified templates and configs for how to deidentify structured, unstructures, and image files. User must provide either a unstructured deidentify template or at least one redact image config.
@@ -33,17 +36,17 @@ var GooglePrivacyDlpV2TransformationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deidentifyTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deidentifyTemplate" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2TransformationConfig.prototype, "deidentifyTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageRedactTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageRedactTemplate" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2TransformationConfig.prototype, "imageRedactTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=structuredDeidentifyTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=structuredDeidentifyTemplate" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2TransformationConfig.prototype, "structuredDeidentifyTemplate", void 0);
     return GooglePrivacyDlpV2TransformationConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2TransformationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2TransformationConfig = GooglePrivacyDlpV2TransformationConfig;

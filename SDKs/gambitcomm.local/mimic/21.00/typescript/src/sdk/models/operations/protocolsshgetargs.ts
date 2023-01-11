@@ -22,5 +22,5 @@ export class ProtocolSshGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSshGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolSshGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

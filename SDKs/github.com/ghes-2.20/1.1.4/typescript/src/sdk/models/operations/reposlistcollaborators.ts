@@ -11,16 +11,10 @@ export class ReposListCollaboratorsPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ReposListCollaboratorsAffiliationEnum {
-    Outside = "outside",
-    Direct = "direct",
-    All = "all"
-}
-
 
 export class ReposListCollaboratorsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=affiliation" })
-  affiliation?: ReposListCollaboratorsAffiliationEnum;
+  affiliation?: shared.RepoEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -44,7 +38,7 @@ export class ReposListCollaboratorsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

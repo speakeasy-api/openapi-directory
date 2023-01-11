@@ -13,8 +13,8 @@ export declare class GetPutLifecycleHookQueryParams extends SpeakeasyBase {
     lifecycleHookName: string;
     lifecycleTransition?: string;
     notificationMetadata?: string;
-    notificationTargetArn?: string;
-    roleArn?: string;
+    notificationTargetARN?: string;
+    roleARN?: string;
     version: GetPutLifecycleHookVersionEnum;
 }
 export declare class GetPutLifecycleHookHeaders extends SpeakeasyBase {

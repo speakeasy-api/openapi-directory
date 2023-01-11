@@ -15,7 +15,7 @@ export class GetListTagsForResourceQueryParams extends SpeakeasyBase {
   action: GetListTagsForResourceActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetListTagsForResourceVersionEnum;

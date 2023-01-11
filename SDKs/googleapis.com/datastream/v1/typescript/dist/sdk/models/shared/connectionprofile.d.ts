@@ -10,32 +10,32 @@ import { MysqlProfileInput } from "./mysqlprofile";
  * A set of reusable connection configurations to be used as a source or destination for a stream.
 **/
 export declare class ConnectionProfile extends SpeakeasyBase {
-    bigqueryProfile?: Map<string, any>;
+    bigqueryProfile?: Record<string, any>;
     createTime?: string;
     displayName?: string;
     forwardSshConnectivity?: ForwardSshTunnelConnectivity;
     gcsProfile?: GcsProfile;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mysqlProfile?: MysqlProfile;
     name?: string;
     oracleProfile?: OracleProfile;
     postgresqlProfile?: PostgresqlProfile;
     privateConnectivity?: PrivateConnectivity;
-    staticServiceIpConnectivity?: Map<string, any>;
+    staticServiceIpConnectivity?: Record<string, any>;
     updateTime?: string;
 }
 /**
  * A set of reusable connection configurations to be used as a source or destination for a stream.
 **/
 export declare class ConnectionProfileInput extends SpeakeasyBase {
-    bigqueryProfile?: Map<string, any>;
+    bigqueryProfile?: Record<string, any>;
     displayName?: string;
     forwardSshConnectivity?: ForwardSshTunnelConnectivity;
     gcsProfile?: GcsProfile;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mysqlProfile?: MysqlProfileInput;
     oracleProfile?: OracleProfile;
     postgresqlProfile?: PostgresqlProfile;
     privateConnectivity?: PrivateConnectivity;
-    staticServiceIpConnectivity?: Map<string, any>;
+    staticServiceIpConnectivity?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnWildcard = void 0;
+var utils_1 = require("../../../internal/utils");
 // ColumnWildcard
 /**
  * A wildcard object, consisting of an optional list of excluded column names or indexes.
@@ -33,9 +36,9 @@ var ColumnWildcard = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludedColumnNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludedColumnNames" }),
         __metadata("design:type", Array)
     ], ColumnWildcard.prototype, "excludedColumnNames", void 0);
     return ColumnWildcard;
-}(SpeakeasyBase));
-export { ColumnWildcard };
+}(utils_1.SpeakeasyBase));
+exports.ColumnWildcard = ColumnWildcard;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DfsSlatesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DfsSlatesResponse = exports.DfsSlatesRequest = exports.DfsSlatesPathParams = exports.DfsSlatesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DfsSlatesFormatEnum;
 (function (DfsSlatesFormatEnum) {
     DfsSlatesFormatEnum["Xml"] = "XML";
     DfsSlatesFormatEnum["Json"] = "JSON";
-})(DfsSlatesFormatEnum || (DfsSlatesFormatEnum = {}));
+})(DfsSlatesFormatEnum = exports.DfsSlatesFormatEnum || (exports.DfsSlatesFormatEnum = {}));
 var DfsSlatesPathParams = /** @class */ (function (_super) {
     __extends(DfsSlatesPathParams, _super);
     function DfsSlatesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], DfsSlatesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tournamentid" }),
         __metadata("design:type", String)
     ], DfsSlatesPathParams.prototype, "tournamentid", void 0);
     return DfsSlatesPathParams;
-}(SpeakeasyBase));
-export { DfsSlatesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesPathParams = DfsSlatesPathParams;
 var DfsSlatesRequest = /** @class */ (function (_super) {
     __extends(DfsSlatesRequest, _super);
     function DfsSlatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DfsSlatesPathParams)
     ], DfsSlatesRequest.prototype, "pathParams", void 0);
     return DfsSlatesRequest;
-}(SpeakeasyBase));
-export { DfsSlatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesRequest = DfsSlatesRequest;
 var DfsSlatesResponse = /** @class */ (function (_super) {
     __extends(DfsSlatesResponse, _super);
     function DfsSlatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DfsSlatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DfsSlatesResponse.prototype, "dfsSlates", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DfsSlatesResponse.prototype, "statusCode", void 0);
     return DfsSlatesResponse;
-}(SpeakeasyBase));
-export { DfsSlatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DfsSlatesResponse = DfsSlatesResponse;

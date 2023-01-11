@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetaccesstokenIdRequestBody extends SpeakeasyBase {
     getAccessTokenUsingAuthorizationCode?: shared.AccessToken;
-    getAccessTokenUsingDeviceCodeAndOtp?: any;
+    getAccessTokenUsingDeviceCodeAndOTP?: any;
     getAccessTokenUsingRefreshToken?: shared.RefreshToken;
 }
 export declare class GetaccesstokenIdRequest extends SpeakeasyBase {

@@ -42,5 +42,5 @@ export class WorkflowRun extends SpeakeasyBase {
   workflowRunId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WorkflowRunProperties" })
-  workflowRunProperties?: Map<string, string>;
+  workflowRunProperties?: Record<string, string>;
 }

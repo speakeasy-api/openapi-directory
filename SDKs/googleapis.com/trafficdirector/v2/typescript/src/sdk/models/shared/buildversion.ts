@@ -9,7 +9,7 @@ import { SemanticVersion } from "./semanticversion";
 **/
 export class BuildVersion extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: SemanticVersion;

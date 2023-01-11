@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerChangePasswordResponse = exports.SessionControllerChangePasswordRequest = exports.SessionControllerChangePasswordQueryParams = exports.SessionControllerChangePasswordPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerChangePasswordPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerChangePasswordPathParams, _super);
     function SessionControllerChangePasswordPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerChangePasswordPathParams.prototype, "shortName", void 0);
     return SessionControllerChangePasswordPathParams;
-}(SpeakeasyBase));
-export { SessionControllerChangePasswordPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerChangePasswordPathParams = SessionControllerChangePasswordPathParams;
 var SessionControllerChangePasswordQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerChangePasswordQueryParams, _super);
     function SessionControllerChangePasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=newPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=newPassword" }),
         __metadata("design:type", String)
     ], SessionControllerChangePasswordQueryParams.prototype, "newPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oldPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oldPassword" }),
         __metadata("design:type", String)
     ], SessionControllerChangePasswordQueryParams.prototype, "oldPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], SessionControllerChangePasswordQueryParams.prototype, "token", void 0);
     return SessionControllerChangePasswordQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerChangePasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerChangePasswordQueryParams = SessionControllerChangePasswordQueryParams;
 var SessionControllerChangePasswordRequest = /** @class */ (function (_super) {
     __extends(SessionControllerChangePasswordRequest, _super);
     function SessionControllerChangePasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerChangePasswordPathParams)
     ], SessionControllerChangePasswordRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerChangePasswordQueryParams)
     ], SessionControllerChangePasswordRequest.prototype, "queryParams", void 0);
     return SessionControllerChangePasswordRequest;
-}(SpeakeasyBase));
-export { SessionControllerChangePasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerChangePasswordRequest = SessionControllerChangePasswordRequest;
 var SessionControllerChangePasswordResponse = /** @class */ (function (_super) {
     __extends(SessionControllerChangePasswordResponse, _super);
     function SessionControllerChangePasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerChangePasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerChangePasswordResponse.prototype, "statusCode", void 0);
     return SessionControllerChangePasswordResponse;
-}(SpeakeasyBase));
-export { SessionControllerChangePasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerChangePasswordResponse = SessionControllerChangePasswordResponse;

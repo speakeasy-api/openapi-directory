@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IssueJobStatusStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueJobStatus = exports.IssueJobStatusStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IssueJobStatusStatusEnum;
 (function (IssueJobStatusStatusEnum) {
     IssueJobStatusStatusEnum["Accepted"] = "ACCEPTED";
     IssueJobStatusStatusEnum["Started"] = "STARTED";
     IssueJobStatusStatusEnum["Running"] = "RUNNING";
     IssueJobStatusStatusEnum["Failure"] = "FAILURE";
-})(IssueJobStatusStatusEnum || (IssueJobStatusStatusEnum = {}));
+})(IssueJobStatusStatusEnum = exports.IssueJobStatusStatusEnum || (exports.IssueJobStatusStatusEnum = {}));
 // IssueJobStatus
 /**
  * The status of an import or export job
@@ -40,29 +43,29 @@ var IssueJobStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], IssueJobStatus.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pct" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pct" }),
         __metadata("design:type", Number)
     ], IssueJobStatus.prototype, "pct", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phase" }),
         __metadata("design:type", String)
     ], IssueJobStatus.prototype, "phase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], IssueJobStatus.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], IssueJobStatus.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], IssueJobStatus.prototype, "type", void 0);
     return IssueJobStatus;
-}(SpeakeasyBase));
-export { IssueJobStatus };
+}(utils_1.SpeakeasyBase));
+exports.IssueJobStatus = IssueJobStatus;

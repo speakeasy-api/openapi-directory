@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoaContentTypeEnum } from "./loacontenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLoaRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var loacontenttypeenum_1 = require("./loacontenttypeenum");
 var DescribeLoaRequest = /** @class */ (function (_super) {
     __extends(DescribeLoaRequest, _super);
     function DescribeLoaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], DescribeLoaRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loaContentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loaContentType" }),
         __metadata("design:type", String)
     ], DescribeLoaRequest.prototype, "loaContentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=providerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=providerName" }),
         __metadata("design:type", String)
     ], DescribeLoaRequest.prototype, "providerName", void 0);
     return DescribeLoaRequest;
-}(SpeakeasyBase));
-export { DescribeLoaRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLoaRequest = DescribeLoaRequest;

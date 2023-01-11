@@ -50,5 +50,5 @@ export class GetCustomFieldsForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCustomFieldsForWorkspace200ApplicationJsonObject?: GetCustomFieldsForWorkspace200ApplicationJson;
+  getCustomFieldsForWorkspace200ApplicationJSONObject?: GetCustomFieldsForWorkspace200ApplicationJson;
 }

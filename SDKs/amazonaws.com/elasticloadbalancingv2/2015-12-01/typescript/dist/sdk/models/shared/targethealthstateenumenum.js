@@ -1,4 +1,7 @@
-export var TargetHealthStateEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetHealthStateEnumEnum = void 0;
+var TargetHealthStateEnumEnum;
 (function (TargetHealthStateEnumEnum) {
     TargetHealthStateEnumEnum["Initial"] = "initial";
     TargetHealthStateEnumEnum["Healthy"] = "healthy";
@@ -6,4 +9,4 @@ export var TargetHealthStateEnumEnum;
     TargetHealthStateEnumEnum["Unused"] = "unused";
     TargetHealthStateEnumEnum["Draining"] = "draining";
     TargetHealthStateEnumEnum["Unavailable"] = "unavailable";
-})(TargetHealthStateEnumEnum || (TargetHealthStateEnumEnum = {}));
+})(TargetHealthStateEnumEnum = exports.TargetHealthStateEnumEnum || (exports.TargetHealthStateEnumEnum = {}));

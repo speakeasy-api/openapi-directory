@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InboxPlacementTrackingOption } from "./inboxplacementtrackingoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainDeliverabilityTrackingOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var inboxplacementtrackingoption_1 = require("./inboxplacementtrackingoption");
 // DomainDeliverabilityTrackingOption
 /**
  * An object that contains information about the Deliverability dashboard subscription for a verified domain that you use to send email and currently has an active Deliverability dashboard subscription. If a Deliverability dashboard subscription is active for a domain, you gain access to reputation, inbox placement, and other metrics for the domain.
@@ -34,17 +37,17 @@ var DomainDeliverabilityTrackingOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], DomainDeliverabilityTrackingOption.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InboxPlacementTrackingOption" }),
-        __metadata("design:type", InboxPlacementTrackingOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InboxPlacementTrackingOption" }),
+        __metadata("design:type", inboxplacementtrackingoption_1.InboxPlacementTrackingOption)
     ], DomainDeliverabilityTrackingOption.prototype, "inboxPlacementTrackingOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionStartDate" }),
         __metadata("design:type", Date)
     ], DomainDeliverabilityTrackingOption.prototype, "subscriptionStartDate", void 0);
     return DomainDeliverabilityTrackingOption;
-}(SpeakeasyBase));
-export { DomainDeliverabilityTrackingOption };
+}(utils_1.SpeakeasyBase));
+exports.DomainDeliverabilityTrackingOption = DomainDeliverabilityTrackingOption;

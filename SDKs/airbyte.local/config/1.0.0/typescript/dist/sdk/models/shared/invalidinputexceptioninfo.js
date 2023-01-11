@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvalidInputProperty } from "./invalidinputproperty";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvalidInputExceptionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var invalidinputproperty_1 = require("./invalidinputproperty");
 var InvalidInputExceptionInfo = /** @class */ (function (_super) {
     __extends(InvalidInputExceptionInfo, _super);
     function InvalidInputExceptionInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exceptionClassName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exceptionClassName" }),
         __metadata("design:type", String)
     ], InvalidInputExceptionInfo.prototype, "exceptionClassName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exceptionStack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exceptionStack" }),
         __metadata("design:type", Array)
     ], InvalidInputExceptionInfo.prototype, "exceptionStack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], InvalidInputExceptionInfo.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationErrors", elemType: InvalidInputProperty }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationErrors", elemType: invalidinputproperty_1.InvalidInputProperty }),
         __metadata("design:type", Array)
     ], InvalidInputExceptionInfo.prototype, "validationErrors", void 0);
     return InvalidInputExceptionInfo;
-}(SpeakeasyBase));
-export { InvalidInputExceptionInfo };
+}(utils_1.SpeakeasyBase));
+exports.InvalidInputExceptionInfo = InvalidInputExceptionInfo;

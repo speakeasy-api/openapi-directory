@@ -35,7 +35,7 @@ export class GetTemplateModelResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getTemplateModel200ApplicationJsonBinaryString?: Uint8Array;
+  getTemplateModel200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetstateabbreviationRequest, GetstateabbreviationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetstateabbreviationRequest = {
   queryParams: {
-    license: "placeat",
-    state: "eum",
+    license: "sit",
+    state: "voluptas",
   },
 };
 
-sdk.sdk.getstateabbreviation(req).then((res: GetstateabbreviationResponse | AxiosError) => {
+sdk.stateDataStandardization.getstateabbreviation(req).then((res: GetstateabbreviationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getstateabbreviation(req).then((res: GetstateabbreviationResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### State Data Standardization
 
 * `getstateabbreviation` - Gets a two-letter abbreviation for a state or province name data
 

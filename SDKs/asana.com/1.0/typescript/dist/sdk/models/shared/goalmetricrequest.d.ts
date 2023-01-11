@@ -4,6 +4,9 @@ export declare enum GoalMetricRequestUnitEnum {
     Currency = "currency",
     Percentage = "percentage"
 }
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export declare class GoalMetricRequestInput extends SpeakeasyBase {
     currencyCode?: string;
     currentDisplayValue?: string;

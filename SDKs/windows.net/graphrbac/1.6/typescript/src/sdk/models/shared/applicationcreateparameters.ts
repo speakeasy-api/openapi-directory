@@ -10,7 +10,7 @@ import { PreAuthorizedApplication } from "./preauthorizedapplication";
 
 // ApplicationCreateParameters
 /** 
- * Request parameters for creating a new application.
+ * Active Directive Application common properties shared among GET, POST and PATCH
 **/
 export class ApplicationCreateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allowGuestsSignIn" })
@@ -53,7 +53,7 @@ export class ApplicationCreateParameters extends SpeakeasyBase {
   isDeviceOnlyAuthSupported?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=keyCredentials" })
-  keyCredentials?: Map<string, Map<string, any>>[];
+  keyCredentials?: Record<string, Record<string, any>>[];
 
   @SpeakeasyMetadata({ data: "json, name=knownClientApplications" })
   knownClientApplications?: string[];
@@ -80,7 +80,7 @@ export class ApplicationCreateParameters extends SpeakeasyBase {
   orgRestrictions?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=passwordCredentials" })
-  passwordCredentials?: Map<string, Map<string, any>>[];
+  passwordCredentials?: Record<string, Record<string, any>>[];
 
   @SpeakeasyMetadata({ data: "json, name=preAuthorizedApplications", elemType: PreAuthorizedApplication })
   preAuthorizedApplications?: PreAuthorizedApplication[];
@@ -95,7 +95,7 @@ export class ApplicationCreateParameters extends SpeakeasyBase {
   replyUrls?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=requiredResourceAccess" })
-  requiredResourceAccess?: Map<string, Map<string, any>>[];
+  requiredResourceAccess?: Record<string, Record<string, any>>[];
 
   @SpeakeasyMetadata({ data: "json, name=samlMetadataUrl" })
   samlMetadataUrl?: string;

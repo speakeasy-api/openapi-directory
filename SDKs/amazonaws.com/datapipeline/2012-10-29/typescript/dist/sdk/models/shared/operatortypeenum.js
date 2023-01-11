@@ -1,8 +1,11 @@
-export var OperatorTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperatorTypeEnum = void 0;
+var OperatorTypeEnum;
 (function (OperatorTypeEnum) {
     OperatorTypeEnum["Eq"] = "EQ";
     OperatorTypeEnum["RefEq"] = "REF_EQ";
     OperatorTypeEnum["Le"] = "LE";
     OperatorTypeEnum["Ge"] = "GE";
     OperatorTypeEnum["Between"] = "BETWEEN";
-})(OperatorTypeEnum || (OperatorTypeEnum = {}));
+})(OperatorTypeEnum = exports.OperatorTypeEnum || (exports.OperatorTypeEnum = {}));

@@ -27,7 +27,7 @@ export class ComputeResource extends SpeakeasyBase {
   ec2KeyPair?: string;
 
   @SpeakeasyMetadata({ data: "json, name=imageId" })
-  imageId?: string;
+  imageId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=instanceRole" })
   instanceRole?: string;
@@ -57,7 +57,7 @@ export class ComputeResource extends SpeakeasyBase {
   subnets: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: CrTypeEnum;

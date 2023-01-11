@@ -1,4 +1,7 @@
-export var PolicySourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicySourceTypeEnum = void 0;
+var PolicySourceTypeEnum;
 (function (PolicySourceTypeEnum) {
     PolicySourceTypeEnum["User"] = "user";
     PolicySourceTypeEnum["Group"] = "group";
@@ -7,4 +10,4 @@ export var PolicySourceTypeEnum;
     PolicySourceTypeEnum["UserManaged"] = "user-managed";
     PolicySourceTypeEnum["Resource"] = "resource";
     PolicySourceTypeEnum["None"] = "none";
-})(PolicySourceTypeEnum || (PolicySourceTypeEnum = {}));
+})(PolicySourceTypeEnum = exports.PolicySourceTypeEnum || (exports.PolicySourceTypeEnum = {}));

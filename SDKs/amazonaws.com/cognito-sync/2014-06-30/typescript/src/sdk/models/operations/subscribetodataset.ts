@@ -73,7 +73,7 @@ export class SubscribeToDatasetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  subscribeToDatasetResponse?: Map<string, any>;
+  subscribeToDatasetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   tooManyRequestsException?: any;

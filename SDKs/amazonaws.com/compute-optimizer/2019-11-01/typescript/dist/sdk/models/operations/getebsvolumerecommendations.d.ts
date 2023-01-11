@@ -20,7 +20,7 @@ export declare class GetEbsVolumeRecommendationsRequest extends SpeakeasyBase {
 export declare class GetEbsVolumeRecommendationsResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    getEbsVolumeRecommendationsResponse?: shared.GetEbsVolumeRecommendationsResponse;
+    getEBSVolumeRecommendationsResponse?: shared.GetEbsVolumeRecommendationsResponse;
     internalServerException?: any;
     invalidParameterValueException?: any;
     missingAuthenticationToken?: any;

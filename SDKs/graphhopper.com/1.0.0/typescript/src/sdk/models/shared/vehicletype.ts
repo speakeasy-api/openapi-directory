@@ -27,7 +27,7 @@ export class VehicleType extends SpeakeasyBase {
   networkDataProvider?: VehicleTypeNetworkDataProviderEnum;
 
   @SpeakeasyMetadata({ data: "json, name=profile" })
-  profile?: Map<string, any>;
+  profile?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=service_time_factor" })
   serviceTimeFactor?: number;

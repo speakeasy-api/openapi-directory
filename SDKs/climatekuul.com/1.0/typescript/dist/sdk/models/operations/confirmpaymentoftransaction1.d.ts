@@ -5,7 +5,7 @@ export declare class ConfirmPaymentOfTransaction1RequestBody extends SpeakeasyBa
     transactionId: string;
 }
 export declare class ConfirmPaymentOfTransaction1Request extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: ConfirmPaymentOfTransaction1RequestBody;
 }
 export declare class ConfirmPaymentOfTransaction1Response extends SpeakeasyBase {

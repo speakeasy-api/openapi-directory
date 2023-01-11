@@ -48,5 +48,5 @@ export declare class GetLinkedRelationsRequest extends SpeakeasyBase {
 export declare class GetLinkedRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getLinkedRelations200ApplicationJsonObject?: GetLinkedRelations200ApplicationJson;
+    getLinkedRelations200ApplicationJSONObject?: GetLinkedRelations200ApplicationJson;
 }

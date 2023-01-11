@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidIdentityPskResponse = exports.GetNetworkWirelessSsidIdentityPskRequest = exports.GetNetworkWirelessSsidIdentityPskPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidIdentityPskPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidIdentityPskPathParams, _super);
     function GetNetworkWirelessSsidIdentityPskPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=identityPskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=identityPskId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidIdentityPskPathParams.prototype, "identityPskId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidIdentityPskPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidIdentityPskPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidIdentityPskPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidIdentityPskPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidIdentityPskPathParams = GetNetworkWirelessSsidIdentityPskPathParams;
 var GetNetworkWirelessSsidIdentityPskRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidIdentityPskRequest, _super);
     function GetNetworkWirelessSsidIdentityPskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidIdentityPskPathParams)
     ], GetNetworkWirelessSsidIdentityPskRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidIdentityPskRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidIdentityPskRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidIdentityPskRequest = GetNetworkWirelessSsidIdentityPskRequest;
 var GetNetworkWirelessSsidIdentityPskResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidIdentityPskResponse, _super);
     function GetNetworkWirelessSsidIdentityPskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidIdentityPskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidIdentityPskResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidIdentityPskResponse.prototype, "getNetworkWirelessSsidIdentityPsk200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidIdentityPskResponse.prototype, "getNetworkWirelessSsidIdentityPsk200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidIdentityPskResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidIdentityPskResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidIdentityPskResponse = GetNetworkWirelessSsidIdentityPskResponse;

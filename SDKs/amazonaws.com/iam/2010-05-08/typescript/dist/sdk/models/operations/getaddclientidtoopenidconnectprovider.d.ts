@@ -7,8 +7,8 @@ export declare enum GetAddClientIdToOpenIdConnectProviderVersionEnum {
 }
 export declare class GetAddClientIdToOpenIdConnectProviderQueryParams extends SpeakeasyBase {
     action: GetAddClientIdToOpenIdConnectProviderActionEnum;
-    clientId: string;
-    openIdConnectProviderArn: string;
+    clientID: string;
+    openIDConnectProviderArn: string;
     version: GetAddClientIdToOpenIdConnectProviderVersionEnum;
 }
 export declare class GetAddClientIdToOpenIdConnectProviderHeaders extends SpeakeasyBase {

@@ -58,6 +58,6 @@ export declare class ReposUpdateBranchProtectionResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     protectedBranch?: shared.ProtectedBranch;
-    reposUpdateBranchProtection415ApplicationJsonObject?: ReposUpdateBranchProtection415ApplicationJson;
+    reposUpdateBranchProtection415ApplicationJSONObject?: ReposUpdateBranchProtection415ApplicationJson;
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

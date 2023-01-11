@@ -20,6 +20,6 @@ export declare class GetLocationsIdRequest extends SpeakeasyBase {
 }
 export declare class GetLocationsIdResponse extends SpeakeasyBase {
     contentType: string;
-    getLocationsId200ApplicationJsonObject?: GetLocationsId200ApplicationJson;
     statusCode: number;
+    getLocationsId200ApplicationJSONObject?: GetLocationsId200ApplicationJson;
 }

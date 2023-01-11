@@ -9,6 +9,6 @@ export declare class GetOfferingsOfferingIdGroupsRequest extends SpeakeasyBase {
 export declare class GetOfferingsOfferingIdGroupsResponse extends SpeakeasyBase {
     assessmentGroupResponses?: shared.AssessmentGroupResponse[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -19,6 +19,6 @@ export declare class GetApiVVersionMetalsSpotRatioHistoryResponse extends Speake
     body?: Uint8Array;
     contentType: string;
     intervalCollectionResponses?: shared.IntervalCollectionResponse[];
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
 }

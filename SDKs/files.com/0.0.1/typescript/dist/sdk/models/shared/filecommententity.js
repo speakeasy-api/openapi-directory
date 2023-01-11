@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileCommentReactionEntity } from "./filecommentreactionentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileCommentEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var filecommentreactionentity_1 = require("./filecommentreactionentity");
 // FileCommentEntity
 /**
  * List File Comments by path
@@ -34,17 +37,17 @@ var FileCommentEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], FileCommentEntity.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], FileCommentEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reactions" }),
-        __metadata("design:type", FileCommentReactionEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reactions" }),
+        __metadata("design:type", filecommentreactionentity_1.FileCommentReactionEntity)
     ], FileCommentEntity.prototype, "reactions", void 0);
     return FileCommentEntity;
-}(SpeakeasyBase));
-export { FileCommentEntity };
+}(utils_1.SpeakeasyBase));
+exports.FileCommentEntity = FileCommentEntity;

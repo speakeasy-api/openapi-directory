@@ -11,7 +11,7 @@ export class GetCuratedPodcastsQueryParams extends SpeakeasyBase {
 
 export class GetCuratedPodcastsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -32,7 +32,7 @@ export class GetCuratedPodcastsResponse extends SpeakeasyBase {
   getCuratedPodcastsResponse?: shared.GetCuratedPodcastsResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

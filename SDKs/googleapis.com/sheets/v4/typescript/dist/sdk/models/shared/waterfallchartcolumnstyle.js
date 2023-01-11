@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaterfallChartColumnStyle = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
 // WaterfallChartColumnStyle
 /**
  * Styles for a waterfall chart column.
@@ -35,17 +38,17 @@ var WaterfallChartColumnStyle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", color_1.Color)
     ], WaterfallChartColumnStyle.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], WaterfallChartColumnStyle.prototype, "colorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], WaterfallChartColumnStyle.prototype, "label", void 0);
     return WaterfallChartColumnStyle;
-}(SpeakeasyBase));
-export { WaterfallChartColumnStyle };
+}(utils_1.SpeakeasyBase));
+exports.WaterfallChartColumnStyle = WaterfallChartColumnStyle;

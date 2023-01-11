@@ -11,7 +11,7 @@ export class FeatureTransformation extends SpeakeasyBase {
   creationDateTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=defaultParameters" })
-  defaultParameters?: Map<string, string>;
+  defaultParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=featureTransformationArn" })
   featureTransformationArn?: string;

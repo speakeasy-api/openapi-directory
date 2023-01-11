@@ -1,0 +1,63 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deleteqshow"), exports);
+__exportStar(require("./deletequote"), exports);
+__exportStar(require("./deletequotedislike"), exports);
+__exportStar(require("./deletequoteimage"), exports);
+__exportStar(require("./deletequoteimagebackground"), exports);
+__exportStar(require("./deletequoteimagefont"), exports);
+__exportStar(require("./deletequotelike"), exports);
+__exportStar(require("./getqod"), exports);
+__exportStar(require("./getqodcategories"), exports);
+__exportStar(require("./getqodlanguages"), exports);
+__exportStar(require("./getqshow"), exports);
+__exportStar(require("./getqshowlist"), exports);
+__exportStar(require("./getqshowquotes"), exports);
+__exportStar(require("./getquote"), exports);
+__exportStar(require("./getquoteauthorspopular"), exports);
+__exportStar(require("./getquoteauthorssearch"), exports);
+__exportStar(require("./getquotecategoriespopular"), exports);
+__exportStar(require("./getquotecategoriessearch"), exports);
+__exportStar(require("./getquoteimage"), exports);
+__exportStar(require("./getquoteimagebackgroundlist"), exports);
+__exportStar(require("./getquoteimagebackgroundsearch"), exports);
+__exportStar(require("./getquoteimagefontlist"), exports);
+__exportStar(require("./getquoteimagefontsearch"), exports);
+__exportStar(require("./getquoteimagesearch"), exports);
+__exportStar(require("./getquotelist"), exports);
+__exportStar(require("./getquoterandom"), exports);
+__exportStar(require("./getquotesearch"), exports);
+__exportStar(require("./patchqshow"), exports);
+__exportStar(require("./patchquote"), exports);
+__exportStar(require("./postqshowquotesadd"), exports);
+__exportStar(require("./postqshowquotesremove"), exports);
+__exportStar(require("./postquote"), exports);
+__exportStar(require("./postquotedislike"), exports);
+__exportStar(require("./postquoteimagebackground"), exports);
+__exportStar(require("./postquoteimagebackgroundtagsadd"), exports);
+__exportStar(require("./postquoteimagebackgroundtagsremove"), exports);
+__exportStar(require("./postquoteimagefont"), exports);
+__exportStar(require("./postquoteimagefonttagsadd"), exports);
+__exportStar(require("./postquoteimagefonttagsremove"), exports);
+__exportStar(require("./postquotelike"), exports);
+__exportStar(require("./postquotetagsadd"), exports);
+__exportStar(require("./postquotetagsremove"), exports);
+__exportStar(require("./putqshow"), exports);
+__exportStar(require("./putquote"), exports);
+__exportStar(require("./putquotedislike"), exports);
+__exportStar(require("./putquoteimage"), exports);
+__exportStar(require("./putquotelike"), exports);

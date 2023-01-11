@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentHealthEnum } from "./agenthealthenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentPreview = void 0;
+var utils_1 = require("../../../internal/utils");
+var agenthealthenum_1 = require("./agenthealthenum");
 // AgentPreview
 /**
  * Used as a response element in the <a>PreviewAgents</a> action.
@@ -34,37 +37,37 @@ var AgentPreview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentHealth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentHealth" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "agentHealth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentVersion" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "agentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroup" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "autoScalingGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4Address" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "ipv4Address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kernelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kernelVersion" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "kernelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingSystem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingSystem" }),
         __metadata("design:type", String)
     ], AgentPreview.prototype, "operatingSystem", void 0);
     return AgentPreview;
-}(SpeakeasyBase));
-export { AgentPreview };
+}(utils_1.SpeakeasyBase));
+exports.AgentPreview = AgentPreview;

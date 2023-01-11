@@ -53,7 +53,7 @@ export class UpdateReplicationConfigurationTemplateRequestBody extends Speakeasy
   bandwidthThrottling?: number;
 
   @SpeakeasyMetadata({ data: "json, name=createPublicIP" })
-  createPublicIp?: boolean;
+  createPublicIP?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=dataPlaneRouting" })
   dataPlaneRouting?: UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum;
@@ -68,7 +68,7 @@ export class UpdateReplicationConfigurationTemplateRequestBody extends Speakeasy
   ebsEncryptionKeyArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=replicationConfigurationTemplateID" })
-  replicationConfigurationTemplateId: string;
+  replicationConfigurationTemplateID: string;
 
   @SpeakeasyMetadata({ data: "json, name=replicationServerInstanceType" })
   replicationServerInstanceType?: string;
@@ -80,7 +80,7 @@ export class UpdateReplicationConfigurationTemplateRequestBody extends Speakeasy
   stagingAreaSubnetId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=stagingAreaTags" })
-  stagingAreaTags?: Map<string, string>;
+  stagingAreaTags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=useDedicatedReplicationServer" })
   useDedicatedReplicationServer?: boolean;

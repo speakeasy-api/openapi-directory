@@ -4,7 +4,7 @@ export declare class ForgetWiFiNetworkRequest extends SpeakeasyBase {
     request: shared.ForgetWiFiNetworkRequest;
 }
 export declare class ForgetWiFiNetworkResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    forgetWiFiNetwork200TextPlainObject?: string;
     statusCode: number;
 }

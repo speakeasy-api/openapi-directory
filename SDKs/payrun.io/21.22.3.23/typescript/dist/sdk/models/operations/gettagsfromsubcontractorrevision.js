@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsFromSubContractorRevisionResponse = exports.GetTagsFromSubContractorRevisionRequest = exports.GetTagsFromSubContractorRevisionHeaders = exports.GetTagsFromSubContractorRevisionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTagsFromSubContractorRevisionPathParams = /** @class */ (function (_super) {
     __extends(GetTagsFromSubContractorRevisionPathParams, _super);
     function GetTagsFromSubContractorRevisionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EffectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EffectiveDate" }),
         __metadata("design:type", Date)
     ], GetTagsFromSubContractorRevisionPathParams.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
         __metadata("design:type", String)
     ], GetTagsFromSubContractorRevisionPathParams.prototype, "employerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=SubContractorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=SubContractorId" }),
         __metadata("design:type", String)
     ], GetTagsFromSubContractorRevisionPathParams.prototype, "subContractorId", void 0);
     return GetTagsFromSubContractorRevisionPathParams;
-}(SpeakeasyBase));
-export { GetTagsFromSubContractorRevisionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsFromSubContractorRevisionPathParams = GetTagsFromSubContractorRevisionPathParams;
 var GetTagsFromSubContractorRevisionHeaders = /** @class */ (function (_super) {
     __extends(GetTagsFromSubContractorRevisionHeaders, _super);
     function GetTagsFromSubContractorRevisionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Api-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Api-Version" }),
         __metadata("design:type", String)
     ], GetTagsFromSubContractorRevisionHeaders.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], GetTagsFromSubContractorRevisionHeaders.prototype, "authorization", void 0);
     return GetTagsFromSubContractorRevisionHeaders;
-}(SpeakeasyBase));
-export { GetTagsFromSubContractorRevisionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsFromSubContractorRevisionHeaders = GetTagsFromSubContractorRevisionHeaders;
 var GetTagsFromSubContractorRevisionRequest = /** @class */ (function (_super) {
     __extends(GetTagsFromSubContractorRevisionRequest, _super);
     function GetTagsFromSubContractorRevisionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsFromSubContractorRevisionPathParams)
     ], GetTagsFromSubContractorRevisionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsFromSubContractorRevisionHeaders)
     ], GetTagsFromSubContractorRevisionRequest.prototype, "headers", void 0);
     return GetTagsFromSubContractorRevisionRequest;
-}(SpeakeasyBase));
-export { GetTagsFromSubContractorRevisionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsFromSubContractorRevisionRequest = GetTagsFromSubContractorRevisionRequest;
 var GetTagsFromSubContractorRevisionResponse = /** @class */ (function (_super) {
     __extends(GetTagsFromSubContractorRevisionResponse, _super);
     function GetTagsFromSubContractorRevisionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsFromSubContractorRevisionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], GetTagsFromSubContractorRevisionResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LinkCollection)
     ], GetTagsFromSubContractorRevisionResponse.prototype, "linkCollection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsFromSubContractorRevisionResponse.prototype, "statusCode", void 0);
     return GetTagsFromSubContractorRevisionResponse;
-}(SpeakeasyBase));
-export { GetTagsFromSubContractorRevisionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsFromSubContractorRevisionResponse = GetTagsFromSubContractorRevisionResponse;

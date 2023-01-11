@@ -1,5 +1,8 @@
-export var ShipmentStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShipmentStateEnum = void 0;
+var ShipmentStateEnum;
 (function (ShipmentStateEnum) {
     ShipmentStateEnum["Received"] = "RECEIVED";
     ShipmentStateEnum["Returned"] = "RETURNED";
-})(ShipmentStateEnum || (ShipmentStateEnum = {}));
+})(ShipmentStateEnum = exports.ShipmentStateEnum || (exports.ShipmentStateEnum = {}));

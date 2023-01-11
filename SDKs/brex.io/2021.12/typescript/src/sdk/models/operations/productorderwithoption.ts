@@ -35,10 +35,10 @@ export class ProductOrderWithOptionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productOrderWithOption200ApplicationJsonAny?: any;
+  productOrderWithOption200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productOrderWithOptionDefaultApplicationJsonAny?: any;
+  productOrderWithOptionDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

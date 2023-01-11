@@ -70,7 +70,7 @@ export class AssociateRepositoryRequestBody extends SpeakeasyBase {
   repository: AssociateRepositoryRequestBodyRepository;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

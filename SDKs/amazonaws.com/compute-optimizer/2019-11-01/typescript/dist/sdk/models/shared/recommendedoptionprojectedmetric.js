@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectedMetric } from "./projectedmetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendedOptionProjectedMetric = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectedmetric_1 = require("./projectedmetric");
 // RecommendedOptionProjectedMetric
 /**
  * <p>Describes a projected utilization metric of a recommendation option.</p> <note> <p>The <code>Cpu</code> and <code>Memory</code> metrics are the only projected utilization metrics returned when you run the <a>GetEC2RecommendationProjectedMetrics</a> action. Additionally, the <code>Memory</code> metric is returned only for resources that have the unified CloudWatch agent installed on them. For more information, see <a href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html#cw-agent">Enabling Memory Utilization with the CloudWatch Agent</a>.</p> </note>
@@ -34,17 +37,17 @@ var RecommendedOptionProjectedMetric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectedMetrics", elemType: ProjectedMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectedMetrics", elemType: projectedmetric_1.ProjectedMetric }),
         __metadata("design:type", Array)
     ], RecommendedOptionProjectedMetric.prototype, "projectedMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], RecommendedOptionProjectedMetric.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendedInstanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendedInstanceType" }),
         __metadata("design:type", String)
     ], RecommendedOptionProjectedMetric.prototype, "recommendedInstanceType", void 0);
     return RecommendedOptionProjectedMetric;
-}(SpeakeasyBase));
-export { RecommendedOptionProjectedMetric };
+}(utils_1.SpeakeasyBase));
+exports.RecommendedOptionProjectedMetric = RecommendedOptionProjectedMetric;

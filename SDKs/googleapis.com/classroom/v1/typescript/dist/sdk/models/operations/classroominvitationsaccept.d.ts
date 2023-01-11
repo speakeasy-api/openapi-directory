@@ -27,6 +27,6 @@ export declare class ClassroomInvitationsAcceptRequest extends SpeakeasyBase {
 }
 export declare class ClassroomInvitationsAcceptResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

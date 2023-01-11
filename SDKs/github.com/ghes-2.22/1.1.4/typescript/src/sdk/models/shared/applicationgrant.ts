@@ -14,6 +14,10 @@ export class ApplicationGrantApp extends SpeakeasyBase {
 }
 
 
+// ApplicationGrantSimpleUser
+/** 
+ * Simple User
+**/
 export class ApplicationGrantSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

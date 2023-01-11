@@ -8,8 +8,8 @@ export declare class CreateWorldGenerationJobResponse extends SpeakeasyBase {
     createdAt?: Date;
     failureCode?: WorldGenerationJobErrorCodeEnum;
     status?: WorldGenerationJobStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     template?: string;
     worldCount?: WorldCount;
-    worldTags?: Map<string, string>;
+    worldTags?: Record<string, string>;
 }

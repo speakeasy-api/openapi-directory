@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutOrganizationConfigRuleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutOrganizationConfigRuleResponse = /** @class */ (function (_super) {
     __extends(PutOrganizationConfigRuleResponse, _super);
     function PutOrganizationConfigRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConfigRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConfigRuleArn" }),
         __metadata("design:type", String)
     ], PutOrganizationConfigRuleResponse.prototype, "organizationConfigRuleArn", void 0);
     return PutOrganizationConfigRuleResponse;
-}(SpeakeasyBase));
-export { PutOrganizationConfigRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutOrganizationConfigRuleResponse = PutOrganizationConfigRuleResponse;

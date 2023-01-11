@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionCategoryEnum } from "./subscriptioncategoryenum";
-import { HiuSubscriptionEventContent } from "./hiusubscriptioneventcontent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuSubscriptionNotification = exports.HiuSubscriptionNotificationEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptioncategoryenum_1 = require("./subscriptioncategoryenum");
+var hiusubscriptioneventcontent_1 = require("./hiusubscriptioneventcontent");
 var HiuSubscriptionNotificationEvent = /** @class */ (function (_super) {
     __extends(HiuSubscriptionNotificationEvent, _super);
     function HiuSubscriptionNotificationEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationEvent.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
-        __metadata("design:type", HiuSubscriptionEventContent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
+        __metadata("design:type", hiusubscriptioneventcontent_1.HiuSubscriptionEventContent)
     ], HiuSubscriptionNotificationEvent.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationEvent.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", Date)
     ], HiuSubscriptionNotificationEvent.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionId" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationEvent.prototype, "subscriptionId", void 0);
     return HiuSubscriptionNotificationEvent;
-}(SpeakeasyBase));
-export { HiuSubscriptionNotificationEvent };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionNotificationEvent = HiuSubscriptionNotificationEvent;
 var HiuSubscriptionNotification = /** @class */ (function (_super) {
     __extends(HiuSubscriptionNotification, _super);
     function HiuSubscriptionNotification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", HiuSubscriptionNotificationEvent)
     ], HiuSubscriptionNotification.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotification.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuSubscriptionNotification.prototype, "timestamp", void 0);
     return HiuSubscriptionNotification;
-}(SpeakeasyBase));
-export { HiuSubscriptionNotification };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionNotification = HiuSubscriptionNotification;

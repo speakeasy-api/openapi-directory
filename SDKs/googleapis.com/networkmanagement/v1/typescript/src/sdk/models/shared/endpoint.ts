@@ -1,5 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { AppEngineVersionEndpoint } from "./appengineversionendpoint";
 import { CloudFunctionEndpoint } from "./cloudfunctionendpoint";
+import { CloudRunRevisionEndpoint } from "./cloudrunrevisionendpoint";
 
 
 export enum EndpointNetworkTypeEnum {
@@ -14,8 +16,14 @@ export enum EndpointNetworkTypeEnum {
  * Source or destination of the Connectivity Test.
 **/
 export class Endpoint extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=appEngineVersion" })
+  appEngineVersion?: AppEngineVersionEndpoint;
+
   @SpeakeasyMetadata({ data: "json, name=cloudFunction" })
   cloudFunction?: CloudFunctionEndpoint;
+
+  @SpeakeasyMetadata({ data: "json, name=cloudRunRevision" })
+  cloudRunRevision?: CloudRunRevisionEndpoint;
 
   @SpeakeasyMetadata({ data: "json, name=cloudSqlInstance" })
   cloudSqlInstance?: string;

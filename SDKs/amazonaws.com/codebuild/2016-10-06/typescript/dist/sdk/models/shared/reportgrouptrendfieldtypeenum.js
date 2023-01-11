@@ -1,4 +1,7 @@
-export var ReportGroupTrendFieldTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportGroupTrendFieldTypeEnum = void 0;
+var ReportGroupTrendFieldTypeEnum;
 (function (ReportGroupTrendFieldTypeEnum) {
     ReportGroupTrendFieldTypeEnum["PassRate"] = "PASS_RATE";
     ReportGroupTrendFieldTypeEnum["Duration"] = "DURATION";
@@ -9,4 +12,4 @@ export var ReportGroupTrendFieldTypeEnum;
     ReportGroupTrendFieldTypeEnum["BranchCoverage"] = "BRANCH_COVERAGE";
     ReportGroupTrendFieldTypeEnum["BranchesCovered"] = "BRANCHES_COVERED";
     ReportGroupTrendFieldTypeEnum["BranchesMissed"] = "BRANCHES_MISSED";
-})(ReportGroupTrendFieldTypeEnum || (ReportGroupTrendFieldTypeEnum = {}));
+})(ReportGroupTrendFieldTypeEnum = exports.ReportGroupTrendFieldTypeEnum || (exports.ReportGroupTrendFieldTypeEnum = {}));

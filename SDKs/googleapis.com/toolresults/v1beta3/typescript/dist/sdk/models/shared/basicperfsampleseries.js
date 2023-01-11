@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BasicPerfSampleSeriesPerfMetricTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicPerfSampleSeries = exports.BasicPerfSampleSeriesSampleSeriesLabelEnum = exports.BasicPerfSampleSeriesPerfUnitEnum = exports.BasicPerfSampleSeriesPerfMetricTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BasicPerfSampleSeriesPerfMetricTypeEnum;
 (function (BasicPerfSampleSeriesPerfMetricTypeEnum) {
     BasicPerfSampleSeriesPerfMetricTypeEnum["PerfMetricTypeUnspecified"] = "perfMetricTypeUnspecified";
     BasicPerfSampleSeriesPerfMetricTypeEnum["Memory"] = "memory";
     BasicPerfSampleSeriesPerfMetricTypeEnum["Cpu"] = "cpu";
     BasicPerfSampleSeriesPerfMetricTypeEnum["Network"] = "network";
     BasicPerfSampleSeriesPerfMetricTypeEnum["Graphics"] = "graphics";
-})(BasicPerfSampleSeriesPerfMetricTypeEnum || (BasicPerfSampleSeriesPerfMetricTypeEnum = {}));
-export var BasicPerfSampleSeriesPerfUnitEnum;
+})(BasicPerfSampleSeriesPerfMetricTypeEnum = exports.BasicPerfSampleSeriesPerfMetricTypeEnum || (exports.BasicPerfSampleSeriesPerfMetricTypeEnum = {}));
+var BasicPerfSampleSeriesPerfUnitEnum;
 (function (BasicPerfSampleSeriesPerfUnitEnum) {
     BasicPerfSampleSeriesPerfUnitEnum["PerfUnitUnspecified"] = "perfUnitUnspecified";
     BasicPerfSampleSeriesPerfUnitEnum["Kibibyte"] = "kibibyte";
@@ -39,8 +42,8 @@ export var BasicPerfSampleSeriesPerfUnitEnum;
     BasicPerfSampleSeriesPerfUnitEnum["BytesPerSecond"] = "bytesPerSecond";
     BasicPerfSampleSeriesPerfUnitEnum["FramesPerSecond"] = "framesPerSecond";
     BasicPerfSampleSeriesPerfUnitEnum["Byte"] = "byte";
-})(BasicPerfSampleSeriesPerfUnitEnum || (BasicPerfSampleSeriesPerfUnitEnum = {}));
-export var BasicPerfSampleSeriesSampleSeriesLabelEnum;
+})(BasicPerfSampleSeriesPerfUnitEnum = exports.BasicPerfSampleSeriesPerfUnitEnum || (exports.BasicPerfSampleSeriesPerfUnitEnum = {}));
+var BasicPerfSampleSeriesSampleSeriesLabelEnum;
 (function (BasicPerfSampleSeriesSampleSeriesLabelEnum) {
     BasicPerfSampleSeriesSampleSeriesLabelEnum["SampleSeriesTypeUnspecified"] = "sampleSeriesTypeUnspecified";
     BasicPerfSampleSeriesSampleSeriesLabelEnum["MemoryRssPrivate"] = "memoryRssPrivate";
@@ -55,7 +58,7 @@ export var BasicPerfSampleSeriesSampleSeriesLabelEnum;
     BasicPerfSampleSeriesSampleSeriesLabelEnum["NetworkSent"] = "networkSent";
     BasicPerfSampleSeriesSampleSeriesLabelEnum["NetworkReceived"] = "networkReceived";
     BasicPerfSampleSeriesSampleSeriesLabelEnum["GraphicsFrameRate"] = "graphicsFrameRate";
-})(BasicPerfSampleSeriesSampleSeriesLabelEnum || (BasicPerfSampleSeriesSampleSeriesLabelEnum = {}));
+})(BasicPerfSampleSeriesSampleSeriesLabelEnum = exports.BasicPerfSampleSeriesSampleSeriesLabelEnum || (exports.BasicPerfSampleSeriesSampleSeriesLabelEnum = {}));
 // BasicPerfSampleSeries
 /**
  * Encapsulates the metadata for basic sample series represented by a line chart
@@ -66,17 +69,17 @@ var BasicPerfSampleSeries = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfMetricType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfMetricType" }),
         __metadata("design:type", String)
     ], BasicPerfSampleSeries.prototype, "perfMetricType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfUnit" }),
         __metadata("design:type", String)
     ], BasicPerfSampleSeries.prototype, "perfUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleSeriesLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleSeriesLabel" }),
         __metadata("design:type", String)
     ], BasicPerfSampleSeries.prototype, "sampleSeriesLabel", void 0);
     return BasicPerfSampleSeries;
-}(SpeakeasyBase));
-export { BasicPerfSampleSeries };
+}(utils_1.SpeakeasyBase));
+exports.BasicPerfSampleSeries = BasicPerfSampleSeries;

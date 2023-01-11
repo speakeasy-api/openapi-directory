@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GradeHistoryGradeChangeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GradeHistory = exports.GradeHistoryGradeChangeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GradeHistoryGradeChangeTypeEnum;
 (function (GradeHistoryGradeChangeTypeEnum) {
     GradeHistoryGradeChangeTypeEnum["UnknownGradeChangeType"] = "UNKNOWN_GRADE_CHANGE_TYPE";
     GradeHistoryGradeChangeTypeEnum["DraftGradePointsEarnedChange"] = "DRAFT_GRADE_POINTS_EARNED_CHANGE";
     GradeHistoryGradeChangeTypeEnum["AssignedGradePointsEarnedChange"] = "ASSIGNED_GRADE_POINTS_EARNED_CHANGE";
     GradeHistoryGradeChangeTypeEnum["MaxPointsChange"] = "MAX_POINTS_CHANGE";
-})(GradeHistoryGradeChangeTypeEnum || (GradeHistoryGradeChangeTypeEnum = {}));
+})(GradeHistoryGradeChangeTypeEnum = exports.GradeHistoryGradeChangeTypeEnum || (exports.GradeHistoryGradeChangeTypeEnum = {}));
 // GradeHistory
 /**
  * The history of each grade on this submission.
@@ -40,25 +43,25 @@ var GradeHistory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actorUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actorUserId" }),
         __metadata("design:type", String)
     ], GradeHistory.prototype, "actorUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeChangeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeChangeType" }),
         __metadata("design:type", String)
     ], GradeHistory.prototype, "gradeChangeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gradeTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gradeTimestamp" }),
         __metadata("design:type", String)
     ], GradeHistory.prototype, "gradeTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPoints" }),
         __metadata("design:type", Number)
     ], GradeHistory.prototype, "maxPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointsEarned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointsEarned" }),
         __metadata("design:type", Number)
     ], GradeHistory.prototype, "pointsEarned", void 0);
     return GradeHistory;
-}(SpeakeasyBase));
-export { GradeHistory };
+}(utils_1.SpeakeasyBase));
+exports.GradeHistory = GradeHistory;

@@ -1,8 +1,24 @@
-export * from "./webhooksadd";
-export * from "./webhooksall";
-export * from "./webhooksdelete";
-export * from "./webhooksexecute";
-export * from "./webhooksone";
-export * from "./webhooksresolve";
-export * from "./webhooksshortexecute";
-export * from "./webhooksupdate";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./webhooksadd"), exports);
+__exportStar(require("./webhooksall"), exports);
+__exportStar(require("./webhooksdelete"), exports);
+__exportStar(require("./webhooksexecute"), exports);
+__exportStar(require("./webhooksone"), exports);
+__exportStar(require("./webhooksresolve"), exports);
+__exportStar(require("./webhooksshortexecute"), exports);
+__exportStar(require("./webhooksupdate"), exports);

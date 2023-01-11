@@ -1,6 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec } from "./googlecloudpaymentsresellersubscriptionv1subscriptionpromotionspec";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails } from "./googlecloudpaymentsresellersubscriptionv1subscriptionlineitemonetimerecurrencedetails";
+import { GoogleCloudPaymentsResellerSubscriptionV1ProductPayload } from "./googlecloudpaymentsresellersubscriptionv1productpayload";
 import { GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput } from "./googlecloudpaymentsresellersubscriptionv1subscriptionpromotionspec";
 
 
@@ -16,13 +17,14 @@ export enum GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEn
     LineItemStateInactive = "LINE_ITEM_STATE_INACTIVE",
     LineItemStateNew = "LINE_ITEM_STATE_NEW",
     LineItemStateActivating = "LINE_ITEM_STATE_ACTIVATING",
-    LineItemStateDeactivating = "LINE_ITEM_STATE_DEACTIVATING"
+    LineItemStateDeactivating = "LINE_ITEM_STATE_DEACTIVATING",
+    LineItemStateWaitingToDeactivate = "LINE_ITEM_STATE_WAITING_TO_DEACTIVATE"
 }
 
 
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
 /** 
- * Individual line item definition of a subscription. Next id: 9
+ * Individual line item definition of a subscription.
 **/
 export class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
@@ -40,6 +42,9 @@ export class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem exten
   @SpeakeasyMetadata({ data: "json, name=product" })
   product?: string;
 
+  @SpeakeasyMetadata({ data: "json, name=productPayload" })
+  productPayload?: GoogleCloudPaymentsResellerSubscriptionV1ProductPayload;
+
   @SpeakeasyMetadata({ data: "json, name=recurrenceType" })
   recurrenceType?: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum;
 
@@ -50,7 +55,7 @@ export class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem exten
 
 // GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput
 /** 
- * Individual line item definition of a subscription. Next id: 9
+ * Individual line item definition of a subscription.
 **/
 export class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=lineItemPromotionSpecs", elemType: GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput })
@@ -61,4 +66,7 @@ export class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
 
   @SpeakeasyMetadata({ data: "json, name=product" })
   product?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=productPayload" })
+  productPayload?: GoogleCloudPaymentsResellerSubscriptionV1ProductPayload;
 }

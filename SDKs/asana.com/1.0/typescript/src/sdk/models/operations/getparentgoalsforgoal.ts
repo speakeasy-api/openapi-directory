@@ -44,5 +44,5 @@ export class GetParentGoalsForGoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getParentGoalsForGoal200ApplicationJsonObject?: GetParentGoalsForGoal200ApplicationJson;
+  getParentGoalsForGoal200ApplicationJSONObject?: GetParentGoalsForGoal200ApplicationJson;
 }

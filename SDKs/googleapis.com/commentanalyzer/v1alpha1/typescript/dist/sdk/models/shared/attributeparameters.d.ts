@@ -6,9 +6,6 @@ export declare enum AttributeParametersScoreTypeEnum {
     Percentile = "PERCENTILE",
     Raw = "RAW"
 }
-/**
- * Configurable parameters for attribute scoring.
-**/
 export declare class AttributeParameters extends SpeakeasyBase {
     scoreThreshold?: number;
     scoreType?: AttributeParametersScoreTypeEnum;

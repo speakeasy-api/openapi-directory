@@ -14,7 +14,7 @@ export class CancellationReasonsHeaders extends SpeakeasyBase {
 
 export class CancellationReasonsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   headers: CancellationReasonsHeaders;
@@ -23,16 +23,16 @@ export class CancellationReasonsRequest extends SpeakeasyBase {
 
 export class CancellationReasonsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  fourHundredAndOneUnauthorized?: shared.FourHundredAndOneUnauthorized;
+  fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
 
   @SpeakeasyMetadata()
-  fourHundredAndSixNotAcceptable?: shared.FourHundredAndSixNotAcceptable;
+  fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
 
   @SpeakeasyMetadata()
-  fiveHundredInternalServerError?: shared.FiveHundredInternalServerError;
+  fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
 
   @SpeakeasyMetadata()
-  fiveHundredAndThreeServiceUnavailable?: shared.FiveHundredAndThreeServiceUnavailable;
+  fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
 
   @SpeakeasyMetadata({ elemType: shared.CancellationReasonsResponse })
   cancellationReasonsResponses?: shared.CancellationReasonsResponse[];

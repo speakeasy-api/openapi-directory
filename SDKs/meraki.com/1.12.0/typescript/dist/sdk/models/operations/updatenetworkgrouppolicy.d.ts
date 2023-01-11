@@ -271,5 +271,5 @@ export declare class UpdateNetworkGroupPolicyRequest extends SpeakeasyBase {
 export declare class UpdateNetworkGroupPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkGroupPolicy200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkGroupPolicy200ApplicationJSONObject?: Record<string, any>;
 }

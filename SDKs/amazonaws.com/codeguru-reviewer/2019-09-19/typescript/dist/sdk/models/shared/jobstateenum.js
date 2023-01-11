@@ -1,7 +1,10 @@
-export var JobStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobStateEnum = void 0;
+var JobStateEnum;
 (function (JobStateEnum) {
     JobStateEnum["Completed"] = "Completed";
     JobStateEnum["Pending"] = "Pending";
     JobStateEnum["Failed"] = "Failed";
     JobStateEnum["Deleting"] = "Deleting";
-})(JobStateEnum || (JobStateEnum = {}));
+})(JobStateEnum = exports.JobStateEnum || (exports.JobStateEnum = {}));

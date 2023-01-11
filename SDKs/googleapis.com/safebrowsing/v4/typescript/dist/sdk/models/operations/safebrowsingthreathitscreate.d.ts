@@ -19,6 +19,6 @@ export declare class SafebrowsingThreatHitsCreateRequest extends SpeakeasyBase {
 }
 export declare class SafebrowsingThreatHitsCreateResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationSet } from "./configurationset";
-import { DeliveryOptions } from "./deliveryoptions";
-import { EventDestination } from "./eventdestination";
-import { ReputationOptions } from "./reputationoptions";
-import { TrackingOptions } from "./trackingoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeConfigurationSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationset_1 = require("./configurationset");
+var deliveryoptions_1 = require("./deliveryoptions");
+var eventdestination_1 = require("./eventdestination");
+var reputationoptions_1 = require("./reputationoptions");
+var trackingoptions_1 = require("./trackingoptions");
 // DescribeConfigurationSetResponse
 /**
  * Represents the details of a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Amazon SES Developer Guide</a>.
@@ -38,25 +41,25 @@ var DescribeConfigurationSetResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ConfigurationSet)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", configurationset_1.ConfigurationSet)
     ], DescribeConfigurationSetResponse.prototype, "configurationSet", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DeliveryOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", deliveryoptions_1.DeliveryOptions)
     ], DescribeConfigurationSetResponse.prototype, "deliveryOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: EventDestination }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: eventdestination_1.EventDestination }),
         __metadata("design:type", Array)
     ], DescribeConfigurationSetResponse.prototype, "eventDestinations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReputationOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", reputationoptions_1.ReputationOptions)
     ], DescribeConfigurationSetResponse.prototype, "reputationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrackingOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", trackingoptions_1.TrackingOptions)
     ], DescribeConfigurationSetResponse.prototype, "trackingOptions", void 0);
     return DescribeConfigurationSetResponse;
-}(SpeakeasyBase));
-export { DescribeConfigurationSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeConfigurationSetResponse = DescribeConfigurationSetResponse;

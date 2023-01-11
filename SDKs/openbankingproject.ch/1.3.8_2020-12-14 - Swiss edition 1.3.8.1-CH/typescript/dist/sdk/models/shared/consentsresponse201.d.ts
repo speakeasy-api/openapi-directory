@@ -8,7 +8,7 @@ import { AuthenticationObject } from "./authenticationobject";
  * Body of the JSON response for a successful consent request.
 **/
 export declare class ConsentsResponse201 extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     challengeData?: ChallengeData;
     chosenScaMethod?: ChosenScaMethod;
     consentId: string;

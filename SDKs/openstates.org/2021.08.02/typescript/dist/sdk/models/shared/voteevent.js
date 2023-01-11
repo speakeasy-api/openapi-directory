@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VoteCount } from "./votecount";
-import { Organization } from "./organization";
-import { Link } from "./link";
-import { PersonVote } from "./personvote";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoteEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var votecount_1 = require("./votecount");
+var organization_1 = require("./organization");
+var link_1 = require("./link");
+var personvote_1 = require("./personvote");
 var VoteEvent = /** @class */ (function (_super) {
     __extends(VoteEvent, _super);
     function VoteEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counts", elemType: VoteCount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counts", elemType: votecount_1.VoteCount }),
         __metadata("design:type", Array)
     ], VoteEvent.prototype, "counts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], VoteEvent.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], VoteEvent.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motion_classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motion_classification" }),
         __metadata("design:type", Array)
     ], VoteEvent.prototype, "motionClassification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=motion_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=motion_text" }),
         __metadata("design:type", String)
     ], VoteEvent.prototype, "motionText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", Organization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", organization_1.Organization)
     ], VoteEvent.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], VoteEvent.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], VoteEvent.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", String)
     ], VoteEvent.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=votes", elemType: PersonVote }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=votes", elemType: personvote_1.PersonVote }),
         __metadata("design:type", Array)
     ], VoteEvent.prototype, "votes", void 0);
     return VoteEvent;
-}(SpeakeasyBase));
-export { VoteEvent };
+}(utils_1.SpeakeasyBase));
+exports.VoteEvent = VoteEvent;

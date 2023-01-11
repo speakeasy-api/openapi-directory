@@ -14,5 +14,5 @@ export declare class DeleteAppsAppIdNamespacesNamespaceIdRequest extends Speakea
 export declare class DeleteAppsAppIdNamespacesNamespaceIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

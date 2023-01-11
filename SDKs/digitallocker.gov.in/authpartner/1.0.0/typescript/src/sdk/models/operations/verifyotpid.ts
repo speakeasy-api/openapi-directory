@@ -47,11 +47,11 @@ export class VerifyOtpIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  verifyOtpId400ApplicationJsonOneOf?: any;
+  verifyOTPId400ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  verifyOtpId401ApplicationJsonObject?: VerifyOtpId401ApplicationJson;
+  verifyOTPId401ApplicationJSONObject?: VerifyOtpId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  verifyOtpId500ApplicationJsonObject?: VerifyOtpId500ApplicationJson;
+  verifyOTPId500ApplicationJSONObject?: VerifyOtpId500ApplicationJson;
 }

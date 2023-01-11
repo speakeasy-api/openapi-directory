@@ -34,7 +34,7 @@ export class UrbanDeliveryRequestBody extends SpeakeasyBase {
 
 export class UrbanDeliveryRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: UrbanDeliveryRequestBody;

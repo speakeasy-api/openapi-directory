@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudRecommenderV1RecommenderGenerationConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, any>;
+  params?: Record<string, any>;
 }

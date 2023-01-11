@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskAddCollectionResponse = exports.TaskAddCollectionRequest = exports.TaskAddCollectionHeaders = exports.TaskAddCollectionQueryParams = exports.TaskAddCollectionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaskAddCollectionPathParams = /** @class */ (function (_super) {
     __extends(TaskAddCollectionPathParams, _super);
     function TaskAddCollectionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], TaskAddCollectionPathParams.prototype, "jobId", void 0);
     return TaskAddCollectionPathParams;
-}(SpeakeasyBase));
-export { TaskAddCollectionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddCollectionPathParams = TaskAddCollectionPathParams;
 var TaskAddCollectionQueryParams = /** @class */ (function (_super) {
     __extends(TaskAddCollectionQueryParams, _super);
     function TaskAddCollectionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], TaskAddCollectionQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], TaskAddCollectionQueryParams.prototype, "timeout", void 0);
     return TaskAddCollectionQueryParams;
-}(SpeakeasyBase));
-export { TaskAddCollectionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddCollectionQueryParams = TaskAddCollectionQueryParams;
 var TaskAddCollectionHeaders = /** @class */ (function (_super) {
     __extends(TaskAddCollectionHeaders, _super);
     function TaskAddCollectionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], TaskAddCollectionHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], TaskAddCollectionHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], TaskAddCollectionHeaders.prototype, "returnClientRequestId", void 0);
     return TaskAddCollectionHeaders;
-}(SpeakeasyBase));
-export { TaskAddCollectionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddCollectionHeaders = TaskAddCollectionHeaders;
 var TaskAddCollectionRequest = /** @class */ (function (_super) {
     __extends(TaskAddCollectionRequest, _super);
     function TaskAddCollectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddCollectionPathParams)
     ], TaskAddCollectionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddCollectionQueryParams)
     ], TaskAddCollectionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddCollectionHeaders)
     ], TaskAddCollectionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], TaskAddCollectionRequest.prototype, "request", void 0);
     return TaskAddCollectionRequest;
-}(SpeakeasyBase));
-export { TaskAddCollectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddCollectionRequest = TaskAddCollectionRequest;
 var TaskAddCollectionResponse = /** @class */ (function (_super) {
     __extends(TaskAddCollectionResponse, _super);
     function TaskAddCollectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskAddCollectionResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaskAddCollectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TaskAddCollectionResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaskAddCollectionResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskAddCollectionResponse.prototype, "taskAddCollectionResult", void 0);
     return TaskAddCollectionResponse;
-}(SpeakeasyBase));
-export { TaskAddCollectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddCollectionResponse = TaskAddCollectionResponse;

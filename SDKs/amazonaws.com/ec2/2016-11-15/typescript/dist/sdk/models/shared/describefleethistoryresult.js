@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistoryRecordEntry } from "./historyrecordentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeFleetHistoryResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeFleetHistoryResult = /** @class */ (function (_super) {
     __extends(DescribeFleetHistoryResult, _super);
     function DescribeFleetHistoryResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFleetHistoryResult.prototype, "fleetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: HistoryRecordEntry }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFleetHistoryResult.prototype, "historyRecords", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFleetHistoryResult.prototype, "lastEvaluatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFleetHistoryResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeFleetHistoryResult.prototype, "startTime", void 0);
     return DescribeFleetHistoryResult;
-}(SpeakeasyBase));
-export { DescribeFleetHistoryResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeFleetHistoryResult = DescribeFleetHistoryResult;

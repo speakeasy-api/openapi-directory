@@ -60,7 +60,7 @@ export declare class PensionPension extends SpeakeasyBase {
     employerNiSavingPercentage?: number;
     group?: string;
     lowerThreshold?: number;
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     pensionablePayCodes?: PensionPensionPensionablePayCodes;
     proRataMethod?: PensionPensionProRataMethodEnum;
     providerEmployerRef?: string;
@@ -74,7 +74,7 @@ export declare class PensionPension extends SpeakeasyBase {
     subGroup?: string;
     taxationMethod?: PensionPensionTaxationMethodEnum;
     upperThreshold?: number;
-    useAeThresholds?: boolean;
+    useAEThresholds?: boolean;
 }
 export declare class Pension extends SpeakeasyBase {
     pension?: PensionPension;

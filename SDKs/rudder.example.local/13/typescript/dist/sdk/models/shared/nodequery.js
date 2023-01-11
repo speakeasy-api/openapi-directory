@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NodeQueryCompositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeQuery = exports.NodeQueryWhere = exports.NodeQueryCompositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NodeQueryCompositionEnum;
 (function (NodeQueryCompositionEnum) {
     NodeQueryCompositionEnum["And"] = "and";
     NodeQueryCompositionEnum["Or"] = "or";
-})(NodeQueryCompositionEnum || (NodeQueryCompositionEnum = {}));
+})(NodeQueryCompositionEnum = exports.NodeQueryCompositionEnum || (exports.NodeQueryCompositionEnum = {}));
 var NodeQueryWhere = /** @class */ (function (_super) {
     __extends(NodeQueryWhere, _super);
     function NodeQueryWhere() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], NodeQueryWhere.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], NodeQueryWhere.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], NodeQueryWhere.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], NodeQueryWhere.prototype, "value", void 0);
     return NodeQueryWhere;
-}(SpeakeasyBase));
-export { NodeQueryWhere };
+}(utils_1.SpeakeasyBase));
+exports.NodeQueryWhere = NodeQueryWhere;
 var NodeQuery = /** @class */ (function (_super) {
     __extends(NodeQuery, _super);
     function NodeQuery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=composition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=composition" }),
         __metadata("design:type", String)
     ], NodeQuery.prototype, "composition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=select" }),
         __metadata("design:type", String)
     ], NodeQuery.prototype, "select", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=where", elemType: NodeQueryWhere }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=where", elemType: NodeQueryWhere }),
         __metadata("design:type", Array)
     ], NodeQuery.prototype, "where", void 0);
     return NodeQuery;
-}(SpeakeasyBase));
-export { NodeQuery };
+}(utils_1.SpeakeasyBase));
+exports.NodeQuery = NodeQuery;

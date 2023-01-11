@@ -83,8 +83,8 @@ export class PostServersIdActionsResetPasswordResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postServersIdActionsResetPassword201ApplicationJsonObject?: PostServersIdActionsResetPassword201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postServersIdActionsResetPassword201ApplicationJSONObject?: PostServersIdActionsResetPassword201ApplicationJson;
 }

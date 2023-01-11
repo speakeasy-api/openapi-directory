@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InteractionsRemoveRestrictionsForOrgResponse = exports.InteractionsRemoveRestrictionsForOrgRequest = exports.InteractionsRemoveRestrictionsForOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var InteractionsRemoveRestrictionsForOrgPathParams = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForOrgPathParams, _super);
     function InteractionsRemoveRestrictionsForOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], InteractionsRemoveRestrictionsForOrgPathParams.prototype, "org", void 0);
     return InteractionsRemoveRestrictionsForOrgPathParams;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForOrgPathParams = InteractionsRemoveRestrictionsForOrgPathParams;
 var InteractionsRemoveRestrictionsForOrgRequest = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForOrgRequest, _super);
     function InteractionsRemoveRestrictionsForOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", InteractionsRemoveRestrictionsForOrgPathParams)
     ], InteractionsRemoveRestrictionsForOrgRequest.prototype, "pathParams", void 0);
     return InteractionsRemoveRestrictionsForOrgRequest;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForOrgRequest = InteractionsRemoveRestrictionsForOrgRequest;
 var InteractionsRemoveRestrictionsForOrgResponse = /** @class */ (function (_super) {
     __extends(InteractionsRemoveRestrictionsForOrgResponse, _super);
     function InteractionsRemoveRestrictionsForOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InteractionsRemoveRestrictionsForOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InteractionsRemoveRestrictionsForOrgResponse.prototype, "statusCode", void 0);
     return InteractionsRemoveRestrictionsForOrgResponse;
-}(SpeakeasyBase));
-export { InteractionsRemoveRestrictionsForOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.InteractionsRemoveRestrictionsForOrgResponse = InteractionsRemoveRestrictionsForOrgResponse;

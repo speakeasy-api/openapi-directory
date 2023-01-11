@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationFull } from "./organizationfull";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamFull = exports.TeamFullPrivacyEnum = exports.TeamFullTeamSimple = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationfull_1 = require("./organizationfull");
+// TeamFullTeamSimple
+/**
+ * Groups of organization members that gives permissions on specified repositories.
+**/
 var TeamFullTeamSimple = /** @class */ (function (_super) {
     __extends(TeamFullTeamSimple, _super);
     function TeamFullTeamSimple() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TeamFullTeamSimple.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_dn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_dn" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "ldapDn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_url" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "membersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositories_url" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "repositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], TeamFullTeamSimple.prototype, "url", void 0);
     return TeamFullTeamSimple;
-}(SpeakeasyBase));
-export { TeamFullTeamSimple };
-export var TeamFullPrivacyEnum;
+}(utils_1.SpeakeasyBase));
+exports.TeamFullTeamSimple = TeamFullTeamSimple;
+var TeamFullPrivacyEnum;
 (function (TeamFullPrivacyEnum) {
     TeamFullPrivacyEnum["Closed"] = "closed";
     TeamFullPrivacyEnum["Secret"] = "secret";
-})(TeamFullPrivacyEnum || (TeamFullPrivacyEnum = {}));
+})(TeamFullPrivacyEnum = exports.TeamFullPrivacyEnum || (exports.TeamFullPrivacyEnum = {}));
 // TeamFull
 /**
  * Groups of organization members that gives permissions on specified repositories.
@@ -95,77 +102,77 @@ var TeamFull = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], TeamFull.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TeamFull.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_dn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_dn" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "ldapDn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_count" }),
         __metadata("design:type", Number)
     ], TeamFull.prototype, "membersCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_url" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "membersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", OrganizationFull)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", organizationfull_1.OrganizationFull)
     ], TeamFull.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", TeamFullTeamSimple)
     ], TeamFull.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_count" }),
         __metadata("design:type", Number)
     ], TeamFull.prototype, "reposCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositories_url" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "repositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], TeamFull.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], TeamFull.prototype, "url", void 0);
     return TeamFull;
-}(SpeakeasyBase));
-export { TeamFull };
+}(utils_1.SpeakeasyBase));
+exports.TeamFull = TeamFull;

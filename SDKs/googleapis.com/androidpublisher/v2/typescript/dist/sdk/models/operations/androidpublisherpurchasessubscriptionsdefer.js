@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,130 +14,155 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidpublisherPurchasesSubscriptionsDeferResponse = exports.AndroidpublisherPurchasesSubscriptionsDeferRequest = exports.AndroidpublisherPurchasesSubscriptionsDeferSecurity = exports.AndroidpublisherPurchasesSubscriptionsDeferQueryParams = exports.AndroidpublisherPurchasesSubscriptionsDeferPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AndroidpublisherPurchasesSubscriptionsDeferPathParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherPurchasesSubscriptionsDeferPathParams, _super);
     function AndroidpublisherPurchasesSubscriptionsDeferPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packageName" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferPathParams.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=subscriptionId" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferPathParams.prototype, "subscriptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=token" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferPathParams.prototype, "token", void 0);
     return AndroidpublisherPurchasesSubscriptionsDeferPathParams;
-}(SpeakeasyBase));
-export { AndroidpublisherPurchasesSubscriptionsDeferPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherPurchasesSubscriptionsDeferPathParams = AndroidpublisherPurchasesSubscriptionsDeferPathParams;
 var AndroidpublisherPurchasesSubscriptionsDeferQueryParams = /** @class */ (function (_super) {
     __extends(AndroidpublisherPurchasesSubscriptionsDeferQueryParams, _super);
     function AndroidpublisherPurchasesSubscriptionsDeferQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferQueryParams.prototype, "userIp", void 0);
     return AndroidpublisherPurchasesSubscriptionsDeferQueryParams;
-}(SpeakeasyBase));
-export { AndroidpublisherPurchasesSubscriptionsDeferQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherPurchasesSubscriptionsDeferQueryParams = AndroidpublisherPurchasesSubscriptionsDeferQueryParams;
 var AndroidpublisherPurchasesSubscriptionsDeferSecurity = /** @class */ (function (_super) {
     __extends(AndroidpublisherPurchasesSubscriptionsDeferSecurity, _super);
     function AndroidpublisherPurchasesSubscriptionsDeferSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AndroidpublisherPurchasesSubscriptionsDeferSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AndroidpublisherPurchasesSubscriptionsDeferSecurity.prototype, "oauth2c", void 0);
     return AndroidpublisherPurchasesSubscriptionsDeferSecurity;
-}(SpeakeasyBase));
-export { AndroidpublisherPurchasesSubscriptionsDeferSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherPurchasesSubscriptionsDeferSecurity = AndroidpublisherPurchasesSubscriptionsDeferSecurity;
 var AndroidpublisherPurchasesSubscriptionsDeferRequest = /** @class */ (function (_super) {
     __extends(AndroidpublisherPurchasesSubscriptionsDeferRequest, _super);
     function AndroidpublisherPurchasesSubscriptionsDeferRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherPurchasesSubscriptionsDeferPathParams)
     ], AndroidpublisherPurchasesSubscriptionsDeferRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherPurchasesSubscriptionsDeferQueryParams)
     ], AndroidpublisherPurchasesSubscriptionsDeferRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.SubscriptionPurchasesDeferRequest)
     ], AndroidpublisherPurchasesSubscriptionsDeferRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AndroidpublisherPurchasesSubscriptionsDeferSecurity)
     ], AndroidpublisherPurchasesSubscriptionsDeferRequest.prototype, "security", void 0);
     return AndroidpublisherPurchasesSubscriptionsDeferRequest;
-}(SpeakeasyBase));
-export { AndroidpublisherPurchasesSubscriptionsDeferRequest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherPurchasesSubscriptionsDeferRequest = AndroidpublisherPurchasesSubscriptionsDeferRequest;
 var AndroidpublisherPurchasesSubscriptionsDeferResponse = /** @class */ (function (_super) {
     __extends(AndroidpublisherPurchasesSubscriptionsDeferResponse, _super);
     function AndroidpublisherPurchasesSubscriptionsDeferResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], AndroidpublisherPurchasesSubscriptionsDeferResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AndroidpublisherPurchasesSubscriptionsDeferResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AndroidpublisherPurchasesSubscriptionsDeferResponse.prototype, "statusCode", void 0);
     return AndroidpublisherPurchasesSubscriptionsDeferResponse;
-}(SpeakeasyBase));
-export { AndroidpublisherPurchasesSubscriptionsDeferResponse };
+}(utils_1.SpeakeasyBase));
+exports.AndroidpublisherPurchasesSubscriptionsDeferResponse = AndroidpublisherPurchasesSubscriptionsDeferResponse;

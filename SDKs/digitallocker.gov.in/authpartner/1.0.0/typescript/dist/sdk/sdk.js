@@ -1,56 +1,37 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { AccountDetailApi } from "./accountdetailapi";
-import { Authorization } from "./authorization";
-import { AuthorizationApi } from "./authorizationapi";
-import { DigiLockerMetaApIs } from "./digilockermetaapis";
-import { DigiLockerSignUpApIs } from "./digilockersignupapis";
-import { FileApIs } from "./fileapis";
-import { TokenRevocationApi } from "./tokenrevocationapi";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var accountdetailapi_1 = require("./accountdetailapi");
+var authorization_1 = require("./authorization");
+var authorizationapi_1 = require("./authorizationapi");
+var digilockermetaapis_1 = require("./digilockermetaapis");
+var digilockersignupapis_1 = require("./digilockersignupapis");
+var fileapis_1 = require("./fileapis");
+var tokenrevocationapi_1 = require("./tokenrevocationapi");
+exports.ServerList = [
     "https://betaapi.digitallocker.gov.in/public",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.accountDetailApi = new AccountDetailApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.authorization = new Authorization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.authorizationApi = new AuthorizationApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.digiLockerMetaApIs = new DigiLockerMetaApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.digiLockerSignUpApIs = new DigiLockerSignUpApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.fileApIs = new FileApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.tokenRevocationApi = new TokenRevocationApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.accountDetailAPI = new accountdetailapi_1.AccountDetailApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.authorization = new authorization_1.Authorization(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.authorizationAPI = new authorizationapi_1.AuthorizationApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.digiLockerMetaAPIs = new digilockermetaapis_1.DigiLockerMetaApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.digiLockerSignUpAPIs = new digilockersignupapis_1.DigiLockerSignUpApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.fileAPIs = new fileapis_1.FileApIs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.tokenRevocationAPI = new tokenrevocationapi_1.TokenRevocationApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

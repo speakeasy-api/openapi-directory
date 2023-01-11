@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse = exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest = exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody = exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams, _super);
     function UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=customPerformanceClassId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=customPerformanceClassId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.prototype, "customPerformanceClassId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.prototype, "networkId", void 0);
     return UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams = UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams;
 var UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody, _super);
     function UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxJitter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxJitter" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody.prototype, "maxJitter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLatency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLatency" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody.prototype, "maxLatency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLossPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLossPercentage" }),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody.prototype, "maxLossPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody.prototype, "name", void 0);
     return UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody = UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody;
 var UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest, _super);
     function UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest.prototype, "request", void 0);
     return UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest = UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest;
 var UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse, _super);
     function UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse.prototype, "updateNetworkApplianceTrafficShapingCustomPerformanceClass200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse.prototype, "updateNetworkApplianceTrafficShapingCustomPerformanceClass200ApplicationJSONObject", void 0);
     return UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse = UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse;

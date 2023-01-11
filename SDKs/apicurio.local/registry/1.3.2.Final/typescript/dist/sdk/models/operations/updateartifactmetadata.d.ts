@@ -9,6 +9,6 @@ export declare class UpdateArtifactMetaDataRequest extends SpeakeasyBase {
 }
 export declare class UpdateArtifactMetaDataResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

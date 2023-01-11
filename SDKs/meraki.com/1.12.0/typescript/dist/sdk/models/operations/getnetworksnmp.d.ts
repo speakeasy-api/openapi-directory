@@ -8,5 +8,5 @@ export declare class GetNetworkSnmpRequest extends SpeakeasyBase {
 export declare class GetNetworkSnmpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSnmp200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSnmp200ApplicationJSONObject?: Record<string, any>;
 }

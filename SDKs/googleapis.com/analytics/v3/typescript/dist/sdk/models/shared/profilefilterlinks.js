@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProfileFilterLink } from "./profilefilterlink";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileFilterLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var profilefilterlink_1 = require("./profilefilterlink");
 // ProfileFilterLinks
 /**
  * A profile filter link collection lists profile filter links between profiles and filters. Each resource in the collection corresponds to a profile filter link.
@@ -34,37 +37,37 @@ var ProfileFilterLinks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ProfileFilterLink }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: profilefilterlink_1.ProfileFilterLink }),
         __metadata("design:type", Array)
     ], ProfileFilterLinks.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], ProfileFilterLinks.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ProfileFilterLinks.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextLink" }),
         __metadata("design:type", String)
     ], ProfileFilterLinks.prototype, "nextLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousLink" }),
         __metadata("design:type", String)
     ], ProfileFilterLinks.prototype, "previousLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], ProfileFilterLinks.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], ProfileFilterLinks.prototype, "totalResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ProfileFilterLinks.prototype, "username", void 0);
     return ProfileFilterLinks;
-}(SpeakeasyBase));
-export { ProfileFilterLinks };
+}(utils_1.SpeakeasyBase));
+exports.ProfileFilterLinks = ProfileFilterLinks;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthToken } from "./authtoken";
-import { UserData } from "./userdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = void 0;
+var utils_1 = require("../../../internal/utils");
+var authtoken_1 = require("./authtoken");
+var userdata_1 = require("./userdata");
 // Account
 /**
  * Represents an account passed into the Account Manager on Glass.
@@ -35,21 +38,21 @@ var Account = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authTokens", elemType: AuthToken }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authTokens", elemType: authtoken_1.AuthToken }),
         __metadata("design:type", Array)
     ], Account.prototype, "authTokens", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
         __metadata("design:type", Array)
     ], Account.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], Account.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData", elemType: UserData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData", elemType: userdata_1.UserData }),
         __metadata("design:type", Array)
     ], Account.prototype, "userData", void 0);
     return Account;
-}(SpeakeasyBase));
-export { Account };
+}(utils_1.SpeakeasyBase));
+exports.Account = Account;

@@ -49,7 +49,7 @@ export class PurchaseInteraction extends SpeakeasyBase {
   buy?: PurchaseInteractionBuy;
 
   @SpeakeasyMetadata({ data: "json, name=rent" })
-  rent?: Map<string, any>;
+  rent?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=subscribe" })
   subscribe?: PurchaseInteractionSubscribe;

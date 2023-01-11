@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceWarmSpareRequest extends SpeakeasyBase {
 export declare class GetNetworkApplianceWarmSpareResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceWarmSpare200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

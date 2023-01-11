@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WorkflowsProjectsLocationsListRequest, WorkflowsProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: WorkflowsProjectsLocationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "consequuntur",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "possimus",
-    alt: "proto",
-    callback: "magnam",
-    fields: "numquam",
-    filter: "id",
-    key: "quisquam",
-    oauthToken: "sed",
-    pageSize: 5861057593339212160,
-    pageToken: "error",
-    prettyPrint: false,
-    quotaUser: "nihil",
-    uploadType: "aliquam",
-    uploadProtocol: "doloremque",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

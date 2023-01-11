@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Filter = void 0;
+var utils_1 = require("../../../internal/utils");
 // Filter
 /**
  * A filter object, used to optionally filter results from calls to the <code>ListEntities</code> and <code>ListChangeSets</code> actions.
@@ -33,13 +36,13 @@ var Filter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Filter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ValueList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ValueList" }),
         __metadata("design:type", Array)
     ], Filter.prototype, "valueList", void 0);
     return Filter;
-}(SpeakeasyBase));
-export { Filter };
+}(utils_1.SpeakeasyBase));
+exports.Filter = Filter;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetConnectionLogonResponse = exports.ProtocolTelnetConnectionLogonRequest = exports.ProtocolTelnetConnectionLogonPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetConnectionLogonPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetConnectionLogonPathParams, _super);
     function ProtocolTelnetConnectionLogonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetConnectionLogonPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=connectionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=connectionID" }),
         __metadata("design:type", Number)
-    ], ProtocolTelnetConnectionLogonPathParams.prototype, "connectionId", void 0);
+    ], ProtocolTelnetConnectionLogonPathParams.prototype, "connectionID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=password" }),
         __metadata("design:type", String)
     ], ProtocolTelnetConnectionLogonPathParams.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user" }),
         __metadata("design:type", String)
     ], ProtocolTelnetConnectionLogonPathParams.prototype, "user", void 0);
     return ProtocolTelnetConnectionLogonPathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetConnectionLogonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetConnectionLogonPathParams = ProtocolTelnetConnectionLogonPathParams;
 var ProtocolTelnetConnectionLogonRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetConnectionLogonRequest, _super);
     function ProtocolTelnetConnectionLogonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetConnectionLogonPathParams)
     ], ProtocolTelnetConnectionLogonRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetConnectionLogonRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetConnectionLogonRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetConnectionLogonRequest = ProtocolTelnetConnectionLogonRequest;
 var ProtocolTelnetConnectionLogonResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetConnectionLogonResponse, _super);
     function ProtocolTelnetConnectionLogonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetConnectionLogonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetConnectionLogonResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolTelnetConnectionLogonResponse.prototype, "protocolTelnetConnectionLogon200ApplicationJsonStrings", void 0);
+    ], ProtocolTelnetConnectionLogonResponse.prototype, "protocolTelnetConnectionLogon200ApplicationJSONStrings", void 0);
     return ProtocolTelnetConnectionLogonResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetConnectionLogonResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetConnectionLogonResponse = ProtocolTelnetConnectionLogonResponse;

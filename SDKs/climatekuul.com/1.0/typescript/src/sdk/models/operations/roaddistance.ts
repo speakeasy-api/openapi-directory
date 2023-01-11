@@ -34,7 +34,7 @@ export class RoadDistanceRequestBody extends SpeakeasyBase {
 
 export class RoadDistanceRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: RoadDistanceRequestBody;

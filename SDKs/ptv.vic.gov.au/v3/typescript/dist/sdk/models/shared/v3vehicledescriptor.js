@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3VehicleDescriptor = void 0;
+var utils_1 = require("../../../internal/utils");
 var V3VehicleDescriptor = /** @class */ (function (_super) {
     __extends(V3VehicleDescriptor, _super);
     function V3VehicleDescriptor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=air_conditioned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=air_conditioned" }),
         __metadata("design:type", Boolean)
     ], V3VehicleDescriptor.prototype, "airConditioned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], V3VehicleDescriptor.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], V3VehicleDescriptor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", String)
     ], V3VehicleDescriptor.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=low_floor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=low_floor" }),
         __metadata("design:type", Boolean)
     ], V3VehicleDescriptor.prototype, "lowFloor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], V3VehicleDescriptor.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplier" }),
         __metadata("design:type", String)
     ], V3VehicleDescriptor.prototype, "supplier", void 0);
     return V3VehicleDescriptor;
-}(SpeakeasyBase));
-export { V3VehicleDescriptor };
+}(utils_1.SpeakeasyBase));
+exports.V3VehicleDescriptor = V3VehicleDescriptor;

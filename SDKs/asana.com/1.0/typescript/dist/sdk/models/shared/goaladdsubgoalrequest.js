@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalAddSubgoalRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoalAddSubgoalRequest = /** @class */ (function (_super) {
     __extends(GoalAddSubgoalRequest, _super);
     function GoalAddSubgoalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insert_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insert_after" }),
         __metadata("design:type", String)
     ], GoalAddSubgoalRequest.prototype, "insertAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insert_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insert_before" }),
         __metadata("design:type", String)
     ], GoalAddSubgoalRequest.prototype, "insertBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subgoal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subgoal" }),
         __metadata("design:type", String)
     ], GoalAddSubgoalRequest.prototype, "subgoal", void 0);
     return GoalAddSubgoalRequest;
-}(SpeakeasyBase));
-export { GoalAddSubgoalRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoalAddSubgoalRequest = GoalAddSubgoalRequest;

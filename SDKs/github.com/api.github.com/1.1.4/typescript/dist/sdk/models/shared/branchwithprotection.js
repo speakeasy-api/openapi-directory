@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Commit } from "./commit";
-import { BranchProtection } from "./branchprotection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BranchWithProtection = exports.BranchWithProtectionLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var commit_1 = require("./commit");
+var branchprotection_1 = require("./branchprotection");
 var BranchWithProtectionLinks = /** @class */ (function (_super) {
     __extends(BranchWithProtectionLinks, _super);
     function BranchWithProtectionLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], BranchWithProtectionLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], BranchWithProtectionLinks.prototype, "self", void 0);
     return BranchWithProtectionLinks;
-}(SpeakeasyBase));
-export { BranchWithProtectionLinks };
+}(utils_1.SpeakeasyBase));
+exports.BranchWithProtectionLinks = BranchWithProtectionLinks;
 // BranchWithProtection
 /**
  * Branch With Protection
@@ -51,37 +54,37 @@ var BranchWithProtection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", BranchWithProtectionLinks)
     ], BranchWithProtection.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit" }),
-        __metadata("design:type", Commit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit" }),
+        __metadata("design:type", commit_1.Commit)
     ], BranchWithProtection.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BranchWithProtection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pattern" }),
         __metadata("design:type", String)
     ], BranchWithProtection.prototype, "pattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protected" }),
         __metadata("design:type", Boolean)
     ], BranchWithProtection.prototype, "protected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
-        __metadata("design:type", BranchProtection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
+        __metadata("design:type", branchprotection_1.BranchProtection)
     ], BranchWithProtection.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection_url" }),
         __metadata("design:type", String)
     ], BranchWithProtection.prototype, "protectionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_approving_review_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_approving_review_count" }),
         __metadata("design:type", Number)
     ], BranchWithProtection.prototype, "requiredApprovingReviewCount", void 0);
     return BranchWithProtection;
-}(SpeakeasyBase));
-export { BranchWithProtection };
+}(utils_1.SpeakeasyBase));
+exports.BranchWithProtection = BranchWithProtection;

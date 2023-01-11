@@ -41,11 +41,11 @@ export class OrgsListAppInstallationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  orgsListAppInstallations200ApplicationJsonObject?: OrgsListAppInstallations200ApplicationJson;
+  orgsListAppInstallations200ApplicationJSONObject?: OrgsListAppInstallations200ApplicationJson;
 }

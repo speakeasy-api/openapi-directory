@@ -22,5 +22,5 @@ export class GetNetworkWirelessBluetoothSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessBluetoothSettings200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessBluetoothSettings200ApplicationJSONObject?: Record<string, any>;
 }

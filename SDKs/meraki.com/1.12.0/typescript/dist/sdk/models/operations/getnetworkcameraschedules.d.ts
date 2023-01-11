@@ -8,5 +8,5 @@ export declare class GetNetworkCameraSchedulesRequest extends SpeakeasyBase {
 export declare class GetNetworkCameraSchedulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCameraSchedules200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCameraSchedules200ApplicationJSONObject?: Record<string, any>;
 }

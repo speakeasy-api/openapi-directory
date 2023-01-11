@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Consent } from "./consent";
-import { DateRange } from "./daterange";
-import { KeyMaterial } from "./keymaterial";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiphiRequest = exports.HiphiRequestHiRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var consent_1 = require("./consent");
+var daterange_1 = require("./daterange");
+var keymaterial_1 = require("./keymaterial");
 var HiphiRequestHiRequest = /** @class */ (function (_super) {
     __extends(HiphiRequestHiRequest, _super);
     function HiphiRequestHiRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consent" }),
-        __metadata("design:type", Consent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consent" }),
+        __metadata("design:type", consent_1.Consent)
     ], HiphiRequestHiRequest.prototype, "consent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataPushUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataPushUrl" }),
         __metadata("design:type", String)
     ], HiphiRequestHiRequest.prototype, "dataPushUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], HiphiRequestHiRequest.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyMaterial" }),
-        __metadata("design:type", KeyMaterial)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyMaterial" }),
+        __metadata("design:type", keymaterial_1.KeyMaterial)
     ], HiphiRequestHiRequest.prototype, "keyMaterial", void 0);
     return HiphiRequestHiRequest;
-}(SpeakeasyBase));
-export { HiphiRequestHiRequest };
+}(utils_1.SpeakeasyBase));
+exports.HiphiRequestHiRequest = HiphiRequestHiRequest;
 var HiphiRequest = /** @class */ (function (_super) {
     __extends(HiphiRequest, _super);
     function HiphiRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiRequest" }),
         __metadata("design:type", HiphiRequestHiRequest)
     ], HiphiRequest.prototype, "hiRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiphiRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiphiRequest.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], HiphiRequest.prototype, "transactionId", void 0);
     return HiphiRequest;
-}(SpeakeasyBase));
-export { HiphiRequest };
+}(utils_1.SpeakeasyBase));
+exports.HiphiRequest = HiphiRequest;

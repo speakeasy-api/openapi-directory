@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTermStatsUsingGetResponse = exports.GetTermStatsUsingGetRequest = exports.GetTermStatsUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTermStatsUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetTermStatsUsingGetPathParams, _super);
     function GetTermStatsUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accId" }),
         __metadata("design:type", String)
     ], GetTermStatsUsingGetPathParams.prototype, "accId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=filterAccId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=filterAccId" }),
         __metadata("design:type", String)
     ], GetTermStatsUsingGetPathParams.prototype, "filterAccId", void 0);
     return GetTermStatsUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetTermStatsUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTermStatsUsingGetPathParams = GetTermStatsUsingGetPathParams;
 var GetTermStatsUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetTermStatsUsingGetRequest, _super);
     function GetTermStatsUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTermStatsUsingGetPathParams)
     ], GetTermStatsUsingGetRequest.prototype, "pathParams", void 0);
     return GetTermStatsUsingGetRequest;
-}(SpeakeasyBase));
-export { GetTermStatsUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTermStatsUsingGetRequest = GetTermStatsUsingGetRequest;
 var GetTermStatsUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetTermStatsUsingGetResponse, _super);
     function GetTermStatsUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTermStatsUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTermStatsUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTermStatsUsingGetResponse.prototype, "statusCode", void 0);
     return GetTermStatsUsingGetResponse;
-}(SpeakeasyBase));
-export { GetTermStatsUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTermStatsUsingGetResponse = GetTermStatsUsingGetResponse;

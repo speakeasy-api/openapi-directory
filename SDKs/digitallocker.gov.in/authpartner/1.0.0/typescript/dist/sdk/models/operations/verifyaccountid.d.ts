@@ -22,8 +22,8 @@ export declare class VerifyAccountIdRequest extends SpeakeasyBase {
 export declare class VerifyAccountIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    verifyAccountId400ApplicationJsonObject?: VerifyAccountId400ApplicationJson;
-    verifyAccountId401ApplicationJsonObject?: VerifyAccountId401ApplicationJson;
-    verifyAccountId500ApplicationJsonObject?: VerifyAccountId500ApplicationJson;
+    verifyAccountId400ApplicationJSONObject?: VerifyAccountId400ApplicationJson;
+    verifyAccountId401ApplicationJSONObject?: VerifyAccountId401ApplicationJson;
+    verifyAccountId500ApplicationJSONObject?: VerifyAccountId500ApplicationJson;
     verifyAccountResponse?: shared.VerifyAccountResponse;
 }

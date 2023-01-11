@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveResponse = exports.SaveRequest = exports.SavePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SavePathParams = /** @class */ (function (_super) {
     __extends(SavePathParams, _super);
     function SavePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SavePathParams.prototype, "agentNum", void 0);
     return SavePathParams;
-}(SpeakeasyBase));
-export { SavePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SavePathParams = SavePathParams;
 var SaveRequest = /** @class */ (function (_super) {
     __extends(SaveRequest, _super);
     function SaveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SavePathParams)
     ], SaveRequest.prototype, "pathParams", void 0);
     return SaveRequest;
-}(SpeakeasyBase));
-export { SaveRequest };
+}(utils_1.SpeakeasyBase));
+exports.SaveRequest = SaveRequest;
 var SaveResponse = /** @class */ (function (_super) {
     __extends(SaveResponse, _super);
     function SaveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SaveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SaveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SaveResponse.prototype, "save200ApplicationJsonString", void 0);
+    ], SaveResponse.prototype, "save200ApplicationJSONString", void 0);
     return SaveResponse;
-}(SpeakeasyBase));
-export { SaveResponse };
+}(utils_1.SpeakeasyBase));
+exports.SaveResponse = SaveResponse;

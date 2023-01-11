@@ -3,6 +3,7 @@ export * from "./calculatereachablerangepostdataparameters";
 export * from "./calculateroutepostdataparameters";
 export * from "./computetraveltimeforenum";
 export * from "./contenttypeenum";
+export * from "./downhillefficiencyenum";
 export * from "./hillinessenum";
 export * from "./instructionstypeenum";
 export * from "./reportenum";

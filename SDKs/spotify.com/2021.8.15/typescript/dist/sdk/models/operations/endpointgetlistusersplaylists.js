@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,69 +14,94 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointGetListUsersPlaylistsResponse = exports.EndpointGetListUsersPlaylistsRequest = exports.EndpointGetListUsersPlaylists200ApplicationJson = exports.EndpointGetListUsersPlaylistsSecurity = exports.EndpointGetListUsersPlaylistsHeaders = exports.EndpointGetListUsersPlaylistsQueryParams = exports.EndpointGetListUsersPlaylistsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EndpointGetListUsersPlaylistsPathParams = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsPathParams, _super);
     function EndpointGetListUsersPlaylistsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylistsPathParams.prototype, "userId", void 0);
     return EndpointGetListUsersPlaylistsPathParams;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsPathParams = EndpointGetListUsersPlaylistsPathParams;
 var EndpointGetListUsersPlaylistsQueryParams = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsQueryParams, _super);
     function EndpointGetListUsersPlaylistsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylistsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylistsQueryParams.prototype, "offset", void 0);
     return EndpointGetListUsersPlaylistsQueryParams;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsQueryParams = EndpointGetListUsersPlaylistsQueryParams;
 var EndpointGetListUsersPlaylistsHeaders = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsHeaders, _super);
     function EndpointGetListUsersPlaylistsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylistsHeaders.prototype, "authorization", void 0);
     return EndpointGetListUsersPlaylistsHeaders;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsHeaders = EndpointGetListUsersPlaylistsHeaders;
 var EndpointGetListUsersPlaylistsSecurity = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsSecurity, _super);
     function EndpointGetListUsersPlaylistsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeSpotifyAuth)
     ], EndpointGetListUsersPlaylistsSecurity.prototype, "spotifyAuth", void 0);
     return EndpointGetListUsersPlaylistsSecurity;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsSecurity = EndpointGetListUsersPlaylistsSecurity;
 // EndpointGetListUsersPlaylists200ApplicationJson
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -86,81 +112,81 @@ var EndpointGetListUsersPlaylists200ApplicationJson = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: shared.SimplifiedPlaylistObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: shared.SimplifiedPlaylistObject }),
         __metadata("design:type", Array)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylists200ApplicationJson.prototype, "total", void 0);
     return EndpointGetListUsersPlaylists200ApplicationJson;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylists200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylists200ApplicationJson = EndpointGetListUsersPlaylists200ApplicationJson;
 var EndpointGetListUsersPlaylistsRequest = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsRequest, _super);
     function EndpointGetListUsersPlaylistsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetListUsersPlaylistsPathParams)
     ], EndpointGetListUsersPlaylistsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetListUsersPlaylistsQueryParams)
     ], EndpointGetListUsersPlaylistsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetListUsersPlaylistsHeaders)
     ], EndpointGetListUsersPlaylistsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetListUsersPlaylistsSecurity)
     ], EndpointGetListUsersPlaylistsRequest.prototype, "security", void 0);
     return EndpointGetListUsersPlaylistsRequest;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsRequest = EndpointGetListUsersPlaylistsRequest;
 var EndpointGetListUsersPlaylistsResponse = /** @class */ (function (_super) {
     __extends(EndpointGetListUsersPlaylistsResponse, _super);
     function EndpointGetListUsersPlaylistsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointGetListUsersPlaylistsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponseObject)
     ], EndpointGetListUsersPlaylistsResponse.prototype, "errorResponseObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointGetListUsersPlaylistsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetListUsersPlaylists200ApplicationJson)
-    ], EndpointGetListUsersPlaylistsResponse.prototype, "endpointGetListUsersPlaylists200ApplicationJsonObject", void 0);
+    ], EndpointGetListUsersPlaylistsResponse.prototype, "endpointGetListUsersPlaylists200ApplicationJSONObject", void 0);
     return EndpointGetListUsersPlaylistsResponse;
-}(SpeakeasyBase));
-export { EndpointGetListUsersPlaylistsResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetListUsersPlaylistsResponse = EndpointGetListUsersPlaylistsResponse;

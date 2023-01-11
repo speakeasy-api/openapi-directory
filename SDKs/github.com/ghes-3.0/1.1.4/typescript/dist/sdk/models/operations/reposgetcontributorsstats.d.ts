@@ -11,5 +11,5 @@ export declare class ReposGetContributorsStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     contributorActivities?: shared.ContributorActivity[];
-    reposGetContributorsStats202ApplicationJsonObject?: Map<string, any>;
+    reposGetContributorsStats202ApplicationJSONObject?: Record<string, any>;
 }

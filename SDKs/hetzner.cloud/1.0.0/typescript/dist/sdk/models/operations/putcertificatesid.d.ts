@@ -3,7 +3,7 @@ export declare class PutCertificatesIdPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class PutCertificatesIdUpdateCertificateRequest extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 /**
@@ -46,7 +46,7 @@ export declare class PutCertificatesIdCertificateResponseCertificate extends Spe
     domainNames: string[];
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     notValidAfter: string;
     notValidBefore: string;

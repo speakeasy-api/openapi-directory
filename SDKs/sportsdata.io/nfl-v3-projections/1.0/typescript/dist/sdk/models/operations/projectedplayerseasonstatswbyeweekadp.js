@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedPlayerSeasonStatsWByeWeekAdpResponse = exports.ProjectedPlayerSeasonStatsWByeWeekAdpRequest = exports.ProjectedPlayerSeasonStatsWByeWeekAdpPathParams = exports.ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum;
 (function (ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum) {
     ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum["Xml"] = "XML";
     ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum["Json"] = "JSON";
-})(ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum || (ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum = {}));
+})(ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum = exports.ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum || (exports.ProjectedPlayerSeasonStatsWByeWeekAdpFormatEnum = {}));
 var ProjectedPlayerSeasonStatsWByeWeekAdpPathParams = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsWByeWeekAdpPathParams, _super);
     function ProjectedPlayerSeasonStatsWByeWeekAdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpPathParams.prototype, "season", void 0);
     return ProjectedPlayerSeasonStatsWByeWeekAdpPathParams;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsWByeWeekAdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsWByeWeekAdpPathParams = ProjectedPlayerSeasonStatsWByeWeekAdpPathParams;
 var ProjectedPlayerSeasonStatsWByeWeekAdpRequest = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsWByeWeekAdpRequest, _super);
     function ProjectedPlayerSeasonStatsWByeWeekAdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedPlayerSeasonStatsWByeWeekAdpPathParams)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpRequest.prototype, "pathParams", void 0);
     return ProjectedPlayerSeasonStatsWByeWeekAdpRequest;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsWByeWeekAdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsWByeWeekAdpRequest = ProjectedPlayerSeasonStatsWByeWeekAdpRequest;
 var ProjectedPlayerSeasonStatsWByeWeekAdpResponse = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsWByeWeekAdpResponse, _super);
     function ProjectedPlayerSeasonStatsWByeWeekAdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpResponse.prototype, "playerSeasonProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedPlayerSeasonStatsWByeWeekAdpResponse.prototype, "statusCode", void 0);
     return ProjectedPlayerSeasonStatsWByeWeekAdpResponse;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsWByeWeekAdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsWByeWeekAdpResponse = ProjectedPlayerSeasonStatsWByeWeekAdpResponse;

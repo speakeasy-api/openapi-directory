@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRole200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRoleResponse = exports.GetRole200ApplicationJson = exports.GetRole200ApplicationJsonResultEnum = exports.GetRole200ApplicationJsonData = exports.GetRole200ApplicationJsonDataRightsEnum = exports.GetRole200ApplicationJsonDataIdEnum = exports.GetRole200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRole200ApplicationJsonActionEnum;
 (function (GetRole200ApplicationJsonActionEnum) {
     GetRole200ApplicationJsonActionEnum["GetRole"] = "getRole";
-})(GetRole200ApplicationJsonActionEnum || (GetRole200ApplicationJsonActionEnum = {}));
-export var GetRole200ApplicationJsonDataIdEnum;
+})(GetRole200ApplicationJsonActionEnum = exports.GetRole200ApplicationJsonActionEnum || (exports.GetRole200ApplicationJsonActionEnum = {}));
+var GetRole200ApplicationJsonDataIdEnum;
 (function (GetRole200ApplicationJsonDataIdEnum) {
     GetRole200ApplicationJsonDataIdEnum["Inventory"] = "inventory";
     GetRole200ApplicationJsonDataIdEnum["Compliance"] = "compliance";
     GetRole200ApplicationJsonDataIdEnum["Administrator"] = "administrator";
     GetRole200ApplicationJsonDataIdEnum["Etc"] = "etc";
-})(GetRole200ApplicationJsonDataIdEnum || (GetRole200ApplicationJsonDataIdEnum = {}));
-export var GetRole200ApplicationJsonDataRightsEnum;
+})(GetRole200ApplicationJsonDataIdEnum = exports.GetRole200ApplicationJsonDataIdEnum || (exports.GetRole200ApplicationJsonDataIdEnum = {}));
+var GetRole200ApplicationJsonDataRightsEnum;
 (function (GetRole200ApplicationJsonDataRightsEnum) {
     GetRole200ApplicationJsonDataRightsEnum["NodeRead"] = "node_read";
     GetRole200ApplicationJsonDataRightsEnum["UserAccountAll"] = "userAccount_all";
-})(GetRole200ApplicationJsonDataRightsEnum || (GetRole200ApplicationJsonDataRightsEnum = {}));
+})(GetRole200ApplicationJsonDataRightsEnum = exports.GetRole200ApplicationJsonDataRightsEnum || (exports.GetRole200ApplicationJsonDataRightsEnum = {}));
 var GetRole200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetRole200ApplicationJsonData, _super);
     function GetRole200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetRole200ApplicationJsonData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rights" }),
         __metadata("design:type", Array)
     ], GetRole200ApplicationJsonData.prototype, "rights", void 0);
     return GetRole200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetRole200ApplicationJsonData };
-export var GetRole200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetRole200ApplicationJsonData = GetRole200ApplicationJsonData;
+var GetRole200ApplicationJsonResultEnum;
 (function (GetRole200ApplicationJsonResultEnum) {
     GetRole200ApplicationJsonResultEnum["Success"] = "success";
     GetRole200ApplicationJsonResultEnum["Error"] = "error";
-})(GetRole200ApplicationJsonResultEnum || (GetRole200ApplicationJsonResultEnum = {}));
+})(GetRole200ApplicationJsonResultEnum = exports.GetRole200ApplicationJsonResultEnum || (exports.GetRole200ApplicationJsonResultEnum = {}));
 var GetRole200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRole200ApplicationJson, _super);
     function GetRole200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetRole200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: GetRole200ApplicationJsonData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: GetRole200ApplicationJsonData }),
         __metadata("design:type", Array)
     ], GetRole200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetRole200ApplicationJson.prototype, "result", void 0);
     return GetRole200ApplicationJson;
-}(SpeakeasyBase));
-export { GetRole200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRole200ApplicationJson = GetRole200ApplicationJson;
 var GetRoleResponse = /** @class */ (function (_super) {
     __extends(GetRoleResponse, _super);
     function GetRoleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRoleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRoleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRole200ApplicationJson)
-    ], GetRoleResponse.prototype, "getRole200ApplicationJsonObject", void 0);
+    ], GetRoleResponse.prototype, "getRole200ApplicationJSONObject", void 0);
     return GetRoleResponse;
-}(SpeakeasyBase));
-export { GetRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRoleResponse = GetRoleResponse;

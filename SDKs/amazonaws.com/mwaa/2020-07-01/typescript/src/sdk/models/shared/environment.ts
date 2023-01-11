@@ -13,7 +13,7 @@ import { WebserverAccessModeEnum } from "./webserveraccessmodeenum";
 **/
 export class Environment extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AirflowConfigurationOptions" })
-  airflowConfigurationOptions?: Map<string, string>;
+  airflowConfigurationOptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=AirflowVersion" })
   airflowVersion?: string;
@@ -79,7 +79,7 @@ export class Environment extends SpeakeasyBase {
   status?: EnvironmentStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=WebserverAccessMode" })
   webserverAccessMode?: WebserverAccessModeEnum;

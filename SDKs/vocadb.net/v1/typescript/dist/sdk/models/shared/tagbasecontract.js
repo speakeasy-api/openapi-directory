@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagBaseContract = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagBaseContract = /** @class */ (function (_super) {
     __extends(TagBaseContract, _super);
     function TagBaseContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames, form, name=additionalNames;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames, form, name=additionalNames;" }),
         __metadata("design:type", String)
     ], TagBaseContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryName, form, name=categoryName;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryName, form, name=categoryName;" }),
         __metadata("design:type", String)
     ], TagBaseContract.prototype, "categoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id, form, name=id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id, form, name=id;" }),
         __metadata("design:type", Number)
     ], TagBaseContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name, form, name=name;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name, form, name=name;" }),
         __metadata("design:type", String)
     ], TagBaseContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlSlug, form, name=urlSlug;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlSlug, form, name=urlSlug;" }),
         __metadata("design:type", String)
     ], TagBaseContract.prototype, "urlSlug", void 0);
     return TagBaseContract;
-}(SpeakeasyBase));
-export { TagBaseContract };
+}(utils_1.SpeakeasyBase));
+exports.TagBaseContract = TagBaseContract;

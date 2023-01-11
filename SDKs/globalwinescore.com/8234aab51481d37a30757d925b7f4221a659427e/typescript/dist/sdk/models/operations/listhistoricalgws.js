@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,105 +23,107 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ListHistoricalGwsColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListHistoricalGwsResponse = exports.ListHistoricalGwsRequest = exports.ListHistoricalGwsHeaders = exports.ListHistoricalGwsQueryParams = exports.ListHistoricalGwsOrderingEnum = exports.ListHistoricalGwsColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ListHistoricalGwsColorEnum;
 (function (ListHistoricalGwsColorEnum) {
     ListHistoricalGwsColorEnum["Red"] = "red";
     ListHistoricalGwsColorEnum["White"] = "white";
     ListHistoricalGwsColorEnum["Pink"] = "pink";
-})(ListHistoricalGwsColorEnum || (ListHistoricalGwsColorEnum = {}));
-export var ListHistoricalGwsOrderingEnum;
+})(ListHistoricalGwsColorEnum = exports.ListHistoricalGwsColorEnum || (exports.ListHistoricalGwsColorEnum = {}));
+var ListHistoricalGwsOrderingEnum;
 (function (ListHistoricalGwsOrderingEnum) {
     ListHistoricalGwsOrderingEnum["Date"] = "date";
     ListHistoricalGwsOrderingEnum["MinusDate"] = "-date";
     ListHistoricalGwsOrderingEnum["Score"] = "score";
     ListHistoricalGwsOrderingEnum["MinusScore"] = "-score";
-})(ListHistoricalGwsOrderingEnum || (ListHistoricalGwsOrderingEnum = {}));
+})(ListHistoricalGwsOrderingEnum = exports.ListHistoricalGwsOrderingEnum || (exports.ListHistoricalGwsOrderingEnum = {}));
 var ListHistoricalGwsQueryParams = /** @class */ (function (_super) {
     __extends(ListHistoricalGwsQueryParams, _super);
     function ListHistoricalGwsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=color" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsQueryParams.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=is_primeurs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=is_primeurs" }),
         __metadata("design:type", Boolean)
     ], ListHistoricalGwsQueryParams.prototype, "isPrimeurs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], ListHistoricalGwsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lwin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lwin" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsQueryParams.prototype, "lwin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lwin_11" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lwin_11" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsQueryParams.prototype, "lwin11", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], ListHistoricalGwsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ordering" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ordering" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsQueryParams.prototype, "ordering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vintage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vintage" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsQueryParams.prototype, "vintage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=wine_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=wine_id" }),
         __metadata("design:type", Array)
     ], ListHistoricalGwsQueryParams.prototype, "wineId", void 0);
     return ListHistoricalGwsQueryParams;
-}(SpeakeasyBase));
-export { ListHistoricalGwsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListHistoricalGwsQueryParams = ListHistoricalGwsQueryParams;
 var ListHistoricalGwsHeaders = /** @class */ (function (_super) {
     __extends(ListHistoricalGwsHeaders, _super);
     function ListHistoricalGwsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], ListHistoricalGwsHeaders.prototype, "authorization", void 0);
     return ListHistoricalGwsHeaders;
-}(SpeakeasyBase));
-export { ListHistoricalGwsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ListHistoricalGwsHeaders = ListHistoricalGwsHeaders;
 var ListHistoricalGwsRequest = /** @class */ (function (_super) {
     __extends(ListHistoricalGwsRequest, _super);
     function ListHistoricalGwsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListHistoricalGwsQueryParams)
     ], ListHistoricalGwsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListHistoricalGwsHeaders)
     ], ListHistoricalGwsRequest.prototype, "headers", void 0);
     return ListHistoricalGwsRequest;
-}(SpeakeasyBase));
-export { ListHistoricalGwsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListHistoricalGwsRequest = ListHistoricalGwsRequest;
 var ListHistoricalGwsResponse = /** @class */ (function (_super) {
     __extends(ListHistoricalGwsResponse, _super);
     function ListHistoricalGwsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListHistoricalGwsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListHistoricalGwsResponse.prototype, "statusCode", void 0);
     return ListHistoricalGwsResponse;
-}(SpeakeasyBase));
-export { ListHistoricalGwsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListHistoricalGwsResponse = ListHistoricalGwsResponse;

@@ -46,5 +46,5 @@ export class PatchBulkDataExporterConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: PatchBulkDataExporterConfig200ApplicationJson })
-  patchBulkDataExporterConfig200ApplicationJsonObjects?: PatchBulkDataExporterConfig200ApplicationJson[];
+  patchBulkDataExporterConfig200ApplicationJSONObjects?: PatchBulkDataExporterConfig200ApplicationJson[];
 }

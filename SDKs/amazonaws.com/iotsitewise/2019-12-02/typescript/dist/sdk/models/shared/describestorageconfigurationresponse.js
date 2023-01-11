@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationStatus } from "./configurationstatus";
-import { MultiLayerStorage } from "./multilayerstorage";
-import { StorageTypeEnum } from "./storagetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeStorageConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationstatus_1 = require("./configurationstatus");
+var multilayerstorage_1 = require("./multilayerstorage");
+var storagetypeenum_1 = require("./storagetypeenum");
 var DescribeStorageConfigurationResponse = /** @class */ (function (_super) {
     __extends(DescribeStorageConfigurationResponse, _super);
     function DescribeStorageConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationStatus" }),
-        __metadata("design:type", ConfigurationStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationStatus" }),
+        __metadata("design:type", configurationstatus_1.ConfigurationStatus)
     ], DescribeStorageConfigurationResponse.prototype, "configurationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateDate" }),
         __metadata("design:type", Date)
     ], DescribeStorageConfigurationResponse.prototype, "lastUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiLayerStorage" }),
-        __metadata("design:type", MultiLayerStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiLayerStorage" }),
+        __metadata("design:type", multilayerstorage_1.MultiLayerStorage)
     ], DescribeStorageConfigurationResponse.prototype, "multiLayerStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageType" }),
         __metadata("design:type", String)
     ], DescribeStorageConfigurationResponse.prototype, "storageType", void 0);
     return DescribeStorageConfigurationResponse;
-}(SpeakeasyBase));
-export { DescribeStorageConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeStorageConfigurationResponse = DescribeStorageConfigurationResponse;

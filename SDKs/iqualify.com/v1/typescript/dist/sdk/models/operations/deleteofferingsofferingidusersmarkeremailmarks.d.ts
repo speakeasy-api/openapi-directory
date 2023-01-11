@@ -10,7 +10,7 @@ export declare class DeleteOfferingsOfferingIdUsersMarkerEmailMarksRequest exten
 }
 export declare class DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringUsers?: shared.OfferingUser[];
     statusCode: number;
 }

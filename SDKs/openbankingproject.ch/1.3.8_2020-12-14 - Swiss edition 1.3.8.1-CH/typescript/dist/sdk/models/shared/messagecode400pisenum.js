@@ -1,4 +1,7 @@
-export var MessageCode400PisEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageCode400PisEnum = void 0;
+var MessageCode400PisEnum;
 (function (MessageCode400PisEnum) {
     MessageCode400PisEnum["FormatError"] = "FORMAT_ERROR";
     MessageCode400PisEnum["ParameterNotConsistent"] = "PARAMETER_NOT_CONSISTENT";
@@ -14,4 +17,4 @@ export var MessageCode400PisEnum;
     MessageCode400PisEnum["ConsentUnknown"] = "CONSENT_UNKNOWN";
     MessageCode400PisEnum["PaymentFailed"] = "PAYMENT_FAILED";
     MessageCode400PisEnum["ExecutionDateInvalid"] = "EXECUTION_DATE_INVALID";
-})(MessageCode400PisEnum || (MessageCode400PisEnum = {}));
+})(MessageCode400PisEnum = exports.MessageCode400PisEnum || (exports.MessageCode400PisEnum = {}));

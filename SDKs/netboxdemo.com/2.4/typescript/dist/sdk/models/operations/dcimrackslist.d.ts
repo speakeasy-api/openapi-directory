@@ -34,5 +34,5 @@ export declare class DcimRacksListRequest extends SpeakeasyBase {
 export declare class DcimRacksListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimRacksList200ApplicationJsonObject?: DcimRacksList200ApplicationJson;
+    dcimRacksList200ApplicationJSONObject?: DcimRacksList200ApplicationJson;
 }

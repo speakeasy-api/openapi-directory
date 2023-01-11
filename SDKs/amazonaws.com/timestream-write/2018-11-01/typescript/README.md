@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateDatabaseRequest, CreateDatabaseResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,32 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateDatabaseRequest = {
   headers: {
-    xAmzAlgorithm: "saepe",
-    xAmzContentSha256: "dignissimos",
-    xAmzCredential: "laboriosam",
-    xAmzDate: "enim",
-    xAmzSecurityToken: "natus",
-    xAmzSignature: "nesciunt",
-    xAmzSignedHeaders: "reiciendis",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "Timestream_20181101.CreateDatabase",
   },
   request: {
-    databaseName: "sit",
-    kmsKeyId: "explicabo",
+    databaseName: "fugit",
+    kmsKeyId: "et",
     tags: [
       {
-        key: "quisquam",
-        value: "sapiente",
-      },
-      {
-        key: "maxime",
-        value: "porro",
+        key: "rerum",
+        value: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.createDatabase(req).then((res: CreateDatabaseResponse | AxiosError) => {
+sdk.createDatabase(req).then((res: CreateDatabaseResponse | AxiosError) => {
    // handle response
 });
 ```

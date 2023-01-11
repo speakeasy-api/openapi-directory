@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceEndpoint } from "./serviceendpoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceendpoint_1 = require("./serviceendpoint");
 // DomainStatus
 /**
  * The current status of the search domain.
@@ -34,53 +37,53 @@ var DomainStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DomainStatus.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DomainStatus.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ServiceEndpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", serviceendpoint_1.ServiceEndpoint)
     ], DomainStatus.prototype, "docService", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DomainStatus.prototype, "domainId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DomainStatus.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DomainStatus.prototype, "numSearchableDocs", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DomainStatus.prototype, "processing", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DomainStatus.prototype, "requiresIndexDocuments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DomainStatus.prototype, "searchInstanceCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DomainStatus.prototype, "searchInstanceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DomainStatus.prototype, "searchPartitionCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ServiceEndpoint)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", serviceendpoint_1.ServiceEndpoint)
     ], DomainStatus.prototype, "searchService", void 0);
     return DomainStatus;
-}(SpeakeasyBase));
-export { DomainStatus };
+}(utils_1.SpeakeasyBase));
+exports.DomainStatus = DomainStatus;

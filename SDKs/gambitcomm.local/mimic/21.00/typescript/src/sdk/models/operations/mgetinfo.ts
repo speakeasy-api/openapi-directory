@@ -22,5 +22,5 @@ export class MgetInfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mgetInfo200ApplicationJsonObjects?: Map<string, any>[];
+  mgetInfo200ApplicationJSONObjects?: Record<string, any>[];
 }

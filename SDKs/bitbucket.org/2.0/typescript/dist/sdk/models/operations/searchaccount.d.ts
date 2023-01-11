@@ -15,6 +15,6 @@ export declare class SearchAccountRequest extends SpeakeasyBase {
 export declare class SearchAccountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     searchResultPage?: shared.SearchResultPage;
 }

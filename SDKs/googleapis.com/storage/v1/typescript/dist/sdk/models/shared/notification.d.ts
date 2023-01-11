@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * A subscription to receive Google PubSub notifications.
 **/
 export declare class Notification extends SpeakeasyBase {
-    customAttributes?: Map<string, string>;
+    customAttributes?: Record<string, string>;
     etag?: string;
     eventTypes?: string[];
     id?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartialMatch = void 0;
+var utils_1 = require("../../../internal/utils");
 // PartialMatch
 /**
  * The reference rule that partially matches the <code>ViolationTarget</code> rule and violation reason.
@@ -33,13 +36,13 @@ var PartialMatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reference" }),
         __metadata("design:type", String)
     ], PartialMatch.prototype, "reference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetViolationReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetViolationReasons" }),
         __metadata("design:type", Array)
     ], PartialMatch.prototype, "targetViolationReasons", void 0);
     return PartialMatch;
-}(SpeakeasyBase));
-export { PartialMatch };
+}(utils_1.SpeakeasyBase));
+exports.PartialMatch = PartialMatch;

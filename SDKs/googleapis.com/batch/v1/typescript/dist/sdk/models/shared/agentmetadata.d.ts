@@ -7,7 +7,7 @@ export declare class AgentMetadata extends SpeakeasyBase {
     creator?: string;
     instance?: string;
     instanceId?: string;
-    osRelease?: Map<string, string>;
+    osRelease?: Record<string, string>;
     version?: string;
     zone?: string;
 }

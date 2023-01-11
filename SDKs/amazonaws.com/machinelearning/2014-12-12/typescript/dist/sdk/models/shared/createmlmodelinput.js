@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MlModelTypeEnum } from "./mlmodeltypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateMlModelInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var mlmodeltypeenum_1 = require("./mlmodeltypeenum");
 var CreateMlModelInput = /** @class */ (function (_super) {
     __extends(CreateMlModelInput, _super);
     function CreateMlModelInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelName" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "mlModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelType" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "mlModelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters" }),
+        __metadata("design:type", Object)
     ], CreateMlModelInput.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Recipe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Recipe" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "recipe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecipeUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecipeUri" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "recipeUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrainingDataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrainingDataSourceId" }),
         __metadata("design:type", String)
     ], CreateMlModelInput.prototype, "trainingDataSourceId", void 0);
     return CreateMlModelInput;
-}(SpeakeasyBase));
-export { CreateMlModelInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateMlModelInput = CreateMlModelInput;

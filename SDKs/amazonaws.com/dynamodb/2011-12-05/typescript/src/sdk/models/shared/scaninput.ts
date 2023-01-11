@@ -18,7 +18,7 @@ export class ScanInput extends SpeakeasyBase {
   limit?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ScanFilter", elemType: Condition })
-  scanFilter?: Map<string, Condition>;
+  scanFilter?: Record<string, Condition>;
 
   @SpeakeasyMetadata({ data: "json, name=TableName" })
   tableName: string;

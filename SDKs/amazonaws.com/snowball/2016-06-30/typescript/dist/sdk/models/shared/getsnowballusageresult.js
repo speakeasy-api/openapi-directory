@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSnowballUsageResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSnowballUsageResult = /** @class */ (function (_super) {
     __extends(GetSnowballUsageResult, _super);
     function GetSnowballUsageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballLimit" }),
         __metadata("design:type", Number)
     ], GetSnowballUsageResult.prototype, "snowballLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballsInUse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballsInUse" }),
         __metadata("design:type", Number)
     ], GetSnowballUsageResult.prototype, "snowballsInUse", void 0);
     return GetSnowballUsageResult;
-}(SpeakeasyBase));
-export { GetSnowballUsageResult };
+}(utils_1.SpeakeasyBase));
+exports.GetSnowballUsageResult = GetSnowballUsageResult;

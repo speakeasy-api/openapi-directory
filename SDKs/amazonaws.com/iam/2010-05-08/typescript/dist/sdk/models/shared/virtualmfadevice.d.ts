@@ -7,7 +7,7 @@ import { User } from "./user";
 export declare class VirtualMfaDevice extends SpeakeasyBase {
     base32StringSeed?: string;
     enableDate?: Date;
-    qrCodePng?: string;
+    qrCodePNG?: string;
     serialNumber: string;
     tags?: Tag[];
     user?: User;

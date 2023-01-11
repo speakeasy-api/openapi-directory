@@ -1,6 +1,9 @@
-export var LogFilterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogFilterEnum = void 0;
+var LogFilterEnum;
 (function (LogFilterEnum) {
     LogFilterEnum["Error"] = "ERROR";
     LogFilterEnum["Warn"] = "WARN";
     LogFilterEnum["Info"] = "INFO";
-})(LogFilterEnum || (LogFilterEnum = {}));
+})(LogFilterEnum = exports.LogFilterEnum || (exports.LogFilterEnum = {}));

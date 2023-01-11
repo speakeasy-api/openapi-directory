@@ -11,7 +11,7 @@ export class AssetReportAuditCopyGetRequest extends SpeakeasyBase {
 
 export class AssetReportAuditCopyGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  assetReportGetResponse?: Map<string, any>;
+  assetReportGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

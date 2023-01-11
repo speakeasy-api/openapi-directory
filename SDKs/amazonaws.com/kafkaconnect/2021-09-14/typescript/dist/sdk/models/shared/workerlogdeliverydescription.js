@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLogsLogDeliveryDescription } from "./cloudwatchlogslogdeliverydescription";
-import { FirehoseLogDeliveryDescription } from "./firehoselogdeliverydescription";
-import { S3LogDeliveryDescription } from "./s3logdeliverydescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkerLogDeliveryDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchlogslogdeliverydescription_1 = require("./cloudwatchlogslogdeliverydescription");
+var firehoselogdeliverydescription_1 = require("./firehoselogdeliverydescription");
+var s3logdeliverydescription_1 = require("./s3logdeliverydescription");
 // WorkerLogDeliveryDescription
 /**
  * Workers can send worker logs to different destination types. This configuration specifies the details of these destinations.
@@ -36,17 +39,17 @@ var WorkerLogDeliveryDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchLogs" }),
-        __metadata("design:type", CloudWatchLogsLogDeliveryDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchLogs" }),
+        __metadata("design:type", cloudwatchlogslogdeliverydescription_1.CloudWatchLogsLogDeliveryDescription)
     ], WorkerLogDeliveryDescription.prototype, "cloudWatchLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firehose" }),
-        __metadata("design:type", FirehoseLogDeliveryDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firehose" }),
+        __metadata("design:type", firehoselogdeliverydescription_1.FirehoseLogDeliveryDescription)
     ], WorkerLogDeliveryDescription.prototype, "firehose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3" }),
-        __metadata("design:type", S3LogDeliveryDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3" }),
+        __metadata("design:type", s3logdeliverydescription_1.S3LogDeliveryDescription)
     ], WorkerLogDeliveryDescription.prototype, "s3", void 0);
     return WorkerLogDeliveryDescription;
-}(SpeakeasyBase));
-export { WorkerLogDeliveryDescription };
+}(utils_1.SpeakeasyBase));
+exports.WorkerLogDeliveryDescription = WorkerLogDeliveryDescription;

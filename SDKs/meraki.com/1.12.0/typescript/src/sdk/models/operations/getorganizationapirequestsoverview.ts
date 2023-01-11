@@ -37,5 +37,5 @@ export class GetOrganizationApiRequestsOverviewResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApiRequestsOverview200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApiRequestsOverview200ApplicationJSONObject?: Record<string, any>;
 }

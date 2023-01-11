@@ -50,7 +50,7 @@ export class PutAccountSuppressionAttributesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putAccountSuppressionAttributesResponse?: Map<string, any>;
+  putAccountSuppressionAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

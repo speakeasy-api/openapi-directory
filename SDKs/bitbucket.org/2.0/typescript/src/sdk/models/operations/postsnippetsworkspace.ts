@@ -26,7 +26,7 @@ export class PostSnippetsWorkspaceRequest extends SpeakeasyBase {
   pathParams: PostSnippetsWorkspacePathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostSnippetsWorkspaceSecurity;
@@ -38,14 +38,14 @@ export class PostSnippetsWorkspaceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snippet?: Map<string, any>;
+  snippet?: Record<string, any>;
 }

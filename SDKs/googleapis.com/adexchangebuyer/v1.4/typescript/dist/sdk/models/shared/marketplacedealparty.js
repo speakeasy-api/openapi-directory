@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Buyer } from "./buyer";
-import { Seller } from "./seller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketplaceDealParty = void 0;
+var utils_1 = require("../../../internal/utils");
+var buyer_1 = require("./buyer");
+var seller_1 = require("./seller");
 var MarketplaceDealParty = /** @class */ (function (_super) {
     __extends(MarketplaceDealParty, _super);
     function MarketplaceDealParty() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyer" }),
-        __metadata("design:type", Buyer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyer" }),
+        __metadata("design:type", buyer_1.Buyer)
     ], MarketplaceDealParty.prototype, "buyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seller" }),
-        __metadata("design:type", Seller)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seller" }),
+        __metadata("design:type", seller_1.Seller)
     ], MarketplaceDealParty.prototype, "seller", void 0);
     return MarketplaceDealParty;
-}(SpeakeasyBase));
-export { MarketplaceDealParty };
+}(utils_1.SpeakeasyBase));
+exports.MarketplaceDealParty = MarketplaceDealParty;

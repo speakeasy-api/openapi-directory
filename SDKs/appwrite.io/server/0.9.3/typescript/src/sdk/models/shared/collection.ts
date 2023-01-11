@@ -12,7 +12,7 @@ export class Collection extends SpeakeasyBase {
   dollarId: string;
 
   @SpeakeasyMetadata({ data: "json, name=$permissions" })
-  dollarPermissions: Map<string, any>;
+  dollarPermissions: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=dateCreated" })
   dateCreated: number;

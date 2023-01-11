@@ -1,4 +1,7 @@
-export var AppStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppStatusEnum = void 0;
+var AppStatusEnum;
 (function (AppStatusEnum) {
     AppStatusEnum["Creating"] = "CREATING";
     AppStatusEnum["Active"] = "ACTIVE";
@@ -6,4 +9,4 @@ export var AppStatusEnum;
     AppStatusEnum["Deleting"] = "DELETING";
     AppStatusEnum["Deleted"] = "DELETED";
     AppStatusEnum["DeleteFailed"] = "DELETE_FAILED";
-})(AppStatusEnum || (AppStatusEnum = {}));
+})(AppStatusEnum = exports.AppStatusEnum || (exports.AppStatusEnum = {}));

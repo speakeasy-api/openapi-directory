@@ -17,7 +17,7 @@ export declare class DeleteHumanLoopRequest extends SpeakeasyBase {
 }
 export declare class DeleteHumanLoopResponse extends SpeakeasyBase {
     contentType: string;
-    deleteHumanLoopResponse?: Map<string, any>;
+    deleteHumanLoopResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

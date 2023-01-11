@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateApplicationInput = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateApplicationInput
 /**
  * Represents the input of an <code>UpdateApplication</code> operation.
@@ -33,13 +36,13 @@ var UpdateApplicationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], UpdateApplicationInput.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newApplicationName" }),
         __metadata("design:type", String)
     ], UpdateApplicationInput.prototype, "newApplicationName", void 0);
     return UpdateApplicationInput;
-}(SpeakeasyBase));
-export { UpdateApplicationInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateApplicationInput = UpdateApplicationInput;

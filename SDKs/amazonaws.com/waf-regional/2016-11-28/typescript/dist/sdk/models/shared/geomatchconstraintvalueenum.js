@@ -1,4 +1,7 @@
-export var GeoMatchConstraintValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeoMatchConstraintValueEnum = void 0;
+var GeoMatchConstraintValueEnum;
 (function (GeoMatchConstraintValueEnum) {
     GeoMatchConstraintValueEnum["Af"] = "AF";
     GeoMatchConstraintValueEnum["Ax"] = "AX";
@@ -249,4 +252,4 @@ export var GeoMatchConstraintValueEnum;
     GeoMatchConstraintValueEnum["Ye"] = "YE";
     GeoMatchConstraintValueEnum["Zm"] = "ZM";
     GeoMatchConstraintValueEnum["Zw"] = "ZW";
-})(GeoMatchConstraintValueEnum || (GeoMatchConstraintValueEnum = {}));
+})(GeoMatchConstraintValueEnum = exports.GeoMatchConstraintValueEnum || (exports.GeoMatchConstraintValueEnum = {}));

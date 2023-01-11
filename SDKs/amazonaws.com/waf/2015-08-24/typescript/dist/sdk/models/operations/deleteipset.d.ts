@@ -19,7 +19,7 @@ export declare class DeleteIpSetRequest extends SpeakeasyBase {
 }
 export declare class DeleteIpSetResponse extends SpeakeasyBase {
     contentType: string;
-    deleteIpSetResponse?: shared.DeleteIpSetResponse;
+    deleteIPSetResponse?: shared.DeleteIpSetResponse;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;

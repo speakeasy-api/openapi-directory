@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkCameraQualityRetentionProfileResponse = exports.DeleteNetworkCameraQualityRetentionProfileRequest = exports.DeleteNetworkCameraQualityRetentionProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkCameraQualityRetentionProfilePathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkCameraQualityRetentionProfilePathParams, _super);
     function DeleteNetworkCameraQualityRetentionProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkCameraQualityRetentionProfilePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=qualityRetentionProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=qualityRetentionProfileId" }),
         __metadata("design:type", String)
     ], DeleteNetworkCameraQualityRetentionProfilePathParams.prototype, "qualityRetentionProfileId", void 0);
     return DeleteNetworkCameraQualityRetentionProfilePathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkCameraQualityRetentionProfilePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkCameraQualityRetentionProfilePathParams = DeleteNetworkCameraQualityRetentionProfilePathParams;
 var DeleteNetworkCameraQualityRetentionProfileRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkCameraQualityRetentionProfileRequest, _super);
     function DeleteNetworkCameraQualityRetentionProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkCameraQualityRetentionProfilePathParams)
     ], DeleteNetworkCameraQualityRetentionProfileRequest.prototype, "pathParams", void 0);
     return DeleteNetworkCameraQualityRetentionProfileRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkCameraQualityRetentionProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkCameraQualityRetentionProfileRequest = DeleteNetworkCameraQualityRetentionProfileRequest;
 var DeleteNetworkCameraQualityRetentionProfileResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkCameraQualityRetentionProfileResponse, _super);
     function DeleteNetworkCameraQualityRetentionProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkCameraQualityRetentionProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkCameraQualityRetentionProfileResponse.prototype, "statusCode", void 0);
     return DeleteNetworkCameraQualityRetentionProfileResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkCameraQualityRetentionProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkCameraQualityRetentionProfileResponse = DeleteNetworkCameraQualityRetentionProfileResponse;

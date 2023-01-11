@@ -5,10 +5,10 @@ export declare class UpdateInventoryForAnItemQueryParams extends SpeakeasyBase {
 }
 export declare class UpdateInventoryForAnItemHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare enum UpdateInventoryForAnItemApplicationJsonQuantityUnitEnum {
     Each = "EACH"
@@ -22,7 +22,7 @@ export declare class UpdateInventoryForAnItemApplicationJson extends SpeakeasyBa
     sku: string;
 }
 export declare class UpdateInventoryForAnItemRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     object?: UpdateInventoryForAnItemApplicationJson;
 }
 export declare enum UpdateInventoryForAnItem200ApplicationJsonQuantityUnitEnum {
@@ -45,5 +45,5 @@ export declare class UpdateInventoryForAnItemResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    updateInventoryForAnItem200ApplicationJsonObject?: UpdateInventoryForAnItem200ApplicationJson;
+    updateInventoryForAnItem200ApplicationJSONObject?: UpdateInventoryForAnItem200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ArtistApiGetNamesNameMatchModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistApiGetNamesResponse = exports.ArtistApiGetNamesRequest = exports.ArtistApiGetNamesQueryParams = exports.ArtistApiGetNamesNameMatchModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ArtistApiGetNamesNameMatchModeEnum;
 (function (ArtistApiGetNamesNameMatchModeEnum) {
     ArtistApiGetNamesNameMatchModeEnum["Auto"] = "Auto";
     ArtistApiGetNamesNameMatchModeEnum["Partial"] = "Partial";
     ArtistApiGetNamesNameMatchModeEnum["StartsWith"] = "StartsWith";
     ArtistApiGetNamesNameMatchModeEnum["Exact"] = "Exact";
     ArtistApiGetNamesNameMatchModeEnum["Words"] = "Words";
-})(ArtistApiGetNamesNameMatchModeEnum || (ArtistApiGetNamesNameMatchModeEnum = {}));
+})(ArtistApiGetNamesNameMatchModeEnum = exports.ArtistApiGetNamesNameMatchModeEnum || (exports.ArtistApiGetNamesNameMatchModeEnum = {}));
 var ArtistApiGetNamesQueryParams = /** @class */ (function (_super) {
     __extends(ArtistApiGetNamesQueryParams, _super);
     function ArtistApiGetNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], ArtistApiGetNamesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
         __metadata("design:type", String)
     ], ArtistApiGetNamesQueryParams.prototype, "nameMatchMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], ArtistApiGetNamesQueryParams.prototype, "query", void 0);
     return ArtistApiGetNamesQueryParams;
-}(SpeakeasyBase));
-export { ArtistApiGetNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiGetNamesQueryParams = ArtistApiGetNamesQueryParams;
 var ArtistApiGetNamesRequest = /** @class */ (function (_super) {
     __extends(ArtistApiGetNamesRequest, _super);
     function ArtistApiGetNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtistApiGetNamesQueryParams)
     ], ArtistApiGetNamesRequest.prototype, "queryParams", void 0);
     return ArtistApiGetNamesRequest;
-}(SpeakeasyBase));
-export { ArtistApiGetNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiGetNamesRequest = ArtistApiGetNamesRequest;
 var ArtistApiGetNamesResponse = /** @class */ (function (_super) {
     __extends(ArtistApiGetNamesResponse, _super);
     function ArtistApiGetNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ArtistApiGetNamesResponse.prototype, "artistApiGetNames200ApplicationJsonStrings", void 0);
+    ], ArtistApiGetNamesResponse.prototype, "artistApiGetNames200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ArtistApiGetNamesResponse.prototype, "artistApiGetNames200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ArtistApiGetNamesResponse.prototype, "artistApiGetNames200TextJsonStrings", void 0);
+    ], ArtistApiGetNamesResponse.prototype, "artistApiGetNames200TextJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ArtistApiGetNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ArtistApiGetNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ArtistApiGetNamesResponse.prototype, "statusCode", void 0);
     return ArtistApiGetNamesResponse;
-}(SpeakeasyBase));
-export { ArtistApiGetNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ArtistApiGetNamesResponse = ArtistApiGetNamesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InternalAppSharingArtifact = void 0;
+var utils_1 = require("../../../internal/utils");
 // InternalAppSharingArtifact
 /**
  * An artifact resource which gets created when uploading an APK or Android App Bundle through internal app sharing.
@@ -33,17 +36,17 @@ var InternalAppSharingArtifact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateFingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateFingerprint" }),
         __metadata("design:type", String)
     ], InternalAppSharingArtifact.prototype, "certificateFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadUrl" }),
         __metadata("design:type", String)
     ], InternalAppSharingArtifact.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256" }),
         __metadata("design:type", String)
     ], InternalAppSharingArtifact.prototype, "sha256", void 0);
     return InternalAppSharingArtifact;
-}(SpeakeasyBase));
-export { InternalAppSharingArtifact };
+}(utils_1.SpeakeasyBase));
+exports.InternalAppSharingArtifact = InternalAppSharingArtifact;

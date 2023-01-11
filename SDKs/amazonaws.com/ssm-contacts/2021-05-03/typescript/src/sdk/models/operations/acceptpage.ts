@@ -45,7 +45,7 @@ export class AcceptPageRequest extends SpeakeasyBase {
 
 export class AcceptPageResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  acceptPageResult?: Map<string, any>;
+  acceptPageResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   accessDeniedException?: any;

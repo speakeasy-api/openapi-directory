@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExplicitContentSettingsObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // ExplicitContentSettingsObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-explicitcontentsettingsobject - Find more info on the official Spotify Web API Reference
@@ -33,13 +36,13 @@ var ExplicitContentSettingsObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter_enabled" }),
         __metadata("design:type", Boolean)
     ], ExplicitContentSettingsObject.prototype, "filterEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter_locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter_locked" }),
         __metadata("design:type", Boolean)
     ], ExplicitContentSettingsObject.prototype, "filterLocked", void 0);
     return ExplicitContentSettingsObject;
-}(SpeakeasyBase));
-export { ExplicitContentSettingsObject };
+}(utils_1.SpeakeasyBase));
+exports.ExplicitContentSettingsObject = ExplicitContentSettingsObject;

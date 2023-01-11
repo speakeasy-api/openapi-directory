@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCertificatesCreateCertificateRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCertificatesResponse = exports.PostCertificatesRequest = exports.PostCertificatesCreateCertificateResponse = exports.PostCertificatesCreateCertificateResponseCertificate = exports.PostCertificatesCreateCertificateResponseCertificateUsedBy = exports.PostCertificatesCreateCertificateResponseCertificateTypeEnum = exports.PostCertificatesCreateCertificateResponseCertificateStatus = exports.PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum = exports.PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum = exports.PostCertificatesCreateCertificateResponseCertificateStatusError = exports.PostCertificatesCreateCertificateResponseNullableAction = exports.PostCertificatesCreateCertificateResponseNullableActionStatusEnum = exports.PostCertificatesCreateCertificateResponseNullableActionResources = exports.PostCertificatesCreateCertificateResponseNullableActionError = exports.PostCertificatesCreateCertificateRequest = exports.PostCertificatesCreateCertificateRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCertificatesCreateCertificateRequestTypeEnum;
 (function (PostCertificatesCreateCertificateRequestTypeEnum) {
     PostCertificatesCreateCertificateRequestTypeEnum["Uploaded"] = "uploaded";
     PostCertificatesCreateCertificateRequestTypeEnum["Managed"] = "managed";
-})(PostCertificatesCreateCertificateRequestTypeEnum || (PostCertificatesCreateCertificateRequestTypeEnum = {}));
+})(PostCertificatesCreateCertificateRequestTypeEnum = exports.PostCertificatesCreateCertificateRequestTypeEnum || (exports.PostCertificatesCreateCertificateRequestTypeEnum = {}));
 var PostCertificatesCreateCertificateRequest = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateRequest, _super);
     function PostCertificatesCreateCertificateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateRequest.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain_names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain_names" }),
         __metadata("design:type", Array)
     ], PostCertificatesCreateCertificateRequest.prototype, "domainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostCertificatesCreateCertificateRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_key" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateRequest.prototype, "privateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateRequest.prototype, "type", void 0);
     return PostCertificatesCreateCertificateRequest;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateRequest = PostCertificatesCreateCertificateRequest;
 // PostCertificatesCreateCertificateResponseNullableActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -70,78 +73,78 @@ var PostCertificatesCreateCertificateResponseNullableActionError = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableActionError.prototype, "message", void 0);
     return PostCertificatesCreateCertificateResponseNullableActionError;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseNullableActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseNullableActionError = PostCertificatesCreateCertificateResponseNullableActionError;
 var PostCertificatesCreateCertificateResponseNullableActionResources = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateResponseNullableActionResources, _super);
     function PostCertificatesCreateCertificateResponseNullableActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostCertificatesCreateCertificateResponseNullableActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableActionResources.prototype, "type", void 0);
     return PostCertificatesCreateCertificateResponseNullableActionResources;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseNullableActionResources };
-export var PostCertificatesCreateCertificateResponseNullableActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseNullableActionResources = PostCertificatesCreateCertificateResponseNullableActionResources;
+var PostCertificatesCreateCertificateResponseNullableActionStatusEnum;
 (function (PostCertificatesCreateCertificateResponseNullableActionStatusEnum) {
     PostCertificatesCreateCertificateResponseNullableActionStatusEnum["Success"] = "success";
     PostCertificatesCreateCertificateResponseNullableActionStatusEnum["Running"] = "running";
     PostCertificatesCreateCertificateResponseNullableActionStatusEnum["Error"] = "error";
-})(PostCertificatesCreateCertificateResponseNullableActionStatusEnum || (PostCertificatesCreateCertificateResponseNullableActionStatusEnum = {}));
+})(PostCertificatesCreateCertificateResponseNullableActionStatusEnum = exports.PostCertificatesCreateCertificateResponseNullableActionStatusEnum || (exports.PostCertificatesCreateCertificateResponseNullableActionStatusEnum = {}));
 var PostCertificatesCreateCertificateResponseNullableAction = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateResponseNullableAction, _super);
     function PostCertificatesCreateCertificateResponseNullableAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostCertificatesCreateCertificateResponseNullableActionError)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostCertificatesCreateCertificateResponseNullableActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostCertificatesCreateCertificateResponseNullableActionResources }),
         __metadata("design:type", Array)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseNullableAction.prototype, "status", void 0);
     return PostCertificatesCreateCertificateResponseNullableAction;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseNullableAction };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseNullableAction = PostCertificatesCreateCertificateResponseNullableAction;
 // PostCertificatesCreateCertificateResponseCertificateStatusError
 /**
  * If issuance or renewal reports `failed`, this property contains information about what happened
@@ -152,29 +155,29 @@ var PostCertificatesCreateCertificateResponseCertificateStatusError = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificateStatusError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificateStatusError.prototype, "message", void 0);
     return PostCertificatesCreateCertificateResponseCertificateStatusError;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseCertificateStatusError };
-export var PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseCertificateStatusError = PostCertificatesCreateCertificateResponseCertificateStatusError;
+var PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum;
 (function (PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum) {
     PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum["Pending"] = "pending";
     PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum["Completed"] = "completed";
     PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum["Failed"] = "failed";
-})(PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum || (PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum = {}));
-export var PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum;
+})(PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum = exports.PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum || (exports.PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum = {}));
+var PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum;
 (function (PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum) {
     PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum["Scheduled"] = "scheduled";
     PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum["Pending"] = "pending";
     PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum["Failed"] = "failed";
     PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum["Unavailable"] = "unavailable";
-})(PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum || (PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum = {}));
+})(PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum = exports.PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum || (exports.PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum = {}));
 // PostCertificatesCreateCertificateResponseCertificateStatus
 /**
  * Current status of a type `managed` Certificate, always *null* for type `uploaded` Certificates
@@ -185,142 +188,142 @@ var PostCertificatesCreateCertificateResponseCertificateStatus = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostCertificatesCreateCertificateResponseCertificateStatusError)
     ], PostCertificatesCreateCertificateResponseCertificateStatus.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuance" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificateStatus.prototype, "issuance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewal" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificateStatus.prototype, "renewal", void 0);
     return PostCertificatesCreateCertificateResponseCertificateStatus;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseCertificateStatus };
-export var PostCertificatesCreateCertificateResponseCertificateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseCertificateStatus = PostCertificatesCreateCertificateResponseCertificateStatus;
+var PostCertificatesCreateCertificateResponseCertificateTypeEnum;
 (function (PostCertificatesCreateCertificateResponseCertificateTypeEnum) {
     PostCertificatesCreateCertificateResponseCertificateTypeEnum["Uploaded"] = "uploaded";
     PostCertificatesCreateCertificateResponseCertificateTypeEnum["Managed"] = "managed";
-})(PostCertificatesCreateCertificateResponseCertificateTypeEnum || (PostCertificatesCreateCertificateResponseCertificateTypeEnum = {}));
+})(PostCertificatesCreateCertificateResponseCertificateTypeEnum = exports.PostCertificatesCreateCertificateResponseCertificateTypeEnum || (exports.PostCertificatesCreateCertificateResponseCertificateTypeEnum = {}));
 var PostCertificatesCreateCertificateResponseCertificateUsedBy = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateResponseCertificateUsedBy, _super);
     function PostCertificatesCreateCertificateResponseCertificateUsedBy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostCertificatesCreateCertificateResponseCertificateUsedBy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificateUsedBy.prototype, "type", void 0);
     return PostCertificatesCreateCertificateResponseCertificateUsedBy;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseCertificateUsedBy };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseCertificateUsedBy = PostCertificatesCreateCertificateResponseCertificateUsedBy;
 var PostCertificatesCreateCertificateResponseCertificate = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateResponseCertificate, _super);
     function PostCertificatesCreateCertificateResponseCertificate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain_names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain_names" }),
         __metadata("design:type", Array)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "domainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not_valid_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not_valid_after" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "notValidAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not_valid_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not_valid_before" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "notValidBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", PostCertificatesCreateCertificateResponseCertificateStatus)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used_by", elemType: PostCertificatesCreateCertificateResponseCertificateUsedBy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used_by", elemType: PostCertificatesCreateCertificateResponseCertificateUsedBy }),
         __metadata("design:type", Array)
     ], PostCertificatesCreateCertificateResponseCertificate.prototype, "usedBy", void 0);
     return PostCertificatesCreateCertificateResponseCertificate;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponseCertificate };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponseCertificate = PostCertificatesCreateCertificateResponseCertificate;
 var PostCertificatesCreateCertificateResponse = /** @class */ (function (_super) {
     __extends(PostCertificatesCreateCertificateResponse, _super);
     function PostCertificatesCreateCertificateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostCertificatesCreateCertificateResponseNullableAction)
     ], PostCertificatesCreateCertificateResponse.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", PostCertificatesCreateCertificateResponseCertificate)
     ], PostCertificatesCreateCertificateResponse.prototype, "certificate", void 0);
     return PostCertificatesCreateCertificateResponse;
-}(SpeakeasyBase));
-export { PostCertificatesCreateCertificateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesCreateCertificateResponse = PostCertificatesCreateCertificateResponse;
 var PostCertificatesRequest = /** @class */ (function (_super) {
     __extends(PostCertificatesRequest, _super);
     function PostCertificatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostCertificatesCreateCertificateRequest)
     ], PostCertificatesRequest.prototype, "request", void 0);
     return PostCertificatesRequest;
-}(SpeakeasyBase));
-export { PostCertificatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesRequest = PostCertificatesRequest;
 var PostCertificatesResponse = /** @class */ (function (_super) {
     __extends(PostCertificatesResponse, _super);
     function PostCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCertificatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCertificatesCreateCertificateResponse)
     ], PostCertificatesResponse.prototype, "createCertificateResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCertificatesResponse.prototype, "statusCode", void 0);
     return PostCertificatesResponse;
-}(SpeakeasyBase));
-export { PostCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCertificatesResponse = PostCertificatesResponse;

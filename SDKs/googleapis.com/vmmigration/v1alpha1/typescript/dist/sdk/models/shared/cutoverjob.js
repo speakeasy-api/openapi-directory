@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeEngineTargetDetails } from "./computeenginetargetdetails";
-import { TargetVmDetails } from "./targetvmdetails";
-import { Status } from "./status";
-import { CutoverStep } from "./cutoverstep";
-import { TargetVmDetailsInput } from "./targetvmdetails";
-export var CutoverJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CutoverJobInput = exports.CutoverJob = exports.CutoverJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeenginetargetdetails_1 = require("./computeenginetargetdetails");
+var targetvmdetails_1 = require("./targetvmdetails");
+var status_1 = require("./status");
+var cutoverstep_1 = require("./cutoverstep");
+var targetvmdetails_2 = require("./targetvmdetails");
+var CutoverJobStateEnum;
 (function (CutoverJobStateEnum) {
     CutoverJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     CutoverJobStateEnum["Pending"] = "PENDING";
@@ -38,7 +41,7 @@ export var CutoverJobStateEnum;
     CutoverJobStateEnum["Cancelling"] = "CANCELLING";
     CutoverJobStateEnum["Active"] = "ACTIVE";
     CutoverJobStateEnum["AdaptingOs"] = "ADAPTING_OS";
-})(CutoverJobStateEnum || (CutoverJobStateEnum = {}));
+})(CutoverJobStateEnum = exports.CutoverJobStateEnum || (exports.CutoverJobStateEnum = {}));
 // CutoverJob
 /**
  * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
@@ -49,60 +52,60 @@ var CutoverJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" }),
-        __metadata("design:type", ComputeEngineTargetDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDetails" }),
+        __metadata("design:type", computeenginetargetdetails_1.ComputeEngineTargetDetails)
     ], CutoverJob.prototype, "computeEngineTargetDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDetails" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], CutoverJob.prototype, "computeEngineVmDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], CutoverJob.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], CutoverJob.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progressPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progressPercent" }),
         __metadata("design:type", Number)
     ], CutoverJob.prototype, "progressPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateMessage" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "stateMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateTime" }),
         __metadata("design:type", String)
     ], CutoverJob.prototype, "stateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps", elemType: CutoverStep }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps", elemType: cutoverstep_1.CutoverStep }),
         __metadata("design:type", Array)
     ], CutoverJob.prototype, "steps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDetails" }),
-        __metadata("design:type", TargetVmDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDetails" }),
+        __metadata("design:type", targetvmdetails_1.TargetVmDetails)
     ], CutoverJob.prototype, "targetDetails", void 0);
     return CutoverJob;
-}(SpeakeasyBase));
-export { CutoverJob };
+}(utils_1.SpeakeasyBase));
+exports.CutoverJob = CutoverJob;
 // CutoverJobInput
 /**
  * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
@@ -113,21 +116,21 @@ var CutoverJobInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineTargetDetails" }),
-        __metadata("design:type", ComputeEngineTargetDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineTargetDetails" }),
+        __metadata("design:type", computeenginetargetdetails_1.ComputeEngineTargetDetails)
     ], CutoverJobInput.prototype, "computeEngineTargetDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEngineVmDetails" }),
-        __metadata("design:type", TargetVmDetailsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEngineVmDetails" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
     ], CutoverJobInput.prototype, "computeEngineVmDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], CutoverJobInput.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetDetails" }),
-        __metadata("design:type", TargetVmDetailsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetDetails" }),
+        __metadata("design:type", targetvmdetails_2.TargetVmDetailsInput)
     ], CutoverJobInput.prototype, "targetDetails", void 0);
     return CutoverJobInput;
-}(SpeakeasyBase));
-export { CutoverJobInput };
+}(utils_1.SpeakeasyBase));
+exports.CutoverJobInput = CutoverJobInput;

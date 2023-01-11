@@ -1,46 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { ApIs } from "./apis";
 export declare const ServerList: readonly ["https://apisetu.gov.in/cisce/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    apIs: ApIs;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * hpcer - Class XII Passing Certificate
-     *
-     * API to verify Class XII Passing Certificate.
-    **/
-    hpcer(req: operations.HpcerRequest, config?: AxiosRequestConfig): Promise<operations.HpcerResponse>;
-    /**
-     * hscer - Class XII Marksheet
-     *
-     * API to verify Class XII Marksheet.
-    **/
-    hscer(req: operations.HscerRequest, config?: AxiosRequestConfig): Promise<operations.HscerResponse>;
-    /**
-     * hsmgr - Class XII Migration Certificate
-     *
-     * API to verify Class XII Migration Certificate.
-    **/
-    hsmgr(req: operations.HsmgrRequest, config?: AxiosRequestConfig): Promise<operations.HsmgrResponse>;
-    /**
-     * spcer - Class X Passing Certificate
-     *
-     * API to verify Class X Passing Certificate.
-    **/
-    spcer(req: operations.SpcerRequest, config?: AxiosRequestConfig): Promise<operations.SpcerResponse>;
-    /**
-     * sscer - Class X Marksheet
-     *
-     * API to verify Class X Marksheet.
-    **/
-    sscer(req: operations.SscerRequest, config?: AxiosRequestConfig): Promise<operations.SscerResponse>;
+    constructor(props: SDKProps);
 }
-export {};

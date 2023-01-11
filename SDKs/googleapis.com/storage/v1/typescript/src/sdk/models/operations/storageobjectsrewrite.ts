@@ -151,7 +151,7 @@ export class StorageObjectsRewriteRequest extends SpeakeasyBase {
   queryParams: StorageObjectsRewriteQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: shared.Object;
+  request?: shared.ObjectT;
 
   @SpeakeasyMetadata()
   security: StorageObjectsRewriteSecurity;

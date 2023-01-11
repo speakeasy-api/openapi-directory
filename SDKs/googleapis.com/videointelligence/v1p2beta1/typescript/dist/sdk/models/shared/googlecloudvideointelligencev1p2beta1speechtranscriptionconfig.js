@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudVideointelligenceV1p2beta1SpeechContext } from "./googlecloudvideointelligencev1p2beta1speechcontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudvideointelligencev1p2beta1speechcontext_1 = require("./googlecloudvideointelligencev1p2beta1speechcontext");
 // GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig
 /**
  * Config for SPEECH_TRANSCRIPTION.
@@ -34,41 +37,41 @@ var GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioTracks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioTracks" }),
         __metadata("design:type", Array)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "audioTracks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diarizationSpeakerCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diarizationSpeakerCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "diarizationSpeakerCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableAutomaticPunctuation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableAutomaticPunctuation" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "enableAutomaticPunctuation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableSpeakerDiarization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableSpeakerDiarization" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "enableSpeakerDiarization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableWordConfidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableWordConfidence" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "enableWordConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterProfanity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterProfanity" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "filterProfanity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAlternatives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAlternatives" }),
         __metadata("design:type", Number)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "maxAlternatives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speechContexts", elemType: GoogleCloudVideointelligenceV1p2beta1SpeechContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speechContexts", elemType: googlecloudvideointelligencev1p2beta1speechcontext_1.GoogleCloudVideointelligenceV1p2beta1SpeechContext }),
         __metadata("design:type", Array)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig.prototype, "speechContexts", void 0);
     return GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig = GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig;

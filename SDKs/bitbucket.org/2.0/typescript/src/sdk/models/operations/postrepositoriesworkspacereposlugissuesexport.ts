@@ -29,7 +29,7 @@ export class PostRepositoriesWorkspaceRepoSlugIssuesExportRequest extends Speake
   pathParams: PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity;
@@ -44,5 +44,5 @@ export class PostRepositoriesWorkspaceRepoSlugIssuesExportResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

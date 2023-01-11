@@ -17,7 +17,7 @@ export declare class GetOrganizationApplianceVpnStatsRequest extends SpeakeasyBa
 }
 export declare class GetOrganizationApplianceVpnStatsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationApplianceVpnStats200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationApplianceVpnStats200ApplicationJSONObject?: Record<string, any>;
 }

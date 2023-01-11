@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// Statistics
-/**
- * Provides statistics for each data field imported into to an Amazon Forecast dataset with the <a>CreateDatasetImportJob</a> operation.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statistics = void 0;
+var utils_1 = require("../../../internal/utils");
 var Statistics = /** @class */ (function (_super) {
     __extends(Statistics, _super);
     function Statistics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Avg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Avg" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "avg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Count" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountDistinct" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountDistinct" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countDistinct", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountDistinctLong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountDistinctLong" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countDistinctLong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountLong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountLong" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countLong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountNan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountNan" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countNan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountNanLong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountNanLong" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countNanLong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountNull" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountNull" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countNull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountNullLong" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountNullLong" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "countNullLong", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Max" }),
         __metadata("design:type", String)
     ], Statistics.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Min" }),
         __metadata("design:type", String)
     ], Statistics.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stddev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stddev" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "stddev", void 0);
     return Statistics;
-}(SpeakeasyBase));
-export { Statistics };
+}(utils_1.SpeakeasyBase));
+exports.Statistics = Statistics;

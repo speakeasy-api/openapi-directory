@@ -54,5 +54,5 @@ export class GetScriptTagsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getScriptTags200ApplicationJsonObject?: GetScriptTags200ApplicationJson;
+  getScriptTags200ApplicationJSONObject?: GetScriptTags200ApplicationJson;
 }

@@ -17,5 +17,5 @@ export declare class FollowUsersRequest extends SpeakeasyBase {
 export declare class FollowUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

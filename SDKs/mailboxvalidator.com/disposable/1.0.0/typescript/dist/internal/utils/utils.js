@@ -1,5 +1,8 @@
-import "reflect-metadata";
-import { GetSimplePathParams, ParamDecorator, ppMetadataKey, } from "./pathparams";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isEmpty = exports.isBooleanRecord = exports.isNumberRecord = exports.isStringRecord = exports.parseParamDecorator = exports.generateURL = exports.replaceParameters = exports.SpeakeasyMetadata = exports.SpeakeasyBase = void 0;
+require("reflect-metadata");
+var pathparams_1 = require("./pathparams");
 function isSpeakeasyBase(type) {
     var _a;
     return type && ((_a = Object.getPrototypeOf(type)) === null || _a === void 0 ? void 0 : _a.name) == "SpeakeasyBase";
@@ -79,8 +82,8 @@ var SpeakeasyBase = /** @class */ (function () {
     }
     return SpeakeasyBase;
 }());
-export { SpeakeasyBase };
-export function SpeakeasyMetadata(params) {
+exports.SpeakeasyBase = SpeakeasyBase;
+function SpeakeasyMetadata(params) {
     return function (target, propertyKey) {
         if (params === null || params === void 0 ? void 0 : params.data) {
             var annsArr = params.data.split(", ");
@@ -106,7 +109,8 @@ export function SpeakeasyMetadata(params) {
         props.push(prop);
     };
 }
-export function ReplaceParameters(stringWithParams, params) {
+exports.SpeakeasyMetadata = SpeakeasyMetadata;
+function replaceParameters(stringWithParams, params) {
     var res = stringWithParams;
     params.forEach(function (value, key) {
         var match = "{" + key + "}";
@@ -114,30 +118,32 @@ export function ReplaceParameters(stringWithParams, params) {
     });
     return res;
 }
-export function GenerateURL(serverURL, path, pathParams) {
+exports.replaceParameters = replaceParameters;
+function generateURL(serverURL, path, pathParams) {
     var url = serverURL.replace(/\/$/, "") + path;
     var parsedParameters = new Map();
     var fieldNames = Object.getOwnPropertyNames(pathParams);
     fieldNames.forEach(function (fname) {
-        var ppAnn = Reflect.getMetadata(ppMetadataKey, pathParams, fname);
+        var ppAnn = Reflect.getMetadata(pathparams_1.ppMetadataKey, pathParams, fname);
         if (ppAnn == null)
             return;
-        var ppDecorator = ParseParamDecorator(ppAnn, fname, "simple", false);
+        var ppDecorator = parseParamDecorator(ppAnn, fname, "simple", false);
         if (ppDecorator == null)
             return;
         switch (ppDecorator.Style) {
             case "simple":
-                var simpleParams = GetSimplePathParams(ppDecorator.ParamName, pathParams[fname], ppDecorator.Explode);
+                var simpleParams = (0, pathparams_1.getSimplePathParams)(ppDecorator.ParamName, pathParams[fname], ppDecorator.Explode);
                 simpleParams.forEach(function (value, key) {
                     parsedParameters.set(key, value);
                 });
         }
     });
-    return ReplaceParameters(url, parsedParameters);
+    return replaceParameters(url, parsedParameters);
 }
-export function ParseParamDecorator(ann, fName, defaultStyle, defaultExplode) {
+exports.generateURL = generateURL;
+function parseParamDecorator(ann, fName, defaultStyle, defaultExplode) {
     // style=simple;explode=false;name=apiID
-    var decorator = new ParamDecorator(defaultStyle, defaultExplode, fName.toLowerCase());
+    var decorator = new pathparams_1.ParamDecorator(defaultStyle, defaultExplode, fName.toLowerCase());
     ann.split(";").forEach(function (annPart) {
         var _a = annPart.split("="), paramKey = _a[0], paramVal = _a[1];
         switch (paramKey) {
@@ -156,3 +162,41 @@ export function ParseParamDecorator(ann, fName, defaultStyle, defaultExplode) {
     });
     return decorator;
 }
+exports.parseParamDecorator = parseParamDecorator;
+function isStringRecord(obj) {
+    if (typeof obj !== "object")
+        return false;
+    if (Object.getOwnPropertySymbols(obj).length > 0)
+        return false;
+    return Object.getOwnPropertyNames(obj)
+        .every(function (prop) { return typeof obj[prop] === "string"; });
+}
+exports.isStringRecord = isStringRecord;
+function isNumberRecord(obj) {
+    if (typeof obj !== "object")
+        return false;
+    if (Object.getOwnPropertySymbols(obj).length > 0)
+        return false;
+    return Object.getOwnPropertyNames(obj)
+        .every(function (prop) { return typeof obj[prop] === "number"; });
+}
+exports.isNumberRecord = isNumberRecord;
+function isBooleanRecord(obj) {
+    if (typeof obj !== "object")
+        return false;
+    if (Object.getOwnPropertySymbols(obj).length > 0)
+        return false;
+    return Object.getOwnPropertyNames(obj)
+        .every(function (prop) { return typeof obj[prop] === "boolean"; });
+}
+exports.isBooleanRecord = isBooleanRecord;
+function isEmpty(value) {
+    // check for undefined, null, and NaN
+    var res = false;
+    if (typeof value === "number")
+        res = Number.isNaN(value);
+    else if (typeof value === "string")
+        res = value === "";
+    return res || value == null;
+}
+exports.isEmpty = isEmpty;

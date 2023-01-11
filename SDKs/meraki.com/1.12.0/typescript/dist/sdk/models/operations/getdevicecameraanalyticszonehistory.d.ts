@@ -21,5 +21,5 @@ export declare class GetDeviceCameraAnalyticsZoneHistoryRequest extends Speakeas
 export declare class GetDeviceCameraAnalyticsZoneHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraAnalyticsZoneHistory200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraAnalyticsZoneHistory200ApplicationJSONObject?: Record<string, any>;
 }

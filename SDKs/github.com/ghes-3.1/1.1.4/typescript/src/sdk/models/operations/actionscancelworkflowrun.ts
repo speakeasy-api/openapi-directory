@@ -28,5 +28,5 @@ export class ActionsCancelWorkflowRunResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsCancelWorkflowRun202ApplicationJsonObject?: Map<string, any>;
+  actionsCancelWorkflowRun202ApplicationJSONObject?: Record<string, any>;
 }

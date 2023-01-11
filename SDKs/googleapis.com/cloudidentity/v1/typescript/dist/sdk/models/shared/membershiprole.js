@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExpiryDetail } from "./expirydetail";
-import { RestrictionEvaluations } from "./restrictionevaluations";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipRole = void 0;
+var utils_1 = require("../../../internal/utils");
+var expirydetail_1 = require("./expirydetail");
+var restrictionevaluations_1 = require("./restrictionevaluations");
 // MembershipRole
 /**
  * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
@@ -35,17 +38,17 @@ var MembershipRole = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryDetail" }),
-        __metadata("design:type", ExpiryDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryDetail" }),
+        __metadata("design:type", expirydetail_1.ExpiryDetail)
     ], MembershipRole.prototype, "expiryDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MembershipRole.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictionEvaluations" }),
-        __metadata("design:type", RestrictionEvaluations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictionEvaluations" }),
+        __metadata("design:type", restrictionevaluations_1.RestrictionEvaluations)
     ], MembershipRole.prototype, "restrictionEvaluations", void 0);
     return MembershipRole;
-}(SpeakeasyBase));
-export { MembershipRole };
+}(utils_1.SpeakeasyBase));
+exports.MembershipRole = MembershipRole;

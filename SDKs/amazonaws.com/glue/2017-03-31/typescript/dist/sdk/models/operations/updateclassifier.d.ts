@@ -23,6 +23,6 @@ export declare class UpdateClassifierResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateClassifierResponse?: Map<string, any>;
+    updateClassifierResponse?: Record<string, any>;
     versionMismatchException?: any;
 }

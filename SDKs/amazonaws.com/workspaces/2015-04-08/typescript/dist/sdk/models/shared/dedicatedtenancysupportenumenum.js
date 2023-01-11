@@ -1,4 +1,7 @@
-export var DedicatedTenancySupportEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DedicatedTenancySupportEnumEnum = void 0;
+var DedicatedTenancySupportEnumEnum;
 (function (DedicatedTenancySupportEnumEnum) {
     DedicatedTenancySupportEnumEnum["Enabled"] = "ENABLED";
-})(DedicatedTenancySupportEnumEnum || (DedicatedTenancySupportEnumEnum = {}));
+})(DedicatedTenancySupportEnumEnum = exports.DedicatedTenancySupportEnumEnum || (exports.DedicatedTenancySupportEnumEnum = {}));

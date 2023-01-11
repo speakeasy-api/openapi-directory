@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { BulkCreateTransactionsRequest, BulkCreateTransactionsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { CreateAccountRequest, CreateAccountResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,53 +31,20 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: BulkCreateTransactionsRequest = {
+const req: CreateAccountRequest = {
   pathParams: {
-    budgetId: "esse",
+    budgetId: "sit",
   },
   request: {
-    transactions: [
-      {
-        accountId: "reiciendis",
-        amount: 3980895351131401136,
-        approved: true,
-        categoryId: "quam",
-        cleared: "reconciled",
-        date: "1999-04-28",
-        flagColor: "red",
-        importId: "magnam",
-        memo: "hic",
-        payeeId: "sit",
-        payeeName: "ut",
-        subtransactions: [
-          {
-            amount: 4934187139318920637,
-            categoryId: "delectus",
-            memo: "est",
-            payeeId: "facilis",
-            payeeName: "porro",
-          },
-          {
-            amount: 2665025749108563884,
-            categoryId: "amet",
-            memo: "labore",
-            payeeId: "beatae",
-            payeeName: "repellendus",
-          },
-          {
-            amount: 961304557501690962,
-            categoryId: "officia",
-            memo: "nemo",
-            payeeId: "optio",
-            payeeName: "sed",
-          },
-        ],
-      },
-    ],
+    account: {
+      balance: 2259404117704393152,
+      name: "culpa",
+      type: "lineOfCredit",
+    },
   },
 };
 
-sdk.sdk.bulkCreateTransactions(req).then((res: BulkCreateTransactionsResponse | AxiosError) => {
+sdk.accounts.createAccount(req).then((res: CreateAccountResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -87,38 +53,65 @@ sdk.sdk.bulkCreateTransactions(req).then((res: BulkCreateTransactionsResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Accounts
 
-* `bulkCreateTransactions` - Bulk create transactions
 * `createAccount` - Create a new account
-* `createTransaction` - Create a single transaction or multiple transactions
 * `getAccountById` - Single account
 * `getAccounts` - Account list
+
+### Budgets
+
 * `getBudgetById` - Single budget
-* `getBudgetMonth` - Single budget month
-* `getBudgetMonths` - List budget months
 * `getBudgetSettingsById` - Budget Settings
 * `getBudgets` - List budgets
+
+### Categories
+
 * `getCategories` - List categories
 * `getCategoryById` - Single category
 * `getMonthCategoryById` - Single category for a specific budget month
-* `getPayeeById` - Single payee
+* `updateMonthCategory` - Update a category for a specific month
+
+### Deprecated
+
+* `bulkCreateTransactions` - Bulk create transactions
+
+### Months
+
+* `getBudgetMonth` - Single budget month
+* `getBudgetMonths` - List budget months
+
+### Payee Locations
+
 * `getPayeeLocationById` - Single payee location
 * `getPayeeLocations` - List payee locations
 * `getPayeeLocationsByPayee` - List locations for a payee
+
+### Payees
+
+* `getPayeeById` - Single payee
 * `getPayees` - List payees
+
+### Scheduled Transactions
+
 * `getScheduledTransactionById` - Single scheduled transaction
 * `getScheduledTransactions` - List scheduled transactions
+
+### Transactions
+
+* `createTransaction` - Create a single transaction or multiple transactions
 * `getTransactionById` - Single transaction
 * `getTransactions` - List transactions
 * `getTransactionsByAccount` - List account transactions
 * `getTransactionsByCategory` - List category transactions
 * `getTransactionsByPayee` - List payee transactions
-* `getUser` - User info
 * `importTransactions` - Import transactions
-* `updateMonthCategory` - Update a category for a specific month
 * `updateTransaction` - Updates an existing transaction
 * `updateTransactions` - Update multiple transactions
+
+### User
+
+* `getUser` - User info
 
 <!-- End SDK Available Operations -->
 

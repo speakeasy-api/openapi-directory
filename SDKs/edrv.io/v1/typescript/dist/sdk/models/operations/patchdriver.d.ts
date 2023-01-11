@@ -35,5 +35,5 @@ export declare class PatchDriverRequest extends SpeakeasyBase {
 export declare class PatchDriverResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchDriver200ApplicationJsonObject?: PatchDriver200ApplicationJson;
+    patchDriver200ApplicationJSONObject?: PatchDriver200ApplicationJson;
 }

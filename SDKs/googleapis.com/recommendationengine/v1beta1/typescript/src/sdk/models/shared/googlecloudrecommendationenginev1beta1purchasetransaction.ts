@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudRecommendationengineV1beta1PurchaseTransaction extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=costs" })
-  costs?: Map<string, number>;
+  costs?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=currencyCode" })
   currencyCode?: string;
@@ -20,5 +20,5 @@ export class GoogleCloudRecommendationengineV1beta1PurchaseTransaction extends S
   revenue?: number;
 
   @SpeakeasyMetadata({ data: "json, name=taxes" })
-  taxes?: Map<string, number>;
+  taxes?: Record<string, number>;
 }

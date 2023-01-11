@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OcrPhotoTextElement } from "./ocrphototextelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhotoToWordsWithLocationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var ocrphototextelement_1 = require("./ocrphototextelement");
 // PhotoToWordsWithLocationResult
 /**
  * Result of an photo to words-with-location OCR operation
@@ -34,17 +37,17 @@ var PhotoToWordsWithLocationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DiagnosticImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DiagnosticImage" }),
         __metadata("design:type", String)
     ], PhotoToWordsWithLocationResult.prototype, "diagnosticImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], PhotoToWordsWithLocationResult.prototype, "successful", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TextElements", elemType: OcrPhotoTextElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TextElements", elemType: ocrphototextelement_1.OcrPhotoTextElement }),
         __metadata("design:type", Array)
     ], PhotoToWordsWithLocationResult.prototype, "textElements", void 0);
     return PhotoToWordsWithLocationResult;
-}(SpeakeasyBase));
-export { PhotoToWordsWithLocationResult };
+}(utils_1.SpeakeasyBase));
+exports.PhotoToWordsWithLocationResult = PhotoToWordsWithLocationResult;

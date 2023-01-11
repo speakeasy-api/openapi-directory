@@ -34,7 +34,7 @@ export class SetCognitoEventsHeaders extends SpeakeasyBase {
 
 export class SetCognitoEventsRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Events" })
-  events: Map<string, string>;
+  events: Record<string, string>;
 }
 
 

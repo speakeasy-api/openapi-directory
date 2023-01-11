@@ -13,13 +13,13 @@ import { CommonFeatureState1 } from "./commonfeaturestate1";
 export declare class Feature extends SpeakeasyBase {
     createTime?: string;
     deleteTime?: string;
-    labels?: Map<string, string>;
-    membershipSpecs?: Map<string, MembershipFeatureSpec>;
-    membershipStates?: Map<string, MembershipFeatureState>;
+    labels?: Record<string, string>;
+    membershipSpecs?: Record<string, MembershipFeatureSpec>;
+    membershipStates?: Record<string, MembershipFeatureState>;
     name?: string;
     resourceState?: FeatureResourceState;
-    scopeSpecs?: Map<string, Map<string, any>>;
-    scopeStates?: Map<string, ScopeFeatureState>;
+    scopeSpecs?: Record<string, Record<string, any>>;
+    scopeStates?: Record<string, ScopeFeatureState>;
     spec?: CommonFeatureSpec;
     state?: CommonFeatureState;
     updateTime?: string;
@@ -28,10 +28,10 @@ export declare class Feature extends SpeakeasyBase {
  * Feature represents the settings and status of any Hub Feature.
 **/
 export declare class FeatureInput extends SpeakeasyBase {
-    labels?: Map<string, string>;
-    membershipSpecs?: Map<string, MembershipFeatureSpecInput>;
+    labels?: Record<string, string>;
+    membershipSpecs?: Record<string, MembershipFeatureSpecInput>;
     resourceState?: FeatureResourceState;
-    scopeSpecs?: Map<string, Map<string, any>>;
+    scopeSpecs?: Record<string, Record<string, any>>;
     spec?: CommonFeatureSpec;
     state?: CommonFeatureState1;
 }

@@ -10,7 +10,7 @@ import { WeeklySchedule } from "./weeklyschedule";
 **/
 export class JobScheduleFrequency extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dailySchedule" })
-  dailySchedule?: Map<string, any>;
+  dailySchedule?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=monthlySchedule" })
   monthlySchedule?: MonthlySchedule;

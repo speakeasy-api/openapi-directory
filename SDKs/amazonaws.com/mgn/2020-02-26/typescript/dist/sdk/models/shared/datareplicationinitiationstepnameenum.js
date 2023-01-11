@@ -1,4 +1,7 @@
-export var DataReplicationInitiationStepNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataReplicationInitiationStepNameEnum = void 0;
+var DataReplicationInitiationStepNameEnum;
 (function (DataReplicationInitiationStepNameEnum) {
     DataReplicationInitiationStepNameEnum["Wait"] = "WAIT";
     DataReplicationInitiationStepNameEnum["CreateSecurityGroup"] = "CREATE_SECURITY_GROUP";
@@ -11,4 +14,4 @@ export var DataReplicationInitiationStepNameEnum;
     DataReplicationInitiationStepNameEnum["PairReplicationServerWithAgent"] = "PAIR_REPLICATION_SERVER_WITH_AGENT";
     DataReplicationInitiationStepNameEnum["ConnectAgentToReplicationServer"] = "CONNECT_AGENT_TO_REPLICATION_SERVER";
     DataReplicationInitiationStepNameEnum["StartDataTransfer"] = "START_DATA_TRANSFER";
-})(DataReplicationInitiationStepNameEnum || (DataReplicationInitiationStepNameEnum = {}));
+})(DataReplicationInitiationStepNameEnum = exports.DataReplicationInitiationStepNameEnum || (exports.DataReplicationInitiationStepNameEnum = {}));

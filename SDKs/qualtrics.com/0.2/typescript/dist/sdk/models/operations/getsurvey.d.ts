@@ -8,5 +8,5 @@ export declare class GetSurveyRequest extends SpeakeasyBase {
 export declare class GetSurveyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    surveyResponse?: Map<string, any>;
+    surveyResponse?: Record<string, any>;
 }

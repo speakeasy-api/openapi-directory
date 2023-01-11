@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// TeamRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class TeamRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -23,6 +27,10 @@ export class TeamRepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// TeamRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class TeamRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -101,6 +109,10 @@ export class TeamRepositoryPermissions extends SpeakeasyBase {
 }
 
 
+// TeamRepositoryRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class TeamRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -122,6 +134,10 @@ export class TeamRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// TeamRepositoryRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class TeamRepositoryRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -512,6 +528,10 @@ export class TeamRepositoryRepositoryTemplateRepository extends SpeakeasyBase {
 }
 
 
+// TeamRepositoryRepository
+/** 
+ * A git repository
+**/
 export class TeamRepositoryRepository extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allow_merge_commit" })
   allowMergeCommit?: boolean;

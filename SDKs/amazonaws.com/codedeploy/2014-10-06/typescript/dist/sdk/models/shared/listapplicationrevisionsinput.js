@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListStateFilterActionEnum } from "./liststatefilteractionenum";
-import { ApplicationRevisionSortByEnum } from "./applicationrevisionsortbyenum";
-import { SortOrderEnum } from "./sortorderenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListApplicationRevisionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var liststatefilteractionenum_1 = require("./liststatefilteractionenum");
+var applicationrevisionsortbyenum_1 = require("./applicationrevisionsortbyenum");
+var sortorderenum_1 = require("./sortorderenum");
 // ListApplicationRevisionsInput
 /**
  *  Represents the input of a <code>ListApplicationRevisions</code> operation.
@@ -36,33 +39,33 @@ var ListApplicationRevisionsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployed" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "deployed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Bucket" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "s3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3KeyPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3KeyPrefix" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "s3KeyPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortBy" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsInput.prototype, "sortOrder", void 0);
     return ListApplicationRevisionsInput;
-}(SpeakeasyBase));
-export { ListApplicationRevisionsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListApplicationRevisionsInput = ListApplicationRevisionsInput;

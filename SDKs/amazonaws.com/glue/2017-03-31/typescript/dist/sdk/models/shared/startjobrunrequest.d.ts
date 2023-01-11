@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NotificationProperty } from "./notificationproperty";
 import { WorkerTypeEnum } from "./workertypeenum";
 export declare class StartJobRunRequest extends SpeakeasyBase {
-    allocatedCapacity?: number;
-    arguments?: Map<string, string>;
+    allocatedCapacity?: Record<string, any>;
+    arguments?: Record<string, string>;
     jobName: string;
     jobRunId?: string;
     maxCapacity?: number;

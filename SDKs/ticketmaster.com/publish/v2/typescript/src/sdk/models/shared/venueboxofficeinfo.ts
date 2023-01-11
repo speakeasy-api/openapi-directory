@@ -8,14 +8,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class VenueBoxOfficeInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=acceptedPaymentDetails" })
-  acceptedPaymentDetails?: Map<string, string>;
+  acceptedPaymentDetails?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=openHoursDetails" })
-  openHoursDetails?: Map<string, string>;
+  openHoursDetails?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=phoneNumberDetails" })
-  phoneNumberDetails?: Map<string, string>;
+  phoneNumberDetails?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=willCallDetails" })
-  willCallDetails?: Map<string, string>;
+  willCallDetails?: Record<string, string>;
 }

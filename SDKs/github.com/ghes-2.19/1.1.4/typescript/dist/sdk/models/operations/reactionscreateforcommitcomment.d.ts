@@ -30,6 +30,6 @@ export declare class ReactionsCreateForCommitCommentResponse extends SpeakeasyBa
     contentType: string;
     statusCode: number;
     reaction?: shared.Reaction;
-    reactionsCreateForCommitComment415ApplicationJsonObject?: ReactionsCreateForCommitComment415ApplicationJson;
+    reactionsCreateForCommitComment415ApplicationJSONObject?: ReactionsCreateForCommitComment415ApplicationJson;
     validationError?: shared.ValidationError;
 }

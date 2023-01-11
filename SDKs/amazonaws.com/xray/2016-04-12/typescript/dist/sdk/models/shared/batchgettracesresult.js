@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Trace } from "./trace";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetTracesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var trace_1 = require("./trace");
 var BatchGetTracesResult = /** @class */ (function (_super) {
     __extends(BatchGetTracesResult, _super);
     function BatchGetTracesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], BatchGetTracesResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Traces", elemType: Trace }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Traces", elemType: trace_1.Trace }),
         __metadata("design:type", Array)
     ], BatchGetTracesResult.prototype, "traces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnprocessedTraceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnprocessedTraceIds" }),
         __metadata("design:type", Array)
     ], BatchGetTracesResult.prototype, "unprocessedTraceIds", void 0);
     return BatchGetTracesResult;
-}(SpeakeasyBase));
-export { BatchGetTracesResult };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetTracesResult = BatchGetTracesResult;

@@ -29,7 +29,7 @@ export class PutOfferingsOfferingIdMetadataCategoryResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   offeringMetadataResponse?: shared.OfferingMetadataResponse;

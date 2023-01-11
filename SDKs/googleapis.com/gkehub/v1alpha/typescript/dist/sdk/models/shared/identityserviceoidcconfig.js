@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,71 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// IdentityServiceOidcConfigInput
-/**
- * Configuration for OIDC Auth flow.
-**/
-var IdentityServiceOidcConfigInput = /** @class */ (function (_super) {
-    __extends(IdentityServiceOidcConfigInput, _super);
-    function IdentityServiceOidcConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthorityData" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "certificateAuthorityData", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "clientId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "clientSecret", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployCloudConsoleProxy" }),
-        __metadata("design:type", Boolean)
-    ], IdentityServiceOidcConfigInput.prototype, "deployCloudConsoleProxy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableAccessToken" }),
-        __metadata("design:type", Boolean)
-    ], IdentityServiceOidcConfigInput.prototype, "enableAccessToken", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraParams" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "extraParams", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPrefix" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "groupPrefix", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsClaim" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "groupsClaim", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuerUri" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "issuerUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubectlRedirectUri" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "kubectlRedirectUri", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "scopes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=userClaim" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "userClaim", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPrefix" }),
-        __metadata("design:type", String)
-    ], IdentityServiceOidcConfigInput.prototype, "userPrefix", void 0);
-    return IdentityServiceOidcConfigInput;
-}(SpeakeasyBase));
-export { IdentityServiceOidcConfigInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityServiceOidcConfigInput = exports.IdentityServiceOidcConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // IdentityServiceOidcConfig
 /**
  * Configuration for OIDC Auth flow.
@@ -97,61 +36,125 @@ var IdentityServiceOidcConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateAuthorityData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthorityData" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "certificateAuthorityData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployCloudConsoleProxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployCloudConsoleProxy" }),
         __metadata("design:type", Boolean)
     ], IdentityServiceOidcConfig.prototype, "deployCloudConsoleProxy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableAccessToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableAccessToken" }),
         __metadata("design:type", Boolean)
     ], IdentityServiceOidcConfig.prototype, "enableAccessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptedClientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptedClientSecret" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "encryptedClientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraParams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraParams" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "extraParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPrefix" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "groupPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsClaim" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "groupsClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuerUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuerUri" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "issuerUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubectlRedirectUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubectlRedirectUri" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "kubectlRedirectUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "scopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userClaim" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "userClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPrefix" }),
         __metadata("design:type", String)
     ], IdentityServiceOidcConfig.prototype, "userPrefix", void 0);
     return IdentityServiceOidcConfig;
-}(SpeakeasyBase));
-export { IdentityServiceOidcConfig };
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceOidcConfig = IdentityServiceOidcConfig;
+// IdentityServiceOidcConfigInput
+/**
+ * Configuration for OIDC Auth flow.
+**/
+var IdentityServiceOidcConfigInput = /** @class */ (function (_super) {
+    __extends(IdentityServiceOidcConfigInput, _super);
+    function IdentityServiceOidcConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateAuthorityData" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "certificateAuthorityData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "clientId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "clientSecret", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployCloudConsoleProxy" }),
+        __metadata("design:type", Boolean)
+    ], IdentityServiceOidcConfigInput.prototype, "deployCloudConsoleProxy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableAccessToken" }),
+        __metadata("design:type", Boolean)
+    ], IdentityServiceOidcConfigInput.prototype, "enableAccessToken", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraParams" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "extraParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupPrefix" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "groupPrefix", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsClaim" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "groupsClaim", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuerUri" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "issuerUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubectlRedirectUri" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "kubectlRedirectUri", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "scopes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userClaim" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "userClaim", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPrefix" }),
+        __metadata("design:type", String)
+    ], IdentityServiceOidcConfigInput.prototype, "userPrefix", void 0);
+    return IdentityServiceOidcConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.IdentityServiceOidcConfigInput = IdentityServiceOidcConfigInput;

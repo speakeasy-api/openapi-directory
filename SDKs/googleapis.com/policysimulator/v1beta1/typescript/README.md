@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PolicysimulatorProjectsLocationsReplaysCreateRequest, PolicysimulatorProjectsLocationsReplaysCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,126 +30,123 @@ const req: PolicysimulatorProjectsLocationsReplaysCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dignissimos",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "officiis",
-    alt: "json",
-    callback: "officiis",
-    fields: "nihil",
-    key: "omnis",
-    oauthToken: "maxime",
-    prettyPrint: false,
-    quotaUser: "quos",
-    uploadType: "et",
-    uploadProtocol: "omnis",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     config: {
       logSource: "RECENT_ACCESSES",
       policyOverlay: {
-        "repudiandae": {
+        "voluptatum": {
           auditConfigs: [
             {
               auditLogConfigs: [
                 {
                   exemptedMembers: [
-                    "aut",
-                    "velit",
-                    "est",
-                  ],
-                  logType: "DATA_WRITE",
-                },
-                {
-                  exemptedMembers: [
-                    "quae",
                     "et",
+                    "voluptate",
+                    "iste",
                   ],
-                  logType: "ADMIN_READ",
+                  logType: "LOG_TYPE_UNSPECIFIED",
+                },
+                {
+                  exemptedMembers: [
+                    "dolores",
+                    "illum",
+                    "debitis",
+                  ],
+                  logType: "LOG_TYPE_UNSPECIFIED",
+                },
+                {
+                  exemptedMembers: [
+                    "dolore",
+                  ],
+                  logType: "LOG_TYPE_UNSPECIFIED",
                 },
               ],
-              service: "enim",
-            },
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "accusantium",
-                    "ut",
-                  ],
-                  logType: "DATA_READ",
-                },
-                {
-                  exemptedMembers: [
-                    "iure",
-                    "odit",
-                  ],
-                  logType: "ADMIN_READ",
-                },
-                {
-                  exemptedMembers: [
-                    "amet",
-                    "pariatur",
-                  ],
-                  logType: "ADMIN_READ",
-                },
-              ],
-              service: "tempore",
-            },
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "quia",
-                  ],
-                  logType: "ADMIN_READ",
-                },
-              ],
-              service: "quo",
+              service: "aspernatur",
             },
           ],
           bindings: [
             {
               condition: {
-                description: "aut",
-                expression: "molestiae",
-                location: "blanditiis",
-                title: "et",
+                description: "totam",
+                expression: "commodi",
+                location: "quis",
+                title: "est",
               },
               members: [
-                "dicta",
-                "enim",
+                "odit",
+                "non",
+                "voluptas",
               ],
-              role: "ratione",
+              role: "omnis",
+            },
+            {
+              condition: {
+                description: "aut",
+                expression: "illo",
+                location: "sed",
+                title: "officiis",
+              },
+              members: [
+                "consectetur",
+                "nobis",
+              ],
+              role: "odio",
+            },
+            {
+              condition: {
+                description: "qui",
+                expression: "recusandae",
+                location: "at",
+                title: "ipsum",
+              },
+              members: [
+                "modi",
+                "sint",
+              ],
+              role: "inventore",
             },
           ],
-          etag: "commodi",
-          version: 8785782413205295304,
+          etag: "ut",
+          version: 406703151708498928,
         },
       },
     },
     resultsSummary: {
-      differenceCount: 7841242247132918320,
-      errorCount: 2156911971396190993,
-      logCount: 5590233000876705772,
+      differenceCount: 4756106358532488297,
+      errorCount: 5837486892148644279,
+      logCount: 4736217237333769909,
       newestDate: {
-        day: 4031732429361760447,
-        month: 5797452881319356845,
-        year: 2197377284877921821,
+        day: 2264299874001785192,
+        month: 1061380815263676471,
+        year: 7242748068272024738,
       },
       oldestDate: {
-        day: 4588745654855075331,
-        month: 2360021394080816363,
-        year: 587545568868920246,
+        day: 7719717197379695442,
+        month: 4112921325496946042,
+        year: 2671030200101705776,
       },
-      unchangedCount: 6171314581856648447,
+      unchangedCount: 3508963237347473586,
     },
   },
 };

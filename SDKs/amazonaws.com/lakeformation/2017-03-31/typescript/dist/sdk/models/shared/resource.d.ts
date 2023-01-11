@@ -9,7 +9,7 @@ import { TableWithColumnsResource } from "./tablewithcolumnsresource";
  * A structure for the resource.
 **/
 export declare class Resource extends SpeakeasyBase {
-    catalog?: Map<string, any>;
+    catalog?: Record<string, any>;
     dataLocation?: DataLocationResource;
     database?: DatabaseResource;
     lfTag?: LfTagKeyResource;

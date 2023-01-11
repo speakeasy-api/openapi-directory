@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonthSummary } from "./monthsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonthSummariesResponse = exports.MonthSummariesResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var monthsummary_1 = require("./monthsummary");
 var MonthSummariesResponseData = /** @class */ (function (_super) {
     __extends(MonthSummariesResponseData, _super);
     function MonthSummariesResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=months", elemType: MonthSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=months", elemType: monthsummary_1.MonthSummary }),
         __metadata("design:type", Array)
     ], MonthSummariesResponseData.prototype, "months", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], MonthSummariesResponseData.prototype, "serverKnowledge", void 0);
     return MonthSummariesResponseData;
-}(SpeakeasyBase));
-export { MonthSummariesResponseData };
+}(utils_1.SpeakeasyBase));
+exports.MonthSummariesResponseData = MonthSummariesResponseData;
 var MonthSummariesResponse = /** @class */ (function (_super) {
     __extends(MonthSummariesResponse, _super);
     function MonthSummariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", MonthSummariesResponseData)
     ], MonthSummariesResponse.prototype, "data", void 0);
     return MonthSummariesResponse;
-}(SpeakeasyBase));
-export { MonthSummariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.MonthSummariesResponse = MonthSummariesResponse;

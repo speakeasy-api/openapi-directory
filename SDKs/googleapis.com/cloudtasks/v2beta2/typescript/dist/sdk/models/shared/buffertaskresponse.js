@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Task } from "./task";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BufferTaskResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var task_1 = require("./task");
 // BufferTaskResponse
 /**
  * Response message for BufferTask.
@@ -34,9 +37,9 @@ var BufferTaskResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
-        __metadata("design:type", Task)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
+        __metadata("design:type", task_1.Task)
     ], BufferTaskResponse.prototype, "task", void 0);
     return BufferTaskResponse;
-}(SpeakeasyBase));
-export { BufferTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.BufferTaskResponse = BufferTaskResponse;

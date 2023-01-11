@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
-import { Tag } from "./tag";
+import { SubnetList } from "./subnetlist";
+import { TagList } from "./taglist";
 
 
 
@@ -18,11 +18,11 @@ export class ClusterSubnetGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   subnetGroupStatus?: string;
 
-  @SpeakeasyMetadata({ elemType: Subnet })
-  subnets?: Subnet[];
+  @SpeakeasyMetadata({ elemType: SubnetList })
+  subnets?: SubnetList[];
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 
   @SpeakeasyMetadata()
   vpcId?: string;

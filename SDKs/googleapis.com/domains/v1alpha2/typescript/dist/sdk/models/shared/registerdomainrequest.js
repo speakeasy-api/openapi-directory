@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegistrationInput } from "./registration";
-import { Money } from "./money";
-export var RegisterDomainRequestContactNoticesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterDomainRequestInput = exports.RegisterDomainRequestDomainNoticesEnum = exports.RegisterDomainRequestContactNoticesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var registration_1 = require("./registration");
+var money_1 = require("./money");
+var RegisterDomainRequestContactNoticesEnum;
 (function (RegisterDomainRequestContactNoticesEnum) {
     RegisterDomainRequestContactNoticesEnum["ContactNoticeUnspecified"] = "CONTACT_NOTICE_UNSPECIFIED";
     RegisterDomainRequestContactNoticesEnum["PublicContactDataAcknowledgement"] = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT";
-})(RegisterDomainRequestContactNoticesEnum || (RegisterDomainRequestContactNoticesEnum = {}));
-export var RegisterDomainRequestDomainNoticesEnum;
+})(RegisterDomainRequestContactNoticesEnum = exports.RegisterDomainRequestContactNoticesEnum || (exports.RegisterDomainRequestContactNoticesEnum = {}));
+var RegisterDomainRequestDomainNoticesEnum;
 (function (RegisterDomainRequestDomainNoticesEnum) {
     RegisterDomainRequestDomainNoticesEnum["DomainNoticeUnspecified"] = "DOMAIN_NOTICE_UNSPECIFIED";
     RegisterDomainRequestDomainNoticesEnum["HstsPreloaded"] = "HSTS_PRELOADED";
-})(RegisterDomainRequestDomainNoticesEnum || (RegisterDomainRequestDomainNoticesEnum = {}));
+})(RegisterDomainRequestDomainNoticesEnum = exports.RegisterDomainRequestDomainNoticesEnum || (exports.RegisterDomainRequestDomainNoticesEnum = {}));
 // RegisterDomainRequestInput
 /**
  * Request for the `RegisterDomain` method.
@@ -45,25 +48,25 @@ var RegisterDomainRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactNotices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactNotices" }),
         __metadata("design:type", Array)
     ], RegisterDomainRequestInput.prototype, "contactNotices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainNotices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainNotices" }),
         __metadata("design:type", Array)
     ], RegisterDomainRequestInput.prototype, "domainNotices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration" }),
-        __metadata("design:type", RegistrationInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration" }),
+        __metadata("design:type", registration_1.RegistrationInput)
     ], RegisterDomainRequestInput.prototype, "registration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], RegisterDomainRequestInput.prototype, "validateOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearlyPrice" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearlyPrice" }),
+        __metadata("design:type", money_1.Money)
     ], RegisterDomainRequestInput.prototype, "yearlyPrice", void 0);
     return RegisterDomainRequestInput;
-}(SpeakeasyBase));
-export { RegisterDomainRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.RegisterDomainRequestInput = RegisterDomainRequestInput;

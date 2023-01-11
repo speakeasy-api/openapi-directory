@@ -7,6 +7,6 @@ export declare enum ManageEventActionEnum {
 }
 export declare class ManageEvent extends SpeakeasyBase {
     action?: ManageEventActionEnum;
-    actionParams?: Map<string, any>;
+    actionParams?: Record<string, any>;
     name?: string;
 }

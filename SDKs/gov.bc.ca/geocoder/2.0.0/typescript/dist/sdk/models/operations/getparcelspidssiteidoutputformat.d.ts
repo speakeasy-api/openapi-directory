@@ -10,7 +10,7 @@ export declare enum GetParcelsPidsSiteIdOutputFormatOutputFormatEnum {
 }
 export declare class GetParcelsPidsSiteIdOutputFormatPathParams extends SpeakeasyBase {
     outputFormat: GetParcelsPidsSiteIdOutputFormatOutputFormatEnum;
-    siteId: string;
+    siteID: string;
 }
 export declare class GetParcelsPidsSiteIdOutputFormatRequest extends SpeakeasyBase {
     pathParams: GetParcelsPidsSiteIdOutputFormatPathParams;

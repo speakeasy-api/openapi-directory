@@ -9,6 +9,10 @@ export enum GoalRequestMetricUnitEnum {
 }
 
 
+// GoalRequestMetricInput
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalRequestMetricInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=currency_code" })
   currencyCode?: string;
@@ -33,6 +37,10 @@ export class GoalRequestMetricInput extends SpeakeasyBase {
 }
 
 
+// GoalRequestOwnerInput
+/** 
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 export class GoalRequestOwnerInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -41,7 +49,7 @@ export class GoalRequestOwnerInput extends SpeakeasyBase {
 
 // GoalRequestTeamInput
 /** 
- * *Conditional*. This property is only present when the `workspace` provided is an organization.
+ * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 **/
 export class GoalRequestTeamInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
@@ -59,6 +67,10 @@ export enum GoalRequestTimePeriodPeriodEnum {
 }
 
 
+// GoalRequestTimePeriodInput
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalRequestTimePeriodInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=end_on" })
   endOn?: string;
@@ -71,12 +83,20 @@ export class GoalRequestTimePeriodInput extends SpeakeasyBase {
 }
 
 
+// GoalRequestWorkspaceInput
+/** 
+ * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
+**/
 export class GoalRequestWorkspaceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 }
 
 
+// GoalRequestInput
+/** 
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export class GoalRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=due_on" })
   dueOn?: string;

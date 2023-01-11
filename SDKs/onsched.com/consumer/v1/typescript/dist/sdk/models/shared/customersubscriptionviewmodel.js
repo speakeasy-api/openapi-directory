@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerSubscriptionViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomerSubscriptionViewModel = /** @class */ (function (_super) {
     __extends(CustomerSubscriptionViewModel, _super);
     function CustomerSubscriptionViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], CustomerSubscriptionViewModel.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerPlanId" }),
         __metadata("design:type", String)
     ], CustomerSubscriptionViewModel.prototype, "customerPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerPlanName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerPlanName" }),
         __metadata("design:type", String)
     ], CustomerSubscriptionViewModel.prototype, "customerPlanName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CustomerSubscriptionViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], CustomerSubscriptionViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=planStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=planStart" }),
         __metadata("design:type", Date)
     ], CustomerSubscriptionViewModel.prototype, "planStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialPeriodEnd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialPeriodEnd" }),
         __metadata("design:type", Date)
     ], CustomerSubscriptionViewModel.prototype, "trialPeriodEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialPeriodStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialPeriodStart" }),
         __metadata("design:type", Date)
     ], CustomerSubscriptionViewModel.prototype, "trialPeriodStart", void 0);
     return CustomerSubscriptionViewModel;
-}(SpeakeasyBase));
-export { CustomerSubscriptionViewModel };
+}(utils_1.SpeakeasyBase));
+exports.CustomerSubscriptionViewModel = CustomerSubscriptionViewModel;

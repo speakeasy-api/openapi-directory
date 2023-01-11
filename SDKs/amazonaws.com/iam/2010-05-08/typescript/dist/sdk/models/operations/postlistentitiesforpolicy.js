@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListEntitiesForPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListEntitiesForPolicyResponse = exports.PostListEntitiesForPolicyRequest = exports.PostListEntitiesForPolicyHeaders = exports.PostListEntitiesForPolicyQueryParams = exports.PostListEntitiesForPolicyVersionEnum = exports.PostListEntitiesForPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListEntitiesForPolicyActionEnum;
 (function (PostListEntitiesForPolicyActionEnum) {
     PostListEntitiesForPolicyActionEnum["ListEntitiesForPolicy"] = "ListEntitiesForPolicy";
-})(PostListEntitiesForPolicyActionEnum || (PostListEntitiesForPolicyActionEnum = {}));
-export var PostListEntitiesForPolicyVersionEnum;
+})(PostListEntitiesForPolicyActionEnum = exports.PostListEntitiesForPolicyActionEnum || (exports.PostListEntitiesForPolicyActionEnum = {}));
+var PostListEntitiesForPolicyVersionEnum;
 (function (PostListEntitiesForPolicyVersionEnum) {
     PostListEntitiesForPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostListEntitiesForPolicyVersionEnum || (PostListEntitiesForPolicyVersionEnum = {}));
+})(PostListEntitiesForPolicyVersionEnum = exports.PostListEntitiesForPolicyVersionEnum || (exports.PostListEntitiesForPolicyVersionEnum = {}));
 var PostListEntitiesForPolicyQueryParams = /** @class */ (function (_super) {
     __extends(PostListEntitiesForPolicyQueryParams, _super);
     function PostListEntitiesForPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyQueryParams.prototype, "version", void 0);
     return PostListEntitiesForPolicyQueryParams;
-}(SpeakeasyBase));
-export { PostListEntitiesForPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListEntitiesForPolicyQueryParams = PostListEntitiesForPolicyQueryParams;
 var PostListEntitiesForPolicyHeaders = /** @class */ (function (_super) {
     __extends(PostListEntitiesForPolicyHeaders, _super);
     function PostListEntitiesForPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListEntitiesForPolicyHeaders;
-}(SpeakeasyBase));
-export { PostListEntitiesForPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListEntitiesForPolicyHeaders = PostListEntitiesForPolicyHeaders;
 var PostListEntitiesForPolicyRequest = /** @class */ (function (_super) {
     __extends(PostListEntitiesForPolicyRequest, _super);
     function PostListEntitiesForPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListEntitiesForPolicyQueryParams)
     ], PostListEntitiesForPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListEntitiesForPolicyHeaders)
     ], PostListEntitiesForPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListEntitiesForPolicyRequest.prototype, "request", void 0);
     return PostListEntitiesForPolicyRequest;
-}(SpeakeasyBase));
-export { PostListEntitiesForPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListEntitiesForPolicyRequest = PostListEntitiesForPolicyRequest;
 var PostListEntitiesForPolicyResponse = /** @class */ (function (_super) {
     __extends(PostListEntitiesForPolicyResponse, _super);
     function PostListEntitiesForPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListEntitiesForPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListEntitiesForPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListEntitiesForPolicyResponse.prototype, "statusCode", void 0);
     return PostListEntitiesForPolicyResponse;
-}(SpeakeasyBase));
-export { PostListEntitiesForPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListEntitiesForPolicyResponse = PostListEntitiesForPolicyResponse;

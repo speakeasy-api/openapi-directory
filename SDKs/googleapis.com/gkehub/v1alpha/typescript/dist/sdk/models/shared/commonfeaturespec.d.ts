@@ -8,9 +8,9 @@ import { FeatureSpec } from "./featurespec";
 **/
 export declare class CommonFeatureSpec extends SpeakeasyBase {
     anthosobservability?: AnthosObservabilityFeatureSpec;
-    appdevexperience?: Map<string, any>;
+    appdevexperience?: Record<string, any>;
     cloudauditlogging?: CloudAuditLoggingFeatureSpec;
-    fleetobservability?: Map<string, any>;
+    fleetobservability?: Record<string, any>;
     multiclusteringress?: MultiClusterIngressFeatureSpec;
     workloadcertificate?: FeatureSpec;
 }

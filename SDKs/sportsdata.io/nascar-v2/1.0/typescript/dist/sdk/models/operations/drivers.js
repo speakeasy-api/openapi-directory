@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DriversFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriversResponse = exports.DriversRequest = exports.DriversPathParams = exports.DriversFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DriversFormatEnum;
 (function (DriversFormatEnum) {
     DriversFormatEnum["Xml"] = "xml";
     DriversFormatEnum["Json"] = "json";
-})(DriversFormatEnum || (DriversFormatEnum = {}));
+})(DriversFormatEnum = exports.DriversFormatEnum || (exports.DriversFormatEnum = {}));
 var DriversPathParams = /** @class */ (function (_super) {
     __extends(DriversPathParams, _super);
     function DriversPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], DriversPathParams.prototype, "format", void 0);
     return DriversPathParams;
-}(SpeakeasyBase));
-export { DriversPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DriversPathParams = DriversPathParams;
 var DriversRequest = /** @class */ (function (_super) {
     __extends(DriversRequest, _super);
     function DriversRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriversPathParams)
     ], DriversRequest.prototype, "pathParams", void 0);
     return DriversRequest;
-}(SpeakeasyBase));
-export { DriversRequest };
+}(utils_1.SpeakeasyBase));
+exports.DriversRequest = DriversRequest;
 var DriversResponse = /** @class */ (function (_super) {
     __extends(DriversResponse, _super);
     function DriversResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DriversResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DriversResponse.prototype, "drivers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DriversResponse.prototype, "statusCode", void 0);
     return DriversResponse;
-}(SpeakeasyBase));
-export { DriversResponse };
+}(utils_1.SpeakeasyBase));
+exports.DriversResponse = DriversResponse;

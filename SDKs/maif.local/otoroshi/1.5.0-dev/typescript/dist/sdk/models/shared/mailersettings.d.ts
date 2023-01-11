@@ -8,7 +8,7 @@ export declare class MailerSettings extends SpeakeasyBase {
     apiKeyPublic?: string;
     domain: string;
     eu?: boolean;
-    header?: Map<string, string>;
+    header?: Record<string, string>;
     type?: string;
     url?: string;
 }

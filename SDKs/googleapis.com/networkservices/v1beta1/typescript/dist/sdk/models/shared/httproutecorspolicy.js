@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteCorsPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 // HttpRouteCorsPolicy
 /**
  * The Specification for allowing client side cross-origin requests.
@@ -33,37 +36,37 @@ var HttpRouteCorsPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowCredentials" }),
         __metadata("design:type", Boolean)
     ], HttpRouteCorsPolicy.prototype, "allowCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowHeaders" }),
         __metadata("design:type", Array)
     ], HttpRouteCorsPolicy.prototype, "allowHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowMethods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowMethods" }),
         __metadata("design:type", Array)
     ], HttpRouteCorsPolicy.prototype, "allowMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowOriginRegexes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowOriginRegexes" }),
         __metadata("design:type", Array)
     ], HttpRouteCorsPolicy.prototype, "allowOriginRegexes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowOrigins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowOrigins" }),
         __metadata("design:type", Array)
     ], HttpRouteCorsPolicy.prototype, "allowOrigins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], HttpRouteCorsPolicy.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exposeHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exposeHeaders" }),
         __metadata("design:type", Array)
     ], HttpRouteCorsPolicy.prototype, "exposeHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAge" }),
         __metadata("design:type", String)
     ], HttpRouteCorsPolicy.prototype, "maxAge", void 0);
     return HttpRouteCorsPolicy;
-}(SpeakeasyBase));
-export { HttpRouteCorsPolicy };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteCorsPolicy = HttpRouteCorsPolicy;

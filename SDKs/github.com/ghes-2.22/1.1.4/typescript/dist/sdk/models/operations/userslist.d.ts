@@ -9,7 +9,7 @@ export declare class UsersListRequest extends SpeakeasyBase {
 }
 export declare class UsersListResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     simpleUsers?: shared.SimpleUser[];
 }

@@ -138,7 +138,7 @@ export declare class RetrieveAPageRequest extends SpeakeasyBase {
 }
 export declare class RetrieveAPageResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    retrieveAPage200ApplicationJsonObject?: RetrieveAPage200ApplicationJson;
+    retrieveAPage200ApplicationJSONObject?: RetrieveAPage200ApplicationJson;
 }

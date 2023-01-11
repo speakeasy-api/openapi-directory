@@ -1,4 +1,7 @@
-export var ColumnStatisticsTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnStatisticsTypeEnum = void 0;
+var ColumnStatisticsTypeEnum;
 (function (ColumnStatisticsTypeEnum) {
     ColumnStatisticsTypeEnum["Boolean"] = "BOOLEAN";
     ColumnStatisticsTypeEnum["Date"] = "DATE";
@@ -7,4 +10,4 @@ export var ColumnStatisticsTypeEnum;
     ColumnStatisticsTypeEnum["Long"] = "LONG";
     ColumnStatisticsTypeEnum["String"] = "STRING";
     ColumnStatisticsTypeEnum["Binary"] = "BINARY";
-})(ColumnStatisticsTypeEnum || (ColumnStatisticsTypeEnum = {}));
+})(ColumnStatisticsTypeEnum = exports.ColumnStatisticsTypeEnum || (exports.ColumnStatisticsTypeEnum = {}));

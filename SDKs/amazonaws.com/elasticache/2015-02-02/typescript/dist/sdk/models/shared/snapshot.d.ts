@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AutomaticFailoverStatusEnum } from "./automaticfailoverstatusenum";
-import { NodeSnapshot } from "./nodesnapshot";
+import { NodeSnapshotList } from "./nodesnapshotlist";
 /**
  * Represents a copy of an entire Redis cluster as of the time when the snapshot was taken.
 **/
@@ -16,7 +16,7 @@ export declare class Snapshot extends SpeakeasyBase {
     engine?: string;
     engineVersion?: string;
     kmsKeyId?: string;
-    nodeSnapshots?: NodeSnapshot[];
+    nodeSnapshots?: NodeSnapshotList[];
     numCacheNodes?: number;
     numNodeGroups?: number;
     port?: number;

@@ -18,7 +18,7 @@ export declare class TaxonomyCategories200ApplicationJsonData extends SpeakeasyB
     id?: number;
     productCount?: number;
     subcategories?: TaxonomyCategories200ApplicationJsonDataSubcategories[];
-    thumbnailUrl?: string;
+    thumbnailURL?: string;
 }
 export declare class TaxonomyCategories200ApplicationJson extends SpeakeasyBase {
     data?: TaxonomyCategories200ApplicationJsonData[];
@@ -29,8 +29,8 @@ export declare class TaxonomyCategories200ApplicationJson extends SpeakeasyBase 
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -42,5 +42,5 @@ export declare class TaxonomyCategoriesRequest extends SpeakeasyBase {
 export declare class TaxonomyCategoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    taxonomyCategories200ApplicationJsonObject?: TaxonomyCategories200ApplicationJson;
+    taxonomyCategories200ApplicationJSONObject?: TaxonomyCategories200ApplicationJson;
 }

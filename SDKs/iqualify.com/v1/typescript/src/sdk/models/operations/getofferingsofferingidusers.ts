@@ -8,31 +8,16 @@ export class GetOfferingsOfferingIdUsersPathParams extends SpeakeasyBase {
   offeringId: string;
 }
 
-export enum GetOfferingsOfferingIdUsersFacilitatorsEnum {
-    True = "true",
-    False = "false"
-}
-
-export enum GetOfferingsOfferingIdUsersLearnersEnum {
-    True = "true",
-    False = "false"
-}
-
-export enum GetOfferingsOfferingIdUsersMarkersEnum {
-    True = "true",
-    False = "false"
-}
-
 
 export class GetOfferingsOfferingIdUsersQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=facilitators" })
-  facilitators?: GetOfferingsOfferingIdUsersFacilitatorsEnum;
+  facilitators?: shared.OfferingIdEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=learners" })
-  learners?: GetOfferingsOfferingIdUsersLearnersEnum;
+  learners?: shared.OfferingIdEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=markers" })
-  markers?: GetOfferingsOfferingIdUsersMarkersEnum;
+  markers?: shared.OfferingIdEnum1;
 }
 
 
@@ -50,7 +35,7 @@ export class GetOfferingsOfferingIdUsersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingUserResponse })
   offeringUserResponses?: shared.OfferingUserResponse[];

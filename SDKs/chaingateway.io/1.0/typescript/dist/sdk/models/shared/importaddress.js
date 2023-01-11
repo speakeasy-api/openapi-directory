@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportAddress = void 0;
+var utils_1 = require("../../../internal/utils");
 var ImportAddress = /** @class */ (function (_super) {
     __extends(ImportAddress, _super);
     function ImportAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ethaddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ethaddress" }),
         __metadata("design:type", String)
     ], ImportAddress.prototype, "ethaddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], ImportAddress.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], ImportAddress.prototype, "ok", void 0);
     return ImportAddress;
-}(SpeakeasyBase));
-export { ImportAddress };
+}(utils_1.SpeakeasyBase));
+exports.ImportAddress = ImportAddress;

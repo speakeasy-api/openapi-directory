@@ -17,7 +17,7 @@ export class ProtocolNetflowGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolNetflowGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configNetflow?: shared.ConfigNetflow;
+  configNETFLOW?: shared.ConfigNetflow;
 
   @SpeakeasyMetadata()
   contentType: string;

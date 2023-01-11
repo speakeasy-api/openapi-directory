@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Presentation = void 0;
+var utils_1 = require("../../../internal/utils");
 var Presentation = /** @class */ (function (_super) {
     __extends(Presentation, _super);
     function Presentation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalImageUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalImageUrls" }),
         __metadata("design:type", Array)
     ], Presentation.prototype, "additionalImageUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayImageUrl" }),
         __metadata("design:type", String)
     ], Presentation.prototype, "displayImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaUrls" }),
         __metadata("design:type", Array)
     ], Presentation.prototype, "mediaUrls", void 0);
     return Presentation;
-}(SpeakeasyBase));
-export { Presentation };
+}(utils_1.SpeakeasyBase));
+exports.Presentation = Presentation;

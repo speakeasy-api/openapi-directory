@@ -19,9 +19,9 @@ export declare class GetV4LayersScoutingObservationsRequest extends SpeakeasyBas
 }
 export declare class GetV4LayersScoutingObservationsResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     scoutingObservations?: any;
     statusCode: number;
 }

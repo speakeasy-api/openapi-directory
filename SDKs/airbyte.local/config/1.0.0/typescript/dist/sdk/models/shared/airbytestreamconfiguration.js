@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationSyncModeEnum } from "./destinationsyncmodeenum";
-import { SyncModeEnum } from "./syncmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirbyteStreamConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationsyncmodeenum_1 = require("./destinationsyncmodeenum");
+var syncmodeenum_1 = require("./syncmodeenum");
 // AirbyteStreamConfiguration
 /**
  * the mutable part of the stream to configure the destination
@@ -35,29 +38,29 @@ var AirbyteStreamConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliasName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliasName" }),
         __metadata("design:type", String)
     ], AirbyteStreamConfiguration.prototype, "aliasName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursorField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursorField" }),
         __metadata("design:type", Array)
     ], AirbyteStreamConfiguration.prototype, "cursorField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationSyncMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationSyncMode" }),
         __metadata("design:type", String)
     ], AirbyteStreamConfiguration.prototype, "destinationSyncMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryKey" }),
         __metadata("design:type", Array)
     ], AirbyteStreamConfiguration.prototype, "primaryKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected" }),
         __metadata("design:type", Boolean)
     ], AirbyteStreamConfiguration.prototype, "selected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncMode" }),
         __metadata("design:type", String)
     ], AirbyteStreamConfiguration.prototype, "syncMode", void 0);
     return AirbyteStreamConfiguration;
-}(SpeakeasyBase));
-export { AirbyteStreamConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AirbyteStreamConfiguration = AirbyteStreamConfiguration;

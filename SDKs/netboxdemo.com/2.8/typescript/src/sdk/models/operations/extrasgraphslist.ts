@@ -101,5 +101,5 @@ export class ExtrasGraphsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasGraphsList200ApplicationJsonObject?: ExtrasGraphsList200ApplicationJson;
+  extrasGraphsList200ApplicationJSONObject?: ExtrasGraphsList200ApplicationJson;
 }

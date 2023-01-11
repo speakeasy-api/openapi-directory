@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudStorageFile } from "./cloudstoragefile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudStorageSink = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudstoragefile_1 = require("./cloudstoragefile");
 // CloudStorageSink
 /**
  * Export sink for Cloud Storage files.
@@ -34,9 +37,9 @@ var CloudStorageSink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: CloudStorageFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: cloudstoragefile_1.CloudStorageFile }),
         __metadata("design:type", Array)
     ], CloudStorageSink.prototype, "files", void 0);
     return CloudStorageSink;
-}(SpeakeasyBase));
-export { CloudStorageSink };
+}(utils_1.SpeakeasyBase));
+exports.CloudStorageSink = CloudStorageSink;

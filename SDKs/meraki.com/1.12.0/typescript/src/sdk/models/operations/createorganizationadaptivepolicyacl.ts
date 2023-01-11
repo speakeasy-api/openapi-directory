@@ -73,5 +73,5 @@ export class CreateOrganizationAdaptivePolicyAclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createOrganizationAdaptivePolicyAcl200ApplicationJsonObject?: Map<string, any>;
+  createOrganizationAdaptivePolicyAcl200ApplicationJSONObject?: Record<string, any>;
 }

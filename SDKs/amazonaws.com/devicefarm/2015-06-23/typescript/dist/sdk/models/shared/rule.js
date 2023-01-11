@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceAttributeEnum } from "./deviceattributeenum";
-import { RuleOperatorEnum } from "./ruleoperatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rule = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceattributeenum_1 = require("./deviceattributeenum");
+var ruleoperatorenum_1 = require("./ruleoperatorenum");
 // Rule
 /**
  * Represents a condition for a device pool.
@@ -35,17 +38,17 @@ var Rule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], Rule.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], Rule.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Rule.prototype, "value", void 0);
     return Rule;
-}(SpeakeasyBase));
-export { Rule };
+}(utils_1.SpeakeasyBase));
+exports.Rule = Rule;

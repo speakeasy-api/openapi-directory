@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyRetrieveResponse = exports.KeyRetrieveRequest = exports.KeyRetrieveJwt = exports.KeyRetrievePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KeyRetrievePathParams = /** @class */ (function (_super) {
     __extends(KeyRetrievePathParams, _super);
     function KeyRetrievePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=PK" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=PK" }),
         __metadata("design:type", String)
     ], KeyRetrievePathParams.prototype, "pk", void 0);
     return KeyRetrievePathParams;
-}(SpeakeasyBase));
-export { KeyRetrievePathParams };
+}(utils_1.SpeakeasyBase));
+exports.KeyRetrievePathParams = KeyRetrievePathParams;
 var KeyRetrieveJwt = /** @class */ (function (_super) {
     __extends(KeyRetrieveJwt, _super);
     function KeyRetrieveJwt() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=since" }),
         __metadata("design:type", Date)
     ], KeyRetrieveJwt.prototype, "since", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], KeyRetrieveJwt.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub" }),
         __metadata("design:type", String)
     ], KeyRetrieveJwt.prototype, "sub", void 0);
     return KeyRetrieveJwt;
-}(SpeakeasyBase));
-export { KeyRetrieveJwt };
+}(utils_1.SpeakeasyBase));
+exports.KeyRetrieveJwt = KeyRetrieveJwt;
 var KeyRetrieveRequest = /** @class */ (function (_super) {
     __extends(KeyRetrieveRequest, _super);
     function KeyRetrieveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeyRetrievePathParams)
     ], KeyRetrieveRequest.prototype, "pathParams", void 0);
     return KeyRetrieveRequest;
-}(SpeakeasyBase));
-export { KeyRetrieveRequest };
+}(utils_1.SpeakeasyBase));
+exports.KeyRetrieveRequest = KeyRetrieveRequest;
 var KeyRetrieveResponse = /** @class */ (function (_super) {
     __extends(KeyRetrieveResponse, _super);
     function KeyRetrieveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], KeyRetrieveResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KeyRetrieveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], KeyRetrieveResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeyRetrieveJwt)
     ], KeyRetrieveResponse.prototype, "jwt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KeyRetrieveResponse.prototype, "statusCode", void 0);
     return KeyRetrieveResponse;
-}(SpeakeasyBase));
-export { KeyRetrieveResponse };
+}(utils_1.SpeakeasyBase));
+exports.KeyRetrieveResponse = KeyRetrieveResponse;

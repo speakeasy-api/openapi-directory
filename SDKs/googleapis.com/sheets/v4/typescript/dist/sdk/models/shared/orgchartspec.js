@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChartData } from "./chartdata";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-export var OrgChartSpecNodeSizeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgChartSpec = exports.OrgChartSpecNodeSizeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var chartdata_1 = require("./chartdata");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var OrgChartSpecNodeSizeEnum;
 (function (OrgChartSpecNodeSizeEnum) {
     OrgChartSpecNodeSizeEnum["OrgChartLabelSizeUnspecified"] = "ORG_CHART_LABEL_SIZE_UNSPECIFIED";
     OrgChartSpecNodeSizeEnum["Small"] = "SMALL";
     OrgChartSpecNodeSizeEnum["Medium"] = "MEDIUM";
     OrgChartSpecNodeSizeEnum["Large"] = "LARGE";
-})(OrgChartSpecNodeSizeEnum || (OrgChartSpecNodeSizeEnum = {}));
+})(OrgChartSpecNodeSizeEnum = exports.OrgChartSpecNodeSizeEnum || (exports.OrgChartSpecNodeSizeEnum = {}));
 // OrgChartSpec
 /**
  * An org chart. Org charts require a unique set of labels in labels and may optionally include parent_labels and tooltips. parent_labels contain, for each node, the label identifying the parent node. tooltips contain, for each node, an optional tooltip. For example, to describe an OrgChart with Alice as the CEO, Bob as the President (reporting to Alice) and Cathy as VP of Sales (also reporting to Alice), have labels contain "Alice", "Bob", "Cathy", parent_labels contain "", "Alice", "Alice" and tooltips contain "CEO", "President", "VP Sales".
@@ -43,37 +46,37 @@ var OrgChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], OrgChartSpec.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeColor" }),
+        __metadata("design:type", color_1.Color)
     ], OrgChartSpec.prototype, "nodeColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], OrgChartSpec.prototype, "nodeColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeSize" }),
         __metadata("design:type", String)
     ], OrgChartSpec.prototype, "nodeSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLabels" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLabels" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], OrgChartSpec.prototype, "parentLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedNodeColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedNodeColor" }),
+        __metadata("design:type", color_1.Color)
     ], OrgChartSpec.prototype, "selectedNodeColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedNodeColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedNodeColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], OrgChartSpec.prototype, "selectedNodeColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tooltips" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tooltips" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], OrgChartSpec.prototype, "tooltips", void 0);
     return OrgChartSpec;
-}(SpeakeasyBase));
-export { OrgChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.OrgChartSpec = OrgChartSpec;

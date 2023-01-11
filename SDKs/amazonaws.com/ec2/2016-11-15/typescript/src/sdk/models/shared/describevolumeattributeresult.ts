@@ -1,16 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeBooleanValue } from "./attributebooleanvalue";
-import { ProductCode } from "./productcode";
 
+
+
+// DescribeVolumeAttributeResultAutoEnableIo
+/** 
+ * The state of <code>autoEnableIO</code> attribute.
+**/
+export class DescribeVolumeAttributeResultAutoEnableIo extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
 
 
 export class DescribeVolumeAttributeResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  autoEnableIo?: AttributeBooleanValue;
-
-  @SpeakeasyMetadata({ elemType: ProductCode })
-  productCodes?: ProductCode[];
+  autoEnableIO?: DescribeVolumeAttributeResultAutoEnableIo;
 
   @SpeakeasyMetadata()
-  volumeId?: string;
+  productCodes?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  volumeId?: Record<string, any>;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteConnectionRequest, DeleteConnectionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteConnectionRequest = {
   pathParams: {
-    connectionId: "vero",
+    connectionId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "distinctio",
-    xAmzContentSha256: "cumque",
-    xAmzCredential: "ea",
-    xAmzDate: "non",
-    xAmzSecurityToken: "non",
-    xAmzSignature: "nam",
-    xAmzSignedHeaders: "beatae",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
 };
 
-sdk.sdk.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) => {
+sdk.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) => {
    // handle response
 });
 ```

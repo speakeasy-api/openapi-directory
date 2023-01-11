@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CompileRequest, CompileResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     advSecurityToken: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: CompileRequest = {
   pathParams: {
-    templateToken: "qui",
+    templateToken: "sit",
   },
   queryParams: {
-    docFileName: "et",
-    docUrlExpiresIn: 25486664550251904,
-    latexCompiler: "lualatex",
-    latexRuns: 8784083526164144924,
-    mainFileName: "expedita",
+    docFileName: "voluptas",
+    docUrlExpiresIn: 6050128673802995827,
+    latexCompiler: "pdflatex",
+    latexRuns: 3390393562759376202,
+    mainFileName: "dolor",
   },
   headers: {
-    contentType: "ipsa",
+    contentType: "expedita",
   },
   request: {
-    "neque": "repellendus",
-    "et": "atque",
+    "fugit": "et",
+    "nihil": "rerum",
+    "dicta": "debitis",
   },
 };
 

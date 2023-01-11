@@ -20,5 +20,5 @@ export declare class GetListOfCountriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getListOfCountries200ApplicationJsonObjects?: GetListOfCountries200ApplicationJson[];
+    getListOfCountries200ApplicationJSONObjects?: GetListOfCountries200ApplicationJson[];
 }

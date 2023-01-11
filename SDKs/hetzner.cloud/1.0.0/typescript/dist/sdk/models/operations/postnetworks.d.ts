@@ -51,7 +51,7 @@ export declare class PostNetworks201ApplicationJsonNetwork extends SpeakeasyBase
     created: string;
     id: number;
     ipRange: string;
-    labels: Map<string, any>;
+    labels: Record<string, any>;
     loadBalancers?: number[];
     name: string;
     protection: PostNetworks201ApplicationJsonNetworkProtection;
@@ -67,6 +67,6 @@ export declare class PostNetworksRequest extends SpeakeasyBase {
 }
 export declare class PostNetworksResponse extends SpeakeasyBase {
     contentType: string;
-    postNetworks201ApplicationJsonObject?: PostNetworks201ApplicationJson;
     statusCode: number;
+    postNetworks201ApplicationJSONObject?: PostNetworks201ApplicationJson;
 }

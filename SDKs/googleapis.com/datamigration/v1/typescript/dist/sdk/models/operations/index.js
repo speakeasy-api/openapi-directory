@@ -1,20 +1,36 @@
-export * from "./datamigrationprojectslocationsconnectionprofilescreate";
-export * from "./datamigrationprojectslocationsconnectionprofileslist";
-export * from "./datamigrationprojectslocationslist";
-export * from "./datamigrationprojectslocationsmigrationjobscreate";
-export * from "./datamigrationprojectslocationsmigrationjobsgeneratesshscript";
-export * from "./datamigrationprojectslocationsmigrationjobsgetiampolicy";
-export * from "./datamigrationprojectslocationsmigrationjobslist";
-export * from "./datamigrationprojectslocationsmigrationjobspatch";
-export * from "./datamigrationprojectslocationsmigrationjobspromote";
-export * from "./datamigrationprojectslocationsmigrationjobsrestart";
-export * from "./datamigrationprojectslocationsmigrationjobsresume";
-export * from "./datamigrationprojectslocationsmigrationjobssetiampolicy";
-export * from "./datamigrationprojectslocationsmigrationjobsstart";
-export * from "./datamigrationprojectslocationsmigrationjobsstop";
-export * from "./datamigrationprojectslocationsmigrationjobstestiampermissions";
-export * from "./datamigrationprojectslocationsmigrationjobsverify";
-export * from "./datamigrationprojectslocationsoperationscancel";
-export * from "./datamigrationprojectslocationsoperationsdelete";
-export * from "./datamigrationprojectslocationsoperationsget";
-export * from "./datamigrationprojectslocationsoperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./datamigrationprojectslocationsconnectionprofilescreate"), exports);
+__exportStar(require("./datamigrationprojectslocationsconnectionprofileslist"), exports);
+__exportStar(require("./datamigrationprojectslocationslist"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobscreate"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsgeneratesshscript"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsgetiampolicy"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobslist"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobspatch"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobspromote"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsrestart"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsresume"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobssetiampolicy"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsstart"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsstop"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobstestiampermissions"), exports);
+__exportStar(require("./datamigrationprojectslocationsmigrationjobsverify"), exports);
+__exportStar(require("./datamigrationprojectslocationsoperationscancel"), exports);
+__exportStar(require("./datamigrationprojectslocationsoperationsdelete"), exports);
+__exportStar(require("./datamigrationprojectslocationsoperationsget"), exports);
+__exportStar(require("./datamigrationprojectslocationsoperationslist"), exports);

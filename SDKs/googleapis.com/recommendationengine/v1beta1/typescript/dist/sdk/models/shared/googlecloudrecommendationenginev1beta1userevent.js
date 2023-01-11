@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1EventDetail } from "./googlecloudrecommendationenginev1beta1eventdetail";
-import { GoogleCloudRecommendationengineV1beta1ProductEventDetail } from "./googlecloudrecommendationenginev1beta1producteventdetail";
-import { GoogleCloudRecommendationengineV1beta1UserInfo } from "./googlecloudrecommendationenginev1beta1userinfo";
-export var GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1UserEvent = exports.GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1eventdetail_1 = require("./googlecloudrecommendationenginev1beta1eventdetail");
+var googlecloudrecommendationenginev1beta1producteventdetail_1 = require("./googlecloudrecommendationenginev1beta1producteventdetail");
+var googlecloudrecommendationenginev1beta1userinfo_1 = require("./googlecloudrecommendationenginev1beta1userinfo");
+var GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum;
 (function (GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum) {
     GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum["EventSourceUnspecified"] = "EVENT_SOURCE_UNSPECIFIED";
     GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum["Automl"] = "AUTOML";
     GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum["Ecommerce"] = "ECOMMERCE";
     GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum["BatchUpload"] = "BATCH_UPLOAD";
-})(GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum || (GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum = {}));
+})(GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum = exports.GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum || (exports.GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum = {}));
 // GoogleCloudRecommendationengineV1beta1UserEvent
 /**
  * UserEvent captures all metadata information recommendation engine needs to know about how end users interact with customers' website.
@@ -43,29 +46,29 @@ var GoogleCloudRecommendationengineV1beta1UserEvent = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDetail" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1EventDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDetail" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1eventdetail_1.GoogleCloudRecommendationengineV1beta1EventDetail)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "eventDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventSource" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "eventSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "eventTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productEventDetail" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1ProductEventDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productEventDetail" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1producteventdetail_1.GoogleCloudRecommendationengineV1beta1ProductEventDetail)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "productEventDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userInfo" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1UserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userInfo" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1userinfo_1.GoogleCloudRecommendationengineV1beta1UserInfo)
     ], GoogleCloudRecommendationengineV1beta1UserEvent.prototype, "userInfo", void 0);
     return GoogleCloudRecommendationengineV1beta1UserEvent;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1UserEvent };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1UserEvent = GoogleCloudRecommendationengineV1beta1UserEvent;

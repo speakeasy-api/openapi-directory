@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TerminateConnectionStatus } from "./terminateconnectionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TerminateClientVpnConnectionsResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var TerminateClientVpnConnectionsResult = /** @class */ (function (_super) {
     __extends(TerminateClientVpnConnectionsResult, _super);
     function TerminateClientVpnConnectionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TerminateClientVpnConnectionsResult.prototype, "clientVpnEndpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TerminateConnectionStatus }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TerminateClientVpnConnectionsResult.prototype, "connectionStatuses", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TerminateClientVpnConnectionsResult.prototype, "username", void 0);
     return TerminateClientVpnConnectionsResult;
-}(SpeakeasyBase));
-export { TerminateClientVpnConnectionsResult };
+}(utils_1.SpeakeasyBase));
+exports.TerminateClientVpnConnectionsResult = TerminateClientVpnConnectionsResult;

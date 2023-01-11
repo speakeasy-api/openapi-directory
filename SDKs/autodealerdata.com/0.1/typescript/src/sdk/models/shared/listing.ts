@@ -13,7 +13,7 @@ export class Listing extends SpeakeasyBase {
   color?: string;
 
   @SpeakeasyMetadata({ data: "json, name=dealerID" })
-  dealerId: number;
+  dealerID: number;
 
   @SpeakeasyMetadata({ data: "json, name=firstSeen" })
   firstSeen: Date;
@@ -40,7 +40,7 @@ export class Listing extends SpeakeasyBase {
   vin: string;
 
   @SpeakeasyMetadata({ data: "json, name=vinDecode" })
-  vinDecode?: Map<string, any>;
+  vinDecode?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=year" })
   year: number;

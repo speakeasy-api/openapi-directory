@@ -37,5 +37,5 @@ export class GetcitymatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getcitymatch200ApplicationJsonObject?: Getcitymatch200ApplicationJson;
+  getcitymatch200ApplicationJSONObject?: Getcitymatch200ApplicationJson;
 }

@@ -16,6 +16,6 @@ export declare class GetWorkspacesWorkspaceProjectsProjectKeyRequest extends Spe
 export declare class GetWorkspacesWorkspaceProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

@@ -57,5 +57,5 @@ export class UpdateExpirationForHitResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateExpirationForHitResponse?: Map<string, any>;
+  updateExpirationForHITResponse?: Record<string, any>;
 }

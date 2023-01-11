@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSessioncreateResponse = exports.GetSessioncreateRequest = exports.GetSessioncreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSessioncreatePathParams = /** @class */ (function (_super) {
     __extends(GetSessioncreatePathParams, _super);
     function GetSessioncreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetSessioncreatePathParams.prototype, "name", void 0);
     return GetSessioncreatePathParams;
-}(SpeakeasyBase));
-export { GetSessioncreatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSessioncreatePathParams = GetSessioncreatePathParams;
 var GetSessioncreateRequest = /** @class */ (function (_super) {
     __extends(GetSessioncreateRequest, _super);
     function GetSessioncreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSessioncreatePathParams)
     ], GetSessioncreateRequest.prototype, "pathParams", void 0);
     return GetSessioncreateRequest;
-}(SpeakeasyBase));
-export { GetSessioncreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSessioncreateRequest = GetSessioncreateRequest;
 var GetSessioncreateResponse = /** @class */ (function (_super) {
     __extends(GetSessioncreateResponse, _super);
     function GetSessioncreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSessioncreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSessioncreateResponse.prototype, "statusCode", void 0);
     return GetSessioncreateResponse;
-}(SpeakeasyBase));
-export { GetSessioncreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSessioncreateResponse = GetSessioncreateResponse;

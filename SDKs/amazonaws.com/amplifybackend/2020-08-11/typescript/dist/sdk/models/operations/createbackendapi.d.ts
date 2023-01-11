@@ -13,15 +13,41 @@ export declare class CreateBackendApiHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 /**
+ * The conflict resolution strategy for your data stored in the data models.
+**/
+export declare class CreateBackendApiRequestBodyResourceConfigConflictResolution extends SpeakeasyBase {
+    resolutionStrategy?: Record<string, any>;
+}
+/**
+ * Describes settings for the authentication mode.
+**/
+export declare class CreateBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings extends SpeakeasyBase {
+    cognitoUserPoolId?: Record<string, any>;
+    description?: Record<string, any>;
+    expirationTime?: Record<string, any>;
+    openIDAuthTTL?: Record<string, any>;
+    openIDClientID?: Record<string, any>;
+    openIDIatTTL?: Record<string, any>;
+    openIDIssueURL?: Record<string, any>;
+    openIDProviderName?: Record<string, any>;
+}
+/**
+ * The default authentication type for interacting with the configured data models in your Amplify project.
+**/
+export declare class CreateBackendApiRequestBodyResourceConfigDefaultAuthType extends SpeakeasyBase {
+    mode?: Record<string, any>;
+    settings?: CreateBackendApiRequestBodyResourceConfigDefaultAuthTypeSettings;
+}
+/**
  * The resource config for the data model, configured as a part of the Amplify project.
 **/
 export declare class CreateBackendApiRequestBodyResourceConfig extends SpeakeasyBase {
-    additionalAuthTypes?: shared.BackendApiAuthType[];
-    apiName?: string;
-    conflictResolution?: shared.BackendApiConflictResolution;
-    defaultAuthType?: shared.BackendApiAuthType;
-    service?: string;
-    transformSchema?: string;
+    additionalAuthTypes?: Record<string, any>;
+    apiName?: Record<string, any>;
+    conflictResolution?: CreateBackendApiRequestBodyResourceConfigConflictResolution;
+    defaultAuthType?: CreateBackendApiRequestBodyResourceConfigDefaultAuthType;
+    service?: Record<string, any>;
+    transformSchema?: Record<string, any>;
 }
 export declare class CreateBackendApiRequestBody extends SpeakeasyBase {
     backendEnvironmentName: string;
@@ -36,7 +62,7 @@ export declare class CreateBackendApiRequest extends SpeakeasyBase {
 export declare class CreateBackendApiResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    createBackendApiResponse?: shared.CreateBackendApiResponse;
+    createBackendAPIResponse?: shared.CreateBackendApiResponse;
     gatewayTimeoutException?: any;
     notFoundException?: any;
     statusCode: number;

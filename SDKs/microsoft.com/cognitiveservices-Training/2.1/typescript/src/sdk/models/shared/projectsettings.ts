@@ -12,9 +12,9 @@ export enum ProjectSettingsClassificationTypeEnum {
  * Represents settings associated with a project
 **/
 export class ProjectSettings extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=classificationType, form, name=classificationType;" })
+  @SpeakeasyMetadata({ data: "json, name=classificationType" })
   classificationType?: ProjectSettingsClassificationTypeEnum;
 
-  @SpeakeasyMetadata({ data: "json, name=domainId, form, name=domainId;" })
+  @SpeakeasyMetadata({ data: "json, name=domainId" })
   domainId?: string;
 }

@@ -5,6 +5,6 @@ export declare class ItemImportRequest extends SpeakeasyBase {
 }
 export declare class ItemImportResponse extends SpeakeasyBase {
     contentType: string;
-    itemImportResponse?: Map<string, any>;
+    itemImportResponse?: Record<string, any>;
     statusCode: number;
 }

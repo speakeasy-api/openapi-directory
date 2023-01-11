@@ -10,5 +10,5 @@ export declare class GetVariablesRequest extends SpeakeasyBase {
 export declare class GetVariablesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getVariables200ApplicationJsonStrings?: string[];
+    getVariables200ApplicationJSONStrings?: string[];
 }

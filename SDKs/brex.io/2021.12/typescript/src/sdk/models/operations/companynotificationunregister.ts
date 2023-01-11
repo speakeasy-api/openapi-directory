@@ -26,7 +26,7 @@ export class CompanyNotificationUnregisterRequest extends SpeakeasyBase {
 
 export class CompanyNotificationUnregisterResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyNotificationUnregisterDefaultApplicationJsonAny?: any;
+  companyNotificationUnregisterDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

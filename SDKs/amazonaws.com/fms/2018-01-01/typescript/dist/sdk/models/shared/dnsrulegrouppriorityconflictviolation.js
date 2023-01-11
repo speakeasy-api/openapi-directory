@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DnsRuleGroupPriorityConflictViolation = void 0;
+var utils_1 = require("../../../internal/utils");
 // DnsRuleGroupPriorityConflictViolation
 /**
  * A rule group that Firewall Manager tried to associate with a VPC has the same priority as a rule group that's already associated.
@@ -33,25 +36,25 @@ var DnsRuleGroupPriorityConflictViolation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConflictingPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConflictingPolicyId" }),
         __metadata("design:type", String)
     ], DnsRuleGroupPriorityConflictViolation.prototype, "conflictingPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConflictingPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConflictingPriority" }),
         __metadata("design:type", Number)
     ], DnsRuleGroupPriorityConflictViolation.prototype, "conflictingPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnavailablePriorities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnavailablePriorities" }),
         __metadata("design:type", Array)
     ], DnsRuleGroupPriorityConflictViolation.prototype, "unavailablePriorities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTarget" }),
         __metadata("design:type", String)
     ], DnsRuleGroupPriorityConflictViolation.prototype, "violationTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTargetDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTargetDescription" }),
         __metadata("design:type", String)
     ], DnsRuleGroupPriorityConflictViolation.prototype, "violationTargetDescription", void 0);
     return DnsRuleGroupPriorityConflictViolation;
-}(SpeakeasyBase));
-export { DnsRuleGroupPriorityConflictViolation };
+}(utils_1.SpeakeasyBase));
+exports.DnsRuleGroupPriorityConflictViolation = DnsRuleGroupPriorityConflictViolation;

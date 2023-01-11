@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectRepoId } from "./projectrepoid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepoId = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectrepoid_1 = require("./projectrepoid");
 // RepoId
 /**
  * A unique identifier for a Cloud Repo.
@@ -34,13 +37,13 @@ var RepoId = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectRepoId" }),
-        __metadata("design:type", ProjectRepoId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectRepoId" }),
+        __metadata("design:type", projectrepoid_1.ProjectRepoId)
     ], RepoId.prototype, "projectRepoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], RepoId.prototype, "uid", void 0);
     return RepoId;
-}(SpeakeasyBase));
-export { RepoId };
+}(utils_1.SpeakeasyBase));
+exports.RepoId = RepoId;

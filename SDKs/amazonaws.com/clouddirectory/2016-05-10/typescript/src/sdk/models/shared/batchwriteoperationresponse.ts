@@ -16,13 +16,13 @@ import { BatchUpdateObjectAttributesResponse } from "./batchupdateobjectattribut
 **/
 export class BatchWriteOperationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AddFacetToObject" })
-  addFacetToObject?: Map<string, any>;
+  addFacetToObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AttachObject" })
   attachObject?: BatchAttachObjectResponse;
 
   @SpeakeasyMetadata({ data: "json, name=AttachPolicy" })
-  attachPolicy?: Map<string, any>;
+  attachPolicy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AttachToIndex" })
   attachToIndex?: BatchAttachToIndexResponse;
@@ -37,7 +37,7 @@ export class BatchWriteOperationResponse extends SpeakeasyBase {
   createObject?: BatchCreateObjectResponse;
 
   @SpeakeasyMetadata({ data: "json, name=DeleteObject" })
-  deleteObject?: Map<string, any>;
+  deleteObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DetachFromIndex" })
   detachFromIndex?: BatchDetachFromIndexResponse;
@@ -46,16 +46,16 @@ export class BatchWriteOperationResponse extends SpeakeasyBase {
   detachObject?: BatchDetachObjectResponse;
 
   @SpeakeasyMetadata({ data: "json, name=DetachPolicy" })
-  detachPolicy?: Map<string, any>;
+  detachPolicy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DetachTypedLink" })
-  detachTypedLink?: Map<string, any>;
+  detachTypedLink?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RemoveFacetFromObject" })
-  removeFacetFromObject?: Map<string, any>;
+  removeFacetFromObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=UpdateLinkAttributes" })
-  updateLinkAttributes?: Map<string, any>;
+  updateLinkAttributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=UpdateObjectAttributes" })
   updateObjectAttributes?: BatchUpdateObjectAttributesResponse;

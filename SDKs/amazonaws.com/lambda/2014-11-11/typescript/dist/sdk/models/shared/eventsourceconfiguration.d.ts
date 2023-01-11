@@ -8,7 +8,7 @@ export declare class EventSourceConfiguration extends SpeakeasyBase {
     functionName?: string;
     isActive?: boolean;
     lastModified?: Date;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     role?: string;
     status?: string;
     uuid?: string;

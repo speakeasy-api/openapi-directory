@@ -3,10 +3,6 @@ import { ExperimentTemplateTargetFilter } from "./experimenttemplatetargetfilter
 
 
 
-// ExperimentTemplateTarget
-/** 
- * Describes a target for an experiment template.
-**/
 export class ExperimentTemplateTarget extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=filters", elemType: ExperimentTemplateTargetFilter })
   filters?: ExperimentTemplateTargetFilter[];
@@ -15,7 +11,7 @@ export class ExperimentTemplateTarget extends SpeakeasyBase {
   resourceArns?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=resourceTags" })
-  resourceTags?: Map<string, string>;
+  resourceTags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceType" })
   resourceType?: string;

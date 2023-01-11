@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Condition } from "./condition";
-export var BasicLevelCombiningFunctionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicLevel = exports.BasicLevelCombiningFunctionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var condition_1 = require("./condition");
+var BasicLevelCombiningFunctionEnum;
 (function (BasicLevelCombiningFunctionEnum) {
     BasicLevelCombiningFunctionEnum["And"] = "AND";
     BasicLevelCombiningFunctionEnum["Or"] = "OR";
-})(BasicLevelCombiningFunctionEnum || (BasicLevelCombiningFunctionEnum = {}));
+})(BasicLevelCombiningFunctionEnum = exports.BasicLevelCombiningFunctionEnum || (exports.BasicLevelCombiningFunctionEnum = {}));
 // BasicLevel
 /**
  * `BasicLevel` is an `AccessLevel` using a set of recommended features.
@@ -39,13 +42,13 @@ var BasicLevel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=combiningFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=combiningFunction" }),
         __metadata("design:type", String)
     ], BasicLevel.prototype, "combiningFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions", elemType: Condition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions", elemType: condition_1.Condition }),
         __metadata("design:type", Array)
     ], BasicLevel.prototype, "conditions", void 0);
     return BasicLevel;
-}(SpeakeasyBase));
-export { BasicLevel };
+}(utils_1.SpeakeasyBase));
+exports.BasicLevel = BasicLevel;

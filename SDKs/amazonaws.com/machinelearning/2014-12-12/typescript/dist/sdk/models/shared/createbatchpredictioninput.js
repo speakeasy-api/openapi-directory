@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateBatchPredictionInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateBatchPredictionInput = /** @class */ (function (_super) {
     __extends(CreateBatchPredictionInput, _super);
     function CreateBatchPredictionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchPredictionDataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchPredictionDataSourceId" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionInput.prototype, "batchPredictionDataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchPredictionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchPredictionId" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionInput.prototype, "batchPredictionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchPredictionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchPredictionName" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionInput.prototype, "batchPredictionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionInput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputUri" }),
         __metadata("design:type", String)
     ], CreateBatchPredictionInput.prototype, "outputUri", void 0);
     return CreateBatchPredictionInput;
-}(SpeakeasyBase));
-export { CreateBatchPredictionInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateBatchPredictionInput = CreateBatchPredictionInput;

@@ -111,11 +111,11 @@ export declare class HpcerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    hpcer400ApplicationJsonObject?: Hpcer400ApplicationJson;
-    hpcer401ApplicationJsonObject?: Hpcer401ApplicationJson;
-    hpcer404ApplicationJsonObject?: Hpcer404ApplicationJson;
-    hpcer500ApplicationJsonObject?: Hpcer500ApplicationJson;
-    hpcer502ApplicationJsonObject?: Hpcer502ApplicationJson;
-    hpcer503ApplicationJsonObject?: Hpcer503ApplicationJson;
-    hpcer504ApplicationJsonObject?: Hpcer504ApplicationJson;
+    hpcer400ApplicationJSONObject?: Hpcer400ApplicationJson;
+    hpcer401ApplicationJSONObject?: Hpcer401ApplicationJson;
+    hpcer404ApplicationJSONObject?: Hpcer404ApplicationJson;
+    hpcer500ApplicationJSONObject?: Hpcer500ApplicationJson;
+    hpcer502ApplicationJSONObject?: Hpcer502ApplicationJson;
+    hpcer503ApplicationJSONObject?: Hpcer503ApplicationJson;
+    hpcer504ApplicationJSONObject?: Hpcer504ApplicationJson;
 }

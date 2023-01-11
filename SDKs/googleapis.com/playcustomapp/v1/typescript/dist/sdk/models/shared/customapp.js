@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Organization } from "./organization";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomApp = void 0;
+var utils_1 = require("../../../internal/utils");
+var organization_1 = require("./organization");
 // CustomApp
 /**
  * This resource represents a custom app.
@@ -34,21 +37,21 @@ var CustomApp = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], CustomApp.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations", elemType: Organization }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations", elemType: organization_1.Organization }),
         __metadata("design:type", Array)
     ], CustomApp.prototype, "organizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], CustomApp.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CustomApp.prototype, "title", void 0);
     return CustomApp;
-}(SpeakeasyBase));
-export { CustomApp };
+}(utils_1.SpeakeasyBase));
+exports.CustomApp = CustomApp;

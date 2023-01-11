@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class SerDeInfo extends SpeakeasyBase {
     name?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     serializationLibrary?: string;
 }

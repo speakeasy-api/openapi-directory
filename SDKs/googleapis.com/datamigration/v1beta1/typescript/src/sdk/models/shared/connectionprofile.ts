@@ -42,7 +42,7 @@ export class ConnectionProfile extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysql" })
   mysql?: MySqlConnectionProfile;
@@ -76,7 +76,7 @@ export class ConnectionProfileInput extends SpeakeasyBase {
   error?: Status;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mysql" })
   mysql?: MySqlConnectionProfileInput;

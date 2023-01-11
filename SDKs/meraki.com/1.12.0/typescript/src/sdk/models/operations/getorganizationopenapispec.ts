@@ -22,5 +22,5 @@ export class GetOrganizationOpenapiSpecResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationOpenapiSpec200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationOpenapiSpec200ApplicationJSONObject?: Record<string, any>;
 }

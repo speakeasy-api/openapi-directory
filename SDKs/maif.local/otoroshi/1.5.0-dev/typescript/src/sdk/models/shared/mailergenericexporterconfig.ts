@@ -8,7 +8,7 @@ export enum MailerGenericExporterConfigTypeEnum {
 
 export class MailerGenericExporterConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=to" })
   to?: string[];

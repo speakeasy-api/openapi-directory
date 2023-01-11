@@ -6,13 +6,13 @@ export declare class GetResourcesMediaIdYoutubeMetaDataJsonPathParams extends Sp
 export declare class GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson extends SpeakeasyBase {
     callback?: string;
     meta?: shared.Meta;
-    results?: Map<string, any>[];
+    results?: Record<string, any>[];
 }
 export declare class GetResourcesMediaIdYoutubeMetaDataJsonRequest extends SpeakeasyBase {
     pathParams: GetResourcesMediaIdYoutubeMetaDataJsonPathParams;
 }
 export declare class GetResourcesMediaIdYoutubeMetaDataJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getResourcesMediaIdYoutubeMetaDataJson200ApplicationJsonObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson;
     statusCode: number;
+    getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson;
 }

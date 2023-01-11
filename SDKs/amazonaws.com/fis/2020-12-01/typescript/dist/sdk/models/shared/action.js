@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionParameter } from "./actionparameter";
-import { ActionTarget } from "./actiontarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionparameter_1 = require("./actionparameter");
+var actiontarget_1 = require("./actiontarget");
 // Action
 /**
  * Describes an action. For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/fis-actions-reference.html">AWS FIS actions</a> in the <i>AWS Fault Injection Simulator User Guide</i>.
@@ -35,25 +38,25 @@ var Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Action.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Action.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: ActionParameter }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: actionparameter_1.ActionParameter }),
+        __metadata("design:type", Object)
     ], Action.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Action.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: ActionTarget }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: actiontarget_1.ActionTarget }),
+        __metadata("design:type", Object)
     ], Action.prototype, "targets", void 0);
     return Action;
-}(SpeakeasyBase));
-export { Action };
+}(utils_1.SpeakeasyBase));
+exports.Action = Action;

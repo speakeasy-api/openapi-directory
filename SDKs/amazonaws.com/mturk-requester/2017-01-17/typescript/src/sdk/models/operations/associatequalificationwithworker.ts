@@ -45,7 +45,7 @@ export class AssociateQualificationWithWorkerRequest extends SpeakeasyBase {
 
 export class AssociateQualificationWithWorkerResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associateQualificationWithWorkerResponse?: Map<string, any>;
+  associateQualificationWithWorkerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -46,7 +46,7 @@ export class GetVVersionReportsStartDateToEndDateReportTypeResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: Map<string, any>;
+  object?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

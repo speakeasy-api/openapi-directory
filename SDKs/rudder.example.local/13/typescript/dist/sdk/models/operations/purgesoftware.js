@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PurgeSoftware200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PurgeSoftwareResponse = exports.PurgeSoftware200ApplicationJson = exports.PurgeSoftware200ApplicationJsonResultEnum = exports.PurgeSoftware200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PurgeSoftware200ApplicationJsonActionEnum;
 (function (PurgeSoftware200ApplicationJsonActionEnum) {
     PurgeSoftware200ApplicationJsonActionEnum["PurgeSoftware"] = "purgeSoftware";
-})(PurgeSoftware200ApplicationJsonActionEnum || (PurgeSoftware200ApplicationJsonActionEnum = {}));
-export var PurgeSoftware200ApplicationJsonResultEnum;
+})(PurgeSoftware200ApplicationJsonActionEnum = exports.PurgeSoftware200ApplicationJsonActionEnum || (exports.PurgeSoftware200ApplicationJsonActionEnum = {}));
+var PurgeSoftware200ApplicationJsonResultEnum;
 (function (PurgeSoftware200ApplicationJsonResultEnum) {
     PurgeSoftware200ApplicationJsonResultEnum["Success"] = "success";
     PurgeSoftware200ApplicationJsonResultEnum["Error"] = "error";
-})(PurgeSoftware200ApplicationJsonResultEnum || (PurgeSoftware200ApplicationJsonResultEnum = {}));
+})(PurgeSoftware200ApplicationJsonResultEnum = exports.PurgeSoftware200ApplicationJsonResultEnum || (exports.PurgeSoftware200ApplicationJsonResultEnum = {}));
 var PurgeSoftware200ApplicationJson = /** @class */ (function (_super) {
     __extends(PurgeSoftware200ApplicationJson, _super);
     function PurgeSoftware200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], PurgeSoftware200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", Array)
     ], PurgeSoftware200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], PurgeSoftware200ApplicationJson.prototype, "result", void 0);
     return PurgeSoftware200ApplicationJson;
-}(SpeakeasyBase));
-export { PurgeSoftware200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PurgeSoftware200ApplicationJson = PurgeSoftware200ApplicationJson;
 var PurgeSoftwareResponse = /** @class */ (function (_super) {
     __extends(PurgeSoftwareResponse, _super);
     function PurgeSoftwareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PurgeSoftwareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PurgeSoftwareResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PurgeSoftware200ApplicationJson)
-    ], PurgeSoftwareResponse.prototype, "purgeSoftware200ApplicationJsonObject", void 0);
+    ], PurgeSoftwareResponse.prototype, "purgeSoftware200ApplicationJSONObject", void 0);
     return PurgeSoftwareResponse;
-}(SpeakeasyBase));
-export { PurgeSoftwareResponse };
+}(utils_1.SpeakeasyBase));
+exports.PurgeSoftwareResponse = PurgeSoftwareResponse;

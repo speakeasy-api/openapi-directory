@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudDatalabelingV1beta1LabelStats extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=exampleCount" })
-  exampleCount?: Map<string, string>;
+  exampleCount?: Record<string, string>;
 }

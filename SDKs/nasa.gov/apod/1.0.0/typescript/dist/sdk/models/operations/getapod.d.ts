@@ -13,6 +13,6 @@ export declare class GetApodRequest extends SpeakeasyBase {
 }
 export declare class GetApodResponse extends SpeakeasyBase {
     contentType: string;
-    getApod200ApplicationJsonAnies?: any[];
     statusCode: number;
+    getApod200ApplicationJSONAnies?: any[];
 }

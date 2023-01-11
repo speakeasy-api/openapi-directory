@@ -25,5 +25,5 @@ export declare class GetNetworkWirelessDataRateHistoryRequest extends SpeakeasyB
 export declare class GetNetworkWirelessDataRateHistoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessDataRateHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessDataRateHistory200ApplicationJSONObject?: Record<string, any>;
 }

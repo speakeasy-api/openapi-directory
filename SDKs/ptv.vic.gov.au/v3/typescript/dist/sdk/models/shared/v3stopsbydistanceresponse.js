@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3Disruption } from "./v3disruption";
-import { V3Status } from "./v3status";
-import { V3StopGeosearch } from "./v3stopgeosearch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3StopsByDistanceResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3disruption_1 = require("./v3disruption");
+var v3status_1 = require("./v3status");
+var v3stopgeosearch_1 = require("./v3stopgeosearch");
 var V3StopsByDistanceResponse = /** @class */ (function (_super) {
     __extends(V3StopsByDistanceResponse, _super);
     function V3StopsByDistanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disruptions", elemType: V3Disruption }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disruptions", elemType: v3disruption_1.V3Disruption }),
+        __metadata("design:type", Object)
     ], V3StopsByDistanceResponse.prototype, "disruptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", V3Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", v3status_1.V3Status)
     ], V3StopsByDistanceResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stops", elemType: V3StopGeosearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stops", elemType: v3stopgeosearch_1.V3StopGeosearch }),
         __metadata("design:type", Array)
     ], V3StopsByDistanceResponse.prototype, "stops", void 0);
     return V3StopsByDistanceResponse;
-}(SpeakeasyBase));
-export { V3StopsByDistanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.V3StopsByDistanceResponse = V3StopsByDistanceResponse;

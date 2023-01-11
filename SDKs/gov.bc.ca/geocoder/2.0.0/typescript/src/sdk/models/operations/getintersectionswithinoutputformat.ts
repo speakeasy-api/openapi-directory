@@ -32,7 +32,7 @@ export class GetIntersectionsWithinOutputFormatQueryParams extends SpeakeasyBase
   minDegree?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 }
 
 

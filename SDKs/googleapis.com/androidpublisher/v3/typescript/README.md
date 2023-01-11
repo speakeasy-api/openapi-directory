@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AndroidpublisherApplicationsDeviceTierConfigsCreateRequest, AndroidpublisherApplicationsDeviceTierConfigsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: AndroidpublisherApplicationsDeviceTierConfigsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    packageName: "quo",
+    packageName: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "eos",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     allowUnknownDevices: false,
     alt: "proto",
-    callback: "consequatur",
-    fields: "aspernatur",
-    key: "dolores",
-    oauthToken: "voluptatibus",
-    prettyPrint: true,
-    quotaUser: "omnis",
-    uploadType: "et",
-    uploadProtocol: "est",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     deviceGroups: [
@@ -59,110 +58,74 @@ const req: AndroidpublisherApplicationsDeviceTierConfigsCreateRequest = {
         deviceSelectors: [
           {
             deviceRam: {
-              maxBytes: "repudiandae",
-              minBytes: "delectus",
+              maxBytes: "et",
+              minBytes: "ut",
             },
             excludedDeviceIds: [
               {
                 buildBrand: "et",
-                buildDevice: "tenetur",
+                buildDevice: "voluptate",
               },
               {
-                buildBrand: "labore",
-                buildDevice: "est",
+                buildBrand: "iste",
+                buildDevice: "vitae",
               },
               {
-                buildBrand: "voluptatem",
-                buildDevice: "provident",
+                buildBrand: "totam",
+                buildDevice: "dolores",
               },
             ],
             forbiddenSystemFeatures: [
               {
-                name: "mollitia",
+                name: "debitis",
               },
               {
-                name: "vitae",
+                name: "vel",
+              },
+              {
+                name: "odio",
               },
             ],
             includedDeviceIds: [
               {
-                buildBrand: "magni",
-                buildDevice: "iusto",
+                buildBrand: "id",
+                buildDevice: "aspernatur",
               },
               {
-                buildBrand: "autem",
-                buildDevice: "et",
-              },
-              {
-                buildBrand: "aut",
-                buildDevice: "explicabo",
+                buildBrand: "accusantium",
+                buildDevice: "totam",
               },
             ],
             requiredSystemFeatures: [
               {
-                name: "quia",
+                name: "quis",
+              },
+              {
+                name: "est",
               },
             ],
           },
         ],
-        name: "veniam",
-      },
-      {
-        deviceSelectors: [
-          {
-            deviceRam: {
-              maxBytes: "ducimus",
-              minBytes: "soluta",
-            },
-            excludedDeviceIds: [
-              {
-                buildBrand: "cumque",
-                buildDevice: "aut",
-              },
-              {
-                buildBrand: "explicabo",
-                buildDevice: "maxime",
-              },
-            ],
-            forbiddenSystemFeatures: [
-              {
-                name: "ut",
-              },
-            ],
-            includedDeviceIds: [
-              {
-                buildBrand: "placeat",
-                buildDevice: "modi",
-              },
-              {
-                buildBrand: "et",
-                buildDevice: "qui",
-              },
-              {
-                buildBrand: "quo",
-                buildDevice: "rerum",
-              },
-            ],
-            requiredSystemFeatures: [
-              {
-                name: "dolor",
-              },
-              {
-                name: "exercitationem",
-              },
-            ],
-          },
-        ],
-        name: "inventore",
+        name: "aut",
       },
     ],
     deviceTierSet: {
       deviceTiers: [
         {
           deviceGroupNames: [
-            "sunt",
+            "voluptas",
+            "omnis",
+            "aut",
           ],
-          level: 8374802233122473252,
+          level: 6972732843819909978,
+        },
+        {
+          deviceGroupNames: [
+            "officiis",
+            "autem",
+            "consectetur",
+          ],
+          level: 8683452355129068124,
         },
       ],
     },

@@ -24,5 +24,5 @@ export declare class DeleteGroupRequest extends SpeakeasyBase {
 export declare class DeleteGroupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteGroup200ApplicationJsonObject?: DeleteGroup200ApplicationJson;
+    deleteGroup200ApplicationJSONObject?: DeleteGroup200ApplicationJson;
 }

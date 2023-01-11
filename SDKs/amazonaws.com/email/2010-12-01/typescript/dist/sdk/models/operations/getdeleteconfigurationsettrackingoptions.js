@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteConfigurationSetTrackingOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteConfigurationSetTrackingOptionsResponse = exports.GetDeleteConfigurationSetTrackingOptionsRequest = exports.GetDeleteConfigurationSetTrackingOptionsHeaders = exports.GetDeleteConfigurationSetTrackingOptionsQueryParams = exports.GetDeleteConfigurationSetTrackingOptionsVersionEnum = exports.GetDeleteConfigurationSetTrackingOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteConfigurationSetTrackingOptionsActionEnum;
 (function (GetDeleteConfigurationSetTrackingOptionsActionEnum) {
     GetDeleteConfigurationSetTrackingOptionsActionEnum["DeleteConfigurationSetTrackingOptions"] = "DeleteConfigurationSetTrackingOptions";
-})(GetDeleteConfigurationSetTrackingOptionsActionEnum || (GetDeleteConfigurationSetTrackingOptionsActionEnum = {}));
-export var GetDeleteConfigurationSetTrackingOptionsVersionEnum;
+})(GetDeleteConfigurationSetTrackingOptionsActionEnum = exports.GetDeleteConfigurationSetTrackingOptionsActionEnum || (exports.GetDeleteConfigurationSetTrackingOptionsActionEnum = {}));
+var GetDeleteConfigurationSetTrackingOptionsVersionEnum;
 (function (GetDeleteConfigurationSetTrackingOptionsVersionEnum) {
     GetDeleteConfigurationSetTrackingOptionsVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteConfigurationSetTrackingOptionsVersionEnum || (GetDeleteConfigurationSetTrackingOptionsVersionEnum = {}));
+})(GetDeleteConfigurationSetTrackingOptionsVersionEnum = exports.GetDeleteConfigurationSetTrackingOptionsVersionEnum || (exports.GetDeleteConfigurationSetTrackingOptionsVersionEnum = {}));
 var GetDeleteConfigurationSetTrackingOptionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetTrackingOptionsQueryParams, _super);
     function GetDeleteConfigurationSetTrackingOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ConfigurationSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ConfigurationSetName" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsQueryParams.prototype, "configurationSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsQueryParams.prototype, "version", void 0);
     return GetDeleteConfigurationSetTrackingOptionsQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetTrackingOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetTrackingOptionsQueryParams = GetDeleteConfigurationSetTrackingOptionsQueryParams;
 var GetDeleteConfigurationSetTrackingOptionsHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetTrackingOptionsHeaders, _super);
     function GetDeleteConfigurationSetTrackingOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteConfigurationSetTrackingOptionsHeaders;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetTrackingOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetTrackingOptionsHeaders = GetDeleteConfigurationSetTrackingOptionsHeaders;
 var GetDeleteConfigurationSetTrackingOptionsRequest = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetTrackingOptionsRequest, _super);
     function GetDeleteConfigurationSetTrackingOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteConfigurationSetTrackingOptionsQueryParams)
     ], GetDeleteConfigurationSetTrackingOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteConfigurationSetTrackingOptionsHeaders)
     ], GetDeleteConfigurationSetTrackingOptionsRequest.prototype, "headers", void 0);
     return GetDeleteConfigurationSetTrackingOptionsRequest;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetTrackingOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetTrackingOptionsRequest = GetDeleteConfigurationSetTrackingOptionsRequest;
 var GetDeleteConfigurationSetTrackingOptionsResponse = /** @class */ (function (_super) {
     __extends(GetDeleteConfigurationSetTrackingOptionsResponse, _super);
     function GetDeleteConfigurationSetTrackingOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteConfigurationSetTrackingOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteConfigurationSetTrackingOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteConfigurationSetTrackingOptionsResponse.prototype, "statusCode", void 0);
     return GetDeleteConfigurationSetTrackingOptionsResponse;
-}(SpeakeasyBase));
-export { GetDeleteConfigurationSetTrackingOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteConfigurationSetTrackingOptionsResponse = GetDeleteConfigurationSetTrackingOptionsResponse;

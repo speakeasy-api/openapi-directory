@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleRpcStatus } from "./googlerpcstatus";
-import { GoogleCloudPolicysimulatorV1ExplainedPolicy } from "./googlecloudpolicysimulatorv1explainedpolicy";
-export var GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1ExplainedAccess = exports.GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlerpcstatus_1 = require("./googlerpcstatus");
+var googlecloudpolicysimulatorv1explainedpolicy_1 = require("./googlecloudpolicysimulatorv1explainedpolicy");
+var GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum;
 (function (GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum) {
     GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum["AccessStateUnspecified"] = "ACCESS_STATE_UNSPECIFIED";
     GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum["Granted"] = "GRANTED";
     GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum["NotGranted"] = "NOT_GRANTED";
     GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum["UnknownConditional"] = "UNKNOWN_CONDITIONAL";
     GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum["UnknownInfoDenied"] = "UNKNOWN_INFO_DENIED";
-})(GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum || (GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum = {}));
+})(GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum = exports.GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum || (exports.GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum = {}));
 // GoogleCloudPolicysimulatorV1ExplainedAccess
 /**
  * Details about how a set of policies, listed in ExplainedPolicy, resulted in a certain AccessState when replaying an access tuple.
@@ -43,17 +46,17 @@ var GoogleCloudPolicysimulatorV1ExplainedAccess = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessState" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1ExplainedAccess.prototype, "accessState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: GoogleRpcStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: googlerpcstatus_1.GoogleRpcStatus }),
         __metadata("design:type", Array)
     ], GoogleCloudPolicysimulatorV1ExplainedAccess.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policies", elemType: GoogleCloudPolicysimulatorV1ExplainedPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policies", elemType: googlecloudpolicysimulatorv1explainedpolicy_1.GoogleCloudPolicysimulatorV1ExplainedPolicy }),
         __metadata("design:type", Array)
     ], GoogleCloudPolicysimulatorV1ExplainedAccess.prototype, "policies", void 0);
     return GoogleCloudPolicysimulatorV1ExplainedAccess;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1ExplainedAccess };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1ExplainedAccess = GoogleCloudPolicysimulatorV1ExplainedAccess;

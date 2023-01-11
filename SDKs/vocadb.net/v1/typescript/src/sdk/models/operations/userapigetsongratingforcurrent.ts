@@ -46,11 +46,11 @@ export class UserApiGetSongRatingForCurrentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userApiGetSongRatingForCurrent200ApplicationJsonStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
+  userApiGetSongRatingForCurrent200ApplicationJSONStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
 
   @SpeakeasyMetadata()
   userApiGetSongRatingForCurrent200ApplicationJsonpStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonpEnum;
 
   @SpeakeasyMetadata()
-  userApiGetSongRatingForCurrent200TextJsonStringEnum?: UserApiGetSongRatingForCurrent200TextJsonEnum;
+  userApiGetSongRatingForCurrent200TextJSONStringEnum?: UserApiGetSongRatingForCurrent200TextJsonEnum;
 }

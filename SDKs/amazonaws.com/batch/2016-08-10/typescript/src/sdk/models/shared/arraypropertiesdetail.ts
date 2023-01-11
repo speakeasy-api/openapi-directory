@@ -14,5 +14,5 @@ export class ArrayPropertiesDetail extends SpeakeasyBase {
   size?: number;
 
   @SpeakeasyMetadata({ data: "json, name=statusSummary" })
-  statusSummary?: Map<string, number>;
+  statusSummary?: Record<string, number>;
 }

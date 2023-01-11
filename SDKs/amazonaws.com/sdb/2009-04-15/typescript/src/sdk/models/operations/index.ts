@@ -1,7 +1,6 @@
 export * from "./getcreatedomain";
 export * from "./getdeletedomain";
 export * from "./getdomainmetadata";
-export * from "./getgetattributes";
 export * from "./getlistdomains";
 export * from "./getselect";
 export * from "./postbatchdeleteattributes";

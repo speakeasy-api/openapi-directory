@@ -26,7 +26,7 @@ export class PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse extends Sp
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -18,31 +18,31 @@ export class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse extends
   createSelectionChoice?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse;
 
   @SpeakeasyMetadata({ data: "json, name=deleteField" })
-  deleteField?: Map<string, any>;
+  deleteField?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=deleteSelectionChoice" })
-  deleteSelectionChoice?: Map<string, any>;
+  deleteSelectionChoice?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=disableField" })
-  disableField?: Map<string, any>;
+  disableField?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=disableSelectionChoice" })
-  disableSelectionChoice?: Map<string, any>;
+  disableSelectionChoice?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=enableField" })
-  enableField?: Map<string, any>;
+  enableField?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=enableSelectionChoice" })
-  enableSelectionChoice?: Map<string, any>;
+  enableSelectionChoice?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateField" })
   updateField?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse;
 
   @SpeakeasyMetadata({ data: "json, name=updateFieldType" })
-  updateFieldType?: Map<string, any>;
+  updateFieldType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateLabel" })
-  updateLabel?: Map<string, any>;
+  updateLabel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateSelectionChoiceProperties" })
   updateSelectionChoiceProperties?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse;

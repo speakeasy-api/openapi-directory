@@ -15,7 +15,7 @@ export declare class GetNotificationChannelHeaders extends SpeakeasyBase {
 }
 export declare class GetNotificationChannelRequest extends SpeakeasyBase {
     headers: GetNotificationChannelHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetNotificationChannelResponse extends SpeakeasyBase {
     contentType: string;

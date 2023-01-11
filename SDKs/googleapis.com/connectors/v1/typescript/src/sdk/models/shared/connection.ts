@@ -8,6 +8,46 @@ import { ConnectionStatus } from "./connectionstatus";
 
 
 
+// ConnectionInput
+/** 
+ * Connection represents an instance of connector.
+**/
+export class ConnectionInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=authConfig" })
+  authConfig?: AuthConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=configVariables", elemType: ConfigVariable })
+  configVariables?: ConfigVariable[];
+
+  @SpeakeasyMetadata({ data: "json, name=connectorVersion" })
+  connectorVersion?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=destinationConfigs", elemType: DestinationConfig })
+  destinationConfigs?: DestinationConfig[];
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=lockConfig" })
+  lockConfig?: LockConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=nodeConfig" })
+  nodeConfig?: NodeConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
+  serviceAccount?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=status" })
+  status?: ConnectionStatus;
+
+  @SpeakeasyMetadata({ data: "json, name=suspended" })
+  suspended?: boolean;
+}
+
+
 // Connection
 /** 
  * Connection represents an instance of connector.
@@ -38,7 +78,7 @@ export class Connection extends SpeakeasyBase {
   imageLocation?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lockConfig" })
   lockConfig?: LockConfig;
@@ -63,44 +103,4 @@ export class Connection extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
-}
-
-
-// ConnectionInput
-/** 
- * Connection represents an instance of connector.
-**/
-export class ConnectionInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=authConfig" })
-  authConfig?: AuthConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=configVariables", elemType: ConfigVariable })
-  configVariables?: ConfigVariable[];
-
-  @SpeakeasyMetadata({ data: "json, name=connectorVersion" })
-  connectorVersion?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=destinationConfigs", elemType: DestinationConfig })
-  destinationConfigs?: DestinationConfig[];
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=lockConfig" })
-  lockConfig?: LockConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=nodeConfig" })
-  nodeConfig?: NodeConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
-  serviceAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=status" })
-  status?: ConnectionStatus;
-
-  @SpeakeasyMetadata({ data: "json, name=suspended" })
-  suspended?: boolean;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteWebhooksV3AppIdSettingsClearRequest, DeleteWebhooksV3AppIdSettingsClearResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,7 +33,7 @@ const req: DeleteWebhooksV3AppIdSettingsClearRequest = {
     },
   },
   pathParams: {
-    appId: 4545634859653222470,
+    appId: 8717895732742165505,
   },
 };
 

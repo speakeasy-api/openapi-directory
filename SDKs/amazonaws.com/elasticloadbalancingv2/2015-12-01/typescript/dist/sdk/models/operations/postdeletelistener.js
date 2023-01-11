@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteListenerActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteListenerResponse = exports.PostDeleteListenerRequest = exports.PostDeleteListenerHeaders = exports.PostDeleteListenerQueryParams = exports.PostDeleteListenerVersionEnum = exports.PostDeleteListenerActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteListenerActionEnum;
 (function (PostDeleteListenerActionEnum) {
     PostDeleteListenerActionEnum["DeleteListener"] = "DeleteListener";
-})(PostDeleteListenerActionEnum || (PostDeleteListenerActionEnum = {}));
-export var PostDeleteListenerVersionEnum;
+})(PostDeleteListenerActionEnum = exports.PostDeleteListenerActionEnum || (exports.PostDeleteListenerActionEnum = {}));
+var PostDeleteListenerVersionEnum;
 (function (PostDeleteListenerVersionEnum) {
     PostDeleteListenerVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(PostDeleteListenerVersionEnum || (PostDeleteListenerVersionEnum = {}));
+})(PostDeleteListenerVersionEnum = exports.PostDeleteListenerVersionEnum || (exports.PostDeleteListenerVersionEnum = {}));
 var PostDeleteListenerQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteListenerQueryParams, _super);
     function PostDeleteListenerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteListenerQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteListenerQueryParams.prototype, "version", void 0);
     return PostDeleteListenerQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteListenerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteListenerQueryParams = PostDeleteListenerQueryParams;
 var PostDeleteListenerHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteListenerHeaders, _super);
     function PostDeleteListenerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteListenerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteListenerHeaders;
-}(SpeakeasyBase));
-export { PostDeleteListenerHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteListenerHeaders = PostDeleteListenerHeaders;
 var PostDeleteListenerRequest = /** @class */ (function (_super) {
     __extends(PostDeleteListenerRequest, _super);
     function PostDeleteListenerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteListenerQueryParams)
     ], PostDeleteListenerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteListenerHeaders)
     ], PostDeleteListenerRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteListenerRequest.prototype, "request", void 0);
     return PostDeleteListenerRequest;
-}(SpeakeasyBase));
-export { PostDeleteListenerRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteListenerRequest = PostDeleteListenerRequest;
 var PostDeleteListenerResponse = /** @class */ (function (_super) {
     __extends(PostDeleteListenerResponse, _super);
     function PostDeleteListenerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteListenerResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteListenerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteListenerResponse.prototype, "statusCode", void 0);
     return PostDeleteListenerResponse;
-}(SpeakeasyBase));
-export { PostDeleteListenerResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteListenerResponse = PostDeleteListenerResponse;

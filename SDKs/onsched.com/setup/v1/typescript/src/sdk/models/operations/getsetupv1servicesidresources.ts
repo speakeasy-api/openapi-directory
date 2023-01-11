@@ -37,7 +37,7 @@ export class GetSetupV1ServicesIdResourcesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  resourceListViewModel?: Map<string, any>;
+  resourceListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

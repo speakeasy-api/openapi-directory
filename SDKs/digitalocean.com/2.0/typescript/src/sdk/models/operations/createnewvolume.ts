@@ -1,113 +1,96 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export class CreateNewVolumeRequestBody1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
-  createdAt?: string;
 
-  @Metadata({ data: "json, name=description" })
+export class CreateNewVolumeRequestBody1Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=droplet_ids" })
-  dropletIds?: number[];
+  @SpeakeasyMetadata({ data: "json, name=filesystem_label" })
+  filesystemLabel?: Record<string, any>;
 
-  @Metadata({ data: "json, name=filesystem_label" })
-  filesystemLabel?: Map<string, any>;
-
-  @Metadata({ data: "json, name=filesystem_type" })
+  @SpeakeasyMetadata({ data: "json, name=filesystem_type" })
   filesystemType: string;
 
-  @Metadata({ data: "json, name=id" })
-  id?: string;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes: number;
 
-  @Metadata({ data: "json, name=snapshot_id" })
+  @SpeakeasyMetadata({ data: "json, name=snapshot_id" })
   snapshotId?: string;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
 }
 
 
-export class CreateNewVolumeRequestBody2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
-  createdAt?: string;
-
-  @Metadata({ data: "json, name=description" })
+export class CreateNewVolumeRequestBody2Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
 
-  @Metadata({ data: "json, name=droplet_ids" })
-  dropletIds?: number[];
+  @SpeakeasyMetadata({ data: "json, name=filesystem_label" })
+  filesystemLabel?: Record<string, any>;
 
-  @Metadata({ data: "json, name=filesystem_label" })
-  filesystemLabel?: Map<string, any>;
-
-  @Metadata({ data: "json, name=filesystem_type" })
+  @SpeakeasyMetadata({ data: "json, name=filesystem_type" })
   filesystemType: string;
 
-  @Metadata({ data: "json, name=id" })
-  id?: string;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=size_gigabytes" })
+  @SpeakeasyMetadata({ data: "json, name=size_gigabytes" })
   sizeGigabytes: number;
 
-  @Metadata({ data: "json, name=snapshot_id" })
+  @SpeakeasyMetadata({ data: "json, name=snapshot_id" })
   snapshotId?: string;
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
-}
-
-
-export class CreateNewVolumeRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: any;
 }
 
 
 export class CreateNewVolume401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateNewVolumeRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: any;
+}
+
+
 export class CreateNewVolumeResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createNewVolume201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createNewVolume201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createNewVolume401ApplicationJsonObject?: CreateNewVolume401ApplicationJson;
+  @SpeakeasyMetadata()
+  createNewVolume401ApplicationJSONObject?: CreateNewVolume401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

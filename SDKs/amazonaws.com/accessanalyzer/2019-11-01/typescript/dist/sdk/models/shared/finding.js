@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { FindingSource } from "./findingsource";
-import { FindingStatusEnum } from "./findingstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Finding = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var findingsource_1 = require("./findingsource");
+var findingstatusenum_1 = require("./findingstatusenum");
 // Finding
 /**
  * Contains information about a finding.
@@ -36,61 +39,61 @@ var Finding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", Array)
     ], Finding.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyzedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyzedAt" }),
         __metadata("design:type", Date)
     ], Finding.prototype, "analyzedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", Object)
     ], Finding.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Finding.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Finding.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Finding.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublic" }),
         __metadata("design:type", Boolean)
     ], Finding.prototype, "isPublic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principal" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principal" }),
+        __metadata("design:type", Object)
     ], Finding.prototype, "principal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], Finding.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceOwnerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceOwnerAccount" }),
         __metadata("design:type", String)
     ], Finding.prototype, "resourceOwnerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Finding.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: FindingSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: findingsource_1.FindingSource }),
         __metadata("design:type", Array)
     ], Finding.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Finding.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Finding.prototype, "updatedAt", void 0);
     return Finding;
-}(SpeakeasyBase));
-export { Finding };
+}(utils_1.SpeakeasyBase));
+exports.Finding = Finding;

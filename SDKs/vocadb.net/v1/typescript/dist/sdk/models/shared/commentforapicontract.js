@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserForApiContract } from "./userforapicontract";
-import { EntryRefContract } from "./entryrefcontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentForApiContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var userforapicontract_1 = require("./userforapicontract");
+var entryrefcontract_1 = require("./entryrefcontract");
 var CommentForApiContract = /** @class */ (function (_super) {
     __extends(CommentForApiContract, _super);
     function CommentForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], CommentForApiContract.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorName" }),
         __metadata("design:type", String)
     ], CommentForApiContract.prototype, "authorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], CommentForApiContract.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entry" }),
-        __metadata("design:type", EntryRefContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entry" }),
+        __metadata("design:type", entryrefcontract_1.EntryRefContract)
     ], CommentForApiContract.prototype, "entry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CommentForApiContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CommentForApiContract.prototype, "message", void 0);
     return CommentForApiContract;
-}(SpeakeasyBase));
-export { CommentForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.CommentForApiContract = CommentForApiContract;

@@ -66,7 +66,7 @@ export class StartMlEvaluationTaskRunResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  startMlEvaluationTaskRunResponse?: shared.StartMlEvaluationTaskRunResponse;
+  startMLEvaluationTaskRunResponse?: shared.StartMlEvaluationTaskRunResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

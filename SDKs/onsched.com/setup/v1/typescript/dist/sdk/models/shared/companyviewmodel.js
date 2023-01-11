@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CompanyViewModel = /** @class */ (function (_super) {
     __extends(CompanyViewModel, _super);
     function CompanyViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine1" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "addressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine2" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "addressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "bookingWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "customerWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedStatus" }),
         __metadata("design:type", Boolean)
     ], CompanyViewModel.prototype, "deletedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedTime" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "deletedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableEmailAndSmsNotifications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableEmailAndSmsNotifications" }),
         __metadata("design:type", Boolean)
     ], CompanyViewModel.prototype, "disableEmailAndSmsNotifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationFromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationFromEmailAddress" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "notificationFromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationFromName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationFromName" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "notificationFromName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationDate" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "registrationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationEmail" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "registrationEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reminderWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminderWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "reminderWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "resourceWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneId" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "timezoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], CompanyViewModel.prototype, "website", void 0);
     return CompanyViewModel;
-}(SpeakeasyBase));
-export { CompanyViewModel };
+}(utils_1.SpeakeasyBase));
+exports.CompanyViewModel = CompanyViewModel;

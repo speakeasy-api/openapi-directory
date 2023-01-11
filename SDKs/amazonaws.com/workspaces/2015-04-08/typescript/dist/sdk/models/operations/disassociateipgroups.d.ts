@@ -20,7 +20,7 @@ export declare class DisassociateIpGroupsRequest extends SpeakeasyBase {
 export declare class DisassociateIpGroupsResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    disassociateIpGroupsResult?: Map<string, any>;
+    disassociateIpGroupsResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     resourceNotFoundException?: any;

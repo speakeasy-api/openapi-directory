@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransformParameters } from "./transformparameters";
-import { WorkerTypeEnum } from "./workertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMlTransformRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var transformparameters_1 = require("./transformparameters");
+var workertypeenum_1 = require("./workertypeenum");
 var UpdateMlTransformRequest = /** @class */ (function (_super) {
     __extends(UpdateMlTransformRequest, _super);
     function UpdateMlTransformRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlueVersion" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "glueVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCapacity" }),
         __metadata("design:type", Number)
     ], UpdateMlTransformRequest.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxRetries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxRetries" }),
         __metadata("design:type", Number)
     ], UpdateMlTransformRequest.prototype, "maxRetries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfWorkers" }),
         __metadata("design:type", Number)
     ], UpdateMlTransformRequest.prototype, "numberOfWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters" }),
-        __metadata("design:type", TransformParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters" }),
+        __metadata("design:type", transformparameters_1.TransformParameters)
     ], UpdateMlTransformRequest.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Role" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timeout" }),
         __metadata("design:type", Number)
     ], UpdateMlTransformRequest.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformId" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "transformId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerType" }),
         __metadata("design:type", String)
     ], UpdateMlTransformRequest.prototype, "workerType", void 0);
     return UpdateMlTransformRequest;
-}(SpeakeasyBase));
-export { UpdateMlTransformRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMlTransformRequest = UpdateMlTransformRequest;

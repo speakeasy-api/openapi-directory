@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class LambdaCodeHook extends SpeakeasyBase {
     codeHookInterfaceVersion: string;
-    lambdaArn: string;
+    lambdaARN: string;
 }

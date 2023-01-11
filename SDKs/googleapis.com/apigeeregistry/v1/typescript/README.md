@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApigeeregistryProjectsLocationsApisCreateRequest, ApigeeregistryProjectsLocationsApisCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,42 +30,41 @@ const req: ApigeeregistryProjectsLocationsApisCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "possimus",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "esse",
-    alt: "proto",
-    apiId: "quae",
-    callback: "eum",
-    fields: "qui",
-    key: "ad",
-    oauthToken: "vel",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    apiId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "qui",
-    uploadType: "qui",
-    uploadProtocol: "dolor",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     annotations: {
-      "asperiores": "minima",
+      "voluptatum": "et",
     },
-    availability: "dolores",
-    description: "vitae",
+    availability: "ut",
+    description: "dolorem",
     displayName: "et",
     labels: {
-      "quam": "quo",
-      "dignissimos": "quo",
+      "iste": "vitae",
     },
-    name: "sint",
-    recommendedDeployment: "sit",
-    recommendedVersion: "ducimus",
+    name: "totam",
+    recommendedDeployment: "dolores",
+    recommendedVersion: "illum",
   },
 };
 

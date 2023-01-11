@@ -22,5 +22,5 @@ export declare class UpdateDataCatalogResponse extends SpeakeasyBase {
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateDataCatalogOutput?: Map<string, any>;
+    updateDataCatalogOutput?: Record<string, any>;
 }

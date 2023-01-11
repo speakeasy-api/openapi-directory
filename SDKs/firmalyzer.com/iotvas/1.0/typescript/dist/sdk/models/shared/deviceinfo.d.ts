@@ -1,13 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Vulnerability } from "./vulnerability";
-import { FirmwareInfo } from "./firmwareinfo";
+export declare class DeviceInfoFirmwareInfo extends SpeakeasyBase {
+    downloadUrl?: string;
+    name?: string;
+    releaseDate?: string;
+    sha2?: string;
+    version?: string;
+}
 export declare class DeviceInfo extends SpeakeasyBase {
     cveList?: Vulnerability[];
     deviceType?: string;
-    firmwareInfo?: FirmwareInfo;
+    firmwareInfo?: DeviceInfoFirmwareInfo;
     firmwareVersion?: string;
     isDiscontinued?: boolean;
-    latestFirmwareInfo?: FirmwareInfo;
+    latestFirmwareInfo?: DeviceInfoFirmwareInfo;
     manufacturer?: string;
     modelName?: string;
 }

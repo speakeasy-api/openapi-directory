@@ -8,5 +8,5 @@ export declare class GetProtocolsRequest extends SpeakeasyBase {
 export declare class GetProtocolsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getProtocols200ApplicationJsonStrings?: string[];
+    getProtocols200ApplicationJSONStrings?: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessDates } from "./accessdates";
-import { EndDates } from "./enddates";
-import { StartDates } from "./startdates";
-import { EventStatus } from "./eventstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventDates = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessdates_1 = require("./accessdates");
+var enddates_1 = require("./enddates");
+var startdates_1 = require("./startdates");
+var eventstatus_1 = require("./eventstatus");
 // EventDates
 /**
  * Event's Dates
@@ -37,25 +40,25 @@ var EventDates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
-        __metadata("design:type", AccessDates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
+        __metadata("design:type", accessdates_1.AccessDates)
     ], EventDates.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
-        __metadata("design:type", EndDates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
+        __metadata("design:type", enddates_1.EndDates)
     ], EventDates.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
-        __metadata("design:type", StartDates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
+        __metadata("design:type", startdates_1.StartDates)
     ], EventDates.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", EventStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", eventstatus_1.EventStatus)
     ], EventDates.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], EventDates.prototype, "timezone", void 0);
     return EventDates;
-}(SpeakeasyBase));
-export { EventDates };
+}(utils_1.SpeakeasyBase));
+exports.EventDates = EventDates;

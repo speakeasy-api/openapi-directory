@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerLevel = void 0;
+var utils_1 = require("../../../internal/utils");
 // PlayerLevel
 /**
  * 1P/3P metadata about a user's level.
@@ -33,21 +36,21 @@ var PlayerLevel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PlayerLevel.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", Number)
     ], PlayerLevel.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxExperiencePoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxExperiencePoints" }),
         __metadata("design:type", String)
     ], PlayerLevel.prototype, "maxExperiencePoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minExperiencePoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minExperiencePoints" }),
         __metadata("design:type", String)
     ], PlayerLevel.prototype, "minExperiencePoints", void 0);
     return PlayerLevel;
-}(SpeakeasyBase));
-export { PlayerLevel };
+}(utils_1.SpeakeasyBase));
+exports.PlayerLevel = PlayerLevel;

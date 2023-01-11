@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateTax = void 0;
+var utils_1 = require("../../../internal/utils");
 // StateTax
 /**
  * The State Tax model
@@ -33,57 +36,57 @@ var StateTax = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deductionsAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deductionsAmount" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "deductionsAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependentsAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependentsAmount" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "dependentsAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptions" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "exemptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptions2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptions2" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "exemptions2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filingStatus" }),
         __metadata("design:type", String)
     ], StateTax.prototype, "filingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=higherRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=higherRate" }),
         __metadata("design:type", Boolean)
     ], StateTax.prototype, "higherRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=otherIncomeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otherIncomeAmount" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "otherIncomeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentage" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "percentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialCheckCalc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialCheckCalc" }),
         __metadata("design:type", String)
     ], StateTax.prototype, "specialCheckCalc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxCalculationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxCalculationCode" }),
         __metadata("design:type", String)
     ], StateTax.prototype, "taxCalculationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxCode" }),
         __metadata("design:type", String)
     ], StateTax.prototype, "taxCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=w4FormYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=w4FormYear" }),
         __metadata("design:type", Number)
     ], StateTax.prototype, "w4FormYear", void 0);
     return StateTax;
-}(SpeakeasyBase));
-export { StateTax };
+}(utils_1.SpeakeasyBase));
+exports.StateTax = StateTax;

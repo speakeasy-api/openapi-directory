@@ -5,7 +5,7 @@ import { ConversationLogSettings } from "./conversationlogsettings";
 import { SentimentAnalysisSettings } from "./sentimentanalysissettings";
 export declare class UpdateBotAliasResponse extends SpeakeasyBase {
     botAliasId?: string;
-    botAliasLocaleSettings?: Map<string, BotAliasLocaleSettings>;
+    botAliasLocaleSettings?: Record<string, BotAliasLocaleSettings>;
     botAliasName?: string;
     botAliasStatus?: BotAliasStatusEnum;
     botId?: string;

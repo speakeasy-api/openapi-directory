@@ -47,7 +47,7 @@ export class GetRuleCategoryDetailsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getRuleCategoryDetails200ApplicationJsonObject?: GetRuleCategoryDetails200ApplicationJson;
+  getRuleCategoryDetails200ApplicationJSONObject?: GetRuleCategoryDetails200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

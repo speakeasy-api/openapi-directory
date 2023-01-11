@@ -5,6 +5,6 @@ import { RoleMapping } from "./rolemapping";
 **/
 export declare class SetIdentityPoolRolesInput extends SpeakeasyBase {
     identityPoolId: string;
-    roleMappings?: Map<string, RoleMapping>;
-    roles: Map<string, string>;
+    roleMappings?: Record<string, RoleMapping>;
+    roles: Record<string, string>;
 }

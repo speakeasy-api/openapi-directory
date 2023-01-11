@@ -70,8 +70,8 @@ export class TaxRatesByIpAddressResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: TaxRatesByIpAddress200ApplicationJson })
-  taxRatesByIpAddress200ApplicationJsonObjects?: TaxRatesByIpAddress200ApplicationJson[];
+  taxRatesByIpAddress200ApplicationJSONObjects?: TaxRatesByIpAddress200ApplicationJson[];
 
   @SpeakeasyMetadata()
-  taxRatesByIpAddress500ApplicationJsonObject?: TaxRatesByIpAddress500ApplicationJson;
+  taxRatesByIpAddress500ApplicationJSONObject?: TaxRatesByIpAddress500ApplicationJson;
 }

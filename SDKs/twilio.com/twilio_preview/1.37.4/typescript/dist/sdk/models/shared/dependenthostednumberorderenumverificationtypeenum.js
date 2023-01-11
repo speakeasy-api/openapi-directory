@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DependentHostedNumberOrderEnumVerificationTypeEnum = void 0;
+var DependentHostedNumberOrderEnumVerificationTypeEnum;
+(function (DependentHostedNumberOrderEnumVerificationTypeEnum) {
+    DependentHostedNumberOrderEnumVerificationTypeEnum["PhoneCall"] = "phone-call";
+    DependentHostedNumberOrderEnumVerificationTypeEnum["PhoneBill"] = "phone-bill";
+})(DependentHostedNumberOrderEnumVerificationTypeEnum = exports.DependentHostedNumberOrderEnumVerificationTypeEnum || (exports.DependentHostedNumberOrderEnumVerificationTypeEnum = {}));

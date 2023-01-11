@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BranchDiffSourceCodeType } from "./branchdiffsourcecodetype";
-import { CommitDiffSourceCodeType } from "./commitdiffsourcecodetype";
-import { RepositoryHeadSourceCodeType } from "./repositoryheadsourcecodetype";
-import { RequestMetadata } from "./requestmetadata";
-import { S3BucketRepository } from "./s3bucketrepository";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceCodeType = void 0;
+var utils_1 = require("../../../internal/utils");
+var branchdiffsourcecodetype_1 = require("./branchdiffsourcecodetype");
+var commitdiffsourcecodetype_1 = require("./commitdiffsourcecodetype");
+var repositoryheadsourcecodetype_1 = require("./repositoryheadsourcecodetype");
+var requestmetadata_1 = require("./requestmetadata");
+var s3bucketrepository_1 = require("./s3bucketrepository");
 // SourceCodeType
 /**
  *  Specifies the source code that is analyzed in a code review.
@@ -38,25 +41,25 @@ var SourceCodeType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BranchDiff" }),
-        __metadata("design:type", BranchDiffSourceCodeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BranchDiff" }),
+        __metadata("design:type", branchdiffsourcecodetype_1.BranchDiffSourceCodeType)
     ], SourceCodeType.prototype, "branchDiff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CommitDiff" }),
-        __metadata("design:type", CommitDiffSourceCodeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CommitDiff" }),
+        __metadata("design:type", commitdiffsourcecodetype_1.CommitDiffSourceCodeType)
     ], SourceCodeType.prototype, "commitDiff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RepositoryHead" }),
-        __metadata("design:type", RepositoryHeadSourceCodeType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RepositoryHead" }),
+        __metadata("design:type", repositoryheadsourcecodetype_1.RepositoryHeadSourceCodeType)
     ], SourceCodeType.prototype, "repositoryHead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestMetadata" }),
-        __metadata("design:type", RequestMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestMetadata" }),
+        __metadata("design:type", requestmetadata_1.RequestMetadata)
     ], SourceCodeType.prototype, "requestMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3BucketRepository" }),
-        __metadata("design:type", S3BucketRepository)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3BucketRepository" }),
+        __metadata("design:type", s3bucketrepository_1.S3BucketRepository)
     ], SourceCodeType.prototype, "s3BucketRepository", void 0);
     return SourceCodeType;
-}(SpeakeasyBase));
-export { SourceCodeType };
+}(utils_1.SpeakeasyBase));
+exports.SourceCodeType = SourceCodeType;

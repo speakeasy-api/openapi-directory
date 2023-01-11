@@ -11,6 +11,6 @@ export declare class Youtube extends SpeakeasyBase {
     id?: number;
     likeCount?: number;
     name?: string;
-    thumbnails?: Map<string, any>;
+    thumbnails?: Record<string, any>;
     viewCount?: number;
 }

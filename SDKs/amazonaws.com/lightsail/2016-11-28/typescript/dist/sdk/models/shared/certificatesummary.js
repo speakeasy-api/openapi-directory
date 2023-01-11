@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificate_1 = require("./certificate");
+var tag_1 = require("./tag");
 // CertificateSummary
 /**
  * Describes an Amazon Lightsail SSL/TLS certificate.
@@ -35,25 +38,25 @@ var CertificateSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateArn" }),
         __metadata("design:type", String)
     ], CertificateSummary.prototype, "certificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateDetail" }),
-        __metadata("design:type", Certificate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateDetail" }),
+        __metadata("design:type", certificate_1.Certificate)
     ], CertificateSummary.prototype, "certificateDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateName" }),
         __metadata("design:type", String)
     ], CertificateSummary.prototype, "certificateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], CertificateSummary.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CertificateSummary.prototype, "tags", void 0);
     return CertificateSummary;
-}(SpeakeasyBase));
-export { CertificateSummary };
+}(utils_1.SpeakeasyBase));
+exports.CertificateSummary = CertificateSummary;

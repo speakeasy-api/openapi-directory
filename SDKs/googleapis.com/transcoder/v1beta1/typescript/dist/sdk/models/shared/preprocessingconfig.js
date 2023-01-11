@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Audio } from "./audio";
-import { Color } from "./color";
-import { Crop } from "./crop";
-import { Deblock } from "./deblock";
-import { Denoise } from "./denoise";
-import { Pad } from "./pad";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprocessingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var audio_1 = require("./audio");
+var color_1 = require("./color");
+var crop_1 = require("./crop");
+var deblock_1 = require("./deblock");
+var denoise_1 = require("./denoise");
+var pad_1 = require("./pad");
 // PreprocessingConfig
 /**
  * Preprocessing configurations.
@@ -39,29 +42,29 @@ var PreprocessingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio" }),
-        __metadata("design:type", Audio)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio" }),
+        __metadata("design:type", audio_1.Audio)
     ], PreprocessingConfig.prototype, "audio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", color_1.Color)
     ], PreprocessingConfig.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crop" }),
-        __metadata("design:type", Crop)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crop" }),
+        __metadata("design:type", crop_1.Crop)
     ], PreprocessingConfig.prototype, "crop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deblock" }),
-        __metadata("design:type", Deblock)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deblock" }),
+        __metadata("design:type", deblock_1.Deblock)
     ], PreprocessingConfig.prototype, "deblock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=denoise" }),
-        __metadata("design:type", Denoise)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=denoise" }),
+        __metadata("design:type", denoise_1.Denoise)
     ], PreprocessingConfig.prototype, "denoise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pad" }),
-        __metadata("design:type", Pad)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pad" }),
+        __metadata("design:type", pad_1.Pad)
     ], PreprocessingConfig.prototype, "pad", void 0);
     return PreprocessingConfig;
-}(SpeakeasyBase));
-export { PreprocessingConfig };
+}(utils_1.SpeakeasyBase));
+exports.PreprocessingConfig = PreprocessingConfig;

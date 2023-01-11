@@ -14,5 +14,5 @@ export declare class Addon extends SpeakeasyBase {
     modifiedAt?: Date;
     serviceAccountRoleArn?: string;
     status?: AddonStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

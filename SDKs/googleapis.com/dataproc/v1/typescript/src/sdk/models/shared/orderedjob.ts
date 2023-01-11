@@ -24,7 +24,7 @@ export class OrderedJob extends SpeakeasyBase {
   hiveJob?: HiveJob;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pigJob" })
   pigJob?: PigJob;

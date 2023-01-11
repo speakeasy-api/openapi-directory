@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { CandidateDetail } from "./candidatedetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CandidateDetailPage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var candidatedetail_1 = require("./candidatedetail");
 var CandidateDetailPage = /** @class */ (function (_super) {
     __extends(CandidateDetailPage, _super);
     function CandidateDetailPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], CandidateDetailPage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: CandidateDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: candidatedetail_1.CandidateDetail }),
         __metadata("design:type", Array)
     ], CandidateDetailPage.prototype, "results", void 0);
     return CandidateDetailPage;
-}(SpeakeasyBase));
-export { CandidateDetailPage };
+}(utils_1.SpeakeasyBase));
+exports.CandidateDetailPage = CandidateDetailPage;

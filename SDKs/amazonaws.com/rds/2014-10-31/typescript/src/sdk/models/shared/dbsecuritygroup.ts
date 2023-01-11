@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2SecurityGroup } from "./ec2securitygroup";
-import { IpRange } from "./iprange";
+import { Ec2SecurityGroupList } from "./ec2securitygrouplist";
+import { IpRangeList } from "./iprangelist";
 
 
 
@@ -18,11 +18,11 @@ export class DbSecurityGroup extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbSecurityGroupName?: string;
 
-  @SpeakeasyMetadata({ elemType: Ec2SecurityGroup })
-  ec2SecurityGroups?: Ec2SecurityGroup[];
+  @SpeakeasyMetadata({ elemType: Ec2SecurityGroupList })
+  ec2SecurityGroups?: Ec2SecurityGroupList[];
 
-  @SpeakeasyMetadata({ elemType: IpRange })
-  ipRanges?: IpRange[];
+  @SpeakeasyMetadata({ elemType: IpRangeList })
+  ipRanges?: IpRangeList[];
 
   @SpeakeasyMetadata()
   ownerId?: string;

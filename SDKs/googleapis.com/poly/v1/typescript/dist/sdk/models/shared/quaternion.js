@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Quaternion = void 0;
+var utils_1 = require("../../../internal/utils");
 // Quaternion
 /**
  * A [Quaternion](//en.wikipedia.org/wiki/Quaternion). Please note: if in the response you see "w: 1" and nothing else this is the default value of [0, 0, 0, 1] where x,y, and z are 0.
@@ -33,21 +36,21 @@ var Quaternion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=w" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=w" }),
         __metadata("design:type", Number)
     ], Quaternion.prototype, "w", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x" }),
         __metadata("design:type", Number)
     ], Quaternion.prototype, "x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=y" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=y" }),
         __metadata("design:type", Number)
     ], Quaternion.prototype, "y", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=z" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=z" }),
         __metadata("design:type", Number)
     ], Quaternion.prototype, "z", void 0);
     return Quaternion;
-}(SpeakeasyBase));
-export { Quaternion };
+}(utils_1.SpeakeasyBase));
+exports.Quaternion = Quaternion;

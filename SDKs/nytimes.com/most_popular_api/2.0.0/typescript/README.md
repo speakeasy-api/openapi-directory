@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetMostemailedSectionTimePeriodJsonRequest, GetMostemailedSectionTimePeriodJsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,12 +33,12 @@ const req: GetMostemailedSectionTimePeriodJsonRequest = {
     },
   },
   pathParams: {
-    section: "Magazine",
+    section: "Opinion",
     timePeriod: "1",
   },
 };
 
-sdk.sdk.getMostemailedSectionTimePeriodJson(req).then((res: GetMostemailedSectionTimePeriodJsonResponse | AxiosError) => {
+sdk.getMostemailedSectionTimePeriodJson(req).then((res: GetMostemailedSectionTimePeriodJsonResponse | AxiosError) => {
    // handle response
 });
 ```

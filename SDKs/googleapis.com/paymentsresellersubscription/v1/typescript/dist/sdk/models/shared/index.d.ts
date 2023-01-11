@@ -9,10 +9,12 @@ export * from "./googlecloudpaymentsresellersubscriptionv1extendsubscriptionresp
 export * from "./googlecloudpaymentsresellersubscriptionv1extension";
 export * from "./googlecloudpaymentsresellersubscriptionv1findeligiblepromotionsrequest";
 export * from "./googlecloudpaymentsresellersubscriptionv1findeligiblepromotionsresponse";
+export * from "./googlecloudpaymentsresellersubscriptionv1googleonepayload";
 export * from "./googlecloudpaymentsresellersubscriptionv1listproductsresponse";
 export * from "./googlecloudpaymentsresellersubscriptionv1listpromotionsresponse";
 export * from "./googlecloudpaymentsresellersubscriptionv1location";
 export * from "./googlecloudpaymentsresellersubscriptionv1product";
+export * from "./googlecloudpaymentsresellersubscriptionv1productpayload";
 export * from "./googlecloudpaymentsresellersubscriptionv1productpriceconfig";
 export * from "./googlecloudpaymentsresellersubscriptionv1promotion";
 export * from "./googlecloudpaymentsresellersubscriptionv1promotionintroductorypricingdetails";
@@ -25,5 +27,6 @@ export * from "./googlecloudpaymentsresellersubscriptionv1subscriptionlineitemon
 export * from "./googlecloudpaymentsresellersubscriptionv1subscriptionpromotionspec";
 export * from "./googlecloudpaymentsresellersubscriptionv1subscriptionupgradedowngradedetails";
 export * from "./googlecloudpaymentsresellersubscriptionv1undocancelsubscriptionresponse";
+export * from "./googlecloudpaymentsresellersubscriptionv1youtubepayload";
 export * from "./googletypelocalizedtext";
 export * from "./xgafvenum";

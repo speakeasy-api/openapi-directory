@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDetectResponse = exports.PostDetectRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostDetectRequest = /** @class */ (function (_super) {
     __extends(PostDetectRequest, _super);
     function PostDetectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", String)
     ], PostDetectRequest.prototype, "request", void 0);
     return PostDetectRequest;
-}(SpeakeasyBase));
-export { PostDetectRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDetectRequest = PostDetectRequest;
 var PostDetectResponse = /** @class */ (function (_super) {
     __extends(PostDetectResponse, _super);
     function PostDetectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDetectResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDetectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDetectResponse.prototype, "statusCode", void 0);
     return PostDetectResponse;
-}(SpeakeasyBase));
-export { PostDetectResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDetectResponse = PostDetectResponse;

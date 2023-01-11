@@ -5,7 +5,7 @@ export declare class ListWordSensesQueryParams extends SpeakeasyBase {
 }
 export declare class ListWordSenses200ApplicationJsonFamilies extends SpeakeasyBase {
     key?: number;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
     definition?: string;
 }
 export declare class ListWordSenses200ApplicationJsonFeatures extends SpeakeasyBase {
@@ -27,5 +27,5 @@ export declare class ListWordSensesRequest extends SpeakeasyBase {
 export declare class ListWordSensesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listWordSenses200ApplicationJsonObjects?: ListWordSenses200ApplicationJson[];
+    listWordSenses200ApplicationJSONObjects?: ListWordSenses200ApplicationJson[];
 }

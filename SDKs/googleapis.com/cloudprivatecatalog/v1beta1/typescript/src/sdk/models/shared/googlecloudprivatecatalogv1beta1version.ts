@@ -9,7 +9,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GoogleCloudPrivatecatalogV1beta1Version extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  asset?: Map<string, any>;
+  asset?: Record<string, any>;
 
   @SpeakeasyMetadata()
   createTime?: string;

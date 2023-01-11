@@ -41,7 +41,7 @@ export class GetRepositoriesWorkspaceRepoSlugComponentsResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedComponents?: shared.PaginatedComponents;

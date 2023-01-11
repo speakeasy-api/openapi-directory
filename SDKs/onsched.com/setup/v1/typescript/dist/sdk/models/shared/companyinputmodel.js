@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var CompanyInputModel = /** @class */ (function (_super) {
     __extends(CompanyInputModel, _super);
     function CompanyInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine1" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "addressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressLine2" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "addressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "bookingWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "customerWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableEmailAndSmsNotifications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableEmailAndSmsNotifications" }),
         __metadata("design:type", Boolean)
     ], CompanyInputModel.prototype, "disableEmailAndSmsNotifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationFromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationFromEmailAddress" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "notificationFromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationFromName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationFromName" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "notificationFromName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationEmail" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "registrationEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reminderWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminderWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "reminderWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceWebhookUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceWebhookUrl" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "resourceWebhookUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneName" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "timezoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhookSignatureHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhookSignatureHash" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "webhookSignatureHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], CompanyInputModel.prototype, "website", void 0);
     return CompanyInputModel;
-}(SpeakeasyBase));
-export { CompanyInputModel };
+}(utils_1.SpeakeasyBase));
+exports.CompanyInputModel = CompanyInputModel;

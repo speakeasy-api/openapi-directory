@@ -8,7 +8,7 @@ import { MaxDimensions } from "./maxdimensions";
 import { ReferralDestination } from "./referraldestination";
 export declare class ImageSearchItemEditorial extends SpeakeasyBase {
     allowedUse?: AllowedUse;
-    alternativeIds?: Map<string, string>;
+    alternativeIds?: Record<string, string>;
     artist?: string;
     assetFamily?: string;
     callForImage?: boolean;

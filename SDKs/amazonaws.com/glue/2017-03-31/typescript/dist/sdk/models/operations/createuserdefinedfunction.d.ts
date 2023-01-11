@@ -20,7 +20,7 @@ export declare class CreateUserDefinedFunctionRequest extends SpeakeasyBase {
 export declare class CreateUserDefinedFunctionResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     contentType: string;
-    createUserDefinedFunctionResponse?: Map<string, any>;
+    createUserDefinedFunctionResponse?: Record<string, any>;
     entityNotFoundException?: any;
     glueEncryptionException?: any;
     internalServiceException?: any;

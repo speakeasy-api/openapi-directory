@@ -74,11 +74,11 @@ export class GetNetworkClientsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClients200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClients200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyAttachment = void 0;
+var utils_1 = require("../../../internal/utils");
 // PolicyAttachment
 /**
  * Contains the <code>PolicyType</code>, <code>PolicyId</code>, and the <code>ObjectIdentifier</code> to which it is attached. For more information, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#policies">Policies</a>.
@@ -33,17 +36,17 @@ var PolicyAttachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectIdentifier" }),
         __metadata("design:type", String)
     ], PolicyAttachment.prototype, "objectIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], PolicyAttachment.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyType" }),
         __metadata("design:type", String)
     ], PolicyAttachment.prototype, "policyType", void 0);
     return PolicyAttachment;
-}(SpeakeasyBase));
-export { PolicyAttachment };
+}(utils_1.SpeakeasyBase));
+exports.PolicyAttachment = PolicyAttachment;

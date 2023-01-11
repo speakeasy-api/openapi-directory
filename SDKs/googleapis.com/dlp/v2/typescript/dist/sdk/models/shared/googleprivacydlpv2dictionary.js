@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2CloudStoragePath } from "./googleprivacydlpv2cloudstoragepath";
-import { GooglePrivacyDlpV2WordList } from "./googleprivacydlpv2wordlist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Dictionary = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2cloudstoragepath_1 = require("./googleprivacydlpv2cloudstoragepath");
+var googleprivacydlpv2wordlist_1 = require("./googleprivacydlpv2wordlist");
 // GooglePrivacyDlpV2Dictionary
 /**
  * Custom information type based on a dictionary of words or phrases. This can be used to match sensitive information specific to the data, such as a list of employee IDs or job titles. Dictionary words are case-insensitive and all characters other than letters and digits in the unicode [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane) will be replaced with whitespace when scanning for matches, so the dictionary phrase "Sam Johnson" will match all three phrases "sam johnson", "Sam, Johnson", and "Sam (Johnson)". Additionally, the characters surrounding any match must be of a different type than the adjacent characters within the word, so letters must be next to non-letters and digits next to non-digits. For example, the dictionary word "jen" will match the first three letters of the text "jen123" but will return no matches for "jennifer". Dictionary words containing a large number of characters that are not letters or digits may result in unexpected findings because such characters are treated as whitespace. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries. For dictionaries that do not fit within these constraints, consider using `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2Dictionary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStoragePath" }),
-        __metadata("design:type", GooglePrivacyDlpV2CloudStoragePath)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStoragePath" }),
+        __metadata("design:type", googleprivacydlpv2cloudstoragepath_1.GooglePrivacyDlpV2CloudStoragePath)
     ], GooglePrivacyDlpV2Dictionary.prototype, "cloudStoragePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wordList" }),
-        __metadata("design:type", GooglePrivacyDlpV2WordList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wordList" }),
+        __metadata("design:type", googleprivacydlpv2wordlist_1.GooglePrivacyDlpV2WordList)
     ], GooglePrivacyDlpV2Dictionary.prototype, "wordList", void 0);
     return GooglePrivacyDlpV2Dictionary;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Dictionary };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Dictionary = GooglePrivacyDlpV2Dictionary;

@@ -10,5 +10,5 @@ export declare class EvalValueRequest extends SpeakeasyBase {
 export declare class EvalValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    evalValue200ApplicationJsonString?: string;
+    evalValue200ApplicationJSONString?: string;
 }

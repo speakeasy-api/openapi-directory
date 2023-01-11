@@ -10,5 +10,5 @@ export declare class ProtocolTelnetIpaliasIsenabledRequest extends SpeakeasyBase
 export declare class ProtocolTelnetIpaliasIsenabledResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetIpaliasIsenabled200ApplicationJsonString?: string;
+    protocolTelnetIpaliasIsenabled200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigFile } from "./configfile";
-import { ImportFile } from "./importfile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var configfile_1 = require("./configfile");
+var importfile_1 = require("./importfile");
 var TargetConfiguration = /** @class */ (function (_super) {
     __extends(TargetConfiguration, _super);
     function TargetConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ConfigFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", configfile_1.ConfigFile)
     ], TargetConfiguration.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imports", elemType: ImportFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imports", elemType: importfile_1.ImportFile }),
         __metadata("design:type", Array)
     ], TargetConfiguration.prototype, "imports", void 0);
     return TargetConfiguration;
-}(SpeakeasyBase));
-export { TargetConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.TargetConfiguration = TargetConfiguration;

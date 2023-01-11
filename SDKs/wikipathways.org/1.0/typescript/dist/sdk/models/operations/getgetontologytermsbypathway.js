@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetOntologyTermsByPathwayFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetOntologyTermsByPathwayResponse = exports.GetGetOntologyTermsByPathwayRequest = exports.GetGetOntologyTermsByPathwayQueryParams = exports.GetGetOntologyTermsByPathwayFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetOntologyTermsByPathwayFormatEnum;
 (function (GetGetOntologyTermsByPathwayFormatEnum) {
     GetGetOntologyTermsByPathwayFormatEnum["Json"] = "json";
     GetGetOntologyTermsByPathwayFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetGetOntologyTermsByPathwayFormatEnum;
     GetGetOntologyTermsByPathwayFormatEnum["Dump"] = "dump";
     GetGetOntologyTermsByPathwayFormatEnum["Jpg"] = "jpg";
     GetGetOntologyTermsByPathwayFormatEnum["Pdf"] = "pdf";
-})(GetGetOntologyTermsByPathwayFormatEnum || (GetGetOntologyTermsByPathwayFormatEnum = {}));
+})(GetGetOntologyTermsByPathwayFormatEnum = exports.GetGetOntologyTermsByPathwayFormatEnum || (exports.GetGetOntologyTermsByPathwayFormatEnum = {}));
 var GetGetOntologyTermsByPathwayQueryParams = /** @class */ (function (_super) {
     __extends(GetGetOntologyTermsByPathwayQueryParams, _super);
     function GetGetOntologyTermsByPathwayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetGetOntologyTermsByPathwayQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pwId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pwId" }),
         __metadata("design:type", String)
     ], GetGetOntologyTermsByPathwayQueryParams.prototype, "pwId", void 0);
     return GetGetOntologyTermsByPathwayQueryParams;
-}(SpeakeasyBase));
-export { GetGetOntologyTermsByPathwayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOntologyTermsByPathwayQueryParams = GetGetOntologyTermsByPathwayQueryParams;
 var GetGetOntologyTermsByPathwayRequest = /** @class */ (function (_super) {
     __extends(GetGetOntologyTermsByPathwayRequest, _super);
     function GetGetOntologyTermsByPathwayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetOntologyTermsByPathwayQueryParams)
     ], GetGetOntologyTermsByPathwayRequest.prototype, "queryParams", void 0);
     return GetGetOntologyTermsByPathwayRequest;
-}(SpeakeasyBase));
-export { GetGetOntologyTermsByPathwayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOntologyTermsByPathwayRequest = GetGetOntologyTermsByPathwayRequest;
 var GetGetOntologyTermsByPathwayResponse = /** @class */ (function (_super) {
     __extends(GetGetOntologyTermsByPathwayResponse, _super);
     function GetGetOntologyTermsByPathwayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetOntologyTermsByPathwayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetOntologyTermsByPathwayResponse.prototype, "statusCode", void 0);
     return GetGetOntologyTermsByPathwayResponse;
-}(SpeakeasyBase));
-export { GetGetOntologyTermsByPathwayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetOntologyTermsByPathwayResponse = GetGetOntologyTermsByPathwayResponse;

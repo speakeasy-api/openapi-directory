@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceSwitchWarmSpareResponse = exports.UpdateDeviceSwitchWarmSpareRequest = exports.UpdateDeviceSwitchWarmSpareRequestBody = exports.UpdateDeviceSwitchWarmSparePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceSwitchWarmSparePathParams = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchWarmSparePathParams, _super);
     function UpdateDeviceSwitchWarmSparePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchWarmSparePathParams.prototype, "serial", void 0);
     return UpdateDeviceSwitchWarmSparePathParams;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchWarmSparePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchWarmSparePathParams = UpdateDeviceSwitchWarmSparePathParams;
 var UpdateDeviceSwitchWarmSpareRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchWarmSpareRequestBody, _super);
     function UpdateDeviceSwitchWarmSpareRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchWarmSpareRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spareSerial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spareSerial" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchWarmSpareRequestBody.prototype, "spareSerial", void 0);
     return UpdateDeviceSwitchWarmSpareRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchWarmSpareRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchWarmSpareRequestBody = UpdateDeviceSwitchWarmSpareRequestBody;
 var UpdateDeviceSwitchWarmSpareRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchWarmSpareRequest, _super);
     function UpdateDeviceSwitchWarmSpareRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeviceSwitchWarmSparePathParams)
     ], UpdateDeviceSwitchWarmSpareRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceSwitchWarmSpareRequestBody)
     ], UpdateDeviceSwitchWarmSpareRequest.prototype, "request", void 0);
     return UpdateDeviceSwitchWarmSpareRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchWarmSpareRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchWarmSpareRequest = UpdateDeviceSwitchWarmSpareRequest;
 var UpdateDeviceSwitchWarmSpareResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchWarmSpareResponse, _super);
     function UpdateDeviceSwitchWarmSpareResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchWarmSpareResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchWarmSpareResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceSwitchWarmSpareResponse.prototype, "updateDeviceSwitchWarmSpare200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceSwitchWarmSpareResponse.prototype, "updateDeviceSwitchWarmSpare200ApplicationJSONObject", void 0);
     return UpdateDeviceSwitchWarmSpareResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchWarmSpareResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchWarmSpareResponse = UpdateDeviceSwitchWarmSpareResponse;

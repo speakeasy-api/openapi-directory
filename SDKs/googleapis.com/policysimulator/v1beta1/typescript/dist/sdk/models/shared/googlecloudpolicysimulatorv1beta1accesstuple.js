@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1beta1AccessTuple = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudPolicysimulatorV1beta1AccessTuple
 /**
  * Information about the principal, resource, and permission to check.
@@ -33,17 +36,17 @@ var GoogleCloudPolicysimulatorV1beta1AccessTuple = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullResourceName" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1beta1AccessTuple.prototype, "fullResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1beta1AccessTuple.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principal" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1beta1AccessTuple.prototype, "principal", void 0);
     return GoogleCloudPolicysimulatorV1beta1AccessTuple;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1beta1AccessTuple };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1beta1AccessTuple = GoogleCloudPolicysimulatorV1beta1AccessTuple;

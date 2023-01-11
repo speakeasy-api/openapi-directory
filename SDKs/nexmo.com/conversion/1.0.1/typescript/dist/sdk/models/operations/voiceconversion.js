@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceConversionResponse = exports.VoiceConversionRequest = exports.VoiceConversionQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VoiceConversionQueryParams = /** @class */ (function (_super) {
     __extends(VoiceConversionQueryParams, _super);
     function VoiceConversionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=delivered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=delivered" }),
         __metadata("design:type", Object)
     ], VoiceConversionQueryParams.prototype, "delivered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=message-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=message-id" }),
         __metadata("design:type", String)
     ], VoiceConversionQueryParams.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timestamp" }),
         __metadata("design:type", String)
     ], VoiceConversionQueryParams.prototype, "timestamp", void 0);
     return VoiceConversionQueryParams;
-}(SpeakeasyBase));
-export { VoiceConversionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.VoiceConversionQueryParams = VoiceConversionQueryParams;
 var VoiceConversionRequest = /** @class */ (function (_super) {
     __extends(VoiceConversionRequest, _super);
     function VoiceConversionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VoiceConversionQueryParams)
     ], VoiceConversionRequest.prototype, "queryParams", void 0);
     return VoiceConversionRequest;
-}(SpeakeasyBase));
-export { VoiceConversionRequest };
+}(utils_1.SpeakeasyBase));
+exports.VoiceConversionRequest = VoiceConversionRequest;
 var VoiceConversionResponse = /** @class */ (function (_super) {
     __extends(VoiceConversionResponse, _super);
     function VoiceConversionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VoiceConversionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VoiceConversionResponse.prototype, "statusCode", void 0);
     return VoiceConversionResponse;
-}(SpeakeasyBase));
-export { VoiceConversionResponse };
+}(utils_1.SpeakeasyBase));
+exports.VoiceConversionResponse = VoiceConversionResponse;

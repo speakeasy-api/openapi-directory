@@ -79,5 +79,5 @@ export class CreateSchemaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createSchema200ApplicationJsonObject?: CreateSchema200ApplicationJson;
+  createSchema200ApplicationJSONObject?: CreateSchema200ApplicationJson;
 }

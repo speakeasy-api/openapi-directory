@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GroupsCreatePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class GroupsCreateQueryParams extends SpeakeasyBase {
     apiVersion: string;
 }
 export declare class GroupsCreateRequests extends SpeakeasyBase {
-    groupCreateParameters?: Map<string, Map<string, any>>;
-    groupCreateParameters1?: Map<string, Map<string, any>>;
+    groupCreateParameters?: Record<string, Record<string, any>>;
+    groupCreateParameters1?: Record<string, Record<string, any>>;
 }
 export declare class GroupsCreateRequest extends SpeakeasyBase {
     pathParams: GroupsCreatePathParams;
@@ -16,7 +16,7 @@ export declare class GroupsCreateRequest extends SpeakeasyBase {
     request: GroupsCreateRequests;
 }
 export declare class GroupsCreateResponse extends SpeakeasyBase {
-    adGroup?: Map<string, Map<string, any>>;
+    adGroup?: Record<string, Record<string, any>>;
     contentType: string;
     graphError?: shared.GraphError;
     statusCode: number;

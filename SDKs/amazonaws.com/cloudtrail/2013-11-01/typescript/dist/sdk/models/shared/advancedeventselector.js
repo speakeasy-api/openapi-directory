@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdvancedFieldSelector } from "./advancedfieldselector";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdvancedEventSelector = void 0;
+var utils_1 = require("../../../internal/utils");
+var advancedfieldselector_1 = require("./advancedfieldselector");
 // AdvancedEventSelector
 /**
  * <p>Advanced event selectors let you create fine-grained selectors for the following CloudTrail event record ﬁelds. They help you control costs by logging only those events that are important to you. For more information about advanced event selectors, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">Logging data events for trails</a> in the <i>CloudTrail User Guide</i>.</p> <ul> <li> <p> <code>readOnly</code> </p> </li> <li> <p> <code>eventSource</code> </p> </li> <li> <p> <code>eventName</code> </p> </li> <li> <p> <code>eventCategory</code> </p> </li> <li> <p> <code>resources.type</code> </p> </li> <li> <p> <code>resources.ARN</code> </p> </li> </ul> <p>You cannot apply both event selectors and advanced event selectors to a trail.</p>
@@ -34,13 +37,13 @@ var AdvancedEventSelector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FieldSelectors", elemType: AdvancedFieldSelector }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FieldSelectors", elemType: advancedfieldselector_1.AdvancedFieldSelector }),
         __metadata("design:type", Array)
     ], AdvancedEventSelector.prototype, "fieldSelectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], AdvancedEventSelector.prototype, "name", void 0);
     return AdvancedEventSelector;
-}(SpeakeasyBase));
-export { AdvancedEventSelector };
+}(utils_1.SpeakeasyBase));
+exports.AdvancedEventSelector = AdvancedEventSelector;

@@ -1,8 +1,8 @@
 import "reflect-metadata";
 
 import {
-  GetSimplePathParams,
   ParamDecorator,
+  getSimplePathParams,
   ppMetadataKey,
 } from "./pathparams";
 
@@ -72,22 +72,22 @@ export class SpeakeasyBase {
           if (isSpeakeasyBase(prop.type)) {
             (this as any)[prop.key] = new prop.type(value);
           } else if (
-              prop.type.name == "Array" &&
-              isSpeakeasyBase(prop.elemType)
+            prop.type.name == "Array" &&
+            isSpeakeasyBase(prop.elemType)
           ) {
             (this as any)[prop.key] = handleArray(
-                value,
-                prop.elemType,
-                prop.elemDepth
+              value,
+              prop.elemType,
+              prop.elemDepth
             );
           } else if (
-              prop.type.name == "Object" &&
-              isSpeakeasyBase(prop.elemType)
+            prop.type.name == "Object" &&
+            isSpeakeasyBase(prop.elemType)
           ) {
             (this as any)[prop.key] = handleObject(
-                value,
-                prop.elemType,
-                prop.elemDepth
+              value,
+              prop.elemType,
+              prop.elemDepth
             );
           } else {
             (this as any)[prop.key] = value;
@@ -98,9 +98,9 @@ export class SpeakeasyBase {
   }
 }
 
-export function Metadata<
-    T extends SpeakeasyBase = Record<string | symbol, unknown>
-    >(params?: {
+export function SpeakeasyMetadata<
+  T extends SpeakeasyBase = Record<string | symbol, unknown>
+>(params?: {
   data?: string;
   elemType?: { new (): T };
   elemDepth?: number;
@@ -135,9 +135,9 @@ export function Metadata<
   };
 }
 
-export function ReplaceParameters(
-    stringWithParams: string,
-    params: Map<string, string>
+export function replaceParameters(
+  stringWithParams: string,
+  params: Map<string, string>
 ): string {
   let res: string = stringWithParams;
   params.forEach((value, key) => {
@@ -147,10 +147,10 @@ export function ReplaceParameters(
   return res;
 }
 
-export function GenerateURL(
-    serverURL: string,
-    path: string,
-    pathParams: any
+export function generateURL(
+  serverURL: string,
+  path: string,
+  pathParams: any
 ): string {
   const url: string = serverURL.replace(/\/$/, "") + path;
   const parsedParameters: Map<string, string> = new Map<string, string>();
@@ -158,39 +158,39 @@ export function GenerateURL(
   fieldNames.forEach((fname) => {
     const ppAnn: string = Reflect.getMetadata(ppMetadataKey, pathParams, fname);
     if (ppAnn == null) return;
-    const ppDecorator: ParamDecorator = ParseParamDecorator(
-        ppAnn,
-        fname,
-        "simple",
-        false
+    const ppDecorator: ParamDecorator = parseParamDecorator(
+      ppAnn,
+      fname,
+      "simple",
+      false
     );
     if (ppDecorator == null) return;
     switch (ppDecorator.Style) {
       case "simple":
-        const simpleParams: Map<string, string> = GetSimplePathParams(
-            ppDecorator.ParamName,
-            pathParams[fname],
-            ppDecorator.Explode
+        const simpleParams: Map<string, string> = getSimplePathParams(
+          ppDecorator.ParamName,
+          pathParams[fname],
+          ppDecorator.Explode
         );
         simpleParams.forEach((value, key) => {
           parsedParameters.set(key, value);
         });
     }
   });
-  return ReplaceParameters(url, parsedParameters);
+  return replaceParameters(url, parsedParameters);
 }
 
-export function ParseParamDecorator(
-    ann: string,
-    fName: string,
-    defaultStyle: string,
-    defaultExplode: boolean
+export function parseParamDecorator(
+  ann: string,
+  fName: string,
+  defaultStyle: string,
+  defaultExplode: boolean
 ): ParamDecorator {
   // style=simple;explode=false;name=apiID
   const decorator: ParamDecorator = new ParamDecorator(
-      defaultStyle,
-      defaultExplode,
-      fName.toLowerCase()
+    defaultStyle,
+    defaultExplode,
+    fName.toLowerCase()
   );
 
   ann.split(";").forEach((annPart) => {
@@ -210,4 +210,45 @@ export function ParseParamDecorator(
     }
   });
   return decorator;
+}
+
+export function isStringRecord(obj: any): obj is Record<string, string> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "string")
+}
+
+export function isNumberRecord(obj: any): obj is Record<string, number> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "number")
+}
+
+export function isBooleanRecord(obj: any): obj is Record<string, boolean> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "boolean")
+}
+
+export function isEmpty(value: any): boolean {
+  // check for undefined, null, and NaN
+  let res: boolean = false;
+  if (typeof value === "number") res = Number.isNaN(value);
+  else if (typeof value === "string") res = value === "";
+  return res || value == null;
 }

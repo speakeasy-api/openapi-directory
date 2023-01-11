@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficRoute } from "./trafficroute";
-import { TargetGroupInfo } from "./targetgroupinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetGroupPairInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var trafficroute_1 = require("./trafficroute");
+var targetgroupinfo_1 = require("./targetgroupinfo");
 // TargetGroupPairInfo
 /**
  *  Information about two target groups and how traffic is routed during an Amazon ECS deployment. An optional test traffic route can be specified.
@@ -35,17 +38,17 @@ var TargetGroupPairInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prodTrafficRoute" }),
-        __metadata("design:type", TrafficRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prodTrafficRoute" }),
+        __metadata("design:type", trafficroute_1.TrafficRoute)
     ], TargetGroupPairInfo.prototype, "prodTrafficRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroups", elemType: TargetGroupInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroups", elemType: targetgroupinfo_1.TargetGroupInfo }),
         __metadata("design:type", Array)
     ], TargetGroupPairInfo.prototype, "targetGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTrafficRoute" }),
-        __metadata("design:type", TrafficRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTrafficRoute" }),
+        __metadata("design:type", trafficroute_1.TrafficRoute)
     ], TargetGroupPairInfo.prototype, "testTrafficRoute", void 0);
     return TargetGroupPairInfo;
-}(SpeakeasyBase));
-export { TargetGroupPairInfo };
+}(utils_1.SpeakeasyBase));
+exports.TargetGroupPairInfo = TargetGroupPairInfo;

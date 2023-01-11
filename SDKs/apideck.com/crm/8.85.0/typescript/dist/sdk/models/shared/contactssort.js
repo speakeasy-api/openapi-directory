@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SortDirectionEnum } from "./sortdirectionenum";
-export var ContactsSortByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactsSort = exports.ContactsSortByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sortdirectionenum_1 = require("./sortdirectionenum");
+var ContactsSortByEnum;
 (function (ContactsSortByEnum) {
     ContactsSortByEnum["CreatedAt"] = "created_at";
     ContactsSortByEnum["UpdatedAt"] = "updated_at";
@@ -32,20 +35,20 @@ export var ContactsSortByEnum;
     ContactsSortByEnum["FirstName"] = "first_name";
     ContactsSortByEnum["LastName"] = "last_name";
     ContactsSortByEnum["Email"] = "email";
-})(ContactsSortByEnum || (ContactsSortByEnum = {}));
+})(ContactsSortByEnum = exports.ContactsSortByEnum || (exports.ContactsSortByEnum = {}));
 var ContactsSort = /** @class */ (function (_super) {
     __extends(ContactsSort, _super);
     function ContactsSort() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=by" }),
         __metadata("design:type", String)
     ], ContactsSort.prototype, "by", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=direction" }),
         __metadata("design:type", String)
     ], ContactsSort.prototype, "direction", void 0);
     return ContactsSort;
-}(SpeakeasyBase));
-export { ContactsSort };
+}(utils_1.SpeakeasyBase));
+exports.ContactsSort = ContactsSort;

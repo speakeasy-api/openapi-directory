@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAnnotationResponse = exports.GetAnnotationRequest = exports.GetAnnotationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAnnotationPathParams = /** @class */ (function (_super) {
     __extends(GetAnnotationPathParams, _super);
     function GetAnnotationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=annotationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=annotationId" }),
         __metadata("design:type", String)
     ], GetAnnotationPathParams.prototype, "annotationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commit" }),
         __metadata("design:type", String)
     ], GetAnnotationPathParams.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], GetAnnotationPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reportId" }),
         __metadata("design:type", String)
     ], GetAnnotationPathParams.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetAnnotationPathParams.prototype, "workspace", void 0);
     return GetAnnotationPathParams;
-}(SpeakeasyBase));
-export { GetAnnotationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationPathParams = GetAnnotationPathParams;
 var GetAnnotationRequest = /** @class */ (function (_super) {
     __extends(GetAnnotationRequest, _super);
     function GetAnnotationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAnnotationPathParams)
     ], GetAnnotationRequest.prototype, "pathParams", void 0);
     return GetAnnotationRequest;
-}(SpeakeasyBase));
-export { GetAnnotationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationRequest = GetAnnotationRequest;
 var GetAnnotationResponse = /** @class */ (function (_super) {
     __extends(GetAnnotationResponse, _super);
     function GetAnnotationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAnnotationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAnnotationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetAnnotationResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetAnnotationResponse.prototype, "reportAnnotation", void 0);
     return GetAnnotationResponse;
-}(SpeakeasyBase));
-export { GetAnnotationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationResponse = GetAnnotationResponse;

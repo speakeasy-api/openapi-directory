@@ -11,5 +11,5 @@ export class GoogleHomeEnterpriseSdmV1Room extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=traits" })
-  traits?: Map<string, any>;
+  traits?: Record<string, any>;
 }

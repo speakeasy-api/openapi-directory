@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpSetSummary } from "./ipsetsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListIpSetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipsetsummary_1 = require("./ipsetsummary");
 var ListIpSetsResponse = /** @class */ (function (_super) {
     __extends(ListIpSetsResponse, _super);
     function ListIpSetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IPSets", elemType: IpSetSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IPSets", elemType: ipsetsummary_1.IpSetSummary }),
         __metadata("design:type", Array)
     ], ListIpSetsResponse.prototype, "ipSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextMarker" }),
         __metadata("design:type", String)
     ], ListIpSetsResponse.prototype, "nextMarker", void 0);
     return ListIpSetsResponse;
-}(SpeakeasyBase));
-export { ListIpSetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListIpSetsResponse = ListIpSetsResponse;

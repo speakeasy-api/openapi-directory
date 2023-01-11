@@ -21,7 +21,7 @@ export declare class SearchProductsCodes200ApplicationJsonData extends Speakeasy
     onRequestPeriod?: number;
     onSale?: boolean;
     panoramaCount?: number;
-    pas?: Map<string, any>;
+    pas?: Record<string, any>;
     photoCount?: number;
     price?: number;
     priceFormatted?: string;
@@ -43,13 +43,13 @@ export declare class SearchProductsCodes200ApplicationJsonData extends Speakeasy
     subCatIds?: number[];
     supplierCode?: string;
     supplierName?: string;
-    thumbnailHiResUrl?: string;
-    thumbnailUrl?: string;
+    thumbnailHiResURL?: string;
+    thumbnailURL?: string;
     title?: string;
     translationLevel?: number;
     uniqueShortDescription?: string;
     videoCount?: number;
-    webUrl?: string;
+    webURL?: string;
 }
 export declare class SearchProductsCodes200ApplicationJson extends SpeakeasyBase {
     data?: SearchProductsCodes200ApplicationJsonData[];
@@ -60,8 +60,8 @@ export declare class SearchProductsCodes200ApplicationJson extends SpeakeasyBase
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -73,5 +73,5 @@ export declare class SearchProductsCodesRequest extends SpeakeasyBase {
 export declare class SearchProductsCodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchProductsCodes200ApplicationJsonObject?: SearchProductsCodes200ApplicationJson;
+    searchProductsCodes200ApplicationJSONObject?: SearchProductsCodes200ApplicationJson;
 }

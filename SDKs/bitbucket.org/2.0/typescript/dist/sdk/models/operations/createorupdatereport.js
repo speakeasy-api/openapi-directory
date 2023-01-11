@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrUpdateReportResponse = exports.CreateOrUpdateReportRequest = exports.CreateOrUpdateReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrUpdateReportPathParams = /** @class */ (function (_super) {
     __extends(CreateOrUpdateReportPathParams, _super);
     function CreateOrUpdateReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commit" }),
         __metadata("design:type", String)
     ], CreateOrUpdateReportPathParams.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], CreateOrUpdateReportPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reportId" }),
         __metadata("design:type", String)
     ], CreateOrUpdateReportPathParams.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], CreateOrUpdateReportPathParams.prototype, "workspace", void 0);
     return CreateOrUpdateReportPathParams;
-}(SpeakeasyBase));
-export { CreateOrUpdateReportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateReportPathParams = CreateOrUpdateReportPathParams;
 var CreateOrUpdateReportRequest = /** @class */ (function (_super) {
     __extends(CreateOrUpdateReportRequest, _super);
     function CreateOrUpdateReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateOrUpdateReportPathParams)
     ], CreateOrUpdateReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CreateOrUpdateReportRequest.prototype, "request", void 0);
     return CreateOrUpdateReportRequest;
-}(SpeakeasyBase));
-export { CreateOrUpdateReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateReportRequest = CreateOrUpdateReportRequest;
 var CreateOrUpdateReportResponse = /** @class */ (function (_super) {
     __extends(CreateOrUpdateReportResponse, _super);
     function CreateOrUpdateReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrUpdateReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrUpdateReportResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateOrUpdateReportResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateOrUpdateReportResponse.prototype, "report", void 0);
     return CreateOrUpdateReportResponse;
-}(SpeakeasyBase));
-export { CreateOrUpdateReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateReportResponse = CreateOrUpdateReportResponse;

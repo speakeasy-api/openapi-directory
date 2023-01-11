@@ -6,6 +6,6 @@ import { Tag } from "./tag";
 **/
 export declare class ResourceTagMapping extends SpeakeasyBase {
     complianceDetails?: ComplianceDetails;
-    resourceArn?: string;
+    resourceARN?: string;
     tags?: Tag[];
 }

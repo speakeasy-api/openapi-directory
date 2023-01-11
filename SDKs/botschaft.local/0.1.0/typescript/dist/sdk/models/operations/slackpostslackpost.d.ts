@@ -11,5 +11,5 @@ export declare class SlackPostSlackPostResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    slackPostSlackPost200ApplicationJsonAny?: any;
+    slackPostSlackPost200ApplicationJSONAny?: any;
 }

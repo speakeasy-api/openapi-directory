@@ -7,8 +7,8 @@ export declare class GetAuthorizableKeystoreRequest extends SpeakeasyBase {
     pathParams: GetAuthorizableKeystorePathParams;
 }
 export declare class GetAuthorizableKeystoreResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    keystoreInfo?: string;
     statusCode: number;
     getAuthorizableKeystoreDefaultTextPlainString?: string;
 }

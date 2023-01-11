@@ -48,7 +48,7 @@ export class DeleteAgentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAgentResponse?: Map<string, any>;
+  deleteAgentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalException?: any;

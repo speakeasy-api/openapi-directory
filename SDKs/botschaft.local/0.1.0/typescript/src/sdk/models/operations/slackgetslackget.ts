@@ -41,5 +41,5 @@ export class SlackGetSlackGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  slackGetSlackGet200ApplicationJsonAny?: any;
+  slackGetSlackGet200ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostTruckDirectionsOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostTruckDirectionsOutputFormatResponse = exports.PostTruckDirectionsOutputFormatRequest = exports.PostTruckDirectionsOutputFormatQueryParams = exports.PostTruckDirectionsOutputFormatDistanceUnitEnum = exports.PostTruckDirectionsOutputFormatCriteriaEnum = exports.PostTruckDirectionsOutputFormatPathParams = exports.PostTruckDirectionsOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostTruckDirectionsOutputFormatOutputFormatEnum;
 (function (PostTruckDirectionsOutputFormatOutputFormatEnum) {
     PostTruckDirectionsOutputFormatOutputFormatEnum["Json"] = "json";
     PostTruckDirectionsOutputFormatOutputFormatEnum["Kml"] = "kml";
     PostTruckDirectionsOutputFormatOutputFormatEnum["Html"] = "html";
-})(PostTruckDirectionsOutputFormatOutputFormatEnum || (PostTruckDirectionsOutputFormatOutputFormatEnum = {}));
+})(PostTruckDirectionsOutputFormatOutputFormatEnum = exports.PostTruckDirectionsOutputFormatOutputFormatEnum || (exports.PostTruckDirectionsOutputFormatOutputFormatEnum = {}));
 var PostTruckDirectionsOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(PostTruckDirectionsOutputFormatPathParams, _super);
     function PostTruckDirectionsOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatPathParams.prototype, "outputFormat", void 0);
     return PostTruckDirectionsOutputFormatPathParams;
-}(SpeakeasyBase));
-export { PostTruckDirectionsOutputFormatPathParams };
-export var PostTruckDirectionsOutputFormatCriteriaEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostTruckDirectionsOutputFormatPathParams = PostTruckDirectionsOutputFormatPathParams;
+var PostTruckDirectionsOutputFormatCriteriaEnum;
 (function (PostTruckDirectionsOutputFormatCriteriaEnum) {
     PostTruckDirectionsOutputFormatCriteriaEnum["Shortest"] = "shortest";
     PostTruckDirectionsOutputFormatCriteriaEnum["Fastest"] = "fastest";
-})(PostTruckDirectionsOutputFormatCriteriaEnum || (PostTruckDirectionsOutputFormatCriteriaEnum = {}));
-export var PostTruckDirectionsOutputFormatDistanceUnitEnum;
+})(PostTruckDirectionsOutputFormatCriteriaEnum = exports.PostTruckDirectionsOutputFormatCriteriaEnum || (exports.PostTruckDirectionsOutputFormatCriteriaEnum = {}));
+var PostTruckDirectionsOutputFormatDistanceUnitEnum;
 (function (PostTruckDirectionsOutputFormatDistanceUnitEnum) {
     PostTruckDirectionsOutputFormatDistanceUnitEnum["Km"] = "km";
     PostTruckDirectionsOutputFormatDistanceUnitEnum["Mi"] = "mi";
-})(PostTruckDirectionsOutputFormatDistanceUnitEnum || (PostTruckDirectionsOutputFormatDistanceUnitEnum = {}));
+})(PostTruckDirectionsOutputFormatDistanceUnitEnum = exports.PostTruckDirectionsOutputFormatDistanceUnitEnum || (exports.PostTruckDirectionsOutputFormatDistanceUnitEnum = {}));
 var PostTruckDirectionsOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(PostTruckDirectionsOutputFormatQueryParams, _super);
     function PostTruckDirectionsOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=correctSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=correctSide" }),
         __metadata("design:type", Boolean)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "correctSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=criteria" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departure" }),
         __metadata("design:type", Date)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disable" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "disable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "distanceUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], PostTruckDirectionsOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], PostTruckDirectionsOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=points" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "points", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
         __metadata("design:type", Boolean)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "roundTrip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatQueryParams.prototype, "routeDescription", void 0);
     return PostTruckDirectionsOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { PostTruckDirectionsOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostTruckDirectionsOutputFormatQueryParams = PostTruckDirectionsOutputFormatQueryParams;
 var PostTruckDirectionsOutputFormatRequest = /** @class */ (function (_super) {
     __extends(PostTruckDirectionsOutputFormatRequest, _super);
     function PostTruckDirectionsOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostTruckDirectionsOutputFormatPathParams)
     ], PostTruckDirectionsOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostTruckDirectionsOutputFormatQueryParams)
     ], PostTruckDirectionsOutputFormatRequest.prototype, "queryParams", void 0);
     return PostTruckDirectionsOutputFormatRequest;
-}(SpeakeasyBase));
-export { PostTruckDirectionsOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostTruckDirectionsOutputFormatRequest = PostTruckDirectionsOutputFormatRequest;
 var PostTruckDirectionsOutputFormatResponse = /** @class */ (function (_super) {
     __extends(PostTruckDirectionsOutputFormatResponse, _super);
     function PostTruckDirectionsOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTruckDirectionsOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostTruckDirectionsOutputFormatResponse.prototype, "statusCode", void 0);
     return PostTruckDirectionsOutputFormatResponse;
-}(SpeakeasyBase));
-export { PostTruckDirectionsOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostTruckDirectionsOutputFormatResponse = PostTruckDirectionsOutputFormatResponse;

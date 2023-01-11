@@ -29,7 +29,7 @@ export class PutTeamsUsernameProjectsProjectKeyRequest extends SpeakeasyBase {
   pathParams: PutTeamsUsernameProjectsProjectKeyPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutTeamsUsernameProjectsProjectKeySecurity;
@@ -41,14 +41,14 @@ export class PutTeamsUsernameProjectsProjectKeyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  project?: Map<string, any>;
+  project?: Record<string, any>;
 }

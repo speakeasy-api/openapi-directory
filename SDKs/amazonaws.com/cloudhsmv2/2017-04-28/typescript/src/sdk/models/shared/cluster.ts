@@ -50,7 +50,7 @@ export class Cluster extends SpeakeasyBase {
   stateMessage?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SubnetMapping" })
-  subnetMapping?: Map<string, string>;
+  subnetMapping?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag })
   tagList?: Tag[];

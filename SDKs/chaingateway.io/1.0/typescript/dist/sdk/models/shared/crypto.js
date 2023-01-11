@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cipherparams } from "./cipherparams";
-import { Kdfparams } from "./kdfparams";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Crypto = void 0;
+var utils_1 = require("../../../internal/utils");
+var cipherparams_1 = require("./cipherparams");
+var kdfparams_1 = require("./kdfparams");
 var Crypto = /** @class */ (function (_super) {
     __extends(Crypto, _super);
     function Crypto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cipher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cipher" }),
         __metadata("design:type", String)
     ], Crypto.prototype, "cipher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cipherparams" }),
-        __metadata("design:type", Cipherparams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cipherparams" }),
+        __metadata("design:type", cipherparams_1.Cipherparams)
     ], Crypto.prototype, "cipherparams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ciphertext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ciphertext" }),
         __metadata("design:type", String)
     ], Crypto.prototype, "ciphertext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kdf" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kdf" }),
         __metadata("design:type", String)
     ], Crypto.prototype, "kdf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kdfparams" }),
-        __metadata("design:type", Kdfparams)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kdfparams" }),
+        __metadata("design:type", kdfparams_1.Kdfparams)
     ], Crypto.prototype, "kdfparams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac" }),
         __metadata("design:type", String)
     ], Crypto.prototype, "mac", void 0);
     return Crypto;
-}(SpeakeasyBase));
-export { Crypto };
+}(utils_1.SpeakeasyBase));
+exports.Crypto = Crypto;

@@ -20,7 +20,7 @@ export declare class DeleteRemoteAccessSessionRequest extends SpeakeasyBase {
 export declare class DeleteRemoteAccessSessionResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteRemoteAccessSessionResult?: Map<string, any>;
+    deleteRemoteAccessSessionResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

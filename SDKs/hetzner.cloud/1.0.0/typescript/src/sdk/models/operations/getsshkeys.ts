@@ -64,7 +64,7 @@ export class GetSshKeys200ApplicationJsonSshKeys extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -94,8 +94,8 @@ export class GetSshKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSshKeys200ApplicationJsonObject?: GetSshKeys200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSshKeys200ApplicationJSONObject?: GetSshKeys200ApplicationJson;
 }

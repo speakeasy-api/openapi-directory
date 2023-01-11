@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateConversationRequest, CreateConversationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearerAuth: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateConversationRequest = {
   request: {
-    displayName: "eum",
-    imageUrl: "aut",
-    name: "consequatur",
+    displayName: "sit",
+    imageUrl: "voluptas",
+    name: "culpa",
     properties: {
-      ttl: 14.100000,
+      ttl: 6.200000,
     },
   },
 };

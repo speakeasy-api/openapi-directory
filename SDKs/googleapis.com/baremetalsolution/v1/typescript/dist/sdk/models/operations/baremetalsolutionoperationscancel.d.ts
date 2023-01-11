@@ -23,11 +23,11 @@ export declare class BaremetalsolutionOperationsCancelSecurity extends Speakeasy
 export declare class BaremetalsolutionOperationsCancelRequest extends SpeakeasyBase {
     pathParams: BaremetalsolutionOperationsCancelPathParams;
     queryParams: BaremetalsolutionOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BaremetalsolutionOperationsCancelSecurity;
 }
 export declare class BaremetalsolutionOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole } from "./googlecloudassuredworkloadsv1violationremediationinstructionsconsole";
-import { GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud } from "./googlecloudassuredworkloadsv1violationremediationinstructionsgcloud";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1violationremediationinstructionsconsole_1 = require("./googlecloudassuredworkloadsv1violationremediationinstructionsconsole");
+var googlecloudassuredworkloadsv1violationremediationinstructionsgcloud_1 = require("./googlecloudassuredworkloadsv1violationremediationinstructionsgcloud");
 // GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
 /**
  * Instructions to remediate violation
@@ -35,13 +38,13 @@ var GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consoleInstructions" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consoleInstructions" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1violationremediationinstructionsconsole_1.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions.prototype, "consoleInstructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcloudInstructions" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcloudInstructions" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1violationremediationinstructionsgcloud_1.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud)
     ], GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions.prototype, "gcloudInstructions", void 0);
     return GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions = GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions;

@@ -1,0 +1,77 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Customers {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * getV3CustomersCurrent - Returns information about the current user.
+   *
+   * Returns the first, middle and last name of the authenticated user.
+   * 
+   * You'll need an API key and access token to use this resource.
+   * 	
+   * Please consult our [Authorization FAQ](http://developers.gettyimages.com/en/authorization-faq.html) for more information on authorization tokens.
+   * 
+  **/
+  getV3CustomersCurrent(
+    req: operations.GetV3CustomersCurrentRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetV3CustomersCurrentResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetV3CustomersCurrentRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v3/customers/current";
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetV3CustomersCurrentResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.customerInfoResponse = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 401:
+            break;
+          case httpRes?.status == 503:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

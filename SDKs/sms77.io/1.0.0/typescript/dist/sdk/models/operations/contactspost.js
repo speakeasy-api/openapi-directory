@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ContactsPostActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactsPostResponse = exports.ContactsPostRequest = exports.ContactsPostQueryParams = exports.ContactsPostActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ContactsPostActionEnum;
 (function (ContactsPostActionEnum) {
     ContactsPostActionEnum["Del"] = "del";
     ContactsPostActionEnum["Write"] = "write";
-})(ContactsPostActionEnum || (ContactsPostActionEnum = {}));
+})(ContactsPostActionEnum = exports.ContactsPostActionEnum || (exports.ContactsPostActionEnum = {}));
 var ContactsPostQueryParams = /** @class */ (function (_super) {
     __extends(ContactsPostQueryParams, _super);
     function ContactsPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], ContactsPostQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], ContactsPostQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=empfaenger" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=empfaenger" }),
         __metadata("design:type", String)
     ], ContactsPostQueryParams.prototype, "empfaenger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], ContactsPostQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=json" }),
         __metadata("design:type", Number)
     ], ContactsPostQueryParams.prototype, "json", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nick" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nick" }),
         __metadata("design:type", String)
     ], ContactsPostQueryParams.prototype, "nick", void 0);
     return ContactsPostQueryParams;
-}(SpeakeasyBase));
-export { ContactsPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ContactsPostQueryParams = ContactsPostQueryParams;
 var ContactsPostRequest = /** @class */ (function (_super) {
     __extends(ContactsPostRequest, _super);
     function ContactsPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContactsPostQueryParams)
     ], ContactsPostRequest.prototype, "queryParams", void 0);
     return ContactsPostRequest;
-}(SpeakeasyBase));
-export { ContactsPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.ContactsPostRequest = ContactsPostRequest;
 var ContactsPostResponse = /** @class */ (function (_super) {
     __extends(ContactsPostResponse, _super);
     function ContactsPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ContactsPostResponse.prototype, "contactsPost200ApplicationJsonString", void 0);
+    ], ContactsPostResponse.prototype, "contactsPOST200ApplicationJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ContactsPostResponse.prototype, "contactsPost200TextPlainString", void 0);
+    ], ContactsPostResponse.prototype, "contactsPOST200TextPlainString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContactsPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ContactsPostResponse.prototype, "statusCode", void 0);
     return ContactsPostResponse;
-}(SpeakeasyBase));
-export { ContactsPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.ContactsPostResponse = ContactsPostResponse;

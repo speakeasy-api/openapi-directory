@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppendTextUsingGetResponse = exports.AppendTextUsingGetRequest = exports.AppendTextUsingGet500ApplicationJson = exports.AppendTextUsingGet401ApplicationJson = exports.AppendTextUsingGet400ApplicationJson = exports.AppendTextUsingGet200ApplicationJson = exports.AppendTextUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppendTextUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(AppendTextUsingGetQueryParams, _super);
     function AppendTextUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], AppendTextUsingGetQueryParams.prototype, "padId", void 0);
+    ], AppendTextUsingGetQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], AppendTextUsingGetQueryParams.prototype, "text", void 0);
     return AppendTextUsingGetQueryParams;
-}(SpeakeasyBase));
-export { AppendTextUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGetQueryParams = AppendTextUsingGetQueryParams;
 var AppendTextUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingGet200ApplicationJson, _super);
     function AppendTextUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingGet200ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGet200ApplicationJson = AppendTextUsingGet200ApplicationJson;
 var AppendTextUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingGet400ApplicationJson, _super);
     function AppendTextUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingGet400ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGet400ApplicationJson = AppendTextUsingGet400ApplicationJson;
 var AppendTextUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingGet401ApplicationJson, _super);
     function AppendTextUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingGet401ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGet401ApplicationJson = AppendTextUsingGet401ApplicationJson;
 var AppendTextUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendTextUsingGet500ApplicationJson, _super);
     function AppendTextUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendTextUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendTextUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendTextUsingGet500ApplicationJson.prototype, "message", void 0);
     return AppendTextUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { AppendTextUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGet500ApplicationJson = AppendTextUsingGet500ApplicationJson;
 var AppendTextUsingGetRequest = /** @class */ (function (_super) {
     __extends(AppendTextUsingGetRequest, _super);
     function AppendTextUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingGetQueryParams)
     ], AppendTextUsingGetRequest.prototype, "queryParams", void 0);
     return AppendTextUsingGetRequest;
-}(SpeakeasyBase));
-export { AppendTextUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGetRequest = AppendTextUsingGetRequest;
 var AppendTextUsingGetResponse = /** @class */ (function (_super) {
     __extends(AppendTextUsingGetResponse, _super);
     function AppendTextUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppendTextUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppendTextUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingGet200ApplicationJson)
-    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGet200ApplicationJsonObject", void 0);
+    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingGet400ApplicationJson)
-    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGet400ApplicationJsonObject", void 0);
+    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingGet401ApplicationJson)
-    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGet401ApplicationJsonObject", void 0);
+    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendTextUsingGet500ApplicationJson)
-    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGet500ApplicationJsonObject", void 0);
+    ], AppendTextUsingGetResponse.prototype, "appendTextUsingGET500ApplicationJSONObject", void 0);
     return AppendTextUsingGetResponse;
-}(SpeakeasyBase));
-export { AppendTextUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppendTextUsingGetResponse = AppendTextUsingGetResponse;

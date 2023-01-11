@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Template } from "./template";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var template_1 = require("./template");
 // TemplateConfiguration
 /**
  * Specifies the message template to use for the message, for each type of channel.
@@ -34,21 +37,21 @@ var TemplateConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailTemplate" }),
-        __metadata("design:type", Template)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailTemplate" }),
+        __metadata("design:type", template_1.Template)
     ], TemplateConfiguration.prototype, "emailTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PushTemplate" }),
-        __metadata("design:type", Template)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PushTemplate" }),
+        __metadata("design:type", template_1.Template)
     ], TemplateConfiguration.prototype, "pushTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SMSTemplate" }),
-        __metadata("design:type", Template)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SMSTemplate" }),
+        __metadata("design:type", template_1.Template)
     ], TemplateConfiguration.prototype, "smsTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VoiceTemplate" }),
-        __metadata("design:type", Template)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VoiceTemplate" }),
+        __metadata("design:type", template_1.Template)
     ], TemplateConfiguration.prototype, "voiceTemplate", void 0);
     return TemplateConfiguration;
-}(SpeakeasyBase));
-export { TemplateConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.TemplateConfiguration = TemplateConfiguration;

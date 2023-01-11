@@ -25,8 +25,8 @@ export class GetAccountsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAccounts200ApplicationJsonObject?: GetAccounts200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAccounts200ApplicationJSONObject?: GetAccounts200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileListFromComputeNodeResponse = exports.FileListFromComputeNodeRequest = exports.FileListFromComputeNodeHeaders = exports.FileListFromComputeNodeQueryParams = exports.FileListFromComputeNodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FileListFromComputeNodePathParams = /** @class */ (function (_super) {
     __extends(FileListFromComputeNodePathParams, _super);
     function FileListFromComputeNodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodePathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodePathParams.prototype, "poolId", void 0);
     return FileListFromComputeNodePathParams;
-}(SpeakeasyBase));
-export { FileListFromComputeNodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.FileListFromComputeNodePathParams = FileListFromComputeNodePathParams;
 var FileListFromComputeNodeQueryParams = /** @class */ (function (_super) {
     __extends(FileListFromComputeNodeQueryParams, _super);
     function FileListFromComputeNodeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$filter" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodeQueryParams.prototype, "dollarFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodeQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxresults" }),
         __metadata("design:type", Number)
     ], FileListFromComputeNodeQueryParams.prototype, "maxresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recursive" }),
         __metadata("design:type", Boolean)
     ], FileListFromComputeNodeQueryParams.prototype, "recursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], FileListFromComputeNodeQueryParams.prototype, "timeout", void 0);
     return FileListFromComputeNodeQueryParams;
-}(SpeakeasyBase));
-export { FileListFromComputeNodeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FileListFromComputeNodeQueryParams = FileListFromComputeNodeQueryParams;
 var FileListFromComputeNodeHeaders = /** @class */ (function (_super) {
     __extends(FileListFromComputeNodeHeaders, _super);
     function FileListFromComputeNodeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodeHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], FileListFromComputeNodeHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], FileListFromComputeNodeHeaders.prototype, "returnClientRequestId", void 0);
     return FileListFromComputeNodeHeaders;
-}(SpeakeasyBase));
-export { FileListFromComputeNodeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.FileListFromComputeNodeHeaders = FileListFromComputeNodeHeaders;
 var FileListFromComputeNodeRequest = /** @class */ (function (_super) {
     __extends(FileListFromComputeNodeRequest, _super);
     function FileListFromComputeNodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileListFromComputeNodePathParams)
     ], FileListFromComputeNodeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileListFromComputeNodeQueryParams)
     ], FileListFromComputeNodeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileListFromComputeNodeHeaders)
     ], FileListFromComputeNodeRequest.prototype, "headers", void 0);
     return FileListFromComputeNodeRequest;
-}(SpeakeasyBase));
-export { FileListFromComputeNodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.FileListFromComputeNodeRequest = FileListFromComputeNodeRequest;
 var FileListFromComputeNodeResponse = /** @class */ (function (_super) {
     __extends(FileListFromComputeNodeResponse, _super);
     function FileListFromComputeNodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FileListFromComputeNodeResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FileListFromComputeNodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], FileListFromComputeNodeResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FileListFromComputeNodeResponse.prototype, "nodeFileListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FileListFromComputeNodeResponse.prototype, "statusCode", void 0);
     return FileListFromComputeNodeResponse;
-}(SpeakeasyBase));
-export { FileListFromComputeNodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.FileListFromComputeNodeResponse = FileListFromComputeNodeResponse;

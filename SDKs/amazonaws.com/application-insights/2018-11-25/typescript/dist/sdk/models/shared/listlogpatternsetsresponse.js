@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListLogPatternSetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListLogPatternSetsResponse = /** @class */ (function (_super) {
     __extends(ListLogPatternSetsResponse, _super);
     function ListLogPatternSetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogPatternSets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogPatternSets" }),
         __metadata("design:type", Array)
     ], ListLogPatternSetsResponse.prototype, "logPatternSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListLogPatternSetsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceGroupName" }),
         __metadata("design:type", String)
     ], ListLogPatternSetsResponse.prototype, "resourceGroupName", void 0);
     return ListLogPatternSetsResponse;
-}(SpeakeasyBase));
-export { ListLogPatternSetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListLogPatternSetsResponse = ListLogPatternSetsResponse;

@@ -23,7 +23,7 @@ export class DeleteFaxMediaSecurity extends SpeakeasyBase {
 
 export class DeleteFaxMediaRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: DeleteFaxMediaPathParams;

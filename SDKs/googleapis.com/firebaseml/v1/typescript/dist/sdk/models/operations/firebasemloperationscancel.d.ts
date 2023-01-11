@@ -23,11 +23,11 @@ export declare class FirebasemlOperationsCancelSecurity extends SpeakeasyBase {
 export declare class FirebasemlOperationsCancelRequest extends SpeakeasyBase {
     pathParams: FirebasemlOperationsCancelPathParams;
     queryParams: FirebasemlOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FirebasemlOperationsCancelSecurity;
 }
 export declare class FirebasemlOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

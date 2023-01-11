@@ -31,8 +31,8 @@ export class GetContainersMessagesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getContainersMessages200ApplicationJsonObject?: GetContainersMessages200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getContainersMessages200ApplicationJSONObject?: GetContainersMessages200ApplicationJson;
 }

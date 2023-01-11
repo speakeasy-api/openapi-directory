@@ -35,7 +35,7 @@ export declare class LinkApplicationResponse extends SpeakeasyBase {
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     accountResponse?: shared.AccountResponse;
     contentType: string;
-    linkApplication403ApplicationJsonObject?: LinkApplication403ApplicationJson;
-    linkApplication409ApplicationJsonObject?: LinkApplication409ApplicationJson;
+    linkApplication403ApplicationJSONObject?: LinkApplication403ApplicationJson;
+    linkApplication409ApplicationJSONObject?: LinkApplication409ApplicationJson;
     statusCode: number;
 }

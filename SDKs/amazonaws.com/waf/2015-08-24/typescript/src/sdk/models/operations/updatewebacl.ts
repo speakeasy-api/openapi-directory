@@ -51,7 +51,7 @@ export class UpdateWebAclResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWebAclResponse?: shared.UpdateWebAclResponse;
+  updateWebACLResponse?: shared.UpdateWebAclResponse;
 
   @SpeakeasyMetadata()
   wafInternalErrorException?: any;

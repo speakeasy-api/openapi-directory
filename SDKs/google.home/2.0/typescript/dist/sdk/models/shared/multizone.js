@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Multizone = void 0;
+var utils_1 = require("../../../internal/utils");
 var Multizone = /** @class */ (function (_super) {
     __extends(Multizone, _super);
     function Multizone() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_output_delay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_output_delay" }),
         __metadata("design:type", Number)
     ], Multizone.prototype, "audioOutputDelay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_output_delay_hdmi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_output_delay_hdmi" }),
         __metadata("design:type", Number)
     ], Multizone.prototype, "audioOutputDelayHdmi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_output_delay_oem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_output_delay_oem" }),
         __metadata("design:type", Number)
     ], Multizone.prototype, "audioOutputDelayOem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aux_in_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aux_in_group" }),
         __metadata("design:type", String)
     ], Multizone.prototype, "auxInGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamic_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamic_groups" }),
         __metadata("design:type", Array)
     ], Multizone.prototype, "dynamicGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", Array)
     ], Multizone.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multichannel_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multichannel_status" }),
         __metadata("design:type", Number)
     ], Multizone.prototype, "multichannelStatus", void 0);
     return Multizone;
-}(SpeakeasyBase));
-export { Multizone };
+}(utils_1.SpeakeasyBase));
+exports.Multizone = Multizone;

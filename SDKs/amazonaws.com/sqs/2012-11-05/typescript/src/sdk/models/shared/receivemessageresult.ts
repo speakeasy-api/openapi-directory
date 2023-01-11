@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Message } from "./message";
+import { MessageList } from "./messagelist";
 
 
 
@@ -8,6 +8,6 @@ import { Message } from "./message";
  * A list of received messages.
 **/
 export class ReceiveMessageResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Message })
-  messages?: Message[];
+  @SpeakeasyMetadata({ elemType: MessageList })
+  messages?: MessageList[];
 }

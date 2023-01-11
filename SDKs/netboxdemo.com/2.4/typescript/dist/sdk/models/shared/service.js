@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-import { NestedIpAddress } from "./nestedipaddress";
-import { NestedVirtualMachine } from "./nestedvirtualmachine";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Service = exports.ServiceProtocol = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedipaddress_1 = require("./nestedipaddress");
+var nestedvirtualmachine_1 = require("./nestedvirtualmachine");
 var ServiceProtocol = /** @class */ (function (_super) {
     __extends(ServiceProtocol, _super);
     function ServiceProtocol() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ServiceProtocol.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], ServiceProtocol.prototype, "value", void 0);
     return ServiceProtocol;
-}(SpeakeasyBase));
-export { ServiceProtocol };
+}(utils_1.SpeakeasyBase));
+exports.ServiceProtocol = ServiceProtocol;
 var Service = /** @class */ (function (_super) {
     __extends(Service, _super);
     function Service() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Service.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Service.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], Service.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Service.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipaddresses", elemType: NestedIpAddress }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipaddresses", elemType: nestedipaddress_1.NestedIpAddress }),
         __metadata("design:type", Array)
     ], Service.prototype, "ipaddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Service.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Service.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], Service.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", ServiceProtocol)
     ], Service.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtual_machine" }),
-        __metadata("design:type", NestedVirtualMachine)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtual_machine" }),
+        __metadata("design:type", nestedvirtualmachine_1.NestedVirtualMachine)
     ], Service.prototype, "virtualMachine", void 0);
     return Service;
-}(SpeakeasyBase));
-export { Service };
+}(utils_1.SpeakeasyBase));
+exports.Service = Service;

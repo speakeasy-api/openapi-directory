@@ -37,7 +37,7 @@ export class Youtube extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnails" })
-  thumbnails?: Map<string, any>;
+  thumbnails?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=view_count" })
   viewCount?: number;

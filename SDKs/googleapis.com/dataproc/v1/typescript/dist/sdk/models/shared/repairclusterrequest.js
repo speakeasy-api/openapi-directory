@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NodePool } from "./nodepool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepairClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var nodepool_1 = require("./nodepool");
 // RepairClusterRequest
 /**
  * A request to repair a cluster.
@@ -34,25 +37,25 @@ var RepairClusterRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterUuid" }),
         __metadata("design:type", String)
     ], RepairClusterRequest.prototype, "clusterUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gracefulDecommissionTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gracefulDecommissionTimeout" }),
         __metadata("design:type", String)
     ], RepairClusterRequest.prototype, "gracefulDecommissionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodePools", elemType: NodePool }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodePools", elemType: nodepool_1.NodePool }),
         __metadata("design:type", Array)
     ], RepairClusterRequest.prototype, "nodePools", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentOperationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentOperationId" }),
         __metadata("design:type", String)
     ], RepairClusterRequest.prototype, "parentOperationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], RepairClusterRequest.prototype, "requestId", void 0);
     return RepairClusterRequest;
-}(SpeakeasyBase));
-export { RepairClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.RepairClusterRequest = RepairClusterRequest;
