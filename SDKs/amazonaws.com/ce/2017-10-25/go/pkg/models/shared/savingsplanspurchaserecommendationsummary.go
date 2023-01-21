@@ -1,0 +1,17 @@
+package shared
+
+// SavingsPlansPurchaseRecommendationSummary
+// Summary metrics for your Savings Plans Purchase Recommendations.
+type SavingsPlansPurchaseRecommendationSummary struct {
+	CurrencyCode                               *string `json:"CurrencyCode,omitempty"`
+	CurrentOnDemandSpend                       *string `json:"CurrentOnDemandSpend,omitempty"`
+	DailyCommitmentToPurchase                  *string `json:"DailyCommitmentToPurchase,omitempty"`
+	EstimatedMonthlySavingsAmount              *string `json:"EstimatedMonthlySavingsAmount,omitempty"`
+	EstimatedOnDemandCostWithCurrentCommitment *string `json:"EstimatedOnDemandCostWithCurrentCommitment,omitempty"`
+	EstimatedROI                               *string `json:"EstimatedROI,omitempty"`
+	EstimatedSavingsAmount                     *string `json:"EstimatedSavingsAmount,omitempty"`
+	EstimatedSavingsPercentage                 *string `json:"EstimatedSavingsPercentage,omitempty"`
+	EstimatedTotalCost                         *string `json:"EstimatedTotalCost,omitempty"`
+	HourlyCommitmentToPurchase                 *string `json:"HourlyCommitmentToPurchase,omitempty"`
+	TotalRecommendationCount                   *string `json:"TotalRecommendationCount,omitempty"`
+}

@@ -35,18 +35,18 @@ func main() {
     req := operations.GetAddClientIDToOpenIDConnectProviderRequest{
         QueryParams: operations.GetAddClientIDToOpenIDConnectProviderQueryParams{
             Action: "AddClientIDToOpenIDConnectProvider",
-            ClientID: "aperiam",
-            OpenIDConnectProviderArn: "earum",
+            ClientID: "voluptas",
+            OpenIDConnectProviderArn: "culpa",
             Version: "2010-05-08",
         },
         Headers: operations.GetAddClientIDToOpenIDConnectProviderHeaders{
-            XAmzAlgorithm: "earum",
-            XAmzContentSha256: "est",
-            XAmzCredential: "error",
-            XAmzDate: "ipsa",
-            XAmzSecurityToken: "sint",
-            XAmzSignature: "saepe",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "consequuntur",
+            XAmzContentSha256: "dolor",
+            XAmzCredential: "expedita",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "nihil",
         },
     }
     

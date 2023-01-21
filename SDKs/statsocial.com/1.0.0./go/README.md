@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetApplicationsStatusRequest{
         QueryParams: operations.GetApplicationsStatusQueryParams{
-            Key: "magni",
+            Key: "sit",
         },
     }
     

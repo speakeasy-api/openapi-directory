@@ -24,7 +24,7 @@ func main() {
     
     req := operations.ConnectRequest{
         Request: &operations.ConnectRequestBody{
-            Endpoint: "iste",
+            Endpoint: "sit",
         },
     }
     

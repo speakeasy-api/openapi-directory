@@ -1,0 +1,20 @@
+package shared
+
+type GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum string
+
+const (
+	GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnumOrientationUnspecified GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum = "ORIENTATION_UNSPECIFIED"
+	GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnumPageUp                 GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum = "PAGE_UP"
+	GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnumPageRight              GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum = "PAGE_RIGHT"
+	GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnumPageDown               GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum = "PAGE_DOWN"
+	GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnumPageLeft               GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum = "PAGE_LEFT"
+)
+
+// GoogleCloudDocumentaiV1beta3DocumentPageLayout
+// Visual element describing a layout unit on a page.
+type GoogleCloudDocumentaiV1beta3DocumentPageLayout struct {
+	BoundingPoly *GoogleCloudDocumentaiV1beta3BoundingPoly                      `json:"boundingPoly,omitempty"`
+	Confidence   *float32                                                       `json:"confidence,omitempty"`
+	Orientation  *GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum `json:"orientation,omitempty"`
+	TextAnchor   *GoogleCloudDocumentaiV1beta3DocumentTextAnchor                `json:"textAnchor,omitempty"`
+}

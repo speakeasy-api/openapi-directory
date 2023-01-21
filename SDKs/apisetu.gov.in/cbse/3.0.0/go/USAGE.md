@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                FullName: "facere",
-                Rollno: "rerum",
-                Year: "ea",
+                FullName: "sit",
+                Rollno: "voluptas",
+                Year: "culpa",
             },
-            ConsentArtifact: "cupiditate",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "sed",
+            TxnID: "dolor",
         },
     }
     

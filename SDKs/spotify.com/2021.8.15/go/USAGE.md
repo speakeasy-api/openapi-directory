@@ -18,13 +18,13 @@ func main() {
             },
         },
         PathParams: operations.EndpointGetAnAlbumPathParams{
-            ID: "aut",
+            ID: "sit",
         },
         QueryParams: operations.EndpointGetAnAlbumQueryParams{
-            Market: "perspiciatis",
+            Market: "voluptas",
         },
         Headers: operations.EndpointGetAnAlbumHeaders{
-            Authorization: "aut",
+            Authorization: "culpa",
         },
     }
     

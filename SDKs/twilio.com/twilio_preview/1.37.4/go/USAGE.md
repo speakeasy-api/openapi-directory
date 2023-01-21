@@ -19,12 +19,12 @@ func main() {
             },
         },
         PathParams: operations.CreateDeployedDevicesCertificatePathParams{
-            FleetSid: "eveniet",
+            FleetSid: "sit",
         },
         Request: &operations.CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest{
-            CertificateData: "et",
-            DeviceSid: "laborum",
-            FriendlyName: "sunt",
+            CertificateData: "voluptas",
+            DeviceSid: "culpa",
+            FriendlyName: "expedita",
         },
     }
     

@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateTrackerConsumerRequest{
         PathParams: operations.AssociateTrackerConsumerPathParams{
-            TrackerName: "omnis",
+            TrackerName: "sit",
         },
         Headers: operations.AssociateTrackerConsumerHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "dolores",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "consectetur",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "ducimus",
-            XAmzSignedHeaders: "adipisci",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.AssociateTrackerConsumerRequestBody{
-            ConsumerArn: "ut",
+            ConsumerArn: "fugit",
         },
     }
     

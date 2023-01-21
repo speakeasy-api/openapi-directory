@@ -1,0 +1,8 @@
+package shared
+
+// CancelPaymentByIdempotencyKeyRequest
+// Describes a request to cancel a payment using
+// [CancelPaymentByIdempotencyKey](https://developer.squareup.com/reference/square_2021-08-18/payments-api/cancel-payment-by-idempotency-key).
+type CancelPaymentByIdempotencyKeyRequest struct {
+	IdempotencyKey string `json:"idempotency_key"`
+}

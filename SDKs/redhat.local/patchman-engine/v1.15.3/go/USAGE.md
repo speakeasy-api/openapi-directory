@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.LatestPackagePathParams{
-            PackageName: "dolorum",
+            PackageName: "sit",
         },
     }
     

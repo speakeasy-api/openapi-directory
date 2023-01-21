@@ -23,17 +23,17 @@ func main() {
     
     req := operations.CancelKeyDeletionRequest{
         Headers: operations.CancelKeyDeletionHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "officiis",
-            XAmzCredential: "aliquid",
-            XAmzDate: "natus",
-            XAmzSecurityToken: "voluptate",
-            XAmzSignature: "consectetur",
-            XAmzSignedHeaders: "tempore",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "TrentService.CancelKeyDeletion",
         },
         Request: shared.CancelKeyDeletionRequest{
-            KeyID: "voluptatibus",
+            KeyID: "fugit",
         },
     }
     

@@ -29,8 +29,8 @@ func main() {
             },
         },
         QueryParams: operations.SearchQueryParams{
-            MatchMode: "regexp",
-            Query: "ullam",
+            MatchMode: "literal",
+            Query: "voluptas",
         },
     }
     

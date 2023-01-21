@@ -24,15 +24,15 @@ func main() {
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "architecto",
+            Fields: "voluptas",
             IncludeSubscribed: true,
-            Key: "quaerat",
-            MaxChangeIDCount: "in",
-            OauthToken: "quae",
-            PrettyPrint: false,
-            QuotaUser: "omnis",
-            StartChangeID: "incidunt",
-            UserIP: "eius",
+            Key: "expedita",
+            MaxChangeIDCount: "consequuntur",
+            OauthToken: "dolor",
+            PrettyPrint: true,
+            QuotaUser: "voluptas",
+            StartChangeID: "fugit",
+            UserIP: "et",
         },
     }
     

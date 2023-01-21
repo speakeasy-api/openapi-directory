@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.DgmstRequestBody{
             CertificateParameters: &operations.DgmstRequestBodyCertificateParameters{
-                FullName: "architecto",
-                RROLL: "eum",
-                SEM: "modi",
+                FullName: "sit",
+                RROLL: "voluptas",
+                SEM: "culpa",
             },
-            ConsentArtifact: "voluptatem",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "illum",
+            TxnID: "dolor",
         },
     }
     

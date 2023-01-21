@@ -24,9 +24,9 @@ func main() {
     
     req := operations.MediaTabularExtractsheetRequest{
         QueryParams: operations.MediaTabularExtractsheetQueryParams{
-            Arg1: "numquam",
-            Entryid: "modi",
-            Output: "quia",
+            Arg1: "sit",
+            Entryid: "voluptas",
+            Output: "culpa",
         },
     }
     

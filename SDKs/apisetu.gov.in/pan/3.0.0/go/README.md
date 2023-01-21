@@ -33,16 +33,16 @@ func main() {
         },
         Request: &operations.PancrRequestBody{
             CertificateParameters: &operations.PancrRequestBodyCertificateParameters{
-                DOB: "sint",
-                FullName: "cumque",
-                GENDER: "ut",
-                PANFullName: "nam",
-                UID: "a",
-                Panno: "sed",
+                DOB: "sit",
+                FullName: "voluptas",
+                GENDER: "culpa",
+                PANFullName: "expedita",
+                UID: "consequuntur",
+                Panno: "dolor",
             },
-            ConsentArtifact: "sint",
-            Format: "xml",
-            TxnID: "impedit",
+            ConsentArtifact: "expedita",
+            Format: "pdf",
+            TxnID: "fugit",
         },
     }
     

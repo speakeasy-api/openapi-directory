@@ -34,16 +34,16 @@ func main() {
     
     req := operations.ClassifyImageRequest{
         PathParams: operations.ClassifyImagePathParams{
-            ProjectID: "aut",
-            PublishedName: "beatae",
+            ProjectID: "sit",
+            PublishedName: "voluptas",
         },
         QueryParams: operations.ClassifyImageQueryParams{
-            Application: "beatae",
+            Application: "culpa",
         },
         Request: operations.ClassifyImageRequestBody{
             ImageData: operations.ClassifyImageRequestBodyImageData{
-                Content: []byte("veniam"),
-                ImageData: "sed",
+                Content: []byte("expedita"),
+                ImageData: "consequuntur",
             },
         },
     }

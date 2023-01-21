@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                DOB: "consequatur",
-                FullName: "dolorem",
-                GENDER: "facilis",
-                PolicyNo: "quam",
-                PolicyType: "similique",
+                DOB: "sit",
+                FullName: "voluptas",
+                GENDER: "culpa",
+                PolicyNo: "expedita",
+                PolicyType: "consequuntur",
             },
-            ConsentArtifact: "ut",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "eum",
+            TxnID: "voluptas",
         },
     }
     

@@ -21,92 +21,99 @@ func main() {
             },
         },
         PathParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams{
-            Parent: "enim",
+            Parent: "sit",
         },
         QueryParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "json",
-            Callback: "et",
-            Fields: "id",
-            Key: "dolorem",
-            OauthToken: "sit",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "a",
-            UploadType: "nulla",
-            UploadProtocol: "blanditiis",
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
         Request: &shared.GoogleCloudRecommendationengineV1beta1CatalogItem{
             CategoryHierarchies: []shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "corporis",
-                        "recusandae",
+                        "voluptatum",
+                    },
+                },
+                shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
+                    Categories: []string{
+                        "ut",
+                    },
+                },
+                shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
+                    Categories: []string{
+                        "et",
+                        "voluptate",
+                        "iste",
                     },
                 },
             },
-            Description: "delectus",
-            ID: "eos",
+            Description: "vitae",
+            ID: "totam",
             ItemAttributes: &shared.GoogleCloudRecommendationengineV1beta1FeatureMap{
                 CategoricalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                    "culpa": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "illum": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "aut",
-                            "consequatur",
+                            "vel",
                         },
                     },
                 },
                 NumericalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                    "odio": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "dolore": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            34.200001,
-                            40.200001,
+                            57.099998,
+                            45.099998,
                         },
                     },
                 },
             },
-            ItemGroupID: "iste",
-            LanguageCode: "et",
+            ItemGroupID: "quis",
+            LanguageCode: "est",
             ProductMetadata: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem{
-                AvailableQuantity: "et",
-                CanonicalProductURI: "laudantium",
+                AvailableQuantity: "aut",
+                CanonicalProductURI: "odit",
                 Costs: map[string]float32{
-                    "similique": 77.199997,
+                    "voluptas": 87.099998,
+                    "illo": 78.199997,
+                    "autem": 68.099998,
                 },
-                CurrencyCode: "incidunt",
+                CurrencyCode: "odio",
                 ExactPrice: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice{
-                    DisplayPrice: 27.200001,
-                    OriginalPrice: 64.099998,
+                    DisplayPrice: 77.099998,
+                    OriginalPrice: 88.099998,
                 },
                 Images: []shared.GoogleCloudRecommendationengineV1beta1Image{
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 8942292800023669852,
-                        URI: "autem",
-                        Width: 5883357621257773236,
+                        Height: 303089054982227392,
+                        URI: "sint",
+                        Width: 5392504858645185670,
                     },
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 478099075473941033,
-                        URI: "dolore",
-                        Width: 7587515172654034190,
-                    },
-                    shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 8043303013086071262,
-                        URI: "ipsa",
-                        Width: 1654514952870731982,
+                        Height: 7847956203786849690,
+                        URI: "exercitationem",
+                        Width: 4756106358532488297,
                     },
                 },
                 PriceRange: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange{
-                    Max: 75.199997,
-                    Min: 32.099998,
+                    Max: 30.200001,
+                    Min: 97.099998,
                 },
-                StockState: "IN_STOCK",
+                StockState: "BACKORDER",
             },
             Tags: []string{
-                "aut",
-                "reprehenderit",
-                "ea",
+                "veritatis",
+                "in",
+                "et",
             },
-            Title: "dolorem",
+            Title: "omnis",
         },
     }
     

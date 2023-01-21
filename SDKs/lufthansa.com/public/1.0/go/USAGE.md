@@ -18,13 +18,13 @@ func main() {
             },
         },
         PathParams: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams{
-            Destination: "perferendis",
-            FromDate: "qui",
-            Origin: "eum",
-            ProductCode: "FDG",
+            Destination: "sit",
+            FromDate: "voluptas",
+            Origin: "culpa",
+            ProductCode: "FUN",
         },
         Headers: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders{
-            Accept: "magni",
+            Accept: "consequuntur",
         },
     }
     

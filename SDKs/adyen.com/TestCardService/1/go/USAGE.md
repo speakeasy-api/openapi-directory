@@ -18,7 +18,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "omnis",
+        Request: "sit",
     }
     
     res, err := s.General.PostCreateTestCardRanges(ctx, req)

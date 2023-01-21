@@ -29,7 +29,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "vitae",
+        Request: "sit",
     }
     
     res, err := s.General.PostAccountHolderBalance(ctx, req)

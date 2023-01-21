@@ -34,22 +34,22 @@ func main() {
     
     req := operations.CompileRequest{
         PathParams: operations.CompilePathParams{
-            TemplateToken: "et",
+            TemplateToken: "sit",
         },
         QueryParams: operations.CompileQueryParams{
-            DocFileName: "facere",
-            DocURLExpiresIn: 6665699353848896203,
-            LatexCompiler: "lualatex",
-            LatexRuns: 1660818401949066256,
-            MainFileName: "minima",
+            DocFileName: "voluptas",
+            DocURLExpiresIn: 6050128673802995827,
+            LatexCompiler: "pdflatex",
+            LatexRuns: 3390393562759376202,
+            MainFileName: "dolor",
         },
         Headers: operations.CompileHeaders{
-            ContentType: "est",
+            ContentType: "expedita",
         },
         Request: map[string]interface{}{
-            "non": "aut",
-            "explicabo": "error",
-            "consectetur": "quis",
+            "fugit": "et",
+            "nihil": "rerum",
+            "dicta": "debitis",
         },
     }
     

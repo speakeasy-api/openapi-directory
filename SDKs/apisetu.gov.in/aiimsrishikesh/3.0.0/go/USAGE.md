@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                FullName: "quam",
-                RROLL: "modi",
+                FullName: "sit",
+                RROLL: "voluptas",
             },
-            ConsentArtifact: "cupiditate",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "earum",
+            TxnID: "consequuntur",
         },
     }
     

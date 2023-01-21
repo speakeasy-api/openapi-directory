@@ -35,11 +35,11 @@ func main() {
             CertificateParameters: &operations.HscerRequestBodyCertificateParameters{
                 FullName: "sit",
                 Rollno: "voluptas",
-                Year: "velit",
+                Year: "culpa",
             },
-            ConsentArtifact: "possimus",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "dolor",
         },
     }
     

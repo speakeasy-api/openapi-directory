@@ -18,7 +18,6 @@ type HTTPClient interface {
 type SDK struct {
 	Authentication *Authentication
 	History        *History
-	Publishing     *Publishing
 	Push           *Push
 	Stats          *Stats
 	Status         *Status
@@ -93,15 +92,6 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.History = NewHistory(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.Publishing = NewPublishing(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

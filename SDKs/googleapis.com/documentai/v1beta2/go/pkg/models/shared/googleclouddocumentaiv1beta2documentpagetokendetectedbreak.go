@@ -1,0 +1,16 @@
+package shared
+
+type GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum string
+
+const (
+	GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnumTypeUnspecified GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum = "TYPE_UNSPECIFIED"
+	GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnumSpace           GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum = "SPACE"
+	GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnumWideSpace       GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum = "WIDE_SPACE"
+	GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnumHyphen          GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum = "HYPHEN"
+)
+
+// GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak
+// Detected break at the end of a Token.
+type GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak struct {
+	Type *GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum `json:"type,omitempty"`
+}

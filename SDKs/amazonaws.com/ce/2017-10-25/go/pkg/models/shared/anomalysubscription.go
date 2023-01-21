@@ -1,0 +1,13 @@
+package shared
+
+// AnomalySubscription
+// The association between a monitor, threshold, and list of subscribers used to deliver notifications about anomalies detected by a monitor that exceeds a threshold. The content consists of the detailed metadata and the current status of the <code>AnomalySubscription</code> object.
+type AnomalySubscription struct {
+	AccountID        *string                          `json:"AccountId,omitempty"`
+	Frequency        AnomalySubscriptionFrequencyEnum `json:"Frequency"`
+	MonitorArnList   []string                         `json:"MonitorArnList"`
+	Subscribers      []Subscriber                     `json:"Subscribers"`
+	SubscriptionArn  *string                          `json:"SubscriptionArn,omitempty"`
+	SubscriptionName string                           `json:"SubscriptionName"`
+	Threshold        float64                          `json:"Threshold"`
+}

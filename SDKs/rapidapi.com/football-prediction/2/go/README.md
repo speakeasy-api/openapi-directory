@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetAPIV2ListFederationsRequest{
         Headers: operations.GetAPIV2ListFederationsHeaders{
-            XRapidAPIKey: "soluta",
+            XRapidAPIKey: "sit",
         },
     }
     

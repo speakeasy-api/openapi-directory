@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetAccountInfoRequest{
         Headers: operations.GetAccountInfoHeaders{
-            TrainingKey: "officiis",
+            TrainingKey: "sit",
         },
     }
     

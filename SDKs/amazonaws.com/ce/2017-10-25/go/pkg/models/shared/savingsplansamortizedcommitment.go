@@ -1,0 +1,9 @@
+package shared
+
+// SavingsPlansAmortizedCommitment
+// The amortized amount of Savings Plans purchased in a specific account during a specific time interval.
+type SavingsPlansAmortizedCommitment struct {
+	AmortizedRecurringCommitment *string `json:"AmortizedRecurringCommitment,omitempty"`
+	AmortizedUpfrontCommitment   *string `json:"AmortizedUpfrontCommitment,omitempty"`
+	TotalAmortizedCommitment     *string `json:"TotalAmortizedCommitment,omitempty"`
+}

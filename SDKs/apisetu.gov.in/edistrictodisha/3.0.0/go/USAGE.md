@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.CtcerRequestBody{
             CertificateParameters: &operations.CtcerRequestBodyCertificateParameters{
-                UID: "veritatis",
-                Refno: "dolorum",
+                UID: "sit",
+                Refno: "voluptas",
             },
-            ConsentArtifact: "voluptas",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "saepe",
+            TxnID: "consequuntur",
         },
     }
     

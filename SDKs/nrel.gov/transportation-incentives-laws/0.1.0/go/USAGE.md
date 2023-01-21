@@ -13,11 +13,11 @@ func main() {
     
     req := operations.GetV1CategoryListOutputFormatRequest{
         PathParams: operations.GetV1CategoryListOutputFormatPathParams{
-            OutputFormat: "xml",
+            OutputFormat: "json",
         },
         QueryParams: operations.GetV1CategoryListOutputFormatQueryParams{
-            APIKey: "natus",
-            Type: "incentive",
+            APIKey: "voluptas",
+            Type: "user",
         },
     }
     

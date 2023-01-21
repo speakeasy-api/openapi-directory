@@ -13,13 +13,13 @@ func main() {
     
     req := operations.TaxRatesByCountryCodeRequest{
         QueryParams: operations.TaxRatesByCountryCodeQueryParams{
-            CountryCode: "animi",
-            Date: "tempora",
-            Domain: "enim",
-            Filter: "aperiam",
-            ProductCodes: "doloremque",
-            Province: "in",
-            Zip: "quia",
+            CountryCode: "sit",
+            Date: "voluptas",
+            Domain: "culpa",
+            Filter: "expedita",
+            ProductCodes: "consequuntur",
+            Province: "dolor",
+            Zip: "expedita",
         },
     }
     

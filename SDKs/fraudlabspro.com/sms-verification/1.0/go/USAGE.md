@@ -14,9 +14,9 @@ func main() {
     req := operations.GetV1VerificationResultRequest{
         QueryParams: operations.GetV1VerificationResultQueryParams{
             Format: "json",
-            Key: "voluptatem",
-            Otp: "nam",
-            TranID: "eum",
+            Key: "voluptas",
+            Otp: "culpa",
+            TranID: "expedita",
         },
     }
     

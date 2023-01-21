@@ -31,8 +31,8 @@ type ProjectSettings struct {
 // ProjectSettingsInput
 // Represents settings associated with a project.
 type ProjectSettingsInput struct {
-	ClassificationType      *ProjectSettingsClassificationTypeEnum     `json:"classificationType,omitempty" form:"name=classificationType"`
-	DomainID                *string                                    `json:"domainId,omitempty" form:"name=domainId"`
-	ImageProcessingSettings *ImageProcessingSettings                   `json:"imageProcessingSettings,omitempty" form:"name=imageProcessingSettings"`
-	TargetExportPlatforms   []ProjectSettingsTargetExportPlatformsEnum `json:"targetExportPlatforms,omitempty" form:"name=targetExportPlatforms"`
+	ClassificationType      *ProjectSettingsClassificationTypeEnum     `json:"classificationType,omitempty"`
+	DomainID                *string                                    `json:"domainId,omitempty"`
+	ImageProcessingSettings *ImageProcessingSettings                   `json:"imageProcessingSettings,omitempty"`
+	TargetExportPlatforms   []ProjectSettingsTargetExportPlatformsEnum `json:"targetExportPlatforms,omitempty"`
 }

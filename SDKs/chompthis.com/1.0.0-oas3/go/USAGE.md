@@ -18,7 +18,7 @@ func main() {
             },
         },
         QueryParams: operations.GetFoodBrandedBarcodePhpQueryParams{
-            Code: "velit",
+            Code: "sit",
         },
     }
     

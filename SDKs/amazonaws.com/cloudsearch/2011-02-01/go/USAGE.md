@@ -24,17 +24,17 @@ func main() {
     req := operations.GetCreateDomainRequest{
         QueryParams: operations.GetCreateDomainQueryParams{
             Action: "CreateDomain",
-            DomainName: "illo",
+            DomainName: "voluptas",
             Version: "2011-02-01",
         },
         Headers: operations.GetCreateDomainHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "eum",
-            XAmzDate: "mollitia",
-            XAmzSecurityToken: "praesentium",
-            XAmzSignature: "inventore",
-            XAmzSignedHeaders: "adipisci",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
+            XAmzSignedHeaders: "et",
         },
     }
     

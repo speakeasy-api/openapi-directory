@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetareacodeRequest{
         QueryParams: operations.GetareacodeQueryParams{
-            Areacode: "excepturi",
-            License: "rem",
+            Areacode: "sit",
+            License: "voluptas",
         },
     }
     

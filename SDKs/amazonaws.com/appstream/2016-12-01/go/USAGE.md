@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AssociateFleetRequest{
         Headers: operations.AssociateFleetHeaders{
-            XAmzAlgorithm: "sapiente",
-            XAmzContentSha256: "ipsam",
-            XAmzCredential: "autem",
-            XAmzDate: "placeat",
-            XAmzSecurityToken: "velit",
-            XAmzSignature: "minus",
-            XAmzSignedHeaders: "praesentium",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "PhotonAdminProxyService.AssociateFleet",
         },
         Request: shared.AssociateFleetRequest{
-            FleetName: "voluptas",
-            StackName: "consequatur",
+            FleetName: "fugit",
+            StackName: "et",
         },
     }
     

@@ -32,18 +32,18 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherInapppurchasesGetPathParams{
-            PackageName: "molestiae",
-            ProductID: "quas",
-            Token: "assumenda",
+            PackageName: "sit",
+            ProductID: "voluptas",
+            Token: "culpa",
         },
         QueryParams: operations.AndroidpublisherInapppurchasesGetQueryParams{
             Alt: "json",
-            Fields: "eos",
-            Key: "ut",
-            OauthToken: "nulla",
-            PrettyPrint: false,
-            QuotaUser: "cupiditate",
-            UserIP: "dolores",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
+            PrettyPrint: true,
+            QuotaUser: "fugit",
+            UserIP: "et",
         },
     }
     

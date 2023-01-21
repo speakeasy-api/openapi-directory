@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.FindFormByFormNamePathParams{
-            FormName: "assumenda",
+            FormName: "sit",
         },
     }
     

@@ -34,23 +34,23 @@ func main() {
     
     req := operations.ListRealtimeContactAnalysisSegmentsRequest{
         QueryParams: operations.ListRealtimeContactAnalysisSegmentsQueryParams{
-            MaxResults: "error",
-            NextToken: "odit",
+            MaxResults: "sit",
+            NextToken: "voluptas",
         },
         Headers: operations.ListRealtimeContactAnalysisSegmentsHeaders{
-            XAmzAlgorithm: "repudiandae",
-            XAmzContentSha256: "pariatur",
-            XAmzCredential: "est",
-            XAmzDate: "at",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "libero",
-            XAmzSignedHeaders: "aperiam",
+            XAmzAlgorithm: "culpa",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "consequuntur",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "fugit",
         },
         Request: operations.ListRealtimeContactAnalysisSegmentsRequestBody{
-            ContactID: "voluptatem",
-            InstanceID: "sunt",
-            MaxResults: 5474918243671586608,
-            NextToken: "quaerat",
+            ContactID: "et",
+            InstanceID: "nihil",
+            MaxResults: 8325060299420976708,
+            NextToken: "dicta",
         },
     }
     

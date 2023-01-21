@@ -34,25 +34,25 @@ func main() {
     
     req := operations.CreateAttachmentForTaskRequest{
         PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "delectus",
+            TaskGid: "sit",
         },
         QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 4628205130743140522,
-            Offset: "eveniet",
+            Limit: 2259404117704393152,
+            Offset: "culpa",
             OptFields: []string{
-                "sit",
-                "est",
+                "consequuntur",
+                "dolor",
             },
             OptPretty: true,
         },
         Request: shared.AttachmentRequest{
             File: &shared.AttachmentRequestFile{
-                Content: []byte("ipsa"),
-                File: "assumenda",
+                Content: []byte("voluptas"),
+                File: "fugit",
             },
-            Name: "id",
+            Name: "et",
             ResourceSubtype: "asana_file_attachments",
-            URL: "ipsam",
+            URL: "rerum",
         },
     }
     

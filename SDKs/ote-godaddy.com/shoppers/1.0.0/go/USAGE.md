@@ -13,9 +13,9 @@ func main() {
     
     req := operations.ChangePasswordRequest{
         PathParams: operations.ChangePasswordPathParams{
-            ShopperID: "deleniti",
+            ShopperID: "sit",
         },
-        Request: "est",
+        Request: "voluptas",
     }
     
     res, err := s.V1.ChangePassword(ctx, req)

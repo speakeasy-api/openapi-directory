@@ -18,7 +18,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "voluptatum",
+        Request: "sit",
     }
     
     res, err := s.AccountHolders.PostCloseAccountHolder(ctx, req)

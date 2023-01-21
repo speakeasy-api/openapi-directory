@@ -1,0 +1,10 @@
+package shared
+
+type GetSavingsPlansUtilizationDetailsRequest struct {
+	DataType   []SavingsPlansDataTypeEnum `json:"DataType,omitempty"`
+	Filter     *Expression                `json:"Filter,omitempty"`
+	MaxResults *int64                     `json:"MaxResults,omitempty"`
+	NextToken  *string                    `json:"NextToken,omitempty"`
+	SortBy     *SortDefinition            `json:"SortBy,omitempty"`
+	TimePeriod DateInterval               `json:"TimePeriod"`
+}

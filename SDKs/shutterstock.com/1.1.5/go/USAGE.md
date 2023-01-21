@@ -18,14 +18,14 @@ func main() {
             },
         },
         PathParams: operations.AddTrackCollectionItemsPathParams{
-            ID: "magni",
+            ID: "sit",
         },
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2013-04-20T11:02:32Z",
-                    ID: "ad",
-                    MediaType: "autem",
+                    AddedTime: "1978-05-13T03:50:47Z",
+                    ID: "expedita",
+                    MediaType: "consequuntur",
                 },
             },
         },

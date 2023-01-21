@@ -13,13 +13,13 @@ func main() {
     
     req := operations.DeleteAeAssessmentRequest{
         PathParams: operations.DeleteAeAssessmentPathParams{
-            AEAssessmentID: "at",
-            EmployeeID: "quos",
-            EmployerID: "odit",
+            AEAssessmentID: "sit",
+            EmployeeID: "voluptas",
+            EmployerID: "culpa",
         },
         Headers: operations.DeleteAeAssessmentHeaders{
-            APIVersion: "a",
-            Authorization: "nihil",
+            APIVersion: "expedita",
+            Authorization: "consequuntur",
         },
     }
     

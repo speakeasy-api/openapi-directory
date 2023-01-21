@@ -1,0 +1,18 @@
+package shared
+
+import (
+	"time"
+)
+
+// DataSourceSyncJob
+// Provides information about a synchronization job.
+type DataSourceSyncJob struct {
+	DataSourceErrorCode *string                      `json:"DataSourceErrorCode,omitempty"`
+	EndTime             *time.Time                   `json:"EndTime,omitempty"`
+	ErrorCode           *ErrorCodeEnum               `json:"ErrorCode,omitempty"`
+	ErrorMessage        *string                      `json:"ErrorMessage,omitempty"`
+	ExecutionID         *string                      `json:"ExecutionId,omitempty"`
+	Metrics             *DataSourceSyncJobMetrics    `json:"Metrics,omitempty"`
+	StartTime           *time.Time                   `json:"StartTime,omitempty"`
+	Status              *DataSourceSyncJobStatusEnum `json:"Status,omitempty"`
+}

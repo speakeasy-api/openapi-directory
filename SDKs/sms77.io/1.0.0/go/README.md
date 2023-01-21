@@ -34,11 +34,11 @@ func main() {
     
     req := operations.AnalyticsRequest{
         QueryParams: operations.AnalyticsQueryParams{
-            End: "autem",
-            GroupBy: "label",
-            Label: "a",
-            Start: "ut",
-            Subaccounts: "quia",
+            End: "sit",
+            GroupBy: "subaccount",
+            Label: "culpa",
+            Start: "expedita",
+            Subaccounts: "consequuntur",
         },
     }
     

@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.GetEventPathParams{
-            ID: "neque",
+            ID: "sit",
         },
     }
     

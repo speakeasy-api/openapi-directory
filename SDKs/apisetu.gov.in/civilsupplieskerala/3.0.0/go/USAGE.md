@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.RatcrRequestBody{
             CertificateParameters: &operations.RatcrRequestBodyCertificateParameters{
-                FullName: "sint",
-                UID: "accusamus",
+                FullName: "sit",
+                UID: "voluptas",
             },
-            ConsentArtifact: "saepe",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "ut",
+            TxnID: "consequuntur",
         },
     }
     

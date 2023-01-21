@@ -23,7 +23,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostOriginKeysRequest{
-        Request: "iste",
+        Request: "sit",
     }
     
     res, err := s.PostOriginKeys(ctx, req)

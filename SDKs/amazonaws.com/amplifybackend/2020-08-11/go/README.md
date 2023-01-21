@@ -34,20 +34,20 @@ func main() {
     
     req := operations.CloneBackendRequest{
         PathParams: operations.CloneBackendPathParams{
-            AppID: "laboriosam",
-            BackendEnvironmentName: "velit",
+            AppID: "sit",
+            BackendEnvironmentName: "voluptas",
         },
         Headers: operations.CloneBackendHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "tempore",
-            XAmzCredential: "fugit",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "tempora",
-            XAmzSignature: "aliquid",
-            XAmzSignedHeaders: "mollitia",
+            XAmzAlgorithm: "culpa",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "consequuntur",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "fugit",
         },
         Request: operations.CloneBackendRequestBody{
-            TargetEnvironmentName: "non",
+            TargetEnvironmentName: "et",
         },
     }
     

@@ -13,24 +13,25 @@ func main() {
     
     req := operations.FirebasehostingOperationsCancelRequest{
         PathParams: operations.FirebasehostingOperationsCancelPathParams{
-            Name: "inventore",
+            Name: "sit",
         },
         QueryParams: operations.FirebasehostingOperationsCancelQueryParams{
             DollarXgafv: "1",
-            AccessToken: "cumque",
+            AccessToken: "culpa",
             Alt: "media",
-            Callback: "voluptatem",
-            Fields: "tempore",
-            Key: "cum",
-            OauthToken: "ratione",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "eius",
-            UploadType: "et",
-            UploadProtocol: "consequatur",
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
         Request: map[string]interface{}{
-            "placeat": "est",
-            "voluptas": "et",
+            "debitis": "voluptatum",
+            "et": "ut",
+            "dolorem": "et",
         },
     }
     

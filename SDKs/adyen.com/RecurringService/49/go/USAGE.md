@@ -18,7 +18,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "odit",
+        Request: "sit",
     }
     
     res, err := s.General.PostDisable(ctx, req)

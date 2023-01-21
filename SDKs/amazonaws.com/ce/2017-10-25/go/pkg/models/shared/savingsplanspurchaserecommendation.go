@@ -1,0 +1,13 @@
+package shared
+
+// SavingsPlansPurchaseRecommendation
+// Contains your request parameters, Savings Plan Recommendations Summary, and Details.
+type SavingsPlansPurchaseRecommendation struct {
+	AccountScope                              *AccountScopeEnum                          `json:"AccountScope,omitempty"`
+	LookbackPeriodInDays                      *LookbackPeriodInDaysEnum                  `json:"LookbackPeriodInDays,omitempty"`
+	PaymentOption                             *PaymentOptionEnum                         `json:"PaymentOption,omitempty"`
+	SavingsPlansPurchaseRecommendationDetails []SavingsPlansPurchaseRecommendationDetail `json:"SavingsPlansPurchaseRecommendationDetails,omitempty"`
+	SavingsPlansPurchaseRecommendationSummary *SavingsPlansPurchaseRecommendationSummary `json:"SavingsPlansPurchaseRecommendationSummary,omitempty"`
+	SavingsPlansType                          *SupportedSavingsPlansTypeEnum             `json:"SavingsPlansType,omitempty"`
+	TermInYears                               *TermInYearsEnum                           `json:"TermInYears,omitempty"`
+}

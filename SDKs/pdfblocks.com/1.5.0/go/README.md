@@ -36,14 +36,14 @@ func main() {
         Request: operations.AddImageWatermarkV1RequestBody{
             File: operations.AddImageWatermarkV1RequestBodyFile{
                 Content: []byte("sit"),
-                File: "deleniti",
+                File: "voluptas",
             },
             Image: operations.AddImageWatermarkV1RequestBodyImage{
-                Content: []byte("ab"),
-                Image: "alias",
+                Content: []byte("culpa"),
+                Image: "expedita",
             },
-            Margin: 26.100000,
-            Transparency: 6777217586286325242,
+            Margin: 15.100000,
+            Transparency: 1774932891286980153,
         },
     }
     

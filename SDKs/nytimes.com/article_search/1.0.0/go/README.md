@@ -34,16 +34,16 @@ func main() {
     
     req := operations.GetArticlesearchJSONRequest{
         QueryParams: operations.GetArticlesearchJSONQueryParams{
-            BeginDate: "incidunt",
-            EndDate: "dicta",
-            FacetField: "veritatis",
-            FacetFilter: true,
-            Fl: "recusandae",
-            Fq: "qui",
-            Hl: false,
-            Page: 1366123293212064668,
-            Q: "sint",
-            Sort: "oldest",
+            BeginDate: "sit",
+            EndDate: "voluptas",
+            FacetField: "culpa",
+            FacetFilter: false,
+            Fl: "consequuntur",
+            Fq: "dolor",
+            Hl: true,
+            Page: 6044372234677422456,
+            Q: "fugit",
+            Sort: "newest",
         },
     }
     

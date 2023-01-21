@@ -1,0 +1,281 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"io"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Preview struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewPreview(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Preview {
+	return &Preview{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// Destiny2GetClanAggregateStats - Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
+func (s *Preview) Destiny2GetClanAggregateStats(ctx context.Context, request operations.Destiny2GetClanAggregateStatsRequest) (*operations.Destiny2GetClanAggregateStatsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2GetClanAggregateStatsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// Destiny2GetClanLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
+func (s *Preview) Destiny2GetClanLeaderboards(ctx context.Context, request operations.Destiny2GetClanLeaderboardsRequest) (*operations.Destiny2GetClanLeaderboardsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2GetClanLeaderboardsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// Destiny2GetLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint has not yet been implemented. It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.
+func (s *Preview) Destiny2GetLeaderboards(ctx context.Context, request operations.Destiny2GetLeaderboardsRequest) (*operations.Destiny2GetLeaderboardsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2GetLeaderboardsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// Destiny2GetLeaderboardsForCharacter - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
+func (s *Preview) Destiny2GetLeaderboardsForCharacter(ctx context.Context, request operations.Destiny2GetLeaderboardsForCharacterRequest) (*operations.Destiny2GetLeaderboardsForCharacterResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2GetLeaderboardsForCharacterResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// Destiny2GetPublicVendors - Get items available from vendors where the vendors have items for sale that are common for everyone. If any portion of the Vendor's available inventory is character or account specific, we will be unable to return their data from this endpoint due to the way that available inventory is computed. As I am often guilty of saying: 'It's a long story...'
+func (s *Preview) Destiny2GetPublicVendors(ctx context.Context, request operations.Destiny2GetPublicVendorsRequest) (*operations.Destiny2GetPublicVendorsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Vendors/"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2GetPublicVendorsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// Destiny2InsertSocketPlug - Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
+func (s *Preview) Destiny2InsertSocketPlug(ctx context.Context, request operations.Destiny2InsertSocketPlugRequest) (*operations.Destiny2InsertSocketPlugResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/InsertSocketPlug/"
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.Destiny2InsertSocketPlugResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `*/*`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}

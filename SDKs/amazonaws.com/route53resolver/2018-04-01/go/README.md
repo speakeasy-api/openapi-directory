@@ -34,28 +34,28 @@ func main() {
     
     req := operations.AssociateFirewallRuleGroupRequest{
         Headers: operations.AssociateFirewallRuleGroupHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "non",
-            XAmzCredential: "nulla",
-            XAmzDate: "numquam",
-            XAmzSecurityToken: "quia",
-            XAmzSignature: "fugiat",
-            XAmzSignedHeaders: "laboriosam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
         },
         Request: shared.AssociateFirewallRuleGroupRequest{
-            CreatorRequestID: "nam",
-            FirewallRuleGroupID: "delectus",
+            CreatorRequestID: "fugit",
+            FirewallRuleGroupID: "et",
             MutationProtection: "ENABLED",
-            Name: "incidunt",
-            Priority: 7383927136453695366,
+            Name: "rerum",
+            Priority: 7837839688282259259,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iste",
-                    Value: "fuga",
+                    Key: "voluptatum",
+                    Value: "et",
                 },
             },
-            VpcID: "at",
+            VpcID: "ut",
         },
     }
     

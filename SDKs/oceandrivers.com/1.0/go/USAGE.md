@@ -13,7 +13,7 @@ func main() {
     
     req := operations.CompareStationRequest{
         PathParams: operations.CompareStationPathParams{
-            StationName: "et",
+            StationName: "sit",
         },
     }
     

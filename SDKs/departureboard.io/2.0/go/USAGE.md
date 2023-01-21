@@ -13,16 +13,16 @@ func main() {
     
     req := operations.GetArrivalsAndDeparturesByCrsRequest{
         PathParams: operations.GetArrivalsAndDeparturesByCrsPathParams{
-            CRS: "voluptas",
+            CRS: "sit",
         },
         QueryParams: operations.GetArrivalsAndDeparturesByCrsQueryParams{
-            APIKey: "veniam",
-            FilterStation: "dolorum",
-            FilterType: "id",
-            NumServices: 5235212334792799739,
+            APIKey: "voluptas",
+            FilterStation: "culpa",
+            FilterType: "expedita",
+            NumServices: 3390393562759376202,
             ServiceDetails: false,
-            TimeOffset: 5575187088826678383,
-            TimeWindow: 6278711762470794999,
+            TimeOffset: 1774932891286980153,
+            TimeWindow: 6044372234677422456,
         },
     }
     

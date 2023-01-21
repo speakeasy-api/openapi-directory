@@ -1,0 +1,12 @@
+package shared
+
+// GoogleCloudDocumentaiV1beta3ProcessRequest
+// Request message for the process document method.
+type GoogleCloudDocumentaiV1beta3ProcessRequest struct {
+	Document        *GoogleCloudDocumentaiV1beta3Document       `json:"document,omitempty"`
+	FieldMask       *string                                     `json:"fieldMask,omitempty"`
+	InlineDocument  *GoogleCloudDocumentaiV1beta3Document       `json:"inlineDocument,omitempty"`
+	ProcessOptions  *GoogleCloudDocumentaiV1beta3ProcessOptions `json:"processOptions,omitempty"`
+	RawDocument     *GoogleCloudDocumentaiV1beta3RawDocument    `json:"rawDocument,omitempty"`
+	SkipHumanReview *bool                                       `json:"skipHumanReview,omitempty"`
+}

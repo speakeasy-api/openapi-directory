@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetBng2latlongEastingNorthingRequest{
         PathParams: operations.GetBng2latlongEastingNorthingPathParams{
-            Easting: 7711782718440894490,
-            Northing: 2018122545907442435,
+            Easting: 8717895732742165505,
+            Northing: 2259404117704393152,
         },
     }
     

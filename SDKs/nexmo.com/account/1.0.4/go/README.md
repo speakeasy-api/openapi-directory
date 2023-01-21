@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetAccountBalanceRequest{
         QueryParams: operations.GetAccountBalanceQueryParams{
-            APIKey: "quis",
-            APISecret: "quo",
+            APIKey: "sit",
+            APISecret: "voluptas",
         },
     }
     

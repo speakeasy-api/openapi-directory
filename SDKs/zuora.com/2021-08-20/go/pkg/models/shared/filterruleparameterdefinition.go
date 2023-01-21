@@ -32,6 +32,8 @@ const (
 	FilterRuleParameterDefinitionValueTypeEnumTimestampArray     FilterRuleParameterDefinitionValueTypeEnum = "TIMESTAMP_ARRAY"
 )
 
+// FilterRuleParameterDefinition
+// Definition of a filter rule parameter.
 type FilterRuleParameterDefinition struct {
 	Description *string                                     `json:"description,omitempty"`
 	DisplayName *string                                     `json:"displayName,omitempty"`

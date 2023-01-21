@@ -24,14 +24,14 @@ func main() {
     
     req := operations.VerifyCheckRequest{
         PathParams: operations.VerifyCheckPathParams{
-            Format: "xml",
+            Format: "json",
         },
         Request: shared.CheckRequest{
-            APIKey: "cum",
-            APISecret: "sed",
-            Code: "quibusdam",
-            IPAddress: "consequatur",
-            RequestID: "ab",
+            APIKey: "voluptas",
+            APISecret: "culpa",
+            Code: "expedita",
+            IPAddress: "consequuntur",
+            RequestID: "dolor",
         },
     }
     

@@ -23,17 +23,17 @@ func main() {
     
     req := operations.ChangeServerLifeCycleStateRequest{
         Headers: operations.ChangeServerLifeCycleStateHeaders{
-            XAmzAlgorithm: "natus",
-            XAmzContentSha256: "corrupti",
-            XAmzCredential: "quis",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "tenetur",
-            XAmzSignature: "alias",
-            XAmzSignedHeaders: "similique",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.ChangeServerLifeCycleStateRequestBody{
             LifeCycle: operations.ChangeServerLifeCycleStateRequestBodyLifeCycle{
-                State: "READY_FOR_TEST",
+                State: "CUTOVER",
             },
             SourceServerID: "fugit",
         },

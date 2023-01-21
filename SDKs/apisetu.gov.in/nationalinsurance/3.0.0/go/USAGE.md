@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                CustomerID: "exercitationem",
-                PolicyNumber: "accusantium",
-                PolicyStartDate: "voluptatem",
+                CustomerID: "sit",
+                PolicyNumber: "voluptas",
+                PolicyStartDate: "culpa",
             },
-            ConsentArtifact: "porro",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "optio",
+            TxnID: "dolor",
         },
     }
     

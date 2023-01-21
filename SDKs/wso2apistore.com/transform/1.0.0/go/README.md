@@ -23,7 +23,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostJsontoxmlRequest{
-        Request: "laboriosam",
+        Request: "sit",
     }
     
     res, err := s.PostJsontoxml(ctx, req)

@@ -35,17 +35,17 @@ func main() {
     req := operations.GetClassificationsRequest{
         QueryParams: operations.GetClassificationsQueryParams{
             Ids: []string{
-                "consequatur",
+                "voluptas",
             },
-            IsCountry: "laboriosam",
-            PageNumber: 773736624494728175,
-            PageSize: 1546546415388482117,
-            Q: "placeat",
+            IsCountry: "culpa",
+            PageNumber: 501233450539197794,
+            PageSize: 3390393562759376202,
+            Q: "dolor",
             Sort: []GetClassificationsSortEnum{
                 "value",
-                "updated_at",
+                "created_at",
             },
-            Type: "AlternateFeedType",
+            Type: "Language",
         },
     }
     

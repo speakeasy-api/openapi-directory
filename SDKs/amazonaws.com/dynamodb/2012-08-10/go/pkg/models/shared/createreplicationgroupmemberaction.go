@@ -1,0 +1,10 @@
+package shared
+
+// CreateReplicationGroupMemberAction
+// Represents a replica to be created.
+type CreateReplicationGroupMemberAction struct {
+	GlobalSecondaryIndexes        []ReplicaGlobalSecondaryIndex  `json:"GlobalSecondaryIndexes,omitempty"`
+	KMSMasterKeyID                *string                        `json:"KMSMasterKeyId,omitempty"`
+	ProvisionedThroughputOverride *ProvisionedThroughputOverride `json:"ProvisionedThroughputOverride,omitempty"`
+	RegionName                    string                         `json:"RegionName"`
+}

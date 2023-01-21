@@ -1,0 +1,10 @@
+package shared
+
+type PutPrincipalMappingRequest struct {
+	DataSourceID *string      `json:"DataSourceId,omitempty"`
+	GroupID      string       `json:"GroupId"`
+	GroupMembers GroupMembers `json:"GroupMembers"`
+	IndexID      string       `json:"IndexId"`
+	OrderingID   *int64       `json:"OrderingId,omitempty"`
+	RoleArn      *string      `json:"RoleArn,omitempty"`
+}

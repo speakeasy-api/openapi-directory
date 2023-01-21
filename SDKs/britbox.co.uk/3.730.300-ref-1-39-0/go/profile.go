@@ -1,0 +1,1950 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+	"time"
+)
+
+type Profile struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewProfile(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Profile {
+	return &Profile{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// BookmarkItem - Bookmark an item under the active profile.
+//
+// Creates one if it doesn't exist, overwrites one if it does.
+func (s *Profile) BookmarkItem(ctx context.Context, request operations.BookmarkItemRequest) (*operations.BookmarkItemResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BookmarkItemResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Bookmark
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Bookmark = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteItemBookmark - Unbookmark an item under the active profile.
+func (s *Profile) DeleteItemBookmark(ctx context.Context, request operations.DeleteItemBookmarkRequest) (*operations.DeleteItemBookmarkResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteItemBookmarkResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteWatched - Remove the watched status of items under the active profile. Passing in
+// specific `itemId`s to the `item_ids` query parameter will cause only these
+// items to be removed. **If this list is missing all watched items will be
+// removed**
+func (s *Profile) DeleteWatched(ctx context.Context, request operations.DeleteWatchedRequest) (*operations.DeleteWatchedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched"
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteWatchedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetBookmarkList - Returns the list of bookmarked items under the active profile.
+func (s *Profile) GetBookmarkList(ctx context.Context, request operations.GetBookmarkListRequest) (*operations.GetBookmarkListResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/bookmarks/list"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetBookmarkListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ItemList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ItemList = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetBookmarks - Get the map of bookmarked item ids (itemId => creationDate) under the active profile.
+func (s *Profile) GetBookmarks(ctx context.Context, request operations.GetBookmarksRequest) (*operations.GetBookmarksResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/bookmarks"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetBookmarksResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]time.Time
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetBookmarks200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetContinueWatchingList - Returns a list of items which have been watched but not completed under the active
+// profile.
+//
+// Multiple episodes under the same show may be watched or in progress, however only a
+// single item belonging to a particular show will be included in the returned list.
+//
+// The next episode to continue watching for a particular show will be the most recent
+// incompletely watched episode, or the next episode following the most recently
+// completely watched episode. Based on the specified `show_item_type` type, either the next
+// episode, the season of the next episode, or the show will be included in the list.
+func (s *Profile) GetContinueWatchingList(ctx context.Context, request operations.GetContinueWatchingListRequest) (*operations.GetContinueWatchingListResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/continue-watching/list"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetContinueWatchingListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ItemList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ItemList = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetItemBookmark - Get the bookmark for an item under the active profile.
+func (s *Profile) GetItemBookmark(ctx context.Context, request operations.GetItemBookmarkRequest) (*operations.GetItemBookmarkResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetItemBookmarkResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Bookmark
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Bookmark = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetItemRating - Get the rating info for an item under the active profile.
+func (s *Profile) GetItemRating(ctx context.Context, request operations.GetItemRatingRequest) (*operations.GetItemRatingResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetItemRatingResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UserRating
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UserRating = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetItemWatchedStatus - Get the watched status info for an item under the active profile.
+func (s *Profile) GetItemWatchedStatus(ctx context.Context, request operations.GetItemWatchedStatusRequest) (*operations.GetItemWatchedStatusResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetItemWatchedStatusResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Watched
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Watched = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetNextPlaybackItem - Returns the next item to play given a source item id.
+//
+// For an unwatched show it returns the first episode available to the account.
+//
+// For a watched show it returns the last incompletely watched episode by the profile,
+// or the episode that immediately follows the last completely watched episode
+// or nothing.
+//
+// For an episode it always returns the immediately following episode, if available to
+// the account, or nothing.
+//
+// If the response does not contain a `next` property then no item was found.
+func (s *Profile) GetNextPlaybackItem(ctx context.Context, request operations.GetNextPlaybackItemRequest) (*operations.GetNextPlaybackItemResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/items/{itemId}/next", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetNextPlaybackItemResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NextPlaybackItem
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NextPlaybackItem = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetProfile - Get the details of the active profile, including watched, bookmarked and rated items.
+func (s *Profile) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProfileResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ProfileDetail
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProfileDetail = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRatings - Get the map of rated item ids (itemId => rating out of 10) under the active profile.
+func (s *Profile) GetRatings(ctx context.Context, request operations.GetRatingsRequest) (*operations.GetRatingsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/ratings"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRatingsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]int32
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetRatings200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRatingsList - Returns the list of rated items under the active profile.
+func (s *Profile) GetRatingsList(ctx context.Context, request operations.GetRatingsListRequest) (*operations.GetRatingsListResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/ratings/list"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRatingsListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ItemList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ItemList = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWatched - Get the map of watched item ids (itemId => last playhead position) under the active profile.
+func (s *Profile) GetWatched(ctx context.Context, request operations.GetWatchedRequest) (*operations.GetWatchedResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWatchedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]shared.Watched
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetWatched200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWatchedList - Returns the list of watched items under the active profile.
+func (s *Profile) GetWatchedList(ctx context.Context, request operations.GetWatchedListRequest) (*operations.GetWatchedListResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/account/profile/watched/list"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWatchedListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ItemList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ItemList = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// RateItem - Rate an item under the active profile.
+//
+// Creates one if it doesn't exist, overwrites one if it does.
+func (s *Profile) RateItem(ctx context.Context, request operations.RateItemRequest) (*operations.RateItemResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RateItemResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UserRating
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UserRating = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
+// SetItemWatchedStatus - Record the watched playhead position of a video under the active profile.
+//
+// Can be used later to resume a video from where it was last watched.
+//
+// Creates one if it doesn't exist, overwrites one if it does.
+func (s *Profile) SetItemWatchedStatus(ctx context.Context, request operations.SetItemWatchedStatusRequest) (*operations.SetItemWatchedStatusResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SetItemWatchedStatusResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Watched
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Watched = out
+		}
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 415:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceError = out
+		}
+	}
+
+	return res, nil
+}

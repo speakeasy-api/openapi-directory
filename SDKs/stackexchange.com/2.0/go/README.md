@@ -24,13 +24,13 @@ func main() {
     
     req := operations.GetAccessTokensAccessTokensRequest{
         PathParams: operations.GetAccessTokensAccessTokensPathParams{
-            AccessTokens: "omnis",
+            AccessTokens: "sit",
         },
         QueryParams: operations.GetAccessTokensAccessTokensQueryParams{
-            Callback: "qui",
-            Filter: "doloribus",
-            Page: 8480251478551216538,
-            Pagesize: 2453198920892388966,
+            Callback: "voluptas",
+            Filter: "culpa",
+            Page: 501233450539197794,
+            Pagesize: 3390393562759376202,
         },
     }
     

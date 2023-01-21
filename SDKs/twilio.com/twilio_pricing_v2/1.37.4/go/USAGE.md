@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.FetchTrunkingCountryPathParams{
-            IsoCountry: "aliquid",
+            IsoCountry: "sit",
         },
     }
     

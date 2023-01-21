@@ -34,26 +34,26 @@ func main() {
     
     req := operations.InvokeEndpointRequest{
         PathParams: operations.InvokeEndpointPathParams{
-            EndpointName: "dolores",
+            EndpointName: "sit",
         },
         Headers: operations.InvokeEndpointHeaders{
-            Accept: "quasi",
-            ContentType: "recusandae",
-            XAmzAlgorithm: "numquam",
-            XAmzContentSha256: "numquam",
-            XAmzCredential: "occaecati",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "occaecati",
+            Accept: "voluptas",
+            ContentType: "culpa",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
             XAmzSignedHeaders: "et",
-            XAmznSageMakerCustomAttributes: "et",
-            XAmznSageMakerInferenceID: "non",
-            XAmznSageMakerTargetContainerHostname: "molestias",
-            XAmznSageMakerTargetModel: "aut",
-            XAmznSageMakerTargetVariant: "qui",
+            XAmznSageMakerCustomAttributes: "nihil",
+            XAmznSageMakerInferenceID: "rerum",
+            XAmznSageMakerTargetContainerHostname: "dicta",
+            XAmznSageMakerTargetModel: "debitis",
+            XAmznSageMakerTargetVariant: "voluptatum",
         },
         Request: operations.InvokeEndpointRequestBody{
-            Body: "consequuntur",
+            Body: "et",
         },
     }
     

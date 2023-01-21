@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.IticrRequestBody{
             CertificateParameters: &operations.IticrRequestBodyCertificateParameters{
-                FullName: "impedit",
-                Certno: "magni",
+                FullName: "sit",
+                Certno: "voluptas",
             },
-            ConsentArtifact: "id",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "fugiat",
+            TxnID: "consequuntur",
         },
     }
     

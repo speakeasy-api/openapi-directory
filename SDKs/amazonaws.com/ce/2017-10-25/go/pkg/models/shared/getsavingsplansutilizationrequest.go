@@ -1,0 +1,8 @@
+package shared
+
+type GetSavingsPlansUtilizationRequest struct {
+	Filter      *Expression      `json:"Filter,omitempty"`
+	Granularity *GranularityEnum `json:"Granularity,omitempty"`
+	SortBy      *SortDefinition  `json:"SortBy,omitempty"`
+	TimePeriod  DateInterval     `json:"TimePeriod"`
+}

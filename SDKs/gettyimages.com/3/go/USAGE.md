@@ -23,11 +23,11 @@ func main() {
     
     req := operations.GetV3AffiliatesSearchImagesRequest{
         QueryParams: operations.GetV3AffiliatesSearchImagesQueryParams{
-            Phrase: "vitae",
-            Style: "vector",
+            Phrase: "sit",
+            Style: "photography",
         },
         Headers: operations.GetV3AffiliatesSearchImagesHeaders{
-            AcceptLanguage: "dolorum",
+            AcceptLanguage: "culpa",
         },
     }
     

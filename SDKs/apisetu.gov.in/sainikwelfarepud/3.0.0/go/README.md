@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.DpcerRequestBody{
             CertificateParameters: &operations.DpcerRequestBodyCertificateParameters{
-                FullName: "qui",
-                UID: "maiores",
-                CertNo: "ipsam",
+                FullName: "sit",
+                UID: "voluptas",
+                CertNo: "culpa",
             },
-            ConsentArtifact: "non",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "veritatis",
+            TxnID: "dolor",
         },
     }
     

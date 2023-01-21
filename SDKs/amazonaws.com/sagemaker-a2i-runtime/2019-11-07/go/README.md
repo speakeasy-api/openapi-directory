@@ -34,16 +34,16 @@ func main() {
     
     req := operations.DeleteHumanLoopRequest{
         PathParams: operations.DeleteHumanLoopPathParams{
-            HumanLoopName: "exercitationem",
+            HumanLoopName: "sit",
         },
         Headers: operations.DeleteHumanLoopHeaders{
-            XAmzAlgorithm: "hic",
-            XAmzContentSha256: "doloribus",
-            XAmzCredential: "porro",
-            XAmzDate: "est",
-            XAmzSecurityToken: "deserunt",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

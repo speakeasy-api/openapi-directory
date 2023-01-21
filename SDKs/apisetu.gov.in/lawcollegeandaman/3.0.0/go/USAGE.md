@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.TrcerRequestBody{
             CertificateParameters: &operations.TrcerRequestBodyCertificateParameters{
-                ADMNNO: "et",
-                FullName: "nostrum",
+                ADMNNO: "sit",
+                FullName: "voluptas",
             },
-            ConsentArtifact: "sed",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "molestias",
+            TxnID: "consequuntur",
         },
     }
     

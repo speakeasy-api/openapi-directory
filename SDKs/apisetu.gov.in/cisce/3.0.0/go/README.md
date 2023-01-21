@@ -33,16 +33,16 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                CUID: "consequatur",
-                DOB: "animi",
-                FullName: "facere",
-                IDXN: "perspiciatis",
-                UID: "ut",
-                YOE: "facilis",
+                CUID: "sit",
+                DOB: "voluptas",
+                FullName: "culpa",
+                IDXN: "expedita",
+                UID: "consequuntur",
+                YOE: "dolor",
             },
-            ConsentArtifact: "beatae",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "at",
+            TxnID: "fugit",
         },
     }
     

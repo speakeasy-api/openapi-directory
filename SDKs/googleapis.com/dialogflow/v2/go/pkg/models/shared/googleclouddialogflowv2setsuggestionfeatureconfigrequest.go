@@ -1,0 +1,17 @@
+package shared
+
+type GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum string
+
+const (
+	GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnumRoleUnspecified GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum = "ROLE_UNSPECIFIED"
+	GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnumHumanAgent      GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum = "HUMAN_AGENT"
+	GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnumAutomatedAgent  GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum = "AUTOMATED_AGENT"
+	GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnumEndUser         GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum = "END_USER"
+)
+
+// GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest
+// The request message for ConversationProfiles.SetSuggestionFeature.
+type GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest struct {
+	ParticipantRole         *GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum `json:"participantRole,omitempty"`
+	SuggestionFeatureConfig *GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig     `json:"suggestionFeatureConfig,omitempty"`
+}

@@ -34,24 +34,22 @@ func main() {
     
     req := operations.AddProfileKeyRequest{
         PathParams: operations.AddProfileKeyPathParams{
-            DomainName: "rem",
+            DomainName: "sit",
         },
         Headers: operations.AddProfileKeyHeaders{
-            XAmzAlgorithm: "laudantium",
-            XAmzContentSha256: "corporis",
-            XAmzCredential: "qui",
-            XAmzDate: "adipisci",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "iste",
-            XAmzSignedHeaders: "minima",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.AddProfileKeyRequestBody{
-            KeyName: "blanditiis",
-            ProfileID: "sit",
+            KeyName: "fugit",
+            ProfileID: "et",
             Values: []string{
-                "earum",
-                "fugiat",
-                "dolores",
+                "rerum",
             },
         },
     }

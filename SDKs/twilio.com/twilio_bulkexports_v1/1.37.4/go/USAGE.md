@@ -19,15 +19,15 @@ func main() {
             },
         },
         PathParams: operations.CreateExportCustomJobPathParams{
-            ResourceType: "ipsum",
+            ResourceType: "sit",
         },
         Request: &operations.CreateExportCustomJobCreateExportCustomJobRequest{
-            Email: "voluptatibus",
-            EndDay: "inventore",
-            FriendlyName: "quia",
-            StartDay: "et",
-            WebhookMethod: "velit",
-            WebhookURL: "iste",
+            Email: "voluptas",
+            EndDay: "culpa",
+            FriendlyName: "expedita",
+            StartDay: "consequuntur",
+            WebhookMethod: "dolor",
+            WebhookURL: "expedita",
         },
     }
     

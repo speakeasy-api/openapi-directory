@@ -13,13 +13,13 @@ func main() {
     
     req := operations.CreateContactInMailinglistRequest{
         PathParams: operations.CreateContactInMailinglistPathParams{
-            DirectoryID: "culpa",
-            MailingListID: "architecto",
+            DirectoryID: "sit",
+            MailingListID: "voluptas",
         },
         Request: shared.CreateContactInMailingList{
-            Email: "officiis",
-            FirstName: "autem",
-            LastName: "reiciendis",
+            Email: "culpa",
+            FirstName: "expedita",
+            LastName: "consequuntur",
             Unsubscribed: false,
         },
     }

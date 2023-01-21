@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.GovidRequestBody{
             CertificateParameters: &operations.GovidRequestBodyCertificateParameters{
-                FullName: "repellendus",
-                Cardno: "possimus",
+                FullName: "sit",
+                Cardno: "voluptas",
             },
-            ConsentArtifact: "autem",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "id",
+            TxnID: "consequuntur",
         },
     }
     

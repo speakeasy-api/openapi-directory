@@ -23,32 +23,24 @@ func main() {
     
     req := operations.ActivatePipelineRequest{
         Headers: operations.ActivatePipelineHeaders{
-            XAmzAlgorithm: "molestias",
-            XAmzContentSha256: "asperiores",
-            XAmzCredential: "suscipit",
-            XAmzDate: "nam",
-            XAmzSecurityToken: "ducimus",
-            XAmzSignature: "ullam",
-            XAmzSignedHeaders: "corrupti",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "DataPipeline.ActivatePipeline",
         },
         Request: shared.ActivatePipelineInput{
             ParameterValues: []shared.ParameterValue{
                 shared.ParameterValue{
-                    ID: "suscipit",
-                    StringValue: "magnam",
-                },
-                shared.ParameterValue{
-                    ID: "aspernatur",
-                    StringValue: "corporis",
-                },
-                shared.ParameterValue{
-                    ID: "accusamus",
-                    StringValue: "fugit",
+                    ID: "et",
+                    StringValue: "nihil",
                 },
             },
-            PipelineID: "qui",
-            StartTimestamp: "1993-08-20T08:47:17Z",
+            PipelineID: "rerum",
+            StartTimestamp: "2004-06-02T10:14:12Z",
         },
     }
     

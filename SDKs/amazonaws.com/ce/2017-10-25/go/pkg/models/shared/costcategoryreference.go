@@ -1,0 +1,14 @@
+package shared
+
+// CostCategoryReference
+// <p>A reference to a Cost Category containing only enough information to identify the Cost Category.</p> <p>You can use this information to retrieve the full Cost Category information using <code>DescribeCostCategory</code>.</p>
+type CostCategoryReference struct {
+	CostCategoryArn  *string                        `json:"CostCategoryArn,omitempty"`
+	DefaultValue     *string                        `json:"DefaultValue,omitempty"`
+	EffectiveEnd     *string                        `json:"EffectiveEnd,omitempty"`
+	EffectiveStart   *string                        `json:"EffectiveStart,omitempty"`
+	Name             *string                        `json:"Name,omitempty"`
+	NumberOfRules    *int64                         `json:"NumberOfRules,omitempty"`
+	ProcessingStatus []CostCategoryProcessingStatus `json:"ProcessingStatus,omitempty"`
+	Values           []string                       `json:"Values,omitempty"`
+}

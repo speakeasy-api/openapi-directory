@@ -34,23 +34,23 @@ func main() {
     
     req := operations.GetMediaRequest{
         Headers: operations.GetMediaHeaders{
-            XAmzAlgorithm: "corporis",
-            XAmzContentSha256: "at",
-            XAmzCredential: "nostrum",
-            XAmzDate: "recusandae",
-            XAmzSecurityToken: "iste",
-            XAmzSignature: "at",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "fugit",
-                ContinuationToken: "repellat",
-                StartSelectorType: "PRODUCER_TIMESTAMP",
-                StartTimestamp: "2002-04-24T14:41:47Z",
+                AfterFragmentNumber: "voluptas",
+                ContinuationToken: "fugit",
+                StartSelectorType: "FRAGMENT_NUMBER",
+                StartTimestamp: "2003-05-13T04:57:12Z",
             },
-            StreamARN: "omnis",
-            StreamName: "magni",
+            StreamARN: "rerum",
+            StreamName: "dicta",
         },
     }
     

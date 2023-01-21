@@ -18,29 +18,30 @@ func main() {
             },
         },
         PathParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams{
-            ExternalEventID: "illum",
-            SubscriberState: "non",
+            ExternalEventID: "sit",
+            SubscriberState: "voluptas",
         },
         QueryParams: operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams{
-            ExternalAccountID: "omnis",
+            ExternalAccountID: "culpa",
         },
         Request: shared.BatchInputMarketingEventSubscriber{
             Inputs: []shared.MarketingEventSubscriber{
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 6625460606341040745,
+                    InteractionDateTime: 3390393562759376202,
                     Properties: map[string]string{
-                        "repellendus": "quasi",
-                        "sequi": "illo",
+                        "expedita": "voluptas",
+                        "fugit": "et",
                     },
-                    Vid: 8018450455142408820,
+                    Vid: 2661732831099943416,
                 },
                 shared.MarketingEventSubscriber{
-                    InteractionDateTime: 3807802538545777848,
+                    InteractionDateTime: 8325060299420976708,
                     Properties: map[string]string{
-                        "velit": "enim",
-                        "repellendus": "sed",
+                        "debitis": "voluptatum",
+                        "et": "ut",
+                        "dolorem": "et",
                     },
-                    Vid: 558040594850452455,
+                    Vid: 7373105480197164748,
                 },
             },
         },

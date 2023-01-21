@@ -21,63 +21,59 @@ func main() {
             },
         },
         QueryParams: operations.DoubleclickbidmanagerQueriesCreatequeryQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "reprehenderit",
-            Alt: "proto",
-            Asynchronous: true,
-            Callback: "recusandae",
-            Fields: "soluta",
-            Key: "error",
-            OauthToken: "reprehenderit",
+            DollarXgafv: "1",
+            AccessToken: "voluptas",
+            Alt: "media",
+            Asynchronous: false,
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "aperiam",
-            UploadType: "temporibus",
-            UploadProtocol: "quisquam",
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
         Request: &shared.Query{
-            Kind: "ab",
+            Kind: "dicta",
             Metadata: &shared.QueryMetadata{
-                DataRange: "CURRENT_DAY",
-                Format: "EXCEL_CSV",
-                GoogleCloudStoragePathForLatestReport: "eum",
-                GoogleDrivePathForLatestReport: "soluta",
-                LatestReportRunTimeMs: "dolore",
-                Locale: "excepturi",
-                ReportCount: 272458188829119136,
-                Running: false,
+                DataRange: "PREVIOUS_HALF_MONTH",
+                Format: "CSV",
+                GoogleCloudStoragePathForLatestReport: "et",
+                GoogleDrivePathForLatestReport: "ut",
+                LatestReportRunTimeMs: "dolorem",
+                Locale: "et",
+                ReportCount: 7373105480197164748,
+                Running: true,
                 SendNotification: true,
                 ShareEmailAddress: []string{
-                    "odit",
-                    "repudiandae",
+                    "dolores",
+                    "illum",
+                    "debitis",
                 },
-                Title: "aut",
+                Title: "vel",
             },
             Params: &shared.Parameters{
                 Filters: []shared.FilterPair{
                     shared.FilterPair{
-                        Type: "FILTER_APP_URL",
-                        Value: "occaecati",
-                    },
-                    shared.FilterPair{
-                        Type: "FILTER_BUDGET_SEGMENT_BUDGET",
-                        Value: "voluptate",
+                        Type: "FILTER_CHANNEL_GROUPING",
+                        Value: "id",
                     },
                 },
                 GroupBys: []shared.ParametersGroupBysEnum{
-                    "FILTER_YOUTUBE_AD_VIDEO",
-                    "FILTER_TRUEVIEW_INTEREST",
+                    "FILTER_EXTENSION_TYPE",
                 },
-                IncludeInviteData: true,
+                IncludeInviteData: false,
                 Metrics: []shared.ParametersMetricsEnum{
-                    "METRIC_FEE6_PARTNER",
-                    "METRIC_ACTIVE_VIEW_PERCENT_IN_BACKGROUND",
+                    "METRIC_MEDIA_COST_ADVERTISER",
+                    "METRIC_PLATFORM_FEE_USD",
                 },
                 Options: &shared.Options{
-                    IncludeOnlyTargetedUserLists: false,
+                    IncludeOnlyTargetedUserLists: true,
                     PathQueryOptions: &shared.PathQueryOptions{
                         ChannelGrouping: &shared.ChannelGrouping{
-                            FallbackName: "repellendus",
-                            Name: "alias",
+                            FallbackName: "odit",
+                            Name: "non",
                             Rules: []shared.Rule{
                                 shared.Rule{
                                     DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
@@ -85,17 +81,33 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_CAMPAIGN_DAILY_FREQUENCY",
-                                                        Match: "EXACT",
+                                                        Filter: "FILTER_TARGETED_DATA_PROVIDERS",
+                                                        Match: "BEGINS_WITH",
                                                         Values: []string{
-                                                            "voluptas",
+                                                            "autem",
+                                                            "consectetur",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_TRUEVIEW_AD_TYPE_NAME",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "at",
+                                                            "ipsum",
+                                                            "eveniet",
                                                         },
                                                     },
                                                 },
                                             },
                                         },
                                     },
-                                    Name: "amet",
+                                    Name: "modi",
                                 },
                             },
                         },
@@ -104,56 +116,12 @@ func main() {
                                 EventFilters: []shared.EventFilter{
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_USER_LIST_THIRD_PARTY_NAME",
-                                            Match: "BEGINS_WITH",
+                                            Filter: "FILTER_DAY_OF_WEEK",
+                                            Match: "EXACT",
                                             Values: []string{
-                                                "omnis",
-                                                "commodi",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_SKIPPABLE_SUPPORT",
-                                            Match: "BEGINS_WITH",
-                                            Values: []string{
-                                                "nesciunt",
-                                                "dolores",
-                                                "impedit",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_TRUEVIEW_REGION",
-                                            Match: "PARTIAL",
-                                            Values: []string{
-                                                "quas",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "ANY",
-                            },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_COMPLETE",
-                                            Match: "PARTIAL",
-                                            Values: []string{
-                                                "sint",
-                                                "nihil",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_VARIANT_NAME",
-                                            Match: "UNKNOWN",
-                                            Values: []string{
-                                                "in",
-                                                "cumque",
+                                                "reprehenderit",
+                                                "tempore",
+                                                "maiores",
                                             },
                                         },
                                     },
@@ -163,19 +131,19 @@ func main() {
                         },
                     },
                 },
-                Type: "TYPE_KEYWORD",
+                Type: "TYPE_PETRA_NIELSEN_ONLINE_GLOBAL_MARKET",
             },
-            QueryID: "nihil",
-            ReportDataEndTimeMs: "vel",
-            ReportDataStartTimeMs: "minima",
+            QueryID: "beatae",
+            ReportDataEndTimeMs: "veritatis",
+            ReportDataStartTimeMs: "in",
             Schedule: &shared.QuerySchedule{
-                EndTimeMs: "dolor",
-                Frequency: "YEARLY",
-                NextRunMinuteOfDay: 1221540791052924616,
-                NextRunTimezoneCode: "doloribus",
-                StartTimeMs: "veritatis",
+                EndTimeMs: "et",
+                Frequency: "WEEKLY",
+                NextRunMinuteOfDay: 4564823113789767141,
+                NextRunTimezoneCode: "ex",
+                StartTimeMs: "dolores",
             },
-            TimezoneCode: "dolor",
+            TimezoneCode: "placeat",
         },
     }
     

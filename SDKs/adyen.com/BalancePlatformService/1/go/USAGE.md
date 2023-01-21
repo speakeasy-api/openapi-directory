@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.GetAccountHoldersIDPathParams{
-            ID: "dolorem",
+            ID: "sit",
         },
     }
     

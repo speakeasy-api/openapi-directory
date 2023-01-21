@@ -18,9 +18,9 @@ func main() {
             },
         },
         Request: shared.IdentificationTokenGenerationRequest{
-            Email: "exercitationem",
-            FirstName: "tempore",
-            LastName: "aut",
+            Email: "sit",
+            FirstName: "voluptas",
+            LastName: "culpa",
         },
     }
     

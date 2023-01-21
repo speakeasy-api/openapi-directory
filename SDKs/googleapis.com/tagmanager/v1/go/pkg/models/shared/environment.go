@@ -1,0 +1,27 @@
+package shared
+
+type EnvironmentTypeEnum string
+
+const (
+	EnvironmentTypeEnumUser   EnvironmentTypeEnum = "user"
+	EnvironmentTypeEnumLive   EnvironmentTypeEnum = "live"
+	EnvironmentTypeEnumLatest EnvironmentTypeEnum = "latest"
+	EnvironmentTypeEnumDraft  EnvironmentTypeEnum = "draft"
+)
+
+// Environment
+// Represents a Google Tag Manager Environment. Note that a user can create, delete and update environments of type USER, but can only update the enable_debug and url fields of environments of other types.
+type Environment struct {
+	AccountID                *string              `json:"accountId,omitempty"`
+	AuthorizationCode        *string              `json:"authorizationCode,omitempty"`
+	AuthorizationTimestampMs *string              `json:"authorizationTimestampMs,omitempty"`
+	ContainerID              *string              `json:"containerId,omitempty"`
+	ContainerVersionID       *string              `json:"containerVersionId,omitempty"`
+	Description              *string              `json:"description,omitempty"`
+	EnableDebug              *bool                `json:"enableDebug,omitempty"`
+	EnvironmentID            *string              `json:"environmentId,omitempty"`
+	Fingerprint              *string              `json:"fingerprint,omitempty"`
+	Name                     *string              `json:"name,omitempty"`
+	Type                     *EnvironmentTypeEnum `json:"type,omitempty"`
+	URL                      *string              `json:"url,omitempty"`
+}

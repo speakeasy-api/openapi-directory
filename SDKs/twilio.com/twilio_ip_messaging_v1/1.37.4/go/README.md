@@ -30,13 +30,13 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "aliquid",
+            ServiceSid: "sit",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "omnis",
-            FriendlyName: "natus",
+            Attributes: "voluptas",
+            FriendlyName: "culpa",
             Type: "public",
-            UniqueName: "doloribus",
+            UniqueName: "consequuntur",
         },
     }
     

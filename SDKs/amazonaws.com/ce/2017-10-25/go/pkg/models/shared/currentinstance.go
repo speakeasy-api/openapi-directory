@@ -1,0 +1,17 @@
+package shared
+
+// CurrentInstance
+// Context about the current instance.
+type CurrentInstance struct {
+	CurrencyCode                             *string              `json:"CurrencyCode,omitempty"`
+	InstanceName                             *string              `json:"InstanceName,omitempty"`
+	MonthlyCost                              *string              `json:"MonthlyCost,omitempty"`
+	OnDemandHoursInLookbackPeriod            *string              `json:"OnDemandHoursInLookbackPeriod,omitempty"`
+	ReservationCoveredHoursInLookbackPeriod  *string              `json:"ReservationCoveredHoursInLookbackPeriod,omitempty"`
+	ResourceDetails                          *ResourceDetails     `json:"ResourceDetails,omitempty"`
+	ResourceID                               *string              `json:"ResourceId,omitempty"`
+	ResourceUtilization                      *ResourceUtilization `json:"ResourceUtilization,omitempty"`
+	SavingsPlansCoveredHoursInLookbackPeriod *string              `json:"SavingsPlansCoveredHoursInLookbackPeriod,omitempty"`
+	Tags                                     []TagValues          `json:"Tags,omitempty"`
+	TotalRunningHoursInLookbackPeriod        *string              `json:"TotalRunningHoursInLookbackPeriod,omitempty"`
+}

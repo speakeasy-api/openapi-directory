@@ -34,17 +34,19 @@ func main() {
     
     req := operations.BatchGetChannelRequest{
         Headers: operations.BatchGetChannelHeaders{
-            XAmzAlgorithm: "debitis",
-            XAmzContentSha256: "est",
-            XAmzCredential: "animi",
-            XAmzDate: "distinctio",
-            XAmzSecurityToken: "hic",
-            XAmzSignature: "mollitia",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.BatchGetChannelRequestBody{
             Arns: []string{
-                "labore",
+                "fugit",
+                "et",
+                "nihil",
             },
         },
     }

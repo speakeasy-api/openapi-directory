@@ -18,13 +18,13 @@ func main() {
             },
         },
         PathParams: operations.CreateCategoriesPathParams{
-            OrganizationUUID: "alias",
+            OrganizationUUID: "sit",
         },
         Request: shared.CategoryRequest{
             Categories: []shared.CategoryDto{
                 shared.CategoryDto{
-                    Name: "non",
-                    UUID: "exercitationem",
+                    Name: "culpa",
+                    UUID: "expedita",
                 },
             },
         },

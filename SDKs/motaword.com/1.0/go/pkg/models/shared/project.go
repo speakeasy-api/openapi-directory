@@ -17,7 +17,7 @@ type ProjectPriceWithoutDiscount struct {
 }
 
 type Project struct {
-	AverageScores          map[string]float64           `json:"average_scores,omitempty"`
+	AverageScores          map[string]float32           `json:"average_scores,omitempty"`
 	BudgetCode             *string                      `json:"budget_code,omitempty"`
 	CallbackURL            *string                      `json:"callback_url,omitempty"`
 	Client                 *User                        `json:"client,omitempty"`

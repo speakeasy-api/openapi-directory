@@ -1,0 +1,10 @@
+package shared
+
+type GetAnomaliesRequest struct {
+	DateInterval  AnomalyDateInterval      `json:"DateInterval"`
+	Feedback      *AnomalyFeedbackTypeEnum `json:"Feedback,omitempty"`
+	MaxResults    *int64                   `json:"MaxResults,omitempty"`
+	MonitorArn    *string                  `json:"MonitorArn,omitempty"`
+	NextPageToken *string                  `json:"NextPageToken,omitempty"`
+	TotalImpact   *TotalImpactFilter       `json:"TotalImpact,omitempty"`
+}

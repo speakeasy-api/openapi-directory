@@ -1,0 +1,12 @@
+package shared
+
+// RightsizingRecommendation
+// Recommendations to rightsize resources.
+type RightsizingRecommendation struct {
+	AccountID                     *string                        `json:"AccountId,omitempty"`
+	CurrentInstance               *CurrentInstance               `json:"CurrentInstance,omitempty"`
+	FindingReasonCodes            []FindingReasonCodeEnum        `json:"FindingReasonCodes,omitempty"`
+	ModifyRecommendationDetail    *ModifyRecommendationDetail    `json:"ModifyRecommendationDetail,omitempty"`
+	RightsizingType               *RightsizingTypeEnum           `json:"RightsizingType,omitempty"`
+	TerminateRecommendationDetail *TerminateRecommendationDetail `json:"TerminateRecommendationDetail,omitempty"`
+}

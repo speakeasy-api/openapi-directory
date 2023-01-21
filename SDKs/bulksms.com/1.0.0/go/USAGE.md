@@ -30,8 +30,8 @@ func main() {
             },
         },
         Request: shared.PreSignRequest{
-            FileExtension: "dignissimos",
-            MediaType: "ullam",
+            FileExtension: "sit",
+            MediaType: "voluptas",
         },
     }
     

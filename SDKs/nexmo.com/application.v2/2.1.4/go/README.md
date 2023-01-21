@@ -34,7 +34,7 @@ func main() {
     s := sdk.New(opts...)
     
     req := operations.CreateApplicationRequest{
-        Request: "autem",
+        Request: "sit",
     }
     
     res, err := s.CreateApplication(ctx, req)

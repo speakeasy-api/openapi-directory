@@ -24,7 +24,7 @@ func main() {
     
     req := operations.AreasGetRequest{
         PathParams: operations.AreasGetPathParams{
-            Version: "est",
+            Version: "sit",
         },
     }
     

@@ -23,17 +23,17 @@ func main() {
     
     req := operations.ActivateEventSourceRequest{
         Headers: operations.ActivateEventSourceHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "rerum",
-            XAmzCredential: "est",
-            XAmzDate: "neque",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "nobis",
-            XAmzSignedHeaders: "ipsam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSEvents.ActivateEventSource",
         },
         Request: shared.ActivateEventSourceRequest{
-            Name: "nihil",
+            Name: "fugit",
         },
     }
     

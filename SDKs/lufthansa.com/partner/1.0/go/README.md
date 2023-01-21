@@ -29,10 +29,10 @@ func main() {
             },
         },
         PathParams: operations.BaggageTripAndContactPathParams{
-            SearchID: "debitis",
+            SearchID: "sit",
         },
         Headers: operations.BaggageTripAndContactHeaders{
-            Accept: "ut",
+            Accept: "voluptas",
         },
     }
     

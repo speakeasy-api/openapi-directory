@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetClientClientIDRequest{
         PathParams: operations.GetClientClientIDPathParams{
-            ClientID: "neque",
+            ClientID: "sit",
         },
     }
     

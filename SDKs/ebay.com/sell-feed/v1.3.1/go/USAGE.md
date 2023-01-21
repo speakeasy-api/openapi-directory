@@ -18,21 +18,23 @@ func main() {
             },
         },
         Headers: operations.CreateCustomerServiceMetricTaskHeaders{
-            AcceptLanguage: "voluptas",
+            AcceptLanguage: "sit",
         },
         Request: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "et",
+            FeedType: "voluptas",
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
                 CustomerServiceMetricType: "culpa",
-                EvaluationMarketplaceID: "odio",
+                EvaluationMarketplaceID: "expedita",
                 ListingCategories: []string{
+                    "dolor",
+                    "expedita",
                     "voluptas",
                 },
                 ShippingRegions: []string{
-                    "corrupti",
+                    "et",
                 },
             },
-            SchemaVersion: "qui",
+            SchemaVersion: "nihil",
         },
     }
     

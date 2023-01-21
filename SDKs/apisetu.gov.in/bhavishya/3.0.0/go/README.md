@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.PecerRequestBody{
             CertificateParameters: &operations.PecerRequestBodyCertificateParameters{
-                DOB: "aliquid",
-                FullName: "consequuntur",
-                GENDER: "rerum",
-                PAN: "officiis",
-                PPO: "corporis",
+                DOB: "sit",
+                FullName: "voluptas",
+                GENDER: "culpa",
+                PAN: "expedita",
+                PPO: "consequuntur",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "numquam",
+            TxnID: "voluptas",
         },
     }
     

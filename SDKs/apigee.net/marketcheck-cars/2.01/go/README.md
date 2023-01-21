@@ -24,11 +24,11 @@ func main() {
     
     req := operations.CrmCheckRequest{
         PathParams: operations.CrmCheckPathParams{
-            Vin: "qui",
+            Vin: "sit",
         },
         QueryParams: operations.CrmCheckQueryParams{
-            APIKey: "aut",
-            SaleDate: "voluptatum",
+            APIKey: "voluptas",
+            SaleDate: "culpa",
         },
     }
     

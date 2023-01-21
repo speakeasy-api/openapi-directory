@@ -24,8 +24,8 @@ func main() {
     
     req := operations.AddShortlinkRequest{
         Request: shared.ShortlinkRequest{
-            Keyid: "minima",
-            Shortlink: "in",
+            Keyid: "sit",
+            Shortlink: "voluptas",
         },
     }
     

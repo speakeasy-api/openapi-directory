@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetglobaltimeRequest{
         QueryParams: operations.GetglobaltimeQueryParams{
-            License: "quia",
-            Locale: "iure",
+            License: "sit",
+            Locale: "voluptas",
         },
     }
     

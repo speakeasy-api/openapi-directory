@@ -23,18 +23,18 @@ func main() {
     
     req := operations.ApplyArchiveRuleRequest{
         Headers: operations.ApplyArchiveRuleHeaders{
-            XAmzAlgorithm: "rerum",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "laborum",
-            XAmzDate: "fugit",
-            XAmzSecurityToken: "quis",
-            XAmzSignature: "minus",
-            XAmzSignedHeaders: "soluta",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.ApplyArchiveRuleRequestBody{
-            AnalyzerArn: "aperiam",
-            ClientToken: "consequuntur",
-            RuleName: "excepturi",
+            AnalyzerArn: "voluptas",
+            ClientToken: "fugit",
+            RuleName: "et",
         },
     }
     

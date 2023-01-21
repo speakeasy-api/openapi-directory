@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetReisezentrenRequest{
         QueryParams: operations.GetReisezentrenQueryParams{
-            Name: "nihil",
+            Name: "sit",
         },
     }
     

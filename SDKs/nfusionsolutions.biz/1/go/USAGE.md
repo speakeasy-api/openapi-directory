@@ -13,15 +13,15 @@ func main() {
     
     req := operations.GetAPIVVersionCurrenciesHistoryRequest{
         PathParams: operations.GetAPIVVersionCurrenciesHistoryPathParams{
-            Version: "exercitationem",
+            Version: "sit",
         },
         QueryParams: operations.GetAPIVVersionCurrenciesHistoryQueryParams{
-            End: "2006-07-13T17:38:01Z",
+            End: "2006-05-01T09:38:06Z",
             Format: "xml",
-            Interval: "voluptatum",
-            Pairs: "neque",
-            Start: "2009-08-05T13:18:10Z",
-            Token: "odit",
+            Interval: "expedita",
+            Pairs: "consequuntur",
+            Start: "2003-04-20T23:11:44Z",
+            Token: "expedita",
         },
     }
     

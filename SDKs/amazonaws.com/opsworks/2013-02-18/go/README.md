@@ -34,20 +34,19 @@ func main() {
     
     req := operations.AssignInstanceRequest{
         Headers: operations.AssignInstanceHeaders{
-            XAmzAlgorithm: "vel",
-            XAmzContentSha256: "itaque",
-            XAmzCredential: "ut",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "unde",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "OpsWorks_20130218.AssignInstance",
         },
         Request: shared.AssignInstanceRequest{
-            InstanceID: "repellendus",
+            InstanceID: "fugit",
             LayerIds: []string{
-                "repudiandae",
-                "voluptates",
+                "nihil",
             },
         },
     }

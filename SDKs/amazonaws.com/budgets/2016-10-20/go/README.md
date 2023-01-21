@@ -34,87 +34,124 @@ func main() {
     
     req := operations.CreateBudgetRequest{
         Headers: operations.CreateBudgetHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "ad",
-            XAmzCredential: "et",
-            XAmzDate: "nemo",
-            XAmzSecurityToken: "illo",
-            XAmzSignature: "animi",
-            XAmzSignedHeaders: "earum",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
         },
         Request: shared.CreateBudgetRequest{
-            AccountID: "vero",
+            AccountID: "fugit",
             Budget: shared.Budget{
                 BudgetLimit: &shared.Spend{
                     Amount: "et",
-                    Unit: "quam",
+                    Unit: "nihil",
                 },
-                BudgetName: "iste",
-                BudgetType: "SAVINGS_PLANS_UTILIZATION",
+                BudgetName: "rerum",
+                BudgetType: "SAVINGS_PLANS_COVERAGE",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "eos",
-                        Unit: "aut",
+                        Amount: "debitis",
+                        Unit: "voluptatum",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "ut",
-                        Unit: "enim",
+                        Amount: "et",
+                        Unit: "ut",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "cupiditate": []string{
-                        "id",
-                        "molestiae",
+                    "et": []string{
+                        "iste",
+                    },
+                    "vitae": []string{
+                        "dolores",
+                        "illum",
+                        "debitis",
+                    },
+                    "vel": []string{
+                        "dolore",
                     },
                 },
                 CostTypes: &shared.CostTypes{
-                    IncludeCredit: true,
+                    IncludeCredit: false,
                     IncludeDiscount: true,
-                    IncludeOtherSubscription: false,
+                    IncludeOtherSubscription: true,
                     IncludeRecurring: false,
                     IncludeRefund: false,
                     IncludeSubscription: true,
-                    IncludeSupport: true,
-                    IncludeTax: false,
+                    IncludeSupport: false,
+                    IncludeTax: true,
                     IncludeUpfront: true,
                     UseAmortized: true,
-                    UseBlended: true,
+                    UseBlended: false,
                 },
-                LastUpdatedTime: "2020-04-04T17:02:02Z",
+                LastUpdatedTime: "1987-09-29T10:21:53Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
-                    "modi": shared.Spend{
-                        Amount: "dolor",
-                        Unit: "omnis",
-                    },
-                    "explicabo": shared.Spend{
-                        Amount: "voluptatum",
-                        Unit: "quia",
-                    },
-                    "perferendis": shared.Spend{
-                        Amount: "temporibus",
-                        Unit: "incidunt",
+                    "illo": shared.Spend{
+                        Amount: "sed",
+                        Unit: "officiis",
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "1983-11-22T04:40:57Z",
-                    Start: "2006-01-09T19:38:06Z",
+                    End: "2017-04-22T14:51:53Z",
+                    Start: "1990-12-08T19:16:18Z",
                 },
-                TimeUnit: "QUARTERLY",
+                TimeUnit: "MONTHLY",
             },
             NotificationsWithSubscribers: []shared.NotificationWithSubscribers{
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "EQUAL_TO",
+                        ComparisonOperator: "LESS_THAN",
                         NotificationState: "OK",
-                        NotificationType: "FORECASTED",
-                        Threshold: 7.100000,
+                        NotificationType: "ACTUAL",
+                        Threshold: 19.100000,
                         ThresholdType: "ABSOLUTE_VALUE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "iste",
+                            Address: "exercitationem",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "reprehenderit",
                             SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "maiores",
+                            SubscriptionType: "SNS",
+                        },
+                    },
+                },
+                shared.NotificationWithSubscribers{
+                    Notification: shared.Notification{
+                        ComparisonOperator: "LESS_THAN",
+                        NotificationState: "ALARM",
+                        NotificationType: "FORECASTED",
+                        Threshold: 80.199997,
+                        ThresholdType: "ABSOLUTE_VALUE",
+                    },
+                    Subscribers: []shared.Subscriber{
+                        shared.Subscriber{
+                            Address: "ex",
+                            SubscriptionType: "SNS",
+                        },
+                    },
+                },
+                shared.NotificationWithSubscribers{
+                    Notification: shared.Notification{
+                        ComparisonOperator: "GREATER_THAN",
+                        NotificationState: "OK",
+                        NotificationType: "FORECASTED",
+                        Threshold: 89.099998,
+                        ThresholdType: "ABSOLUTE_VALUE",
+                    },
+                    Subscribers: []shared.Subscriber{
+                        shared.Subscriber{
+                            Address: "qui",
+                            SubscriptionType: "SNS",
                         },
                     },
                 },

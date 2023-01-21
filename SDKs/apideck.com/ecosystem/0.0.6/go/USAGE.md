@@ -13,11 +13,11 @@ func main() {
     
     req := operations.CategoriesAllRequest{
         PathParams: operations.CategoriesAllPathParams{
-            EcosystemID: "itaque",
+            EcosystemID: "sit",
         },
         QueryParams: operations.CategoriesAllQueryParams{
-            Cursor: "optio",
-            Limit: 7998526504416170211,
+            Cursor: "voluptas",
+            Limit: 6050128673802995827,
         },
     }
     

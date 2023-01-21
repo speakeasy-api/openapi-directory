@@ -13,13 +13,13 @@ func main() {
     
     req := operations.CreateAMapRequest{
         QueryParams: operations.CreateAMapQueryParams{
-            AppToken: "et",
-            Constraint: "et",
-            EntityID: "tempore",
-            Variable: "occaecati",
+            AppToken: "sit",
+            Constraint: "voluptas",
+            EntityID: "culpa",
+            Variable: "expedita",
         },
         Headers: operations.CreateAMapHeaders{
-            XAppToken: "tempore",
+            XAppToken: "consequuntur",
         },
     }
     

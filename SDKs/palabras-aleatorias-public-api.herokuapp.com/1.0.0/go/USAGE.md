@@ -13,10 +13,10 @@ func main() {
     
     req := operations.GetAddWordRequest{
         QueryParams: operations.GetAddWordQueryParams{
-            Author: "recusandae",
-            Definition: "accusamus",
-            Related: "ut",
-            Word: "repellat",
+            Author: "sit",
+            Definition: "voluptas",
+            Related: "culpa",
+            Word: "expedita",
         },
     }
     

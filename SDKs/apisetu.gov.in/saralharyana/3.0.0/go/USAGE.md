@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.NbcerRequestBody{
             CertificateParameters: &operations.NbcerRequestBodyCertificateParameters{
-                RefNo: "aut",
-                TokenNo: "eveniet",
+                RefNo: "sit",
+                TokenNo: "voluptas",
             },
-            ConsentArtifact: "aut",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "rem",
+            TxnID: "consequuntur",
         },
     }
     

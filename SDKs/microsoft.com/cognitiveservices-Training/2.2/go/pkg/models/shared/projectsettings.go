@@ -10,6 +10,6 @@ const (
 // ProjectSettings
 // Represents settings associated with a project.
 type ProjectSettings struct {
-	ClassificationType *ProjectSettingsClassificationTypeEnum `json:"classificationType,omitempty" form:"name=classificationType"`
-	DomainID           *string                                `json:"domainId,omitempty" form:"name=domainId"`
+	ClassificationType *ProjectSettingsClassificationTypeEnum `json:"classificationType,omitempty"`
+	DomainID           *string                                `json:"domainId,omitempty"`
 }

@@ -36,17 +36,17 @@ func main() {
         QueryParams: operations.GetAbortEnvironmentUpdateQueryParams{
             Action: "AbortEnvironmentUpdate",
             EnvironmentID: "voluptas",
-            EnvironmentName: "facilis",
+            EnvironmentName: "culpa",
             Version: "2010-12-01",
         },
         Headers: operations.GetAbortEnvironmentUpdateHeaders{
-            XAmzAlgorithm: "sunt",
-            XAmzContentSha256: "quis",
-            XAmzCredential: "qui",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "temporibus",
-            XAmzSignature: "nemo",
-            XAmzSignedHeaders: "ea",
+            XAmzAlgorithm: "consequuntur",
+            XAmzContentSha256: "dolor",
+            XAmzCredential: "expedita",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "nihil",
         },
     }
     

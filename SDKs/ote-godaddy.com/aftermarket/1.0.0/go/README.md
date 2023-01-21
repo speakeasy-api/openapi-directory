@@ -25,10 +25,10 @@ func main() {
     req := operations.AddExpiryListingsRequest{
         Request: operations.AddExpiryListingsRequests{
             AftermarketListingExpiryCreates: []interface{}{
-                "error",
+                "voluptas",
             },
-            ApplicationXML: []byte("qui"),
-            TextXML: []byte("qui"),
+            ApplicationXML: []byte("culpa"),
+            TextXML: []byte("expedita"),
         },
     }
     

@@ -23,19 +23,19 @@ func main() {
     
     req := operations.AcceptCertificateTransferRequest{
         PathParams: operations.AcceptCertificateTransferPathParams{
-            CertificateID: "quis",
+            CertificateID: "sit",
         },
         QueryParams: operations.AcceptCertificateTransferQueryParams{
             SetAsActive: false,
         },
         Headers: operations.AcceptCertificateTransferHeaders{
-            XAmzAlgorithm: "fugit",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "id",
-            XAmzDate: "sequi",
-            XAmzSecurityToken: "dicta",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "molestiae",
+            XAmzAlgorithm: "culpa",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "consequuntur",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "fugit",
         },
     }
     

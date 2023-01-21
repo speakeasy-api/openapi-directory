@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetVehicleSeenVehicleSeenGetRequest{
         QueryParams: operations.GetVehicleSeenVehicleSeenGetQueryParams{
-            AfterDate: "1973-05-30",
-            Jwt: "praesentium",
-            Vin: "enim",
+            AfterDate: "2006-05-01",
+            Jwt: "culpa",
+            Vin: "expedita",
         },
     }
     

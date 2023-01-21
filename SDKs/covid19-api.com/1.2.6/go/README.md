@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetDailyReportAllCountriesRequest{
         QueryParams: operations.GetDailyReportAllCountriesQueryParams{
-            Date: "ipsam",
-            DateFormat: "YYYY-MM-DD",
+            Date: "sit",
+            DateFormat: "DD-MM-YYYY",
             Format: "xml",
         },
     }

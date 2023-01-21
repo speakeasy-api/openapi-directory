@@ -24,7 +24,7 @@ func main() {
     
     req := operations.ConfigConfigGetRequest{
         Headers: operations.ConfigConfigGetHeaders{
-            Authorization: "ut",
+            Authorization: "sit",
         },
     }
     

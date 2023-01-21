@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.AlimwRequestBody{
             CertificateParameters: &operations.AlimwRequestBodyCertificateParameters{
-                RefNo: "maxime",
-                TokenNo: "rerum",
+                RefNo: "sit",
+                TokenNo: "voluptas",
             },
-            ConsentArtifact: "quisquam",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "nemo",
+            TxnID: "consequuntur",
         },
     }
     

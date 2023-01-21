@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.DpicrRequestBody{
             CertificateParameters: &operations.DpicrRequestBodyCertificateParameters{
-                Udf1: "enim",
-                UID: "voluptates",
+                Udf1: "sit",
+                UID: "voluptas",
             },
-            ConsentArtifact: "dolore",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "aut",
+            TxnID: "consequuntur",
         },
     }
     

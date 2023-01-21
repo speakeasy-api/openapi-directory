@@ -34,28 +34,22 @@ func main() {
     
     req := operations.AddCustomRoutingEndpointsRequest{
         Headers: operations.AddCustomRoutingEndpointsHeaders{
-            XAmzAlgorithm: "modi",
-            XAmzContentSha256: "cum",
-            XAmzCredential: "similique",
-            XAmzDate: "voluptatibus",
-            XAmzSecurityToken: "quisquam",
-            XAmzSignature: "quis",
-            XAmzSignedHeaders: "autem",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
         },
         Request: shared.AddCustomRoutingEndpointsRequest{
             EndpointConfigurations: []shared.CustomRoutingEndpointConfiguration{
                 shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "ducimus",
-                },
-                shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "provident",
-                },
-                shared.CustomRoutingEndpointConfiguration{
-                    EndpointID: "commodi",
+                    EndpointID: "et",
                 },
             },
-            EndpointGroupArn: "ut",
+            EndpointGroupArn: "nihil",
         },
     }
     

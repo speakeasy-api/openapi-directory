@@ -23,17 +23,16 @@ func main() {
     
     req := operations.GetPersonasRequest{
         QueryParams: operations.GetPersonasQueryParams{
-            Count: 3450639195285476113,
+            Count: 8717895732742165505,
             Expand: []string{
-                "laudantium",
+                "culpa",
             },
             Fields: []string{
-                "soluta",
-                "vel",
-                "et",
+                "consequuntur",
+                "dolor",
             },
-            Name: "cupiditate",
-            Page: 1874909988799788225,
+            Name: "expedita",
+            Page: 6044372234677422456,
         },
     }
     

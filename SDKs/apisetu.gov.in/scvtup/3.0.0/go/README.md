@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                DOB: "sapiente",
-                FullName: "rerum",
-                RollNumber: "esse",
-                Session: "beatae",
+                DOB: "sit",
+                FullName: "voluptas",
+                RollNumber: "culpa",
+                Session: "expedita",
             },
-            ConsentArtifact: "quibusdam",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "nulla",
+            TxnID: "expedita",
         },
     }
     

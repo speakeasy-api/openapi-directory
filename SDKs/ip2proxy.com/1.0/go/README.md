@@ -24,10 +24,10 @@ func main() {
     
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
-            Format: "xml",
-            IP: "illo",
-            Key: "repudiandae",
-            Package: "et",
+            Format: "json",
+            IP: "voluptas",
+            Key: "culpa",
+            Package: "expedita",
         },
     }
     

@@ -24,23 +24,23 @@ func main() {
     
     req := operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
         PathParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams{
-            Parent: "alias",
+            Parent: "sit",
         },
         QueryParams: operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "ratione",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
             Alt: "media",
-            Callback: "non",
-            Fields: "corrupti",
-            Filter: "rerum",
-            Key: "assumenda",
-            OauthToken: "veritatis",
-            PageSize: 464811253189919483,
-            PageToken: "recusandae",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Filter: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
+            PageSize: 1543572285742637646,
+            PageToken: "nihil",
             PrettyPrint: true,
-            QuotaUser: "odit",
-            UploadType: "voluptatum",
-            UploadProtocol: "neque",
+            QuotaUser: "dicta",
+            UploadType: "debitis",
+            UploadProtocol: "voluptatum",
         },
     }
     

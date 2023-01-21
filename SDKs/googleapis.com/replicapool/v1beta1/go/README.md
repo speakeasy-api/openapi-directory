@@ -34,22 +34,22 @@ func main() {
             },
         },
         PathParams: operations.ReplicapoolPoolsDeletePathParams{
-            PoolName: "error",
-            ProjectName: "sint",
-            Zone: "commodi",
+            PoolName: "sit",
+            ProjectName: "voluptas",
+            Zone: "culpa",
         },
         QueryParams: operations.ReplicapoolPoolsDeleteQueryParams{
             Alt: "json",
-            Fields: "et",
-            Key: "veniam",
-            OauthToken: "necessitatibus",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
             PrettyPrint: true,
-            QuotaUser: "sed",
-            UserIP: "nihil",
+            QuotaUser: "fugit",
+            UserIP: "et",
         },
         Request: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
-                "qui",
+                "rerum",
             },
         },
     }

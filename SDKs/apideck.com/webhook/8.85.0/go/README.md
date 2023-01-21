@@ -39,18 +39,17 @@ func main() {
             },
         },
         Headers: operations.WebhooksAddHeaders{
-            XApideckAppID: "rerum",
+            XApideckAppID: "sit",
         },
         Request: shared.CreateWebhookRequest{
-            DeliveryURL: "placeat",
-            Description: "doloremque",
+            DeliveryURL: "voluptas",
+            Description: "culpa",
             Events: []shared.WebhookEventTypeEnum{
-                "accounting.customer.updated",
-                "lead.lead.updated",
-                "pos.item.deleted",
+                "crm.contact.created",
+                "crm.contact.updated",
             },
             Status: "disabled",
-            UnifiedAPI: "file-storage",
+            UnifiedAPI: "crm",
         },
     }
     

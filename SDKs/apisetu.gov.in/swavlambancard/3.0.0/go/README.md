@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.DpicrRequestBody{
             CertificateParameters: &operations.DpicrRequestBodyCertificateParameters{
-                CERTNO: "facere",
-                FullName: "facere",
+                CERTNO: "sit",
+                FullName: "voluptas",
             },
-            ConsentArtifact: "ut",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "assumenda",
+            TxnID: "consequuntur",
         },
     }
     

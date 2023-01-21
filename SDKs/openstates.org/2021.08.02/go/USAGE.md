@@ -13,20 +13,20 @@ func main() {
     
     req := operations.BillDetailBillsJurisdictionSessionBillIDGetRequest{
         PathParams: operations.BillDetailBillsJurisdictionSessionBillIDGetPathParams{
-            BillID: "aut",
-            Jurisdiction: "earum",
-            Session: "omnis",
+            BillID: "sit",
+            Jurisdiction: "voluptas",
+            Session: "culpa",
         },
         QueryParams: operations.BillDetailBillsJurisdictionSessionBillIDGetQueryParams{
-            Apikey: "minima",
+            Apikey: "expedita",
             Include: []shared.BillIncludeEnum{
                 "versions",
-                "sponsorships",
+                "versions",
                 "votes",
             },
         },
         Headers: operations.BillDetailBillsJurisdictionSessionBillIDGetHeaders{
-            XAPIKey: "et",
+            XAPIKey: "fugit",
         },
     }
     

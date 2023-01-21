@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetEntryInfoInfoEntryGetRequest{
         PathParams: operations.GetEntryInfoInfoEntryGetPathParams{
-            Entry: "sunt",
+            Entry: "sit",
         },
     }
     

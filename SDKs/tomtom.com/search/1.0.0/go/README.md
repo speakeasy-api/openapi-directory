@@ -35,11 +35,11 @@ func main() {
     req := operations.GetSearchVersionNumberAdditionalDataExtRequest{
         PathParams: operations.GetSearchVersionNumberAdditionalDataExtPathParams{
             Ext: "json",
-            VersionNumber: 6747597897255533018,
+            VersionNumber: 2259404117704393152,
         },
         QueryParams: operations.GetSearchVersionNumberAdditionalDataExtQueryParams{
-            Geometries: "totam",
-            GeometriesZoom: 1458970778718258314,
+            Geometries: "culpa",
+            GeometriesZoom: 501233450539197794,
         },
     }
     

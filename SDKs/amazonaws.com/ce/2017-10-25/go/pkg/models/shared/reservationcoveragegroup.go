@@ -1,0 +1,8 @@
+package shared
+
+// ReservationCoverageGroup
+// A group of reservations that share a set of attributes.
+type ReservationCoverageGroup struct {
+	Attributes map[string]string `json:"Attributes,omitempty"`
+	Coverage   *Coverage         `json:"Coverage,omitempty"`
+}

@@ -24,17 +24,17 @@ func main() {
     
     req := operations.ActivityEntryAPIGetListRequest{
         QueryParams: operations.ActivityEntryAPIGetListQueryParams{
-            Before: "2000-12-30T00:58:45Z",
+            Before: "2006-05-01T09:38:06Z",
             EditEvent: "Updated",
-            EntryFields: "MainPicture",
-            EntryType: "Album",
-            Fields: "Entry",
+            EntryFields: "Description",
+            EntryType: "Venue",
+            Fields: "ArchivedVersion",
             GetTotalCount: true,
-            Lang: "Default",
-            MaxResults: 8152946618831078707,
-            Since: "2000-02-24T19:20:37Z",
-            SortRule: "CreateDate",
-            UserID: 1938043663830596226,
+            Lang: "Japanese",
+            MaxResults: 8274930044578894929,
+            Since: "2011-08-12T10:11:12Z",
+            SortRule: "CreateDateDescending",
+            UserID: 8325060299420976708,
         },
     }
     

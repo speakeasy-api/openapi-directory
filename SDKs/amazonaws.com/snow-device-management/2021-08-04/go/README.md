@@ -34,16 +34,16 @@ func main() {
     
     req := operations.CancelTaskRequest{
         PathParams: operations.CancelTaskPathParams{
-            TaskID: "itaque",
+            TaskID: "sit",
         },
         Headers: operations.CancelTaskHeaders{
-            XAmzAlgorithm: "nobis",
-            XAmzContentSha256: "sequi",
-            XAmzCredential: "esse",
-            XAmzDate: "nobis",
-            XAmzSecurityToken: "sint",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "sequi",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

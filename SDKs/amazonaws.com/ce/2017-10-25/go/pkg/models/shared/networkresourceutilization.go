@@ -1,0 +1,11 @@
+package shared
+
+// NetworkResourceUtilization
+//
+//	The network field that contains a list of network metrics that are associated with the current instance.
+type NetworkResourceUtilization struct {
+	NetworkInBytesPerSecond    *string `json:"NetworkInBytesPerSecond,omitempty"`
+	NetworkOutBytesPerSecond   *string `json:"NetworkOutBytesPerSecond,omitempty"`
+	NetworkPacketsInPerSecond  *string `json:"NetworkPacketsInPerSecond,omitempty"`
+	NetworkPacketsOutPerSecond *string `json:"NetworkPacketsOutPerSecond,omitempty"`
+}

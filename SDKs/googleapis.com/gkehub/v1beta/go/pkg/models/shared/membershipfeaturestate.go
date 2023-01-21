@@ -1,5 +1,7 @@
 package shared
 
+// MembershipFeatureState
+// MembershipFeatureState contains Feature status information for a single Membership.
 type MembershipFeatureState struct {
 	Appdevexperience   *AppDevExperienceFeatureState    `json:"appdevexperience,omitempty"`
 	Configmanagement   *ConfigManagementMembershipState `json:"configmanagement,omitempty"`

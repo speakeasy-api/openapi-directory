@@ -23,13 +23,13 @@ func main() {
     
     req := operations.CountClosedWorkflowExecutionsRequest{
         Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "illo",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "omnis",
-            XAmzDate: "eos",
-            XAmzSecurityToken: "dolore",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "dolor",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
         },
         Request: shared.CountClosedWorkflowExecutionsInput{
@@ -37,23 +37,23 @@ func main() {
                 Status: "COMPLETED",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "1983-08-05T17:33:17Z",
-                OldestDate: "1997-05-27T09:53:03Z",
+                LatestDate: "2011-08-12T10:11:12Z",
+                OldestDate: "2003-05-13T04:57:12Z",
             },
-            Domain: "iste",
+            Domain: "rerum",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "voluptatibus",
+                WorkflowID: "dicta",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "1980-03-26T04:47:11Z",
-                OldestDate: "1983-07-03T09:45:43Z",
+                LatestDate: "2004-06-02T10:14:12Z",
+                OldestDate: "1981-07-21T06:30:48Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "debitis",
+                Tag: "et",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "quam",
-                Version: "excepturi",
+                Name: "ut",
+                Version: "dolorem",
             },
         },
     }

@@ -35,13 +35,13 @@ func main() {
     req := operations.MergeTemplateRequest{
         QueryParams: operations.MergeTemplateQueryParams{
             Format: "zip",
-            Name: "illum",
+            Name: "voluptas",
             Output: "url",
-            TemplateID: 1665832531304498762,
+            TemplateID: 501233450539197794,
         },
         Request: shared.Data{
-            ID: 8072506708664074759,
-            Name: "aliquid",
+            ID: 3390393562759376202,
+            Name: "dolor",
         },
     }
     

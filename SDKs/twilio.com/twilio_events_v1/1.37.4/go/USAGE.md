@@ -19,9 +19,9 @@ func main() {
             },
         },
         Request: &operations.CreateSinkCreateSinkRequest{
-            Description: "repellendus",
-            SinkConfiguration: "facere",
-            SinkType: "segment",
+            Description: "sit",
+            SinkConfiguration: "voluptas",
+            SinkType: "webhook",
         },
     }
     

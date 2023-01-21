@@ -23,16 +23,16 @@ func main() {
     
     req := operations.ClaimDevicesByClaimCodeRequest{
         PathParams: operations.ClaimDevicesByClaimCodePathParams{
-            ClaimCode: "amet",
+            ClaimCode: "sit",
         },
         Headers: operations.ClaimDevicesByClaimCodeHeaders{
-            XAmzAlgorithm: "inventore",
-            XAmzContentSha256: "reprehenderit",
-            XAmzCredential: "autem",
-            XAmzDate: "tenetur",
-            XAmzSecurityToken: "facilis",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "est",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

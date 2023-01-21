@@ -23,48 +23,44 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "voluptatem",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "voluptas",
-            XAmzDate: "maxime",
-            XAmzSecurityToken: "error",
-            XAmzSignature: "exercitationem",
-            XAmzSignedHeaders: "quisquam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AmazonForecast.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            DataFrequency: "quaerat",
-            DatasetName: "earum",
+            DataFrequency: "fugit",
+            DatasetName: "et",
             DatasetType: "TARGET_TIME_SERIES",
-            Domain: "CUSTOM",
+            Domain: "METRICS",
             EncryptionConfig: &shared.EncryptionConfig{
-                KMSKeyArn: "ut",
-                RoleArn: "ut",
+                KMSKeyArn: "dicta",
+                RoleArn: "debitis",
             },
             Schema: shared.Schema{
                 Attributes: []shared.SchemaAttribute{
                     shared.SchemaAttribute{
-                        AttributeName: "magni",
-                        AttributeType: "timestamp",
-                    },
-                    shared.SchemaAttribute{
-                        AttributeName: "quaerat",
-                        AttributeType: "timestamp",
-                    },
-                    shared.SchemaAttribute{
-                        AttributeName: "voluptas",
-                        AttributeType: "float",
+                        AttributeName: "et",
+                        AttributeType: "integer",
                     },
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "sed",
-                    Value: "accusantium",
+                    Key: "et",
+                    Value: "voluptate",
                 },
                 shared.Tag{
-                    Key: "repellat",
-                    Value: "quam",
+                    Key: "iste",
+                    Value: "vitae",
+                },
+                shared.Tag{
+                    Key: "totam",
+                    Value: "dolores",
                 },
             },
         },

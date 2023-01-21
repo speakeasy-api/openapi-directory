@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.LpgsvRequestBody{
             CertificateParameters: &operations.LpgsvRequestBodyCertificateParameters{
-                UID: "ut",
+                UID: "sit",
             },
-            ConsentArtifact: "vel",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "eligendi",
+            TxnID: "expedita",
         },
     }
     

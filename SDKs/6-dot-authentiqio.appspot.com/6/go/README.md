@@ -24,10 +24,10 @@ func main() {
     
     req := operations.KeyRevokeRequest{
         PathParams: operations.KeyRevokePathParams{
-            PK: "expedita",
+            PK: "sit",
         },
         QueryParams: operations.KeyRevokeQueryParams{
-            Secret: "consequuntur",
+            Secret: "voluptas",
         },
     }
     

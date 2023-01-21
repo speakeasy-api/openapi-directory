@@ -29,9 +29,9 @@ func main() {
             },
         },
         PathParams: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams{
-            ID: "voluptates",
-            MemberID: "eos",
-            WorkspaceID: "ducimus",
+            ID: "sit",
+            MemberID: "voluptas",
+            WorkspaceID: "culpa",
         },
     }
     

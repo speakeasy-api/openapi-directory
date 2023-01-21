@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.FmcerRequestBody{
             CertificateParameters: &operations.FmcerRequestBodyCertificateParameters{
-                UID: "consectetur",
+                UID: "sit",
             },
-            ConsentArtifact: "consequuntur",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "saepe",
+            TxnID: "expedita",
         },
     }
     

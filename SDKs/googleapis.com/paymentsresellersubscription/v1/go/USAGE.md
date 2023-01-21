@@ -13,23 +13,23 @@ func main() {
     
     req := operations.PaymentsresellersubscriptionPartnersProductsListRequest{
         PathParams: operations.PaymentsresellersubscriptionPartnersProductsListPathParams{
-            Parent: "velit",
+            Parent: "sit",
         },
         QueryParams: operations.PaymentsresellersubscriptionPartnersProductsListQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "sint",
-            Alt: "json",
-            Callback: "fuga",
-            Fields: "modi",
-            Filter: "illo",
-            Key: "autem",
-            OauthToken: "dolores",
-            PageSize: 4740378950094471264,
-            PageToken: "blanditiis",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Filter: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
+            PageSize: 1543572285742637646,
+            PageToken: "nihil",
             PrettyPrint: true,
-            QuotaUser: "fuga",
-            UploadType: "alias",
-            UploadProtocol: "quas",
+            QuotaUser: "dicta",
+            UploadType: "debitis",
+            UploadProtocol: "voluptatum",
         },
     }
     

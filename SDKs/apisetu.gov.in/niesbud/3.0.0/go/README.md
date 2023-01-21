@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                COURSENO: "nihil",
-                FullName: "cumque",
-                CertificateType: "recusandae",
+                COURSENO: "sit",
+                FullName: "voluptas",
+                CertificateType: "culpa",
             },
-            ConsentArtifact: "omnis",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "vel",
+            TxnID: "dolor",
         },
     }
     

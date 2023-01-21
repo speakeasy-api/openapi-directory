@@ -18,33 +18,48 @@ func main() {
             },
         },
         QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "et",
-            DomainName: "ea",
+            AliasName: "sit",
+            DomainName: "voluptas",
         },
         Request: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
-                    Country: "vel",
-                    Os: "quia",
-                    URL: "voluptas",
+                    Country: "expedita",
+                    Os: "consequuntur",
+                    URL: "dolor",
+                },
+                shared.DestinationModel{
+                    Country: "expedita",
+                    Os: "voluptas",
+                    URL: "fugit",
                 },
             },
             Metatags: []shared.MetaTagModel{
                 shared.MetaTagModel{
-                    Content: "non",
-                    Name: "ut",
-                },
-                shared.MetaTagModel{
-                    Content: "excepturi",
-                    Name: "cumque",
+                    Content: "nihil",
+                    Name: "rerum",
                 },
             },
             Snippets: []shared.SnippetModel{
                 shared.SnippetModel{
-                    ID: "aspernatur",
+                    ID: "debitis",
                     Parameters: map[string]string{
-                        "unde": "adipisci",
-                        "aut": "porro",
+                        "et": "ut",
+                    },
+                },
+                shared.SnippetModel{
+                    ID: "dolorem",
+                    Parameters: map[string]string{
+                        "voluptate": "iste",
+                        "vitae": "totam",
+                    },
+                },
+                shared.SnippetModel{
+                    ID: "dolores",
+                    Parameters: map[string]string{
+                        "debitis": "vel",
+                        "odio": "dolore",
+                        "id": "aspernatur",
                     },
                 },
             },

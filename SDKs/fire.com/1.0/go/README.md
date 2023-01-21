@@ -34,15 +34,15 @@ func main() {
     
     req := operations.CreateAPIApplicationRequest{
         Request: operations.CreateAPIApplicationNewAPIApplication{
-            ApplicationName: "repellat",
-            Enabled: true,
-            Expiry: "2007-01-26T16:05:44Z",
-            Ican: 4405335760754809355,
-            NumberOfPayeeApprovalsRequired: 620736082703045283,
-            NumberOfPaymentApprovalsRequired: 1823518455980936632,
+            ApplicationName: "sit",
+            Enabled: false,
+            Expiry: "1978-05-13T03:50:47Z",
+            Ican: 501233450539197794,
+            NumberOfPayeeApprovalsRequired: 3390393562759376202,
+            NumberOfPaymentApprovalsRequired: 2669985732393126063,
             Permissions: []string{
-                "dolores",
-                "perferendis",
+                "voluptas",
+                "fugit",
             },
         },
     }

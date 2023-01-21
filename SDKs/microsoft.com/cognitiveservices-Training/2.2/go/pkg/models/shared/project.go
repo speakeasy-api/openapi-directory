@@ -21,5 +21,5 @@ type Project struct {
 type ProjectInput struct {
 	Description *string          `json:"description,omitempty" form:"name=description"`
 	Name        *string          `json:"name,omitempty" form:"name=name"`
-	Settings    *ProjectSettings `json:"settings,omitempty" form:"name=settings"`
+	Settings    *ProjectSettings `json:"settings,omitempty" form:"name=settings,json"`
 }

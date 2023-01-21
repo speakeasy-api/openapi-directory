@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.AdcrdRequestBody{
             CertificateParameters: &operations.AdcrdRequestBodyCertificateParameters{
-                DOB: "explicabo",
-                PrnNo: "exercitationem",
-                RequestID: "ea",
+                DOB: "sit",
+                PrnNo: "voluptas",
+                RequestID: "culpa",
             },
-            ConsentArtifact: "quos",
-            Format: "xml",
-            TxnID: "officiis",
+            ConsentArtifact: "expedita",
+            Format: "pdf",
+            TxnID: "dolor",
         },
     }
     

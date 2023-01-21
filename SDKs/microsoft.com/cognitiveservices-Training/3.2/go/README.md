@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetDomainRequest{
         PathParams: operations.GetDomainPathParams{
-            DomainID: "quia",
+            DomainID: "sit",
         },
     }
     
@@ -102,7 +102,6 @@ training for the provided iteration {iterationId}.
 * `TrainProject` - Queues project for training.
 * `UnpublishIteration` - Unpublish a specific iteration.
 * `UpdateIteration` - Update a specific iteration.
-* `UpdateProject` - Update a specific project.
 
 ### SuggestTagsAndRegionsApi
 

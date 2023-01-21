@@ -34,26 +34,26 @@ func main() {
     
     req := operations.CreateEventIntegrationRequest{
         Headers: operations.CreateEventIntegrationHeaders{
-            XAmzAlgorithm: "asperiores",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "hic",
-            XAmzDate: "doloribus",
-            XAmzSecurityToken: "corrupti",
-            XAmzSignature: "nemo",
-            XAmzSignedHeaders: "architecto",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateEventIntegrationRequestBody{
-            ClientToken: "neque",
-            Description: "autem",
-            EventBridgeBus: "saepe",
+            ClientToken: "voluptas",
+            Description: "fugit",
+            EventBridgeBus: "et",
             EventFilter: operations.CreateEventIntegrationRequestBodyEventFilter{
-                Source: "voluptatem",
+                Source: "nihil",
             },
-            Name: "error",
+            Name: "rerum",
             Tags: map[string]string{
-                "in": "mollitia",
-                "autem": "distinctio",
-                "consequuntur": "autem",
+                "debitis": "voluptatum",
+                "et": "ut",
+                "dolorem": "et",
             },
         },
     }

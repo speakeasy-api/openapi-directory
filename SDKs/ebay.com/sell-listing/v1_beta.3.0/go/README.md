@@ -33,50 +33,45 @@ func main() {
             XEBAYCMARKETPLACEID: "voluptas",
         },
         Request: &shared.ItemDraft{
-            CategoryID: "sint",
+            CategoryID: "culpa",
             Charity: &shared.Charity{
-                CharityID: "voluptate",
-                DonationPercentage: "aperiam",
+                CharityID: "expedita",
+                DonationPercentage: "consequuntur",
             },
-            Condition: "aut",
-            Format: "unde",
+            Condition: "dolor",
+            Format: "expedita",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "dolorem",
-                    Value: "aspernatur",
+                    Currency: "voluptas",
+                    Value: "fugit",
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "quia",
-                    Value: "autem",
+                    Currency: "et",
+                    Value: "nihil",
                 },
                 Price: &shared.Amount{
-                    Currency: "facere",
-                    Value: "at",
+                    Currency: "rerum",
+                    Value: "dicta",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "qui",
+                        Name: "voluptatum",
                         Values: []string{
-                            "modi",
-                        },
-                    },
-                    shared.Aspect{
-                        Name: "debitis",
-                        Values: []string{
-                            "fugiat",
-                            "perferendis",
+                            "ut",
                         },
                     },
                 },
-                Brand: "soluta",
-                Description: "aut",
-                Epid: "nihil",
+                Brand: "dolorem",
+                Description: "et",
+                Epid: "voluptate",
                 ImageUrls: []string{
-                    "voluptates",
+                    "vitae",
+                    "totam",
+                    "dolores",
                 },
-                Title: "quasi",
+                Title: "illum",
             },
         },
     }

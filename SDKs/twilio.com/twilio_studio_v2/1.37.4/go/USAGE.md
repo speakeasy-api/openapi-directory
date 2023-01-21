@@ -19,12 +19,12 @@ func main() {
             },
         },
         PathParams: operations.CreateExecutionPathParams{
-            FlowSid: "voluptatem",
+            FlowSid: "sit",
         },
         Request: &operations.CreateExecutionCreateExecutionRequest{
-            From: "unde",
-            Parameters: "odio",
-            To: "ab",
+            From: "voluptas",
+            Parameters: "culpa",
+            To: "expedita",
         },
     }
     

@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteSettingsOrganizationsOrganizationNamePathParams{
-            OrganizationName: "voluptas",
+            OrganizationName: "sit",
         },
     }
     

@@ -30,7 +30,7 @@ func main() {
             },
         },
         PathParams: operations.FetchAlertPathParams{
-            Sid: "illum",
+            Sid: "sit",
         },
     }
     

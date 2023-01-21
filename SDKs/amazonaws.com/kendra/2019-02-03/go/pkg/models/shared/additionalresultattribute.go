@@ -1,0 +1,9 @@
+package shared
+
+// AdditionalResultAttribute
+// An attribute returned from an index query.
+type AdditionalResultAttribute struct {
+	Key       string                                 `json:"Key"`
+	Value     AdditionalResultAttributeValue         `json:"Value"`
+	ValueType AdditionalResultAttributeValueTypeEnum `json:"ValueType"`
+}

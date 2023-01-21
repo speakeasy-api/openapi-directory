@@ -1,0 +1,10 @@
+package shared
+
+// Search
+// Provides information about how a custom index field is used during a search.
+type Search struct {
+	Displayable *bool `json:"Displayable,omitempty"`
+	Facetable   *bool `json:"Facetable,omitempty"`
+	Searchable  *bool `json:"Searchable,omitempty"`
+	Sortable    *bool `json:"Sortable,omitempty"`
+}

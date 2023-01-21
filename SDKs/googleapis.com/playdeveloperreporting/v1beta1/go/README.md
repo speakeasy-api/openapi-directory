@@ -24,23 +24,23 @@ func main() {
     
     req := operations.PlaydeveloperreportingAnomaliesListRequest{
         PathParams: operations.PlaydeveloperreportingAnomaliesListPathParams{
-            Parent: "quasi",
+            Parent: "sit",
         },
         QueryParams: operations.PlaydeveloperreportingAnomaliesListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "recusandae",
+            AccessToken: "culpa",
             Alt: "media",
-            Callback: "eos",
-            Fields: "ut",
-            Filter: "est",
-            Key: "aut",
-            OauthToken: "voluptatem",
-            PageSize: 4790505383503673118,
-            PageToken: "voluptatibus",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Filter: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
+            PageSize: 1543572285742637646,
+            PageToken: "nihil",
             PrettyPrint: true,
-            QuotaUser: "quod",
-            UploadType: "nihil",
-            UploadProtocol: "maxime",
+            QuotaUser: "dicta",
+            UploadType: "debitis",
+            UploadProtocol: "voluptatum",
         },
     }
     

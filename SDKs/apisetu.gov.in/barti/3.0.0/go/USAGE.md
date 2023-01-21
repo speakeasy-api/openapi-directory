@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.CvcerRequestBody{
             CertificateParameters: &operations.CvcerRequestBodyCertificateParameters{
-                DOB: "consequatur",
-                VCNo: "quo",
+                DOB: "sit",
+                VCNo: "voluptas",
             },
-            ConsentArtifact: "deleniti",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "nemo",
+            TxnID: "consequuntur",
         },
     }
     

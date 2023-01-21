@@ -37,9 +37,9 @@ func main() {
     
     req := operations.BadWordFilterRequest{
         Request: &operations.BadWordFilterRequestBody{
-            Catalog: "quisquam",
-            CensorCharacter: "quasi",
-            Content: "delectus",
+            Catalog: "sit",
+            CensorCharacter: "voluptas",
+            Content: "culpa",
             OutputCase: "camel",
         },
     }

@@ -23,18 +23,18 @@ func main() {
     
     req := operations.BuildBotLocaleRequest{
         PathParams: operations.BuildBotLocalePathParams{
-            BotID: "dolor",
-            BotVersion: "voluptatibus",
-            LocaleID: "aut",
+            BotID: "sit",
+            BotVersion: "voluptas",
+            LocaleID: "culpa",
         },
         Headers: operations.BuildBotLocaleHeaders{
-            XAmzAlgorithm: "repellendus",
-            XAmzContentSha256: "et",
-            XAmzCredential: "sunt",
-            XAmzDate: "exercitationem",
-            XAmzSecurityToken: "voluptatem",
-            XAmzSignature: "natus",
-            XAmzSignedHeaders: "ea",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
+            XAmzSignedHeaders: "et",
         },
     }
     

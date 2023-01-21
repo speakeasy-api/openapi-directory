@@ -23,20 +23,20 @@ func main() {
     
     req := operations.CreateHomeRegionControlRequest{
         Headers: operations.CreateHomeRegionControlHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "deleniti",
-            XAmzCredential: "laudantium",
-            XAmzDate: "fuga",
-            XAmzSecurityToken: "doloribus",
-            XAmzSignature: "quasi",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
         },
         Request: shared.CreateHomeRegionControlRequest{
-            DryRun: false,
-            HomeRegion: "doloremque",
+            DryRun: true,
+            HomeRegion: "et",
             Target: shared.Target{
-                ID: "minus",
+                ID: "nihil",
                 Type: "ACCOUNT",
             },
         },

@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetActionsRequest{
         QueryParams: operations.GetActionsQueryParams{
-            ID: 8882134101877179010,
-            Sort: "status:asc",
+            ID: 8717895732742165505,
+            Sort: "id",
             Status: "success",
         },
     }

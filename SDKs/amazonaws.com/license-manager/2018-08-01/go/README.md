@@ -34,17 +34,17 @@ func main() {
     
     req := operations.AcceptGrantRequest{
         Headers: operations.AcceptGrantHeaders{
-            XAmzAlgorithm: "vel",
-            XAmzContentSha256: "rerum",
-            XAmzCredential: "minus",
-            XAmzDate: "asperiores",
-            XAmzSecurityToken: "laboriosam",
-            XAmzSignature: "voluptate",
-            XAmzSignedHeaders: "aut",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSLicenseManager.AcceptGrant",
         },
         Request: shared.AcceptGrantRequest{
-            GrantArn: "ipsa",
+            GrantArn: "fugit",
         },
     }
     

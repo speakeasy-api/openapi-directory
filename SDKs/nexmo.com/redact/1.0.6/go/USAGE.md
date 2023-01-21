@@ -19,8 +19,8 @@ func main() {
             },
         },
         Request: shared.RedactTransaction{
-            ID: "tenetur",
-            Product: "verify",
+            ID: "sit",
+            Product: "sms",
             Type: "outbound",
         },
     }

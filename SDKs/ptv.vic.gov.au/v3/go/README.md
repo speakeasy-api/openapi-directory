@@ -24,28 +24,27 @@ func main() {
     
     req := operations.DeparturesGetForStopRequest{
         PathParams: operations.DeparturesGetForStopPathParams{
-            RouteType: 7191447943873783343,
-            StopID: 5184739520645517328,
+            RouteType: 8717895732742165505,
+            StopID: 2259404117704393152,
         },
         QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "1978-07-16T07:01:39Z",
-            Devid: "sapiente",
-            DirectionID: 4122159384933783933,
+            DateUtc: "1978-05-13T03:50:47Z",
+            Devid: "expedita",
+            DirectionID: 3390393562759376202,
             Expand: []DeparturesGetForStopExpandEnum{
+                "VehiclePosition",
                 "None",
             },
-            Gtfs: false,
-            IncludeCancelled: true,
-            IncludeGeopath: false,
-            LookBackwards: false,
-            MaxResults: 3667407268721385014,
+            Gtfs: true,
+            IncludeCancelled: false,
+            IncludeGeopath: true,
+            LookBackwards: true,
+            MaxResults: 7837839688282259259,
             PlatformNumbers: []int32{
-                2999443024173756696,
-                4335001580442025170,
-                7516829928812896570,
+                5617773211005988520,
             },
-            Signature: "ut",
-            Token: "aut",
+            Signature: "et",
+            Token: "ut",
         },
     }
     

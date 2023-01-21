@@ -23,8 +23,8 @@ func main() {
     
     req := operations.AppendTextUsingGetRequest{
         QueryParams: operations.AppendTextUsingGetQueryParams{
-            PadID: "et",
-            Text: "fuga",
+            PadID: "sit",
+            Text: "voluptas",
         },
     }
     

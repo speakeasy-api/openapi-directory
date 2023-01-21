@@ -34,51 +34,40 @@ func main() {
     
     req := operations.CreateIdentityPoolRequest{
         Headers: operations.CreateIdentityPoolHeaders{
-            XAmzAlgorithm: "vitae",
-            XAmzContentSha256: "vel",
-            XAmzCredential: "assumenda",
-            XAmzDate: "corrupti",
-            XAmzSecurityToken: "ad",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
         },
         Request: shared.CreateIdentityPoolInput{
-            AllowClassicFlow: false,
-            AllowUnauthenticatedIdentities: true,
+            AllowClassicFlow: true,
+            AllowUnauthenticatedIdentities: false,
             CognitoIdentityProviders: []shared.CognitoIdentityProvider{
                 shared.CognitoIdentityProvider{
-                    ClientID: "consequatur",
-                    ProviderName: "non",
-                    ServerSideTokenCheck: true,
-                },
-                shared.CognitoIdentityProvider{
-                    ClientID: "cum",
-                    ProviderName: "eius",
-                    ServerSideTokenCheck: false,
-                },
-                shared.CognitoIdentityProvider{
-                    ClientID: "nisi",
-                    ProviderName: "sit",
+                    ClientID: "rerum",
+                    ProviderName: "dicta",
                     ServerSideTokenCheck: true,
                 },
             },
-            DeveloperProviderName: "rerum",
-            IdentityPoolName: "quisquam",
+            DeveloperProviderName: "voluptatum",
+            IdentityPoolName: "et",
             IdentityPoolTags: map[string]string{
-                "itaque": "reiciendis",
-                "expedita": "itaque",
+                "dolorem": "et",
+                "voluptate": "iste",
+                "vitae": "totam",
             },
             OpenIDConnectProviderARNs: []string{
-                "voluptatum",
+                "illum",
             },
             SamlProviderARNs: []string{
-                "modi",
-                "adipisci",
+                "vel",
             },
             SupportedLoginProviders: map[string]string{
-                "tempora": "illum",
-                "quae": "aut",
+                "dolore": "id",
             },
         },
     }

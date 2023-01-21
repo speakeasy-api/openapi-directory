@@ -24,9 +24,9 @@ func main() {
     
     req := operations.SendAnSmsRequest{
         PathParams: operations.SendAnSmsPathParams{
-            Format: "xml",
+            Format: "json",
         },
-        Request: "est",
+        Request: "voluptas",
     }
     
     res, err := s.SendAnSms(ctx, req)

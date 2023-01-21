@@ -1,0 +1,443 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Invoices struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewInvoices(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Invoices {
+	return &Invoices{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// CancelInvoice - CancelInvoice
+// Cancels an invoice. The seller cannot collect payments for
+// the canceled invoice.
+//
+// You cannot cancel an invoice in the `DRAFT` state or in a terminal state: `PAID`, `REFUNDED`, `CANCELED`, or `FAILED`.
+func (s *Invoices) CancelInvoice(ctx context.Context, request operations.CancelInvoiceRequest) (*operations.CancelInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/cancel", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CancelInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CancelInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CancelInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateInvoice - CreateInvoice
+// Creates a draft [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice)
+// for an order created using the Orders API.
+//
+// A draft invoice remains in your account and no action is taken.
+// You must publish the invoice before Square can process it (send it to the customer's email address or charge the customer’s card on file).
+func (s *Invoices) CreateInvoice(ctx context.Context, request operations.CreateInvoiceRequest) (*operations.CreateInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteInvoice - DeleteInvoice
+// Deletes the specified invoice. When an invoice is deleted, the
+// associated order status changes to CANCELED. You can only delete a draft
+// invoice (you cannot delete a published invoice, including one that is scheduled for processing).
+func (s *Invoices) DeleteInvoice(ctx context.Context, request operations.DeleteInvoiceRequest) (*operations.DeleteInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DeleteInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetInvoice - GetInvoice
+// Retrieves an invoice by invoice ID.
+func (s *Invoices) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest) (*operations.GetInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListInvoices - ListInvoices
+// Returns a list of invoices for a given location. The response
+// is paginated. If truncated, the response includes a `cursor` that you
+// use in a subsequent request to retrieve the next set of invoices.
+func (s *Invoices) ListInvoices(ctx context.Context, request operations.ListInvoicesRequest) (*operations.ListInvoicesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListInvoicesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListInvoicesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListInvoicesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PublishInvoice - PublishInvoice
+// Publishes the specified draft invoice.
+//
+// After an invoice is published, Square
+// follows up based on the invoice configuration. For example, Square
+// sends the invoice to the customer's email address, charges the customer's card on file, or does
+// nothing. Square also makes the invoice available on a Square-hosted invoice page.
+//
+// The invoice `status` also changes from `DRAFT` to a status
+// based on the invoice configuration. For example, the status changes to `UNPAID` if
+// Square emails the invoice or `PARTIALLY_PAID` if Square charge a card on file for a portion of the
+// invoice amount.
+func (s *Invoices) PublishInvoice(ctx context.Context, request operations.PublishInvoiceRequest) (*operations.PublishInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/publish", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PublishInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PublishInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PublishInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SearchInvoices - SearchInvoices
+// Searches for invoices from a location specified in
+// the filter. You can optionally specify customers in the filter for whom to
+// retrieve invoices. In the current implementation, you can only specify one location and
+// optionally one customer.
+//
+// The response is paginated. If truncated, the response includes a `cursor`
+// that you use in a subsequent request to retrieve the next set of invoices.
+func (s *Invoices) SearchInvoices(ctx context.Context, request operations.SearchInvoicesRequest) (*operations.SearchInvoicesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/invoices/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchInvoicesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchInvoicesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchInvoicesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateInvoice - UpdateInvoice
+// Updates an invoice by modifying fields, clearing fields, or both. For most updates, you can use a sparse
+// `Invoice` object to add fields or change values and use the `fields_to_clear` field to specify fields to clear.
+// However, some restrictions apply. For example, you cannot change the `order_id` or `location_id` field and you
+// must provide the complete `custom_fields` list to update a custom field. Published invoices have additional restrictions.
+func (s *Invoices) UpdateInvoice(ctx context.Context, request operations.UpdateInvoiceRequest) (*operations.UpdateInvoiceResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateInvoiceResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateInvoiceResponse = out
+		}
+	}
+
+	return res, nil
+}

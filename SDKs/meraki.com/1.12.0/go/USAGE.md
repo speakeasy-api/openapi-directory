@@ -23,7 +23,7 @@ func main() {
     
     req := operations.GetNetworkSwitchAccessControlListsRequest{
         PathParams: operations.GetNetworkSwitchAccessControlListsPathParams{
-            NetworkID: "numquam",
+            NetworkID: "sit",
         },
     }
     

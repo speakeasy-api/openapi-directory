@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.GetPayoutPathParams{
-            PayoutID: "quo",
+            PayoutID: "sit",
         },
     }
     

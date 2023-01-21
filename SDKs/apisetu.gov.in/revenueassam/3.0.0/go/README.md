@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.NncerRequestBody{
             CertificateParameters: &operations.NncerRequestBodyCertificateParameters{
-                RefNo: "consequatur",
+                RefNo: "sit",
             },
-            ConsentArtifact: "sit",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "quaerat",
+            TxnID: "expedita",
         },
     }
     

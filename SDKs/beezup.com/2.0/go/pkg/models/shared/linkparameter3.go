@@ -2,7 +2,7 @@ package shared
 
 type LinkParameter3 struct {
 	Description *string                `json:"description,omitempty"`
-	In          *ParameterInEnum       `json:"in,omitempty"`
+	In          ParameterInEnum        `json:"in"`
 	Label       *string                `json:"label,omitempty"`
 	LovLink     *LovLink3              `json:"lovLink,omitempty"`
 	LovRequired *bool                  `json:"lovRequired,omitempty"`

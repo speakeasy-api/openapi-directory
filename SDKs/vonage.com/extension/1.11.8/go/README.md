@@ -29,8 +29,8 @@ func main() {
             },
         },
         PathParams: operations.ExtensionCtrlGetAccountExtensionByIDPathParams{
-            AccountID: "qui",
-            ExtensionNumber: 79.199997,
+            AccountID: "sit",
+            ExtensionNumber: 14.200000,
         },
     }
     

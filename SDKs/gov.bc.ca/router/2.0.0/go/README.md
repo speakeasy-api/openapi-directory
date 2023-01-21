@@ -34,18 +34,18 @@ func main() {
     
     req := operations.GetDirectionsOutputFormatRequest{
         PathParams: operations.GetDirectionsOutputFormatPathParams{
-            OutputFormat: "kml",
+            OutputFormat: "json",
         },
         QueryParams: operations.GetDirectionsOutputFormatQueryParams{
             CorrectSide: false,
-            Criteria: "shortest",
-            Departure: "2012-09-29T14:14:23Z",
-            Disable: "quia",
-            DistanceUnit: "mi",
-            OutputSRS: 2629240772588096916,
-            Points: "distinctio",
-            RoundTrip: false,
-            RouteDescription: "nesciunt",
+            Criteria: "fastest",
+            Departure: "2019-04-21T07:38:14Z",
+            Disable: "consequuntur",
+            DistanceUnit: "km",
+            OutputSRS: 1774932891286980153,
+            Points: "voluptas",
+            RoundTrip: true,
+            RouteDescription: "et",
         },
     }
     

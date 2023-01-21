@@ -23,19 +23,19 @@ func main() {
     
     req := operations.BatchDeleteWorldsRequest{
         Headers: operations.BatchDeleteWorldsHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "ea",
-            XAmzCredential: "sapiente",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "voluptate",
-            XAmzSignedHeaders: "dolore",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.BatchDeleteWorldsRequestBody{
             Worlds: []string{
-                "quia",
-                "eum",
-                "iure",
+                "fugit",
+                "et",
+                "nihil",
             },
         },
     }

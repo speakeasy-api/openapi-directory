@@ -34,20 +34,19 @@ func main() {
     
     req := operations.CreateWorkspaceRequest{
         Headers: operations.CreateWorkspaceHeaders{
-            XAmzAlgorithm: "commodi",
-            XAmzContentSha256: "in",
-            XAmzCredential: "quibusdam",
-            XAmzDate: "asperiores",
-            XAmzSecurityToken: "quo",
-            XAmzSignature: "ea",
-            XAmzSignedHeaders: "soluta",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateWorkspaceRequestBody{
-            Alias: "tempora",
-            ClientToken: "commodi",
+            Alias: "voluptas",
+            ClientToken: "fugit",
             Tags: map[string]string{
-                "facere": "in",
-                "et": "odit",
+                "nihil": "rerum",
             },
         },
     }

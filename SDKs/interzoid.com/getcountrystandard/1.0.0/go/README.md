@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetcountrystandardRequest{
         QueryParams: operations.GetcountrystandardQueryParams{
-            Country: "provident",
-            License: "neque",
+            Country: "sit",
+            License: "voluptas",
         },
     }
     

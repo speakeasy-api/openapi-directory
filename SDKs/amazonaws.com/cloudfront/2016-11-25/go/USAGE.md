@@ -23,15 +23,15 @@ func main() {
     
     req := operations.CreateCloudFrontOriginAccessIdentity20161125Request{
         Headers: operations.CreateCloudFrontOriginAccessIdentity20161125Headers{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "architecto",
-            XAmzCredential: "omnis",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "sunt",
-            XAmzSignature: "modi",
-            XAmzSignedHeaders: "nisi",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
-        Request: []byte("dolores"),
+        Request: []byte("voluptas"),
     }
     
     res, err := s.CreateCloudFrontOriginAccessIdentity20161125(ctx, req)

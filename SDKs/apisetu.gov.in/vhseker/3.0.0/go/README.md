@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.VochseRequestBody{
             CertificateParameters: &operations.VochseRequestBodyCertificateParameters{
-                DOB: "corporis",
-                FullName: "voluptates",
-                Regno: "quaerat",
-                Year: "aperiam",
-                Type: "et",
+                DOB: "sit",
+                FullName: "voluptas",
+                Regno: "culpa",
+                Year: "expedita",
+                Type: "consequuntur",
             },
-            ConsentArtifact: "nisi",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "quo",
+            TxnID: "voluptas",
         },
     }
     

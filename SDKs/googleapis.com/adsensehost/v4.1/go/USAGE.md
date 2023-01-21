@@ -21,17 +21,17 @@ func main() {
             },
         },
         PathParams: operations.AdsensehostAccountsAdclientsGetPathParams{
-            AccountID: "qui",
-            AdClientID: "necessitatibus",
+            AccountID: "sit",
+            AdClientID: "voluptas",
         },
         QueryParams: operations.AdsensehostAccountsAdclientsGetQueryParams{
-            Alt: "csv",
-            Fields: "itaque",
-            Key: "veniam",
-            OauthToken: "nihil",
+            Alt: "json",
+            Fields: "expedita",
+            Key: "consequuntur",
+            OauthToken: "dolor",
             PrettyPrint: true,
-            QuotaUser: "est",
-            UserIP: "placeat",
+            QuotaUser: "voluptas",
+            UserIP: "fugit",
         },
     }
     

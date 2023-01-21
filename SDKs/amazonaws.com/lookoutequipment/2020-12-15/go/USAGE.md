@@ -23,26 +23,34 @@ func main() {
     
     req := operations.CreateDatasetRequest{
         Headers: operations.CreateDatasetHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "est",
-            XAmzCredential: "voluptates",
-            XAmzDate: "repellat",
-            XAmzSecurityToken: "eligendi",
-            XAmzSignature: "adipisci",
-            XAmzSignedHeaders: "sit",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
         },
         Request: shared.CreateDatasetRequest{
-            ClientToken: "atque",
-            DatasetName: "odio",
+            ClientToken: "fugit",
+            DatasetName: "et",
             DatasetSchema: shared.DatasetSchema{
-                InlineDataSchema: "quam",
+                InlineDataSchema: "nihil",
             },
-            ServerSideKmsKeyID: "ut",
+            ServerSideKmsKeyID: "rerum",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "voluptas",
-                    Value: "in",
+                    Key: "debitis",
+                    Value: "voluptatum",
+                },
+                shared.Tag{
+                    Key: "et",
+                    Value: "ut",
+                },
+                shared.Tag{
+                    Key: "dolorem",
+                    Value: "et",
                 },
             },
         },

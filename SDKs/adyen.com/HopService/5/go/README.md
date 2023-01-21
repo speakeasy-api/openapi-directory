@@ -29,7 +29,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "debitis",
+        Request: "sit",
     }
     
     res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req)

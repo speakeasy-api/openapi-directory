@@ -18,7 +18,7 @@ func main() {
             },
         },
         QueryParams: operations.DeleteQuoteQueryParams{
-            ID: "ea",
+            ID: "sit",
         },
     }
     

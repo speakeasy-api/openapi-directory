@@ -35,15 +35,15 @@ func main() {
     
     req := operations.RequestAccessTokenRequest{
         PathParams: operations.RequestAccessTokenPathParams{
-            KeyName: "dolor",
+            KeyName: "sit",
         },
         QueryParams: operations.RequestAccessTokenQueryParams{
-            Format: "html",
+            Format: "msgpack",
         },
         Headers: operations.RequestAccessTokenHeaders{
-            XAblyVersion: "voluptas",
+            XAblyVersion: "culpa",
         },
-        Request: "fugit",
+        Request: "expedita",
     }
     
     res, err := s.Authentication.RequestAccessToken(ctx, req)
@@ -69,10 +69,6 @@ func main() {
 * `GetMessagesByChannel` - Get message history for a channel
 * `GetPresenceHistoryOfChannel` - Get presence history of a channel
 
-### Publishing
-
-* `PublishMessagesToChannel` - Publish a message to a channel
-
 ### Push
 
 * `DeletePushDeviceDetails` - Delete a registered device's update token
@@ -81,7 +77,6 @@ func main() {
 * `GetPushSubscriptionsOnChannels` - List channel subscriptions
 * `GetRegisteredPushDevices` - List devices registered for receiving push notifications
 * `PatchPushDeviceDetails` - Update a device registration
-* `PublishPushNotificationToDevices` - Publish a push notification to device(s)
 * `PutPushDeviceDetails` - Update a device registration
 * `RegisterPushDevice` - Register a device for receiving push notifications
 * `SubscribePushDeviceToChannel` - Subscribe a device to a channel

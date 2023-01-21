@@ -1,7 +1,7 @@
 package shared
 
 type ReportByDayResponse struct {
-	CurrencyCode                *string            `json:"currencyCode,omitempty"`
-	Days                        []ReportByDay      `json:"days,omitempty"`
-	GlobalPerformanceIndicators *ReportByDayGlobal `json:"globalPerformanceIndicators,omitempty"`
+	CurrencyCode                string            `json:"currencyCode"`
+	Days                        []ReportByDay     `json:"days"`
+	GlobalPerformanceIndicators ReportByDayGlobal `json:"globalPerformanceIndicators"`
 }

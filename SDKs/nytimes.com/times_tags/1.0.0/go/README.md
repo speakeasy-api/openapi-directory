@@ -34,9 +34,9 @@ func main() {
     
     req := operations.GetTimestagsRequest{
         QueryParams: operations.GetTimestagsQueryParams{
-            Filter: "Per",
-            Max: 540949453915600111,
-            Query: "ex",
+            Filter: "Org",
+            Max: 2259404117704393152,
+            Query: "culpa",
         },
     }
     

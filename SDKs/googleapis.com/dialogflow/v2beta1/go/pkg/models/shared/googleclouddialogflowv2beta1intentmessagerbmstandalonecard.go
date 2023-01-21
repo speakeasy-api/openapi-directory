@@ -1,0 +1,25 @@
+package shared
+
+type GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum string
+
+const (
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnumCardOrientationUnspecified GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum = "CARD_ORIENTATION_UNSPECIFIED"
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnumHorizontal                 GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum = "HORIZONTAL"
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnumVertical                   GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum = "VERTICAL"
+)
+
+type GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum string
+
+const (
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnumThumbnailImageAlignmentUnspecified GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum = "THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED"
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnumLeft                               GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum = "LEFT"
+	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnumRight                              GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum = "RIGHT"
+)
+
+// GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard
+// Standalone Rich Business Messaging (RBM) rich card. Rich cards allow you to respond to users with more vivid content, e.g. with media and suggestions. You can group multiple rich cards into one using RbmCarouselCard but carousel cards will give you less control over the card layout.
+type GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard struct {
+	CardContent             *GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent                               `json:"cardContent,omitempty"`
+	CardOrientation         *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum         `json:"cardOrientation,omitempty"`
+	ThumbnailImageAlignment *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum `json:"thumbnailImageAlignment,omitempty"`
+}

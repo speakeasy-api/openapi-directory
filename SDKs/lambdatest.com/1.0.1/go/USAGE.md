@@ -19,7 +19,7 @@ func main() {
             },
         },
         QueryParams: operations.DevicesQueryParams{
-            Os: "aut",
+            Os: "sit",
         },
     }
     

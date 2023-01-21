@@ -18,10 +18,10 @@ func main() {
             },
         },
         PathParams: operations.GetCharityOrgPathParams{
-            CharityOrgID: "et",
+            CharityOrgID: "sit",
         },
         Headers: operations.GetCharityOrgHeaders{
-            XEBAYCMARKETPLACEID: "maxime",
+            XEBAYCMARKETPLACEID: "voluptas",
         },
     }
     

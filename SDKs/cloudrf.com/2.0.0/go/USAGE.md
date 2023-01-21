@@ -28,8 +28,8 @@ func main() {
             },
         },
         QueryParams: operations.InterferenceQueryParams{
-            Name: "voluptas",
-            Network: "quam",
+            Name: "sit",
+            Network: "voluptas",
         },
     }
     

@@ -34,7 +34,7 @@ func main() {
     
     req := operations.BatchReadFileRequest{
         Request: shared.ImageURL{
-            URL: "occaecati",
+            URL: "sit",
         },
     }
     

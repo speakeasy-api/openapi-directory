@@ -30,21 +30,19 @@ func main() {
             },
         },
         PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "voluptas",
+            PhoneNumber: "sit",
         },
         QueryParams: operations.FetchPhoneNumberQueryParams{
             AddOns: []string{
-                "quae",
+                "culpa",
             },
             AddOnsData: map[string]interface{}{
-                "dolor": "nobis",
-                "sint": "maxime",
+                "consequuntur": "dolor",
+                "expedita": "voluptas",
             },
-            CountryCode: "neque",
+            CountryCode: "fugit",
             Type: []string{
-                "ullam",
-                "placeat",
-                "architecto",
+                "nihil",
             },
         },
     }

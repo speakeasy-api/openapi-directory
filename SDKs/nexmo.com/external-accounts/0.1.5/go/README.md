@@ -29,9 +29,9 @@ func main() {
             },
         },
         QueryParams: operations.GetAllAccountsQueryParams{
-            PageNumber: 320452589942240589,
-            PageSize: 8077343311452570016,
-            Provider: "whatsapp",
+            PageNumber: 8717895732742165505,
+            PageSize: 2259404117704393152,
+            Provider: "viber_service_msg",
         },
     }
     

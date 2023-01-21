@@ -23,30 +23,22 @@ func main() {
     
     req := operations.CreateDatabaseRequest{
         Headers: operations.CreateDatabaseHeaders{
-            XAmzAlgorithm: "omnis",
-            XAmzContentSha256: "accusantium",
-            XAmzCredential: "architecto",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "porro",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "eius",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "Timestream_20181101.CreateDatabase",
         },
         Request: shared.CreateDatabaseRequest{
-            DatabaseName: "beatae",
-            KmsKeyID: "quia",
+            DatabaseName: "fugit",
+            KmsKeyID: "et",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "id",
-                    Value: "dolorem",
-                },
-                shared.Tag{
-                    Key: "et",
-                    Value: "quibusdam",
-                },
-                shared.Tag{
-                    Key: "cupiditate",
-                    Value: "eaque",
+                    Key: "rerum",
+                    Value: "dicta",
                 },
             },
         },

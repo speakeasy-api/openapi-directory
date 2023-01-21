@@ -1,0 +1,444 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Team struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewTeam(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Team {
+	return &Team{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// BulkCreateTeamMembers - BulkCreateTeamMembers
+// Creates multiple `TeamMember` objects. The created `TeamMember` objects are returned on successful creates.
+// This process is non-transactional and processes as much of the request as possible. If one of the creates in
+// the request cannot be successfully processed, the request is not marked as failed, but the body of the response
+// contains explicit error information for the failed create.
+//
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-create-team-members).
+func (s *Team) BulkCreateTeamMembers(ctx context.Context, request operations.BulkCreateTeamMembersRequest) (*operations.BulkCreateTeamMembersResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/bulk-create"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BulkCreateTeamMembersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BulkCreateTeamMembersResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BulkCreateTeamMembersResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// BulkUpdateTeamMembers - BulkUpdateTeamMembers
+// Updates multiple `TeamMember` objects. The updated `TeamMember` objects are returned on successful updates.
+// This process is non-transactional and processes as much of the request as possible. If one of the updates in
+// the request cannot be successfully processed, the request is not marked as failed, but the body of the response
+// contains explicit error information for the failed update.
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-update-team-members).
+func (s *Team) BulkUpdateTeamMembers(ctx context.Context, request operations.BulkUpdateTeamMembersRequest) (*operations.BulkUpdateTeamMembersResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/bulk-update"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BulkUpdateTeamMembersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BulkUpdateTeamMembersResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BulkUpdateTeamMembersResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateTeamMember - CreateTeamMember
+// Creates a single `TeamMember` object. The `TeamMember` object is returned on successful creates.
+// You must provide the following values in your request to this endpoint:
+// - `given_name`
+// - `family_name`
+//
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#createteammember).
+func (s *Team) CreateTeamMember(ctx context.Context, request operations.CreateTeamMemberRequest) (*operations.CreateTeamMemberResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateTeamMemberResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateTeamMemberResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateTeamMemberResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveTeamMember - RetrieveTeamMember
+// Retrieves a `TeamMember` object for the given `TeamMember.id`.
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrieve-a-team-member).
+func (s *Team) RetrieveTeamMember(ctx context.Context, request operations.RetrieveTeamMemberRequest) (*operations.RetrieveTeamMemberResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveTeamMemberResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveTeamMemberResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveTeamMemberResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveWageSetting - RetrieveWageSetting
+// Retrieves a `WageSetting` object for a team member specified
+// by `TeamMember.id`.
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrievewagesetting).
+func (s *Team) RetrieveWageSetting(ctx context.Context, request operations.RetrieveWageSettingRequest) (*operations.RetrieveWageSettingResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveWageSettingResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveWageSettingResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveWageSettingResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SearchTeamMembers - SearchTeamMembers
+// Returns a paginated list of `TeamMember` objects for a business.
+// The list can be filtered by the following:
+// - location IDs
+// - `status`
+func (s *Team) SearchTeamMembers(ctx context.Context, request operations.SearchTeamMembersRequest) (*operations.SearchTeamMembersResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/team-members/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchTeamMembersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchTeamMembersResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchTeamMembersResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateTeamMember - UpdateTeamMember
+// Updates a single `TeamMember` object. The `TeamMember` object is returned on successful updates.
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#update-a-team-member).
+func (s *Team) UpdateTeamMember(ctx context.Context, request operations.UpdateTeamMemberRequest) (*operations.UpdateTeamMemberResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateTeamMemberResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateTeamMemberResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateTeamMemberResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateWageSetting - UpdateWageSetting
+// Creates or updates a `WageSetting` object. The object is created if a
+// `WageSetting` with the specified `team_member_id` does not exist. Otherwise,
+// it fully replaces the `WageSetting` object for the team member.
+// The `WageSetting` is returned on a successful update.
+// Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#create-or-update-a-wage-setting).
+func (s *Team) UpdateWageSetting(ctx context.Context, request operations.UpdateWageSettingRequest) (*operations.UpdateWageSettingResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateWageSettingResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateWageSettingResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateWageSettingResponse = out
+		}
+	}
+
+	return res, nil
+}

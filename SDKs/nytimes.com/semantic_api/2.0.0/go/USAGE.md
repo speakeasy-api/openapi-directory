@@ -23,12 +23,12 @@ func main() {
     
     req := operations.GetNameConceptTypeSpecificConceptJSONRequest{
         PathParams: operations.GetNameConceptTypeSpecificConceptJSONPathParams{
-            ConceptType: "nytd_per",
-            SpecificConcept: "magni",
+            ConceptType: "nytd_org",
+            SpecificConcept: "voluptas",
         },
         QueryParams: operations.GetNameConceptTypeSpecificConceptJSONQueryParams{
-            Fields: "ticker_symbol",
-            Query: "fuga",
+            Fields: "links",
+            Query: "expedita",
         },
     }
     

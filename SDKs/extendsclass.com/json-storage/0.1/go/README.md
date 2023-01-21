@@ -24,7 +24,7 @@ func main() {
     
     req := operations.DeleteBinIDRequest{
         PathParams: operations.DeleteBinIDPathParams{
-            ID: "ipsum",
+            ID: "sit",
         },
     }
     

@@ -34,10 +34,10 @@ func main() {
     
     req := operations.AuthenticateRequest{
         PathParams: operations.AuthenticatePathParams{
-            Username: "debitis",
+            Username: "sit",
         },
         QueryParams: operations.AuthenticateQueryParams{
-            Password: "ea",
+            Password: "voluptas",
         },
     }
     

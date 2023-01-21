@@ -2,7 +2,7 @@ package shared
 
 type BeezUpCommonLinkParameter3 struct {
 	Description *string                                       `json:"description,omitempty"`
-	In          *BeezUpCommonParameterInEnum                  `json:"in,omitempty"`
+	In          BeezUpCommonParameterInEnum                   `json:"in"`
 	Label       *string                                       `json:"label,omitempty"`
 	LovLink     *BeezUpCommonLovLink3                         `json:"lovLink,omitempty"`
 	LovRequired *bool                                         `json:"lovRequired,omitempty"`

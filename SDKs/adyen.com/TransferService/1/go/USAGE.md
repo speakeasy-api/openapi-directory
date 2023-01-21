@@ -17,7 +17,7 @@ func main() {
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "aut",
+        Request: "sit",
     }
     
     res, err := s.General.PostTransfers(ctx, req)

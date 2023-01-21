@@ -1,10 +1,10 @@
 package shared
 
 type ChannelCategoryColumnOverride struct {
-	ChannelColumnDescription *string                     `json:"channelColumnDescription,omitempty"`
-	ChannelColumnID          *string                     `json:"channelColumnId,omitempty"`
-	ChannelColumnName        *string                     `json:"channelColumnName,omitempty"`
-	Configuration            *ChannelColumnConfiguration `json:"configuration,omitempty"`
-	RestrictedValues         map[string]string           `json:"restrictedValues,omitempty"`
-	ShowInMapping            *bool                       `json:"showInMapping,omitempty"`
+	ChannelColumnDescription *string                    `json:"channelColumnDescription,omitempty"`
+	ChannelColumnID          string                     `json:"channelColumnId"`
+	ChannelColumnName        string                     `json:"channelColumnName"`
+	Configuration            ChannelColumnConfiguration `json:"configuration"`
+	RestrictedValues         map[string]string          `json:"restrictedValues,omitempty"`
+	ShowInMapping            bool                       `json:"showInMapping"`
 }

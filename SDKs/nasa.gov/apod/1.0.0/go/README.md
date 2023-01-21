@@ -29,8 +29,8 @@ func main() {
             },
         },
         QueryParams: operations.GetApodQueryParams{
-            Date: "adipisci",
-            Hd: true,
+            Date: "sit",
+            Hd: false,
         },
     }
     

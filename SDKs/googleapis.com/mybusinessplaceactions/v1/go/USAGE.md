@@ -13,26 +13,26 @@ func main() {
     
     req := operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest{
         PathParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams{
-            Parent: "aut",
+            Parent: "sit",
         },
         QueryParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "dignissimos",
-            Alt: "proto",
-            Callback: "commodi",
-            Fields: "rerum",
-            Key: "voluptas",
-            OauthToken: "quasi",
-            PrettyPrint: false,
-            QuotaUser: "vel",
-            UploadType: "sed",
-            UploadProtocol: "et",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
         Request: &shared.PlaceActionLinkInput{
-            IsPreferred: true,
-            Name: "aut",
-            PlaceActionType: "DINING_RESERVATION",
-            URI: "modi",
+            IsPreferred: false,
+            Name: "debitis",
+            PlaceActionType: "PLACE_ACTION_TYPE_UNSPECIFIED",
+            URI: "et",
         },
     }
     

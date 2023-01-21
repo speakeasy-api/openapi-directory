@@ -23,7 +23,7 @@ func main() {
     
     req := operations.GetMappingValuesKeyRequest{
         PathParams: operations.GetMappingValuesKeyPathParams{
-            Key: "exchCode",
+            Key: "securityType",
         },
     }
     

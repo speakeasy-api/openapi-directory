@@ -1,0 +1,7 @@
+package shared
+
+type CostCategorySplitChargeRuleParameterTypeEnum string
+
+const (
+	CostCategorySplitChargeRuleParameterTypeEnumAllocationPercentages CostCategorySplitChargeRuleParameterTypeEnum = "ALLOCATION_PERCENTAGES"
+)

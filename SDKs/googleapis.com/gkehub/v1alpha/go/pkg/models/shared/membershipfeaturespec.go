@@ -1,5 +1,7 @@
 package shared
 
+// MembershipFeatureSpec
+// MembershipFeatureSpec contains configuration information for a single Membership.
 type MembershipFeatureSpec struct {
 	Anthosobservability *AnthosObservabilityMembershipSpec `json:"anthosobservability,omitempty"`
 	Cloudbuild          *CloudBuildMembershipSpec          `json:"cloudbuild,omitempty"`
@@ -12,6 +14,8 @@ type MembershipFeatureSpec struct {
 	Workloadcertificate *MembershipSpec                    `json:"workloadcertificate,omitempty"`
 }
 
+// MembershipFeatureSpecInput
+// MembershipFeatureSpec contains configuration information for a single Membership.
 type MembershipFeatureSpecInput struct {
 	Anthosobservability *AnthosObservabilityMembershipSpec  `json:"anthosobservability,omitempty"`
 	Cloudbuild          *CloudBuildMembershipSpec           `json:"cloudbuild,omitempty"`

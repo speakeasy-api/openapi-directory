@@ -18,16 +18,16 @@ func main() {
             },
         },
         PathParams: operations.CreateFileAssociationPathParams{
-            FileID: "at",
+            FileID: "sit",
         },
         Headers: operations.CreateFileAssociationHeaders{
-            XeroTenantID: "consequatur",
+            XeroTenantID: "voluptas",
         },
         Request: &shared.Association{
-            FileID: "maxime",
+            FileID: "culpa",
             ObjectGroup: "Payment",
-            ObjectID: "nam",
-            ObjectType: "Current",
+            ObjectID: "consequuntur",
+            ObjectType: "Accpay",
         },
     }
     

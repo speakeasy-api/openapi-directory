@@ -1,0 +1,9 @@
+package shared
+
+// RoleGroup
+// Group information
+type RoleGroup struct {
+	ID       int64  `json:"id"`
+	IsMember bool   `json:"isMember"`
+	Name     string `json:"name"`
+}

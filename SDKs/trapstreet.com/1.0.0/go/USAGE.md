@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetAddressRequest{
         PathParams: operations.GetAddressPathParams{
-            Address: "accusamus",
+            Address: "sit",
         },
     }
     

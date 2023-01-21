@@ -30,7 +30,7 @@ func main() {
             },
         },
         PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "impedit",
+            PhoneNumber: "sit",
         },
     }
     

@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.MrcerRequestBody{
             CertificateParameters: &operations.MrcerRequestBodyCertificateParameters{
-                CERTTYPE: "et",
-                FullName: "neque",
-                RROLL: "autem",
+                CERTTYPE: "sit",
+                FullName: "voluptas",
+                RROLL: "culpa",
             },
-            ConsentArtifact: "optio",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "blanditiis",
+            TxnID: "dolor",
         },
     }
     

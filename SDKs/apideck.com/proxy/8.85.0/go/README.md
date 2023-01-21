@@ -42,11 +42,11 @@ func main() {
             },
         },
         Headers: operations.DeleteProxyHeaders{
-            XApideckAppID: "ullam",
-            XApideckConsumerID: "id",
-            XApideckDownstreamAuthorization: "temporibus",
-            XApideckDownstreamURL: "ipsam",
-            XApideckServiceID: "eum",
+            XApideckAppID: "sit",
+            XApideckConsumerID: "voluptas",
+            XApideckDownstreamAuthorization: "culpa",
+            XApideckDownstreamURL: "expedita",
+            XApideckServiceID: "consequuntur",
         },
     }
     

@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetLookupSha1Sha1Request{
         PathParams: operations.GetLookupSha1Sha1PathParams{
-            Sha1: "nisi",
+            Sha1: "sit",
         },
     }
     

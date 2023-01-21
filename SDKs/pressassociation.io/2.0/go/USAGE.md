@@ -18,10 +18,10 @@ func main() {
             },
         },
         PathParams: operations.GetAssetPathParams{
-            AssetID: "laudantium",
+            AssetID: "sit",
         },
         QueryParams: operations.GetAssetQueryParams{
-            Aliases: true,
+            Aliases: false,
         },
     }
     

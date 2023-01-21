@@ -19,7 +19,7 @@ func main() {
             },
         },
         Request: &operations.CreateAccountCreateAccountRequest{
-            FriendlyName: "rem",
+            FriendlyName: "sit",
         },
     }
     

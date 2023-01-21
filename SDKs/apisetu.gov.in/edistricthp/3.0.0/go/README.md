@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.AecmwRequestBody{
             CertificateParameters: &operations.AecmwRequestBodyCertificateParameters{
-                Udf1: "distinctio",
+                Udf1: "sit",
             },
-            ConsentArtifact: "repellendus",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "omnis",
+            TxnID: "expedita",
         },
     }
     

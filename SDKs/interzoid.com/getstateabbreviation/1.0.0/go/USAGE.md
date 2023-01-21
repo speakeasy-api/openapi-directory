@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetstateabbreviationRequest{
         QueryParams: operations.GetstateabbreviationQueryParams{
-            License: "voluptatem",
-            State: "magni",
+            License: "sit",
+            State: "voluptas",
         },
     }
     

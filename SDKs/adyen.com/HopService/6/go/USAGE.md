@@ -18,7 +18,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "vel",
+        Request: "sit",
     }
     
     res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req)

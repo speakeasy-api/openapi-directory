@@ -1,0 +1,151 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"io"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Account struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewAccount(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Account {
+	return &Account{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+func (s *Account) AccountLogin(ctx context.Context) (*operations.AccountLoginResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/Account/login"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AccountLoginResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Object = out
+		case utils.MatchContentType(contentType, `text/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Object = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+func (s *Account) PostAPIAccountLogin(ctx context.Context) (*operations.PostAPIAccountLoginResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/Account/login"
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAPIAccountLoginResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Object = out
+		case utils.MatchContentType(contentType, `text/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Object = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}

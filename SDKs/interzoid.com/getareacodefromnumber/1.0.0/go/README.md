@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetareacodefromnumberRequest{
         QueryParams: operations.GetareacodefromnumberQueryParams{
-            License: "aspernatur",
-            Number: "deleniti",
+            License: "sit",
+            Number: "voluptas",
         },
     }
     

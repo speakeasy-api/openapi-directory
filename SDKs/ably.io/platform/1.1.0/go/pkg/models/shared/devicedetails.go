@@ -43,7 +43,7 @@ type DeviceDetailsInput struct {
 	DeviceSecret  *string                      `json:"deviceSecret,omitempty" form:"name=deviceSecret"`
 	FormFactor    *DeviceDetailsFormFactorEnum `json:"formFactor,omitempty" form:"name=formFactor"`
 	ID            *string                      `json:"id,omitempty" form:"name=id"`
-	Metadata      map[string]interface{}       `json:"metadata,omitempty" form:"name=metadata"`
+	Metadata      map[string]interface{}       `json:"metadata,omitempty" form:"name=metadata,json"`
 	Platform      *DeviceDetailsPlatformEnum   `json:"platform,omitempty" form:"name=platform"`
 	PushRecipient *Recipient                   `json:"push.recipient,omitempty" form:"name=push.recipient"`
 }

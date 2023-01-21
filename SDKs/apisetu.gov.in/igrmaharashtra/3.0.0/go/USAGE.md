@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.LlcerRequestBody{
             CertificateParameters: &operations.LlcerRequestBodyCertificateParameters{
-                Udf1: "ex",
-                Udf2: "ad",
-                Udf3: "dolorum",
+                Udf1: "sit",
+                Udf2: "voluptas",
+                Udf3: "culpa",
             },
-            ConsentArtifact: "voluptatem",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "laborum",
+            TxnID: "dolor",
         },
     }
     

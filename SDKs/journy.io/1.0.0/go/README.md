@@ -24,10 +24,10 @@ func main() {
     
     req := operations.AddUserToAccountRequest{
         PathParams: operations.AddUserToAccountPathParams{
-            AccountID: "tempora",
+            AccountID: "sit",
         },
         Request: operations.AddUserToAccountRequestBody{
-            UserID: "eius",
+            UserID: "voluptas",
         },
     }
     

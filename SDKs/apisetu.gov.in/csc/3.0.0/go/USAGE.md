@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.SkcerRequestBody{
             CertificateParameters: &operations.SkcerRequestBodyCertificateParameters{
-                FullName: "odit",
-                CertificateType: "eum",
-                Username: "placeat",
+                FullName: "sit",
+                CertificateType: "voluptas",
+                Username: "culpa",
             },
-            ConsentArtifact: "illo",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "quas",
+            TxnID: "dolor",
         },
     }
     

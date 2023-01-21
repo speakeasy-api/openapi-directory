@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.EgcerRequestBody{
             CertificateParameters: &operations.EgcerRequestBodyCertificateParameters{
-                FullName: "qui",
-                RefNo: "voluptatibus",
-                TokenNo: "nulla",
-                UID: "quia",
+                FullName: "sit",
+                RefNo: "voluptas",
+                TokenNo: "culpa",
+                UID: "expedita",
             },
-            ConsentArtifact: "dolorem",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "quis",
+            TxnID: "expedita",
         },
     }
     

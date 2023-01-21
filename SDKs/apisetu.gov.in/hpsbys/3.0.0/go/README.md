@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.RsbycRequestBody{
             CertificateParameters: &operations.RsbycRequestBodyCertificateParameters{
-                UID: "facere",
+                UID: "sit",
             },
-            ConsentArtifact: "sunt",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "nulla",
+            TxnID: "expedita",
         },
     }
     

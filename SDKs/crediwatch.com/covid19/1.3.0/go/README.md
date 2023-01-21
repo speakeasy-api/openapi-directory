@@ -24,7 +24,7 @@ func main() {
     
     req := operations.StatusCallAPIV1StatusCallGetRequest{
         QueryParams: operations.StatusCallAPIV1StatusCallGetQueryParams{
-            Query: "provident",
+            Query: "sit",
         },
     }
     

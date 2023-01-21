@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.CancelReportPathParams{
-            ReportID: "iste",
+            ReportID: "sit",
         },
     }
     

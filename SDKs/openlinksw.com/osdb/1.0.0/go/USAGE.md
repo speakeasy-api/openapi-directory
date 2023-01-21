@@ -13,8 +13,8 @@ func main() {
     
     req := operations.ActionHelpRequest{
         PathParams: operations.ActionHelpPathParams{
-            ActionID: "eum",
-            ServiceID: "explicabo",
+            ActionID: "sit",
+            ServiceID: "voluptas",
         },
     }
     

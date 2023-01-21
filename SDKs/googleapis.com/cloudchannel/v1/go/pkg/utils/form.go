@@ -35,7 +35,6 @@ func populateForm(paramName string, explode bool, objType reflect.Type, objValue
 				var value string
 				if valType.Type().Kind() == reflect.Ptr {
 					value = fmt.Sprintf("%v", valType.Elem())
-
 				} else {
 					value = fmt.Sprintf("%v", valType.Interface())
 				}

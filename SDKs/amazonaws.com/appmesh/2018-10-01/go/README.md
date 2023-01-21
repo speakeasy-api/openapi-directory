@@ -34,17 +34,17 @@ func main() {
     
     req := operations.CreateMeshRequest{
         Headers: operations.CreateMeshHeaders{
-            XAmzAlgorithm: "nihil",
-            XAmzContentSha256: "quam",
-            XAmzCredential: "et",
-            XAmzDate: "vel",
-            XAmzSecurityToken: "itaque",
-            XAmzSignature: "provident",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateMeshRequestBody{
-            ClientToken: "qui",
-            MeshName: "modi",
+            ClientToken: "voluptas",
+            MeshName: "fugit",
         },
     }
     

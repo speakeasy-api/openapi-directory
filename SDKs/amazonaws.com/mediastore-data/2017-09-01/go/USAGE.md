@@ -23,16 +23,16 @@ func main() {
     
     req := operations.DeleteObjectRequest{
         PathParams: operations.DeleteObjectPathParams{
-            Path: "quibusdam",
+            Path: "sit",
         },
         Headers: operations.DeleteObjectHeaders{
-            XAmzAlgorithm: "nihil",
-            XAmzContentSha256: "sint",
-            XAmzCredential: "dolorem",
-            XAmzDate: "porro",
-            XAmzSecurityToken: "nemo",
-            XAmzSignature: "ut",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

@@ -13,14 +13,14 @@ func main() {
     
     req := operations.GetVersionIncidentsFormatRequest{
         QueryParams: operations.GetVersionIncidentsFormatQueryParams{
-            IncidentType: "hazard",
-            OccurredAfter: 7278960282919804440,
-            OccurredBefore: 8123455823415940668,
-            Page: 279016587921788840,
-            PerPage: 6868718605133710902,
-            Proximity: "quibusdam",
-            ProximitySquare: 2090439125431722263,
-            Query: "vel",
+            IncidentType: "crash",
+            OccurredAfter: 2259404117704393152,
+            OccurredBefore: 6050128673802995827,
+            Page: 501233450539197794,
+            PerPage: 3390393562759376202,
+            Proximity: "dolor",
+            ProximitySquare: 1774932891286980153,
+            Query: "voluptas",
         },
     }
     

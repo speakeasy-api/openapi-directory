@@ -23,7 +23,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostRequestRequest{
-        Request: "reprehenderit",
+        Request: "sit",
     }
     
     res, err := s.PostRequest(ctx, req)

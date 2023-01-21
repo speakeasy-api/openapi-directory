@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                FullName: "quod",
-                Udf1: "sint",
-                Udf2: "fuga",
-                Udf3: "pariatur",
+                FullName: "sit",
+                Udf1: "voluptas",
+                Udf2: "culpa",
+                Udf3: "expedita",
             },
-            ConsentArtifact: "odit",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "voluptates",
+            TxnID: "expedita",
         },
     }
     

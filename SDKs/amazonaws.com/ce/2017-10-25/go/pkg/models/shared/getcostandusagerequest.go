@@ -1,0 +1,10 @@
+package shared
+
+type GetCostAndUsageRequest struct {
+	Filter        *Expression       `json:"Filter,omitempty"`
+	Granularity   GranularityEnum   `json:"Granularity"`
+	GroupBy       []GroupDefinition `json:"GroupBy,omitempty"`
+	Metrics       []string          `json:"Metrics"`
+	NextPageToken *string           `json:"NextPageToken,omitempty"`
+	TimePeriod    DateInterval      `json:"TimePeriod"`
+}

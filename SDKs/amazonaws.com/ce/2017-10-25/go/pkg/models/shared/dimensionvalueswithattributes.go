@@ -1,0 +1,8 @@
+package shared
+
+// DimensionValuesWithAttributes
+// The metadata of a specific type that you can use to filter and group your results. You can use <code>GetDimensionValues</code> to find specific values.
+type DimensionValuesWithAttributes struct {
+	Attributes map[string]string `json:"Attributes,omitempty"`
+	Value      *string           `json:"Value,omitempty"`
+}

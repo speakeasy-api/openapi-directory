@@ -21,109 +21,73 @@ func main() {
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams{
-            Parent: "sint",
+            Parent: "sit",
         },
         QueryParams: operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "a",
+            AccessToken: "culpa",
             Alt: "media",
-            APIConfigID: "eveniet",
-            Callback: "perferendis",
-            Fields: "numquam",
-            Key: "assumenda",
-            OauthToken: "vitae",
-            PrettyPrint: true,
-            QuotaUser: "a",
-            UploadType: "mollitia",
-            UploadProtocol: "ut",
+            APIConfigID: "consequuntur",
+            Callback: "dolor",
+            Fields: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "rerum",
+            UploadProtocol: "dicta",
         },
         Request: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "consequatur",
-            GatewayServiceAccount: "repellat",
+            DisplayName: "debitis",
+            GatewayServiceAccount: "voluptatum",
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "repellendus",
-                        Path: "alias",
+                        Contents: "ut",
+                        Path: "dolorem",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "blanditiis",
-                            Path: "pariatur",
+                            Contents: "voluptate",
+                            Path: "iste",
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "ipsam",
-                            Path: "veritatis",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "voluptatem",
-                            Path: "ullam",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "quasi",
-                        Path: "deleniti",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "sit",
-                            Path: "assumenda",
-                        },
-                    },
-                },
-                shared.ApigatewayAPIConfigGrpcServiceDefinition{
-                    FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "quo",
-                        Path: "ipsum",
-                    },
-                    Source: []shared.ApigatewayAPIConfigFile{
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "laudantium",
-                            Path: "aperiam",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "eos",
-                            Path: "qui",
-                        },
-                        shared.ApigatewayAPIConfigFile{
-                            Contents: "perspiciatis",
-                            Path: "quod",
+                            Contents: "vitae",
+                            Path: "totam",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "aliquam": "aut",
-                "laborum": "voluptatem",
-                "enim": "non",
+                "illum": "debitis",
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "saepe",
-                    Path: "dolores",
+                    Contents: "odio",
+                    Path: "dolore",
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "dolorum",
-                    Path: "ab",
-                },
-                shared.ApigatewayAPIConfigFile{
-                    Contents: "earum",
-                    Path: "nihil",
+                    Contents: "id",
+                    Path: "aspernatur",
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "consectetur",
-                        Path: "ut",
+                        Contents: "totam",
+                        Path: "commodi",
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "qui",
-                        Path: "deleniti",
+                        Contents: "quis",
+                        Path: "est",
+                    },
+                },
+                shared.ApigatewayAPIConfigOpenAPIDocument{
+                    Document: &shared.ApigatewayAPIConfigFile{
+                        Contents: "aut",
+                        Path: "odit",
                     },
                 },
             },

@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetEndpointsRequest{
         QueryParams: operations.GetEndpointsQueryParams{
-            Openapi: true,
+            Openapi: false,
         },
     }
     

@@ -34,41 +34,41 @@ func main() {
     
     req := operations.AssociateRepositoryRequest{
         Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "numquam",
-            XAmzDate: "et",
-            XAmzSecurityToken: "officiis",
-            XAmzSignature: "sequi",
-            XAmzSignedHeaders: "vel",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "et",
+            ClientRequestToken: "voluptas",
             KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKmsKeyDetails{
                 EncryptionOption: "AWS_OWNED_CMK",
-                KMSKeyID: "aliquid",
+                KMSKeyID: "et",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "autem",
-                    Name: "asperiores",
-                    Owner: "tempora",
+                    ConnectionArn: "nihil",
+                    Name: "rerum",
+                    Owner: "dicta",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "voluptate",
+                    Name: "debitis",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "est",
-                    Name: "nostrum",
-                    Owner: "mollitia",
+                    ConnectionArn: "voluptatum",
+                    Name: "et",
+                    Owner: "ut",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "aut",
-                    Name: "recusandae",
+                    BucketName: "dolorem",
+                    Name: "et",
                 },
             },
             Tags: map[string]string{
-                "quas": "repellendus",
+                "iste": "vitae",
             },
         },
     }

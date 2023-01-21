@@ -1,0 +1,305 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type SalesRep struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewSalesRep(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *SalesRep {
+	return &SalesRep{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// SalesRepDelete - Removes an existing Sale Rep.
+func (s *SalesRep) SalesRepDelete(ctx context.Context, request operations.SalesRepDeleteRequest) (*operations.SalesRepDeleteResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SalesRepDeleteResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SalesRepDelete200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// SalesRepGet - Returns a list of company's SaleRep.
+// Filtering is forbidden.
+// Ordering is allowed by "id".
+func (s *SalesRep) SalesRepGet(ctx context.Context) (*operations.SalesRepGetResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesReps"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SalesRepGetResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PageResultSaleRepsDto
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PageResultSaleRepsDto = out
+		}
+	}
+
+	return res, nil
+}
+
+// SalesRepPost - Creates a new SaleRep.
+func (s *SalesRep) SalesRepPost(ctx context.Context, request operations.SalesRepPostRequest) (*operations.SalesRepPostResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesReps"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SalesRepPostResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SalesRepPost200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// SalesRepProcessBatch - Processes a batch of Sale Rep.
+func (s *SalesRep) SalesRepProcessBatch(ctx context.Context, request operations.SalesRepProcessBatchRequest) (*operations.SalesRepProcessBatchResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/salesReps/batch"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SalesRepProcessBatchResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SalesRepProcessBatch200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// SalesRepPut - Updates an existing Sale Rep.
+func (s *SalesRep) SalesRepPut(ctx context.Context, request operations.SalesRepPutRequest) (*operations.SalesRepPutResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SalesRepPutResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SalesRepPut200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetV1SalesRepsID - Returns information about a single SaleRep.
+func (s *SalesRep) GetV1SalesRepsID(ctx context.Context, request operations.GetV1SalesRepsIDRequest) (*operations.GetV1SalesRepsIDResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetV1SalesRepsIDResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SaleRepsDto
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SaleRepsDto = out
+		}
+	}
+
+	return res, nil
+}

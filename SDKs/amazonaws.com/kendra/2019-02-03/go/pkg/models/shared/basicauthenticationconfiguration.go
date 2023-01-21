@@ -1,0 +1,9 @@
+package shared
+
+// BasicAuthenticationConfiguration
+// Provides the configuration information to connect to websites that require basic user authentication.
+type BasicAuthenticationConfiguration struct {
+	Credentials string `json:"Credentials"`
+	Host        string `json:"Host"`
+	Port        int64  `json:"Port"`
+}

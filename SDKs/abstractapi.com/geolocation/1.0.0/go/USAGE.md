@@ -13,9 +13,9 @@ func main() {
     
     req := operations.GetV1Request{
         QueryParams: operations.GetV1QueryParams{
-            APIKey: "nihil",
-            Fields: "rerum",
-            IPAddress: "dicta",
+            APIKey: "sit",
+            Fields: "voluptas",
+            IPAddress: "culpa",
         },
     }
     

@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.SslcrRequestBody{
             CertificateParameters: &operations.SslcrRequestBodyCertificateParameters{
-                DOB: "enim",
-                FullName: "minima",
-                UID: "incidunt",
-                Regno: "excepturi",
-                Year: "autem",
+                DOB: "sit",
+                FullName: "voluptas",
+                UID: "culpa",
+                Regno: "expedita",
+                Year: "consequuntur",
             },
-            ConsentArtifact: "similique",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "soluta",
+            TxnID: "voluptas",
         },
     }
     

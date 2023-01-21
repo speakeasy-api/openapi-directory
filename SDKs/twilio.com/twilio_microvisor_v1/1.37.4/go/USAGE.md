@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteAppPathParams{
-            Sid: "quia",
+            Sid: "sit",
         },
     }
     

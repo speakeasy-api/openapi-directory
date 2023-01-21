@@ -34,25 +34,24 @@ func main() {
     
     req := operations.GetEntitlementsRequest{
         Headers: operations.GetEntitlementsHeaders{
-            XAmzAlgorithm: "fugit",
-            XAmzContentSha256: "cumque",
-            XAmzCredential: "corporis",
-            XAmzDate: "adipisci",
-            XAmzSecurityToken: "aliquid",
-            XAmzSignature: "accusantium",
-            XAmzSignedHeaders: "exercitationem",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
         },
         Request: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
-                "perspiciatis": []string{
-                    "inventore",
-                    "voluptatem",
+                "et": []string{
+                    "rerum",
                 },
             },
-            MaxResults: 2441923158078746440,
-            NextToken: "ut",
-            ProductCode: "ullam",
+            MaxResults: 7837839688282259259,
+            NextToken: "debitis",
+            ProductCode: "voluptatum",
         },
     }
     

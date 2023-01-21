@@ -23,16 +23,16 @@ func main() {
     
     req := operations.BulkPublishRequest{
         PathParams: operations.BulkPublishPathParams{
-            IdentityPoolID: "molestias",
+            IdentityPoolID: "sit",
         },
         Headers: operations.BulkPublishHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "quia",
-            XAmzCredential: "ipsa",
-            XAmzDate: "sit",
-            XAmzSecurityToken: "repellat",
-            XAmzSignature: "non",
-            XAmzSignedHeaders: "facilis",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

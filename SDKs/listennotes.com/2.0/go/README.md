@@ -24,15 +24,15 @@ func main() {
     
     req := operations.GetBestPodcastsRequest{
         QueryParams: operations.GetBestPodcastsQueryParams{
-            GenreID: "corporis",
-            Language: "et",
-            Page: 9142852366173964212,
-            PublisherRegion: "nobis",
-            Region: "reiciendis",
-            SafeMode: 8219548017842294811,
+            GenreID: "sit",
+            Language: "voluptas",
+            Page: 6050128673802995827,
+            PublisherRegion: "expedita",
+            Region: "consequuntur",
+            SafeMode: 2669985732393126063,
         },
         Headers: operations.GetBestPodcastsHeaders{
-            XListenAPIKey: "aut",
+            XListenAPIKey: "expedita",
         },
     }
     

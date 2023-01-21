@@ -1,5 +1,7 @@
 package shared
 
+// RouteSettings
+// Represents a collection of route settings.
 type RouteSettings struct {
 	DataTraceEnabled       map[string]interface{} `json:"DataTraceEnabled,omitempty"`
 	DetailedMetricsEnabled map[string]interface{} `json:"DetailedMetricsEnabled,omitempty"`

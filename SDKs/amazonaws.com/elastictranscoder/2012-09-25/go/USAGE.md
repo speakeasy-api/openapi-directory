@@ -23,16 +23,16 @@ func main() {
     
     req := operations.CancelJobRequest{
         PathParams: operations.CancelJobPathParams{
-            ID: "est",
+            ID: "sit",
         },
         Headers: operations.CancelJobHeaders{
-            XAmzAlgorithm: "at",
-            XAmzContentSha256: "harum",
-            XAmzCredential: "magnam",
-            XAmzDate: "earum",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "odio",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

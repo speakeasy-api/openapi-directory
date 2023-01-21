@@ -24,11 +24,11 @@ func main() {
     
     req := operations.DeleteAccountingCodeRequest{
         PathParams: operations.DeleteAccountingCodePathParams{
-            AcID: "distinctio",
+            AcID: "sit",
         },
         Headers: operations.DeleteAccountingCodeHeaders{
             ZuoraEntityIds: "voluptas",
-            ZuoraTrackID: "quos",
+            ZuoraTrackID: "culpa",
         },
     }
     

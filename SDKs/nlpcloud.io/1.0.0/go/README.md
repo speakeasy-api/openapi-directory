@@ -34,7 +34,7 @@ func main() {
     
     req := operations.ReadDependenciesV1EnCoreWebSmDependenciesPostRequest{
         Request: shared.UserRequestIn{
-            Text: "cum",
+            Text: "sit",
         },
     }
     

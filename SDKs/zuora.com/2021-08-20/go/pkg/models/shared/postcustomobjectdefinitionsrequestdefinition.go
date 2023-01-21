@@ -26,8 +26,8 @@ type PostCustomObjectDefinitionsRequestDefinitionRelationships struct {
 
 type PostCustomObjectDefinitionsRequestDefinition struct {
 	Filterable    []string                                                    `json:"filterable,omitempty"`
-	Label         *string                                                     `json:"label,omitempty"`
-	Object        *string                                                     `json:"object,omitempty"`
+	Label         string                                                      `json:"label"`
+	Object        string                                                      `json:"object"`
 	Properties    map[string]PostCustomObjectDefinitionFieldDefinitionRequest `json:"properties,omitempty"`
 	Relationships []PostCustomObjectDefinitionsRequestDefinitionRelationships `json:"relationships,omitempty"`
 	Required      []string                                                    `json:"required,omitempty"`

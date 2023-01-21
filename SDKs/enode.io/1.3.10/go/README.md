@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.ControlChargerChargingPathParams{
-            ChargerID: "ut",
+            ChargerID: "sit",
         },
         Request: &operations.ControlChargerChargingRequestBody{
             Action: "START",

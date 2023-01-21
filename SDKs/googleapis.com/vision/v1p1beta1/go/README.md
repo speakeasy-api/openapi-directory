@@ -35,92 +35,86 @@ func main() {
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "eius",
-            Alt: "proto",
-            Callback: "minus",
-            Fields: "esse",
-            Key: "autem",
-            OauthToken: "rerum",
+            AccessToken: "voluptas",
+            Alt: "media",
+            Callback: "expedita",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
             PrettyPrint: true,
-            QuotaUser: "laboriosam",
-            UploadType: "sint",
-            UploadProtocol: "nisi",
+            QuotaUser: "fugit",
+            UploadType: "et",
+            UploadProtocol: "nihil",
         },
         Request: &shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest{
-            Parent: "recusandae",
+            Parent: "rerum",
             Requests: []shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 3971315781086113626,
-                            Model: "esse",
-                            Type: "CROP_HINTS",
-                        },
-                        shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 3280961666086257703,
-                            Model: "dolore",
-                            Type: "PRODUCT_SEARCH",
-                        },
-                        shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 2168295586647050175,
-                            Model: "reprehenderit",
-                            Type: "LOGO_DETECTION",
+                            MaxResults: 5617773211005988520,
+                            Model: "et",
+                            Type: "TYPE_UNSPECIFIED",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
                             AspectRatios: []float32{
-                                33.200001,
-                                24.200001,
-                                19.200001,
+                                50.099998,
+                                15.100000,
+                                66.099998,
                             },
                         },
                         LanguageHints: []string{
-                            "ducimus",
-                            "quam",
-                            "voluptas",
+                            "debitis",
+                            "vel",
+                            "odio",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 66.099998,
-                                Longitude: 11.100000,
+                                Latitude: 91.099998,
+                                Longitude: 57.099998,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 97.099998,
-                                Longitude: 99.199997,
+                                Latitude: 45.099998,
+                                Longitude: 78.199997,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 73.199997,
-                                        Y: 20.200001,
+                                        X: 10.200000,
+                                        Y: 14.200000,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 44.099998,
+                                        Y: 78.199997,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 87.099998,
+                                        Y: 0.100000,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 4811534959094338657,
-                                        Y: 8138503825895719319,
-                                    },
-                                    shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 3370215413715443786,
-                                        Y: 894693224882232375,
+                                        X: 388440063886460141,
+                                        Y: 7561811714888168464,
                                     },
                                 },
                             },
-                            Filter: "enim",
+                            Filter: "ipsum",
                             ProductCategories: []string{
-                                "voluptatem",
-                                "et",
+                                "modi",
+                                "sint",
                             },
-                            ProductSet: "quia",
+                            ProductSet: "inventore",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "omnis",
-                                "libero",
-                                "eum",
+                                "exercitationem",
+                                "aut",
+                                "reprehenderit",
                             },
                             EnableTextDetectionConfidenceScore: false,
                         },
@@ -129,14 +123,169 @@ func main() {
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
-                        Content: "est",
+                        Content: "incidunt",
                         GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
-                            URI: "soluta",
+                            URI: "dolor",
                         },
-                        MimeType: "consequatur",
+                        MimeType: "beatae",
                     },
                     Pages: []int32{
-                        888600988671988232,
+                        2671030200101705776,
+                        3508963237347473586,
+                    },
+                },
+                shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
+                    Features: []shared.GoogleCloudVisionV1p1beta1Feature{
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 4564823113789767141,
+                            Model: "ex",
+                            Type: "SAFE_SEARCH_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 3983722386484812742,
+                            Model: "vel",
+                            Type: "PRODUCT_SEARCH",
+                        },
+                    },
+                    ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
+                        CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
+                            AspectRatios: []float32{
+                                84.199997,
+                                23.100000,
+                            },
+                        },
+                        LanguageHints: []string{
+                            "unde",
+                        },
+                        LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
+                            MaxLatLng: &shared.LatLng{
+                                Latitude: 31.100000,
+                                Longitude: 13.100000,
+                            },
+                            MinLatLng: &shared.LatLng{
+                                Latitude: 26.100000,
+                                Longitude: 90.099998,
+                            },
+                        },
+                        ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
+                            BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
+                                NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 40.099998,
+                                        Y: 28.100000,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 29.100000,
+                                        Y: 90.199997,
+                                    },
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 31.200001,
+                                        Y: 9.200000,
+                                    },
+                                },
+                                Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 7862762095958642309,
+                                        Y: 4391202566038595699,
+                                    },
+                                },
+                            },
+                            Filter: "omnis",
+                            ProductCategories: []string{
+                                "consequatur",
+                                "dolor",
+                            },
+                            ProductSet: "commodi",
+                        },
+                        TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
+                            AdvancedOcrOptions: []string{
+                                "reprehenderit",
+                            },
+                            EnableTextDetectionConfidenceScore: false,
+                        },
+                        WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
+                            IncludeGeoResults: true,
+                        },
+                    },
+                    InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
+                        Content: "ut",
+                        GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
+                            URI: "laboriosam",
+                        },
+                        MimeType: "sed",
+                    },
+                    Pages: []int32{
+                        1836598054518427835,
+                    },
+                },
+                shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
+                    Features: []shared.GoogleCloudVisionV1p1beta1Feature{
+                        shared.GoogleCloudVisionV1p1beta1Feature{
+                            MaxResults: 7638413271565042464,
+                            Model: "consequuntur",
+                            Type: "LANDMARK_DETECTION",
+                        },
+                    },
+                    ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
+                        CropHintsParams: &shared.GoogleCloudVisionV1p1beta1CropHintsParams{
+                            AspectRatios: []float32{
+                                35.200001,
+                            },
+                        },
+                        LanguageHints: []string{
+                            "perferendis",
+                        },
+                        LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
+                            MaxLatLng: &shared.LatLng{
+                                Latitude: 26.200001,
+                                Longitude: 87.099998,
+                            },
+                            MinLatLng: &shared.LatLng{
+                                Latitude: 42.099998,
+                                Longitude: 15.200000,
+                            },
+                        },
+                        ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
+                            BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
+                                NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                    shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
+                                        X: 50.099998,
+                                        Y: 9.200000,
+                                    },
+                                },
+                                Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
+                                    shared.GoogleCloudVisionV1p1beta1Vertex{
+                                        X: 2333048574390956331,
+                                        Y: 9205243623417456715,
+                                    },
+                                },
+                            },
+                            Filter: "quis",
+                            ProductCategories: []string{
+                                "labore",
+                            },
+                            ProductSet: "et",
+                        },
+                        TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
+                            AdvancedOcrOptions: []string{
+                                "ad",
+                                "expedita",
+                            },
+                            EnableTextDetectionConfidenceScore: true,
+                        },
+                        WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
+                            IncludeGeoResults: true,
+                        },
+                    },
+                    InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
+                        Content: "modi",
+                        GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
+                            URI: "nihil",
+                        },
+                        MimeType: "tempora",
+                    },
+                    Pages: []int32{
+                        4745905187492708501,
                     },
                 },
             },

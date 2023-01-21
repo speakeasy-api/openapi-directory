@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateAssessmentReportEvidenceFolderRequest{
         PathParams: operations.AssociateAssessmentReportEvidenceFolderPathParams{
-            AssessmentID: "cum",
+            AssessmentID: "sit",
         },
         Headers: operations.AssociateAssessmentReportEvidenceFolderHeaders{
-            XAmzAlgorithm: "hic",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "cum",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "consequatur",
-            XAmzSignature: "molestiae",
-            XAmzSignedHeaders: "laudantium",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.AssociateAssessmentReportEvidenceFolderRequestBody{
-            EvidenceFolderID: "tempore",
+            EvidenceFolderID: "fugit",
         },
     }
     

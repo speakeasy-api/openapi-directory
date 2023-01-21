@@ -24,10 +24,10 @@ func main() {
     
     req := operations.KeywordSearchRequest{
         QueryParams: operations.KeywordSearchQueryParams{
-            DomainCode: "aut",
-            Keyword: "velit",
-            NumberOfProducts: 8628636448964422193,
-            SortBy: "non",
+            DomainCode: "sit",
+            Keyword: "voluptas",
+            NumberOfProducts: 6050128673802995827,
+            SortBy: "expedita",
         },
     }
     

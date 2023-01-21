@@ -1,0 +1,9 @@
+package shared
+
+// BatchPutDocumentResponseFailedDocument
+// Provides information about a document that could not be indexed.
+type BatchPutDocumentResponseFailedDocument struct {
+	ErrorCode    *ErrorCodeEnum `json:"ErrorCode,omitempty"`
+	ErrorMessage *string        `json:"ErrorMessage,omitempty"`
+	ID           *string        `json:"Id,omitempty"`
+}

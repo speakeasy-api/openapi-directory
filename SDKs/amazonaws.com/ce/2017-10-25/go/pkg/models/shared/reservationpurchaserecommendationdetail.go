@@ -1,0 +1,25 @@
+package shared
+
+// ReservationPurchaseRecommendationDetail
+// Details about your recommended reservation purchase.
+type ReservationPurchaseRecommendationDetail struct {
+	AccountID                                 *string          `json:"AccountId,omitempty"`
+	AverageNormalizedUnitsUsedPerHour         *string          `json:"AverageNormalizedUnitsUsedPerHour,omitempty"`
+	AverageNumberOfInstancesUsedPerHour       *string          `json:"AverageNumberOfInstancesUsedPerHour,omitempty"`
+	AverageUtilization                        *string          `json:"AverageUtilization,omitempty"`
+	CurrencyCode                              *string          `json:"CurrencyCode,omitempty"`
+	EstimatedBreakEvenInMonths                *string          `json:"EstimatedBreakEvenInMonths,omitempty"`
+	EstimatedMonthlyOnDemandCost              *string          `json:"EstimatedMonthlyOnDemandCost,omitempty"`
+	EstimatedMonthlySavingsAmount             *string          `json:"EstimatedMonthlySavingsAmount,omitempty"`
+	EstimatedMonthlySavingsPercentage         *string          `json:"EstimatedMonthlySavingsPercentage,omitempty"`
+	EstimatedReservationCostForLookbackPeriod *string          `json:"EstimatedReservationCostForLookbackPeriod,omitempty"`
+	InstanceDetails                           *InstanceDetails `json:"InstanceDetails,omitempty"`
+	MaximumNormalizedUnitsUsedPerHour         *string          `json:"MaximumNormalizedUnitsUsedPerHour,omitempty"`
+	MaximumNumberOfInstancesUsedPerHour       *string          `json:"MaximumNumberOfInstancesUsedPerHour,omitempty"`
+	MinimumNormalizedUnitsUsedPerHour         *string          `json:"MinimumNormalizedUnitsUsedPerHour,omitempty"`
+	MinimumNumberOfInstancesUsedPerHour       *string          `json:"MinimumNumberOfInstancesUsedPerHour,omitempty"`
+	RecommendedNormalizedUnitsToPurchase      *string          `json:"RecommendedNormalizedUnitsToPurchase,omitempty"`
+	RecommendedNumberOfInstancesToPurchase    *string          `json:"RecommendedNumberOfInstancesToPurchase,omitempty"`
+	RecurringStandardMonthlyCost              *string          `json:"RecurringStandardMonthlyCost,omitempty"`
+	UpfrontCost                               *string          `json:"UpfrontCost,omitempty"`
+}

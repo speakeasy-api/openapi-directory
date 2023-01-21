@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.AlltrRequestBody{
             CertificateParameters: &operations.AlltrRequestBodyCertificateParameters{
-                DOB: "et",
-                FullName: "tempore",
-                RegNum: "quis",
-                UID: "vitae",
+                DOB: "sit",
+                FullName: "voluptas",
+                RegNum: "culpa",
+                UID: "expedita",
             },
-            ConsentArtifact: "sunt",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "sit",
+            TxnID: "expedita",
         },
     }
     

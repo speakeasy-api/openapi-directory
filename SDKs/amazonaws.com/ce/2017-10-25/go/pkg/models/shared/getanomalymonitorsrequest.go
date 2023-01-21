@@ -1,0 +1,7 @@
+package shared
+
+type GetAnomalyMonitorsRequest struct {
+	MaxResults     *int64   `json:"MaxResults,omitempty"`
+	MonitorArnList []string `json:"MonitorArnList,omitempty"`
+	NextPageToken  *string  `json:"NextPageToken,omitempty"`
+}

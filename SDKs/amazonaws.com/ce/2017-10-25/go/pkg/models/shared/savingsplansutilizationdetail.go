@@ -1,0 +1,11 @@
+package shared
+
+// SavingsPlansUtilizationDetail
+// A single daily or monthly Savings Plans utilization rate, and details for your account. A management account in an organization have access to member accounts. You can use <code>GetDimensionValues</code> to determine the possible dimension values.
+type SavingsPlansUtilizationDetail struct {
+	AmortizedCommitment *SavingsPlansAmortizedCommitment `json:"AmortizedCommitment,omitempty"`
+	Attributes          map[string]string                `json:"Attributes,omitempty"`
+	Savings             *SavingsPlansSavings             `json:"Savings,omitempty"`
+	SavingsPlanArn      *string                          `json:"SavingsPlanArn,omitempty"`
+	Utilization         *SavingsPlansUtilization         `json:"Utilization,omitempty"`
+}

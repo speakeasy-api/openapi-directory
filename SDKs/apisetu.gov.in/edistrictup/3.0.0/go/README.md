@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.BtcerRequestBody{
             CertificateParameters: &operations.BtcerRequestBodyCertificateParameters{
-                ApplicationNo: "illo",
-                CertificateID: "molestias",
+                ApplicationNo: "sit",
+                CertificateID: "voluptas",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "culpa",
             Format: "xml",
-            TxnID: "officia",
+            TxnID: "consequuntur",
         },
     }
     

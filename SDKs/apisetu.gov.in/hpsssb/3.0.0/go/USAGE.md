@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.AdcrdRequestBody{
             CertificateParameters: &operations.AdcrdRequestBodyCertificateParameters{
-                DOB: "quia",
-                FatherName: "officia",
-                FullName: "qui",
+                DOB: "sit",
+                FatherName: "voluptas",
+                FullName: "culpa",
             },
-            ConsentArtifact: "odit",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "sed",
+            TxnID: "dolor",
         },
     }
     

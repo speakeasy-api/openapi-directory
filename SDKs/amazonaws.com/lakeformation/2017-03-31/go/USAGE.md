@@ -23,82 +23,92 @@ func main() {
     
     req := operations.AddLfTagsToResourceRequest{
         Headers: operations.AddLfTagsToResourceHeaders{
-            XAmzAlgorithm: "velit",
-            XAmzContentSha256: "maiores",
-            XAmzCredential: "sunt",
-            XAmzDate: "et",
-            XAmzSecurityToken: "est",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "totam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSLakeFormation.AddLFTagsToResource",
         },
         Request: shared.AddLfTagsToResourceRequest{
-            CatalogID: "voluptas",
+            CatalogID: "fugit",
             LFTags: []shared.LfTagPair{
                 shared.LfTagPair{
-                    CatalogID: "consequatur",
-                    TagKey: "veritatis",
+                    CatalogID: "nihil",
+                    TagKey: "rerum",
                     TagValues: []string{
+                        "debitis",
+                        "voluptatum",
                         "et",
-                        "nisi",
-                        "cupiditate",
                     },
                 },
             },
             Resource: shared.Resource{
                 Catalog: map[string]interface{}{
-                    "quos": "et",
+                    "dolorem": "et",
+                    "voluptate": "iste",
+                    "vitae": "totam",
                 },
                 DataLocation: &shared.DataLocationResource{
-                    CatalogID: "perspiciatis",
-                    ResourceArn: "quo",
+                    CatalogID: "dolores",
+                    ResourceArn: "illum",
                 },
                 Database: &shared.DatabaseResource{
-                    CatalogID: "nulla",
-                    Name: "modi",
+                    CatalogID: "debitis",
+                    Name: "vel",
                 },
                 LFTag: &shared.LfTagKeyResource{
-                    CatalogID: "est",
-                    TagKey: "impedit",
+                    CatalogID: "odio",
+                    TagKey: "dolore",
                     TagValues: []string{
-                        "qui",
-                        "ut",
+                        "aspernatur",
+                        "accusantium",
                     },
                 },
                 LFTagPolicy: &shared.LfTagPolicyResource{
-                    CatalogID: "possimus",
+                    CatalogID: "totam",
                     Expression: []shared.LfTag{
                         shared.LfTag{
-                            TagKey: "iusto",
+                            TagKey: "quis",
                             TagValues: []string{
-                                "qui",
+                                "aut",
+                                "odit",
+                            },
+                        },
+                        shared.LfTag{
+                            TagKey: "non",
+                            TagValues: []string{
+                                "omnis",
                             },
                         },
                     },
-                    ResourceType: "TABLE",
+                    ResourceType: "DATABASE",
                 },
                 Table: &shared.TableResource{
-                    CatalogID: "totam",
-                    DatabaseName: "at",
-                    Name: "aliquam",
+                    CatalogID: "illo",
+                    DatabaseName: "sed",
+                    Name: "officiis",
                     TableWildcard: map[string]interface{}{
-                        "inventore": "esse",
-                        "consectetur": "cumque",
-                        "fugit": "qui",
+                        "consectetur": "nobis",
+                        "odio": "qui",
                     },
                 },
                 TableWithColumns: &shared.TableWithColumnsResource{
-                    CatalogID: "quia",
+                    CatalogID: "recusandae",
                     ColumnNames: []string{
-                        "incidunt",
+                        "ipsum",
+                        "eveniet",
                     },
                     ColumnWildcard: &shared.ColumnWildcard{
                         ExcludedColumnNames: []string{
-                            "neque",
+                            "sint",
+                            "inventore",
                         },
                     },
-                    DatabaseName: "alias",
-                    Name: "tempore",
+                    DatabaseName: "ut",
+                    Name: "exercitationem",
                 },
             },
         },

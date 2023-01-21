@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.PvcerRequestBody{
             CertificateParameters: &operations.PvcerRequestBodyCertificateParameters{
-                ENROLNO: "quis",
-                FullName: "ratione",
-                YEAR: "ut",
+                ENROLNO: "sit",
+                FullName: "voluptas",
+                YEAR: "culpa",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "placeat",
+            TxnID: "dolor",
         },
     }
     

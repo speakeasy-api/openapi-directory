@@ -1,0 +1,769 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type Loyalty struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewLoyalty(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Loyalty {
+	return &Loyalty{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// AccumulateLoyaltyPoints - AccumulateLoyaltyPoints
+// Adds points to a loyalty account.
+//
+// - If you are using the Orders API to manage orders, you only provide the `order_id`.
+// The endpoint reads the order to compute points to add to the buyer's account.
+// - If you are not using the Orders API to manage orders,
+// you first perform a client-side computation to compute the points.
+// For spend-based and visit-based programs, you can first call
+// [CalculateLoyaltyPoints](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/calculate-loyalty-points) to compute the points
+// that you provide to this endpoint.
+//
+// __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs.
+// For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
+func (s *Loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operations.AccumulateLoyaltyPointsRequest) (*operations.AccumulateLoyaltyPointsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/accumulate", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AccumulateLoyaltyPointsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.AccumulateLoyaltyPointsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccumulateLoyaltyPointsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// AdjustLoyaltyPoints - AdjustLoyaltyPoints
+// Adds points to or subtracts points from a buyer's account.
+//
+// Use this endpoint only when you need to manually adjust points. Otherwise, in your application flow, you call
+// [AccumulateLoyaltyPoints](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/accumulate-loyalty-points)
+// to add points when a buyer pays for the purchase.
+func (s *Loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.AdjustLoyaltyPointsRequest) (*operations.AdjustLoyaltyPointsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/adjust", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AdjustLoyaltyPointsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.AdjustLoyaltyPointsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AdjustLoyaltyPointsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CalculateLoyaltyPoints - CalculateLoyaltyPoints
+// Calculates the points a purchase earns.
+//
+// - If you are using the Orders API to manage orders, you provide `order_id` in the request. The
+// endpoint calculates the points by reading the order.
+// - If you are not using the Orders API to manage orders, you provide the purchase amount in
+// the request for the endpoint to calculate the points.
+//
+// An application might call this endpoint to show the points that a buyer can earn with the
+// specific purchase.
+//
+// __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs.
+// For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
+func (s *Loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations.CalculateLoyaltyPointsRequest) (*operations.CalculateLoyaltyPointsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}/calculate", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CalculateLoyaltyPointsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CalculateLoyaltyPointsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CalculateLoyaltyPointsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateLoyaltyAccount - CreateLoyaltyAccount
+// Creates a loyalty account. To create a loyalty account, you must provide the `program_id` and a `mapping` with the `phone_number` of the buyer.
+func (s *Loyalty) CreateLoyaltyAccount(ctx context.Context, request operations.CreateLoyaltyAccountRequest) (*operations.CreateLoyaltyAccountResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/accounts"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateLoyaltyAccountResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateLoyaltyAccountResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateLoyaltyAccountResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateLoyaltyReward - CreateLoyaltyReward
+// Creates a loyalty reward. In the process, the endpoint does following:
+//
+// - Uses the `reward_tier_id` in the request to determine the number of points
+// to lock for this reward.
+// - If the request includes `order_id`, it adds the reward and related discount to the order.
+//
+// After a reward is created, the points are locked and
+// not available for the buyer to redeem another reward.
+func (s *Loyalty) CreateLoyaltyReward(ctx context.Context, request operations.CreateLoyaltyRewardRequest) (*operations.CreateLoyaltyRewardResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/rewards"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateLoyaltyRewardResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateLoyaltyRewardResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateLoyaltyRewardResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteLoyaltyReward - DeleteLoyaltyReward
+// Deletes a loyalty reward by doing the following:
+//
+// - Returns the loyalty points back to the loyalty account.
+// - If an order ID was specified when the reward was created
+// (see [CreateLoyaltyReward](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/create-loyalty-reward)),
+// it updates the order by removing the reward and related
+// discounts.
+//
+// You cannot delete a reward that has reached the terminal state (REDEEMED).
+func (s *Loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.DeleteLoyaltyRewardRequest) (*operations.DeleteLoyaltyRewardResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteLoyaltyRewardResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DeleteLoyaltyRewardResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteLoyaltyRewardResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListLoyaltyPrograms - ListLoyaltyPrograms
+// Returns a list of loyalty programs in the seller's account.
+// Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
+//
+// Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
+func (s *Loyalty) ListLoyaltyPrograms(ctx context.Context, request operations.ListLoyaltyProgramsRequest) (*operations.ListLoyaltyProgramsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/programs"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListLoyaltyProgramsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListLoyaltyProgramsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListLoyaltyProgramsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RedeemLoyaltyReward - RedeemLoyaltyReward
+// Redeems a loyalty reward.
+//
+// The endpoint sets the reward to the `REDEEMED` terminal state.
+//
+// If you are using your own order processing system (not using the
+// Orders API), you call this endpoint after the buyer paid for the
+// purchase.
+//
+// After the reward reaches the terminal state, it cannot be deleted.
+// In other words, points used for the reward cannot be returned
+// to the account.
+func (s *Loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.RedeemLoyaltyRewardRequest) (*operations.RedeemLoyaltyRewardResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}/redeem", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RedeemLoyaltyRewardResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RedeemLoyaltyRewardResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RedeemLoyaltyRewardResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveLoyaltyAccount - RetrieveLoyaltyAccount
+// Retrieves a loyalty account.
+func (s *Loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations.RetrieveLoyaltyAccountRequest) (*operations.RetrieveLoyaltyAccountResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveLoyaltyAccountResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveLoyaltyAccountResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveLoyaltyAccountResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveLoyaltyProgram - RetrieveLoyaltyProgram
+// Retrieves the loyalty program in a seller's account, specified by the program ID or the keyword `main`.
+//
+// Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
+func (s *Loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations.RetrieveLoyaltyProgramRequest) (*operations.RetrieveLoyaltyProgramResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveLoyaltyProgramResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveLoyaltyProgramResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveLoyaltyProgramResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveLoyaltyReward - RetrieveLoyaltyReward
+// Retrieves a loyalty reward.
+func (s *Loyalty) RetrieveLoyaltyReward(ctx context.Context, request operations.RetrieveLoyaltyRewardRequest) (*operations.RetrieveLoyaltyRewardResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveLoyaltyRewardResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveLoyaltyRewardResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveLoyaltyRewardResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SearchLoyaltyAccounts - SearchLoyaltyAccounts
+// Searches for loyalty accounts in a loyalty program.
+//
+// You can search for a loyalty account using the phone number or customer ID associated with the account. To return all loyalty accounts, specify an empty `query` object or omit it entirely.
+//
+// Search results are sorted by `created_at` in ascending order.
+func (s *Loyalty) SearchLoyaltyAccounts(ctx context.Context, request operations.SearchLoyaltyAccountsRequest) (*operations.SearchLoyaltyAccountsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/accounts/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchLoyaltyAccountsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchLoyaltyAccountsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchLoyaltyAccountsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SearchLoyaltyEvents - SearchLoyaltyEvents
+// Searches for loyalty events.
+//
+// A Square loyalty program maintains a ledger of events that occur during the lifetime of a
+// buyer's loyalty account. Each change in the point balance
+// (for example, points earned, points redeemed, and points expired) is
+// recorded in the ledger. Using this endpoint, you can search the ledger for events.
+//
+// Search results are sorted by `created_at` in descending order.
+func (s *Loyalty) SearchLoyaltyEvents(ctx context.Context, request operations.SearchLoyaltyEventsRequest) (*operations.SearchLoyaltyEventsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/events/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchLoyaltyEventsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchLoyaltyEventsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchLoyaltyEventsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SearchLoyaltyRewards - SearchLoyaltyRewards
+// Searches for loyalty rewards in a loyalty account.
+//
+// In the current implementation, the endpoint supports search by the reward `status`.
+//
+// If you know a reward ID, use the
+// [RetrieveLoyaltyReward](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-reward) endpoint.
+//
+// Search results are sorted by `updated_at` in descending order.
+func (s *Loyalty) SearchLoyaltyRewards(ctx context.Context, request operations.SearchLoyaltyRewardsRequest) (*operations.SearchLoyaltyRewardsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/rewards/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchLoyaltyRewardsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchLoyaltyRewardsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchLoyaltyRewardsResponse = out
+		}
+	}
+
+	return res, nil
+}

@@ -32,8 +32,8 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRecoveryRequestBody{
-            Email: "amet",
-            URL: "sequi",
+            Email: "sit",
+            URL: "voluptas",
         },
     }
     

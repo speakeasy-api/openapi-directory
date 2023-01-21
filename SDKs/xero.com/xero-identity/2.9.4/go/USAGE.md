@@ -18,7 +18,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteConnectionPathParams{
-            ID: "qui",
+            ID: "sit",
         },
     }
     

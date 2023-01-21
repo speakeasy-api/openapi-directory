@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetContentAspectIDRequest{
         PathParams: operations.GetContentAspectIDPathParams{
-            AspectID: "psl",
+            AspectID: "complete",
         },
     }
     

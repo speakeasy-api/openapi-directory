@@ -34,23 +34,21 @@ func main() {
     
     req := operations.BatchGetTracesRequest{
         QueryParams: operations.BatchGetTracesQueryParams{
-            NextToken: "ut",
+            NextToken: "sit",
         },
         Headers: operations.BatchGetTracesHeaders{
-            XAmzAlgorithm: "possimus",
-            XAmzContentSha256: "iusto",
-            XAmzCredential: "illum",
-            XAmzDate: "ex",
-            XAmzSecurityToken: "eos",
-            XAmzSignature: "asperiores",
-            XAmzSignedHeaders: "dicta",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.BatchGetTracesRequestBody{
-            NextToken: "sunt",
+            NextToken: "fugit",
             TraceIds: []string{
-                "omnis",
-                "nobis",
-                "et",
+                "nihil",
             },
         },
     }

@@ -23,6 +23,8 @@ const (
 	RegionalTaxRateInfoTaxTierEnumTaxTierLiveOrBroadcast1 RegionalTaxRateInfoTaxTierEnum = "TAX_TIER_LIVE_OR_BROADCAST_1"
 )
 
+// RegionalTaxRateInfo
+// Specified details about taxation in a given geographical region.
 type RegionalTaxRateInfo struct {
 	EligibleForStreamingServiceTaxRate *bool                                    `json:"eligibleForStreamingServiceTaxRate,omitempty"`
 	StreamingTaxType                   *RegionalTaxRateInfoStreamingTaxTypeEnum `json:"streamingTaxType,omitempty"`

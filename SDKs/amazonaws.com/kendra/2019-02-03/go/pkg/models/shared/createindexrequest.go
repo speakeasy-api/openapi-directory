@@ -1,0 +1,13 @@
+package shared
+
+type CreateIndexRequest struct {
+	ClientToken                       *string                            `json:"ClientToken,omitempty"`
+	Description                       *string                            `json:"Description,omitempty"`
+	Edition                           *IndexEditionEnum                  `json:"Edition,omitempty"`
+	Name                              string                             `json:"Name"`
+	RoleArn                           string                             `json:"RoleArn"`
+	ServerSideEncryptionConfiguration *ServerSideEncryptionConfiguration `json:"ServerSideEncryptionConfiguration,omitempty"`
+	Tags                              []Tag                              `json:"Tags,omitempty"`
+	UserContextPolicy                 *UserContextPolicyEnum             `json:"UserContextPolicy,omitempty"`
+	UserTokenConfigurations           []UserTokenConfiguration           `json:"UserTokenConfigurations,omitempty"`
+}

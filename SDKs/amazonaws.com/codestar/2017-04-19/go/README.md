@@ -34,21 +34,21 @@ func main() {
     
     req := operations.AssociateTeamMemberRequest{
         Headers: operations.AssociateTeamMemberHeaders{
-            XAmzAlgorithm: "quod",
-            XAmzContentSha256: "ut",
-            XAmzCredential: "ut",
-            XAmzDate: "sed",
-            XAmzSecurityToken: "quibusdam",
-            XAmzSignature: "harum",
-            XAmzSignedHeaders: "repudiandae",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "CodeStar_20170419.AssociateTeamMember",
         },
         Request: shared.AssociateTeamMemberRequest{
-            ClientRequestToken: "molestiae",
-            ProjectID: "rerum",
-            ProjectRole: "occaecati",
+            ClientRequestToken: "fugit",
+            ProjectID: "et",
+            ProjectRole: "nihil",
             RemoteAccessAllowed: true,
-            UserArn: "rerum",
+            UserArn: "dicta",
         },
     }
     

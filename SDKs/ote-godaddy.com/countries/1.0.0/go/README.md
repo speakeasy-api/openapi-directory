@@ -24,10 +24,10 @@ func main() {
     
     req := operations.GetCountriesRequest{
         QueryParams: operations.GetCountriesQueryParams{
-            MarketID: "officiis",
+            MarketID: "sit",
             Order: "ascending",
-            RegionName: "aut",
-            RegionTypeID: 6278051711282407836,
+            RegionName: "culpa",
+            RegionTypeID: 501233450539197794,
             Sort: "label",
         },
     }

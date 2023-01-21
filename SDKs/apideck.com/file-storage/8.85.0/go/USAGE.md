@@ -28,17 +28,17 @@ func main() {
             },
         },
         QueryParams: operations.DriveGroupsAddQueryParams{
-            Raw: true,
+            Raw: false,
         },
         Headers: operations.DriveGroupsAddHeaders{
-            XApideckAppID: "deleniti",
-            XApideckConsumerID: "ut",
-            XApideckServiceID: "corporis",
+            XApideckAppID: "voluptas",
+            XApideckConsumerID: "culpa",
+            XApideckServiceID: "expedita",
         },
         Request: shared.DriveGroupInput{
-            Description: "enim",
-            DisplayName: "quia",
-            Name: "autem",
+            Description: "consequuntur",
+            DisplayName: "dolor",
+            Name: "expedita",
         },
     }
     

@@ -29,9 +29,9 @@ func main() {
             },
         },
         QueryParams: operations.DoctorsListQueryParams{
-            Cursor: "est",
-            Doctor: 2873217883208899000,
-            PageSize: 749214027407528753,
+            Cursor: "sit",
+            Doctor: 2259404117704393152,
+            PageSize: 6050128673802995827,
         },
     }
     

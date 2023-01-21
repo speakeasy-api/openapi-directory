@@ -34,26 +34,25 @@ func main() {
     
     req := operations.GenerateDataSetRequest{
         Headers: operations.GenerateDataSetHeaders{
-            XAmzAlgorithm: "quisquam",
-            XAmzContentSha256: "sequi",
-            XAmzCredential: "quia",
-            XAmzDate: "est",
-            XAmzSecurityToken: "voluptatem",
-            XAmzSignature: "voluptate",
-            XAmzSignedHeaders: "facilis",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
         },
         Request: shared.GenerateDataSetRequest{
             CustomerDefinedValues: map[string]string{
-                "ipsum": "repudiandae",
-                "iusto": "quis",
+                "et": "nihil",
             },
-            DataSetPublicationDate: "2013-05-15T08:13:46Z",
-            DataSetType: "monthly_revenue_billing_and_revenue_data",
-            DestinationS3BucketName: "sunt",
-            DestinationS3Prefix: "laborum",
-            RoleNameArn: "quibusdam",
-            SnsTopicArn: "eum",
+            DataSetPublicationDate: "2004-06-02T10:14:12Z",
+            DataSetType: "daily_business_usage_by_instance_type",
+            DestinationS3BucketName: "et",
+            DestinationS3Prefix: "ut",
+            RoleNameArn: "dolorem",
+            SnsTopicArn: "et",
         },
     }
     

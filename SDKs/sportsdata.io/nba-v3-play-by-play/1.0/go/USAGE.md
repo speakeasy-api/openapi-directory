@@ -24,7 +24,7 @@ func main() {
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
             Format: "XML",
-            Gameid: "illo",
+            Gameid: "voluptas",
         },
     }
     

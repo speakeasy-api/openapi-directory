@@ -34,16 +34,16 @@ func main() {
     
     req := operations.CancelContactRequest{
         PathParams: operations.CancelContactPathParams{
-            ContactID: "repudiandae",
+            ContactID: "sit",
         },
         Headers: operations.CancelContactHeaders{
-            XAmzAlgorithm: "quo",
-            XAmzContentSha256: "omnis",
-            XAmzCredential: "adipisci",
-            XAmzDate: "praesentium",
-            XAmzSecurityToken: "qui",
-            XAmzSignature: "ipsam",
-            XAmzSignedHeaders: "in",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

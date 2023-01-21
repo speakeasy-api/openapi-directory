@@ -1,0 +1,18 @@
+package shared
+
+import (
+	"time"
+)
+
+// ReplicaDescription
+// Contains the details of the replica.
+type ReplicaDescription struct {
+	GlobalSecondaryIndexes        []ReplicaGlobalSecondaryIndexDescription `json:"GlobalSecondaryIndexes,omitempty"`
+	KMSMasterKeyID                *string                                  `json:"KMSMasterKeyId,omitempty"`
+	ProvisionedThroughputOverride *ProvisionedThroughputOverride           `json:"ProvisionedThroughputOverride,omitempty"`
+	RegionName                    *string                                  `json:"RegionName,omitempty"`
+	ReplicaInaccessibleDateTime   *time.Time                               `json:"ReplicaInaccessibleDateTime,omitempty"`
+	ReplicaStatus                 *ReplicaStatusEnum                       `json:"ReplicaStatus,omitempty"`
+	ReplicaStatusDescription      *string                                  `json:"ReplicaStatusDescription,omitempty"`
+	ReplicaStatusPercentProgress  *string                                  `json:"ReplicaStatusPercentProgress,omitempty"`
+}

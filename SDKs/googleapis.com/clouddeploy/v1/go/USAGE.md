@@ -21,73 +21,87 @@ func main() {
             },
         },
         PathParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams{
-            Parent: "in",
+            Parent: "sit",
         },
         QueryParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "rerum",
-            Alt: "proto",
-            Callback: "vero",
-            DeliveryPipelineID: "et",
-            Fields: "dolor",
-            Key: "quibusdam",
-            OauthToken: "sit",
-            PrettyPrint: true,
-            QuotaUser: "eum",
-            RequestID: "natus",
-            UploadType: "ipsa",
-            UploadProtocol: "et",
-            ValidateOnly: false,
+            DollarXgafv: "1",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            DeliveryPipelineID: "dolor",
+            Fields: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            RequestID: "rerum",
+            UploadType: "dicta",
+            UploadProtocol: "debitis",
+            ValidateOnly: true,
         },
         Request: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
-                "sapiente": "iure",
+                "ut": "dolorem",
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
-                    Status: true,
-                    UpdateTime: "omnis",
+                    Status: false,
+                    UpdateTime: "voluptate",
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
-                        "fugit",
+                        "vitae",
+                        "totam",
+                        "dolores",
                     },
-                    Status: true,
-                    UpdateTime: "inventore",
+                    Status: false,
+                    UpdateTime: "debitis",
                 },
             },
-            Description: "a",
-            Etag: "laboriosam",
+            Description: "vel",
+            Etag: "odio",
             Labels: map[string]string{
-                "voluptates": "laborum",
-                "eligendi": "est",
+                "id": "aspernatur",
+                "accusantium": "totam",
             },
-            Name: "inventore",
+            Name: "commodi",
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "sapiente",
-                        },
-                        Strategy: &shared.Strategy{
-                            Standard: &shared.Standard{
-                                Verify: false,
-                            },
-                        },
-                        TargetID: "aliquam",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "dolores",
-                            "vel",
-                            "cumque",
+                            "aut",
+                            "odit",
                         },
                         Strategy: &shared.Strategy{
                             Standard: &shared.Standard{
                                 Verify: true,
                             },
                         },
-                        TargetID: "nihil",
+                        TargetID: "voluptas",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "aut",
+                            "illo",
+                        },
+                        Strategy: &shared.Strategy{
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "officiis",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "consectetur",
+                            "nobis",
+                        },
+                        Strategy: &shared.Strategy{
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "qui",
                     },
                 },
             },

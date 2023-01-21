@@ -18,8 +18,8 @@ func main() {
             },
         },
         PathParams: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams{
-            AppID: 6434536896164192283,
-            CardID: "dicta",
+            AppID: 8717895732742165505,
+            CardID: "voluptas",
         },
     }
     

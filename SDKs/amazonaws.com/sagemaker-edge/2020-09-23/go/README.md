@@ -34,17 +34,17 @@ func main() {
     
     req := operations.GetDeviceRegistrationRequest{
         Headers: operations.GetDeviceRegistrationHeaders{
-            XAmzAlgorithm: "quos",
-            XAmzContentSha256: "quam",
-            XAmzCredential: "quam",
-            XAmzDate: "totam",
-            XAmzSecurityToken: "omnis",
-            XAmzSignature: "qui",
-            XAmzSignedHeaders: "neque",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.GetDeviceRegistrationRequestBody{
-            DeviceFleetName: "officia",
-            DeviceName: "quo",
+            DeviceFleetName: "voluptas",
+            DeviceName: "fugit",
         },
     }
     

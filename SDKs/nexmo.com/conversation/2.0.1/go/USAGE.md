@@ -23,11 +23,11 @@ func main() {
     
     req := operations.CreateConversationRequest{
         Request: &operations.CreateConversationRequestBody{
-            DisplayName: "molestias",
-            ImageURL: "libero",
-            Name: "modi",
+            DisplayName: "sit",
+            ImageURL: "voluptas",
+            Name: "culpa",
             Properties: &shared.ConversationProperties{
-                TTL: 37.200001,
+                TTL: 6.200000,
             },
         },
     }

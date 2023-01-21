@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CtcerRequestBody{
             CertificateParameters: &operations.CtcerRequestBodyCertificateParameters{
-                RefNo: "corporis",
-                TokenNo: "accusantium",
+                RefNo: "sit",
+                TokenNo: "voluptas",
             },
-            ConsentArtifact: "eaque",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "quidem",
+            TxnID: "consequuntur",
         },
     }
     

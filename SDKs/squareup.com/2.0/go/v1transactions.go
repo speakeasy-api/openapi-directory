@@ -1,0 +1,469 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type V1Transactions struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewV1Transactions(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *V1Transactions {
+	return &V1Transactions{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// CreateRefund - CreateRefund
+// Issues a refund for a previously processed payment. You must issue
+// a refund within 60 days of the associated payment.
+//
+// You cannot issue a partial refund for a split tender payment. You must
+// instead issue a full or partial refund for a particular tender, by
+// providing the applicable tender id to the V1CreateRefund endpoint.
+// Issuing a full refund for a split tender payment refunds all tenders
+// associated with the payment.
+//
+// Issuing a refund for a card payment is not reversible. For development
+// purposes, you can create fake cash payments in Square Point of Sale and
+// refund them.
+func (s *V1Transactions) CreateRefund(ctx context.Context, request operations.CreateRefundRequest) (*operations.CreateRefundResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateRefundResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.V1Refund
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Refund = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListOrders - ListOrders
+// Provides summary information for a merchant's online store orders.
+func (s *V1Transactions) ListOrders(ctx context.Context, request operations.ListOrdersRequest) (*operations.ListOrdersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListOrdersResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.V1Order
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Orders = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListPayments - ListPayments
+// Provides summary information for all payments taken for a given
+// Square account during a date range. Date ranges cannot exceed 1 year in
+// length. See Date ranges for details of inclusive and exclusive dates.
+//
+// *Note**: Details for payments processed with Square Point of Sale while
+// in offline mode may not be transmitted to Square for up to 72 hours.
+// Offline payments have a `created_at` value that reflects the time the
+// payment was originally processed, not the time it was subsequently
+// transmitted to Square. Consequently, the ListPayments endpoint might
+// list an offline payment chronologically between online payments that
+// were seen in a previous request.
+func (s *V1Transactions) ListPayments(ctx context.Context, request operations.ListPaymentsRequest) (*operations.ListPaymentsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListPaymentsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.V1Payment
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Payments = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListRefunds - ListRefunds
+// Provides the details for all refunds initiated by a merchant or any of the merchant's mobile staff during a date range. Date ranges cannot exceed one year in length.
+func (s *V1Transactions) ListRefunds(ctx context.Context, request operations.ListRefundsRequest) (*operations.ListRefundsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/refunds", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListRefundsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.V1Refund
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Refunds = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListSettlements - ListSettlements
+// Provides summary information for all deposits and withdrawals
+// initiated by Square to a linked bank account during a date range. Date
+// ranges cannot exceed one year in length.
+//
+// *Note**: the ListSettlements endpoint does not provide entry
+// information.
+func (s *V1Transactions) ListSettlements(ctx context.Context, request operations.ListSettlementsRequest) (*operations.ListSettlementsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListSettlementsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.V1Settlement
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Settlements = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveOrder - RetrieveOrder
+// Provides comprehensive information for a single online store order, including the order's history.
+func (s *V1Transactions) RetrieveOrder(ctx context.Context, request operations.RetrieveOrderRequest) (*operations.RetrieveOrderResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveOrderResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.V1Order
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Order = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrievePayment - RetrievePayment
+// Provides comprehensive information for a single payment.
+func (s *V1Transactions) RetrievePayment(ctx context.Context, request operations.RetrievePaymentRequest) (*operations.RetrievePaymentResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/payments/{payment_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrievePaymentResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.V1Payment
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Payment = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveSettlement - RetrieveSettlement
+// Provides comprehensive information for a single settlement.
+//
+// The returned `Settlement` objects include an `entries` field that lists
+// the transactions that contribute to the settlement total. Most
+// settlement entries correspond to a payment payout, but settlement
+// entries are also generated for less common events, like refunds, manual
+// adjustments, or chargeback holds.
+//
+// Square initiates its regular deposits as indicated in the
+// [Deposit Options with Square](https://squareup.com/help/us/en/article/3807)
+// help article. Details for a regular deposit are usually not available
+// from Connect API endpoints before 10 p.m. PST the same day.
+//
+// Square does not know when an initiated settlement **completes**, only
+// whether it has failed. A completed settlement is typically reflected in
+// a bank account within 3 business days, but in exceptional cases it may
+// take longer.
+func (s *V1Transactions) RetrieveSettlement(ctx context.Context, request operations.RetrieveSettlementRequest) (*operations.RetrieveSettlementResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/settlements/{settlement_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveSettlementResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.V1Settlement
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Settlement = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateOrder - UpdateOrder
+// Updates the details of an online store order. Every update you perform on an order corresponds to one of three actions:
+func (s *V1Transactions) UpdateOrder(ctx context.Context, request operations.UpdateOrderRequest) (*operations.UpdateOrderResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location_id}/orders/{order_id}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateOrderResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.V1Order
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.V1Order = out
+		}
+	}
+
+	return res, nil
+}

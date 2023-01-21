@@ -34,18 +34,18 @@ func main() {
     
     req := operations.AssociateWebACLRequest{
         Headers: operations.AssociateWebACLHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "modi",
-            XAmzCredential: "consequatur",
-            XAmzDate: "quia",
-            XAmzSecurityToken: "eaque",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "assumenda",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSWAF_Regional_20161128.AssociateWebACL",
         },
         Request: shared.AssociateWebACLRequest{
-            ResourceArn: "perspiciatis",
-            WebACLID: "quia",
+            ResourceArn: "fugit",
+            WebACLID: "et",
         },
     }
     

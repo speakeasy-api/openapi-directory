@@ -18,8 +18,8 @@ func main() {
             },
         },
         Request: shared.CertificateRequest{
-            BeneficiaryID: "et",
-            Mobile: "vitae",
+            BeneficiaryID: "sit",
+            Mobile: "voluptas",
         },
     }
     

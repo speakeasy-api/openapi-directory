@@ -36,17 +36,17 @@ func main() {
         QueryParams: operations.GetAcceptTransitGatewayPeeringAttachmentQueryParams{
             Action: "AcceptTransitGatewayPeeringAttachment",
             DryRun: false,
-            TransitGatewayAttachmentID: "ut",
+            TransitGatewayAttachmentID: "culpa",
             Version: "2016-11-15",
         },
         Headers: operations.GetAcceptTransitGatewayPeeringAttachmentHeaders{
-            XAmzAlgorithm: "assumenda",
-            XAmzContentSha256: "autem",
-            XAmzCredential: "ut",
-            XAmzDate: "labore",
-            XAmzSecurityToken: "amet",
-            XAmzSignature: "in",
-            XAmzSignedHeaders: "provident",
+            XAmzAlgorithm: "consequuntur",
+            XAmzContentSha256: "dolor",
+            XAmzCredential: "expedita",
+            XAmzDate: "voluptas",
+            XAmzSecurityToken: "fugit",
+            XAmzSignature: "et",
+            XAmzSignedHeaders: "nihil",
         },
     }
     

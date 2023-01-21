@@ -24,10 +24,10 @@ func main() {
     
     req := operations.GetDomainRequest{
         PathParams: operations.GetDomainPathParams{
-            DomainID: "nostrum",
+            DomainID: "sit",
         },
         Headers: operations.GetDomainHeaders{
-            TrainingKey: "aut",
+            TrainingKey: "voluptas",
         },
     }
     
@@ -93,7 +93,6 @@ training for the provided iteration {iterationId}.
 * `TrainProject` - Queues project for training.
 * `UnpublishIteration` - Unpublish a specific iteration.
 * `UpdateIteration` - Update a specific iteration.
-* `UpdateProject` - Update a specific project.
 
 ### SuggestTagsAndRegionsApi
 

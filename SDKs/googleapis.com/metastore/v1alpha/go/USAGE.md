@@ -21,40 +21,36 @@ func main() {
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "ex",
+            Parent: "sit",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "veniam",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
             Alt: "media",
-            Callback: "fuga",
-            FederationID: "quasi",
-            Fields: "doloribus",
-            Key: "maxime",
-            OauthToken: "quod",
+            Callback: "consequuntur",
+            FederationID: "dolor",
+            Fields: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
             PrettyPrint: false,
-            QuotaUser: "occaecati",
-            RequestID: "nisi",
-            UploadType: "amet",
-            UploadProtocol: "iste",
+            QuotaUser: "nihil",
+            RequestID: "rerum",
+            UploadType: "dicta",
+            UploadProtocol: "debitis",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "ipsam": shared.BackendMetastore{
+                "et": shared.BackendMetastore{
                     MetastoreType: "DATAPROC_METASTORE",
-                    Name: "voluptas",
-                },
-                "animi": shared.BackendMetastore{
-                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "optio",
+                    Name: "dolorem",
                 },
             },
             Labels: map[string]string{
-                "labore": "voluptatem",
-                "id": "labore",
+                "voluptate": "iste",
+                "vitae": "totam",
             },
-            Name: "eos",
-            Version: "iste",
+            Name: "dolores",
+            Version: "illum",
         },
     }
     

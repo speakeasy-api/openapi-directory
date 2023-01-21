@@ -13,7 +13,7 @@ func main() {
     
     req := operations.CreateGlobalRuleRequest{
         Request: shared.Rule{
-            Config: "magnam",
+            Config: "sit",
             Type: "VALIDITY",
         },
     }

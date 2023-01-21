@@ -34,36 +34,40 @@ func main() {
     
     req := operations.CreateCapacityProviderRequest{
         Headers: operations.CreateCapacityProviderHeaders{
-            XAmzAlgorithm: "praesentium",
-            XAmzContentSha256: "voluptates",
-            XAmzCredential: "inventore",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "deleniti",
-            XAmzSignature: "facere",
-            XAmzSignedHeaders: "numquam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
         },
         Request: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
-                AutoScalingGroupArn: "explicabo",
+                AutoScalingGroupArn: "fugit",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 6635728551378606624,
-                    MaximumScalingStepSize: 5973617793068578508,
-                    MinimumScalingStepSize: 8160591596675653275,
+                    InstanceWarmupPeriod: 1543572285742637646,
+                    MaximumScalingStepSize: 2661732831099943416,
+                    MinimumScalingStepSize: 8325060299420976708,
                     Status: "DISABLED",
-                    TargetCapacity: 7028752311702887101,
+                    TargetCapacity: 2518412263346885298,
                 },
                 ManagedTerminationProtection: "ENABLED",
             },
-            Name: "qui",
+            Name: "et",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "qui",
+                    Key: "dolorem",
                     Value: "et",
                 },
                 shared.Tag{
-                    Key: "aliquid",
-                    Value: "repellendus",
+                    Key: "voluptate",
+                    Value: "iste",
+                },
+                shared.Tag{
+                    Key: "vitae",
+                    Value: "totam",
                 },
             },
         },

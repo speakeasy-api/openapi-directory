@@ -25,14 +25,13 @@ func main() {
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Addon: []GetAddonEnum{
-                "city",
                 "region",
             },
-            Format: "json",
-            IP: "voluptas",
-            Key: "sed",
-            Lang: "ms",
-            Package: "WS20",
+            Format: "xml",
+            IP: "expedita",
+            Key: "consequuntur",
+            Lang: "ko",
+            Package: "WS18",
         },
     }
     

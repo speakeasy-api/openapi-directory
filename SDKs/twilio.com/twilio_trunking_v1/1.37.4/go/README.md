@@ -30,10 +30,10 @@ func main() {
             },
         },
         PathParams: operations.CreateCredentialListPathParams{
-            TrunkSid: "repellat",
+            TrunkSid: "sit",
         },
         Request: &operations.CreateCredentialListCreateCredentialListRequest{
-            CredentialListSid: "sint",
+            CredentialListSid: "voluptas",
         },
     }
     

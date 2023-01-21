@@ -13,8 +13,8 @@ func main() {
     
     req := operations.AnimateImageRequest{
         QueryParams: operations.AnimateImageQueryParams{
-            Type: "consectetur",
-            URL: "atque",
+            Type: "sit",
+            URL: "voluptas",
         },
     }
     

@@ -34,23 +34,23 @@ func main() {
     
     req := operations.CreateAPICacheRequest{
         PathParams: operations.CreateAPICachePathParams{
-            APIID: "aut",
+            APIID: "sit",
         },
         Headers: operations.CreateAPICacheHeaders{
-            XAmzAlgorithm: "et",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "atque",
-            XAmzDate: "praesentium",
-            XAmzSecurityToken: "perferendis",
-            XAmzSignature: "ab",
-            XAmzSignedHeaders: "cumque",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.CreateAPICacheRequestBody{
             APICachingBehavior: "FULL_REQUEST_CACHING",
             AtRestEncryptionEnabled: false,
             TransitEncryptionEnabled: true,
-            TTL: 1541276666071085218,
-            Type: "SMALL",
+            TTL: 8325060299420976708,
+            Type: "LARGE_12X",
         },
     }
     

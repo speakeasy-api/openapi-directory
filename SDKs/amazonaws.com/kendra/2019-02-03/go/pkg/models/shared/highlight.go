@@ -1,0 +1,10 @@
+package shared
+
+// Highlight
+// Provides information that you can use to highlight a search result so that your users can quickly identify terms in the response.
+type Highlight struct {
+	BeginOffset int64              `json:"BeginOffset"`
+	EndOffset   int64              `json:"EndOffset"`
+	TopAnswer   *bool              `json:"TopAnswer,omitempty"`
+	Type        *HighlightTypeEnum `json:"Type,omitempty"`
+}

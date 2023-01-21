@@ -13,7 +13,7 @@ func main() {
     
     req := operations.KeysAPICurrentRequest{
         PathParams: operations.KeysAPICurrentPathParams{
-            Serial: "ut",
+            Serial: "sit",
         },
     }
     

@@ -34,30 +34,29 @@ func main() {
     
     req := operations.GetPersonalizedRankingRequest{
         Headers: operations.GetPersonalizedRankingHeaders{
-            XAmzAlgorithm: "sapiente",
-            XAmzContentSha256: "molestiae",
-            XAmzCredential: "aut",
-            XAmzDate: "illo",
-            XAmzSecurityToken: "sapiente",
-            XAmzSignature: "quisquam",
-            XAmzSignedHeaders: "ad",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.GetPersonalizedRankingRequestBody{
-            CampaignArn: "incidunt",
+            CampaignArn: "voluptas",
             Context: map[string]string{
-                "suscipit": "officiis",
-                "cum": "totam",
+                "et": "nihil",
             },
-            FilterArn: "mollitia",
+            FilterArn: "rerum",
             FilterValues: map[string]string{
-                "quos": "beatae",
+                "debitis": "voluptatum",
+                "et": "ut",
+                "dolorem": "et",
             },
             InputList: []string{
-                "dolor",
-                "veritatis",
-                "dicta",
+                "iste",
             },
-            UserID: "consequatur",
+            UserID: "vitae",
         },
     }
     

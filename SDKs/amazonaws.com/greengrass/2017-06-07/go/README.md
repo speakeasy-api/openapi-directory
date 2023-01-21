@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateRoleToGroupRequest{
         PathParams: operations.AssociateRoleToGroupPathParams{
-            GroupID: "recusandae",
+            GroupID: "sit",
         },
         Headers: operations.AssociateRoleToGroupHeaders{
-            XAmzAlgorithm: "iste",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "veritatis",
-            XAmzDate: "alias",
-            XAmzSecurityToken: "eum",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "iste",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.AssociateRoleToGroupRequestBody{
-            RoleArn: "deleniti",
+            RoleArn: "fugit",
         },
     }
     

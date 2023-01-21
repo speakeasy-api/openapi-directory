@@ -23,23 +23,21 @@ func main() {
     
     req := operations.BatchUpdateClusterRequest{
         Headers: operations.BatchUpdateClusterHeaders{
-            XAmzAlgorithm: "dicta",
-            XAmzContentSha256: "inventore",
-            XAmzCredential: "perspiciatis",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "esse",
-            XAmzSignature: "facere",
-            XAmzSignedHeaders: "commodi",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AmazonMemoryDB.BatchUpdateCluster",
         },
         Request: shared.BatchUpdateClusterRequest{
             ClusterNames: []string{
-                "asperiores",
-                "amet",
-                "cupiditate",
+                "et",
             },
             ServiceUpdate: &shared.ServiceUpdateRequest{
-                ServiceUpdateNameToApply: "nisi",
+                ServiceUpdateNameToApply: "nihil",
             },
         },
     }

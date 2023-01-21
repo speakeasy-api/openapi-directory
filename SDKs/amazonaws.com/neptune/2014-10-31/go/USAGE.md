@@ -24,19 +24,19 @@ func main() {
     req := operations.GetAddRoleToDbClusterRequest{
         QueryParams: operations.GetAddRoleToDbClusterQueryParams{
             Action: "AddRoleToDBCluster",
-            DBClusterIdentifier: "qui",
-            FeatureName: "consequatur",
-            RoleArn: "laborum",
+            DBClusterIdentifier: "voluptas",
+            FeatureName: "culpa",
+            RoleArn: "expedita",
             Version: "2014-10-31",
         },
         Headers: operations.GetAddRoleToDbClusterHeaders{
-            XAmzAlgorithm: "laboriosam",
-            XAmzContentSha256: "fugiat",
-            XAmzCredential: "et",
-            XAmzDate: "nesciunt",
-            XAmzSecurityToken: "tempore",
-            XAmzSignature: "libero",
-            XAmzSignedHeaders: "modi",
+            XAmzAlgorithm: "dolor",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "voluptas",
+            XAmzDate: "fugit",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "rerum",
         },
     }
     

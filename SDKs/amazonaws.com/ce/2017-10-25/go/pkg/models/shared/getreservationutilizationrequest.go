@@ -1,0 +1,11 @@
+package shared
+
+type GetReservationUtilizationRequest struct {
+	Filter        *Expression       `json:"Filter,omitempty"`
+	Granularity   *GranularityEnum  `json:"Granularity,omitempty"`
+	GroupBy       []GroupDefinition `json:"GroupBy,omitempty"`
+	MaxResults    *int64            `json:"MaxResults,omitempty"`
+	NextPageToken *string           `json:"NextPageToken,omitempty"`
+	SortBy        *SortDefinition   `json:"SortBy,omitempty"`
+	TimePeriod    DateInterval      `json:"TimePeriod"`
+}

@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetFindInteractionsRequest{
         QueryParams: operations.GetFindInteractionsQueryParams{
-            Format: "jpg",
-            Query: "at",
+            Format: "json",
+            Query: "voluptas",
         },
     }
     

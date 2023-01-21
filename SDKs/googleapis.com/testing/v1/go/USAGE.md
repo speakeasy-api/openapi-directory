@@ -22,19 +22,19 @@ func main() {
         },
         QueryParams: operations.TestingApplicationDetailServiceGetApkDetailsQueryParams{
             DollarXgafv: "1",
-            AccessToken: "et",
+            AccessToken: "voluptas",
             Alt: "media",
-            Callback: "sint",
-            Fields: "sed",
-            Key: "modi",
-            OauthToken: "ut",
+            Callback: "expedita",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
             PrettyPrint: true,
-            QuotaUser: "error",
-            UploadType: "eos",
-            UploadProtocol: "modi",
+            QuotaUser: "fugit",
+            UploadType: "et",
+            UploadProtocol: "nihil",
         },
         Request: &shared.FileReference{
-            GcsPath: "neque",
+            GcsPath: "rerum",
         },
     }
     

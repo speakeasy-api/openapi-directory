@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.TdcerRequestBody{
             CertificateParameters: &operations.TdcerRequestBodyCertificateParameters{
-                CustID: "id",
-                DOB: "vitae",
-                FinYr: "atque",
+                CustID: "sit",
+                DOB: "voluptas",
+                FinYr: "culpa",
             },
-            ConsentArtifact: "sit",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "sint",
+            TxnID: "dolor",
         },
     }
     

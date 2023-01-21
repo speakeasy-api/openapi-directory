@@ -18,10 +18,10 @@ func main() {
             },
         },
         PathParams: operations.GetOrderPathParams{
-            OrderID: "quasi",
+            OrderID: "sit",
         },
         QueryParams: operations.GetOrderQueryParams{
-            FieldGroups: "odit",
+            FieldGroups: "voluptas",
         },
     }
     

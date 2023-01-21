@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteAppsIDPathParams{
-            ID: "et",
+            ID: "sit",
         },
     }
     

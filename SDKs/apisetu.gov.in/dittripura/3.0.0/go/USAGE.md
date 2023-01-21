@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.ChcerRequestBody{
             CertificateParameters: &operations.ChcerRequestBodyCertificateParameters{
-                RefNo: "illo",
-                TokenNo: "eveniet",
+                RefNo: "sit",
+                TokenNo: "voluptas",
             },
-            ConsentArtifact: "cumque",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "eveniet",
+            TxnID: "consequuntur",
         },
     }
     

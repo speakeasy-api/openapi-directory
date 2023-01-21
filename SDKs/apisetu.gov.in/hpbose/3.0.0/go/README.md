@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.HvcerRequestBody{
             CertificateParameters: &operations.HvcerRequestBodyCertificateParameters{
-                DOB: "tempora",
-                FullName: "sed",
-                ROLL: "recusandae",
-                YOP: "magnam",
+                DOB: "sit",
+                FullName: "voluptas",
+                ROLL: "culpa",
+                YOP: "expedita",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "labore",
+            TxnID: "expedita",
         },
     }
     

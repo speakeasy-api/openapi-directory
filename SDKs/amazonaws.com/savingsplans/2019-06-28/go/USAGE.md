@@ -23,25 +23,25 @@ func main() {
     
     req := operations.CreateSavingsPlanRequest{
         Headers: operations.CreateSavingsPlanHeaders{
-            XAmzAlgorithm: "dolores",
-            XAmzContentSha256: "fuga",
-            XAmzCredential: "et",
-            XAmzDate: "qui",
-            XAmzSecurityToken: "voluptatum",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "distinctio",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "dicta",
-            Commitment: "tenetur",
-            PurchaseTime: "2000-01-09T02:09:05Z",
-            SavingsPlanOfferingID: "cupiditate",
+            ClientToken: "voluptas",
+            Commitment: "fugit",
+            PurchaseTime: "2011-08-12T10:11:12Z",
+            SavingsPlanOfferingID: "nihil",
             Tags: map[string]string{
-                "facere": "sequi",
-                "rerum": "enim",
-                "qui": "unde",
+                "dicta": "debitis",
+                "voluptatum": "et",
+                "ut": "dolorem",
             },
-            UpfrontPaymentAmount: "assumenda",
+            UpfrontPaymentAmount: "et",
         },
     }
     

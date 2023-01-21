@@ -35,12 +35,12 @@ func main() {
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "dolores",
-            Key: "voluptates",
-            OauthToken: "illo",
+            Fields: "voluptas",
+            Key: "culpa",
+            OauthToken: "expedita",
             PrettyPrint: true,
-            QuotaUser: "eveniet",
-            UserIP: "molestiae",
+            QuotaUser: "dolor",
+            UserIP: "expedita",
         },
     }
     

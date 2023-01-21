@@ -18,14 +18,14 @@ func main() {
             },
         },
         QueryParams: operations.GetDealItemsQueryParams{
-            CategoryIds: "porro",
-            Commissionable: "et",
-            DeliveryCountry: "asperiores",
-            Limit: "quibusdam",
-            Offset: "sed",
+            CategoryIds: "sit",
+            Commissionable: "voluptas",
+            DeliveryCountry: "culpa",
+            Limit: "expedita",
+            Offset: "consequuntur",
         },
         Headers: operations.GetDealItemsHeaders{
-            XEBAYCMARKETPLACEID: "sequi",
+            XEBAYCMARKETPLACEID: "dolor",
         },
     }
     

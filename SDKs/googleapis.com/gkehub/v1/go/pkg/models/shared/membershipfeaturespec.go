@@ -1,5 +1,7 @@
 package shared
 
+// MembershipFeatureSpec
+// MembershipFeatureSpec contains configuration information for a single Membership.
 type MembershipFeatureSpec struct {
 	Configmanagement   *ConfigManagementMembershipSpec `json:"configmanagement,omitempty"`
 	FleetInherited     *bool                           `json:"fleetInherited,omitempty"`
@@ -8,6 +10,8 @@ type MembershipFeatureSpec struct {
 	Mesh               *ServiceMeshMembershipSpec      `json:"mesh,omitempty"`
 }
 
+// MembershipFeatureSpecInput
+// MembershipFeatureSpec contains configuration information for a single Membership.
 type MembershipFeatureSpecInput struct {
 	Configmanagement   *ConfigManagementMembershipSpec     `json:"configmanagement,omitempty"`
 	FleetInherited     *bool                               `json:"fleetInherited,omitempty"`

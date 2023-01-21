@@ -13,11 +13,11 @@ func main() {
     
     req := operations.DeleteAddressRequest{
         Headers: operations.DeleteAddressHeaders{
-            Authorization: "dolores",
+            Authorization: "sit",
         },
         Request: shared.DeleteAddressRequest{
-            Ethereumaddress: "sit",
-            Password: "id",
+            Ethereumaddress: "voluptas",
+            Password: "culpa",
         },
     }
     

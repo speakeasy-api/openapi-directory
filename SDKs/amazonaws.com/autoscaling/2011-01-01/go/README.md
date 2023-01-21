@@ -35,21 +35,21 @@ func main() {
     req := operations.GetAttachInstancesRequest{
         QueryParams: operations.GetAttachInstancesQueryParams{
             Action: "AttachInstances",
-            AutoScalingGroupName: "eum",
+            AutoScalingGroupName: "voluptas",
             InstanceIds: []string{
-                "ut",
-                "similique",
+                "expedita",
+                "consequuntur",
             },
             Version: "2011-01-01",
         },
         Headers: operations.GetAttachInstancesHeaders{
-            XAmzAlgorithm: "praesentium",
-            XAmzContentSha256: "ipsa",
-            XAmzCredential: "ipsa",
-            XAmzDate: "rerum",
-            XAmzSecurityToken: "iure",
-            XAmzSignature: "rem",
-            XAmzSignedHeaders: "dolore",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "fugit",
+            XAmzDate: "et",
+            XAmzSecurityToken: "nihil",
+            XAmzSignature: "rerum",
+            XAmzSignedHeaders: "dicta",
         },
     }
     

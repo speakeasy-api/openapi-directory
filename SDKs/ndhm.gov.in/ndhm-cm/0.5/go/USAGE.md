@@ -13,69 +13,65 @@ func main() {
     
     req := operations.PostV05ConsentRequestsInitRequest{
         Headers: operations.PostV05ConsentRequestsInitHeaders{
-            Authorization: "assumenda",
+            Authorization: "sit",
         },
         Request: operations.PostV05ConsentRequestsInitRequests{
-            ApplicationXML: []byte("ipsa"),
+            ApplicationXML: []byte("voluptas"),
             ConsentRequest: &shared.ConsentRequest{
                 Consent: shared.ConsentRequestConsent{
                     CareContexts: []shared.CareContextDefinition{
                         shared.CareContextDefinition{
-                            CareContextReference: "debitis",
-                            PatientReference: "quia",
+                            CareContextReference: "expedita",
+                            PatientReference: "consequuntur",
                         },
                         shared.CareContextDefinition{
-                            CareContextReference: "qui",
-                            PatientReference: "sit",
-                        },
-                        shared.CareContextDefinition{
-                            CareContextReference: "aut",
-                            PatientReference: "corrupti",
+                            CareContextReference: "dolor",
+                            PatientReference: "expedita",
                         },
                     },
                     HiTypes: []shared.HiTypeEnumEnum{
-                        "Prescription",
-                        "DiagnosticReport",
+                        "OPConsultation",
+                        "OPConsultation",
                         "OPConsultation",
                     },
                     Hip: &shared.ConsentRequestConsentHip{
-                        ID: "quos",
+                        ID: "rerum",
                     },
                     Hiu: shared.ConsentRequestConsentHiu{
-                        ID: "non",
+                        ID: "dicta",
                     },
                     Patient: shared.ConsentRequestConsentPatient{
-                        ID: "culpa",
+                        ID: "debitis",
                     },
                     Permission: shared.Permission{
-                        AccessMode: "STORE",
-                        DataEraseAt: "1996-05-30T09:14:15Z",
+                        AccessMode: "VIEW",
+                        DataEraseAt: "2005-09-27T09:17:54Z",
                         DateRange: shared.PermissionDateRange{
-                            From: "1999-04-03T00:31:51Z",
-                            To: "2000-05-14T09:37:53Z",
+                            From: "1970-04-14T21:44:49Z",
+                            To: "2021-10-23T13:19:10Z",
                         },
                         Frequency: shared.PermissionFrequency{
-                            Repeats: 1023459084632939894,
-                            Unit: "MONTH",
-                            Value: 9095513636727418367,
+                            Repeats: 7259475919510918339,
+                            Unit: "YEAR",
+                            Value: 3287288577352441706,
                         },
                     },
                     Purpose: shared.UsePurpose{
-                        Code: "atque",
-                        RefURI: "quasi",
-                        Text: "voluptates",
+                        Code: "vitae",
+                        RefURI: "totam",
+                        Text: "dolores",
                     },
                     Requester: shared.Requester{
                         Identifier: &shared.RequesterIdentifier{
-                            System: "in",
-                            Type: "aut",
-                            Value: "nobis",
+                            System: "illum",
+                            Type: "debitis",
+                            Value: "vel",
                         },
-                        Name: "hic",
+                        Name: "odio",
                     },
                 },
-                RequestID: "dolores",
-                Timestamp: "2018-03-19T12:27:56Z",
+                RequestID: "dolore",
+                Timestamp: "1993-03-23T22:53:08Z",
             },
         },
     }

@@ -24,13 +24,13 @@ func main() {
     
     req := operations.CreateAPIRequest{
         QueryParams: operations.CreateAPIQueryParams{
-            Workspace: "est",
+            Workspace: "sit",
         },
         Request: &operations.CreateAPIRequestBody{
             API: &operations.CreateAPIRequestBodyAPI{
-                Description: "et",
-                Name: "dolores",
-                Summary: "modi",
+                Description: "voluptas",
+                Name: "culpa",
+                Summary: "expedita",
             },
         },
     }

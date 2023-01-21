@@ -1,0 +1,9 @@
+package shared
+
+// TotalImpactFilter
+// Filters cost anomalies based on the total impact.
+type TotalImpactFilter struct {
+	EndValue        *float64            `json:"EndValue,omitempty"`
+	NumericOperator NumericOperatorEnum `json:"NumericOperator"`
+	StartValue      float64             `json:"StartValue"`
+}

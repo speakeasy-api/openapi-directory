@@ -1,0 +1,34 @@
+package operations
+
+type DeleteOrganizationXAmzTargetEnum string
+
+const (
+	DeleteOrganizationXAmzTargetEnumAwsOrganizationsV20161128DeleteOrganization DeleteOrganizationXAmzTargetEnum = "AWSOrganizationsV20161128.DeleteOrganization"
+)
+
+type DeleteOrganizationHeaders struct {
+	XAmzAlgorithm     *string                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                          `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                          `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                          `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                          `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                          `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                          `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget        DeleteOrganizationXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+}
+
+type DeleteOrganizationRequest struct {
+	Headers DeleteOrganizationHeaders
+}
+
+type DeleteOrganizationResponse struct {
+	AWSOrganizationsNotInUseException *interface{}
+	AccessDeniedException             *interface{}
+	ConcurrentModificationException   *interface{}
+	ContentType                       string
+	InvalidInputException             *interface{}
+	OrganizationNotEmptyException     *interface{}
+	ServiceException                  *interface{}
+	StatusCode                        int64
+	TooManyRequestsException          *interface{}
+}

@@ -19,7 +19,7 @@ func main() {
             },
         },
         PathParams: operations.CreateAlphaSenderPathParams{
-            ServiceSid: "autem",
+            ServiceSid: "sit",
         },
         Request: &operations.CreateAlphaSenderCreateAlphaSenderRequest{
             AlphaSender: "voluptas",

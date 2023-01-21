@@ -34,61 +34,50 @@ func main() {
             },
         },
         QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "dolores",
-            Alt: "json",
-            Callback: "nihil",
-            Fields: "dolorem",
-            Key: "a",
-            OauthToken: "dicta",
+            DollarXgafv: "1",
+            AccessToken: "voluptas",
+            Alt: "media",
+            Callback: "expedita",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
             Part: []string{
-                "consequatur",
+                "fugit",
+                "et",
+                "nihil",
             },
             PrettyPrint: true,
-            QuotaUser: "omnis",
-            UploadType: "doloremque",
-            UploadProtocol: "magnam",
+            QuotaUser: "dicta",
+            UploadType: "debitis",
+            UploadProtocol: "voluptatum",
         },
         Request: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "ea",
-                },
-                shared.AbuseType{
-                    ID: "in",
-                },
-                shared.AbuseType{
-                    ID: "et",
+                    ID: "ut",
                 },
             },
-            Description: "aut",
+            Description: "dolorem",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "qui",
-                        TypeID: "blanditiis",
-                        URL: "inventore",
+                        ID: "voluptate",
+                        TypeID: "iste",
+                        URL: "vitae",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "minima",
-                        TypeID: "eum",
-                        URL: "dolorum",
-                    },
-                },
-                shared.RelatedEntity{
-                    Entity: &shared.Entity{
-                        ID: "quibusdam",
-                        TypeID: "est",
-                        URL: "sint",
+                        ID: "totam",
+                        TypeID: "dolores",
+                        URL: "illum",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "et",
-                TypeID: "aut",
-                URL: "repellendus",
+                ID: "debitis",
+                TypeID: "vel",
+                URL: "odio",
             },
         },
     }

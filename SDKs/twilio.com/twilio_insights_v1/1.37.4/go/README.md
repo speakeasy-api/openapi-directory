@@ -30,7 +30,7 @@ func main() {
             },
         },
         QueryParams: operations.FetchAccountSettingsQueryParams{
-            SubaccountSid: "ad",
+            SubaccountSid: "sit",
         },
     }
     

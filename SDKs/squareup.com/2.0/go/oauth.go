@@ -1,0 +1,228 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+type OAuth struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewOAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *OAuth {
+	return &OAuth{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// ObtainToken - ObtainToken
+// Returns an OAuth access token.
+//
+// The endpoint supports distinct methods of obtaining OAuth access tokens.
+// Applications specify a method by adding the `grant_type` parameter
+// in the request and also provide relevant information.
+//
+// __Note:__ Regardless of the method application specified,
+// the endpoint always returns two items; an OAuth access token and
+// a refresh token in the response.
+//
+// __OAuth tokens should only live on secure servers. Application clients
+// should never interact directly with OAuth tokens__.
+func (s *OAuth) ObtainToken(ctx context.Context, request operations.ObtainTokenRequest) (*operations.ObtainTokenResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/token"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ObtainTokenResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ObtainTokenResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ObtainTokenResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RenewToken - RenewToken
+// `RenewToken` is deprecated. For information about refreshing OAuth access tokens, see
+// [Migrate from Renew to Refresh OAuth Tokens](https://developer.squareup.com/docs/oauth-api/migrate-to-refresh-tokens).
+//
+// Renews an OAuth access token before it expires.
+//
+// OAuth access tokens besides your application's personal access token expire after __30 days__.
+// You can also renew expired tokens within __15 days__ of their expiration.
+// You cannot renew an access token that has been expired for more than 15 days.
+// Instead, the associated user must re-complete the OAuth flow from the beginning.
+//
+// __Important:__ The `Authorization` header for this endpoint must have the
+// following format:
+//
+// ```
+// Authorization: Client APPLICATION_SECRET
+// ```
+//
+// Replace `APPLICATION_SECRET` with the application secret on the Credentials
+// page in the [developer dashboard](https://developer.squareup.com/apps).
+func (s *OAuth) RenewToken(ctx context.Context, request operations.RenewTokenRequest) (*operations.RenewTokenResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/oauth2/clients/{client_id}/access-token/renew", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RenewTokenResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RenewTokenResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RenewTokenResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RevokeToken - RevokeToken
+// Revokes an access token generated with the OAuth flow.
+//
+// If an account has more than one OAuth access token for your application, this
+// endpoint revokes all of them, regardless of which token you specify. When an
+// OAuth access token is revoked, all of the active subscriptions associated
+// with that OAuth token are canceled immediately.
+//
+// __Important:__ The `Authorization` header for this endpoint must have the
+// following format:
+//
+// ```
+// Authorization: Client APPLICATION_SECRET
+// ```
+//
+// Replace `APPLICATION_SECRET` with the application secret on the OAuth
+// page in the [developer dashboard](https://developer.squareup.com/apps).
+func (s *OAuth) RevokeToken(ctx context.Context, request operations.RevokeTokenRequest) (*operations.RevokeTokenResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/oauth2/revoke"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RevokeTokenResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RevokeTokenResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RevokeTokenResponse = out
+		}
+	}
+
+	return res, nil
+}

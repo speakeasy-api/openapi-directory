@@ -14,9 +14,9 @@ func main() {
     req := operations.GetCityRequest{
         QueryParams: operations.GetCityQueryParams{
             Format: "json",
-            Key: "ex",
-            Lat: 12.200000,
-            Lng: 33.200001,
+            Key: "voluptas",
+            Lat: 53.099998,
+            Lng: 15.100000,
         },
     }
     

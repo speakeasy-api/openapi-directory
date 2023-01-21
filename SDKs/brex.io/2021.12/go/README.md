@@ -29,15 +29,15 @@ func main() {
             },
         },
         PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "quia",
+            Country: "sit",
         },
         Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "velit",
-            Name: "sed",
-            Number: "occaecati",
-            Phone: "quidem",
-            URL: "maxime",
-            Vat: "eos",
+            Address: "voluptas",
+            Name: "culpa",
+            Number: "expedita",
+            Phone: "consequuntur",
+            URL: "dolor",
+            Vat: "expedita",
         },
     }
     

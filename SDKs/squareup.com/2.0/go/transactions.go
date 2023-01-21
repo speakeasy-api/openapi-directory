@@ -1,0 +1,390 @@
+package sdk
+
+import (
+	"context"
+	"fmt"
+	"net/http"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+)
+
+type Transactions struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+func NewTransactions(defaultClient, securityClient HTTPClient, serverURL, language, sdkVersion, genVersion string) *Transactions {
+	return &Transactions{
+		_defaultClient:  defaultClient,
+		_securityClient: securityClient,
+		_serverURL:      serverURL,
+		_language:       language,
+		_sdkVersion:     sdkVersion,
+		_genVersion:     genVersion,
+	}
+}
+
+// CaptureTransaction - CaptureTransaction
+// Captures a transaction that was created with the [Charge](https://developer.squareup.com/reference/square_2021-08-18/transactions-api/charge)
+// endpoint with a `delay_capture` value of `true`.
+//
+// See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
+// for more information.
+func (s *Transactions) CaptureTransaction(ctx context.Context, request operations.CaptureTransactionRequest) (*operations.CaptureTransactionResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CaptureTransactionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CaptureTransactionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CaptureTransactionResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// Charge - Charge
+// Charges a card represented by a card nonce or a customer's card on file.
+//
+// Your request to this endpoint must include _either_:
+//
+// - A value for the `card_nonce` parameter (to charge a card payment token generated
+// with the Web Payments SDK)
+// - Values for the `customer_card_id` and `customer_id` parameters (to charge
+// a customer's card on file)
+//
+// In order for an eCommerce payment to potentially qualify for
+// [Square chargeback protection](https://squareup.com/help/article/5394), you
+// _must_ provide values for the following parameters in your request:
+//
+// - `buyer_email_address`
+// - At least one of `billing_address` or `shipping_address`
+//
+// When this response is returned, the amount of Square's processing fee might not yet be
+// calculated. To obtain the processing fee, wait about ten seconds and call
+// [RetrieveTransaction](https://developer.squareup.com/reference/square_2021-08-18/transactions-api/retrieve-transaction). See the `processing_fee_money`
+// field of each [Tender included](https://developer.squareup.com/reference/square_2021-08-18/objects/Tender) in the transaction.
+func (s *Transactions) Charge(ctx context.Context, request operations.ChargeRequest) (*operations.ChargeResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ChargeResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ChargeResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ChargeResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListTransactions - ListTransactions
+// Lists transactions for a particular location.
+//
+// Transactions include payment information from sales and exchanges and refund
+// information from returns and exchanges.
+//
+// Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
+func (s *Transactions) ListTransactions(ctx context.Context, request operations.ListTransactionsRequest) (*operations.ListTransactionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListTransactionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListTransactionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListTransactionsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveTransaction - RetrieveTransaction
+// Retrieves details for a single transaction.
+func (s *Transactions) RetrieveTransaction(ctx context.Context, request operations.RetrieveTransactionRequest) (*operations.RetrieveTransactionResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveTransactionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RetrieveTransactionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveTransactionResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// VoidTransaction - VoidTransaction
+// Cancels a transaction that was created with the [Charge](https://developer.squareup.com/reference/square_2021-08-18/transactions-api/charge)
+// endpoint with a `delay_capture` value of `true`.
+//
+// See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
+// for more information.
+func (s *Transactions) VoidTransaction(ctx context.Context, request operations.VoidTransactionRequest) (*operations.VoidTransactionResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.VoidTransactionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.VoidTransactionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.VoidTransactionResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetV2LocationsLocationIDRefunds - ListRefunds
+// Lists refunds for one of a business's locations.
+//
+// In addition to full or partial tender refunds processed through Square APIs,
+// refunds may result from itemized returns or exchanges through Square's
+// Point of Sale applications.
+//
+// Refunds with a `status` of `PENDING` are not currently included in this
+// endpoint's response.
+//
+// Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
+func (s *Transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, request operations.GetV2LocationsLocationIDRefundsRequest) (*operations.GetV2LocationsLocationIDRefundsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/refunds", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetV2LocationsLocationIDRefundsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListRefundsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListRefundsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostV2LocationsLocationIDTransactionsTransactionIDRefund - CreateRefund
+// Initiates a refund for a previously charged tender.
+//
+// You must issue a refund within 120 days of the associated payment. See
+// [this article](https://squareup.com/help/us/en/article/5060) for more information
+// on refund behavior.
+//
+// NOTE: Card-present transactions with Interac credit cards **cannot be
+// refunded using the Connect API**. Interac transactions must refunded
+// in-person (e.g., dipping the card using POS app).
+func (s *Transactions) PostV2LocationsLocationIDTransactionsTransactionIDRefund(ctx context.Context, request operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest) (*operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateRefundResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateRefundResponse = out
+		}
+	}
+
+	return res, nil
+}

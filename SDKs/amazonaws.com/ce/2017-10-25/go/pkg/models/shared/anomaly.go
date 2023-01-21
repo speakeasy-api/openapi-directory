@@ -1,0 +1,15 @@
+package shared
+
+// Anomaly
+// An unusual cost pattern. This consists of the detailed metadata and the current status of the anomaly object.
+type Anomaly struct {
+	AnomalyEndDate   *string                  `json:"AnomalyEndDate,omitempty"`
+	AnomalyID        string                   `json:"AnomalyId"`
+	AnomalyScore     AnomalyScore             `json:"AnomalyScore"`
+	AnomalyStartDate *string                  `json:"AnomalyStartDate,omitempty"`
+	DimensionValue   *string                  `json:"DimensionValue,omitempty"`
+	Feedback         *AnomalyFeedbackTypeEnum `json:"Feedback,omitempty"`
+	Impact           Impact                   `json:"Impact"`
+	MonitorArn       string                   `json:"MonitorArn"`
+	RootCauses       []RootCause              `json:"RootCauses,omitempty"`
+}

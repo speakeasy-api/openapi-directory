@@ -13,40 +13,42 @@ func main() {
     
     req := operations.MirrorAccountsInsertRequest{
         PathParams: operations.MirrorAccountsInsertPathParams{
-            AccountName: "quo",
-            AccountType: "dolorem",
-            UserToken: "quod",
+            AccountName: "sit",
+            AccountType: "voluptas",
+            UserToken: "culpa",
         },
         QueryParams: operations.MirrorAccountsInsertQueryParams{
             Alt: "json",
-            Fields: "eius",
+            Fields: "consequuntur",
             Key: "dolor",
-            OauthToken: "maiores",
-            PrettyPrint: false,
-            QuotaUser: "recusandae",
-            UserIP: "in",
+            OauthToken: "expedita",
+            PrettyPrint: true,
+            QuotaUser: "fugit",
+            UserIP: "et",
         },
         Request: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "ipsum",
-                    Type: "mollitia",
+                    AuthToken: "rerum",
+                    Type: "dicta",
                 },
             },
             Features: []string{
-                "ipsum",
-                "vero",
-                "autem",
+                "voluptatum",
             },
-            Password: "laboriosam",
+            Password: "et",
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "incidunt",
-                    Value: "distinctio",
+                    Key: "dolorem",
+                    Value: "et",
                 },
                 shared.UserData{
-                    Key: "labore",
-                    Value: "magnam",
+                    Key: "voluptate",
+                    Value: "iste",
+                },
+                shared.UserData{
+                    Key: "vitae",
+                    Value: "totam",
                 },
             },
         },

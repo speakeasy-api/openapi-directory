@@ -1,0 +1,7 @@
+package shared
+
+// Ec2Specification
+// The Amazon EC2 hardware specifications that you want Amazon Web Services to provide recommendations for.
+type Ec2Specification struct {
+	OfferingClass *OfferingClassEnum `json:"OfferingClass,omitempty"`
+}

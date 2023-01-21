@@ -13,9 +13,9 @@ func main() {
     
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            HundredsForm: "quia",
-            TheNumber: "quas",
-            Unit: "sunt",
+            HundredsForm: "sit",
+            TheNumber: "voluptas",
+            Unit: "culpa",
         },
     }
     

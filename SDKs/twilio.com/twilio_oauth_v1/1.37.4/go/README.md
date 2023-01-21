@@ -30,14 +30,14 @@ func main() {
             },
         },
         Request: &operations.CreateTokenCreateTokenRequest{
-            ClientSecret: "rerum",
-            ClientSid: "tempore",
-            Code: "repellat",
-            CodeVerifier: "dicta",
-            DeviceCode: "nihil",
+            ClientSecret: "sit",
+            ClientSid: "voluptas",
+            Code: "culpa",
+            CodeVerifier: "expedita",
+            DeviceCode: "consequuntur",
             DeviceID: "dolor",
-            GrantType: "ab",
-            RefreshToken: "qui",
+            GrantType: "expedita",
+            RefreshToken: "voluptas",
         },
     }
     

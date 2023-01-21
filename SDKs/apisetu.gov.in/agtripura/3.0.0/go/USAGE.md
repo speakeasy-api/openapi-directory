@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.PecerRequestBody{
             CertificateParameters: &operations.PecerRequestBodyCertificateParameters{
-                ACNO: "aut",
-                DOB: "dicta",
+                ACNO: "sit",
+                DOB: "voluptas",
             },
-            ConsentArtifact: "qui",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "dolore",
+            TxnID: "consequuntur",
         },
     }
     

@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AddNotificationChannelRequest{
         Headers: operations.AddNotificationChannelHeaders{
-            XAmzAlgorithm: "aut",
-            XAmzContentSha256: "voluptate",
-            XAmzCredential: "a",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "dolore",
-            XAmzSignature: "assumenda",
-            XAmzSignedHeaders: "rerum",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "non",
+                    TopicArn: "voluptas",
                 },
             },
         },

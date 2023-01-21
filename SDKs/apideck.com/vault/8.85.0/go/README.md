@@ -42,13 +42,13 @@ func main() {
             },
         },
         PathParams: operations.ConnectionSettingsAllPathParams{
-            Resource: "atque",
-            ServiceID: "maiores",
-            UnifiedAPI: "beatae",
+            Resource: "sit",
+            ServiceID: "voluptas",
+            UnifiedAPI: "culpa",
         },
         Headers: operations.ConnectionSettingsAllHeaders{
-            XApideckAppID: "ab",
-            XApideckConsumerID: "exercitationem",
+            XApideckAppID: "expedita",
+            XApideckConsumerID: "consequuntur",
         },
     }
     

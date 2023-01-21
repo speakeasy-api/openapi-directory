@@ -23,20 +23,20 @@ func main() {
     
     req := operations.GetGlobalwinescoresLatestRequest{
         QueryParams: operations.GetGlobalwinescoresLatestQueryParams{
-            Color: "pink",
-            IsPrimeurs: true,
-            Limit: 6308795235080022817,
-            Lwin: "molestiae",
-            Lwin11: "error",
-            Offset: 9017080597034832094,
-            Ordering: "date",
-            Vintage: "accusantium",
+            Color: "red",
+            IsPrimeurs: false,
+            Limit: 6050128673802995827,
+            Lwin: "expedita",
+            Lwin11: "consequuntur",
+            Offset: 2669985732393126063,
+            Ordering: "-score",
+            Vintage: "voluptas",
             WineID: []int64{
-                7904238630633999270,
+                1543572285742637646,
             },
         },
         Headers: operations.GetGlobalwinescoresLatestHeaders{
-            Authorization: "labore",
+            Authorization: "nihil",
         },
     }
     

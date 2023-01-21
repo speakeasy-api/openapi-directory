@@ -32,125 +32,115 @@ func main() {
             },
         },
         PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "et",
+            Parent: "sit",
         },
         QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
             DollarXgafv: "1",
-            AccessToken: "minima",
+            AccessToken: "culpa",
             Alt: "media",
-            AuthorizationPolicyID: "dolor",
-            Callback: "explicabo",
-            Fields: "voluptates",
-            Key: "dolor",
-            OauthToken: "iure",
+            AuthorizationPolicyID: "consequuntur",
+            Callback: "dolor",
+            Fields: "expedita",
+            Key: "voluptas",
+            OauthToken: "fugit",
             PrettyPrint: false,
-            QuotaUser: "at",
-            UploadType: "nostrum",
-            UploadProtocol: "quo",
+            QuotaUser: "nihil",
+            UploadType: "rerum",
+            UploadProtocol: "dicta",
         },
         Request: &shared.AuthorizationPolicyInput{
-            Action: "ALLOW",
-            Description: "qui",
+            Action: "ACTION_UNSPECIFIED",
+            Description: "voluptatum",
             Labels: map[string]string{
-                "odio": "beatae",
-                "nobis": "totam",
-                "sunt": "adipisci",
+                "ut": "dolorem",
             },
-            Name: "ullam",
+            Name: "et",
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "eum",
-                                "sed",
+                                "totam",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "eveniet",
-                                RegexMatch: "est",
+                                HeaderName: "dolores",
+                                RegexMatch: "illum",
                             },
                             Methods: []string{
-                                "et",
-                                "ipsa",
-                                "assumenda",
+                                "vel",
                             },
                             Ports: []int64{
-                                4943689285477287669,
-                                3160307118056465289,
+                                6303220950515014660,
                             },
                         },
                         shared.Destination{
                             Hosts: []string{
-                                "id",
+                                "aspernatur",
+                                "accusantium",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "cupiditate",
-                                RegexMatch: "dolorem",
+                                HeaderName: "totam",
+                                RegexMatch: "commodi",
                             },
                             Methods: []string{
-                                "esse",
-                                "ratione",
-                                "soluta",
-                            },
-                            Ports: []int64{
-                                3231685339067003690,
-                                5512569230175251860,
-                                8584494059737821751,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "omnis",
-                            },
-                            Principals: []string{
-                                "accusamus",
-                                "atque",
-                                "et",
-                            },
-                        },
-                    },
-                },
-                shared.Rule{
-                    Destinations: []shared.Destination{
-                        shared.Destination{
-                            Hosts: []string{
-                                "ratione",
-                                "occaecati",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "et",
-                                RegexMatch: "neque",
-                            },
-                            Methods: []string{
-                                "ea",
-                            },
-                            Ports: []int64{
-                                4607326647308611294,
-                                6100199300792176061,
-                                3576388956540400177,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "asperiores",
-                                "non",
-                            },
-                            Principals: []string{
-                                "ab",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
+                                "est",
                                 "aut",
-                                "unde",
+                                "odit",
+                            },
+                            Ports: []int64{
+                                167566062957544642,
+                                4778690082005258714,
+                                1059542851699319360,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "sed",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: "officiis",
+                                RegexMatch: "autem",
+                            },
+                            Methods: []string{
+                                "nobis",
+                            },
+                            Ports: []int64{
+                                7699391924090763411,
+                            },
+                        },
+                    },
+                    Sources: []shared.Source{
+                        shared.Source{
+                            IPBlocks: []string{
+                                "ipsum",
+                                "eveniet",
                             },
                             Principals: []string{
-                                "repellat",
-                                "sed",
+                                "sint",
+                                "inventore",
+                            },
+                        },
+                        shared.Source{
+                            IPBlocks: []string{
+                                "exercitationem",
+                                "aut",
+                                "reprehenderit",
+                            },
+                            Principals: []string{
+                                "maiores",
+                                "incidunt",
+                                "dolor",
+                            },
+                        },
+                        shared.Source{
+                            IPBlocks: []string{
+                                "veritatis",
+                                "in",
+                                "et",
+                            },
+                            Principals: []string{
+                                "ipsum",
+                                "ex",
                             },
                         },
                     },

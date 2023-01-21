@@ -31,15 +31,15 @@ func main() {
         },
         Request: &operations.CreateByocTrunkCreateByocTrunkRequest{
             CnamLookupEnabled: false,
-            ConnectionPolicySid: "nam",
-            FriendlyName: "repudiandae",
-            FromDomainSid: "quia",
+            ConnectionPolicySid: "voluptas",
+            FriendlyName: "culpa",
+            FromDomainSid: "expedita",
             StatusCallbackMethod: "DELETE",
-            StatusCallbackURL: "voluptates",
-            VoiceFallbackMethod: "PATCH",
-            VoiceFallbackURL: "doloribus",
-            VoiceMethod: "PATCH",
-            VoiceURL: "quisquam",
+            StatusCallbackURL: "dolor",
+            VoiceFallbackMethod: "GET",
+            VoiceFallbackURL: "voluptas",
+            VoiceMethod: "HEAD",
+            VoiceURL: "et",
         },
     }
     

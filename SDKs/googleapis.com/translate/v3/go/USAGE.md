@@ -21,71 +21,51 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "assumenda",
+            Parent: "sit",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "cumque",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
             Alt: "media",
-            Callback: "assumenda",
-            Fields: "voluptatem",
-            Key: "harum",
-            OauthToken: "natus",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
             PrettyPrint: true,
-            QuotaUser: "corporis",
-            UploadType: "asperiores",
-            UploadProtocol: "dignissimos",
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
         Request: &shared.BatchTranslateDocumentRequest{
             FormatConversions: map[string]string{
-                "mollitia": "iste",
+                "debitis": "voluptatum",
+                "et": "ut",
+                "dolorem": "et",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "a": shared.TranslateTextGlossaryConfig{
-                    Glossary: "sed",
-                    IgnoreCase: false,
-                },
-                "dignissimos": shared.TranslateTextGlossaryConfig{
-                    Glossary: "doloremque",
-                    IgnoreCase: true,
-                },
-                "quia": shared.TranslateTextGlossaryConfig{
-                    Glossary: "quia",
+                "iste": shared.TranslateTextGlossaryConfig{
+                    Glossary: "vitae",
                     IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "occaecati",
-                    },
-                },
-                shared.BatchDocumentInputConfig{
-                    GcsSource: &shared.GcsSource{
-                        InputURI: "ullam",
-                    },
-                },
-                shared.BatchDocumentInputConfig{
-                    GcsSource: &shared.GcsSource{
-                        InputURI: "quo",
+                        InputURI: "illum",
                     },
                 },
             },
             Models: map[string]string{
-                "quia": "et",
-                "quos": "quae",
-                "est": "necessitatibus",
+                "vel": "odio",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "velit",
+                    OutputURIPrefix: "dolore",
                 },
             },
-            SourceLanguageCode: "harum",
+            SourceLanguageCode: "id",
             TargetLanguageCodes: []string{
-                "ipsum",
-                "autem",
-                "cumque",
+                "accusantium",
             },
         },
     }

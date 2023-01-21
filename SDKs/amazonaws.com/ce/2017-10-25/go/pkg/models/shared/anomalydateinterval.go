@@ -1,0 +1,8 @@
+package shared
+
+// AnomalyDateInterval
+// The time period for an anomaly.
+type AnomalyDateInterval struct {
+	EndDate   *string `json:"EndDate,omitempty"`
+	StartDate string  `json:"StartDate"`
+}

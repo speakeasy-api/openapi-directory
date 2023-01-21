@@ -13,12 +13,12 @@ func main() {
     
     req := operations.RegistryCreateAPIRequest{
         PathParams: operations.RegistryCreateAPIPathParams{
-            Project: "rerum",
+            Project: "sit",
         },
         QueryParams: operations.RegistryCreateAPIQueryParams{
-            APIID: "nobis",
+            APIID: "voluptas",
         },
-        Request: "nemo",
+        Request: "culpa",
     }
     
     res, err := s.RegistryCreateAPI(ctx, req)

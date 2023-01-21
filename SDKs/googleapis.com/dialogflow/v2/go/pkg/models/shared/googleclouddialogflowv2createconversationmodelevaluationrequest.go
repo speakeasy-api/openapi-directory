@@ -1,0 +1,7 @@
+package shared
+
+// GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInput
+// The request message for ConversationModels.CreateConversationModelEvaluation
+type GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInput struct {
+	ConversationModelEvaluation *GoogleCloudDialogflowV2ConversationModelEvaluationInput `json:"conversationModelEvaluation,omitempty"`
+}

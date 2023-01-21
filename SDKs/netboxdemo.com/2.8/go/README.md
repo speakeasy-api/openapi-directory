@@ -35,17 +35,17 @@ func main() {
     req := operations.CircuitsCircuitTerminationsCreateRequest{
         Request: shared.WritableCircuitTerminationInput{
             Cable: &shared.NestedCableInput{
-                Label: "voluptatem",
+                Label: "sit",
             },
-            Circuit: 4229805829452798336,
-            ConnectionStatus: false,
-            Description: "dicta",
-            PortSpeed: 8904735046532926757,
-            PpInfo: "molestiae",
-            Site: 979502095464504871,
+            Circuit: 2259404117704393152,
+            ConnectionStatus: true,
+            Description: "expedita",
+            PortSpeed: 3390393562759376202,
+            PpInfo: "dolor",
+            Site: 1774932891286980153,
             TermSide: "Z",
-            UpstreamSpeed: 6618523597562287215,
-            XconnectID: "ea",
+            UpstreamSpeed: 8274930044578894929,
+            XconnectID: "et",
         },
     }
     

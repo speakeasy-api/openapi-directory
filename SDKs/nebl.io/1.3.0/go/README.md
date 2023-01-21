@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetAddressRequest{
         PathParams: operations.GetAddressPathParams{
-            Address: "quisquam",
+            Address: "sit",
         },
     }
     

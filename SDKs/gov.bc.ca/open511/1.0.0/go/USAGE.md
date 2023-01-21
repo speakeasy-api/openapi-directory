@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetAreasRequest{
         QueryParams: operations.GetAreasQueryParams{
-            Format: "xml",
+            Format: "json",
         },
     }
     

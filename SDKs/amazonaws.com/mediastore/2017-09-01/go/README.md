@@ -34,29 +34,21 @@ func main() {
     
     req := operations.CreateContainerRequest{
         Headers: operations.CreateContainerHeaders{
-            XAmzAlgorithm: "magnam",
-            XAmzContentSha256: "veniam",
-            XAmzCredential: "dolores",
-            XAmzDate: "rerum",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "voluptatem",
-            XAmzSignedHeaders: "voluptatem",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "MediaStore_20170901.CreateContainer",
         },
         Request: shared.CreateContainerInput{
-            ContainerName: "est",
+            ContainerName: "fugit",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "ea",
-                },
-                shared.Tag{
-                    Key: "voluptas",
-                    Value: "velit",
-                },
-                shared.Tag{
-                    Key: "ipsa",
-                    Value: "in",
+                    Key: "nihil",
+                    Value: "rerum",
                 },
             },
         },

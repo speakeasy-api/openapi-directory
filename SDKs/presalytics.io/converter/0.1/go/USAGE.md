@@ -14,8 +14,8 @@ func main() {
     req := operations.SvgconvertRequest{
         Request: operations.SvgconvertFileToConvert{
             File: &operations.SvgconvertFileToConvertFile{
-                Content: []byte("dolores"),
-                File: "reiciendis",
+                Content: []byte("sit"),
+                File: "voluptas",
             },
         },
     }

@@ -19,12 +19,12 @@ func main() {
             },
         },
         PathParams: operations.CreateDocumentPathParams{
-            ServiceSid: "ratione",
+            ServiceSid: "sit",
         },
         Request: &operations.CreateDocumentCreateDocumentRequest{
-            Data: "officia",
-            TTL: 1252102352868461268,
-            UniqueName: "quibusdam",
+            Data: "voluptas",
+            TTL: 6050128673802995827,
+            UniqueName: "expedita",
         },
     }
     

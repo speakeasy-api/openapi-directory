@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.RatcrRequestBody{
             CertificateParameters: &operations.RatcrRequestBodyCertificateParameters{
-                FullName: "laborum",
-                UID: "laborum",
-                RationCardNo: "perferendis",
+                FullName: "sit",
+                UID: "voluptas",
+                RationCardNo: "culpa",
             },
-            ConsentArtifact: "vero",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "dolor",
         },
     }
     

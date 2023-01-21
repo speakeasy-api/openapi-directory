@@ -23,37 +23,44 @@ func main() {
     
     req := operations.CreateAccessPointRequest{
         Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "vero",
-            XAmzContentSha256: "debitis",
-            XAmzCredential: "vitae",
-            XAmzDate: "illo",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "aut",
-            XAmzSignedHeaders: "corrupti",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "iusto",
-            FileSystemID: "necessitatibus",
+            ClientToken: "voluptas",
+            FileSystemID: "fugit",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 9099396917438780945,
+                Gid: 1543572285742637646,
                 SecondaryGids: []int64{
-                    7393415062790344033,
-                    5573655011999427817,
+                    8325060299420976708,
                 },
-                UID: 3450856630666814463,
+                UID: 7837839688282259259,
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
-                    OwnerGid: 2817162217093611776,
-                    OwnerUID: 2020632354827331984,
-                    Permissions: "magni",
+                    OwnerGid: 2518412263346885298,
+                    OwnerUID: 5617773211005988520,
+                    Permissions: "et",
                 },
-                Path: "nostrum",
+                Path: "ut",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "tenetur",
-                    Value: "numquam",
+                    Key: "et",
+                    Value: "voluptate",
+                },
+                shared.Tag{
+                    Key: "iste",
+                    Value: "vitae",
+                },
+                shared.Tag{
+                    Key: "totam",
+                    Value: "dolores",
                 },
             },
         },

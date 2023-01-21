@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetcitymatchRequest{
         QueryParams: operations.GetcitymatchQueryParams{
-            City: "eos",
-            License: "harum",
+            City: "sit",
+            License: "voluptas",
         },
     }
     

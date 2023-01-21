@@ -34,7 +34,7 @@ func main() {
     
     req := operations.AccountRequest{
         PathParams: operations.AccountPathParams{
-            AccountID: "deleniti",
+            AccountID: "sit",
         },
     }
     

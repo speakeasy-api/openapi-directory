@@ -1,0 +1,11 @@
+package shared
+
+// Relevance
+// Provides information for manually tuning the relevance of a field in a search. When a query includes terms that match the field, the results are given a boost in the response based on these tuning parameters.
+type Relevance struct {
+	Duration           *string          `json:"Duration,omitempty"`
+	Freshness          *bool            `json:"Freshness,omitempty"`
+	Importance         *int64           `json:"Importance,omitempty"`
+	RankOrder          *OrderEnum       `json:"RankOrder,omitempty"`
+	ValueImportanceMap map[string]int64 `json:"ValueImportanceMap,omitempty"`
+}

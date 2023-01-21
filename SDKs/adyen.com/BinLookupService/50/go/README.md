@@ -29,7 +29,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "voluptate",
+        Request: "sit",
     }
     
     res, err := s.General.PostGet3dsAvailability(ctx, req)

@@ -22,7 +22,7 @@ func main() {
     s := sdk.New(opts...)
     
     req := operations.PostAssetsCorrelationMatrixRequest{
-        Request: "ut",
+        Request: "sit",
     }
     
     res, err := s.AssetsCorrelationMatrix.PostAssetsCorrelationMatrix(ctx, req)

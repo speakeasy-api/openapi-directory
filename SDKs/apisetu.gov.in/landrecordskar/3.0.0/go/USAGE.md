@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.CncerRequestBody{
             CertificateParameters: &operations.CncerRequestBodyCertificateParameters{
-                DocumentNumber: "qui",
+                DocumentNumber: "sit",
             },
-            ConsentArtifact: "quis",
-            Format: "xml",
-            TxnID: "et",
+            ConsentArtifact: "voluptas",
+            Format: "pdf",
+            TxnID: "expedita",
         },
     }
     

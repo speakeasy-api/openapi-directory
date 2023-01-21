@@ -21,61 +21,55 @@ func main() {
             },
         },
         QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "cupiditate",
-            Alt: "json",
-            Callback: "aliquid",
-            Fields: "et",
-            Key: "adipisci",
-            OauthToken: "et",
-            PrettyPrint: false,
-            QuotaUser: "itaque",
-            UploadType: "illum",
-            UploadProtocol: "voluptas",
+            DollarXgafv: "1",
+            AccessToken: "voluptas",
+            Alt: "media",
+            Callback: "expedita",
+            Fields: "consequuntur",
+            Key: "dolor",
+            OauthToken: "expedita",
+            PrettyPrint: true,
+            QuotaUser: "fugit",
+            UploadType: "et",
+            UploadProtocol: "nihil",
         },
         Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "a",
+            ClientToken: "rerum",
             Comment: &shared.TextEntry{
-                Text: "debitis",
-                Type: "PLAIN_TEXT",
+                Text: "dicta",
+                Type: "TEXT_TYPE_UNSPECIFIED",
             },
-            CommunityID: "molestiae",
+            CommunityID: "voluptatum",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "labore",
-                        Type: "PLAIN_TEXT",
+                        Text: "et",
+                        Type: "HTML",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "consectetur",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: "dolorem",
+                        Type: "PLAIN_TEXT",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "ipsam",
-                        Type: "HTML",
-                    },
-                    shared.TextEntry{
-                        Text: "cum",
-                        Type: "PLAIN_TEXT",
+                        Text: "iste",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
             },
             DoNotStore: true,
             Languages: []string{
-                "repellat",
-                "excepturi",
-                "voluptatem",
+                "illum",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "id": shared.AttributeParameters{
-                    ScoreThreshold: 28.200001,
-                    ScoreType: "RAW",
+                "vel": shared.AttributeParameters{
+                    ScoreThreshold: 20.200001,
+                    ScoreType: "STD_DEV_SCORE",
                 },
             },
-            SessionID: "consectetur",
-            SpanAnnotations: false,
+            SessionID: "aspernatur",
+            SpanAnnotations: true,
         },
     }
     

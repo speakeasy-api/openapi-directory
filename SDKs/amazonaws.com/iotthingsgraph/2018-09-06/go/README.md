@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateEntityToThingRequest{
         Headers: operations.AssociateEntityToThingHeaders{
-            XAmzAlgorithm: "impedit",
-            XAmzContentSha256: "est",
-            XAmzCredential: "dolor",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "tenetur",
-            XAmzSignedHeaders: "voluptatibus",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "IotThingsGraphFrontEndService.AssociateEntityToThing",
         },
         Request: shared.AssociateEntityToThingRequest{
-            EntityID: "cupiditate",
-            NamespaceVersion: 6514906014667812376,
-            ThingName: "in",
+            EntityID: "fugit",
+            NamespaceVersion: 1543572285742637646,
+            ThingName: "nihil",
         },
     }
     

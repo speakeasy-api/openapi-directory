@@ -19,19 +19,19 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "nemo",
+            ServiceSid: "sit",
         },
         Headers: operations.CreateChannelHeaders{
             XTwilioWebhookEnabled: "true",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "occaecati",
-            CreatedBy: "consequatur",
-            DateCreated: "2020-02-23T18:59:01Z",
-            DateUpdated: "1978-01-03T06:54:16Z",
-            FriendlyName: "fuga",
-            Type: "public",
-            UniqueName: "quis",
+            Attributes: "culpa",
+            CreatedBy: "expedita",
+            DateCreated: "1997-12-26T13:41:25Z",
+            DateUpdated: "2003-04-20T23:11:44Z",
+            FriendlyName: "expedita",
+            Type: "private",
+            UniqueName: "fugit",
         },
     }
     

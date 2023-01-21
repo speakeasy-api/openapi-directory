@@ -23,26 +23,22 @@ func main() {
     
     req := operations.CopyBackupToRegionRequest{
         Headers: operations.CopyBackupToRegionHeaders{
-            XAmzAlgorithm: "sunt",
-            XAmzContentSha256: "asperiores",
-            XAmzCredential: "reprehenderit",
-            XAmzDate: "consectetur",
-            XAmzSecurityToken: "sequi",
-            XAmzSignature: "reprehenderit",
-            XAmzSignedHeaders: "qui",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "BaldrApiService.CopyBackupToRegion",
         },
         Request: shared.CopyBackupToRegionRequest{
-            BackupID: "enim",
-            DestinationRegion: "sint",
+            BackupID: "fugit",
+            DestinationRegion: "et",
             TagList: []shared.Tag{
                 shared.Tag{
-                    Key: "rem",
-                    Value: "aliquid",
-                },
-                shared.Tag{
-                    Key: "quo",
-                    Value: "quo",
+                    Key: "rerum",
+                    Value: "dicta",
                 },
             },
         },

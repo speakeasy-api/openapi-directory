@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                FullName: "ullam",
-                Rollcode: "ipsam",
-                Rollno: "mollitia",
-                Year: "sunt",
+                FullName: "sit",
+                Rollcode: "voluptas",
+                Rollno: "culpa",
+                Year: "expedita",
             },
-            ConsentArtifact: "quo",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "quo",
+            TxnID: "expedita",
         },
     }
     

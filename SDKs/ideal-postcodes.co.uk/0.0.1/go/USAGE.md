@@ -34,12 +34,12 @@ func main() {
             },
         },
         QueryParams: operations.AddressSearchQueryParams{
-            Filter: "ut",
-            Licensee: "vitae",
-            Limit: 196897373371338696,
-            Page: 9130205367074315387,
-            PostcodeOutward: "sed",
-            Query: "quod",
+            Filter: "sit",
+            Licensee: "voluptas",
+            Limit: 6050128673802995827,
+            Page: 501233450539197794,
+            PostcodeOutward: "consequuntur",
+            Query: "dolor",
         },
     }
     

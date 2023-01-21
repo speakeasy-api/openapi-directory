@@ -1,0 +1,12 @@
+package shared
+
+// Schema
+// The type of API resource. For Schema resources, this is always `admin#directory#schema`.
+type Schema struct {
+	DisplayName *string           `json:"displayName,omitempty"`
+	Etag        *string           `json:"etag,omitempty"`
+	Fields      []SchemaFieldSpec `json:"fields,omitempty"`
+	Kind        *string           `json:"kind,omitempty"`
+	SchemaID    *string           `json:"schemaId,omitempty"`
+	SchemaName  *string           `json:"schemaName,omitempty"`
+}

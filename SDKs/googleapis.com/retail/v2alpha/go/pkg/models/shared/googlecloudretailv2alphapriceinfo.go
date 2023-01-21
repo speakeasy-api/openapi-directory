@@ -1,0 +1,13 @@
+package shared
+
+// GoogleCloudRetailV2alphaPriceInfo
+// The price information of a Product.
+type GoogleCloudRetailV2alphaPriceInfo struct {
+	Cost               *float32                                     `json:"cost,omitempty"`
+	CurrencyCode       *string                                      `json:"currencyCode,omitempty"`
+	OriginalPrice      *float32                                     `json:"originalPrice,omitempty"`
+	Price              *float32                                     `json:"price,omitempty"`
+	PriceEffectiveTime *string                                      `json:"priceEffectiveTime,omitempty"`
+	PriceExpireTime    *string                                      `json:"priceExpireTime,omitempty"`
+	PriceRange         *GoogleCloudRetailV2alphaPriceInfoPriceRange `json:"priceRange,omitempty"`
+}

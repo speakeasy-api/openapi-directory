@@ -19,13 +19,13 @@ func main() {
             },
         },
         Request: &operations.CreateCommandCreateCommandRequest{
-            CallbackMethod: "PATCH",
-            CallbackURL: "non",
-            Command: "molestias",
-            CommandMode: "binary",
+            CallbackMethod: "HEAD",
+            CallbackURL: "voluptas",
+            Command: "culpa",
+            CommandMode: "text",
             DeliveryReceiptRequested: true,
-            IncludeSid: "quia",
-            Sim: "dolore",
+            IncludeSid: "dolor",
+            Sim: "expedita",
         },
     }
     

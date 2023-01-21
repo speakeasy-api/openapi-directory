@@ -26,7 +26,7 @@ func main() {
         QueryParams: operations.GetV1EmailFreeQueryParams{
             Email: "sit",
             Format: "json",
-            Key: "voluptatem",
+            Key: "culpa",
         },
     }
     

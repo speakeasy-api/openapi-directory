@@ -23,28 +23,35 @@ func main() {
     
     req := operations.CreateUrlsExportRequest{
         PathParams: operations.CreateUrlsExportPathParams{
-            AnalysisSlug: "error",
-            ProjectSlug: "minus",
-            Username: "animi",
+            AnalysisSlug: "sit",
+            ProjectSlug: "voluptas",
+            Username: "culpa",
         },
         QueryParams: operations.CreateUrlsExportQueryParams{
-            Area: "disappeared",
+            Area: "new",
         },
         Request: &shared.UrlsQuery{
             Fields: []string{
-                "vitae",
+                "dolor",
+                "expedita",
+                "voluptas",
             },
             Filters: map[string]interface{}{
-                "non": "reiciendis",
-                "id": "aut",
+                "et": "nihil",
             },
             Sort: []map[string]interface{}{
                 map[string]interface{}{
-                    "quaerat": "exercitationem",
+                    "debitis": "voluptatum",
+                    "et": "ut",
+                    "dolorem": "et",
                 },
                 map[string]interface{}{
-                    "ipsum": "rerum",
-                    "assumenda": "porro",
+                    "iste": "vitae",
+                },
+                map[string]interface{}{
+                    "dolores": "illum",
+                    "debitis": "vel",
+                    "odio": "dolore",
                 },
             },
         },

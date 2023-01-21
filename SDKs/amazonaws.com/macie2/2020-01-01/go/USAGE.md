@@ -23,18 +23,18 @@ func main() {
     
     req := operations.AcceptInvitationRequest{
         Headers: operations.AcceptInvitationHeaders{
-            XAmzAlgorithm: "veritatis",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "facere",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "nesciunt",
-            XAmzSignature: "adipisci",
-            XAmzSignedHeaders: "consequatur",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.AcceptInvitationRequestBody{
-            AdministratorAccountID: "praesentium",
-            InvitationID: "temporibus",
-            MasterAccount: "alias",
+            AdministratorAccountID: "voluptas",
+            InvitationID: "fugit",
+            MasterAccount: "et",
         },
     }
     

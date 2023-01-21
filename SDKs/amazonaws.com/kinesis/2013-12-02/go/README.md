@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AddTagsToStreamRequest{
         Headers: operations.AddTagsToStreamHeaders{
-            XAmzAlgorithm: "vel",
-            XAmzContentSha256: "magni",
-            XAmzCredential: "architecto",
-            XAmzDate: "est",
-            XAmzSecurityToken: "consectetur",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "in",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "Kinesis_20131202.AddTagsToStream",
         },
         Request: shared.AddTagsToStreamInput{
-            StreamName: "possimus",
+            StreamName: "fugit",
             Tags: map[string]string{
-                "animi": "nesciunt",
+                "nihil": "rerum",
             },
         },
     }

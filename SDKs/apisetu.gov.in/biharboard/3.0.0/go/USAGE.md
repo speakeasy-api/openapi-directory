@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.SscerRequestBody{
             CertificateParameters: &operations.SscerRequestBodyCertificateParameters{
-                DOB: "in",
-                FullName: "animi",
-                RROLL: "consequuntur",
-                RROLLCODE: "impedit",
-                Year: "cumque",
+                DOB: "sit",
+                FullName: "voluptas",
+                RROLL: "culpa",
+                RROLLCODE: "expedita",
+                Year: "consequuntur",
             },
-            ConsentArtifact: "eos",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "beatae",
+            TxnID: "voluptas",
         },
     }
     

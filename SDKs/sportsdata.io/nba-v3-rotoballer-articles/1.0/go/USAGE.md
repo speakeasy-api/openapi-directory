@@ -23,7 +23,7 @@ func main() {
     
     req := operations.RotoballerArticlesRequest{
         PathParams: operations.RotoballerArticlesPathParams{
-            Format: "json",
+            Format: "xml",
         },
     }
     

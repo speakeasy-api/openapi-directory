@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                FullName: "ut",
-                Policyno: "sint",
+                FullName: "sit",
+                Policyno: "voluptas",
             },
-            ConsentArtifact: "optio",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "eos",
+            TxnID: "consequuntur",
         },
     }
     

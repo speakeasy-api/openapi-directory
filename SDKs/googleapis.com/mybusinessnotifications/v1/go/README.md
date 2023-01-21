@@ -24,20 +24,20 @@ func main() {
     
     req := operations.MybusinessnotificationsAccountsGetNotificationSettingRequest{
         PathParams: operations.MybusinessnotificationsAccountsGetNotificationSettingPathParams{
-            Name: "repellat",
+            Name: "sit",
         },
         QueryParams: operations.MybusinessnotificationsAccountsGetNotificationSettingQueryParams{
-            DollarXgafv: "2",
-            AccessToken: "ut",
-            Alt: "json",
-            Callback: "eum",
-            Fields: "repellendus",
-            Key: "totam",
-            OauthToken: "facilis",
-            PrettyPrint: false,
-            QuotaUser: "ut",
-            UploadType: "dicta",
-            UploadProtocol: "enim",
+            DollarXgafv: "1",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
+            PrettyPrint: true,
+            QuotaUser: "et",
+            UploadType: "nihil",
+            UploadProtocol: "rerum",
         },
     }
     

@@ -23,19 +23,19 @@ func main() {
     
     req := operations.AcceptPortfolioShareRequest{
         Headers: operations.AcceptPortfolioShareHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "optio",
-            XAmzCredential: "iste",
-            XAmzDate: "nisi",
-            XAmzSecurityToken: "repudiandae",
-            XAmzSignature: "amet",
-            XAmzSignedHeaders: "impedit",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWS242ServiceCatalogService.AcceptPortfolioShare",
         },
         Request: shared.AcceptPortfolioShareInput{
-            AcceptLanguage: "eum",
+            AcceptLanguage: "fugit",
             PortfolioID: "et",
-            PortfolioShareType: "AWS_SERVICECATALOG",
+            PortfolioShareType: "IMPORTED",
         },
     }
     

@@ -28,7 +28,7 @@ func main() {
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        Request: "illo",
+        Request: "sit",
     }
     
     res, err := s.Calls.CreateCall(ctx, req)

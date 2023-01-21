@@ -28,7 +28,7 @@ func main() {
                 Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        Request: "fuga",
+        Request: "sit",
     }
     
     res, err := s.SendMessage(ctx, req)

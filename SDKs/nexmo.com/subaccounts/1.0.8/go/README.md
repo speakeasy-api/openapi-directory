@@ -30,12 +30,12 @@ func main() {
             },
         },
         PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "illo",
+            APIKey: "sit",
         },
         Request: shared.NewSubaccountRequest{
-            Name: "deleniti",
-            Secret: "velit",
-            UsePrimaryAccountBalance: true,
+            Name: "voluptas",
+            Secret: "culpa",
+            UsePrimaryAccountBalance: false,
         },
     }
     

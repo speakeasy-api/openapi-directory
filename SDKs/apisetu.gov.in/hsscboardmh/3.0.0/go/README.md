@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                FullName: "et",
-                Exsession: "est",
-                Rollnumber: "repellendus",
-                Totalmarks: "consequatur",
-                Year: "laudantium",
+                FullName: "sit",
+                Exsession: "voluptas",
+                Rollnumber: "culpa",
+                Totalmarks: "expedita",
+                Year: "consequuntur",
             },
-            ConsentArtifact: "voluptatibus",
-            Format: "xml",
-            TxnID: "repudiandae",
+            ConsentArtifact: "dolor",
+            Format: "pdf",
+            TxnID: "voluptas",
         },
     }
     

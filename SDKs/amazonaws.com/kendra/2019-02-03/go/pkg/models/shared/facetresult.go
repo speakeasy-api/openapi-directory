@@ -1,0 +1,9 @@
+package shared
+
+// FacetResult
+// The facet values for the documents in the response.
+type FacetResult struct {
+	DocumentAttributeKey             *string                           `json:"DocumentAttributeKey,omitempty"`
+	DocumentAttributeValueCountPairs []DocumentAttributeValueCountPair `json:"DocumentAttributeValueCountPairs,omitempty"`
+	DocumentAttributeValueType       *DocumentAttributeValueTypeEnum   `json:"DocumentAttributeValueType,omitempty"`
+}

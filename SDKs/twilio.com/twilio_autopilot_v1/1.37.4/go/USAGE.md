@@ -19,13 +19,13 @@ func main() {
             },
         },
         Request: &operations.CreateAssistantCreateAssistantRequest{
-            CallbackEvents: "accusantium",
-            CallbackURL: "blanditiis",
-            Defaults: "itaque",
-            FriendlyName: "quo",
+            CallbackEvents: "sit",
+            CallbackURL: "voluptas",
+            Defaults: "culpa",
+            FriendlyName: "expedita",
             LogQueries: true,
-            StyleSheet: "temporibus",
-            UniqueName: "ut",
+            StyleSheet: "dolor",
+            UniqueName: "expedita",
         },
     }
     

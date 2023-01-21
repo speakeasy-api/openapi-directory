@@ -23,25 +23,27 @@ func main() {
     
     req := operations.BatchExecuteStatementRequest{
         Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "inventore",
-            XAmzContentSha256: "est",
-            XAmzCredential: "dolor",
-            XAmzDate: "animi",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "sit",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "RedshiftData.BatchExecuteStatement",
         },
         Request: shared.BatchExecuteStatementInput{
-            ClusterIdentifier: "eos",
-            Database: "accusantium",
-            DbUser: "minima",
-            SecretArn: "qui",
+            ClusterIdentifier: "fugit",
+            Database: "et",
+            DbUser: "nihil",
+            SecretArn: "rerum",
             Sqls: []string{
-                "est",
+                "debitis",
+                "voluptatum",
+                "et",
             },
-            StatementName: "tempora",
-            WithEvent: false,
+            StatementName: "ut",
+            WithEvent: true,
         },
     }
     

@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.SocerRequestBody{
             CertificateParameters: &operations.SocerRequestBodyCertificateParameters{
-                APPNO: "in",
-                DateOfBirth: "tempora",
-                ENROLNO: "molestiae",
-                TypOfCert: "aperiam",
+                APPNO: "sit",
+                DateOfBirth: "voluptas",
+                ENROLNO: "culpa",
+                TypOfCert: "expedita",
             },
-            ConsentArtifact: "sit",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "iste",
+            TxnID: "expedita",
         },
     }
     

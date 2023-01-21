@@ -1,0 +1,13 @@
+package shared
+
+// ReservationPurchaseRecommendation
+// A specific reservation that Amazon Web Services recommends for purchase.
+type ReservationPurchaseRecommendation struct {
+	AccountScope          *AccountScopeEnum                         `json:"AccountScope,omitempty"`
+	LookbackPeriodInDays  *LookbackPeriodInDaysEnum                 `json:"LookbackPeriodInDays,omitempty"`
+	PaymentOption         *PaymentOptionEnum                        `json:"PaymentOption,omitempty"`
+	RecommendationDetails []ReservationPurchaseRecommendationDetail `json:"RecommendationDetails,omitempty"`
+	RecommendationSummary *ReservationPurchaseRecommendationSummary `json:"RecommendationSummary,omitempty"`
+	ServiceSpecification  *ServiceSpecification                     `json:"ServiceSpecification,omitempty"`
+	TermInYears           *TermInYearsEnum                          `json:"TermInYears,omitempty"`
+}

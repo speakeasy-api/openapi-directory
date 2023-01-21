@@ -30,9 +30,9 @@ func main() {
             },
         },
         Request: &operations.CreateEsimProfileCreateEsimProfileRequest{
-            CallbackMethod: "PUT",
-            CallbackURL: "tenetur",
-            Eid: "ut",
+            CallbackMethod: "HEAD",
+            CallbackURL: "voluptas",
+            Eid: "culpa",
         },
     }
     

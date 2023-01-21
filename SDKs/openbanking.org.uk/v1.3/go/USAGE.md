@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetAtmsRequest{
         Headers: operations.GetAtmsHeaders{
-            IfModifiedSince: "vero",
-            IfNoneMatch: "voluptatem",
+            IfModifiedSince: "sit",
+            IfNoneMatch: "voluptas",
         },
     }
     

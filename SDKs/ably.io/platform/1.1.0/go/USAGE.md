@@ -24,15 +24,15 @@ func main() {
     
     req := operations.RequestAccessTokenRequest{
         PathParams: operations.RequestAccessTokenPathParams{
-            KeyName: "dolor",
+            KeyName: "sit",
         },
         QueryParams: operations.RequestAccessTokenQueryParams{
-            Format: "html",
+            Format: "msgpack",
         },
         Headers: operations.RequestAccessTokenHeaders{
-            XAblyVersion: "voluptas",
+            XAblyVersion: "culpa",
         },
-        Request: "fugit",
+        Request: "expedita",
     }
     
     res, err := s.Authentication.RequestAccessToken(ctx, req)

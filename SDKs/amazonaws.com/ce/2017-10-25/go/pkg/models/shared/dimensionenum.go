@@ -1,0 +1,37 @@
+package shared
+
+type DimensionEnum string
+
+const (
+	DimensionEnumAz                         DimensionEnum = "AZ"
+	DimensionEnumInstanceType               DimensionEnum = "INSTANCE_TYPE"
+	DimensionEnumLinkedAccount              DimensionEnum = "LINKED_ACCOUNT"
+	DimensionEnumLinkedAccountName          DimensionEnum = "LINKED_ACCOUNT_NAME"
+	DimensionEnumOperation                  DimensionEnum = "OPERATION"
+	DimensionEnumPurchaseType               DimensionEnum = "PURCHASE_TYPE"
+	DimensionEnumRegion                     DimensionEnum = "REGION"
+	DimensionEnumService                    DimensionEnum = "SERVICE"
+	DimensionEnumServiceCode                DimensionEnum = "SERVICE_CODE"
+	DimensionEnumUsageType                  DimensionEnum = "USAGE_TYPE"
+	DimensionEnumUsageTypeGroup             DimensionEnum = "USAGE_TYPE_GROUP"
+	DimensionEnumRecordType                 DimensionEnum = "RECORD_TYPE"
+	DimensionEnumOperatingSystem            DimensionEnum = "OPERATING_SYSTEM"
+	DimensionEnumTenancy                    DimensionEnum = "TENANCY"
+	DimensionEnumScope                      DimensionEnum = "SCOPE"
+	DimensionEnumPlatform                   DimensionEnum = "PLATFORM"
+	DimensionEnumSubscriptionID             DimensionEnum = "SUBSCRIPTION_ID"
+	DimensionEnumLegalEntityName            DimensionEnum = "LEGAL_ENTITY_NAME"
+	DimensionEnumDeploymentOption           DimensionEnum = "DEPLOYMENT_OPTION"
+	DimensionEnumDatabaseEngine             DimensionEnum = "DATABASE_ENGINE"
+	DimensionEnumCacheEngine                DimensionEnum = "CACHE_ENGINE"
+	DimensionEnumInstanceTypeFamily         DimensionEnum = "INSTANCE_TYPE_FAMILY"
+	DimensionEnumBillingEntity              DimensionEnum = "BILLING_ENTITY"
+	DimensionEnumReservationID              DimensionEnum = "RESERVATION_ID"
+	DimensionEnumResourceID                 DimensionEnum = "RESOURCE_ID"
+	DimensionEnumRightsizingType            DimensionEnum = "RIGHTSIZING_TYPE"
+	DimensionEnumSavingsPlansType           DimensionEnum = "SAVINGS_PLANS_TYPE"
+	DimensionEnumSavingsPlanArn             DimensionEnum = "SAVINGS_PLAN_ARN"
+	DimensionEnumPaymentOption              DimensionEnum = "PAYMENT_OPTION"
+	DimensionEnumAgreementEndDateTimeAfter  DimensionEnum = "AGREEMENT_END_DATE_TIME_AFTER"
+	DimensionEnumAgreementEndDateTimeBefore DimensionEnum = "AGREEMENT_END_DATE_TIME_BEFORE"
+)

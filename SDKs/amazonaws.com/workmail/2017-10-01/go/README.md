@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateDelegateToResourceRequest{
         Headers: operations.AssociateDelegateToResourceHeaders{
-            XAmzAlgorithm: "voluptates",
-            XAmzContentSha256: "non",
-            XAmzCredential: "nam",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "enim",
-            XAmzSignature: "assumenda",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "WorkMailService.AssociateDelegateToResource",
         },
         Request: shared.AssociateDelegateToResourceRequest{
-            EntityID: "quis",
-            OrganizationID: "esse",
-            ResourceID: "voluptate",
+            EntityID: "fugit",
+            OrganizationID: "et",
+            ResourceID: "nihil",
         },
     }
     

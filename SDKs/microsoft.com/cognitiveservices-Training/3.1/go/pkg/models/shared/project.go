@@ -20,7 +20,7 @@ type Project struct {
 // ProjectInput
 // Represents a project.
 type ProjectInput struct {
-	Description string               `json:"description" form:"name=description"`
-	Name        string               `json:"name" form:"name=name"`
-	Settings    ProjectSettingsInput `json:"settings" form:"name=settings"`
+	Description string               `json:"description"`
+	Name        string               `json:"name"`
+	Settings    ProjectSettingsInput `json:"settings"`
 }

@@ -30,10 +30,10 @@ func main() {
             },
         },
         PathParams: operations.CreateAssetPathParams{
-            ServiceSid: "similique",
+            ServiceSid: "sit",
         },
         Request: &operations.CreateAssetCreateAssetRequest{
-            FriendlyName: "omnis",
+            FriendlyName: "voluptas",
         },
     }
     

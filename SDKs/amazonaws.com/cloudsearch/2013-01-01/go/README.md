@@ -35,17 +35,17 @@ func main() {
     req := operations.GetBuildSuggestersRequest{
         QueryParams: operations.GetBuildSuggestersQueryParams{
             Action: "BuildSuggesters",
-            DomainName: "quaerat",
+            DomainName: "voluptas",
             Version: "2013-01-01",
         },
         Headers: operations.GetBuildSuggestersHeaders{
-            XAmzAlgorithm: "omnis",
-            XAmzContentSha256: "consectetur",
-            XAmzCredential: "ducimus",
-            XAmzDate: "consequatur",
-            XAmzSecurityToken: "non",
-            XAmzSignature: "vel",
-            XAmzSignedHeaders: "at",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
+            XAmzSignedHeaders: "et",
         },
     }
     

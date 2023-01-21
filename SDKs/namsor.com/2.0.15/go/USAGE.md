@@ -24,7 +24,7 @@ func main() {
     req := operations.AnonymizeRequest{
         PathParams: operations.AnonymizePathParams{
             Anonymized: false,
-            Source: "est",
+            Source: "voluptas",
         },
     }
     

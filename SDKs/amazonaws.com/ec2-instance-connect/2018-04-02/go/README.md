@@ -34,20 +34,20 @@ func main() {
     
     req := operations.SendSSHPublicKeyRequest{
         Headers: operations.SendSSHPublicKeyHeaders{
-            XAmzAlgorithm: "doloribus",
-            XAmzContentSha256: "ratione",
-            XAmzCredential: "voluptas",
-            XAmzDate: "omnis",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "possimus",
-            XAmzSignedHeaders: "quo",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
         },
         Request: shared.SendSSHPublicKeyRequest{
-            AvailabilityZone: "eos",
-            InstanceID: "enim",
-            InstanceOSUser: "temporibus",
-            SSHPublicKey: "exercitationem",
+            AvailabilityZone: "fugit",
+            InstanceID: "et",
+            InstanceOSUser: "nihil",
+            SSHPublicKey: "rerum",
         },
     }
     

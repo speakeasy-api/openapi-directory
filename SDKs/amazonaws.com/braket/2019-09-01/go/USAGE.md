@@ -23,19 +23,19 @@ func main() {
     
     req := operations.CancelQuantumTaskRequest{
         PathParams: operations.CancelQuantumTaskPathParams{
-            QuantumTaskArn: "quia",
+            QuantumTaskArn: "sit",
         },
         Headers: operations.CancelQuantumTaskHeaders{
-            XAmzAlgorithm: "ab",
-            XAmzContentSha256: "nemo",
-            XAmzCredential: "eveniet",
-            XAmzDate: "id",
-            XAmzSecurityToken: "placeat",
-            XAmzSignature: "error",
-            XAmzSignedHeaders: "odio",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.CancelQuantumTaskRequestBody{
-            ClientToken: "qui",
+            ClientToken: "fugit",
         },
     }
     

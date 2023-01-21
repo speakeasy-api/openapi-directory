@@ -23,49 +23,40 @@ func main() {
     
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "nam",
-            XAmzContentSha256: "non",
-            XAmzCredential: "doloremque",
-            XAmzDate: "qui",
-            XAmzSecurityToken: "quaerat",
-            XAmzSignature: "natus",
-            XAmzSignedHeaders: "illo",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "optio",
+            ConfigurationSetName: "voluptas",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "reprehenderit",
+                SendingPoolName: "fugit",
                 TLSPolicy: "REQUIRE",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2000-05-10T08:14:20Z",
-                ReputationMetricsEnabled: false,
+                LastFreshStart: "2003-05-13T04:57:12Z",
+                ReputationMetricsEnabled: true,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
-                SendingEnabled: true,
+                SendingEnabled: false,
             },
             SuppressionOptions: &operations.CreateConfigurationSetRequestBodySuppressionOptions{
                 SuppressedReasons: []shared.SuppressionListReasonEnum{
                     "BOUNCE",
-                    "COMPLAINT",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "esse",
-                },
-                shared.Tag{
-                    Key: "architecto",
-                    Value: "est",
-                },
-                shared.Tag{
-                    Key: "aliquam",
-                    Value: "aut",
+                    Key: "ut",
+                    Value: "dolorem",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "corporis",
+                CustomRedirectDomain: "et",
             },
         },
     }

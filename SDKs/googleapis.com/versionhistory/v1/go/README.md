@@ -24,22 +24,22 @@ func main() {
     
     req := operations.VersionhistoryPlatformsChannelsListRequest{
         PathParams: operations.VersionhistoryPlatformsChannelsListPathParams{
-            Parent: "quod",
+            Parent: "sit",
         },
         QueryParams: operations.VersionhistoryPlatformsChannelsListQueryParams{
             DollarXgafv: "1",
-            AccessToken: "numquam",
-            Alt: "json",
-            Callback: "blanditiis",
-            Fields: "voluptatem",
-            Key: "voluptas",
-            OauthToken: "ea",
-            PageSize: 3770087752288054082,
-            PageToken: "ea",
-            PrettyPrint: false,
-            QuotaUser: "quod",
-            UploadType: "est",
-            UploadProtocol: "quae",
+            AccessToken: "culpa",
+            Alt: "media",
+            Callback: "consequuntur",
+            Fields: "dolor",
+            Key: "expedita",
+            OauthToken: "voluptas",
+            PageSize: 8274930044578894929,
+            PageToken: "et",
+            PrettyPrint: true,
+            QuotaUser: "rerum",
+            UploadType: "dicta",
+            UploadProtocol: "debitis",
         },
     }
     

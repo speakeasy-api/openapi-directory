@@ -1,0 +1,38 @@
+package operations
+
+import (
+	"openapi/pkg/models/shared"
+)
+
+type UpdateQuerySuggestionsBlockListXAmzTargetEnum string
+
+const (
+	UpdateQuerySuggestionsBlockListXAmzTargetEnumAwsKendraFrontendServiceUpdateQuerySuggestionsBlockList UpdateQuerySuggestionsBlockListXAmzTargetEnum = "AWSKendraFrontendService.UpdateQuerySuggestionsBlockList"
+)
+
+type UpdateQuerySuggestionsBlockListHeaders struct {
+	XAmzAlgorithm     *string                                       `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string                                       `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string                                       `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string                                       `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string                                       `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string                                       `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string                                       `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	XAmzTarget        UpdateQuerySuggestionsBlockListXAmzTargetEnum `header:"style=simple,explode=false,name=X-Amz-Target"`
+}
+
+type UpdateQuerySuggestionsBlockListRequest struct {
+	Headers UpdateQuerySuggestionsBlockListHeaders
+	Request shared.UpdateQuerySuggestionsBlockListRequest `request:"mediaType=application/json"`
+}
+
+type UpdateQuerySuggestionsBlockListResponse struct {
+	AccessDeniedException     *interface{}
+	ConflictException         *interface{}
+	ContentType               string
+	InternalServerException   *interface{}
+	ResourceNotFoundException *interface{}
+	StatusCode                int64
+	ThrottlingException       *interface{}
+	ValidationException       *interface{}
+}

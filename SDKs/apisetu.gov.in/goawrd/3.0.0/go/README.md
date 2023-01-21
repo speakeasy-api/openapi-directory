@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.ErcerRequestBody{
             CertificateParameters: &operations.ErcerRequestBodyCertificateParameters{
-                FullName: "vero",
-                Registration: "eius",
+                FullName: "sit",
+                Registration: "voluptas",
             },
-            ConsentArtifact: "veniam",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "et",
+            TxnID: "consequuntur",
         },
     }
     

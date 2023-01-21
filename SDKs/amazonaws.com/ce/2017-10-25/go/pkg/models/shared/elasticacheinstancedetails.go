@@ -1,0 +1,12 @@
+package shared
+
+// ElastiCacheInstanceDetails
+// Details about the Amazon ElastiCache instances that Amazon Web Services recommends that you purchase.
+type ElastiCacheInstanceDetails struct {
+	CurrentGeneration  *bool   `json:"CurrentGeneration,omitempty"`
+	Family             *string `json:"Family,omitempty"`
+	NodeType           *string `json:"NodeType,omitempty"`
+	ProductDescription *string `json:"ProductDescription,omitempty"`
+	Region             *string `json:"Region,omitempty"`
+	SizeFlexEligible   *bool   `json:"SizeFlexEligible,omitempty"`
+}

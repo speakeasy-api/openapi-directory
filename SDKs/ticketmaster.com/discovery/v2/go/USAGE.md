@@ -14,22 +14,21 @@ func main() {
     req := operations.FindRequest{
         QueryParams: operations.FindQueryParams{
             ClassificationID: []interface{}{
-                "officia",
-                "vitae",
-                "qui",
-            },
-            ClassificationName: []interface{}{
                 "voluptas",
             },
-            ID: "id",
+            ClassificationName: []interface{}{
+                "expedita",
+                "consequuntur",
+            },
+            ID: "dolor",
             IncludeLicensedContent: " no",
             IncludeSpellcheck: " no",
             IncludeTest: "yes",
-            Keyword: "tenetur",
-            Locale: "sed",
-            Page: "non",
-            Size: "saepe",
-            Sort: "eum",
+            Keyword: "et",
+            Locale: "nihil",
+            Page: "rerum",
+            Size: "dicta",
+            Sort: "debitis",
             Source: "ticketmaster",
         },
     }

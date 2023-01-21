@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetglobalnumberinfoRequest{
         QueryParams: operations.GetglobalnumberinfoQueryParams{
-            Intlnumber: "et",
-            License: "perferendis",
+            Intlnumber: "sit",
+            License: "voluptas",
         },
     }
     

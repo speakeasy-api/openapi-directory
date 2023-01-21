@@ -13,9 +13,9 @@ func main() {
     
     req := operations.CampaignAnalyticsRequest{
         QueryParams: operations.CampaignAnalyticsQueryParams{
-            CampaignID: "cumque",
-            EndingAt: "tenetur",
-            Length: "non",
+            CampaignID: "sit",
+            EndingAt: "voluptas",
+            Length: "culpa",
         },
     }
     

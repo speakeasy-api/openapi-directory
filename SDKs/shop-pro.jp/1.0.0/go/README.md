@@ -29,15 +29,15 @@ func main() {
             },
         },
         PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "a",
+            RecurringApplicationChargeID: "sit",
         },
         Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "eveniet",
+            XAppstoreUsageChargeToken: "voluptas",
         },
         Request: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
-                Description: "similique",
-                Point: 7913887709946499438,
+                Description: "culpa",
+                Point: 501233450539197794,
             },
         },
     }

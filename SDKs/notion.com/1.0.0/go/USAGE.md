@@ -13,7 +13,7 @@ func main() {
     
     req := operations.AppendBlockChildrenRequest{
         PathParams: operations.AppendBlockChildrenPathParams{
-            ID: "et",
+            ID: "sit",
         },
         Request: &operations.AppendBlockChildrenRequestBody{
             Children: []AppendBlockChildrenRequestBodyChildren{
@@ -22,20 +22,20 @@ func main() {
                         Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
                             operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
                                 Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "vero",
+                                    Content: "expedita",
                                 },
-                                Type: "et",
+                                Type: "consequuntur",
                             },
                             operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
                                 Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "et",
+                                    Content: "dolor",
                                 },
-                                Type: "quasi",
+                                Type: "expedita",
                             },
                         },
                     },
-                    Object: "nam",
-                    Type: "ut",
+                    Object: "voluptas",
+                    Type: "fugit",
                 },
             },
         },

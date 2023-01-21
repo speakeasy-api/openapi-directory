@@ -13,12 +13,12 @@ func main() {
     
     req := operations.FilterFileDataStoppingsRequest{
         PathParams: operations.FilterFileDataStoppingsPathParams{
-            Type: "quae",
+            Type: "sit",
         },
         Request: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
-                Content: []byte("minima"),
-                File: "eaque",
+                Content: []byte("voluptas"),
+                File: "culpa",
             },
         },
     }

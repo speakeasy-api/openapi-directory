@@ -12,7 +12,7 @@ func main() {
     s := sdk.New()
     
     req := operations.CreateTicketRequest{
-        Request: "esse",
+        Request: "sit",
     }
     
     res, err := s.V1.CreateTicket(ctx, req)

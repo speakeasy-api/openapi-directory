@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetV1EmailDisposableRequest{
         QueryParams: operations.GetV1EmailDisposableQueryParams{
-            Email: "libero",
+            Email: "sit",
             Format: "json",
-            Key: "magnam",
+            Key: "culpa",
         },
     }
     

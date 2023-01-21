@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetSearchV1FieldsRequest{
         QueryParams: operations.GetSearchV1FieldsQueryParams{
-            Callback: "officia",
+            Callback: "sit",
         },
     }
     

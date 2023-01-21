@@ -12,7 +12,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostOauthAccessTokenRequest{
-        Request: "explicabo",
+        Request: "sit",
     }
     
     res, err := s.Auth.PostOauthAccessToken(ctx, req)

@@ -22,11 +22,11 @@ func main() {
         },
         Request: &operations.EtcerRequestBody{
             CertificateParameters: &operations.EtcerRequestBodyCertificateParameters{
-                UniqueCode: "incidunt",
+                UniqueCode: "sit",
             },
-            ConsentArtifact: "qui",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "reprehenderit",
+            TxnID: "expedita",
         },
     }
     

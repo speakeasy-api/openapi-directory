@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetzipcodeinfoRequest{
         QueryParams: operations.GetzipcodeinfoQueryParams{
-            License: "non",
-            Zip: "cupiditate",
+            License: "sit",
+            Zip: "voluptas",
         },
     }
     

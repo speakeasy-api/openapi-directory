@@ -13,10 +13,10 @@ func main() {
     
     req := operations.GetAPICardRequest{
         QueryParams: operations.GetAPICardQueryParams{
-            Type: "vel",
+            Type: "sit",
         },
         Headers: operations.GetAPICardHeaders{
-            XAPIKey: "voluptatem",
+            XAPIKey: "voluptas",
         },
     }
     

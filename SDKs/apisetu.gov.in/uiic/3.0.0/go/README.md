@@ -33,16 +33,16 @@ func main() {
         },
         Request: &operations.CripcRequestBody{
             CertificateParameters: &operations.CripcRequestBodyCertificateParameters{
-                DOB: "nesciunt",
-                FullName: "eaque",
-                Udf1: "suscipit",
-                Udf2: "labore",
-                Udf3: "voluptatum",
-                UID: "quisquam",
+                DOB: "sit",
+                FullName: "voluptas",
+                Udf1: "culpa",
+                Udf2: "expedita",
+                Udf3: "consequuntur",
+                UID: "dolor",
             },
-            ConsentArtifact: "pariatur",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "incidunt",
+            TxnID: "fugit",
         },
     }
     

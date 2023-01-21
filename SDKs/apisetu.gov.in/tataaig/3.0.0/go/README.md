@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.PodocRequestBody{
             CertificateParameters: &operations.PodocRequestBodyCertificateParameters{
-                FullName: "at",
-                PolicyNumber: "fuga",
+                FullName: "sit",
+                PolicyNumber: "voluptas",
             },
-            ConsentArtifact: "dolorem",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "voluptatem",
+            TxnID: "consequuntur",
         },
     }
     

@@ -23,8 +23,8 @@ func main() {
     
     req := operations.DfsSlatesByDateRequest{
         PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "incidunt",
-            Format: "JSON",
+            Date: "sit",
+            Format: "XML",
         },
     }
     

@@ -30,9 +30,9 @@ func main() {
             },
         },
         Request: &operations.CreateCredentialAwsCreateCredentialAwsRequest{
-            AccountSid: "accusamus",
-            Credentials: "laboriosam",
-            FriendlyName: "ipsum",
+            AccountSid: "sit",
+            Credentials: "voluptas",
+            FriendlyName: "culpa",
         },
     }
     

@@ -29,7 +29,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "non",
+        Request: "sit",
     }
     
     res, err := s.General.PostDisable(ctx, req)

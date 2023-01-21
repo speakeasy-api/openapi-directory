@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetfullnamematchRequest{
         QueryParams: operations.GetfullnamematchQueryParams{
-            Fullname: "qui",
-            License: "blanditiis",
+            Fullname: "sit",
+            License: "voluptas",
         },
     }
     

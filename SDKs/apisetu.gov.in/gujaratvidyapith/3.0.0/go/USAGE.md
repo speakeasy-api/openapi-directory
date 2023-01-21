@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                CNAME: "unde",
-                REGNO: "fuga",
-                RROLL: "officiis",
-                YEAR: "laborum",
+                CNAME: "sit",
+                REGNO: "voluptas",
+                RROLL: "culpa",
+                YEAR: "expedita",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "voluptatem",
+            TxnID: "expedita",
         },
     }
     

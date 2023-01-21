@@ -1,0 +1,8 @@
+package shared
+
+// DataSourceSyncJobMetricTarget
+// Maps a particular data source sync job to a particular data source.
+type DataSourceSyncJobMetricTarget struct {
+	DataSourceID        string  `json:"DataSourceId"`
+	DataSourceSyncJobID *string `json:"DataSourceSyncJobId,omitempty"`
+}

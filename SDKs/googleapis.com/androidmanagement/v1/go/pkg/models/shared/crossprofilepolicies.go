@@ -1,0 +1,43 @@
+package shared
+
+type CrossProfilePoliciesCrossProfileCopyPasteEnum string
+
+const (
+	CrossProfilePoliciesCrossProfileCopyPasteEnumCrossProfileCopyPasteUnspecified CrossProfilePoliciesCrossProfileCopyPasteEnum = "CROSS_PROFILE_COPY_PASTE_UNSPECIFIED"
+	CrossProfilePoliciesCrossProfileCopyPasteEnumCopyFromWorkToPersonalDisallowed CrossProfilePoliciesCrossProfileCopyPasteEnum = "COPY_FROM_WORK_TO_PERSONAL_DISALLOWED"
+	CrossProfilePoliciesCrossProfileCopyPasteEnumCrossProfileCopyPasteAllowed     CrossProfilePoliciesCrossProfileCopyPasteEnum = "CROSS_PROFILE_COPY_PASTE_ALLOWED"
+)
+
+type CrossProfilePoliciesCrossProfileDataSharingEnum string
+
+const (
+	CrossProfilePoliciesCrossProfileDataSharingEnumCrossProfileDataSharingUnspecified      CrossProfilePoliciesCrossProfileDataSharingEnum = "CROSS_PROFILE_DATA_SHARING_UNSPECIFIED"
+	CrossProfilePoliciesCrossProfileDataSharingEnumCrossProfileDataSharingDisallowed       CrossProfilePoliciesCrossProfileDataSharingEnum = "CROSS_PROFILE_DATA_SHARING_DISALLOWED"
+	CrossProfilePoliciesCrossProfileDataSharingEnumDataSharingFromWorkToPersonalDisallowed CrossProfilePoliciesCrossProfileDataSharingEnum = "DATA_SHARING_FROM_WORK_TO_PERSONAL_DISALLOWED"
+	CrossProfilePoliciesCrossProfileDataSharingEnumCrossProfileDataSharingAllowed          CrossProfilePoliciesCrossProfileDataSharingEnum = "CROSS_PROFILE_DATA_SHARING_ALLOWED"
+)
+
+type CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum string
+
+const (
+	CrossProfilePoliciesShowWorkContactsInPersonalProfileEnumShowWorkContactsInPersonalProfileUnspecified CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum = "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_UNSPECIFIED"
+	CrossProfilePoliciesShowWorkContactsInPersonalProfileEnumShowWorkContactsInPersonalProfileDisallowed  CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum = "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED"
+	CrossProfilePoliciesShowWorkContactsInPersonalProfileEnumShowWorkContactsInPersonalProfileAllowed     CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum = "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED"
+)
+
+type CrossProfilePoliciesWorkProfileWidgetsDefaultEnum string
+
+const (
+	CrossProfilePoliciesWorkProfileWidgetsDefaultEnumWorkProfileWidgetsDefaultUnspecified CrossProfilePoliciesWorkProfileWidgetsDefaultEnum = "WORK_PROFILE_WIDGETS_DEFAULT_UNSPECIFIED"
+	CrossProfilePoliciesWorkProfileWidgetsDefaultEnumWorkProfileWidgetsDefaultAllowed     CrossProfilePoliciesWorkProfileWidgetsDefaultEnum = "WORK_PROFILE_WIDGETS_DEFAULT_ALLOWED"
+	CrossProfilePoliciesWorkProfileWidgetsDefaultEnumWorkProfileWidgetsDefaultDisallowed  CrossProfilePoliciesWorkProfileWidgetsDefaultEnum = "WORK_PROFILE_WIDGETS_DEFAULT_DISALLOWED"
+)
+
+// CrossProfilePolicies
+// Cross-profile policies applied on the device.
+type CrossProfilePolicies struct {
+	CrossProfileCopyPaste             *CrossProfilePoliciesCrossProfileCopyPasteEnum             `json:"crossProfileCopyPaste,omitempty"`
+	CrossProfileDataSharing           *CrossProfilePoliciesCrossProfileDataSharingEnum           `json:"crossProfileDataSharing,omitempty"`
+	ShowWorkContactsInPersonalProfile *CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum `json:"showWorkContactsInPersonalProfile,omitempty"`
+	WorkProfileWidgetsDefault         *CrossProfilePoliciesWorkProfileWidgetsDefaultEnum         `json:"workProfileWidgetsDefault,omitempty"`
+}

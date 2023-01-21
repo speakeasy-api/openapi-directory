@@ -1,0 +1,2474 @@
+package sdk
+
+import (
+	"net/http"
+
+	"context"
+	"fmt"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/utils"
+	"strings"
+)
+
+var ServerList = []string{
+	"http://ce.{region}.amazonaws.com",
+	"https://ce.{region}.amazonaws.com",
+	"http://ce.{region}.amazonaws.com.cn",
+	"https://ce.{region}.amazonaws.com.cn",
+}
+
+type HTTPClient interface {
+	Do(req *http.Request) (*http.Response, error)
+}
+
+// SDK Documentation: https://docs.aws.amazon.com/ce/ - Amazon Web Services documentation
+type SDK struct {
+	_defaultClient  HTTPClient
+	_securityClient HTTPClient
+	_security       *shared.Security
+	_serverURL      string
+	_language       string
+	_sdkVersion     string
+	_genVersion     string
+}
+
+type SDKOption func(*SDK)
+
+func WithServerURL(serverURL string, params map[string]string) SDKOption {
+	return func(sdk *SDK) {
+		if params != nil {
+			serverURL = utils.ReplaceParameters(serverURL, params)
+		}
+
+		sdk._serverURL = serverURL
+	}
+}
+
+func WithClient(client HTTPClient) SDKOption {
+	return func(sdk *SDK) {
+		sdk._defaultClient = client
+	}
+}
+
+func WithSecurity(security shared.Security) SDKOption {
+	return func(sdk *SDK) {
+		sdk._security = &security
+	}
+}
+
+func New(opts ...SDKOption) *SDK {
+	sdk := &SDK{
+		_language:   "go",
+		_sdkVersion: "",
+		_genVersion: "internal",
+	}
+	for _, opt := range opts {
+		opt(sdk)
+	}
+
+	if sdk._defaultClient == nil {
+		sdk._defaultClient = http.DefaultClient
+	}
+	if sdk._securityClient == nil {
+
+		if sdk._security != nil {
+			sdk._securityClient = utils.ConfigureSecurityClient(sdk._defaultClient, sdk._security)
+		} else {
+			sdk._securityClient = sdk._defaultClient
+		}
+
+	}
+
+	if sdk._serverURL == "" {
+		sdk._serverURL = ServerList[0]
+	}
+
+	return sdk
+}
+
+// CreateAnomalyMonitor - Creates a new cost anomaly detection monitor with the requested type and monitor specification.
+func (s *SDK) CreateAnomalyMonitor(ctx context.Context, request operations.CreateAnomalyMonitorRequest) (*operations.CreateAnomalyMonitorResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateAnomalyMonitor"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateAnomalyMonitorResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateAnomalyMonitorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateAnomalyMonitorResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateAnomalySubscription - Adds a subscription to a cost anomaly detection monitor. You can use each subscription to define subscribers with email or SNS notifications. Email subscribers can set a dollar threshold and a time frequency for receiving notifications.
+func (s *SDK) CreateAnomalySubscription(ctx context.Context, request operations.CreateAnomalySubscriptionRequest) (*operations.CreateAnomalySubscriptionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateAnomalySubscription"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateAnomalySubscriptionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateAnomalySubscriptionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateAnomalySubscriptionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownMonitorException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateCostCategoryDefinition - Creates a new Cost Category with the requested name and rules.
+func (s *SDK) CreateCostCategoryDefinition(ctx context.Context, request operations.CreateCostCategoryDefinitionRequest) (*operations.CreateCostCategoryDefinitionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.CreateCostCategoryDefinition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateCostCategoryDefinitionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateCostCategoryDefinitionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateCostCategoryDefinitionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteAnomalyMonitor - Deletes a cost anomaly monitor.
+func (s *SDK) DeleteAnomalyMonitor(ctx context.Context, request operations.DeleteAnomalyMonitorRequest) (*operations.DeleteAnomalyMonitorResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteAnomalyMonitor"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteAnomalyMonitorResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAnomalyMonitorResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownMonitorException = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteAnomalySubscription - Deletes a cost anomaly subscription.
+func (s *SDK) DeleteAnomalySubscription(ctx context.Context, request operations.DeleteAnomalySubscriptionRequest) (*operations.DeleteAnomalySubscriptionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteAnomalySubscription"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteAnomalySubscriptionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAnomalySubscriptionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownSubscriptionException = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteCostCategoryDefinition - Deletes a Cost Category. Expenses from this month going forward will no longer be categorized with this Cost Category.
+func (s *SDK) DeleteCostCategoryDefinition(ctx context.Context, request operations.DeleteCostCategoryDefinitionRequest) (*operations.DeleteCostCategoryDefinitionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DeleteCostCategoryDefinition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteCostCategoryDefinitionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DeleteCostCategoryDefinitionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteCostCategoryDefinitionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceNotFoundException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// DescribeCostCategoryDefinition - <p>Returns the name, ARN, rules, definition, and effective dates of a Cost Category that's defined in the account.</p> <p>You have the option to use <code>EffectiveOn</code> to return a Cost Category that is active on a specific date. If there is no <code>EffectiveOn</code> specified, you’ll see a Cost Category that is effective on the current date. If Cost Category is still effective, <code>EffectiveEnd</code> is omitted in the response. </p>
+func (s *SDK) DescribeCostCategoryDefinition(ctx context.Context, request operations.DescribeCostCategoryDefinitionRequest) (*operations.DescribeCostCategoryDefinitionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.DescribeCostCategoryDefinition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DescribeCostCategoryDefinitionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DescribeCostCategoryDefinitionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DescribeCostCategoryDefinitionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceNotFoundException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetAnomalies - Retrieves all of the cost anomalies detected on your account during the time period that's specified by the <code>DateInterval</code> object.
+func (s *SDK) GetAnomalies(ctx context.Context, request operations.GetAnomaliesRequest) (*operations.GetAnomaliesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalies"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAnomaliesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetAnomaliesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetAnomaliesResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetAnomalyMonitors - Retrieves the cost anomaly monitor definitions for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs).
+func (s *SDK) GetAnomalyMonitors(ctx context.Context, request operations.GetAnomalyMonitorsRequest) (*operations.GetAnomalyMonitorsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalyMonitors"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAnomalyMonitorsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetAnomalyMonitorsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetAnomalyMonitorsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownMonitorException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetAnomalySubscriptions - Retrieves the cost anomaly subscription objects for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs).
+func (s *SDK) GetAnomalySubscriptions(ctx context.Context, request operations.GetAnomalySubscriptionsRequest) (*operations.GetAnomalySubscriptionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetAnomalySubscriptions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAnomalySubscriptionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetAnomalySubscriptionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetAnomalySubscriptionsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownSubscriptionException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCostAndUsage - <p>Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric that you want the request to return. For example, you can specify <code>BlendedCosts</code> or <code>UsageQuantity</code>. You can also filter and group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. For a complete list of valid dimensions, see the <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html">GetDimensionValues</a> operation. Management account in an organization in Organizations have access to all member accounts.</p> <p>For information about filter limitations, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-limits.html">Quotas and restrictions</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+func (s *SDK) GetCostAndUsage(ctx context.Context, request operations.GetCostAndUsageRequest) (*operations.GetCostAndUsageResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostAndUsage"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCostAndUsageResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetCostAndUsageResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetCostAndUsageResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BillExpirationException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequestChangedException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCostAndUsageWithResources - <p>Retrieves cost and usage metrics with resources for your account. You can specify which cost and usage-related metric, such as <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. For a complete list of valid dimensions, see the <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html">GetDimensionValues</a> operation. Management account in an organization in Organizations have access to all member accounts. This API is currently available for the Amazon Elastic Compute Cloud – Compute service only.</p> <note> <p>This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how to access the Settings page, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-access.html">Controlling Access for Cost Explorer</a> in the <i>Billing and Cost Management User Guide</i>.</p> </note>
+func (s *SDK) GetCostAndUsageWithResources(ctx context.Context, request operations.GetCostAndUsageWithResourcesRequest) (*operations.GetCostAndUsageWithResourcesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostAndUsageWithResources"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCostAndUsageWithResourcesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetCostAndUsageWithResourcesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetCostAndUsageWithResourcesResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BillExpirationException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequestChangedException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCostCategories - <p>Retrieves an array of Cost Category names and values incurred cost.</p> <note> <p>If some Cost Category names and values are not associated with any cost, they will not be returned by this API.</p> </note>
+func (s *SDK) GetCostCategories(ctx context.Context, request operations.GetCostCategoriesRequest) (*operations.GetCostCategoriesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostCategories"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCostCategoriesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetCostCategoriesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetCostCategoriesResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BillExpirationException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequestChangedException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCostForecast - Retrieves a forecast for how much Amazon Web Services predicts that you will spend over the forecast time period that you select, based on your past costs.
+func (s *SDK) GetCostForecast(ctx context.Context, request operations.GetCostForecastRequest) (*operations.GetCostForecastResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetCostForecast"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCostForecastResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetCostForecastResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetCostForecastResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetDimensionValues - Retrieves all available filter values for a specified filter over a period of time. You can search the dimension values for an arbitrary string.
+func (s *SDK) GetDimensionValues(ctx context.Context, request operations.GetDimensionValuesRequest) (*operations.GetDimensionValuesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetDimensionValues"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetDimensionValuesResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetDimensionValuesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetDimensionValuesResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BillExpirationException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequestChangedException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetReservationCoverage - <p>Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following dimensions:</p> <ul> <li> <p>AZ</p> </li> <li> <p>CACHE_ENGINE</p> </li> <li> <p>DATABASE_ENGINE</p> </li> <li> <p>DEPLOYMENT_OPTION</p> </li> <li> <p>INSTANCE_TYPE</p> </li> <li> <p>LINKED_ACCOUNT</p> </li> <li> <p>OPERATING_SYSTEM</p> </li> <li> <p>PLATFORM</p> </li> <li> <p>REGION</p> </li> <li> <p>SERVICE</p> </li> <li> <p>TAG</p> </li> <li> <p>TENANCY</p> </li> </ul> <p>To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation. </p>
+func (s *SDK) GetReservationCoverage(ctx context.Context, request operations.GetReservationCoverageRequest) (*operations.GetReservationCoverageResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationCoverage"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetReservationCoverageResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetReservationCoverageResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetReservationCoverageResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetReservationPurchaseRecommendation - <p>Gets recommendations for which reservations to purchase. These recommendations could help you reduce your costs. Reservations provide a discounted hourly rate (up to 75%) compared to On-Demand pricing.</p> <p>Amazon Web Services generates your recommendations by identifying your On-Demand usage during a specific time period and collecting your usage into categories that are eligible for a reservation. After Amazon Web Services has these categories, it simulates every combination of reservations in each category of usage to identify the best number of each type of RI to purchase to maximize your estimated savings. </p> <p>For example, Amazon Web Services automatically aggregates your Amazon EC2 Linux, shared tenancy, and c4 family usage in the US West (Oregon) Region and recommends that you buy size-flexible regional reservations to apply to the c4 family usage. Amazon Web Services recommends the smallest size instance in an instance family. This makes it easier to purchase a size-flexible RI. Amazon Web Services also shows the equal number of normalized units so that you can purchase any instance size that you want. For this example, your RI recommendation would be for <code>c4.large</code> because that is the smallest size instance in the c4 instance family.</p>
+func (s *SDK) GetReservationPurchaseRecommendation(ctx context.Context, request operations.GetReservationPurchaseRecommendationRequest) (*operations.GetReservationPurchaseRecommendationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationPurchaseRecommendation"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetReservationPurchaseRecommendationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetReservationPurchaseRecommendationResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetReservationPurchaseRecommendationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetReservationUtilization - Retrieves the reservation utilization for your account. Management account in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by <code>SUBSCRIPTION_ID</code>.
+func (s *SDK) GetReservationUtilization(ctx context.Context, request operations.GetReservationUtilizationRequest) (*operations.GetReservationUtilizationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetReservationUtilization"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetReservationUtilizationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetReservationUtilizationResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetReservationUtilizationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRightsizingRecommendation - <p>Creates recommendations that help you save cost by identifying idle and underutilized Amazon EC2 instances.</p> <p>Recommendations are generated to either downsize or terminate instances, along with providing savings detail and metrics. For details on calculation and function, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-rightsizing.html">Optimizing Your Cost with Rightsizing Recommendations</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+func (s *SDK) GetRightsizingRecommendation(ctx context.Context, request operations.GetRightsizingRecommendationRequest) (*operations.GetRightsizingRecommendationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetRightsizingRecommendation"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRightsizingRecommendationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetRightsizingRecommendationResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetRightsizingRecommendationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetSavingsPlansCoverage - <p>Retrieves the Savings Plans covered for your account. This enables you to see how much of your cost is covered by a Savings Plan. An organization’s management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data for Savings Plans usage with the following dimensions:</p> <ul> <li> <p> <code>LINKED_ACCOUNT</code> </p> </li> <li> <p> <code>REGION</code> </p> </li> <li> <p> <code>SERVICE</code> </p> </li> <li> <p> <code>INSTANCE_FAMILY</code> </p> </li> </ul> <p>To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.</p>
+func (s *SDK) GetSavingsPlansCoverage(ctx context.Context, request operations.GetSavingsPlansCoverageRequest) (*operations.GetSavingsPlansCoverageResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansCoverage"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSavingsPlansCoverageResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetSavingsPlansCoverageResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetSavingsPlansCoverageResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetSavingsPlansPurchaseRecommendation - Retrieves your request parameters, Savings Plan Recommendations Summary and Details.
+func (s *SDK) GetSavingsPlansPurchaseRecommendation(ctx context.Context, request operations.GetSavingsPlansPurchaseRecommendationRequest) (*operations.GetSavingsPlansPurchaseRecommendationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSavingsPlansPurchaseRecommendationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetSavingsPlansPurchaseRecommendationResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetSavingsPlansPurchaseRecommendationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetSavingsPlansUtilization - <p>Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity. Management account in an organization have access to member accounts. You can use <code>GetDimensionValues</code> in <code>SAVINGS_PLANS</code> to determine the possible dimension values.</p> <note> <p>You cannot group by any dimension values for <code>GetSavingsPlansUtilization</code>.</p> </note>
+func (s *SDK) GetSavingsPlansUtilization(ctx context.Context, request operations.GetSavingsPlansUtilizationRequest) (*operations.GetSavingsPlansUtilizationResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansUtilization"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSavingsPlansUtilizationResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetSavingsPlansUtilizationResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetSavingsPlansUtilizationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetSavingsPlansUtilizationDetails - <p>Retrieves attribute data along with aggregate utilization and savings data for a given time period. This doesn't support granular or grouped data (daily/monthly) in response. You can't retrieve data by dates in a single response similar to <code>GetSavingsPlanUtilization</code>, but you have the option to make multiple calls to <code>GetSavingsPlanUtilizationDetails</code> by providing individual dates. You can use <code>GetDimensionValues</code> in <code>SAVINGS_PLANS</code> to determine the possible dimension values.</p> <note> <p> <code>GetSavingsPlanUtilizationDetails</code> internally groups data by <code>SavingsPlansArn</code>.</p> </note>
+func (s *SDK) GetSavingsPlansUtilizationDetails(ctx context.Context, request operations.GetSavingsPlansUtilizationDetailsRequest) (*operations.GetSavingsPlansUtilizationDetailsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetSavingsPlansUtilizationDetails"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetSavingsPlansUtilizationDetailsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetSavingsPlansUtilizationDetailsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetSavingsPlansUtilizationDetailsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetTags - Queries for available tag keys and tag values for a specified period. You can search the tag values for an arbitrary string.
+func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*operations.GetTagsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetTags"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTagsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetTagsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetTagsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BillExpirationException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidNextTokenException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequestChangedException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetUsageForecast - Retrieves a forecast for how much Amazon Web Services predicts that you will use over the forecast time period that you select, based on your past usage.
+func (s *SDK) GetUsageForecast(ctx context.Context, request operations.GetUsageForecastRequest) (*operations.GetUsageForecastResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.GetUsageForecast"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUsageForecastResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetUsageForecastResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetUsageForecastResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DataUnavailableException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnresolvableUsageUnitException = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListCostCategoryDefinitions - Returns the name, ARN, <code>NumberOfRules</code> and effective dates of all Cost Categories defined in the account. You have the option to use <code>EffectiveOn</code> to return a list of Cost Categories that were active on a specific date. If there is no <code>EffectiveOn</code> specified, you’ll see Cost Categories that are effective on the current date. If Cost Category is still effective, <code>EffectiveEnd</code> is omitted in the response. <code>ListCostCategoryDefinitions</code> supports pagination. The request can have a <code>MaxResults</code> range up to 100.
+func (s *SDK) ListCostCategoryDefinitions(ctx context.Context, request operations.ListCostCategoryDefinitionsRequest) (*operations.ListCostCategoryDefinitionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ListCostCategoryDefinitions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListCostCategoryDefinitionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListCostCategoryDefinitionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListCostCategoryDefinitionsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// ProvideAnomalyFeedback - Modifies the feedback property of a given cost anomaly.
+func (s *SDK) ProvideAnomalyFeedback(ctx context.Context, request operations.ProvideAnomalyFeedbackRequest) (*operations.ProvideAnomalyFeedbackResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.ProvideAnomalyFeedback"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ProvideAnomalyFeedbackResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ProvideAnomalyFeedbackResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProvideAnomalyFeedbackResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateAnomalyMonitor - Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn'tt change anomalies detected in the past.
+func (s *SDK) UpdateAnomalyMonitor(ctx context.Context, request operations.UpdateAnomalyMonitorRequest) (*operations.UpdateAnomalyMonitorResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateAnomalyMonitor"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateAnomalyMonitorResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateAnomalyMonitorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateAnomalyMonitorResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownMonitorException = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateAnomalySubscription - Updates an existing cost anomaly monitor subscription.
+func (s *SDK) UpdateAnomalySubscription(ctx context.Context, request operations.UpdateAnomalySubscriptionRequest) (*operations.UpdateAnomalySubscriptionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateAnomalySubscription"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateAnomalySubscriptionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateAnomalySubscriptionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateAnomalySubscriptionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownMonitorException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnknownSubscriptionException = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateCostCategoryDefinition - Updates an existing Cost Category. Changes made to the Cost Category rules will be used to categorize the current month’s expenses and future expenses. This won’t change categorization for the previous months.
+func (s *SDK) UpdateCostCategoryDefinition(ctx context.Context, request operations.UpdateCostCategoryDefinitionRequest) (*operations.UpdateCostCategoryDefinitionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSInsightsIndexService.UpdateCostCategoryDefinition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateCostCategoryDefinitionResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UpdateCostCategoryDefinitionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateCostCategoryDefinitionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceNotFoundException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LimitExceededException = out
+		}
+	}
+
+	return res, nil
+}

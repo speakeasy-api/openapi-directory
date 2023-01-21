@@ -33,11 +33,11 @@ func main() {
         },
         Request: &operations.KecerRequestBody{
             CertificateParameters: &operations.KecerRequestBodyCertificateParameters{
-                DocumentNumber: "ut",
+                DocumentNumber: "sit",
             },
-            ConsentArtifact: "praesentium",
+            ConsentArtifact: "voluptas",
             Format: "pdf",
-            TxnID: "vel",
+            TxnID: "expedita",
         },
     }
     

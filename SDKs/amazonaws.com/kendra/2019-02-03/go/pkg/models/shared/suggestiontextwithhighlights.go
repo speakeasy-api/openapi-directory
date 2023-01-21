@@ -1,0 +1,8 @@
+package shared
+
+// SuggestionTextWithHighlights
+// Provides text and information about where to highlight the query suggestion text.
+type SuggestionTextWithHighlights struct {
+	Highlights []SuggestionHighlight `json:"Highlights,omitempty"`
+	Text       *string               `json:"Text,omitempty"`
+}

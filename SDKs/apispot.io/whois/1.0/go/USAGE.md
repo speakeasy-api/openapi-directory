@@ -23,7 +23,7 @@ func main() {
     
     req := operations.CheckDomainRequest{
         PathParams: operations.CheckDomainPathParams{
-            Domain: "porro",
+            Domain: "sit",
         },
     }
     

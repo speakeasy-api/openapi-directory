@@ -34,21 +34,21 @@ func main() {
     
     req := operations.AssociateDeviceWithPlacementRequest{
         PathParams: operations.AssociateDeviceWithPlacementPathParams{
-            DeviceTemplateName: "voluptatem",
-            PlacementName: "magnam",
-            ProjectName: "recusandae",
+            DeviceTemplateName: "sit",
+            PlacementName: "voluptas",
+            ProjectName: "culpa",
         },
         Headers: operations.AssociateDeviceWithPlacementHeaders{
-            XAmzAlgorithm: "quos",
-            XAmzContentSha256: "aspernatur",
-            XAmzCredential: "veniam",
-            XAmzDate: "minima",
-            XAmzSecurityToken: "harum",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "alias",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
+            XAmzSignedHeaders: "et",
         },
         Request: operations.AssociateDeviceWithPlacementRequestBody{
-            DeviceID: "aliquam",
+            DeviceID: "nihil",
         },
     }
     

@@ -13,44 +13,36 @@ func main() {
     
     req := operations.PatchAttractionRequest{
         PathParams: operations.PatchAttractionPathParams{
-            ID: "laudantium",
+            ID: "sit",
         },
         Headers: operations.PatchAttractionHeaders{
-            TMPSCorrelationID: "est",
+            TMPSCorrelationID: "voluptas",
         },
         Request: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "blanditiis",
-                    Op: "add",
-                    Path: "totam",
-                    Value: map[string]interface{}{
-                        "velit": "quo",
-                        "est": "et",
-                    },
-                },
-                shared.Change{
-                    From: "asperiores",
-                    Op: "remove",
-                    Path: "fuga",
-                    Value: map[string]interface{}{
-                        "blanditiis": "est",
-                    },
-                },
-                shared.Change{
-                    From: "natus",
+                    From: "expedita",
                     Op: "test",
-                    Path: "quos",
+                    Path: "dolor",
                     Value: map[string]interface{}{
-                        "labore": "quasi",
+                        "voluptas": "fugit",
+                        "et": "nihil",
+                    },
+                },
+                shared.Change{
+                    From: "rerum",
+                    Op: "test",
+                    Path: "debitis",
+                    Value: map[string]interface{}{
+                        "et": "ut",
                     },
                 },
             },
-            RelatedEntityID: "voluptatum",
-            RelatedEntityType: "event",
-            Score: 72.099998,
-            Source: "animi",
-            VersionNumber: 7633959003780935022,
+            RelatedEntityID: "dolorem",
+            RelatedEntityType: "attraction",
+            Score: 94.199997,
+            Source: "vitae",
+            VersionNumber: 4706154865122290029,
         },
     }
     

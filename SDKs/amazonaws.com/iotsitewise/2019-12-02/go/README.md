@@ -34,21 +34,21 @@ func main() {
     
     req := operations.AssociateAssetsRequest{
         PathParams: operations.AssociateAssetsPathParams{
-            AssetID: "labore",
+            AssetID: "sit",
         },
         Headers: operations.AssociateAssetsHeaders{
-            XAmzAlgorithm: "cupiditate",
-            XAmzContentSha256: "unde",
-            XAmzCredential: "cupiditate",
-            XAmzDate: "odio",
-            XAmzSecurityToken: "rerum",
-            XAmzSignature: "placeat",
-            XAmzSignedHeaders: "nostrum",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
         Request: operations.AssociateAssetsRequestBody{
-            ChildAssetID: "repellat",
-            ClientToken: "earum",
-            HierarchyID: "eum",
+            ChildAssetID: "fugit",
+            ClientToken: "et",
+            HierarchyID: "nihil",
         },
     }
     

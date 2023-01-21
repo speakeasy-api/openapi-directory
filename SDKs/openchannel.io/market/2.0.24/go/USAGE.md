@@ -24,10 +24,10 @@ func main() {
     
     req := operations.DeleteAppsAppIDRequest{
         PathParams: operations.DeleteAppsAppIDPathParams{
-            AppID: "esse",
+            AppID: "sit",
         },
         QueryParams: operations.DeleteAppsAppIDQueryParams{
-            DeveloperID: "enim",
+            DeveloperID: "voluptas",
         },
     }
     

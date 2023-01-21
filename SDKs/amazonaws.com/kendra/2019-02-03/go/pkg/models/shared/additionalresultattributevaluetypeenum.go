@@ -1,0 +1,7 @@
+package shared
+
+type AdditionalResultAttributeValueTypeEnum string
+
+const (
+	AdditionalResultAttributeValueTypeEnumTextWithHighlightsValue AdditionalResultAttributeValueTypeEnum = "TEXT_WITH_HIGHLIGHTS_VALUE"
+)

@@ -23,37 +23,97 @@ func main() {
     
     req := operations.CreateConnectionRequest{
         Request: shared.ConnectionCreate{
-            DestinationID: "sed",
-            Name: "officiis",
+            DestinationID: "sit",
+            Name: "voluptas",
             NamespaceDefinition: "destination",
-            NamespaceFormat: "consectetur",
+            NamespaceFormat: "expedita",
             OperationIds: []string{
-                "odio",
+                "dolor",
+                "expedita",
+                "voluptas",
             },
-            Prefix: "qui",
+            Prefix: "fugit",
             ResourceRequirements: &shared.ResourceRequirements{
-                CPULimit: "recusandae",
-                CPURequest: "at",
-                MemoryLimit: "ipsum",
-                MemoryRequest: "eveniet",
+                CPULimit: "et",
+                CPURequest: "nihil",
+                MemoryLimit: "rerum",
+                MemoryRequest: "dicta",
             },
             Schedule: &shared.ConnectionSchedule{
-                TimeUnit: "months",
-                Units: 7338728586234333996,
+                TimeUnit: "weeks",
+                Units: 5617773211005988520,
             },
-            SourceID: "inventore",
+            SourceID: "et",
             Status: "deprecated",
             SyncCatalog: &shared.AirbyteCatalog{
                 Streams: []shared.AirbyteStreamAndConfiguration{
                     shared.AirbyteStreamAndConfiguration{
                         Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "aut",
+                            AliasName: "et",
                             CursorField: []string{
-                                "tempore",
+                                "iste",
                             },
                             DestinationSyncMode: "append",
                             PrimaryKey: [][]string{
                                 []string{
+                                    "illum",
+                                },
+                                []string{
+                                    "vel",
+                                },
+                                []string{
+                                    "dolore",
+                                },
+                            },
+                            Selected: false,
+                            SyncMode: "incremental",
+                        },
+                        Stream: &shared.AirbyteStream{
+                            DefaultCursorField: []string{
+                                "totam",
+                                "commodi",
+                                "quis",
+                            },
+                            JSONSchema: map[string]interface{}{
+                                "aut": "odit",
+                                "non": "voluptas",
+                            },
+                            Name: "omnis",
+                            Namespace: "aut",
+                            SourceDefinedCursor: true,
+                            SourceDefinedPrimaryKey: [][]string{
+                                []string{
+                                    "autem",
+                                    "consectetur",
+                                },
+                                []string{
+                                    "odio",
+                                },
+                                []string{
+                                    "recusandae",
+                                },
+                            },
+                            SupportedSyncModes: []shared.SyncModeEnum{
+                                "full_refresh",
+                                "full_refresh",
+                            },
+                        },
+                    },
+                    shared.AirbyteStreamAndConfiguration{
+                        Config: &shared.AirbyteStreamConfiguration{
+                            AliasName: "modi",
+                            CursorField: []string{
+                                "inventore",
+                            },
+                            DestinationSyncMode: "append_dedup",
+                            PrimaryKey: [][]string{
+                                []string{
+                                    "reprehenderit",
+                                    "tempore",
+                                    "maiores",
+                                },
+                                []string{
+                                    "dolor",
                                     "beatae",
                                     "veritatis",
                                 },
@@ -62,20 +122,17 @@ func main() {
                                     "omnis",
                                     "ipsum",
                                 },
-                                []string{
-                                    "dolores",
-                                },
                             },
                             Selected: true,
                             SyncMode: "full_refresh",
                         },
                         Stream: &shared.AirbyteStream{
                             DefaultCursorField: []string{
-                                "mollitia",
-                                "voluptas",
-                                "quam",
+                                "vel",
                             },
                             JSONSchema: map[string]interface{}{
+                                "mollitia": "voluptas",
+                                "quam": "reprehenderit",
                                 "qui": "qui",
                             },
                             Name: "unde",
@@ -124,55 +181,6 @@ func main() {
                             SourceDefinedPrimaryKey: [][]string{
                                 []string{
                                     "consectetur",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "incremental",
-                            },
-                        },
-                    },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "laboriosam",
-                            CursorField: []string{
-                                "a",
-                                "soluta",
-                                "aut",
-                            },
-                            DestinationSyncMode: "append_dedup",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "autem",
-                                },
-                                []string{
-                                    "expedita",
-                                },
-                                []string{
-                                    "perferendis",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "incremental",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "explicabo",
-                                "ea",
-                                "maxime",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "perferendis": "et",
-                            },
-                            Name: "rerum",
-                            Namespace: "reiciendis",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "necessitatibus",
-                                },
-                                []string{
-                                    "quis",
-                                    "eum",
                                 },
                             },
                             SupportedSyncModes: []shared.SyncModeEnum{

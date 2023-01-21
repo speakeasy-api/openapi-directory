@@ -23,32 +23,31 @@ func main() {
     
     req := operations.DescribeRecommendationExportJobsRequest{
         Headers: operations.DescribeRecommendationExportJobsHeaders{
-            XAmzAlgorithm: "itaque",
-            XAmzContentSha256: "corrupti",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "quasi",
-            XAmzSecurityToken: "repellat",
-            XAmzSignature: "rem",
-            XAmzSignedHeaders: "nisi",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
         },
         Request: shared.DescribeRecommendationExportJobsRequest{
             Filters: []shared.JobFilter{
                 shared.JobFilter{
-                    Name: "JobStatus",
+                    Name: "ResourceType",
                     Values: []string{
-                        "soluta",
-                        "laudantium",
+                        "rerum",
                     },
                 },
             },
             JobIds: []string{
-                "eaque",
-                "ex",
-                "cum",
+                "debitis",
+                "voluptatum",
+                "et",
             },
-            MaxResults: 7436471626629558277,
-            NextToken: "sunt",
+            MaxResults: 7144924247938981575,
+            NextToken: "dolorem",
         },
     }
     

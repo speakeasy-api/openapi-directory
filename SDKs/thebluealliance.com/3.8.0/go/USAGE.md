@@ -18,7 +18,7 @@ func main() {
             },
         },
         Headers: operations.GetStatusHeaders{
-            IfModifiedSince: "numquam",
+            IfModifiedSince: "sit",
         },
     }
     

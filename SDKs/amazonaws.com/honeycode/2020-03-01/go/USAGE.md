@@ -23,46 +23,32 @@ func main() {
     
     req := operations.BatchCreateTableRowsRequest{
         PathParams: operations.BatchCreateTableRowsPathParams{
-            TableID: "praesentium",
-            WorkbookID: "et",
+            TableID: "sit",
+            WorkbookID: "voluptas",
         },
         Headers: operations.BatchCreateTableRowsHeaders{
-            XAmzAlgorithm: "ratione",
-            XAmzContentSha256: "est",
-            XAmzCredential: "in",
-            XAmzDate: "corporis",
-            XAmzSecurityToken: "dolores",
-            XAmzSignature: "perferendis",
-            XAmzSignedHeaders: "laboriosam",
+            XAmzAlgorithm: "culpa",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "consequuntur",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "fugit",
         },
         Request: operations.BatchCreateTableRowsRequestBody{
-            ClientRequestToken: "numquam",
+            ClientRequestToken: "et",
             RowsToCreate: []shared.CreateRowData{
                 shared.CreateRowData{
-                    BatchItemID: "aperiam",
+                    BatchItemID: "rerum",
                     CellsToCreate: map[string]shared.CellInput{
-                        "velit": shared.CellInput{
-                            Fact: "possimus",
+                        "debitis": shared.CellInput{
+                            Fact: "voluptatum",
                         },
-                        "hic": shared.CellInput{
-                            Fact: "quis",
+                        "et": shared.CellInput{
+                            Fact: "ut",
                         },
-                        "sunt": shared.CellInput{
-                            Fact: "quo",
-                        },
-                    },
-                },
-                shared.CreateRowData{
-                    BatchItemID: "eveniet",
-                    CellsToCreate: map[string]shared.CellInput{
-                        "reiciendis": shared.CellInput{
-                            Fact: "non",
-                        },
-                        "dolor": shared.CellInput{
-                            Fact: "maiores",
-                        },
-                        "itaque": shared.CellInput{
-                            Fact: "pariatur",
+                        "dolorem": shared.CellInput{
+                            Fact: "et",
                         },
                     },
                 },

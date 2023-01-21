@@ -34,19 +34,19 @@ func main() {
     
     req := operations.DeleteThingShadowRequest{
         PathParams: operations.DeleteThingShadowPathParams{
-            ThingName: "aliquam",
+            ThingName: "sit",
         },
         QueryParams: operations.DeleteThingShadowQueryParams{
-            Name: "quos",
+            Name: "voluptas",
         },
         Headers: operations.DeleteThingShadowHeaders{
-            XAmzAlgorithm: "omnis",
-            XAmzContentSha256: "illum",
-            XAmzCredential: "repellat",
-            XAmzDate: "id",
-            XAmzSecurityToken: "blanditiis",
-            XAmzSignature: "possimus",
-            XAmzSignedHeaders: "eius",
+            XAmzAlgorithm: "culpa",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "consequuntur",
+            XAmzDate: "dolor",
+            XAmzSecurityToken: "expedita",
+            XAmzSignature: "voluptas",
+            XAmzSignedHeaders: "fugit",
         },
     }
     

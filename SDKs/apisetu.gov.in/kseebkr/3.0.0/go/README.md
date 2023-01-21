@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.SscerRequestBody{
             CertificateParameters: &operations.SscerRequestBodyCertificateParameters{
-                DOB: "id",
-                FullName: "minima",
-                REGNO: "aut",
-                UID: "ea",
+                DOB: "sit",
+                FullName: "voluptas",
+                REGNO: "culpa",
+                UID: "expedita",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "enim",
+            TxnID: "expedita",
         },
     }
     

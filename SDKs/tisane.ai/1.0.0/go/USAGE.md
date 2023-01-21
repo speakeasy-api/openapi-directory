@@ -13,7 +13,7 @@ func main() {
     
     req := operations.GetFamilyDetailsRequest{
         QueryParams: operations.GetFamilyDetailsQueryParams{
-            ID: "alias",
+            ID: "sit",
         },
     }
     

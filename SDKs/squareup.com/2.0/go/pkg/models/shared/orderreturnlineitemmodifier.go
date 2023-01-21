@@ -1,0 +1,13 @@
+package shared
+
+// OrderReturnLineItemModifier
+// A line item modifier being returned.
+type OrderReturnLineItemModifier struct {
+	BasePriceMoney    *Money  `json:"base_price_money,omitempty"`
+	CatalogObjectID   *string `json:"catalog_object_id,omitempty"`
+	CatalogVersion    *int64  `json:"catalog_version,omitempty"`
+	Name              *string `json:"name,omitempty"`
+	SourceModifierUID *string `json:"source_modifier_uid,omitempty"`
+	TotalPriceMoney   *Money  `json:"total_price_money,omitempty"`
+	UID               *string `json:"uid,omitempty"`
+}

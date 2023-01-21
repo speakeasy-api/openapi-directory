@@ -1,0 +1,11 @@
+package shared
+
+// ColumnConfiguration
+// Provides information about how Amazon Kendra should use the columns of a database in an index.
+type ColumnConfiguration struct {
+	ChangeDetectingColumns  []string                        `json:"ChangeDetectingColumns"`
+	DocumentDataColumnName  string                          `json:"DocumentDataColumnName"`
+	DocumentIDColumnName    string                          `json:"DocumentIdColumnName"`
+	DocumentTitleColumnName *string                         `json:"DocumentTitleColumnName,omitempty"`
+	FieldMappings           []DataSourceToIndexFieldMapping `json:"FieldMappings,omitempty"`
+}

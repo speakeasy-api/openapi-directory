@@ -13,19 +13,19 @@ func main() {
     
     req := operations.PredictImageRequest{
         PathParams: operations.PredictImagePathParams{
-            ProjectID: "dolor",
+            ProjectID: "sit",
         },
         QueryParams: operations.PredictImageQueryParams{
-            Application: "ea",
-            IterationID: "excepturi",
+            Application: "voluptas",
+            IterationID: "culpa",
         },
         Headers: operations.PredictImageHeaders{
-            PredictionKey: "aliquid",
+            PredictionKey: "expedita",
         },
         Request: operations.PredictImageRequestBody{
             ImageData: operations.PredictImageRequestBodyImageData{
-                Content: []byte("ad"),
-                ImageData: "alias",
+                Content: []byte("consequuntur"),
+                ImageData: "dolor",
             },
         },
     }

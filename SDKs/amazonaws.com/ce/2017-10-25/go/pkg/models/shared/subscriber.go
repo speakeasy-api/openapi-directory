@@ -1,0 +1,9 @@
+package shared
+
+// Subscriber
+// The recipient of <code>AnomalySubscription</code> notifications.
+type Subscriber struct {
+	Address *string               `json:"Address,omitempty"`
+	Status  *SubscriberStatusEnum `json:"Status,omitempty"`
+	Type    *SubscriberTypeEnum   `json:"Type,omitempty"`
+}

@@ -30,7 +30,7 @@ func main() {
             },
         },
         PathParams: operations.FetchUserPathParams{
-            Sid: "cum",
+            Sid: "sit",
         },
     }
     

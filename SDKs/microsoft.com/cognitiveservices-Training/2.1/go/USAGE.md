@@ -13,10 +13,10 @@ func main() {
     
     req := operations.GetDomainRequest{
         PathParams: operations.GetDomainPathParams{
-            DomainID: "autem",
+            DomainID: "sit",
         },
         Headers: operations.GetDomainHeaders{
-            TrainingKey: "eum",
+            TrainingKey: "voluptas",
         },
     }
     

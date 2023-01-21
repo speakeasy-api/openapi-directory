@@ -34,38 +34,38 @@ func main() {
     
     req := operations.BatchMeterUsageRequest{
         Headers: operations.BatchMeterUsageHeaders{
-            XAmzAlgorithm: "nihil",
-            XAmzContentSha256: "dolorem",
-            XAmzCredential: "impedit",
-            XAmzDate: "laboriosam",
-            XAmzSecurityToken: "iste",
-            XAmzSignature: "soluta",
-            XAmzSignedHeaders: "ut",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
         },
         Request: shared.BatchMeterUsageRequest{
-            ProductCode: "vel",
+            ProductCode: "fugit",
             UsageRecords: []shared.UsageRecord{
                 shared.UsageRecord{
-                    CustomerIdentifier: "soluta",
-                    Dimension: "alias",
-                    Quantity: 3089778739814785022,
-                    Timestamp: "1984-04-21T17:27:21Z",
+                    CustomerIdentifier: "nihil",
+                    Dimension: "rerum",
+                    Quantity: 7837839688282259259,
+                    Timestamp: "2004-06-02T10:14:12Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
-                            AllocatedUsageQuantity: 4453435121235553912,
+                            AllocatedUsageQuantity: 2339563716805116249,
                             Tags: []shared.Tag{
                                 shared.Tag{
-                                    Key: "dolore",
-                                    Value: "quidem",
-                                },
-                                shared.Tag{
-                                    Key: "doloribus",
-                                    Value: "at",
-                                },
-                                shared.Tag{
-                                    Key: "dolore",
+                                    Key: "dolorem",
                                     Value: "et",
+                                },
+                                shared.Tag{
+                                    Key: "voluptate",
+                                    Value: "iste",
+                                },
+                                shared.Tag{
+                                    Key: "vitae",
+                                    Value: "totam",
                                 },
                             },
                         },

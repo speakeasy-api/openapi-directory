@@ -1,0 +1,8 @@
+package shared
+
+type SalesforceChatterFeedIncludeFilterTypeEnum string
+
+const (
+	SalesforceChatterFeedIncludeFilterTypeEnumActiveUser   SalesforceChatterFeedIncludeFilterTypeEnum = "ACTIVE_USER"
+	SalesforceChatterFeedIncludeFilterTypeEnumStandardUser SalesforceChatterFeedIncludeFilterTypeEnum = "STANDARD_USER"
+)

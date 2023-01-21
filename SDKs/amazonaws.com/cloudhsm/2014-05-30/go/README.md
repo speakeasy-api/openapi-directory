@@ -34,21 +34,21 @@ func main() {
     
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "nihil",
-            XAmzContentSha256: "magni",
-            XAmzCredential: "vitae",
-            XAmzDate: "excepturi",
-            XAmzSecurityToken: "ut",
-            XAmzSignature: "totam",
-            XAmzSignedHeaders: "blanditiis",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "CloudHsmFrontendService.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceRequest{
-            ResourceArn: "sint",
+            ResourceArn: "fugit",
             TagList: []shared.Tag{
                 shared.Tag{
-                    Key: "fugiat",
-                    Value: "adipisci",
+                    Key: "nihil",
+                    Value: "rerum",
                 },
             },
         },

@@ -34,7 +34,7 @@ func main() {
     
     req := operations.GetCriticsResourceTypeJSONRequest{
         PathParams: operations.GetCriticsResourceTypeJSONPathParams{
-            ResourceType: "accusamus",
+            ResourceType: "sit",
         },
     }
     

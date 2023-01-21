@@ -23,7 +23,7 @@ func main() {
     
     req := operations.DfsSlatesByDateRequest{
         PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "neque",
+            Date: "sit",
             Format: "XML",
         },
     }

@@ -23,220 +23,285 @@ func main() {
     
     req := operations.CreateLifecyclePolicyRequest{
         Headers: operations.CreateLifecyclePolicyHeaders{
-            XAmzAlgorithm: "doloremque",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "et",
-            XAmzDate: "ut",
-            XAmzSecurityToken: "praesentium",
-            XAmzSignature: "labore",
-            XAmzSignedHeaders: "accusamus",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateLifecyclePolicyRequestBody{
-            Description: "aut",
-            ExecutionRoleArn: "alias",
+            Description: "voluptas",
+            ExecutionRoleArn: "fugit",
             PolicyDetails: operations.CreateLifecyclePolicyRequestBodyPolicyDetails{
                 Actions: []shared.Action{
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "voluptatem",
+                                    CmkArn: "rerum",
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 5320768077586043095,
+                                    Interval: 2518412263346885298,
                                     IntervalUnit: "DAYS",
                                 },
-                                Target: "nostrum",
-                            },
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "adipisci",
-                                    Encrypted: true,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 6537984888763423894,
-                                    IntervalUnit: "WEEKS",
-                                },
-                                Target: "delectus",
+                                Target: "et",
                             },
                         },
-                        Name: "tenetur",
-                    },
-                    shared.Action{
-                        CrossRegionCopy: []shared.CrossRegionCopyAction{
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "quia",
-                                    Encrypted: true,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 8697756961697963853,
-                                    IntervalUnit: "YEARS",
-                                },
-                                Target: "nostrum",
-                            },
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "autem",
-                                    Encrypted: true,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 4506911669298280718,
-                                    IntervalUnit: "YEARS",
-                                },
-                                Target: "molestias",
-                            },
-                        },
-                        Name: "nihil",
+                        Name: "ut",
                     },
                 },
                 EventSource: &shared.EventSource{
                     Parameters: &shared.EventParameters{
-                        DescriptionRegex: "consequatur",
+                        DescriptionRegex: "dolorem",
                         EventType: "shareSnapshot",
                         SnapshotOwner: []string{
-                            "quae",
-                            "natus",
+                            "iste",
                         },
                     },
                     Type: "MANAGED_CWE",
                 },
                 Parameters: &shared.Parameters{
-                    ExcludeBootVolume: false,
+                    ExcludeBootVolume: true,
                     NoReboot: true,
                 },
-                PolicyType: "EBS_SNAPSHOT_MANAGEMENT",
+                PolicyType: "EVENT_BASED_POLICY",
                 ResourceLocations: []shared.ResourceLocationValuesEnum{
-                    "OUTPOST",
                     "CLOUD",
                 },
                 ResourceTypes: []shared.ResourceTypeValuesEnum{
                     "INSTANCE",
-                    "INSTANCE",
-                    "INSTANCE",
                 },
                 Schedules: []shared.Schedule{
                     shared.Schedule{
-                        CopyTags: false,
+                        CopyTags: true,
                         CreateRule: &shared.CreateRule{
-                            CronExpression: "sapiente",
-                            Interval: 4642672273651120892,
+                            CronExpression: "accusantium",
+                            Interval: 1395437218309923052,
                             IntervalUnit: "HOURS",
                             Location: "CLOUD",
                             Times: []string{
-                                "quo",
+                                "aut",
+                                "odit",
                             },
                         },
                         CrossRegionCopyRules: []shared.CrossRegionCopyRule{
                             shared.CrossRegionCopyRule{
-                                CmkArn: "ratione",
-                                CopyTags: false,
+                                CmkArn: "voluptas",
+                                CopyTags: true,
                                 DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 6134675409536001115,
+                                    Interval: 1059542851699319360,
                                     IntervalUnit: "DAYS",
                                 },
-                                Encrypted: true,
+                                Encrypted: false,
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 1000668831263546934,
-                                    IntervalUnit: "MONTHS",
-                                },
-                                Target: "aut",
-                                TargetRegion: "minima",
-                            },
-                            shared.CrossRegionCopyRule{
-                                CmkArn: "at",
-                                CopyTags: true,
-                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 127225875950264235,
+                                    Interval: 7845762441295307478,
                                     IntervalUnit: "YEARS",
                                 },
-                                Encrypted: true,
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 1325682419092169393,
-                                    IntervalUnit: "MONTHS",
-                                },
-                                Target: "accusantium",
-                                TargetRegion: "qui",
+                                Target: "consectetur",
+                                TargetRegion: "nobis",
                             },
                             shared.CrossRegionCopyRule{
-                                CmkArn: "ea",
-                                CopyTags: true,
+                                CmkArn: "odio",
+                                CopyTags: false,
                                 DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 8037355963908866572,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: 388440063886460141,
+                                    IntervalUnit: "DAYS",
                                 },
-                                Encrypted: true,
+                                Encrypted: false,
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 5643905309582698835,
+                                    Interval: 8902041070398994519,
+                                    IntervalUnit: "YEARS",
+                                },
+                                Target: "sint",
+                                TargetRegion: "inventore",
+                            },
+                            shared.CrossRegionCopyRule{
+                                CmkArn: "ut",
+                                CopyTags: false,
+                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
+                                    Interval: 4756106358532488297,
                                     IntervalUnit: "MONTHS",
                                 },
-                                Target: "vero",
-                                TargetRegion: "quis",
+                                Encrypted: false,
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 2264299874001785192,
+                                    IntervalUnit: "MONTHS",
+                                },
+                                Target: "dolor",
+                                TargetRegion: "beatae",
                             },
                         },
                         DeprecateRule: &shared.DeprecateRule{
-                            Count: 3816780269387027271,
-                            Interval: 3292878388625507251,
+                            Count: 4112921325496946042,
+                            Interval: 2671030200101705776,
                             IntervalUnit: "WEEKS",
                         },
                         FastRestoreRule: &shared.FastRestoreRule{
                             AvailabilityZones: []string{
-                                "vitae",
-                                "nesciunt",
-                                "fugit",
+                                "ipsum",
+                                "ex",
                             },
-                            Count: 2502521760373555910,
-                            Interval: 4666865012529559949,
-                            IntervalUnit: "DAYS",
-                        },
-                        Name: "magni",
-                        RetainRule: &shared.RetainRule{
-                            Count: 5403100475415031532,
-                            Interval: 500970383850890347,
+                            Count: 7014402135919778893,
+                            Interval: 3983722386484812742,
                             IntervalUnit: "MONTHS",
+                        },
+                        Name: "rerum",
+                        RetainRule: &shared.RetainRule{
+                            Count: 8489437897698681073,
+                            Interval: 1938800996802160635,
+                            IntervalUnit: "YEARS",
                         },
                         ShareRules: []shared.ShareRule{
                             shared.ShareRule{
                                 TargetAccounts: []string{
                                     "qui",
                                 },
-                                UnshareInterval: 4416889129261804116,
+                                UnshareInterval: 4308690457412179793,
                                 UnshareIntervalUnit: "YEARS",
                             },
                         },
                         TagsToAdd: []shared.Tag{
                             shared.Tag{
-                                Key: "doloribus",
-                                Value: "accusantium",
+                                Key: "qui",
+                                Value: "ut",
                             },
                             shared.Tag{
-                                Key: "explicabo",
-                                Value: "rem",
-                            },
-                            shared.Tag{
-                                Key: "corporis",
-                                Value: "pariatur",
+                                Key: "itaque",
+                                Value: "ab",
                             },
                         },
                         VariableTags: []shared.Tag{
                             shared.Tag{
-                                Key: "quisquam",
-                                Value: "animi",
+                                Key: "ullam",
+                                Value: "et",
+                            },
+                        },
+                    },
+                    shared.Schedule{
+                        CopyTags: false,
+                        CreateRule: &shared.CreateRule{
+                            CronExpression: "esse",
+                            Interval: 5902760509050140210,
+                            IntervalUnit: "HOURS",
+                            Location: "OUTPOST_LOCAL",
+                            Times: []string{
+                                "soluta",
+                                "sunt",
+                            },
+                        },
+                        CrossRegionCopyRules: []shared.CrossRegionCopyRule{
+                            shared.CrossRegionCopyRule{
+                                CmkArn: "magni",
+                                CopyTags: false,
+                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
+                                    Interval: 6651829488660799814,
+                                    IntervalUnit: "MONTHS",
+                                },
+                                Encrypted: true,
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 4391202566038595699,
+                                    IntervalUnit: "MONTHS",
+                                },
+                                Target: "ut",
+                                TargetRegion: "consequatur",
+                            },
+                            shared.CrossRegionCopyRule{
+                                CmkArn: "dolor",
+                                CopyTags: true,
+                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
+                                    Interval: 1925401661646756611,
+                                    IntervalUnit: "YEARS",
+                                },
+                                Encrypted: false,
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: 2803285039048912676,
+                                    IntervalUnit: "YEARS",
+                                },
+                                Target: "laboriosam",
+                                TargetRegion: "sed",
+                            },
+                        },
+                        DeprecateRule: &shared.DeprecateRule{
+                            Count: 6604365855503062775,
+                            Interval: 1836598054518427835,
+                            IntervalUnit: "DAYS",
+                        },
+                        FastRestoreRule: &shared.FastRestoreRule{
+                            AvailabilityZones: []string{
+                                "consequuntur",
+                                "laudantium",
+                                "autem",
+                            },
+                            Count: 1891001667378689416,
+                            Interval: 1627381309359808899,
+                            IntervalUnit: "DAYS",
+                        },
+                        Name: "perferendis",
+                        RetainRule: &shared.RetainRule{
+                            Count: 8497925768463229012,
+                            Interval: 5311927246208705713,
+                            IntervalUnit: "YEARS",
+                        },
+                        ShareRules: []shared.ShareRule{
+                            shared.ShareRule{
+                                TargetAccounts: []string{
+                                    "maxime",
+                                },
+                                UnshareInterval: 8392001091488039958,
+                                UnshareIntervalUnit: "WEEKS",
+                            },
+                            shared.ShareRule{
+                                TargetAccounts: []string{
+                                    "rerum",
+                                },
+                                UnshareInterval: 6394356307858046544,
+                                UnshareIntervalUnit: "WEEKS",
+                            },
+                            shared.ShareRule{
+                                TargetAccounts: []string{
+                                    "minima",
+                                    "necessitatibus",
+                                },
+                                UnshareInterval: 9205243623417456715,
+                                UnshareIntervalUnit: "DAYS",
+                            },
+                        },
+                        TagsToAdd: []shared.Tag{
+                            shared.Tag{
+                                Key: "labore",
+                                Value: "et",
+                            },
+                        },
+                        VariableTags: []shared.Tag{
+                            shared.Tag{
+                                Key: "ad",
+                                Value: "expedita",
+                            },
+                            shared.Tag{
+                                Key: "vel",
+                                Value: "qui",
                             },
                         },
                     },
                 },
                 TargetTags: []shared.Tag{
                     shared.Tag{
-                        Key: "beatae",
-                        Value: "iste",
+                        Key: "nihil",
+                        Value: "tempora",
+                    },
+                    shared.Tag{
+                        Key: "deserunt",
+                        Value: "eaque",
                     },
                 },
             },
-            State: "DISABLED",
+            State: "ENABLED",
             Tags: map[string]string{
-                "corporis": "quo",
+                "autem": "quis",
+                "vel": "vel",
             },
         },
     }

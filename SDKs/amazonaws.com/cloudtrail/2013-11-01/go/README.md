@@ -34,25 +34,21 @@ func main() {
     
     req := operations.AddTagsRequest{
         Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "est",
-            XAmzContentSha256: "aut",
-            XAmzCredential: "dignissimos",
-            XAmzDate: "et",
-            XAmzSecurityToken: "alias",
-            XAmzSignature: "vitae",
-            XAmzSignedHeaders: "ipsum",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
         },
         Request: shared.AddTagsRequest{
-            ResourceID: "magni",
+            ResourceID: "fugit",
             TagsList: []shared.Tag{
                 shared.Tag{
-                    Key: "ea",
-                    Value: "dolor",
-                },
-                shared.Tag{
-                    Key: "consequatur",
-                    Value: "assumenda",
+                    Key: "nihil",
+                    Value: "rerum",
                 },
             },
         },

@@ -22,12 +22,12 @@ func main() {
         },
         Request: &operations.LicerRequestBody{
             CertificateParameters: &operations.LicerRequestBodyCertificateParameters{
-                DOB: "voluptatem",
-                Policynumber: "qui",
+                DOB: "sit",
+                Policynumber: "voluptas",
             },
-            ConsentArtifact: "ea",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "sapiente",
+            TxnID: "consequuntur",
         },
     }
     

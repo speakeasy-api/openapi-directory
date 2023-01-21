@@ -18,7 +18,7 @@ func main() {
             },
         },
         QueryParams: operations.GetUserContentByDateJSONQueryParams{
-            Date: "totam",
+            Date: "sit",
         },
     }
     

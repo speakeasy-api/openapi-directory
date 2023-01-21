@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetV1ValidationSingleRequest{
         QueryParams: operations.GetV1ValidationSingleQueryParams{
-            Email: "ut",
+            Email: "sit",
             Format: "json",
-            Key: "ut",
+            Key: "culpa",
         },
     }
     

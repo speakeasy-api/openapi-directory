@@ -13,11 +13,11 @@ func main() {
     
     req := operations.CreateArtifactRuleRequest{
         PathParams: operations.CreateArtifactRulePathParams{
-            ArtifactID: "et",
+            ArtifactID: "sit",
         },
         Request: shared.Rule{
-            Config: "explicabo",
-            Type: "VALIDITY",
+            Config: "voluptas",
+            Type: "COMPATIBILITY",
         },
     }
     

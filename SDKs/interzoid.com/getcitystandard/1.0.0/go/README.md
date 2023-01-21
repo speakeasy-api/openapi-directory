@@ -24,8 +24,8 @@ func main() {
     
     req := operations.GetcitystandardRequest{
         QueryParams: operations.GetcitystandardQueryParams{
-            City: "asperiores",
-            License: "non",
+            City: "sit",
+            License: "voluptas",
         },
     }
     

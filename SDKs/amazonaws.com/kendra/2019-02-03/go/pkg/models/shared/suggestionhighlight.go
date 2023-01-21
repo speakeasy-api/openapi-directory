@@ -1,0 +1,8 @@
+package shared
+
+// SuggestionHighlight
+// The text highlights for a single query suggestion.
+type SuggestionHighlight struct {
+	BeginOffset *int64 `json:"BeginOffset,omitempty"`
+	EndOffset   *int64 `json:"EndOffset,omitempty"`
+}

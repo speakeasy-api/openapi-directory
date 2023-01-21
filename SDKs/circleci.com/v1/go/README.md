@@ -34,8 +34,8 @@ func main() {
     
     req := operations.DeleteProjectUsernameProjectBuildCacheRequest{
         PathParams: operations.DeleteProjectUsernameProjectBuildCachePathParams{
-            Project: "necessitatibus",
-            Username: "quam",
+            Project: "sit",
+            Username: "voluptas",
         },
     }
     

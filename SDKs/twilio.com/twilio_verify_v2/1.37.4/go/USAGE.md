@@ -19,13 +19,13 @@ func main() {
             },
         },
         PathParams: operations.CreateAccessTokenPathParams{
-            ServiceSid: "aut",
+            ServiceSid: "sit",
         },
         Request: &operations.CreateAccessTokenCreateAccessTokenRequest{
-            FactorFriendlyName: "molestiae",
+            FactorFriendlyName: "voluptas",
             FactorType: "push",
-            Identity: "dicta",
-            TTL: 3891820843117366017,
+            Identity: "expedita",
+            TTL: 3390393562759376202,
         },
     }
     

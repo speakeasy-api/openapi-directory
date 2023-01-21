@@ -22,15 +22,15 @@ func main() {
         },
         Request: &operations.HpcerRequestBody{
             CertificateParameters: &operations.HpcerRequestBodyCertificateParameters{
-                DOB: "illo",
-                FullName: "id",
-                Regno: "est",
-                Type: "architecto",
-                Year: "officiis",
+                DOB: "sit",
+                FullName: "voluptas",
+                Regno: "culpa",
+                Type: "expedita",
+                Year: "consequuntur",
             },
-            ConsentArtifact: "deserunt",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "est",
+            TxnID: "voluptas",
         },
     }
     

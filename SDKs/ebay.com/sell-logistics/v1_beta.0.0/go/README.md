@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.CancelShipmentPathParams{
-            ShipmentID: "aliquid",
+            ShipmentID: "sit",
         },
     }
     

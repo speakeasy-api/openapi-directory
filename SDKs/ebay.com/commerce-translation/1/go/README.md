@@ -29,13 +29,12 @@ func main() {
             },
         },
         Request: shared.TranslateRequest{
-            From: "facilis",
+            From: "sit",
             Text: []string{
-                "aliquid",
-                "ad",
+                "culpa",
             },
-            To: "labore",
-            TranslationContext: "totam",
+            To: "expedita",
+            TranslationContext: "consequuntur",
         },
     }
     

@@ -23,36 +23,39 @@ func main() {
     
     req := operations.AnalyzeDocumentRequest{
         Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "repellendus",
-            XAmzContentSha256: "corrupti",
-            XAmzCredential: "ex",
-            XAmzDate: "voluptatum",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "doloribus",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "Textract.AnalyzeDocument",
         },
         Request: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "sunt",
+                Bytes: "fugit",
                 S3Object: &shared.S3Object{
                     Bucket: "et",
-                    Name: "ea",
-                    Version: "deserunt",
+                    Name: "nihil",
+                    Version: "rerum",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
                 "TABLES",
-                "FORMS",
+                "TABLES",
+                "TABLES",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
-                        "FreeOfAdultContent",
+                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfPersonallyIdentifiableInformation",
                     },
                 },
-                FlowDefinitionArn: "magnam",
-                HumanLoopName: "dicta",
+                FlowDefinitionArn: "iste",
+                HumanLoopName: "vitae",
             },
         },
     }

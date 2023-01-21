@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.AlsfcRequestBody{
             CertificateParameters: &operations.AlsfcRequestBodyCertificateParameters{
-                UID: "et",
+                UID: "sit",
                 Lino: "voluptas",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "culpa",
             Format: "pdf",
-            TxnID: "consequatur",
+            TxnID: "consequuntur",
         },
     }
     

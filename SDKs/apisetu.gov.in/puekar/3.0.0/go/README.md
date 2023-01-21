@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.HscerRequestBody{
             CertificateParameters: &operations.HscerRequestBodyCertificateParameters{
-                DOB: "facere",
-                FullName: "nihil",
-                PASSYR: "repellendus",
-                REGNO: "ducimus",
-                UID: "sunt",
+                DOB: "sit",
+                FullName: "voluptas",
+                PASSYR: "culpa",
+                REGNO: "expedita",
+                UID: "consequuntur",
             },
-            ConsentArtifact: "rerum",
+            ConsentArtifact: "dolor",
             Format: "pdf",
-            TxnID: "recusandae",
+            TxnID: "voluptas",
         },
     }
     

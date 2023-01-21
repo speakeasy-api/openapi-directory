@@ -1,0 +1,14 @@
+package shared
+
+// Ec2InstanceDetails
+// Details about the Amazon EC2 instances that Amazon Web Services recommends that you purchase.
+type Ec2InstanceDetails struct {
+	AvailabilityZone  *string `json:"AvailabilityZone,omitempty"`
+	CurrentGeneration *bool   `json:"CurrentGeneration,omitempty"`
+	Family            *string `json:"Family,omitempty"`
+	InstanceType      *string `json:"InstanceType,omitempty"`
+	Platform          *string `json:"Platform,omitempty"`
+	Region            *string `json:"Region,omitempty"`
+	SizeFlexEligible  *bool   `json:"SizeFlexEligible,omitempty"`
+	Tenancy           *string `json:"Tenancy,omitempty"`
+}

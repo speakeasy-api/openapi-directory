@@ -23,10 +23,10 @@ func main() {
     
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
-            Format: "JSON",
-            Hometeam: "velit",
-            Season: "maxime",
-            Week: "facere",
+            Format: "XML",
+            Hometeam: "voluptas",
+            Season: "culpa",
+            Week: "expedita",
         },
     }
     

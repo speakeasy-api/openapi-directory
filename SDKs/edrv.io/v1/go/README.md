@@ -34,7 +34,7 @@ func main() {
     
     req := operations.DeleteChargeStationRequest{
         PathParams: operations.DeleteChargeStationPathParams{
-            ID: "omnis",
+            ID: "sit",
         },
     }
     

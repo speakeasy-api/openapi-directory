@@ -35,16 +35,16 @@ func main() {
     req := operations.GetDecodeAuthorizationMessageRequest{
         QueryParams: operations.GetDecodeAuthorizationMessageQueryParams{
             Action: "DecodeAuthorizationMessage",
-            EncodedMessage: "autem",
+            EncodedMessage: "voluptas",
             Version: "2011-06-15",
         },
         Headers: operations.GetDecodeAuthorizationMessageHeaders{
-            XAmzAlgorithm: "consequatur",
-            XAmzContentSha256: "delectus",
-            XAmzCredential: "qui",
-            XAmzDate: "et",
-            XAmzSecurityToken: "quaerat",
-            XAmzSignature: "voluptatem",
+            XAmzAlgorithm: "expedita",
+            XAmzContentSha256: "consequuntur",
+            XAmzCredential: "dolor",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "voluptas",
+            XAmzSignature: "fugit",
             XAmzSignedHeaders: "et",
         },
     }

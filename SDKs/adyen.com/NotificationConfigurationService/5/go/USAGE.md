@@ -18,7 +18,7 @@ func main() {
                 Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "accusantium",
+        Request: "sit",
     }
     
     res, err := s.General.PostCreateNotificationConfiguration(ctx, req)

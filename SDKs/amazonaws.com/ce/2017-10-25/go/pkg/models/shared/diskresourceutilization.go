@@ -1,0 +1,11 @@
+package shared
+
+// DiskResourceUtilization
+//
+//	The field that contains a list of disk (local storage) metrics that are associated with the current instance.
+type DiskResourceUtilization struct {
+	DiskReadBytesPerSecond  *string `json:"DiskReadBytesPerSecond,omitempty"`
+	DiskReadOpsPerSecond    *string `json:"DiskReadOpsPerSecond,omitempty"`
+	DiskWriteBytesPerSecond *string `json:"DiskWriteBytesPerSecond,omitempty"`
+	DiskWriteOpsPerSecond   *string `json:"DiskWriteOpsPerSecond,omitempty"`
+}

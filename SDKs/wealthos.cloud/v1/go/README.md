@@ -29,12 +29,12 @@ func main() {
             },
         },
         PathParams: operations.UpdateBankAccountPathParams{
-            BankAccountID: "qui",
+            BankAccountID: "sit",
         },
         Headers: operations.UpdateBankAccountHeaders{
-            XAPIKey: "ipsum",
+            XAPIKey: "voluptas",
         },
-        Request: "dolorum",
+        Request: "culpa",
     }
     
     res, err := s.BankAccounts.UpdateBankAccount(ctx, req)

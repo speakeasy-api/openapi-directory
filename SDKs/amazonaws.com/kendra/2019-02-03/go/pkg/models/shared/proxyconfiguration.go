@@ -1,0 +1,9 @@
+package shared
+
+// ProxyConfiguration
+// Provides the configuration information for a web proxy to connect to website hosts.
+type ProxyConfiguration struct {
+	Credentials *string `json:"Credentials,omitempty"`
+	Host        string  `json:"Host"`
+	Port        int64   `json:"Port"`
+}

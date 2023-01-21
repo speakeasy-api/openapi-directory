@@ -13,8 +13,8 @@ func main() {
     
     req := operations.GetOrdersRequest{
         QueryParams: operations.GetOrdersQueryParams{
-            Limit: "ut",
-            Offset: "autem",
+            Limit: "sit",
+            Offset: "voluptas",
             OrderStatus: "Cancelled",
         },
     }

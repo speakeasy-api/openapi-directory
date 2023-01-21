@@ -13,9 +13,9 @@ func main() {
     
     req := operations.AuthTokenRequest{
         Request: &shared.TokenRequest{
-            ClientID: "deleniti",
-            ClientSecret: "libero",
-            GrantType: "nihil",
+            ClientID: "sit",
+            ClientSecret: "voluptas",
+            GrantType: "culpa",
         },
     }
     

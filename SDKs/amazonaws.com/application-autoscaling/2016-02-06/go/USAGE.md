@@ -23,20 +23,20 @@ func main() {
     
     req := operations.DeleteScalingPolicyRequest{
         Headers: operations.DeleteScalingPolicyHeaders{
-            XAmzAlgorithm: "vitae",
-            XAmzContentSha256: "fugit",
-            XAmzCredential: "non",
-            XAmzDate: "aut",
-            XAmzSecurityToken: "autem",
-            XAmzSignature: "dolores",
-            XAmzSignedHeaders: "aperiam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AnyScaleFrontendService.DeleteScalingPolicy",
         },
         Request: shared.DeleteScalingPolicyRequest{
-            PolicyName: "culpa",
-            ResourceID: "quaerat",
-            ScalableDimension: "rds:cluster:ReadReplicaCount",
-            ServiceNamespace: "custom-resource",
+            PolicyName: "fugit",
+            ResourceID: "et",
+            ScalableDimension: "comprehend:entity-recognizer-endpoint:DesiredInferenceUnits",
+            ServiceNamespace: "elasticmapreduce",
         },
     }
     

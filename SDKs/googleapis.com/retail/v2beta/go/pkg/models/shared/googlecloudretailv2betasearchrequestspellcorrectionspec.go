@@ -1,0 +1,15 @@
+package shared
+
+type GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnum string
+
+const (
+	GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnumModeUnspecified GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnum = "MODE_UNSPECIFIED"
+	GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnumSuggestionOnly  GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnum = "SUGGESTION_ONLY"
+	GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnumAuto            GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnum = "AUTO"
+)
+
+// GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec
+// The specification for query spell correction.
+type GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec struct {
+	Mode *GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpecModeEnum `json:"mode,omitempty"`
+}

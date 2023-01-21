@@ -24,37 +24,45 @@ func main() {
     
     req := operations.PostV05CareContextsDiscoverRequest{
         Headers: operations.PostV05CareContextsDiscoverHeaders{
-            Authorization: "qui",
-            XHIPID: "quo",
+            Authorization: "sit",
+            XHIPID: "voluptas",
         },
         Request: operations.PostV05CareContextsDiscoverRequests{
-            ApplicationXML: []byte("quia"),
+            ApplicationXML: []byte("culpa"),
             PatientDiscoveryRequest: &shared.PatientDiscoveryRequest{
                 Patient: shared.PatientDiscoveryRequestPatient{
-                    Gender: "F",
-                    ID: "sed",
-                    Name: "consequatur",
+                    Gender: "O",
+                    ID: "consequuntur",
+                    Name: "dolor",
                     UnverifiedIdentifiers: []shared.Identifier{
                         shared.Identifier{
+                            Type: "MR",
+                            Value: "fugit",
+                        },
+                        shared.Identifier{
                             Type: "MOBILE",
-                            Value: "quibusdam",
+                            Value: "nihil",
                         },
                     },
                     VerifiedIdentifiers: []shared.Identifier{
                         shared.Identifier{
-                            Type: "MR",
-                            Value: "sunt",
+                            Type: "HEALTH_ID",
+                            Value: "debitis",
+                        },
+                        shared.Identifier{
+                            Type: "MOBILE",
+                            Value: "et",
                         },
                         shared.Identifier{
                             Type: "HEALTH_ID",
-                            Value: "eveniet",
+                            Value: "dolorem",
                         },
                     },
-                    YearOfBirth: 3323039620656045207,
+                    YearOfBirth: 7259475919510918339,
                 },
-                RequestID: "vel",
-                Timestamp: "2017-02-07T19:36:12Z",
-                TransactionID: "architecto",
+                RequestID: "voluptate",
+                Timestamp: "1998-09-30T11:01:25Z",
+                TransactionID: "vitae",
             },
         },
     }

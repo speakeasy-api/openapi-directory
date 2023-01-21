@@ -24,15 +24,15 @@ func main() {
     
     req := operations.GetInventoryRequest{
         QueryParams: operations.GetInventoryQueryParams{
-            ShipNode: "temporibus",
-            Sku: "omnis",
+            ShipNode: "sit",
+            Sku: "voluptas",
         },
         Headers: operations.GetInventoryHeaders{
-            Authorization: "praesentium",
-            WMCONSUMERCHANNELTYPE: "reprehenderit",
-            WMQOSCORRELATIONID: "nisi",
-            WMSECACCESSTOKEN: "vel",
-            WMSVCNAME: "aut",
+            Authorization: "culpa",
+            WMCONSUMERCHANNELTYPE: "expedita",
+            WMQOSCORRELATIONID: "consequuntur",
+            WMSECACCESSTOKEN: "dolor",
+            WMSVCNAME: "expedita",
         },
     }
     

@@ -34,32 +34,22 @@ func main() {
     
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "laborum",
-            XAmzContentSha256: "ex",
-            XAmzCredential: "ad",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "accusantium",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceMessage{
-            ResourceArn: "quidem",
+            ResourceArn: "fugit",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iure",
-                    ResourceArn: "incidunt",
-                    Value: "iusto",
-                },
-                shared.Tag{
-                    Key: "voluptatibus",
-                    ResourceArn: "voluptates",
-                    Value: "quia",
-                },
-                shared.Tag{
-                    Key: "tenetur",
-                    ResourceArn: "et",
-                    Value: "rerum",
+                    Key: "nihil",
+                    ResourceArn: "rerum",
+                    Value: "dicta",
                 },
             },
         },

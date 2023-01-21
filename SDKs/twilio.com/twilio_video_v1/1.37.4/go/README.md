@@ -31,21 +31,19 @@ func main() {
         },
         Request: &operations.CreateCompositionCreateCompositionRequest{
             AudioSources: []string{
-                "quas",
-                "natus",
+                "voluptas",
             },
             AudioSourcesExcluded: []string{
-                "quis",
-                "eos",
-                "nesciunt",
+                "expedita",
+                "consequuntur",
             },
             Format: "mp4",
-            Resolution: "quibusdam",
-            RoomSid: "vel",
-            StatusCallback: "sed",
-            StatusCallbackMethod: "GET",
-            Trim: false,
-            VideoLayout: "itaque",
+            Resolution: "expedita",
+            RoomSid: "voluptas",
+            StatusCallback: "fugit",
+            StatusCallbackMethod: "HEAD",
+            Trim: true,
+            VideoLayout: "rerum",
         },
     }
     

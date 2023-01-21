@@ -23,7 +23,7 @@ func main() {
     
     req := operations.GetDomainRequest{
         PathParams: operations.GetDomainPathParams{
-            DomainID: "quia",
+            DomainID: "sit",
         },
     }
     

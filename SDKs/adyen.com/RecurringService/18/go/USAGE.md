@@ -12,7 +12,7 @@ func main() {
     s := sdk.New()
     
     req := operations.PostDisableRequest{
-        Request: "commodi",
+        Request: "sit",
     }
     
     res, err := s.PostDisable(ctx, req)

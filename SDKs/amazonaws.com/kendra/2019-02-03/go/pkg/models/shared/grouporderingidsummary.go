@@ -1,0 +1,15 @@
+package shared
+
+import (
+	"time"
+)
+
+// GroupOrderingIDSummary
+// Information on the processing of <code>PUT</code> and <code>DELETE</code> actions for mapping users to their groups.
+type GroupOrderingIDSummary struct {
+	FailureReason *string                     `json:"FailureReason,omitempty"`
+	LastUpdatedAt *time.Time                  `json:"LastUpdatedAt,omitempty"`
+	OrderingID    *int64                      `json:"OrderingId,omitempty"`
+	ReceivedAt    *time.Time                  `json:"ReceivedAt,omitempty"`
+	Status        *PrincipalMappingStatusEnum `json:"Status,omitempty"`
+}

@@ -24,19 +24,19 @@ func main() {
     req := operations.GetAuthorizeCacheSecurityGroupIngressRequest{
         QueryParams: operations.GetAuthorizeCacheSecurityGroupIngressQueryParams{
             Action: "AuthorizeCacheSecurityGroupIngress",
-            CacheSecurityGroupName: "labore",
-            Ec2SecurityGroupName: "id",
-            Ec2SecurityGroupOwnerID: "libero",
+            CacheSecurityGroupName: "voluptas",
+            Ec2SecurityGroupName: "culpa",
+            Ec2SecurityGroupOwnerID: "expedita",
             Version: "2015-02-02",
         },
         Headers: operations.GetAuthorizeCacheSecurityGroupIngressHeaders{
-            XAmzAlgorithm: "amet",
-            XAmzContentSha256: "sint",
-            XAmzCredential: "nostrum",
-            XAmzDate: "voluptatem",
-            XAmzSecurityToken: "tempore",
-            XAmzSignature: "est",
-            XAmzSignedHeaders: "molestias",
+            XAmzAlgorithm: "dolor",
+            XAmzContentSha256: "expedita",
+            XAmzCredential: "voluptas",
+            XAmzDate: "fugit",
+            XAmzSecurityToken: "et",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "rerum",
         },
     }
     

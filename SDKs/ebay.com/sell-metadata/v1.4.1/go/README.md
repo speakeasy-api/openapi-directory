@@ -29,7 +29,7 @@ func main() {
             },
         },
         PathParams: operations.GetSalesTaxJurisdictionsPathParams{
-            CountryCode: "modi",
+            CountryCode: "sit",
         },
     }
     

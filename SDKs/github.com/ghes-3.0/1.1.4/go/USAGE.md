@@ -13,9 +13,9 @@ func main() {
     
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "natus",
-            RepositoryID: 8643140321872946841,
-            RunnerGroupID: 1926702589155937415,
+            Org: "sit",
+            RepositoryID: 2259404117704393152,
+            RunnerGroupID: 6050128673802995827,
         },
     }
     

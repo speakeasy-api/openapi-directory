@@ -24,9 +24,9 @@ func main() {
     
     req := operations.GetResourcesCampaignsJSONRequest{
         QueryParams: operations.GetResourcesCampaignsJSONQueryParams{
-            Max: 5231058739915060904,
-            Offset: 7105271836128858469,
-            Sort: "eius",
+            Max: 8717895732742165505,
+            Offset: 2259404117704393152,
+            Sort: "culpa",
         },
     }
     

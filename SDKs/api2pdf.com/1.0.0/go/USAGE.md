@@ -23,11 +23,11 @@ func main() {
     
     req := operations.ChromeFromHTMLPostRequest{
         Request: &shared.ChromeHTMLToPdfRequest{
-            FileName: "in",
-            HTML: "quia",
-            InlinePdf: false,
+            FileName: "sit",
+            HTML: "voluptas",
+            InlinePdf: true,
             Options: &shared.ChromeAdvancedOptions{
-                Landscape: "quia",
+                Landscape: "expedita",
                 PrintBackground: true,
             },
         },

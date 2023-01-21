@@ -1,0 +1,9 @@
+package shared
+
+type ListGroupsOlderThanOrderingIDRequest struct {
+	DataSourceID *string `json:"DataSourceId,omitempty"`
+	IndexID      string  `json:"IndexId"`
+	MaxResults   *int64  `json:"MaxResults,omitempty"`
+	NextToken    *string `json:"NextToken,omitempty"`
+	OrderingID   int64   `json:"OrderingId"`
+}

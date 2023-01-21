@@ -13,11 +13,11 @@ func main() {
     
     req := operations.GetAccountRequest{
         QueryParams: operations.GetAccountQueryParams{
-            Include: "maxime",
+            Include: "sit",
         },
         Headers: operations.GetAccountHeaders{
-            EvAccessToken: "facilis",
-            EvAPIKey: "iure",
+            EvAccessToken: "voluptas",
+            EvAPIKey: "culpa",
         },
     }
     

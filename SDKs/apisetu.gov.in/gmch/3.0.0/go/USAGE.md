@@ -22,13 +22,13 @@ func main() {
         },
         Request: &operations.LabrpRequestBody{
             CertificateParameters: &operations.LabrpRequestBodyCertificateParameters{
-                FullName: "ipsum",
-                Reportdate: "rem",
-                Uhid: "consequuntur",
+                FullName: "sit",
+                Reportdate: "voluptas",
+                Uhid: "culpa",
             },
-            ConsentArtifact: "aliquam",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "fuga",
+            TxnID: "dolor",
         },
     }
     

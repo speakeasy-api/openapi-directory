@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.BtcerRequestBody{
             CertificateParameters: &operations.BtcerRequestBodyCertificateParameters{
-                CertType: "dolor",
-                DateofEvent: "fugit",
-                RegisNumber: "et",
-                Year: "aut",
+                CertType: "sit",
+                DateofEvent: "voluptas",
+                RegisNumber: "culpa",
+                Year: "expedita",
             },
-            ConsentArtifact: "aliquam",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "excepturi",
+            TxnID: "expedita",
         },
     }
     

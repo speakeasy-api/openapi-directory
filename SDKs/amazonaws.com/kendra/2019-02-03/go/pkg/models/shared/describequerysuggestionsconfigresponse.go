@@ -1,0 +1,17 @@
+package shared
+
+import (
+	"time"
+)
+
+type DescribeQuerySuggestionsConfigResponse struct {
+	IncludeQueriesWithoutUserInformation *bool                       `json:"IncludeQueriesWithoutUserInformation,omitempty"`
+	LastClearTime                        *time.Time                  `json:"LastClearTime,omitempty"`
+	LastSuggestionsBuildTime             *time.Time                  `json:"LastSuggestionsBuildTime,omitempty"`
+	MinimumNumberOfQueryingUsers         *int64                      `json:"MinimumNumberOfQueryingUsers,omitempty"`
+	MinimumQueryCount                    *int64                      `json:"MinimumQueryCount,omitempty"`
+	Mode                                 *ModeEnum                   `json:"Mode,omitempty"`
+	QueryLogLookBackWindowInDays         *int64                      `json:"QueryLogLookBackWindowInDays,omitempty"`
+	Status                               *QuerySuggestionsStatusEnum `json:"Status,omitempty"`
+	TotalSuggestionsCount                *int64                      `json:"TotalSuggestionsCount,omitempty"`
+}

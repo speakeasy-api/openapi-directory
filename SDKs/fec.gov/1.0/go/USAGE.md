@@ -29,51 +29,51 @@ func main() {
     
     req := operations.GetAuditCaseRequest{
         QueryParams: operations.GetAuditCaseQueryParams{
-            APIKey: "consequatur",
+            APIKey: "sit",
             AuditCaseID: []string{
-                "officia",
-                "nihil",
+                "culpa",
             },
             AuditID: []int32{
-                7756699698972645173,
-                5607289564857015942,
+                3390393562759376202,
+                2669985732393126063,
             },
             CandidateID: []string{
-                "necessitatibus",
-                "iste",
+                "voluptas",
+                "fugit",
             },
-            CommitteeDesignation: "ea",
+            CommitteeDesignation: "et",
             CommitteeID: []string{
-                "sed",
+                "rerum",
             },
             CommitteeType: []string{
-                "aliquam",
-                "nisi",
+                "debitis",
+                "voluptatum",
+                "et",
             },
             Cycle: []int32{
-                8156228904820113242,
-                5947285951484731198,
+                161231572858529631,
+                7259475919510918339,
+                7373105480197164748,
             },
-            MaxElectionCycle: 869561943583408486,
-            MinElectionCycle: 3655237301516905859,
-            Page: 2909554718741390322,
-            PerPage: 6600351355182752240,
-            PrimaryCategoryID: "non",
+            MaxElectionCycle: 3287288577352441706,
+            MinElectionCycle: 3930927879439176946,
+            Page: 4706154865122290029,
+            PerPage: 2217592893536642650,
+            PrimaryCategoryID: "illum",
             Q: []string{
-                "delectus",
+                "vel",
             },
             Qq: []string{
-                "minus",
+                "dolore",
             },
             Sort: []string{
-                "eos",
-                "quaerat",
-                "quasi",
+                "aspernatur",
+                "accusantium",
             },
             SortHideNull: false,
-            SortNullOnly: true,
-            SortNullsLast: false,
-            SubCategoryID: "officia",
+            SortNullOnly: false,
+            SortNullsLast: true,
+            SubCategoryID: "est",
         },
     }
     

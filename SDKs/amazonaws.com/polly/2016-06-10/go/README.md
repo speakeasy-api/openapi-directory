@@ -34,16 +34,16 @@ func main() {
     
     req := operations.DeleteLexiconRequest{
         PathParams: operations.DeleteLexiconPathParams{
-            LexiconName: "nemo",
+            LexiconName: "sit",
         },
         Headers: operations.DeleteLexiconHeaders{
-            XAmzAlgorithm: "quia",
-            XAmzContentSha256: "provident",
-            XAmzCredential: "sint",
-            XAmzDate: "distinctio",
-            XAmzSecurityToken: "maiores",
-            XAmzSignature: "exercitationem",
-            XAmzSignedHeaders: "sunt",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

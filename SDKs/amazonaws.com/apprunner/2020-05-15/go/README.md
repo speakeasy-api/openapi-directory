@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AssociateCustomDomainRequest{
         Headers: operations.AssociateCustomDomainHeaders{
-            XAmzAlgorithm: "pariatur",
-            XAmzContentSha256: "id",
-            XAmzCredential: "voluptatem",
-            XAmzDate: "esse",
-            XAmzSecurityToken: "in",
-            XAmzSignature: "amet",
-            XAmzSignedHeaders: "consectetur",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AppRunner.AssociateCustomDomain",
         },
         Request: shared.AssociateCustomDomainRequest{
-            DomainName: "nesciunt",
+            DomainName: "fugit",
             EnableWWWSubdomain: false,
-            ServiceArn: "aut",
+            ServiceArn: "nihil",
         },
     }
     

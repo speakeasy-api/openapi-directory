@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.PmjayRequestBody{
             CertificateParameters: &operations.PmjayRequestBodyCertificateParameters{
-                DOB: "enim",
-                FullName: "aliquid",
-                Udf1: "et",
-                Udf2: "et",
+                DOB: "sit",
+                FullName: "voluptas",
+                Udf1: "culpa",
+                Udf2: "expedita",
             },
-            ConsentArtifact: "quia",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "maiores",
+            TxnID: "expedita",
         },
     }
     

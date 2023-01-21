@@ -1,0 +1,12 @@
+package shared
+
+type GetSavingsPlansCoverageRequest struct {
+	Filter      *Expression       `json:"Filter,omitempty"`
+	Granularity *GranularityEnum  `json:"Granularity,omitempty"`
+	GroupBy     []GroupDefinition `json:"GroupBy,omitempty"`
+	MaxResults  *int64            `json:"MaxResults,omitempty"`
+	Metrics     []string          `json:"Metrics,omitempty"`
+	NextToken   *string           `json:"NextToken,omitempty"`
+	SortBy      *SortDefinition   `json:"SortBy,omitempty"`
+	TimePeriod  DateInterval      `json:"TimePeriod"`
+}

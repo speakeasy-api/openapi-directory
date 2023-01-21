@@ -33,13 +33,13 @@ func main() {
         },
         Request: &operations.OtcerRequestBody{
             CertificateParameters: &operations.OtcerRequestBodyCertificateParameters{
-                DOB: "voluptates",
-                FullName: "sit",
-                UID: "aut",
+                DOB: "sit",
+                FullName: "voluptas",
+                UID: "culpa",
             },
-            ConsentArtifact: "et",
+            ConsentArtifact: "expedita",
             Format: "pdf",
-            TxnID: "fuga",
+            TxnID: "dolor",
         },
     }
     

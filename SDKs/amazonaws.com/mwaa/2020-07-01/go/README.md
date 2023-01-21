@@ -34,16 +34,16 @@ func main() {
     
     req := operations.CreateCliTokenRequest{
         PathParams: operations.CreateCliTokenPathParams{
-            Name: "nostrum",
+            Name: "sit",
         },
         Headers: operations.CreateCliTokenHeaders{
-            XAmzAlgorithm: "sed",
-            XAmzContentSha256: "qui",
-            XAmzCredential: "enim",
-            XAmzDate: "corporis",
-            XAmzSecurityToken: "dolorem",
-            XAmzSignature: "quos",
-            XAmzSignedHeaders: "quibusdam",
+            XAmzAlgorithm: "voluptas",
+            XAmzContentSha256: "culpa",
+            XAmzCredential: "expedita",
+            XAmzDate: "consequuntur",
+            XAmzSecurityToken: "dolor",
+            XAmzSignature: "expedita",
+            XAmzSignedHeaders: "voluptas",
         },
     }
     

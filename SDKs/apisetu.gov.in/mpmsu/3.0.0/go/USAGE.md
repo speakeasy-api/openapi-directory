@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.MicerRequestBody{
             CertificateParameters: &operations.MicerRequestBodyCertificateParameters{
-                APPNO: "sapiente",
-                DateOfBirth: "iure",
-                ENROLNO: "assumenda",
-                ROLLNO: "dolore",
+                APPNO: "sit",
+                DateOfBirth: "voluptas",
+                ENROLNO: "culpa",
+                ROLLNO: "expedita",
             },
-            ConsentArtifact: "nobis",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "qui",
+            TxnID: "expedita",
         },
     }
     

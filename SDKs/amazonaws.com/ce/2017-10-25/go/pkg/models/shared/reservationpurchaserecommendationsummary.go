@@ -1,0 +1,9 @@
+package shared
+
+// ReservationPurchaseRecommendationSummary
+// A summary about this recommendation, such as the currency code, the amount that Amazon Web Services estimates that you could save, and the total amount of reservation to purchase.
+type ReservationPurchaseRecommendationSummary struct {
+	CurrencyCode                           *string `json:"CurrencyCode,omitempty"`
+	TotalEstimatedMonthlySavingsAmount     *string `json:"TotalEstimatedMonthlySavingsAmount,omitempty"`
+	TotalEstimatedMonthlySavingsPercentage *string `json:"TotalEstimatedMonthlySavingsPercentage,omitempty"`
+}

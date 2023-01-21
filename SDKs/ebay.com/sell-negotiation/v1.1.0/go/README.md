@@ -29,11 +29,11 @@ func main() {
             },
         },
         QueryParams: operations.FindEligibleItemsQueryParams{
-            Limit: "repellat",
-            Offset: "expedita",
+            Limit: "sit",
+            Offset: "voluptas",
         },
         Headers: operations.FindEligibleItemsHeaders{
-            XEBAYCMARKETPLACEID: "dolore",
+            XEBAYCMARKETPLACEID: "culpa",
         },
     }
     

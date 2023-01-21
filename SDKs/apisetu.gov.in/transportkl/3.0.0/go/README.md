@@ -33,14 +33,14 @@ func main() {
         },
         Request: &operations.DrvlcRequestBody{
             CertificateParameters: &operations.DrvlcRequestBodyCertificateParameters{
-                DOB: "quae",
-                FullName: "nisi",
-                UID: "voluptatem",
-                Dlno: "in",
+                DOB: "sit",
+                FullName: "voluptas",
+                UID: "culpa",
+                Dlno: "expedita",
             },
-            ConsentArtifact: "corrupti",
+            ConsentArtifact: "consequuntur",
             Format: "xml",
-            TxnID: "vero",
+            TxnID: "expedita",
         },
     }
     

@@ -23,8 +23,8 @@ func main() {
     
     req := operations.GetYearMonthJSONRequest{
         PathParams: operations.GetYearMonthJSONPathParams{
-            Month: 3455249889890293003,
-            Year: 8913761506068765304,
+            Month: 8717895732742165505,
+            Year: 2259404117704393152,
         },
     }
     

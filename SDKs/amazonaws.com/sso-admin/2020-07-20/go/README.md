@@ -34,19 +34,19 @@ func main() {
     
     req := operations.AttachManagedPolicyToPermissionSetRequest{
         Headers: operations.AttachManagedPolicyToPermissionSetHeaders{
-            XAmzAlgorithm: "ea",
-            XAmzContentSha256: "pariatur",
-            XAmzCredential: "eligendi",
-            XAmzDate: "sit",
-            XAmzSecurityToken: "libero",
-            XAmzSignature: "quia",
-            XAmzSignedHeaders: "ipsa",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "SWBExternalService.AttachManagedPolicyToPermissionSet",
         },
         Request: shared.AttachManagedPolicyToPermissionSetRequest{
-            InstanceArn: "quis",
-            ManagedPolicyArn: "necessitatibus",
-            PermissionSetArn: "sint",
+            InstanceArn: "fugit",
+            ManagedPolicyArn: "et",
+            PermissionSetArn: "nihil",
         },
     }
     

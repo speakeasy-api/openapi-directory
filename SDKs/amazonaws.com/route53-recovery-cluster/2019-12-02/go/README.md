@@ -34,17 +34,17 @@ func main() {
     
     req := operations.GetRoutingControlStateRequest{
         Headers: operations.GetRoutingControlStateHeaders{
-            XAmzAlgorithm: "sed",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "maxime",
-            XAmzDate: "eos",
-            XAmzSecurityToken: "aut",
-            XAmzSignature: "autem",
-            XAmzSignedHeaders: "deleniti",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "ToggleCustomerAPI.GetRoutingControlState",
         },
         Request: shared.GetRoutingControlStateRequest{
-            RoutingControlArn: "asperiores",
+            RoutingControlArn: "fugit",
         },
     }
     

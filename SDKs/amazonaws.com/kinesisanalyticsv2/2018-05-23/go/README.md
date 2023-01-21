@@ -34,22 +34,22 @@ func main() {
     
     req := operations.AddApplicationCloudWatchLoggingOptionRequest{
         Headers: operations.AddApplicationCloudWatchLoggingOptionHeaders{
-            XAmzAlgorithm: "provident",
-            XAmzContentSha256: "voluptatem",
-            XAmzCredential: "veniam",
-            XAmzDate: "aspernatur",
-            XAmzSecurityToken: "sed",
-            XAmzSignature: "voluptatem",
-            XAmzSignedHeaders: "numquam",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption",
         },
         Request: shared.AddApplicationCloudWatchLoggingOptionRequest{
-            ApplicationName: "et",
+            ApplicationName: "fugit",
             CloudWatchLoggingOption: shared.CloudWatchLoggingOption{
-                LogStreamARN: "nulla",
+                LogStreamARN: "et",
             },
-            ConditionalToken: "nulla",
-            CurrentApplicationVersionID: 8361513412454442989,
+            ConditionalToken: "nihil",
+            CurrentApplicationVersionID: 8325060299420976708,
         },
     }
     

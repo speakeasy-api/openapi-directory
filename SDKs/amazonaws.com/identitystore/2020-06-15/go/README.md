@@ -34,18 +34,18 @@ func main() {
     
     req := operations.DescribeGroupRequest{
         Headers: operations.DescribeGroupHeaders{
-            XAmzAlgorithm: "mollitia",
-            XAmzContentSha256: "neque",
-            XAmzCredential: "autem",
-            XAmzDate: "ab",
-            XAmzSecurityToken: "dolore",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "saepe",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSIdentityStore.DescribeGroup",
         },
         Request: shared.DescribeGroupRequest{
-            GroupID: "dignissimos",
-            IdentityStoreID: "rerum",
+            GroupID: "fugit",
+            IdentityStoreID: "et",
         },
     }
     

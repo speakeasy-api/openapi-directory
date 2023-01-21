@@ -24,8 +24,8 @@ func main() {
     
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            Filename: "labore",
-            Source: "nulla",
+            Filename: "sit",
+            Source: "voluptas",
             Validate: "on",
         },
     }

@@ -1,0 +1,10 @@
+package shared
+
+// Status
+// Provides information about the status of documents submitted for indexing.
+type Status struct {
+	DocumentID     *string             `json:"DocumentId,omitempty"`
+	DocumentStatus *DocumentStatusEnum `json:"DocumentStatus,omitempty"`
+	FailureCode    *string             `json:"FailureCode,omitempty"`
+	FailureReason  *string             `json:"FailureReason,omitempty"`
+}

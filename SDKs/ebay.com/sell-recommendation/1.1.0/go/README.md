@@ -29,16 +29,18 @@ func main() {
             },
         },
         QueryParams: operations.FindListingRecommendationsQueryParams{
-            Filter: "omnis",
-            Limit: "aliquam",
-            Offset: "provident",
+            Filter: "sit",
+            Limit: "voluptas",
+            Offset: "culpa",
         },
         Headers: operations.FindListingRecommendationsHeaders{
-            XEBAYCMARKETPLACEID: "corporis",
+            XEBAYCMARKETPLACEID: "expedita",
         },
         Request: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
-                "at",
+                "dolor",
+                "expedita",
+                "voluptas",
             },
         },
     }

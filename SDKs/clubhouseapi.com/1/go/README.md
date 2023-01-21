@@ -24,7 +24,7 @@ func main() {
     
     req := operations.GetCheckForUpdateRequest{
         QueryParams: operations.GetCheckForUpdateQueryParams{
-            IsTestflight: 7806412736464655250,
+            IsTestflight: 8717895732742165505,
         },
     }
     

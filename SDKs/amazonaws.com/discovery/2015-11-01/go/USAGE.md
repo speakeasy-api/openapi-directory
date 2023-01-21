@@ -23,20 +23,19 @@ func main() {
     
     req := operations.AssociateConfigurationItemsToApplicationRequest{
         Headers: operations.AssociateConfigurationItemsToApplicationHeaders{
-            XAmzAlgorithm: "enim",
-            XAmzContentSha256: "sed",
-            XAmzCredential: "aut",
-            XAmzDate: "ea",
-            XAmzSecurityToken: "magnam",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
             XAmzTarget: "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication",
         },
         Request: shared.AssociateConfigurationItemsToApplicationRequest{
-            ApplicationConfigurationID: "eum",
+            ApplicationConfigurationID: "fugit",
             ConfigurationIds: []string{
-                "modi",
-                "officiis",
+                "nihil",
             },
         },
     }

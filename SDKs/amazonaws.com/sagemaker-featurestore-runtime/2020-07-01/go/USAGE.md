@@ -23,26 +23,47 @@ func main() {
     
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "alias",
-            XAmzContentSha256: "reprehenderit",
-            XAmzCredential: "non",
-            XAmzDate: "quia",
-            XAmzSecurityToken: "sed",
-            XAmzSignature: "consequatur",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "aliquid",
+                    FeatureGroupName: "fugit",
                     FeatureNames: []string{
-                        "unde",
-                        "ducimus",
-                        "ut",
+                        "nihil",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "quidem",
-                        "nulla",
+                        "dicta",
+                        "debitis",
+                        "voluptatum",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "et",
+                    FeatureNames: []string{
+                        "dolorem",
+                        "et",
+                        "voluptate",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "vitae",
+                        "totam",
+                        "dolores",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "illum",
+                    FeatureNames: []string{
+                        "vel",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "dolore",
                     },
                 },
             },

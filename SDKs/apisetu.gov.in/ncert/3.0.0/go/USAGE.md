@@ -22,14 +22,14 @@ func main() {
         },
         Request: &operations.MrcerRequestBody{
             CertificateParameters: &operations.MrcerRequestBodyCertificateParameters{
-                DOB: "nihil",
-                FullName: "dicta",
-                RROLL: "impedit",
-                Year: "illum",
+                DOB: "sit",
+                FullName: "voluptas",
+                RROLL: "culpa",
+                Year: "expedita",
             },
-            ConsentArtifact: "quibusdam",
+            ConsentArtifact: "consequuntur",
             Format: "pdf",
-            TxnID: "id",
+            TxnID: "expedita",
         },
     }
     

@@ -23,27 +23,23 @@ func main() {
     
     req := operations.CreateSignalingChannelRequest{
         Headers: operations.CreateSignalingChannelHeaders{
-            XAmzAlgorithm: "error",
-            XAmzContentSha256: "voluptate",
-            XAmzCredential: "odit",
-            XAmzDate: "exercitationem",
-            XAmzSecurityToken: "hic",
-            XAmzSignature: "perferendis",
-            XAmzSignedHeaders: "cupiditate",
+            XAmzAlgorithm: "sit",
+            XAmzContentSha256: "voluptas",
+            XAmzCredential: "culpa",
+            XAmzDate: "expedita",
+            XAmzSecurityToken: "consequuntur",
+            XAmzSignature: "dolor",
+            XAmzSignedHeaders: "expedita",
         },
         Request: operations.CreateSignalingChannelRequestBody{
-            ChannelName: "sed",
+            ChannelName: "voluptas",
             ChannelType: "SINGLE_MASTER",
             SingleMasterConfiguration: &operations.CreateSignalingChannelRequestBodySingleMasterConfiguration{
-                MessageTTLSeconds: 7341080715805291804,
+                MessageTTLSeconds: 1543572285742637646,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "qui",
-                    Value: "eius",
-                },
-                shared.Tag{
-                    Key: "voluptas",
+                    Key: "rerum",
                     Value: "dicta",
                 },
             },
